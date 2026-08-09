@@ -1,0 +1,42 @@
+mathjax-go
+Copyright 2026 D2 contributors
+
+This product includes a Go translation and modification of portions of
+MathJax 3.2.2:
+
+  Project: MathJax
+  Copyright (c) 2009-2022 The MathJax Consortium
+  Repository: https://github.com/mathjax/MathJax-src
+  License: Apache License 2.0
+
+The translated TeX color support also retains its additional upstream
+copyright attribution:
+
+  Copyright (c) 2018-2022 Omar Al-Ithawi and The MathJax Consortium
+
+The mhchem package includes a Go translation and modification of
+mhchemParser 4.1.1:
+
+  Project: mhchemParser
+  Copyright (c) 2015-2021 Martin Hensel
+  Repository: https://github.com/mhchem/mhchemParser
+  License: Apache License 2.0
+
+The initial Go translation structure for portions of that package was adapted
+from Luo-Studio/go-tex:
+
+  Project: go-tex
+  Commit: 60635a3613c51e710fd5cb57e1d7eeb7b3163a1f
+  Copyright (c) 2026 luo-studio
+  Copyright (c) erweixin (upstream RaTeX)
+  Repository: https://github.com/Luo-Studio/go-tex
+  License: MIT
+
+The Apache License 2.0 is in LICENSE. The additional MIT license is in
+LICENSES/MIT-Luo-Studio.txt. Source provenance and the exact compatibility
+artifacts are recorded in PROVENANCE.md.
+
+No MathJax or mhchem JavaScript is linked into or executed by the production Go
+library. The repository contains a small test-only Node.js driver that can run
+externally supplied, cryptographically pinned JavaScript assets as a
+differential oracle.
