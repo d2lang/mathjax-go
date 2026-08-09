@@ -1,0 +1,56 @@
+name: ci
+
+on: [push, pull_request]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.sha }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-go@v6
+        with:
+          go-version: stable
+          cache: true
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+      - name: Fetch frozen D2 MathJax oracle
+        env:
+          D2_COMMIT: 5666d9337c77a4803b9cd60cb1c5a24439d0f949
+        run: |
+          mkdir "$RUNNER_TEMP/mathjax-oracle"
+          for asset in mathjax.js polyfills.js setup.js; do
+            curl --fail --location --silent --show-error \
+              "https://raw.githubusercontent.com/d2lang/d2/$D2_COMMIT/d2renderers/d2latex/$asset" \
+              --output "$RUNNER_TEMP/mathjax-oracle/$asset"
+          done
+          cd "$RUNNER_TEMP/mathjax-oracle"
+          echo "cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869  mathjax.js" | sha256sum --check
+          echo "7fe1d048c78b0e09854c1259f7413868a51cc8f0c822489eb1ac36ae6c85ce01  polyfills.js" | sha256sum --check
+          echo "a52cb0bbabfbd7796b9fedd793b9386c474e3123e788ee151cbe47ca1fa6e881  setup.js" | sha256sum --check
+      - name: Test with frozen oracle
+        env:
+          MATHJAX_GO_ORACLE_DIR: ${{ runner.temp }}/mathjax-oracle
+          MATHJAX_GO_ORACLE_FULL: "1"
+        run: go test ./...
+      - run: go test -race ./...
+      - run: go vet ./...
+      - name: Build WebAssembly
+        run: GOOS=js GOARCH=wasm go build ./...
+
+  go-floor:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-go@v6
+        with:
+          go-version: "1.23.x"
+          cache: true
+      - run: go test ./...

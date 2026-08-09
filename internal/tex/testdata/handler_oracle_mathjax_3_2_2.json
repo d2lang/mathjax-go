@@ -1,0 +1,1047 @@
+{
+  "schema_version": 1,
+  "oracle": {
+    "project": "MathJax",
+    "version": "3.2.2",
+    "git_commit": "ad8f5c21cb810236551da8c6512ba733e67357ee",
+    "npm_package": "mathjax@3.2.2",
+    "npm_integrity": "sha512-Bt+SSVU8eBG27zChVewOicYs7Xsdt40qm4+UpHyX7k0/O9NliPc+x77k1/FEsPsjKPZGJvtRZM1vO+geW0OhGw==",
+    "npm_tarball_sha256": "1b9c0a1c44df864e915690558e72adb9cc5203360daefd385084ced3b6c64c09",
+    "runtime": "Goja",
+    "state": "MathJax._.core.MathItem.STATE.COMPILED",
+    "serializer": "MmlNode.toString()",
+    "display": true,
+    "fresh_document_per_case": true,
+    "packages": [
+      "base",
+      "mathtools",
+      "ams",
+      "amscd",
+      "braket",
+      "cancel",
+      "cases",
+      "color",
+      "gensymb",
+      "mhchem",
+      "physics",
+      "empheq",
+      "newcommand"
+    ],
+    "provenance": "Frozen with Goja from the integrity-verified mathjax@3.2.2 npm ES5 bundle; each input used a fresh MathJax document and TeX input jax. D2 frozen MathJax assets supplied core/package code, with the matching official newcommand.js and empheq.js extension components loaded before setup."
+  },
+  "handler_scope": {
+    "name": "original-95-selected-package-handler-set",
+    "packages": [
+      "ams",
+      "mathtools",
+      "amscd",
+      "braket",
+      "cases",
+      "physics",
+      "empheq",
+      "newcommand"
+    ],
+    "map_kinds": [
+      "CommandMap",
+      "EnvironmentMap",
+      "MacroMap"
+    ]
+  },
+  "handler_count": 95,
+  "cases": [
+    {
+      "name": "aboxed",
+      "handlers": [
+        "Aboxed"
+      ],
+      "tex": "\\begin{align*}a&\\Aboxed{=b}\\end{align*}",
+      "class": "valid",
+      "mml": "math([mtable(mtr(mtd([mi(a)]),mtd([]),mtd([TeXAtom([mpadded([menclose([TeXAtom([mstyle([TeXAtom([mo(=),mi(b),TeXAtom([])])])])])])]),mspace(),TeXAtom([mphantom([mo(=),mi(b)])])]),mtd([TeXAtom([mphantom([TeXAtom([])])]),mspace()])))])"
+    },
+    {
+      "name": "accent",
+      "handlers": [
+        "Accent"
+      ],
+      "tex": "\\mathring{x}",
+      "class": "valid",
+      "mml": "math([TeXAtom([mover(mi(x),mo(˚))])])"
+    },
+    {
+      "name": "alignat",
+      "handlers": [
+        "AlignAt"
+      ],
+      "tex": "\\begin{alignat*}{2}a&=b&c&=d\\end{alignat*}",
+      "class": "valid",
+      "mml": "math([mtable(mtr(mtd([mi(a)]),mtd([mi(),mo(=),mi(b)]),mtd([mi(c)]),mtd([mi(),mo(=),mi(d)])))])"
+    },
+    {
+      "name": "ams-eqn-array",
+      "handlers": [
+        "AmsEqnArray"
+      ],
+      "tex": "\\begin{aligned}a&=b\\\\c&=d\\end{aligned}",
+      "class": "valid",
+      "mml": "math([mtable(mtr(mtd([mi(a)]),mtd([mi(),mo(=),mi(b)])),mtr(mtd([mi(c)]),mtd([mi(),mo(=),mi(d)])))])"
+    },
+    {
+      "name": "array",
+      "handlers": [
+        "Array"
+      ],
+      "tex": "\\begin{pmatrix}a&b\\\\c&d\\end{pmatrix}",
+      "class": "valid",
+      "mml": "math([mrow(mo((),mtable(mtr(mtd([mi(a)]),mtd([mi(b)])),mtr(mtd([mi(c)]),mtd([mi(d)]))),mo()))])"
+    },
+    {
+      "name": "arrow-between-lines",
+      "handlers": [
+        "ArrowBetweenLines"
+      ],
+      "tex": "\\begin{align*}a&=b\\\\\\ArrowBetweenLines\\\\c&=d\\end{align*}",
+      "class": "valid",
+      "mml": "math([mtable(mtr(mtd([mi(a)]),mtd([mi(),mo(=),mi(b)])),mtr(mtd([mo(⇕),mstyle([mspace()])])),mtr(mtd([])),mtr(mtd([mi(c)]),mtd([mi(),mo(=),mi(d)])))])"
+    },
+    {
+      "name": "auto-close",
+      "handlers": [
+        "Quantity",
+        "AutoClose"
+      ],
+      "tex": "\\qty(a+b)",
+      "class": "valid",
+      "mml": "math([mrow(mo((),mi(a),mo(+),mi(b),mo()))])"
+    },
+    {
+      "name": "braket-bar",
+      "handlers": [
+        "Braket",
+        "Bar"
+      ],
+      "tex": "\\Braket{a|b}",
+      "class": "valid",
+      "mml": "math([mrow(mo(⟨),mi(a),mo(|),mi(b),mo(⟩))])"
+    },
+    {
+      "name": "physics-bra",
+      "handlers": [
+        "Bra"
+      ],
+      "tex": "\\bra{x}",
+      "class": "valid",
+      "mml": "math([mrow(mo(⟨),TeXAtom([mi(x)]),mo(|)),TeXAtom([])])"
+    },
+    {
+      "name": "physics-braket",
+      "handlers": [
+        "BraKet"
+      ],
+      "tex": "\\innerproduct{x}{y}",
+      "class": "valid",
+      "mml": "math([mrow(mo(⟨),TeXAtom([mi(x)]),TeXAtom([]),mo(|),TeXAtom([]),TeXAtom([mi(y)]),mo(⟩))])"
+    },
+    {
+      "name": "ams-cd-arrow",
+      "handlers": [
+        "CD",
+        "arrow"
+      ],
+      "tex": "\\begin{CD}A@>f>>B\\\\@VgVV@AAhA\\\\C@>>k>D\\end{CD}",
+      "class": "valid",
+      "mml": "math([mtable(mtr(mtd([mi(A),mpadded([])]),mtd([mover(mo(→),mpadded([mi(f)]))]),mtd([mi(B)])),mtr(mtd([mrow(mstyle([TeXAtom([mpadded([mi(g)])])]),mo(↓))]),mtd([]),mtd([mrow(mo(↑),mstyle([TeXAtom([mpadded([mi(h)])])]))]),mtd([])),mtr(mtd([mi(C),mpadded([])]),mtd([munderover(mo(→),mpadded([mi(k)]),mpadded([mspace()]))]),mtd([mi(D)])))])"
+    },
+    {
+      "name": "cfrac-option",
+      "handlers": [
+        "CFrac"
+      ],
+      "tex": "\\cfrac[l]{1}{2}",
+      "variant": "option",
+      "class": "valid",
+      "mml": "math([mfrac(mrow(mpadded([mrow()]),mstyle([TeXAtom([mn(1)])])),mrow(mpadded([mrow()]),mstyle([TeXAtom([mn(2)])])))])"
+    },
+    {
+      "name": "cases-star",
+      "handlers": [
+        "Cases"
+      ],
+      "tex": "\\begin{dcases*}x&if x>0\\\\0&otherwise\\end{dcases*}",
+      "class": "valid",
+      "mml": "math([mrow(mo({),mtable(mtr(mtd([mi(x)]),mtd([mstyle([mtext(if x>0)])])),mtr(mtd([mn(0)]),mtd([mstyle([mtext(otherwise)])]))),mo())])"
+    },
+    {
+      "name": "center-colon",
+      "handlers": [
+        "CenterColon"
+      ],
+      "tex": "\\centercolon",
+      "class": "valid",
+      "mml": "math([mpadded([mo(:)])])"
+    },
+    {
+      "name": "commutator",
+      "handlers": [
+        "Commutator"
+      ],
+      "tex": "\\commutator{A}{B}",
+      "class": "valid",
+      "mml": "math([mrow(mo([),mi(A),mo(,),mi(B),mo(]))])"
+    },
+    {
+      "name": "cramped",
+      "handlers": [
+        "Cramped"
+      ],
+      "tex": "\\cramped{x^2}",
+      "class": "valid",
+      "mml": "math([mstyle([msup(mi(x),mn(2))])])"
+    },
+    {
+      "name": "declare-paired-delimiter",
+      "handlers": [
+        "DeclarePairedDelimiter"
+      ],
+      "tex": "\\DeclarePairedDelimiter{\\absx}{|}{|}\\absx{x}",
+      "class": "valid",
+      "mml": "math([mo(|),mi(x),mo(|)])"
+    },
+    {
+      "name": "declare-paired-delimiter-x",
+      "handlers": [
+        "DeclarePairedDelimiterX"
+      ],
+      "tex": "\\DeclarePairedDelimiterX{\\pairx}[2]{(}{)}{#1\\delimsize|#2}\\pairx{a}{b}",
+      "class": "valid",
+      "mml": "math([mo((),mi(a),mo(|),mi(b),mo())])"
+    },
+    {
+      "name": "declare-paired-delimiter-xpp",
+      "handlers": [
+        "DeclarePairedDelimiterXPP"
+      ],
+      "tex": "\\DeclarePairedDelimiterXPP{\\pairpp}[2]{P}{(}{)}{Q}{#1,#2}\\pairpp{a}{b}",
+      "class": "valid",
+      "mml": "math([mi(P),mo((),mi(a),mo(,),mi(b),mo()),mi(Q)])"
+    },
+    {
+      "name": "derivative",
+      "handlers": [
+        "Derivative"
+      ],
+      "tex": "\\dv{f}{x}",
+      "class": "valid",
+      "mml": "math([mfrac(mrow(TeXAtom([mi(d)]),mi(f)),mrow(TeXAtom([mi(d)]),mi(x)))])"
+    },
+    {
+      "name": "diagonal-matrix",
+      "handlers": [
+        "DiagonalMatrix"
+      ],
+      "tex": "\\begin{pmatrix}\\dmat{a,b}\\end{pmatrix}",
+      "class": "valid",
+      "mml": "math([mrow(mo((),mtable(mtr(mtd([mtable(mtr(mtd([mi(a)])))])),mtr(mtd([]),mtd([mtable(mtr(mtd([mi(b)])))]))),mo()))])"
+    },
+    {
+      "name": "diffd",
+      "handlers": [
+        "DiffD"
+      ],
+      "tex": "\\diffd",
+      "class": "valid",
+      "mml": "math([TeXAtom([mi(d)])])"
+    },
+    {
+      "name": "differential",
+      "handlers": [
+        "Differential"
+      ],
+      "tex": "\\dd{x}",
+      "class": "valid",
+      "mml": "math([TeXAtom([TeXAtom([mi(d)]),mi(x)])])"
+    },
+    {
+      "name": "empheq",
+      "handlers": [
+        "Empheq"
+      ],
+      "tex": "\\begin{empheq}{align}a&=b\\end{empheq}",
+      "class": "valid",
+      "mml": "math([mtable(mtr(mtd([mi(a)]),mtd([mi(),mo(=),mi(b)])))])"
+    },
+    {
+      "name": "empheq-delim",
+      "handlers": [
+        "EmpheqDelim"
+      ],
+      "tex": "\\empheql\\langle",
+      "class": "valid",
+      "mml": "math([mo(⟨)])"
+    },
+    {
+      "name": "empheq-mo",
+      "handlers": [
+        "EmpheqMO"
+      ],
+      "tex": "\\empheqlbrace",
+      "class": "valid",
+      "mml": "math([mo({)])"
+    },
+    {
+      "name": "numcases-entry",
+      "handlers": [
+        "NumCases",
+        "Entry"
+      ],
+      "tex": "\\begin{numcases}{f(x)=}x&if x>0\\\\0&otherwise\\end{numcases}",
+      "class": "valid",
+      "mml": "math([mtable(mtr(mtd([mpadded([mpadded([mi(f),mo((),mi(x),mo()),mo(=),mo({),mstyle([mspace()]),mphantom([mpadded([mtable(mtr(mtd([mi(x)]),mtd([mstyle([mtext(if x>0)])])),mtr(mtd([mn(0)]),mtd([mstyle([mtext(otherwise)])])))])])]),mphantom([mpadded([mtable(mtr(mtd([mi(x)]),mtd([mstyle([mtext(if x>0)])])))])])])]),mtd([mi(x)]),mtd([mstyle([mtext(if x>0)])])),mtr(mtd([]),mtd([mn(0)]),mtd([mstyle([mtext(otherwise)])])))])"
+    },
+    {
+      "name": "eqn-array",
+      "handlers": [
+        "EqnArray"
+      ],
+      "tex": "\\begin{align*}a&=b\\\\c&=d\\end{align*}",
+      "class": "valid",
+      "mml": "math([mtable(mtr(mtd([mi(a)]),mtd([mi(),mo(=),mi(b)])),mtr(mtd([mi(c)]),mtd([mi(),mo(=),mi(d)])))])"
+    },
+    {
+      "name": "equation",
+      "handlers": [
+        "Equation"
+      ],
+      "tex": "\\begin{equation*}a=b\\end{equation*}",
+      "class": "valid",
+      "mml": "math([mi(a),mo(=),mi(b)])"
+    },
+    {
+      "name": "eval",
+      "handlers": [
+        "Eval"
+      ],
+      "tex": "\\eval{x^2}_{0}^{1}",
+      "class": "valid",
+      "mml": "math([msubsup(mrow(mo(),msup(mi(x),mn(2)),TeXAtom([mpadded([mphantom([mo(∫)])])]),mo(|)),TeXAtom([mn(0)]),TeXAtom([mn(1)]))])"
+    },
+    {
+      "name": "expectation",
+      "handlers": [
+        "Expectation"
+      ],
+      "tex": "\\expval{A}",
+      "class": "valid",
+      "mml": "math([mrow(mo(⟨),TeXAtom([mi(A)]),mo(⟩))])"
+    },
+    {
+      "name": "expression-option",
+      "handlers": [
+        "Expression"
+      ],
+      "tex": "\\sin[2](x)",
+      "variant": "option",
+      "class": "valid",
+      "mml": "math([msup(mi(sin),mn(2)),mo(⁡),mrow(mo((),mi(x),mo()))])"
+    },
+    {
+      "name": "flalign-array",
+      "handlers": [
+        "FlalignArray"
+      ],
+      "tex": "\\begin{flalign*}a&=b&&\\end{flalign*}",
+      "class": "valid",
+      "mml": "math([mtable(mtr(mtd([mi(a)]),mtd([mi(),mo(=),mi(b)]),mtd([]),mtd([]),mtd([])))])"
+    },
+    {
+      "name": "flush-space-above",
+      "handlers": [
+        "FlushSpaceAbove"
+      ],
+      "tex": "\\begin{align*}a&=b\\\\\\MTFlushSpaceAbove\\vdotswithin{=}\\\\c&=d\\end{align*}",
+      "class": "valid",
+      "mml": "math([mtable(mtr(mtd([mi(a)]),mtd([mi(),mo(=),mi(b)])),mtr(mtd([mpadded([mpadded([mo(⋮)]),mphantom([mi(),mo(=),mi()])])])),mtr(mtd([mi(c)]),mtd([mi(),mo(=),mi(d)])))])"
+    },
+    {
+      "name": "flush-space-below",
+      "handlers": [
+        "FlushSpaceBelow"
+      ],
+      "tex": "\\begin{align*}a&=b\\\\\\vdotswithin{=}\\MTFlushSpaceBelow c&=d\\end{align*}",
+      "class": "valid",
+      "mml": "math([mtable(mtr(mtd([mi(a)]),mtd([mi(),mo(=),mi(b)])),mtr(mtd([mpadded([mpadded([mo(⋮)]),mphantom([mi(),mo(=),mi()])])])),mtr(mtd([mi(c)]),mtd([mi(),mo(=),mi(d)])))])"
+    },
+    {
+      "name": "genfrac",
+      "handlers": [
+        "Genfrac"
+      ],
+      "tex": "\\genfrac{(}{)}{1pt}{0}{a}{b}",
+      "class": "valid",
+      "mml": "math([mstyle([mrow(TeXAtom([mo(()]),mfrac(mi(a),mi(b)),TeXAtom([mo())]))])])"
+    },
+    {
+      "name": "declare-math-operator",
+      "handlers": [
+        "HandleDeclareOp"
+      ],
+      "tex": "\\DeclareMathOperator{\\Foo}{Foo}\\Foo(x)",
+      "class": "valid",
+      "mml": "math([mi(Foo),mo((),mi(x),mo())])"
+    },
+    {
+      "name": "notag",
+      "handlers": [
+        "HandleNoTag"
+      ],
+      "tex": "\\begin{align}a&=b\\notag\\end{align}",
+      "class": "valid",
+      "mml": "math([mtable(mtr(mtd([mi(a)]),mtd([mi(),mo(=),mi(b)])))])"
+    },
+    {
+      "name": "operator-name",
+      "handlers": [
+        "HandleOperatorName"
+      ],
+      "tex": "\\operatorname*{arg\\,max}_{x}",
+      "class": "valid",
+      "mml": "math([munder(TeXAtom([mi(arg),mstyle([mspace()]),mi(max)]),TeXAtom([mi(x)]))])"
+    },
+    {
+      "name": "eqref",
+      "handlers": [
+        "HandleRef"
+      ],
+      "tex": "\\begin{equation}a=b\\label{eq:a}\\end{equation}\\eqref{eq:a}",
+      "class": "valid",
+      "mml": "math([mi(a),mo(=),mi(b),mrow(mtext((???)))])"
+    },
+    {
+      "name": "shove-left",
+      "handlers": [
+        "HandleShove"
+      ],
+      "tex": "\\begin{multline*}a+b\\\\\\shoveleft{c+d}\\end{multline*}",
+      "class": "valid",
+      "mml": "math([mtable(mtr(mtd([mi(a),mo(+),mi(b)])),mtr(mtd([TeXAtom([mi(c),mo(+),mi(d)])])))])"
+    },
+    {
+      "name": "tag",
+      "handlers": [
+        "HandleTag"
+      ],
+      "tex": "\\begin{equation}a=b\\tag{T}\\end{equation}",
+      "class": "valid",
+      "mml": "math([mtable(mlabeledtr(mtd([mtext((T))]),mtd([mi(a),mo(=),mi(b)])))])"
+    },
+    {
+      "name": "identity-matrix",
+      "handlers": [
+        "IdentityMatrix"
+      ],
+      "tex": "\\begin{pmatrix}\\imat{2}\\end{pmatrix}",
+      "class": "valid",
+      "mml": "math([mrow(mo((),mtable(mtr(mtd([mn(1)]),mtd([mn(0)])),mtr(mtd([mn(0)]),mtd([mn(1)]))),mo()))])"
+    },
+    {
+      "name": "physics-ket",
+      "handlers": [
+        "Ket"
+      ],
+      "tex": "\\ket{x}",
+      "class": "valid",
+      "mml": "math([mrow(mo(|),TeXAtom([mi(x)]),mo(⟩))])"
+    },
+    {
+      "name": "physics-ketbra",
+      "handlers": [
+        "KetBra"
+      ],
+      "tex": "\\outerproduct{x}{y}",
+      "class": "valid",
+      "mml": "math([mrow(mo(|),TeXAtom([mi(x)]),TeXAtom([]),mo(⟩),TeXAtom([]),mstyle([mspace()]),TeXAtom([]),mo(⟨),TeXAtom([]),TeXAtom([mi(y)]),mo(|))])"
+    },
+    {
+      "name": "let",
+      "handlers": [
+        "Let"
+      ],
+      "tex": "\\let\\foo=\\alpha\\foo",
+      "class": "valid",
+      "mml": "math([mi(α)])"
+    },
+    {
+      "name": "macro",
+      "handlers": [
+        "Macro"
+      ],
+      "tex": "\\boxed{x}",
+      "class": "valid",
+      "mml": "math([menclose([TeXAtom([mstyle([TeXAtom([mi(x)])])])])])"
+    },
+    {
+      "name": "macro-def",
+      "handlers": [
+        "MacroDef"
+      ],
+      "tex": "\\def\\foo#1{#1^2}\\foo{x}",
+      "class": "valid",
+      "mml": "math([msup(mi(x),mn(2))])"
+    },
+    {
+      "name": "macro-with-template",
+      "handlers": [
+        "MacroWithTemplate"
+      ],
+      "tex": "\\adjustlimits\\sum_{i=1}\\prod_{j=1}",
+      "class": "valid",
+      "mml": "math([munder(TeXAtom([TeXAtom([mo(∑)]),TeXAtom([mpadded([mphantom([TeXAtom([mo(∏)])])])])]),TeXAtom([TeXAtom([mi(i),mo(=),mn(1)]),TeXAtom([mpadded([mphantom([TeXAtom([mi(j),mo(=),mn(1)])])])])])),mo(⁡),munder(TeXAtom([TeXAtom([mo(∏)]),TeXAtom([mpadded([mphantom([TeXAtom([mo(∑)])])])])]),TeXAtom([TeXAtom([mi(j),mo(=),mn(1)]),TeXAtom([mpadded([mphantom([TeXAtom([mi(i),mo(=),mn(1)])])])])]))])"
+    },
+    {
+      "name": "math-lap",
+      "handlers": [
+        "MathLap"
+      ],
+      "tex": "a+\\mathclap{x}+b",
+      "class": "valid",
+      "mml": "math([mi(a),mo(+),TeXAtom([mstyle([mpadded([mi(x)])])]),mo(+),mi(b)])"
+    },
+    {
+      "name": "math-mbox",
+      "handlers": [
+        "MathMBox"
+      ],
+      "tex": "\\mathmbox{x+y}",
+      "class": "valid",
+      "mml": "math([mrow(mi(x),mo(+),mi(y))])"
+    },
+    {
+      "name": "math-makebox-options",
+      "handlers": [
+        "MathMakeBox"
+      ],
+      "tex": "\\mathmakebox[2em][r]{x}",
+      "variant": "option",
+      "class": "valid",
+      "mml": "math([mpadded([mi(x)])])"
+    },
+    {
+      "name": "matrix-element",
+      "handlers": [
+        "MatrixElement"
+      ],
+      "tex": "\\mel{a}{A}{b}",
+      "class": "valid",
+      "mml": "math([mrow(mo(⟨),TeXAtom([mi(a)]),mo(|)),TeXAtom([mi(A)]),mrow(mo(|),TeXAtom([mi(b)]),mo(⟩))])"
+    },
+    {
+      "name": "matrix-quantity",
+      "handlers": [
+        "MatrixQuantity"
+      ],
+      "tex": "\\mqty(a&b\\\\c&d)",
+      "class": "valid",
+      "mml": "math([mrow(mo((),mtable(mtr(mtd([mi(a)]),mtd([mi(b)])),mtr(mtd([mi(c)]),mtd([mi(d)]))),mo()))])"
+    },
+    {
+      "name": "mt-lap",
+      "handlers": [
+        "MtLap"
+      ],
+      "tex": "a+\\clap{x}+b",
+      "class": "valid",
+      "mml": "math([mi(a),mo(+),mpadded([mstyle([mtext(x)])]),mo(+),mi(b)])"
+    },
+    {
+      "name": "mt-matrix-option",
+      "handlers": [
+        "MtMatrix"
+      ],
+      "tex": "\\begin{pmatrix*}[r]a&b\\\\c&d\\end{pmatrix*}",
+      "variant": "option",
+      "class": "valid",
+      "mml": "math([mrow(mo((),mtable(mtr(mtd([mi(a)]),mtd([mi(b)])),mtr(mtd([mi(c)]),mtd([mi(d)]))),mo()))])"
+    },
+    {
+      "name": "mt-multlined-option",
+      "handlers": [
+        "MtMultlined"
+      ],
+      "tex": "\\begin{multlined}[c]a+b\\\\c+d\\end{multlined}",
+      "variant": "option",
+      "class": "valid",
+      "mml": "math([mtable(mtr(mtd([mi(a),mo(+),mi(b),mspace()])),mtr(mtd([mspace(),mi(c),mo(+),mi(d)])))])"
+    },
+    {
+      "name": "mt-small-matrix-option",
+      "handlers": [
+        "MtSmallMatrix"
+      ],
+      "tex": "\\begin{psmallmatrix*}[r]a&b\\\\c&d\\end{psmallmatrix*}",
+      "variant": "option",
+      "class": "valid",
+      "mml": "math([mrow(mo((),mtable(mtr(mtd([mi(a)]),mtd([mi(b)])),mtr(mtd([mi(c)]),mtd([mi(d)]))),mo()))])"
+    },
+    {
+      "name": "multi-integral",
+      "handlers": [
+        "MultiIntegral"
+      ],
+      "tex": "\\idotsint_A f",
+      "class": "valid",
+      "mml": "math([mo(∫),mo(⋯),msub(mo(∫),mi(A)),mi(f)])"
+    },
+    {
+      "name": "multline",
+      "handlers": [
+        "Multline"
+      ],
+      "tex": "\\begin{multline*}a+b\\\\c+d\\end{multline*}",
+      "class": "valid",
+      "mml": "math([mtable(mtr(mtd([mi(a),mo(+),mi(b)])),mtr(mtd([mi(c),mo(+),mi(d)])))])"
+    },
+    {
+      "name": "n-arrow",
+      "handlers": [
+        "NArrow"
+      ],
+      "tex": "a\\nuparrow b",
+      "class": "valid",
+      "mml": "math([mi(a),TeXAtom([mtext(↑),mpadded([mpadded([menclose([mspace()])]),mphantom([mtext(↑)])])]),mi(b)])"
+    },
+    {
+      "name": "named-fn",
+      "handlers": [
+        "NamedFn"
+      ],
+      "tex": "\\rank(A)",
+      "class": "valid",
+      "mml": "math([mi(rank),mo(⁡),mo((),mi(A),mo())])"
+    },
+    {
+      "name": "named-op",
+      "handlers": [
+        "NamedOp"
+      ],
+      "tex": "\\injlim_{n} A_n",
+      "class": "valid",
+      "mml": "math([munder(mo(inj lim),TeXAtom([mi(n)])),msub(mi(A),mi(n))])"
+    },
+    {
+      "name": "newcommand",
+      "handlers": [
+        "NewCommand"
+      ],
+      "tex": "\\newcommand{\\foo}[1]{#1^2}\\foo{x}",
+      "class": "valid",
+      "mml": "math([msup(mi(x),mn(2))])"
+    },
+    {
+      "name": "newenvironment",
+      "handlers": [
+        "NewEnvironment"
+      ],
+      "tex": "\\newenvironment{foo}{a+}{+b}\\begin{foo}x\\end{foo}",
+      "class": "valid",
+      "mml": "math([mi(a),mo(+),mi(x),mo(+),mi(b)])"
+    },
+    {
+      "name": "newtagform-and-use",
+      "handlers": [
+        "NewTagForm",
+        "UseTagForm"
+      ],
+      "tex": "\\newtagform{brackets}{[}{]}\\usetagform{brackets}\\begin{equation}a=b\\tag{T}\\end{equation}",
+      "class": "valid",
+      "mml": "math([mtable(mlabeledtr(mtd([mtext([T])]),mtd([mi(a),mo(=),mi(b)])))])"
+    },
+    {
+      "name": "operator-application",
+      "handlers": [
+        "OperatorApplication"
+      ],
+      "tex": "\\grad(f)",
+      "class": "valid",
+      "mml": "math([TeXAtom([TeXAtom([mo(∇)])]),mo(⁡),mrow(mo((),mi(f),mo()))])"
+    },
+    {
+      "name": "pauli-matrix",
+      "handlers": [
+        "PauliMatrix"
+      ],
+      "tex": "\\begin{pmatrix}\\pmat{1}\\end{pmatrix}",
+      "class": "valid",
+      "mml": "math([mrow(mo((),mtable(mtr(mtd([mn(0)]),mtd([mn(1)])),mtr(mtd([mn(1)]),mtd([mn(0)]))),mo()))])"
+    },
+    {
+      "name": "prescript",
+      "handlers": [
+        "Prescript"
+      ],
+      "tex": "\\prescript{a}{b}{X}",
+      "class": "valid",
+      "mml": "math([mmultiscripts(mi(X),mprescripts(),mi(b),mi(a))])"
+    },
+    {
+      "name": "qqtext",
+      "handlers": [
+        "Qqtext"
+      ],
+      "tex": "a\\qq{if}b",
+      "class": "valid",
+      "mml": "math([mi(a),mstyle([mspace()]),mtext(if),mstyle([mspace()]),mi(b)])"
+    },
+    {
+      "name": "relation",
+      "handlers": [
+        "Relation"
+      ],
+      "tex": "a\\coloneqq b",
+      "class": "valid",
+      "mml": "math([mi(a),TeXAtom([mpadded([mo(:)]),mo(=)]),mi(b)])"
+    },
+    {
+      "name": "set-options",
+      "handlers": [
+        "SetOptions"
+      ],
+      "tex": "\\mathtoolsset{centercolon=true}:",
+      "class": "valid",
+      "mml": "math([mpadded([mo(:)])])"
+    },
+    {
+      "name": "short-vdots-within",
+      "handlers": [
+        "ShortVDotsWithin"
+      ],
+      "tex": "\\begin{align*}a&=b\\\\\\shortvdotswithin{=}\\\\c&=d\\end{align*}",
+      "class": "valid",
+      "mml": "math([mtable(mtr(mtd([mi(a)]),mtd([mi(),mo(=),mi(b)])),mtr(mtd([]),mtd([mpadded([mpadded([mo(⋮)]),mphantom([mi(),mo(=),mi()])])])),mtr(mtd([])),mtr(mtd([mi(c)]),mtd([mi(),mo(=),mi(d)])))])"
+    },
+    {
+      "name": "sideset",
+      "handlers": [
+        "SideSet"
+      ],
+      "tex": "\\sideset{_a^b}{_c^d}\\sum",
+      "class": "valid",
+      "mml": "math([TeXAtom([mmultiscripts(mo(∑),mi(c),mi(d),mprescripts(),mi(a),mi(b))])])"
+    },
+    {
+      "name": "spacer",
+      "handlers": [
+        "Spacer"
+      ],
+      "tex": "a\\negmedspace b",
+      "class": "valid",
+      "mml": "math([mi(a),mstyle([mspace()]),mi(b)])"
+    },
+    {
+      "name": "split-frac",
+      "handlers": [
+        "SplitFrac"
+      ],
+      "tex": "\\splitfrac{a+b}{c+d}",
+      "class": "valid",
+      "mml": "math([mstyle([mfrac(mstyle([mi(a),mo(+),mi(b),mi(),mspace()]),mstyle([mspace(),mi(),mi(c),mo(+),mi(d)]))])])"
+    },
+    {
+      "name": "spread-lines",
+      "handlers": [
+        "SpreadLines"
+      ],
+      "tex": "\\begin{spreadlines}{1em}\\begin{gathered}a\\\\b\\end{gathered}\\end{spreadlines}",
+      "class": "valid",
+      "mml": "math([mtable(mtr(mtd([mi(a)])),mtr(mtd([mi(b)])))])"
+    },
+    {
+      "name": "star-macro",
+      "handlers": [
+        "StarMacro"
+      ],
+      "tex": "\\va*{x}",
+      "class": "valid",
+      "mml": "math([TeXAtom([mover(mi(x),mo(→))])])"
+    },
+    {
+      "name": "tilde",
+      "handlers": [
+        "Tilde"
+      ],
+      "tex": "a\\nobreakspace b",
+      "class": "valid",
+      "mml": "math([mi(a),mtext( ),mi(b)])"
+    },
+    {
+      "name": "under-over-bracket-options",
+      "handlers": [
+        "UnderOverBracket"
+      ],
+      "tex": "\\overbracket[.2em][.3em]{x+y}",
+      "variant": "option",
+      "class": "valid",
+      "mml": "math([TeXAtom([mover(mrow(mi(x),mo(+),mi(y)),mpadded([mphantom([mi(x),mo(+),mi(y)])]))])])"
+    },
+    {
+      "name": "vdots-within",
+      "handlers": [
+        "VDotsWithin"
+      ],
+      "tex": "\\begin{align*}a&=b\\\\\\vdotswithin{=}\\\\c&=d\\end{align*}",
+      "class": "valid",
+      "mml": "math([mtable(mtr(mtd([mi(a)]),mtd([mi(),mo(=),mi(b)])),mtr(mtd([mpadded([mpadded([mo(⋮)]),mphantom([mi(),mo(=),mi()])])])),mtr(mtd([mi(c)]),mtd([mi(),mo(=),mi(d)])))])"
+    },
+    {
+      "name": "vector-bold",
+      "handlers": [
+        "VectorBold"
+      ],
+      "tex": "\\vb{x}",
+      "class": "valid",
+      "mml": "math([mi(x)])"
+    },
+    {
+      "name": "vector-operator",
+      "handlers": [
+        "VectorOperator"
+      ],
+      "tex": "\\divergence(A)",
+      "class": "valid",
+      "mml": "math([TeXAtom([TeXAtom([mo(∇)])]),mo(⋅),mrow(mo((),mi(A),mo()))])"
+    },
+    {
+      "name": "vnabla",
+      "handlers": [
+        "Vnabla"
+      ],
+      "tex": "\\vnabla",
+      "class": "valid",
+      "mml": "math([TeXAtom([TeXAtom([mo(∇)])])])"
+    },
+    {
+      "name": "xmathstrut-option",
+      "handlers": [
+        "XMathStrut"
+      ],
+      "tex": "\\xmathstrut[.2]{.3}x",
+      "variant": "option",
+      "class": "valid",
+      "mml": "math([TeXAtom([mpadded([mphantom([mo(()])])]),mi(x)])"
+    },
+    {
+      "name": "x-matrix",
+      "handlers": [
+        "XMatrix"
+      ],
+      "tex": "\\begin{pmatrix}\\xmat{x}{2}{2}\\end{pmatrix}",
+      "class": "valid",
+      "mml": "math([mrow(mo((),mtable(mtr(mtd([mi(x)]),mtd([mi(x)])),mtr(mtd([mi(x)]),mtd([mi(x)]))),mo()))])"
+    },
+    {
+      "name": "xalignat",
+      "handlers": [
+        "XalignAt"
+      ],
+      "tex": "\\begin{xalignat*}{2}a&=b&c&=d\\end{xalignat*}",
+      "class": "valid",
+      "mml": "math([mtable(mtr(mtd([]),mtd([mi(a)]),mtd([mi(),mo(=),mi(b)]),mtd([]),mtd([mi(c)]),mtd([mi(),mo(=),mi(d)]),mtd([])))])"
+    },
+    {
+      "name": "amscd-min-width",
+      "handlers": [
+        "minCDarrowwidth"
+      ],
+      "tex": "\\minCDarrowwidth{3em}\\begin{CD}A@>>>B\\end{CD}",
+      "class": "valid",
+      "mml": "math([mtable(mtr(mtd([mi(A),mpadded([])]),mtd([mover(mo(→),mpadded([mspace()]))]),mtd([mi(B)])))])"
+    },
+    {
+      "name": "amscd-min-height",
+      "handlers": [
+        "minCDarrowheight"
+      ],
+      "tex": "\\minCDarrowheight{3em}\\begin{CD}A@VVV\\\\B\\end{CD}",
+      "class": "valid",
+      "mml": "math([mtable(mtr(mtd([mi(A),mpadded([])]),mtd([mo(↓)]),mtd([])),mtr(mtd([mi(B)])))])"
+    },
+    {
+      "name": "x-arrow-option",
+      "handlers": [
+        "xArrow"
+      ],
+      "tex": "\\xrightarrow[below]{above}",
+      "variant": "option",
+      "class": "valid",
+      "mml": "math([munderover(mstyle([mo(→)]),mpadded([mi(b),mi(e),mi(l),mi(o),mi(w),mspace()]),mpadded([mi(a),mi(b),mi(o),mi(v),mi(e),mspace()]))])"
+    },
+    {
+      "name": "newcommand-default-omitted",
+      "handlers": [
+        "NewCommand"
+      ],
+      "tex": "\\newcommand{\\foo}[2][d]{#1+#2}\\foo{x}",
+      "variant": "option-default-omitted",
+      "class": "valid",
+      "mml": "math([mi(d),mo(+),mi(x)])"
+    },
+    {
+      "name": "newcommand-default-provided",
+      "handlers": [
+        "NewCommand"
+      ],
+      "tex": "\\newcommand{\\foo}[2][d]{#1+#2}\\foo[q]{x}",
+      "variant": "option-default-provided",
+      "class": "valid",
+      "mml": "math([mi(q),mo(+),mi(x)])"
+    },
+    {
+      "name": "newenvironment-default-omitted",
+      "handlers": [
+        "NewEnvironment"
+      ],
+      "tex": "\\newenvironment{foo}[2][d]{#1+#2+}{+z}\\begin{foo}{x}y\\end{foo}",
+      "variant": "option-default-omitted",
+      "class": "valid",
+      "mml": "math([mi(d),mo(+),mi(x),mo(+),mi(y),mo(+),mi(z)])"
+    },
+    {
+      "name": "newenvironment-default-provided",
+      "handlers": [
+        "NewEnvironment"
+      ],
+      "tex": "\\newenvironment{foo}[2][d]{#1+#2+}{+z}\\begin{foo}[q]{x}y\\end{foo}",
+      "variant": "option-default-provided",
+      "class": "valid",
+      "mml": "math([mi(q),mo(+),mi(x),mo(+),mi(y),mo(+),mi(z)])"
+    },
+    {
+      "name": "newcommand-argument-count-error",
+      "handlers": [
+        "NewCommand"
+      ],
+      "tex": "\\newcommand{\\foo}[x]{x}",
+      "class": "merror",
+      "error_id": "IllegalParamNumber",
+      "mml": "math([merror([mtext(Illegal number of parameters specified in \\newcommand)])])"
+    },
+    {
+      "name": "newcommand-parameter-reference-error",
+      "handlers": [
+        "NewCommand"
+      ],
+      "tex": "\\newcommand{\\foo}[1]{#2}\\foo{x}",
+      "class": "merror",
+      "error_id": "IllegalMacroParam",
+      "mml": "math([merror([mtext(Illegal macro parameter reference)])])"
+    },
+    {
+      "name": "newenvironment-argument-count-error",
+      "handlers": [
+        "NewEnvironment"
+      ],
+      "tex": "\\newenvironment{foo}[x]{}{}",
+      "class": "merror",
+      "error_id": "IllegalParamNumber",
+      "mml": "math([merror([mtext(Illegal number of parameters specified in \\newenvironment)])])"
+    },
+    {
+      "name": "newenvironment-end-parameter-error",
+      "handlers": [
+        "NewEnvironment"
+      ],
+      "tex": "\\newenvironment{foo}[1]{}{#1}\\begin{foo}{x}y\\end{foo}",
+      "class": "merror",
+      "error_id": "IllegalMacroParam",
+      "mml": "math([merror([mtext(Illegal macro parameter reference)])])"
+    },
+    {
+      "name": "tag-disallowed-environment-error",
+      "handlers": [
+        "HandleTag"
+      ],
+      "tex": "\\begin{aligned}a&=b\\tag{T}\\end{aligned}",
+      "class": "merror",
+      "error_id": "CommandNotAllowedInEnv",
+      "mml": "math([merror([mtext(\\tag not allowed in aligned environment)])])"
+    },
+    {
+      "name": "tag-duplicate-error",
+      "handlers": [
+        "HandleTag"
+      ],
+      "tex": "\\begin{equation}a=b\\tag{A}\\tag{B}\\end{equation}",
+      "class": "merror",
+      "error_id": "MultipleCommand",
+      "mml": "math([merror([mtext(Multiple \\tag)])])"
+    },
+    {
+      "name": "notag-top-level",
+      "handlers": [
+        "HandleNoTag"
+      ],
+      "tex": "a\\notag",
+      "variant": "top-level",
+      "class": "valid",
+      "mml": "math([mtable(mlabeledtr(mtd([]),mtd([mi(a)])))])"
+    },
+    {
+      "name": "newtagform-duplicate-error",
+      "handlers": [
+        "NewTagForm"
+      ],
+      "tex": "\\newtagform{x}{(}{)}\\newtagform{x}{[}{]}",
+      "class": "merror",
+      "error_id": "DuplicateTagForm",
+      "mml": "math([merror([mtext(Duplicate tag form: x)])])"
+    },
+    {
+      "name": "usetagform-undefined-error",
+      "handlers": [
+        "UseTagForm"
+      ],
+      "tex": "\\usetagform{notdefined}",
+      "class": "merror",
+      "error_id": "UndefinedTagForm",
+      "mml": "math([merror([mtext(Undefined tag form: notdefined)])])"
+    },
+    {
+      "name": "mathtoolsset-invalid-key-error",
+      "handlers": [
+        "SetOptions"
+      ],
+      "tex": "\\mathtoolsset{not-an-option=true}",
+      "class": "merror",
+      "error_id": "InvalidOption",
+      "mml": "math([merror([mtext(Invalid option: not-an-option)])])"
+    },
+    {
+      "name": "mathtoolsset-string-value",
+      "handlers": [
+        "SetOptions"
+      ],
+      "tex": "\\mathtoolsset{centercolon=maybe}",
+      "variant": "string-value",
+      "class": "valid",
+      "mml": "math([])"
+    },
+    {
+      "name": "empheq-option-left-right",
+      "handlers": [
+        "Empheq"
+      ],
+      "tex": "\\begin{empheq}[left={(},right={)}]{align}a&=b\\end{empheq}",
+      "variant": "option",
+      "class": "valid",
+      "mml": "math([mtable(mtr(mtd([mpadded([mpadded([mo((),mphantom([mpadded([mtable(mtr(mtd([mi(a)]),mtd([mi(),mo(=),mi(b)])))])])]),mphantom([mpadded([mtable(mtr(mtd([mi(a)]),mtd([mi(),mo(=),mi(b)])))])])])]),mtd([mi(a)]),mtd([mi(),mo(=),mi(b)]),mtd([mpadded([mpadded([mo()),mphantom([mpadded([mtable(mtr(mtd([mi(a)]),mtd([mi(),mo(=),mi(b)])))])])]),mphantom([mpadded([mtable(mtr(mtd([mi(a)]),mtd([mi(),mo(=),mi(b)])))])])])])))])"
+    },
+    {
+      "name": "empheq-invalid-option-error",
+      "handlers": [
+        "Empheq"
+      ],
+      "tex": "\\begin{empheq}[box=\\boxed]{align}a&=b\\end{empheq}",
+      "class": "merror",
+      "error_id": "InvalidOption",
+      "mml": "math([merror([mtext(Invalid option: box)])])"
+    }
+  ]
+}
