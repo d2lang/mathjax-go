@@ -36,10 +36,9 @@ func TestPhysicsVectorFontPinnedReferences(t *testing.T) {
 	}
 	// Preserve the exact primary fixtures. These independently demonstrated
 	// preexisting attributes are outside Physics font selection: ordinary
-	// Accent adds mover.accent and treats vec as stretchy (D045); MtLap omits
+	// Accent adds mover.accent; MtLap omits
 	// two explicit mstyle defaults. Compare every other tree field exactly.
 	accentShapes := map[string]bool{"accent-hat": true, "accent-dot": true, "arrow": true, "arrow-star": true, "unit": true, "unit-star": true, "outer-arrow": true, "nested-arrow": true, "long-alias": true, "bold-arrow-control": true, "multi-alias": true}
-	renderLimits := map[string]bool{"nested-arrow": true, "bold-arrow-control": true, "multi-alias": true}
 	for _, c := range fixture.Cases {
 		t.Run(c.Name, func(t *testing.T) {
 			root, err := tex.NewCompiler().Compile(c.Tex, c.Display)
@@ -87,10 +86,8 @@ func TestPhysicsVectorFontPinnedReferences(t *testing.T) {
 			if err != nil {
 				t.Fatal(err)
 			}
-			if !renderLimits[label] {
-				if h := fmt.Sprintf("%x", sha256.Sum256([]byte(svg))); h != c.SVGSHA256 {
-					t.Errorf("complete SVG %s, want %s", h, c.SVGSHA256)
-				}
+			if h := fmt.Sprintf("%x", sha256.Sum256([]byte(svg))); h != c.SVGSHA256 {
+				t.Errorf("complete SVG %s, want %s", h, c.SVGSHA256)
 			}
 		})
 	}
@@ -102,11 +99,6 @@ func qualifyVectorTree(n *nestedFontTree, accent, clap bool) {
 	if accent && n.Kind == "mover" {
 		if _, exists := n.Attributes["accent"]; !exists {
 			n.Attributes["accent"] = true
-		}
-	}
-	if accent && n.Kind == "mo" && len(n.Children) == 1 && n.Children[0].Text != nil && *n.Children[0].Text == "→" {
-		if n.Attributes["stretchy"] == false {
-			delete(n.Attributes, "stretchy")
 		}
 	}
 	if clap && n.Kind == "mstyle" && n.Attributes["displaystyle"] == false && n.Attributes["scriptlevel"] == float64(0) {
