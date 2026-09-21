@@ -8,11 +8,11 @@ import (
 )
 
 func TestResolvedFontScopeSurvivesParserClone(t *testing.T) {
-	inner := token("mi", "x")
+	inner := ambientFontToken(token("mi", "x"))
 	applyScopedMathVariant(inner, "normal")
 	copied := inner.Clone()
-	sibling := token("mi", "y")
-	kept := token("mi", "R")
+	sibling := ambientFontToken(token("mi", "y"))
+	kept := ambientFontToken(token("mi", "R"))
 	kept.Attributes.Set("mathvariant", "double-struck")
 	kept.Attributes.Set("mjx-keep-attrs", "id mathvariant")
 	applyScopedMathVariant(node("mrow", copied, sibling, kept), "bold")

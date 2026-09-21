@@ -248,7 +248,6 @@ func (p *parser) parseCharacter() *mml.Node {
 		}
 		identifier := token("mi", text)
 		if p.multiLetterFont != "" {
-			identifier.Attributes.Set("mathvariant", p.multiLetterFont)
 			if p.multiLetterFont == "normal" && len(text) > 1 {
 				// ParseMethods.variable records noAutoOP as the internal autoOP
 				// property, rather than allowing MmlMi to promote a roman run to
@@ -256,7 +255,7 @@ func (p *parser) parseCharacter() *mml.Node {
 				identifier.SetProperty("autoOP", false)
 			}
 		}
-		return identifier
+		return ambientLiteralToken(identifier, r)
 	}
 	if unicode.IsDigit(r) || ((r == '.' || r == ',') && p.pos < len(p.source) && unicode.IsDigit(p.peekRune())) {
 		start := p.pos - utf8.RuneLen(r)
@@ -267,7 +266,7 @@ func (p *parser) parseCharacter() *mml.Node {
 			}
 			p.consumeRune()
 		}
-		return token("mn", p.source[start:p.pos])
+		return ambientLiteralToken(token("mn", p.source[start:p.pos]), r)
 	}
 	// The selected package closure installs two character-map overrides ahead
 	// of BaseConfiguration.Other.  Mathtools' centered-colon handler creates a
@@ -277,7 +276,7 @@ func (p *parser) parseCharacter() *mml.Node {
 	if r == ':' {
 		return token("mo", ":")
 	}
-	if r == ')' || r == ']' {
+	if r == ')' || r == ']' || r == '|' {
 		return setAttributes(token("mo", string(r)), map[string]any{"stretchy": false})
 	}
 	text := string(r)
@@ -288,7 +287,7 @@ func (p *parser) parseCharacter() *mml.Node {
 	} else if r == '`' {
 		text = "‘"
 	}
-	mo := token("mo", text)
+	mo := ambientLiteralToken(token("mo", text), r)
 	// BaseConfiguration.Other records raw operators for the fixStretchy
 	// postfilter.  addNode() leaves the observable in-lists marker even after
 	// the temporary fixStretchy property is removed.
@@ -454,7 +453,7 @@ func (p *parser) parseString(source string) (*mml.Node, error) {
 // environment.  Its multiLetterIdentifiers expression consumes an ASCII
 // letter run into one mi and noAutoOP prevents a multi-letter roman identifier
 // from being reclassified as a named operator.
-func (p *parser) parseMathFontString(source, variant string) (*mml.Node, error) {
+func (p *parser) parseMathFontString(source, variant string, ambientOnly bool) (*mml.Node, error) {
 	sub := &parser{
 		source:          source,
 		state:           p.state,
@@ -468,7 +467,7 @@ func (p *parser) parseMathFontString(source, variant string) (*mml.Node, error) 
 	result := row(children, true)
 	// ParseUtil.getFontDef applies the selected font to variables, digits,
 	// mapped math characters, and operators created by the nested parser.
-	applyScopedMathVariant(result, variant)
+	applyFontScope(result, variant, ambientOnly)
 	return result, nil
 }
 
@@ -731,8 +730,15 @@ func applyMathVariant(n *mml.Node, variant string) {
 const resolvedFontScope = "go-resolved-font-scope"
 
 func applyScopedMathVariant(n *mml.Node, variant string) {
+	applyFontScope(n, variant, true)
+}
+
+func applyFontScope(n *mml.Node, variant string, ambientOnly bool) {
 	n.Walk(func(current *mml.Node) bool {
 		if current.Kind != "mi" && current.Kind != "mn" && current.Kind != "mo" {
+			return true
+		}
+		if eligible, _ := current.Property(ambientFontSource); ambientOnly && eligible != true {
 			return true
 		}
 		if _, resolved := current.Property(resolvedFontScope); resolved {
@@ -747,6 +753,34 @@ func applyScopedMathVariant(n *mml.Node, variant string) {
 		current.SetProperty(resolvedFontScope, true)
 		return true
 	})
+}
+
+// Font environments apply at selected token-creation sites in ParseMethods,
+// BaseConfiguration.Other and BaseMethods.Accent, not at the generic factory.
+// Keep that provenance while the parser lowers MathFont/SetFont scopes.
+const ambientFontSource = "go-ambient-font-source"
+
+func ambientFontToken(n *mml.Node) *mml.Node {
+	n.SetProperty(ambientFontSource, true)
+	return n
+}
+
+func ambientLiteralToken(n *mml.Node, character rune) *mml.Node {
+	// Other's Unicode-range variant overrides the current font. Reuse the
+	// pinned table without changing token-kind or character classification.
+	for _, interval := range mjOperatorRanges {
+		if int(character) < interval.First {
+			break
+		}
+		if int(character) <= interval.Last {
+			if interval.HasVariant {
+				n.Attributes.Set("mathvariant", interval.Variant)
+				return n
+			}
+			break
+		}
+	}
+	return ambientFontToken(n)
 }
 
 var styleDeclarations = map[string]map[string]any{

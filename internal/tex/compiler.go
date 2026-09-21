@@ -67,6 +67,7 @@ func (c *Compiler) Compile(source string, display bool) (*mml.Node, error) {
 	}
 	root.Walk(func(n *mml.Node) bool {
 		n.RemoveProperty(resolvedFontScope)
+		n.RemoveProperty(ambientFontSource)
 		return true
 	})
 	setMathMLInheritance(root, display)

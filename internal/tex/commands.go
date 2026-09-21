@@ -644,6 +644,7 @@ func (p *parser) accent(name string) ([]*mml.Node, error) {
 	}
 	wide := strings.HasPrefix(name, "wide") || name == "vec"
 	accent := operator(accentCharacters[name], mml.TeXClassOrd, map[string]any{"accent": true, "stretchy": wide})
+	ambientFontToken(accent)
 	// BaseMethods.Accent passes mathaccent through NodeUtil's property layer.
 	// SVGmo uses that internal marker to zero the accent width and translate
 	// the source glyph around its origin before the mover centers it.
@@ -848,7 +849,9 @@ func (p *parser) mathFont(name string) ([]*mml.Node, error) {
 	if err != nil {
 		return nil, err
 	}
-	arg, err := p.parseMathFontString(raw, mathVariants[name])
+	// The Go-only boldsymbol extension predates this ambient-font policy.
+	// Keep its existing whole-token scope; the pinned package omits it.
+	arg, err := p.parseMathFontString(raw, mathVariants[name], name != "boldsymbol")
 	if err != nil {
 		return nil, err
 	}
