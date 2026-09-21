@@ -1,0 +1,3653 @@
+{
+  "oracle": "Unmodified pinned D2 MathJax3.2.2; fresh VM per case/mode; AST observed before unchanged SVG renderer",
+  "mathjaxGitCommit": "ad8f5c21cb810236551da8c6512ba733e67357ee",
+  "assetsSHA256": {
+    "polyfills.js": "7fe1d048c78b0e09854c1259f7413868a51cc8f0c822489eb1ac36ae6c85ce01",
+    "mathjax.js": "cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869",
+    "setup.js": "a52cb0bbabfbd7796b9fedd793b9386c474e3123e788ee151cbe47ca1fa6e881"
+  },
+  "cases": [
+    {
+      "name": "up-short-inline",
+      "tex": "\\overset{\\uparrow}{x}",
+      "display": false,
+      "width": 11,
+      "height": 24,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mover",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mo",
+                    "text": null,
+                    "attributes": {
+                      "stretchy": false
+                    },
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "↑",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "cd6465d5701e050cfedaeb96eac71bc0ef5f91c26aa49fbf4d3511f55668cb7d"
+    },
+    {
+      "name": "up-short-display",
+      "tex": "\\overset{\\uparrow}{x}",
+      "display": true,
+      "width": 11,
+      "height": 24,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mover",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mo",
+                    "text": null,
+                    "attributes": {
+                      "stretchy": false
+                    },
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "↑",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "cd6465d5701e050cfedaeb96eac71bc0ef5f91c26aa49fbf4d3511f55668cb7d"
+    },
+    {
+      "name": "up-long-inline",
+      "tex": "\\overset{\\uparrow}{abcdef}",
+      "display": false,
+      "width": 53,
+      "height": 32,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mover",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "mrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "a",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "b",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "c",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "d",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "e",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "f",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mo",
+                    "text": null,
+                    "attributes": {
+                      "stretchy": false
+                    },
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "↑",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "bc1a375664231b7afb45b93503fa2d85c425ccb8471243bd0c5895bd4a252990"
+    },
+    {
+      "name": "up-long-display",
+      "tex": "\\overset{\\uparrow}{abcdef}",
+      "display": true,
+      "width": 53,
+      "height": 32,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mover",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "mrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "a",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "b",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "c",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "d",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "e",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "f",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mo",
+                    "text": null,
+                    "attributes": {
+                      "stretchy": false
+                    },
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "↑",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "bc1a375664231b7afb45b93503fa2d85c425ccb8471243bd0c5895bd4a252990"
+    },
+    {
+      "name": "down-short-inline",
+      "tex": "\\underset{\\downarrow}{x}",
+      "display": false,
+      "width": 11,
+      "height": 25,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "munder",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mo",
+                    "text": null,
+                    "attributes": {
+                      "stretchy": false
+                    },
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "↓",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "a957432c57f910c40138f9b5c907ff35936b647e74a273714c00ac8223a3c4cc"
+    },
+    {
+      "name": "down-short-display",
+      "tex": "\\underset{\\downarrow}{x}",
+      "display": true,
+      "width": 11,
+      "height": 25,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "munder",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mo",
+                    "text": null,
+                    "attributes": {
+                      "stretchy": false
+                    },
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "↓",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "a957432c57f910c40138f9b5c907ff35936b647e74a273714c00ac8223a3c4cc"
+    },
+    {
+      "name": "down-long-inline",
+      "tex": "\\underset{\\downarrow}{abcdef}",
+      "display": false,
+      "width": 53,
+      "height": 33,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "munder",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "mrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "a",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "b",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "c",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "d",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "e",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "f",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mo",
+                    "text": null,
+                    "attributes": {
+                      "stretchy": false
+                    },
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "↓",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "34bbd220b0245cad62d016451f0b5ad5608c7488d14edc7680285f4f095b5399"
+    },
+    {
+      "name": "down-long-display",
+      "tex": "\\underset{\\downarrow}{abcdef}",
+      "display": true,
+      "width": 53,
+      "height": 33,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "munder",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "mrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "a",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "b",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "c",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "d",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "e",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "f",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mo",
+                    "text": null,
+                    "attributes": {
+                      "stretchy": false
+                    },
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "↓",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "34bbd220b0245cad62d016451f0b5ad5608c7488d14edc7680285f4f095b5399"
+    },
+    {
+      "name": "ordinary-sup-inline",
+      "tex": "x^a",
+      "display": false,
+      "width": 19,
+      "height": 13,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "msup",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "a",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "42895f547250a0fd563fcbdb10e9232afee3e15ed006c752c8e25e818c77d35a"
+    },
+    {
+      "name": "ordinary-sup-display",
+      "tex": "x^a",
+      "display": true,
+      "width": 19,
+      "height": 14,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "msup",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "a",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "588ecf350351bf3d17b8bcbaa79798af7a566277b1a89978deb4943473db84e5"
+    },
+    {
+      "name": "ordinary-sub-inline",
+      "tex": "x_a",
+      "display": false,
+      "width": 19,
+      "height": 11,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "msub",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "a",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "646ce1726f0769d61d116fce1886bc7cad188e23f737b6cc60d18ce7cad211b7"
+    },
+    {
+      "name": "ordinary-sub-display",
+      "tex": "x_a",
+      "display": true,
+      "width": 19,
+      "height": 11,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "msub",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "a",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "646ce1726f0769d61d116fce1886bc7cad188e23f737b6cc60d18ce7cad211b7"
+    },
+    {
+      "name": "over-sum-inline",
+      "tex": "\\overset{a}{\\sum}",
+      "display": false,
+      "width": 20,
+      "height": 30,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mover",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "mo",
+                    "text": null,
+                    "attributes": {
+                      "movablelimits": false
+                    },
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "∑",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "a",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "f1cdea3c3021267fb639c8bfde98af000299579f50b502870c2dc9f33c36b47d"
+    },
+    {
+      "name": "over-sum-display",
+      "tex": "\\overset{a}{\\sum}",
+      "display": true,
+      "width": 27,
+      "height": 37,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mover",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "mo",
+                    "text": null,
+                    "attributes": {
+                      "movablelimits": false
+                    },
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "∑",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "a",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "3b5aabed1559f515ab4c530c76a46bb2dec9410ec7b1680211bf08e456a532c0"
+    },
+    {
+      "name": "under-sum-inline",
+      "tex": "\\underset{a}{\\sum}",
+      "display": false,
+      "width": 20,
+      "height": 31,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "munder",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "mo",
+                    "text": null,
+                    "attributes": {
+                      "movablelimits": false
+                    },
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "∑",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "a",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "c7567d1143067a4e886d34d71ee51a502e8018b506f251fd240891f79de82593"
+    },
+    {
+      "name": "under-sum-display",
+      "tex": "\\underset{a}{\\sum}",
+      "display": true,
+      "width": 27,
+      "height": 39,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "munder",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "mo",
+                    "text": null,
+                    "attributes": {
+                      "movablelimits": false
+                    },
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "∑",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "a",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "0b4ef4dbaab58a97692b9246dbbe86c7ee2e1f602f1a415d65a461f31e6b38a3"
+    },
+    {
+      "name": "over-limits-inline",
+      "tex": "\\overset{a}{\\sum_i^n}",
+      "display": false,
+      "width": 37,
+      "height": 21,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mover",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "munderover",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mo",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "∑",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "i",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "n",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "a",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "f63b276df3be9e8b6de3b34d6e55fd1cc598f0df9aac95de6d4d941e9b48cf57"
+    },
+    {
+      "name": "over-limits-display",
+      "tex": "\\overset{a}{\\sum_i^n}",
+      "display": true,
+      "width": 27,
+      "height": 61,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mover",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "munderover",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mo",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "∑",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "i",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "n",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "a",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "817888c9d6bd392ed383b25561660d2c1247147a6c2428b0a4d4a5f1ffa8c4a3"
+    },
+    {
+      "name": "under-limits-inline",
+      "tex": "\\underset{a}{\\sum_i^n}",
+      "display": false,
+      "width": 37,
+      "height": 21,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "munder",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "munderover",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mo",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "∑",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "i",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "n",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "a",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "bc676f23933a2d9b8276f2f6dc94125c1b2c5e10e8828f56ee90ee0fa934b5f3"
+    },
+    {
+      "name": "under-limits-display",
+      "tex": "\\underset{a}{\\sum_i^n}",
+      "display": true,
+      "width": 27,
+      "height": 63,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "munder",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "munderover",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mo",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "∑",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "i",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "n",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "a",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "dbef7f640912087c9c046d9ceda70cde766b959ff541fb09a23af9332b0fa748"
+    },
+    {
+      "name": "over-mathop-inline",
+      "tex": "\\overset{a}{\\mathop{x}}",
+      "display": false,
+      "width": 11,
+      "height": 20,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mover",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "TeXAtom",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "inferredMrow",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "x",
+                                "attributes": {},
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "a",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "53b54b411102c3a73326c2d1ea93120723a18d7ee087ec8ac54669fd45485cf7"
+    },
+    {
+      "name": "over-mathop-display",
+      "tex": "\\overset{a}{\\mathop{x}}",
+      "display": true,
+      "width": 11,
+      "height": 20,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mover",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "TeXAtom",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "inferredMrow",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "x",
+                                "attributes": {},
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "a",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "53b54b411102c3a73326c2d1ea93120723a18d7ee087ec8ac54669fd45485cf7"
+    },
+    {
+      "name": "under-mathop-inline",
+      "tex": "\\underset{a}{\\mathop{x}}",
+      "display": false,
+      "width": 11,
+      "height": 21,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "munder",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "TeXAtom",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "inferredMrow",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "x",
+                                "attributes": {},
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "a",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "22eb0fb23197a9a9ba8baf874edd5fb9504e42f2a15b4bf49f0da1af6e457d0a"
+    },
+    {
+      "name": "under-mathop-display",
+      "tex": "\\underset{a}{\\mathop{x}}",
+      "display": true,
+      "width": 11,
+      "height": 21,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "munder",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "TeXAtom",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "inferredMrow",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "x",
+                                "attributes": {},
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "a",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "22eb0fb23197a9a9ba8baf874edd5fb9504e42f2a15b4bf49f0da1af6e457d0a"
+    },
+    {
+      "name": "over-explicit-accent-inline",
+      "tex": "\\overset{\\mmlToken{mo}[accent=true]{→}}{x}",
+      "display": false,
+      "width": 11,
+      "height": 21,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mover",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mo",
+                    "text": null,
+                    "attributes": {
+                      "accent": false
+                    },
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "→",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "d2f57637bd6775f1f3baa02c5075fb4cd0c81b84aa83618b5c7f9c26770c9c04"
+    },
+    {
+      "name": "over-explicit-accent-display",
+      "tex": "\\overset{\\mmlToken{mo}[accent=true]{→}}{x}",
+      "display": true,
+      "width": 11,
+      "height": 21,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mover",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mo",
+                    "text": null,
+                    "attributes": {
+                      "accent": false
+                    },
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "→",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "d2f57637bd6775f1f3baa02c5075fb4cd0c81b84aa83618b5c7f9c26770c9c04"
+    },
+    {
+      "name": "under-explicit-accent-inline",
+      "tex": "\\underset{\\mmlToken{mo}[accent=true]{→}}{x}",
+      "display": false,
+      "width": 11,
+      "height": 22,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "munder",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mo",
+                    "text": null,
+                    "attributes": {
+                      "accent": false
+                    },
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "→",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "b3dbc35c5f16cd6b4097f8ff77fbdbda887d4fd2eb7a4299dabedf88abcf03a2"
+    },
+    {
+      "name": "under-explicit-accent-display",
+      "tex": "\\underset{\\mmlToken{mo}[accent=true]{→}}{x}",
+      "display": true,
+      "width": 11,
+      "height": 22,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "munder",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mo",
+                    "text": null,
+                    "attributes": {
+                      "accent": false
+                    },
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "→",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "b3dbc35c5f16cd6b4097f8ff77fbdbda887d4fd2eb7a4299dabedf88abcf03a2"
+    },
+    {
+      "name": "over-grouped-accent-inline",
+      "tex": "\\overset{{\\to}}{x}",
+      "display": false,
+      "width": 11,
+      "height": 21,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mover",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TeXAtom",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "inferredMrow",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "mo",
+                            "text": null,
+                            "attributes": {
+                              "accent": false,
+                              "stretchy": false
+                            },
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "→",
+                                "attributes": {},
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "83ba6e7afb98d352b6999d57eab904af03dcea3ebd2236ecc5bef4427075df93"
+    },
+    {
+      "name": "over-grouped-accent-display",
+      "tex": "\\overset{{\\to}}{x}",
+      "display": true,
+      "width": 11,
+      "height": 21,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mover",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TeXAtom",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "inferredMrow",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "mo",
+                            "text": null,
+                            "attributes": {
+                              "accent": false,
+                              "stretchy": false
+                            },
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "→",
+                                "attributes": {},
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "83ba6e7afb98d352b6999d57eab904af03dcea3ebd2236ecc5bef4427075df93"
+    },
+    {
+      "name": "under-grouped-accent-inline",
+      "tex": "\\underset{{\\to}}{x}",
+      "display": false,
+      "width": 11,
+      "height": 22,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "munder",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TeXAtom",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "inferredMrow",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "mo",
+                            "text": null,
+                            "attributes": {
+                              "accent": false,
+                              "stretchy": false
+                            },
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "→",
+                                "attributes": {},
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "a2d4227edcbb4d000d860320f5986482381a92e12a17c80d218269292c4fff95"
+    },
+    {
+      "name": "under-grouped-accent-display",
+      "tex": "\\underset{{\\to}}{x}",
+      "display": true,
+      "width": 11,
+      "height": 22,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "munder",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TeXAtom",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "inferredMrow",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "mo",
+                            "text": null,
+                            "attributes": {
+                              "accent": false,
+                              "stretchy": false
+                            },
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "→",
+                                "attributes": {},
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "a2d4227edcbb4d000d860320f5986482381a92e12a17c80d218269292c4fff95"
+    },
+    {
+      "name": "over-explicit-base-inline",
+      "tex": "\\overset{a}{\\mmlToken{mo}[movablelimits=true]{x}}",
+      "display": false,
+      "width": 10,
+      "height": 19,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mover",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "mo",
+                    "text": null,
+                    "attributes": {
+                      "movablelimits": false
+                    },
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "a",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "36e8f4c28ebfd8038869cf9921fee692e8ba437e59384be25f6533a2062304e1"
+    },
+    {
+      "name": "over-explicit-base-display",
+      "tex": "\\overset{a}{\\mmlToken{mo}[movablelimits=true]{x}}",
+      "display": true,
+      "width": 10,
+      "height": 19,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mover",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "mo",
+                    "text": null,
+                    "attributes": {
+                      "movablelimits": false
+                    },
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "a",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "36e8f4c28ebfd8038869cf9921fee692e8ba437e59384be25f6533a2062304e1"
+    },
+    {
+      "name": "under-explicit-base-inline",
+      "tex": "\\underset{a}{\\mmlToken{mo}[movablelimits=true]{x}}",
+      "display": false,
+      "width": 10,
+      "height": 21,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "munder",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "mo",
+                    "text": null,
+                    "attributes": {
+                      "movablelimits": false
+                    },
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "a",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "61f3977866a6f998c4d3f31fcafab0dc71f29ae50d8375b8d7c98fb07e4deb61"
+    },
+    {
+      "name": "under-explicit-base-display",
+      "tex": "\\underset{a}{\\mmlToken{mo}[movablelimits=true]{x}}",
+      "display": true,
+      "width": 10,
+      "height": 21,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "munder",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "mo",
+                    "text": null,
+                    "attributes": {
+                      "movablelimits": false
+                    },
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "a",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "61f3977866a6f998c4d3f31fcafab0dc71f29ae50d8375b8d7c98fb07e4deb61"
+    },
+    {
+      "name": "over-false-base-inline",
+      "tex": "\\overset{a}{\\mmlToken{mo}[movablelimits=false]{∑}}",
+      "display": false,
+      "width": 20,
+      "height": 30,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mover",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "mo",
+                    "text": null,
+                    "attributes": {
+                      "movablelimits": false
+                    },
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "∑",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "a",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "f1cdea3c3021267fb639c8bfde98af000299579f50b502870c2dc9f33c36b47d"
+    },
+    {
+      "name": "over-false-base-display",
+      "tex": "\\overset{a}{\\mmlToken{mo}[movablelimits=false]{∑}}",
+      "display": true,
+      "width": 27,
+      "height": 37,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mover",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "mo",
+                    "text": null,
+                    "attributes": {
+                      "movablelimits": false
+                    },
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "∑",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "a",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "3b5aabed1559f515ab4c530c76a46bb2dec9410ec7b1680211bf08e456a532c0"
+    },
+    {
+      "name": "under-false-base-inline",
+      "tex": "\\underset{a}{\\mmlToken{mo}[movablelimits=false]{∑}}",
+      "display": false,
+      "width": 20,
+      "height": 31,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "munder",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "mo",
+                    "text": null,
+                    "attributes": {
+                      "movablelimits": false
+                    },
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "∑",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "a",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "c7567d1143067a4e886d34d71ee51a502e8018b506f251fd240891f79de82593"
+    },
+    {
+      "name": "under-false-base-display",
+      "tex": "\\underset{a}{\\mmlToken{mo}[movablelimits=false]{∑}}",
+      "display": true,
+      "width": 27,
+      "height": 39,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "munder",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "mo",
+                    "text": null,
+                    "attributes": {
+                      "movablelimits": false
+                    },
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "∑",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "a",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "0b4ef4dbaab58a97692b9246dbbe86c7ee2e1f602f1a415d65a461f31e6b38a3"
+    },
+    {
+      "name": "nested-inline",
+      "tex": "\\underset{b}{\\overset{a}{x}}",
+      "display": false,
+      "width": 11,
+      "height": 34,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "munder",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "mover",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "x",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "a",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "b",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "d4401f30eef8da0a9a85444349d555d37c9d354967427dbbd7ecd89f9fff812a"
+    },
+    {
+      "name": "nested-display",
+      "tex": "\\underset{b}{\\overset{a}{x}}",
+      "display": true,
+      "width": 11,
+      "height": 34,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "munder",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "mover",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "x",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "a",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "b",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "d4401f30eef8da0a9a85444349d555d37c9d354967427dbbd7ecd89f9fff812a"
+    },
+    {
+      "name": "subsequent-scripts-inline",
+      "tex": "\\overset{a}{x}_i^n",
+      "display": false,
+      "width": 20,
+      "height": 25,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "msubsup",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "mover",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "x",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "a",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "i",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "n",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "18d43504a135f61c9c16aa876d84739109b7f549ed337819f1d1257e9baff5e5"
+    },
+    {
+      "name": "subsequent-scripts-display",
+      "tex": "\\overset{a}{x}_i^n",
+      "display": true,
+      "width": 20,
+      "height": 25,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "msubsup",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "mover",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "x",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "a",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "i",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "n",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "18d43504a135f61c9c16aa876d84739109b7f549ed337819f1d1257e9baff5e5"
+    },
+    {
+      "name": "stackrel-control-inline",
+      "tex": "\\stackrel{a}{=}",
+      "display": false,
+      "width": 15,
+      "height": 24,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mover",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "TeXAtom",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "inferredMrow",
+                                "text": null,
+                                "attributes": {},
+                                "children": [
+                                  {
+                                    "kind": "mo",
+                                    "text": null,
+                                    "attributes": {},
+                                    "children": [
+                                      {
+                                        "kind": "text",
+                                        "text": "=",
+                                        "attributes": {},
+                                        "children": []
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "TeXAtom",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "inferredMrow",
+                                "text": null,
+                                "attributes": {},
+                                "children": [
+                                  {
+                                    "kind": "mi",
+                                    "text": null,
+                                    "attributes": {},
+                                    "children": [
+                                      {
+                                        "kind": "text",
+                                        "text": "a",
+                                        "attributes": {},
+                                        "children": []
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "33b2922b2f9e98440cac97fb734295bad75c5e395ad72e78d4cdf5d8122cdf33"
+    },
+    {
+      "name": "stackrel-control-display",
+      "tex": "\\stackrel{a}{=}",
+      "display": true,
+      "width": 15,
+      "height": 24,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mover",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "TeXAtom",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "inferredMrow",
+                                "text": null,
+                                "attributes": {},
+                                "children": [
+                                  {
+                                    "kind": "mo",
+                                    "text": null,
+                                    "attributes": {},
+                                    "children": [
+                                      {
+                                        "kind": "text",
+                                        "text": "=",
+                                        "attributes": {},
+                                        "children": []
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "TeXAtom",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "inferredMrow",
+                                "text": null,
+                                "attributes": {},
+                                "children": [
+                                  {
+                                    "kind": "mi",
+                                    "text": null,
+                                    "attributes": {},
+                                    "children": [
+                                      {
+                                        "kind": "text",
+                                        "text": "a",
+                                        "attributes": {},
+                                        "children": []
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "33b2922b2f9e98440cac97fb734295bad75c5e395ad72e78d4cdf5d8122cdf33"
+    },
+    {
+      "name": "overunderset-control-inline",
+      "tex": "\\overunderset{a}{b}{x}",
+      "display": false,
+      "width": 11,
+      "height": 34,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "munderover",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "b",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "a",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "652b5a6f9c65e719506a960f6d23a43a904c9d2ea56c9ba28b9285f7e1e9cbbf"
+    },
+    {
+      "name": "overunderset-control-display",
+      "tex": "\\overunderset{a}{b}{x}",
+      "display": true,
+      "width": 11,
+      "height": 34,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "munderover",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "b",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "a",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "652b5a6f9c65e719506a960f6d23a43a904c9d2ea56c9ba28b9285f7e1e9cbbf"
+    },
+    {
+      "name": "scriptstyle-inline",
+      "tex": "\\scriptstyle\\overset{a}{x}",
+      "display": false,
+      "width": 8,
+      "height": 14,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mstyle",
+                "text": null,
+                "attributes": {
+                  "displaystyle": false,
+                  "scriptlevel": 1
+                },
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mover",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "x",
+                                "attributes": {},
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "a",
+                                "attributes": {},
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "7b75ef3c282af40d1020814f897a43fc114c88184954a2c9d8b03e49e4e02176"
+    },
+    {
+      "name": "scriptstyle-display",
+      "tex": "\\scriptstyle\\overset{a}{x}",
+      "display": true,
+      "width": 8,
+      "height": 14,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mstyle",
+                "text": null,
+                "attributes": {
+                  "displaystyle": false,
+                  "scriptlevel": 1
+                },
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mover",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "x",
+                                "attributes": {},
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "a",
+                                "attributes": {},
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "7b75ef3c282af40d1020814f897a43fc114c88184954a2c9d8b03e49e4e02176"
+    }
+  ]
+}

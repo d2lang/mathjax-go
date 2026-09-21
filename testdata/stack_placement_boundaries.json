@@ -1,0 +1,225 @@
+{
+  "baseline": "5836be2e73642e7ee36e6e514ab724c2e687362a",
+  "cases": {
+    "subsequent-scripts-inline": {
+      "tex": "\\overset{a}{x}_i^n",
+      "display": false,
+      "primarySHA256": "18d43504a135f61c9c16aa876d84739109b7f549ed337819f1d1257e9baff5e5",
+      "expectedSHA256": "f74d506d313d207f51b14cfdbf282543cd1760035865724b0ec1003b16df79fa",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Double exponent: use braces to clarify"
+                },
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Double exponent: use braces to clarify",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "width": 413,
+      "height": 18,
+      "reason": "Unchanged D053 Double exponent error"
+    },
+    "subsequent-scripts-display": {
+      "tex": "\\overset{a}{x}_i^n",
+      "display": true,
+      "primarySHA256": "18d43504a135f61c9c16aa876d84739109b7f549ed337819f1d1257e9baff5e5",
+      "expectedSHA256": "f74d506d313d207f51b14cfdbf282543cd1760035865724b0ec1003b16df79fa",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Double exponent: use braces to clarify"
+                },
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Double exponent: use braces to clarify",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "width": 413,
+      "height": 18,
+      "reason": "Unchanged D053 Double exponent error"
+    },
+    "stackrel-control-inline": {
+      "tex": "\\stackrel{a}{=}",
+      "display": false,
+      "primarySHA256": "33b2922b2f9e98440cac97fb734295bad75c5e395ad72e78d4cdf5d8122cdf33",
+      "expectedSHA256": "c4bf64218b15720429839c47e9a1da37eaf76896236c4a3c058fc6341a690157",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mover",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "mo",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "=",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "a",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "width": 15,
+      "height": 24,
+      "reason": "Unchanged stackrel transparent TeXAtom grouping; exact Decimal full paint proof"
+    },
+    "stackrel-control-display": {
+      "tex": "\\stackrel{a}{=}",
+      "display": true,
+      "primarySHA256": "33b2922b2f9e98440cac97fb734295bad75c5e395ad72e78d4cdf5d8122cdf33",
+      "expectedSHA256": "c4bf64218b15720429839c47e9a1da37eaf76896236c4a3c058fc6341a690157",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mover",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "mo",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "=",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "a",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "width": 15,
+      "height": 24,
+      "reason": "Unchanged stackrel transparent TeXAtom grouping; exact Decimal full paint proof"
+    }
+  }
+}
