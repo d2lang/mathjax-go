@@ -1,0 +1,331 @@
+{
+  "oracle": "Unmodified pinned D2 MathJax3.2.2; fresh VM per case/mode; AST observed before unchanged SVG renderer",
+  "mathjaxGitCommit": "ad8f5c21cb810236551da8c6512ba733e67357ee",
+  "assetsSHA256": {
+    "polyfills.js": "7fe1d048c78b0e09854c1259f7413868a51cc8f0c822489eb1ac36ae6c85ce01",
+    "mathjax.js": "cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869",
+    "setup.js": "a52cb0bbabfbd7796b9fedd793b9386c474e3123e788ee151cbe47ca1fa6e881"
+  },
+  "cases": [
+    {
+      "name": "underline-low-inline",
+      "tex": "\\underline{a}",
+      "display": false,
+      "width": 10,
+      "height": 14,
+      "svgSHA256": "cb341929dba37f31ce0c7a68689d8f88333c48428b88bcad1725d46c066f7fd4"
+    },
+    {
+      "name": "underline-low-display",
+      "tex": "\\underline{a}",
+      "display": true,
+      "width": 10,
+      "height": 14,
+      "svgSHA256": "cb341929dba37f31ce0c7a68689d8f88333c48428b88bcad1725d46c066f7fd4"
+    },
+    {
+      "name": "underline-xheight-inline",
+      "tex": "\\underline{x}",
+      "display": false,
+      "width": 11,
+      "height": 14,
+      "svgSHA256": "7ad6b49b5bf62350b2d7a1577072424eb47635e49b78aefecafbc4c46729c4e6"
+    },
+    {
+      "name": "underline-xheight-display",
+      "tex": "\\underline{x}",
+      "display": true,
+      "width": 11,
+      "height": 14,
+      "svgSHA256": "7ad6b49b5bf62350b2d7a1577072424eb47635e49b78aefecafbc4c46729c4e6"
+    },
+    {
+      "name": "underline-capital-inline",
+      "tex": "\\underline{A}",
+      "display": false,
+      "width": 14,
+      "height": 19,
+      "svgSHA256": "5b44a420aece2f93c3c51b7b55b4a799300453811a90871e670d39e3eb8e5136"
+    },
+    {
+      "name": "underline-capital-display",
+      "tex": "\\underline{A}",
+      "display": true,
+      "width": 14,
+      "height": 19,
+      "svgSHA256": "5b44a420aece2f93c3c51b7b55b4a799300453811a90871e670d39e3eb8e5136"
+    },
+    {
+      "name": "underline-long-inline",
+      "tex": "\\underline{abcdef}",
+      "display": false,
+      "width": 53,
+      "height": 23,
+      "svgSHA256": "619adbf6de2430dfd9bc56a9ff7e4799615caf15469d7704c3c9e5abc6ae185d"
+    },
+    {
+      "name": "underline-long-display",
+      "tex": "\\underline{abcdef}",
+      "display": true,
+      "width": 53,
+      "height": 23,
+      "svgSHA256": "619adbf6de2430dfd9bc56a9ff7e4799615caf15469d7704c3c9e5abc6ae185d"
+    },
+    {
+      "name": "underline-fraction-inline",
+      "tex": "\\underline{\\frac{a}{b}}",
+      "display": false,
+      "width": 15,
+      "height": 25,
+      "svgSHA256": "570d35cefee45574b3fe3cac17cd82a7655169225f39c1d459a4f57db72ceaab"
+    },
+    {
+      "name": "underline-fraction-display",
+      "tex": "\\underline{\\frac{a}{b}}",
+      "display": true,
+      "width": 18,
+      "height": 39,
+      "svgSHA256": "bc3fee597b02f35ac4439806639900304ae32840f595792bc306ca749d609c93"
+    },
+    {
+      "name": "underline-scripts-inline",
+      "tex": "\\underline{x_1+y^2}",
+      "display": false,
+      "width": 58,
+      "height": 25,
+      "svgSHA256": "47eaf344ed2cde140600b8439c61b1b488d87b6c0c586a1a50f2d4baff0882fd"
+    },
+    {
+      "name": "underline-scripts-display",
+      "tex": "\\underline{x_1+y^2}",
+      "display": true,
+      "width": 58,
+      "height": 26,
+      "svgSHA256": "8baa6fe11900e90bf341f790dee7eb1fd9f759f04cbc16a9a3862da21796d2b2"
+    },
+    {
+      "name": "overline-low-inline",
+      "tex": "\\overline{a}",
+      "display": false,
+      "width": 10,
+      "height": 14,
+      "svgSHA256": "bf296a0d5c04def803343c673328eabea7ee238fc395bab135383261ddd1e067"
+    },
+    {
+      "name": "overline-low-display",
+      "tex": "\\overline{a}",
+      "display": true,
+      "width": 10,
+      "height": 14,
+      "svgSHA256": "bf296a0d5c04def803343c673328eabea7ee238fc395bab135383261ddd1e067"
+    },
+    {
+      "name": "overline-xheight-inline",
+      "tex": "\\overline{x}",
+      "display": false,
+      "width": 11,
+      "height": 14,
+      "svgSHA256": "ff1f8ee2c66cdaacecf61d002cfb371021034fd76abd86acfb5636cb5af7d765"
+    },
+    {
+      "name": "overline-xheight-display",
+      "tex": "\\overline{x}",
+      "display": true,
+      "width": 11,
+      "height": 14,
+      "svgSHA256": "ff1f8ee2c66cdaacecf61d002cfb371021034fd76abd86acfb5636cb5af7d765"
+    },
+    {
+      "name": "overline-capital-inline",
+      "tex": "\\overline{A}",
+      "display": false,
+      "width": 14,
+      "height": 19,
+      "svgSHA256": "e9e6b95cb60b1e803e75b54a280c0885de69dd0e0df6ef6676fba5b3e6de85c0"
+    },
+    {
+      "name": "overline-capital-display",
+      "tex": "\\overline{A}",
+      "display": true,
+      "width": 14,
+      "height": 19,
+      "svgSHA256": "e9e6b95cb60b1e803e75b54a280c0885de69dd0e0df6ef6676fba5b3e6de85c0"
+    },
+    {
+      "name": "overline-long-inline",
+      "tex": "\\overline{abcdef}",
+      "display": false,
+      "width": 53,
+      "height": 23,
+      "svgSHA256": "b0595840e8743fbc1f4016d8c2ad25e59450789391750778f79322bb8f71567b"
+    },
+    {
+      "name": "overline-long-display",
+      "tex": "\\overline{abcdef}",
+      "display": true,
+      "width": 53,
+      "height": 23,
+      "svgSHA256": "b0595840e8743fbc1f4016d8c2ad25e59450789391750778f79322bb8f71567b"
+    },
+    {
+      "name": "overline-fraction-inline",
+      "tex": "\\overline{\\frac{a}{b}}",
+      "display": false,
+      "width": 15,
+      "height": 25,
+      "svgSHA256": "3f4b8ade09aad0382826717b6958b655759f199ebef0bfea52b25a03f7770cdd"
+    },
+    {
+      "name": "overline-fraction-display",
+      "tex": "\\overline{\\frac{a}{b}}",
+      "display": true,
+      "width": 18,
+      "height": 39,
+      "svgSHA256": "4d7b41972a942a8f309c610bb5b9162ce7f33707cc73cd6acca00afbcf677098"
+    },
+    {
+      "name": "overline-scripts-inline",
+      "tex": "\\overline{x_1+y^2}",
+      "display": false,
+      "width": 58,
+      "height": 24,
+      "svgSHA256": "698ebc841154bad37bb335c330f86f1b14ef81ed93711fdd79d788036496dbab"
+    },
+    {
+      "name": "overline-scripts-display",
+      "tex": "\\overline{x_1+y^2}",
+      "display": true,
+      "width": 58,
+      "height": 24,
+      "svgSHA256": "698ebc841154bad37bb335c330f86f1b14ef81ed93711fdd79d788036496dbab"
+    },
+    {
+      "name": "nested-lines-inline",
+      "tex": "\\overline{\\underline{a}}",
+      "display": false,
+      "width": 10,
+      "height": 20,
+      "svgSHA256": "2537432d0b6a6b5d83006b53445b906b303e8ba73e8ee5b9bd88783bd6711230"
+    },
+    {
+      "name": "nested-lines-display",
+      "tex": "\\overline{\\underline{a}}",
+      "display": true,
+      "width": 10,
+      "height": 20,
+      "svgSHA256": "2537432d0b6a6b5d83006b53445b906b303e8ba73e8ee5b9bd88783bd6711230"
+    },
+    {
+      "name": "nested-underlines-inline",
+      "tex": "\\underline{\\underline{x}}",
+      "display": false,
+      "width": 11,
+      "height": 18,
+      "svgSHA256": "588f000fb3145bfbf96528278a2cbef067e8fc4cb98124d0a3f41f59b19a0f09"
+    },
+    {
+      "name": "nested-underlines-display",
+      "tex": "\\underline{\\underline{x}}",
+      "display": true,
+      "width": 11,
+      "height": 18,
+      "svgSHA256": "588f000fb3145bfbf96528278a2cbef067e8fc4cb98124d0a3f41f59b19a0f09"
+    },
+    {
+      "name": "script-line-inline",
+      "tex": "x_{\\underline{a}}",
+      "display": false,
+      "width": 19,
+      "height": 15,
+      "svgSHA256": "c570885f507136ee624b68dfa08701eb16eca616e89c54bb2e42bab9fcf5395d"
+    },
+    {
+      "name": "script-line-display",
+      "tex": "x_{\\underline{a}}",
+      "display": true,
+      "width": 19,
+      "height": 15,
+      "svgSHA256": "c570885f507136ee624b68dfa08701eb16eca616e89c54bb2e42bab9fcf5395d"
+    },
+    {
+      "name": "line-vector-inline",
+      "tex": "\\overline{\\vec{a}}",
+      "display": false,
+      "width": 10,
+      "height": 20,
+      "svgSHA256": "e119487e54a485b7e1f03a038911396ff1fe3f15b7118c0ca416ff8e8123f360"
+    },
+    {
+      "name": "line-vector-display",
+      "tex": "\\overline{\\vec{a}}",
+      "display": true,
+      "width": 10,
+      "height": 20,
+      "svgSHA256": "e119487e54a485b7e1f03a038911396ff1fe3f15b7118c0ca416ff8e8123f360"
+    },
+    {
+      "name": "hat-control-inline",
+      "tex": "\\hat{x}",
+      "display": false,
+      "width": 11,
+      "height": 15,
+      "svgSHA256": "db5b43e42abd56f087635b43762722245a39af1f4d69a648685995b9ba8228f7"
+    },
+    {
+      "name": "hat-control-display",
+      "tex": "\\hat{x}",
+      "display": true,
+      "width": 11,
+      "height": 15,
+      "svgSHA256": "db5b43e42abd56f087635b43762722245a39af1f4d69a648685995b9ba8228f7"
+    },
+    {
+      "name": "tilde-control-inline",
+      "tex": "\\tilde{x}",
+      "display": false,
+      "width": 11,
+      "height": 14,
+      "svgSHA256": "cc28be583e7240eed863e5b307df579243b0992f7f2a450239a53ed14a08416d"
+    },
+    {
+      "name": "tilde-control-display",
+      "tex": "\\tilde{x}",
+      "display": true,
+      "width": 11,
+      "height": 14,
+      "svgSHA256": "cc28be583e7240eed863e5b307df579243b0992f7f2a450239a53ed14a08416d"
+    },
+    {
+      "name": "arrow-control-inline",
+      "tex": "\\overrightarrow{x}",
+      "display": false,
+      "width": 11,
+      "height": 22,
+      "svgSHA256": "dd8383c4f3df4d830ae2e252a54c02ada316a4b5905062b239fa0c4ac91f8a50"
+    },
+    {
+      "name": "arrow-control-display",
+      "tex": "\\overrightarrow{x}",
+      "display": true,
+      "width": 11,
+      "height": 22,
+      "svgSHA256": "dd8383c4f3df4d830ae2e252a54c02ada316a4b5905062b239fa0c4ac91f8a50"
+    },
+    {
+      "name": "ordinary-control-inline",
+      "tex": "a+x",
+      "display": false,
+      "width": 43,
+      "height": 13,
+      "svgSHA256": "7087fa0fe7cfb03c23ebaf4230ea411f26147f9f8935a29cd505c2b9ceb4c164"
+    },
+    {
+      "name": "ordinary-control-display",
+      "tex": "a+x",
+      "display": true,
+      "width": 43,
+      "height": 13,
+      "svgSHA256": "7087fa0fe7cfb03c23ebaf4230ea411f26147f9f8935a29cd505c2b9ceb4c164"
+    }
+  ]
+}
