@@ -43,14 +43,11 @@ func (w *wrapper) isAccentMO() bool {
 	if w == nil || w.node.Kind != "mo" {
 		return false
 	}
-	if value, ok := w.node.Property("mathaccent"); ok && truthy(value) {
-		return true
-	}
-
-	// MmlMo.coreParent() climbs through embellished wrappers before testing
-	// whether this core is the under/over script selected by its stack parent.
+	// MmlMo.isAccent is separate from the internal mathaccent positioning
+	// marker. Follow coreParent through embellished nodes, stopping at math.
 	outer := w
-	for outer.parent != nil && outer.parent.node.Flags.Embellished && accentCoreMO(outer.parent) == w {
+	for outer.parent != nil && outer.parent.node.Kind != "math" &&
+		outer.parent.node.Flags.Embellished && accentCoreMO(outer.parent) == w {
 		outer = outer.parent
 	}
 	stack := outer.parent
@@ -60,11 +57,11 @@ func (w *wrapper) isAccentMO() bool {
 	key := ""
 	switch stack.node.Kind {
 	case "mover":
-		if accentCoreMO(stack.overChild()) == w {
+		if stack.overChild() != nil {
 			key = "accent"
 		}
 	case "munder":
-		if accentCoreMO(stack.underChild()) == w {
+		if stack.underChild() != nil {
 			key = "accentunder"
 		}
 	case "munderover":
@@ -74,7 +71,15 @@ func (w *wrapper) isAccentMO() bool {
 			key = "accentunder"
 		}
 	}
-	return key != "" && boolAttributeDefault(stack.node, key, boolAttributeDefault(w.node, "accent", false))
+	if key == "" {
+		return false
+	}
+	// The pinned getter leaves isAccent false when the stack has an explicit
+	// accent attribute; otherwise it uses this operator's resolved accent.
+	if _, explicit := stack.node.Attributes.GetExplicit(key); explicit {
+		return false
+	}
+	return boolAttributeDefault(w.node, "accent", false)
 }
 
 func remapAccentText(parent *wrapper, text string) string {

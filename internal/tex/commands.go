@@ -649,7 +649,9 @@ func (p *parser) accent(name string) ([]*mml.Node, error) {
 	// SVGmo uses that internal marker to zero the accent width and translate
 	// the source glyph around its origin before the mover centers it.
 	accent.SetProperty("mathaccent", true)
-	result := setAttributes(node("mover", base, accent), map[string]any{"accent": true})
+	// BaseMethods.Accent leaves the parent implicit; its accent value is
+	// inherited from the operator during MathML inheritance.
+	result := node("mover", base, accent)
 	return []*mml.Node{texAtom(result, mml.TeXClassOrd)}, nil
 }
 
@@ -784,7 +786,13 @@ func (p *parser) overUnderSet(name string) ([]*mml.Node, error) {
 	if err != nil {
 		return nil, err
 	}
-	return []*mml.Node{node("munderover", base, under, over)}, nil
+	if over.Kind == "mo" {
+		over.Attributes.Set("accent", false)
+	}
+	if under.Kind == "mo" {
+		under.Attributes.Set("accent", false)
+	}
+	return []*mml.Node{setAttributes(node("munderover", base, under, over), map[string]any{"accent": false, "accentunder": false})}, nil
 }
 
 var arrowCharacters = map[string]string{

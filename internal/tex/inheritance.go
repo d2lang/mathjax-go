@@ -510,7 +510,35 @@ func inheritUnderOver(n *mml.Node, attributes *inheritedAttributes, display bool
 		if force || !propertyBool(accentValue) {
 			childLevel++
 		}
-		setInheritedAttributes(n.Children[i], attributes, false, childLevel, prime || i == under)
+		childPrime := prime || i == under
+		setInheritedAttributes(n.Children[i], attributes, false, childLevel, childPrime)
+		// MmlMunderover.setInheritedAccent derives only an unset/null stack
+		// attribute from the embellished script's core operator. A changed
+		// default requires a second pass with fresh inheritance and the
+		// parent's display/prime context, after the first operator pass.
+		explicit, _ := n.Attributes.GetExplicit(accent)
+		child := n.Children[i]
+		if explicit == nil && child.Flags.Embellished {
+			core := child
+			for core.Kind != "mo" && core.Flags.Embellished {
+				next := core.Core()
+				if next == nil || next == core {
+					break
+				}
+				core = next
+			}
+			value, _ := core.Attributes.Get("accent")
+			n.Attributes.SetInherited(accent, value)
+			defaultValue, _ := n.Attributes.GetDefault(accent)
+			if !reflect.DeepEqual(value, defaultValue) {
+				resolved, _ := n.Attributes.Get(accent)
+				childLevel = level
+				if force || !propertyBool(resolved) {
+					childLevel++
+				}
+				setInheritedAttributes(child, ordered.New[inheritedAttribute](), display, childLevel, prime)
+			}
+		}
 	}
 }
 

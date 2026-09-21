@@ -34,11 +34,9 @@ func TestPhysicsVectorFontPinnedReferences(t *testing.T) {
 	if len(fixture.Cases) != 96 {
 		t.Fatal("incomplete token font policy matrix")
 	}
-	// Preserve the exact primary fixtures. These independently demonstrated
-	// preexisting attributes are outside Physics font selection: ordinary
-	// Accent adds mover.accent; MtLap omits
-	// two explicit mstyle defaults. Compare every other tree field exactly.
-	accentShapes := map[string]bool{"accent-hat": true, "accent-dot": true, "arrow": true, "arrow-star": true, "unit": true, "unit-star": true, "outer-arrow": true, "nested-arrow": true, "long-alias": true, "bold-arrow-control": true, "multi-alias": true}
+	// Preserve the exact primary fixtures. Only the separately observed MtLap
+	// omission of two explicit mstyle defaults remains qualified. Accent
+	// parent attributes now match the complete primary tree directly.
 	for _, c := range fixture.Cases {
 		t.Run(c.Name, func(t *testing.T) {
 			root, err := tex.NewCompiler().Compile(c.Tex, c.Display)
@@ -63,14 +61,14 @@ func TestPhysicsVectorFontPinnedReferences(t *testing.T) {
 			}
 			label := strings.TrimSuffix(strings.TrimSuffix(c.Name, "-display"), "-inline")
 			wantTree := c.Tree
-			if accentShapes[label] || label == "clap-text" {
+			if label == "clap-text" {
 				wantBytes, _ := json.Marshal(c.Tree)
 				var qualified *nestedFontTree
 				if err := json.Unmarshal(wantBytes, &qualified); err != nil {
 					t.Fatal(err)
 				}
 				wantTree = qualified
-				qualifyVectorTree(wantTree, accentShapes[label], label == "clap-text")
+				qualifyVectorTree(wantTree)
 				originalAfter, _ := json.Marshal(c.Tree)
 				if string(originalAfter) != string(wantBytes) {
 					t.Fatal("qualification mutated the primary fixture tree")
@@ -95,17 +93,12 @@ func TestPhysicsVectorFontPinnedReferences(t *testing.T) {
 
 // Apply only the named, observed legacy attribute differences to a copy of the
 // primary tree. No text, node, font choice, position or SVG is normalized.
-func qualifyVectorTree(n *nestedFontTree, accent, clap bool) {
-	if accent && n.Kind == "mover" {
-		if _, exists := n.Attributes["accent"]; !exists {
-			n.Attributes["accent"] = true
-		}
-	}
-	if clap && n.Kind == "mstyle" && n.Attributes["displaystyle"] == false && n.Attributes["scriptlevel"] == float64(0) {
+func qualifyVectorTree(n *nestedFontTree) {
+	if n.Kind == "mstyle" && n.Attributes["displaystyle"] == false && n.Attributes["scriptlevel"] == float64(0) {
 		delete(n.Attributes, "displaystyle")
 		delete(n.Attributes, "scriptlevel")
 	}
 	for _, child := range n.Children {
-		qualifyVectorTree(child, accent, clap)
+		qualifyVectorTree(child)
 	}
 }
