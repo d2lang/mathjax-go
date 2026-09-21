@@ -838,7 +838,7 @@ func textRow(raw string) *mml.Node {
 }
 
 var mathVariants = map[string]string{
-	"mathrm": "normal", "mathbf": "bold", "mathit": "italic", "mathsf": "sans-serif",
+	"mathrm": "normal", "mathbf": "bold", "mathit": "-tex-mathit", "mathsf": "sans-serif",
 	"mathtt": "monospace", "mathbb": "double-struck", "mathcal": "-tex-calligraphic",
 	"mathscr": "script", "mathfrak": "fraktur", "boldsymbol": "bold-italic",
 }

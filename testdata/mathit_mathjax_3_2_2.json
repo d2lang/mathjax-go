@@ -1,0 +1,314 @@
+{
+  "mathjaxGitCommit": "ad8f5c21cb810236551da8c6512ba733e67357ee",
+  "assetsSHA256": {
+    "polyfills.js": "7fe1d048c78b0e09854c1259f7413868a51cc8f0c822489eb1ac36ae6c85ce01",
+    "mathjax.js": "cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869",
+    "setup.js": "a52cb0bbabfbd7796b9fedd793b9386c474e3123e788ee151cbe47ca1fa6e881"
+  },
+  "cases": [
+    {
+      "name": "lowercase-display",
+      "tex": "\\mathit{x}",
+      "display": true,
+      "sha256": "1803419cc747feda76450c459ce0ae0556a3ec2d7c2c0ed14016a1763ece31dd",
+      "width": 9,
+      "height": 9
+    },
+    {
+      "name": "lowercase-inline",
+      "tex": "\\mathit{x}",
+      "display": false,
+      "sha256": "1803419cc747feda76450c459ce0ae0556a3ec2d7c2c0ed14016a1763ece31dd",
+      "width": 9,
+      "height": 9
+    },
+    {
+      "name": "uppercase-display",
+      "tex": "\\mathit{A}",
+      "display": true,
+      "sha256": "1454ce740af9ccdb357fcae826acc042ab522581a221c1eefa20585e95ef1a6e",
+      "width": 14,
+      "height": 13
+    },
+    {
+      "name": "uppercase-inline",
+      "tex": "\\mathit{A}",
+      "display": false,
+      "sha256": "1454ce740af9ccdb357fcae826acc042ab522581a221c1eefa20585e95ef1a6e",
+      "width": 14,
+      "height": 13
+    },
+    {
+      "name": "multiple-display",
+      "tex": "\\mathit{xyz}",
+      "display": true,
+      "sha256": "aa54f7a9e72a51961eebd0e821712fb4a11601e70ac50ded32593f4d1cbf215d",
+      "width": 25,
+      "height": 12
+    },
+    {
+      "name": "multiple-inline",
+      "tex": "\\mathit{xyz}",
+      "display": false,
+      "sha256": "aa54f7a9e72a51961eebd0e821712fb4a11601e70ac50ded32593f4d1cbf215d",
+      "width": 25,
+      "height": 12
+    },
+    {
+      "name": "digits-display",
+      "tex": "\\mathit{123}",
+      "display": true,
+      "sha256": "20b68969a6350773a3fa5d6cc210c164095d54faaa15b1d750a22c05d905f7ec",
+      "width": 28,
+      "height": 13
+    },
+    {
+      "name": "digits-inline",
+      "tex": "\\mathit{123}",
+      "display": false,
+      "sha256": "20b68969a6350773a3fa5d6cc210c164095d54faaa15b1d750a22c05d905f7ec",
+      "width": 28,
+      "height": 13
+    },
+    {
+      "name": "greek-display",
+      "tex": "\\mathit{\\alpha+\\Gamma}",
+      "display": true,
+      "sha256": "d4b28430bac8140814bedff5a3458a5df0a7ca7f22627afdea4486688302a817",
+      "width": 47,
+      "height": 14
+    },
+    {
+      "name": "greek-inline",
+      "tex": "\\mathit{\\alpha+\\Gamma}",
+      "display": false,
+      "sha256": "d4b28430bac8140814bedff5a3458a5df0a7ca7f22627afdea4486688302a817",
+      "width": 47,
+      "height": 14
+    },
+    {
+      "name": "scripts-display",
+      "tex": "\\mathit{x_i^2}",
+      "display": true,
+      "sha256": "c31e693163f8e3cbc0e3c487cf19b50f393ffc03ab57c3c2d1b798a5efadca48",
+      "width": 17,
+      "height": 21
+    },
+    {
+      "name": "scripts-inline",
+      "tex": "\\mathit{x_i^2}",
+      "display": false,
+      "sha256": "7e5cc287a30fa27815e05b5c6b685950a630cfdd66b20413bf84097ec38a5ce1",
+      "width": 17,
+      "height": 21
+    },
+    {
+      "name": "fraction-display",
+      "tex": "\\mathit{\\frac{x}{y}}",
+      "display": true,
+      "sha256": "450e1656ec21c76b54aac7d8ecc7d4b0589813a39d2a919448fac219b6025583",
+      "width": 17,
+      "height": 37
+    },
+    {
+      "name": "fraction-inline",
+      "tex": "\\mathit{\\frac{x}{y}}",
+      "display": false,
+      "sha256": "52cf7e40f97547ab68db8e84b60803731bcd0134b3700fefc4ddb349307f4b8a",
+      "width": 15,
+      "height": 22
+    },
+    {
+      "name": "radical-display",
+      "tex": "\\mathit{\\sqrt{x}}",
+      "display": true,
+      "sha256": "eb691727d03c8443f4d93a6ad43c3264e69c973c9952cdc6e5dfb44ac0b81d98",
+      "width": 24,
+      "height": 20
+    },
+    {
+      "name": "radical-inline",
+      "tex": "\\mathit{\\sqrt{x}}",
+      "display": false,
+      "sha256": "fcab32e091ad0449f44e406dbeb4311ae028a4f2569a182997ce9cd0b7a4ba46",
+      "width": 24,
+      "height": 20
+    },
+    {
+      "name": "operator-display",
+      "tex": "\\mathit{\\sum x}",
+      "display": true,
+      "sha256": "f205434d03b736e7030c077474d4441032694450e771ec0b05097149462e3515",
+      "width": 38,
+      "height": 26
+    },
+    {
+      "name": "operator-inline",
+      "tex": "\\mathit{\\sum x}",
+      "display": false,
+      "sha256": "4d807565f943fd5fd34c5ded404827e9664681a3c6607c4490193e734b46636a",
+      "width": 31,
+      "height": 19
+    },
+    {
+      "name": "expression-display",
+      "tex": "\\mathit{a+b}",
+      "display": true,
+      "sha256": "85245484cff9a52d0ae58667f46d9723abe52f6e6f2a85c4dd5c71e90602fffe",
+      "width": 40,
+      "height": 14
+    },
+    {
+      "name": "expression-inline",
+      "tex": "\\mathit{a+b}",
+      "display": false,
+      "sha256": "85245484cff9a52d0ae58667f46d9723abe52f6e6f2a85c4dd5c71e90602fffe",
+      "width": 40,
+      "height": 14
+    },
+    {
+      "name": "empty-display",
+      "tex": "\\mathit{}",
+      "display": true,
+      "sha256": "b8687eac1a43b455bfb0741930caf9c7d32cccdff35dc8b33adec46c6028b399",
+      "width": 1,
+      "height": 1
+    },
+    {
+      "name": "empty-inline",
+      "tex": "\\mathit{}",
+      "display": false,
+      "sha256": "b8687eac1a43b455bfb0741930caf9c7d32cccdff35dc8b33adec46c6028b399",
+      "width": 1,
+      "height": 1
+    },
+    {
+      "name": "unbraced-display",
+      "tex": "\\mathit x",
+      "display": true,
+      "sha256": "1803419cc747feda76450c459ce0ae0556a3ec2d7c2c0ed14016a1763ece31dd",
+      "width": 9,
+      "height": 9
+    },
+    {
+      "name": "unbraced-inline",
+      "tex": "\\mathit x",
+      "display": false,
+      "sha256": "1803419cc747feda76450c459ce0ae0556a3ec2d7c2c0ed14016a1763ece31dd",
+      "width": 9,
+      "height": 9
+    },
+    {
+      "name": "scope-display",
+      "tex": "\\mathit{x}+y",
+      "display": true,
+      "sha256": "eaaf21574ae219b8bbf480b17a9aefb79f37408708ce5d04bea75ce7024f2096",
+      "width": 40,
+      "height": 15
+    },
+    {
+      "name": "scope-inline",
+      "tex": "\\mathit{x}+y",
+      "display": false,
+      "sha256": "eaaf21574ae219b8bbf480b17a9aefb79f37408708ce5d04bea75ce7024f2096",
+      "width": 40,
+      "height": 15
+    },
+    {
+      "name": "plain-control-display",
+      "tex": "x+y",
+      "display": true,
+      "sha256": "f0c1a6e54de6dce5fb8b46455eaeac8f868c3b598ba7a4d9b574f3a100895f87",
+      "width": 42,
+      "height": 15
+    },
+    {
+      "name": "plain-control-inline",
+      "tex": "x+y",
+      "display": false,
+      "sha256": "f0c1a6e54de6dce5fb8b46455eaeac8f868c3b598ba7a4d9b574f3a100895f87",
+      "width": 42,
+      "height": 15
+    },
+    {
+      "name": "bold-control-display",
+      "tex": "\\mathbf{x}",
+      "display": true,
+      "sha256": "4fa2300af121b336bb0d7845b8e2b3e34be5a517a1bca45b4ec7b6514b2c544d",
+      "width": 11,
+      "height": 9
+    },
+    {
+      "name": "bold-control-inline",
+      "tex": "\\mathbf{x}",
+      "display": false,
+      "sha256": "4fa2300af121b336bb0d7845b8e2b3e34be5a517a1bca45b4ec7b6514b2c544d",
+      "width": 11,
+      "height": 9
+    },
+    {
+      "name": "roman-control-display",
+      "tex": "\\mathrm{x}",
+      "display": true,
+      "sha256": "898ef909a41bd46b17b9e4ace839e39ff839bd085ddedebf0d4baf6fe66ea15f",
+      "width": 10,
+      "height": 8
+    },
+    {
+      "name": "roman-control-inline",
+      "tex": "\\mathrm{x}",
+      "display": false,
+      "sha256": "898ef909a41bd46b17b9e4ace839e39ff839bd085ddedebf0d4baf6fe66ea15f",
+      "width": 10,
+      "height": 8
+    },
+    {
+      "name": "declaration-control-display",
+      "tex": "{\\it x}",
+      "display": true,
+      "sha256": "1803419cc747feda76450c459ce0ae0556a3ec2d7c2c0ed14016a1763ece31dd",
+      "width": 9,
+      "height": 9
+    },
+    {
+      "name": "declaration-control-inline",
+      "tex": "{\\it x}",
+      "display": false,
+      "sha256": "1803419cc747feda76450c459ce0ae0556a3ec2d7c2c0ed14016a1763ece31dd",
+      "width": 9,
+      "height": 9
+    },
+    {
+      "name": "sin-control-display",
+      "tex": "\\sin x",
+      "display": true,
+      "sha256": "c228482a36b98d24cb5db669b2ea5dbc6ba571979e4da7a7c80a77311a9a7de8",
+      "width": 36,
+      "height": 13
+    },
+    {
+      "name": "sin-control-inline",
+      "tex": "\\sin x",
+      "display": false,
+      "sha256": "c228482a36b98d24cb5db669b2ea5dbc6ba571979e4da7a7c80a77311a9a7de8",
+      "width": 36,
+      "height": 13
+    },
+    {
+      "name": "sans-control-display",
+      "tex": "\\mathsf{x}",
+      "display": true,
+      "sha256": "d787d17e42359103e5fcd2279a2df4c2113f68c150029b0f9a431ba33876682d",
+      "width": 9,
+      "height": 9
+    },
+    {
+      "name": "sans-control-inline",
+      "tex": "\\mathsf{x}",
+      "display": false,
+      "sha256": "d787d17e42359103e5fcd2279a2df4c2113f68c150029b0f9a431ba33876682d",
+      "width": 9,
+      "height": 9
+    }
+  ]
+}

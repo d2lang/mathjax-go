@@ -745,7 +745,7 @@ func emLength(value float64) string {
 }
 
 var fontDeclarations = map[string]string{
-	"rm": "normal", "bf": "bold", "it": "italic", "cal": "-tex-calligraphic",
+	"rm": "normal", "bf": "bold", "it": "-tex-mathit", "cal": "-tex-calligraphic",
 	"tt": "monospace", "sf": "sans-serif",
 }
 
