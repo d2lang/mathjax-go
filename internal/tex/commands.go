@@ -116,6 +116,8 @@ func (p *parser) command(name string) ([]*mml.Node, error) {
 	}
 
 	switch name {
+	case "mmlToken":
+		return p.mmlToken(name)
 	case ",":
 		return []*mml.Node{spacer("0.167em")}, nil
 	case ":":
