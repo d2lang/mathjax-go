@@ -1,0 +1,427 @@
+{
+  "oracle": "Unmodified pinned D2 MathJax3.2.2; fresh VM per case/mode; AST observed before unchanged SVG renderer",
+  "mathjaxGitCommit": "ad8f5c21cb810236551da8c6512ba733e67357ee",
+  "assetsSHA256": {
+    "polyfills.js": "7fe1d048c78b0e09854c1259f7413868a51cc8f0c822489eb1ac36ae6c85ce01",
+    "mathjax.js": "cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869",
+    "setup.js": "a52cb0bbabfbd7796b9fedd793b9386c474e3123e788ee151cbe47ca1fa6e881"
+  },
+  "cases": [
+    {
+      "name": "widehat-one-inline",
+      "tex": "\\widehat{x}",
+      "display": false,
+      "width": 11,
+      "height": 16,
+      "svgSHA256": "d7a9d54371ce2581d5c81555ce791fe27ef686dda43b27dbd3cf64f3b6f421b0"
+    },
+    {
+      "name": "widehat-one-display",
+      "tex": "\\widehat{x}",
+      "display": true,
+      "width": 11,
+      "height": 16,
+      "svgSHA256": "d7a9d54371ce2581d5c81555ce791fe27ef686dda43b27dbd3cf64f3b6f421b0"
+    },
+    {
+      "name": "widehat-two-inline",
+      "tex": "\\widehat{xy}",
+      "display": false,
+      "width": 20,
+      "height": 20,
+      "svgSHA256": "c7378289f0c17070f3ae3bb8bcbc2a59c92e29b190e8c7b0de590b76903997d9"
+    },
+    {
+      "name": "widehat-two-display",
+      "tex": "\\widehat{xy}",
+      "display": true,
+      "width": 20,
+      "height": 20,
+      "svgSHA256": "c7378289f0c17070f3ae3bb8bcbc2a59c92e29b190e8c7b0de590b76903997d9"
+    },
+    {
+      "name": "widehat-three-inline",
+      "tex": "\\widehat{xyz}",
+      "display": false,
+      "width": 28,
+      "height": 20,
+      "svgSHA256": "2b229df772daacce9aee84c801701b42d91c0ef9718117cddd2900092ee825db"
+    },
+    {
+      "name": "widehat-three-display",
+      "tex": "\\widehat{xyz}",
+      "display": true,
+      "width": 28,
+      "height": 20,
+      "svgSHA256": "2b229df772daacce9aee84c801701b42d91c0ef9718117cddd2900092ee825db"
+    },
+    {
+      "name": "widehat-four-inline",
+      "tex": "\\widehat{abcd}",
+      "display": false,
+      "width": 35,
+      "height": 22,
+      "svgSHA256": "5f0b17ee6a97647f650a0ca9e61b8e2b4a59f57f9ad63ed0d502890511963a76"
+    },
+    {
+      "name": "widehat-four-display",
+      "tex": "\\widehat{abcd}",
+      "display": true,
+      "width": 35,
+      "height": 22,
+      "svgSHA256": "5f0b17ee6a97647f650a0ca9e61b8e2b4a59f57f9ad63ed0d502890511963a76"
+    },
+    {
+      "name": "widehat-long-inline",
+      "tex": "\\widehat{abcdef}",
+      "display": false,
+      "width": 53,
+      "height": 26,
+      "svgSHA256": "785eb605586b3fe9677763a9009c52bdecdb5d412509f37a37b1bdd0ad8e00ca"
+    },
+    {
+      "name": "widehat-long-display",
+      "tex": "\\widehat{abcdef}",
+      "display": true,
+      "width": 53,
+      "height": 26,
+      "svgSHA256": "785eb605586b3fe9677763a9009c52bdecdb5d412509f37a37b1bdd0ad8e00ca"
+    },
+    {
+      "name": "widehat-very-long-inline",
+      "tex": "\\widehat{abcdefghijklmnop}",
+      "display": false,
+      "width": 146,
+      "height": 26,
+      "svgSHA256": "dfb1974ff7a30a454f76ebb5c7f4c291cb73e3f5761b36b90364e56a503a6c77"
+    },
+    {
+      "name": "widehat-very-long-display",
+      "tex": "\\widehat{abcdefghijklmnop}",
+      "display": true,
+      "width": 146,
+      "height": 26,
+      "svgSHA256": "dfb1974ff7a30a454f76ebb5c7f4c291cb73e3f5761b36b90364e56a503a6c77"
+    },
+    {
+      "name": "widehat-roman-inline",
+      "tex": "\\widehat{\\mathrm{abcdef}}",
+      "display": false,
+      "width": 52,
+      "height": 22,
+      "svgSHA256": "a749d071e3562f890bb966e97ae8d441537c87f69e23e55d52a9f87cf8a1d7cd"
+    },
+    {
+      "name": "widehat-roman-display",
+      "tex": "\\widehat{\\mathrm{abcdef}}",
+      "display": true,
+      "width": 52,
+      "height": 22,
+      "svgSHA256": "a749d071e3562f890bb966e97ae8d441537c87f69e23e55d52a9f87cf8a1d7cd"
+    },
+    {
+      "name": "widehat-bold-inline",
+      "tex": "\\widehat{\\mathbf{abcdef}}",
+      "display": false,
+      "width": 61,
+      "height": 22,
+      "svgSHA256": "63233694273f4f089f42c863c4b15ea85856b57c833abcff7952ce94db5e61ef"
+    },
+    {
+      "name": "widehat-bold-display",
+      "tex": "\\widehat{\\mathbf{abcdef}}",
+      "display": true,
+      "width": 61,
+      "height": 22,
+      "svgSHA256": "63233694273f4f089f42c863c4b15ea85856b57c833abcff7952ce94db5e61ef"
+    },
+    {
+      "name": "widehat-fraction-inline",
+      "tex": "\\widehat{\\frac{abcdef}{xy}}",
+      "display": false,
+      "width": 46,
+      "height": 36,
+      "svgSHA256": "0d37e32e3de1c9ac9267bb6c5fc32ab0718406a932c235bca88483631882cbfb"
+    },
+    {
+      "name": "widehat-fraction-display",
+      "tex": "\\widehat{\\frac{abcdef}{xy}}",
+      "display": true,
+      "width": 61,
+      "height": 50,
+      "svgSHA256": "2935b15b7e549e7f3eae3d64b5ebb697ec231c4875d50d54ca0991ffe64f4c7f"
+    },
+    {
+      "name": "widehat-scripts-inline",
+      "tex": "\\widehat{x_1+y_2}",
+      "display": false,
+      "width": 58,
+      "height": 24,
+      "svgSHA256": "6cf626f129d7e9e9c76ac6fd3e8c02a5f4062076e192ac6103cb6c19b5044434"
+    },
+    {
+      "name": "widehat-scripts-display",
+      "tex": "\\widehat{x_1+y_2}",
+      "display": true,
+      "width": 58,
+      "height": 24,
+      "svgSHA256": "6cf626f129d7e9e9c76ac6fd3e8c02a5f4062076e192ac6103cb6c19b5044434"
+    },
+    {
+      "name": "widetilde-one-inline",
+      "tex": "\\widetilde{x}",
+      "display": false,
+      "width": 11,
+      "height": 15,
+      "svgSHA256": "9f97f0a2816d1931e86222108c34f779c8ff8573ef52b0fd8115ffeb857d495a"
+    },
+    {
+      "name": "widetilde-one-display",
+      "tex": "\\widetilde{x}",
+      "display": true,
+      "width": 11,
+      "height": 15,
+      "svgSHA256": "9f97f0a2816d1931e86222108c34f779c8ff8573ef52b0fd8115ffeb857d495a"
+    },
+    {
+      "name": "widetilde-two-inline",
+      "tex": "\\widetilde{xy}",
+      "display": false,
+      "width": 20,
+      "height": 18,
+      "svgSHA256": "e785be7b233862e196976bb5ddff0ec19241cfadc5a762bf84332513e0a24601"
+    },
+    {
+      "name": "widetilde-two-display",
+      "tex": "\\widetilde{xy}",
+      "display": true,
+      "width": 20,
+      "height": 18,
+      "svgSHA256": "e785be7b233862e196976bb5ddff0ec19241cfadc5a762bf84332513e0a24601"
+    },
+    {
+      "name": "widetilde-three-inline",
+      "tex": "\\widetilde{xyz}",
+      "display": false,
+      "width": 28,
+      "height": 18,
+      "svgSHA256": "0d71e804f2e3fcc0c4a9b4d540fa3f50542b8da8768b183ed87c3ecf2a1a2dc3"
+    },
+    {
+      "name": "widetilde-three-display",
+      "tex": "\\widetilde{xyz}",
+      "display": true,
+      "width": 28,
+      "height": 18,
+      "svgSHA256": "0d71e804f2e3fcc0c4a9b4d540fa3f50542b8da8768b183ed87c3ecf2a1a2dc3"
+    },
+    {
+      "name": "widetilde-four-inline",
+      "tex": "\\widetilde{abcd}",
+      "display": false,
+      "width": 35,
+      "height": 21,
+      "svgSHA256": "7b0cc316ca25ee5f2133f6793bc49773bbb5db8c6f10f25a8b8e929b12f4f31d"
+    },
+    {
+      "name": "widetilde-four-display",
+      "tex": "\\widetilde{abcd}",
+      "display": true,
+      "width": 35,
+      "height": 21,
+      "svgSHA256": "7b0cc316ca25ee5f2133f6793bc49773bbb5db8c6f10f25a8b8e929b12f4f31d"
+    },
+    {
+      "name": "widetilde-long-inline",
+      "tex": "\\widetilde{abcdef}",
+      "display": false,
+      "width": 53,
+      "height": 25,
+      "svgSHA256": "209e08f986d986999fae81b931e4296b3ff2009f7008c45a042345efd57510fb"
+    },
+    {
+      "name": "widetilde-long-display",
+      "tex": "\\widetilde{abcdef}",
+      "display": true,
+      "width": 53,
+      "height": 25,
+      "svgSHA256": "209e08f986d986999fae81b931e4296b3ff2009f7008c45a042345efd57510fb"
+    },
+    {
+      "name": "widetilde-very-long-inline",
+      "tex": "\\widetilde{abcdefghijklmnop}",
+      "display": false,
+      "width": 146,
+      "height": 25,
+      "svgSHA256": "96c59431f6db783786bdbc528a7babfa4ed528195c7e9a529ae1898a2eff7d8c"
+    },
+    {
+      "name": "widetilde-very-long-display",
+      "tex": "\\widetilde{abcdefghijklmnop}",
+      "display": true,
+      "width": 146,
+      "height": 25,
+      "svgSHA256": "96c59431f6db783786bdbc528a7babfa4ed528195c7e9a529ae1898a2eff7d8c"
+    },
+    {
+      "name": "widetilde-roman-inline",
+      "tex": "\\widetilde{\\mathrm{abcdef}}",
+      "display": false,
+      "width": 52,
+      "height": 22,
+      "svgSHA256": "9336998d17e8bfe485486f7ae82ba7e77a86d15d03e08a743bca6725fcccdc6c"
+    },
+    {
+      "name": "widetilde-roman-display",
+      "tex": "\\widetilde{\\mathrm{abcdef}}",
+      "display": true,
+      "width": 52,
+      "height": 22,
+      "svgSHA256": "9336998d17e8bfe485486f7ae82ba7e77a86d15d03e08a743bca6725fcccdc6c"
+    },
+    {
+      "name": "widetilde-bold-inline",
+      "tex": "\\widetilde{\\mathbf{abcdef}}",
+      "display": false,
+      "width": 61,
+      "height": 21,
+      "svgSHA256": "8af1812a096f64a636ac79aacbf414aef017635bf2dbcf732e9a77a00d139b79"
+    },
+    {
+      "name": "widetilde-bold-display",
+      "tex": "\\widetilde{\\mathbf{abcdef}}",
+      "display": true,
+      "width": 61,
+      "height": 21,
+      "svgSHA256": "8af1812a096f64a636ac79aacbf414aef017635bf2dbcf732e9a77a00d139b79"
+    },
+    {
+      "name": "widetilde-fraction-inline",
+      "tex": "\\widetilde{\\frac{abcdef}{xy}}",
+      "display": false,
+      "width": 46,
+      "height": 35,
+      "svgSHA256": "964d56829d724dc320eda55040f2ccff26895c51afc672aa6767f0ca1930bc41"
+    },
+    {
+      "name": "widetilde-fraction-display",
+      "tex": "\\widetilde{\\frac{abcdef}{xy}}",
+      "display": true,
+      "width": 61,
+      "height": 50,
+      "svgSHA256": "81a2235d79c2aa7bf6a5d6e70c54f57d55da225e9d1689875d3af3f706b2e0ca"
+    },
+    {
+      "name": "widetilde-scripts-inline",
+      "tex": "\\widetilde{x_1+y_2}",
+      "display": false,
+      "width": 58,
+      "height": 23,
+      "svgSHA256": "b9cf4852690d95e5c3a3db7c1a594a3054e423be05d77d7ff648be4350c157cf"
+    },
+    {
+      "name": "widetilde-scripts-display",
+      "tex": "\\widetilde{x_1+y_2}",
+      "display": true,
+      "width": 58,
+      "height": 23,
+      "svgSHA256": "b9cf4852690d95e5c3a3db7c1a594a3054e423be05d77d7ff648be4350c157cf"
+    },
+    {
+      "name": "ordinary-hat-inline",
+      "tex": "\\hat{abcdef}",
+      "display": false,
+      "width": 53,
+      "height": 24,
+      "svgSHA256": "0da327730cb7928964e09d197529f78b171702631c6f79d010e4de5f30d2bbc4"
+    },
+    {
+      "name": "ordinary-hat-display",
+      "tex": "\\hat{abcdef}",
+      "display": true,
+      "width": 53,
+      "height": 24,
+      "svgSHA256": "0da327730cb7928964e09d197529f78b171702631c6f79d010e4de5f30d2bbc4"
+    },
+    {
+      "name": "ordinary-tilde-inline",
+      "tex": "\\tilde{abcdef}",
+      "display": false,
+      "width": 53,
+      "height": 23,
+      "svgSHA256": "d572220afc6d5b68030d4f120d4876807ab3429f4d164ab0ebd2660c10fe8b4d"
+    },
+    {
+      "name": "ordinary-tilde-display",
+      "tex": "\\tilde{abcdef}",
+      "display": true,
+      "width": 53,
+      "height": 23,
+      "svgSHA256": "d572220afc6d5b68030d4f120d4876807ab3429f4d164ab0ebd2660c10fe8b4d"
+    },
+    {
+      "name": "overarrow-inline",
+      "tex": "\\overrightarrow{abcdef}",
+      "display": false,
+      "width": 53,
+      "height": 33,
+      "svgSHA256": "4713f65732e85c8377f52614b6979a42767817d9b989e594059a1280128e54fa"
+    },
+    {
+      "name": "overarrow-display",
+      "tex": "\\overrightarrow{abcdef}",
+      "display": true,
+      "width": 53,
+      "height": 33,
+      "svgSHA256": "4713f65732e85c8377f52614b6979a42767817d9b989e594059a1280128e54fa"
+    },
+    {
+      "name": "ordinary-inline",
+      "tex": "x+y+1",
+      "display": false,
+      "width": 73,
+      "height": 16,
+      "svgSHA256": "fa84bf871d2257ae8c43be18d0cac3e9a62db0452bd1f57da59ab592bb6a313c"
+    },
+    {
+      "name": "ordinary-display",
+      "tex": "x+y+1",
+      "display": true,
+      "width": 73,
+      "height": 16,
+      "svgSHA256": "fa84bf871d2257ae8c43be18d0cac3e9a62db0452bd1f57da59ab592bb6a313c"
+    },
+    {
+      "name": "nested-script-inline",
+      "tex": "z^{\\widehat{abcdef}}",
+      "display": false,
+      "width": 48,
+      "height": 23,
+      "svgSHA256": "b4a106c4f437a2788bfcbb013d9b4fb588897e5c6b6e1ee0c9c31188c5a4eb59"
+    },
+    {
+      "name": "nested-script-display",
+      "tex": "z^{\\widehat{abcdef}}",
+      "display": true,
+      "width": 48,
+      "height": 23,
+      "svgSHA256": "cf4e88893c5f3819d8cb66a79d913a342ccb0634caa4203c23d006136347a876"
+    },
+    {
+      "name": "nested-wide-inline",
+      "tex": "\\widehat{\\widetilde{abcdef}}",
+      "display": false,
+      "width": 53,
+      "height": 32,
+      "svgSHA256": "9f7cc39b99413188b91b3d3b05d93d73c35da84dec1c3750b19d6f313de607ec"
+    },
+    {
+      "name": "nested-wide-display",
+      "tex": "\\widehat{\\widetilde{abcdef}}",
+      "display": true,
+      "width": 53,
+      "height": 32,
+      "svgSHA256": "9f7cc39b99413188b91b3d3b05d93d73c35da84dec1c3750b19d6f313de607ec"
+    }
+  ]
+}

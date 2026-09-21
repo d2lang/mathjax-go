@@ -5,7 +5,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"os"
-	"strings"
 	"testing"
 
 	mathjax "github.com/d2lang/mathjax-go"
@@ -43,10 +42,10 @@ func TestVectorAccentPinnedReferences(t *testing.T) {
 	if err := json.Unmarshal(residualData, &residuals); err != nil {
 		t.Fatal(err)
 	}
-	if residuals.Base != "c22e62130eaa42e523a3b0bc8cee66ba19c45c5c" || len(residuals.Cases) != 6 {
+	if residuals.Base != "c22e62130eaa42e523a3b0bc8cee66ba19c45c5c" || len(residuals.Cases) != 2 {
 		t.Fatal("missing immutable known-residual baseline")
 	}
-	known := map[string]bool{"combined-brace-inline": true, "combined-brace-display": true, "widehat-control-inline": true, "widehat-control-display": true, "widetilde-control-inline": true, "widetilde-control-display": true}
+	known := map[string]bool{"combined-brace-inline": true, "combined-brace-display": true}
 	for _, r := range residuals.Cases {
 		if !known[r.Name] {
 			t.Fatal("unexpected/duplicate residual", r.Name)
@@ -55,7 +54,7 @@ func TestVectorAccentPinnedReferences(t *testing.T) {
 		if fmt.Sprintf("%x", sha256.Sum256([]byte(r.SVG))) != r.BaselineSVGSHA256 || r.BaselineSVGSHA256 == r.PrimarySVGSHA256 {
 			t.Fatal("invalid known residual", r.Name)
 		}
-		if strings.HasPrefix(r.Name, "combined-brace-") && r.Issue != "D047" || !strings.HasPrefix(r.Name, "combined-brace-") && r.Issue != "D046" {
+		if r.Issue != "D047" {
 			t.Fatal("wrong residual issue", r.Name)
 		}
 	}

@@ -202,6 +202,10 @@ func (w *wrapper) getStretchedVariant(dimensions []float64, exact bool) {
 			w.variant = variant
 		}
 		w.size, w.sizeSet = i, true
+		// CommonMo retains delim.c when falling back to the largest fixed size.
+		if w.stretch.HasAlias {
+			w.stretchGlyph = w.stretch.Alias
+		}
 		w.invalidateBBox()
 	}
 }
@@ -300,6 +304,8 @@ func (w *wrapper) moToSVG(parent *Element) {
 	if _, accent := w.node.Property("mathaccent"); accent {
 		prototype := layout.EmptyBBox()
 		w.computeChildrenBBox(prototype)
+		// CommonMo.getAccentOffset uses protoBBox, including italic correction.
+		w.copySkewIC(prototype)
 		v = -prototype.W / 2
 	}
 	if u != 0 || v != 0 {
