@@ -314,7 +314,10 @@ func (p *parser) attachScript(nodes []*mml.Node, marker byte) ([]*mml.Node, erro
 	if value, ok := base.Attributes.Get("movesupsub"); ok {
 		moveLimits, _ = value.(bool)
 	}
-	underOver := moveLimits && p.display
+	// Braces and brackets are stacked operators even in inline math. Ordinary
+	// movable-limit operators still use side scripts in that mode.
+	stacked, _ := base.Property("subsupOK")
+	underOver := moveLimits && (p.display || (base.Kind == "TeXAtom" && stacked == true))
 	var result *mml.Node
 	if marker == '_' {
 		switch base.Kind {
