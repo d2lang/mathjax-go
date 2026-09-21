@@ -1,0 +1,20 @@
+# Nested movable-limit renderer lookup
+
+This correction changes only the lookup used by `CommonScriptbase.hasMovableLimits`. The primary implementation reads `baseChild.coreMO().node`, rather than the layout core that stops at an existing script wrapper. `coreMO()` is node-specific: script/base/layout classes descend child zero even for a nonembellished base; rows follow their actual embellished core or return themselves; tokens and ordinary nodes return themselves. A non-operator result is valid. Generic MML core traversal, accent lookup, layout-core calculations and parser dispatch remain unchanged.
+
+The authority is unmodified MathJax 3.2.2 bundled with D2 v0.8.1. Both generators verify all three original asset hashes. Source is MathJax-src `ad8f5c21cb810236551da8c6512ba733e67357ee`, CommonScriptbase.hasMovableLimits, CommonWrapper.coreMO and the node-specific coreMO implementations. The predicate inherits the separately accepted immediate-base class-transfer (D057) and direct Overunderset base normalization (D058) fixes.
+
+Generate fresh evidence without rewriting fixtures:
+
+```
+node testdata/generate_nested_movable_limits.cjs /path/to/d2latex /tmp/nested-primary
+node internal/svg/testdata/generate_movable_limit_core.cjs /path/to/d2latex /tmp/core-primary
+```
+
+The public generator writes 40 complete SVGs, pre-output MathML trees and `discovery.json`. Every primary SVG hash remains byte-exact to the prior independent preparation. The Go test requires all 40 same-primary-MathML SVGs to match raw primary hashes, including repeat/clone output and unchanged input/node/parent identities. Forty actual public TeX cases check exact dimensions and complete output. Twenty-eight match raw primary SVG bytes. Twelve inline sum/product cases retain exactly one existing parser tag difference (`msubsup`/`munderover`, `msub`/`munder`, or `msup`/`mover`). Each fixture binds the exact tag's position, both raw hashes, and the complete primary output after that one replacement; no other attribute, geometry, path, style, or character is ignored. This does not claim the separate parser representation issue is fixed.
+
+The core generator constructs 62 registered primary MathML controls (31 bases in both modes), invokes the actual primary wrapper predicate, and records exact target identity/path, node kind and boolean result. It covers typed true/false nonoperator attributes, nonembellished and multi-child rows, wrapped ordinary bases, script/fraction/layout delegation, root/enclose nodes, a selected action child, and a nonzero row-core index. The projected Go `CoreIndex` is the index of the actual primary `core()` child for an embellished node, not the abstract `coreIndex()` method's default zero. Four action-render attempts cannot paint in the pinned lite DOM because it has no addEventListener; their actual predicate/target observations remain valid, and no complete action SVG claim is made. Nonoperator movablelimits attributes are not accepted by the authored mmlToken parser; their boundary is the registered MathML/predicate API. Full SVG diagnostic receipts for those registered cases retain a preexisting copied-attribute serialization difference instead of hiding it in the accepted whole-SVG tests.
+
+The first mo-only prototype incorrectly returned nil for valid nonoperator cores. Its preserved negative control fails ten inline primary predicate cases. The accepted parent fails ten actual public nested inline cases while ordinary/display controls remain unchanged. Full current-parent baseline receipts and the earlier changed-but-wrong spacing evidence are preserved outside the repository. No D050 dispatcher, D056 explicit-limits, stackrel, brace or duplicate-script change is included.
+
+Attribute-type limits: the predicate retains the existing Go boolean-attribute conversion, and the selected-action branch retains numeric attribute handling. These tests establish typed boolean values and numeric selection, not arbitrary JavaScript truthiness/coercion for malformed string/boolean selection values. No generic attribute coercion change is included.

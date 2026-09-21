@@ -28,8 +28,44 @@ func (w *wrapper) overChild() *wrapper {
 	return nil
 }
 
+// movableLimitCore follows the node-specific coreMO contract used only by
+// CommonScriptbase.hasMovableLimits. A non-operator may be the returned core.
+// Keep the distinct layout-base and accent-operator traversals unchanged.
+func movableLimitCore(base *wrapper) *wrapper {
+	for base != nil {
+		index := 0
+		switch base.node.Kind {
+		case "mrow":
+			if !base.node.Flags.Embellished {
+				return base
+			}
+			index = base.node.Flags.CoreIndex
+		case "msub", "msup", "msubsup", "munder", "mover", "munderover", "mmultiscripts",
+			"TeXAtom", "mstyle", "mpadded", "mphantom", "semantics", "mfrac", "math", "mtd":
+			// AbstractMmlBaseNode and AbstractMmlLayoutNode always use child 0.
+		case "maction":
+			selection, ok := numberAttribute(base.node, "selection")
+			if !ok || math.IsNaN(selection) {
+				return nil
+			}
+			selected := math.Max(1, math.Min(float64(len(base.children)), selection)) - 1
+			if selected != math.Trunc(selected) {
+				return nil
+			}
+			index = int(selected)
+		default:
+			return base
+		}
+		if index < 0 || index >= len(base.children) {
+			return nil
+		}
+		base = base.children[index]
+	}
+	return nil
+}
+
 func (w *wrapper) hasMovableLimits() bool {
-	base := w.scriptBaseCore()
+	base := movableLimitCore(w.scriptBase())
 	return !w.displayStyle && base != nil && boolAttributeDefault(base.node, "movablelimits", false)
 }
 
