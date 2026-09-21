@@ -164,6 +164,9 @@ func (w *wrapper) getVariant() {
 		w.fontFamily = "serif"
 		return
 	}
+	if w.authoredFontFamily() {
+		return
+	}
 	if name := stringAttribute(w.node, "mathvariant", ""); name != "" && font.ValidVariant(font.Variant(name)) {
 		w.variant = font.Variant(name)
 	} else if w.node.Kind == "mi" {
@@ -182,6 +185,76 @@ func (w *wrapper) getVariant() {
 	if value, ok := w.node.Property("variantForm"); ok && truthy(value) {
 		w.variant = font.TeXVariant
 	}
+}
+
+// CommonWrapper.getVariant selects explicit-font text for an authored family.
+// MathML font attributes override CSS, while an explicit mathvariant overrides
+// both. Keep the selected styles on this wrapper, never on the input MathML.
+func (w *wrapper) authoredFontFamily() bool {
+	// Deprecated mglyph character rendering has its own family handler.
+	// This path handles the five text-token kinds accepted by MmlToken.
+	switch w.node.Kind {
+	case "mi", "mn", "mo", "mtext", "ms":
+	default:
+		return false
+	}
+	family := stringAttribute(w.node, "fontfamily", "")
+	weight := stringAttribute(w.node, "fontweight", "")
+	style := stringAttribute(w.node, "fontstyle", "")
+	cssFamily, cssWeight, cssStyle := "", "", ""
+	if w.styles != nil {
+		cssFamily = w.styles.value("font-family")
+		cssWeight = w.styles.value("font-weight")
+		cssStyle = w.styles.value("font-style")
+	}
+	if family == "" && cssFamily == "" {
+		return false
+	}
+	if w.styles == nil {
+		w.styles = &wrapperStyles{}
+	}
+	// The primary wrapper removes these CSS declarations before resolving
+	// the variant and appends only the chosen explicit-font styles afterward.
+	kept := w.styles.other[:0]
+	for _, declaration := range w.styles.other {
+		if declaration.name != "font-family" && declaration.name != "font-weight" && declaration.name != "font-style" {
+			kept = append(kept, declaration)
+		}
+	}
+	w.styles.other = kept
+	// CommonMo selects its large-operator variant before the generic font
+	// family resolution; CSS font declarations have already been removed.
+	if w.node.Kind == "mo" && boolAttributeDefault(w.node, "largeop", false) {
+		return false
+	}
+	if value, ok := w.node.Attributes.GetExplicit("mathvariant"); ok && truthy(value) {
+		return false
+	}
+	if family == "" {
+		family = cssFamily
+	}
+	if weight == "" {
+		weight = cssWeight
+	}
+	if style == "" {
+		style = cssStyle
+	}
+	if weight != "" && strings.IndexFunc(weight, func(r rune) bool { return r < '0' || r > '9' }) == -1 {
+		value, _ := strconv.ParseFloat(weight, 64)
+		weight = "normal"
+		if value > 600 {
+			weight = "bold"
+		}
+	}
+	w.styles.setOther("font-family", family)
+	if weight != "" {
+		w.styles.setOther("font-weight", weight)
+	}
+	if style != "" {
+		w.styles.setOther("font-style", style)
+	}
+	w.variant = font.Variant("-explicitFont")
+	return true
 }
 
 func (w *wrapper) getScale() {
@@ -363,7 +436,7 @@ func (w *wrapper) computeChildrenBBox(bbox *layout.BBox) {
 
 func (w *wrapper) computeTextBBox(bbox *layout.BBox) {
 	bbox.Empty()
-	if w.parent != nil && w.parent.explicitFont {
+	if w.parent != nil && (w.parent.explicitFont || w.parent.variant == font.Variant("-explicitFont")) {
 		bbox.H = .75
 		bbox.D = .2
 		for _, codepoint := range w.node.Text {
@@ -613,7 +686,7 @@ func (w *wrapper) textToSVG(parent *Element) {
 	if w.node.Text == "" {
 		return
 	}
-	if w.parent != nil && w.parent.explicitFont {
+	if w.parent != nil && (w.parent.explicitFont || w.parent.variant == font.Variant("-explicitFont")) {
 		w.element = w.unknownText(w.node.Text, font.Variant("-explicitFont"))
 		parent.Append(w.element)
 		return
