@@ -1,0 +1,1264 @@
+{
+  "oracle": "Unmodified pinned D2 MathJax3.2.2, pure post-compile MML overlays before output; no mmlToken parser claim",
+  "assetsSHA256": {
+    "polyfills.js": "7fe1d048c78b0e09854c1259f7413868a51cc8f0c822489eb1ac36ae6c85ce01",
+    "mathjax.js": "cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869",
+    "setup.js": "a52cb0bbabfbd7796b9fedd793b9386c474e3123e788ee151cbe47ca1fa6e881"
+  },
+  "cases": [
+    {
+      "name": "empty-before-sum-display",
+      "tex": "\\sum_{i}^{n}",
+      "display": true,
+      "overlays": [],
+      "prependEmpty": true,
+      "sha256": "30b96180fc7159a2168edfb405d4edbe623a9656e0d6c1ba88232dac965687a8",
+      "operators": [
+        {
+          "text": "",
+          "lspace": 0.05555555555555555,
+          "rspace": 0.05555555555555555,
+          "scriptlevel": 0
+        },
+        {
+          "text": "∑",
+          "lspace": 0.1111111111111111,
+          "rspace": 0.16666666666666666,
+          "scriptlevel": 0
+        }
+      ]
+    },
+    {
+      "name": "empty-before-zero-sum-display",
+      "tex": "\\sum_{i}^{n}",
+      "display": true,
+      "overlays": [
+        {
+          "index": 1,
+          "explicit": {
+            "lspace": "0",
+            "rspace": "0"
+          },
+          "inherited": {},
+          "removeClass": false
+        }
+      ],
+      "prependEmpty": true,
+      "sha256": "30b96180fc7159a2168edfb405d4edbe623a9656e0d6c1ba88232dac965687a8",
+      "operators": [
+        {
+          "text": "",
+          "lspace": 0.05555555555555555,
+          "rspace": 0.05555555555555555,
+          "scriptlevel": 0
+        },
+        {
+          "text": "∑",
+          "lspace": 0.1111111111111111,
+          "rspace": 0.16666666666666666,
+          "scriptlevel": 0
+        }
+      ]
+    },
+    {
+      "name": "leading-explicit-inline",
+      "tex": "+x",
+      "display": false,
+      "overlays": [
+        {
+          "index": 0,
+          "explicit": {
+            "lspace": "1em",
+            "rspace": "0em"
+          },
+          "inherited": {},
+          "removeClass": false
+        }
+      ],
+      "prependEmpty": false,
+      "sha256": "5336df4764f9d467e7665ed5013beee01874e742e11addbfa20059f734ed05df",
+      "operators": [
+        {
+          "text": "+",
+          "lspace": 0.05555555555555555,
+          "rspace": 0.1111111111111111,
+          "scriptlevel": 0
+        }
+      ]
+    },
+    {
+      "name": "leading-explicit-display",
+      "tex": "+x",
+      "display": true,
+      "overlays": [
+        {
+          "index": 0,
+          "explicit": {
+            "lspace": "1em",
+            "rspace": "0em"
+          },
+          "inherited": {},
+          "removeClass": false
+        }
+      ],
+      "prependEmpty": false,
+      "sha256": "5336df4764f9d467e7665ed5013beee01874e742e11addbfa20059f734ed05df",
+      "operators": [
+        {
+          "text": "+",
+          "lspace": 0.05555555555555555,
+          "rspace": 0.1111111111111111,
+          "scriptlevel": 0
+        }
+      ]
+    },
+    {
+      "name": "internal-zero-inline",
+      "tex": "x+y",
+      "display": false,
+      "overlays": [
+        {
+          "index": 0,
+          "explicit": {
+            "lspace": "0em",
+            "rspace": "0em"
+          },
+          "inherited": {},
+          "removeClass": false
+        }
+      ],
+      "prependEmpty": false,
+      "sha256": "457b9fc0a9caa7b9c8667492dbd15bb8bac64ad0e7fc1f9ce27c975eb23829da",
+      "operators": [
+        {
+          "text": "+",
+          "lspace": 0.2777777777777778,
+          "rspace": 0.2777777777777778,
+          "scriptlevel": 0
+        }
+      ]
+    },
+    {
+      "name": "internal-zero-display",
+      "tex": "x+y",
+      "display": true,
+      "overlays": [
+        {
+          "index": 0,
+          "explicit": {
+            "lspace": "0em",
+            "rspace": "0em"
+          },
+          "inherited": {},
+          "removeClass": false
+        }
+      ],
+      "prependEmpty": false,
+      "sha256": "457b9fc0a9caa7b9c8667492dbd15bb8bac64ad0e7fc1f9ce27c975eb23829da",
+      "operators": [
+        {
+          "text": "+",
+          "lspace": 0.2777777777777778,
+          "rspace": 0.2777777777777778,
+          "scriptlevel": 0
+        }
+      ]
+    },
+    {
+      "name": "isolated-inline",
+      "tex": "+",
+      "display": false,
+      "overlays": [
+        {
+          "index": 0,
+          "explicit": {
+            "lspace": "1em",
+            "rspace": "2em"
+          },
+          "inherited": {},
+          "removeClass": false
+        }
+      ],
+      "prependEmpty": false,
+      "sha256": "f6ebfbb8cb346c8983c035be20a7acdb6dbefbe6e6b243f0798adfe28f728347",
+      "operators": [
+        {
+          "text": "+",
+          "lspace": 0.2777777777777778,
+          "rspace": 0.2777777777777778,
+          "scriptlevel": 0
+        }
+      ]
+    },
+    {
+      "name": "isolated-display",
+      "tex": "+",
+      "display": true,
+      "overlays": [
+        {
+          "index": 0,
+          "explicit": {
+            "lspace": "1em",
+            "rspace": "2em"
+          },
+          "inherited": {},
+          "removeClass": false
+        }
+      ],
+      "prependEmpty": false,
+      "sha256": "f6ebfbb8cb346c8983c035be20a7acdb6dbefbe6e6b243f0798adfe28f728347",
+      "operators": [
+        {
+          "text": "+",
+          "lspace": 0.2777777777777778,
+          "rspace": 0.2777777777777778,
+          "scriptlevel": 0
+        }
+      ]
+    },
+    {
+      "name": "left-only-default-right-inline",
+      "tex": "+x",
+      "display": false,
+      "overlays": [
+        {
+          "index": 0,
+          "explicit": {
+            "lspace": "1em"
+          },
+          "inherited": {},
+          "removeClass": false
+        }
+      ],
+      "prependEmpty": false,
+      "sha256": "e1950c84b51e438db5d1aabf209a72b5602fa05ef42cd7e031a12ca73ed333a3",
+      "operators": [
+        {
+          "text": "+",
+          "lspace": 0.05555555555555555,
+          "rspace": 0.1111111111111111,
+          "scriptlevel": 0
+        }
+      ]
+    },
+    {
+      "name": "left-only-default-right-display",
+      "tex": "+x",
+      "display": true,
+      "overlays": [
+        {
+          "index": 0,
+          "explicit": {
+            "lspace": "1em"
+          },
+          "inherited": {},
+          "removeClass": false
+        }
+      ],
+      "prependEmpty": false,
+      "sha256": "e1950c84b51e438db5d1aabf209a72b5602fa05ef42cd7e031a12ca73ed333a3",
+      "operators": [
+        {
+          "text": "+",
+          "lspace": 0.05555555555555555,
+          "rspace": 0.1111111111111111,
+          "scriptlevel": 0
+        }
+      ]
+    },
+    {
+      "name": "right-only-default-left-inline",
+      "tex": "x+y",
+      "display": false,
+      "overlays": [
+        {
+          "index": 0,
+          "explicit": {
+            "rspace": "1em"
+          },
+          "inherited": {},
+          "removeClass": false
+        }
+      ],
+      "prependEmpty": false,
+      "sha256": "ca1548ed9f124fd737e902f842d474558449a239376e1549997c81ddd195a5f3",
+      "operators": [
+        {
+          "text": "+",
+          "lspace": 0.2777777777777778,
+          "rspace": 0.2777777777777778,
+          "scriptlevel": 0
+        }
+      ]
+    },
+    {
+      "name": "right-only-default-left-display",
+      "tex": "x+y",
+      "display": true,
+      "overlays": [
+        {
+          "index": 0,
+          "explicit": {
+            "rspace": "1em"
+          },
+          "inherited": {},
+          "removeClass": false
+        }
+      ],
+      "prependEmpty": false,
+      "sha256": "ca1548ed9f124fd737e902f842d474558449a239376e1549997c81ddd195a5f3",
+      "operators": [
+        {
+          "text": "+",
+          "lspace": 0.2777777777777778,
+          "rspace": 0.2777777777777778,
+          "scriptlevel": 0
+        }
+      ]
+    },
+    {
+      "name": "inherited-inline",
+      "tex": "x+y",
+      "display": false,
+      "overlays": [
+        {
+          "index": 0,
+          "explicit": {},
+          "inherited": {
+            "lspace": ".5em",
+            "rspace": ".25em"
+          },
+          "removeClass": false
+        }
+      ],
+      "prependEmpty": false,
+      "sha256": "ac2745988b356eecfd93add625bec6111f5644f196d2f0ccefac4348b545b646",
+      "operators": [
+        {
+          "text": "+",
+          "lspace": 0.2777777777777778,
+          "rspace": 0.2777777777777778,
+          "scriptlevel": 0
+        }
+      ]
+    },
+    {
+      "name": "inherited-display",
+      "tex": "x+y",
+      "display": true,
+      "overlays": [
+        {
+          "index": 0,
+          "explicit": {},
+          "inherited": {
+            "lspace": ".5em",
+            "rspace": ".25em"
+          },
+          "removeClass": false
+        }
+      ],
+      "prependEmpty": false,
+      "sha256": "ac2745988b356eecfd93add625bec6111f5644f196d2f0ccefac4348b545b646",
+      "operators": [
+        {
+          "text": "+",
+          "lspace": 0.2777777777777778,
+          "rspace": 0.2777777777777778,
+          "scriptlevel": 0
+        }
+      ]
+    },
+    {
+      "name": "explicit-over-inherited-inline",
+      "tex": "x+y",
+      "display": false,
+      "overlays": [
+        {
+          "index": 0,
+          "explicit": {
+            "lspace": "0",
+            "rspace": ".1em"
+          },
+          "inherited": {
+            "lspace": "1em",
+            "rspace": "2em"
+          },
+          "removeClass": false
+        }
+      ],
+      "prependEmpty": false,
+      "sha256": "f0ceadccb734de790182d79f04abb660744a6a12a96c0d3793c316ac22b08da3",
+      "operators": [
+        {
+          "text": "+",
+          "lspace": 0.2777777777777778,
+          "rspace": 0.2777777777777778,
+          "scriptlevel": 0
+        }
+      ]
+    },
+    {
+      "name": "explicit-over-inherited-display",
+      "tex": "x+y",
+      "display": true,
+      "overlays": [
+        {
+          "index": 0,
+          "explicit": {
+            "lspace": "0",
+            "rspace": ".1em"
+          },
+          "inherited": {
+            "lspace": "1em",
+            "rspace": "2em"
+          },
+          "removeClass": false
+        }
+      ],
+      "prependEmpty": false,
+      "sha256": "f0ceadccb734de790182d79f04abb660744a6a12a96c0d3793c316ac22b08da3",
+      "operators": [
+        {
+          "text": "+",
+          "lspace": 0.2777777777777778,
+          "rspace": 0.2777777777777778,
+          "scriptlevel": 0
+        }
+      ]
+    },
+    {
+      "name": "negative-clamped-inline",
+      "tex": "x+y",
+      "display": false,
+      "overlays": [
+        {
+          "index": 0,
+          "explicit": {
+            "lspace": "-.5em",
+            "rspace": "-1em"
+          },
+          "inherited": {},
+          "removeClass": false
+        }
+      ],
+      "prependEmpty": false,
+      "sha256": "457b9fc0a9caa7b9c8667492dbd15bb8bac64ad0e7fc1f9ce27c975eb23829da",
+      "operators": [
+        {
+          "text": "+",
+          "lspace": 0.2777777777777778,
+          "rspace": 0.2777777777777778,
+          "scriptlevel": 0
+        }
+      ]
+    },
+    {
+      "name": "negative-clamped-display",
+      "tex": "x+y",
+      "display": true,
+      "overlays": [
+        {
+          "index": 0,
+          "explicit": {
+            "lspace": "-.5em",
+            "rspace": "-1em"
+          },
+          "inherited": {},
+          "removeClass": false
+        }
+      ],
+      "prependEmpty": false,
+      "sha256": "457b9fc0a9caa7b9c8667492dbd15bb8bac64ad0e7fc1f9ce27c975eb23829da",
+      "operators": [
+        {
+          "text": "+",
+          "lspace": 0.2777777777777778,
+          "rspace": 0.2777777777777778,
+          "scriptlevel": 0
+        }
+      ]
+    },
+    {
+      "name": "adjacent-max-inline",
+      "tex": "x++y",
+      "display": false,
+      "overlays": [
+        {
+          "index": 0,
+          "explicit": {
+            "lspace": ".2em",
+            "rspace": ".6em"
+          },
+          "inherited": {},
+          "removeClass": false
+        },
+        {
+          "index": 1,
+          "explicit": {
+            "lspace": ".9em",
+            "rspace": ".1em"
+          },
+          "inherited": {},
+          "removeClass": false
+        }
+      ],
+      "prependEmpty": false,
+      "sha256": "ee094af71f58396317e6ca7d59edb66d4cecef94f3894054abe41eae7bcb0efe",
+      "operators": [
+        {
+          "text": "+",
+          "lspace": 0.2777777777777778,
+          "rspace": 0.2777777777777778,
+          "scriptlevel": 0
+        },
+        {
+          "text": "+",
+          "lspace": 0.2777777777777778,
+          "rspace": 0.2777777777777778,
+          "scriptlevel": 0
+        }
+      ]
+    },
+    {
+      "name": "adjacent-max-display",
+      "tex": "x++y",
+      "display": true,
+      "overlays": [
+        {
+          "index": 0,
+          "explicit": {
+            "lspace": ".2em",
+            "rspace": ".6em"
+          },
+          "inherited": {},
+          "removeClass": false
+        },
+        {
+          "index": 1,
+          "explicit": {
+            "lspace": ".9em",
+            "rspace": ".1em"
+          },
+          "inherited": {},
+          "removeClass": false
+        }
+      ],
+      "prependEmpty": false,
+      "sha256": "ee094af71f58396317e6ca7d59edb66d4cecef94f3894054abe41eae7bcb0efe",
+      "operators": [
+        {
+          "text": "+",
+          "lspace": 0.2777777777777778,
+          "rspace": 0.2777777777777778,
+          "scriptlevel": 0
+        },
+        {
+          "text": "+",
+          "lspace": 0.2777777777777778,
+          "rspace": 0.2777777777777778,
+          "scriptlevel": 0
+        }
+      ]
+    },
+    {
+      "name": "adjacent-covered-inline",
+      "tex": "x++y",
+      "display": false,
+      "overlays": [
+        {
+          "index": 0,
+          "explicit": {
+            "rspace": "1em"
+          },
+          "inherited": {},
+          "removeClass": false
+        },
+        {
+          "index": 1,
+          "explicit": {
+            "lspace": ".2em"
+          },
+          "inherited": {},
+          "removeClass": false
+        }
+      ],
+      "prependEmpty": false,
+      "sha256": "2d60cd69d437044509ebec3e82ae9abbca5970e6562f49f0db51ee704b4ea432",
+      "operators": [
+        {
+          "text": "+",
+          "lspace": 0.2777777777777778,
+          "rspace": 0.2777777777777778,
+          "scriptlevel": 0
+        },
+        {
+          "text": "+",
+          "lspace": 0.2777777777777778,
+          "rspace": 0.2777777777777778,
+          "scriptlevel": 0
+        }
+      ]
+    },
+    {
+      "name": "adjacent-covered-display",
+      "tex": "x++y",
+      "display": true,
+      "overlays": [
+        {
+          "index": 0,
+          "explicit": {
+            "rspace": "1em"
+          },
+          "inherited": {},
+          "removeClass": false
+        },
+        {
+          "index": 1,
+          "explicit": {
+            "lspace": ".2em"
+          },
+          "inherited": {},
+          "removeClass": false
+        }
+      ],
+      "prependEmpty": false,
+      "sha256": "2d60cd69d437044509ebec3e82ae9abbca5970e6562f49f0db51ee704b4ea432",
+      "operators": [
+        {
+          "text": "+",
+          "lspace": 0.2777777777777778,
+          "rspace": 0.2777777777777778,
+          "scriptlevel": 0
+        },
+        {
+          "text": "+",
+          "lspace": 0.2777777777777778,
+          "rspace": 0.2777777777777778,
+          "scriptlevel": 0
+        }
+      ]
+    },
+    {
+      "name": "adjacent-embellished-inline",
+      "tex": "x+_{i}+^{j}y",
+      "display": false,
+      "overlays": [
+        {
+          "index": 0,
+          "explicit": {
+            "rspace": ".4em"
+          },
+          "inherited": {},
+          "removeClass": false
+        },
+        {
+          "index": 1,
+          "explicit": {
+            "lspace": ".7em"
+          },
+          "inherited": {},
+          "removeClass": false
+        }
+      ],
+      "prependEmpty": false,
+      "sha256": "c3f67bee46cb158c6b8730d9684d4d78696d620c9ad196275bf2f3ecdc155412",
+      "operators": [
+        {
+          "text": "+",
+          "lspace": 0.2777777777777778,
+          "rspace": 0.2777777777777778,
+          "scriptlevel": 0
+        },
+        {
+          "text": "+",
+          "lspace": 0.2777777777777778,
+          "rspace": 0.2777777777777778,
+          "scriptlevel": 0
+        }
+      ]
+    },
+    {
+      "name": "adjacent-embellished-display",
+      "tex": "x+_{i}+^{j}y",
+      "display": true,
+      "overlays": [
+        {
+          "index": 0,
+          "explicit": {
+            "rspace": ".4em"
+          },
+          "inherited": {},
+          "removeClass": false
+        },
+        {
+          "index": 1,
+          "explicit": {
+            "lspace": ".7em"
+          },
+          "inherited": {},
+          "removeClass": false
+        }
+      ],
+      "prependEmpty": false,
+      "sha256": "efa14c6a5b2a410909d71a1426bc0f2bf037db272a588b3d27a04b9865ef85db",
+      "operators": [
+        {
+          "text": "+",
+          "lspace": 0.2777777777777778,
+          "rspace": 0.2777777777777778,
+          "scriptlevel": 0
+        },
+        {
+          "text": "+",
+          "lspace": 0.2777777777777778,
+          "rspace": 0.2777777777777778,
+          "scriptlevel": 0
+        }
+      ]
+    },
+    {
+      "name": "script-default-large-inline",
+      "tex": "x^{y+z}",
+      "display": false,
+      "overlays": [
+        {
+          "index": 0,
+          "explicit": {
+            "lspace": "0"
+          },
+          "inherited": {},
+          "removeClass": false
+        }
+      ],
+      "prependEmpty": false,
+      "sha256": "a29cae0cfe246d13f34c8b6f5dc7f7a93934a5c0930da83c55a047499f904bcf",
+      "operators": [
+        {
+          "text": "+",
+          "lspace": 0.2777777777777778,
+          "rspace": 0.2777777777777778,
+          "scriptlevel": 1
+        }
+      ]
+    },
+    {
+      "name": "script-default-large-display",
+      "tex": "x^{y+z}",
+      "display": true,
+      "overlays": [
+        {
+          "index": 0,
+          "explicit": {
+            "lspace": "0"
+          },
+          "inherited": {},
+          "removeClass": false
+        }
+      ],
+      "prependEmpty": false,
+      "sha256": "c0ae3a0945bbb268d5fbd4e4d8585d654a2530cd13b23b4ec478b819abebff4f",
+      "operators": [
+        {
+          "text": "+",
+          "lspace": 0.2777777777777778,
+          "rspace": 0.2777777777777778,
+          "scriptlevel": 1
+        }
+      ]
+    },
+    {
+      "name": "script-default-small-inline",
+      "tex": "x^{+y}",
+      "display": false,
+      "overlays": [
+        {
+          "index": 0,
+          "explicit": {
+            "rspace": "0"
+          },
+          "inherited": {},
+          "removeClass": false
+        }
+      ],
+      "prependEmpty": false,
+      "sha256": "55d96c6924d4705de558515d2137a6acdc8f0aac63b2420b07a4b54daab2019b",
+      "operators": [
+        {
+          "text": "+",
+          "lspace": 0.05555555555555555,
+          "rspace": 0.1111111111111111,
+          "scriptlevel": 1
+        }
+      ]
+    },
+    {
+      "name": "script-default-small-display",
+      "tex": "x^{+y}",
+      "display": true,
+      "overlays": [
+        {
+          "index": 0,
+          "explicit": {
+            "rspace": "0"
+          },
+          "inherited": {},
+          "removeClass": false
+        }
+      ],
+      "prependEmpty": false,
+      "sha256": "526ca13926aad6cdf834f3248098546cc679a6dbdc504cc183f35a59930f0d01",
+      "operators": [
+        {
+          "text": "+",
+          "lspace": 0.05555555555555555,
+          "rspace": 0.1111111111111111,
+          "scriptlevel": 1
+        }
+      ]
+    },
+    {
+      "name": "script-explicit-inline",
+      "tex": "x^{y+z}",
+      "display": false,
+      "overlays": [
+        {
+          "index": 0,
+          "explicit": {
+            "lspace": "1em",
+            "rspace": ".5em"
+          },
+          "inherited": {},
+          "removeClass": false
+        }
+      ],
+      "prependEmpty": false,
+      "sha256": "797fb190c141c800523877e00ad569f5d68950c3e2dd57e9aa433d17b3a3c1cf",
+      "operators": [
+        {
+          "text": "+",
+          "lspace": 0.2777777777777778,
+          "rspace": 0.2777777777777778,
+          "scriptlevel": 1
+        }
+      ]
+    },
+    {
+      "name": "script-explicit-display",
+      "tex": "x^{y+z}",
+      "display": true,
+      "overlays": [
+        {
+          "index": 0,
+          "explicit": {
+            "lspace": "1em",
+            "rspace": ".5em"
+          },
+          "inherited": {},
+          "removeClass": false
+        }
+      ],
+      "prependEmpty": false,
+      "sha256": "86f0cded5320d3fcce24a44d5593c834347b6122c068f8fc420ef661483b7fa3",
+      "operators": [
+        {
+          "text": "+",
+          "lspace": 0.2777777777777778,
+          "rspace": 0.2777777777777778,
+          "scriptlevel": 1
+        }
+      ]
+    },
+    {
+      "name": "script-secondlevel-inline",
+      "tex": "x^{y^{a+b}}",
+      "display": false,
+      "overlays": [
+        {
+          "index": 0,
+          "explicit": {
+            "lspace": "0"
+          },
+          "inherited": {},
+          "removeClass": false
+        }
+      ],
+      "prependEmpty": false,
+      "sha256": "d89f760b2fd0a8d05c8a99fc329c16a03a93c9e62858bf6d4d177126bde3262d",
+      "operators": [
+        {
+          "text": "+",
+          "lspace": 0.2777777777777778,
+          "rspace": 0.2777777777777778,
+          "scriptlevel": 2
+        }
+      ]
+    },
+    {
+      "name": "script-secondlevel-display",
+      "tex": "x^{y^{a+b}}",
+      "display": true,
+      "overlays": [
+        {
+          "index": 0,
+          "explicit": {
+            "lspace": "0"
+          },
+          "inherited": {},
+          "removeClass": false
+        }
+      ],
+      "prependEmpty": false,
+      "sha256": "339db4576145eb3a66bc67ebbba1edb94e75a6654ab12119efa2f1733dfc8754",
+      "operators": [
+        {
+          "text": "+",
+          "lspace": 0.2777777777777778,
+          "rspace": 0.2777777777777778,
+          "scriptlevel": 2
+        }
+      ]
+    },
+    {
+      "name": "embellished-subscript-inline",
+      "tex": "x+_{i}y",
+      "display": false,
+      "overlays": [
+        {
+          "index": 0,
+          "explicit": {
+            "lspace": ".4em",
+            "rspace": ".6em"
+          },
+          "inherited": {},
+          "removeClass": false
+        }
+      ],
+      "prependEmpty": false,
+      "sha256": "4fec2a72e352c87ae24a186593322ca31a7c01a6f74127ddd9e3adf3a890db2e",
+      "operators": [
+        {
+          "text": "+",
+          "lspace": 0.2777777777777778,
+          "rspace": 0.2777777777777778,
+          "scriptlevel": 0
+        }
+      ]
+    },
+    {
+      "name": "embellished-subscript-display",
+      "tex": "x+_{i}y",
+      "display": true,
+      "overlays": [
+        {
+          "index": 0,
+          "explicit": {
+            "lspace": ".4em",
+            "rspace": ".6em"
+          },
+          "inherited": {},
+          "removeClass": false
+        }
+      ],
+      "prependEmpty": false,
+      "sha256": "4fec2a72e352c87ae24a186593322ca31a7c01a6f74127ddd9e3adf3a890db2e",
+      "operators": [
+        {
+          "text": "+",
+          "lspace": 0.2777777777777778,
+          "rspace": 0.2777777777777778,
+          "scriptlevel": 0
+        }
+      ]
+    },
+    {
+      "name": "embellished-single-row-inline",
+      "tex": "x\\mathord{+}y",
+      "display": false,
+      "overlays": [
+        {
+          "index": 0,
+          "explicit": {
+            "lspace": ".4em",
+            "rspace": ".6em"
+          },
+          "inherited": {},
+          "removeClass": false
+        }
+      ],
+      "prependEmpty": false,
+      "sha256": "a73f2a7f7c466f95fa81221c380d5128fafc30183d897c63200e2d8ad9bc61dc",
+      "operators": [
+        {
+          "text": "+",
+          "lspace": 0.2777777777777778,
+          "rspace": 0.2777777777777778,
+          "scriptlevel": 0
+        }
+      ]
+    },
+    {
+      "name": "embellished-single-row-display",
+      "tex": "x\\mathord{+}y",
+      "display": true,
+      "overlays": [
+        {
+          "index": 0,
+          "explicit": {
+            "lspace": ".4em",
+            "rspace": ".6em"
+          },
+          "inherited": {},
+          "removeClass": false
+        }
+      ],
+      "prependEmpty": false,
+      "sha256": "a73f2a7f7c466f95fa81221c380d5128fafc30183d897c63200e2d8ad9bc61dc",
+      "operators": [
+        {
+          "text": "+",
+          "lspace": 0.2777777777777778,
+          "rspace": 0.2777777777777778,
+          "scriptlevel": 0
+        }
+      ]
+    },
+    {
+      "name": "single-child-fraction-inline",
+      "tex": "\\frac{+}{x}",
+      "display": false,
+      "overlays": [
+        {
+          "index": 0,
+          "explicit": {
+            "lspace": "1em",
+            "rspace": "2em"
+          },
+          "inherited": {},
+          "removeClass": false
+        }
+      ],
+      "prependEmpty": false,
+      "sha256": "774d52b87b2703127c177d062ef487e1f1ecd2a44ff10684facac6cb2004185a",
+      "operators": [
+        {
+          "text": "+",
+          "lspace": 0.2777777777777778,
+          "rspace": 0.2777777777777778,
+          "scriptlevel": 1
+        }
+      ]
+    },
+    {
+      "name": "single-child-fraction-display",
+      "tex": "\\frac{+}{x}",
+      "display": true,
+      "overlays": [
+        {
+          "index": 0,
+          "explicit": {
+            "lspace": "1em",
+            "rspace": "2em"
+          },
+          "inherited": {},
+          "removeClass": false
+        }
+      ],
+      "prependEmpty": false,
+      "sha256": "6b95ba853a5cda7fe89390740e25a4683c13d3fa2633198dc501171105ed6969",
+      "operators": [
+        {
+          "text": "+",
+          "lspace": 0.2777777777777778,
+          "rspace": 0.2777777777777778,
+          "scriptlevel": 0
+        }
+      ]
+    },
+    {
+      "name": "multi-child-fraction-inline",
+      "tex": "\\frac{+x}{y}",
+      "display": false,
+      "overlays": [
+        {
+          "index": 0,
+          "explicit": {
+            "lspace": "1em",
+            "rspace": ".2em"
+          },
+          "inherited": {},
+          "removeClass": false
+        }
+      ],
+      "prependEmpty": false,
+      "sha256": "76afb311c44452f207fee2307d5e3efc4d8031be05daf002f37cd1a4b2278cf3",
+      "operators": [
+        {
+          "text": "+",
+          "lspace": 0.05555555555555555,
+          "rspace": 0.1111111111111111,
+          "scriptlevel": 1
+        }
+      ]
+    },
+    {
+      "name": "multi-child-fraction-display",
+      "tex": "\\frac{+x}{y}",
+      "display": true,
+      "overlays": [
+        {
+          "index": 0,
+          "explicit": {
+            "lspace": "1em",
+            "rspace": ".2em"
+          },
+          "inherited": {},
+          "removeClass": false
+        }
+      ],
+      "prependEmpty": false,
+      "sha256": "bca0a2164523af9754d9a7d720e61cf08b0f7b527d290cacdebd28eeb9cfd19d",
+      "operators": [
+        {
+          "text": "+",
+          "lspace": 0.05555555555555555,
+          "rspace": 0.1111111111111111,
+          "scriptlevel": 0
+        }
+      ]
+    },
+    {
+      "name": "form-only-control-inline",
+      "tex": "x+y",
+      "display": false,
+      "overlays": [
+        {
+          "index": 0,
+          "explicit": {
+            "form": "prefix"
+          },
+          "inherited": {},
+          "removeClass": false
+        }
+      ],
+      "prependEmpty": false,
+      "sha256": "f0c1a6e54de6dce5fb8b46455eaeac8f868c3b598ba7a4d9b574f3a100895f87",
+      "operators": [
+        {
+          "text": "+",
+          "lspace": 0.2777777777777778,
+          "rspace": 0.2777777777777778,
+          "scriptlevel": 0
+        }
+      ]
+    },
+    {
+      "name": "form-only-control-display",
+      "tex": "x+y",
+      "display": true,
+      "overlays": [
+        {
+          "index": 0,
+          "explicit": {
+            "form": "prefix"
+          },
+          "inherited": {},
+          "removeClass": false
+        }
+      ],
+      "prependEmpty": false,
+      "sha256": "f0c1a6e54de6dce5fb8b46455eaeac8f868c3b598ba7a4d9b574f3a100895f87",
+      "operators": [
+        {
+          "text": "+",
+          "lspace": 0.2777777777777778,
+          "rspace": 0.2777777777777778,
+          "scriptlevel": 0
+        }
+      ]
+    },
+    {
+      "name": "no-spacing-control-inline",
+      "tex": "x+y",
+      "display": false,
+      "overlays": [],
+      "prependEmpty": false,
+      "sha256": "f0c1a6e54de6dce5fb8b46455eaeac8f868c3b598ba7a4d9b574f3a100895f87",
+      "operators": [
+        {
+          "text": "+",
+          "lspace": 0.2777777777777778,
+          "rspace": 0.2777777777777778,
+          "scriptlevel": 0
+        }
+      ]
+    },
+    {
+      "name": "no-spacing-control-display",
+      "tex": "x+y",
+      "display": true,
+      "overlays": [],
+      "prependEmpty": false,
+      "sha256": "f0c1a6e54de6dce5fb8b46455eaeac8f868c3b598ba7a4d9b574f3a100895f87",
+      "operators": [
+        {
+          "text": "+",
+          "lspace": 0.2777777777777778,
+          "rspace": 0.2777777777777778,
+          "scriptlevel": 0
+        }
+      ]
+    },
+    {
+      "name": "remove-class-explicit-inline",
+      "tex": "x+y",
+      "display": false,
+      "overlays": [
+        {
+          "index": 0,
+          "explicit": {
+            "lspace": "0em",
+            "rspace": "0em"
+          },
+          "inherited": {},
+          "removeClass": true
+        }
+      ],
+      "prependEmpty": false,
+      "sha256": "457b9fc0a9caa7b9c8667492dbd15bb8bac64ad0e7fc1f9ce27c975eb23829da",
+      "operators": [
+        {
+          "text": "+",
+          "lspace": 0.2777777777777778,
+          "rspace": 0.2777777777777778,
+          "scriptlevel": 0
+        }
+      ]
+    },
+    {
+      "name": "remove-class-explicit-display",
+      "tex": "x+y",
+      "display": true,
+      "overlays": [
+        {
+          "index": 0,
+          "explicit": {
+            "lspace": "0em",
+            "rspace": "0em"
+          },
+          "inherited": {},
+          "removeClass": true
+        }
+      ],
+      "prependEmpty": false,
+      "sha256": "457b9fc0a9caa7b9c8667492dbd15bb8bac64ad0e7fc1f9ce27c975eb23829da",
+      "operators": [
+        {
+          "text": "+",
+          "lspace": 0.2777777777777778,
+          "rspace": 0.2777777777777778,
+          "scriptlevel": 0
+        }
+      ]
+    }
+  ]
+}

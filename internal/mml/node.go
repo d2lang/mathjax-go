@@ -88,6 +88,9 @@ type Node struct {
 	TeXClass   TeXClass
 	PrevClass  TeXClass
 	PrevLevel  int
+	// OperatorLspace/OperatorRspace are MmlMo's dictionary-derived defaults,
+	// distinct from explicit/inherited lspace/rspace attributes (in ems).
+	OperatorLspace, OperatorRspace float64
 }
 
 // NewNode creates a node with empty attribute and property maps.
@@ -98,6 +101,9 @@ func NewNode(kind string, defaults, global *ordered.Map[Property], children ...*
 		Properties: ordered.New[Property](),
 		TeXClass:   TeXClassNone,
 		PrevClass:  TeXClassNone,
+	}
+	if kind == "mo" {
+		n.OperatorLspace, n.OperatorRspace = 5.0/18, 5.0/18
 	}
 	n.SetChildren(children)
 	return n
@@ -245,14 +251,16 @@ func (n *Node) Clone() *Node {
 		return nil
 	}
 	clone := &Node{
-		Kind:       n.Kind,
-		Attributes: n.Attributes.Clone(),
-		Properties: n.Properties.Clone(),
-		Text:       n.Text,
-		Flags:      n.Flags,
-		TeXClass:   n.TeXClass,
-		PrevClass:  n.PrevClass,
-		PrevLevel:  n.PrevLevel,
+		Kind:           n.Kind,
+		Attributes:     n.Attributes.Clone(),
+		Properties:     n.Properties.Clone(),
+		Text:           n.Text,
+		Flags:          n.Flags,
+		TeXClass:       n.TeXClass,
+		PrevClass:      n.PrevClass,
+		PrevLevel:      n.PrevLevel,
+		OperatorLspace: n.OperatorLspace,
+		OperatorRspace: n.OperatorRspace,
 	}
 	children := make([]*Node, len(n.Children))
 	for i, child := range n.Children {

@@ -362,6 +362,8 @@ func applyOperatorInheritance(n *mml.Node) {
 
 	text := textContent(n)
 	if definition, ok := lookupOperatorDefinition(text, forms); ok {
+		n.OperatorLspace = float64(definition.Lspace+1) / 18
+		n.OperatorRspace = float64(definition.Rspace+1) / 18
 		if _, explicitClass := n.Property("texClass"); !explicitClass {
 			n.TeXClass = mml.TeXClass(definition.TexClass)
 		}
@@ -387,6 +389,13 @@ func applyOperatorInheritance(n *mml.Node) {
 			break
 		}
 		if codepoint <= operatorRange.Last {
+			for _, spacing := range mjOperatorMMLSpacing {
+				if spacing.TexClass == operatorRange.TexClass {
+					n.OperatorLspace = float64(spacing.Lspace+1) / 18
+					n.OperatorRspace = float64(spacing.Rspace+1) / 18
+					break
+				}
+			}
 			if _, explicitClass := n.Property("texClass"); !explicitClass {
 				n.TeXClass = mml.TeXClass(operatorRange.TexClass)
 			}
