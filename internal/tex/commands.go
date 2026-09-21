@@ -749,6 +749,26 @@ func (p *parser) underOver(name string) ([]*mml.Node, error) {
 	return []*mml.Node{setAttributes(node("mover", base, mark), map[string]any{"accent": true})}, nil
 }
 
+// normalizeStackBase restores the primary scripted-base representation before
+// the direct Overset/Underset handlers apply the shared movable-limit policy.
+func normalizeStackBase(base *mml.Node) *mml.Node {
+	// Inline movable-limit scripts use a side-script representation in this
+	// parser. The primary parser retains their under/over kind before the
+	// Overset/Underset handler disables the base's movable limits.
+	if moves, _ := base.Property("movesupsub"); moves == true && base.Flags.Embellished {
+		kind := map[string]string{"msub": "munder", "msup": "mover", "msubsup": "munderover"}[base.Kind]
+		if kind != "" {
+			replacement := node(kind, base.Children...)
+			replacement.Attributes.SetList(base.Attributes.Explicit())
+			replacement.Properties = base.Properties.Clone()
+			base = replacement
+		}
+	}
+
+	checkMovableLimits(base)
+	return base
+}
+
 func (p *parser) overSet(name string) ([]*mml.Node, error) {
 	over, err := p.parseArgument(name)
 	if err != nil {
@@ -757,6 +777,12 @@ func (p *parser) overSet(name string) ([]*mml.Node, error) {
 	base, err := p.parseArgument(name)
 	if err != nil {
 		return nil, err
+	}
+	if name == "overset" {
+		base = normalizeStackBase(base)
+		if over.Kind == "mo" {
+			over.Attributes.Set("accent", false)
+		}
 	}
 	return []*mml.Node{node("mover", base, over)}, nil
 }
@@ -770,7 +796,11 @@ func (p *parser) underSet(name string) ([]*mml.Node, error) {
 	if err != nil {
 		return nil, err
 	}
-	return []*mml.Node{node("munder", base, under)}, nil
+	base = normalizeStackBase(base)
+	if under.Kind == "mo" {
+		under.Attributes.Set("accent", false)
+	}
+	return []*mml.Node{setAttributes(node("munder", base, under), map[string]any{"accentunder": false})}, nil
 }
 
 func (p *parser) overUnderSet(name string) ([]*mml.Node, error) {

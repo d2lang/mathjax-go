@@ -49,15 +49,7 @@ func TestOverUnderSetDirectBasePrimary(t *testing.T) {
 				t.Fatalf("whole SVG=%s want%s", got, c.ExpectedSHA256)
 			}
 			if c.Boundary {
-				// Overset/Underset are still shadowed by existing macros. Freeze
-				// their accepted baseline bytes without calling them primary parity.
-				if !strings.HasPrefix(c.Name, "overset-") && !strings.HasPrefix(c.Name, "underset-") {
-					t.Fatal("unexpected boundary exception")
-				}
-				if c.ExpectedSHA256 == c.SVGSHA256 {
-					t.Fatal("boundary is no longer a known discrepancy")
-				}
-				return
+				t.Fatal("all direct handler cases must now use primary output")
 			}
 			if c.ExpectedSHA256 != c.SVGSHA256 {
 				t.Fatal("direct-base case must use raw primary SVG")

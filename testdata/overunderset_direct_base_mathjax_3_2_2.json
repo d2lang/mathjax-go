@@ -2488,8 +2488,8 @@
           }
         ]
       },
-      "boundary": true,
-      "expectedSHA256": "567c1b51c9bf9af571a0426df7e0bcd6e353ca7ab3c2b776580457a26b56d9c3"
+      "boundary": false,
+      "expectedSHA256": "950dbe0f5981ea33cba0e1ca0b34c7ec25c5d87107e9876ebb368d0c00dd3e31"
     },
     {
       "name": "overset-product-display",
@@ -2583,8 +2583,8 @@
           }
         ]
       },
-      "boundary": true,
-      "expectedSHA256": "f1a23f589be3d68bfc9af425421d8267598218328873eebf94cce3252f6633cf"
+      "boundary": false,
+      "expectedSHA256": "d97204bf07227ab8e51d09902cb31fd66c2b763936b5b3fcb032f84ae36804a0"
     },
     {
       "name": "underset-mathop-inline",
@@ -2696,8 +2696,8 @@
           }
         ]
       },
-      "boundary": true,
-      "expectedSHA256": "45db42a276cacc18f1584a952ffe6cd7b16589b9ae48c47336e2bab96a07e6aa"
+      "boundary": false,
+      "expectedSHA256": "de054d96aaea01c9903a8a8da5b6f4536fdba63a396e4be2b19f7d3abc7773a2"
     },
     {
       "name": "underset-mathop-display",
@@ -2811,8 +2811,8 @@
           }
         ]
       },
-      "boundary": true,
-      "expectedSHA256": "b141d49b21ef66a9d3f08940d272c8ec5d7c74ff83cf12a933321de5d9d5674a"
+      "boundary": false,
+      "expectedSHA256": "de054d96aaea01c9903a8a8da5b6f4536fdba63a396e4be2b19f7d3abc7773a2"
     }
   ]
 }

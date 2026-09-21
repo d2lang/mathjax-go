@@ -150,8 +150,6 @@ var simpleMacros = map[string]string{
 	"implies":   "\\;\\Longrightarrow\\;",
 	"impliedby": "\\;\\Longleftarrow\\;",
 	"not":       "\\mathrel{\\rlap{#1}\\mkern2mu{/}}",
-	"overset":   "\\mathop{#2}\\limits^{#1}",
-	"underset":  "\\mathop{#2}\\limits_{#1}",
 	"substack":  "\\begin{subarray}{c}#1\\end{subarray}",
 	"Bra":       "\\left\\langle #1\\right|",
 	"Ket":       "\\left|#1\\right\\rangle",

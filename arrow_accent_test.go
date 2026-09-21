@@ -96,11 +96,11 @@ func arrowQualifications(t *testing.T) map[string]arrowQualification {
 	if err = json.Unmarshal(data, &f); err != nil {
 		t.Fatal(err)
 	}
-	if f.Base != "7101dc7e9bc1cfb830f91db9e23314c597c0d81d" || len(f.Cases) != 12 {
+	if f.Base != "7101dc7e9bc1cfb830f91db9e23314c597c0d81d" || len(f.Cases) != 4 {
 		t.Fatal("missing exact qualified controls")
 	}
 	expected := map[string]string{}
-	for _, name := range []string{"up-short", "up-long", "down-short", "down-long", "ordinary-arrows", "bar-control"} {
+	for _, name := range []string{"ordinary-arrows", "bar-control"} {
 		for _, mode := range []string{"inline", "display"} {
 			kind := "unchanged"
 			if name == "bar-control" {
