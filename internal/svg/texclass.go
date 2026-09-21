@@ -177,7 +177,9 @@ func adjustTeXClass(node, previous *mml.Node) *mml.Node {
 	}
 	previousClass := mml.TeXClassNone
 	if previous != nil {
-		previousClass = previous.TeXClass
+		// MmlMo.adjustTeXclass uses prev.texClass || ORD. Unset classes
+		// (for example mfrac's null class) differ from explicit NONE.
+		previousClass = effectiveTeXClass(previous)
 		if auto, ok := previous.Property("autoOP"); ok && truthy(auto) &&
 			(class == mml.TeXClassBin || class == mml.TeXClassRel) {
 			previous.TeXClass = mml.TeXClassOrd
