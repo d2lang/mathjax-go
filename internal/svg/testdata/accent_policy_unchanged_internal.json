@@ -1,0 +1,10 @@
+{
+  "base": "357d77d6145edb49af124eb68966d39c9adb35c5",
+  "boundary": "Unreachable internal mathaccent false/null positioning; full immutable baseline, not primary renderer acceptance. All primary getter/inheritance states remain strict.",
+  "sha256": {
+    "ordinary-unmarked-inline": "7db3cd9a91e12485329f54113cf9bed34d24ab34e6ca631775de016eae7b3ed5",
+    "ordinary-unmarked-display": "7db3cd9a91e12485329f54113cf9bed34d24ab34e6ca631775de016eae7b3ed5",
+    "ordinary-null-inline": "7db3cd9a91e12485329f54113cf9bed34d24ab34e6ca631775de016eae7b3ed5",
+    "ordinary-null-display": "7db3cd9a91e12485329f54113cf9bed34d24ab34e6ca631775de016eae7b3ed5"
+  }
+}

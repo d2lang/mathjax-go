@@ -29,7 +29,14 @@ func TestExplicitStretchCharacterBypassesAccentRemap(t *testing.T) {
 		t.Run(c.name, func(t *testing.T) {
 			n := mml.NewNode("mo", nil, nil)
 			n.SetProperty("mathaccent", true)
-			parent := &wrapper{node: n, hasStretch: c.stretch, stretch: font.Delimiter{HasAlias: c.hasAlias, Alias: c.alias, SizeChars: c.chars}, size: c.size, sizeSet: c.sizeSet, stretchGlyph: '→'}
+			// A real implicit accent stack is distinct from the mathaccent
+			// positioning marker. The pinned registered-MML corpus covers this
+			// state and the marker-only negative separately.
+			n.Attributes.SetInherited("accent", true)
+			stackNode := mml.NewNode("mover", nil, nil)
+			stack := &wrapper{node: stackNode}
+			parent := &wrapper{node: n, hasStretch: c.stretch, stretch: font.Delimiter{HasAlias: c.hasAlias, Alias: c.alias, SizeChars: c.chars}, size: c.size, sizeSet: c.sizeSet, stretchGlyph: '→', parent: stack}
+			stack.children = []*wrapper{{node: mml.NewNode("mi", nil, nil)}, parent}
 			if got := remapAccentText(parent, "→"); got != c.want {
 				t.Errorf("remap %q, want %q", got, c.want)
 			}
