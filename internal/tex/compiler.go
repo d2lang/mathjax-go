@@ -65,6 +65,10 @@ func (c *Compiler) Compile(source string, display bool) (*mml.Node, error) {
 	if display {
 		root.Attributes.Set("display", "block")
 	}
+	root.Walk(func(n *mml.Node) bool {
+		n.RemoveProperty(resolvedFontScope)
+		return true
+	})
 	setMathMLInheritance(root, display)
 	cleanMathMLAttributes(root)
 	return root, nil
