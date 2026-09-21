@@ -642,7 +642,7 @@ func (p *parser) accent(name string) ([]*mml.Node, error) {
 	if err != nil {
 		return nil, err
 	}
-	wide := strings.HasPrefix(name, "wide") || name == "vec"
+	wide := strings.HasPrefix(name, "wide")
 	accent := operator(accentCharacters[name], mml.TeXClassOrd, map[string]any{"accent": true, "stretchy": wide})
 	ambientFontToken(accent)
 	// BaseMethods.Accent passes mathaccent through NodeUtil's property layer.
