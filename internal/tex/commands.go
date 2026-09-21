@@ -786,6 +786,7 @@ func (p *parser) overUnderSet(name string) ([]*mml.Node, error) {
 	if err != nil {
 		return nil, err
 	}
+	checkMovableLimits(base)
 	if over.Kind == "mo" {
 		over.Attributes.Set("accent", false)
 	}
@@ -793,6 +794,40 @@ func (p *parser) overUnderSet(name string) ([]*mml.Node, error) {
 		under.Attributes.Set("accent", false)
 	}
 	return []*mml.Node{setAttributes(node("munderover", base, under, over), map[string]any{"accent": false, "accentunder": false})}, nil
+}
+
+// checkMovableLimits ports ParseUtil.checkMovableLimits. Only the direct base's
+// property and, for an mo, its contextual dictionary entry participate. A
+// grouped or scripted descendant must retain its own movable-limit policy.
+func checkMovableLimits(base *mml.Node) {
+	movable, _ := base.Property("movablelimits")
+	moveLimits := movable != nil
+	switch value := movable.(type) {
+	case bool:
+		moveLimits = value
+	case string:
+		moveLimits = value != ""
+	case int:
+		moveLimits = value != 0
+	case int64:
+		moveLimits = value != 0
+	case float64:
+		moveLimits = value != 0 && value == value // JavaScript NaN is falsy.
+	}
+	if base.Kind == "mo" {
+		// NodeUtil.getForm uses getForms directly, without an explicit-form
+		// override or a recursive core-operator traversal.
+		if definition, ok := lookupOperatorDefinition(textContent(base), operatorForms(base)); ok {
+			for _, property := range definition.Properties {
+				if property.Name == "movablelimits" && propertyBool(property.Value) {
+					moveLimits = true
+				}
+			}
+		}
+	}
+	if moveLimits {
+		applySourceObject(base, mjSourceObject{{Name: "movablelimits", Value: false}})
+	}
 }
 
 var arrowCharacters = map[string]string{
