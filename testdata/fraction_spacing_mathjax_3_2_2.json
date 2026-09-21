@@ -1,0 +1,170 @@
+{
+  "provenance": "Exact D2 v0.8.1 embedded MathJax 3.2.2; fresh VM per formula, em16/ex8, fontCache none; no browser.",
+  "assetSHA256": {
+    "mathjax.js": "cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869",
+    "polyfills.js": "7fe1d048c78b0e09854c1259f7413868a51cc8f0c822489eb1ac36ae6c85ce01",
+    "setup.js": "a52cb0bbabfbd7796b9fedd793b9386c474e3123e788ee151cbe47ca1fa6e881"
+  },
+  "cases": [
+    {
+      "name": "fraction-plus-display",
+      "tex": "\\frac{1}{2}+x",
+      "display": true,
+      "sha256": "715bc0277a113b768f6fa51a0c28cc239069d5fbecc8d96b3bb3b1f8fad8d5d5",
+      "width": 50,
+      "height": 37
+    },
+    {
+      "name": "fraction-plus-inline",
+      "tex": "\\frac{1}{2}+x",
+      "display": false,
+      "sha256": "e76cafa82c49562ba9429ca5ed662ffdb17b5b9287063ba8e3c3d4d11c3c82c7",
+      "width": 47,
+      "height": 22
+    },
+    {
+      "name": "fraction-minus-display",
+      "tex": "\\frac{1}{2}-x",
+      "display": true,
+      "sha256": "8ed2968b17fce6ea94948af7c948fbafe24947ee4f184cc1de1262c2a8493e0e",
+      "width": 50,
+      "height": 37
+    },
+    {
+      "name": "fraction-minus-inline",
+      "tex": "\\frac{1}{2}-x",
+      "display": false,
+      "sha256": "4bbe1e6f342aa76cd2c98acfbae92f990eb5e91cfd988af7652d8a1a0711f98a",
+      "width": 47,
+      "height": 22
+    },
+    {
+      "name": "fraction-relation-display",
+      "tex": "\\frac{1}{2}=x",
+      "display": true,
+      "sha256": "b321a77fd55d77a1c60fe610d7d3e630d26af8cf87f02a7c3a2900bc6ca6ca63",
+      "width": 52,
+      "height": 37
+    },
+    {
+      "name": "fraction-relation-inline",
+      "tex": "\\frac{1}{2}=x",
+      "display": false,
+      "sha256": "b28a38930fd57cac3d237e6c19fdabe21a8ebca295b14d2db47d848d5ca3bc6d",
+      "width": 49,
+      "height": 22
+    },
+    {
+      "name": "fraction-alone-display",
+      "tex": "\\frac{1}{2}",
+      "display": true,
+      "sha256": "f47560ab694c6a16451e73ce35b8480492153f2d3bb0f8323f7f295e3a42c68d",
+      "width": 18,
+      "height": 37
+    },
+    {
+      "name": "fraction-alone-inline",
+      "tex": "\\frac{1}{2}",
+      "display": false,
+      "sha256": "bedee61d7fcb658a864d71753462bc9418927cb0925d175ed7c910f5b6e50f79",
+      "width": 15,
+      "height": 22
+    },
+    {
+      "name": "preceding-binary-display",
+      "tex": "x+\\frac{1}{2}",
+      "display": true,
+      "sha256": "28fe27bac611dc9d3fb0ed475a8ed85152568263fe29d31a00d94af5db6e0bd8",
+      "width": 50,
+      "height": 37
+    },
+    {
+      "name": "preceding-binary-inline",
+      "tex": "x+\\frac{1}{2}",
+      "display": false,
+      "sha256": "323054133efc6502e9b056738a2aedee6d954c31f50c199409917afe451c4c20",
+      "width": 47,
+      "height": 22
+    },
+    {
+      "name": "fraction-operator-sequence-display",
+      "tex": "\\frac{a}{b}+c+d",
+      "display": true,
+      "sha256": "7047565e5db981f9e6e2249205db6e8b20630b73cf8bbae6aa7c1c61e01cc04e",
+      "width": 80,
+      "height": 33
+    },
+    {
+      "name": "fraction-operator-sequence-inline",
+      "tex": "\\frac{a}{b}+c+d",
+      "display": false,
+      "sha256": "d1caee2b46dc0918218f9fac8a817e52a8d94917ce20abd375aa339dff9aef81",
+      "width": 77,
+      "height": 20
+    },
+    {
+      "name": "explicit-none-apply-function-display",
+      "tex": "\\sin x",
+      "display": true,
+      "sha256": "c228482a36b98d24cb5db669b2ea5dbc6ba571979e4da7a7c80a77311a9a7de8",
+      "width": 36,
+      "height": 13
+    },
+    {
+      "name": "explicit-none-apply-function-inline",
+      "tex": "\\sin x",
+      "display": false,
+      "sha256": "c228482a36b98d24cb5db669b2ea5dbc6ba571979e4da7a7c80a77311a9a7de8",
+      "width": 36,
+      "height": 13
+    },
+    {
+      "name": "unary-plus-display",
+      "tex": "+x",
+      "display": true,
+      "sha256": "d30647124b6a69d38314ad45aafd9e9e44420e69ed1f8d2fce587756c17dd2d3",
+      "width": 25,
+      "height": 13
+    },
+    {
+      "name": "unary-plus-inline",
+      "tex": "+x",
+      "display": false,
+      "sha256": "d30647124b6a69d38314ad45aafd9e9e44420e69ed1f8d2fce587756c17dd2d3",
+      "width": 25,
+      "height": 13
+    },
+    {
+      "name": "ordinary-binary-display",
+      "tex": "a+b",
+      "display": true,
+      "sha256": "4ab36a27e95be822176c223ebf4fbccf983e703bae8e51ce94014931087255c4",
+      "width": 40,
+      "height": 15
+    },
+    {
+      "name": "ordinary-binary-inline",
+      "tex": "a+b",
+      "display": false,
+      "sha256": "4ab36a27e95be822176c223ebf4fbccf983e703bae8e51ce94014931087255c4",
+      "width": 40,
+      "height": 15
+    },
+    {
+      "name": "script-fraction-plus-display",
+      "tex": "x^{\\frac{1}{2}+y}",
+      "display": true,
+      "sha256": "3b4b643408ea7aa70e7a91b505e713cfc653a84971fd40bef5d3a2d74c3682ac",
+      "width": 39,
+      "height": 19
+    },
+    {
+      "name": "script-fraction-plus-inline",
+      "tex": "x^{\\frac{1}{2}+y}",
+      "display": false,
+      "sha256": "a7b57f172701bcd9bc2c9a4a6521c33a657e7593e44204eda4b79a89f9406569",
+      "width": 39,
+      "height": 18
+    }
+  ]
+}
