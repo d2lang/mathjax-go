@@ -191,10 +191,20 @@ func adjustTeXClass(node, previous *mml.Node) *mml.Node {
 		}
 	}
 	node.PrevClass = previousClass
-	node.PrevLevel = 0
 	if previous != nil {
-		if level, ok := numberAttribute(previous, "scriptlevel"); ok {
-			node.PrevLevel = int(level)
+		// MmlMo (also used by TeXAtom) reads the current inherited level,
+		// excluding explicit attributes. Without a predecessor it retains
+		// the previous level already stored on this node.
+		node.PrevLevel = 0
+		if value, ok := node.Attributes.GetInherited("scriptlevel"); ok {
+			switch level := value.(type) {
+			case int:
+				node.PrevLevel = level
+			case int64:
+				node.PrevLevel = int(level)
+			case float64:
+				node.PrevLevel = int(level)
+			}
 		}
 	}
 
