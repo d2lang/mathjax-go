@@ -1,0 +1,331 @@
+{
+  "oracle": "Unmodified pinned D2 MathJax3.2.2; fresh VM per case/mode; AST observed before unchanged SVG renderer",
+  "mathjaxGitCommit": "ad8f5c21cb810236551da8c6512ba733e67357ee",
+  "assetsSHA256": {
+    "polyfills.js": "7fe1d048c78b0e09854c1259f7413868a51cc8f0c822489eb1ac36ae6c85ce01",
+    "mathjax.js": "cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869",
+    "setup.js": "a52cb0bbabfbd7796b9fedd793b9386c474e3123e788ee151cbe47ca1fa6e881"
+  },
+  "cases": [
+    {
+      "name": "vec-low-inline",
+      "tex": "\\vec{a}",
+      "display": false,
+      "width": 10,
+      "height": 16,
+      "svgSHA256": "d33630278662f5e00c2666e3f92958bbb872652d18487a3b723efdc315180343"
+    },
+    {
+      "name": "vec-low-display",
+      "tex": "\\vec{a}",
+      "display": true,
+      "width": 10,
+      "height": 16,
+      "svgSHA256": "d33630278662f5e00c2666e3f92958bbb872652d18487a3b723efdc315180343"
+    },
+    {
+      "name": "hat-low-inline",
+      "tex": "\\hat{a}",
+      "display": false,
+      "width": 10,
+      "height": 15,
+      "svgSHA256": "69f5ad19c091abdf0467351a635e380ee87161a472ca850494826796ca436b72"
+    },
+    {
+      "name": "hat-low-display",
+      "tex": "\\hat{a}",
+      "display": true,
+      "width": 10,
+      "height": 15,
+      "svgSHA256": "69f5ad19c091abdf0467351a635e380ee87161a472ca850494826796ca436b72"
+    },
+    {
+      "name": "tilde-low-inline",
+      "tex": "\\tilde{a}",
+      "display": false,
+      "width": 10,
+      "height": 14,
+      "svgSHA256": "77815400cbfc88a5cf610f58920ec04a70cc2d4579eee1c126ff6cbe1b927d93"
+    },
+    {
+      "name": "tilde-low-display",
+      "tex": "\\tilde{a}",
+      "display": true,
+      "width": 10,
+      "height": 14,
+      "svgSHA256": "77815400cbfc88a5cf610f58920ec04a70cc2d4579eee1c126ff6cbe1b927d93"
+    },
+    {
+      "name": "dot-low-inline",
+      "tex": "\\dot{a}",
+      "display": false,
+      "width": 10,
+      "height": 15,
+      "svgSHA256": "3eb2f7873f9060a95be44c1b86691e3fb368a63e8ca9a170ebc20b62c9312e27"
+    },
+    {
+      "name": "dot-low-display",
+      "tex": "\\dot{a}",
+      "display": true,
+      "width": 10,
+      "height": 15,
+      "svgSHA256": "3eb2f7873f9060a95be44c1b86691e3fb368a63e8ca9a170ebc20b62c9312e27"
+    },
+    {
+      "name": "vec-high-inline",
+      "tex": "\\vec{A}",
+      "display": false,
+      "width": 14,
+      "height": 21,
+      "svgSHA256": "973154f1cced0a3974408f1e50c0f54db94e1dfb50a69dbea0afa0b63b59126d"
+    },
+    {
+      "name": "vec-high-display",
+      "tex": "\\vec{A}",
+      "display": true,
+      "width": 14,
+      "height": 21,
+      "svgSHA256": "973154f1cced0a3974408f1e50c0f54db94e1dfb50a69dbea0afa0b63b59126d"
+    },
+    {
+      "name": "hat-high-inline",
+      "tex": "\\hat{A}",
+      "display": false,
+      "width": 14,
+      "height": 20,
+      "svgSHA256": "7ea51abf48101bec0b478e06654e034549c3af4f71f6efc34160421a4734f63b"
+    },
+    {
+      "name": "hat-high-display",
+      "tex": "\\hat{A}",
+      "display": true,
+      "width": 14,
+      "height": 20,
+      "svgSHA256": "7ea51abf48101bec0b478e06654e034549c3af4f71f6efc34160421a4734f63b"
+    },
+    {
+      "name": "vec-x-inline",
+      "tex": "\\vec{x}",
+      "display": false,
+      "width": 11,
+      "height": 16,
+      "svgSHA256": "5b13a1ec87ff18a1fa464f4f1e032fe20e6f7458d48235fddebe8af66e53343e"
+    },
+    {
+      "name": "vec-x-display",
+      "tex": "\\vec{x}",
+      "display": true,
+      "width": 11,
+      "height": 16,
+      "svgSHA256": "5b13a1ec87ff18a1fa464f4f1e032fe20e6f7458d48235fddebe8af66e53343e"
+    },
+    {
+      "name": "vec-fraction-inline",
+      "tex": "\\vec{\\frac{a}{b}}",
+      "display": false,
+      "width": 15,
+      "height": 27,
+      "svgSHA256": "f992487f6b2caa135c1e40e0036a893e416faf50b6ae6555caab30fcc76637c5"
+    },
+    {
+      "name": "vec-fraction-display",
+      "tex": "\\vec{\\frac{a}{b}}",
+      "display": true,
+      "width": 18,
+      "height": 41,
+      "svgSHA256": "3e56e0a9128c722571d2269a951f75001b7d99432fc137da53db13ed057e9c20"
+    },
+    {
+      "name": "nested-vec-inline",
+      "tex": "\\vec{\\vec{a}}",
+      "display": false,
+      "width": 10,
+      "height": 21,
+      "svgSHA256": "e013fbd8f8485aaac8b2b46423a460ae9168984a17442d2872cdd193697363eb"
+    },
+    {
+      "name": "nested-vec-display",
+      "tex": "\\vec{\\vec{a}}",
+      "display": true,
+      "width": 10,
+      "height": 21,
+      "svgSHA256": "e013fbd8f8485aaac8b2b46423a460ae9168984a17442d2872cdd193697363eb"
+    },
+    {
+      "name": "hat-vec-inline",
+      "tex": "\\hat{\\vec{a}}",
+      "display": false,
+      "width": 10,
+      "height": 21,
+      "svgSHA256": "685eeb90d9be22a103653ea29d63ff077eb0c3d13037690eade3be9d7e04dd19"
+    },
+    {
+      "name": "hat-vec-display",
+      "tex": "\\hat{\\vec{a}}",
+      "display": true,
+      "width": 10,
+      "height": 21,
+      "svgSHA256": "685eeb90d9be22a103653ea29d63ff077eb0c3d13037690eade3be9d7e04dd19"
+    },
+    {
+      "name": "vec-hat-inline",
+      "tex": "\\vec{\\hat{a}}",
+      "display": false,
+      "width": 10,
+      "height": 21,
+      "svgSHA256": "f0dd8cab59130e5563ce969a3a8ca7d4aa4a9d55fd41778ad83129e5b3d749dd"
+    },
+    {
+      "name": "vec-hat-display",
+      "tex": "\\vec{\\hat{a}}",
+      "display": true,
+      "width": 10,
+      "height": 21,
+      "svgSHA256": "f0dd8cab59130e5563ce969a3a8ca7d4aa4a9d55fd41778ad83129e5b3d749dd"
+    },
+    {
+      "name": "sup-vector-inline",
+      "tex": "x^{\\vec{a}}",
+      "display": false,
+      "width": 19,
+      "height": 18,
+      "svgSHA256": "67e9fd553d6929eb604bde473cfab85b2f9196532abd8e55a6fccd2e1d955619"
+    },
+    {
+      "name": "sup-vector-display",
+      "tex": "x^{\\vec{a}}",
+      "display": true,
+      "width": 19,
+      "height": 19,
+      "svgSHA256": "3ab0a7a519fe547546ffb81cba7996c1c30e1f129512a1d99729e7daf1c3c59e"
+    },
+    {
+      "name": "sub-vector-inline",
+      "tex": "x_{\\vec{a}}",
+      "display": false,
+      "width": 19,
+      "height": 13,
+      "svgSHA256": "2b3052b31f362895e5f9160f0f078aff1198225cbf0abb7fc43ca6862345806d"
+    },
+    {
+      "name": "sub-vector-display",
+      "tex": "x_{\\vec{a}}",
+      "display": true,
+      "width": 19,
+      "height": 13,
+      "svgSHA256": "2b3052b31f362895e5f9160f0f078aff1198225cbf0abb7fc43ca6862345806d"
+    },
+    {
+      "name": "script-vector-inline",
+      "tex": "\\scriptstyle\\vec{a}",
+      "display": false,
+      "width": 7,
+      "height": 11,
+      "svgSHA256": "895d9b13bdfdf7a92bc95e563df0d3299c66e40526d23bf156d21a1a81cbe9e6"
+    },
+    {
+      "name": "script-vector-display",
+      "tex": "\\scriptstyle\\vec{a}",
+      "display": true,
+      "width": 7,
+      "height": 11,
+      "svgSHA256": "895d9b13bdfdf7a92bc95e563df0d3299c66e40526d23bf156d21a1a81cbe9e6"
+    },
+    {
+      "name": "scriptscript-hat-inline",
+      "tex": "\\scriptscriptstyle\\hat{a}",
+      "display": false,
+      "width": 5,
+      "height": 8,
+      "svgSHA256": "15af54cc84c1f03e65aa80d051eba123e6e00a76a89583ce56bd847af3b07e6e"
+    },
+    {
+      "name": "scriptscript-hat-display",
+      "tex": "\\scriptscriptstyle\\hat{a}",
+      "display": true,
+      "width": 5,
+      "height": 8,
+      "svgSHA256": "15af54cc84c1f03e65aa80d051eba123e6e00a76a89583ce56bd847af3b07e6e"
+    },
+    {
+      "name": "under-vector-inline",
+      "tex": "\\underbrace{\\vec{a}}_{n}",
+      "display": false,
+      "width": 33,
+      "height": 40,
+      "svgSHA256": "2bd63a89358a9cad677fb59403d33a3b82879ecaa6b0fc972ec3f20b5aaa3079"
+    },
+    {
+      "name": "under-vector-display",
+      "tex": "\\underbrace{\\vec{a}}_{n}",
+      "display": true,
+      "width": 33,
+      "height": 40,
+      "svgSHA256": "2bd63a89358a9cad677fb59403d33a3b82879ecaa6b0fc972ec3f20b5aaa3079"
+    },
+    {
+      "name": "over-vector-inline",
+      "tex": "\\overbrace{\\vec{a}}^{n}",
+      "display": false,
+      "width": 33,
+      "height": 36,
+      "svgSHA256": "9619e9a0032383da4510e900e1a4064efeecb5e4813c7b7a2176b37e2d86a900"
+    },
+    {
+      "name": "over-vector-display",
+      "tex": "\\overbrace{\\vec{a}}^{n}",
+      "display": true,
+      "width": 33,
+      "height": 36,
+      "svgSHA256": "9619e9a0032383da4510e900e1a4064efeecb5e4813c7b7a2176b37e2d86a900"
+    },
+    {
+      "name": "combined-brace-inline",
+      "tex": "\\overbrace{\\frac{a^2+b^2}{\\sqrt{x+y}}+c+d+e+f+g+h}^{n}+\\vec{a}",
+      "display": false,
+      "width": 262,
+      "height": 50,
+      "svgSHA256": "c846976b77d076fb0bcc8674694a5b468b66e1561b44d591c7dc7c0c25423971"
+    },
+    {
+      "name": "combined-brace-display",
+      "tex": "\\overbrace{\\frac{a^2+b^2}{\\sqrt{x+y}}+c+d+e+f+g+h}^{n}+\\vec{a}",
+      "display": true,
+      "width": 284,
+      "height": 67,
+      "svgSHA256": "78a93aae68ff4d2e93d39dd6bc5a02ec251c30d3874d449b576176e33cde0d16"
+    },
+    {
+      "name": "underline-control-inline",
+      "tex": "\\underline{a}",
+      "display": false,
+      "width": 10,
+      "height": 14,
+      "svgSHA256": "cb341929dba37f31ce0c7a68689d8f88333c48428b88bcad1725d46c066f7fd4"
+    },
+    {
+      "name": "underline-control-display",
+      "tex": "\\underline{a}",
+      "display": true,
+      "width": 10,
+      "height": 14,
+      "svgSHA256": "cb341929dba37f31ce0c7a68689d8f88333c48428b88bcad1725d46c066f7fd4"
+    },
+    {
+      "name": "underbrace-control-inline",
+      "tex": "\\underbrace{a}_{n}",
+      "display": false,
+      "width": 33,
+      "height": 33,
+      "svgSHA256": "bcaeae13d7e60d0db063c3d0c58026988669d3407f1c184a52ecc67b8920bc19"
+    },
+    {
+      "name": "underbrace-control-display",
+      "tex": "\\underbrace{a}_{n}",
+      "display": true,
+      "width": 33,
+      "height": 33,
+      "svgSHA256": "bcaeae13d7e60d0db063c3d0c58026988669d3407f1c184a52ecc67b8920bc19"
+    }
+  ]
+}
