@@ -1,0 +1,2818 @@
+{
+  "primaryCommit": "ad8f5c21cb810236551da8c6512ba733e67357ee",
+  "boundaryBase": "0e8bf718f9b7d18c8d9a506313dc2d8f190cac75",
+  "cases": [
+    {
+      "name": "bare-sum-inline",
+      "tex": "\\overunderset{a}{b}{\\sum}",
+      "display": false,
+      "width": 20,
+      "height": 44,
+      "svgSHA256": "f759e30920bdfb84f9481d3698a89ed5b54a0b37f157b5ba2bad80a07dc31671",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "isAccent": null,
+        "coreParentKind": null,
+        "coreParentParentKind": null,
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "isAccent": null,
+            "coreParentKind": null,
+            "coreParentParentKind": null,
+            "children": [
+              {
+                "kind": "munderover",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "isAccent": null,
+                "coreParentKind": null,
+                "coreParentParentKind": null,
+                "children": [
+                  {
+                    "kind": "mo",
+                    "text": null,
+                    "attributes": {
+                      "movablelimits": false
+                    },
+                    "properties": {
+                      "texClass": 1,
+                      "movesupsub": true,
+                      "in-lists": "fixStretchy",
+                      "movablelimits": false,
+                      "texprimestyle": true
+                    },
+                    "isAccent": false,
+                    "coreParentKind": "inferredMrow",
+                    "coreParentParentKind": "math",
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "\u2211",
+                        "attributes": {},
+                        "properties": {},
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {
+                      "texprimestyle": true
+                    },
+                    "isAccent": null,
+                    "coreParentKind": null,
+                    "coreParentParentKind": null,
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "b",
+                        "attributes": {},
+                        "properties": {},
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "isAccent": null,
+                    "coreParentKind": null,
+                    "coreParentParentKind": null,
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "a",
+                        "attributes": {},
+                        "properties": {},
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "boundary": false,
+      "expectedSHA256": "f759e30920bdfb84f9481d3698a89ed5b54a0b37f157b5ba2bad80a07dc31671"
+    },
+    {
+      "name": "bare-sum-display",
+      "tex": "\\overunderset{a}{b}{\\sum}",
+      "display": true,
+      "width": 27,
+      "height": 51,
+      "svgSHA256": "2087dd12b91e17cfc7b20a06376af0c81f272401a7228971275d2bc8666120b3",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "isAccent": null,
+        "coreParentKind": null,
+        "coreParentParentKind": null,
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "isAccent": null,
+            "coreParentKind": null,
+            "coreParentParentKind": null,
+            "children": [
+              {
+                "kind": "munderover",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "isAccent": null,
+                "coreParentKind": null,
+                "coreParentParentKind": null,
+                "children": [
+                  {
+                    "kind": "mo",
+                    "text": null,
+                    "attributes": {
+                      "movablelimits": false
+                    },
+                    "properties": {
+                      "texClass": 1,
+                      "movesupsub": true,
+                      "in-lists": "fixStretchy",
+                      "movablelimits": false,
+                      "texprimestyle": true
+                    },
+                    "isAccent": false,
+                    "coreParentKind": "inferredMrow",
+                    "coreParentParentKind": "math",
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "\u2211",
+                        "attributes": {},
+                        "properties": {},
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {
+                      "texprimestyle": true
+                    },
+                    "isAccent": null,
+                    "coreParentKind": null,
+                    "coreParentParentKind": null,
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "b",
+                        "attributes": {},
+                        "properties": {},
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "isAccent": null,
+                    "coreParentKind": null,
+                    "coreParentParentKind": null,
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "a",
+                        "attributes": {},
+                        "properties": {},
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "boundary": false,
+      "expectedSHA256": "2087dd12b91e17cfc7b20a06376af0c81f272401a7228971275d2bc8666120b3"
+    },
+    {
+      "name": "grouped-bare-sum-inline",
+      "tex": "\\overunderset{a}{b}{{\\sum}}",
+      "display": false,
+      "width": 28,
+      "height": 20,
+      "svgSHA256": "e9e35c7ec6c1f7fa399ed53d840ac9c40b1db07d4c8d88ea7831c4f2e837e8d9",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "isAccent": null,
+        "coreParentKind": null,
+        "coreParentParentKind": null,
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "isAccent": null,
+            "coreParentKind": null,
+            "coreParentParentKind": null,
+            "children": [
+              {
+                "kind": "munderover",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "isAccent": null,
+                "coreParentKind": null,
+                "coreParentParentKind": null,
+                "children": [
+                  {
+                    "kind": "TeXAtom",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {
+                      "texClass": 0,
+                      "texprimestyle": true
+                    },
+                    "isAccent": null,
+                    "coreParentKind": null,
+                    "coreParentParentKind": null,
+                    "children": [
+                      {
+                        "kind": "inferredMrow",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {
+                          "texprimestyle": true
+                        },
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": [
+                          {
+                            "kind": "mo",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {
+                              "texClass": 1,
+                              "movesupsub": true,
+                              "in-lists": "fixStretchy",
+                              "texprimestyle": true
+                            },
+                            "isAccent": false,
+                            "coreParentKind": "inferredMrow",
+                            "coreParentParentKind": "math",
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "\u2211",
+                                "attributes": {},
+                                "properties": {},
+                                "isAccent": null,
+                                "coreParentKind": null,
+                                "coreParentParentKind": null,
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {
+                      "texprimestyle": true
+                    },
+                    "isAccent": null,
+                    "coreParentKind": null,
+                    "coreParentParentKind": null,
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "b",
+                        "attributes": {},
+                        "properties": {},
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "isAccent": null,
+                    "coreParentKind": null,
+                    "coreParentParentKind": null,
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "a",
+                        "attributes": {},
+                        "properties": {},
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "boundary": false,
+      "expectedSHA256": "e9e35c7ec6c1f7fa399ed53d840ac9c40b1db07d4c8d88ea7831c4f2e837e8d9"
+    },
+    {
+      "name": "grouped-bare-sum-display",
+      "tex": "\\overunderset{a}{b}{{\\sum}}",
+      "display": true,
+      "width": 27,
+      "height": 51,
+      "svgSHA256": "85ce8f4bb6d6f758c5e62a9dd30ccea74d81cf5c8d6a3e552ed04257671ac351",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "isAccent": null,
+        "coreParentKind": null,
+        "coreParentParentKind": null,
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "isAccent": null,
+            "coreParentKind": null,
+            "coreParentParentKind": null,
+            "children": [
+              {
+                "kind": "munderover",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "isAccent": null,
+                "coreParentKind": null,
+                "coreParentParentKind": null,
+                "children": [
+                  {
+                    "kind": "TeXAtom",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {
+                      "texClass": 0,
+                      "texprimestyle": true
+                    },
+                    "isAccent": null,
+                    "coreParentKind": null,
+                    "coreParentParentKind": null,
+                    "children": [
+                      {
+                        "kind": "inferredMrow",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {
+                          "texprimestyle": true
+                        },
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": [
+                          {
+                            "kind": "mo",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {
+                              "texClass": 1,
+                              "movesupsub": true,
+                              "in-lists": "fixStretchy",
+                              "texprimestyle": true
+                            },
+                            "isAccent": false,
+                            "coreParentKind": "inferredMrow",
+                            "coreParentParentKind": "math",
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "\u2211",
+                                "attributes": {},
+                                "properties": {},
+                                "isAccent": null,
+                                "coreParentKind": null,
+                                "coreParentParentKind": null,
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {
+                      "texprimestyle": true
+                    },
+                    "isAccent": null,
+                    "coreParentKind": null,
+                    "coreParentParentKind": null,
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "b",
+                        "attributes": {},
+                        "properties": {},
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "isAccent": null,
+                    "coreParentKind": null,
+                    "coreParentParentKind": null,
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "a",
+                        "attributes": {},
+                        "properties": {},
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "boundary": false,
+      "expectedSHA256": "85ce8f4bb6d6f758c5e62a9dd30ccea74d81cf5c8d6a3e552ed04257671ac351"
+    },
+    {
+      "name": "product-inline",
+      "tex": "\\overunderset{a}{b}{\\prod}",
+      "display": false,
+      "width": 18,
+      "height": 44,
+      "svgSHA256": "c4f856b845ec96ad8136ab8410086054e2c0e184818a73b6017b7043a6c42452",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "isAccent": null,
+        "coreParentKind": null,
+        "coreParentParentKind": null,
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "isAccent": null,
+            "coreParentKind": null,
+            "coreParentParentKind": null,
+            "children": [
+              {
+                "kind": "munderover",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "isAccent": null,
+                "coreParentKind": null,
+                "coreParentParentKind": null,
+                "children": [
+                  {
+                    "kind": "mo",
+                    "text": null,
+                    "attributes": {
+                      "movablelimits": false
+                    },
+                    "properties": {
+                      "texClass": 1,
+                      "movesupsub": true,
+                      "in-lists": "fixStretchy",
+                      "movablelimits": false,
+                      "texprimestyle": true
+                    },
+                    "isAccent": false,
+                    "coreParentKind": "inferredMrow",
+                    "coreParentParentKind": "math",
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "\u220f",
+                        "attributes": {},
+                        "properties": {},
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {
+                      "texprimestyle": true
+                    },
+                    "isAccent": null,
+                    "coreParentKind": null,
+                    "coreParentParentKind": null,
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "b",
+                        "attributes": {},
+                        "properties": {},
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "isAccent": null,
+                    "coreParentKind": null,
+                    "coreParentParentKind": null,
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "a",
+                        "attributes": {},
+                        "properties": {},
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "boundary": false,
+      "expectedSHA256": "c4f856b845ec96ad8136ab8410086054e2c0e184818a73b6017b7043a6c42452"
+    },
+    {
+      "name": "product-display",
+      "tex": "\\overunderset{a}{b}{\\prod}",
+      "display": true,
+      "width": 24,
+      "height": 51,
+      "svgSHA256": "7eb79b3067cebf732b2b2ab9e0d2678df7588f89fa764addf5aca8224d082e83",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "isAccent": null,
+        "coreParentKind": null,
+        "coreParentParentKind": null,
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "isAccent": null,
+            "coreParentKind": null,
+            "coreParentParentKind": null,
+            "children": [
+              {
+                "kind": "munderover",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "isAccent": null,
+                "coreParentKind": null,
+                "coreParentParentKind": null,
+                "children": [
+                  {
+                    "kind": "mo",
+                    "text": null,
+                    "attributes": {
+                      "movablelimits": false
+                    },
+                    "properties": {
+                      "texClass": 1,
+                      "movesupsub": true,
+                      "in-lists": "fixStretchy",
+                      "movablelimits": false,
+                      "texprimestyle": true
+                    },
+                    "isAccent": false,
+                    "coreParentKind": "inferredMrow",
+                    "coreParentParentKind": "math",
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "\u220f",
+                        "attributes": {},
+                        "properties": {},
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {
+                      "texprimestyle": true
+                    },
+                    "isAccent": null,
+                    "coreParentKind": null,
+                    "coreParentParentKind": null,
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "b",
+                        "attributes": {},
+                        "properties": {},
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "isAccent": null,
+                    "coreParentKind": null,
+                    "coreParentParentKind": null,
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "a",
+                        "attributes": {},
+                        "properties": {},
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "boundary": false,
+      "expectedSHA256": "7eb79b3067cebf732b2b2ab9e0d2678df7588f89fa764addf5aca8224d082e83"
+    },
+    {
+      "name": "integral-inline",
+      "tex": "\\overunderset{a}{b}{\\int}",
+      "display": false,
+      "width": 12,
+      "height": 46,
+      "svgSHA256": "8d74493b25989bbb5ad9c9cc55b4caf8b0f0b276baaca76363eb44b0881d720a",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "isAccent": null,
+        "coreParentKind": null,
+        "coreParentParentKind": null,
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "isAccent": null,
+            "coreParentKind": null,
+            "coreParentParentKind": null,
+            "children": [
+              {
+                "kind": "munderover",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "isAccent": null,
+                "coreParentKind": null,
+                "coreParentParentKind": null,
+                "children": [
+                  {
+                    "kind": "mo",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {
+                      "texClass": 1,
+                      "in-lists": "fixStretchy",
+                      "texprimestyle": true
+                    },
+                    "isAccent": false,
+                    "coreParentKind": "inferredMrow",
+                    "coreParentParentKind": "math",
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "\u222b",
+                        "attributes": {},
+                        "properties": {},
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {
+                      "texprimestyle": true
+                    },
+                    "isAccent": null,
+                    "coreParentKind": null,
+                    "coreParentParentKind": null,
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "b",
+                        "attributes": {},
+                        "properties": {},
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "isAccent": null,
+                    "coreParentKind": null,
+                    "coreParentParentKind": null,
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "a",
+                        "attributes": {},
+                        "properties": {},
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "boundary": false,
+      "expectedSHA256": "8d74493b25989bbb5ad9c9cc55b4caf8b0f0b276baaca76363eb44b0881d720a"
+    },
+    {
+      "name": "integral-display",
+      "tex": "\\overunderset{a}{b}{\\int}",
+      "display": true,
+      "width": 18,
+      "height": 66,
+      "svgSHA256": "3f8d2614fe655b32c507eb96e97af9e2df405c1e45b322c70431306237f065f0",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "isAccent": null,
+        "coreParentKind": null,
+        "coreParentParentKind": null,
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "isAccent": null,
+            "coreParentKind": null,
+            "coreParentParentKind": null,
+            "children": [
+              {
+                "kind": "munderover",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "isAccent": null,
+                "coreParentKind": null,
+                "coreParentParentKind": null,
+                "children": [
+                  {
+                    "kind": "mo",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {
+                      "texClass": 1,
+                      "in-lists": "fixStretchy",
+                      "texprimestyle": true
+                    },
+                    "isAccent": false,
+                    "coreParentKind": "inferredMrow",
+                    "coreParentParentKind": "math",
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "\u222b",
+                        "attributes": {},
+                        "properties": {},
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {
+                      "texprimestyle": true
+                    },
+                    "isAccent": null,
+                    "coreParentKind": null,
+                    "coreParentParentKind": null,
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "b",
+                        "attributes": {},
+                        "properties": {},
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "isAccent": null,
+                    "coreParentKind": null,
+                    "coreParentParentKind": null,
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "a",
+                        "attributes": {},
+                        "properties": {},
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "boundary": false,
+      "expectedSHA256": "3f8d2614fe655b32c507eb96e97af9e2df405c1e45b322c70431306237f065f0"
+    },
+    {
+      "name": "mathop-inline",
+      "tex": "\\overunderset{a}{b}{\\mathop{x}}",
+      "display": false,
+      "width": 11,
+      "height": 34,
+      "svgSHA256": "124111b32f96305a8752915cbdae2eef398e3219929941d996c7ffcc282e46d7",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "isAccent": null,
+        "coreParentKind": null,
+        "coreParentParentKind": null,
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "isAccent": null,
+            "coreParentKind": null,
+            "coreParentParentKind": null,
+            "children": [
+              {
+                "kind": "munderover",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "isAccent": null,
+                "coreParentKind": null,
+                "coreParentParentKind": null,
+                "children": [
+                  {
+                    "kind": "TeXAtom",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {
+                      "texClass": 1,
+                      "movablelimits": false,
+                      "movesupsub": true,
+                      "texprimestyle": true
+                    },
+                    "isAccent": null,
+                    "coreParentKind": null,
+                    "coreParentParentKind": null,
+                    "children": [
+                      {
+                        "kind": "inferredMrow",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {
+                          "texprimestyle": true
+                        },
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": [
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {
+                              "texprimestyle": true
+                            },
+                            "isAccent": null,
+                            "coreParentKind": null,
+                            "coreParentParentKind": null,
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "x",
+                                "attributes": {},
+                                "properties": {},
+                                "isAccent": null,
+                                "coreParentKind": null,
+                                "coreParentParentKind": null,
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {
+                      "texprimestyle": true
+                    },
+                    "isAccent": null,
+                    "coreParentKind": null,
+                    "coreParentParentKind": null,
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "b",
+                        "attributes": {},
+                        "properties": {},
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "isAccent": null,
+                    "coreParentKind": null,
+                    "coreParentParentKind": null,
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "a",
+                        "attributes": {},
+                        "properties": {},
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "boundary": false,
+      "expectedSHA256": "124111b32f96305a8752915cbdae2eef398e3219929941d996c7ffcc282e46d7"
+    },
+    {
+      "name": "mathop-display",
+      "tex": "\\overunderset{a}{b}{\\mathop{x}}",
+      "display": true,
+      "width": 11,
+      "height": 34,
+      "svgSHA256": "124111b32f96305a8752915cbdae2eef398e3219929941d996c7ffcc282e46d7",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "isAccent": null,
+        "coreParentKind": null,
+        "coreParentParentKind": null,
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "isAccent": null,
+            "coreParentKind": null,
+            "coreParentParentKind": null,
+            "children": [
+              {
+                "kind": "munderover",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "isAccent": null,
+                "coreParentKind": null,
+                "coreParentParentKind": null,
+                "children": [
+                  {
+                    "kind": "TeXAtom",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {
+                      "texClass": 1,
+                      "movablelimits": false,
+                      "movesupsub": true,
+                      "texprimestyle": true
+                    },
+                    "isAccent": null,
+                    "coreParentKind": null,
+                    "coreParentParentKind": null,
+                    "children": [
+                      {
+                        "kind": "inferredMrow",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {
+                          "texprimestyle": true
+                        },
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": [
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {
+                              "texprimestyle": true
+                            },
+                            "isAccent": null,
+                            "coreParentKind": null,
+                            "coreParentParentKind": null,
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "x",
+                                "attributes": {},
+                                "properties": {},
+                                "isAccent": null,
+                                "coreParentKind": null,
+                                "coreParentParentKind": null,
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {
+                      "texprimestyle": true
+                    },
+                    "isAccent": null,
+                    "coreParentKind": null,
+                    "coreParentParentKind": null,
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "b",
+                        "attributes": {},
+                        "properties": {},
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "isAccent": null,
+                    "coreParentKind": null,
+                    "coreParentParentKind": null,
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "a",
+                        "attributes": {},
+                        "properties": {},
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "boundary": false,
+      "expectedSHA256": "124111b32f96305a8752915cbdae2eef398e3219929941d996c7ffcc282e46d7"
+    },
+    {
+      "name": "sum-false-inline",
+      "tex": "\\overunderset{a}{b}{\\mmlToken{mo}[movablelimits=false]{\u2211}}",
+      "display": false,
+      "width": 20,
+      "height": 44,
+      "svgSHA256": "f759e30920bdfb84f9481d3698a89ed5b54a0b37f157b5ba2bad80a07dc31671",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "isAccent": null,
+        "coreParentKind": null,
+        "coreParentParentKind": null,
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "isAccent": null,
+            "coreParentKind": null,
+            "coreParentParentKind": null,
+            "children": [
+              {
+                "kind": "munderover",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "isAccent": null,
+                "coreParentKind": null,
+                "coreParentParentKind": null,
+                "children": [
+                  {
+                    "kind": "mo",
+                    "text": null,
+                    "attributes": {
+                      "movablelimits": false
+                    },
+                    "properties": {
+                      "movablelimits": false,
+                      "texprimestyle": true
+                    },
+                    "isAccent": false,
+                    "coreParentKind": "inferredMrow",
+                    "coreParentParentKind": "math",
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "\u2211",
+                        "attributes": {},
+                        "properties": {},
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {
+                      "texprimestyle": true
+                    },
+                    "isAccent": null,
+                    "coreParentKind": null,
+                    "coreParentParentKind": null,
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "b",
+                        "attributes": {},
+                        "properties": {},
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "isAccent": null,
+                    "coreParentKind": null,
+                    "coreParentParentKind": null,
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "a",
+                        "attributes": {},
+                        "properties": {},
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "boundary": false,
+      "expectedSHA256": "f759e30920bdfb84f9481d3698a89ed5b54a0b37f157b5ba2bad80a07dc31671"
+    },
+    {
+      "name": "sum-false-display",
+      "tex": "\\overunderset{a}{b}{\\mmlToken{mo}[movablelimits=false]{\u2211}}",
+      "display": true,
+      "width": 27,
+      "height": 51,
+      "svgSHA256": "2087dd12b91e17cfc7b20a06376af0c81f272401a7228971275d2bc8666120b3",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "isAccent": null,
+        "coreParentKind": null,
+        "coreParentParentKind": null,
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "isAccent": null,
+            "coreParentKind": null,
+            "coreParentParentKind": null,
+            "children": [
+              {
+                "kind": "munderover",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "isAccent": null,
+                "coreParentKind": null,
+                "coreParentParentKind": null,
+                "children": [
+                  {
+                    "kind": "mo",
+                    "text": null,
+                    "attributes": {
+                      "movablelimits": false
+                    },
+                    "properties": {
+                      "movablelimits": false,
+                      "texprimestyle": true
+                    },
+                    "isAccent": false,
+                    "coreParentKind": "inferredMrow",
+                    "coreParentParentKind": "math",
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "\u2211",
+                        "attributes": {},
+                        "properties": {},
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {
+                      "texprimestyle": true
+                    },
+                    "isAccent": null,
+                    "coreParentKind": null,
+                    "coreParentParentKind": null,
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "b",
+                        "attributes": {},
+                        "properties": {},
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "isAccent": null,
+                    "coreParentKind": null,
+                    "coreParentParentKind": null,
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "a",
+                        "attributes": {},
+                        "properties": {},
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "boundary": false,
+      "expectedSHA256": "2087dd12b91e17cfc7b20a06376af0c81f272401a7228971275d2bc8666120b3"
+    },
+    {
+      "name": "sum-true-inline",
+      "tex": "\\overunderset{a}{b}{\\mmlToken{mo}[movablelimits=true]{\u2211}}",
+      "display": false,
+      "width": 20,
+      "height": 44,
+      "svgSHA256": "f759e30920bdfb84f9481d3698a89ed5b54a0b37f157b5ba2bad80a07dc31671",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "isAccent": null,
+        "coreParentKind": null,
+        "coreParentParentKind": null,
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "isAccent": null,
+            "coreParentKind": null,
+            "coreParentParentKind": null,
+            "children": [
+              {
+                "kind": "munderover",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "isAccent": null,
+                "coreParentKind": null,
+                "coreParentParentKind": null,
+                "children": [
+                  {
+                    "kind": "mo",
+                    "text": null,
+                    "attributes": {
+                      "movablelimits": false
+                    },
+                    "properties": {
+                      "movablelimits": false,
+                      "texprimestyle": true
+                    },
+                    "isAccent": false,
+                    "coreParentKind": "inferredMrow",
+                    "coreParentParentKind": "math",
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "\u2211",
+                        "attributes": {},
+                        "properties": {},
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {
+                      "texprimestyle": true
+                    },
+                    "isAccent": null,
+                    "coreParentKind": null,
+                    "coreParentParentKind": null,
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "b",
+                        "attributes": {},
+                        "properties": {},
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "isAccent": null,
+                    "coreParentKind": null,
+                    "coreParentParentKind": null,
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "a",
+                        "attributes": {},
+                        "properties": {},
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "boundary": false,
+      "expectedSHA256": "f759e30920bdfb84f9481d3698a89ed5b54a0b37f157b5ba2bad80a07dc31671"
+    },
+    {
+      "name": "sum-true-display",
+      "tex": "\\overunderset{a}{b}{\\mmlToken{mo}[movablelimits=true]{\u2211}}",
+      "display": true,
+      "width": 27,
+      "height": 51,
+      "svgSHA256": "2087dd12b91e17cfc7b20a06376af0c81f272401a7228971275d2bc8666120b3",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "isAccent": null,
+        "coreParentKind": null,
+        "coreParentParentKind": null,
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "isAccent": null,
+            "coreParentKind": null,
+            "coreParentParentKind": null,
+            "children": [
+              {
+                "kind": "munderover",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "isAccent": null,
+                "coreParentKind": null,
+                "coreParentParentKind": null,
+                "children": [
+                  {
+                    "kind": "mo",
+                    "text": null,
+                    "attributes": {
+                      "movablelimits": false
+                    },
+                    "properties": {
+                      "movablelimits": false,
+                      "texprimestyle": true
+                    },
+                    "isAccent": false,
+                    "coreParentKind": "inferredMrow",
+                    "coreParentParentKind": "math",
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "\u2211",
+                        "attributes": {},
+                        "properties": {},
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {
+                      "texprimestyle": true
+                    },
+                    "isAccent": null,
+                    "coreParentKind": null,
+                    "coreParentParentKind": null,
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "b",
+                        "attributes": {},
+                        "properties": {},
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "isAccent": null,
+                    "coreParentKind": null,
+                    "coreParentParentKind": null,
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "a",
+                        "attributes": {},
+                        "properties": {},
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "boundary": false,
+      "expectedSHA256": "2087dd12b91e17cfc7b20a06376af0c81f272401a7228971275d2bc8666120b3"
+    },
+    {
+      "name": "integral-false-inline",
+      "tex": "\\overunderset{a}{b}{\\mmlToken{mo}[movablelimits=false]{\u222b}}",
+      "display": false,
+      "width": 12,
+      "height": 46,
+      "svgSHA256": "8d74493b25989bbb5ad9c9cc55b4caf8b0f0b276baaca76363eb44b0881d720a",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "isAccent": null,
+        "coreParentKind": null,
+        "coreParentParentKind": null,
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "isAccent": null,
+            "coreParentKind": null,
+            "coreParentParentKind": null,
+            "children": [
+              {
+                "kind": "munderover",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "isAccent": null,
+                "coreParentKind": null,
+                "coreParentParentKind": null,
+                "children": [
+                  {
+                    "kind": "mo",
+                    "text": null,
+                    "attributes": {
+                      "movablelimits": false
+                    },
+                    "properties": {
+                      "movablelimits": false,
+                      "texprimestyle": true
+                    },
+                    "isAccent": false,
+                    "coreParentKind": "inferredMrow",
+                    "coreParentParentKind": "math",
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "\u222b",
+                        "attributes": {},
+                        "properties": {},
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {
+                      "texprimestyle": true
+                    },
+                    "isAccent": null,
+                    "coreParentKind": null,
+                    "coreParentParentKind": null,
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "b",
+                        "attributes": {},
+                        "properties": {},
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "isAccent": null,
+                    "coreParentKind": null,
+                    "coreParentParentKind": null,
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "a",
+                        "attributes": {},
+                        "properties": {},
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "boundary": false,
+      "expectedSHA256": "8d74493b25989bbb5ad9c9cc55b4caf8b0f0b276baaca76363eb44b0881d720a"
+    },
+    {
+      "name": "integral-false-display",
+      "tex": "\\overunderset{a}{b}{\\mmlToken{mo}[movablelimits=false]{\u222b}}",
+      "display": true,
+      "width": 18,
+      "height": 66,
+      "svgSHA256": "3f8d2614fe655b32c507eb96e97af9e2df405c1e45b322c70431306237f065f0",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "isAccent": null,
+        "coreParentKind": null,
+        "coreParentParentKind": null,
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "isAccent": null,
+            "coreParentKind": null,
+            "coreParentParentKind": null,
+            "children": [
+              {
+                "kind": "munderover",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "isAccent": null,
+                "coreParentKind": null,
+                "coreParentParentKind": null,
+                "children": [
+                  {
+                    "kind": "mo",
+                    "text": null,
+                    "attributes": {
+                      "movablelimits": false
+                    },
+                    "properties": {
+                      "movablelimits": false,
+                      "texprimestyle": true
+                    },
+                    "isAccent": false,
+                    "coreParentKind": "inferredMrow",
+                    "coreParentParentKind": "math",
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "\u222b",
+                        "attributes": {},
+                        "properties": {},
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {
+                      "texprimestyle": true
+                    },
+                    "isAccent": null,
+                    "coreParentKind": null,
+                    "coreParentParentKind": null,
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "b",
+                        "attributes": {},
+                        "properties": {},
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "isAccent": null,
+                    "coreParentKind": null,
+                    "coreParentParentKind": null,
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "a",
+                        "attributes": {},
+                        "properties": {},
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "boundary": false,
+      "expectedSHA256": "3f8d2614fe655b32c507eb96e97af9e2df405c1e45b322c70431306237f065f0"
+    },
+    {
+      "name": "integral-true-inline",
+      "tex": "\\overunderset{a}{b}{\\mmlToken{mo}[movablelimits=true]{\u222b}}",
+      "display": false,
+      "width": 12,
+      "height": 46,
+      "svgSHA256": "8d74493b25989bbb5ad9c9cc55b4caf8b0f0b276baaca76363eb44b0881d720a",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "isAccent": null,
+        "coreParentKind": null,
+        "coreParentParentKind": null,
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "isAccent": null,
+            "coreParentKind": null,
+            "coreParentParentKind": null,
+            "children": [
+              {
+                "kind": "munderover",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "isAccent": null,
+                "coreParentKind": null,
+                "coreParentParentKind": null,
+                "children": [
+                  {
+                    "kind": "mo",
+                    "text": null,
+                    "attributes": {
+                      "movablelimits": false
+                    },
+                    "properties": {
+                      "movablelimits": false,
+                      "texprimestyle": true
+                    },
+                    "isAccent": false,
+                    "coreParentKind": "inferredMrow",
+                    "coreParentParentKind": "math",
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "\u222b",
+                        "attributes": {},
+                        "properties": {},
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {
+                      "texprimestyle": true
+                    },
+                    "isAccent": null,
+                    "coreParentKind": null,
+                    "coreParentParentKind": null,
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "b",
+                        "attributes": {},
+                        "properties": {},
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "isAccent": null,
+                    "coreParentKind": null,
+                    "coreParentParentKind": null,
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "a",
+                        "attributes": {},
+                        "properties": {},
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "boundary": false,
+      "expectedSHA256": "8d74493b25989bbb5ad9c9cc55b4caf8b0f0b276baaca76363eb44b0881d720a"
+    },
+    {
+      "name": "integral-true-display",
+      "tex": "\\overunderset{a}{b}{\\mmlToken{mo}[movablelimits=true]{\u222b}}",
+      "display": true,
+      "width": 18,
+      "height": 66,
+      "svgSHA256": "3f8d2614fe655b32c507eb96e97af9e2df405c1e45b322c70431306237f065f0",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "isAccent": null,
+        "coreParentKind": null,
+        "coreParentParentKind": null,
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "isAccent": null,
+            "coreParentKind": null,
+            "coreParentParentKind": null,
+            "children": [
+              {
+                "kind": "munderover",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "isAccent": null,
+                "coreParentKind": null,
+                "coreParentParentKind": null,
+                "children": [
+                  {
+                    "kind": "mo",
+                    "text": null,
+                    "attributes": {
+                      "movablelimits": false
+                    },
+                    "properties": {
+                      "movablelimits": false,
+                      "texprimestyle": true
+                    },
+                    "isAccent": false,
+                    "coreParentKind": "inferredMrow",
+                    "coreParentParentKind": "math",
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "\u222b",
+                        "attributes": {},
+                        "properties": {},
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {
+                      "texprimestyle": true
+                    },
+                    "isAccent": null,
+                    "coreParentKind": null,
+                    "coreParentParentKind": null,
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "b",
+                        "attributes": {},
+                        "properties": {},
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "isAccent": null,
+                    "coreParentKind": null,
+                    "coreParentParentKind": null,
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "a",
+                        "attributes": {},
+                        "properties": {},
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "boundary": false,
+      "expectedSHA256": "3f8d2614fe655b32c507eb96e97af9e2df405c1e45b322c70431306237f065f0"
+    },
+    {
+      "name": "plus-true-inline",
+      "tex": "\\overunderset{a}{b}{\\mmlToken{mo}[movablelimits=true]{+}}",
+      "display": false,
+      "width": 15,
+      "height": 37,
+      "svgSHA256": "2141679777bf51d3a9673b5c2fb452f755f359f868475ba3f09b562a5b08033a",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "isAccent": null,
+        "coreParentKind": null,
+        "coreParentParentKind": null,
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "isAccent": null,
+            "coreParentKind": null,
+            "coreParentParentKind": null,
+            "children": [
+              {
+                "kind": "munderover",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "isAccent": null,
+                "coreParentKind": null,
+                "coreParentParentKind": null,
+                "children": [
+                  {
+                    "kind": "mo",
+                    "text": null,
+                    "attributes": {
+                      "movablelimits": false
+                    },
+                    "properties": {
+                      "movablelimits": false,
+                      "texprimestyle": true
+                    },
+                    "isAccent": false,
+                    "coreParentKind": "inferredMrow",
+                    "coreParentParentKind": "math",
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "+",
+                        "attributes": {},
+                        "properties": {},
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {
+                      "texprimestyle": true
+                    },
+                    "isAccent": null,
+                    "coreParentKind": null,
+                    "coreParentParentKind": null,
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "b",
+                        "attributes": {},
+                        "properties": {},
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "isAccent": null,
+                    "coreParentKind": null,
+                    "coreParentParentKind": null,
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "a",
+                        "attributes": {},
+                        "properties": {},
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "boundary": false,
+      "expectedSHA256": "2141679777bf51d3a9673b5c2fb452f755f359f868475ba3f09b562a5b08033a"
+    },
+    {
+      "name": "plus-true-display",
+      "tex": "\\overunderset{a}{b}{\\mmlToken{mo}[movablelimits=true]{+}}",
+      "display": true,
+      "width": 15,
+      "height": 37,
+      "svgSHA256": "2141679777bf51d3a9673b5c2fb452f755f359f868475ba3f09b562a5b08033a",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "isAccent": null,
+        "coreParentKind": null,
+        "coreParentParentKind": null,
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "isAccent": null,
+            "coreParentKind": null,
+            "coreParentParentKind": null,
+            "children": [
+              {
+                "kind": "munderover",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "isAccent": null,
+                "coreParentKind": null,
+                "coreParentParentKind": null,
+                "children": [
+                  {
+                    "kind": "mo",
+                    "text": null,
+                    "attributes": {
+                      "movablelimits": false
+                    },
+                    "properties": {
+                      "movablelimits": false,
+                      "texprimestyle": true
+                    },
+                    "isAccent": false,
+                    "coreParentKind": "inferredMrow",
+                    "coreParentParentKind": "math",
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "+",
+                        "attributes": {},
+                        "properties": {},
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {
+                      "texprimestyle": true
+                    },
+                    "isAccent": null,
+                    "coreParentKind": null,
+                    "coreParentParentKind": null,
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "b",
+                        "attributes": {},
+                        "properties": {},
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "isAccent": null,
+                    "coreParentKind": null,
+                    "coreParentParentKind": null,
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "a",
+                        "attributes": {},
+                        "properties": {},
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "boundary": false,
+      "expectedSHA256": "2141679777bf51d3a9673b5c2fb452f755f359f868475ba3f09b562a5b08033a"
+    },
+    {
+      "name": "overset-product-inline",
+      "tex": "\\overset{a}{\\prod}",
+      "display": false,
+      "width": 18,
+      "height": 30,
+      "svgSHA256": "950dbe0f5981ea33cba0e1ca0b34c7ec25c5d87107e9876ebb368d0c00dd3e31",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "isAccent": null,
+        "coreParentKind": null,
+        "coreParentParentKind": null,
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "isAccent": null,
+            "coreParentKind": null,
+            "coreParentParentKind": null,
+            "children": [
+              {
+                "kind": "mover",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "isAccent": null,
+                "coreParentKind": null,
+                "coreParentParentKind": null,
+                "children": [
+                  {
+                    "kind": "mo",
+                    "text": null,
+                    "attributes": {
+                      "movablelimits": false
+                    },
+                    "properties": {
+                      "texClass": 1,
+                      "movesupsub": true,
+                      "in-lists": "fixStretchy",
+                      "movablelimits": false,
+                      "texprimestyle": true
+                    },
+                    "isAccent": false,
+                    "coreParentKind": "inferredMrow",
+                    "coreParentParentKind": "math",
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "\u220f",
+                        "attributes": {},
+                        "properties": {},
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "isAccent": null,
+                    "coreParentKind": null,
+                    "coreParentParentKind": null,
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "a",
+                        "attributes": {},
+                        "properties": {},
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "boundary": true,
+      "expectedSHA256": "567c1b51c9bf9af571a0426df7e0bcd6e353ca7ab3c2b776580457a26b56d9c3"
+    },
+    {
+      "name": "overset-product-display",
+      "tex": "\\overset{a}{\\prod}",
+      "display": true,
+      "width": 24,
+      "height": 37,
+      "svgSHA256": "d97204bf07227ab8e51d09902cb31fd66c2b763936b5b3fcb032f84ae36804a0",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "isAccent": null,
+        "coreParentKind": null,
+        "coreParentParentKind": null,
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "isAccent": null,
+            "coreParentKind": null,
+            "coreParentParentKind": null,
+            "children": [
+              {
+                "kind": "mover",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "isAccent": null,
+                "coreParentKind": null,
+                "coreParentParentKind": null,
+                "children": [
+                  {
+                    "kind": "mo",
+                    "text": null,
+                    "attributes": {
+                      "movablelimits": false
+                    },
+                    "properties": {
+                      "texClass": 1,
+                      "movesupsub": true,
+                      "in-lists": "fixStretchy",
+                      "movablelimits": false,
+                      "texprimestyle": true
+                    },
+                    "isAccent": false,
+                    "coreParentKind": "inferredMrow",
+                    "coreParentParentKind": "math",
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "\u220f",
+                        "attributes": {},
+                        "properties": {},
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "isAccent": null,
+                    "coreParentKind": null,
+                    "coreParentParentKind": null,
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "a",
+                        "attributes": {},
+                        "properties": {},
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "boundary": true,
+      "expectedSHA256": "f1a23f589be3d68bfc9af425421d8267598218328873eebf94cce3252f6633cf"
+    },
+    {
+      "name": "underset-mathop-inline",
+      "tex": "\\underset{b}{\\mathop{x}}",
+      "display": false,
+      "width": 11,
+      "height": 23,
+      "svgSHA256": "de054d96aaea01c9903a8a8da5b6f4536fdba63a396e4be2b19f7d3abc7773a2",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "isAccent": null,
+        "coreParentKind": null,
+        "coreParentParentKind": null,
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "isAccent": null,
+            "coreParentKind": null,
+            "coreParentParentKind": null,
+            "children": [
+              {
+                "kind": "munder",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "isAccent": null,
+                "coreParentKind": null,
+                "coreParentParentKind": null,
+                "children": [
+                  {
+                    "kind": "TeXAtom",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {
+                      "texClass": 1,
+                      "movablelimits": false,
+                      "movesupsub": true
+                    },
+                    "isAccent": null,
+                    "coreParentKind": null,
+                    "coreParentParentKind": null,
+                    "children": [
+                      {
+                        "kind": "inferredMrow",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": [
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {},
+                            "isAccent": null,
+                            "coreParentKind": null,
+                            "coreParentParentKind": null,
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "x",
+                                "attributes": {},
+                                "properties": {},
+                                "isAccent": null,
+                                "coreParentKind": null,
+                                "coreParentParentKind": null,
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {
+                      "texprimestyle": true
+                    },
+                    "isAccent": null,
+                    "coreParentKind": null,
+                    "coreParentParentKind": null,
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "b",
+                        "attributes": {},
+                        "properties": {},
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "boundary": true,
+      "expectedSHA256": "45db42a276cacc18f1584a952ffe6cd7b16589b9ae48c47336e2bab96a07e6aa"
+    },
+    {
+      "name": "underset-mathop-display",
+      "tex": "\\underset{b}{\\mathop{x}}",
+      "display": true,
+      "width": 11,
+      "height": 23,
+      "svgSHA256": "de054d96aaea01c9903a8a8da5b6f4536fdba63a396e4be2b19f7d3abc7773a2",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "isAccent": null,
+        "coreParentKind": null,
+        "coreParentParentKind": null,
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "isAccent": null,
+            "coreParentKind": null,
+            "coreParentParentKind": null,
+            "children": [
+              {
+                "kind": "munder",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "isAccent": null,
+                "coreParentKind": null,
+                "coreParentParentKind": null,
+                "children": [
+                  {
+                    "kind": "TeXAtom",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {
+                      "texClass": 1,
+                      "movablelimits": false,
+                      "movesupsub": true
+                    },
+                    "isAccent": null,
+                    "coreParentKind": null,
+                    "coreParentParentKind": null,
+                    "children": [
+                      {
+                        "kind": "inferredMrow",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": [
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {},
+                            "isAccent": null,
+                            "coreParentKind": null,
+                            "coreParentParentKind": null,
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "x",
+                                "attributes": {},
+                                "properties": {},
+                                "isAccent": null,
+                                "coreParentKind": null,
+                                "coreParentParentKind": null,
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {
+                      "texprimestyle": true
+                    },
+                    "isAccent": null,
+                    "coreParentKind": null,
+                    "coreParentParentKind": null,
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "b",
+                        "attributes": {},
+                        "properties": {},
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "boundary": true,
+      "expectedSHA256": "b141d49b21ef66a9d3f08940d272c8ec5d7c74ff83cf12a933321de5d9d5674a"
+    }
+  ]
+}
