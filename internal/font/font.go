@@ -170,6 +170,17 @@ func lookupEffective(variant Variant, codepoint rune) (Glyph, bool) {
 	return Glyph{}, false
 }
 
+// RemapCodepoint applies the effective variant's mathematical-alphabet mapping
+// before glyph lookup, as CommonWrapper.unicodeChars does. Keep the mapped
+// character even when no bundled outline exists: it is also the text fallback.
+func RemapCodepoint(variant Variant, codepoint rune) rune {
+	glyph, ok := lookupEffective(variant, codepoint)
+	if ok && glyph.Codepoint != codepoint && glyph.Path == "" && glyph.Content == "" && glyph.Metrics == (Metrics{}) {
+		return glyph.Codepoint
+	}
+	return codepoint
+}
+
 // Lookup performs MathJax's effective lookup, including variant link and
 // inheritance precedence and Basic Latin/Greek remapping into Unicode's
 // Mathematical Alphanumeric Symbols block.

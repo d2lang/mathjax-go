@@ -696,6 +696,7 @@ func isCJK(codepoint rune) bool {
 }
 
 func (w *wrapper) placeChar(codepoint rune, x, y float64, parent *Element, variant font.Variant) float64 {
+	codepoint = font.RemapCodepoint(variant, codepoint)
 	glyph, ok := font.Lookup(variant, codepoint)
 	if !ok {
 		text := w.unknownText(string(codepoint), variant)
@@ -735,6 +736,11 @@ func (w *wrapper) unknownText(text string, variant font.Variant) *Element {
 		SetAttr("transform", "scale(1,-1)").
 		SetAttr("font-size", jsFixed(scale, 1)+"px")
 	if variant == font.Variant("-explicitFont") {
+		return element
+	}
+	// A mathematical-alphanumeric character already encodes its font style.
+	// SVG.unknownText leaves its CSS font attributes unset in this case.
+	if r, size := utf8.DecodeRuneInString(text); size == len(text) && r >= 0x1D400 && r <= 0x1D7FF {
 		return element
 	}
 	family, italic, bold := "serif", false, false
