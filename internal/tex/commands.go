@@ -664,8 +664,8 @@ func (p *parser) underOver(name string) ([]*mml.Node, error) {
 	switch name {
 	case "bar":
 		stretchy = false
-	case "underline":
-		char = "_"
+	case "overline", "underline":
+		char = "―"
 	case "overbrace", "underbrace":
 		char = map[bool]string{true: "⏟", false: "⏞"}[under]
 	case "overrightarrow", "underrightarrow":
