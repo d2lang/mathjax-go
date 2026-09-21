@@ -56,6 +56,12 @@ func setTeXClass(node, previous *mml.Node) *mml.Node {
 		return adjustTeXClass(node, previous)
 
 	case "mo":
+		// Explicit MathML spacing without an assigned TeX class stops the
+		// inter-atom TeX spacing chain (MmlMo.setTeXclass).
+		if _, explicit := node.Property("texClass"); !explicit &&
+			(node.Attributes.IsSet("lspace") || node.Attributes.IsSet("rspace")) {
+			return nil
+		}
 		return adjustTeXClass(node, previous)
 
 	case "msub", "msup", "msubsup", "munder", "mover", "munderover", "mmultiscripts", "semantics":

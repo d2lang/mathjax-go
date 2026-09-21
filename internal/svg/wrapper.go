@@ -206,33 +206,68 @@ func (w *wrapper) getScale() {
 }
 
 func (w *wrapper) getSpace() {
-	if w.node.Flags.Inferred || w.node.Kind == "text" || w.node.PrevClass == mml.TeXClassNone {
+	if w.node.Flags.Inferred || w.node.Kind == "text" {
+		return
+	}
+	core := coreMONode(w.node)
+	if core != nil && (core.Attributes.IsSet("lspace") || core.Attributes.IsSet("rspace")) {
+		// CommonWrapper selects MathML spacing before consulting prevClass.
+		// Only the outermost embellished wrapper owns the operator's space.
+		if w.node.Flags.Embellished && (w.node.Parent == nil || !w.node.Parent.Flags.Embellished) {
+			w.getMathMLSpacing(core)
+		}
+		return
+	}
+	if w.node.PrevClass == mml.TeXClassNone {
 		return
 	}
 	level := w.scriptLevel > 0 || w.node.PrevLevel > 0
 	if space := mml.TeXSpacing(w.node.PrevClass, effectiveTeXClass(w.node), level); space != "" {
 		w.bbox.L = layout.Length2Em(space, 1, w.bbox.Scale, w.renderer.pxPerEm)
 	}
-	core := coreMONode(w.node)
-	if core == nil {
+}
+
+// getMathMLSpacing ports CommonWrapper.getMathMLSpacing. The actual core
+// parent matters: an inferred multi-child row counts, but an isolated operator
+// or one directly inside a fixed-arity construct receives no outer space.
+func (w *wrapper) getMathMLSpacing(core *mml.Node) {
+	child := core
+	for parent := child.Parent; parent != nil && parent.Kind != "math" &&
+		parent.Flags.Embellished && coreMONode(parent) == core; parent = child.Parent {
+		child = parent
+	}
+	parent := child.Parent
+	if parent == nil || parent.Kind != "mrow" || len(parent.Children) <= 1 {
 		return
 	}
-	isTop := w.node.Flags.Embellished && (w.node.Parent == nil || !w.node.Parent.Flags.Embellished)
-	hasSpacing := core.Attributes.IsSet("lspace") || core.Attributes.IsSet("rspace")
-	if !isTop && !hasSpacing {
+	isScript := w.scriptLevel > 0
+	if level, ok := numberAttribute(core, "scriptlevel"); ok {
+		isScript = level > 0
+	}
+	space := func(name string, fallback float64) float64 {
+		if core.Attributes.IsSet(name) {
+			value, _ := core.Attributes.Get(name)
+			return math.Max(0, layout.Length2Em(value, 1, w.bbox.Scale, w.renderer.pxPerEm))
+		}
+		if isScript {
+			if fallback < 2.0/18 {
+				return 0
+			}
+			return 2.0 / 18
+		}
+		return fallback
+	}
+	w.bbox.L = space("lspace", core.OperatorLspace)
+	w.bbox.R = space("rspace", core.OperatorRspace)
+	index := parent.ChildIndex(child)
+	if index <= 0 || !parent.Children[index-1].Flags.Embellished {
 		return
 	}
-	if value, ok := core.Attributes.GetExplicit("lspace"); ok {
-		w.bbox.L = math.Max(0, layout.Length2Em(value, 1, w.bbox.Scale, w.renderer.pxPerEm))
-	} else if core.Attributes.Inherited().Has("lspace") {
-		value, _ := core.Attributes.GetInherited("lspace")
-		w.bbox.L = math.Max(0, layout.Length2Em(value, 1, w.bbox.Scale, w.renderer.pxPerEm))
-	}
-	if value, ok := core.Attributes.GetExplicit("rspace"); ok {
-		w.bbox.R = math.Max(0, layout.Length2Em(value, 1, w.bbox.Scale, w.renderer.pxPerEm))
-	} else if core.Attributes.Inherited().Has("rspace") {
-		value, _ := core.Attributes.GetInherited("rspace")
-		w.bbox.R = math.Max(0, layout.Length2Em(value, 1, w.bbox.Scale, w.renderer.pxPerEm))
+	// Siblings are wrapped in source order; their complete bbox is available
+	// even while this wrapper's constructor is still running.
+	if w.parent != nil && w.parent.node == parent && index <= len(w.parent.children) {
+		previous := w.parent.children[index-1]
+		w.bbox.L = math.Max(0, w.bbox.L-previous.getBBox().R)
 	}
 }
 
