@@ -331,6 +331,7 @@ func setChildInheritedAttributes(n *mml.Node, attributes *inheritedAttributes, d
 
 	case "mo":
 		applyOperatorInheritance(n)
+		checkMathAccent(n)
 		return
 
 	case "mn", "mtext", "mspace", "ms", "mglyph":
@@ -404,6 +405,40 @@ func applyOperatorInheritance(n *mml.Node) {
 		}
 	}
 	n.RemoveProperty("fixStretchy")
+}
+
+// checkMathAccent follows MmlMo.checkMathAccent after operator inheritance.
+// A recognized single-character script acquires the internal marker; an
+// embellished base and an already-defined marker are deliberately excluded.
+func checkMathAccent(n *mml.Node) {
+	if _, defined := n.Property("mathaccent"); defined {
+		return
+	}
+	parent := n.ParentNode()
+	if parent == nil || (parent.Kind != "munder" && parent.Kind != "mover" && parent.Kind != "munderover") {
+		return
+	}
+	if len(parent.Children) != 0 {
+		base := parent.Children[0]
+		if base != nil && base.Flags.Embellished {
+			core := base
+			for core.Kind != "mo" && core.Flags.Embellished {
+				next := core.Core()
+				if next == nil || next == core {
+					break
+				}
+				core = next
+			}
+			if core == n {
+				return
+			}
+		}
+	}
+	chars := []rune(textContent(n))
+	const accents = "\u00B4\u0301\u02CA\u0060\u0300\u02CB\u00A8\u0308\u007E\u0303\u02DC\u00AF\u0304\u02C9\u02D8\u0306\u02C7\u030C\u005E\u0302\u02C6\u2192\u20D7\u02D9\u0307\u02DA\u030A\u20DB\u20DC"
+	if len(chars) == 1 && strings.ContainsRune(accents, chars[0]) {
+		n.SetProperty("mathaccent", true)
+	}
 }
 
 func lookupOperatorDefinition(text string, forms []string) (mjOperatorDefinition, bool) {

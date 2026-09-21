@@ -1,0 +1,761 @@
+{
+  "oracle": "Unmodified pinned D2 MathJax3.2.2; fresh VM per case/mode; AST observed before unchanged SVG renderer",
+  "mathjaxGitCommit": "ad8f5c21cb810236551da8c6512ba733e67357ee",
+  "assetsSHA256": {
+    "polyfills.js": "7fe1d048c78b0e09854c1259f7413868a51cc8f0c822489eb1ac36ae6c85ce01",
+    "mathjax.js": "cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869",
+    "setup.js": "a52cb0bbabfbd7796b9fedd793b9386c474e3123e788ee151cbe47ca1fa6e881"
+  },
+  "cases": [
+    {
+      "name": "right-short-inline",
+      "tex": "\\overrightarrow{x}",
+      "display": false,
+      "width": 11,
+      "height": 22,
+      "svgSHA256": "dd8383c4f3df4d830ae2e252a54c02ada316a4b5905062b239fa0c4ac91f8a50",
+      "markers": [
+        {
+          "text": "→",
+          "defined": true,
+          "value": true
+        }
+      ]
+    },
+    {
+      "name": "right-short-display",
+      "tex": "\\overrightarrow{x}",
+      "display": true,
+      "width": 11,
+      "height": 22,
+      "svgSHA256": "dd8383c4f3df4d830ae2e252a54c02ada316a4b5905062b239fa0c4ac91f8a50",
+      "markers": [
+        {
+          "text": "→",
+          "defined": true,
+          "value": true
+        }
+      ]
+    },
+    {
+      "name": "right-long-inline",
+      "tex": "\\overrightarrow{abcdef}",
+      "display": false,
+      "width": 53,
+      "height": 33,
+      "svgSHA256": "4713f65732e85c8377f52614b6979a42767817d9b989e594059a1280128e54fa",
+      "markers": [
+        {
+          "text": "→",
+          "defined": true,
+          "value": true
+        }
+      ]
+    },
+    {
+      "name": "right-long-display",
+      "tex": "\\overrightarrow{abcdef}",
+      "display": true,
+      "width": 53,
+      "height": 33,
+      "svgSHA256": "4713f65732e85c8377f52614b6979a42767817d9b989e594059a1280128e54fa",
+      "markers": [
+        {
+          "text": "→",
+          "defined": true,
+          "value": true
+        }
+      ]
+    },
+    {
+      "name": "right-fraction-inline",
+      "tex": "\\overrightarrow{\\frac{a}{b}}",
+      "display": false,
+      "width": 15,
+      "height": 33,
+      "svgSHA256": "a7235b2c86fdbfbcb6c53707d25ab90aaf2fbc778cb53875ec1d3c88272f7ab3",
+      "markers": [
+        {
+          "text": "→",
+          "defined": true,
+          "value": true
+        }
+      ]
+    },
+    {
+      "name": "right-fraction-display",
+      "tex": "\\overrightarrow{\\frac{a}{b}}",
+      "display": true,
+      "width": 18,
+      "height": 49,
+      "svgSHA256": "8a73d89880d777cbde2c2dafceb48b14a4a5ec3297c2fa51e05d688a7b36d0a8",
+      "markers": [
+        {
+          "text": "→",
+          "defined": true,
+          "value": true
+        }
+      ]
+    },
+    {
+      "name": "right-script-inline",
+      "tex": "\\scriptstyle\\overrightarrow{x}",
+      "display": false,
+      "width": 8,
+      "height": 16,
+      "svgSHA256": "6d27187bcea2fdf850e9d085e7fd836b724419eb417c96ec5657e8359512c574",
+      "markers": [
+        {
+          "text": "→",
+          "defined": true,
+          "value": true
+        }
+      ]
+    },
+    {
+      "name": "right-script-display",
+      "tex": "\\scriptstyle\\overrightarrow{x}",
+      "display": true,
+      "width": 8,
+      "height": 16,
+      "svgSHA256": "6d27187bcea2fdf850e9d085e7fd836b724419eb417c96ec5657e8359512c574",
+      "markers": [
+        {
+          "text": "→",
+          "defined": true,
+          "value": true
+        }
+      ]
+    },
+    {
+      "name": "left-short-inline",
+      "tex": "\\overleftarrow{x}",
+      "display": false,
+      "width": 19,
+      "height": 22,
+      "svgSHA256": "6b26ae7821a34f6e99f472da6eccb2390c66c37e299a4435c6feca70c5192ae3",
+      "markers": [
+        {
+          "text": "←",
+          "defined": false,
+          "value": null
+        }
+      ]
+    },
+    {
+      "name": "left-short-display",
+      "tex": "\\overleftarrow{x}",
+      "display": true,
+      "width": 19,
+      "height": 22,
+      "svgSHA256": "6b26ae7821a34f6e99f472da6eccb2390c66c37e299a4435c6feca70c5192ae3",
+      "markers": [
+        {
+          "text": "←",
+          "defined": false,
+          "value": null
+        }
+      ]
+    },
+    {
+      "name": "left-long-inline",
+      "tex": "\\overleftarrow{abcdef}",
+      "display": false,
+      "width": 53,
+      "height": 33,
+      "svgSHA256": "015d6df43b4a103d4658591e4a3f504c52ab558190062a0a693a81bd37fda02f",
+      "markers": [
+        {
+          "text": "←",
+          "defined": false,
+          "value": null
+        }
+      ]
+    },
+    {
+      "name": "left-long-display",
+      "tex": "\\overleftarrow{abcdef}",
+      "display": true,
+      "width": 53,
+      "height": 33,
+      "svgSHA256": "015d6df43b4a103d4658591e4a3f504c52ab558190062a0a693a81bd37fda02f",
+      "markers": [
+        {
+          "text": "←",
+          "defined": false,
+          "value": null
+        }
+      ]
+    },
+    {
+      "name": "under-right-short-inline",
+      "tex": "\\underrightarrow{x}",
+      "display": false,
+      "width": 11,
+      "height": 22,
+      "svgSHA256": "9e8332ef3a534fc47bf735ad77a9004d6e22a7eef6cbb55812256990c58fedb7",
+      "markers": [
+        {
+          "text": "→",
+          "defined": true,
+          "value": true
+        }
+      ]
+    },
+    {
+      "name": "under-right-short-display",
+      "tex": "\\underrightarrow{x}",
+      "display": true,
+      "width": 11,
+      "height": 22,
+      "svgSHA256": "9e8332ef3a534fc47bf735ad77a9004d6e22a7eef6cbb55812256990c58fedb7",
+      "markers": [
+        {
+          "text": "→",
+          "defined": true,
+          "value": true
+        }
+      ]
+    },
+    {
+      "name": "under-right-long-inline",
+      "tex": "\\underrightarrow{abcdef}",
+      "display": false,
+      "width": 53,
+      "height": 33,
+      "svgSHA256": "87409f5b8b08d43c6f8da7cfdf32108c0492b29848bfcb6864c5296e4bcd2a8f",
+      "markers": [
+        {
+          "text": "→",
+          "defined": true,
+          "value": true
+        }
+      ]
+    },
+    {
+      "name": "under-right-long-display",
+      "tex": "\\underrightarrow{abcdef}",
+      "display": true,
+      "width": 53,
+      "height": 33,
+      "svgSHA256": "87409f5b8b08d43c6f8da7cfdf32108c0492b29848bfcb6864c5296e4bcd2a8f",
+      "markers": [
+        {
+          "text": "→",
+          "defined": true,
+          "value": true
+        }
+      ]
+    },
+    {
+      "name": "under-left-short-inline",
+      "tex": "\\underleftarrow{x}",
+      "display": false,
+      "width": 19,
+      "height": 22,
+      "svgSHA256": "4b2ec9346d146a3df45f722f64114d7fed9ff0d17a9f40304c791a172906fcef",
+      "markers": [
+        {
+          "text": "←",
+          "defined": false,
+          "value": null
+        }
+      ]
+    },
+    {
+      "name": "under-left-short-display",
+      "tex": "\\underleftarrow{x}",
+      "display": true,
+      "width": 19,
+      "height": 22,
+      "svgSHA256": "4b2ec9346d146a3df45f722f64114d7fed9ff0d17a9f40304c791a172906fcef",
+      "markers": [
+        {
+          "text": "←",
+          "defined": false,
+          "value": null
+        }
+      ]
+    },
+    {
+      "name": "under-left-long-inline",
+      "tex": "\\underleftarrow{abcdef}",
+      "display": false,
+      "width": 53,
+      "height": 33,
+      "svgSHA256": "ec6df6ab1094c530bad049d148549e467b60feabbb4254caf66b3a4dd0421f2d",
+      "markers": [
+        {
+          "text": "←",
+          "defined": false,
+          "value": null
+        }
+      ]
+    },
+    {
+      "name": "under-left-long-display",
+      "tex": "\\underleftarrow{abcdef}",
+      "display": true,
+      "width": 53,
+      "height": 33,
+      "svgSHA256": "ec6df6ab1094c530bad049d148549e467b60feabbb4254caf66b3a4dd0421f2d",
+      "markers": [
+        {
+          "text": "←",
+          "defined": false,
+          "value": null
+        }
+      ]
+    },
+    {
+      "name": "up-short-inline",
+      "tex": "\\overset{\\uparrow}{x}",
+      "display": false,
+      "width": 11,
+      "height": 24,
+      "svgSHA256": "cd6465d5701e050cfedaeb96eac71bc0ef5f91c26aa49fbf4d3511f55668cb7d",
+      "markers": [
+        {
+          "text": "↑",
+          "defined": false,
+          "value": null
+        }
+      ]
+    },
+    {
+      "name": "up-short-display",
+      "tex": "\\overset{\\uparrow}{x}",
+      "display": true,
+      "width": 11,
+      "height": 24,
+      "svgSHA256": "cd6465d5701e050cfedaeb96eac71bc0ef5f91c26aa49fbf4d3511f55668cb7d",
+      "markers": [
+        {
+          "text": "↑",
+          "defined": false,
+          "value": null
+        }
+      ]
+    },
+    {
+      "name": "up-long-inline",
+      "tex": "\\overset{\\uparrow}{abcdef}",
+      "display": false,
+      "width": 53,
+      "height": 32,
+      "svgSHA256": "bc1a375664231b7afb45b93503fa2d85c425ccb8471243bd0c5895bd4a252990",
+      "markers": [
+        {
+          "text": "↑",
+          "defined": false,
+          "value": null
+        }
+      ]
+    },
+    {
+      "name": "up-long-display",
+      "tex": "\\overset{\\uparrow}{abcdef}",
+      "display": true,
+      "width": 53,
+      "height": 32,
+      "svgSHA256": "bc1a375664231b7afb45b93503fa2d85c425ccb8471243bd0c5895bd4a252990",
+      "markers": [
+        {
+          "text": "↑",
+          "defined": false,
+          "value": null
+        }
+      ]
+    },
+    {
+      "name": "down-short-inline",
+      "tex": "\\underset{\\downarrow}{x}",
+      "display": false,
+      "width": 11,
+      "height": 25,
+      "svgSHA256": "a957432c57f910c40138f9b5c907ff35936b647e74a273714c00ac8223a3c4cc",
+      "markers": [
+        {
+          "text": "↓",
+          "defined": false,
+          "value": null
+        }
+      ]
+    },
+    {
+      "name": "down-short-display",
+      "tex": "\\underset{\\downarrow}{x}",
+      "display": true,
+      "width": 11,
+      "height": 25,
+      "svgSHA256": "a957432c57f910c40138f9b5c907ff35936b647e74a273714c00ac8223a3c4cc",
+      "markers": [
+        {
+          "text": "↓",
+          "defined": false,
+          "value": null
+        }
+      ]
+    },
+    {
+      "name": "down-long-inline",
+      "tex": "\\underset{\\downarrow}{abcdef}",
+      "display": false,
+      "width": 53,
+      "height": 33,
+      "svgSHA256": "34bbd220b0245cad62d016451f0b5ad5608c7488d14edc7680285f4f095b5399",
+      "markers": [
+        {
+          "text": "↓",
+          "defined": false,
+          "value": null
+        }
+      ]
+    },
+    {
+      "name": "down-long-display",
+      "tex": "\\underset{\\downarrow}{abcdef}",
+      "display": true,
+      "width": 53,
+      "height": 33,
+      "svgSHA256": "34bbd220b0245cad62d016451f0b5ad5608c7488d14edc7680285f4f095b5399",
+      "markers": [
+        {
+          "text": "↓",
+          "defined": false,
+          "value": null
+        }
+      ]
+    },
+    {
+      "name": "ordinary-arrows-inline",
+      "tex": "x\\rightarrow y+\\uparrow\\downarrow",
+      "display": false,
+      "width": 85,
+      "height": 17,
+      "svgSHA256": "62481662ca9d460598be06715b7b16ac25f8d9e5e18bc2321fdcaf76edf2968a",
+      "markers": [
+        {
+          "text": "→",
+          "defined": false,
+          "value": null
+        },
+        {
+          "text": "+",
+          "defined": false,
+          "value": null
+        },
+        {
+          "text": "↑↓",
+          "defined": false,
+          "value": null
+        }
+      ]
+    },
+    {
+      "name": "ordinary-arrows-display",
+      "tex": "x\\rightarrow y+\\uparrow\\downarrow",
+      "display": true,
+      "width": 85,
+      "height": 17,
+      "svgSHA256": "62481662ca9d460598be06715b7b16ac25f8d9e5e18bc2321fdcaf76edf2968a",
+      "markers": [
+        {
+          "text": "→",
+          "defined": false,
+          "value": null
+        },
+        {
+          "text": "+",
+          "defined": false,
+          "value": null
+        },
+        {
+          "text": "↑↓",
+          "defined": false,
+          "value": null
+        }
+      ]
+    },
+    {
+      "name": "vec-short-inline",
+      "tex": "\\vec{x}",
+      "display": false,
+      "width": 11,
+      "height": 16,
+      "svgSHA256": "5b13a1ec87ff18a1fa464f4f1e032fe20e6f7458d48235fddebe8af66e53343e",
+      "markers": [
+        {
+          "text": "→",
+          "defined": true,
+          "value": true
+        }
+      ]
+    },
+    {
+      "name": "vec-short-display",
+      "tex": "\\vec{x}",
+      "display": true,
+      "width": 11,
+      "height": 16,
+      "svgSHA256": "5b13a1ec87ff18a1fa464f4f1e032fe20e6f7458d48235fddebe8af66e53343e",
+      "markers": [
+        {
+          "text": "→",
+          "defined": true,
+          "value": true
+        }
+      ]
+    },
+    {
+      "name": "vec-long-inline",
+      "tex": "\\vec{abcdef}",
+      "display": false,
+      "width": 53,
+      "height": 24,
+      "svgSHA256": "f1a21cfe4cd071e01ac35009fb51860bcc1eb903ccf9bcea8e76e5292525ab49",
+      "markers": [
+        {
+          "text": "→",
+          "defined": true,
+          "value": true
+        }
+      ]
+    },
+    {
+      "name": "vec-long-display",
+      "tex": "\\vec{abcdef}",
+      "display": true,
+      "width": 53,
+      "height": 24,
+      "svgSHA256": "f1a21cfe4cd071e01ac35009fb51860bcc1eb903ccf9bcea8e76e5292525ab49",
+      "markers": [
+        {
+          "text": "→",
+          "defined": true,
+          "value": true
+        }
+      ]
+    },
+    {
+      "name": "bar-control-inline",
+      "tex": "\\bar{x}",
+      "display": false,
+      "width": 11,
+      "height": 13,
+      "svgSHA256": "7e33236199f3df8d334ffd7fba2443a43521bd4610f4a6e3f2aba24ea52f5173",
+      "markers": [
+        {
+          "text": "¯",
+          "defined": true,
+          "value": true
+        }
+      ]
+    },
+    {
+      "name": "bar-control-display",
+      "tex": "\\bar{x}",
+      "display": true,
+      "width": 11,
+      "height": 13,
+      "svgSHA256": "7e33236199f3df8d334ffd7fba2443a43521bd4610f4a6e3f2aba24ea52f5173",
+      "markers": [
+        {
+          "text": "¯",
+          "defined": true,
+          "value": true
+        }
+      ]
+    },
+    {
+      "name": "hat-control-inline",
+      "tex": "\\hat{x}",
+      "display": false,
+      "width": 11,
+      "height": 15,
+      "svgSHA256": "db5b43e42abd56f087635b43762722245a39af1f4d69a648685995b9ba8228f7",
+      "markers": [
+        {
+          "text": "^",
+          "defined": true,
+          "value": true
+        }
+      ]
+    },
+    {
+      "name": "hat-control-display",
+      "tex": "\\hat{x}",
+      "display": true,
+      "width": 11,
+      "height": 15,
+      "svgSHA256": "db5b43e42abd56f087635b43762722245a39af1f4d69a648685995b9ba8228f7",
+      "markers": [
+        {
+          "text": "^",
+          "defined": true,
+          "value": true
+        }
+      ]
+    },
+    {
+      "name": "wide-control-inline",
+      "tex": "\\widetilde{abcdef}",
+      "display": false,
+      "width": 53,
+      "height": 25,
+      "svgSHA256": "209e08f986d986999fae81b931e4296b3ff2009f7008c45a042345efd57510fb",
+      "markers": [
+        {
+          "text": "~",
+          "defined": true,
+          "value": true
+        }
+      ]
+    },
+    {
+      "name": "wide-control-display",
+      "tex": "\\widetilde{abcdef}",
+      "display": true,
+      "width": 53,
+      "height": 25,
+      "svgSHA256": "209e08f986d986999fae81b931e4296b3ff2009f7008c45a042345efd57510fb",
+      "markers": [
+        {
+          "text": "~",
+          "defined": true,
+          "value": true
+        }
+      ]
+    },
+    {
+      "name": "red-right-inline",
+      "tex": "\\color{red}{\\overrightarrow{x}}",
+      "display": false,
+      "width": 11,
+      "height": 22,
+      "svgSHA256": "f11d70e439d76a4636430b12a03105fd342527f6c46e29b1f17e64da7aafdd3c",
+      "markers": [
+        {
+          "text": "→",
+          "defined": true,
+          "value": true
+        }
+      ]
+    },
+    {
+      "name": "red-right-display",
+      "tex": "\\color{red}{\\overrightarrow{x}}",
+      "display": true,
+      "width": 11,
+      "height": 22,
+      "svgSHA256": "f11d70e439d76a4636430b12a03105fd342527f6c46e29b1f17e64da7aafdd3c",
+      "markers": [
+        {
+          "text": "→",
+          "defined": true,
+          "value": true
+        }
+      ]
+    },
+    {
+      "name": "bold-right-inline",
+      "tex": "\\mathbf{\\overrightarrow{x}}",
+      "display": false,
+      "width": 11,
+      "height": 22,
+      "svgSHA256": "776aa3fa5d85e5eaea76df86b2fc1ac0e91ac04a53da5abcd79bfb93f72d9c5d",
+      "markers": [
+        {
+          "text": "→",
+          "defined": true,
+          "value": true
+        }
+      ]
+    },
+    {
+      "name": "bold-right-display",
+      "tex": "\\mathbf{\\overrightarrow{x}}",
+      "display": true,
+      "width": 11,
+      "height": 22,
+      "svgSHA256": "776aa3fa5d85e5eaea76df86b2fc1ac0e91ac04a53da5abcd79bfb93f72d9c5d",
+      "markers": [
+        {
+          "text": "→",
+          "defined": true,
+          "value": true
+        }
+      ]
+    },
+    {
+      "name": "bold-base-inline",
+      "tex": "\\overrightarrow{\\mathbf{x}}",
+      "display": false,
+      "width": 11,
+      "height": 22,
+      "svgSHA256": "4f46fa7401fac1774aa939c0fc6962e3db3ef64ebcda35c34a22b06289b1b5dd",
+      "markers": [
+        {
+          "text": "→",
+          "defined": true,
+          "value": true
+        }
+      ]
+    },
+    {
+      "name": "bold-base-display",
+      "tex": "\\overrightarrow{\\mathbf{x}}",
+      "display": true,
+      "width": 11,
+      "height": 22,
+      "svgSHA256": "4f46fa7401fac1774aa939c0fc6962e3db3ef64ebcda35c34a22b06289b1b5dd",
+      "markers": [
+        {
+          "text": "→",
+          "defined": true,
+          "value": true
+        }
+      ]
+    },
+    {
+      "name": "nested-arrows-inline",
+      "tex": "\\overrightarrow{\\overleftarrow{x}}",
+      "display": false,
+      "width": 19,
+      "height": 36,
+      "svgSHA256": "9f8acd36a728707a710a88b5cd41d7749c254eda64dfe9feeac381f08d21a528",
+      "markers": [
+        {
+          "text": "←",
+          "defined": false,
+          "value": null
+        },
+        {
+          "text": "→",
+          "defined": true,
+          "value": true
+        }
+      ]
+    },
+    {
+      "name": "nested-arrows-display",
+      "tex": "\\overrightarrow{\\overleftarrow{x}}",
+      "display": true,
+      "width": 19,
+      "height": 36,
+      "svgSHA256": "9f8acd36a728707a710a88b5cd41d7749c254eda64dfe9feeac381f08d21a528",
+      "markers": [
+        {
+          "text": "←",
+          "defined": false,
+          "value": null
+        },
+        {
+          "text": "→",
+          "defined": true,
+          "value": true
+        }
+      ]
+    }
+  ]
+}

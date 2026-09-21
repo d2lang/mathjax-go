@@ -78,6 +78,17 @@ func (w *wrapper) isAccentMO() bool {
 }
 
 func remapAccentText(parent *wrapper, text string) string {
+	// CommonTextNode uses an explicit stretch.c directly. A selected schar
+	// also becomes stretch.c; neither may be remapped back to an accent.
+	if parent != nil && parent.hasStretch {
+		hasCharacter := parent.stretch.HasAlias && parent.stretch.Alias != 0
+		if parent.sizeSet && parent.size >= 0 && parent.size < len(parent.stretch.SizeChars) {
+			hasCharacter = hasCharacter || parent.stretch.SizeChars[parent.size] != 0
+		}
+		if hasCharacter {
+			return text
+		}
+	}
 	characters := []rune(text)
 	if len(characters) != 1 || parent == nil || !parent.isAccentMO() {
 		return text
