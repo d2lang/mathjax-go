@@ -72,6 +72,9 @@ func lookupMJSourceSymbol(name string) (*mml.Node, bool) {
 			}
 		}
 		n := token(tokenKind, character)
+		if strings.Contains(sourceMap.Parser, "mathchar7") {
+			ambientFontToken(n)
+		}
 		n.TeXClass = class
 		applySourceObject(n, attributes)
 		if tokenKind == "mo" && strings.Contains(sourceMap.Parser, "mathchar0mo") {
