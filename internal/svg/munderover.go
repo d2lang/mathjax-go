@@ -261,7 +261,7 @@ func (w *wrapper) computeUnderOverBBox(bbox *layout.BBox) {
 		return
 	}
 	bbox.Empty()
-	baseBox := base.outerBBox().Clone()
+	baseBox := base.outerBBox()
 	if boolAttributeDefault(w.node, "accent", false) {
 		baseBox.H = math.Max(baseBox.H, w.renderer.params.XHeight*baseBox.Scale)
 	}
