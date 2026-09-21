@@ -671,6 +671,73 @@ func (p *parser) underOver(name string) ([]*mml.Node, error) {
 		char = "←"
 	}
 	mark := operator(char, mml.TeXClassOrd, map[string]any{"stretchy": stretchy})
+	if name == "overbrace" || name == "underbrace" {
+		// The parser represents inline movable limits as side scripts. Restore
+		// their under/over form for ParseUtil.underOver's brace normalization;
+		// the renderer still chooses inline placement from movablelimits.
+		if moves, _ := base.Property("movesupsub"); moves == true && base.Flags.Embellished {
+			kind := map[string]string{"msub": "munder", "msup": "mover", "msubsup": "munderover"}[base.Kind]
+			if kind != "" {
+				replacement := node(kind, base.Children...)
+				replacement.Attributes.SetList(base.Attributes.Explicit())
+				replacement.Properties = base.Properties.Clone()
+				base = replacement
+			}
+		}
+		// Preserve ParseUtil.underOver's operator normalization: a brace must
+		// not become a movable limit of a bare sum in inline math, and an
+		// embellished under/over base needs its own unembellished row.
+		movable, _ := base.Property("movablelimits")
+		attribute, _ := base.Attributes.Get("movablelimits")
+		moveLimits := propertyBool(movable)
+		if base.Kind == "mo" {
+			moveLimits = moveLimits || propertyBool(attribute)
+			forms := operatorForms(base)
+			if form, ok := base.Attributes.GetExplicit("form"); ok {
+				forms = append([]string{propertyString(form)}, forms...)
+			}
+			if definition, ok := lookupOperatorDefinition(textContent(base), forms); ok {
+				for _, property := range definition.Properties {
+					if property.Name == "movablelimits" && propertyBool(property.Value) {
+						moveLimits = true
+					}
+				}
+			}
+		}
+		if moveLimits {
+			applySourceObject(base, mjSourceObject{{Name: "movablelimits", Value: false}})
+		}
+		if (base.Kind == "munder" || base.Kind == "mover" || base.Kind == "munderover") && base.Flags.Embellished {
+			// Stop at the operator: its text child is not the spacing target.
+			core := base
+			for core.Kind != "mo" && core.Flags.Embellished {
+				next := core.Core()
+				if next == nil || next == core {
+					break
+				}
+				core = next
+			}
+			if core.Kind == "mo" {
+				core.Attributes.Set("lspace", 0)
+				core.Attributes.Set("rspace", 0)
+			}
+			empty := node("mo")
+			empty.Attributes.Set("rspace", 0)
+			base = node("mrow", empty, base)
+		}
+		// MathJax's UnderOver(..., stack=true) keeps the brace inside an OP
+		// atom. A following script labels the whole brace instead of replacing
+		// its accent or being rejected as a duplicate exponent/subscript.
+		mark.Attributes.Set("accent", true)
+		kind, accent := "mover", "accent"
+		if under {
+			kind, accent = "munder", "accentunder"
+		}
+		stack := texAtom(setAttributes(node(kind, base, mark), map[string]any{accent: true}), mml.TeXClassOp)
+		stack.SetProperty("movesupsub", true)
+		stack.SetProperty("subsupOK", true)
+		return []*mml.Node{stack}, nil
+	}
 	if under {
 		return []*mml.Node{setAttributes(node("munder", base, mark), map[string]any{"accentunder": true})}, nil
 	}

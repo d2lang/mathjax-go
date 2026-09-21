@@ -1,0 +1,369 @@
+{
+  "oracle": "D2 frozen MathJax 3.2.2; asset hashes are pinned in PROVENANCE.md",
+  "sourceManifestSHA256": "eb3efe3246589eb9635d1c2bae224bfe703040a49a96906d7e170a613924f94c",
+  "cases": [
+    {
+      "name": "overbrace-unannotated",
+      "tex": "\\overbrace{x}",
+      "display": true,
+      "merror": false,
+      "error": null,
+      "width": 34,
+      "height": 22,
+      "svgSHA256": "902eeff0c37c94c16d1b97419d7f0e09659d5278d336d2bf39c0c3d468dbc8d8"
+    },
+    {
+      "name": "overbrace-unannotated",
+      "tex": "\\overbrace{x}",
+      "display": false,
+      "merror": false,
+      "error": null,
+      "width": 34,
+      "height": 22,
+      "svgSHA256": "902eeff0c37c94c16d1b97419d7f0e09659d5278d336d2bf39c0c3d468dbc8d8"
+    },
+    {
+      "name": "underbrace-unannotated",
+      "tex": "\\underbrace{x}",
+      "display": true,
+      "merror": false,
+      "error": null,
+      "width": 33,
+      "height": 22,
+      "svgSHA256": "77c13295375fa7cb231bed9b7a0e1a904dc96d518d2da61f846368ae04eeead2"
+    },
+    {
+      "name": "underbrace-unannotated",
+      "tex": "\\underbrace{x}",
+      "display": false,
+      "merror": false,
+      "error": null,
+      "width": 33,
+      "height": 22,
+      "svgSHA256": "77c13295375fa7cb231bed9b7a0e1a904dc96d518d2da61f846368ae04eeead2"
+    },
+    {
+      "name": "overbrace-annotated",
+      "tex": "\\overbrace{x}^{n}",
+      "display": true,
+      "merror": false,
+      "error": null,
+      "width": 34,
+      "height": 31,
+      "svgSHA256": "68a252229d535ae5dbdbba60b48d2060102e847a6ea82a2ab6ec37f2e1716bac"
+    },
+    {
+      "name": "overbrace-annotated",
+      "tex": "\\overbrace{x}^{n}",
+      "display": false,
+      "merror": false,
+      "error": null,
+      "width": 34,
+      "height": 31,
+      "svgSHA256": "68a252229d535ae5dbdbba60b48d2060102e847a6ea82a2ab6ec37f2e1716bac"
+    },
+    {
+      "name": "underbrace-annotated",
+      "tex": "\\underbrace{x}_{n}",
+      "display": true,
+      "merror": false,
+      "error": null,
+      "width": 33,
+      "height": 33,
+      "svgSHA256": "3fae87fad2a9ce75fd4d218e881b0354fefb4765dd4ecc8e722549fb4caf8f38"
+    },
+    {
+      "name": "underbrace-annotated",
+      "tex": "\\underbrace{x}_{n}",
+      "display": false,
+      "merror": false,
+      "error": null,
+      "width": 33,
+      "height": 33,
+      "svgSHA256": "3fae87fad2a9ce75fd4d218e881b0354fefb4765dd4ecc8e722549fb4caf8f38"
+    },
+    {
+      "name": "overbrace-sub-sup",
+      "tex": "\\overbrace{x}_{i}^{n}",
+      "display": true,
+      "merror": false,
+      "error": null,
+      "width": 34,
+      "height": 44,
+      "svgSHA256": "790463202d7b7ae74f775f7ae7eb61c6b3d21aaf200a8b465299e9480e3e5541"
+    },
+    {
+      "name": "overbrace-sub-sup",
+      "tex": "\\overbrace{x}_{i}^{n}",
+      "display": false,
+      "merror": false,
+      "error": null,
+      "width": 34,
+      "height": 44,
+      "svgSHA256": "790463202d7b7ae74f775f7ae7eb61c6b3d21aaf200a8b465299e9480e3e5541"
+    },
+    {
+      "name": "overbrace-sup-sub",
+      "tex": "\\overbrace{x}^{n}_{i}",
+      "display": true,
+      "merror": false,
+      "error": null,
+      "width": 34,
+      "height": 44,
+      "svgSHA256": "790463202d7b7ae74f775f7ae7eb61c6b3d21aaf200a8b465299e9480e3e5541"
+    },
+    {
+      "name": "overbrace-sup-sub",
+      "tex": "\\overbrace{x}^{n}_{i}",
+      "display": false,
+      "merror": false,
+      "error": null,
+      "width": 34,
+      "height": 44,
+      "svgSHA256": "790463202d7b7ae74f775f7ae7eb61c6b3d21aaf200a8b465299e9480e3e5541"
+    },
+    {
+      "name": "underbrace-sub-sup",
+      "tex": "\\underbrace{x}_{i}^{n}",
+      "display": true,
+      "merror": false,
+      "error": null,
+      "width": 33,
+      "height": 44,
+      "svgSHA256": "e334be004bc21be6b24cff58033c1bf5952f32100c453fb01a01f85da2668165"
+    },
+    {
+      "name": "underbrace-sub-sup",
+      "tex": "\\underbrace{x}_{i}^{n}",
+      "display": false,
+      "merror": false,
+      "error": null,
+      "width": 33,
+      "height": 44,
+      "svgSHA256": "e334be004bc21be6b24cff58033c1bf5952f32100c453fb01a01f85da2668165"
+    },
+    {
+      "name": "underbrace-sup-sub",
+      "tex": "\\underbrace{x}^{n}_{i}",
+      "display": true,
+      "merror": false,
+      "error": null,
+      "width": 33,
+      "height": 44,
+      "svgSHA256": "e334be004bc21be6b24cff58033c1bf5952f32100c453fb01a01f85da2668165"
+    },
+    {
+      "name": "underbrace-sup-sub",
+      "tex": "\\underbrace{x}^{n}_{i}",
+      "display": false,
+      "merror": false,
+      "error": null,
+      "width": 33,
+      "height": 44,
+      "svgSHA256": "e334be004bc21be6b24cff58033c1bf5952f32100c453fb01a01f85da2668165"
+    },
+    {
+      "name": "nested-braces",
+      "tex": "\\overbrace{\\underbrace{x}_{i}}^{n}",
+      "display": true,
+      "merror": false,
+      "error": null,
+      "width": 33,
+      "height": 56,
+      "svgSHA256": "bd3be28e56a1599b6186e9d2b15c581dfa0dd480afd69f085fb8642c2c8775fd"
+    },
+    {
+      "name": "nested-braces",
+      "tex": "\\overbrace{\\underbrace{x}_{i}}^{n}",
+      "display": false,
+      "merror": false,
+      "error": null,
+      "width": 33,
+      "height": 56,
+      "svgSHA256": "bd3be28e56a1599b6186e9d2b15c581dfa0dd480afd69f085fb8642c2c8775fd"
+    },
+    {
+      "name": "grouped-brace",
+      "tex": "{\\overbrace{x}}^{n}",
+      "display": true,
+      "merror": false,
+      "error": null,
+      "width": 43,
+      "height": 23,
+      "svgSHA256": "c2bc1a0850af9510d99746dc1823bbd45a3e3221cb7b954a662ae18981b7cd48"
+    },
+    {
+      "name": "grouped-brace",
+      "tex": "{\\overbrace{x}}^{n}",
+      "display": false,
+      "merror": false,
+      "error": null,
+      "width": 43,
+      "height": 23,
+      "svgSHA256": "c2bc1a0850af9510d99746dc1823bbd45a3e3221cb7b954a662ae18981b7cd48"
+    },
+    {
+      "name": "overbrace-binary",
+      "tex": "\\overbrace{x+y}^{n}",
+      "display": true,
+      "merror": false,
+      "error": null,
+      "width": 42,
+      "height": 37,
+      "svgSHA256": "6460dafd120210eea7c747bc75a7937d3355f33176fcc488711925b512d83116"
+    },
+    {
+      "name": "overbrace-binary",
+      "tex": "\\overbrace{x+y}^{n}",
+      "display": false,
+      "merror": false,
+      "error": null,
+      "width": 42,
+      "height": 37,
+      "svgSHA256": "6460dafd120210eea7c747bc75a7937d3355f33176fcc488711925b512d83116"
+    },
+    {
+      "name": "underbrace-binary",
+      "tex": "\\underbrace{x+y}_{n}",
+      "display": true,
+      "merror": false,
+      "error": null,
+      "width": 42,
+      "height": 39,
+      "svgSHA256": "f7bf108c0a5410918fc10104991e1f1708f5918b6211d7f664abf92ad92f9814"
+    },
+    {
+      "name": "underbrace-binary",
+      "tex": "\\underbrace{x+y}_{n}",
+      "display": false,
+      "merror": false,
+      "error": null,
+      "width": 42,
+      "height": 39,
+      "svgSHA256": "f7bf108c0a5410918fc10104991e1f1708f5918b6211d7f664abf92ad92f9814"
+    },
+    {
+      "name": "ordinary-double-sup",
+      "tex": "x^a^b",
+      "display": true,
+      "merror": true,
+      "error": "Double exponent: use braces to clarify",
+      "width": 413,
+      "height": 18,
+      "svgSHA256": "f74d506d313d207f51b14cfdbf282543cd1760035865724b0ec1003b16df79fa"
+    },
+    {
+      "name": "ordinary-double-sup",
+      "tex": "x^a^b",
+      "display": false,
+      "merror": true,
+      "error": "Double exponent: use braces to clarify",
+      "width": 413,
+      "height": 18,
+      "svgSHA256": "f74d506d313d207f51b14cfdbf282543cd1760035865724b0ec1003b16df79fa"
+    },
+    {
+      "name": "ordinary-double-sub",
+      "tex": "x_a_b",
+      "display": true,
+      "merror": true,
+      "error": "Double subscripts: use braces to clarify",
+      "width": 435,
+      "height": 18,
+      "svgSHA256": "3c55f3ef99abff7c8b924939af339d657ef2b2d7db51ee4a836f2979400ca910"
+    },
+    {
+      "name": "ordinary-double-sub",
+      "tex": "x_a_b",
+      "display": false,
+      "merror": true,
+      "error": "Double subscripts: use braces to clarify",
+      "width": 435,
+      "height": 18,
+      "svgSHA256": "3c55f3ef99abff7c8b924939af339d657ef2b2d7db51ee4a836f2979400ca910"
+    },
+    {
+      "name": "brace-double-sup",
+      "tex": "\\overbrace{x}^{a}^{b}",
+      "display": true,
+      "merror": true,
+      "error": "Double exponent: use braces to clarify",
+      "width": 413,
+      "height": 18,
+      "svgSHA256": "f74d506d313d207f51b14cfdbf282543cd1760035865724b0ec1003b16df79fa"
+    },
+    {
+      "name": "brace-double-sup",
+      "tex": "\\overbrace{x}^{a}^{b}",
+      "display": false,
+      "merror": true,
+      "error": "Double exponent: use braces to clarify",
+      "width": 413,
+      "height": 18,
+      "svgSHA256": "f74d506d313d207f51b14cfdbf282543cd1760035865724b0ec1003b16df79fa"
+    },
+    {
+      "name": "brace-double-sub",
+      "tex": "\\underbrace{x}_{a}_{b}",
+      "display": true,
+      "merror": true,
+      "error": "Double subscripts: use braces to clarify",
+      "width": 435,
+      "height": 18,
+      "svgSHA256": "3c55f3ef99abff7c8b924939af339d657ef2b2d7db51ee4a836f2979400ca910"
+    },
+    {
+      "name": "brace-double-sub",
+      "tex": "\\underbrace{x}_{a}_{b}",
+      "display": false,
+      "merror": true,
+      "error": "Double subscripts: use braces to clarify",
+      "width": 435,
+      "height": 18,
+      "svgSHA256": "3c55f3ef99abff7c8b924939af339d657ef2b2d7db51ee4a836f2979400ca910"
+    },
+    {
+      "name": "brace-bare-sum",
+      "tex": "\\overbrace{\\sum}^{n}",
+      "display": true,
+      "merror": false,
+      "error": null,
+      "width": 33,
+      "height": 48,
+      "svgSHA256": "4da1b9064492d669121a0320f68677e92e0a1776e6d2b53a3f35e848daccea54"
+    },
+    {
+      "name": "brace-bare-sum",
+      "tex": "\\overbrace{\\sum}^{n}",
+      "display": false,
+      "merror": false,
+      "error": null,
+      "width": 33,
+      "height": 41,
+      "svgSHA256": "8da7cb764c440bb75cb7e0af83714f2b7c395bc87644ee5e5ae97b338acb34db"
+    },
+    {
+      "name": "brace-sum-limits",
+      "tex": "\\overbrace{\\sum_{i}^{n}}^{N}",
+      "display": true,
+      "merror": false,
+      "error": null,
+      "width": 33,
+      "height": 76,
+      "svgSHA256": "dbfae4193ac89db3bae1b2d7f6e69299e7f27dbe19a6dffc91fed6de65e0995c"
+    },
+    {
+      "name": "brace-sum-limits",
+      "tex": "\\overbrace{\\sum_{i}^{n}}^{N}",
+      "display": false,
+      "merror": false,
+      "error": null,
+      "width": 33,
+      "height": 45,
+      "svgSHA256": "e24b47276c602d7266ca79c1308a07cb50ca931ddd4a790b96e21bdf82d4f461"
+    }
+  ],
+  "additionalSourceManifestSHA256": "7d7a2a29a40182b63661f52ba9437aad834bf127cce06474291b7b342fb938a9",
+  "sumLimitsASTSHA256": "2f3fbea10af5016bfba547854c76ac2ff0a7e057279260df45f25a49573cb9c9",
+  "sumLimitsInlineASTSHA256": "3b24afc1a29bb1c30b10cfd6ba7a4f6f0a17ff6370023017326a521bed39b29d"
+}

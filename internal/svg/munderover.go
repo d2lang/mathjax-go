@@ -37,6 +37,20 @@ func (w *wrapper) lineAccent(script *wrapper) bool {
 	return script != nil && nodeText(script.node) == "―"
 }
 
+// CommonScriptbase records the first under/over accent below transparent
+// wrappers. Its existing gap is removed before a further label is stacked.
+func (w *wrapper) baseHasAccent(attribute string) bool {
+	core := w.scriptBaseCore()
+	if core == nil {
+		return false
+	}
+	switch core.node.Kind {
+	case "munder", "mover", "munderover":
+		return boolAttributeDefault(core.node, attribute, false)
+	}
+	return false
+}
+
 func (w *wrapper) overKU(base, over *layout.BBox) (separation, offset float64) {
 	accent := boolAttributeDefault(w.node, "accent", false)
 	params := w.renderer.params
@@ -49,6 +63,9 @@ func (w *wrapper) overKU(base, over *layout.BBox) (separation, offset float64) {
 	separation = math.Max(params.BigOp1, params.BigOp3-math.Max(0, depth))
 	if accent {
 		separation = T
+	}
+	if w.baseHasAccent("accent") {
+		separation -= t
 	}
 	offset = base.H*base.RScale + separation + depth
 	return
@@ -66,6 +83,9 @@ func (w *wrapper) underKV(base, under *layout.BBox) (separation, offset float64)
 	separation = math.Max(params.BigOp2, params.BigOp4-height)
 	if accent {
 		separation = T
+	}
+	if w.baseHasAccent("accentunder") {
+		separation -= t
 	}
 	offset = -(base.D*base.RScale + separation + height)
 	return
