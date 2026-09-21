@@ -73,6 +73,9 @@ func (r *renderer) wrap(node *mml.Node, parent *wrapper, level int, display bool
 			w.bbox.PWidth = layout.FullWidth
 		}
 	}
+	if node.Kind == "ms" {
+		w.initializeStringQuotes()
+	}
 	if node.Kind == "mtable" {
 		initializeTablePWidth(w)
 	}
@@ -627,6 +630,14 @@ func (w *wrapper) textToSVG(parent *Element) {
 		text = "−" + strings.TrimPrefix(text, "-")
 	}
 	text = remapAccentText(w.parent, text)
+	// SVGTextNode gives multiple text wrappers positionable groups. CommonMs
+	// now has separate opening/body/closing wrappers; keep this correction
+	// scoped to those string tokens rather than alter unrelated text output.
+	if w.parent != nil && w.parent.node.Kind == "ms" && len(w.parent.children) > 1 {
+		w.element = NewElement("g").SetAttr("data-mml-node", "text")
+		parent.Append(w.element)
+		parent = w.element
+	}
 	x := 0.0
 	for _, codepoint := range text {
 		x += w.placeChar(codepoint, x, 0, parent, variant)
