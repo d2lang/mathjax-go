@@ -169,7 +169,7 @@ func (p *parser) parseRow(terminator byte, stopRight bool) ([]*mml.Node, string,
 				if err != nil {
 					return nil, "", err
 				}
-				applyMathVariant(row(rest, true), variant)
+				applyScopedMathVariant(row(rest, true), variant)
 				appendNodes(rest, false)
 				return nodes, right, nil
 			}
@@ -468,7 +468,7 @@ func (p *parser) parseMathFontString(source, variant string) (*mml.Node, error) 
 	result := row(children, true)
 	// ParseUtil.getFontDef applies the selected font to variables, digits,
 	// mapped math characters, and operators created by the nested parser.
-	applyMathVariant(result, variant)
+	applyScopedMathVariant(result, variant)
 	return result, nil
 }
 
@@ -718,6 +718,33 @@ func applyMathVariant(n *mml.Node, variant string) {
 			}
 			current.Attributes.Set("mathvariant", variant)
 		}
+		return true
+	})
+}
+
+// MathFont and SetFont select the current lexical environment in MathJax.
+// This parser lowers those environments after parsing their contents, so an
+// inner environment has already resolved its tokens when an outer one runs.
+// Keep that choice until compilation finishes instead of overwriting it.
+// The transient property survives the parser's existing node clones and is
+// removed before any MathML is returned to the renderer or caller.
+const resolvedFontScope = "go-resolved-font-scope"
+
+func applyScopedMathVariant(n *mml.Node, variant string) {
+	n.Walk(func(current *mml.Node) bool {
+		if current.Kind != "mi" && current.Kind != "mn" && current.Kind != "mo" {
+			return true
+		}
+		if _, resolved := current.Property(resolvedFontScope); resolved {
+			return true
+		}
+		if keep, ok := current.Attributes.GetExplicit("mjx-keep-attrs"); ok {
+			if names, ok := keep.(string); ok && strings.Contains(" "+names+" ", " mathvariant ") {
+				return true
+			}
+		}
+		current.Attributes.Set("mathvariant", variant)
+		current.SetProperty(resolvedFontScope, true)
 		return true
 	})
 }

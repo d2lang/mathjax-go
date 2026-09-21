@@ -1,0 +1,4753 @@
+{
+  "oracle": "Unmodified pinned D2 MathJax3.2.2; fresh VM per case/mode; AST observed before unchanged SVG renderer",
+  "mathjaxGitCommit": "ad8f5c21cb810236551da8c6512ba733e67357ee",
+  "assetsSHA256": {
+    "polyfills.js": "7fe1d048c78b0e09854c1259f7413868a51cc8f0c822489eb1ac36ae6c85ce01",
+    "mathjax.js": "cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869",
+    "setup.js": "a52cb0bbabfbd7796b9fedd793b9386c474e3123e788ee151cbe47ca1fa6e881"
+  },
+  "cases": [
+    {
+      "name": "bold-roman-inline",
+      "tex": "\\mathbf{\\mathrm{x}}",
+      "display": false,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "TeXAtom",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": {
+                                  "mathvariant": "normal"
+                                },
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "x",
+                                    "attributes": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "35314412371cee998a73b4095fdde301887e389e0f99519f4071eb414c5558cd"
+    },
+    {
+      "name": "bold-roman-display",
+      "tex": "\\mathbf{\\mathrm{x}}",
+      "display": true,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "TeXAtom",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": {
+                                  "mathvariant": "normal"
+                                },
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "x",
+                                    "attributes": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "35314412371cee998a73b4095fdde301887e389e0f99519f4071eb414c5558cd"
+    },
+    {
+      "name": "roman-bold-inline",
+      "tex": "\\mathrm{\\mathbf{x}}",
+      "display": false,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "TeXAtom",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": {
+                                  "mathvariant": "bold"
+                                },
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "x",
+                                    "attributes": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "5ec6a85ee3a975b06b7919c19e6380937dec86721e8130b7dd40e458846545a2"
+    },
+    {
+      "name": "roman-bold-display",
+      "tex": "\\mathrm{\\mathbf{x}}",
+      "display": true,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "TeXAtom",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": {
+                                  "mathvariant": "bold"
+                                },
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "x",
+                                    "attributes": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "5ec6a85ee3a975b06b7919c19e6380937dec86721e8130b7dd40e458846545a2"
+    },
+    {
+      "name": "bold-roman-scope-inline",
+      "tex": "\\mathbf{a\\mathrm{x}b}+y",
+      "display": false,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {
+                          "mathvariant": "bold"
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "a",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "TeXAtom",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": {
+                                  "mathvariant": "normal"
+                                },
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "x",
+                                    "attributes": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {
+                          "mathvariant": "bold"
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "b",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "+",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "y",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "ac68c682ab332317562cb8a2abace627bd1cfd9a11c43f53db318a584d5dcaba"
+    },
+    {
+      "name": "bold-roman-scope-display",
+      "tex": "\\mathbf{a\\mathrm{x}b}+y",
+      "display": true,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {
+                          "mathvariant": "bold"
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "a",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "TeXAtom",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": {
+                                  "mathvariant": "normal"
+                                },
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "x",
+                                    "attributes": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {
+                          "mathvariant": "bold"
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "b",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "+",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "y",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "ac68c682ab332317562cb8a2abace627bd1cfd9a11c43f53db318a584d5dcaba"
+    },
+    {
+      "name": "roman-bold-scope-inline",
+      "tex": "\\mathrm{a\\mathbf{x}b}+y",
+      "display": false,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {
+                          "mathvariant": "normal"
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "a",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "TeXAtom",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": {
+                                  "mathvariant": "bold"
+                                },
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "x",
+                                    "attributes": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {
+                          "mathvariant": "normal"
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "b",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "+",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "y",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "a581fb7b09650076cbd707fdf765eb120cf36c7b0209ca351e52c44395b314ec"
+    },
+    {
+      "name": "roman-bold-scope-display",
+      "tex": "\\mathrm{a\\mathbf{x}b}+y",
+      "display": true,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {
+                          "mathvariant": "normal"
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "a",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "TeXAtom",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": {
+                                  "mathvariant": "bold"
+                                },
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "x",
+                                    "attributes": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {
+                          "mathvariant": "normal"
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "b",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "+",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "y",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "a581fb7b09650076cbd707fdf765eb120cf36c7b0209ca351e52c44395b314ec"
+    },
+    {
+      "name": "triple-inline",
+      "tex": "\\mathbf{a\\mathrm{b\\mathbf{x}c}d}",
+      "display": false,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {
+                          "mathvariant": "bold"
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "a",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "TeXAtom",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": {
+                                  "mathvariant": "normal"
+                                },
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "b",
+                                    "attributes": {},
+                                    "children": []
+                                  }
+                                ]
+                              },
+                              {
+                                "kind": "TeXAtom",
+                                "text": null,
+                                "attributes": {},
+                                "children": [
+                                  {
+                                    "kind": "inferredMrow",
+                                    "text": null,
+                                    "attributes": {},
+                                    "children": [
+                                      {
+                                        "kind": "mi",
+                                        "text": null,
+                                        "attributes": {
+                                          "mathvariant": "bold"
+                                        },
+                                        "children": [
+                                          {
+                                            "kind": "text",
+                                            "text": "x",
+                                            "attributes": {},
+                                            "children": []
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": {
+                                  "mathvariant": "normal"
+                                },
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "c",
+                                    "attributes": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {
+                          "mathvariant": "bold"
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "d",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "6b20d648b3c99f0fadf81bbb96404adb391873de24b8d4d93b1422e37c6e3fc1"
+    },
+    {
+      "name": "triple-display",
+      "tex": "\\mathbf{a\\mathrm{b\\mathbf{x}c}d}",
+      "display": true,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {
+                          "mathvariant": "bold"
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "a",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "TeXAtom",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": {
+                                  "mathvariant": "normal"
+                                },
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "b",
+                                    "attributes": {},
+                                    "children": []
+                                  }
+                                ]
+                              },
+                              {
+                                "kind": "TeXAtom",
+                                "text": null,
+                                "attributes": {},
+                                "children": [
+                                  {
+                                    "kind": "inferredMrow",
+                                    "text": null,
+                                    "attributes": {},
+                                    "children": [
+                                      {
+                                        "kind": "mi",
+                                        "text": null,
+                                        "attributes": {
+                                          "mathvariant": "bold"
+                                        },
+                                        "children": [
+                                          {
+                                            "kind": "text",
+                                            "text": "x",
+                                            "attributes": {},
+                                            "children": []
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": {
+                                  "mathvariant": "normal"
+                                },
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "c",
+                                    "attributes": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {
+                          "mathvariant": "bold"
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "d",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "6b20d648b3c99f0fadf81bbb96404adb391873de24b8d4d93b1422e37c6e3fc1"
+    },
+    {
+      "name": "multiple-inline",
+      "tex": "\\mathbf{a\\mathrm{xy}b}",
+      "display": false,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {
+                          "mathvariant": "bold"
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "a",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "TeXAtom",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": {},
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "xy",
+                                    "attributes": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {
+                          "mathvariant": "bold"
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "b",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "dd36ec00b515df3aea1dbe1b7e596618c62dc6f0d3cc1ca71c8ac5a022c332ef"
+    },
+    {
+      "name": "multiple-display",
+      "tex": "\\mathbf{a\\mathrm{xy}b}",
+      "display": true,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {
+                          "mathvariant": "bold"
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "a",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "TeXAtom",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": {},
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "xy",
+                                    "attributes": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {
+                          "mathvariant": "bold"
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "b",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "dd36ec00b515df3aea1dbe1b7e596618c62dc6f0d3cc1ca71c8ac5a022c332ef"
+    },
+    {
+      "name": "fraction-inline",
+      "tex": "\\mathbf{\\frac{a}{\\mathrm{x}}}",
+      "display": false,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mfrac",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": {
+                              "mathvariant": "bold"
+                            },
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "a",
+                                "attributes": {},
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "TeXAtom",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "inferredMrow",
+                                "text": null,
+                                "attributes": {},
+                                "children": [
+                                  {
+                                    "kind": "mi",
+                                    "text": null,
+                                    "attributes": {
+                                      "mathvariant": "normal"
+                                    },
+                                    "children": [
+                                      {
+                                        "kind": "text",
+                                        "text": "x",
+                                        "attributes": {},
+                                        "children": []
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "4173a9d460e1ff900817cb8ee82141f2b4798f385d510912bae2eefd9a22958f"
+    },
+    {
+      "name": "fraction-display",
+      "tex": "\\mathbf{\\frac{a}{\\mathrm{x}}}",
+      "display": true,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mfrac",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": {
+                              "mathvariant": "bold"
+                            },
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "a",
+                                "attributes": {},
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "TeXAtom",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "inferredMrow",
+                                "text": null,
+                                "attributes": {},
+                                "children": [
+                                  {
+                                    "kind": "mi",
+                                    "text": null,
+                                    "attributes": {
+                                      "mathvariant": "normal"
+                                    },
+                                    "children": [
+                                      {
+                                        "kind": "text",
+                                        "text": "x",
+                                        "attributes": {},
+                                        "children": []
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "af18b1a561aae2944950b654bfb87bcaf7902ac0db78ec598ea6d04695f06888"
+    },
+    {
+      "name": "script-inline",
+      "tex": "\\mathbf{a_{\\mathrm{x}}^2}",
+      "display": false,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "msubsup",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": {
+                              "mathvariant": "bold"
+                            },
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "a",
+                                "attributes": {},
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "TeXAtom",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "inferredMrow",
+                                "text": null,
+                                "attributes": {},
+                                "children": [
+                                  {
+                                    "kind": "TeXAtom",
+                                    "text": null,
+                                    "attributes": {},
+                                    "children": [
+                                      {
+                                        "kind": "inferredMrow",
+                                        "text": null,
+                                        "attributes": {},
+                                        "children": [
+                                          {
+                                            "kind": "mi",
+                                            "text": null,
+                                            "attributes": {
+                                              "mathvariant": "normal"
+                                            },
+                                            "children": [
+                                              {
+                                                "kind": "text",
+                                                "text": "x",
+                                                "attributes": {},
+                                                "children": []
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "mn",
+                            "text": null,
+                            "attributes": {
+                              "mathvariant": "bold"
+                            },
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "2",
+                                "attributes": {},
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "40442155aa45a3f16f39adbbd43ad8b03b69b92e5161181075f6b5df50c39805"
+    },
+    {
+      "name": "script-display",
+      "tex": "\\mathbf{a_{\\mathrm{x}}^2}",
+      "display": true,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "msubsup",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": {
+                              "mathvariant": "bold"
+                            },
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "a",
+                                "attributes": {},
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "TeXAtom",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "inferredMrow",
+                                "text": null,
+                                "attributes": {},
+                                "children": [
+                                  {
+                                    "kind": "TeXAtom",
+                                    "text": null,
+                                    "attributes": {},
+                                    "children": [
+                                      {
+                                        "kind": "inferredMrow",
+                                        "text": null,
+                                        "attributes": {},
+                                        "children": [
+                                          {
+                                            "kind": "mi",
+                                            "text": null,
+                                            "attributes": {
+                                              "mathvariant": "normal"
+                                            },
+                                            "children": [
+                                              {
+                                                "kind": "text",
+                                                "text": "x",
+                                                "attributes": {},
+                                                "children": []
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "mn",
+                            "text": null,
+                            "attributes": {
+                              "mathvariant": "bold"
+                            },
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "2",
+                                "attributes": {},
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "5f032ffccca5068c89c7744ad31c432acc2b7be7c315221a02bd1696abcd2d14"
+    },
+    {
+      "name": "radical-inline",
+      "tex": "\\mathrm{\\sqrt{\\mathbf{x}}}",
+      "display": false,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "msqrt",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "TeXAtom",
+                                "text": null,
+                                "attributes": {},
+                                "children": [
+                                  {
+                                    "kind": "inferredMrow",
+                                    "text": null,
+                                    "attributes": {},
+                                    "children": [
+                                      {
+                                        "kind": "mi",
+                                        "text": null,
+                                        "attributes": {
+                                          "mathvariant": "bold"
+                                        },
+                                        "children": [
+                                          {
+                                            "kind": "text",
+                                            "text": "x",
+                                            "attributes": {},
+                                            "children": []
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "eb8ff14cf66e6e7efb2b1b12c61d9ee49cf25b059fb50406d38ede25d36c2d40"
+    },
+    {
+      "name": "radical-display",
+      "tex": "\\mathrm{\\sqrt{\\mathbf{x}}}",
+      "display": true,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "msqrt",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "TeXAtom",
+                                "text": null,
+                                "attributes": {},
+                                "children": [
+                                  {
+                                    "kind": "inferredMrow",
+                                    "text": null,
+                                    "attributes": {},
+                                    "children": [
+                                      {
+                                        "kind": "mi",
+                                        "text": null,
+                                        "attributes": {
+                                          "mathvariant": "bold"
+                                        },
+                                        "children": [
+                                          {
+                                            "kind": "text",
+                                            "text": "x",
+                                            "attributes": {},
+                                            "children": []
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "91fed9e1084ab90487f6850768e870d55266db4598bfae402327b1881dd97a9a"
+    },
+    {
+      "name": "decl-inner-roman-inline",
+      "tex": "\\mathbf{a{\\rm x}b}",
+      "display": false,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {
+                          "mathvariant": "bold"
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "a",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "TeXAtom",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": {
+                                  "mathvariant": "normal"
+                                },
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "x",
+                                    "attributes": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {
+                          "mathvariant": "bold"
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "b",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "c09573003bce2388f74383790f13506ca64093dd8e8be7799497e1dbc40d21d6"
+    },
+    {
+      "name": "decl-inner-roman-display",
+      "tex": "\\mathbf{a{\\rm x}b}",
+      "display": true,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {
+                          "mathvariant": "bold"
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "a",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "TeXAtom",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": {
+                                  "mathvariant": "normal"
+                                },
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "x",
+                                    "attributes": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {
+                          "mathvariant": "bold"
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "b",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "c09573003bce2388f74383790f13506ca64093dd8e8be7799497e1dbc40d21d6"
+    },
+    {
+      "name": "decl-inner-bold-inline",
+      "tex": "\\mathrm{a{\\bf x}b}",
+      "display": false,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {
+                          "mathvariant": "normal"
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "a",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "TeXAtom",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": {
+                                  "mathvariant": "bold"
+                                },
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "x",
+                                    "attributes": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {
+                          "mathvariant": "normal"
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "b",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "8f33d73ac8ff20c649264b610548d798bb3547c3587d724aa40974ff16786125"
+    },
+    {
+      "name": "decl-inner-bold-display",
+      "tex": "\\mathrm{a{\\bf x}b}",
+      "display": true,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {
+                          "mathvariant": "normal"
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "a",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "TeXAtom",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": {
+                                  "mathvariant": "bold"
+                                },
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "x",
+                                    "attributes": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {
+                          "mathvariant": "normal"
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "b",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "8f33d73ac8ff20c649264b610548d798bb3547c3587d724aa40974ff16786125"
+    },
+    {
+      "name": "decl-outer-bold-inline",
+      "tex": "{\\bf a\\mathrm{x}b}+y",
+      "display": false,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {
+                          "mathvariant": "bold"
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "a",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "TeXAtom",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": {
+                                  "mathvariant": "normal"
+                                },
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "x",
+                                    "attributes": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {
+                          "mathvariant": "bold"
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "b",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "+",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "y",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "ac68c682ab332317562cb8a2abace627bd1cfd9a11c43f53db318a584d5dcaba"
+    },
+    {
+      "name": "decl-outer-bold-display",
+      "tex": "{\\bf a\\mathrm{x}b}+y",
+      "display": true,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {
+                          "mathvariant": "bold"
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "a",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "TeXAtom",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": {
+                                  "mathvariant": "normal"
+                                },
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "x",
+                                    "attributes": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {
+                          "mathvariant": "bold"
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "b",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "+",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "y",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "ac68c682ab332317562cb8a2abace627bd1cfd9a11c43f53db318a584d5dcaba"
+    },
+    {
+      "name": "decl-outer-roman-inline",
+      "tex": "{\\rm a\\mathbf{x}b}+y",
+      "display": false,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {
+                          "mathvariant": "normal"
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "a",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "TeXAtom",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": {
+                                  "mathvariant": "bold"
+                                },
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "x",
+                                    "attributes": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {
+                          "mathvariant": "normal"
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "b",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "+",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "y",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "a581fb7b09650076cbd707fdf765eb120cf36c7b0209ca351e52c44395b314ec"
+    },
+    {
+      "name": "decl-outer-roman-display",
+      "tex": "{\\rm a\\mathbf{x}b}+y",
+      "display": true,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {
+                          "mathvariant": "normal"
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "a",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "TeXAtom",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": {
+                                  "mathvariant": "bold"
+                                },
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "x",
+                                    "attributes": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {
+                          "mathvariant": "normal"
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "b",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "+",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "y",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "a581fb7b09650076cbd707fdf765eb120cf36c7b0209ca351e52c44395b314ec"
+    },
+    {
+      "name": "decl-sequence-inline",
+      "tex": "{\\bf a\\rm x\\bf b}+y",
+      "display": false,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {
+                          "mathvariant": "bold"
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "a",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {
+                          "mathvariant": "normal"
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "x",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {
+                          "mathvariant": "bold"
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "b",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "+",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "y",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "d14fe273fd94bb653ab38e39fac180c5fde205f11a2e598dc86e158b1cf2dcd6"
+    },
+    {
+      "name": "decl-sequence-display",
+      "tex": "{\\bf a\\rm x\\bf b}+y",
+      "display": true,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {
+                          "mathvariant": "bold"
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "a",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {
+                          "mathvariant": "normal"
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "x",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {
+                          "mathvariant": "bold"
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "b",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "+",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "y",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "d14fe273fd94bb653ab38e39fac180c5fde205f11a2e598dc86e158b1cf2dcd6"
+    },
+    {
+      "name": "decl-nested-group-inline",
+      "tex": "{\\bf a{\\rm x}b}+y",
+      "display": false,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {
+                          "mathvariant": "bold"
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "a",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "TeXAtom",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": {
+                                  "mathvariant": "normal"
+                                },
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "x",
+                                    "attributes": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {
+                          "mathvariant": "bold"
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "b",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "+",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "y",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "ac68c682ab332317562cb8a2abace627bd1cfd9a11c43f53db318a584d5dcaba"
+    },
+    {
+      "name": "decl-nested-group-display",
+      "tex": "{\\bf a{\\rm x}b}+y",
+      "display": true,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {
+                          "mathvariant": "bold"
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "a",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "TeXAtom",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": {
+                                  "mathvariant": "normal"
+                                },
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "x",
+                                    "attributes": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {
+                          "mathvariant": "bold"
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "b",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "+",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "y",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "ac68c682ab332317562cb8a2abace627bd1cfd9a11c43f53db318a584d5dcaba"
+    },
+    {
+      "name": "nested-operator-inline",
+      "tex": "\\mathbf{\\mathrm{+x}}",
+      "display": false,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "TeXAtom",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "mo",
+                                "text": null,
+                                "attributes": {},
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "+",
+                                    "attributes": {},
+                                    "children": []
+                                  }
+                                ]
+                              },
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": {
+                                  "mathvariant": "normal"
+                                },
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "x",
+                                    "attributes": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "80cd2e199bae1939605a2d65e4f99da0c8a55f6c228b6088dfdc2fa8489ccf81"
+    },
+    {
+      "name": "nested-operator-display",
+      "tex": "\\mathbf{\\mathrm{+x}}",
+      "display": true,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "TeXAtom",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "mo",
+                                "text": null,
+                                "attributes": {},
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "+",
+                                    "attributes": {},
+                                    "children": []
+                                  }
+                                ]
+                              },
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": {
+                                  "mathvariant": "normal"
+                                },
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "x",
+                                    "attributes": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "80cd2e199bae1939605a2d65e4f99da0c8a55f6c228b6088dfdc2fa8489ccf81"
+    },
+    {
+      "name": "kept-token-inline",
+      "tex": "\\mathbf{\\mathrm{\\mmlToken{mi}[mathvariant=double-struck]{R}}}",
+      "display": false,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "TeXAtom",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": {
+                                  "mathvariant": "double-struck"
+                                },
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "R",
+                                    "attributes": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "748fe5b2d193c2c14ec9193dedda0c4453bb94b03e290df9a8f8b35caf3b271a"
+    },
+    {
+      "name": "kept-token-display",
+      "tex": "\\mathbf{\\mathrm{\\mmlToken{mi}[mathvariant=double-struck]{R}}}",
+      "display": true,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "TeXAtom",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": {
+                                  "mathvariant": "double-struck"
+                                },
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "R",
+                                    "attributes": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "748fe5b2d193c2c14ec9193dedda0c4453bb94b03e290df9a8f8b35caf3b271a"
+    },
+    {
+      "name": "kept-declaration-inline",
+      "tex": "{\\bf \\rm \\mmlToken{mi}[mathvariant=double-struck]{R}}",
+      "display": false,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {
+                          "mathvariant": "double-struck"
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "R",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "74228650f6c79775b41cbc5c646c3a84a62c82a9c49bbb60be0d4372a0d831eb"
+    },
+    {
+      "name": "kept-declaration-display",
+      "tex": "{\\bf \\rm \\mmlToken{mi}[mathvariant=double-struck]{R}}",
+      "display": true,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {
+                          "mathvariant": "double-struck"
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "R",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "74228650f6c79775b41cbc5c646c3a84a62c82a9c49bbb60be0d4372a0d831eb"
+    },
+    {
+      "name": "plain-control-inline",
+      "tex": "x+y",
+      "display": false,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "+",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "y",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "f0c1a6e54de6dce5fb8b46455eaeac8f868c3b598ba7a4d9b574f3a100895f87"
+    },
+    {
+      "name": "plain-control-display",
+      "tex": "x+y",
+      "display": true,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "+",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "y",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "f0c1a6e54de6dce5fb8b46455eaeac8f868c3b598ba7a4d9b574f3a100895f87"
+    },
+    {
+      "name": "bold-control-inline",
+      "tex": "\\mathbf{x}",
+      "display": false,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {
+                          "mathvariant": "bold"
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "x",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "4fa2300af121b336bb0d7845b8e2b3e34be5a517a1bca45b4ec7b6514b2c544d"
+    },
+    {
+      "name": "bold-control-display",
+      "tex": "\\mathbf{x}",
+      "display": true,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {
+                          "mathvariant": "bold"
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "x",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "4fa2300af121b336bb0d7845b8e2b3e34be5a517a1bca45b4ec7b6514b2c544d"
+    },
+    {
+      "name": "roman-control-inline",
+      "tex": "\\mathrm{x}",
+      "display": false,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {
+                          "mathvariant": "normal"
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "x",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "898ef909a41bd46b17b9e4ace839e39ff839bd085ddedebf0d4baf6fe66ea15f"
+    },
+    {
+      "name": "roman-control-display",
+      "tex": "\\mathrm{x}",
+      "display": true,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {
+                          "mathvariant": "normal"
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "x",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "898ef909a41bd46b17b9e4ace839e39ff839bd085ddedebf0d4baf6fe66ea15f"
+    },
+    {
+      "name": "function-control-inline",
+      "tex": "\\sin x",
+      "display": false,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "sin",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "⁡",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "c228482a36b98d24cb5db669b2ea5dbc6ba571979e4da7a7c80a77311a9a7de8"
+    },
+    {
+      "name": "function-control-display",
+      "tex": "\\sin x",
+      "display": true,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "sin",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "⁡",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "c228482a36b98d24cb5db669b2ea5dbc6ba571979e4da7a7c80a77311a9a7de8"
+    },
+    {
+      "name": "bold-italic-inline",
+      "tex": "\\mathbf{\\mathit{x}}",
+      "display": false,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "TeXAtom",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": {
+                                  "mathvariant": "-tex-mathit"
+                                },
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "x",
+                                    "attributes": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "8a9ee8e68242e332ad3af95a99abcf6dd22f5ad20896bb70f0fc27c9cebb4ac8"
+    },
+    {
+      "name": "bold-italic-display",
+      "tex": "\\mathbf{\\mathit{x}}",
+      "display": true,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "TeXAtom",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": {
+                                  "mathvariant": "-tex-mathit"
+                                },
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "x",
+                                    "attributes": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "8a9ee8e68242e332ad3af95a99abcf6dd22f5ad20896bb70f0fc27c9cebb4ac8"
+    },
+    {
+      "name": "italic-bold-inline",
+      "tex": "\\mathit{\\mathbf{x}}",
+      "display": false,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "TeXAtom",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": {
+                                  "mathvariant": "bold"
+                                },
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "x",
+                                    "attributes": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "5ec6a85ee3a975b06b7919c19e6380937dec86721e8130b7dd40e458846545a2"
+    },
+    {
+      "name": "italic-bold-display",
+      "tex": "\\mathit{\\mathbf{x}}",
+      "display": true,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "TeXAtom",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": {
+                                  "mathvariant": "bold"
+                                },
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "x",
+                                    "attributes": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "5ec6a85ee3a975b06b7919c19e6380937dec86721e8130b7dd40e458846545a2"
+    },
+    {
+      "name": "sans-mono-inline",
+      "tex": "\\mathsf{\\mathtt{x}}",
+      "display": false,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "TeXAtom",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": {
+                                  "mathvariant": "monospace"
+                                },
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "x",
+                                    "attributes": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "d83b9bc7d75ed9bd96bbd5051646a77f4e4c18afed19590e0b853d6cf0e91fe9"
+    },
+    {
+      "name": "sans-mono-display",
+      "tex": "\\mathsf{\\mathtt{x}}",
+      "display": true,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "TeXAtom",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": {
+                                  "mathvariant": "monospace"
+                                },
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "x",
+                                    "attributes": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "d83b9bc7d75ed9bd96bbd5051646a77f4e4c18afed19590e0b853d6cf0e91fe9"
+    },
+    {
+      "name": "mono-sans-inline",
+      "tex": "\\mathtt{\\mathsf{x}}",
+      "display": false,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "TeXAtom",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": {
+                                  "mathvariant": "sans-serif"
+                                },
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "x",
+                                    "attributes": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "8d308b540a1fb1edaabe01789d4db6daceb4b29cf3ddc2f3899c3d57c5d8dc65"
+    },
+    {
+      "name": "mono-sans-display",
+      "tex": "\\mathtt{\\mathsf{x}}",
+      "display": true,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "TeXAtom",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": {
+                                  "mathvariant": "sans-serif"
+                                },
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "x",
+                                    "attributes": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "8d308b540a1fb1edaabe01789d4db6daceb4b29cf3ddc2f3899c3d57c5d8dc65"
+    },
+    {
+      "name": "word-italic-inline",
+      "tex": "\\mathbf{xy\\mathit{z}}",
+      "display": false,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {
+                          "mathvariant": "bold"
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "xy",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "TeXAtom",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": {
+                                  "mathvariant": "-tex-mathit"
+                                },
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "z",
+                                    "attributes": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "15e4aadaf7511c36947704b65b4843543b30be47a8e61bdbe6e8c6759dee3706"
+    },
+    {
+      "name": "word-italic-display",
+      "tex": "\\mathbf{xy\\mathit{z}}",
+      "display": true,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {
+                          "mathvariant": "bold"
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "xy",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "TeXAtom",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": {
+                                  "mathvariant": "-tex-mathit"
+                                },
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "z",
+                                    "attributes": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "15e4aadaf7511c36947704b65b4843543b30be47a8e61bdbe6e8c6759dee3706"
+    },
+    {
+      "name": "declaration-italic-inline",
+      "tex": "{\\bf a{\\it x}b}",
+      "display": false,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {
+                          "mathvariant": "bold"
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "a",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "TeXAtom",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": {
+                                  "mathvariant": "-tex-mathit"
+                                },
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "x",
+                                    "attributes": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {
+                          "mathvariant": "bold"
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "b",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "88faf28801c045a5d5ee0979ba6d752e72504a843f2a8b9603df22150f83ff24"
+    },
+    {
+      "name": "declaration-italic-display",
+      "tex": "{\\bf a{\\it x}b}",
+      "display": true,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {
+                          "mathvariant": "bold"
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "a",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "TeXAtom",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": {
+                                  "mathvariant": "-tex-mathit"
+                                },
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "x",
+                                    "attributes": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {
+                          "mathvariant": "bold"
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "b",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "88faf28801c045a5d5ee0979ba6d752e72504a843f2a8b9603df22150f83ff24"
+    }
+  ]
+}
