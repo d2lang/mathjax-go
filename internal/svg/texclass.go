@@ -113,11 +113,9 @@ func setBaseTeXClass(node, previous *mml.Node) *mml.Node {
 	base := node.Children[0]
 	if node.Flags.Embellished || base.Kind == "mi" {
 		previous = setTeXClass(base, previous)
-		core := base
-		if node.Flags.Embellished {
-			core = coreNode(node)
-		}
-		updateTeXClass(node, core)
+		// AbstractMmlBaseNode.core() is the immediate base. Its recursive
+		// operator has already transferred and cleared this spacing state.
+		updateTeXClass(node, base)
 	} else {
 		setTeXClass(base, nil)
 		previous = node
