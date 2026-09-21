@@ -1,0 +1,3092 @@
+{
+  "oracle": "Unmodified D2 v0.8.1 embedded MathJax 3.2.2, fresh VM per case; parser and output unchanged",
+  "mathjaxGitCommit": "ad8f5c21cb810236551da8c6512ba733e67357ee",
+  "assetsSHA256": {
+    "polyfills.js": "7fe1d048c78b0e09854c1259f7413868a51cc8f0c822489eb1ac36ae6c85ce01",
+    "mathjax.js": "cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869",
+    "setup.js": "a52cb0bbabfbd7796b9fedd793b9386c474e3123e788ee151cbe47ca1fa6e881"
+  },
+  "cases": [
+    {
+      "name": "mi",
+      "tex": "\\mmlToken{mi}{x}",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": null,
+      "keptNodes": [],
+      "svgSHA256": "fcc5df999e3b49fae1685ee0ab5bd03709804e1dd49f2ee722c4269eb0f5506d"
+    },
+    {
+      "name": "mn",
+      "tex": "\\mmlToken{mn}{123}",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mn",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "123",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": null,
+      "keptNodes": [],
+      "svgSHA256": "45800be48021c5df9a03bb0b656cb486913d3d88031d87c019614293e9466fed"
+    },
+    {
+      "name": "mo",
+      "tex": "\\mmlToken{mo}{+}",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "+",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": null,
+      "keptNodes": [],
+      "svgSHA256": "f6ebfbb8cb346c8983c035be20a7acdb6dbefbe6e6b243f0798adfe28f728347"
+    },
+    {
+      "name": "mtext",
+      "tex": "\\mmlToken{mtext}{two words}",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mtext",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "two words",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": null,
+      "keptNodes": [],
+      "svgSHA256": "164f6f72db245f608be22d34d0d46d84ed6bb0d41a21cad3ef033274ae88e189"
+    },
+    {
+      "name": "ms",
+      "tex": "\\mmlToken{ms}{text}",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "ms",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "text",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": null,
+      "keptNodes": [],
+      "svgSHA256": null
+    },
+    {
+      "name": "mglyph",
+      "tex": "\\mmlToken{mglyph}[alt=\"literal\" width=\"1em\" height=\"1em\"]{}",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mglyph",
+                "text": null,
+                "attributes": {
+                  "alt": "literal",
+                  "height": "1em",
+                  "width": "1em"
+                },
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": null,
+      "keptNodes": [
+        {
+          "kind": "mglyph",
+          "attributes": {
+            "alt": "literal",
+            "height": "1em",
+            "mjx-keep-attrs": "alt width height",
+            "width": "1em"
+          },
+          "movablelimits": null
+        }
+      ],
+      "svgSHA256": null
+    },
+    {
+      "name": "literal-tex",
+      "tex": "\\mmlToken{mtext}{\\alpha {x} ^2}",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mtext",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "\\alpha {x} ^2",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": null,
+      "keptNodes": [],
+      "svgSHA256": "8f6efe84eb488021f856a86a11e5f6b2c8669d29660b63b3bbde0ade811a1c6b"
+    },
+    {
+      "name": "literal-xml",
+      "tex": "\\mmlToken{mtext}{<&>}",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mtext",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "<&>",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": null,
+      "keptNodes": [],
+      "svgSHA256": "523d91fd29f4e1834917635c4adfe6d1f239ef32207cd53208f3b74dcbddf04d"
+    },
+    {
+      "name": "literal-spaces",
+      "tex": "\\mmlToken{mtext}{  a  b  }",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mtext",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "  a  b  ",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": null,
+      "keptNodes": [],
+      "svgSHA256": "73d55434c16a81aa817ebb8227731adc6e1fe6b6b3c4e74bd19389c226e51de8"
+    },
+    {
+      "name": "empty-text",
+      "tex": "\\mmlToken{mi}{}",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": null,
+      "keptNodes": [],
+      "svgSHA256": "b5ad1ce89fbd75513ae1d81b06e6db8371b01b284f8d722e81c16f1a33505a72"
+    },
+    {
+      "name": "quoted",
+      "tex": "\\mmlToken{mi}[mathvariant='bold', mathcolor=\"red\"]{x}",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {
+                  "mathcolor": "red",
+                  "mathvariant": "bold"
+                },
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": null,
+      "keptNodes": [
+        {
+          "kind": "mi",
+          "attributes": {
+            "mathcolor": "red",
+            "mathvariant": "bold",
+            "mjx-keep-attrs": "mathvariant mathcolor"
+          },
+          "movablelimits": null
+        }
+      ],
+      "svgSHA256": "1a532d36028acd1e06b5a87e949633f03aa07e4139d628be89c63f86aacfdd36"
+    },
+    {
+      "name": "unquoted",
+      "tex": "\\mmlToken{mi}[mathvariant=bold,mathcolor=red]{x}",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {
+                  "mathcolor": "red",
+                  "mathvariant": "bold"
+                },
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": null,
+      "keptNodes": [
+        {
+          "kind": "mi",
+          "attributes": {
+            "mathcolor": "red",
+            "mathvariant": "bold",
+            "mjx-keep-attrs": "mathvariant mathcolor"
+          },
+          "movablelimits": null
+        }
+      ],
+      "svgSHA256": "1a532d36028acd1e06b5a87e949633f03aa07e4139d628be89c63f86aacfdd36"
+    },
+    {
+      "name": "boolean",
+      "tex": "\\mmlToken{mo}[stretchy=FaLsE,symmetric=TrUe,movablelimits=TRUE]{∑}",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": {
+                  "movablelimits": true,
+                  "stretchy": false,
+                  "symmetric": true
+                },
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "∑",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": null,
+      "keptNodes": [
+        {
+          "kind": "mo",
+          "attributes": {
+            "mjx-keep-attrs": "stretchy symmetric movablelimits",
+            "movablelimits": true,
+            "stretchy": false,
+            "symmetric": true
+          },
+          "movablelimits": true
+        }
+      ],
+      "svgSHA256": null
+    },
+    {
+      "name": "keep-default",
+      "tex": "\\mmlToken{mi}[mathvariant=normal]{x}",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {
+                  "mathvariant": "normal"
+                },
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": null,
+      "keptNodes": [
+        {
+          "kind": "mi",
+          "attributes": {
+            "mathvariant": "normal",
+            "mjx-keep-attrs": "mathvariant"
+          },
+          "movablelimits": null
+        }
+      ],
+      "svgSHA256": "2eefdbc219b32cfcabfdfb88db9824b9eaabf9acd50129d75423c84cbba1aa73"
+    },
+    {
+      "name": "empty-attrs",
+      "tex": "\\mmlToken{mi}[id=,class=\"\",mathvariant='']{x}",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": null,
+      "keptNodes": [],
+      "svgSHA256": "fcc5df999e3b49fae1685ee0ab5bd03709804e1dd49f2ee722c4269eb0f5506d"
+    },
+    {
+      "name": "duplicate",
+      "tex": "\\mmlToken{mi}[id=first,id=second,mathvariant=bold,mathvariant=normal]{x}",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {
+                  "id": "second",
+                  "mathvariant": "normal"
+                },
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": null,
+      "keptNodes": [
+        {
+          "kind": "mi",
+          "attributes": {
+            "id": "second",
+            "mathvariant": "normal",
+            "mjx-keep-attrs": "id id mathvariant mathvariant"
+          },
+          "movablelimits": null
+        }
+      ],
+      "svgSHA256": "d4cb82186aaa89e384cac870a16d71d8250ba5331f2a971887c74cd72e8f6034"
+    },
+    {
+      "name": "duplicate-empty",
+      "tex": "\\mmlToken{mi}[id=first,id=,id=\"\"]{x}",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {
+                  "id": "first"
+                },
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": null,
+      "keptNodes": [
+        {
+          "kind": "mi",
+          "attributes": {
+            "id": "first",
+            "mjx-keep-attrs": "id"
+          },
+          "movablelimits": null
+        }
+      ],
+      "svgSHA256": "b975b2016df1cf651a4ec55edaae96095f6186815416f0768efbe5cf9644256f"
+    },
+    {
+      "name": "allowlist",
+      "tex": "\\mmlToken{mtext}[fontfamily=\"serif\",fontsize=16px,fontweight=bold,fontstyle=italic,color=red,background=white,id=label,class=token,href=\"#local\",style=\"color: blue\"]{x}",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mtext",
+                "text": null,
+                "attributes": {
+                  "background": "white",
+                  "class": "token",
+                  "color": "red",
+                  "fontfamily": "serif",
+                  "fontsize": "16px",
+                  "fontstyle": "italic",
+                  "fontweight": "bold",
+                  "href": "#local",
+                  "id": "label",
+                  "style": "color: blue"
+                },
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": null,
+      "keptNodes": [
+        {
+          "kind": "mtext",
+          "attributes": {
+            "background": "white",
+            "class": "token",
+            "color": "red",
+            "fontfamily": "serif",
+            "fontsize": "16px",
+            "fontstyle": "italic",
+            "fontweight": "bold",
+            "href": "#local",
+            "id": "label",
+            "mjx-keep-attrs": "fontfamily fontsize fontweight fontstyle color background id class href style",
+            "style": "color: blue"
+          },
+          "movablelimits": null
+        }
+      ],
+      "svgSHA256": null
+    },
+    {
+      "name": "global-default",
+      "tex": "\\mmlToken{mi}[scriptlevel=2,displaystyle=false]{x}",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {
+                  "displaystyle": false,
+                  "scriptlevel": "2"
+                },
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": null,
+      "keptNodes": [
+        {
+          "kind": "mi",
+          "attributes": {
+            "displaystyle": false,
+            "mjx-keep-attrs": "scriptlevel displaystyle",
+            "scriptlevel": "2"
+          },
+          "movablelimits": null
+        }
+      ],
+      "svgSHA256": null
+    },
+    {
+      "name": "token-specific",
+      "tex": "\\mmlToken{ms}[lquote=\"<\",rquote=\">\"]{x}",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "ms",
+                "text": null,
+                "attributes": {
+                  "lquote": "<",
+                  "rquote": ">"
+                },
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": null,
+      "keptNodes": [
+        {
+          "kind": "ms",
+          "attributes": {
+            "lquote": "<",
+            "mjx-keep-attrs": "lquote rquote",
+            "rquote": ">"
+          },
+          "movablelimits": null
+        }
+      ],
+      "svgSHA256": null
+    },
+    {
+      "name": "explicit-spaces-shape-only",
+      "tex": "\\mmlToken{mo}[lspace=1em,rspace=0em]{+}x",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": {
+                  "lspace": "1em",
+                  "rspace": "0em"
+                },
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "+",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": null,
+      "keptNodes": [
+        {
+          "kind": "mo",
+          "attributes": {
+            "lspace": "1em",
+            "mjx-keep-attrs": "lspace rspace",
+            "rspace": "0em"
+          },
+          "movablelimits": null
+        }
+      ],
+      "svgSHA256": null
+    },
+    {
+      "name": "separator-no-comma",
+      "tex": "\\mmlToken{mi}[id=one class=two]{x}",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {
+                  "class": "two",
+                  "id": "one"
+                },
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": null,
+      "keptNodes": [
+        {
+          "kind": "mi",
+          "attributes": {
+            "class": "two",
+            "id": "one",
+            "mjx-keep-attrs": "id class"
+          },
+          "movablelimits": null
+        }
+      ],
+      "svgSHA256": "1872f7f80cca8abed93310d36f0aa6eda1e475d3ae00bcb7f5cf132b6b70ba68"
+    },
+    {
+      "name": "single-quote-space",
+      "tex": "\\mmlToken{mtext}[id='two words']{x}",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mtext",
+                "text": null,
+                "attributes": {
+                  "id": "two words"
+                },
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": null,
+      "keptNodes": [
+        {
+          "kind": "mtext",
+          "attributes": {
+            "id": "two words",
+            "mjx-keep-attrs": "id"
+          },
+          "movablelimits": null
+        }
+      ],
+      "svgSHA256": "0cf57f382688d437f4699c19a50bb958682d21f513043b717d33b13369a14b47"
+    },
+    {
+      "name": "unquoted-tab-value",
+      "tex": "\\mmlToken{mi}[id=one\tclass=two]{x}",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {
+                  "id": "one\tclass=two"
+                },
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": null,
+      "keptNodes": [
+        {
+          "kind": "mi",
+          "attributes": {
+            "id": "one\tclass=two",
+            "mjx-keep-attrs": "id"
+          },
+          "movablelimits": null
+        }
+      ],
+      "svgSHA256": null
+    },
+    {
+      "name": "unclosed-quote-is-unquoted",
+      "tex": "\\mmlToken{mi}[id='abc]{x}",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {
+                  "id": "'abc"
+                },
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": null,
+      "keptNodes": [
+        {
+          "kind": "mi",
+          "attributes": {
+            "id": "'abc",
+            "mjx-keep-attrs": "id"
+          },
+          "movablelimits": null
+        }
+      ],
+      "svgSHA256": null
+    },
+    {
+      "name": "linebreak-inside-quote",
+      "tex": "\\mmlToken{mi}[id=\"first\nsecond\"]{x}",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {
+                  "id": "\"first\nsecond\""
+                },
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": null,
+      "keptNodes": [
+        {
+          "kind": "mi",
+          "attributes": {
+            "id": "\"first\nsecond\"",
+            "mjx-keep-attrs": "id"
+          },
+          "movablelimits": null
+        }
+      ],
+      "svgSHA256": null
+    },
+    {
+      "name": "boolean-string-space",
+      "tex": "\\mmlToken{mi}[id=\" true \"]{x}",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {
+                  "id": " true "
+                },
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": null,
+      "keptNodes": [
+        {
+          "kind": "mi",
+          "attributes": {
+            "id": " true ",
+            "mjx-keep-attrs": "id"
+          },
+          "movablelimits": null
+        }
+      ],
+      "svgSHA256": null
+    },
+    {
+      "name": "boolean-id",
+      "tex": "\\mmlToken{mi}[id=FALSE]{x}",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {
+                  "id": false
+                },
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": null,
+      "keptNodes": [
+        {
+          "kind": "mi",
+          "attributes": {
+            "id": false,
+            "mjx-keep-attrs": "id"
+          },
+          "movablelimits": null
+        }
+      ],
+      "svgSHA256": null
+    },
+    {
+      "name": "unicode-not-boolean",
+      "tex": "\\mmlToken{mo}[stretchy=falſe]{(}",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": {
+                  "stretchy": "falſe"
+                },
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "(",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": null,
+      "keptNodes": [
+        {
+          "kind": "mo",
+          "attributes": {
+            "mjx-keep-attrs": "stretchy",
+            "stretchy": "falſe"
+          },
+          "movablelimits": null
+        }
+      ],
+      "svgSHA256": null
+    },
+    {
+      "name": "js-whitespace",
+      "tex": "\\mmlToken{mi}[ ﻿id = \"x\" , class=y　]{x}",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {
+                  "class": "y　",
+                  "id": "x"
+                },
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": null,
+      "keptNodes": [
+        {
+          "kind": "mi",
+          "attributes": {
+            "class": "y　",
+            "id": "x",
+            "mjx-keep-attrs": "id class"
+          },
+          "movablelimits": null
+        }
+      ],
+      "svgSHA256": null
+    },
+    {
+      "name": "nel-not-js-whitespace",
+      "tex": "\\mmlToken{mi}[id=x]{x}",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Invalid MathML attribute: id=x"
+                },
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Invalid MathML attribute: id=x",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "InvalidMathMLAttr",
+        "message": "Invalid MathML attribute: id=x"
+      },
+      "keptNodes": [],
+      "svgSHA256": null
+    },
+    {
+      "name": "case-sensitive-attribute",
+      "tex": "\\mmlToken{mi}[ID=x]{x}",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "ID is not a recognized attribute for mi"
+                },
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "ID is not a recognized attribute for mi",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "UnknownAttrForElement",
+        "message": "ID is not a recognized attribute for mi"
+      },
+      "keptNodes": [],
+      "svgSHA256": null
+    },
+    {
+      "name": "unicode-fold-name",
+      "tex": "\\mmlToken{mi}[claſs=x]{x}",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Invalid MathML attribute: claſs=x"
+                },
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Invalid MathML attribute: claſs=x",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "InvalidMathMLAttr",
+        "message": "Invalid MathML attribute: claſs=x"
+      },
+      "keptNodes": [],
+      "svgSHA256": null
+    },
+    {
+      "name": "hyphen-name",
+      "tex": "\\mmlToken{mi}[data-id=x]{x}",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Invalid MathML attribute: data-id=x"
+                },
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Invalid MathML attribute: data-id=x",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "InvalidMathMLAttr",
+        "message": "Invalid MathML attribute: data-id=x"
+      },
+      "keptNodes": [],
+      "svgSHA256": null
+    },
+    {
+      "name": "digit-name",
+      "tex": "\\mmlToken{mi}[id2=x]{x}",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Invalid MathML attribute: id2=x"
+                },
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Invalid MathML attribute: id2=x",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "InvalidMathMLAttr",
+        "message": "Invalid MathML attribute: id2=x"
+      },
+      "keptNodes": [],
+      "svgSHA256": null
+    },
+    {
+      "name": "unknown",
+      "tex": "\\mmlToken{mi}[unknown=x]{x}",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "unknown is not a recognized attribute for mi"
+                },
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "unknown is not a recognized attribute for mi",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "UnknownAttrForElement",
+        "message": "unknown is not a recognized attribute for mi"
+      },
+      "keptNodes": [],
+      "svgSHA256": null
+    },
+    {
+      "name": "unknown-empty",
+      "tex": "\\mmlToken{mi}[unknown=]{x}",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "unknown is not a recognized attribute for mi"
+                },
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "unknown is not a recognized attribute for mi",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "UnknownAttrForElement",
+        "message": "unknown is not a recognized attribute for mi"
+      },
+      "keptNodes": [],
+      "svgSHA256": null
+    },
+    {
+      "name": "wrong-token-attribute",
+      "tex": "\\mmlToken{mi}[stretchy=true]{x}",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "stretchy is not a recognized attribute for mi"
+                },
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "stretchy is not a recognized attribute for mi",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "UnknownAttrForElement",
+        "message": "stretchy is not a recognized attribute for mi"
+      },
+      "keptNodes": [],
+      "svgSHA256": null
+    },
+    {
+      "name": "invalid-tail",
+      "tex": "\\mmlToken{mi}[id=ok, broken]{x}",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Invalid MathML attribute: broken"
+                },
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Invalid MathML attribute: broken",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "InvalidMathMLAttr",
+        "message": "Invalid MathML attribute: broken"
+      },
+      "keptNodes": [],
+      "svgSHA256": null
+    },
+    {
+      "name": "trailing-double-comma",
+      "tex": "\\mmlToken{mi}[id=ok,,]{x}",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Invalid MathML attribute: ,"
+                },
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Invalid MathML attribute: ,",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "InvalidMathMLAttr",
+        "message": "Invalid MathML attribute: ,"
+      },
+      "keptNodes": [],
+      "svgSHA256": null
+    },
+    {
+      "name": "space-in-unquoted",
+      "tex": "\\mmlToken{mi}[id=two words]{x}",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Invalid MathML attribute: words"
+                },
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Invalid MathML attribute: words",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "InvalidMathMLAttr",
+        "message": "Invalid MathML attribute: words"
+      },
+      "keptNodes": [],
+      "svgSHA256": null
+    },
+    {
+      "name": "missing-equals",
+      "tex": "\\mmlToken{mi}[id]{x}",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Invalid MathML attribute: id"
+                },
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Invalid MathML attribute: id",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "InvalidMathMLAttr",
+        "message": "Invalid MathML attribute: id"
+      },
+      "keptNodes": [],
+      "svgSHA256": null
+    },
+    {
+      "name": "mrow-not-token",
+      "tex": "\\mmlToken{mrow}{x}",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "mrow is not a token element"
+                },
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "mrow is not a token element",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "NotMathMLToken",
+        "message": "mrow is not a token element"
+      },
+      "keptNodes": [],
+      "svgSHA256": null
+    },
+    {
+      "name": "mspace-ignores-text",
+      "tex": "\\mmlToken{mspace}{x}",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mspace",
+                "text": null,
+                "attributes": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "error": null,
+      "keptNodes": [],
+      "svgSHA256": "237ce2b0f1e0334b895d540f0e6ba1faa6bd48fd3984f349f131ab35de125e9c"
+    },
+    {
+      "name": "text-not-token",
+      "tex": "\\mmlToken{text}{x}",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "text is not a token element"
+                },
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "text is not a token element",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "NotMathMLToken",
+        "message": "text is not a token element"
+      },
+      "keptNodes": [],
+      "svgSHA256": null
+    },
+    {
+      "name": "xml-not-token",
+      "tex": "\\mmlToken{XML}{x}",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "XML is not a token element"
+                },
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "XML is not a token element",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "NotMathMLToken",
+        "message": "XML is not a token element"
+      },
+      "keptNodes": [],
+      "svgSHA256": null
+    },
+    {
+      "name": "unknown-kind",
+      "tex": "\\mmlToken{unknown}{x}",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "unknown is not a token element"
+                },
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "unknown is not a token element",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "NotMathMLToken",
+        "message": "unknown is not a token element"
+      },
+      "keptNodes": [],
+      "svgSHA256": null
+    },
+    {
+      "name": "kind-case",
+      "tex": "\\mmlToken{MI}{x}",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "MI is not a token element"
+                },
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "MI is not a token element",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "NotMathMLToken",
+        "message": "MI is not a token element"
+      },
+      "keptNodes": [],
+      "svgSHA256": null
+    },
+    {
+      "name": "kind-whitespace",
+      "tex": "\\mmlToken{ mi }{x}",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": " mi  is not a token element"
+                },
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": " mi  is not a token element",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "NotMathMLToken",
+        "message": " mi  is not a token element"
+      },
+      "keptNodes": [],
+      "svgSHA256": null
+    },
+    {
+      "name": "missing-kind",
+      "tex": "\\mmlToken",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Missing argument for \\mmlToken"
+                },
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Missing argument for \\mmlToken",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "MissingArgFor",
+        "message": "Missing argument for \\mmlToken"
+      },
+      "keptNodes": [],
+      "svgSHA256": null
+    },
+    {
+      "name": "missing-text",
+      "tex": "\\mmlToken{mi}",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Missing argument for \\mmlToken"
+                },
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Missing argument for \\mmlToken",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "MissingArgFor",
+        "message": "Missing argument for \\mmlToken"
+      },
+      "keptNodes": [],
+      "svgSHA256": null
+    },
+    {
+      "name": "invalid-kind-missing-text",
+      "tex": "\\mmlToken{mrow}",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Missing argument for \\mmlToken"
+                },
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Missing argument for \\mmlToken",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "MissingArgFor",
+        "message": "Missing argument for \\mmlToken"
+      },
+      "keptNodes": [],
+      "svgSHA256": null
+    },
+    {
+      "name": "missing-bracket",
+      "tex": "\\mmlToken{mi}[id=x{x}",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Could not find closing ']' for argument to \\mmlToken"
+                },
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Could not find closing ']' for argument to \\mmlToken",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "MissingCloseBracket",
+        "message": "Could not find closing ']' for argument to \\mmlToken"
+      },
+      "keptNodes": [],
+      "svgSHA256": null
+    },
+    {
+      "name": "extra-brace-in-bracket",
+      "tex": "\\mmlToken{mi}[id=x}]{x}",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Extra close brace while looking for ']'"
+                },
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Extra close brace while looking for ']'",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "ExtraCloseLooking",
+        "message": "Extra close brace while looking for ']'"
+      },
+      "keptNodes": [],
+      "svgSHA256": null
+    },
+    {
+      "name": "missing-brace",
+      "tex": "\\mmlToken{mi}{x",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Missing close brace"
+                },
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Missing close brace",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "MissingCloseBrace",
+        "message": "Missing close brace"
+      },
+      "keptNodes": [],
+      "svgSHA256": null
+    },
+    {
+      "name": "unbraced-text",
+      "tex": "\\mmlToken{mi}x",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": null,
+      "keptNodes": [],
+      "svgSHA256": "fcc5df999e3b49fae1685ee0ab5bd03709804e1dd49f2ee722c4269eb0f5506d"
+    },
+    {
+      "name": "control-sequence-text",
+      "tex": "\\mmlToken{mtext}\\alpha",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mtext",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "\\alpha",
+                    "attributes": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": null,
+      "keptNodes": [],
+      "svgSHA256": "580677a588c2a602e783e4417e185d177c494e531ea35ffaff7a87a300305635"
+    },
+    {
+      "name": "scripted-token",
+      "tex": "\\mmlToken{mi}{x}_i",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "msub",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "i",
+                        "attributes": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": null,
+      "keptNodes": [],
+      "svgSHA256": "10c16af3229388fdcbca3de7c695fa41f6f5b29030b647d1570025ec7c4f9f9a"
+    },
+    {
+      "name": "styled-context",
+      "tex": "\\mathbf{\\mmlToken{mi}[mathvariant=normal]{x}}",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {
+                          "mathvariant": "normal"
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "x",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": null,
+      "keptNodes": [
+        {
+          "kind": "mi",
+          "attributes": {
+            "mathvariant": "normal",
+            "mjx-keep-attrs": "mathvariant"
+          },
+          "movablelimits": null
+        }
+      ],
+      "svgSHA256": "898ef909a41bd46b17b9e4ace839e39ff839bd085ddedebf0d4baf6fe66ea15f"
+    },
+    {
+      "name": "nested-explicit-variant",
+      "tex": "\\mathbf{\\mathit{\\mmlToken{mi}[mathvariant=double-struck]{R}}}",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "TeXAtom",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": {
+                                  "mathvariant": "double-struck"
+                                },
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "R",
+                                    "attributes": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": null,
+      "keptNodes": [
+        {
+          "kind": "mi",
+          "attributes": {
+            "mathvariant": "double-struck",
+            "mjx-keep-attrs": "mathvariant"
+          },
+          "movablelimits": null
+        }
+      ],
+      "svgSHA256": "748fe5b2d193c2c14ec9193dedda0c4453bb94b03e290df9a8f8b35caf3b271a"
+    },
+    {
+      "name": "declaration-explicit-variant",
+      "tex": "{\\bf \\mmlToken{mi}[mathvariant=normal]{x}}",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {
+                          "mathvariant": "normal"
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "x",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": null,
+      "keptNodes": [
+        {
+          "kind": "mi",
+          "attributes": {
+            "mathvariant": "normal",
+            "mjx-keep-attrs": "mathvariant"
+          },
+          "movablelimits": null
+        }
+      ],
+      "svgSHA256": "898ef909a41bd46b17b9e4ace839e39ff839bd085ddedebf0d4baf6fe66ea15f"
+    },
+    {
+      "name": "ordinary-font-control",
+      "tex": "\\mathbf{x}",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {
+                          "mathvariant": "bold"
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "x",
+                            "attributes": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": null,
+      "keptNodes": [],
+      "svgSHA256": "4fa2300af121b336bb0d7845b8e2b3e34be5a517a1bca45b4ec7b6514b2c544d"
+    }
+  ]
+}

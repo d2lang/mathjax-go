@@ -709,6 +709,13 @@ func parseInteger(value string, id string) (int, error) {
 func applyMathVariant(n *mml.Node, variant string) {
 	n.Walk(func(current *mml.Node) bool {
 		if current.Kind == "mi" || current.Kind == "mn" || current.Kind == "mo" {
+			// MmlToken's kept explicit attributes override the surrounding TeX
+			// font environment, as in the pinned NodeFactory/MmlToken path.
+			if keep, ok := current.Attributes.GetExplicit("mjx-keep-attrs"); ok {
+				if names, ok := keep.(string); ok && strings.Contains(" "+names+" ", " mathvariant ") {
+					return true
+				}
+			}
 			current.Attributes.Set("mathvariant", variant)
 		}
 		return true
