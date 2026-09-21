@@ -835,7 +835,8 @@ func (p *parser) textCommand(name, variant string) ([]*mml.Node, error) {
 }
 
 func textRow(raw string) *mml.Node {
-	return token("mtext", strings.ReplaceAll(raw, "~", "\u00a0"))
+	// ParseUtil.internalText creates a node, bypassing the token factory.
+	return node("mtext", mml.NewText(strings.ReplaceAll(raw, "~", "\u00a0")))
 }
 
 var mathVariants = map[string]string{
@@ -998,7 +999,7 @@ func (p *parser) lap(name string) ([]*mml.Node, error) {
 		if err != nil {
 			return nil, err
 		}
-		content := node("mstyle", token("mtext", raw))
+		content := node("mstyle", node("mtext", mml.NewText(raw)))
 		return []*mml.Node{setAttributes(node("mpadded", content), map[string]any{"width": 0, "lspace": "-.5width"})}, nil
 	}
 	arg, err := p.parseArgument(name)
@@ -1749,15 +1750,10 @@ func (p *parser) vectorBold(name string) ([]*mml.Node, error) {
 	if err != nil {
 		return nil, err
 	}
-	arg, err := p.parseString(raw)
+	arg, err := p.parseVectorString(raw, star)
 	if err != nil {
 		return nil, err
 	}
-	variant := "bold"
-	if star {
-		variant = "bold-italic"
-	}
-	applyMathVariant(arg, variant)
 	return unwrapInferred(arg), nil
 }
 
@@ -1767,24 +1763,24 @@ func (p *parser) vectorAccent(name string) ([]*mml.Node, error) {
 	if err != nil {
 		return nil, err
 	}
-	arg, err := p.parseString(raw)
+	accent := "vec"
+	if name == "vectorunit" || name == "vu" {
+		accent = "hat"
+	}
+	bold := "vb"
+	if star {
+		bold += "*"
+	}
+	// PhysicsMethods.StarMacro preserves the ordinary accent handler around
+	// the vector argument; the accent is outside VectorBold's font reset.
+	sub := &parser{source: "\\" + accent + "{\\" + bold + "{" + raw + "}}", state: p.state, display: p.display,
+		multiLetterFont: p.multiLetterFont, activeFont: p.activeFont,
+		vectorFactory: p.vectorFactory, vectorFont: p.vectorFont, vectorStar: p.vectorStar, vectorAlias: true}
+	children, _, err := sub.parseRow(0, false)
 	if err != nil {
 		return nil, err
 	}
-	variant := "bold"
-	if star {
-		// PhysicsMethods.StarMacro expands \va*{x} through \vb*{x}; the
-		// starred vector font is bold-italic, while the accent stays unstarred.
-		variant = "bold-italic"
-	}
-	applyMathVariant(arg, variant)
-	mark := "→"
-	if name == "vectorunit" || name == "vu" {
-		mark = "^"
-	}
-	accent := operator(mark, mml.TeXClassOrd, map[string]any{"accent": true, "stretchy": true})
-	accent.SetProperty("mathaccent", true)
-	return []*mml.Node{texAtom(setAttributes(node("mover", arg, accent), map[string]any{"accent": true}), mml.TeXClassOrd)}, nil
+	return children, nil
 }
 
 func (p *parser) operatorApplication(name string, vector bool) ([]*mml.Node, error) {
@@ -1856,7 +1852,7 @@ func (p *parser) quickQuadText(name string) ([]*mml.Node, error) {
 			return nil, err
 		}
 	}
-	return []*mml.Node{spacer("1em"), token("mtext", text), spacer("1em")}, nil
+	return []*mml.Node{spacer("1em"), node("mtext", mml.NewText(text)), spacer("1em")}, nil
 }
 
 func (p *parser) prescript(name string) ([]*mml.Node, error) {

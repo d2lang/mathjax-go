@@ -35,7 +35,7 @@ func (p *parser) casesEnvironment(name string) (nodes []*mml.Node, handled bool,
 		mtds := make([]*mml.Node, 0, len(cells))
 		for column, raw := range cells {
 			if column == 1 {
-				mtds = append(mtds, node("mtd", node("mstyle", token("mtext", strings.TrimLeft(raw, " \t\r\n")))))
+				mtds = append(mtds, node("mtd", node("mstyle", node("mtext", mml.NewText(strings.TrimLeft(raw, " \t\r\n"))))))
 				continue
 			}
 			content, err := p.parseString(strings.TrimSpace(raw))
