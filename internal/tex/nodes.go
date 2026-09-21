@@ -69,6 +69,7 @@ func hasInferredMrow(kind string) bool {
 
 func token(kind, text string) *mml.Node {
 	n := node(kind, mml.NewText(text))
+	n.SetProperty(vectorFactoryToken, true)
 	n.Flags.Token = true
 	switch kind {
 	case "mi", "mn", "mtext", "ms":

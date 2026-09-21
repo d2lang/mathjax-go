@@ -68,6 +68,8 @@ func (c *Compiler) Compile(source string, display bool) (*mml.Node, error) {
 	root.Walk(func(n *mml.Node) bool {
 		n.RemoveProperty(resolvedFontScope)
 		n.RemoveProperty(ambientFontSource)
+		n.RemoveProperty(vectorFactoryToken)
+		n.RemoveProperty(vectorFactoryDone)
 		return true
 	})
 	setMathMLInheritance(root, display)
@@ -76,7 +78,7 @@ func (c *Compiler) Compile(source string, display bool) (*mml.Node, error) {
 }
 
 func mathError(message string, display bool) *mml.Node {
-	merror := setAttributes(node("merror", token("mtext", message)), map[string]any{"data-mjx-error": message})
+	merror := setAttributes(node("merror", node("mtext", mml.NewText(message))), map[string]any{"data-mjx-error": message})
 	root := node("math", merror)
 	if display {
 		root.Attributes.Set("display", "block")

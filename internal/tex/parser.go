@@ -69,12 +69,19 @@ type parser struct {
 	display              bool
 	commandNamedFunction bool
 	multiLetterFont      string
+	activeFont           string
+	vectorFactory        bool
+	vectorFont           string
+	vectorStar           bool
+	vectorAlias          bool
 }
 
 // parseRow corresponds to TexParser.Parse plus the base Stack reduction.  A
 // non-zero terminator is consumed.  stopRight lets a \left subparse return the
 // delimiter consumed by its matching \right.
 func (p *parser) parseRow(terminator byte, stopRight bool) ([]*mml.Node, string, error) {
+	vectorFont, vectorStar := p.vectorFont, p.vectorStar
+	defer func() { p.vectorFont, p.vectorStar = vectorFont, vectorStar }()
 	var nodes []*mml.Node
 	// BaseMethods.NamedFn and PhysicsMethods.Expression push an FnItem.  It
 	// retains the function until the next stack item determines whether an
@@ -85,6 +92,9 @@ func (p *parser) parseRow(terminator byte, stopRight bool) ([]*mml.Node, string,
 	appendNodes := func(created []*mml.Node, namedFunction bool) {
 		if len(created) == 0 {
 			return
+		}
+		for _, n := range created {
+			p.applyVectorFactory(n)
 		}
 		if pendingFunction {
 			if !suppressesFunctionApplication(created[0]) {
@@ -165,7 +175,10 @@ func (p *parser) parseRow(terminator byte, stopRight bool) ([]*mml.Node, string,
 				return nodes, right, nil
 			}
 			if variant, ok := fontDeclarations[name]; ok {
+				oldFont := p.activeFont
+				p.activeFont = variant
 				rest, right, err := p.parseRow(terminator, stopRight)
+				p.activeFont = oldFont
 				if err != nil {
 					return nil, "", err
 				}
@@ -409,7 +422,14 @@ func (p *parser) parseScriptArgument() (*mml.Node, error) {
 	return row(created, true), nil
 }
 
-func (p *parser) parseOneToken() ([]*mml.Node, error) {
+func (p *parser) parseOneToken() (created []*mml.Node, err error) {
+	defer func() {
+		if err == nil {
+			for _, n := range created {
+				p.applyVectorFactory(n)
+			}
+		}
+	}()
 	p.skipSpaces()
 	if p.pos >= len(p.source) {
 		return nil, texError("MissingArgFor", "Missing argument")
@@ -441,7 +461,12 @@ func (p *parser) parseArgument(name string) (*mml.Node, error) {
 }
 
 func (p *parser) parseString(source string) (*mml.Node, error) {
-	sub := &parser{source: source, state: p.state, display: p.display}
+	sub := &parser{source: source, state: p.state, display: p.display,
+		activeFont: p.activeFont, vectorFactory: p.vectorFactory,
+		vectorFont: p.vectorFont, vectorStar: p.vectorStar, vectorAlias: p.vectorAlias}
+	if p.vectorFactory || p.vectorAlias {
+		sub.multiLetterFont = p.multiLetterFont
+	}
 	children, _, err := sub.parseRow(0, false)
 	if err != nil {
 		return nil, err
@@ -459,6 +484,11 @@ func (p *parser) parseMathFontString(source, variant string, ambientOnly bool) (
 		state:           p.state,
 		display:         p.display,
 		multiLetterFont: variant,
+		activeFont:      variant,
+		vectorFactory:   p.vectorFactory,
+		vectorFont:      p.vectorFont,
+		vectorStar:      p.vectorStar,
+		vectorAlias:     p.vectorAlias,
 	}
 	children, _, err := sub.parseRow(0, false)
 	if err != nil {

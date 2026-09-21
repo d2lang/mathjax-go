@@ -218,7 +218,7 @@ func (p *parser) mathtoolsCases(environment string) ([]*mml.Node, error) {
 		mtds := make([]*mml.Node, 0, len(cells))
 		for i, raw := range cells {
 			if i == 1 {
-				text := node("mstyle", token("mtext", strings.TrimSpace(raw)))
+				text := node("mstyle", node("mtext", mml.NewText(strings.TrimSpace(raw))))
 				mtds = append(mtds, node("mtd", text))
 				continue
 			}

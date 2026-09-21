@@ -254,6 +254,15 @@ func (p *parser) amsOperatorName(name string) ([]*mml.Node, error) {
 	} else {
 		result = node("TeXAtom", children...)
 	}
+	// HandleOperatorName reparses in an explicit normal-font environment.
+	// That environment suppresses Physics' vector token factory, including
+	// for fixed-symbol tokens whose own variant is not replaced by normal.
+	result.Walk(func(n *mml.Node) bool {
+		if origin, _ := n.Property(vectorFactoryToken); origin == true {
+			n.SetProperty(vectorFactoryDone, true)
+		}
+		return true
+	})
 	result.TeXClass = mml.TeXClassOp
 	result.SetProperty("texClass", mml.TeXClassOp)
 	result.SetProperty("movesupsub", star)
