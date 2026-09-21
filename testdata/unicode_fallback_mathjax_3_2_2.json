@@ -1,0 +1,335 @@
+{
+  "oracle": "Unmodified pinned D2 v0.8.1 MathJax3.2.2; fresh VM per case/mode",
+  "mathjaxGitCommit": "ad8f5c21cb810236551da8c6512ba733e67357ee",
+  "assetsSHA256": {
+    "polyfills.js": "7fe1d048c78b0e09854c1259f7413868a51cc8f0c822489eb1ac36ae6c85ce01",
+    "mathjax.js": "cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869",
+    "setup.js": "a52cb0bbabfbd7796b9fedd793b9386c474e3123e788ee151cbe47ca1fa6e881"
+  },
+  "cases": [
+    {
+      "name": "double-struck-k-inline",
+      "tex": "\\mathbb{k}",
+      "display": false,
+      "svgSHA256": "5dbc9a311eb34c57ed208c13549fb7be1fa0fd427793d99fbf4cb7f22227c8cf"
+    },
+    {
+      "name": "double-struck-k-display",
+      "tex": "\\mathbb{k}",
+      "display": true,
+      "svgSHA256": "5dbc9a311eb34c57ed208c13549fb7be1fa0fd427793d99fbf4cb7f22227c8cf"
+    },
+    {
+      "name": "raw-bold-alpha-inline",
+      "tex": "\\mathbf{α}",
+      "display": false,
+      "svgSHA256": "5d1d6b3fe140a22c2e44df84e8bd5d8d0980ba3da4c162b70e481b9daf7c06cc"
+    },
+    {
+      "name": "raw-bold-alpha-display",
+      "tex": "\\mathbf{α}",
+      "display": true,
+      "svgSHA256": "5d1d6b3fe140a22c2e44df84e8bd5d8d0980ba3da4c162b70e481b9daf7c06cc"
+    },
+    {
+      "name": "fixed-Bbbk-inline",
+      "tex": "\\Bbbk",
+      "display": false,
+      "svgSHA256": "00dde86b15c222ba99560c2d05ab0787b06cf59ee847e136cda2864d25243d92"
+    },
+    {
+      "name": "fixed-Bbbk-display",
+      "tex": "\\Bbbk",
+      "display": true,
+      "svgSHA256": "00dde86b15c222ba99560c2d05ab0787b06cf59ee847e136cda2864d25243d92"
+    },
+    {
+      "name": "mixed-raw-inline",
+      "tex": "\\mathbf{α+Γ}",
+      "display": false,
+      "svgSHA256": "a69b278021902738a6ab600a80e697da47696f2e2bfad31142e90fb5b27f973b"
+    },
+    {
+      "name": "mixed-raw-display",
+      "tex": "\\mathbf{α+Γ}",
+      "display": true,
+      "svgSHA256": "a69b278021902738a6ab600a80e697da47696f2e2bfad31142e90fb5b27f973b"
+    },
+    {
+      "name": "double-struck-R-control-inline",
+      "tex": "\\mathbb{R}",
+      "display": false,
+      "svgSHA256": "74228650f6c79775b41cbc5c646c3a84a62c82a9c49bbb60be0d4372a0d831eb"
+    },
+    {
+      "name": "double-struck-R-control-display",
+      "tex": "\\mathbb{R}",
+      "display": true,
+      "svgSHA256": "74228650f6c79775b41cbc5c646c3a84a62c82a9c49bbb60be0d4372a0d831eb"
+    },
+    {
+      "name": "bold-gamma-control-inline",
+      "tex": "\\mathbf{\\Gamma}",
+      "display": false,
+      "svgSHA256": "84bcff99a2723b1fabefe614a39ef275d858f352555d1b7e90e707551ef9f8de"
+    },
+    {
+      "name": "bold-gamma-control-display",
+      "tex": "\\mathbf{\\Gamma}",
+      "display": true,
+      "svgSHA256": "84bcff99a2723b1fabefe614a39ef275d858f352555d1b7e90e707551ef9f8de"
+    },
+    {
+      "name": "ordinary-control-inline",
+      "tex": "x+1",
+      "display": false,
+      "svgSHA256": "8c141ad6d0b88d5a896ba7d54636bea96a920123bea014dd9a5a32c06104b6d5"
+    },
+    {
+      "name": "ordinary-control-display",
+      "tex": "x+1",
+      "display": true,
+      "svgSHA256": "8c141ad6d0b88d5a896ba7d54636bea96a920123bea014dd9a5a32c06104b6d5"
+    },
+    {
+      "name": "cjk-control-inline",
+      "tex": "\\text{漢}",
+      "display": false,
+      "svgSHA256": "6c637d385d6d35d4fe772124445b2c6ded4b02d51d866b64905225d4e8c8a1c2"
+    },
+    {
+      "name": "cjk-control-display",
+      "tex": "\\text{漢}",
+      "display": true,
+      "svgSHA256": "6c637d385d6d35d4fe772124445b2c6ded4b02d51d866b64905225d4e8c8a1c2"
+    },
+    {
+      "name": "unmapped-symbol-control-inline",
+      "tex": "\\text{☃}",
+      "display": false,
+      "svgSHA256": "80e2dfceb75e2c6bc705cfb3e4a642c78816d09e66dd8826b637e0377e038eea"
+    },
+    {
+      "name": "unmapped-symbol-control-display",
+      "tex": "\\text{☃}",
+      "display": true,
+      "svgSHA256": "80e2dfceb75e2c6bc705cfb3e4a642c78816d09e66dd8826b637e0377e038eea"
+    },
+    {
+      "name": "normal-inline",
+      "tex": "\\mmlToken{mi}[mathvariant=normal]{ABhkαΓϕ19!?}",
+      "display": false,
+      "svgSHA256": "e72bbda8cb4d29294e8749169d67126a85fb69eec42d0a74d8591cc020733df1"
+    },
+    {
+      "name": "normal-display",
+      "tex": "\\mmlToken{mi}[mathvariant=normal]{ABhkαΓϕ19!?}",
+      "display": true,
+      "svgSHA256": "e72bbda8cb4d29294e8749169d67126a85fb69eec42d0a74d8591cc020733df1"
+    },
+    {
+      "name": "bold-inline",
+      "tex": "\\mmlToken{mi}[mathvariant=bold]{ABhkαΓϕ19!?}",
+      "display": false,
+      "svgSHA256": "898e6da7b1b60b1d84912ce05e43d8a91ffaaede12ef3295041e16923f00e969"
+    },
+    {
+      "name": "bold-display",
+      "tex": "\\mmlToken{mi}[mathvariant=bold]{ABhkαΓϕ19!?}",
+      "display": true,
+      "svgSHA256": "898e6da7b1b60b1d84912ce05e43d8a91ffaaede12ef3295041e16923f00e969"
+    },
+    {
+      "name": "italic-inline",
+      "tex": "\\mmlToken{mi}[mathvariant=italic]{ABhkαΓϕ19!?}",
+      "display": false,
+      "svgSHA256": "01d9ba6e6fee24202062bd1c197283ff3ae4931a36a0a1affae3d235aeb14e32"
+    },
+    {
+      "name": "italic-display",
+      "tex": "\\mmlToken{mi}[mathvariant=italic]{ABhkαΓϕ19!?}",
+      "display": true,
+      "svgSHA256": "01d9ba6e6fee24202062bd1c197283ff3ae4931a36a0a1affae3d235aeb14e32"
+    },
+    {
+      "name": "bold-italic-inline",
+      "tex": "\\mmlToken{mi}[mathvariant=bold-italic]{ABhkαΓϕ19!?}",
+      "display": false,
+      "svgSHA256": "2a0f44247cd28e79a5de836a5fdc69d77c8d83123b9f481e63b4aa765d2269ca"
+    },
+    {
+      "name": "bold-italic-display",
+      "tex": "\\mmlToken{mi}[mathvariant=bold-italic]{ABhkαΓϕ19!?}",
+      "display": true,
+      "svgSHA256": "2a0f44247cd28e79a5de836a5fdc69d77c8d83123b9f481e63b4aa765d2269ca"
+    },
+    {
+      "name": "double-struck-inline",
+      "tex": "\\mmlToken{mi}[mathvariant=double-struck]{ABhkαΓϕ19!?}",
+      "display": false,
+      "svgSHA256": "8ff2d472b30a308f38ae4d52327d048ed18ebfca9e247a2b3de1d3ef08c49eef"
+    },
+    {
+      "name": "double-struck-display",
+      "tex": "\\mmlToken{mi}[mathvariant=double-struck]{ABhkαΓϕ19!?}",
+      "display": true,
+      "svgSHA256": "8ff2d472b30a308f38ae4d52327d048ed18ebfca9e247a2b3de1d3ef08c49eef"
+    },
+    {
+      "name": "fraktur-inline",
+      "tex": "\\mmlToken{mi}[mathvariant=fraktur]{ABhkαΓϕ19!?}",
+      "display": false,
+      "svgSHA256": "daf69f54ef6dca07384d9bf5264c8a7ebb12e6c589591c10092ad8555637fe90"
+    },
+    {
+      "name": "fraktur-display",
+      "tex": "\\mmlToken{mi}[mathvariant=fraktur]{ABhkαΓϕ19!?}",
+      "display": true,
+      "svgSHA256": "daf69f54ef6dca07384d9bf5264c8a7ebb12e6c589591c10092ad8555637fe90"
+    },
+    {
+      "name": "bold-fraktur-inline",
+      "tex": "\\mmlToken{mi}[mathvariant=bold-fraktur]{ABhkαΓϕ19!?}",
+      "display": false,
+      "svgSHA256": "58082230af00be08f304f861e6c1e3a223155df73f21989d21f81cc1438e1b5f"
+    },
+    {
+      "name": "bold-fraktur-display",
+      "tex": "\\mmlToken{mi}[mathvariant=bold-fraktur]{ABhkαΓϕ19!?}",
+      "display": true,
+      "svgSHA256": "58082230af00be08f304f861e6c1e3a223155df73f21989d21f81cc1438e1b5f"
+    },
+    {
+      "name": "script-inline",
+      "tex": "\\mmlToken{mi}[mathvariant=script]{ABhkαΓϕ19!?}",
+      "display": false,
+      "svgSHA256": "24f2336a3804e556722c596fe175eee0e149f141ebb438a670dc662f6ef0a9ce"
+    },
+    {
+      "name": "script-display",
+      "tex": "\\mmlToken{mi}[mathvariant=script]{ABhkαΓϕ19!?}",
+      "display": true,
+      "svgSHA256": "24f2336a3804e556722c596fe175eee0e149f141ebb438a670dc662f6ef0a9ce"
+    },
+    {
+      "name": "bold-script-inline",
+      "tex": "\\mmlToken{mi}[mathvariant=bold-script]{ABhkαΓϕ19!?}",
+      "display": false,
+      "svgSHA256": "ee45c27eb17fc46b417e45e5176fc283d0b04d14db38626d2fc35ecabb953aa8"
+    },
+    {
+      "name": "bold-script-display",
+      "tex": "\\mmlToken{mi}[mathvariant=bold-script]{ABhkαΓϕ19!?}",
+      "display": true,
+      "svgSHA256": "ee45c27eb17fc46b417e45e5176fc283d0b04d14db38626d2fc35ecabb953aa8"
+    },
+    {
+      "name": "sans-serif-inline",
+      "tex": "\\mmlToken{mi}[mathvariant=sans-serif]{ABhkαΓϕ19!?}",
+      "display": false,
+      "svgSHA256": "5b0264dfc37d1a6cf918e38aa696cb88890e5cc625968f6581ebd57c3b1ff204"
+    },
+    {
+      "name": "sans-serif-display",
+      "tex": "\\mmlToken{mi}[mathvariant=sans-serif]{ABhkαΓϕ19!?}",
+      "display": true,
+      "svgSHA256": "5b0264dfc37d1a6cf918e38aa696cb88890e5cc625968f6581ebd57c3b1ff204"
+    },
+    {
+      "name": "bold-sans-serif-inline",
+      "tex": "\\mmlToken{mi}[mathvariant=bold-sans-serif]{ABhkαΓϕ19!?}",
+      "display": false,
+      "svgSHA256": "4e7f6f86af1b5f7a541198b19c876ed0221122633e6677578a3b4d17c41be130"
+    },
+    {
+      "name": "bold-sans-serif-display",
+      "tex": "\\mmlToken{mi}[mathvariant=bold-sans-serif]{ABhkαΓϕ19!?}",
+      "display": true,
+      "svgSHA256": "4e7f6f86af1b5f7a541198b19c876ed0221122633e6677578a3b4d17c41be130"
+    },
+    {
+      "name": "sans-serif-italic-inline",
+      "tex": "\\mmlToken{mi}[mathvariant=sans-serif-italic]{ABhkαΓϕ19!?}",
+      "display": false,
+      "svgSHA256": "e8f0b7c4da99ce0270e326a0b9873ebcbfc06a34fa5939e76cfa366e66ab38e3"
+    },
+    {
+      "name": "sans-serif-italic-display",
+      "tex": "\\mmlToken{mi}[mathvariant=sans-serif-italic]{ABhkαΓϕ19!?}",
+      "display": true,
+      "svgSHA256": "e8f0b7c4da99ce0270e326a0b9873ebcbfc06a34fa5939e76cfa366e66ab38e3"
+    },
+    {
+      "name": "sans-serif-bold-italic-inline",
+      "tex": "\\mmlToken{mi}[mathvariant=sans-serif-bold-italic]{ABhkαΓϕ19!?}",
+      "display": false,
+      "svgSHA256": "b6a48087835bc6aff3667995bc34e0f9420bbee7f1b91efdf9696cd4b97f908a"
+    },
+    {
+      "name": "sans-serif-bold-italic-display",
+      "tex": "\\mmlToken{mi}[mathvariant=sans-serif-bold-italic]{ABhkαΓϕ19!?}",
+      "display": true,
+      "svgSHA256": "b6a48087835bc6aff3667995bc34e0f9420bbee7f1b91efdf9696cd4b97f908a"
+    },
+    {
+      "name": "monospace-inline",
+      "tex": "\\mmlToken{mi}[mathvariant=monospace]{ABhkαΓϕ19!?}",
+      "display": false,
+      "svgSHA256": "84131995e3909973d867c05372f845ea2279b6b8b00f019487a207bdd4977a27"
+    },
+    {
+      "name": "monospace-display",
+      "tex": "\\mmlToken{mi}[mathvariant=monospace]{ABhkαΓϕ19!?}",
+      "display": true,
+      "svgSHA256": "84131995e3909973d867c05372f845ea2279b6b8b00f019487a207bdd4977a27"
+    },
+    {
+      "name": "literal-smp-fallback-inline",
+      "tex": "\\mmlToken{mi}[mathvariant=double-struck]{𝕜}",
+      "display": false,
+      "svgSHA256": "00dde86b15c222ba99560c2d05ab0787b06cf59ee847e136cda2864d25243d92"
+    },
+    {
+      "name": "literal-smp-fallback-display",
+      "tex": "\\mmlToken{mi}[mathvariant=double-struck]{𝕜}",
+      "display": true,
+      "svgSHA256": "00dde86b15c222ba99560c2d05ab0787b06cf59ee847e136cda2864d25243d92"
+    },
+    {
+      "name": "non-smp-supplementary-inline",
+      "tex": "\\mmlToken{mi}[mathvariant=double-struck]{𝄞}",
+      "display": false,
+      "svgSHA256": "639c9dfee3ddb875659173e3a97323bbea738663667879b9d8e66cd65f2c1365"
+    },
+    {
+      "name": "non-smp-supplementary-display",
+      "tex": "\\mmlToken{mi}[mathvariant=double-struck]{𝄞}",
+      "display": true,
+      "svgSHA256": "639c9dfee3ddb875659173e3a97323bbea738663667879b9d8e66cd65f2c1365"
+    },
+    {
+      "name": "smp-upper-bound-inline",
+      "tex": "\\mmlToken{mi}[mathvariant=double-struck]{𝟿}",
+      "display": false,
+      "svgSHA256": "9c15e5a5076d075e03d02c640adc5c65617c7dc3fb194e378d7f6a32ff7d7af2"
+    },
+    {
+      "name": "smp-upper-bound-display",
+      "tex": "\\mmlToken{mi}[mathvariant=double-struck]{𝟿}",
+      "display": true,
+      "svgSHA256": "9c15e5a5076d075e03d02c640adc5c65617c7dc3fb194e378d7f6a32ff7d7af2"
+    },
+    {
+      "name": "after-smp-bound-inline",
+      "tex": "\\mmlToken{mi}[mathvariant=double-struck]{𝠀}",
+      "display": false,
+      "svgSHA256": "a049b04c567a35e792617d7df46424b57ef966f77be50aba83c241d0dd0e0206"
+    },
+    {
+      "name": "after-smp-bound-display",
+      "tex": "\\mmlToken{mi}[mathvariant=double-struck]{𝠀}",
+      "display": true,
+      "svgSHA256": "a049b04c567a35e792617d7df46424b57ef966f77be50aba83c241d0dd0e0206"
+    }
+  ]
+}
