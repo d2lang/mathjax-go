@@ -1,0 +1,479 @@
+{
+  "oracle": "Unmodified pinned D2 v0.8.1 MathJax3.2.2; fresh VM per case/mode",
+  "mathjaxGitCommit": "ad8f5c21cb810236551da8c6512ba733e67357ee",
+  "assetsSHA256": {
+    "polyfills.js": "7fe1d048c78b0e09854c1259f7413868a51cc8f0c822489eb1ac36ae6c85ce01",
+    "mathjax.js": "cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869",
+    "setup.js": "a52cb0bbabfbd7796b9fedd793b9386c474e3123e788ee151cbe47ca1fa6e881"
+  },
+  "cases": [
+    {
+      "name": "mi-monospace-inline",
+      "tex": "\\mmlToken{mi}[fontfamily=monospace]{xyz}",
+      "display": false,
+      "svgSHA256": "65f693d06139f94b00a95f435611f4268bfcc5e3f5246bfbeb6ceb51f5f6e2ab"
+    },
+    {
+      "name": "mi-monospace-display",
+      "tex": "\\mmlToken{mi}[fontfamily=monospace]{xyz}",
+      "display": true,
+      "svgSHA256": "65f693d06139f94b00a95f435611f4268bfcc5e3f5246bfbeb6ceb51f5f6e2ab"
+    },
+    {
+      "name": "mi-serif-inline",
+      "tex": "\\mmlToken{mi}[fontfamily=serif]{xyz}",
+      "display": false,
+      "svgSHA256": "c66cbc26400f7f0f5f4a6a86bac906f25c4e788519e85de291320a9a70277bbc"
+    },
+    {
+      "name": "mi-serif-display",
+      "tex": "\\mmlToken{mi}[fontfamily=serif]{xyz}",
+      "display": true,
+      "svgSHA256": "c66cbc26400f7f0f5f4a6a86bac906f25c4e788519e85de291320a9a70277bbc"
+    },
+    {
+      "name": "mi-single-inline",
+      "tex": "\\mmlToken{mi}[fontfamily=monospace]{x}",
+      "display": false,
+      "svgSHA256": "9690d17891fdac23ae6103e071801343ecb5059925a5a718c93d7ca1082270a3"
+    },
+    {
+      "name": "mi-single-display",
+      "tex": "\\mmlToken{mi}[fontfamily=monospace]{x}",
+      "display": true,
+      "svgSHA256": "9690d17891fdac23ae6103e071801343ecb5059925a5a718c93d7ca1082270a3"
+    },
+    {
+      "name": "mn-family-inline",
+      "tex": "\\mmlToken{mn}[fontfamily=monospace]{123}",
+      "display": false,
+      "svgSHA256": "b509b28f84bf05c6ec6ded8c0cddb3dd4df53ac3f34a7f3ae834f3344f97b377"
+    },
+    {
+      "name": "mn-family-display",
+      "tex": "\\mmlToken{mn}[fontfamily=monospace]{123}",
+      "display": true,
+      "svgSHA256": "b509b28f84bf05c6ec6ded8c0cddb3dd4df53ac3f34a7f3ae834f3344f97b377"
+    },
+    {
+      "name": "mo-family-inline",
+      "tex": "\\mmlToken{mo}[fontfamily=monospace]{+}",
+      "display": false,
+      "svgSHA256": "ea5fef4aebcbee6393507d0a52a3fd97c830d4386e30694e8cd449e502b3784d"
+    },
+    {
+      "name": "mo-family-display",
+      "tex": "\\mmlToken{mo}[fontfamily=monospace]{+}",
+      "display": true,
+      "svgSHA256": "ea5fef4aebcbee6393507d0a52a3fd97c830d4386e30694e8cd449e502b3784d"
+    },
+    {
+      "name": "mtext-family-inline",
+      "tex": "\\mmlToken{mtext}[fontfamily=monospace]{hello}",
+      "display": false,
+      "svgSHA256": "a82edf3e4bae0ec5417a921d4c8af73cef9758a6be9cc743155986d599a26256"
+    },
+    {
+      "name": "mtext-family-display",
+      "tex": "\\mmlToken{mtext}[fontfamily=monospace]{hello}",
+      "display": true,
+      "svgSHA256": "a82edf3e4bae0ec5417a921d4c8af73cef9758a6be9cc743155986d599a26256"
+    },
+    {
+      "name": "ms-family-inline",
+      "tex": "\\mmlToken{ms}[fontfamily=monospace]{abc}",
+      "display": false,
+      "svgSHA256": "e62c4049e4f1c35784abf1b7d5df6434007a4f05b08bb7adab316c7103ff7b31"
+    },
+    {
+      "name": "ms-family-display",
+      "tex": "\\mmlToken{ms}[fontfamily=monospace]{abc}",
+      "display": true,
+      "svgSHA256": "e62c4049e4f1c35784abf1b7d5df6434007a4f05b08bb7adab316c7103ff7b31"
+    },
+    {
+      "name": "mi-empty-family-inline",
+      "tex": "\\mmlToken{mi}[fontfamily=\"\"]{xyz}",
+      "display": false,
+      "svgSHA256": "3cdea18d19b13540a24dbb81484a544a7b617bc312067a44aaba7f172f9a5332"
+    },
+    {
+      "name": "mi-empty-family-display",
+      "tex": "\\mmlToken{mi}[fontfamily=\"\"]{xyz}",
+      "display": true,
+      "svgSHA256": "3cdea18d19b13540a24dbb81484a544a7b617bc312067a44aaba7f172f9a5332"
+    },
+    {
+      "name": "family-bold-inline",
+      "tex": "\\mmlToken{mi}[fontfamily=monospace,fontweight=bold]{xyz}",
+      "display": false,
+      "svgSHA256": "7f81a8cf071e9726654722285ccf74a37aa4a0fc88a277f16fc96b9d0f2a3542"
+    },
+    {
+      "name": "family-bold-display",
+      "tex": "\\mmlToken{mi}[fontfamily=monospace,fontweight=bold]{xyz}",
+      "display": true,
+      "svgSHA256": "7f81a8cf071e9726654722285ccf74a37aa4a0fc88a277f16fc96b9d0f2a3542"
+    },
+    {
+      "name": "family-600-inline",
+      "tex": "\\mmlToken{mi}[fontfamily=monospace,fontweight=600]{xyz}",
+      "display": false,
+      "svgSHA256": "98201f579f1e0e920fadc9c3c8c83fe54d33e0228eae657a7f7a4ec9fdecef4e"
+    },
+    {
+      "name": "family-600-display",
+      "tex": "\\mmlToken{mi}[fontfamily=monospace,fontweight=600]{xyz}",
+      "display": true,
+      "svgSHA256": "98201f579f1e0e920fadc9c3c8c83fe54d33e0228eae657a7f7a4ec9fdecef4e"
+    },
+    {
+      "name": "family-700-inline",
+      "tex": "\\mmlToken{mi}[fontfamily=monospace,fontweight=700]{xyz}",
+      "display": false,
+      "svgSHA256": "7f81a8cf071e9726654722285ccf74a37aa4a0fc88a277f16fc96b9d0f2a3542"
+    },
+    {
+      "name": "family-700-display",
+      "tex": "\\mmlToken{mi}[fontfamily=monospace,fontweight=700]{xyz}",
+      "display": true,
+      "svgSHA256": "7f81a8cf071e9726654722285ccf74a37aa4a0fc88a277f16fc96b9d0f2a3542"
+    },
+    {
+      "name": "family-italic-inline",
+      "tex": "\\mmlToken{mi}[fontfamily=monospace,fontstyle=italic]{xyz}",
+      "display": false,
+      "svgSHA256": "c90a7d292fc01ad2fe8a0637030d79487b9b137c157b144bd3c55fa225ea1527"
+    },
+    {
+      "name": "family-italic-display",
+      "tex": "\\mmlToken{mi}[fontfamily=monospace,fontstyle=italic]{xyz}",
+      "display": true,
+      "svgSHA256": "c90a7d292fc01ad2fe8a0637030d79487b9b137c157b144bd3c55fa225ea1527"
+    },
+    {
+      "name": "family-bold-italic-inline",
+      "tex": "\\mmlToken{mi}[fontfamily=monospace,fontweight=bold,fontstyle=italic]{xyz}",
+      "display": false,
+      "svgSHA256": "0c2f8f774930edb92734860dad9df82bb3234d04ef8d7c146af63d99145a8ff9"
+    },
+    {
+      "name": "family-bold-italic-display",
+      "tex": "\\mmlToken{mi}[fontfamily=monospace,fontweight=bold,fontstyle=italic]{xyz}",
+      "display": true,
+      "svgSHA256": "0c2f8f774930edb92734860dad9df82bb3234d04ef8d7c146af63d99145a8ff9"
+    },
+    {
+      "name": "explicit-variant-inline",
+      "tex": "\\mmlToken{mi}[fontfamily=monospace,mathvariant=normal]{xyz}",
+      "display": false,
+      "svgSHA256": "3cdea18d19b13540a24dbb81484a544a7b617bc312067a44aaba7f172f9a5332"
+    },
+    {
+      "name": "explicit-variant-display",
+      "tex": "\\mmlToken{mi}[fontfamily=monospace,mathvariant=normal]{xyz}",
+      "display": true,
+      "svgSHA256": "3cdea18d19b13540a24dbb81484a544a7b617bc312067a44aaba7f172f9a5332"
+    },
+    {
+      "name": "explicit-bold-variant-inline",
+      "tex": "\\mmlToken{mi}[fontfamily=monospace,mathvariant=bold]{xyz}",
+      "display": false,
+      "svgSHA256": "feca53a607433ec9e02fb7c0f0b4434d35c8caeef07cb7c47193841a3235cda4"
+    },
+    {
+      "name": "explicit-bold-variant-display",
+      "tex": "\\mmlToken{mi}[fontfamily=monospace,mathvariant=bold]{xyz}",
+      "display": true,
+      "svgSHA256": "feca53a607433ec9e02fb7c0f0b4434d35c8caeef07cb7c47193841a3235cda4"
+    },
+    {
+      "name": "family-greek-inline",
+      "tex": "\\mmlToken{mi}[fontfamily=monospace]{α}",
+      "display": false,
+      "svgSHA256": "cdfaa8ce57d930605994834dfd47f26f5a0650086db972612d6ae2e61f5ec85e"
+    },
+    {
+      "name": "family-greek-display",
+      "tex": "\\mmlToken{mi}[fontfamily=monospace]{α}",
+      "display": true,
+      "svgSHA256": "cdfaa8ce57d930605994834dfd47f26f5a0650086db972612d6ae2e61f5ec85e"
+    },
+    {
+      "name": "family-cjk-inline",
+      "tex": "\\mmlToken{mi}[fontfamily=monospace]{漢字}",
+      "display": false,
+      "svgSHA256": "ffb088619af024acc42bc08641fc843986189d39a2833d32fed255193fc595cb"
+    },
+    {
+      "name": "family-cjk-display",
+      "tex": "\\mmlToken{mi}[fontfamily=monospace]{漢字}",
+      "display": true,
+      "svgSHA256": "ffb088619af024acc42bc08641fc843986189d39a2833d32fed255193fc595cb"
+    },
+    {
+      "name": "family-smp-inline",
+      "tex": "\\mmlToken{mi}[fontfamily=monospace]{𝕜}",
+      "display": false,
+      "svgSHA256": "af1271aca119296ad0536992dbaafab694a621224242eee9db97f8448a716557"
+    },
+    {
+      "name": "family-smp-display",
+      "tex": "\\mmlToken{mi}[fontfamily=monospace]{𝕜}",
+      "display": true,
+      "svgSHA256": "af1271aca119296ad0536992dbaafab694a621224242eee9db97f8448a716557"
+    },
+    {
+      "name": "family-in-bold-inline",
+      "tex": "\\mathbf{\\mmlToken{mi}[fontfamily=monospace]{xyz}}",
+      "display": false,
+      "svgSHA256": "baa17dc4d2939943a0b9031b436e06384326a7b84816635dc337a8681d33074b"
+    },
+    {
+      "name": "family-in-bold-display",
+      "tex": "\\mathbf{\\mmlToken{mi}[fontfamily=monospace]{xyz}}",
+      "display": true,
+      "svgSHA256": "baa17dc4d2939943a0b9031b436e06384326a7b84816635dc337a8681d33074b"
+    },
+    {
+      "name": "family-script-inline",
+      "tex": "x^{\\mmlToken{mi}[fontfamily=monospace]{xyz}}",
+      "display": false,
+      "svgSHA256": "eb667a43718e423df5378481b8949e884b81e0bb3f1567cea754eab3107c79f3"
+    },
+    {
+      "name": "family-script-display",
+      "tex": "x^{\\mmlToken{mi}[fontfamily=monospace]{xyz}}",
+      "display": true,
+      "svgSHA256": "0fb2cdffcb39f99fb8f5b285964ab5d90b4945fa7e9c9a78cdcf72d35872e6b3"
+    },
+    {
+      "name": "family-delimiter-inline",
+      "tex": "\\mmlToken{mo}[fontfamily=monospace]{(}",
+      "display": false,
+      "svgSHA256": "99c7ffd5716e83896ab4f950fa7e2a4e0399d85a5cab3bf781ba01193387fd97"
+    },
+    {
+      "name": "family-delimiter-display",
+      "tex": "\\mmlToken{mo}[fontfamily=monospace]{(}",
+      "display": true,
+      "svgSHA256": "99c7ffd5716e83896ab4f950fa7e2a4e0399d85a5cab3bf781ba01193387fd97"
+    },
+    {
+      "name": "style-family-inline",
+      "tex": "\\mmlToken{mi}[style=\"font-family:monospace\"]{xyz}",
+      "display": false,
+      "svgSHA256": "65f693d06139f94b00a95f435611f4268bfcc5e3f5246bfbeb6ceb51f5f6e2ab"
+    },
+    {
+      "name": "style-family-display",
+      "tex": "\\mmlToken{mi}[style=\"font-family:monospace\"]{xyz}",
+      "display": true,
+      "svgSHA256": "65f693d06139f94b00a95f435611f4268bfcc5e3f5246bfbeb6ceb51f5f6e2ab"
+    },
+    {
+      "name": "style-priority-inline",
+      "tex": "\\mmlToken{mi}[fontfamily=serif,style=\"font-family:monospace; font-weight:bold; font-style:italic\"]{xyz}",
+      "display": false,
+      "svgSHA256": "4a5967a77665dbb6e1acd2ee7b3799886f92cadc7bcd7e478775b432c33ef8ca"
+    },
+    {
+      "name": "style-priority-display",
+      "tex": "\\mmlToken{mi}[fontfamily=serif,style=\"font-family:monospace; font-weight:bold; font-style:italic\"]{xyz}",
+      "display": true,
+      "svgSHA256": "4a5967a77665dbb6e1acd2ee7b3799886f92cadc7bcd7e478775b432c33ef8ca"
+    },
+    {
+      "name": "style-variant-inline",
+      "tex": "\\mmlToken{mi}[mathvariant=bold,style=\"font-family:monospace\"]{xyz}",
+      "display": false,
+      "svgSHA256": "feca53a607433ec9e02fb7c0f0b4434d35c8caeef07cb7c47193841a3235cda4"
+    },
+    {
+      "name": "style-variant-display",
+      "tex": "\\mmlToken{mi}[mathvariant=bold,style=\"font-family:monospace\"]{xyz}",
+      "display": true,
+      "svgSHA256": "feca53a607433ec9e02fb7c0f0b4434d35c8caeef07cb7c47193841a3235cda4"
+    },
+    {
+      "name": "style-padding-inline",
+      "tex": "\\mmlToken{mi}[style=\"font-family:monospace; padding:1px; color:red\"]{xyz}",
+      "display": false,
+      "svgSHA256": "d5d88094536fa631a0088eb14b29bad574ec6ab09f5ff65a08610c264ae08dde"
+    },
+    {
+      "name": "style-padding-display",
+      "tex": "\\mmlToken{mi}[style=\"font-family:monospace; padding:1px; color:red\"]{xyz}",
+      "display": true,
+      "svgSHA256": "d5d88094536fa631a0088eb14b29bad574ec6ab09f5ff65a08610c264ae08dde"
+    },
+    {
+      "name": "ordinary-inline",
+      "tex": "x+y",
+      "display": false,
+      "svgSHA256": "f0c1a6e54de6dce5fb8b46455eaeac8f868c3b598ba7a4d9b574f3a100895f87"
+    },
+    {
+      "name": "ordinary-display",
+      "tex": "x+y",
+      "display": true,
+      "svgSHA256": "f0c1a6e54de6dce5fb8b46455eaeac8f868c3b598ba7a4d9b574f3a100895f87"
+    },
+    {
+      "name": "error-control-inline",
+      "tex": "x^2^3",
+      "display": false,
+      "svgSHA256": "f74d506d313d207f51b14cfdbf282543cd1760035865724b0ec1003b16df79fa"
+    },
+    {
+      "name": "error-control-display",
+      "tex": "x^2^3",
+      "display": true,
+      "svgSHA256": "f74d506d313d207f51b14cfdbf282543cd1760035865724b0ec1003b16df79fa"
+    },
+    {
+      "name": "largeop-family-inline",
+      "tex": "\\mmlToken{mo}[fontfamily=monospace,largeop=true]{∑}",
+      "display": false,
+      "svgSHA256": "2935afa9d370ff6aee9d3c01fb76ee65e5c352e74b3aafd80f293803404f1571"
+    },
+    {
+      "name": "largeop-family-display",
+      "tex": "\\mmlToken{mo}[fontfamily=monospace,largeop=true]{∑}",
+      "display": true,
+      "svgSHA256": "9b9441d841a7d77652c306877849913de18c96a09631e4c57c8e3d662ddac796"
+    },
+    {
+      "name": "largeop-style-family-inline",
+      "tex": "\\mmlToken{mo}[style=\"font-family:monospace\",largeop=true]{∑}",
+      "display": false,
+      "svgSHA256": "2935afa9d370ff6aee9d3c01fb76ee65e5c352e74b3aafd80f293803404f1571"
+    },
+    {
+      "name": "largeop-style-family-display",
+      "tex": "\\mmlToken{mo}[style=\"font-family:monospace\",largeop=true]{∑}",
+      "display": true,
+      "svgSHA256": "9b9441d841a7d77652c306877849913de18c96a09631e4c57c8e3d662ddac796"
+    },
+    {
+      "name": "stretch-family-inline",
+      "tex": "\\mmlToken{mo}[fontfamily=monospace,minsize=3em]{(}",
+      "display": false,
+      "svgSHA256": "01fa61984a96d83159831b4182683e2db1156281e6a43b2a2e2520857fb14cb6"
+    },
+    {
+      "name": "stretch-family-display",
+      "tex": "\\mmlToken{mo}[fontfamily=monospace,minsize=3em]{(}",
+      "display": true,
+      "svgSHA256": "01fa61984a96d83159831b4182683e2db1156281e6a43b2a2e2520857fb14cb6"
+    },
+    {
+      "name": "horizontal-family-inline",
+      "tex": "\\mmlToken{mo}[fontfamily=monospace,stretchy=true,minsize=3em]{→}",
+      "display": false,
+      "svgSHA256": "15647f73caca1d00dccd3b8105c9cc3d428ae13162af7adced89e27b467c30dd"
+    },
+    {
+      "name": "horizontal-family-display",
+      "tex": "\\mmlToken{mo}[fontfamily=monospace,stretchy=true,minsize=3em]{→}",
+      "display": true,
+      "svgSHA256": "15647f73caca1d00dccd3b8105c9cc3d428ae13162af7adced89e27b467c30dd"
+    },
+    {
+      "name": "family-attribute-style-priority-inline",
+      "tex": "\\mmlToken{mi}[fontfamily=serif,fontweight=normal,fontstyle=normal,style=\"font-family:monospace; font-weight:bold; font-style:italic\"]{xyz}",
+      "display": false,
+      "svgSHA256": "e1b2a43a32edee9e48121979c7571dcb6c00f9ff0160fbe6e1b4a500aed65cb8"
+    },
+    {
+      "name": "family-attribute-style-priority-display",
+      "tex": "\\mmlToken{mi}[fontfamily=serif,fontweight=normal,fontstyle=normal,style=\"font-family:monospace; font-weight:bold; font-style:italic\"]{xyz}",
+      "display": true,
+      "svgSHA256": "e1b2a43a32edee9e48121979c7571dcb6c00f9ff0160fbe6e1b4a500aed65cb8"
+    },
+    {
+      "name": "family-empty-css-inline",
+      "tex": "\\mmlToken{mi}[fontfamily=\"\",style=\"font-family:monospace\"]{xyz}",
+      "display": false,
+      "svgSHA256": "65f693d06139f94b00a95f435611f4268bfcc5e3f5246bfbeb6ceb51f5f6e2ab"
+    },
+    {
+      "name": "family-empty-css-display",
+      "tex": "\\mmlToken{mi}[fontfamily=\"\",style=\"font-family:monospace\"]{xyz}",
+      "display": true,
+      "svgSHA256": "65f693d06139f94b00a95f435611f4268bfcc5e3f5246bfbeb6ceb51f5f6e2ab"
+    },
+    {
+      "name": "family-explicit-empty-variant-inline",
+      "tex": "\\mmlToken{mi}[fontfamily=monospace,mathvariant=\"\"]{xyz}",
+      "display": false,
+      "svgSHA256": "65f693d06139f94b00a95f435611f4268bfcc5e3f5246bfbeb6ceb51f5f6e2ab"
+    },
+    {
+      "name": "family-explicit-empty-variant-display",
+      "tex": "\\mmlToken{mi}[fontfamily=monospace,mathvariant=\"\"]{xyz}",
+      "display": true,
+      "svgSHA256": "65f693d06139f94b00a95f435611f4268bfcc5e3f5246bfbeb6ceb51f5f6e2ab"
+    },
+    {
+      "name": "family-weight-huge-inline",
+      "tex": "\\mmlToken{mi}[fontfamily=monospace,fontweight=999999999999999999999999999999999999999999999999999999]{xyz}",
+      "display": false,
+      "svgSHA256": "7f81a8cf071e9726654722285ccf74a37aa4a0fc88a277f16fc96b9d0f2a3542"
+    },
+    {
+      "name": "family-weight-huge-display",
+      "tex": "\\mmlToken{mi}[fontfamily=monospace,fontweight=999999999999999999999999999999999999999999999999999999]{xyz}",
+      "display": true,
+      "svgSHA256": "7f81a8cf071e9726654722285ccf74a37aa4a0fc88a277f16fc96b9d0f2a3542"
+    },
+    {
+      "name": "family-list-inline",
+      "tex": "\\mmlToken{mi}[fontfamily=\"Arial, serif\"]{xyz}",
+      "display": false,
+      "svgSHA256": "075a489dbe62079d052fd940d0afab0c75f75e50b20e3fc9178d6fbb1227362a"
+    },
+    {
+      "name": "family-list-display",
+      "tex": "\\mmlToken{mi}[fontfamily=\"Arial, serif\"]{xyz}",
+      "display": true,
+      "svgSHA256": "075a489dbe62079d052fd940d0afab0c75f75e50b20e3fc9178d6fbb1227362a"
+    },
+    {
+      "name": "family-mathsize-inline",
+      "tex": "\\mmlToken{mi}[fontfamily=monospace,mathsize=150%]{xyz}",
+      "display": false,
+      "svgSHA256": "065e562a1ef41cd907d7c83738badcb02895f4013741083e3cec75384becf3c7"
+    },
+    {
+      "name": "family-mathsize-display",
+      "tex": "\\mmlToken{mi}[fontfamily=monospace,mathsize=150%]{xyz}",
+      "display": true,
+      "svgSHA256": "065e562a1ef41cd907d7c83738badcb02895f4013741083e3cec75384becf3c7"
+    },
+    {
+      "name": "family-ms-custom-inline",
+      "tex": "\\mmlToken{ms}[fontfamily=monospace,lquote=\"<\",rquote=\">\"]{xyz}",
+      "display": false,
+      "svgSHA256": "029d59e2214664be6a1d63de0c20ca3b15e6036ea27231493387c9ff80e3d26c"
+    },
+    {
+      "name": "family-ms-custom-display",
+      "tex": "\\mmlToken{ms}[fontfamily=monospace,lquote=\"<\",rquote=\">\"]{xyz}",
+      "display": true,
+      "svgSHA256": "029d59e2214664be6a1d63de0c20ca3b15e6036ea27231493387c9ff80e3d26c"
+    },
+    {
+      "name": "family-scripts-control-inline",
+      "tex": "\\mmlToken{mi}[fontfamily=monospace]{xyz}_i^2",
+      "display": false,
+      "svgSHA256": "f0f3bc928a56a051c700d845be2f8b3ed0b604f8fe0e3038c44ae75c2a3723b4"
+    },
+    {
+      "name": "family-scripts-control-display",
+      "tex": "\\mmlToken{mi}[fontfamily=monospace]{xyz}_i^2",
+      "display": true,
+      "svgSHA256": "f0f3bc928a56a051c700d845be2f8b3ed0b604f8fe0e3038c44ae75c2a3723b4"
+    }
+  ]
+}
