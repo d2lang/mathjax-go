@@ -15,7 +15,7 @@ import (
 	"github.com/d2lang/mathjax-go/internal/tex"
 )
 
-func TestFixedInfixFencePinnedReferences(t *testing.T) {
+func TestBinomialCommandPinnedReferences(t *testing.T) {
 	var fixture struct {
 		MathjaxGitCommit string
 		Cases            []struct {
@@ -30,7 +30,7 @@ func TestFixedInfixFencePinnedReferences(t *testing.T) {
 		MetadataBoundaries map[string]struct {
 			TeX, PrimarySHA256, BaselineSHA256 string
 			Display                            bool
-			BaselineTree                       *limitsTree
+			CandidateTree                      *limitsTree
 			Adjustments                        []struct {
 				Path                            []int
 				Kind, Field, Key                string
@@ -49,18 +49,18 @@ func TestFixedInfixFencePinnedReferences(t *testing.T) {
 			t.Fatal(err)
 		}
 	}
-	read("testdata/fixed_infix_fences_mathjax_3_2_2.json", &fixture)
-	read("testdata/fixed_infix_fences_boundaries.json", &boundaries)
-	if fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || len(fixture.Cases) != 48 || boundaries.Baseline != "06fcb3e2df8c5800d3b26cc7e1586c2ff59bd041" || len(boundaries.MetadataBoundaries) != 8 {
+	read("testdata/binomial_commands_mathjax_3_2_2.json", &fixture)
+	read("testdata/binomial_commands_boundaries.json", &boundaries)
+	if fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || len(fixture.Cases) != 48 || boundaries.Baseline != "46e9024262e80131193abaa119a965789ec1c9ac" || len(boundaries.MetadataBoundaries) != 4 {
 		t.Fatal("unbound fixed-fence reference corpus")
 	}
-	metadataCount, fixedCount := 0, 0
+	metadataCount := 0
 	for _, c := range fixture.Cases {
 		t.Run(c.Name, func(t *testing.T) {
 			wantSVG, wantTree := c.SVGSHA256, c.PropertiesTree
 			if b, ok := boundaries.MetadataBoundaries[c.Name]; ok {
 				metadataCount++
-				if !(strings.HasPrefix(c.Name, "atop-control-") || strings.HasPrefix(c.Name, "genfrac-")) || b.TeX != c.TeX || b.Display != c.Display || b.PrimarySHA256 != c.SVGSHA256 || b.BaselineSHA256 != c.SVGSHA256 {
+				if !(strings.HasPrefix(c.Name, "prime-") || strings.HasPrefix(c.Name, "genfrac-control-")) || b.TeX != c.TeX || b.Display != c.Display || b.PrimarySHA256 != c.SVGSHA256 {
 					t.Fatal("unexpected preexisting metadata boundary")
 				}
 				for _, a := range b.Adjustments {
@@ -79,7 +79,7 @@ func TestFixedInfixFencePinnedReferences(t *testing.T) {
 						delete(fields, a.Key)
 					}
 				}
-				if !reflect.DeepEqual(wantTree, b.BaselineTree) {
+				if !reflect.DeepEqual(wantTree, b.CandidateTree) {
 					t.Fatal("metadata receipts do not reconstruct exact accepted baseline")
 				}
 			}
@@ -117,12 +117,9 @@ func TestFixedInfixFencePinnedReferences(t *testing.T) {
 					t.Errorf("measure=%dx%d,%v want=%dx%d", w, h, err, c.Width, c.Height)
 				}
 			}
-			if _, metadata := boundaries.MetadataBoundaries[c.Name]; !metadata && (strings.Contains(c.TeX, "\\choose") || strings.Contains(c.TeX, "\\brace") || strings.Contains(c.TeX, "\\brack")) {
-				fixedCount++
-			}
 		})
 	}
-	if metadataCount != 8 || fixedCount != 30 {
-		t.Fatal("reference classification changed", metadataCount, fixedCount)
+	if metadataCount != 4 {
+		t.Fatal("reference classification changed", metadataCount)
 	}
 }

@@ -21,15 +21,14 @@ four-way palette, and inherited selection of equal min/max delimiter sizes.
 
 The accepted reference baseline is `06fcb3e2df8c5800d3b26cc7e1586c2ff59bd041`.
 All 30 fixed-fence cases fail against that baseline and match the primary after
-the repair. All 18 control SVGs and raw compiler trees remain byte-identical to
-that baseline. Of all 48 cases, 42 complete SVGs, 40 explicit-attribute trees and
-34 own-property trees match the primary without qualifications.
+the repair. At the D063 acceptance point all 18 control SVGs and raw compiler trees remained
+byte-identical to that baseline. D064 now upgrades the six binomial records to
+untouched complete primary SVG and full trees. Across all 48 records, 48 complete
+SVGs, 46 explicit-attribute trees and 40 own-property trees are primary exact;
+all 42 non-binomial actual outputs remain byte-identical to accepted D063.
 
 The exact remaining boundaries are recorded in `fixed_infix_fences_boundaries.json`:
 
-- Six `binom`/`dbinom`/`tbinom` records retain the complete accepted SVG and tree,
-  independently bound to the primary reference too. Their macro dispatch and
-  visible fraction-rule discrepancy belong to D064 and are untouched.
 - Two `atop` records retain the accepted explicit string `"0"` rather than the
   primary numeric `0` at the single recorded fraction attribute path. Their
   complete SVGs are raw-primary exact.
@@ -54,5 +53,7 @@ among successful parity assertions or fixed by this patch.
 Scope is only the existing supplied-delimiter infix fraction path: reuse the
 existing fixed palette, set `withDelims`, and preserve fixedFence's ORD row and
 numeric zero. General `fenced`, generalized-fraction behavior, the renderer,
-command dispatch, D064 macros, prime handling and unsupported delimiter commands
-are unchanged.
+prime handling and unsupported delimiter commands are unchanged by D063. D064
+separately repairs the three binomial registrations and their fixed-fence handler,
+as documented in binomial_commands_README.md. The original D063 baseline
+receipts remain archived; no primary fixtures were rewritten for the upgrade.
