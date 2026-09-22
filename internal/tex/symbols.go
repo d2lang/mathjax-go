@@ -138,6 +138,7 @@ var functionNames = map[string]string{
 }
 
 var simpleMacros = map[string]string{
+	"stackrel":  "\\mathrel{\\mathop{#2}\\limits^{#1}}",
 	"dfrac":     "\\displaystyle\\frac{#1}{#2}",
 	"tfrac":     "\\textstyle\\frac{#1}{#2}",
 	"binom":     "\\left(\\frac{#1}{#2}\\right)",
