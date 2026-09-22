@@ -49,7 +49,7 @@ func TestDecorationMovablePinnedReferences(t *testing.T) {
 	if err = json.Unmarshal(data, &bounds); err != nil {
 		t.Fatal(err)
 	}
-	if fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || len(fixture.Cases) != 60 || bounds.Baseline != "69ae099022c270469016a6a83f9f9ae13d98e320" || len(bounds.Cases) != 54 {
+	if fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || len(fixture.Cases) != 60 || bounds.Baseline != "efd6d63071862218af992a6074e3c8680b634ab4" || len(bounds.Cases) != 54 {
 		t.Fatal("unbound ordinary-decoration matrix")
 	}
 	rawSVG, rawOwn, rawExplicit := 0, 0, 0
@@ -63,12 +63,6 @@ func TestDecorationMovablePinnedReferences(t *testing.T) {
 				}
 				rawTree = false
 				switch q.Category {
-				case "unchanged-D071-error":
-					if q.ExpectedTree == nil || q.ExpectedSHA256 == c.SVGSHA256 || len(q.Differences) != 0 {
-						t.Fatal("invalid exact error boundary")
-					}
-					wantTree, wantSVG = q.ExpectedTree, q.ExpectedSHA256
-					rawAttributes = false
 				case "exact-inherited-fields":
 					if q.ExpectedTree != nil || q.ExpectedSHA256 != c.SVGSHA256 || len(q.Differences) == 0 {
 						t.Fatal("invalid exact metadata boundary")
@@ -142,7 +136,7 @@ func TestDecorationMovablePinnedReferences(t *testing.T) {
 			}
 		})
 	}
-	if rawSVG != 38 || rawExplicit != 8 || rawOwn != 6 {
-		t.Fatalf("raw SVG/explicit/own counts %d/%d/%d want38/8/6", rawSVG, rawExplicit, rawOwn)
+	if rawSVG != 60 || rawExplicit != 8 || rawOwn != 6 {
+		t.Fatalf("raw SVG/explicit/own counts %d/%d/%d want60/8/6", rawSVG, rawExplicit, rawOwn)
 	}
 }

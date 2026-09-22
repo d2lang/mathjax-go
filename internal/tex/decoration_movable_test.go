@@ -26,8 +26,8 @@ func TestOrdinaryDecorationNormalizesDirectBase(t *testing.T) {
 					t.Fatalf("ordinary constructor: %v", err)
 				}
 				annotation := out[0]
-				if _, ok := annotation.Property("subsupOK"); ok {
-					t.Fatal("separate decoration permission was introduced")
+				if permission, ok := annotation.Property("subsupOK"); !ok || permission != true {
+					t.Fatal("ordinary decoration lacks primary own script permission")
 				}
 				base, mark := annotation.Children[0], annotation.Children[1]
 				if base.Parent != annotation || mark.Parent != annotation {

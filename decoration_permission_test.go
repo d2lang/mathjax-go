@@ -12,8 +12,8 @@ import (
 	"github.com/d2lang/mathjax-go/internal/tex"
 )
 
-func TestScriptedDecorationPinnedReferences(t *testing.T) {
-	data, err := os.ReadFile("testdata/scripted_decoration_mathjax_3_2_2.json")
+func TestDecorationPermissionPinnedReferences(t *testing.T) {
+	data, err := os.ReadFile("testdata/decoration_permission_mathjax_3_2_2.json")
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -29,7 +29,7 @@ func TestScriptedDecorationPinnedReferences(t *testing.T) {
 	if err = json.Unmarshal(data, &fixture); err != nil {
 		t.Fatal(err)
 	}
-	data, err = os.ReadFile("testdata/scripted_decoration_boundaries.json")
+	data, err = os.ReadFile("testdata/decoration_permission_boundaries.json")
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -49,8 +49,8 @@ func TestScriptedDecorationPinnedReferences(t *testing.T) {
 	if err = json.Unmarshal(data, &bounds); err != nil {
 		t.Fatal(err)
 	}
-	if fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || len(fixture.Cases) != 48 || bounds.Baseline != "efd6d63071862218af992a6074e3c8680b634ab4" || len(bounds.Cases) != 48 {
-		t.Fatal("unbound scripted-decoration matrix")
+	if fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || len(fixture.Cases) != 60 || bounds.Baseline != "efd6d63071862218af992a6074e3c8680b634ab4" || len(bounds.Cases) != 50 {
+		t.Fatal("unbound decoration-permission matrix")
 	}
 	rawSVG, rawOwn, rawExplicit := 0, 0, 0
 	for _, c := range fixture.Cases {
@@ -145,7 +145,7 @@ func TestScriptedDecorationPinnedReferences(t *testing.T) {
 			}
 		})
 	}
-	if rawSVG != 48 || rawExplicit != 2 || rawOwn != 0 {
-		t.Fatalf("raw SVG/explicit/own counts %d/%d/%d want48/2/0", rawSVG, rawExplicit, rawOwn)
+	if rawSVG != 60 || rawExplicit != 12 || rawOwn != 10 {
+		t.Fatalf("raw SVG/explicit/own counts %d/%d/%d want60/12/10", rawSVG, rawExplicit, rawOwn)
 	}
 }

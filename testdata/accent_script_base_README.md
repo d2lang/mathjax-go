@@ -6,14 +6,13 @@ verify the three original bundle hashes before loading a fresh VM for each case.
 The accepted comparison baseline is mathjax-go
 `f1ae550cda1fb97e41bebf86799ffeae48cd3042`.
 
-The public corpus has 52 cases in both inline and display modes. Fifty complete
-SVGs match the untouched primary output. The two `nested-under` cases retain
-the accepted baseline's false DoubleSubscripts error for
-`\underline{\hat{x}}_i`; these are explicit preexisting boundaries, not parity
-passes. The new test fails for 34 cases with the accepted implementation and
-passes for all 52 with this candidate, including the two unchanged error receipts.
-Thirty-two SVGs change to the primary output; two additional cases upgrade only
-compiler-tree metadata.
+The public corpus has 52 cases in both inline and display modes. All 52 complete
+SVGs match the untouched primary output. Ordinary decoration script permission
+now fixes the two `nested-under` false DoubleSubscripts errors for
+`\underline{\hat{x}}_i`. Against accepted `efd6d630`, those two SVGs change to
+the primary output; the other 50 SVGs are byte-identical. The two `nested-line`
+cases also gain the primary own `subsupOK: true` property. The other 48 complete
+compiler-tree records are unchanged.
 
 The explicit-tree projection retains kind, text, every explicit attribute, and
 ordered children. The own-property projection additionally retains every own
@@ -21,8 +20,13 @@ property. Raw equality is 48/52 for explicit trees and 8/52 for own-property tre
 The boundary file records exact per-case paths and complete before/after field
 maps for inherited metadata differences. Forty cases retain an extra `texClass: 0`
 on the accent operator. The two `nested-line` cases additionally retain accepted
-under/over `accent`/`subsupOK` metadata differences. No field is globally dropped.
-The two unchanged error cases bind their complete accepted tree and SVG hash.
+under/over `accent` metadata differences; their former missing-permission
+qualification is removed. The two repaired `nested-under` cases bind four exact
+inherited whole maps each to accepted `efd6d630` output for the identical
+decoration prefix `\underline{\hat{x}}` before its later script. Each map records
+the original primary map, expected complete map, exact node paths, source and
+baseline digest. No field is globally dropped, and script permission itself is
+never qualified.
 
 The registered-MathML constructor corpus has 88 cases. It checks selected core
 identity, first accent flags, and constructor-time `isMathAccent` before stretching,
