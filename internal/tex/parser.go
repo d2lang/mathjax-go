@@ -866,7 +866,20 @@ func (p *parser) infixFraction(name string, left []*mml.Node, terminator byte, s
 		} else if name == "brack" {
 			open, close = "[", "]"
 		}
-		frac = fenced(open, frac, close, true)
+		// OverItem uses numeric zero and ParseUtil.fixedFence: the fraction
+		// has no null-delimiter padding, and its fences select the existing
+		// bigg/big palette after inherited display/script style is known.
+		frac.Attributes.Set("linethickness", 0)
+		frac.SetProperty("withDelims", true)
+		frac = forcedRow([]*mml.Node{
+			amsFixedFencePalette(open, mml.TeXClassOpen),
+			frac,
+			amsFixedFencePalette(close, mml.TeXClassClose),
+		}, false)
+		frac.SetProperty("open", open)
+		frac.SetProperty("close", close)
+		frac.SetProperty("texClass", mml.TeXClassOrd)
+		frac.TeXClass = mml.TeXClassOrd
 	}
 	return frac, right, nil
 }
