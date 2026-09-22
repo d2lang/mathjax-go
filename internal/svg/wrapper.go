@@ -39,6 +39,7 @@ type wrapper struct {
 	size         int
 	sizeSet      bool
 	surdHeight   float64
+	isMathAccent bool
 
 	// table retains CommonMtable's natural and resolved percentage-width
 	// state for the lifetime of this wrapped render tree.  It is nil for every
@@ -97,6 +98,7 @@ func (r *renderer) wrap(node *mml.Node, parent *wrapper, level int, display bool
 	// can subsequently resize an embellished core, and a bbox recomputation
 	// must not undo that later stretch pass.
 	if node.Kind == "munder" || node.Kind == "mover" || node.Kind == "munderover" {
+		w.initializeMathAccent()
 		w.stretchUnderOverChildren()
 	}
 	if node.Kind == "math" || node.Kind == "mrow" {

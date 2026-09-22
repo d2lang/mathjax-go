@@ -209,6 +209,7 @@ func (w *wrapper) getStretchedVariant(dimensions []float64, exact bool) {
 	}
 	if len(w.stretch.Stretch) != 0 {
 		w.size, w.sizeSet = -1, true
+		w.invalidateBBox()
 		w.setStretchBBox(dimensions, w.extendedHeight(dimension))
 		return
 	}
