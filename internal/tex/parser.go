@@ -187,11 +187,11 @@ func (p *parser) parseRow(terminator byte, stopRight bool) ([]*mml.Node, string,
 				return nodes, right, nil
 			}
 			if name == "limits" || name == "nolimits" {
-				if len(nodes) == 0 {
-					return nil, "", texError("MisplacedLimits", "Misplaced %s", "\\"+name)
+				var err error
+				nodes, err = p.parseLimits(nodes, name)
+				if err != nil {
+					return nil, "", err
 				}
-				nodes[len(nodes)-1].SetProperty("movesupsub", name == "limits")
-				nodes[len(nodes)-1].Attributes.Set("movablelimits", name == "limits")
 				continue
 			}
 			p.commandNamedFunction = false
@@ -326,10 +326,9 @@ func (p *parser) attachScript(nodes []*mml.Node, marker byte) ([]*mml.Node, erro
 	if value, ok := base.Attributes.Get("movesupsub"); ok {
 		moveLimits, _ = value.(bool)
 	}
-	// Braces and brackets are stacked operators even in inline math. Ordinary
-	// movable-limit operators still use side scripts in that mode.
-	stacked, _ := base.Property("subsupOK")
-	underOver := moveLimits && (p.display || (base.Kind == "TeXAtom" && stacked == true))
+	// BaseMethods chooses the under/over family from movesupsub in both
+	// modes. The renderer uses movablelimits for inline side placement.
+	underOver := moveLimits
 	var result *mml.Node
 	if marker == '_' {
 		switch base.Kind {
@@ -364,6 +363,7 @@ func (p *parser) attachScript(nodes []*mml.Node, marker byte) ([]*mml.Node, erro
 	}
 	result.Flags.Embellished = base.Flags.Embellished
 	result.Flags.CoreIndex = 0
+	result.SetProperty(limitsScriptOrigin, true)
 	if hasMoves {
 		result.SetProperty("movesupsub", moves)
 	}
@@ -396,10 +396,14 @@ func (p *parser) attachPrimes(nodes []*mml.Node) ([]*mml.Node, error) {
 	if base.Kind == "msup" || base.Kind == "msubsup" {
 		return nil, texError("DoubleExponentPrime", "Prime causes double exponent: use braces to clarify")
 	}
+	var result *mml.Node
 	if base.Kind == "msub" {
-		return append(nodes, node("msubsup", base.Children[0], base.Children[1], sup)), nil
+		result = node("msubsup", base.Children[0], base.Children[1], sup)
+	} else {
+		result = node("msup", base, sup)
 	}
-	return append(nodes, node("msup", base, sup)), nil
+	result.SetProperty(limitsScriptOrigin, "prime")
+	return append(nodes, result), nil
 }
 
 func (p *parser) parseScriptArgument() (*mml.Node, error) {

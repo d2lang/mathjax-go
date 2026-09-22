@@ -973,6 +973,7 @@ func (p *parser) mathClass(name string) ([]*mml.Node, error) {
 	}
 	n := texAtom(arg, classes[name])
 	if name == "mathop" {
+		n.SetProperty("movablelimits", true)
 		n.SetProperty("movesupsub", true)
 	}
 	return []*mml.Node{n}, nil

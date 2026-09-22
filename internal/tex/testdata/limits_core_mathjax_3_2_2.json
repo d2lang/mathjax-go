@@ -1,0 +1,607 @@
+{
+  "assetsSHA256": {
+    "polyfills.js": "7fe1d048c78b0e09854c1259f7413868a51cc8f0c822489eb1ac36ae6c85ce01",
+    "mathjax.js": "cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869",
+    "setup.js": "a52cb0bbabfbd7796b9fedd793b9386c474e3123e788ee151cbe47ca1fa6e881"
+  },
+  "rows": [
+    {
+      "kind": "msub",
+      "isKindFunction": "function(t){return this.factory.nodeIsKind(this,t)}",
+      "isMsubsup": true,
+      "isMunderover": false
+    },
+    {
+      "kind": "msup",
+      "isKindFunction": "function(t){return this.factory.nodeIsKind(this,t)}",
+      "isMsubsup": true,
+      "isMunderover": false
+    },
+    {
+      "kind": "msubsup",
+      "isKindFunction": "function(t){return this.factory.nodeIsKind(this,t)}",
+      "isMsubsup": true,
+      "isMunderover": false
+    },
+    {
+      "kind": "munder",
+      "isKindFunction": "function(t){return this.factory.nodeIsKind(this,t)}",
+      "isMsubsup": false,
+      "isMunderover": true
+    },
+    {
+      "kind": "mover",
+      "isKindFunction": "function(t){return this.factory.nodeIsKind(this,t)}",
+      "isMsubsup": false,
+      "isMunderover": true
+    },
+    {
+      "kind": "munderover",
+      "isKindFunction": "function(t){return this.factory.nodeIsKind(this,t)}",
+      "isMsubsup": false,
+      "isMunderover": true
+    }
+  ],
+  "selected": [
+    {
+      "selection": -2,
+      "corePath": 0,
+      "coreKind": "mi",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": 0,
+      "corePath": 0,
+      "coreKind": "mi",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": 1,
+      "corePath": 0,
+      "coreKind": "mi",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": 2,
+      "corePath": 1,
+      "coreKind": "mo",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": 3,
+      "corePath": 1,
+      "coreKind": "mo",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": 99,
+      "corePath": 1,
+      "coreKind": "mo",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": 1.5,
+      "corePath": null,
+      "coreKind": "mrow",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": null,
+      "corePath": 0,
+      "coreKind": "mi",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": true,
+      "corePath": 0,
+      "coreKind": "mi",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": false,
+      "corePath": 0,
+      "coreKind": "mi",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": "",
+      "corePath": 0,
+      "coreKind": "mi",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": " 2 ",
+      "corePath": 1,
+      "coreKind": "mo",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": "0x2",
+      "corePath": 1,
+      "coreKind": "mo",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": "0X2",
+      "corePath": 1,
+      "coreKind": "mo",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": "0b10",
+      "corePath": 1,
+      "coreKind": "mo",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": "0B10",
+      "corePath": 1,
+      "coreKind": "mo",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": "0o2",
+      "corePath": 1,
+      "coreKind": "mo",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": "0O2",
+      "corePath": 1,
+      "coreKind": "mo",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": "1_0",
+      "corePath": null,
+      "coreKind": "mrow",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": "Inf",
+      "corePath": null,
+      "coreKind": "mrow",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": "Infinity",
+      "corePath": 1,
+      "coreKind": "mo",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": "+Infinity",
+      "corePath": 1,
+      "coreKind": "mo",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": "-Infinity",
+      "corePath": 0,
+      "coreKind": "mi",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": "﻿2",
+      "corePath": 1,
+      "coreKind": "mo",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": "2",
+      "corePath": null,
+      "coreKind": "mrow",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": "+2",
+      "corePath": 1,
+      "coreKind": "mo",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": "1e400",
+      "corePath": 1,
+      "coreKind": "mo",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": "-1e400",
+      "corePath": 0,
+      "coreKind": "mi",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": "1e-400",
+      "corePath": 0,
+      "coreKind": "mi",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": "0x",
+      "corePath": null,
+      "coreKind": "mrow",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": "0b2",
+      "corePath": null,
+      "coreKind": "mrow",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": "0o8",
+      "corePath": null,
+      "coreKind": "mrow",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": "0x1p1",
+      "corePath": null,
+      "coreKind": "mrow",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": "+0x2",
+      "corePath": null,
+      "coreKind": "mrow",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": "-0b10",
+      "corePath": null,
+      "coreKind": "mrow",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": "NaN",
+      "corePath": null,
+      "coreKind": "mrow",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": "infinity",
+      "corePath": null,
+      "coreKind": "mrow",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": ".2",
+      "corePath": 0,
+      "coreKind": "mi",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": "2.",
+      "corePath": 1,
+      "coreKind": "mo",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": "02",
+      "corePath": 1,
+      "coreKind": "mo",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": "2e0",
+      "corePath": 1,
+      "coreKind": "mo",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": "1e",
+      "corePath": null,
+      "coreKind": "mrow",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": "1e+",
+      "corePath": null,
+      "coreKind": "mrow",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": "2a",
+      "corePath": null,
+      "coreKind": "mrow",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": "2 0",
+      "corePath": null,
+      "coreKind": "mrow",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": "1_000",
+      "corePath": null,
+      "coreKind": "mrow",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": "0x1_0",
+      "corePath": null,
+      "coreKind": "mrow",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": "0b1_0",
+      "corePath": null,
+      "coreKind": "mrow",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": "0o1_0",
+      "corePath": null,
+      "coreKind": "mrow",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "corePath": 1,
+      "coreKind": "mo",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": "0b11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111",
+      "corePath": 1,
+      "coreKind": "mo",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": "0o7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777",
+      "corePath": 1,
+      "coreKind": "mo",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": "\t2\t",
+      "corePath": 1,
+      "coreKind": "mo",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": "\n2\n",
+      "corePath": 1,
+      "coreKind": "mo",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": "\u000b2\u000b",
+      "corePath": 1,
+      "coreKind": "mo",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": "\f2\f",
+      "corePath": 1,
+      "coreKind": "mo",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": "\r2\r",
+      "corePath": 1,
+      "coreKind": "mo",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": " 2 ",
+      "corePath": 1,
+      "coreKind": "mo",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": " 2 ",
+      "corePath": 1,
+      "coreKind": "mo",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": " 2 ",
+      "corePath": 1,
+      "coreKind": "mo",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": " 2 ",
+      "corePath": 1,
+      "coreKind": "mo",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": " 2 ",
+      "corePath": 1,
+      "coreKind": "mo",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": " 2 ",
+      "corePath": 1,
+      "coreKind": "mo",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": " 2 ",
+      "corePath": 1,
+      "coreKind": "mo",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": " 2 ",
+      "corePath": 1,
+      "coreKind": "mo",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": " 2 ",
+      "corePath": 1,
+      "coreKind": "mo",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": " 2 ",
+      "corePath": 1,
+      "coreKind": "mo",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": " 2 ",
+      "corePath": 1,
+      "coreKind": "mo",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": " 2 ",
+      "corePath": 1,
+      "coreKind": "mo",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": " 2 ",
+      "corePath": 1,
+      "coreKind": "mo",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": " 2 ",
+      "corePath": 1,
+      "coreKind": "mo",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": " 2 ",
+      "corePath": 1,
+      "coreKind": "mo",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": " 2 ",
+      "corePath": 1,
+      "coreKind": "mo",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": " 2 ",
+      "corePath": 1,
+      "coreKind": "mo",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": " 2 ",
+      "corePath": 1,
+      "coreKind": "mo",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": "　2　",
+      "corePath": 1,
+      "coreKind": "mo",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": "﻿2﻿",
+      "corePath": 1,
+      "coreKind": "mo",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": "2",
+      "corePath": null,
+      "coreKind": "mrow",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": "᠎2᠎",
+      "corePath": null,
+      "coreKind": "mrow",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    },
+    {
+      "selection": "​2​",
+      "corePath": null,
+      "coreKind": "mrow",
+      "selectedSource": "function(){var t=this.attributes.get(\"selection\"),e=Math.max(1,Math.min(this.childNodes.length,t))-1;return this.childNodes[e]||this.factory.create(\"mrow\")}",
+      "coreMOSource": "function(){return this.selected.coreMO()}"
+    }
+  ]
+}

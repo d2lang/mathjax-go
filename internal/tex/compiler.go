@@ -70,9 +70,11 @@ func (c *Compiler) Compile(source string, display bool) (*mml.Node, error) {
 		n.RemoveProperty(ambientFontSource)
 		n.RemoveProperty(vectorFactoryToken)
 		n.RemoveProperty(vectorFactoryDone)
+		n.RemoveProperty(limitsScriptOrigin)
 		return true
 	})
 	setMathMLInheritance(root, display)
+	root = moveMathLimits(root)
 	cleanMathMLAttributes(root)
 	return root, nil
 }
