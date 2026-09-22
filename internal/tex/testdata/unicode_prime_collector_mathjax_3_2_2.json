@@ -1,0 +1,533 @@
+{
+  "assetsSHA256": {
+    "polyfills.js": "7fe1d048c78b0e09854c1259f7413868a51cc8f0c822489eb1ac36ae6c85ce01",
+    "mathjax.js": "cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869",
+    "setup.js": "a52cb0bbabfbd7796b9fedd793b9386c474e3123e788ee151cbe47ca1fa6e881"
+  },
+  "primeSource": "function(t,e){var Q=t.stack.Prev();if(Q||(Q=t.create(\"node\",\"mi\")),l.default.isType(Q,\"msubsup\")&&!l.default.isType(Q,\"msup\")&&l.default.getChildAt(Q,Q.sup))throw new c.default(\"DoubleExponentPrime\",\"Prime causes double exponent: use braces to clarify\");var r=\"\";t.i--;do{r+=H.entities.prime,t.i++,e=t.GetNext()}while(\"'\"===e||e===H.entities.rsquo);r=[\"\",\"\\u2032\",\"\\u2033\",\"\\u2034\",\"\\u2057\"][r.length]||r;var T=t.create(\"token\",\"mo\",{variantForm:!0},r);t.Push(t.itemFactory.create(\"prime\",Q,T))}",
+  "getNextSource": "function(){for(;this.nextIsSpace();)this.i++;return this.getCodePoint()}",
+  "nextIsSpaceSource": "function(){return!!this.string.charAt(this.i).match(/\\s/)}",
+  "getCodePointSource": "function(){var t=this.string.codePointAt(this.i);return void 0===t?\"\":String.fromCodePoint(t)}",
+  "rows": [
+    {
+      "source": "'",
+      "reject": false,
+      "error": null,
+      "cursorUTF16": 1,
+      "remaining": "",
+      "baseUnchanged": true,
+      "baseIdentity": true,
+      "token": "′",
+      "attributes": {},
+      "properties": {
+        "variantForm": true
+      }
+    },
+    {
+      "source": "'",
+      "reject": true,
+      "error": "Prime causes double exponent: use braces to clarify",
+      "cursorUTF16": 1,
+      "remaining": "",
+      "baseUnchanged": true,
+      "baseIdentity": null,
+      "token": null,
+      "attributes": null,
+      "properties": null
+    },
+    {
+      "source": "’",
+      "reject": false,
+      "error": null,
+      "cursorUTF16": 1,
+      "remaining": "",
+      "baseUnchanged": true,
+      "baseIdentity": true,
+      "token": "′",
+      "attributes": {},
+      "properties": {
+        "variantForm": true
+      }
+    },
+    {
+      "source": "’",
+      "reject": true,
+      "error": "Prime causes double exponent: use braces to clarify",
+      "cursorUTF16": 1,
+      "remaining": "",
+      "baseUnchanged": true,
+      "baseIdentity": null,
+      "token": null,
+      "attributes": null,
+      "properties": null
+    },
+    {
+      "source": "'’",
+      "reject": false,
+      "error": null,
+      "cursorUTF16": 2,
+      "remaining": "",
+      "baseUnchanged": true,
+      "baseIdentity": true,
+      "token": "″",
+      "attributes": {},
+      "properties": {
+        "variantForm": true
+      }
+    },
+    {
+      "source": "'’",
+      "reject": true,
+      "error": "Prime causes double exponent: use braces to clarify",
+      "cursorUTF16": 1,
+      "remaining": "’",
+      "baseUnchanged": true,
+      "baseIdentity": null,
+      "token": null,
+      "attributes": null,
+      "properties": null
+    },
+    {
+      "source": "’'",
+      "reject": false,
+      "error": null,
+      "cursorUTF16": 2,
+      "remaining": "",
+      "baseUnchanged": true,
+      "baseIdentity": true,
+      "token": "″",
+      "attributes": {},
+      "properties": {
+        "variantForm": true
+      }
+    },
+    {
+      "source": "’'",
+      "reject": true,
+      "error": "Prime causes double exponent: use braces to clarify",
+      "cursorUTF16": 1,
+      "remaining": "'",
+      "baseUnchanged": true,
+      "baseIdentity": null,
+      "token": null,
+      "attributes": null,
+      "properties": null
+    },
+    {
+      "source": "’’’",
+      "reject": false,
+      "error": null,
+      "cursorUTF16": 3,
+      "remaining": "",
+      "baseUnchanged": true,
+      "baseIdentity": true,
+      "token": "‴",
+      "attributes": {},
+      "properties": {
+        "variantForm": true
+      }
+    },
+    {
+      "source": "’’’",
+      "reject": true,
+      "error": "Prime causes double exponent: use braces to clarify",
+      "cursorUTF16": 1,
+      "remaining": "’’",
+      "baseUnchanged": true,
+      "baseIdentity": null,
+      "token": null,
+      "attributes": null,
+      "properties": null
+    },
+    {
+      "source": "'’'’",
+      "reject": false,
+      "error": null,
+      "cursorUTF16": 4,
+      "remaining": "",
+      "baseUnchanged": true,
+      "baseIdentity": true,
+      "token": "⁗",
+      "attributes": {},
+      "properties": {
+        "variantForm": true
+      }
+    },
+    {
+      "source": "'’'’",
+      "reject": true,
+      "error": "Prime causes double exponent: use braces to clarify",
+      "cursorUTF16": 1,
+      "remaining": "’'’",
+      "baseUnchanged": true,
+      "baseIdentity": null,
+      "token": null,
+      "attributes": null,
+      "properties": null
+    },
+    {
+      "source": "’'’'’",
+      "reject": false,
+      "error": null,
+      "cursorUTF16": 5,
+      "remaining": "",
+      "baseUnchanged": true,
+      "baseIdentity": true,
+      "token": "′′′′′",
+      "attributes": {},
+      "properties": {
+        "variantForm": true
+      }
+    },
+    {
+      "source": "’'’'’",
+      "reject": true,
+      "error": "Prime causes double exponent: use braces to clarify",
+      "cursorUTF16": 1,
+      "remaining": "'’'’",
+      "baseUnchanged": true,
+      "baseIdentity": null,
+      "token": null,
+      "attributes": null,
+      "properties": null
+    },
+    {
+      "source": "’α",
+      "reject": false,
+      "error": null,
+      "cursorUTF16": 1,
+      "remaining": "α",
+      "baseUnchanged": true,
+      "baseIdentity": true,
+      "token": "′",
+      "attributes": {},
+      "properties": {
+        "variantForm": true
+      }
+    },
+    {
+      "source": "’α",
+      "reject": true,
+      "error": "Prime causes double exponent: use braces to clarify",
+      "cursorUTF16": 1,
+      "remaining": "α",
+      "baseUnchanged": true,
+      "baseIdentity": null,
+      "token": null,
+      "attributes": null,
+      "properties": null
+    },
+    {
+      "source": "’𝑥",
+      "reject": false,
+      "error": null,
+      "cursorUTF16": 1,
+      "remaining": "𝑥",
+      "baseUnchanged": true,
+      "baseIdentity": true,
+      "token": "′",
+      "attributes": {},
+      "properties": {
+        "variantForm": true
+      }
+    },
+    {
+      "source": "’𝑥",
+      "reject": true,
+      "error": "Prime causes double exponent: use braces to clarify",
+      "cursorUTF16": 1,
+      "remaining": "𝑥",
+      "baseUnchanged": true,
+      "baseIdentity": null,
+      "token": null,
+      "attributes": null,
+      "properties": null
+    },
+    {
+      "source": "’ \t'’z",
+      "reject": false,
+      "error": null,
+      "cursorUTF16": 5,
+      "remaining": "z",
+      "baseUnchanged": true,
+      "baseIdentity": true,
+      "token": "‴",
+      "attributes": {},
+      "properties": {
+        "variantForm": true
+      }
+    },
+    {
+      "source": "’ \t'’z",
+      "reject": true,
+      "error": "Prime causes double exponent: use braces to clarify",
+      "cursorUTF16": 1,
+      "remaining": " \t'’z",
+      "baseUnchanged": true,
+      "baseIdentity": null,
+      "token": null,
+      "attributes": null,
+      "properties": null
+    },
+    {
+      "source": "’ '’z",
+      "reject": false,
+      "error": null,
+      "cursorUTF16": 4,
+      "remaining": "z",
+      "baseUnchanged": true,
+      "baseIdentity": true,
+      "token": "‴",
+      "attributes": {},
+      "properties": {
+        "variantForm": true
+      }
+    },
+    {
+      "source": "’ '’z",
+      "reject": true,
+      "error": "Prime causes double exponent: use braces to clarify",
+      "cursorUTF16": 1,
+      "remaining": " '’z",
+      "baseUnchanged": true,
+      "baseIdentity": null,
+      "token": null,
+      "attributes": null,
+      "properties": null
+    },
+    {
+      "source": "’% comment\n'",
+      "reject": false,
+      "error": null,
+      "cursorUTF16": 1,
+      "remaining": "% comment\n'",
+      "baseUnchanged": true,
+      "baseIdentity": true,
+      "token": "′",
+      "attributes": {},
+      "properties": {
+        "variantForm": true
+      }
+    },
+    {
+      "source": "’% comment\n'",
+      "reject": true,
+      "error": "Prime causes double exponent: use braces to clarify",
+      "cursorUTF16": 1,
+      "remaining": "% comment\n'",
+      "baseUnchanged": true,
+      "baseIdentity": null,
+      "token": null,
+      "attributes": null,
+      "properties": null
+    },
+    {
+      "source": "’\\limits",
+      "reject": false,
+      "error": null,
+      "cursorUTF16": 1,
+      "remaining": "\\limits",
+      "baseUnchanged": true,
+      "baseIdentity": true,
+      "token": "′",
+      "attributes": {},
+      "properties": {
+        "variantForm": true
+      }
+    },
+    {
+      "source": "’\\limits",
+      "reject": true,
+      "error": "Prime causes double exponent: use braces to clarify",
+      "cursorUTF16": 1,
+      "remaining": "\\limits",
+      "baseUnchanged": true,
+      "baseIdentity": null,
+      "token": null,
+      "attributes": null,
+      "properties": null
+    },
+    {
+      "source": "’‘",
+      "reject": false,
+      "error": null,
+      "cursorUTF16": 1,
+      "remaining": "‘",
+      "baseUnchanged": true,
+      "baseIdentity": true,
+      "token": "′",
+      "attributes": {},
+      "properties": {
+        "variantForm": true
+      }
+    },
+    {
+      "source": "’‘",
+      "reject": true,
+      "error": "Prime causes double exponent: use braces to clarify",
+      "cursorUTF16": 1,
+      "remaining": "‘",
+      "baseUnchanged": true,
+      "baseIdentity": null,
+      "token": null,
+      "attributes": null,
+      "properties": null
+    },
+    {
+      "source": "’′",
+      "reject": false,
+      "error": null,
+      "cursorUTF16": 1,
+      "remaining": "′",
+      "baseUnchanged": true,
+      "baseIdentity": true,
+      "token": "′",
+      "attributes": {},
+      "properties": {
+        "variantForm": true
+      }
+    },
+    {
+      "source": "’′",
+      "reject": true,
+      "error": "Prime causes double exponent: use braces to clarify",
+      "cursorUTF16": 1,
+      "remaining": "′",
+      "baseUnchanged": true,
+      "baseIdentity": null,
+      "token": null,
+      "attributes": null,
+      "properties": null
+    },
+    {
+      "source": "’–",
+      "reject": false,
+      "error": null,
+      "cursorUTF16": 1,
+      "remaining": "–",
+      "baseUnchanged": true,
+      "baseIdentity": true,
+      "token": "′",
+      "attributes": {},
+      "properties": {
+        "variantForm": true
+      }
+    },
+    {
+      "source": "’–",
+      "reject": true,
+      "error": "Prime causes double exponent: use braces to clarify",
+      "cursorUTF16": 1,
+      "remaining": "–",
+      "baseUnchanged": true,
+      "baseIdentity": null,
+      "token": null,
+      "attributes": null,
+      "properties": null
+    },
+    {
+      "source": "'﻿'",
+      "reject": false,
+      "error": null,
+      "cursorUTF16": 3,
+      "remaining": "",
+      "baseUnchanged": true,
+      "baseIdentity": true,
+      "token": "″",
+      "attributes": {},
+      "properties": {
+        "variantForm": true
+      }
+    },
+    {
+      "source": "'﻿'",
+      "reject": true,
+      "error": "Prime causes double exponent: use braces to clarify",
+      "cursorUTF16": 1,
+      "remaining": "﻿'",
+      "baseUnchanged": true,
+      "baseIdentity": null,
+      "token": null,
+      "attributes": null,
+      "properties": null
+    },
+    {
+      "source": "''",
+      "reject": false,
+      "error": null,
+      "cursorUTF16": 1,
+      "remaining": "'",
+      "baseUnchanged": true,
+      "baseIdentity": true,
+      "token": "′",
+      "attributes": {},
+      "properties": {
+        "variantForm": true
+      }
+    },
+    {
+      "source": "''",
+      "reject": true,
+      "error": "Prime causes double exponent: use braces to clarify",
+      "cursorUTF16": 1,
+      "remaining": "'",
+      "baseUnchanged": true,
+      "baseIdentity": null,
+      "token": null,
+      "attributes": null,
+      "properties": null
+    },
+    {
+      "source": "’﻿’",
+      "reject": false,
+      "error": null,
+      "cursorUTF16": 3,
+      "remaining": "",
+      "baseUnchanged": true,
+      "baseIdentity": true,
+      "token": "″",
+      "attributes": {},
+      "properties": {
+        "variantForm": true
+      }
+    },
+    {
+      "source": "’﻿’",
+      "reject": true,
+      "error": "Prime causes double exponent: use braces to clarify",
+      "cursorUTF16": 1,
+      "remaining": "﻿’",
+      "baseUnchanged": true,
+      "baseIdentity": null,
+      "token": null,
+      "attributes": null,
+      "properties": null
+    },
+    {
+      "source": "’’",
+      "reject": false,
+      "error": null,
+      "cursorUTF16": 1,
+      "remaining": "’",
+      "baseUnchanged": true,
+      "baseIdentity": true,
+      "token": "′",
+      "attributes": {},
+      "properties": {
+        "variantForm": true
+      }
+    },
+    {
+      "source": "’’",
+      "reject": true,
+      "error": "Prime causes double exponent: use braces to clarify",
+      "cursorUTF16": 1,
+      "remaining": "’",
+      "baseUnchanged": true,
+      "baseIdentity": null,
+      "token": null,
+      "attributes": null,
+      "properties": null
+    }
+  ]
+}

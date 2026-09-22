@@ -1,0 +1,1725 @@
+{
+  "baseline": "3dcb09030b4404c4c5982a9cebfbe5c1b6e51cd9",
+  "unchangedNonPrime": {
+    "mbox-literal-inline": {
+      "tex": "\\mbox{x\u2019}",
+      "display": false,
+      "svgSHA256": "834d4d26d57dfd4476989b2224513321a84f5bd760ad391a8bc5b5a20cd433ca",
+      "baselineTreeSHA256": "247c517b2cade6708c3cefe7637e540039b3e4128f9c9782e3e8753b1827eeb8",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mtext",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x\u2019",
+                    "attributes": {},
+                    "children": [],
+                    "properties": {}
+                  }
+                ],
+                "properties": {}
+              }
+            ],
+            "properties": {}
+          }
+        ],
+        "properties": {}
+      }
+    },
+    "mbox-literal-display": {
+      "tex": "\\mbox{x\u2019}",
+      "display": true,
+      "svgSHA256": "834d4d26d57dfd4476989b2224513321a84f5bd760ad391a8bc5b5a20cd433ca",
+      "baselineTreeSHA256": "ac2b207cdf794ac3438a200f7bdc4e161e134c3c57ab4e84c4965925f8487e97",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mtext",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x\u2019",
+                    "attributes": {},
+                    "children": [],
+                    "properties": {}
+                  }
+                ],
+                "properties": {}
+              }
+            ],
+            "properties": {}
+          }
+        ],
+        "properties": {}
+      }
+    },
+    "operator-literal-inline": {
+      "tex": "\\operatorname{x\u2019}",
+      "display": false,
+      "svgSHA256": "79e7f3bd2c5c355b8727e4245e9f096e005df483e24e215fb2dbe0d0d47d483e",
+      "baselineTreeSHA256": "fa339cc5579e0a2ed5808e582ea4ed4a0b3924dbd930112aa0ac4f14100fb17b",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {
+                          "mathvariant": "normal"
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "x",
+                            "attributes": {},
+                            "children": [],
+                            "properties": {}
+                          }
+                        ],
+                        "properties": {
+                          "texClass": 1
+                        }
+                      },
+                      {
+                        "kind": "mo",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "\u2019",
+                            "attributes": {},
+                            "children": [],
+                            "properties": {}
+                          }
+                        ],
+                        "properties": {
+                          "in-lists": "fixStretchy"
+                        }
+                      }
+                    ],
+                    "properties": {}
+                  }
+                ],
+                "properties": {
+                  "texClass": 1,
+                  "movesupsub": false,
+                  "movablelimits": true
+                }
+              }
+            ],
+            "properties": {}
+          }
+        ],
+        "properties": {}
+      }
+    },
+    "operator-literal-display": {
+      "tex": "\\operatorname{x\u2019}",
+      "display": true,
+      "svgSHA256": "79e7f3bd2c5c355b8727e4245e9f096e005df483e24e215fb2dbe0d0d47d483e",
+      "baselineTreeSHA256": "4cdedf2f81380e44120484e535a498298b548fb369d5cb2d3312ba3454c3859e",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {
+                          "mathvariant": "normal"
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "x",
+                            "attributes": {},
+                            "children": [],
+                            "properties": {}
+                          }
+                        ],
+                        "properties": {
+                          "texClass": 1
+                        }
+                      },
+                      {
+                        "kind": "mo",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "\u2019",
+                            "attributes": {},
+                            "children": [],
+                            "properties": {}
+                          }
+                        ],
+                        "properties": {
+                          "in-lists": "fixStretchy"
+                        }
+                      }
+                    ],
+                    "properties": {}
+                  }
+                ],
+                "properties": {
+                  "texClass": 1,
+                  "movesupsub": false,
+                  "movablelimits": true
+                }
+              }
+            ],
+            "properties": {}
+          }
+        ],
+        "properties": {}
+      }
+    },
+    "left-quote-inline": {
+      "tex": "x\u2018",
+      "display": false,
+      "svgSHA256": "1c159c019b036278fcce09efdbe3a941f532c551810a61a71881d4c389536ea8",
+      "baselineTreeSHA256": "482b664cdf1702abb99ae834786aafaf82edb771fb9185a3109ccf4cfd547ffc",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "children": [],
+                    "properties": {}
+                  }
+                ],
+                "properties": {}
+              },
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "\u2018",
+                    "attributes": {},
+                    "children": [],
+                    "properties": {}
+                  }
+                ],
+                "properties": {
+                  "in-lists": "fixStretchy"
+                }
+              }
+            ],
+            "properties": {}
+          }
+        ],
+        "properties": {}
+      }
+    },
+    "left-quote-display": {
+      "tex": "x\u2018",
+      "display": true,
+      "svgSHA256": "1c159c019b036278fcce09efdbe3a941f532c551810a61a71881d4c389536ea8",
+      "baselineTreeSHA256": "7760df93bc539c093c0d79593ecf194344012af5a66c36855fd56ab9cba457de",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "children": [],
+                    "properties": {}
+                  }
+                ],
+                "properties": {}
+              },
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "\u2018",
+                    "attributes": {},
+                    "children": [],
+                    "properties": {}
+                  }
+                ],
+                "properties": {
+                  "in-lists": "fixStretchy"
+                }
+              }
+            ],
+            "properties": {}
+          }
+        ],
+        "properties": {}
+      }
+    },
+    "literal-single-inline": {
+      "tex": "x\u2032",
+      "display": false,
+      "svgSHA256": "0653cfd5424474e2721d87114f5ee51958ef028f5ccb516866382be1b1611ec5",
+      "baselineTreeSHA256": "149c345541579b0139e178276bfd3faf159ccca89cf08a1fd13782338abc4f97",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "children": [],
+                    "properties": {}
+                  }
+                ],
+                "properties": {}
+              },
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "\u2032",
+                    "attributes": {},
+                    "children": [],
+                    "properties": {}
+                  }
+                ],
+                "properties": {
+                  "in-lists": "fixStretchy"
+                }
+              }
+            ],
+            "properties": {}
+          }
+        ],
+        "properties": {}
+      }
+    },
+    "literal-single-display": {
+      "tex": "x\u2032",
+      "display": true,
+      "svgSHA256": "0653cfd5424474e2721d87114f5ee51958ef028f5ccb516866382be1b1611ec5",
+      "baselineTreeSHA256": "aa152f0da3bd62764576b14990274307c55e5da4ce2fc7c569eabcbab134c9cb",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "children": [],
+                    "properties": {}
+                  }
+                ],
+                "properties": {}
+              },
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "\u2032",
+                    "attributes": {},
+                    "children": [],
+                    "properties": {}
+                  }
+                ],
+                "properties": {
+                  "in-lists": "fixStretchy"
+                }
+              }
+            ],
+            "properties": {}
+          }
+        ],
+        "properties": {}
+      }
+    },
+    "literal-double-inline": {
+      "tex": "x\u2033",
+      "display": false,
+      "svgSHA256": "a7fd173a9256ae2d8caa14653f369020427eb1f9affda952f4a3b5c25c1ab9a4",
+      "baselineTreeSHA256": "46eed27ff6390bc726d99456f91deb4ecbb161cbf9b94b6032610b2e92086f40",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "children": [],
+                    "properties": {}
+                  }
+                ],
+                "properties": {}
+              },
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "\u2033",
+                    "attributes": {},
+                    "children": [],
+                    "properties": {}
+                  }
+                ],
+                "properties": {
+                  "in-lists": "fixStretchy"
+                }
+              }
+            ],
+            "properties": {}
+          }
+        ],
+        "properties": {}
+      }
+    },
+    "literal-double-display": {
+      "tex": "x\u2033",
+      "display": true,
+      "svgSHA256": "a7fd173a9256ae2d8caa14653f369020427eb1f9affda952f4a3b5c25c1ab9a4",
+      "baselineTreeSHA256": "d0e904b35cad72993b96df1ec7d23ee624134f445893594b8b7e7a2aa19216a5",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "children": [],
+                    "properties": {}
+                  }
+                ],
+                "properties": {}
+              },
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "\u2033",
+                    "attributes": {},
+                    "children": [],
+                    "properties": {}
+                  }
+                ],
+                "properties": {
+                  "in-lists": "fixStretchy"
+                }
+              }
+            ],
+            "properties": {}
+          }
+        ],
+        "properties": {}
+      }
+    },
+    "unrelated-punctuation-inline": {
+      "tex": "x\u2013y",
+      "display": false,
+      "svgSHA256": "da145fc081301bd7d1a195f506b8b8fb3875699b4c49ef6663e396535bc62e76",
+      "baselineTreeSHA256": "34d52e467bc7bc336491c84c863c5ce8cff60af1a8b4eed21c79e21eed4ae239",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "children": [],
+                    "properties": {}
+                  }
+                ],
+                "properties": {}
+              },
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "\u2013",
+                    "attributes": {},
+                    "children": [],
+                    "properties": {}
+                  }
+                ],
+                "properties": {
+                  "in-lists": "fixStretchy"
+                }
+              },
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "y",
+                    "attributes": {},
+                    "children": [],
+                    "properties": {}
+                  }
+                ],
+                "properties": {}
+              }
+            ],
+            "properties": {}
+          }
+        ],
+        "properties": {}
+      }
+    },
+    "unrelated-punctuation-display": {
+      "tex": "x\u2013y",
+      "display": true,
+      "svgSHA256": "da145fc081301bd7d1a195f506b8b8fb3875699b4c49ef6663e396535bc62e76",
+      "baselineTreeSHA256": "e84d7ef5d6b2b5bfdd8b53e5fba4b51df2be9ffcbfef76c7374836a894db1d06",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "children": [],
+                    "properties": {}
+                  }
+                ],
+                "properties": {}
+              },
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "\u2013",
+                    "attributes": {},
+                    "children": [],
+                    "properties": {}
+                  }
+                ],
+                "properties": {
+                  "in-lists": "fixStretchy"
+                }
+              },
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "y",
+                    "attributes": {},
+                    "children": [],
+                    "properties": {}
+                  }
+                ],
+                "properties": {}
+              }
+            ],
+            "properties": {}
+          }
+        ],
+        "properties": {}
+      }
+    }
+  },
+  "inheritedPrimeMetadata": {
+    "unicode-1-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "primaryValue": false,
+        "primaryText": "\u2032"
+      }
+    ],
+    "unicode-1-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "primaryValue": false,
+        "primaryText": "\u2032"
+      }
+    ],
+    "unicode-2-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "primaryValue": false,
+        "primaryText": "\u2033"
+      }
+    ],
+    "unicode-2-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "primaryValue": false,
+        "primaryText": "\u2033"
+      }
+    ],
+    "unicode-3-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "primaryValue": false,
+        "primaryText": "\u2034"
+      }
+    ],
+    "unicode-3-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "primaryValue": false,
+        "primaryText": "\u2034"
+      }
+    ],
+    "unicode-4-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "primaryValue": false,
+        "primaryText": "\u2057"
+      }
+    ],
+    "unicode-4-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "primaryValue": false,
+        "primaryText": "\u2057"
+      }
+    ],
+    "unicode-5-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "primaryValue": false,
+        "primaryText": "\u2032\u2032\u2032\u2032\u2032"
+      }
+    ],
+    "unicode-5-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "primaryValue": false,
+        "primaryText": "\u2032\u2032\u2032\u2032\u2032"
+      }
+    ],
+    "mixed-ascii-first-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "primaryValue": false,
+        "primaryText": "\u2033"
+      }
+    ],
+    "mixed-ascii-first-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "primaryValue": false,
+        "primaryText": "\u2033"
+      }
+    ],
+    "mixed-unicode-first-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "primaryValue": false,
+        "primaryText": "\u2033"
+      }
+    ],
+    "mixed-unicode-first-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "primaryValue": false,
+        "primaryText": "\u2033"
+      }
+    ],
+    "mixed-three-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "primaryValue": false,
+        "primaryText": "\u2034"
+      }
+    ],
+    "mixed-three-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "primaryValue": false,
+        "primaryText": "\u2034"
+      }
+    ],
+    "mixed-four-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "primaryValue": false,
+        "primaryText": "\u2057"
+      }
+    ],
+    "mixed-four-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "primaryValue": false,
+        "primaryText": "\u2057"
+      }
+    ],
+    "mixed-five-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "primaryValue": false,
+        "primaryText": "\u2032\u2032\u2032\u2032\u2032"
+      }
+    ],
+    "mixed-five-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "primaryValue": false,
+        "primaryText": "\u2032\u2032\u2032\u2032\u2032"
+      }
+    ],
+    "following-ascii-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "primaryValue": false,
+        "primaryText": "\u2032"
+      }
+    ],
+    "following-ascii-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "primaryValue": false,
+        "primaryText": "\u2032"
+      }
+    ],
+    "following-multibyte-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "primaryValue": false,
+        "primaryText": "\u2032"
+      }
+    ],
+    "following-multibyte-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "primaryValue": false,
+        "primaryText": "\u2032"
+      }
+    ],
+    "bare-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "primaryValue": false,
+        "primaryText": "\u2032"
+      }
+    ],
+    "bare-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "primaryValue": false,
+        "primaryText": "\u2032"
+      }
+    ],
+    "bare-sup-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "\u2032"
+      }
+    ],
+    "bare-sup-display": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "\u2032"
+      }
+    ],
+    "group-base-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "\u2032"
+      }
+    ],
+    "group-base-display": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "\u2032"
+      }
+    ],
+    "group-prime-inline": [
+      {
+        "path": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "primaryValue": false,
+        "primaryText": "\u2032"
+      }
+    ],
+    "group-prime-display": [
+      {
+        "path": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "primaryValue": false,
+        "primaryText": "\u2032"
+      }
+    ],
+    "unicode-sup-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "\u2032"
+      }
+    ],
+    "unicode-sup-display": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "\u2032"
+      }
+    ],
+    "unicode-sub-inline": [
+      {
+        "path": [
+          0,
+          0,
+          2
+        ],
+        "primaryValue": false,
+        "primaryText": "\u2032"
+      }
+    ],
+    "unicode-sub-display": [
+      {
+        "path": [
+          0,
+          0,
+          2
+        ],
+        "primaryValue": false,
+        "primaryText": "\u2032"
+      }
+    ],
+    "sup-sub-inline": [
+      {
+        "path": [
+          0,
+          0,
+          2,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "\u2032"
+      }
+    ],
+    "sup-sub-display": [
+      {
+        "path": [
+          0,
+          0,
+          2,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "\u2032"
+      }
+    ],
+    "base-sub-inline": [
+      {
+        "path": [
+          0,
+          0,
+          2,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "\u2032"
+      }
+    ],
+    "base-sub-display": [
+      {
+        "path": [
+          0,
+          0,
+          2,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "\u2032"
+      }
+    ],
+    "mixed-sup-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "\u2033"
+      }
+    ],
+    "mixed-sup-display": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "\u2033"
+      }
+    ],
+    "mixed-sub-inline": [
+      {
+        "path": [
+          0,
+          0,
+          2
+        ],
+        "primaryValue": false,
+        "primaryText": "\u2033"
+      }
+    ],
+    "mixed-sub-display": [
+      {
+        "path": [
+          0,
+          0,
+          2
+        ],
+        "primaryValue": false,
+        "primaryText": "\u2033"
+      }
+    ],
+    "sup-group-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "\u2032"
+      }
+    ],
+    "sup-group-display": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "\u2032"
+      }
+    ],
+    "empty-sup-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "\u2032"
+      }
+    ],
+    "empty-sup-display": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "\u2032"
+      }
+    ],
+    "sum-sup-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "\u2032"
+      }
+    ],
+    "sum-sup-display": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "\u2032"
+      }
+    ],
+    "sum-sub-inline": [
+      {
+        "path": [
+          0,
+          0,
+          2
+        ],
+        "primaryValue": true,
+        "primaryText": "\u2032"
+      }
+    ],
+    "sum-sub-display": [
+      {
+        "path": [
+          0,
+          0,
+          2
+        ],
+        "primaryValue": true,
+        "primaryText": "\u2032"
+      }
+    ],
+    "sum-limits-first-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "\u2032"
+      }
+    ],
+    "sum-limits-first-display": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "\u2032"
+      }
+    ],
+    "sum-no-limits-first-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "\u2032"
+      }
+    ],
+    "sum-no-limits-first-display": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "\u2032"
+      }
+    ],
+    "sum-consumed-limits-inline": [
+      {
+        "path": [
+          0,
+          0,
+          2
+        ],
+        "primaryValue": true,
+        "primaryText": "\u2032"
+      }
+    ],
+    "sum-consumed-limits-display": [
+      {
+        "path": [
+          0,
+          0,
+          2
+        ],
+        "primaryValue": true,
+        "primaryText": "\u2032"
+      }
+    ],
+    "overset-sup-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "\u2032"
+      }
+    ],
+    "overset-sup-display": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "\u2032"
+      }
+    ],
+    "overset-sub-inline": [
+      {
+        "path": [
+          0,
+          0,
+          2
+        ],
+        "primaryValue": false,
+        "primaryText": "\u2032"
+      }
+    ],
+    "overset-sub-display": [
+      {
+        "path": [
+          0,
+          0,
+          2
+        ],
+        "primaryValue": false,
+        "primaryText": "\u2032"
+      }
+    ],
+    "underset-sup-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "\u2032"
+      }
+    ],
+    "underset-sup-display": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "\u2032"
+      }
+    ],
+    "font-base-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "\u2032"
+      }
+    ],
+    "font-base-display": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "\u2032"
+      }
+    ],
+    "font-scope-inline": [
+      {
+        "path": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "\u2032"
+      }
+    ],
+    "font-scope-display": [
+      {
+        "path": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "\u2032"
+      }
+    ],
+    "font-pending-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "\u2032"
+      }
+    ],
+    "font-pending-display": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "\u2032"
+      }
+    ],
+    "nested-sub-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "\u2032"
+      }
+    ],
+    "nested-sub-display": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "\u2032"
+      }
+    ],
+    "nested-sup-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "\u2032"
+      }
+    ],
+    "nested-sup-display": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "\u2032"
+      }
+    ],
+    "space-run-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "\u2034"
+      }
+    ],
+    "space-run-display": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "\u2034"
+      }
+    ],
+    "tab-run-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "\u2034"
+      }
+    ],
+    "tab-run-display": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "\u2034"
+      }
+    ],
+    "nbsp-run-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "\u2034"
+      }
+    ],
+    "nbsp-run-display": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "\u2034"
+      }
+    ],
+    "comment-script-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "\u2032"
+      }
+    ],
+    "comment-script-display": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "\u2032"
+      }
+    ],
+    "ordinary-then-sup-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "primaryValue": false,
+        "primaryText": "\u2032"
+      }
+    ],
+    "ordinary-then-sup-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "primaryValue": false,
+        "primaryText": "\u2032"
+      }
+    ],
+    "ascii-control-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "\u2032"
+      }
+    ],
+    "ascii-control-display": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "\u2032"
+      }
+    ]
+  }
+}
