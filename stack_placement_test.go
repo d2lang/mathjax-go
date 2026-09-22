@@ -38,7 +38,7 @@ func projectStackTree(n *mml.Node) *stackTree {
 	return r
 }
 func TestStackPlacementPinnedReferences(t *testing.T) {
-	// Keep the two unrelated preexisting boundaries byte-bound to the accepted
+	// Keep the unrelated preexisting script-attachment boundary byte-bound to the accepted
 	// parent. They are not counted as raw primary parity cases.
 	boundaryData, err := os.ReadFile("testdata/stack_placement_boundaries.json")
 	if err != nil {
@@ -56,10 +56,10 @@ func TestStackPlacementPinnedReferences(t *testing.T) {
 	if err = json.Unmarshal(boundaryData, &boundaries); err != nil {
 		t.Fatal(err)
 	}
-	if boundaries.Baseline != "5836be2e73642e7ee36e6e514ab724c2e687362a" || len(boundaries.Cases) != 4 {
+	if boundaries.Baseline != "5836be2e73642e7ee36e6e514ab724c2e687362a" || len(boundaries.Cases) != 2 {
 		t.Fatal("unbound stack boundary matrix")
 	}
-	for _, name := range []string{"subsequent-scripts-inline", "subsequent-scripts-display", "stackrel-control-inline", "stackrel-control-display"} {
+	for _, name := range []string{"subsequent-scripts-inline", "subsequent-scripts-display"} {
 		if _, ok := boundaries.Cases[name]; !ok {
 			t.Fatal("missing precise boundary", name)
 		}

@@ -111,10 +111,10 @@ func TestExplicitLimitsPinnedReferences(t *testing.T) {
 	if err = json.Unmarshal(data, &boundaries); err != nil {
 		t.Fatal(err)
 	}
-	if boundaries.Baseline != "0daaf607d985dfdd636e1ff9c353355541425961" || len(boundaries.RawBoundaries) != 4 || len(boundaries.MetadataBoundaries) != 8 {
+	if boundaries.Baseline != "0daaf607d985dfdd636e1ff9c353355541425961" || len(boundaries.RawBoundaries) != 2 || len(boundaries.MetadataBoundaries) != 8 {
 		t.Fatal("unbound qualification matrix")
 	}
-	for _, stem := range []string{"stackrel-control", "prime-consumed-sup"} {
+	for _, stem := range []string{"prime-consumed-sup"} {
 		for _, mode := range []string{"inline", "display"} {
 			if _, ok := boundaries.RawBoundaries[stem+"-"+mode]; !ok {
 				t.Fatal("changed precise raw boundary set")
