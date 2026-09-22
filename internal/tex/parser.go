@@ -326,40 +326,9 @@ func (p *parser) attachScript(nodes []*mml.Node, marker byte) ([]*mml.Node, erro
 	if value, ok := base.Attributes.Get("movesupsub"); ok {
 		moveLimits, _ = value.(bool)
 	}
-	// BaseMethods chooses the under/over family from movesupsub in both
-	// modes. The renderer uses movablelimits for inline side placement.
-	underOver := moveLimits
-	var result *mml.Node
-	if marker == '_' {
-		switch base.Kind {
-		case "msup":
-			result = node("msubsup", base.Children[0], script, base.Children[1])
-		case "mover":
-			result = node("munderover", base.Children[0], script, base.Children[1])
-		case "msub", "msubsup", "munder", "munderover":
-			return nil, texError("DoubleSubscripts", "Double subscripts: use braces to clarify")
-		default:
-			if underOver {
-				result = node("munder", base, script)
-			} else {
-				result = node("msub", base, script)
-			}
-		}
-	} else {
-		switch base.Kind {
-		case "msub":
-			result = node("msubsup", base.Children[0], base.Children[1], script)
-		case "munder":
-			result = node("munderover", base.Children[0], base.Children[1], script)
-		case "msup", "msubsup", "mover", "munderover":
-			return nil, texError("DoubleExponent", "Double exponent: use braces to clarify")
-		default:
-			if underOver {
-				result = node("mover", base, script)
-			} else {
-				result = node("msup", base, script)
-			}
-		}
+	result, err := attachScriptBase(base, script, marker, moveLimits)
+	if err != nil {
+		return nil, err
 	}
 	result.Flags.Embellished = base.Flags.Embellished
 	result.Flags.CoreIndex = 0

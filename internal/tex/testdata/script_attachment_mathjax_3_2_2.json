@@ -1,0 +1,2296 @@
+{
+  "assetsSHA256": {
+    "polyfills.js": "7fe1d048c78b0e09854c1259f7413868a51cc8f0c822489eb1ac36ae6c85ce01",
+    "mathjax.js": "cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869",
+    "setup.js": "a52cb0bbabfbd7796b9fedd793b9386c474e3123e788ee151cbe47ca1fa6e881"
+  },
+  "subscriptSource": "function(t,e){var Q,r,T;t.GetNext().match(/\\d/)&&(t.string=t.string.substr(0,t.i+1)+\" \"+t.string.substr(t.i+1));var n=t.stack.Top();n.isKind(\"prime\")?(T=(Q=i(n.Peek(2),2))[0],r=Q[1],t.stack.Pop()):(T=t.stack.Prev())||(T=t.create(\"token\",\"mi\",{},\"\"));var o=l.default.getProperty(T,\"movesupsub\"),a=l.default.isType(T,\"msubsup\")?T.sub:T.under;if(l.default.isType(T,\"msubsup\")&&!l.default.isType(T,\"msup\")&&l.default.getChildAt(T,T.sub)||l.default.isType(T,\"munderover\")&&!l.default.isType(T,\"mover\")&&l.default.getChildAt(T,T.under)&&!l.default.getProperty(T,\"subsupOK\"))throw new c.default(\"DoubleSubscripts\",\"Double subscripts: use braces to clarify\");l.default.isType(T,\"msubsup\")&&!l.default.isType(T,\"msup\")||(o?((!l.default.isType(T,\"munderover\")||l.default.isType(T,\"mover\")||l.default.getChildAt(T,T.under))&&(T=t.create(\"node\",\"munderover\",[T],{movesupsub:!0})),a=T.under):a=(T=t.create(\"node\",\"msubsup\",[T])).sub),t.Push(t.itemFactory.create(\"subsup\",T).setProperties({position:a,primes:r,movesupsub:o}))}",
+  "superscriptSource": "function(t,e){var Q,r,T;t.GetNext().match(/\\d/)&&(t.string=t.string.substr(0,t.i+1)+\" \"+t.string.substr(t.i+1));var n=t.stack.Top();n.isKind(\"prime\")?(T=(Q=i(n.Peek(2),2))[0],r=Q[1],t.stack.Pop()):(T=t.stack.Prev())||(T=t.create(\"token\",\"mi\",{},\"\"));var o=l.default.getProperty(T,\"movesupsub\"),a=l.default.isType(T,\"msubsup\")?T.sup:T.over;if(l.default.isType(T,\"msubsup\")&&!l.default.isType(T,\"msup\")&&l.default.getChildAt(T,T.sup)||l.default.isType(T,\"munderover\")&&!l.default.isType(T,\"mover\")&&l.default.getChildAt(T,T.over)&&!l.default.getProperty(T,\"subsupOK\"))throw new c.default(\"DoubleExponent\",\"Double exponent: use braces to clarify\");l.default.isType(T,\"msubsup\")&&!l.default.isType(T,\"msup\")||(o?((!l.default.isType(T,\"munderover\")||l.default.isType(T,\"mover\")||l.default.getChildAt(T,T.over))&&(T=t.create(\"node\",\"munderover\",[T],{movesupsub:!0})),a=T.over):a=(T=t.create(\"node\",\"msubsup\",[T])).sup),t.Push(t.itemFactory.create(\"subsup\",T).setProperties({position:a,primes:r,movesupsub:o}))}",
+  "rows": [
+    {
+      "type": "msub",
+      "kind": "msub",
+      "marker": "_",
+      "moves": null,
+      "allowed": false,
+      "error": "Double subscripts: use braces to clarify"
+    },
+    {
+      "type": "msub",
+      "kind": "msub",
+      "marker": "_",
+      "moves": null,
+      "allowed": true,
+      "error": "Double subscripts: use braces to clarify"
+    },
+    {
+      "type": "msub",
+      "kind": "msub",
+      "marker": "_",
+      "moves": false,
+      "allowed": false,
+      "error": "Double subscripts: use braces to clarify"
+    },
+    {
+      "type": "msub",
+      "kind": "msub",
+      "marker": "_",
+      "moves": false,
+      "allowed": true,
+      "error": "Double subscripts: use braces to clarify"
+    },
+    {
+      "type": "msub",
+      "kind": "msub",
+      "marker": "_",
+      "moves": true,
+      "allowed": false,
+      "error": "Double subscripts: use braces to clarify"
+    },
+    {
+      "type": "msub",
+      "kind": "msub",
+      "marker": "_",
+      "moves": true,
+      "allowed": true,
+      "error": "Double subscripts: use braces to clarify"
+    },
+    {
+      "type": "msub",
+      "kind": "msub",
+      "marker": "^",
+      "moves": null,
+      "allowed": false,
+      "error": null,
+      "sourceKind": "msub",
+      "position": 2,
+      "reused": true,
+      "compactKind": "msubsup",
+      "children": [
+        "core",
+        "under",
+        "script"
+      ],
+      "childParents": [
+        true,
+        true,
+        true
+      ],
+      "attributes": {
+        "id": "authored"
+      },
+      "properties": {
+        "kept": 17
+      },
+      "baseRetainedWhole": false
+    },
+    {
+      "type": "msub",
+      "kind": "msub",
+      "marker": "^",
+      "moves": null,
+      "allowed": true,
+      "error": null,
+      "sourceKind": "msub",
+      "position": 2,
+      "reused": true,
+      "compactKind": "msubsup",
+      "children": [
+        "core",
+        "under",
+        "script"
+      ],
+      "childParents": [
+        true,
+        true,
+        true
+      ],
+      "attributes": {
+        "id": "authored"
+      },
+      "properties": {
+        "kept": 17,
+        "subsupOK": true
+      },
+      "baseRetainedWhole": false
+    },
+    {
+      "type": "msub",
+      "kind": "msub",
+      "marker": "^",
+      "moves": false,
+      "allowed": false,
+      "error": null,
+      "sourceKind": "msub",
+      "position": 2,
+      "reused": true,
+      "compactKind": "msubsup",
+      "children": [
+        "core",
+        "under",
+        "script"
+      ],
+      "childParents": [
+        true,
+        true,
+        true
+      ],
+      "attributes": {
+        "id": "authored"
+      },
+      "properties": {
+        "kept": 17,
+        "movesupsub": false
+      },
+      "baseRetainedWhole": false
+    },
+    {
+      "type": "msub",
+      "kind": "msub",
+      "marker": "^",
+      "moves": false,
+      "allowed": true,
+      "error": null,
+      "sourceKind": "msub",
+      "position": 2,
+      "reused": true,
+      "compactKind": "msubsup",
+      "children": [
+        "core",
+        "under",
+        "script"
+      ],
+      "childParents": [
+        true,
+        true,
+        true
+      ],
+      "attributes": {
+        "id": "authored"
+      },
+      "properties": {
+        "kept": 17,
+        "movesupsub": false,
+        "subsupOK": true
+      },
+      "baseRetainedWhole": false
+    },
+    {
+      "type": "msub",
+      "kind": "msub",
+      "marker": "^",
+      "moves": true,
+      "allowed": false,
+      "error": null,
+      "sourceKind": "msub",
+      "position": 2,
+      "reused": true,
+      "compactKind": "msubsup",
+      "children": [
+        "core",
+        "under",
+        "script"
+      ],
+      "childParents": [
+        true,
+        true,
+        true
+      ],
+      "attributes": {
+        "id": "authored"
+      },
+      "properties": {
+        "kept": 17,
+        "movesupsub": true
+      },
+      "baseRetainedWhole": false
+    },
+    {
+      "type": "msub",
+      "kind": "msub",
+      "marker": "^",
+      "moves": true,
+      "allowed": true,
+      "error": null,
+      "sourceKind": "msub",
+      "position": 2,
+      "reused": true,
+      "compactKind": "msubsup",
+      "children": [
+        "core",
+        "under",
+        "script"
+      ],
+      "childParents": [
+        true,
+        true,
+        true
+      ],
+      "attributes": {
+        "id": "authored"
+      },
+      "properties": {
+        "kept": 17,
+        "movesupsub": true,
+        "subsupOK": true
+      },
+      "baseRetainedWhole": false
+    },
+    {
+      "type": "msup",
+      "kind": "msup",
+      "marker": "_",
+      "moves": null,
+      "allowed": false,
+      "error": null,
+      "sourceKind": "msubsup",
+      "position": 1,
+      "reused": false,
+      "compactKind": "msub",
+      "children": [
+        "base",
+        "script"
+      ],
+      "childParents": [
+        true,
+        true
+      ],
+      "attributes": {},
+      "properties": {},
+      "baseRetainedWhole": true
+    },
+    {
+      "type": "msup",
+      "kind": "msup",
+      "marker": "_",
+      "moves": null,
+      "allowed": true,
+      "error": null,
+      "sourceKind": "msubsup",
+      "position": 1,
+      "reused": false,
+      "compactKind": "msub",
+      "children": [
+        "base",
+        "script"
+      ],
+      "childParents": [
+        true,
+        true
+      ],
+      "attributes": {},
+      "properties": {},
+      "baseRetainedWhole": true
+    },
+    {
+      "type": "msup",
+      "kind": "msup",
+      "marker": "_",
+      "moves": false,
+      "allowed": false,
+      "error": null,
+      "sourceKind": "msubsup",
+      "position": 1,
+      "reused": false,
+      "compactKind": "msub",
+      "children": [
+        "base",
+        "script"
+      ],
+      "childParents": [
+        true,
+        true
+      ],
+      "attributes": {},
+      "properties": {},
+      "baseRetainedWhole": true
+    },
+    {
+      "type": "msup",
+      "kind": "msup",
+      "marker": "_",
+      "moves": false,
+      "allowed": true,
+      "error": null,
+      "sourceKind": "msubsup",
+      "position": 1,
+      "reused": false,
+      "compactKind": "msub",
+      "children": [
+        "base",
+        "script"
+      ],
+      "childParents": [
+        true,
+        true
+      ],
+      "attributes": {},
+      "properties": {},
+      "baseRetainedWhole": true
+    },
+    {
+      "type": "msup",
+      "kind": "msup",
+      "marker": "_",
+      "moves": true,
+      "allowed": false,
+      "error": null,
+      "sourceKind": "munderover",
+      "position": 1,
+      "reused": false,
+      "compactKind": "munder",
+      "children": [
+        "base",
+        "script"
+      ],
+      "childParents": [
+        true,
+        true
+      ],
+      "attributes": {},
+      "properties": {
+        "movesupsub": true
+      },
+      "baseRetainedWhole": true
+    },
+    {
+      "type": "msup",
+      "kind": "msup",
+      "marker": "_",
+      "moves": true,
+      "allowed": true,
+      "error": null,
+      "sourceKind": "munderover",
+      "position": 1,
+      "reused": false,
+      "compactKind": "munder",
+      "children": [
+        "base",
+        "script"
+      ],
+      "childParents": [
+        true,
+        true
+      ],
+      "attributes": {},
+      "properties": {
+        "movesupsub": true
+      },
+      "baseRetainedWhole": true
+    },
+    {
+      "type": "msup",
+      "kind": "msup",
+      "marker": "^",
+      "moves": null,
+      "allowed": false,
+      "error": null,
+      "sourceKind": "msubsup",
+      "position": 2,
+      "reused": false,
+      "compactKind": "msup",
+      "children": [
+        "base",
+        "script"
+      ],
+      "childParents": [
+        true,
+        true
+      ],
+      "attributes": {},
+      "properties": {},
+      "baseRetainedWhole": true
+    },
+    {
+      "type": "msup",
+      "kind": "msup",
+      "marker": "^",
+      "moves": null,
+      "allowed": true,
+      "error": null,
+      "sourceKind": "msubsup",
+      "position": 2,
+      "reused": false,
+      "compactKind": "msup",
+      "children": [
+        "base",
+        "script"
+      ],
+      "childParents": [
+        true,
+        true
+      ],
+      "attributes": {},
+      "properties": {},
+      "baseRetainedWhole": true
+    },
+    {
+      "type": "msup",
+      "kind": "msup",
+      "marker": "^",
+      "moves": false,
+      "allowed": false,
+      "error": null,
+      "sourceKind": "msubsup",
+      "position": 2,
+      "reused": false,
+      "compactKind": "msup",
+      "children": [
+        "base",
+        "script"
+      ],
+      "childParents": [
+        true,
+        true
+      ],
+      "attributes": {},
+      "properties": {},
+      "baseRetainedWhole": true
+    },
+    {
+      "type": "msup",
+      "kind": "msup",
+      "marker": "^",
+      "moves": false,
+      "allowed": true,
+      "error": null,
+      "sourceKind": "msubsup",
+      "position": 2,
+      "reused": false,
+      "compactKind": "msup",
+      "children": [
+        "base",
+        "script"
+      ],
+      "childParents": [
+        true,
+        true
+      ],
+      "attributes": {},
+      "properties": {},
+      "baseRetainedWhole": true
+    },
+    {
+      "type": "msup",
+      "kind": "msup",
+      "marker": "^",
+      "moves": true,
+      "allowed": false,
+      "error": null,
+      "sourceKind": "munderover",
+      "position": 2,
+      "reused": false,
+      "compactKind": "mover",
+      "children": [
+        "base",
+        "script"
+      ],
+      "childParents": [
+        true,
+        true
+      ],
+      "attributes": {},
+      "properties": {
+        "movesupsub": true
+      },
+      "baseRetainedWhole": true
+    },
+    {
+      "type": "msup",
+      "kind": "msup",
+      "marker": "^",
+      "moves": true,
+      "allowed": true,
+      "error": null,
+      "sourceKind": "munderover",
+      "position": 2,
+      "reused": false,
+      "compactKind": "mover",
+      "children": [
+        "base",
+        "script"
+      ],
+      "childParents": [
+        true,
+        true
+      ],
+      "attributes": {},
+      "properties": {
+        "movesupsub": true
+      },
+      "baseRetainedWhole": true
+    },
+    {
+      "type": "msubsup",
+      "kind": "msubsup",
+      "marker": "_",
+      "moves": null,
+      "allowed": false,
+      "error": "Double subscripts: use braces to clarify"
+    },
+    {
+      "type": "msubsup",
+      "kind": "msubsup",
+      "marker": "_",
+      "moves": null,
+      "allowed": true,
+      "error": "Double subscripts: use braces to clarify"
+    },
+    {
+      "type": "msubsup",
+      "kind": "msubsup",
+      "marker": "_",
+      "moves": false,
+      "allowed": false,
+      "error": "Double subscripts: use braces to clarify"
+    },
+    {
+      "type": "msubsup",
+      "kind": "msubsup",
+      "marker": "_",
+      "moves": false,
+      "allowed": true,
+      "error": "Double subscripts: use braces to clarify"
+    },
+    {
+      "type": "msubsup",
+      "kind": "msubsup",
+      "marker": "_",
+      "moves": true,
+      "allowed": false,
+      "error": "Double subscripts: use braces to clarify"
+    },
+    {
+      "type": "msubsup",
+      "kind": "msubsup",
+      "marker": "_",
+      "moves": true,
+      "allowed": true,
+      "error": "Double subscripts: use braces to clarify"
+    },
+    {
+      "type": "msubsup",
+      "kind": "msubsup",
+      "marker": "^",
+      "moves": null,
+      "allowed": false,
+      "error": "Double exponent: use braces to clarify"
+    },
+    {
+      "type": "msubsup",
+      "kind": "msubsup",
+      "marker": "^",
+      "moves": null,
+      "allowed": true,
+      "error": "Double exponent: use braces to clarify"
+    },
+    {
+      "type": "msubsup",
+      "kind": "msubsup",
+      "marker": "^",
+      "moves": false,
+      "allowed": false,
+      "error": "Double exponent: use braces to clarify"
+    },
+    {
+      "type": "msubsup",
+      "kind": "msubsup",
+      "marker": "^",
+      "moves": false,
+      "allowed": true,
+      "error": "Double exponent: use braces to clarify"
+    },
+    {
+      "type": "msubsup",
+      "kind": "msubsup",
+      "marker": "^",
+      "moves": true,
+      "allowed": false,
+      "error": "Double exponent: use braces to clarify"
+    },
+    {
+      "type": "msubsup",
+      "kind": "msubsup",
+      "marker": "^",
+      "moves": true,
+      "allowed": true,
+      "error": "Double exponent: use braces to clarify"
+    },
+    {
+      "type": "munder",
+      "kind": "munder",
+      "marker": "_",
+      "moves": null,
+      "allowed": false,
+      "error": "Double subscripts: use braces to clarify"
+    },
+    {
+      "type": "munder",
+      "kind": "munder",
+      "marker": "_",
+      "moves": null,
+      "allowed": true,
+      "error": null,
+      "sourceKind": "msubsup",
+      "position": 1,
+      "reused": false,
+      "compactKind": "msub",
+      "children": [
+        "base",
+        "script"
+      ],
+      "childParents": [
+        true,
+        true
+      ],
+      "attributes": {},
+      "properties": {},
+      "baseRetainedWhole": true
+    },
+    {
+      "type": "munder",
+      "kind": "munder",
+      "marker": "_",
+      "moves": false,
+      "allowed": false,
+      "error": "Double subscripts: use braces to clarify"
+    },
+    {
+      "type": "munder",
+      "kind": "munder",
+      "marker": "_",
+      "moves": false,
+      "allowed": true,
+      "error": null,
+      "sourceKind": "msubsup",
+      "position": 1,
+      "reused": false,
+      "compactKind": "msub",
+      "children": [
+        "base",
+        "script"
+      ],
+      "childParents": [
+        true,
+        true
+      ],
+      "attributes": {},
+      "properties": {},
+      "baseRetainedWhole": true
+    },
+    {
+      "type": "munder",
+      "kind": "munder",
+      "marker": "_",
+      "moves": true,
+      "allowed": false,
+      "error": "Double subscripts: use braces to clarify"
+    },
+    {
+      "type": "munder",
+      "kind": "munder",
+      "marker": "_",
+      "moves": true,
+      "allowed": true,
+      "error": null,
+      "sourceKind": "munderover",
+      "position": 1,
+      "reused": false,
+      "compactKind": "munder",
+      "children": [
+        "base",
+        "script"
+      ],
+      "childParents": [
+        true,
+        true
+      ],
+      "attributes": {},
+      "properties": {
+        "movesupsub": true
+      },
+      "baseRetainedWhole": true
+    },
+    {
+      "type": "munder",
+      "kind": "munder",
+      "marker": "^",
+      "moves": null,
+      "allowed": false,
+      "error": null,
+      "sourceKind": "msubsup",
+      "position": 2,
+      "reused": false,
+      "compactKind": "msup",
+      "children": [
+        "base",
+        "script"
+      ],
+      "childParents": [
+        true,
+        true
+      ],
+      "attributes": {},
+      "properties": {},
+      "baseRetainedWhole": true
+    },
+    {
+      "type": "munder",
+      "kind": "munder",
+      "marker": "^",
+      "moves": null,
+      "allowed": true,
+      "error": null,
+      "sourceKind": "msubsup",
+      "position": 2,
+      "reused": false,
+      "compactKind": "msup",
+      "children": [
+        "base",
+        "script"
+      ],
+      "childParents": [
+        true,
+        true
+      ],
+      "attributes": {},
+      "properties": {},
+      "baseRetainedWhole": true
+    },
+    {
+      "type": "munder",
+      "kind": "munder",
+      "marker": "^",
+      "moves": false,
+      "allowed": false,
+      "error": null,
+      "sourceKind": "msubsup",
+      "position": 2,
+      "reused": false,
+      "compactKind": "msup",
+      "children": [
+        "base",
+        "script"
+      ],
+      "childParents": [
+        true,
+        true
+      ],
+      "attributes": {},
+      "properties": {},
+      "baseRetainedWhole": true
+    },
+    {
+      "type": "munder",
+      "kind": "munder",
+      "marker": "^",
+      "moves": false,
+      "allowed": true,
+      "error": null,
+      "sourceKind": "msubsup",
+      "position": 2,
+      "reused": false,
+      "compactKind": "msup",
+      "children": [
+        "base",
+        "script"
+      ],
+      "childParents": [
+        true,
+        true
+      ],
+      "attributes": {},
+      "properties": {},
+      "baseRetainedWhole": true
+    },
+    {
+      "type": "munder",
+      "kind": "munder",
+      "marker": "^",
+      "moves": true,
+      "allowed": false,
+      "error": null,
+      "sourceKind": "munder",
+      "position": 2,
+      "reused": true,
+      "compactKind": "munderover",
+      "children": [
+        "core",
+        "under",
+        "script"
+      ],
+      "childParents": [
+        true,
+        true,
+        true
+      ],
+      "attributes": {
+        "id": "authored"
+      },
+      "properties": {
+        "kept": 17,
+        "movesupsub": true
+      },
+      "baseRetainedWhole": false
+    },
+    {
+      "type": "munder",
+      "kind": "munder",
+      "marker": "^",
+      "moves": true,
+      "allowed": true,
+      "error": null,
+      "sourceKind": "munder",
+      "position": 2,
+      "reused": true,
+      "compactKind": "munderover",
+      "children": [
+        "core",
+        "under",
+        "script"
+      ],
+      "childParents": [
+        true,
+        true,
+        true
+      ],
+      "attributes": {
+        "id": "authored"
+      },
+      "properties": {
+        "kept": 17,
+        "movesupsub": true,
+        "subsupOK": true
+      },
+      "baseRetainedWhole": false
+    },
+    {
+      "type": "mover",
+      "kind": "mover",
+      "marker": "_",
+      "moves": null,
+      "allowed": false,
+      "error": null,
+      "sourceKind": "msubsup",
+      "position": 1,
+      "reused": false,
+      "compactKind": "msub",
+      "children": [
+        "base",
+        "script"
+      ],
+      "childParents": [
+        true,
+        true
+      ],
+      "attributes": {},
+      "properties": {},
+      "baseRetainedWhole": true
+    },
+    {
+      "type": "mover",
+      "kind": "mover",
+      "marker": "_",
+      "moves": null,
+      "allowed": true,
+      "error": null,
+      "sourceKind": "msubsup",
+      "position": 1,
+      "reused": false,
+      "compactKind": "msub",
+      "children": [
+        "base",
+        "script"
+      ],
+      "childParents": [
+        true,
+        true
+      ],
+      "attributes": {},
+      "properties": {},
+      "baseRetainedWhole": true
+    },
+    {
+      "type": "mover",
+      "kind": "mover",
+      "marker": "_",
+      "moves": false,
+      "allowed": false,
+      "error": null,
+      "sourceKind": "msubsup",
+      "position": 1,
+      "reused": false,
+      "compactKind": "msub",
+      "children": [
+        "base",
+        "script"
+      ],
+      "childParents": [
+        true,
+        true
+      ],
+      "attributes": {},
+      "properties": {},
+      "baseRetainedWhole": true
+    },
+    {
+      "type": "mover",
+      "kind": "mover",
+      "marker": "_",
+      "moves": false,
+      "allowed": true,
+      "error": null,
+      "sourceKind": "msubsup",
+      "position": 1,
+      "reused": false,
+      "compactKind": "msub",
+      "children": [
+        "base",
+        "script"
+      ],
+      "childParents": [
+        true,
+        true
+      ],
+      "attributes": {},
+      "properties": {},
+      "baseRetainedWhole": true
+    },
+    {
+      "type": "mover",
+      "kind": "mover",
+      "marker": "_",
+      "moves": true,
+      "allowed": false,
+      "error": null,
+      "sourceKind": "munderover",
+      "position": 1,
+      "reused": false,
+      "compactKind": "munder",
+      "children": [
+        "base",
+        "script"
+      ],
+      "childParents": [
+        true,
+        true
+      ],
+      "attributes": {},
+      "properties": {
+        "movesupsub": true
+      },
+      "baseRetainedWhole": true
+    },
+    {
+      "type": "mover",
+      "kind": "mover",
+      "marker": "_",
+      "moves": true,
+      "allowed": true,
+      "error": null,
+      "sourceKind": "munderover",
+      "position": 1,
+      "reused": false,
+      "compactKind": "munder",
+      "children": [
+        "base",
+        "script"
+      ],
+      "childParents": [
+        true,
+        true
+      ],
+      "attributes": {},
+      "properties": {
+        "movesupsub": true
+      },
+      "baseRetainedWhole": true
+    },
+    {
+      "type": "mover",
+      "kind": "mover",
+      "marker": "^",
+      "moves": null,
+      "allowed": false,
+      "error": null,
+      "sourceKind": "msubsup",
+      "position": 2,
+      "reused": false,
+      "compactKind": "msup",
+      "children": [
+        "base",
+        "script"
+      ],
+      "childParents": [
+        true,
+        true
+      ],
+      "attributes": {},
+      "properties": {},
+      "baseRetainedWhole": true
+    },
+    {
+      "type": "mover",
+      "kind": "mover",
+      "marker": "^",
+      "moves": null,
+      "allowed": true,
+      "error": null,
+      "sourceKind": "msubsup",
+      "position": 2,
+      "reused": false,
+      "compactKind": "msup",
+      "children": [
+        "base",
+        "script"
+      ],
+      "childParents": [
+        true,
+        true
+      ],
+      "attributes": {},
+      "properties": {},
+      "baseRetainedWhole": true
+    },
+    {
+      "type": "mover",
+      "kind": "mover",
+      "marker": "^",
+      "moves": false,
+      "allowed": false,
+      "error": null,
+      "sourceKind": "msubsup",
+      "position": 2,
+      "reused": false,
+      "compactKind": "msup",
+      "children": [
+        "base",
+        "script"
+      ],
+      "childParents": [
+        true,
+        true
+      ],
+      "attributes": {},
+      "properties": {},
+      "baseRetainedWhole": true
+    },
+    {
+      "type": "mover",
+      "kind": "mover",
+      "marker": "^",
+      "moves": false,
+      "allowed": true,
+      "error": null,
+      "sourceKind": "msubsup",
+      "position": 2,
+      "reused": false,
+      "compactKind": "msup",
+      "children": [
+        "base",
+        "script"
+      ],
+      "childParents": [
+        true,
+        true
+      ],
+      "attributes": {},
+      "properties": {},
+      "baseRetainedWhole": true
+    },
+    {
+      "type": "mover",
+      "kind": "mover",
+      "marker": "^",
+      "moves": true,
+      "allowed": false,
+      "error": null,
+      "sourceKind": "munderover",
+      "position": 2,
+      "reused": false,
+      "compactKind": "mover",
+      "children": [
+        "base",
+        "script"
+      ],
+      "childParents": [
+        true,
+        true
+      ],
+      "attributes": {},
+      "properties": {
+        "movesupsub": true
+      },
+      "baseRetainedWhole": true
+    },
+    {
+      "type": "mover",
+      "kind": "mover",
+      "marker": "^",
+      "moves": true,
+      "allowed": true,
+      "error": null,
+      "sourceKind": "munderover",
+      "position": 2,
+      "reused": false,
+      "compactKind": "mover",
+      "children": [
+        "base",
+        "script"
+      ],
+      "childParents": [
+        true,
+        true
+      ],
+      "attributes": {},
+      "properties": {
+        "movesupsub": true
+      },
+      "baseRetainedWhole": true
+    },
+    {
+      "type": "munderover",
+      "kind": "munderover",
+      "marker": "_",
+      "moves": null,
+      "allowed": false,
+      "error": "Double subscripts: use braces to clarify"
+    },
+    {
+      "type": "munderover",
+      "kind": "munderover",
+      "marker": "_",
+      "moves": null,
+      "allowed": true,
+      "error": null,
+      "sourceKind": "msubsup",
+      "position": 1,
+      "reused": false,
+      "compactKind": "msub",
+      "children": [
+        "base",
+        "script"
+      ],
+      "childParents": [
+        true,
+        true
+      ],
+      "attributes": {},
+      "properties": {},
+      "baseRetainedWhole": true
+    },
+    {
+      "type": "munderover",
+      "kind": "munderover",
+      "marker": "_",
+      "moves": false,
+      "allowed": false,
+      "error": "Double subscripts: use braces to clarify"
+    },
+    {
+      "type": "munderover",
+      "kind": "munderover",
+      "marker": "_",
+      "moves": false,
+      "allowed": true,
+      "error": null,
+      "sourceKind": "msubsup",
+      "position": 1,
+      "reused": false,
+      "compactKind": "msub",
+      "children": [
+        "base",
+        "script"
+      ],
+      "childParents": [
+        true,
+        true
+      ],
+      "attributes": {},
+      "properties": {},
+      "baseRetainedWhole": true
+    },
+    {
+      "type": "munderover",
+      "kind": "munderover",
+      "marker": "_",
+      "moves": true,
+      "allowed": false,
+      "error": "Double subscripts: use braces to clarify"
+    },
+    {
+      "type": "munderover",
+      "kind": "munderover",
+      "marker": "_",
+      "moves": true,
+      "allowed": true,
+      "error": null,
+      "sourceKind": "munderover",
+      "position": 1,
+      "reused": false,
+      "compactKind": "munder",
+      "children": [
+        "base",
+        "script"
+      ],
+      "childParents": [
+        true,
+        true
+      ],
+      "attributes": {},
+      "properties": {
+        "movesupsub": true
+      },
+      "baseRetainedWhole": true
+    },
+    {
+      "type": "munderover",
+      "kind": "munderover",
+      "marker": "^",
+      "moves": null,
+      "allowed": false,
+      "error": "Double exponent: use braces to clarify"
+    },
+    {
+      "type": "munderover",
+      "kind": "munderover",
+      "marker": "^",
+      "moves": null,
+      "allowed": true,
+      "error": null,
+      "sourceKind": "msubsup",
+      "position": 2,
+      "reused": false,
+      "compactKind": "msup",
+      "children": [
+        "base",
+        "script"
+      ],
+      "childParents": [
+        true,
+        true
+      ],
+      "attributes": {},
+      "properties": {},
+      "baseRetainedWhole": true
+    },
+    {
+      "type": "munderover",
+      "kind": "munderover",
+      "marker": "^",
+      "moves": false,
+      "allowed": false,
+      "error": "Double exponent: use braces to clarify"
+    },
+    {
+      "type": "munderover",
+      "kind": "munderover",
+      "marker": "^",
+      "moves": false,
+      "allowed": true,
+      "error": null,
+      "sourceKind": "msubsup",
+      "position": 2,
+      "reused": false,
+      "compactKind": "msup",
+      "children": [
+        "base",
+        "script"
+      ],
+      "childParents": [
+        true,
+        true
+      ],
+      "attributes": {},
+      "properties": {},
+      "baseRetainedWhole": true
+    },
+    {
+      "type": "munderover",
+      "kind": "munderover",
+      "marker": "^",
+      "moves": true,
+      "allowed": false,
+      "error": "Double exponent: use braces to clarify"
+    },
+    {
+      "type": "munderover",
+      "kind": "munderover",
+      "marker": "^",
+      "moves": true,
+      "allowed": true,
+      "error": null,
+      "sourceKind": "munderover",
+      "position": 2,
+      "reused": false,
+      "compactKind": "mover",
+      "children": [
+        "base",
+        "script"
+      ],
+      "childParents": [
+        true,
+        true
+      ],
+      "attributes": {},
+      "properties": {
+        "movesupsub": true
+      },
+      "baseRetainedWhole": true
+    },
+    {
+      "type": "msubsup-no-under",
+      "kind": "msubsup",
+      "marker": "_",
+      "moves": null,
+      "allowed": false,
+      "error": null,
+      "sourceKind": "msubsup",
+      "position": 1,
+      "reused": true,
+      "compactKind": "msubsup",
+      "children": [
+        "core",
+        "script",
+        "over"
+      ],
+      "childParents": [
+        true,
+        true,
+        true
+      ],
+      "attributes": {
+        "id": "authored"
+      },
+      "properties": {
+        "kept": 17
+      },
+      "baseRetainedWhole": false
+    },
+    {
+      "type": "msubsup-no-under",
+      "kind": "msubsup",
+      "marker": "_",
+      "moves": null,
+      "allowed": true,
+      "error": null,
+      "sourceKind": "msubsup",
+      "position": 1,
+      "reused": true,
+      "compactKind": "msubsup",
+      "children": [
+        "core",
+        "script",
+        "over"
+      ],
+      "childParents": [
+        true,
+        true,
+        true
+      ],
+      "attributes": {
+        "id": "authored"
+      },
+      "properties": {
+        "kept": 17,
+        "subsupOK": true
+      },
+      "baseRetainedWhole": false
+    },
+    {
+      "type": "msubsup-no-under",
+      "kind": "msubsup",
+      "marker": "_",
+      "moves": false,
+      "allowed": false,
+      "error": null,
+      "sourceKind": "msubsup",
+      "position": 1,
+      "reused": true,
+      "compactKind": "msubsup",
+      "children": [
+        "core",
+        "script",
+        "over"
+      ],
+      "childParents": [
+        true,
+        true,
+        true
+      ],
+      "attributes": {
+        "id": "authored"
+      },
+      "properties": {
+        "kept": 17,
+        "movesupsub": false
+      },
+      "baseRetainedWhole": false
+    },
+    {
+      "type": "msubsup-no-under",
+      "kind": "msubsup",
+      "marker": "_",
+      "moves": false,
+      "allowed": true,
+      "error": null,
+      "sourceKind": "msubsup",
+      "position": 1,
+      "reused": true,
+      "compactKind": "msubsup",
+      "children": [
+        "core",
+        "script",
+        "over"
+      ],
+      "childParents": [
+        true,
+        true,
+        true
+      ],
+      "attributes": {
+        "id": "authored"
+      },
+      "properties": {
+        "kept": 17,
+        "movesupsub": false,
+        "subsupOK": true
+      },
+      "baseRetainedWhole": false
+    },
+    {
+      "type": "msubsup-no-under",
+      "kind": "msubsup",
+      "marker": "_",
+      "moves": true,
+      "allowed": false,
+      "error": null,
+      "sourceKind": "msubsup",
+      "position": 1,
+      "reused": true,
+      "compactKind": "msubsup",
+      "children": [
+        "core",
+        "script",
+        "over"
+      ],
+      "childParents": [
+        true,
+        true,
+        true
+      ],
+      "attributes": {
+        "id": "authored"
+      },
+      "properties": {
+        "kept": 17,
+        "movesupsub": true
+      },
+      "baseRetainedWhole": false
+    },
+    {
+      "type": "msubsup-no-under",
+      "kind": "msubsup",
+      "marker": "_",
+      "moves": true,
+      "allowed": true,
+      "error": null,
+      "sourceKind": "msubsup",
+      "position": 1,
+      "reused": true,
+      "compactKind": "msubsup",
+      "children": [
+        "core",
+        "script",
+        "over"
+      ],
+      "childParents": [
+        true,
+        true,
+        true
+      ],
+      "attributes": {
+        "id": "authored"
+      },
+      "properties": {
+        "kept": 17,
+        "movesupsub": true,
+        "subsupOK": true
+      },
+      "baseRetainedWhole": false
+    },
+    {
+      "type": "msubsup-no-under",
+      "kind": "msubsup",
+      "marker": "^",
+      "moves": null,
+      "allowed": false,
+      "error": "Double exponent: use braces to clarify"
+    },
+    {
+      "type": "msubsup-no-under",
+      "kind": "msubsup",
+      "marker": "^",
+      "moves": null,
+      "allowed": true,
+      "error": "Double exponent: use braces to clarify"
+    },
+    {
+      "type": "msubsup-no-under",
+      "kind": "msubsup",
+      "marker": "^",
+      "moves": false,
+      "allowed": false,
+      "error": "Double exponent: use braces to clarify"
+    },
+    {
+      "type": "msubsup-no-under",
+      "kind": "msubsup",
+      "marker": "^",
+      "moves": false,
+      "allowed": true,
+      "error": "Double exponent: use braces to clarify"
+    },
+    {
+      "type": "msubsup-no-under",
+      "kind": "msubsup",
+      "marker": "^",
+      "moves": true,
+      "allowed": false,
+      "error": "Double exponent: use braces to clarify"
+    },
+    {
+      "type": "msubsup-no-under",
+      "kind": "msubsup",
+      "marker": "^",
+      "moves": true,
+      "allowed": true,
+      "error": "Double exponent: use braces to clarify"
+    },
+    {
+      "type": "msubsup-no-over",
+      "kind": "msubsup",
+      "marker": "_",
+      "moves": null,
+      "allowed": false,
+      "error": "Double subscripts: use braces to clarify"
+    },
+    {
+      "type": "msubsup-no-over",
+      "kind": "msubsup",
+      "marker": "_",
+      "moves": null,
+      "allowed": true,
+      "error": "Double subscripts: use braces to clarify"
+    },
+    {
+      "type": "msubsup-no-over",
+      "kind": "msubsup",
+      "marker": "_",
+      "moves": false,
+      "allowed": false,
+      "error": "Double subscripts: use braces to clarify"
+    },
+    {
+      "type": "msubsup-no-over",
+      "kind": "msubsup",
+      "marker": "_",
+      "moves": false,
+      "allowed": true,
+      "error": "Double subscripts: use braces to clarify"
+    },
+    {
+      "type": "msubsup-no-over",
+      "kind": "msubsup",
+      "marker": "_",
+      "moves": true,
+      "allowed": false,
+      "error": "Double subscripts: use braces to clarify"
+    },
+    {
+      "type": "msubsup-no-over",
+      "kind": "msubsup",
+      "marker": "_",
+      "moves": true,
+      "allowed": true,
+      "error": "Double subscripts: use braces to clarify"
+    },
+    {
+      "type": "msubsup-no-over",
+      "kind": "msubsup",
+      "marker": "^",
+      "moves": null,
+      "allowed": false,
+      "error": null,
+      "sourceKind": "msubsup",
+      "position": 2,
+      "reused": true,
+      "compactKind": "msubsup",
+      "children": [
+        "core",
+        "under",
+        "script"
+      ],
+      "childParents": [
+        true,
+        true,
+        true
+      ],
+      "attributes": {
+        "id": "authored"
+      },
+      "properties": {
+        "kept": 17
+      },
+      "baseRetainedWhole": false
+    },
+    {
+      "type": "msubsup-no-over",
+      "kind": "msubsup",
+      "marker": "^",
+      "moves": null,
+      "allowed": true,
+      "error": null,
+      "sourceKind": "msubsup",
+      "position": 2,
+      "reused": true,
+      "compactKind": "msubsup",
+      "children": [
+        "core",
+        "under",
+        "script"
+      ],
+      "childParents": [
+        true,
+        true,
+        true
+      ],
+      "attributes": {
+        "id": "authored"
+      },
+      "properties": {
+        "kept": 17,
+        "subsupOK": true
+      },
+      "baseRetainedWhole": false
+    },
+    {
+      "type": "msubsup-no-over",
+      "kind": "msubsup",
+      "marker": "^",
+      "moves": false,
+      "allowed": false,
+      "error": null,
+      "sourceKind": "msubsup",
+      "position": 2,
+      "reused": true,
+      "compactKind": "msubsup",
+      "children": [
+        "core",
+        "under",
+        "script"
+      ],
+      "childParents": [
+        true,
+        true,
+        true
+      ],
+      "attributes": {
+        "id": "authored"
+      },
+      "properties": {
+        "kept": 17,
+        "movesupsub": false
+      },
+      "baseRetainedWhole": false
+    },
+    {
+      "type": "msubsup-no-over",
+      "kind": "msubsup",
+      "marker": "^",
+      "moves": false,
+      "allowed": true,
+      "error": null,
+      "sourceKind": "msubsup",
+      "position": 2,
+      "reused": true,
+      "compactKind": "msubsup",
+      "children": [
+        "core",
+        "under",
+        "script"
+      ],
+      "childParents": [
+        true,
+        true,
+        true
+      ],
+      "attributes": {
+        "id": "authored"
+      },
+      "properties": {
+        "kept": 17,
+        "movesupsub": false,
+        "subsupOK": true
+      },
+      "baseRetainedWhole": false
+    },
+    {
+      "type": "msubsup-no-over",
+      "kind": "msubsup",
+      "marker": "^",
+      "moves": true,
+      "allowed": false,
+      "error": null,
+      "sourceKind": "msubsup",
+      "position": 2,
+      "reused": true,
+      "compactKind": "msubsup",
+      "children": [
+        "core",
+        "under",
+        "script"
+      ],
+      "childParents": [
+        true,
+        true,
+        true
+      ],
+      "attributes": {
+        "id": "authored"
+      },
+      "properties": {
+        "kept": 17,
+        "movesupsub": true
+      },
+      "baseRetainedWhole": false
+    },
+    {
+      "type": "msubsup-no-over",
+      "kind": "msubsup",
+      "marker": "^",
+      "moves": true,
+      "allowed": true,
+      "error": null,
+      "sourceKind": "msubsup",
+      "position": 2,
+      "reused": true,
+      "compactKind": "msubsup",
+      "children": [
+        "core",
+        "under",
+        "script"
+      ],
+      "childParents": [
+        true,
+        true,
+        true
+      ],
+      "attributes": {
+        "id": "authored"
+      },
+      "properties": {
+        "kept": 17,
+        "movesupsub": true,
+        "subsupOK": true
+      },
+      "baseRetainedWhole": false
+    },
+    {
+      "type": "munderover-no-under",
+      "kind": "munderover",
+      "marker": "_",
+      "moves": null,
+      "allowed": false,
+      "error": null,
+      "sourceKind": "msubsup",
+      "position": 1,
+      "reused": false,
+      "compactKind": "msub",
+      "children": [
+        "base",
+        "script"
+      ],
+      "childParents": [
+        true,
+        true
+      ],
+      "attributes": {},
+      "properties": {},
+      "baseRetainedWhole": true
+    },
+    {
+      "type": "munderover-no-under",
+      "kind": "munderover",
+      "marker": "_",
+      "moves": null,
+      "allowed": true,
+      "error": null,
+      "sourceKind": "msubsup",
+      "position": 1,
+      "reused": false,
+      "compactKind": "msub",
+      "children": [
+        "base",
+        "script"
+      ],
+      "childParents": [
+        true,
+        true
+      ],
+      "attributes": {},
+      "properties": {},
+      "baseRetainedWhole": true
+    },
+    {
+      "type": "munderover-no-under",
+      "kind": "munderover",
+      "marker": "_",
+      "moves": false,
+      "allowed": false,
+      "error": null,
+      "sourceKind": "msubsup",
+      "position": 1,
+      "reused": false,
+      "compactKind": "msub",
+      "children": [
+        "base",
+        "script"
+      ],
+      "childParents": [
+        true,
+        true
+      ],
+      "attributes": {},
+      "properties": {},
+      "baseRetainedWhole": true
+    },
+    {
+      "type": "munderover-no-under",
+      "kind": "munderover",
+      "marker": "_",
+      "moves": false,
+      "allowed": true,
+      "error": null,
+      "sourceKind": "msubsup",
+      "position": 1,
+      "reused": false,
+      "compactKind": "msub",
+      "children": [
+        "base",
+        "script"
+      ],
+      "childParents": [
+        true,
+        true
+      ],
+      "attributes": {},
+      "properties": {},
+      "baseRetainedWhole": true
+    },
+    {
+      "type": "munderover-no-under",
+      "kind": "munderover",
+      "marker": "_",
+      "moves": true,
+      "allowed": false,
+      "error": null,
+      "sourceKind": "munderover",
+      "position": 1,
+      "reused": true,
+      "compactKind": "munderover",
+      "children": [
+        "core",
+        "script",
+        "over"
+      ],
+      "childParents": [
+        true,
+        true,
+        true
+      ],
+      "attributes": {
+        "id": "authored"
+      },
+      "properties": {
+        "kept": 17,
+        "movesupsub": true
+      },
+      "baseRetainedWhole": false
+    },
+    {
+      "type": "munderover-no-under",
+      "kind": "munderover",
+      "marker": "_",
+      "moves": true,
+      "allowed": true,
+      "error": null,
+      "sourceKind": "munderover",
+      "position": 1,
+      "reused": true,
+      "compactKind": "munderover",
+      "children": [
+        "core",
+        "script",
+        "over"
+      ],
+      "childParents": [
+        true,
+        true,
+        true
+      ],
+      "attributes": {
+        "id": "authored"
+      },
+      "properties": {
+        "kept": 17,
+        "movesupsub": true,
+        "subsupOK": true
+      },
+      "baseRetainedWhole": false
+    },
+    {
+      "type": "munderover-no-under",
+      "kind": "munderover",
+      "marker": "^",
+      "moves": null,
+      "allowed": false,
+      "error": "Double exponent: use braces to clarify"
+    },
+    {
+      "type": "munderover-no-under",
+      "kind": "munderover",
+      "marker": "^",
+      "moves": null,
+      "allowed": true,
+      "error": null,
+      "sourceKind": "msubsup",
+      "position": 2,
+      "reused": false,
+      "compactKind": "msup",
+      "children": [
+        "base",
+        "script"
+      ],
+      "childParents": [
+        true,
+        true
+      ],
+      "attributes": {},
+      "properties": {},
+      "baseRetainedWhole": true
+    },
+    {
+      "type": "munderover-no-under",
+      "kind": "munderover",
+      "marker": "^",
+      "moves": false,
+      "allowed": false,
+      "error": "Double exponent: use braces to clarify"
+    },
+    {
+      "type": "munderover-no-under",
+      "kind": "munderover",
+      "marker": "^",
+      "moves": false,
+      "allowed": true,
+      "error": null,
+      "sourceKind": "msubsup",
+      "position": 2,
+      "reused": false,
+      "compactKind": "msup",
+      "children": [
+        "base",
+        "script"
+      ],
+      "childParents": [
+        true,
+        true
+      ],
+      "attributes": {},
+      "properties": {},
+      "baseRetainedWhole": true
+    },
+    {
+      "type": "munderover-no-under",
+      "kind": "munderover",
+      "marker": "^",
+      "moves": true,
+      "allowed": false,
+      "error": "Double exponent: use braces to clarify"
+    },
+    {
+      "type": "munderover-no-under",
+      "kind": "munderover",
+      "marker": "^",
+      "moves": true,
+      "allowed": true,
+      "error": null,
+      "sourceKind": "munderover",
+      "position": 2,
+      "reused": false,
+      "compactKind": "mover",
+      "children": [
+        "base",
+        "script"
+      ],
+      "childParents": [
+        true,
+        true
+      ],
+      "attributes": {},
+      "properties": {
+        "movesupsub": true
+      },
+      "baseRetainedWhole": true
+    },
+    {
+      "type": "munderover-no-over",
+      "kind": "munderover",
+      "marker": "_",
+      "moves": null,
+      "allowed": false,
+      "error": "Double subscripts: use braces to clarify"
+    },
+    {
+      "type": "munderover-no-over",
+      "kind": "munderover",
+      "marker": "_",
+      "moves": null,
+      "allowed": true,
+      "error": null,
+      "sourceKind": "msubsup",
+      "position": 1,
+      "reused": false,
+      "compactKind": "msub",
+      "children": [
+        "base",
+        "script"
+      ],
+      "childParents": [
+        true,
+        true
+      ],
+      "attributes": {},
+      "properties": {},
+      "baseRetainedWhole": true
+    },
+    {
+      "type": "munderover-no-over",
+      "kind": "munderover",
+      "marker": "_",
+      "moves": false,
+      "allowed": false,
+      "error": "Double subscripts: use braces to clarify"
+    },
+    {
+      "type": "munderover-no-over",
+      "kind": "munderover",
+      "marker": "_",
+      "moves": false,
+      "allowed": true,
+      "error": null,
+      "sourceKind": "msubsup",
+      "position": 1,
+      "reused": false,
+      "compactKind": "msub",
+      "children": [
+        "base",
+        "script"
+      ],
+      "childParents": [
+        true,
+        true
+      ],
+      "attributes": {},
+      "properties": {},
+      "baseRetainedWhole": true
+    },
+    {
+      "type": "munderover-no-over",
+      "kind": "munderover",
+      "marker": "_",
+      "moves": true,
+      "allowed": false,
+      "error": "Double subscripts: use braces to clarify"
+    },
+    {
+      "type": "munderover-no-over",
+      "kind": "munderover",
+      "marker": "_",
+      "moves": true,
+      "allowed": true,
+      "error": null,
+      "sourceKind": "munderover",
+      "position": 1,
+      "reused": false,
+      "compactKind": "munder",
+      "children": [
+        "base",
+        "script"
+      ],
+      "childParents": [
+        true,
+        true
+      ],
+      "attributes": {},
+      "properties": {
+        "movesupsub": true
+      },
+      "baseRetainedWhole": true
+    },
+    {
+      "type": "munderover-no-over",
+      "kind": "munderover",
+      "marker": "^",
+      "moves": null,
+      "allowed": false,
+      "error": null,
+      "sourceKind": "msubsup",
+      "position": 2,
+      "reused": false,
+      "compactKind": "msup",
+      "children": [
+        "base",
+        "script"
+      ],
+      "childParents": [
+        true,
+        true
+      ],
+      "attributes": {},
+      "properties": {},
+      "baseRetainedWhole": true
+    },
+    {
+      "type": "munderover-no-over",
+      "kind": "munderover",
+      "marker": "^",
+      "moves": null,
+      "allowed": true,
+      "error": null,
+      "sourceKind": "msubsup",
+      "position": 2,
+      "reused": false,
+      "compactKind": "msup",
+      "children": [
+        "base",
+        "script"
+      ],
+      "childParents": [
+        true,
+        true
+      ],
+      "attributes": {},
+      "properties": {},
+      "baseRetainedWhole": true
+    },
+    {
+      "type": "munderover-no-over",
+      "kind": "munderover",
+      "marker": "^",
+      "moves": false,
+      "allowed": false,
+      "error": null,
+      "sourceKind": "msubsup",
+      "position": 2,
+      "reused": false,
+      "compactKind": "msup",
+      "children": [
+        "base",
+        "script"
+      ],
+      "childParents": [
+        true,
+        true
+      ],
+      "attributes": {},
+      "properties": {},
+      "baseRetainedWhole": true
+    },
+    {
+      "type": "munderover-no-over",
+      "kind": "munderover",
+      "marker": "^",
+      "moves": false,
+      "allowed": true,
+      "error": null,
+      "sourceKind": "msubsup",
+      "position": 2,
+      "reused": false,
+      "compactKind": "msup",
+      "children": [
+        "base",
+        "script"
+      ],
+      "childParents": [
+        true,
+        true
+      ],
+      "attributes": {},
+      "properties": {},
+      "baseRetainedWhole": true
+    },
+    {
+      "type": "munderover-no-over",
+      "kind": "munderover",
+      "marker": "^",
+      "moves": true,
+      "allowed": false,
+      "error": null,
+      "sourceKind": "munderover",
+      "position": 2,
+      "reused": true,
+      "compactKind": "munderover",
+      "children": [
+        "core",
+        "under",
+        "script"
+      ],
+      "childParents": [
+        true,
+        true,
+        true
+      ],
+      "attributes": {
+        "id": "authored"
+      },
+      "properties": {
+        "kept": 17,
+        "movesupsub": true
+      },
+      "baseRetainedWhole": false
+    },
+    {
+      "type": "munderover-no-over",
+      "kind": "munderover",
+      "marker": "^",
+      "moves": true,
+      "allowed": true,
+      "error": null,
+      "sourceKind": "munderover",
+      "position": 2,
+      "reused": true,
+      "compactKind": "munderover",
+      "children": [
+        "core",
+        "under",
+        "script"
+      ],
+      "childParents": [
+        true,
+        true,
+        true
+      ],
+      "attributes": {
+        "id": "authored"
+      },
+      "properties": {
+        "kept": 17,
+        "movesupsub": true,
+        "subsupOK": true
+      },
+      "baseRetainedWhole": false
+    }
+  ]
+}
