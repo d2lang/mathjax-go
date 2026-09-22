@@ -2927,281 +2927,179 @@
       "primarySHA256": "d028fc2db6e5af0502e2f431eee308412401bfd41a9dcaed20b602000380f248",
       "baselineSHA256": "b7945969efb0141d72af4fbe04c81d5f4d99e12d33b1d7b6aa00fb5a21e8d9cc",
       "baselineTreeSHA256": "db99d6cdd15bb24b5547916d2fe2e6155021a5748557ad493ef249a87b17ccc4",
-      "expectedSHA256": "b7945969efb0141d72af4fbe04c81d5f4d99e12d33b1d7b6aa00fb5a21e8d9cc",
-      "category": "unchanged-scripted-decoration",
-      "expectedTree": {
-        "kind": "math",
-        "text": null,
-        "attributes": {},
-        "properties": {},
-        "children": [
-          {
-            "kind": "inferredMrow",
-            "text": null,
-            "attributes": {},
-            "properties": {},
-            "children": [
-              {
-                "kind": "msup",
-                "text": null,
-                "attributes": {},
-                "properties": {},
-                "children": [
-                  {
-                    "kind": "mover",
-                    "text": null,
-                    "attributes": {
-                      "accent": true
-                    },
-                    "properties": {},
-                    "children": [
-                      {
-                        "kind": "munderover",
-                        "text": null,
-                        "attributes": {},
-                        "properties": {
-                          "movesupsub": true,
-                          "texprimestyle": true
-                        },
-                        "children": [
-                          {
-                            "kind": "mo",
-                            "text": null,
-                            "attributes": {},
-                            "properties": {
-                              "texClass": 1,
-                              "movesupsub": true,
-                              "in-lists": "fixStretchy",
-                              "texprimestyle": true
-                            },
-                            "children": [
-                              {
-                                "kind": "text",
-                                "text": "\u2211",
-                                "attributes": {},
-                                "properties": {},
-                                "children": []
-                              }
-                            ]
-                          },
-                          {
-                            "kind": "mi",
-                            "text": null,
-                            "attributes": {},
-                            "properties": {
-                              "texprimestyle": true
-                            },
-                            "children": [
-                              {
-                                "kind": "text",
-                                "text": "i",
-                                "attributes": {},
-                                "properties": {},
-                                "children": []
-                              }
-                            ]
-                          },
-                          {
-                            "kind": "mi",
-                            "text": null,
-                            "attributes": {},
-                            "properties": {
-                              "texprimestyle": true
-                            },
-                            "children": [
-                              {
-                                "kind": "text",
-                                "text": "n",
-                                "attributes": {},
-                                "properties": {},
-                                "children": []
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      {
-                        "kind": "mo",
-                        "text": null,
-                        "attributes": {},
-                        "properties": {
-                          "texClass": 0
-                        },
-                        "children": [
-                          {
-                            "kind": "text",
-                            "text": "\u2015",
-                            "attributes": {},
-                            "properties": {},
-                            "children": []
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "kind": "mi",
-                    "text": null,
-                    "attributes": {},
-                    "properties": {},
-                    "children": [
-                      {
-                        "kind": "text",
-                        "text": "a",
-                        "attributes": {},
-                        "properties": {},
-                        "children": []
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      "differences": []
+      "expectedSHA256": "d028fc2db6e5af0502e2f431eee308412401bfd41a9dcaed20b602000380f248",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accent": true
+          },
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "subsupOK": true
+          },
+          "expected": {},
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "attributes",
+          "primary": {
+            "accent": true
+          },
+          "expected": {},
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {},
+          "expected": {
+            "texClass": 0
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
     },
     "overline-scripted-sum-display": {
       "primarySHA256": "fe411b8c54fa80d7c6f80b3adc09ea4026662908bbb8248eec107307283631bb",
       "baselineSHA256": "288c89270814b906ca367a1f8d78b26380e71e9c2956293056244f971eefc00d",
       "baselineTreeSHA256": "b08224a2569eb4f77fb19902970a238c0e189ddc7582c56478570acbf01f2913",
-      "expectedSHA256": "288c89270814b906ca367a1f8d78b26380e71e9c2956293056244f971eefc00d",
-      "category": "unchanged-scripted-decoration",
-      "expectedTree": {
-        "kind": "math",
-        "text": null,
-        "attributes": {
-          "display": "block"
+      "expectedSHA256": "fe411b8c54fa80d7c6f80b3adc09ea4026662908bbb8248eec107307283631bb",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accent": true
+          },
+          "baselineKind": "mover",
+          "expectedKind": "mover"
         },
-        "properties": {},
-        "children": [
-          {
-            "kind": "inferredMrow",
-            "text": null,
-            "attributes": {},
-            "properties": {},
-            "children": [
-              {
-                "kind": "msup",
-                "text": null,
-                "attributes": {},
-                "properties": {},
-                "children": [
-                  {
-                    "kind": "mover",
-                    "text": null,
-                    "attributes": {
-                      "accent": true
-                    },
-                    "properties": {},
-                    "children": [
-                      {
-                        "kind": "munderover",
-                        "text": null,
-                        "attributes": {},
-                        "properties": {
-                          "movesupsub": true,
-                          "texprimestyle": true
-                        },
-                        "children": [
-                          {
-                            "kind": "mo",
-                            "text": null,
-                            "attributes": {},
-                            "properties": {
-                              "texClass": 1,
-                              "movesupsub": true,
-                              "in-lists": "fixStretchy",
-                              "texprimestyle": true
-                            },
-                            "children": [
-                              {
-                                "kind": "text",
-                                "text": "\u2211",
-                                "attributes": {},
-                                "properties": {},
-                                "children": []
-                              }
-                            ]
-                          },
-                          {
-                            "kind": "mi",
-                            "text": null,
-                            "attributes": {},
-                            "properties": {
-                              "texprimestyle": true
-                            },
-                            "children": [
-                              {
-                                "kind": "text",
-                                "text": "i",
-                                "attributes": {},
-                                "properties": {},
-                                "children": []
-                              }
-                            ]
-                          },
-                          {
-                            "kind": "mi",
-                            "text": null,
-                            "attributes": {},
-                            "properties": {
-                              "texprimestyle": true
-                            },
-                            "children": [
-                              {
-                                "kind": "text",
-                                "text": "n",
-                                "attributes": {},
-                                "properties": {},
-                                "children": []
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      {
-                        "kind": "mo",
-                        "text": null,
-                        "attributes": {},
-                        "properties": {
-                          "texClass": 0
-                        },
-                        "children": [
-                          {
-                            "kind": "text",
-                            "text": "\u2015",
-                            "attributes": {},
-                            "properties": {},
-                            "children": []
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "kind": "mi",
-                    "text": null,
-                    "attributes": {},
-                    "properties": {},
-                    "children": [
-                      {
-                        "kind": "text",
-                        "text": "a",
-                        "attributes": {},
-                        "properties": {},
-                        "children": []
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      "differences": []
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "subsupOK": true
+          },
+          "expected": {},
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "attributes",
+          "primary": {
+            "accent": true
+          },
+          "expected": {},
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {},
+          "expected": {
+            "texClass": 0
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
     },
     "underarrow-scripted-sum-inline": {
       "primarySHA256": "cc70487018ff838eb4f2859a9b50b09a22cd0c47ac7c04af09a07332eff0f865",
