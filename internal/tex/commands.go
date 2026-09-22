@@ -437,11 +437,22 @@ func (p *parser) binomial(name, style string) ([]*mml.Node, error) {
 		return nil, err
 	}
 	frac := setAttributes(node("mfrac", numerator, denominator), map[string]any{"linethickness": "0"})
-	var content *mml.Node = frac
+	// AMS Genfrac uses string zero, fixedFence, then an optional style
+	// around the entire fenced expression (including its MathChoice fences).
+	frac.SetProperty("withDelims", true)
+	content := forcedRow([]*mml.Node{
+		amsFixedFencePalette("(", mml.TeXClassOpen),
+		frac,
+		amsFixedFencePalette(")", mml.TeXClassClose),
+	}, false)
+	content.SetProperty("open", "(")
+	content.SetProperty("close", ")")
+	content.SetProperty("texClass", mml.TeXClassOrd)
+	content.TeXClass = mml.TeXClassOrd
 	if style != "" {
 		content = setAttributes(node("mstyle", content), styleAttributes(style))
 	}
-	return []*mml.Node{fenced("(", content, ")", true)}, nil
+	return []*mml.Node{content}, nil
 }
 
 func (p *parser) generalizedFraction(name string) ([]*mml.Node, error) {

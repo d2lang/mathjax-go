@@ -1,0 +1,893 @@
+{
+  "baseline": "46e9024262e80131193abaa119a965789ec1c9ac",
+  "metadataBoundaries": {
+    "prime-inline": {
+      "tex": "\\binom{x'}{y^n}",
+      "display": false,
+      "primarySHA256": "ae10fc70eb6f207424c9a8ab3a01361f8f671a0b71b0105f18f91b6d53eb215c",
+      "candidateTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mrow",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "TeXAtom",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "inferredMrow",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "mo",
+                            "text": null,
+                            "attributes": {
+                              "minsize": "1.2em",
+                              "maxsize": "1.2em"
+                            },
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "(",
+                                "attributes": {},
+                                "children": [],
+                                "properties": {}
+                              }
+                            ],
+                            "properties": {}
+                          }
+                        ],
+                        "properties": {}
+                      }
+                    ],
+                    "properties": {
+                      "texClass": 4
+                    }
+                  },
+                  {
+                    "kind": "mfrac",
+                    "text": null,
+                    "attributes": {
+                      "linethickness": "0"
+                    },
+                    "children": [
+                      {
+                        "kind": "msup",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "x",
+                                "attributes": {},
+                                "children": [],
+                                "properties": {}
+                              }
+                            ],
+                            "properties": {}
+                          },
+                          {
+                            "kind": "mo",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "\u2032",
+                                "attributes": {},
+                                "children": [],
+                                "properties": {}
+                              }
+                            ],
+                            "properties": {
+                              "variantForm": true
+                            }
+                          }
+                        ],
+                        "properties": {}
+                      },
+                      {
+                        "kind": "msup",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "y",
+                                "attributes": {},
+                                "children": [],
+                                "properties": {}
+                              }
+                            ],
+                            "properties": {
+                              "texprimestyle": true
+                            }
+                          },
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "n",
+                                "attributes": {},
+                                "children": [],
+                                "properties": {}
+                              }
+                            ],
+                            "properties": {
+                              "texprimestyle": true
+                            }
+                          }
+                        ],
+                        "properties": {
+                          "texprimestyle": true
+                        }
+                      }
+                    ],
+                    "properties": {
+                      "withDelims": true
+                    }
+                  },
+                  {
+                    "kind": "TeXAtom",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "inferredMrow",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "mo",
+                            "text": null,
+                            "attributes": {
+                              "minsize": "1.2em",
+                              "maxsize": "1.2em"
+                            },
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": ")",
+                                "attributes": {},
+                                "children": [],
+                                "properties": {}
+                              }
+                            ],
+                            "properties": {}
+                          }
+                        ],
+                        "properties": {}
+                      }
+                    ],
+                    "properties": {
+                      "texClass": 5
+                    }
+                  }
+                ],
+                "properties": {
+                  "open": "(",
+                  "close": ")",
+                  "texClass": 0
+                }
+              }
+            ],
+            "properties": {}
+          }
+        ],
+        "properties": {}
+      },
+      "adjustments": [
+        {
+          "path": [
+            0,
+            0,
+            1,
+            0,
+            1
+          ],
+          "kind": "mo",
+          "field": "properties",
+          "key": "pseudoscript",
+          "primaryPresent": true,
+          "baselinePresent": false,
+          "primary": false,
+          "baseline": null
+        }
+      ],
+      "acceptedBeforeWitness": {
+        "baselinePath": [
+          0,
+          0,
+          1,
+          0,
+          1
+        ],
+        "candidatePath": [
+          0,
+          0,
+          1,
+          0,
+          1
+        ],
+        "exactSubtree": {
+          "kind": "mo",
+          "text": null,
+          "attributes": {},
+          "children": [
+            {
+              "kind": "text",
+              "text": "\u2032",
+              "attributes": {},
+              "children": [],
+              "properties": {}
+            }
+          ],
+          "properties": {
+            "variantForm": true
+          }
+        },
+        "scope": "D060 inherited absent pseudoscript=false own property; whole SVG and all explicit attrs remain primary"
+      }
+    },
+    "prime-display": {
+      "tex": "\\binom{x'}{y^n}",
+      "display": true,
+      "primarySHA256": "fa9b0920258b60ee260939bb66394cef213e90b1439b1ff5eb3938536a43ac73",
+      "candidateTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mrow",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "TeXAtom",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "inferredMrow",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "mo",
+                            "text": null,
+                            "attributes": {
+                              "minsize": "2.047em",
+                              "maxsize": "2.047em"
+                            },
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "(",
+                                "attributes": {},
+                                "children": [],
+                                "properties": {}
+                              }
+                            ],
+                            "properties": {}
+                          }
+                        ],
+                        "properties": {}
+                      }
+                    ],
+                    "properties": {
+                      "texClass": 4
+                    }
+                  },
+                  {
+                    "kind": "mfrac",
+                    "text": null,
+                    "attributes": {
+                      "linethickness": "0"
+                    },
+                    "children": [
+                      {
+                        "kind": "msup",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "x",
+                                "attributes": {},
+                                "children": [],
+                                "properties": {}
+                              }
+                            ],
+                            "properties": {}
+                          },
+                          {
+                            "kind": "mo",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "\u2032",
+                                "attributes": {},
+                                "children": [],
+                                "properties": {}
+                              }
+                            ],
+                            "properties": {
+                              "variantForm": true
+                            }
+                          }
+                        ],
+                        "properties": {}
+                      },
+                      {
+                        "kind": "msup",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "y",
+                                "attributes": {},
+                                "children": [],
+                                "properties": {}
+                              }
+                            ],
+                            "properties": {
+                              "texprimestyle": true
+                            }
+                          },
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "n",
+                                "attributes": {},
+                                "children": [],
+                                "properties": {}
+                              }
+                            ],
+                            "properties": {
+                              "texprimestyle": true
+                            }
+                          }
+                        ],
+                        "properties": {
+                          "texprimestyle": true
+                        }
+                      }
+                    ],
+                    "properties": {
+                      "withDelims": true
+                    }
+                  },
+                  {
+                    "kind": "TeXAtom",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "inferredMrow",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "mo",
+                            "text": null,
+                            "attributes": {
+                              "minsize": "2.047em",
+                              "maxsize": "2.047em"
+                            },
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": ")",
+                                "attributes": {},
+                                "children": [],
+                                "properties": {}
+                              }
+                            ],
+                            "properties": {}
+                          }
+                        ],
+                        "properties": {}
+                      }
+                    ],
+                    "properties": {
+                      "texClass": 5
+                    }
+                  }
+                ],
+                "properties": {
+                  "open": "(",
+                  "close": ")",
+                  "texClass": 0
+                }
+              }
+            ],
+            "properties": {}
+          }
+        ],
+        "properties": {}
+      },
+      "adjustments": [
+        {
+          "path": [
+            0,
+            0,
+            1,
+            0,
+            1
+          ],
+          "kind": "mo",
+          "field": "properties",
+          "key": "pseudoscript",
+          "primaryPresent": true,
+          "baselinePresent": false,
+          "primary": false,
+          "baseline": null
+        }
+      ],
+      "acceptedBeforeWitness": {
+        "baselinePath": [
+          0,
+          0,
+          1,
+          0,
+          1
+        ],
+        "candidatePath": [
+          0,
+          0,
+          1,
+          0,
+          1
+        ],
+        "exactSubtree": {
+          "kind": "mo",
+          "text": null,
+          "attributes": {},
+          "children": [
+            {
+              "kind": "text",
+              "text": "\u2032",
+              "attributes": {},
+              "children": [],
+              "properties": {}
+            }
+          ],
+          "properties": {
+            "variantForm": true
+          }
+        },
+        "scope": "D060 inherited absent pseudoscript=false own property; whole SVG and all explicit attrs remain primary"
+      }
+    },
+    "genfrac-control-inline": {
+      "tex": "\\genfrac{(}{)}{0}{}{x}{y}",
+      "display": false,
+      "primarySHA256": "3399b7b6aa03a5c1311a507f3ad4ca7bbedb41a80b4bb3ab44164611960d57ea",
+      "candidateTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mrow",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "TeXAtom",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "inferredMrow",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "mo",
+                            "text": null,
+                            "attributes": {
+                              "minsize": "1.2em",
+                              "maxsize": "1.2em"
+                            },
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "(",
+                                "attributes": {},
+                                "children": [],
+                                "properties": {}
+                              }
+                            ],
+                            "properties": {}
+                          }
+                        ],
+                        "properties": {}
+                      }
+                    ],
+                    "properties": {
+                      "texClass": 4
+                    }
+                  },
+                  {
+                    "kind": "mfrac",
+                    "text": null,
+                    "attributes": {
+                      "linethickness": "0"
+                    },
+                    "children": [
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "x",
+                            "attributes": {},
+                            "children": [],
+                            "properties": {}
+                          }
+                        ],
+                        "properties": {}
+                      },
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "y",
+                            "attributes": {},
+                            "children": [],
+                            "properties": {}
+                          }
+                        ],
+                        "properties": {
+                          "texprimestyle": true
+                        }
+                      }
+                    ],
+                    "properties": {
+                      "withDelims": true
+                    }
+                  },
+                  {
+                    "kind": "TeXAtom",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "inferredMrow",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "mo",
+                            "text": null,
+                            "attributes": {
+                              "minsize": "1.2em",
+                              "maxsize": "1.2em"
+                            },
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": ")",
+                                "attributes": {},
+                                "children": [],
+                                "properties": {}
+                              }
+                            ],
+                            "properties": {}
+                          }
+                        ],
+                        "properties": {}
+                      }
+                    ],
+                    "properties": {
+                      "texClass": 5
+                    }
+                  }
+                ],
+                "properties": {}
+              }
+            ],
+            "properties": {}
+          }
+        ],
+        "properties": {}
+      },
+      "adjustments": [
+        {
+          "path": [
+            0,
+            0
+          ],
+          "kind": "mrow",
+          "field": "properties",
+          "key": "texClass",
+          "primaryPresent": true,
+          "baselinePresent": false,
+          "primary": 0,
+          "baseline": null
+        },
+        {
+          "path": [
+            0,
+            0
+          ],
+          "kind": "mrow",
+          "field": "properties",
+          "key": "close",
+          "primaryPresent": true,
+          "baselinePresent": false,
+          "primary": ")",
+          "baseline": null
+        },
+        {
+          "path": [
+            0,
+            0
+          ],
+          "kind": "mrow",
+          "field": "properties",
+          "key": "open",
+          "primaryPresent": true,
+          "baselinePresent": false,
+          "primary": "(",
+          "baseline": null
+        }
+      ],
+      "acceptedBeforeWitness": {
+        "scope": "Accepted genfrac row own-property omission, entire tree and SVG unchanged"
+      }
+    },
+    "genfrac-control-display": {
+      "tex": "\\genfrac{(}{)}{0}{}{x}{y}",
+      "display": true,
+      "primarySHA256": "44e664ad1f80f2f09dc31958498766a9aba1fe78be43f22c351415d3d78af252",
+      "candidateTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mrow",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "TeXAtom",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "inferredMrow",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "mo",
+                            "text": null,
+                            "attributes": {
+                              "minsize": "2.047em",
+                              "maxsize": "2.047em"
+                            },
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "(",
+                                "attributes": {},
+                                "children": [],
+                                "properties": {}
+                              }
+                            ],
+                            "properties": {}
+                          }
+                        ],
+                        "properties": {}
+                      }
+                    ],
+                    "properties": {
+                      "texClass": 4
+                    }
+                  },
+                  {
+                    "kind": "mfrac",
+                    "text": null,
+                    "attributes": {
+                      "linethickness": "0"
+                    },
+                    "children": [
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "x",
+                            "attributes": {},
+                            "children": [],
+                            "properties": {}
+                          }
+                        ],
+                        "properties": {}
+                      },
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "y",
+                            "attributes": {},
+                            "children": [],
+                            "properties": {}
+                          }
+                        ],
+                        "properties": {
+                          "texprimestyle": true
+                        }
+                      }
+                    ],
+                    "properties": {
+                      "withDelims": true
+                    }
+                  },
+                  {
+                    "kind": "TeXAtom",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "inferredMrow",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "mo",
+                            "text": null,
+                            "attributes": {
+                              "minsize": "2.047em",
+                              "maxsize": "2.047em"
+                            },
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": ")",
+                                "attributes": {},
+                                "children": [],
+                                "properties": {}
+                              }
+                            ],
+                            "properties": {}
+                          }
+                        ],
+                        "properties": {}
+                      }
+                    ],
+                    "properties": {
+                      "texClass": 5
+                    }
+                  }
+                ],
+                "properties": {}
+              }
+            ],
+            "properties": {}
+          }
+        ],
+        "properties": {}
+      },
+      "adjustments": [
+        {
+          "path": [
+            0,
+            0
+          ],
+          "kind": "mrow",
+          "field": "properties",
+          "key": "texClass",
+          "primaryPresent": true,
+          "baselinePresent": false,
+          "primary": 0,
+          "baseline": null
+        },
+        {
+          "path": [
+            0,
+            0
+          ],
+          "kind": "mrow",
+          "field": "properties",
+          "key": "close",
+          "primaryPresent": true,
+          "baselinePresent": false,
+          "primary": ")",
+          "baseline": null
+        },
+        {
+          "path": [
+            0,
+            0
+          ],
+          "kind": "mrow",
+          "field": "properties",
+          "key": "open",
+          "primaryPresent": true,
+          "baselinePresent": false,
+          "primary": "(",
+          "baseline": null
+        }
+      ],
+      "acceptedBeforeWitness": {
+        "scope": "Accepted genfrac row own-property omission, entire tree and SVG unchanged"
+      }
+    }
+  }
+}
