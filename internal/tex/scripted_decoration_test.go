@@ -180,8 +180,8 @@ func TestOrdinaryScriptedDecorationCallers(t *testing.T) {
 					t.Fatalf("constructor: %v", err)
 				}
 				annotation := out[0]
-				if _, ok := annotation.Property("subsupOK"); ok {
-					t.Fatal("D071 permission introduced")
+				if permission, ok := annotation.Property("subsupOK"); !ok || permission != true {
+					t.Fatal("ordinary decoration lacks primary own script permission")
 				}
 				row := annotation.Children[0]
 				if row.Kind != "mrow" || len(row.Children) != 2 || row.Children[0].Kind != "mo" || len(row.Children[0].Children) != 0 || row.Children[1].Kind != "munderover" {

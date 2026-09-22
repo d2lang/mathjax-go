@@ -746,7 +746,7 @@
           },
           "baseline": {
             "kind": "same-formula",
-            "file": "d072-accepted/underline-grouped-inline.json",
+            "file": "accepted/underline-grouped-inline.json",
             "sha256": "662c1960238a639c2a3f60a90521098b4415b1714e80a582585767c80d54ec03",
             "paths": [
               [
@@ -776,7 +776,7 @@
           "expected": {},
           "baseline": {
             "kind": "same-formula",
-            "file": "d072-accepted/underline-grouped-inline.json",
+            "file": "accepted/underline-grouped-inline.json",
             "sha256": "662c1960238a639c2a3f60a90521098b4415b1714e80a582585767c80d54ec03",
             "paths": [
               [
@@ -810,7 +810,7 @@
           },
           "baseline": {
             "kind": "same-formula",
-            "file": "d072-accepted/underline-grouped-inline.json",
+            "file": "accepted/underline-grouped-inline.json",
             "sha256": "662c1960238a639c2a3f60a90521098b4415b1714e80a582585767c80d54ec03",
             "paths": [
               [
@@ -848,7 +848,7 @@
           },
           "baseline": {
             "kind": "same-formula",
-            "file": "d072-accepted/underline-grouped-display.json",
+            "file": "accepted/underline-grouped-display.json",
             "sha256": "2984869e1b8f40bdafada64ae348f721725e8f150f48b9b3c6c3554cb82c52a5",
             "paths": [
               [
@@ -878,7 +878,7 @@
           "expected": {},
           "baseline": {
             "kind": "same-formula",
-            "file": "d072-accepted/underline-grouped-display.json",
+            "file": "accepted/underline-grouped-display.json",
             "sha256": "2984869e1b8f40bdafada64ae348f721725e8f150f48b9b3c6c3554cb82c52a5",
             "paths": [
               [
@@ -912,7 +912,7 @@
           },
           "baseline": {
             "kind": "same-formula",
-            "file": "d072-accepted/underline-grouped-display.json",
+            "file": "accepted/underline-grouped-display.json",
             "sha256": "2984869e1b8f40bdafada64ae348f721725e8f150f48b9b3c6c3554cb82c52a5",
             "paths": [
               [
@@ -1365,7 +1365,7 @@
           },
           "baseline": {
             "kind": "same-formula",
-            "file": "d072-accepted/underline-bare-inline.json",
+            "file": "accepted/underline-bare-inline.json",
             "sha256": "387fa1210e1766d9273320dfbdfd1a1fb9b3e92d956f1f67b0037044cfcacb13",
             "paths": [
               [
@@ -1389,7 +1389,7 @@
           "expected": {},
           "baseline": {
             "kind": "same-formula",
-            "file": "d072-accepted/underline-bare-inline.json",
+            "file": "accepted/underline-bare-inline.json",
             "sha256": "387fa1210e1766d9273320dfbdfd1a1fb9b3e92d956f1f67b0037044cfcacb13",
             "paths": [
               [
@@ -1417,7 +1417,7 @@
           },
           "baseline": {
             "kind": "same-formula",
-            "file": "d072-accepted/underline-bare-inline.json",
+            "file": "accepted/underline-bare-inline.json",
             "sha256": "387fa1210e1766d9273320dfbdfd1a1fb9b3e92d956f1f67b0037044cfcacb13",
             "paths": [
               [
@@ -1449,7 +1449,7 @@
           },
           "baseline": {
             "kind": "same-formula",
-            "file": "d072-accepted/underline-bare-display.json",
+            "file": "accepted/underline-bare-display.json",
             "sha256": "98f4ab58b51ac7d981a1f661536d2b0fec6573e577a9342b7269b9aa087145ed",
             "paths": [
               [
@@ -1473,7 +1473,7 @@
           "expected": {},
           "baseline": {
             "kind": "same-formula",
-            "file": "d072-accepted/underline-bare-display.json",
+            "file": "accepted/underline-bare-display.json",
             "sha256": "98f4ab58b51ac7d981a1f661536d2b0fec6573e577a9342b7269b9aa087145ed",
             "paths": [
               [
@@ -1501,7 +1501,7 @@
           },
           "baseline": {
             "kind": "same-formula",
-            "file": "d072-accepted/underline-bare-display.json",
+            "file": "accepted/underline-bare-display.json",
             "sha256": "98f4ab58b51ac7d981a1f661536d2b0fec6573e577a9342b7269b9aa087145ed",
             "paths": [
               [
@@ -1533,7 +1533,7 @@
           },
           "baseline": {
             "kind": "same-formula",
-            "file": "d072-accepted/underarrow-bare-inline.json",
+            "file": "accepted/underarrow-bare-inline.json",
             "sha256": "647a1a62e693e06b5f6cc0ddc32d76f62c3ccf5d65d3e04ad4dbf2ce10426b14",
             "paths": [
               [
@@ -1562,7 +1562,7 @@
           },
           "baseline": {
             "kind": "same-formula",
-            "file": "d072-accepted/underarrow-bare-inline.json",
+            "file": "accepted/underarrow-bare-inline.json",
             "sha256": "647a1a62e693e06b5f6cc0ddc32d76f62c3ccf5d65d3e04ad4dbf2ce10426b14",
             "paths": [
               [
@@ -1594,7 +1594,7 @@
           },
           "baseline": {
             "kind": "same-formula",
-            "file": "d072-accepted/underarrow-bare-display.json",
+            "file": "accepted/underarrow-bare-display.json",
             "sha256": "7afccc325c96443b104c06ea6c6e576fcae89bc402753a19237a99e2abee3534",
             "paths": [
               [
@@ -1623,7 +1623,7 @@
           },
           "baseline": {
             "kind": "same-formula",
-            "file": "d072-accepted/underarrow-bare-display.json",
+            "file": "accepted/underarrow-bare-display.json",
             "sha256": "7afccc325c96443b104c06ea6c6e576fcae89bc402753a19237a99e2abee3534",
             "paths": [
               [
@@ -1656,7 +1656,7 @@
           },
           "baseline": {
             "kind": "same-formula",
-            "file": "d072-accepted/overline-sup-inline.json",
+            "file": "accepted/overline-sup-inline.json",
             "sha256": "8f75469fb780d8161225016e7cd7c70fd847b22962c60dd4ece915045fd170f9",
             "paths": [
               [
@@ -1682,7 +1682,7 @@
           "expected": {},
           "baseline": {
             "kind": "same-formula",
-            "file": "d072-accepted/overline-sup-inline.json",
+            "file": "accepted/overline-sup-inline.json",
             "sha256": "8f75469fb780d8161225016e7cd7c70fd847b22962c60dd4ece915045fd170f9",
             "paths": [
               [
@@ -1709,7 +1709,7 @@
           },
           "baseline": {
             "kind": "same-formula",
-            "file": "d072-accepted/overline-sup-inline.json",
+            "file": "accepted/overline-sup-inline.json",
             "sha256": "8f75469fb780d8161225016e7cd7c70fd847b22962c60dd4ece915045fd170f9",
             "paths": [
               [
@@ -1743,7 +1743,7 @@
           },
           "baseline": {
             "kind": "same-formula",
-            "file": "d072-accepted/overline-sup-display.json",
+            "file": "accepted/overline-sup-display.json",
             "sha256": "dce75d1b6f41738ea92d98613a058fac023c1ed05e3e53eb35191adca3ce0bec",
             "paths": [
               [
@@ -1769,7 +1769,7 @@
           "expected": {},
           "baseline": {
             "kind": "same-formula",
-            "file": "d072-accepted/overline-sup-display.json",
+            "file": "accepted/overline-sup-display.json",
             "sha256": "dce75d1b6f41738ea92d98613a058fac023c1ed05e3e53eb35191adca3ce0bec",
             "paths": [
               [
@@ -1796,7 +1796,7 @@
           },
           "baseline": {
             "kind": "same-formula",
-            "file": "d072-accepted/overline-sup-display.json",
+            "file": "accepted/overline-sup-display.json",
             "sha256": "dce75d1b6f41738ea92d98613a058fac023c1ed05e3e53eb35191adca3ce0bec",
             "paths": [
               [
@@ -1830,7 +1830,7 @@
           },
           "baseline": {
             "kind": "same-formula",
-            "file": "d072-accepted/overright-sup-inline.json",
+            "file": "accepted/overright-sup-inline.json",
             "sha256": "de6a35d2a9de1818b454bbf37f6e48840b414a43abe60f98be06c67948a599ae",
             "paths": [
               [
@@ -1859,7 +1859,7 @@
           },
           "baseline": {
             "kind": "same-formula",
-            "file": "d072-accepted/overright-sup-inline.json",
+            "file": "accepted/overright-sup-inline.json",
             "sha256": "de6a35d2a9de1818b454bbf37f6e48840b414a43abe60f98be06c67948a599ae",
             "paths": [
               [
@@ -1893,7 +1893,7 @@
           },
           "baseline": {
             "kind": "same-formula",
-            "file": "d072-accepted/overright-sup-display.json",
+            "file": "accepted/overright-sup-display.json",
             "sha256": "ecc637254da64a6d3b2a21daf719b7a5832ea4d7fc88d24bacfc6b3e4c79e4b1",
             "paths": [
               [
@@ -1922,7 +1922,7 @@
           },
           "baseline": {
             "kind": "same-formula",
-            "file": "d072-accepted/overright-sup-display.json",
+            "file": "accepted/overright-sup-display.json",
             "sha256": "ecc637254da64a6d3b2a21daf719b7a5832ea4d7fc88d24bacfc6b3e4c79e4b1",
             "paths": [
               [
@@ -1956,7 +1956,7 @@
           },
           "baseline": {
             "kind": "same-formula",
-            "file": "d072-accepted/overleft-sup-inline.json",
+            "file": "accepted/overleft-sup-inline.json",
             "sha256": "ffc6fa326ccd7b54f2c698f81f8ab79cbfa41b04c7fbc4711df9508010ebcc67",
             "paths": [
               [
@@ -1982,7 +1982,7 @@
           },
           "baseline": {
             "kind": "same-formula",
-            "file": "d072-accepted/overleft-sup-inline.json",
+            "file": "accepted/overleft-sup-inline.json",
             "sha256": "ffc6fa326ccd7b54f2c698f81f8ab79cbfa41b04c7fbc4711df9508010ebcc67",
             "paths": [
               [
@@ -2016,7 +2016,7 @@
           },
           "baseline": {
             "kind": "same-formula",
-            "file": "d072-accepted/overleft-sup-display.json",
+            "file": "accepted/overleft-sup-display.json",
             "sha256": "e812a4968185ee7dea44afa2ed8a6f79557c35fe1444c6906faaf7b29cbafde7",
             "paths": [
               [
@@ -2042,7 +2042,7 @@
           },
           "baseline": {
             "kind": "same-formula",
-            "file": "d072-accepted/overleft-sup-display.json",
+            "file": "accepted/overleft-sup-display.json",
             "sha256": "e812a4968185ee7dea44afa2ed8a6f79557c35fe1444c6906faaf7b29cbafde7",
             "paths": [
               [
@@ -2082,7 +2082,7 @@
           },
           "baseline": {
             "kind": "same-formula",
-            "file": "d072-accepted/bar-sub-inline.json",
+            "file": "accepted/bar-sub-inline.json",
             "sha256": "4152c5a8022fbe98cef60d23b471c1f79cc58b5cee02ff0d1367aacbece97293",
             "paths": [
               [
@@ -2124,7 +2124,7 @@
           },
           "baseline": {
             "kind": "same-formula",
-            "file": "d072-accepted/bar-sub-display.json",
+            "file": "accepted/bar-sub-display.json",
             "sha256": "eebced0c83954b4be9777b6f6f6a427965c782a14feaa15faf1e2a7fac6fbf2b",
             "paths": [
               [
@@ -2162,7 +2162,7 @@
           },
           "baseline": {
             "kind": "same-formula",
-            "file": "d072-accepted/underbrace-label-inline.json",
+            "file": "accepted/underbrace-label-inline.json",
             "sha256": "5e3c5ee061b41969ebbb424f2e567c7931e9ab68130abeeea242f986fca3a129",
             "paths": [
               [
@@ -2195,7 +2195,7 @@
           },
           "baseline": {
             "kind": "same-formula",
-            "file": "d072-accepted/underbrace-label-inline.json",
+            "file": "accepted/underbrace-label-inline.json",
             "sha256": "5e3c5ee061b41969ebbb424f2e567c7931e9ab68130abeeea242f986fca3a129",
             "paths": [
               [
@@ -2233,7 +2233,7 @@
           },
           "baseline": {
             "kind": "same-formula",
-            "file": "d072-accepted/underbrace-label-display.json",
+            "file": "accepted/underbrace-label-display.json",
             "sha256": "bc73cfd45233e9baf968f253759b2a516edf791463b917e1e9f6fba382bd7630",
             "paths": [
               [
@@ -2266,7 +2266,7 @@
           },
           "baseline": {
             "kind": "same-formula",
-            "file": "d072-accepted/underbrace-label-display.json",
+            "file": "accepted/underbrace-label-display.json",
             "sha256": "bc73cfd45233e9baf968f253759b2a516edf791463b917e1e9f6fba382bd7630",
             "paths": [
               [
@@ -2304,7 +2304,7 @@
           },
           "baseline": {
             "kind": "same-formula",
-            "file": "d072-accepted/overbrace-label-inline.json",
+            "file": "accepted/overbrace-label-inline.json",
             "sha256": "595d7c50ebd6840c912cf4732abf02c1fdb1b21d3a8d6a2f200aaee4d6a3f589",
             "paths": [
               [
@@ -2337,7 +2337,7 @@
           },
           "baseline": {
             "kind": "same-formula",
-            "file": "d072-accepted/overbrace-label-inline.json",
+            "file": "accepted/overbrace-label-inline.json",
             "sha256": "595d7c50ebd6840c912cf4732abf02c1fdb1b21d3a8d6a2f200aaee4d6a3f589",
             "paths": [
               [
@@ -2375,7 +2375,7 @@
           },
           "baseline": {
             "kind": "same-formula",
-            "file": "d072-accepted/overbrace-label-display.json",
+            "file": "accepted/overbrace-label-display.json",
             "sha256": "f9f97fe41193690272832ab69989071be5c36f99633012889a75a6add944dbf0",
             "paths": [
               [
@@ -2408,7 +2408,7 @@
           },
           "baseline": {
             "kind": "same-formula",
-            "file": "d072-accepted/overbrace-label-display.json",
+            "file": "accepted/overbrace-label-display.json",
             "sha256": "f9f97fe41193690272832ab69989071be5c36f99633012889a75a6add944dbf0",
             "paths": [
               [
@@ -2918,7 +2918,7 @@
           },
           "baseline": {
             "kind": "same-formula",
-            "file": "d072-accepted/overline-sum-sup-inline.json",
+            "file": "accepted/overline-sum-sup-inline.json",
             "sha256": "595b2bc88d431c2a97f31d57e51055d5d83c1635d0170167cc25f92319c9ad59",
             "paths": [
               [
@@ -2944,7 +2944,7 @@
           "expected": {},
           "baseline": {
             "kind": "same-formula",
-            "file": "d072-accepted/overline-sum-sup-inline.json",
+            "file": "accepted/overline-sum-sup-inline.json",
             "sha256": "595b2bc88d431c2a97f31d57e51055d5d83c1635d0170167cc25f92319c9ad59",
             "paths": [
               [
@@ -2971,7 +2971,7 @@
           },
           "baseline": {
             "kind": "same-formula",
-            "file": "d072-accepted/overline-sum-sup-inline.json",
+            "file": "accepted/overline-sum-sup-inline.json",
             "sha256": "595b2bc88d431c2a97f31d57e51055d5d83c1635d0170167cc25f92319c9ad59",
             "paths": [
               [
@@ -3005,7 +3005,7 @@
           },
           "baseline": {
             "kind": "same-formula",
-            "file": "d072-accepted/overline-sum-sup-display.json",
+            "file": "accepted/overline-sum-sup-display.json",
             "sha256": "d7e10430fb8ba82749ff910a78efce7e1106aced29cd7b7e2f13f8a415e199b2",
             "paths": [
               [
@@ -3031,7 +3031,7 @@
           "expected": {},
           "baseline": {
             "kind": "same-formula",
-            "file": "d072-accepted/overline-sum-sup-display.json",
+            "file": "accepted/overline-sum-sup-display.json",
             "sha256": "d7e10430fb8ba82749ff910a78efce7e1106aced29cd7b7e2f13f8a415e199b2",
             "paths": [
               [
@@ -3058,7 +3058,7 @@
           },
           "baseline": {
             "kind": "same-formula",
-            "file": "d072-accepted/overline-sum-sup-display.json",
+            "file": "accepted/overline-sum-sup-display.json",
             "sha256": "d7e10430fb8ba82749ff910a78efce7e1106aced29cd7b7e2f13f8a415e199b2",
             "paths": [
               [
@@ -3092,7 +3092,7 @@
           },
           "baseline": {
             "kind": "same-formula",
-            "file": "d072-accepted/overright-sum-sup-inline.json",
+            "file": "accepted/overright-sum-sup-inline.json",
             "sha256": "93fe4d970c78c53b3c6cc3d4a349a641b62341c3fa3ceeb5bda7280f518e2443",
             "paths": [
               [
@@ -3121,7 +3121,7 @@
           },
           "baseline": {
             "kind": "same-formula",
-            "file": "d072-accepted/overright-sum-sup-inline.json",
+            "file": "accepted/overright-sum-sup-inline.json",
             "sha256": "93fe4d970c78c53b3c6cc3d4a349a641b62341c3fa3ceeb5bda7280f518e2443",
             "paths": [
               [
@@ -3155,7 +3155,7 @@
           },
           "baseline": {
             "kind": "same-formula",
-            "file": "d072-accepted/overright-sum-sup-display.json",
+            "file": "accepted/overright-sum-sup-display.json",
             "sha256": "0ec61cbb5a4aee0dc6568b89242d8c15f9e6df40de5b6c2b8031eda9c6e85cde",
             "paths": [
               [
@@ -3184,7 +3184,7 @@
           },
           "baseline": {
             "kind": "same-formula",
-            "file": "d072-accepted/overright-sum-sup-display.json",
+            "file": "accepted/overright-sum-sup-display.json",
             "sha256": "0ec61cbb5a4aee0dc6568b89242d8c15f9e6df40de5b6c2b8031eda9c6e85cde",
             "paths": [
               [
@@ -3198,881 +3198,11 @@
         }
       ]
     },
-    "overline-product-inline": {
+    "underline-reverse-inline": {
       "category": "exact-inherited-fields",
-      "primarySHA256": "63ae1a3791c2d229061c1481cbf71e12a02795083fce6238db8a79a9cc1b6ece",
-      "expectedSHA256": "63ae1a3791c2d229061c1481cbf71e12a02795083fce6238db8a79a9cc1b6ece",
-      "baselineTreeSHA256": "05de0a1ccced378bf85c5620cca0902255b7e1f95170364bdb11e6ea39a7984a",
-      "differences": [
-        {
-          "path": [
-            0,
-            0,
-            0
-          ],
-          "field": "attributes",
-          "expectedKind": "mover",
-          "primary": {},
-          "expected": {
-            "accent": true
-          },
-          "baseline": {
-            "kind": "same-formula",
-            "file": "d072-accepted/overline-product-inline.json",
-            "sha256": "05de0a1ccced378bf85c5620cca0902255b7e1f95170364bdb11e6ea39a7984a",
-            "paths": [
-              [
-                0,
-                0,
-                0
-              ]
-            ]
-          }
-        },
-        {
-          "path": [
-            0,
-            0,
-            0,
-            1
-          ],
-          "field": "attributes",
-          "expectedKind": "mo",
-          "primary": {
-            "accent": true
-          },
-          "expected": {},
-          "baseline": {
-            "kind": "same-formula",
-            "file": "d072-accepted/overline-product-inline.json",
-            "sha256": "05de0a1ccced378bf85c5620cca0902255b7e1f95170364bdb11e6ea39a7984a",
-            "paths": [
-              [
-                0,
-                0,
-                0,
-                1
-              ]
-            ]
-          }
-        },
-        {
-          "path": [
-            0,
-            0,
-            0,
-            1
-          ],
-          "field": "properties",
-          "expectedKind": "mo",
-          "primary": {},
-          "expected": {
-            "texClass": 0
-          },
-          "baseline": {
-            "kind": "same-formula",
-            "file": "d072-accepted/overline-product-inline.json",
-            "sha256": "05de0a1ccced378bf85c5620cca0902255b7e1f95170364bdb11e6ea39a7984a",
-            "paths": [
-              [
-                0,
-                0,
-                0,
-                1
-              ]
-            ]
-          }
-        }
-      ]
-    },
-    "overline-product-display": {
-      "category": "exact-inherited-fields",
-      "primarySHA256": "438abe5189751920ac5b755a89c1f6cb668548d19b4442e8f6aff2d6d201042a",
-      "expectedSHA256": "438abe5189751920ac5b755a89c1f6cb668548d19b4442e8f6aff2d6d201042a",
-      "baselineTreeSHA256": "7605b441e5855bcf46fc84aa30d69153b959442747d7e3401bffc0461905a1e8",
-      "differences": [
-        {
-          "path": [
-            0,
-            0,
-            0
-          ],
-          "field": "attributes",
-          "expectedKind": "mover",
-          "primary": {},
-          "expected": {
-            "accent": true
-          },
-          "baseline": {
-            "kind": "same-formula",
-            "file": "d072-accepted/overline-product-display.json",
-            "sha256": "7605b441e5855bcf46fc84aa30d69153b959442747d7e3401bffc0461905a1e8",
-            "paths": [
-              [
-                0,
-                0,
-                0
-              ]
-            ]
-          }
-        },
-        {
-          "path": [
-            0,
-            0,
-            0,
-            1
-          ],
-          "field": "attributes",
-          "expectedKind": "mo",
-          "primary": {
-            "accent": true
-          },
-          "expected": {},
-          "baseline": {
-            "kind": "same-formula",
-            "file": "d072-accepted/overline-product-display.json",
-            "sha256": "7605b441e5855bcf46fc84aa30d69153b959442747d7e3401bffc0461905a1e8",
-            "paths": [
-              [
-                0,
-                0,
-                0,
-                1
-              ]
-            ]
-          }
-        },
-        {
-          "path": [
-            0,
-            0,
-            0,
-            1
-          ],
-          "field": "properties",
-          "expectedKind": "mo",
-          "primary": {},
-          "expected": {
-            "texClass": 0
-          },
-          "baseline": {
-            "kind": "same-formula",
-            "file": "d072-accepted/overline-product-display.json",
-            "sha256": "7605b441e5855bcf46fc84aa30d69153b959442747d7e3401bffc0461905a1e8",
-            "paths": [
-              [
-                0,
-                0,
-                0,
-                1
-              ]
-            ]
-          }
-        }
-      ]
-    },
-    "overline-integral-inline": {
-      "category": "exact-inherited-fields",
-      "primarySHA256": "8ab008532f32355acff41b427f6e5ff4b2f0203657631026e1a75cbee3a6942f",
-      "expectedSHA256": "8ab008532f32355acff41b427f6e5ff4b2f0203657631026e1a75cbee3a6942f",
-      "baselineTreeSHA256": "ccae18930993685cffbfc491a24040b56c015765ac54a5c77b6b16279200d4a2",
-      "differences": [
-        {
-          "path": [
-            0,
-            0,
-            0
-          ],
-          "field": "attributes",
-          "expectedKind": "mover",
-          "primary": {},
-          "expected": {
-            "accent": true
-          },
-          "baseline": {
-            "kind": "same-formula",
-            "file": "d072-accepted/overline-integral-inline.json",
-            "sha256": "ccae18930993685cffbfc491a24040b56c015765ac54a5c77b6b16279200d4a2",
-            "paths": [
-              [
-                0,
-                0,
-                0
-              ]
-            ]
-          }
-        },
-        {
-          "path": [
-            0,
-            0,
-            0,
-            1
-          ],
-          "field": "attributes",
-          "expectedKind": "mo",
-          "primary": {
-            "accent": true
-          },
-          "expected": {},
-          "baseline": {
-            "kind": "same-formula",
-            "file": "d072-accepted/overline-integral-inline.json",
-            "sha256": "ccae18930993685cffbfc491a24040b56c015765ac54a5c77b6b16279200d4a2",
-            "paths": [
-              [
-                0,
-                0,
-                0,
-                1
-              ]
-            ]
-          }
-        },
-        {
-          "path": [
-            0,
-            0,
-            0,
-            1
-          ],
-          "field": "properties",
-          "expectedKind": "mo",
-          "primary": {},
-          "expected": {
-            "texClass": 0
-          },
-          "baseline": {
-            "kind": "same-formula",
-            "file": "d072-accepted/overline-integral-inline.json",
-            "sha256": "ccae18930993685cffbfc491a24040b56c015765ac54a5c77b6b16279200d4a2",
-            "paths": [
-              [
-                0,
-                0,
-                0,
-                1
-              ]
-            ]
-          }
-        }
-      ]
-    },
-    "overline-integral-display": {
-      "category": "exact-inherited-fields",
-      "primarySHA256": "df4884b6d913ebcf5c90174244d3d1b9815406a988866dd5502ed5fc4eec9f2d",
-      "expectedSHA256": "df4884b6d913ebcf5c90174244d3d1b9815406a988866dd5502ed5fc4eec9f2d",
-      "baselineTreeSHA256": "2d9671f442263a034c9ea42f4ab7f0a11d9d658dc744c56f3d5be12110b3968f",
-      "differences": [
-        {
-          "path": [
-            0,
-            0,
-            0
-          ],
-          "field": "attributes",
-          "expectedKind": "mover",
-          "primary": {},
-          "expected": {
-            "accent": true
-          },
-          "baseline": {
-            "kind": "same-formula",
-            "file": "d072-accepted/overline-integral-display.json",
-            "sha256": "2d9671f442263a034c9ea42f4ab7f0a11d9d658dc744c56f3d5be12110b3968f",
-            "paths": [
-              [
-                0,
-                0,
-                0
-              ]
-            ]
-          }
-        },
-        {
-          "path": [
-            0,
-            0,
-            0,
-            1
-          ],
-          "field": "attributes",
-          "expectedKind": "mo",
-          "primary": {
-            "accent": true
-          },
-          "expected": {},
-          "baseline": {
-            "kind": "same-formula",
-            "file": "d072-accepted/overline-integral-display.json",
-            "sha256": "2d9671f442263a034c9ea42f4ab7f0a11d9d658dc744c56f3d5be12110b3968f",
-            "paths": [
-              [
-                0,
-                0,
-                0,
-                1
-              ]
-            ]
-          }
-        },
-        {
-          "path": [
-            0,
-            0,
-            0,
-            1
-          ],
-          "field": "properties",
-          "expectedKind": "mo",
-          "primary": {},
-          "expected": {
-            "texClass": 0
-          },
-          "baseline": {
-            "kind": "same-formula",
-            "file": "d072-accepted/overline-integral-display.json",
-            "sha256": "2d9671f442263a034c9ea42f4ab7f0a11d9d658dc744c56f3d5be12110b3968f",
-            "paths": [
-              [
-                0,
-                0,
-                0,
-                1
-              ]
-            ]
-          }
-        }
-      ]
-    },
-    "overline-mathop-inline": {
-      "category": "exact-inherited-fields",
-      "primarySHA256": "6e0eb166afd8a0345b338c6f7fe149ee37d9a94cfaeddc826c3b4b095af676cb",
-      "expectedSHA256": "6e0eb166afd8a0345b338c6f7fe149ee37d9a94cfaeddc826c3b4b095af676cb",
-      "baselineTreeSHA256": "9f9372b2a712e37829b7178eff1f01dd0b2ca52bc4ef01b038c4c9cd70756054",
-      "differences": [
-        {
-          "path": [
-            0,
-            0,
-            0
-          ],
-          "field": "attributes",
-          "expectedKind": "mover",
-          "primary": {},
-          "expected": {
-            "accent": true
-          },
-          "baseline": {
-            "kind": "same-formula",
-            "file": "d072-accepted/overline-mathop-inline.json",
-            "sha256": "9f9372b2a712e37829b7178eff1f01dd0b2ca52bc4ef01b038c4c9cd70756054",
-            "paths": [
-              [
-                0,
-                0,
-                0
-              ]
-            ]
-          }
-        },
-        {
-          "path": [
-            0,
-            0,
-            0,
-            1
-          ],
-          "field": "attributes",
-          "expectedKind": "mo",
-          "primary": {
-            "accent": true
-          },
-          "expected": {},
-          "baseline": {
-            "kind": "same-formula",
-            "file": "d072-accepted/overline-mathop-inline.json",
-            "sha256": "9f9372b2a712e37829b7178eff1f01dd0b2ca52bc4ef01b038c4c9cd70756054",
-            "paths": [
-              [
-                0,
-                0,
-                0,
-                1
-              ]
-            ]
-          }
-        },
-        {
-          "path": [
-            0,
-            0,
-            0,
-            1
-          ],
-          "field": "properties",
-          "expectedKind": "mo",
-          "primary": {},
-          "expected": {
-            "texClass": 0
-          },
-          "baseline": {
-            "kind": "same-formula",
-            "file": "d072-accepted/overline-mathop-inline.json",
-            "sha256": "9f9372b2a712e37829b7178eff1f01dd0b2ca52bc4ef01b038c4c9cd70756054",
-            "paths": [
-              [
-                0,
-                0,
-                0,
-                1
-              ]
-            ]
-          }
-        }
-      ]
-    },
-    "overline-mathop-display": {
-      "category": "exact-inherited-fields",
-      "primarySHA256": "6e0eb166afd8a0345b338c6f7fe149ee37d9a94cfaeddc826c3b4b095af676cb",
-      "expectedSHA256": "6e0eb166afd8a0345b338c6f7fe149ee37d9a94cfaeddc826c3b4b095af676cb",
-      "baselineTreeSHA256": "72a73234c88efd7ba06f4ca9986617e0741639d4d3e07a8018520f435c1433d5",
-      "differences": [
-        {
-          "path": [
-            0,
-            0,
-            0
-          ],
-          "field": "attributes",
-          "expectedKind": "mover",
-          "primary": {},
-          "expected": {
-            "accent": true
-          },
-          "baseline": {
-            "kind": "same-formula",
-            "file": "d072-accepted/overline-mathop-display.json",
-            "sha256": "72a73234c88efd7ba06f4ca9986617e0741639d4d3e07a8018520f435c1433d5",
-            "paths": [
-              [
-                0,
-                0,
-                0
-              ]
-            ]
-          }
-        },
-        {
-          "path": [
-            0,
-            0,
-            0,
-            1
-          ],
-          "field": "attributes",
-          "expectedKind": "mo",
-          "primary": {
-            "accent": true
-          },
-          "expected": {},
-          "baseline": {
-            "kind": "same-formula",
-            "file": "d072-accepted/overline-mathop-display.json",
-            "sha256": "72a73234c88efd7ba06f4ca9986617e0741639d4d3e07a8018520f435c1433d5",
-            "paths": [
-              [
-                0,
-                0,
-                0,
-                1
-              ]
-            ]
-          }
-        },
-        {
-          "path": [
-            0,
-            0,
-            0,
-            1
-          ],
-          "field": "properties",
-          "expectedKind": "mo",
-          "primary": {},
-          "expected": {
-            "texClass": 0
-          },
-          "baseline": {
-            "kind": "same-formula",
-            "file": "d072-accepted/overline-mathop-display.json",
-            "sha256": "72a73234c88efd7ba06f4ca9986617e0741639d4d3e07a8018520f435c1433d5",
-            "paths": [
-              [
-                0,
-                0,
-                0,
-                1
-              ]
-            ]
-          }
-        }
-      ]
-    },
-    "overline-group-sum-inline": {
-      "category": "exact-inherited-fields",
-      "primarySHA256": "ec982c274e020f3786d908e5a9c77f65af8c09f4576d9f7456cb265a4b35d257",
-      "expectedSHA256": "ec982c274e020f3786d908e5a9c77f65af8c09f4576d9f7456cb265a4b35d257",
-      "baselineTreeSHA256": "8493970e46a92eb5911f9a3b283e7fb5045c77596175c48709b8c546d8e299e6",
-      "differences": [
-        {
-          "path": [
-            0,
-            0,
-            0
-          ],
-          "field": "attributes",
-          "expectedKind": "mover",
-          "primary": {},
-          "expected": {
-            "accent": true
-          },
-          "baseline": {
-            "kind": "same-formula",
-            "file": "d072-accepted/overline-group-sum-inline.json",
-            "sha256": "8493970e46a92eb5911f9a3b283e7fb5045c77596175c48709b8c546d8e299e6",
-            "paths": [
-              [
-                0,
-                0,
-                0
-              ]
-            ]
-          }
-        },
-        {
-          "path": [
-            0,
-            0,
-            0,
-            1
-          ],
-          "field": "attributes",
-          "expectedKind": "mo",
-          "primary": {
-            "accent": true
-          },
-          "expected": {},
-          "baseline": {
-            "kind": "same-formula",
-            "file": "d072-accepted/overline-group-sum-inline.json",
-            "sha256": "8493970e46a92eb5911f9a3b283e7fb5045c77596175c48709b8c546d8e299e6",
-            "paths": [
-              [
-                0,
-                0,
-                0,
-                1
-              ]
-            ]
-          }
-        },
-        {
-          "path": [
-            0,
-            0,
-            0,
-            1
-          ],
-          "field": "properties",
-          "expectedKind": "mo",
-          "primary": {},
-          "expected": {
-            "texClass": 0
-          },
-          "baseline": {
-            "kind": "same-formula",
-            "file": "d072-accepted/overline-group-sum-inline.json",
-            "sha256": "8493970e46a92eb5911f9a3b283e7fb5045c77596175c48709b8c546d8e299e6",
-            "paths": [
-              [
-                0,
-                0,
-                0,
-                1
-              ]
-            ]
-          }
-        }
-      ]
-    },
-    "overline-group-sum-display": {
-      "category": "exact-inherited-fields",
-      "primarySHA256": "841bdfb41802993befb69eb250bcd88f6c2bac3efb85bd7842c4196962019274",
-      "expectedSHA256": "841bdfb41802993befb69eb250bcd88f6c2bac3efb85bd7842c4196962019274",
-      "baselineTreeSHA256": "68d257a074a78b7dd0b50e7703885f5ce2b43ff731e3226747366f2bb0a1ac21",
-      "differences": [
-        {
-          "path": [
-            0,
-            0,
-            0
-          ],
-          "field": "attributes",
-          "expectedKind": "mover",
-          "primary": {},
-          "expected": {
-            "accent": true
-          },
-          "baseline": {
-            "kind": "same-formula",
-            "file": "d072-accepted/overline-group-sum-display.json",
-            "sha256": "68d257a074a78b7dd0b50e7703885f5ce2b43ff731e3226747366f2bb0a1ac21",
-            "paths": [
-              [
-                0,
-                0,
-                0
-              ]
-            ]
-          }
-        },
-        {
-          "path": [
-            0,
-            0,
-            0,
-            1
-          ],
-          "field": "attributes",
-          "expectedKind": "mo",
-          "primary": {
-            "accent": true
-          },
-          "expected": {},
-          "baseline": {
-            "kind": "same-formula",
-            "file": "d072-accepted/overline-group-sum-display.json",
-            "sha256": "68d257a074a78b7dd0b50e7703885f5ce2b43ff731e3226747366f2bb0a1ac21",
-            "paths": [
-              [
-                0,
-                0,
-                0,
-                1
-              ]
-            ]
-          }
-        },
-        {
-          "path": [
-            0,
-            0,
-            0,
-            1
-          ],
-          "field": "properties",
-          "expectedKind": "mo",
-          "primary": {},
-          "expected": {
-            "texClass": 0
-          },
-          "baseline": {
-            "kind": "same-formula",
-            "file": "d072-accepted/overline-group-sum-display.json",
-            "sha256": "68d257a074a78b7dd0b50e7703885f5ce2b43ff731e3226747366f2bb0a1ac21",
-            "paths": [
-              [
-                0,
-                0,
-                0,
-                1
-              ]
-            ]
-          }
-        }
-      ]
-    },
-    "overline-scripted-sum-inline": {
-      "category": "exact-inherited-fields",
-      "primarySHA256": "d028fc2db6e5af0502e2f431eee308412401bfd41a9dcaed20b602000380f248",
-      "expectedSHA256": "d028fc2db6e5af0502e2f431eee308412401bfd41a9dcaed20b602000380f248",
-      "baselineTreeSHA256": "fc882a8cd3ad28793d92f3ec171df1bd0b6c9031de35896e55a8adbdee842305",
-      "differences": [
-        {
-          "path": [
-            0,
-            0,
-            0
-          ],
-          "field": "attributes",
-          "expectedKind": "mover",
-          "primary": {},
-          "expected": {
-            "accent": true
-          },
-          "baseline": {
-            "kind": "same-formula",
-            "file": "d072-accepted/overline-scripted-sum-inline.json",
-            "sha256": "fc882a8cd3ad28793d92f3ec171df1bd0b6c9031de35896e55a8adbdee842305",
-            "paths": [
-              [
-                0,
-                0,
-                0
-              ]
-            ]
-          }
-        },
-        {
-          "path": [
-            0,
-            0,
-            0,
-            1
-          ],
-          "field": "attributes",
-          "expectedKind": "mo",
-          "primary": {
-            "accent": true
-          },
-          "expected": {},
-          "baseline": {
-            "kind": "same-formula",
-            "file": "d072-accepted/overline-scripted-sum-inline.json",
-            "sha256": "fc882a8cd3ad28793d92f3ec171df1bd0b6c9031de35896e55a8adbdee842305",
-            "paths": [
-              [
-                0,
-                0,
-                0,
-                1
-              ]
-            ]
-          }
-        },
-        {
-          "path": [
-            0,
-            0,
-            0,
-            1
-          ],
-          "field": "properties",
-          "expectedKind": "mo",
-          "primary": {},
-          "expected": {
-            "texClass": 0
-          },
-          "baseline": {
-            "kind": "same-formula",
-            "file": "d072-accepted/overline-scripted-sum-inline.json",
-            "sha256": "fc882a8cd3ad28793d92f3ec171df1bd0b6c9031de35896e55a8adbdee842305",
-            "paths": [
-              [
-                0,
-                0,
-                0,
-                1
-              ]
-            ]
-          }
-        }
-      ]
-    },
-    "overline-scripted-sum-display": {
-      "category": "exact-inherited-fields",
-      "primarySHA256": "fe411b8c54fa80d7c6f80b3adc09ea4026662908bbb8248eec107307283631bb",
-      "expectedSHA256": "fe411b8c54fa80d7c6f80b3adc09ea4026662908bbb8248eec107307283631bb",
-      "baselineTreeSHA256": "f47ce956e97ff4a7440e00664f3ab5b7f52b49af1233d0d22da691ed4b64fe3e",
-      "differences": [
-        {
-          "path": [
-            0,
-            0,
-            0
-          ],
-          "field": "attributes",
-          "expectedKind": "mover",
-          "primary": {},
-          "expected": {
-            "accent": true
-          },
-          "baseline": {
-            "kind": "same-formula",
-            "file": "d072-accepted/overline-scripted-sum-display.json",
-            "sha256": "f47ce956e97ff4a7440e00664f3ab5b7f52b49af1233d0d22da691ed4b64fe3e",
-            "paths": [
-              [
-                0,
-                0,
-                0
-              ]
-            ]
-          }
-        },
-        {
-          "path": [
-            0,
-            0,
-            0,
-            1
-          ],
-          "field": "attributes",
-          "expectedKind": "mo",
-          "primary": {
-            "accent": true
-          },
-          "expected": {},
-          "baseline": {
-            "kind": "same-formula",
-            "file": "d072-accepted/overline-scripted-sum-display.json",
-            "sha256": "f47ce956e97ff4a7440e00664f3ab5b7f52b49af1233d0d22da691ed4b64fe3e",
-            "paths": [
-              [
-                0,
-                0,
-                0,
-                1
-              ]
-            ]
-          }
-        },
-        {
-          "path": [
-            0,
-            0,
-            0,
-            1
-          ],
-          "field": "properties",
-          "expectedKind": "mo",
-          "primary": {},
-          "expected": {
-            "texClass": 0
-          },
-          "baseline": {
-            "kind": "same-formula",
-            "file": "d072-accepted/overline-scripted-sum-display.json",
-            "sha256": "f47ce956e97ff4a7440e00664f3ab5b7f52b49af1233d0d22da691ed4b64fe3e",
-            "paths": [
-              [
-                0,
-                0,
-                0,
-                1
-              ]
-            ]
-          }
-        }
-      ]
-    },
-    "underarrow-scripted-sum-inline": {
-      "category": "exact-inherited-fields",
-      "primarySHA256": "cc70487018ff838eb4f2859a9b50b09a22cd0c47ac7c04af09a07332eff0f865",
-      "expectedSHA256": "cc70487018ff838eb4f2859a9b50b09a22cd0c47ac7c04af09a07332eff0f865",
-      "baselineTreeSHA256": "a499f498d5155a65908e41edff83860bad69a3e97bbabc0e6069fb579bbb5bda",
+      "primarySHA256": "d00fc6829323eb94c7b25e9f359617e65cea1fef905295ab09b4907af936609e",
+      "expectedSHA256": "d00fc6829323eb94c7b25e9f359617e65cea1fef905295ab09b4907af936609e",
+      "baselineTreeSHA256": "4bb21d8961c4907db4890fb4adbfa32f15e68d6e697f344b597136c3e2349c3f",
       "differences": [
         {
           "path": [
@@ -4087,11 +3217,192 @@
             "accentunder": true
           },
           "baseline": {
-            "kind": "same-decoration-before-script",
-            "file": "bare-accepted/bare-14.json",
-            "sha256": "7d9a503aa0d512c9246b000fcb46bb5932927b62fd9d246d27969998a0d97514",
+            "kind": "same-formula",
+            "file": "accepted/underline-reverse-inline.json",
+            "sha256": "4bb21d8961c4907db4890fb4adbfa32f15e68d6e697f344b597136c3e2349c3f",
             "paths": [
               [
+                0,
+                0,
+                0
+              ]
+            ]
+          }
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "attributes",
+          "expectedKind": "mo",
+          "primary": {
+            "accent": true
+          },
+          "expected": {},
+          "baseline": {
+            "kind": "same-formula",
+            "file": "accepted/underline-reverse-inline.json",
+            "sha256": "4bb21d8961c4907db4890fb4adbfa32f15e68d6e697f344b597136c3e2349c3f",
+            "paths": [
+              [
+                0,
+                0,
+                0,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "expectedKind": "mo",
+          "primary": {
+            "texprimestyle": true
+          },
+          "expected": {
+            "texClass": 0,
+            "texprimestyle": true
+          },
+          "baseline": {
+            "kind": "same-formula",
+            "file": "accepted/underline-reverse-inline.json",
+            "sha256": "4bb21d8961c4907db4890fb4adbfa32f15e68d6e697f344b597136c3e2349c3f",
+            "paths": [
+              [
+                0,
+                0,
+                0,
+                1
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    "underline-reverse-display": {
+      "category": "exact-inherited-fields",
+      "primarySHA256": "a1cbd1b37edb84b8aea98f2404603c6835e10094b5157bb425df807b5bfa04af",
+      "expectedSHA256": "a1cbd1b37edb84b8aea98f2404603c6835e10094b5157bb425df807b5bfa04af",
+      "baselineTreeSHA256": "8bdb387d91cff6e42aaf891e2c78a1b73b96dfc528b36c6b5df59cd8bbdb3d58",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "expectedKind": "munder",
+          "primary": {},
+          "expected": {
+            "accentunder": true
+          },
+          "baseline": {
+            "kind": "same-formula",
+            "file": "accepted/underline-reverse-display.json",
+            "sha256": "8bdb387d91cff6e42aaf891e2c78a1b73b96dfc528b36c6b5df59cd8bbdb3d58",
+            "paths": [
+              [
+                0,
+                0,
+                0
+              ]
+            ]
+          }
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "attributes",
+          "expectedKind": "mo",
+          "primary": {
+            "accent": true
+          },
+          "expected": {},
+          "baseline": {
+            "kind": "same-formula",
+            "file": "accepted/underline-reverse-display.json",
+            "sha256": "8bdb387d91cff6e42aaf891e2c78a1b73b96dfc528b36c6b5df59cd8bbdb3d58",
+            "paths": [
+              [
+                0,
+                0,
+                0,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "expectedKind": "mo",
+          "primary": {
+            "texprimestyle": true
+          },
+          "expected": {
+            "texClass": 0,
+            "texprimestyle": true
+          },
+          "baseline": {
+            "kind": "same-formula",
+            "file": "accepted/underline-reverse-display.json",
+            "sha256": "8bdb387d91cff6e42aaf891e2c78a1b73b96dfc528b36c6b5df59cd8bbdb3d58",
+            "paths": [
+              [
+                0,
+                0,
+                0,
+                1
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    "underarrow-reverse-inline": {
+      "category": "exact-inherited-fields",
+      "primarySHA256": "ba43ecf605fd2bf77c1276a885bba776ea230772cad4eb00101d8753746bf5d2",
+      "expectedSHA256": "ba43ecf605fd2bf77c1276a885bba776ea230772cad4eb00101d8753746bf5d2",
+      "baselineTreeSHA256": "94b4f4e574fac18277eff8e5ba2c9cd88db15041864f77e7e2b6096cea22f7c0",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "expectedKind": "munder",
+          "primary": {},
+          "expected": {
+            "accentunder": true
+          },
+          "baseline": {
+            "kind": "same-formula",
+            "file": "accepted/underarrow-reverse-inline.json",
+            "sha256": "94b4f4e574fac18277eff8e5ba2c9cd88db15041864f77e7e2b6096cea22f7c0",
+            "paths": [
+              [
+                0,
                 0,
                 0
               ]
@@ -4117,11 +3428,12 @@
             "mathaccent": true
           },
           "baseline": {
-            "kind": "same-decoration-before-script",
-            "file": "bare-accepted/bare-14.json",
-            "sha256": "7d9a503aa0d512c9246b000fcb46bb5932927b62fd9d246d27969998a0d97514",
+            "kind": "same-formula",
+            "file": "accepted/underarrow-reverse-inline.json",
+            "sha256": "94b4f4e574fac18277eff8e5ba2c9cd88db15041864f77e7e2b6096cea22f7c0",
             "paths": [
               [
+                0,
                 0,
                 0,
                 1
@@ -4131,11 +3443,11 @@
         }
       ]
     },
-    "underarrow-scripted-sum-display": {
+    "underarrow-reverse-display": {
       "category": "exact-inherited-fields",
-      "primarySHA256": "2773c3be57abe2943d728489e581b7c634d4a35d4b2838a2cc6d6a6ea11eb92f",
-      "expectedSHA256": "2773c3be57abe2943d728489e581b7c634d4a35d4b2838a2cc6d6a6ea11eb92f",
-      "baselineTreeSHA256": "02efda89be3985e67b88c83e0dd22e47407bd5dd7811f08c3581c9ce1ac6faaa",
+      "primarySHA256": "36769099f144f9a952217226d27d2791d2c2500708c81b26df75a4473fc8a97b",
+      "expectedSHA256": "36769099f144f9a952217226d27d2791d2c2500708c81b26df75a4473fc8a97b",
+      "baselineTreeSHA256": "f421fdb5d0387ac0bf8ac207c9263fe7d9eee054a52919c4339ebb49ec23ba75",
       "differences": [
         {
           "path": [
@@ -4150,11 +3462,12 @@
             "accentunder": true
           },
           "baseline": {
-            "kind": "same-decoration-before-script",
-            "file": "bare-accepted/bare-15.json",
-            "sha256": "27a01b2da9a8618368221ddca22b49d764ac7a65a85d58d9f72f282d62bf9f45",
+            "kind": "same-formula",
+            "file": "accepted/underarrow-reverse-display.json",
+            "sha256": "f421fdb5d0387ac0bf8ac207c9263fe7d9eee054a52919c4339ebb49ec23ba75",
             "paths": [
               [
+                0,
                 0,
                 0
               ]
@@ -4180,11 +3493,360 @@
             "mathaccent": true
           },
           "baseline": {
-            "kind": "same-decoration-before-script",
-            "file": "bare-accepted/bare-15.json",
-            "sha256": "27a01b2da9a8618368221ddca22b49d764ac7a65a85d58d9f72f282d62bf9f45",
+            "kind": "same-formula",
+            "file": "accepted/underarrow-reverse-display.json",
+            "sha256": "f421fdb5d0387ac0bf8ac207c9263fe7d9eee054a52919c4339ebb49ec23ba75",
             "paths": [
               [
+                0,
+                0,
+                0,
+                1
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    "overline-both-inline": {
+      "category": "exact-inherited-fields",
+      "primarySHA256": "814b93ec06ef2e72e1ed2442dc7f0b23a98f16bde513fe3721f441943efabe63",
+      "expectedSHA256": "814b93ec06ef2e72e1ed2442dc7f0b23a98f16bde513fe3721f441943efabe63",
+      "baselineTreeSHA256": "1203fe7bd6edaebb523e2cace575f8f460dc264664d7251495cc3e7aff72c8e8",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "expectedKind": "mover",
+          "primary": {},
+          "expected": {
+            "accent": true
+          },
+          "baseline": {
+            "kind": "same-formula",
+            "file": "accepted/overline-both-inline.json",
+            "sha256": "1203fe7bd6edaebb523e2cace575f8f460dc264664d7251495cc3e7aff72c8e8",
+            "paths": [
+              [
+                0,
+                0,
+                0
+              ]
+            ]
+          }
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "attributes",
+          "expectedKind": "mo",
+          "primary": {
+            "accent": true
+          },
+          "expected": {},
+          "baseline": {
+            "kind": "same-formula",
+            "file": "accepted/overline-both-inline.json",
+            "sha256": "1203fe7bd6edaebb523e2cace575f8f460dc264664d7251495cc3e7aff72c8e8",
+            "paths": [
+              [
+                0,
+                0,
+                0,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "expectedKind": "mo",
+          "primary": {},
+          "expected": {
+            "texClass": 0
+          },
+          "baseline": {
+            "kind": "same-formula",
+            "file": "accepted/overline-both-inline.json",
+            "sha256": "1203fe7bd6edaebb523e2cace575f8f460dc264664d7251495cc3e7aff72c8e8",
+            "paths": [
+              [
+                0,
+                0,
+                0,
+                1
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    "overline-both-display": {
+      "category": "exact-inherited-fields",
+      "primarySHA256": "814b93ec06ef2e72e1ed2442dc7f0b23a98f16bde513fe3721f441943efabe63",
+      "expectedSHA256": "814b93ec06ef2e72e1ed2442dc7f0b23a98f16bde513fe3721f441943efabe63",
+      "baselineTreeSHA256": "865829f35b5d556ecf08f7bc38fa7a2e189d2b46334ba7c7918ebe3d444f746b",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "expectedKind": "mover",
+          "primary": {},
+          "expected": {
+            "accent": true
+          },
+          "baseline": {
+            "kind": "same-formula",
+            "file": "accepted/overline-both-display.json",
+            "sha256": "865829f35b5d556ecf08f7bc38fa7a2e189d2b46334ba7c7918ebe3d444f746b",
+            "paths": [
+              [
+                0,
+                0,
+                0
+              ]
+            ]
+          }
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "attributes",
+          "expectedKind": "mo",
+          "primary": {
+            "accent": true
+          },
+          "expected": {},
+          "baseline": {
+            "kind": "same-formula",
+            "file": "accepted/overline-both-display.json",
+            "sha256": "865829f35b5d556ecf08f7bc38fa7a2e189d2b46334ba7c7918ebe3d444f746b",
+            "paths": [
+              [
+                0,
+                0,
+                0,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "expectedKind": "mo",
+          "primary": {},
+          "expected": {
+            "texClass": 0
+          },
+          "baseline": {
+            "kind": "same-formula",
+            "file": "accepted/overline-both-display.json",
+            "sha256": "865829f35b5d556ecf08f7bc38fa7a2e189d2b46334ba7c7918ebe3d444f746b",
+            "paths": [
+              [
+                0,
+                0,
+                0,
+                1
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    "overline-reverse-inline": {
+      "category": "exact-inherited-fields",
+      "primarySHA256": "814b93ec06ef2e72e1ed2442dc7f0b23a98f16bde513fe3721f441943efabe63",
+      "expectedSHA256": "814b93ec06ef2e72e1ed2442dc7f0b23a98f16bde513fe3721f441943efabe63",
+      "baselineTreeSHA256": "1203fe7bd6edaebb523e2cace575f8f460dc264664d7251495cc3e7aff72c8e8",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "expectedKind": "mover",
+          "primary": {},
+          "expected": {
+            "accent": true
+          },
+          "baseline": {
+            "kind": "same-formula",
+            "file": "accepted/overline-reverse-inline.json",
+            "sha256": "1203fe7bd6edaebb523e2cace575f8f460dc264664d7251495cc3e7aff72c8e8",
+            "paths": [
+              [
+                0,
+                0,
+                0
+              ]
+            ]
+          }
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "attributes",
+          "expectedKind": "mo",
+          "primary": {
+            "accent": true
+          },
+          "expected": {},
+          "baseline": {
+            "kind": "same-formula",
+            "file": "accepted/overline-reverse-inline.json",
+            "sha256": "1203fe7bd6edaebb523e2cace575f8f460dc264664d7251495cc3e7aff72c8e8",
+            "paths": [
+              [
+                0,
+                0,
+                0,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "expectedKind": "mo",
+          "primary": {},
+          "expected": {
+            "texClass": 0
+          },
+          "baseline": {
+            "kind": "same-formula",
+            "file": "accepted/overline-reverse-inline.json",
+            "sha256": "1203fe7bd6edaebb523e2cace575f8f460dc264664d7251495cc3e7aff72c8e8",
+            "paths": [
+              [
+                0,
+                0,
+                0,
+                1
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    "overline-reverse-display": {
+      "category": "exact-inherited-fields",
+      "primarySHA256": "814b93ec06ef2e72e1ed2442dc7f0b23a98f16bde513fe3721f441943efabe63",
+      "expectedSHA256": "814b93ec06ef2e72e1ed2442dc7f0b23a98f16bde513fe3721f441943efabe63",
+      "baselineTreeSHA256": "865829f35b5d556ecf08f7bc38fa7a2e189d2b46334ba7c7918ebe3d444f746b",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "expectedKind": "mover",
+          "primary": {},
+          "expected": {
+            "accent": true
+          },
+          "baseline": {
+            "kind": "same-formula",
+            "file": "accepted/overline-reverse-display.json",
+            "sha256": "865829f35b5d556ecf08f7bc38fa7a2e189d2b46334ba7c7918ebe3d444f746b",
+            "paths": [
+              [
+                0,
+                0,
+                0
+              ]
+            ]
+          }
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "attributes",
+          "expectedKind": "mo",
+          "primary": {
+            "accent": true
+          },
+          "expected": {},
+          "baseline": {
+            "kind": "same-formula",
+            "file": "accepted/overline-reverse-display.json",
+            "sha256": "865829f35b5d556ecf08f7bc38fa7a2e189d2b46334ba7c7918ebe3d444f746b",
+            "paths": [
+              [
+                0,
+                0,
+                0,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "expectedKind": "mo",
+          "primary": {},
+          "expected": {
+            "texClass": 0
+          },
+          "baseline": {
+            "kind": "same-formula",
+            "file": "accepted/overline-reverse-display.json",
+            "sha256": "865829f35b5d556ecf08f7bc38fa7a2e189d2b46334ba7c7918ebe3d444f746b",
+            "paths": [
+              [
+                0,
                 0,
                 0,
                 1

@@ -62,15 +62,6 @@ func TestAccentScriptBasePinnedReferences(t *testing.T) {
 				}
 				rawTree = false
 				switch q.Category {
-				case "unchanged-underline-subscript-error":
-					if c.Name != "nested-under-inline" && c.Name != "nested-under-display" {
-						t.Fatal("unexpected error boundary")
-					}
-					if q.ExpectedTree == nil || q.ExpectedSHA256 == c.SVGSHA256 || len(q.Differences) != 0 {
-						t.Fatal("invalid exact error boundary")
-					}
-					wantTree, wantSVG = q.ExpectedTree, q.ExpectedSHA256
-					rawAttributes = false
 				case "exact-inherited-own-fields":
 					if q.ExpectedTree != nil || q.ExpectedSHA256 != c.SVGSHA256 || len(q.Differences) == 0 {
 						t.Fatal("invalid exact metadata boundary")
@@ -144,8 +135,8 @@ func TestAccentScriptBasePinnedReferences(t *testing.T) {
 			}
 		})
 	}
-	if rawSVG != 50 || rawExplicit != 48 || rawOwn != 8 {
-		t.Fatalf("raw SVG/explicit/own counts %d/%d/%d want50/48/8", rawSVG, rawExplicit, rawOwn)
+	if rawSVG != 52 || rawExplicit != 48 || rawOwn != 8 {
+		t.Fatalf("raw SVG/explicit/own counts %d/%d/%d want52/48/8", rawSVG, rawExplicit, rawOwn)
 	}
 }
 

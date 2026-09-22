@@ -1,0 +1,4097 @@
+{
+  "baseline": "efd6d63071862218af992a6074e3c8680b634ab4",
+  "cases": [
+    {
+      "command": "overline",
+      "display": false,
+      "name": "overline/{x}/false",
+      "source": "{x}",
+      "tree": {
+        "attributes": {
+          "accent": true
+        },
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              {
+                "attributes": {},
+                "children": [],
+                "kind": "text",
+                "properties": {},
+                "text": "x"
+              }
+            ],
+            "kind": "mi",
+            "properties": {
+              "go-ambient-font-source": true,
+              "go-vector-factory-token": true
+            },
+            "text": null
+          },
+          {
+            "attributes": {
+              "stretchy": true
+            },
+            "children": [
+              {
+                "attributes": {},
+                "children": [],
+                "kind": "text",
+                "properties": {},
+                "text": "―"
+              }
+            ],
+            "kind": "mo",
+            "properties": {
+              "go-vector-factory-token": true,
+              "texClass": 0
+            },
+            "text": null
+          }
+        ],
+        "kind": "mover",
+        "properties": {},
+        "text": null
+      }
+    },
+    {
+      "command": "overline",
+      "display": true,
+      "name": "overline/{x}/true",
+      "source": "{x}",
+      "tree": {
+        "attributes": {
+          "accent": true
+        },
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              {
+                "attributes": {},
+                "children": [],
+                "kind": "text",
+                "properties": {},
+                "text": "x"
+              }
+            ],
+            "kind": "mi",
+            "properties": {
+              "go-ambient-font-source": true,
+              "go-vector-factory-token": true
+            },
+            "text": null
+          },
+          {
+            "attributes": {
+              "stretchy": true
+            },
+            "children": [
+              {
+                "attributes": {},
+                "children": [],
+                "kind": "text",
+                "properties": {},
+                "text": "―"
+              }
+            ],
+            "kind": "mo",
+            "properties": {
+              "go-vector-factory-token": true,
+              "texClass": 0
+            },
+            "text": null
+          }
+        ],
+        "kind": "mover",
+        "properties": {},
+        "text": null
+      }
+    },
+    {
+      "command": "overline",
+      "display": false,
+      "name": "overline/{\\sum}/false",
+      "source": "{\\sum}",
+      "tree": {
+        "attributes": {
+          "accent": true
+        },
+        "children": [
+          {
+            "attributes": {
+              "movablelimits": false,
+              "stretchy": false
+            },
+            "children": [
+              {
+                "attributes": {},
+                "children": [],
+                "kind": "text",
+                "properties": {},
+                "text": "∑"
+              }
+            ],
+            "kind": "mo",
+            "properties": {
+              "fixStretchy": true,
+              "go-vector-factory-token": true,
+              "in-lists": "fixStretchy",
+              "movablelimits": false,
+              "movesupsub": true,
+              "texClass": 1
+            },
+            "text": null
+          },
+          {
+            "attributes": {
+              "stretchy": true
+            },
+            "children": [
+              {
+                "attributes": {},
+                "children": [],
+                "kind": "text",
+                "properties": {},
+                "text": "―"
+              }
+            ],
+            "kind": "mo",
+            "properties": {
+              "go-vector-factory-token": true,
+              "texClass": 0
+            },
+            "text": null
+          }
+        ],
+        "kind": "mover",
+        "properties": {},
+        "text": null
+      }
+    },
+    {
+      "command": "overline",
+      "display": true,
+      "name": "overline/{\\sum}/true",
+      "source": "{\\sum}",
+      "tree": {
+        "attributes": {
+          "accent": true
+        },
+        "children": [
+          {
+            "attributes": {
+              "movablelimits": false,
+              "stretchy": false
+            },
+            "children": [
+              {
+                "attributes": {},
+                "children": [],
+                "kind": "text",
+                "properties": {},
+                "text": "∑"
+              }
+            ],
+            "kind": "mo",
+            "properties": {
+              "fixStretchy": true,
+              "go-vector-factory-token": true,
+              "in-lists": "fixStretchy",
+              "movablelimits": false,
+              "movesupsub": true,
+              "texClass": 1
+            },
+            "text": null
+          },
+          {
+            "attributes": {
+              "stretchy": true
+            },
+            "children": [
+              {
+                "attributes": {},
+                "children": [],
+                "kind": "text",
+                "properties": {},
+                "text": "―"
+              }
+            ],
+            "kind": "mo",
+            "properties": {
+              "go-vector-factory-token": true,
+              "texClass": 0
+            },
+            "text": null
+          }
+        ],
+        "kind": "mover",
+        "properties": {},
+        "text": null
+      }
+    },
+    {
+      "command": "overline",
+      "display": false,
+      "name": "overline/{\\sum_i^n}/false",
+      "source": "{\\sum_i^n}",
+      "tree": {
+        "attributes": {
+          "accent": true
+        },
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              {
+                "attributes": {
+                  "rspace": 0
+                },
+                "children": [],
+                "kind": "mo",
+                "properties": {},
+                "text": null
+              },
+              {
+                "attributes": {},
+                "children": [
+                  {
+                    "attributes": {
+                      "lspace": 0,
+                      "rspace": 0,
+                      "stretchy": false
+                    },
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "∑"
+                      }
+                    ],
+                    "kind": "mo",
+                    "properties": {
+                      "fixStretchy": true,
+                      "go-vector-factory-token": true,
+                      "in-lists": "fixStretchy",
+                      "movesupsub": true,
+                      "texClass": 1
+                    },
+                    "text": null
+                  },
+                  {
+                    "attributes": {},
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "i"
+                      }
+                    ],
+                    "kind": "mi",
+                    "properties": {
+                      "go-ambient-font-source": true,
+                      "go-vector-factory-token": true
+                    },
+                    "text": null
+                  },
+                  {
+                    "attributes": {},
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "n"
+                      }
+                    ],
+                    "kind": "mi",
+                    "properties": {
+                      "go-ambient-font-source": true,
+                      "go-vector-factory-token": true
+                    },
+                    "text": null
+                  }
+                ],
+                "kind": "munderover",
+                "properties": {
+                  "_texLimitsScriptOrigin": true,
+                  "movesupsub": true
+                },
+                "text": null
+              }
+            ],
+            "kind": "mrow",
+            "properties": {},
+            "text": null
+          },
+          {
+            "attributes": {
+              "stretchy": true
+            },
+            "children": [
+              {
+                "attributes": {},
+                "children": [],
+                "kind": "text",
+                "properties": {},
+                "text": "―"
+              }
+            ],
+            "kind": "mo",
+            "properties": {
+              "go-vector-factory-token": true,
+              "texClass": 0
+            },
+            "text": null
+          }
+        ],
+        "kind": "mover",
+        "properties": {},
+        "text": null
+      }
+    },
+    {
+      "command": "overline",
+      "display": true,
+      "name": "overline/{\\sum_i^n}/true",
+      "source": "{\\sum_i^n}",
+      "tree": {
+        "attributes": {
+          "accent": true
+        },
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              {
+                "attributes": {
+                  "rspace": 0
+                },
+                "children": [],
+                "kind": "mo",
+                "properties": {},
+                "text": null
+              },
+              {
+                "attributes": {},
+                "children": [
+                  {
+                    "attributes": {
+                      "lspace": 0,
+                      "rspace": 0,
+                      "stretchy": false
+                    },
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "∑"
+                      }
+                    ],
+                    "kind": "mo",
+                    "properties": {
+                      "fixStretchy": true,
+                      "go-vector-factory-token": true,
+                      "in-lists": "fixStretchy",
+                      "movesupsub": true,
+                      "texClass": 1
+                    },
+                    "text": null
+                  },
+                  {
+                    "attributes": {},
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "i"
+                      }
+                    ],
+                    "kind": "mi",
+                    "properties": {
+                      "go-ambient-font-source": true,
+                      "go-vector-factory-token": true
+                    },
+                    "text": null
+                  },
+                  {
+                    "attributes": {},
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "n"
+                      }
+                    ],
+                    "kind": "mi",
+                    "properties": {
+                      "go-ambient-font-source": true,
+                      "go-vector-factory-token": true
+                    },
+                    "text": null
+                  }
+                ],
+                "kind": "munderover",
+                "properties": {
+                  "_texLimitsScriptOrigin": true,
+                  "movesupsub": true
+                },
+                "text": null
+              }
+            ],
+            "kind": "mrow",
+            "properties": {},
+            "text": null
+          },
+          {
+            "attributes": {
+              "stretchy": true
+            },
+            "children": [
+              {
+                "attributes": {},
+                "children": [],
+                "kind": "text",
+                "properties": {},
+                "text": "―"
+              }
+            ],
+            "kind": "mo",
+            "properties": {
+              "go-vector-factory-token": true,
+              "texClass": 0
+            },
+            "text": null
+          }
+        ],
+        "kind": "mover",
+        "properties": {},
+        "text": null
+      }
+    },
+    {
+      "command": "underline",
+      "display": false,
+      "name": "underline/{x}/false",
+      "source": "{x}",
+      "tree": {
+        "attributes": {
+          "accentunder": true
+        },
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              {
+                "attributes": {},
+                "children": [],
+                "kind": "text",
+                "properties": {},
+                "text": "x"
+              }
+            ],
+            "kind": "mi",
+            "properties": {
+              "go-ambient-font-source": true,
+              "go-vector-factory-token": true
+            },
+            "text": null
+          },
+          {
+            "attributes": {
+              "stretchy": true
+            },
+            "children": [
+              {
+                "attributes": {},
+                "children": [],
+                "kind": "text",
+                "properties": {},
+                "text": "―"
+              }
+            ],
+            "kind": "mo",
+            "properties": {
+              "go-vector-factory-token": true,
+              "texClass": 0
+            },
+            "text": null
+          }
+        ],
+        "kind": "munder",
+        "properties": {},
+        "text": null
+      }
+    },
+    {
+      "command": "underline",
+      "display": true,
+      "name": "underline/{x}/true",
+      "source": "{x}",
+      "tree": {
+        "attributes": {
+          "accentunder": true
+        },
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              {
+                "attributes": {},
+                "children": [],
+                "kind": "text",
+                "properties": {},
+                "text": "x"
+              }
+            ],
+            "kind": "mi",
+            "properties": {
+              "go-ambient-font-source": true,
+              "go-vector-factory-token": true
+            },
+            "text": null
+          },
+          {
+            "attributes": {
+              "stretchy": true
+            },
+            "children": [
+              {
+                "attributes": {},
+                "children": [],
+                "kind": "text",
+                "properties": {},
+                "text": "―"
+              }
+            ],
+            "kind": "mo",
+            "properties": {
+              "go-vector-factory-token": true,
+              "texClass": 0
+            },
+            "text": null
+          }
+        ],
+        "kind": "munder",
+        "properties": {},
+        "text": null
+      }
+    },
+    {
+      "command": "underline",
+      "display": false,
+      "name": "underline/{\\sum}/false",
+      "source": "{\\sum}",
+      "tree": {
+        "attributes": {
+          "accentunder": true
+        },
+        "children": [
+          {
+            "attributes": {
+              "movablelimits": false,
+              "stretchy": false
+            },
+            "children": [
+              {
+                "attributes": {},
+                "children": [],
+                "kind": "text",
+                "properties": {},
+                "text": "∑"
+              }
+            ],
+            "kind": "mo",
+            "properties": {
+              "fixStretchy": true,
+              "go-vector-factory-token": true,
+              "in-lists": "fixStretchy",
+              "movablelimits": false,
+              "movesupsub": true,
+              "texClass": 1
+            },
+            "text": null
+          },
+          {
+            "attributes": {
+              "stretchy": true
+            },
+            "children": [
+              {
+                "attributes": {},
+                "children": [],
+                "kind": "text",
+                "properties": {},
+                "text": "―"
+              }
+            ],
+            "kind": "mo",
+            "properties": {
+              "go-vector-factory-token": true,
+              "texClass": 0
+            },
+            "text": null
+          }
+        ],
+        "kind": "munder",
+        "properties": {},
+        "text": null
+      }
+    },
+    {
+      "command": "underline",
+      "display": true,
+      "name": "underline/{\\sum}/true",
+      "source": "{\\sum}",
+      "tree": {
+        "attributes": {
+          "accentunder": true
+        },
+        "children": [
+          {
+            "attributes": {
+              "movablelimits": false,
+              "stretchy": false
+            },
+            "children": [
+              {
+                "attributes": {},
+                "children": [],
+                "kind": "text",
+                "properties": {},
+                "text": "∑"
+              }
+            ],
+            "kind": "mo",
+            "properties": {
+              "fixStretchy": true,
+              "go-vector-factory-token": true,
+              "in-lists": "fixStretchy",
+              "movablelimits": false,
+              "movesupsub": true,
+              "texClass": 1
+            },
+            "text": null
+          },
+          {
+            "attributes": {
+              "stretchy": true
+            },
+            "children": [
+              {
+                "attributes": {},
+                "children": [],
+                "kind": "text",
+                "properties": {},
+                "text": "―"
+              }
+            ],
+            "kind": "mo",
+            "properties": {
+              "go-vector-factory-token": true,
+              "texClass": 0
+            },
+            "text": null
+          }
+        ],
+        "kind": "munder",
+        "properties": {},
+        "text": null
+      }
+    },
+    {
+      "command": "underline",
+      "display": false,
+      "name": "underline/{\\sum_i^n}/false",
+      "source": "{\\sum_i^n}",
+      "tree": {
+        "attributes": {
+          "accentunder": true
+        },
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              {
+                "attributes": {
+                  "rspace": 0
+                },
+                "children": [],
+                "kind": "mo",
+                "properties": {},
+                "text": null
+              },
+              {
+                "attributes": {},
+                "children": [
+                  {
+                    "attributes": {
+                      "lspace": 0,
+                      "rspace": 0,
+                      "stretchy": false
+                    },
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "∑"
+                      }
+                    ],
+                    "kind": "mo",
+                    "properties": {
+                      "fixStretchy": true,
+                      "go-vector-factory-token": true,
+                      "in-lists": "fixStretchy",
+                      "movesupsub": true,
+                      "texClass": 1
+                    },
+                    "text": null
+                  },
+                  {
+                    "attributes": {},
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "i"
+                      }
+                    ],
+                    "kind": "mi",
+                    "properties": {
+                      "go-ambient-font-source": true,
+                      "go-vector-factory-token": true
+                    },
+                    "text": null
+                  },
+                  {
+                    "attributes": {},
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "n"
+                      }
+                    ],
+                    "kind": "mi",
+                    "properties": {
+                      "go-ambient-font-source": true,
+                      "go-vector-factory-token": true
+                    },
+                    "text": null
+                  }
+                ],
+                "kind": "munderover",
+                "properties": {
+                  "_texLimitsScriptOrigin": true,
+                  "movesupsub": true
+                },
+                "text": null
+              }
+            ],
+            "kind": "mrow",
+            "properties": {},
+            "text": null
+          },
+          {
+            "attributes": {
+              "stretchy": true
+            },
+            "children": [
+              {
+                "attributes": {},
+                "children": [],
+                "kind": "text",
+                "properties": {},
+                "text": "―"
+              }
+            ],
+            "kind": "mo",
+            "properties": {
+              "go-vector-factory-token": true,
+              "texClass": 0
+            },
+            "text": null
+          }
+        ],
+        "kind": "munder",
+        "properties": {},
+        "text": null
+      }
+    },
+    {
+      "command": "underline",
+      "display": true,
+      "name": "underline/{\\sum_i^n}/true",
+      "source": "{\\sum_i^n}",
+      "tree": {
+        "attributes": {
+          "accentunder": true
+        },
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              {
+                "attributes": {
+                  "rspace": 0
+                },
+                "children": [],
+                "kind": "mo",
+                "properties": {},
+                "text": null
+              },
+              {
+                "attributes": {},
+                "children": [
+                  {
+                    "attributes": {
+                      "lspace": 0,
+                      "rspace": 0,
+                      "stretchy": false
+                    },
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "∑"
+                      }
+                    ],
+                    "kind": "mo",
+                    "properties": {
+                      "fixStretchy": true,
+                      "go-vector-factory-token": true,
+                      "in-lists": "fixStretchy",
+                      "movesupsub": true,
+                      "texClass": 1
+                    },
+                    "text": null
+                  },
+                  {
+                    "attributes": {},
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "i"
+                      }
+                    ],
+                    "kind": "mi",
+                    "properties": {
+                      "go-ambient-font-source": true,
+                      "go-vector-factory-token": true
+                    },
+                    "text": null
+                  },
+                  {
+                    "attributes": {},
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "n"
+                      }
+                    ],
+                    "kind": "mi",
+                    "properties": {
+                      "go-ambient-font-source": true,
+                      "go-vector-factory-token": true
+                    },
+                    "text": null
+                  }
+                ],
+                "kind": "munderover",
+                "properties": {
+                  "_texLimitsScriptOrigin": true,
+                  "movesupsub": true
+                },
+                "text": null
+              }
+            ],
+            "kind": "mrow",
+            "properties": {},
+            "text": null
+          },
+          {
+            "attributes": {
+              "stretchy": true
+            },
+            "children": [
+              {
+                "attributes": {},
+                "children": [],
+                "kind": "text",
+                "properties": {},
+                "text": "―"
+              }
+            ],
+            "kind": "mo",
+            "properties": {
+              "go-vector-factory-token": true,
+              "texClass": 0
+            },
+            "text": null
+          }
+        ],
+        "kind": "munder",
+        "properties": {},
+        "text": null
+      }
+    },
+    {
+      "command": "overrightarrow",
+      "display": false,
+      "name": "overrightarrow/{x}/false",
+      "source": "{x}",
+      "tree": {
+        "attributes": {
+          "accent": true
+        },
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              {
+                "attributes": {},
+                "children": [],
+                "kind": "text",
+                "properties": {},
+                "text": "x"
+              }
+            ],
+            "kind": "mi",
+            "properties": {
+              "go-ambient-font-source": true,
+              "go-vector-factory-token": true
+            },
+            "text": null
+          },
+          {
+            "attributes": {
+              "stretchy": true
+            },
+            "children": [
+              {
+                "attributes": {},
+                "children": [],
+                "kind": "text",
+                "properties": {},
+                "text": "→"
+              }
+            ],
+            "kind": "mo",
+            "properties": {
+              "go-vector-factory-token": true,
+              "texClass": 0
+            },
+            "text": null
+          }
+        ],
+        "kind": "mover",
+        "properties": {},
+        "text": null
+      }
+    },
+    {
+      "command": "overrightarrow",
+      "display": true,
+      "name": "overrightarrow/{x}/true",
+      "source": "{x}",
+      "tree": {
+        "attributes": {
+          "accent": true
+        },
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              {
+                "attributes": {},
+                "children": [],
+                "kind": "text",
+                "properties": {},
+                "text": "x"
+              }
+            ],
+            "kind": "mi",
+            "properties": {
+              "go-ambient-font-source": true,
+              "go-vector-factory-token": true
+            },
+            "text": null
+          },
+          {
+            "attributes": {
+              "stretchy": true
+            },
+            "children": [
+              {
+                "attributes": {},
+                "children": [],
+                "kind": "text",
+                "properties": {},
+                "text": "→"
+              }
+            ],
+            "kind": "mo",
+            "properties": {
+              "go-vector-factory-token": true,
+              "texClass": 0
+            },
+            "text": null
+          }
+        ],
+        "kind": "mover",
+        "properties": {},
+        "text": null
+      }
+    },
+    {
+      "command": "overrightarrow",
+      "display": false,
+      "name": "overrightarrow/{\\sum}/false",
+      "source": "{\\sum}",
+      "tree": {
+        "attributes": {
+          "accent": true
+        },
+        "children": [
+          {
+            "attributes": {
+              "movablelimits": false,
+              "stretchy": false
+            },
+            "children": [
+              {
+                "attributes": {},
+                "children": [],
+                "kind": "text",
+                "properties": {},
+                "text": "∑"
+              }
+            ],
+            "kind": "mo",
+            "properties": {
+              "fixStretchy": true,
+              "go-vector-factory-token": true,
+              "in-lists": "fixStretchy",
+              "movablelimits": false,
+              "movesupsub": true,
+              "texClass": 1
+            },
+            "text": null
+          },
+          {
+            "attributes": {
+              "stretchy": true
+            },
+            "children": [
+              {
+                "attributes": {},
+                "children": [],
+                "kind": "text",
+                "properties": {},
+                "text": "→"
+              }
+            ],
+            "kind": "mo",
+            "properties": {
+              "go-vector-factory-token": true,
+              "texClass": 0
+            },
+            "text": null
+          }
+        ],
+        "kind": "mover",
+        "properties": {},
+        "text": null
+      }
+    },
+    {
+      "command": "overrightarrow",
+      "display": true,
+      "name": "overrightarrow/{\\sum}/true",
+      "source": "{\\sum}",
+      "tree": {
+        "attributes": {
+          "accent": true
+        },
+        "children": [
+          {
+            "attributes": {
+              "movablelimits": false,
+              "stretchy": false
+            },
+            "children": [
+              {
+                "attributes": {},
+                "children": [],
+                "kind": "text",
+                "properties": {},
+                "text": "∑"
+              }
+            ],
+            "kind": "mo",
+            "properties": {
+              "fixStretchy": true,
+              "go-vector-factory-token": true,
+              "in-lists": "fixStretchy",
+              "movablelimits": false,
+              "movesupsub": true,
+              "texClass": 1
+            },
+            "text": null
+          },
+          {
+            "attributes": {
+              "stretchy": true
+            },
+            "children": [
+              {
+                "attributes": {},
+                "children": [],
+                "kind": "text",
+                "properties": {},
+                "text": "→"
+              }
+            ],
+            "kind": "mo",
+            "properties": {
+              "go-vector-factory-token": true,
+              "texClass": 0
+            },
+            "text": null
+          }
+        ],
+        "kind": "mover",
+        "properties": {},
+        "text": null
+      }
+    },
+    {
+      "command": "overrightarrow",
+      "display": false,
+      "name": "overrightarrow/{\\sum_i^n}/false",
+      "source": "{\\sum_i^n}",
+      "tree": {
+        "attributes": {
+          "accent": true
+        },
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              {
+                "attributes": {
+                  "rspace": 0
+                },
+                "children": [],
+                "kind": "mo",
+                "properties": {},
+                "text": null
+              },
+              {
+                "attributes": {},
+                "children": [
+                  {
+                    "attributes": {
+                      "lspace": 0,
+                      "rspace": 0,
+                      "stretchy": false
+                    },
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "∑"
+                      }
+                    ],
+                    "kind": "mo",
+                    "properties": {
+                      "fixStretchy": true,
+                      "go-vector-factory-token": true,
+                      "in-lists": "fixStretchy",
+                      "movesupsub": true,
+                      "texClass": 1
+                    },
+                    "text": null
+                  },
+                  {
+                    "attributes": {},
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "i"
+                      }
+                    ],
+                    "kind": "mi",
+                    "properties": {
+                      "go-ambient-font-source": true,
+                      "go-vector-factory-token": true
+                    },
+                    "text": null
+                  },
+                  {
+                    "attributes": {},
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "n"
+                      }
+                    ],
+                    "kind": "mi",
+                    "properties": {
+                      "go-ambient-font-source": true,
+                      "go-vector-factory-token": true
+                    },
+                    "text": null
+                  }
+                ],
+                "kind": "munderover",
+                "properties": {
+                  "_texLimitsScriptOrigin": true,
+                  "movesupsub": true
+                },
+                "text": null
+              }
+            ],
+            "kind": "mrow",
+            "properties": {},
+            "text": null
+          },
+          {
+            "attributes": {
+              "stretchy": true
+            },
+            "children": [
+              {
+                "attributes": {},
+                "children": [],
+                "kind": "text",
+                "properties": {},
+                "text": "→"
+              }
+            ],
+            "kind": "mo",
+            "properties": {
+              "go-vector-factory-token": true,
+              "texClass": 0
+            },
+            "text": null
+          }
+        ],
+        "kind": "mover",
+        "properties": {},
+        "text": null
+      }
+    },
+    {
+      "command": "overrightarrow",
+      "display": true,
+      "name": "overrightarrow/{\\sum_i^n}/true",
+      "source": "{\\sum_i^n}",
+      "tree": {
+        "attributes": {
+          "accent": true
+        },
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              {
+                "attributes": {
+                  "rspace": 0
+                },
+                "children": [],
+                "kind": "mo",
+                "properties": {},
+                "text": null
+              },
+              {
+                "attributes": {},
+                "children": [
+                  {
+                    "attributes": {
+                      "lspace": 0,
+                      "rspace": 0,
+                      "stretchy": false
+                    },
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "∑"
+                      }
+                    ],
+                    "kind": "mo",
+                    "properties": {
+                      "fixStretchy": true,
+                      "go-vector-factory-token": true,
+                      "in-lists": "fixStretchy",
+                      "movesupsub": true,
+                      "texClass": 1
+                    },
+                    "text": null
+                  },
+                  {
+                    "attributes": {},
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "i"
+                      }
+                    ],
+                    "kind": "mi",
+                    "properties": {
+                      "go-ambient-font-source": true,
+                      "go-vector-factory-token": true
+                    },
+                    "text": null
+                  },
+                  {
+                    "attributes": {},
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "n"
+                      }
+                    ],
+                    "kind": "mi",
+                    "properties": {
+                      "go-ambient-font-source": true,
+                      "go-vector-factory-token": true
+                    },
+                    "text": null
+                  }
+                ],
+                "kind": "munderover",
+                "properties": {
+                  "_texLimitsScriptOrigin": true,
+                  "movesupsub": true
+                },
+                "text": null
+              }
+            ],
+            "kind": "mrow",
+            "properties": {},
+            "text": null
+          },
+          {
+            "attributes": {
+              "stretchy": true
+            },
+            "children": [
+              {
+                "attributes": {},
+                "children": [],
+                "kind": "text",
+                "properties": {},
+                "text": "→"
+              }
+            ],
+            "kind": "mo",
+            "properties": {
+              "go-vector-factory-token": true,
+              "texClass": 0
+            },
+            "text": null
+          }
+        ],
+        "kind": "mover",
+        "properties": {},
+        "text": null
+      }
+    },
+    {
+      "command": "underrightarrow",
+      "display": false,
+      "name": "underrightarrow/{x}/false",
+      "source": "{x}",
+      "tree": {
+        "attributes": {
+          "accentunder": true
+        },
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              {
+                "attributes": {},
+                "children": [],
+                "kind": "text",
+                "properties": {},
+                "text": "x"
+              }
+            ],
+            "kind": "mi",
+            "properties": {
+              "go-ambient-font-source": true,
+              "go-vector-factory-token": true
+            },
+            "text": null
+          },
+          {
+            "attributes": {
+              "stretchy": true
+            },
+            "children": [
+              {
+                "attributes": {},
+                "children": [],
+                "kind": "text",
+                "properties": {},
+                "text": "→"
+              }
+            ],
+            "kind": "mo",
+            "properties": {
+              "go-vector-factory-token": true,
+              "texClass": 0
+            },
+            "text": null
+          }
+        ],
+        "kind": "munder",
+        "properties": {},
+        "text": null
+      }
+    },
+    {
+      "command": "underrightarrow",
+      "display": true,
+      "name": "underrightarrow/{x}/true",
+      "source": "{x}",
+      "tree": {
+        "attributes": {
+          "accentunder": true
+        },
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              {
+                "attributes": {},
+                "children": [],
+                "kind": "text",
+                "properties": {},
+                "text": "x"
+              }
+            ],
+            "kind": "mi",
+            "properties": {
+              "go-ambient-font-source": true,
+              "go-vector-factory-token": true
+            },
+            "text": null
+          },
+          {
+            "attributes": {
+              "stretchy": true
+            },
+            "children": [
+              {
+                "attributes": {},
+                "children": [],
+                "kind": "text",
+                "properties": {},
+                "text": "→"
+              }
+            ],
+            "kind": "mo",
+            "properties": {
+              "go-vector-factory-token": true,
+              "texClass": 0
+            },
+            "text": null
+          }
+        ],
+        "kind": "munder",
+        "properties": {},
+        "text": null
+      }
+    },
+    {
+      "command": "underrightarrow",
+      "display": false,
+      "name": "underrightarrow/{\\sum}/false",
+      "source": "{\\sum}",
+      "tree": {
+        "attributes": {
+          "accentunder": true
+        },
+        "children": [
+          {
+            "attributes": {
+              "movablelimits": false,
+              "stretchy": false
+            },
+            "children": [
+              {
+                "attributes": {},
+                "children": [],
+                "kind": "text",
+                "properties": {},
+                "text": "∑"
+              }
+            ],
+            "kind": "mo",
+            "properties": {
+              "fixStretchy": true,
+              "go-vector-factory-token": true,
+              "in-lists": "fixStretchy",
+              "movablelimits": false,
+              "movesupsub": true,
+              "texClass": 1
+            },
+            "text": null
+          },
+          {
+            "attributes": {
+              "stretchy": true
+            },
+            "children": [
+              {
+                "attributes": {},
+                "children": [],
+                "kind": "text",
+                "properties": {},
+                "text": "→"
+              }
+            ],
+            "kind": "mo",
+            "properties": {
+              "go-vector-factory-token": true,
+              "texClass": 0
+            },
+            "text": null
+          }
+        ],
+        "kind": "munder",
+        "properties": {},
+        "text": null
+      }
+    },
+    {
+      "command": "underrightarrow",
+      "display": true,
+      "name": "underrightarrow/{\\sum}/true",
+      "source": "{\\sum}",
+      "tree": {
+        "attributes": {
+          "accentunder": true
+        },
+        "children": [
+          {
+            "attributes": {
+              "movablelimits": false,
+              "stretchy": false
+            },
+            "children": [
+              {
+                "attributes": {},
+                "children": [],
+                "kind": "text",
+                "properties": {},
+                "text": "∑"
+              }
+            ],
+            "kind": "mo",
+            "properties": {
+              "fixStretchy": true,
+              "go-vector-factory-token": true,
+              "in-lists": "fixStretchy",
+              "movablelimits": false,
+              "movesupsub": true,
+              "texClass": 1
+            },
+            "text": null
+          },
+          {
+            "attributes": {
+              "stretchy": true
+            },
+            "children": [
+              {
+                "attributes": {},
+                "children": [],
+                "kind": "text",
+                "properties": {},
+                "text": "→"
+              }
+            ],
+            "kind": "mo",
+            "properties": {
+              "go-vector-factory-token": true,
+              "texClass": 0
+            },
+            "text": null
+          }
+        ],
+        "kind": "munder",
+        "properties": {},
+        "text": null
+      }
+    },
+    {
+      "command": "underrightarrow",
+      "display": false,
+      "name": "underrightarrow/{\\sum_i^n}/false",
+      "source": "{\\sum_i^n}",
+      "tree": {
+        "attributes": {
+          "accentunder": true
+        },
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              {
+                "attributes": {
+                  "rspace": 0
+                },
+                "children": [],
+                "kind": "mo",
+                "properties": {},
+                "text": null
+              },
+              {
+                "attributes": {},
+                "children": [
+                  {
+                    "attributes": {
+                      "lspace": 0,
+                      "rspace": 0,
+                      "stretchy": false
+                    },
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "∑"
+                      }
+                    ],
+                    "kind": "mo",
+                    "properties": {
+                      "fixStretchy": true,
+                      "go-vector-factory-token": true,
+                      "in-lists": "fixStretchy",
+                      "movesupsub": true,
+                      "texClass": 1
+                    },
+                    "text": null
+                  },
+                  {
+                    "attributes": {},
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "i"
+                      }
+                    ],
+                    "kind": "mi",
+                    "properties": {
+                      "go-ambient-font-source": true,
+                      "go-vector-factory-token": true
+                    },
+                    "text": null
+                  },
+                  {
+                    "attributes": {},
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "n"
+                      }
+                    ],
+                    "kind": "mi",
+                    "properties": {
+                      "go-ambient-font-source": true,
+                      "go-vector-factory-token": true
+                    },
+                    "text": null
+                  }
+                ],
+                "kind": "munderover",
+                "properties": {
+                  "_texLimitsScriptOrigin": true,
+                  "movesupsub": true
+                },
+                "text": null
+              }
+            ],
+            "kind": "mrow",
+            "properties": {},
+            "text": null
+          },
+          {
+            "attributes": {
+              "stretchy": true
+            },
+            "children": [
+              {
+                "attributes": {},
+                "children": [],
+                "kind": "text",
+                "properties": {},
+                "text": "→"
+              }
+            ],
+            "kind": "mo",
+            "properties": {
+              "go-vector-factory-token": true,
+              "texClass": 0
+            },
+            "text": null
+          }
+        ],
+        "kind": "munder",
+        "properties": {},
+        "text": null
+      }
+    },
+    {
+      "command": "underrightarrow",
+      "display": true,
+      "name": "underrightarrow/{\\sum_i^n}/true",
+      "source": "{\\sum_i^n}",
+      "tree": {
+        "attributes": {
+          "accentunder": true
+        },
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              {
+                "attributes": {
+                  "rspace": 0
+                },
+                "children": [],
+                "kind": "mo",
+                "properties": {},
+                "text": null
+              },
+              {
+                "attributes": {},
+                "children": [
+                  {
+                    "attributes": {
+                      "lspace": 0,
+                      "rspace": 0,
+                      "stretchy": false
+                    },
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "∑"
+                      }
+                    ],
+                    "kind": "mo",
+                    "properties": {
+                      "fixStretchy": true,
+                      "go-vector-factory-token": true,
+                      "in-lists": "fixStretchy",
+                      "movesupsub": true,
+                      "texClass": 1
+                    },
+                    "text": null
+                  },
+                  {
+                    "attributes": {},
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "i"
+                      }
+                    ],
+                    "kind": "mi",
+                    "properties": {
+                      "go-ambient-font-source": true,
+                      "go-vector-factory-token": true
+                    },
+                    "text": null
+                  },
+                  {
+                    "attributes": {},
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "n"
+                      }
+                    ],
+                    "kind": "mi",
+                    "properties": {
+                      "go-ambient-font-source": true,
+                      "go-vector-factory-token": true
+                    },
+                    "text": null
+                  }
+                ],
+                "kind": "munderover",
+                "properties": {
+                  "_texLimitsScriptOrigin": true,
+                  "movesupsub": true
+                },
+                "text": null
+              }
+            ],
+            "kind": "mrow",
+            "properties": {},
+            "text": null
+          },
+          {
+            "attributes": {
+              "stretchy": true
+            },
+            "children": [
+              {
+                "attributes": {},
+                "children": [],
+                "kind": "text",
+                "properties": {},
+                "text": "→"
+              }
+            ],
+            "kind": "mo",
+            "properties": {
+              "go-vector-factory-token": true,
+              "texClass": 0
+            },
+            "text": null
+          }
+        ],
+        "kind": "munder",
+        "properties": {},
+        "text": null
+      }
+    },
+    {
+      "command": "overleftarrow",
+      "display": false,
+      "name": "overleftarrow/{x}/false",
+      "source": "{x}",
+      "tree": {
+        "attributes": {
+          "accent": true
+        },
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              {
+                "attributes": {},
+                "children": [],
+                "kind": "text",
+                "properties": {},
+                "text": "x"
+              }
+            ],
+            "kind": "mi",
+            "properties": {
+              "go-ambient-font-source": true,
+              "go-vector-factory-token": true
+            },
+            "text": null
+          },
+          {
+            "attributes": {
+              "stretchy": true
+            },
+            "children": [
+              {
+                "attributes": {},
+                "children": [],
+                "kind": "text",
+                "properties": {},
+                "text": "←"
+              }
+            ],
+            "kind": "mo",
+            "properties": {
+              "go-vector-factory-token": true,
+              "texClass": 0
+            },
+            "text": null
+          }
+        ],
+        "kind": "mover",
+        "properties": {},
+        "text": null
+      }
+    },
+    {
+      "command": "overleftarrow",
+      "display": true,
+      "name": "overleftarrow/{x}/true",
+      "source": "{x}",
+      "tree": {
+        "attributes": {
+          "accent": true
+        },
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              {
+                "attributes": {},
+                "children": [],
+                "kind": "text",
+                "properties": {},
+                "text": "x"
+              }
+            ],
+            "kind": "mi",
+            "properties": {
+              "go-ambient-font-source": true,
+              "go-vector-factory-token": true
+            },
+            "text": null
+          },
+          {
+            "attributes": {
+              "stretchy": true
+            },
+            "children": [
+              {
+                "attributes": {},
+                "children": [],
+                "kind": "text",
+                "properties": {},
+                "text": "←"
+              }
+            ],
+            "kind": "mo",
+            "properties": {
+              "go-vector-factory-token": true,
+              "texClass": 0
+            },
+            "text": null
+          }
+        ],
+        "kind": "mover",
+        "properties": {},
+        "text": null
+      }
+    },
+    {
+      "command": "overleftarrow",
+      "display": false,
+      "name": "overleftarrow/{\\sum}/false",
+      "source": "{\\sum}",
+      "tree": {
+        "attributes": {
+          "accent": true
+        },
+        "children": [
+          {
+            "attributes": {
+              "movablelimits": false,
+              "stretchy": false
+            },
+            "children": [
+              {
+                "attributes": {},
+                "children": [],
+                "kind": "text",
+                "properties": {},
+                "text": "∑"
+              }
+            ],
+            "kind": "mo",
+            "properties": {
+              "fixStretchy": true,
+              "go-vector-factory-token": true,
+              "in-lists": "fixStretchy",
+              "movablelimits": false,
+              "movesupsub": true,
+              "texClass": 1
+            },
+            "text": null
+          },
+          {
+            "attributes": {
+              "stretchy": true
+            },
+            "children": [
+              {
+                "attributes": {},
+                "children": [],
+                "kind": "text",
+                "properties": {},
+                "text": "←"
+              }
+            ],
+            "kind": "mo",
+            "properties": {
+              "go-vector-factory-token": true,
+              "texClass": 0
+            },
+            "text": null
+          }
+        ],
+        "kind": "mover",
+        "properties": {},
+        "text": null
+      }
+    },
+    {
+      "command": "overleftarrow",
+      "display": true,
+      "name": "overleftarrow/{\\sum}/true",
+      "source": "{\\sum}",
+      "tree": {
+        "attributes": {
+          "accent": true
+        },
+        "children": [
+          {
+            "attributes": {
+              "movablelimits": false,
+              "stretchy": false
+            },
+            "children": [
+              {
+                "attributes": {},
+                "children": [],
+                "kind": "text",
+                "properties": {},
+                "text": "∑"
+              }
+            ],
+            "kind": "mo",
+            "properties": {
+              "fixStretchy": true,
+              "go-vector-factory-token": true,
+              "in-lists": "fixStretchy",
+              "movablelimits": false,
+              "movesupsub": true,
+              "texClass": 1
+            },
+            "text": null
+          },
+          {
+            "attributes": {
+              "stretchy": true
+            },
+            "children": [
+              {
+                "attributes": {},
+                "children": [],
+                "kind": "text",
+                "properties": {},
+                "text": "←"
+              }
+            ],
+            "kind": "mo",
+            "properties": {
+              "go-vector-factory-token": true,
+              "texClass": 0
+            },
+            "text": null
+          }
+        ],
+        "kind": "mover",
+        "properties": {},
+        "text": null
+      }
+    },
+    {
+      "command": "overleftarrow",
+      "display": false,
+      "name": "overleftarrow/{\\sum_i^n}/false",
+      "source": "{\\sum_i^n}",
+      "tree": {
+        "attributes": {
+          "accent": true
+        },
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              {
+                "attributes": {
+                  "rspace": 0
+                },
+                "children": [],
+                "kind": "mo",
+                "properties": {},
+                "text": null
+              },
+              {
+                "attributes": {},
+                "children": [
+                  {
+                    "attributes": {
+                      "lspace": 0,
+                      "rspace": 0,
+                      "stretchy": false
+                    },
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "∑"
+                      }
+                    ],
+                    "kind": "mo",
+                    "properties": {
+                      "fixStretchy": true,
+                      "go-vector-factory-token": true,
+                      "in-lists": "fixStretchy",
+                      "movesupsub": true,
+                      "texClass": 1
+                    },
+                    "text": null
+                  },
+                  {
+                    "attributes": {},
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "i"
+                      }
+                    ],
+                    "kind": "mi",
+                    "properties": {
+                      "go-ambient-font-source": true,
+                      "go-vector-factory-token": true
+                    },
+                    "text": null
+                  },
+                  {
+                    "attributes": {},
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "n"
+                      }
+                    ],
+                    "kind": "mi",
+                    "properties": {
+                      "go-ambient-font-source": true,
+                      "go-vector-factory-token": true
+                    },
+                    "text": null
+                  }
+                ],
+                "kind": "munderover",
+                "properties": {
+                  "_texLimitsScriptOrigin": true,
+                  "movesupsub": true
+                },
+                "text": null
+              }
+            ],
+            "kind": "mrow",
+            "properties": {},
+            "text": null
+          },
+          {
+            "attributes": {
+              "stretchy": true
+            },
+            "children": [
+              {
+                "attributes": {},
+                "children": [],
+                "kind": "text",
+                "properties": {},
+                "text": "←"
+              }
+            ],
+            "kind": "mo",
+            "properties": {
+              "go-vector-factory-token": true,
+              "texClass": 0
+            },
+            "text": null
+          }
+        ],
+        "kind": "mover",
+        "properties": {},
+        "text": null
+      }
+    },
+    {
+      "command": "overleftarrow",
+      "display": true,
+      "name": "overleftarrow/{\\sum_i^n}/true",
+      "source": "{\\sum_i^n}",
+      "tree": {
+        "attributes": {
+          "accent": true
+        },
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              {
+                "attributes": {
+                  "rspace": 0
+                },
+                "children": [],
+                "kind": "mo",
+                "properties": {},
+                "text": null
+              },
+              {
+                "attributes": {},
+                "children": [
+                  {
+                    "attributes": {
+                      "lspace": 0,
+                      "rspace": 0,
+                      "stretchy": false
+                    },
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "∑"
+                      }
+                    ],
+                    "kind": "mo",
+                    "properties": {
+                      "fixStretchy": true,
+                      "go-vector-factory-token": true,
+                      "in-lists": "fixStretchy",
+                      "movesupsub": true,
+                      "texClass": 1
+                    },
+                    "text": null
+                  },
+                  {
+                    "attributes": {},
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "i"
+                      }
+                    ],
+                    "kind": "mi",
+                    "properties": {
+                      "go-ambient-font-source": true,
+                      "go-vector-factory-token": true
+                    },
+                    "text": null
+                  },
+                  {
+                    "attributes": {},
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "n"
+                      }
+                    ],
+                    "kind": "mi",
+                    "properties": {
+                      "go-ambient-font-source": true,
+                      "go-vector-factory-token": true
+                    },
+                    "text": null
+                  }
+                ],
+                "kind": "munderover",
+                "properties": {
+                  "_texLimitsScriptOrigin": true,
+                  "movesupsub": true
+                },
+                "text": null
+              }
+            ],
+            "kind": "mrow",
+            "properties": {},
+            "text": null
+          },
+          {
+            "attributes": {
+              "stretchy": true
+            },
+            "children": [
+              {
+                "attributes": {},
+                "children": [],
+                "kind": "text",
+                "properties": {},
+                "text": "←"
+              }
+            ],
+            "kind": "mo",
+            "properties": {
+              "go-vector-factory-token": true,
+              "texClass": 0
+            },
+            "text": null
+          }
+        ],
+        "kind": "mover",
+        "properties": {},
+        "text": null
+      }
+    },
+    {
+      "command": "underleftarrow",
+      "display": false,
+      "name": "underleftarrow/{x}/false",
+      "source": "{x}",
+      "tree": {
+        "attributes": {
+          "accentunder": true
+        },
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              {
+                "attributes": {},
+                "children": [],
+                "kind": "text",
+                "properties": {},
+                "text": "x"
+              }
+            ],
+            "kind": "mi",
+            "properties": {
+              "go-ambient-font-source": true,
+              "go-vector-factory-token": true
+            },
+            "text": null
+          },
+          {
+            "attributes": {
+              "stretchy": true
+            },
+            "children": [
+              {
+                "attributes": {},
+                "children": [],
+                "kind": "text",
+                "properties": {},
+                "text": "←"
+              }
+            ],
+            "kind": "mo",
+            "properties": {
+              "go-vector-factory-token": true,
+              "texClass": 0
+            },
+            "text": null
+          }
+        ],
+        "kind": "munder",
+        "properties": {},
+        "text": null
+      }
+    },
+    {
+      "command": "underleftarrow",
+      "display": true,
+      "name": "underleftarrow/{x}/true",
+      "source": "{x}",
+      "tree": {
+        "attributes": {
+          "accentunder": true
+        },
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              {
+                "attributes": {},
+                "children": [],
+                "kind": "text",
+                "properties": {},
+                "text": "x"
+              }
+            ],
+            "kind": "mi",
+            "properties": {
+              "go-ambient-font-source": true,
+              "go-vector-factory-token": true
+            },
+            "text": null
+          },
+          {
+            "attributes": {
+              "stretchy": true
+            },
+            "children": [
+              {
+                "attributes": {},
+                "children": [],
+                "kind": "text",
+                "properties": {},
+                "text": "←"
+              }
+            ],
+            "kind": "mo",
+            "properties": {
+              "go-vector-factory-token": true,
+              "texClass": 0
+            },
+            "text": null
+          }
+        ],
+        "kind": "munder",
+        "properties": {},
+        "text": null
+      }
+    },
+    {
+      "command": "underleftarrow",
+      "display": false,
+      "name": "underleftarrow/{\\sum}/false",
+      "source": "{\\sum}",
+      "tree": {
+        "attributes": {
+          "accentunder": true
+        },
+        "children": [
+          {
+            "attributes": {
+              "movablelimits": false,
+              "stretchy": false
+            },
+            "children": [
+              {
+                "attributes": {},
+                "children": [],
+                "kind": "text",
+                "properties": {},
+                "text": "∑"
+              }
+            ],
+            "kind": "mo",
+            "properties": {
+              "fixStretchy": true,
+              "go-vector-factory-token": true,
+              "in-lists": "fixStretchy",
+              "movablelimits": false,
+              "movesupsub": true,
+              "texClass": 1
+            },
+            "text": null
+          },
+          {
+            "attributes": {
+              "stretchy": true
+            },
+            "children": [
+              {
+                "attributes": {},
+                "children": [],
+                "kind": "text",
+                "properties": {},
+                "text": "←"
+              }
+            ],
+            "kind": "mo",
+            "properties": {
+              "go-vector-factory-token": true,
+              "texClass": 0
+            },
+            "text": null
+          }
+        ],
+        "kind": "munder",
+        "properties": {},
+        "text": null
+      }
+    },
+    {
+      "command": "underleftarrow",
+      "display": true,
+      "name": "underleftarrow/{\\sum}/true",
+      "source": "{\\sum}",
+      "tree": {
+        "attributes": {
+          "accentunder": true
+        },
+        "children": [
+          {
+            "attributes": {
+              "movablelimits": false,
+              "stretchy": false
+            },
+            "children": [
+              {
+                "attributes": {},
+                "children": [],
+                "kind": "text",
+                "properties": {},
+                "text": "∑"
+              }
+            ],
+            "kind": "mo",
+            "properties": {
+              "fixStretchy": true,
+              "go-vector-factory-token": true,
+              "in-lists": "fixStretchy",
+              "movablelimits": false,
+              "movesupsub": true,
+              "texClass": 1
+            },
+            "text": null
+          },
+          {
+            "attributes": {
+              "stretchy": true
+            },
+            "children": [
+              {
+                "attributes": {},
+                "children": [],
+                "kind": "text",
+                "properties": {},
+                "text": "←"
+              }
+            ],
+            "kind": "mo",
+            "properties": {
+              "go-vector-factory-token": true,
+              "texClass": 0
+            },
+            "text": null
+          }
+        ],
+        "kind": "munder",
+        "properties": {},
+        "text": null
+      }
+    },
+    {
+      "command": "underleftarrow",
+      "display": false,
+      "name": "underleftarrow/{\\sum_i^n}/false",
+      "source": "{\\sum_i^n}",
+      "tree": {
+        "attributes": {
+          "accentunder": true
+        },
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              {
+                "attributes": {
+                  "rspace": 0
+                },
+                "children": [],
+                "kind": "mo",
+                "properties": {},
+                "text": null
+              },
+              {
+                "attributes": {},
+                "children": [
+                  {
+                    "attributes": {
+                      "lspace": 0,
+                      "rspace": 0,
+                      "stretchy": false
+                    },
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "∑"
+                      }
+                    ],
+                    "kind": "mo",
+                    "properties": {
+                      "fixStretchy": true,
+                      "go-vector-factory-token": true,
+                      "in-lists": "fixStretchy",
+                      "movesupsub": true,
+                      "texClass": 1
+                    },
+                    "text": null
+                  },
+                  {
+                    "attributes": {},
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "i"
+                      }
+                    ],
+                    "kind": "mi",
+                    "properties": {
+                      "go-ambient-font-source": true,
+                      "go-vector-factory-token": true
+                    },
+                    "text": null
+                  },
+                  {
+                    "attributes": {},
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "n"
+                      }
+                    ],
+                    "kind": "mi",
+                    "properties": {
+                      "go-ambient-font-source": true,
+                      "go-vector-factory-token": true
+                    },
+                    "text": null
+                  }
+                ],
+                "kind": "munderover",
+                "properties": {
+                  "_texLimitsScriptOrigin": true,
+                  "movesupsub": true
+                },
+                "text": null
+              }
+            ],
+            "kind": "mrow",
+            "properties": {},
+            "text": null
+          },
+          {
+            "attributes": {
+              "stretchy": true
+            },
+            "children": [
+              {
+                "attributes": {},
+                "children": [],
+                "kind": "text",
+                "properties": {},
+                "text": "←"
+              }
+            ],
+            "kind": "mo",
+            "properties": {
+              "go-vector-factory-token": true,
+              "texClass": 0
+            },
+            "text": null
+          }
+        ],
+        "kind": "munder",
+        "properties": {},
+        "text": null
+      }
+    },
+    {
+      "command": "underleftarrow",
+      "display": true,
+      "name": "underleftarrow/{\\sum_i^n}/true",
+      "source": "{\\sum_i^n}",
+      "tree": {
+        "attributes": {
+          "accentunder": true
+        },
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              {
+                "attributes": {
+                  "rspace": 0
+                },
+                "children": [],
+                "kind": "mo",
+                "properties": {},
+                "text": null
+              },
+              {
+                "attributes": {},
+                "children": [
+                  {
+                    "attributes": {
+                      "lspace": 0,
+                      "rspace": 0,
+                      "stretchy": false
+                    },
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "∑"
+                      }
+                    ],
+                    "kind": "mo",
+                    "properties": {
+                      "fixStretchy": true,
+                      "go-vector-factory-token": true,
+                      "in-lists": "fixStretchy",
+                      "movesupsub": true,
+                      "texClass": 1
+                    },
+                    "text": null
+                  },
+                  {
+                    "attributes": {},
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "i"
+                      }
+                    ],
+                    "kind": "mi",
+                    "properties": {
+                      "go-ambient-font-source": true,
+                      "go-vector-factory-token": true
+                    },
+                    "text": null
+                  },
+                  {
+                    "attributes": {},
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "n"
+                      }
+                    ],
+                    "kind": "mi",
+                    "properties": {
+                      "go-ambient-font-source": true,
+                      "go-vector-factory-token": true
+                    },
+                    "text": null
+                  }
+                ],
+                "kind": "munderover",
+                "properties": {
+                  "_texLimitsScriptOrigin": true,
+                  "movesupsub": true
+                },
+                "text": null
+              }
+            ],
+            "kind": "mrow",
+            "properties": {},
+            "text": null
+          },
+          {
+            "attributes": {
+              "stretchy": true
+            },
+            "children": [
+              {
+                "attributes": {},
+                "children": [],
+                "kind": "text",
+                "properties": {},
+                "text": "←"
+              }
+            ],
+            "kind": "mo",
+            "properties": {
+              "go-vector-factory-token": true,
+              "texClass": 0
+            },
+            "text": null
+          }
+        ],
+        "kind": "munder",
+        "properties": {},
+        "text": null
+      }
+    },
+    {
+      "command": "overbrace",
+      "display": false,
+      "name": "overbrace/{x}/false",
+      "source": "{x}",
+      "tree": {
+        "attributes": {},
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              {
+                "attributes": {
+                  "accent": true
+                },
+                "children": [
+                  {
+                    "attributes": {},
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "x"
+                      }
+                    ],
+                    "kind": "mi",
+                    "properties": {
+                      "go-ambient-font-source": true,
+                      "go-vector-factory-token": true
+                    },
+                    "text": null
+                  },
+                  {
+                    "attributes": {
+                      "accent": true,
+                      "stretchy": true
+                    },
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "⏞"
+                      }
+                    ],
+                    "kind": "mo",
+                    "properties": {
+                      "go-vector-factory-token": true,
+                      "texClass": 0
+                    },
+                    "text": null
+                  }
+                ],
+                "kind": "mover",
+                "properties": {},
+                "text": null
+              }
+            ],
+            "kind": "inferredMrow",
+            "properties": {},
+            "text": null
+          }
+        ],
+        "kind": "TeXAtom",
+        "properties": {
+          "movesupsub": true,
+          "subsupOK": true,
+          "texClass": 1
+        },
+        "text": null
+      }
+    },
+    {
+      "command": "overbrace",
+      "display": true,
+      "name": "overbrace/{x}/true",
+      "source": "{x}",
+      "tree": {
+        "attributes": {},
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              {
+                "attributes": {
+                  "accent": true
+                },
+                "children": [
+                  {
+                    "attributes": {},
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "x"
+                      }
+                    ],
+                    "kind": "mi",
+                    "properties": {
+                      "go-ambient-font-source": true,
+                      "go-vector-factory-token": true
+                    },
+                    "text": null
+                  },
+                  {
+                    "attributes": {
+                      "accent": true,
+                      "stretchy": true
+                    },
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "⏞"
+                      }
+                    ],
+                    "kind": "mo",
+                    "properties": {
+                      "go-vector-factory-token": true,
+                      "texClass": 0
+                    },
+                    "text": null
+                  }
+                ],
+                "kind": "mover",
+                "properties": {},
+                "text": null
+              }
+            ],
+            "kind": "inferredMrow",
+            "properties": {},
+            "text": null
+          }
+        ],
+        "kind": "TeXAtom",
+        "properties": {
+          "movesupsub": true,
+          "subsupOK": true,
+          "texClass": 1
+        },
+        "text": null
+      }
+    },
+    {
+      "command": "overbrace",
+      "display": false,
+      "name": "overbrace/{\\sum}/false",
+      "source": "{\\sum}",
+      "tree": {
+        "attributes": {},
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              {
+                "attributes": {
+                  "accent": true
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "movablelimits": false,
+                      "stretchy": false
+                    },
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "∑"
+                      }
+                    ],
+                    "kind": "mo",
+                    "properties": {
+                      "fixStretchy": true,
+                      "go-vector-factory-token": true,
+                      "in-lists": "fixStretchy",
+                      "movablelimits": false,
+                      "movesupsub": true,
+                      "texClass": 1
+                    },
+                    "text": null
+                  },
+                  {
+                    "attributes": {
+                      "accent": true,
+                      "stretchy": true
+                    },
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "⏞"
+                      }
+                    ],
+                    "kind": "mo",
+                    "properties": {
+                      "go-vector-factory-token": true,
+                      "texClass": 0
+                    },
+                    "text": null
+                  }
+                ],
+                "kind": "mover",
+                "properties": {},
+                "text": null
+              }
+            ],
+            "kind": "inferredMrow",
+            "properties": {},
+            "text": null
+          }
+        ],
+        "kind": "TeXAtom",
+        "properties": {
+          "movesupsub": true,
+          "subsupOK": true,
+          "texClass": 1
+        },
+        "text": null
+      }
+    },
+    {
+      "command": "overbrace",
+      "display": true,
+      "name": "overbrace/{\\sum}/true",
+      "source": "{\\sum}",
+      "tree": {
+        "attributes": {},
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              {
+                "attributes": {
+                  "accent": true
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "movablelimits": false,
+                      "stretchy": false
+                    },
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "∑"
+                      }
+                    ],
+                    "kind": "mo",
+                    "properties": {
+                      "fixStretchy": true,
+                      "go-vector-factory-token": true,
+                      "in-lists": "fixStretchy",
+                      "movablelimits": false,
+                      "movesupsub": true,
+                      "texClass": 1
+                    },
+                    "text": null
+                  },
+                  {
+                    "attributes": {
+                      "accent": true,
+                      "stretchy": true
+                    },
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "⏞"
+                      }
+                    ],
+                    "kind": "mo",
+                    "properties": {
+                      "go-vector-factory-token": true,
+                      "texClass": 0
+                    },
+                    "text": null
+                  }
+                ],
+                "kind": "mover",
+                "properties": {},
+                "text": null
+              }
+            ],
+            "kind": "inferredMrow",
+            "properties": {},
+            "text": null
+          }
+        ],
+        "kind": "TeXAtom",
+        "properties": {
+          "movesupsub": true,
+          "subsupOK": true,
+          "texClass": 1
+        },
+        "text": null
+      }
+    },
+    {
+      "command": "overbrace",
+      "display": false,
+      "name": "overbrace/{\\sum_i^n}/false",
+      "source": "{\\sum_i^n}",
+      "tree": {
+        "attributes": {},
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              {
+                "attributes": {
+                  "accent": true
+                },
+                "children": [
+                  {
+                    "attributes": {},
+                    "children": [
+                      {
+                        "attributes": {
+                          "rspace": 0
+                        },
+                        "children": [],
+                        "kind": "mo",
+                        "properties": {},
+                        "text": null
+                      },
+                      {
+                        "attributes": {},
+                        "children": [
+                          {
+                            "attributes": {
+                              "lspace": 0,
+                              "rspace": 0,
+                              "stretchy": false
+                            },
+                            "children": [
+                              {
+                                "attributes": {},
+                                "children": [],
+                                "kind": "text",
+                                "properties": {},
+                                "text": "∑"
+                              }
+                            ],
+                            "kind": "mo",
+                            "properties": {
+                              "fixStretchy": true,
+                              "go-vector-factory-token": true,
+                              "in-lists": "fixStretchy",
+                              "movesupsub": true,
+                              "texClass": 1
+                            },
+                            "text": null
+                          },
+                          {
+                            "attributes": {},
+                            "children": [
+                              {
+                                "attributes": {},
+                                "children": [],
+                                "kind": "text",
+                                "properties": {},
+                                "text": "i"
+                              }
+                            ],
+                            "kind": "mi",
+                            "properties": {
+                              "go-ambient-font-source": true,
+                              "go-vector-factory-token": true
+                            },
+                            "text": null
+                          },
+                          {
+                            "attributes": {},
+                            "children": [
+                              {
+                                "attributes": {},
+                                "children": [],
+                                "kind": "text",
+                                "properties": {},
+                                "text": "n"
+                              }
+                            ],
+                            "kind": "mi",
+                            "properties": {
+                              "go-ambient-font-source": true,
+                              "go-vector-factory-token": true
+                            },
+                            "text": null
+                          }
+                        ],
+                        "kind": "munderover",
+                        "properties": {
+                          "_texLimitsScriptOrigin": true,
+                          "movesupsub": true
+                        },
+                        "text": null
+                      }
+                    ],
+                    "kind": "mrow",
+                    "properties": {},
+                    "text": null
+                  },
+                  {
+                    "attributes": {
+                      "accent": true,
+                      "stretchy": true
+                    },
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "⏞"
+                      }
+                    ],
+                    "kind": "mo",
+                    "properties": {
+                      "go-vector-factory-token": true,
+                      "texClass": 0
+                    },
+                    "text": null
+                  }
+                ],
+                "kind": "mover",
+                "properties": {},
+                "text": null
+              }
+            ],
+            "kind": "inferredMrow",
+            "properties": {},
+            "text": null
+          }
+        ],
+        "kind": "TeXAtom",
+        "properties": {
+          "movesupsub": true,
+          "subsupOK": true,
+          "texClass": 1
+        },
+        "text": null
+      }
+    },
+    {
+      "command": "overbrace",
+      "display": true,
+      "name": "overbrace/{\\sum_i^n}/true",
+      "source": "{\\sum_i^n}",
+      "tree": {
+        "attributes": {},
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              {
+                "attributes": {
+                  "accent": true
+                },
+                "children": [
+                  {
+                    "attributes": {},
+                    "children": [
+                      {
+                        "attributes": {
+                          "rspace": 0
+                        },
+                        "children": [],
+                        "kind": "mo",
+                        "properties": {},
+                        "text": null
+                      },
+                      {
+                        "attributes": {},
+                        "children": [
+                          {
+                            "attributes": {
+                              "lspace": 0,
+                              "rspace": 0,
+                              "stretchy": false
+                            },
+                            "children": [
+                              {
+                                "attributes": {},
+                                "children": [],
+                                "kind": "text",
+                                "properties": {},
+                                "text": "∑"
+                              }
+                            ],
+                            "kind": "mo",
+                            "properties": {
+                              "fixStretchy": true,
+                              "go-vector-factory-token": true,
+                              "in-lists": "fixStretchy",
+                              "movesupsub": true,
+                              "texClass": 1
+                            },
+                            "text": null
+                          },
+                          {
+                            "attributes": {},
+                            "children": [
+                              {
+                                "attributes": {},
+                                "children": [],
+                                "kind": "text",
+                                "properties": {},
+                                "text": "i"
+                              }
+                            ],
+                            "kind": "mi",
+                            "properties": {
+                              "go-ambient-font-source": true,
+                              "go-vector-factory-token": true
+                            },
+                            "text": null
+                          },
+                          {
+                            "attributes": {},
+                            "children": [
+                              {
+                                "attributes": {},
+                                "children": [],
+                                "kind": "text",
+                                "properties": {},
+                                "text": "n"
+                              }
+                            ],
+                            "kind": "mi",
+                            "properties": {
+                              "go-ambient-font-source": true,
+                              "go-vector-factory-token": true
+                            },
+                            "text": null
+                          }
+                        ],
+                        "kind": "munderover",
+                        "properties": {
+                          "_texLimitsScriptOrigin": true,
+                          "movesupsub": true
+                        },
+                        "text": null
+                      }
+                    ],
+                    "kind": "mrow",
+                    "properties": {},
+                    "text": null
+                  },
+                  {
+                    "attributes": {
+                      "accent": true,
+                      "stretchy": true
+                    },
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "⏞"
+                      }
+                    ],
+                    "kind": "mo",
+                    "properties": {
+                      "go-vector-factory-token": true,
+                      "texClass": 0
+                    },
+                    "text": null
+                  }
+                ],
+                "kind": "mover",
+                "properties": {},
+                "text": null
+              }
+            ],
+            "kind": "inferredMrow",
+            "properties": {},
+            "text": null
+          }
+        ],
+        "kind": "TeXAtom",
+        "properties": {
+          "movesupsub": true,
+          "subsupOK": true,
+          "texClass": 1
+        },
+        "text": null
+      }
+    },
+    {
+      "command": "underbrace",
+      "display": false,
+      "name": "underbrace/{x}/false",
+      "source": "{x}",
+      "tree": {
+        "attributes": {},
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              {
+                "attributes": {
+                  "accentunder": true
+                },
+                "children": [
+                  {
+                    "attributes": {},
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "x"
+                      }
+                    ],
+                    "kind": "mi",
+                    "properties": {
+                      "go-ambient-font-source": true,
+                      "go-vector-factory-token": true
+                    },
+                    "text": null
+                  },
+                  {
+                    "attributes": {
+                      "accent": true,
+                      "stretchy": true
+                    },
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "⏟"
+                      }
+                    ],
+                    "kind": "mo",
+                    "properties": {
+                      "go-vector-factory-token": true,
+                      "texClass": 0
+                    },
+                    "text": null
+                  }
+                ],
+                "kind": "munder",
+                "properties": {},
+                "text": null
+              }
+            ],
+            "kind": "inferredMrow",
+            "properties": {},
+            "text": null
+          }
+        ],
+        "kind": "TeXAtom",
+        "properties": {
+          "movesupsub": true,
+          "subsupOK": true,
+          "texClass": 1
+        },
+        "text": null
+      }
+    },
+    {
+      "command": "underbrace",
+      "display": true,
+      "name": "underbrace/{x}/true",
+      "source": "{x}",
+      "tree": {
+        "attributes": {},
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              {
+                "attributes": {
+                  "accentunder": true
+                },
+                "children": [
+                  {
+                    "attributes": {},
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "x"
+                      }
+                    ],
+                    "kind": "mi",
+                    "properties": {
+                      "go-ambient-font-source": true,
+                      "go-vector-factory-token": true
+                    },
+                    "text": null
+                  },
+                  {
+                    "attributes": {
+                      "accent": true,
+                      "stretchy": true
+                    },
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "⏟"
+                      }
+                    ],
+                    "kind": "mo",
+                    "properties": {
+                      "go-vector-factory-token": true,
+                      "texClass": 0
+                    },
+                    "text": null
+                  }
+                ],
+                "kind": "munder",
+                "properties": {},
+                "text": null
+              }
+            ],
+            "kind": "inferredMrow",
+            "properties": {},
+            "text": null
+          }
+        ],
+        "kind": "TeXAtom",
+        "properties": {
+          "movesupsub": true,
+          "subsupOK": true,
+          "texClass": 1
+        },
+        "text": null
+      }
+    },
+    {
+      "command": "underbrace",
+      "display": false,
+      "name": "underbrace/{\\sum}/false",
+      "source": "{\\sum}",
+      "tree": {
+        "attributes": {},
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              {
+                "attributes": {
+                  "accentunder": true
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "movablelimits": false,
+                      "stretchy": false
+                    },
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "∑"
+                      }
+                    ],
+                    "kind": "mo",
+                    "properties": {
+                      "fixStretchy": true,
+                      "go-vector-factory-token": true,
+                      "in-lists": "fixStretchy",
+                      "movablelimits": false,
+                      "movesupsub": true,
+                      "texClass": 1
+                    },
+                    "text": null
+                  },
+                  {
+                    "attributes": {
+                      "accent": true,
+                      "stretchy": true
+                    },
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "⏟"
+                      }
+                    ],
+                    "kind": "mo",
+                    "properties": {
+                      "go-vector-factory-token": true,
+                      "texClass": 0
+                    },
+                    "text": null
+                  }
+                ],
+                "kind": "munder",
+                "properties": {},
+                "text": null
+              }
+            ],
+            "kind": "inferredMrow",
+            "properties": {},
+            "text": null
+          }
+        ],
+        "kind": "TeXAtom",
+        "properties": {
+          "movesupsub": true,
+          "subsupOK": true,
+          "texClass": 1
+        },
+        "text": null
+      }
+    },
+    {
+      "command": "underbrace",
+      "display": true,
+      "name": "underbrace/{\\sum}/true",
+      "source": "{\\sum}",
+      "tree": {
+        "attributes": {},
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              {
+                "attributes": {
+                  "accentunder": true
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "movablelimits": false,
+                      "stretchy": false
+                    },
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "∑"
+                      }
+                    ],
+                    "kind": "mo",
+                    "properties": {
+                      "fixStretchy": true,
+                      "go-vector-factory-token": true,
+                      "in-lists": "fixStretchy",
+                      "movablelimits": false,
+                      "movesupsub": true,
+                      "texClass": 1
+                    },
+                    "text": null
+                  },
+                  {
+                    "attributes": {
+                      "accent": true,
+                      "stretchy": true
+                    },
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "⏟"
+                      }
+                    ],
+                    "kind": "mo",
+                    "properties": {
+                      "go-vector-factory-token": true,
+                      "texClass": 0
+                    },
+                    "text": null
+                  }
+                ],
+                "kind": "munder",
+                "properties": {},
+                "text": null
+              }
+            ],
+            "kind": "inferredMrow",
+            "properties": {},
+            "text": null
+          }
+        ],
+        "kind": "TeXAtom",
+        "properties": {
+          "movesupsub": true,
+          "subsupOK": true,
+          "texClass": 1
+        },
+        "text": null
+      }
+    },
+    {
+      "command": "underbrace",
+      "display": false,
+      "name": "underbrace/{\\sum_i^n}/false",
+      "source": "{\\sum_i^n}",
+      "tree": {
+        "attributes": {},
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              {
+                "attributes": {
+                  "accentunder": true
+                },
+                "children": [
+                  {
+                    "attributes": {},
+                    "children": [
+                      {
+                        "attributes": {
+                          "rspace": 0
+                        },
+                        "children": [],
+                        "kind": "mo",
+                        "properties": {},
+                        "text": null
+                      },
+                      {
+                        "attributes": {},
+                        "children": [
+                          {
+                            "attributes": {
+                              "lspace": 0,
+                              "rspace": 0,
+                              "stretchy": false
+                            },
+                            "children": [
+                              {
+                                "attributes": {},
+                                "children": [],
+                                "kind": "text",
+                                "properties": {},
+                                "text": "∑"
+                              }
+                            ],
+                            "kind": "mo",
+                            "properties": {
+                              "fixStretchy": true,
+                              "go-vector-factory-token": true,
+                              "in-lists": "fixStretchy",
+                              "movesupsub": true,
+                              "texClass": 1
+                            },
+                            "text": null
+                          },
+                          {
+                            "attributes": {},
+                            "children": [
+                              {
+                                "attributes": {},
+                                "children": [],
+                                "kind": "text",
+                                "properties": {},
+                                "text": "i"
+                              }
+                            ],
+                            "kind": "mi",
+                            "properties": {
+                              "go-ambient-font-source": true,
+                              "go-vector-factory-token": true
+                            },
+                            "text": null
+                          },
+                          {
+                            "attributes": {},
+                            "children": [
+                              {
+                                "attributes": {},
+                                "children": [],
+                                "kind": "text",
+                                "properties": {},
+                                "text": "n"
+                              }
+                            ],
+                            "kind": "mi",
+                            "properties": {
+                              "go-ambient-font-source": true,
+                              "go-vector-factory-token": true
+                            },
+                            "text": null
+                          }
+                        ],
+                        "kind": "munderover",
+                        "properties": {
+                          "_texLimitsScriptOrigin": true,
+                          "movesupsub": true
+                        },
+                        "text": null
+                      }
+                    ],
+                    "kind": "mrow",
+                    "properties": {},
+                    "text": null
+                  },
+                  {
+                    "attributes": {
+                      "accent": true,
+                      "stretchy": true
+                    },
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "⏟"
+                      }
+                    ],
+                    "kind": "mo",
+                    "properties": {
+                      "go-vector-factory-token": true,
+                      "texClass": 0
+                    },
+                    "text": null
+                  }
+                ],
+                "kind": "munder",
+                "properties": {},
+                "text": null
+              }
+            ],
+            "kind": "inferredMrow",
+            "properties": {},
+            "text": null
+          }
+        ],
+        "kind": "TeXAtom",
+        "properties": {
+          "movesupsub": true,
+          "subsupOK": true,
+          "texClass": 1
+        },
+        "text": null
+      }
+    },
+    {
+      "command": "underbrace",
+      "display": true,
+      "name": "underbrace/{\\sum_i^n}/true",
+      "source": "{\\sum_i^n}",
+      "tree": {
+        "attributes": {},
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              {
+                "attributes": {
+                  "accentunder": true
+                },
+                "children": [
+                  {
+                    "attributes": {},
+                    "children": [
+                      {
+                        "attributes": {
+                          "rspace": 0
+                        },
+                        "children": [],
+                        "kind": "mo",
+                        "properties": {},
+                        "text": null
+                      },
+                      {
+                        "attributes": {},
+                        "children": [
+                          {
+                            "attributes": {
+                              "lspace": 0,
+                              "rspace": 0,
+                              "stretchy": false
+                            },
+                            "children": [
+                              {
+                                "attributes": {},
+                                "children": [],
+                                "kind": "text",
+                                "properties": {},
+                                "text": "∑"
+                              }
+                            ],
+                            "kind": "mo",
+                            "properties": {
+                              "fixStretchy": true,
+                              "go-vector-factory-token": true,
+                              "in-lists": "fixStretchy",
+                              "movesupsub": true,
+                              "texClass": 1
+                            },
+                            "text": null
+                          },
+                          {
+                            "attributes": {},
+                            "children": [
+                              {
+                                "attributes": {},
+                                "children": [],
+                                "kind": "text",
+                                "properties": {},
+                                "text": "i"
+                              }
+                            ],
+                            "kind": "mi",
+                            "properties": {
+                              "go-ambient-font-source": true,
+                              "go-vector-factory-token": true
+                            },
+                            "text": null
+                          },
+                          {
+                            "attributes": {},
+                            "children": [
+                              {
+                                "attributes": {},
+                                "children": [],
+                                "kind": "text",
+                                "properties": {},
+                                "text": "n"
+                              }
+                            ],
+                            "kind": "mi",
+                            "properties": {
+                              "go-ambient-font-source": true,
+                              "go-vector-factory-token": true
+                            },
+                            "text": null
+                          }
+                        ],
+                        "kind": "munderover",
+                        "properties": {
+                          "_texLimitsScriptOrigin": true,
+                          "movesupsub": true
+                        },
+                        "text": null
+                      }
+                    ],
+                    "kind": "mrow",
+                    "properties": {},
+                    "text": null
+                  },
+                  {
+                    "attributes": {
+                      "accent": true,
+                      "stretchy": true
+                    },
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "⏟"
+                      }
+                    ],
+                    "kind": "mo",
+                    "properties": {
+                      "go-vector-factory-token": true,
+                      "texClass": 0
+                    },
+                    "text": null
+                  }
+                ],
+                "kind": "munder",
+                "properties": {},
+                "text": null
+              }
+            ],
+            "kind": "inferredMrow",
+            "properties": {},
+            "text": null
+          }
+        ],
+        "kind": "TeXAtom",
+        "properties": {
+          "movesupsub": true,
+          "subsupOK": true,
+          "texClass": 1
+        },
+        "text": null
+      }
+    }
+  ]
+}

@@ -769,9 +769,13 @@ func (p *parser) underOver(name string) ([]*mml.Node, error) {
 	checkMovableLimits(base)
 	base = normalizeDecorationBase(base)
 	if under {
-		return []*mml.Node{setAttributes(node("munder", base, mark), map[string]any{"accentunder": true})}, nil
+		decoration := setAttributes(node("munder", base, mark), map[string]any{"accentunder": true})
+		decoration.SetProperty("subsupOK", true)
+		return []*mml.Node{decoration}, nil
 	}
-	return []*mml.Node{setAttributes(node("mover", base, mark), map[string]any{"accent": true})}, nil
+	decoration := setAttributes(node("mover", base, mark), map[string]any{"accent": true})
+	decoration.SetProperty("subsupOK", true)
+	return []*mml.Node{decoration}, nil
 }
 
 // normalizeDecorationBase preserves ParseUtil.underOver's embellished-base

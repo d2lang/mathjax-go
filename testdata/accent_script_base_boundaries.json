@@ -1188,23 +1188,6 @@
           "path": [
             0,
             0,
-            0
-          ],
-          "field": "properties",
-          "primary": {
-            "subsupOK": true
-          },
-          "expected": {},
-          "baselinePath": [
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "path": [
-            0,
-            0,
             0,
             0,
             0,
@@ -1288,23 +1271,6 @@
           "expected": {
             "accent": true
           },
-          "baselinePath": [
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "path": [
-            0,
-            0,
-            0
-          ],
-          "field": "properties",
-          "primary": {
-            "subsupOK": true
-          },
-          "expected": {},
           "baselinePath": [
             0,
             0,
@@ -1778,118 +1744,310 @@
       ]
     },
     "nested-under-inline": {
-      "category": "unchanged-underline-subscript-error",
+      "category": "exact-inherited-own-fields",
       "primarySHA256": "857d88993cec308a381a0b84126be0087bcf86ae6d640c274d2e84a165cd5c34",
-      "expectedSHA256": "3c55f3ef99abff7c8b924939af339d657ef2b2d7db51ee4a836f2979400ca910",
+      "expectedSHA256": "857d88993cec308a381a0b84126be0087bcf86ae6d640c274d2e84a165cd5c34",
       "baselineTreeSHA256": "a499f498d5155a65908e41edff83860bad69a3e97bbabc0e6069fb579bbb5bda",
-      "expectedTree": {
-        "kind": "math",
-        "text": null,
-        "attributes": {},
-        "properties": {},
-        "children": [
-          {
-            "kind": "inferredMrow",
-            "text": null,
-            "attributes": {},
-            "properties": {},
-            "children": [
-              {
-                "kind": "merror",
-                "text": null,
-                "attributes": {
-                  "data-mjx-error": "Double subscripts: use braces to clarify"
-                },
-                "properties": {},
-                "children": [
-                  {
-                    "kind": "inferredMrow",
-                    "text": null,
-                    "attributes": {},
-                    "properties": {},
-                    "children": [
-                      {
-                        "kind": "mtext",
-                        "text": null,
-                        "attributes": {},
-                        "properties": {},
-                        "children": [
-                          {
-                            "kind": "text",
-                            "text": "Double subscripts: use braces to clarify",
-                            "attributes": {},
-                            "properties": {},
-                            "children": []
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
+      "baselineCommit": "efd6d63071862218af992a6074e3c8680b634ab4",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accentunder": true
+          },
+          "baselinePath": [
+            0,
+            0
+          ],
+          "baseline": {
+            "commit": "efd6d63071862218af992a6074e3c8680b634ab4",
+            "kind": "same-decoration-before-script",
+            "tex": "\\underline{\\hat{x}}",
+            "display": false,
+            "file": "accepted-prefix/nested-under-prefix-inline.json",
+            "sha256": "c1cee0380f33be7d931a2d2a6568285b76cf3273e98d1f90578509cbf9feb9b9",
+            "paths": [
+              [
+                0,
+                0
+              ]
             ]
           }
-        ]
-      },
-      "differences": []
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "mathaccent": true
+          },
+          "expected": {
+            "texClass": 0,
+            "mathaccent": true
+          },
+          "baselinePath": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "baseline": {
+            "commit": "efd6d63071862218af992a6074e3c8680b634ab4",
+            "kind": "same-decoration-before-script",
+            "tex": "\\underline{\\hat{x}}",
+            "display": false,
+            "file": "accepted-prefix/nested-under-prefix-inline.json",
+            "sha256": "c1cee0380f33be7d931a2d2a6568285b76cf3273e98d1f90578509cbf9feb9b9",
+            "paths": [
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "attributes",
+          "primary": {
+            "accent": true
+          },
+          "expected": {},
+          "baselinePath": [
+            0,
+            0,
+            1
+          ],
+          "baseline": {
+            "commit": "efd6d63071862218af992a6074e3c8680b634ab4",
+            "kind": "same-decoration-before-script",
+            "tex": "\\underline{\\hat{x}}",
+            "display": false,
+            "file": "accepted-prefix/nested-under-prefix-inline.json",
+            "sha256": "c1cee0380f33be7d931a2d2a6568285b76cf3273e98d1f90578509cbf9feb9b9",
+            "paths": [
+              [
+                0,
+                0,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "texprimestyle": true
+          },
+          "expected": {
+            "texClass": 0,
+            "texprimestyle": true
+          },
+          "baselinePath": [
+            0,
+            0,
+            1
+          ],
+          "baseline": {
+            "commit": "efd6d63071862218af992a6074e3c8680b634ab4",
+            "kind": "same-decoration-before-script",
+            "tex": "\\underline{\\hat{x}}",
+            "display": false,
+            "file": "accepted-prefix/nested-under-prefix-inline.json",
+            "sha256": "c1cee0380f33be7d931a2d2a6568285b76cf3273e98d1f90578509cbf9feb9b9",
+            "paths": [
+              [
+                0,
+                0,
+                1
+              ]
+            ]
+          }
+        }
+      ]
     },
     "nested-under-display": {
-      "category": "unchanged-underline-subscript-error",
+      "category": "exact-inherited-own-fields",
       "primarySHA256": "857d88993cec308a381a0b84126be0087bcf86ae6d640c274d2e84a165cd5c34",
-      "expectedSHA256": "3c55f3ef99abff7c8b924939af339d657ef2b2d7db51ee4a836f2979400ca910",
+      "expectedSHA256": "857d88993cec308a381a0b84126be0087bcf86ae6d640c274d2e84a165cd5c34",
       "baselineTreeSHA256": "02efda89be3985e67b88c83e0dd22e47407bd5dd7811f08c3581c9ce1ac6faaa",
-      "expectedTree": {
-        "kind": "math",
-        "text": null,
-        "attributes": {
-          "display": "block"
-        },
-        "properties": {},
-        "children": [
-          {
-            "kind": "inferredMrow",
-            "text": null,
-            "attributes": {},
-            "properties": {},
-            "children": [
-              {
-                "kind": "merror",
-                "text": null,
-                "attributes": {
-                  "data-mjx-error": "Double subscripts: use braces to clarify"
-                },
-                "properties": {},
-                "children": [
-                  {
-                    "kind": "inferredMrow",
-                    "text": null,
-                    "attributes": {},
-                    "properties": {},
-                    "children": [
-                      {
-                        "kind": "mtext",
-                        "text": null,
-                        "attributes": {},
-                        "properties": {},
-                        "children": [
-                          {
-                            "kind": "text",
-                            "text": "Double subscripts: use braces to clarify",
-                            "attributes": {},
-                            "properties": {},
-                            "children": []
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
+      "baselineCommit": "efd6d63071862218af992a6074e3c8680b634ab4",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accentunder": true
+          },
+          "baselinePath": [
+            0,
+            0
+          ],
+          "baseline": {
+            "commit": "efd6d63071862218af992a6074e3c8680b634ab4",
+            "kind": "same-decoration-before-script",
+            "tex": "\\underline{\\hat{x}}",
+            "display": true,
+            "file": "accepted-prefix/nested-under-prefix-display.json",
+            "sha256": "44dca850b9ef34ac57eed379540b07607276e9d10956b3d4ece673580b7b6354",
+            "paths": [
+              [
+                0,
+                0
+              ]
             ]
           }
-        ]
-      },
-      "differences": []
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "mathaccent": true
+          },
+          "expected": {
+            "texClass": 0,
+            "mathaccent": true
+          },
+          "baselinePath": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "baseline": {
+            "commit": "efd6d63071862218af992a6074e3c8680b634ab4",
+            "kind": "same-decoration-before-script",
+            "tex": "\\underline{\\hat{x}}",
+            "display": true,
+            "file": "accepted-prefix/nested-under-prefix-display.json",
+            "sha256": "44dca850b9ef34ac57eed379540b07607276e9d10956b3d4ece673580b7b6354",
+            "paths": [
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "attributes",
+          "primary": {
+            "accent": true
+          },
+          "expected": {},
+          "baselinePath": [
+            0,
+            0,
+            1
+          ],
+          "baseline": {
+            "commit": "efd6d63071862218af992a6074e3c8680b634ab4",
+            "kind": "same-decoration-before-script",
+            "tex": "\\underline{\\hat{x}}",
+            "display": true,
+            "file": "accepted-prefix/nested-under-prefix-display.json",
+            "sha256": "44dca850b9ef34ac57eed379540b07607276e9d10956b3d4ece673580b7b6354",
+            "paths": [
+              [
+                0,
+                0,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "texprimestyle": true
+          },
+          "expected": {
+            "texClass": 0,
+            "texprimestyle": true
+          },
+          "baselinePath": [
+            0,
+            0,
+            1
+          ],
+          "baseline": {
+            "commit": "efd6d63071862218af992a6074e3c8680b634ab4",
+            "kind": "same-decoration-before-script",
+            "tex": "\\underline{\\hat{x}}",
+            "display": true,
+            "file": "accepted-prefix/nested-under-prefix-display.json",
+            "sha256": "44dca850b9ef34ac57eed379540b07607276e9d10956b3d4ece673580b7b6354",
+            "paths": [
+              [
+                0,
+                0,
+                1
+              ]
+            ]
+          }
+        }
+      ]
     }
   }
 }
