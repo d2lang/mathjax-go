@@ -36,12 +36,7 @@ func TestPendingPrimePinnedReferences(t *testing.T) {
 		t.Fatal(err)
 	}
 	var boundaries struct {
-		Baseline string
-		Unicode  map[string]struct {
-			TeX, SVGSHA256, BaselineTreeSHA256 string
-			Display                            bool
-			Tree                               *limitsTree
-		}
+		Baseline               string
 		InheritedPrimeMetadata map[string][]struct {
 			Path         []int
 			PrimaryValue bool
@@ -51,7 +46,7 @@ func TestPendingPrimePinnedReferences(t *testing.T) {
 	if err = json.Unmarshal(data, &boundaries); err != nil {
 		t.Fatal(err)
 	}
-	if len(fixture.Cases) != 96 || len(boundaries.Unicode) != 4 || len(boundaries.InheritedPrimeMetadata) != 68 || boundaries.Baseline != "7c6a5cf0ec1aaa7a5dcab78c3d68c8720c1c5abc" {
+	if len(fixture.Cases) != 96 || len(boundaries.InheritedPrimeMetadata) != 72 || boundaries.Baseline != "7c6a5cf0ec1aaa7a5dcab78c3d68c8720c1c5abc" {
 		t.Fatal("unbound prime matrix")
 	}
 	primaryErrors := 0
@@ -61,22 +56,13 @@ func TestPendingPrimePinnedReferences(t *testing.T) {
 		}
 		t.Run(c.Name, func(t *testing.T) {
 			wantSVG, wantTree := c.SVGSHA256, c.PropertiesTree
-			unicode, qualified := boundaries.Unicode[c.Name]
-			if qualified {
-				if unicode.TeX != c.TeX || unicode.Display != c.Display || len(unicode.BaselineTreeSHA256) != 64 || unicode.SVGSHA256 == c.SVGSHA256 {
-					t.Fatal("changed D061 boundary")
+			for _, b := range boundaries.InheritedPrimeMetadata[c.Name] {
+				n := limitsNodeAt(wantTree, b.Path)
+				if n == nil || n.Kind != "mo" || n.Properties["pseudoscript"] != b.PrimaryValue || len(n.Children) != 1 || n.Children[0].Text == nil || *n.Children[0].Text != b.PrimaryText {
+					t.Fatal("changed exact inherited metadata path")
 				}
-				wantSVG, wantTree = unicode.SVGSHA256, unicode.Tree
-			} else {
-				for _, b := range boundaries.InheritedPrimeMetadata[c.Name] {
-					n := limitsNodeAt(wantTree, b.Path)
-					if n == nil || n.Kind != "mo" || n.Properties["pseudoscript"] != b.PrimaryValue || len(n.Children) != 1 || n.Children[0].Text == nil || *n.Children[0].Text != b.PrimaryText {
-						t.Fatal("changed exact inherited metadata path")
-					}
-					// The accepted compiler omits this MmlMo inheritance property. This
-					// bound path/value is separate from the pending-prime parser fix.
-					delete(n.Properties, "pseudoscript")
-				}
+				// The existing operator-inheritance omission is bound by exact node path.
+				delete(n.Properties, "pseudoscript")
 			}
 			root, err := tex.NewCompiler().Compile(c.TeX, c.Display)
 			if err != nil {
@@ -96,7 +82,7 @@ func TestPendingPrimePinnedReferences(t *testing.T) {
 			if !reflect.DeepEqual(got, wantTree) {
 				t.Error("complete explicit/own-property tree differs from exact bound reference")
 			}
-			if !qualified {
+			{
 				raw, _ = json.Marshal(projectStackTree(root))
 				var explicit *stackTree
 				_ = json.Unmarshal(raw, &explicit)
@@ -117,7 +103,7 @@ func TestPendingPrimePinnedReferences(t *testing.T) {
 			if err != nil || repeated != svg {
 				t.Fatal("repeat render changed")
 			}
-			if c.Display && !qualified {
+			if c.Display {
 				w, h, err := mathjax.Measure(c.TeX)
 				if err != nil || w != c.Width || h != c.Height {
 					t.Fatalf("measurement=%dx%d,%v want=%dx%d", w, h, err, c.Width, c.Height)

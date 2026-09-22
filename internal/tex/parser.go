@@ -264,9 +264,9 @@ func (p *parser) parseRow(terminator byte, stopRight bool) ([]*mml.Node, string,
 			if err != nil {
 				return nil, "", err
 			}
-		case '\'', 0xE2: // ASCII prime; U+2019 is handled by parseCharacter.
-			if c == '\'' {
-				p.pos++
+		case '\'', 0xE2: // Only ASCII apostrophe and U+2019 enter Prime.
+			if isPrimeRune(p.peekRune()) {
+				p.consumeRune()
 				var err error
 				finishPrime()
 				var base *mml.Node

@@ -14,6 +14,8 @@ import (
 // msup loses this distinction and wrongly treats x'^n as a double exponent.
 type pendingPrime struct{ base, prime *mml.Node }
 
+func isPrimeRune(r rune) bool { return r == '\'' || r == '\u2019' }
+
 func (p *parser) startPrime(base *mml.Node) (*pendingPrime, error) {
 	origin, _ := base.Property(limitsScriptOrigin)
 	side := base.Kind == "msub" || base.Kind == "msup" || base.Kind == "msubsup"
@@ -24,10 +26,10 @@ func (p *parser) startPrime(base *mml.Node) (*pendingPrime, error) {
 	count := 1
 	for p.pos < len(p.source) {
 		p.skipSpaces()
-		if p.pos >= len(p.source) || p.source[p.pos] != '\'' {
+		if p.pos >= len(p.source) || !isPrimeRune(p.peekRune()) {
 			break
 		}
-		p.pos++
+		p.consumeRune()
 		count++
 	}
 	primes := []string{"", "′", "″", "‴", "⁗"}
