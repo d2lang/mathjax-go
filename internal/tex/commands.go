@@ -767,10 +767,23 @@ func (p *parser) underOver(name string) ([]*mml.Node, error) {
 		return []*mml.Node{stack}, nil
 	}
 	checkMovableLimits(base)
+	base = normalizeDecorationBase(base)
 	if under {
 		return []*mml.Node{setAttributes(node("munder", base, mark), map[string]any{"accentunder": true})}, nil
 	}
 	return []*mml.Node{setAttributes(node("mover", base, mark), map[string]any{"accent": true})}, nil
+}
+
+// normalizeDecorationBase preserves ParseUtil.underOver's embellished-base
+// row. Side-script families and grouped bases are deliberately excluded.
+func normalizeDecorationBase(base *mml.Node) *mml.Node {
+	if (base.Kind != "munder" && base.Kind != "mover" && base.Kind != "munderover") || !base.Flags.Embellished {
+		return base
+	}
+	applySourceObject(limitsCore(base), mjSourceObject{{Name: "lspace", Value: 0}, {Name: "rspace", Value: 0}})
+	empty := node("mo")
+	empty.Attributes.Set("rspace", 0)
+	return node("mrow", empty, base)
 }
 
 // normalizeStackBase restores the primary scripted-base representation before

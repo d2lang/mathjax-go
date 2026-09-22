@@ -1,0 +1,3909 @@
+{
+  "baseline": "c57a3ee4c3db310de4d33a5b0ab9f4c1d9da1dde",
+  "cases": {
+    "witness-inline": {
+      "primarySHA256": "d028fc2db6e5af0502e2f431eee308412401bfd41a9dcaed20b602000380f248",
+      "expectedSHA256": "d028fc2db6e5af0502e2f431eee308412401bfd41a9dcaed20b602000380f248",
+      "baselineSVG": "b7945969efb0141d72af4fbe04c81d5f4d99e12d33b1d7b6aa00fb5a21e8d9cc",
+      "baselineTreeSHA256": "db99d6cdd15bb24b5547916d2fe2e6155021a5748557ad493ef249a87b17ccc4",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accent": true
+          },
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "subsupOK": true
+          },
+          "expected": {},
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "attributes",
+          "primary": {
+            "accent": true
+          },
+          "expected": {},
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {},
+          "expected": {
+            "texClass": 0
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "witness-display": {
+      "primarySHA256": "fe411b8c54fa80d7c6f80b3adc09ea4026662908bbb8248eec107307283631bb",
+      "expectedSHA256": "fe411b8c54fa80d7c6f80b3adc09ea4026662908bbb8248eec107307283631bb",
+      "baselineSVG": "288c89270814b906ca367a1f8d78b26380e71e9c2956293056244f971eefc00d",
+      "baselineTreeSHA256": "b08224a2569eb4f77fb19902970a238c0e189ddc7582c56478570acbf01f2913",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accent": true
+          },
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "subsupOK": true
+          },
+          "expected": {},
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "attributes",
+          "primary": {
+            "accent": true
+          },
+          "expected": {},
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {},
+          "expected": {
+            "texClass": 0
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "sum-sub-inline": {
+      "primarySHA256": "fd904260367ba1f696a5ab75cb0cff8219c4de03ea305799b52a46377d689202",
+      "expectedSHA256": "fd904260367ba1f696a5ab75cb0cff8219c4de03ea305799b52a46377d689202",
+      "baselineSVG": "7987997f4a32bc25c6739741b34c7f1eee3ec6e154d93527a6477b4a823dadbb",
+      "baselineTreeSHA256": "035051ef7def4ac0102266238e9d15f2d29535bd980ae634a7f5f6ee479bff27",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accent": true
+          },
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "subsupOK": true
+          },
+          "expected": {},
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            1
+          ],
+          "field": "attributes",
+          "primary": {
+            "accent": true
+          },
+          "expected": {},
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        },
+        {
+          "path": [
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {},
+          "expected": {
+            "texClass": 0
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "sum-sub-display": {
+      "primarySHA256": "eb122a5097a76cc805e9384b27eb9807da357211ab1b06518e72c939c06e17bd",
+      "expectedSHA256": "eb122a5097a76cc805e9384b27eb9807da357211ab1b06518e72c939c06e17bd",
+      "baselineSVG": "f5adc6f66fb40313f2c3274cf6db64be193484062e7da0f3ea00442410f6f613",
+      "baselineTreeSHA256": "00666e8220dfc31691d1dc84ebbe2fcd02a8cfe88b7247ed829e562bcce7fd1d",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accent": true
+          },
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "subsupOK": true
+          },
+          "expected": {},
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            1
+          ],
+          "field": "attributes",
+          "primary": {
+            "accent": true
+          },
+          "expected": {},
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        },
+        {
+          "path": [
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {},
+          "expected": {
+            "texClass": 0
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "sum-sup-inline": {
+      "primarySHA256": "8013b6f5205507da4028a58f39e8b6a091e9a053e8d262f73e79d4851564a1e4",
+      "expectedSHA256": "8013b6f5205507da4028a58f39e8b6a091e9a053e8d262f73e79d4851564a1e4",
+      "baselineSVG": "4cfed37ac4eac1147a4ccf5810f65acaa43b010316748fe09a0e440af2660146",
+      "baselineTreeSHA256": "b4957300234144fc91f7554f0a03e0ff0adeea5b224d53b333183d2fd5377e5c",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accent": true
+          },
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "subsupOK": true
+          },
+          "expected": {},
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            1
+          ],
+          "field": "attributes",
+          "primary": {
+            "accent": true
+          },
+          "expected": {},
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        },
+        {
+          "path": [
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {},
+          "expected": {
+            "texClass": 0
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "sum-sup-display": {
+      "primarySHA256": "dafede7354f253eac254a9b68839440597b69db0b7d51797891075f152b43837",
+      "expectedSHA256": "dafede7354f253eac254a9b68839440597b69db0b7d51797891075f152b43837",
+      "baselineSVG": "5eab6418c35c9550e5c47270b3111fb6acaebe48db4824bc2bccaf575c1cd526",
+      "baselineTreeSHA256": "bd25a9ae0c34ad34f87e94b6bb66eed50ac10f0f43164ad255a092abc093db6c",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accent": true
+          },
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "subsupOK": true
+          },
+          "expected": {},
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            1
+          ],
+          "field": "attributes",
+          "primary": {
+            "accent": true
+          },
+          "expected": {},
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        },
+        {
+          "path": [
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {},
+          "expected": {
+            "texClass": 0
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "product-both-inline": {
+      "primarySHA256": "943715d807e19df7276ed5f6f89db845753350fa21b2a6fdd3129838d22ffa93",
+      "expectedSHA256": "943715d807e19df7276ed5f6f89db845753350fa21b2a6fdd3129838d22ffa93",
+      "baselineSVG": "2db7b2ede4377d3b71c5cb093d9afbe5a52582e495c142cdf8f529f6ab7f9cce",
+      "baselineTreeSHA256": "9d574b9e9a6aea4a226d7053001772ae80292a6db0868c9e18bd5ae78188452b",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accent": true
+          },
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "subsupOK": true
+          },
+          "expected": {},
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "attributes",
+          "primary": {
+            "accent": true
+          },
+          "expected": {},
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {},
+          "expected": {
+            "texClass": 0
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "product-both-display": {
+      "primarySHA256": "e5da224655fb632b0fac028e42d90e48590ca26f78fe4adb7517a8870b5781e9",
+      "expectedSHA256": "e5da224655fb632b0fac028e42d90e48590ca26f78fe4adb7517a8870b5781e9",
+      "baselineSVG": "f9dce64ea03079b9917d165b64b632a4678a42c38db5fcc74c35af44d2c1a4f4",
+      "baselineTreeSHA256": "3851ef0362e4b183f7ab6a151feab51498a82c145837d66a6773297a25b549b3",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accent": true
+          },
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "subsupOK": true
+          },
+          "expected": {},
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "attributes",
+          "primary": {
+            "accent": true
+          },
+          "expected": {},
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {},
+          "expected": {
+            "texClass": 0
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "integral-both-inline": {
+      "primarySHA256": "fc69355c1fc05a6e6ac0949484216e8d1570fdefe2769093b24472f52c6978d1",
+      "expectedSHA256": "fc69355c1fc05a6e6ac0949484216e8d1570fdefe2769093b24472f52c6978d1",
+      "baselineSVG": "fc69355c1fc05a6e6ac0949484216e8d1570fdefe2769093b24472f52c6978d1",
+      "baselineTreeSHA256": "687ee1111b92666a3c165d84d0aead9f4495ebbeb19b4124c9ad7139c5f9e3e6",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accent": true
+          },
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "subsupOK": true
+          },
+          "expected": {},
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "attributes",
+          "primary": {
+            "accent": true
+          },
+          "expected": {},
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {},
+          "expected": {
+            "texClass": 0
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "integral-both-display": {
+      "primarySHA256": "ce9993acea56c127a4ae0866bbd3bdc4f89addace55579af1a52d53e87716ab7",
+      "expectedSHA256": "ce9993acea56c127a4ae0866bbd3bdc4f89addace55579af1a52d53e87716ab7",
+      "baselineSVG": "ce9993acea56c127a4ae0866bbd3bdc4f89addace55579af1a52d53e87716ab7",
+      "baselineTreeSHA256": "6d4c3f6fcef627f58918cc60e69107a154d70addcd2446f83a24b931c43de10f",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accent": true
+          },
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "subsupOK": true
+          },
+          "expected": {},
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "attributes",
+          "primary": {
+            "accent": true
+          },
+          "expected": {},
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {},
+          "expected": {
+            "texClass": 0
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "mathop-both-inline": {
+      "primarySHA256": "9ecab1174148c034952e17c425ad28823988c014bb9fe6e615e1ec79439a3c69",
+      "expectedSHA256": "9ecab1174148c034952e17c425ad28823988c014bb9fe6e615e1ec79439a3c69",
+      "baselineSVG": "9ecab1174148c034952e17c425ad28823988c014bb9fe6e615e1ec79439a3c69",
+      "baselineTreeSHA256": "23f164cf2848e4bde62d333b38eaf67dc75eaae0a945ea2d7a95e353c430bae6",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accent": true
+          },
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "subsupOK": true
+          },
+          "expected": {},
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "attributes",
+          "primary": {
+            "accent": true
+          },
+          "expected": {},
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {},
+          "expected": {
+            "texClass": 0
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "mathop-both-display": {
+      "primarySHA256": "708746058094e5eb722a2f6f3e26888a09b49aa24edbd69f96cff3c4fe4f70bf",
+      "expectedSHA256": "708746058094e5eb722a2f6f3e26888a09b49aa24edbd69f96cff3c4fe4f70bf",
+      "baselineSVG": "708746058094e5eb722a2f6f3e26888a09b49aa24edbd69f96cff3c4fe4f70bf",
+      "baselineTreeSHA256": "7f6a831a3e3a28afae9c6f0d533801c339261c68d0785c504b2f956c326357cb",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accent": true
+          },
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "subsupOK": true
+          },
+          "expected": {},
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "attributes",
+          "primary": {
+            "accent": true
+          },
+          "expected": {},
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {},
+          "expected": {
+            "texClass": 0
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "right-both-inline": {
+      "primarySHA256": "b5e30d910289a9b6d733098f132818f6c50ff071a90c403904093d64948217c2",
+      "expectedSHA256": "b5e30d910289a9b6d733098f132818f6c50ff071a90c403904093d64948217c2",
+      "baselineSVG": "1e7641cfc635e91b93489d76508d88105fd35e32608825d2a39fbed4d65a1269",
+      "baselineTreeSHA256": "a106867896341be8579db99873711874c4c2661984c1d01d19a90c4e9cb0b220",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accent": true
+          },
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "subsupOK": true
+          },
+          "expected": {},
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "mathaccent": true
+          },
+          "expected": {
+            "texClass": 0,
+            "mathaccent": true
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "right-both-display": {
+      "primarySHA256": "8b76bfcc93fd9a72f71aae1ed21db55ac4e1a568e293241146d81fdecfacdfe7",
+      "expectedSHA256": "8b76bfcc93fd9a72f71aae1ed21db55ac4e1a568e293241146d81fdecfacdfe7",
+      "baselineSVG": "a0393d98990d033abba8990b0ba8442014509d48824ee98593e41bf6456d044f",
+      "baselineTreeSHA256": "edaa714dfa1f68e73438a64eb6f9f29416b81c3007eb0abebec2270ebfc80029",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accent": true
+          },
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "subsupOK": true
+          },
+          "expected": {},
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "mathaccent": true
+          },
+          "expected": {
+            "texClass": 0,
+            "mathaccent": true
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "left-both-inline": {
+      "primarySHA256": "9be8afb6719f8f85d38e0d2a72aa02271b1ca92c6716886cfbdc1993ae81b9eb",
+      "expectedSHA256": "9be8afb6719f8f85d38e0d2a72aa02271b1ca92c6716886cfbdc1993ae81b9eb",
+      "baselineSVG": "02988af7bf3b44a5fb241a75d1de1980d2bb4b8cb34415ebf04fcd9d0833eefb",
+      "baselineTreeSHA256": "89e1cb1bb0d376fde84027cebf04585fdba3abc8ac40e696e02905dc92c80e23",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accent": true
+          },
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "subsupOK": true
+          },
+          "expected": {},
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {},
+          "expected": {
+            "texClass": 0
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "left-both-display": {
+      "primarySHA256": "509b18d68362e4b2b204cdcc7431325d6775c569672cef782da3f7d278eb73df",
+      "expectedSHA256": "509b18d68362e4b2b204cdcc7431325d6775c569672cef782da3f7d278eb73df",
+      "baselineSVG": "3a5ada70bc352e1b8d841826844b250f53d01fcb461e560acc2835d1efe471b9",
+      "baselineTreeSHA256": "f8908e8189a62b6cc31aa024ca528050ddeff175303437f9765dc06ec274f210",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accent": true
+          },
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "subsupOK": true
+          },
+          "expected": {},
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {},
+          "expected": {
+            "texClass": 0
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "under-both-inline": {
+      "primarySHA256": "09b329cde32621f72a1efb9b8cb90e28eb618fad470bba9319fd6acc566c341d",
+      "expectedSHA256": "09b329cde32621f72a1efb9b8cb90e28eb618fad470bba9319fd6acc566c341d",
+      "baselineSVG": "74a144438b9d8bd5082e927fa49f4eccf24ca54d82e54a40bc8f040f14389ca9",
+      "baselineTreeSHA256": "9ea363702f13135ba6abce850e3db2927484fda5d9a9a9f6748f21eb8ebe3851",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accentunder": true
+          },
+          "baselineKind": "munder",
+          "expectedKind": "munder"
+        },
+        {
+          "path": [
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "subsupOK": true
+          },
+          "expected": {},
+          "baselineKind": "munder",
+          "expectedKind": "munder"
+        },
+        {
+          "path": [
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            1
+          ],
+          "field": "attributes",
+          "primary": {
+            "accent": true
+          },
+          "expected": {},
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        },
+        {
+          "path": [
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "texprimestyle": true
+          },
+          "expected": {
+            "texClass": 0,
+            "texprimestyle": true
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "under-both-display": {
+      "primarySHA256": "a246248de102f30385624bda23ac3b877a34f51fd622cb4a6f85f714865190a7",
+      "expectedSHA256": "a246248de102f30385624bda23ac3b877a34f51fd622cb4a6f85f714865190a7",
+      "baselineSVG": "6bd5089f9d9506c6ee5e30096ffb97070596c08c3f2d42d9359657eee5ed6d10",
+      "baselineTreeSHA256": "ddde529fb6a64e28c90199d8c601c4c99af49e5f4683c11c9c7ba67374b21fe9",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accentunder": true
+          },
+          "baselineKind": "munder",
+          "expectedKind": "munder"
+        },
+        {
+          "path": [
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "subsupOK": true
+          },
+          "expected": {},
+          "baselineKind": "munder",
+          "expectedKind": "munder"
+        },
+        {
+          "path": [
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            1
+          ],
+          "field": "attributes",
+          "primary": {
+            "accent": true
+          },
+          "expected": {},
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        },
+        {
+          "path": [
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "texprimestyle": true
+          },
+          "expected": {
+            "texClass": 0,
+            "texprimestyle": true
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "underright-both-inline": {
+      "primarySHA256": "d242ebe9333b0880d5bdb160548fdfb6a95a0ae307b0bc41172af1787f84239d",
+      "expectedSHA256": "d242ebe9333b0880d5bdb160548fdfb6a95a0ae307b0bc41172af1787f84239d",
+      "baselineSVG": "77800eb85bef3a63862a0093d4098e89b85486c72d9762fca63224ba9f66528b",
+      "baselineTreeSHA256": "ffc8da03bc5ee9085e068bdf93dd5cf5b7a318298ece8204a8c4d5741fad56db",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accentunder": true
+          },
+          "baselineKind": "munder",
+          "expectedKind": "munder"
+        },
+        {
+          "path": [
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "subsupOK": true
+          },
+          "expected": {},
+          "baselineKind": "munder",
+          "expectedKind": "munder"
+        },
+        {
+          "path": [
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "texprimestyle": true,
+            "mathaccent": true
+          },
+          "expected": {
+            "texClass": 0,
+            "texprimestyle": true,
+            "mathaccent": true
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "underright-both-display": {
+      "primarySHA256": "f1e2f6620c8b2561e2bdd085d1611f1dcfd680a68c7eeda3680ed7af1e400fbe",
+      "expectedSHA256": "f1e2f6620c8b2561e2bdd085d1611f1dcfd680a68c7eeda3680ed7af1e400fbe",
+      "baselineSVG": "fd29d0b68ac5cbf692cc8f929a67cc614a6e425f6d97f578d54f0d3b439467c8",
+      "baselineTreeSHA256": "ef3f5fd155f05a426aaa2d08d589de8c5d1d2c1a9a1cb778bf29edb2fb677436",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accentunder": true
+          },
+          "baselineKind": "munder",
+          "expectedKind": "munder"
+        },
+        {
+          "path": [
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "subsupOK": true
+          },
+          "expected": {},
+          "baselineKind": "munder",
+          "expectedKind": "munder"
+        },
+        {
+          "path": [
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "texprimestyle": true,
+            "mathaccent": true
+          },
+          "expected": {
+            "texClass": 0,
+            "texprimestyle": true,
+            "mathaccent": true
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "underleft-both-inline": {
+      "primarySHA256": "92430dea475c649f2af3e42ee6e1729924d439ebf515dd212afa26de90256dcb",
+      "expectedSHA256": "92430dea475c649f2af3e42ee6e1729924d439ebf515dd212afa26de90256dcb",
+      "baselineSVG": "ef65f603b0e7ae0a34bfbede4a2c9399d598a809542fc74438ed47a03b9e8a3f",
+      "baselineTreeSHA256": "aec14be99f61650c2e7ee3e6d2487b2918aca9dc11b92ade8b3b482116bcb32b",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accentunder": true
+          },
+          "baselineKind": "munder",
+          "expectedKind": "munder"
+        },
+        {
+          "path": [
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "subsupOK": true
+          },
+          "expected": {},
+          "baselineKind": "munder",
+          "expectedKind": "munder"
+        },
+        {
+          "path": [
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "texprimestyle": true
+          },
+          "expected": {
+            "texClass": 0,
+            "texprimestyle": true
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "underleft-both-display": {
+      "primarySHA256": "5fc642c3396e9398d97c933d2c2db18825bdfe64a1400272f25a823d9c1df2f9",
+      "expectedSHA256": "5fc642c3396e9398d97c933d2c2db18825bdfe64a1400272f25a823d9c1df2f9",
+      "baselineSVG": "c92e6bdbe511374175a7ca07960ecde25b732350dbcd3038816f6cb40aaaf31f",
+      "baselineTreeSHA256": "7b8dd00a06f253bc2138c4257986149b83ed18572caf89e252f4d421181783f7",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accentunder": true
+          },
+          "baselineKind": "munder",
+          "expectedKind": "munder"
+        },
+        {
+          "path": [
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "subsupOK": true
+          },
+          "expected": {},
+          "baselineKind": "munder",
+          "expectedKind": "munder"
+        },
+        {
+          "path": [
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "texprimestyle": true
+          },
+          "expected": {
+            "texClass": 0,
+            "texprimestyle": true
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "nested-over-inline": {
+      "primarySHA256": "395de4ee9ce0ef726c557d0eca822b8042d9ec362ae0407f135fdfc3aeb58af2",
+      "expectedSHA256": "395de4ee9ce0ef726c557d0eca822b8042d9ec362ae0407f135fdfc3aeb58af2",
+      "baselineSVG": "423527540da805b6227a37510dda6fa9b74133933d182a463052520d35808504",
+      "baselineTreeSHA256": "eaaa5dc7adf370543e69baaee9dee1cf0ca4e65949ab76b418174b87d78b8c78",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accent": true
+          },
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "subsupOK": true
+          },
+          "expected": {},
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accent": true
+          },
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "subsupOK": true,
+            "texprimestyle": true
+          },
+          "expected": {
+            "texprimestyle": true
+          },
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "attributes",
+          "primary": {
+            "accent": true
+          },
+          "expected": {},
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "texprimestyle": true
+          },
+          "expected": {
+            "texClass": 0,
+            "texprimestyle": true
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "attributes",
+          "primary": {
+            "accent": true
+          },
+          "expected": {},
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {},
+          "expected": {
+            "texClass": 0
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "nested-over-display": {
+      "primarySHA256": "5e1d08c4f674ead62cb9031188f4d4352dccafabd0972cb28a2ae7f60752d3d0",
+      "expectedSHA256": "5e1d08c4f674ead62cb9031188f4d4352dccafabd0972cb28a2ae7f60752d3d0",
+      "baselineSVG": "49d8f7509918dbfd8d8052beca26a875726d4debea8bbd6c94631c3581c76692",
+      "baselineTreeSHA256": "b9e7e402922bee3a5fe22bcd9e8b31a02c9accb9b9c7fa90abc7c1cd637824da",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accent": true
+          },
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "subsupOK": true
+          },
+          "expected": {},
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accent": true
+          },
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "subsupOK": true,
+            "texprimestyle": true
+          },
+          "expected": {
+            "texprimestyle": true
+          },
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "attributes",
+          "primary": {
+            "accent": true
+          },
+          "expected": {},
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "texprimestyle": true
+          },
+          "expected": {
+            "texClass": 0,
+            "texprimestyle": true
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "attributes",
+          "primary": {
+            "accent": true
+          },
+          "expected": {},
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {},
+          "expected": {
+            "texClass": 0
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "grouped-script-inline": {
+      "primarySHA256": "33cd12b0c9e38a37cda8cb2d069f56b544fade819b86c3587e9414eda9725da3",
+      "expectedSHA256": "33cd12b0c9e38a37cda8cb2d069f56b544fade819b86c3587e9414eda9725da3",
+      "baselineSVG": "33cd12b0c9e38a37cda8cb2d069f56b544fade819b86c3587e9414eda9725da3",
+      "baselineTreeSHA256": "07c2d0655cd35c71df2343b6e965207cbc1c72d9ca721f419042a7bb91d9ffe4",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accent": true
+          },
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "subsupOK": true
+          },
+          "expected": {},
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "attributes",
+          "primary": {
+            "accent": true
+          },
+          "expected": {},
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {},
+          "expected": {
+            "texClass": 0
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "grouped-script-display": {
+      "primarySHA256": "6d78995c7c5fd4d09939c4f4e186898cad6700439531832aa4200d1e6ff11734",
+      "expectedSHA256": "6d78995c7c5fd4d09939c4f4e186898cad6700439531832aa4200d1e6ff11734",
+      "baselineSVG": "6d78995c7c5fd4d09939c4f4e186898cad6700439531832aa4200d1e6ff11734",
+      "baselineTreeSHA256": "d6818be21b023337dcc32bcb9d4cfbcc710543f2375274577df1f722500b57f7",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accent": true
+          },
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "subsupOK": true
+          },
+          "expected": {},
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "attributes",
+          "primary": {
+            "accent": true
+          },
+          "expected": {},
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {},
+          "expected": {
+            "texClass": 0
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "styled-script-inline": {
+      "primarySHA256": "21898b190de76c14de4f223dfa3140431332eed3a84b49b173a569b6982fe28e",
+      "expectedSHA256": "21898b190de76c14de4f223dfa3140431332eed3a84b49b173a569b6982fe28e",
+      "baselineSVG": "21898b190de76c14de4f223dfa3140431332eed3a84b49b173a569b6982fe28e",
+      "baselineTreeSHA256": "67fb994d8775608cb3fb6780b27f75ee8447ea635effce38902cae6eb909e2dc",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accent": true
+          },
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "subsupOK": true
+          },
+          "expected": {},
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "attributes",
+          "primary": {
+            "accent": true
+          },
+          "expected": {},
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {},
+          "expected": {
+            "texClass": 0
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "styled-script-display": {
+      "primarySHA256": "f79ee5ae6f66e6cd1dcb65c9b02132be9e7b1c47e3c46eaa9a4961513f3227d2",
+      "expectedSHA256": "f79ee5ae6f66e6cd1dcb65c9b02132be9e7b1c47e3c46eaa9a4961513f3227d2",
+      "baselineSVG": "f79ee5ae6f66e6cd1dcb65c9b02132be9e7b1c47e3c46eaa9a4961513f3227d2",
+      "baselineTreeSHA256": "4294119d8095261f1fd994194a064512c9f22314bd4b7a6d324b6320b6645d17",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accent": true
+          },
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "subsupOK": true
+          },
+          "expected": {},
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "attributes",
+          "primary": {
+            "accent": true
+          },
+          "expected": {},
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {},
+          "expected": {
+            "texClass": 0
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "explicit-limits-inline": {
+      "primarySHA256": "f79b0834194f6b483def5ef590840e116cb9eaca6fab446c7aaf7965416294c5",
+      "expectedSHA256": "f79b0834194f6b483def5ef590840e116cb9eaca6fab446c7aaf7965416294c5",
+      "baselineSVG": "40c53d3ed72a29e0ba294fdee11270dbd0e002de9cbdb8519c820ee2c2715aa6",
+      "baselineTreeSHA256": "3d0c9d62a4521e40a0345f6ffc0b51f50fa481bf97f25c2df9d804e96d4b30b6",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accent": true
+          },
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "subsupOK": true
+          },
+          "expected": {},
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "attributes",
+          "primary": {
+            "accent": true
+          },
+          "expected": {},
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {},
+          "expected": {
+            "texClass": 0
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "explicit-limits-display": {
+      "primarySHA256": "fe411b8c54fa80d7c6f80b3adc09ea4026662908bbb8248eec107307283631bb",
+      "expectedSHA256": "fe411b8c54fa80d7c6f80b3adc09ea4026662908bbb8248eec107307283631bb",
+      "baselineSVG": "288c89270814b906ca367a1f8d78b26380e71e9c2956293056244f971eefc00d",
+      "baselineTreeSHA256": "31f8ec9ddabc61d36dea973c6ce69532b457c8e143798e24283ec0f1a6161cdf",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accent": true
+          },
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "subsupOK": true
+          },
+          "expected": {},
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "attributes",
+          "primary": {
+            "accent": true
+          },
+          "expected": {},
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {},
+          "expected": {
+            "texClass": 0
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "explicit-nolimits-inline": {
+      "primarySHA256": "13036056c6e62cc8fcceff252e7ca283a954e95915f00f9ae102a9bda57b43c7",
+      "expectedSHA256": "13036056c6e62cc8fcceff252e7ca283a954e95915f00f9ae102a9bda57b43c7",
+      "baselineSVG": "13036056c6e62cc8fcceff252e7ca283a954e95915f00f9ae102a9bda57b43c7",
+      "baselineTreeSHA256": "b109bf8d3efeedd4db5b35649485d59377a7208418c29c743dbae1cd828a2c64",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accent": true
+          },
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "subsupOK": true
+          },
+          "expected": {},
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "attributes",
+          "primary": {
+            "accent": true
+          },
+          "expected": {},
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {},
+          "expected": {
+            "texClass": 0
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "explicit-nolimits-display": {
+      "primarySHA256": "cb36091eca427e1a8aeae67cf2c3f9de866054c3e4999443a8888fdc995e446d",
+      "expectedSHA256": "cb36091eca427e1a8aeae67cf2c3f9de866054c3e4999443a8888fdc995e446d",
+      "baselineSVG": "cb36091eca427e1a8aeae67cf2c3f9de866054c3e4999443a8888fdc995e446d",
+      "baselineTreeSHA256": "307d64aa5b34aa3f41f11d6973ce99c2ae836ffc05923a4f3083b4f6a38cf4e1",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accent": true
+          },
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "subsupOK": true
+          },
+          "expected": {},
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "attributes",
+          "primary": {
+            "accent": true
+          },
+          "expected": {},
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {},
+          "expected": {
+            "texClass": 0
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "ordinary-inline": {
+      "primarySHA256": "bc514b415bd317dbfc2d54dadbf7485ed08a358b280e053229531e117376e1fe",
+      "expectedSHA256": "bc514b415bd317dbfc2d54dadbf7485ed08a358b280e053229531e117376e1fe",
+      "baselineSVG": "bc514b415bd317dbfc2d54dadbf7485ed08a358b280e053229531e117376e1fe",
+      "baselineTreeSHA256": "5a534a7f9a747a84df5291f3601f01f2a0749b35861b60274f325277836a9ad9",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accent": true
+          },
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "subsupOK": true
+          },
+          "expected": {},
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "attributes",
+          "primary": {
+            "accent": true
+          },
+          "expected": {},
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {},
+          "expected": {
+            "texClass": 0
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "ordinary-display": {
+      "primarySHA256": "bc514b415bd317dbfc2d54dadbf7485ed08a358b280e053229531e117376e1fe",
+      "expectedSHA256": "bc514b415bd317dbfc2d54dadbf7485ed08a358b280e053229531e117376e1fe",
+      "baselineSVG": "bc514b415bd317dbfc2d54dadbf7485ed08a358b280e053229531e117376e1fe",
+      "baselineTreeSHA256": "b38b55d4ab83381a0026eff341d6ad06f0936b71f4cd07f4b7e3e81283b7d386",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accent": true
+          },
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "subsupOK": true
+          },
+          "expected": {},
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "attributes",
+          "primary": {
+            "accent": true
+          },
+          "expected": {},
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {},
+          "expected": {
+            "texClass": 0
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "ordinary-side-inline": {
+      "primarySHA256": "5090b0803d05175d45aa9b8f4459b47cb9279576f3077ff137705704b96c928a",
+      "expectedSHA256": "5090b0803d05175d45aa9b8f4459b47cb9279576f3077ff137705704b96c928a",
+      "baselineSVG": "5090b0803d05175d45aa9b8f4459b47cb9279576f3077ff137705704b96c928a",
+      "baselineTreeSHA256": "b6089b733a9e2144c072d4a59576e9db2d2b20acc91c799e351207c3e12f75f8",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accent": true
+          },
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "subsupOK": true
+          },
+          "expected": {},
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "attributes",
+          "primary": {
+            "accent": true
+          },
+          "expected": {},
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {},
+          "expected": {
+            "texClass": 0
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "ordinary-side-display": {
+      "primarySHA256": "5090b0803d05175d45aa9b8f4459b47cb9279576f3077ff137705704b96c928a",
+      "expectedSHA256": "5090b0803d05175d45aa9b8f4459b47cb9279576f3077ff137705704b96c928a",
+      "baselineSVG": "5090b0803d05175d45aa9b8f4459b47cb9279576f3077ff137705704b96c928a",
+      "baselineTreeSHA256": "cd789c3d5fb2f907260af185f553628ebeb717eb1aae914355520820ebf91a47",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accent": true
+          },
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "subsupOK": true
+          },
+          "expected": {},
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "attributes",
+          "primary": {
+            "accent": true
+          },
+          "expected": {},
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {},
+          "expected": {
+            "texClass": 0
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "row-inline": {
+      "primarySHA256": "3d5d80c8df05a87b89974d41eac28d49a42301a1c7c7e3c243e1be9c8b20265e",
+      "expectedSHA256": "3d5d80c8df05a87b89974d41eac28d49a42301a1c7c7e3c243e1be9c8b20265e",
+      "baselineSVG": "3d5d80c8df05a87b89974d41eac28d49a42301a1c7c7e3c243e1be9c8b20265e",
+      "baselineTreeSHA256": "ae0f736fdff0619905c346d1dc0c3ed1f8ae976b435587326704300d9abdd11a",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accent": true
+          },
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "subsupOK": true
+          },
+          "expected": {},
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "attributes",
+          "primary": {
+            "accent": true
+          },
+          "expected": {},
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {},
+          "expected": {
+            "texClass": 0
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "row-display": {
+      "primarySHA256": "a4f0681751cbb9bb72e28ab93c945cb6e013f44fb8ccdca1be748fb7f7340e98",
+      "expectedSHA256": "a4f0681751cbb9bb72e28ab93c945cb6e013f44fb8ccdca1be748fb7f7340e98",
+      "baselineSVG": "a4f0681751cbb9bb72e28ab93c945cb6e013f44fb8ccdca1be748fb7f7340e98",
+      "baselineTreeSHA256": "77bcfd539b382723532c1c9097637085dca93aa7c4c9ed01bae20d6e78e06644",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accent": true
+          },
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "subsupOK": true
+          },
+          "expected": {},
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "attributes",
+          "primary": {
+            "accent": true
+          },
+          "expected": {},
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {},
+          "expected": {
+            "texClass": 0
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "brace-inline": {
+      "primarySHA256": "57f5da87eeeec160f9888e29e7517b3e73274d64993fd50a0afc1ecb04207dc3",
+      "expectedSHA256": "57f5da87eeeec160f9888e29e7517b3e73274d64993fd50a0afc1ecb04207dc3",
+      "baselineSVG": "57f5da87eeeec160f9888e29e7517b3e73274d64993fd50a0afc1ecb04207dc3",
+      "baselineTreeSHA256": "e86781e136a8f599789807d59fcbf7cfe26d65cc7d633549ab509b45d20bdf9f",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accent": true
+          },
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "texprimestyle": true
+          },
+          "expected": {
+            "texClass": 0,
+            "texprimestyle": true
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "brace-display": {
+      "primarySHA256": "61b23012ae468679491b42ef0589f69dea835c34f4368f8c6f20eb9047f1f74d",
+      "expectedSHA256": "61b23012ae468679491b42ef0589f69dea835c34f4368f8c6f20eb9047f1f74d",
+      "baselineSVG": "61b23012ae468679491b42ef0589f69dea835c34f4368f8c6f20eb9047f1f74d",
+      "baselineTreeSHA256": "ffdee61fedbfbdc5b79b009fdda84873719faadfee0bde64be5af86ac443542e",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accent": true
+          },
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "texprimestyle": true
+          },
+          "expected": {
+            "texClass": 0,
+            "texprimestyle": true
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "underbrace-inline": {
+      "primarySHA256": "fa1fa148cec1a0a2c2fb1e8f05ece1eed88582046fbe2fabe2b4537fea05b87c",
+      "expectedSHA256": "fa1fa148cec1a0a2c2fb1e8f05ece1eed88582046fbe2fabe2b4537fea05b87c",
+      "baselineSVG": "fa1fa148cec1a0a2c2fb1e8f05ece1eed88582046fbe2fabe2b4537fea05b87c",
+      "baselineTreeSHA256": "428e62614ce503ec21ee42d3088e5134d959ecfffee80c012b2c26ee1039f535",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accentunder": true
+          },
+          "baselineKind": "munder",
+          "expectedKind": "munder"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "texprimestyle": true
+          },
+          "expected": {
+            "texClass": 0,
+            "texprimestyle": true
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "underbrace-display": {
+      "primarySHA256": "7f8f305715112c106b9e50637764f7fe9db705f06371ab9084409f8243adf55f",
+      "expectedSHA256": "7f8f305715112c106b9e50637764f7fe9db705f06371ab9084409f8243adf55f",
+      "baselineSVG": "7f8f305715112c106b9e50637764f7fe9db705f06371ab9084409f8243adf55f",
+      "baselineTreeSHA256": "28bc4da0a54618d071f5e1869c8a9cf334a45cce731fffb82d90a8d9230b57b3",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accentunder": true
+          },
+          "baselineKind": "munder",
+          "expectedKind": "munder"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "texprimestyle": true
+          },
+          "expected": {
+            "texClass": 0,
+            "texprimestyle": true
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "bar-inline": {
+      "primarySHA256": "417c2c05f2116486dc37a347979198d8997440d2dabb3dc7aa763054f0042b61",
+      "expectedSHA256": "417c2c05f2116486dc37a347979198d8997440d2dabb3dc7aa763054f0042b61",
+      "baselineSVG": "417c2c05f2116486dc37a347979198d8997440d2dabb3dc7aa763054f0042b61",
+      "baselineTreeSHA256": "fbf247222bc3cc0607967d2f206078826d2a5226e5ed0045e755c123550d1d59",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "mathaccent": true
+          },
+          "expected": {
+            "texClass": 0,
+            "mathaccent": true
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "bar-display": {
+      "primarySHA256": "36e17f69c1ce179a0f1e0904e2e07630fc05f28e702cd8b58dffb4b957c53f7c",
+      "expectedSHA256": "36e17f69c1ce179a0f1e0904e2e07630fc05f28e702cd8b58dffb4b957c53f7c",
+      "baselineSVG": "36e17f69c1ce179a0f1e0904e2e07630fc05f28e702cd8b58dffb4b957c53f7c",
+      "baselineTreeSHA256": "c0c3e6eb14927ed4a534774d72e35d55fdad3f09a74b6d304a19ef00de809634",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "mathaccent": true
+          },
+          "expected": {
+            "texClass": 0,
+            "mathaccent": true
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "permission-error-inline": {
+      "primarySHA256": "b70b514170b2aaa99233fb0c54841c6958f32296209bb5d12f6fdef51eee32c1",
+      "expectedSHA256": "3c55f3ef99abff7c8b924939af339d657ef2b2d7db51ee4a836f2979400ca910",
+      "baselineSVG": "3c55f3ef99abff7c8b924939af339d657ef2b2d7db51ee4a836f2979400ca910",
+      "baselineTreeSHA256": "a499f498d5155a65908e41edff83860bad69a3e97bbabc0e6069fb579bbb5bda",
+      "category": "unchanged-D071-error",
+      "expectedTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Double subscripts: use braces to clarify"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Double subscripts: use braces to clarify",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "differences": []
+    },
+    "permission-error-display": {
+      "primarySHA256": "b70b514170b2aaa99233fb0c54841c6958f32296209bb5d12f6fdef51eee32c1",
+      "expectedSHA256": "3c55f3ef99abff7c8b924939af339d657ef2b2d7db51ee4a836f2979400ca910",
+      "baselineSVG": "3c55f3ef99abff7c8b924939af339d657ef2b2d7db51ee4a836f2979400ca910",
+      "baselineTreeSHA256": "02efda89be3985e67b88c83e0dd22e47407bd5dd7811f08c3581c9ce1ac6faaa",
+      "category": "unchanged-D071-error",
+      "expectedTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Double subscripts: use braces to clarify"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Double subscripts: use braces to clarify",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "differences": []
+    },
+    "scripted-permission-error-inline": {
+      "primarySHA256": "288b2e31008492e0940f47cbaaf7eec114974460712479a254f7789c6380efa9",
+      "expectedSHA256": "3c55f3ef99abff7c8b924939af339d657ef2b2d7db51ee4a836f2979400ca910",
+      "baselineSVG": "3c55f3ef99abff7c8b924939af339d657ef2b2d7db51ee4a836f2979400ca910",
+      "baselineTreeSHA256": "a499f498d5155a65908e41edff83860bad69a3e97bbabc0e6069fb579bbb5bda",
+      "category": "unchanged-D071-error",
+      "expectedTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Double subscripts: use braces to clarify"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Double subscripts: use braces to clarify",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "differences": []
+    },
+    "scripted-permission-error-display": {
+      "primarySHA256": "44f7c7acf01362acbd2bdc7b9fcda1512c70d6d1d4d4561c8fa6a213d5fce175",
+      "expectedSHA256": "3c55f3ef99abff7c8b924939af339d657ef2b2d7db51ee4a836f2979400ca910",
+      "baselineSVG": "3c55f3ef99abff7c8b924939af339d657ef2b2d7db51ee4a836f2979400ca910",
+      "baselineTreeSHA256": "02efda89be3985e67b88c83e0dd22e47407bd5dd7811f08c3581c9ce1ac6faaa",
+      "category": "unchanged-D071-error",
+      "expectedTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Double subscripts: use braces to clarify"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Double subscripts: use braces to clarify",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "differences": []
+    }
+  }
+}

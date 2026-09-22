@@ -12,8 +12,8 @@ import (
 	"github.com/d2lang/mathjax-go/internal/tex"
 )
 
-func TestDecorationMovablePinnedReferences(t *testing.T) {
-	data, err := os.ReadFile("testdata/decoration_movable_mathjax_3_2_2.json")
+func TestScriptedDecorationPinnedReferences(t *testing.T) {
+	data, err := os.ReadFile("testdata/scripted_decoration_mathjax_3_2_2.json")
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -29,7 +29,7 @@ func TestDecorationMovablePinnedReferences(t *testing.T) {
 	if err = json.Unmarshal(data, &fixture); err != nil {
 		t.Fatal(err)
 	}
-	data, err = os.ReadFile("testdata/decoration_movable_boundaries.json")
+	data, err = os.ReadFile("testdata/scripted_decoration_boundaries.json")
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -49,13 +49,22 @@ func TestDecorationMovablePinnedReferences(t *testing.T) {
 	if err = json.Unmarshal(data, &bounds); err != nil {
 		t.Fatal(err)
 	}
-	if fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || len(fixture.Cases) != 60 || bounds.Baseline != "69ae099022c270469016a6a83f9f9ae13d98e320" || len(bounds.Cases) != 54 {
-		t.Fatal("unbound ordinary-decoration matrix")
+	if fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || len(fixture.Cases) != 48 || bounds.Baseline != "c57a3ee4c3db310de4d33a5b0ab9f4c1d9da1dde" || len(bounds.Cases) != 48 {
+		t.Fatal("unbound scripted-decoration matrix")
 	}
 	rawSVG, rawOwn, rawExplicit := 0, 0, 0
 	for _, c := range fixture.Cases {
 		t.Run(c.Name, func(t *testing.T) {
-			wantTree, wantSVG := c.PropertiesTree, c.SVGSHA256
+			wantSVG := c.SVGSHA256
+			// Qualification works on a fresh tree; the frozen primary remains intact.
+			primaryBytes, err := json.Marshal(c.PropertiesTree)
+			if err != nil {
+				t.Fatal(err)
+			}
+			var wantTree *limitsTree
+			if err = json.Unmarshal(primaryBytes, &wantTree); err != nil {
+				t.Fatal(err)
+			}
 			rawTree, rawAttributes := true, true
 			if q, ok := bounds.Cases[c.Name]; ok {
 				if q.PrimarySHA256 != c.SVGSHA256 || len(q.BaselineTreeSHA256) != 64 {
@@ -64,6 +73,9 @@ func TestDecorationMovablePinnedReferences(t *testing.T) {
 				rawTree = false
 				switch q.Category {
 				case "unchanged-D071-error":
+					if c.Name != "permission-error-inline" && c.Name != "permission-error-display" && c.Name != "scripted-permission-error-inline" && c.Name != "scripted-permission-error-display" {
+						t.Fatal("unexpected D071 boundary")
+					}
 					if q.ExpectedTree == nil || q.ExpectedSHA256 == c.SVGSHA256 || len(q.Differences) != 0 {
 						t.Fatal("invalid exact error boundary")
 					}
@@ -142,7 +154,7 @@ func TestDecorationMovablePinnedReferences(t *testing.T) {
 			}
 		})
 	}
-	if rawSVG != 38 || rawExplicit != 8 || rawOwn != 6 {
-		t.Fatalf("raw SVG/explicit/own counts %d/%d/%d want38/8/6", rawSVG, rawExplicit, rawOwn)
+	if rawSVG != 44 || rawExplicit != 2 || rawOwn != 0 {
+		t.Fatalf("raw SVG/explicit/own counts %d/%d/%d want44/2/0", rawSVG, rawExplicit, rawOwn)
 	}
 }
