@@ -1,0 +1,281 @@
+{
+  "baseline": "03c34cde20d3c98f326a7cb3961290e0264375ab",
+  "unchanged": {
+    "pmod-macro-inline": {
+      "name": "pmod-macro-inline",
+      "tex": "\\pmod{\\relax}",
+      "display": false,
+      "svgSHA256": "52e29d3b9da608ec0dd3b0bfbbf5d17bb7001519dbd21c875c53a8b5dab0514a",
+      "baselineTreeSHA256": "eb054e95ea32079f0cdc35ddb148753a8f751be8139c54e796e7fc07a0eab779",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Undefined control sequence \\pod"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Undefined control sequence \\pod",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "reason": "Earlier unsupported pod command"
+    },
+    "pmod-macro-display": {
+      "name": "pmod-macro-display",
+      "tex": "\\pmod{\\relax}",
+      "display": true,
+      "svgSHA256": "52e29d3b9da608ec0dd3b0bfbbf5d17bb7001519dbd21c875c53a8b5dab0514a",
+      "baselineTreeSHA256": "2c671e1068743db611844fb34b754ccf2376dab6ab7bd5471b07050744a5ce02",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Undefined control sequence \\pod"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Undefined control sequence \\pod",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "reason": "Earlier unsupported pod command"
+    },
+    "mbox-literal-inline": {
+      "name": "mbox-literal-inline",
+      "tex": "\\mbox{\\relax}",
+      "display": false,
+      "svgSHA256": "241c539a7f1b519a9c5da8e7158ac01ed28d8eb2171a07f3b7044082d4df83a5",
+      "baselineTreeSHA256": "6b9132b420a443e8fe37cb60a225b61efbf8855778f123303da78f1e0f29ab71",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mtext",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "\\relax",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "reason": "Existing missing mstyle wrapper"
+    },
+    "mbox-literal-display": {
+      "name": "mbox-literal-display",
+      "tex": "\\mbox{\\relax}",
+      "display": true,
+      "svgSHA256": "241c539a7f1b519a9c5da8e7158ac01ed28d8eb2171a07f3b7044082d4df83a5",
+      "baselineTreeSHA256": "61ff971c660f823f196fb12e517710b0d1655d79c77161ba1fd27c55105f3d08",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mtext",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "\\relax",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "reason": "Existing missing mstyle wrapper"
+    },
+    "text-embedded-math-inline": {
+      "name": "text-embedded-math-inline",
+      "tex": "\\text{a $x\\relax$ b}",
+      "display": false,
+      "svgSHA256": "c9fbbaf6a4b01af9a0b33d2925060f00dc91d7bc90655cd79cacafa89308cc1c",
+      "baselineTreeSHA256": "15f0252a0fb35b3882e8aba37a3c41c4e882729e2e8164c58b4ed0e77b8efe73",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mtext",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "a $x\\relax$ b",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "reason": "Existing literal dollar math in text"
+    },
+    "text-embedded-math-display": {
+      "name": "text-embedded-math-display",
+      "tex": "\\text{a $x\\relax$ b}",
+      "display": true,
+      "svgSHA256": "c9fbbaf6a4b01af9a0b33d2925060f00dc91d7bc90655cd79cacafa89308cc1c",
+      "baselineTreeSHA256": "8b7c074dd3c98fb0971d380727f6cf0166e05f579ef27f03e98be84781397769",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mtext",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "a $x\\relax$ b",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "reason": "Existing literal dollar math in text"
+    }
+  }
+}

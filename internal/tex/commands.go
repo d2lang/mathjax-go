@@ -367,7 +367,7 @@ func (p *parser) command(name string) ([]*mml.Node, error) {
 			return nil, err
 		}
 		return []*mml.Node{setAttributes(node("mstyle", forcedRow(nil, true)), map[string]any{"mathcolor": color})}, nil
-	case "relax", "noalign", "notag", "nonumber", "nolimits", "limits", "displaystyle", "textstyle", "scriptstyle", "scriptscriptstyle":
+	case "noalign", "notag", "nonumber", "nolimits", "limits", "displaystyle", "textstyle", "scriptstyle", "scriptscriptstyle":
 		return nil, nil
 	}
 	return nil, texError("UndefinedControlSequence", "Undefined control sequence \\%s", name)
