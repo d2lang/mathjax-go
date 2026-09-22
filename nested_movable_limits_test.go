@@ -23,13 +23,9 @@ func TestNestedMovableLimitsPublicPrimary(t *testing.T) {
 	}
 	var f struct {
 		Cases []struct {
-			Name, TeX, SVGSHA256, ExpectedSHA256 string
-			Display                              bool
-			Width, Height                        int
-			TagQualification                     *struct {
-				Index           int
-				Actual, Primary string
-			}
+			Name, TeX, SVGSHA256 string
+			Display              bool
+			Width, Height        int
 		}
 	}
 	if err = json.Unmarshal(data, &f); err != nil {
@@ -38,13 +34,8 @@ func TestNestedMovableLimitsPublicPrimary(t *testing.T) {
 	if len(f.Cases) != 40 {
 		t.Fatal("incomplete public matrix")
 	}
-	tags := regexp.MustCompile(`data-mml-node="([^"]*)"`)
 	size := regexp.MustCompile(`(?:width|height)="([\d.]+)ex"`)
-	qualified := 0
 	for _, c := range f.Cases {
-		if c.TagQualification != nil {
-			qualified++
-		}
 		t.Run(c.Name, func(t *testing.T) {
 			o := mathjax.DefaultOptions()
 			o.Display = c.Display
@@ -55,31 +46,8 @@ func TestNestedMovableLimitsPublicPrimary(t *testing.T) {
 			if strings.Contains(got, `data-mml-node="merror"`) {
 				t.Fatal("unexpected error output")
 			}
-			if h := fmt.Sprintf("%x", sha256.Sum256([]byte(got))); h != c.ExpectedSHA256 {
-				t.Fatalf("whole SVG %s want %s", h, c.ExpectedSHA256)
-			}
-			qualifiedSVG := got
-			if q := c.TagQualification; q != nil {
-				if c.Display || !strings.HasSuffix(c.Name, "-inline") {
-					t.Fatal("qualification outside frozen inline parser boundary")
-				}
-				match := tags.FindAllStringSubmatchIndex(got, -1)
-				if q.Index < 0 || q.Index >= len(match) {
-					t.Fatal("missing qualified node")
-				}
-				m := match[q.Index]
-				if got[m[2]:m[3]] != q.Actual {
-					t.Fatal("qualified node kind changed")
-				}
-				switch q.Actual + "/" + q.Primary {
-				case "msubsup/munderover", "msub/munder", "msup/mover":
-				default:
-					t.Fatal("unexpected parser tag qualification")
-				}
-				qualifiedSVG = got[:m[2]] + q.Primary + got[m[3]:]
-			}
-			if h := fmt.Sprintf("%x", sha256.Sum256([]byte(qualifiedSVG))); h != c.SVGSHA256 {
-				t.Fatalf("primary SVG differs beyond the one recorded tag: %s", h)
+			if h := fmt.Sprintf("%x", sha256.Sum256([]byte(got))); h != c.SVGSHA256 {
+				t.Fatalf("complete primary SVG %s want %s", h, c.SVGSHA256)
 			}
 			dimensions := size.FindAllStringSubmatch(got, -1)
 			if len(dimensions) != 2 {
@@ -98,8 +66,5 @@ func TestNestedMovableLimitsPublicPrimary(t *testing.T) {
 				}
 			}
 		})
-	}
-	if qualified != 12 {
-		t.Fatal("parser qualification inventory changed")
 	}
 }

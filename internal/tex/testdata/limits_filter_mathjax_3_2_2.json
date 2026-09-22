@@ -1,0 +1,3358 @@
+{
+  "mathjaxGitCommit": "ad8f5c21cb810236551da8c6512ba733e67357ee",
+  "assetsSHA256": {
+    "polyfills.js": "7fe1d048c78b0e09854c1259f7413868a51cc8f0c822489eb1ac36ae6c85ce01",
+    "mathjax.js": "cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869",
+    "setup.js": "a52cb0bbabfbd7796b9fedd793b9386c474e3123e788ee151cbe47ca1fa6e881"
+  },
+  "outputs": [
+    {
+      "spec": {
+        "kinds": [
+          "munderover",
+          "munderover"
+        ],
+        "outerFirst": false
+      },
+      "before": [
+        {
+          "name": "outer",
+          "kind": "munderover",
+          "children": [
+            "inner",
+            "new1",
+            "new2"
+          ],
+          "parent": "new3"
+        },
+        {
+          "name": "inner",
+          "kind": "munderover",
+          "children": [
+            "base",
+            "new4",
+            "new5"
+          ],
+          "parent": "outer"
+        },
+        {
+          "name": "base",
+          "kind": "mi",
+          "children": [
+            "new6"
+          ],
+          "parent": "inner"
+        },
+        {
+          "name": "detached",
+          "kind": "mover",
+          "children": [
+            "new7",
+            "new8"
+          ],
+          "parent": null
+        }
+      ],
+      "trace": [
+        {
+          "kind": "msubsup",
+          "children": [
+            "base",
+            "new4",
+            "new5"
+          ],
+          "id": "new9"
+        },
+        {
+          "kind": "msubsup",
+          "children": [
+            "new9",
+            "new1",
+            "new2"
+          ],
+          "id": "new10"
+        }
+      ],
+      "after": [
+        {
+          "name": "outer",
+          "kind": "munderover",
+          "parent": null,
+          "children": [
+            "new9",
+            "new1",
+            "new2"
+          ],
+          "replacement": {
+            "kind": "msubsup",
+            "id": "new10",
+            "attributesShared": true,
+            "propertyObjectShared": false,
+            "properties": {
+              "movablelimits": true,
+              "movesupsub": true,
+              "texprimestyle": true
+            },
+            "children": [
+              "new9",
+              "new1",
+              "new2"
+            ],
+            "childParents": [
+              "new10",
+              "new10",
+              "new10"
+            ]
+          }
+        },
+        {
+          "name": "inner",
+          "kind": "munderover",
+          "parent": null,
+          "children": [
+            "base",
+            "new4",
+            "new5"
+          ],
+          "replacement": {
+            "kind": "msubsup",
+            "id": "new9",
+            "attributesShared": true,
+            "propertyObjectShared": false,
+            "properties": {
+              "movablelimits": true,
+              "movesupsub": true,
+              "texprimestyle": true
+            },
+            "children": [
+              "base",
+              "new4",
+              "new5"
+            ],
+            "childParents": [
+              "new9",
+              "new9",
+              "new9"
+            ]
+          }
+        },
+        {
+          "name": "base",
+          "kind": "mi",
+          "parent": "new9",
+          "children": [
+            "new6"
+          ],
+          "replacement": null
+        },
+        {
+          "name": "detached",
+          "kind": "mover",
+          "parent": null,
+          "children": [
+            "new7",
+            "new8"
+          ],
+          "replacement": null
+        }
+      ],
+      "tree": {
+        "kind": "math",
+        "id": "new11",
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "id": "new3",
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "msubsup",
+                "id": "new10",
+                "attributes": {
+                  "displaystyle": false,
+                  "custom": "retained",
+                  "unknownCopyProbe": "kept"
+                },
+                "properties": {
+                  "movablelimits": true,
+                  "movesupsub": true,
+                  "texprimestyle": true
+                },
+                "children": [
+                  {
+                    "kind": "msubsup",
+                    "id": "new9",
+                    "attributes": {
+                      "displaystyle": false,
+                      "custom": "retained",
+                      "unknownCopyProbe": "kept"
+                    },
+                    "properties": {
+                      "movablelimits": true,
+                      "movesupsub": true,
+                      "texprimestyle": true
+                    },
+                    "children": [
+                      {
+                        "kind": "mi",
+                        "id": "base",
+                        "attributes": {},
+                        "properties": {
+                          "movablelimits": true
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "id": "new6",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "id": "new4",
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "id": "new12",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "id": "new5",
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "id": "new13",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "id": "new1",
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "id": "new14",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "id": "new2",
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "id": "new15",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "lists": {
+        "munderover": [],
+        "munder": [],
+        "mover": []
+      }
+    },
+    {
+      "spec": {
+        "kinds": [
+          "munderover",
+          "munderover"
+        ],
+        "outerFirst": true
+      },
+      "before": [
+        {
+          "name": "outer",
+          "kind": "munderover",
+          "children": [
+            "inner",
+            "new1",
+            "new2"
+          ],
+          "parent": "new3"
+        },
+        {
+          "name": "inner",
+          "kind": "munderover",
+          "children": [
+            "base",
+            "new4",
+            "new5"
+          ],
+          "parent": "outer"
+        },
+        {
+          "name": "base",
+          "kind": "mi",
+          "children": [
+            "new6"
+          ],
+          "parent": "inner"
+        },
+        {
+          "name": "detached",
+          "kind": "mover",
+          "children": [
+            "new7",
+            "new8"
+          ],
+          "parent": null
+        }
+      ],
+      "trace": [
+        {
+          "kind": "msubsup",
+          "children": [
+            "inner",
+            "new1",
+            "new2"
+          ],
+          "id": "new9"
+        },
+        {
+          "kind": "msubsup",
+          "children": [
+            "base",
+            "new4",
+            "new5"
+          ],
+          "id": "new10"
+        }
+      ],
+      "after": [
+        {
+          "name": "outer",
+          "kind": "munderover",
+          "parent": null,
+          "children": [
+            "inner",
+            "new1",
+            "new2"
+          ],
+          "replacement": {
+            "kind": "msubsup",
+            "id": "new9",
+            "attributesShared": true,
+            "propertyObjectShared": false,
+            "properties": {
+              "movablelimits": true,
+              "movesupsub": true,
+              "texprimestyle": true
+            },
+            "children": [
+              "new10",
+              "new1",
+              "new2"
+            ],
+            "childParents": [
+              "new9",
+              "new9",
+              "new9"
+            ]
+          }
+        },
+        {
+          "name": "inner",
+          "kind": "munderover",
+          "parent": null,
+          "children": [
+            "base",
+            "new4",
+            "new5"
+          ],
+          "replacement": {
+            "kind": "msubsup",
+            "id": "new10",
+            "attributesShared": true,
+            "propertyObjectShared": false,
+            "properties": {
+              "movablelimits": true,
+              "movesupsub": true,
+              "texprimestyle": true
+            },
+            "children": [
+              "base",
+              "new4",
+              "new5"
+            ],
+            "childParents": [
+              "new10",
+              "new10",
+              "new10"
+            ]
+          }
+        },
+        {
+          "name": "base",
+          "kind": "mi",
+          "parent": "new10",
+          "children": [
+            "new6"
+          ],
+          "replacement": null
+        },
+        {
+          "name": "detached",
+          "kind": "mover",
+          "parent": null,
+          "children": [
+            "new7",
+            "new8"
+          ],
+          "replacement": null
+        }
+      ],
+      "tree": {
+        "kind": "math",
+        "id": "new11",
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "id": "new3",
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "msubsup",
+                "id": "new9",
+                "attributes": {
+                  "displaystyle": false,
+                  "custom": "retained",
+                  "unknownCopyProbe": "kept"
+                },
+                "properties": {
+                  "movablelimits": true,
+                  "movesupsub": true,
+                  "texprimestyle": true
+                },
+                "children": [
+                  {
+                    "kind": "msubsup",
+                    "id": "new10",
+                    "attributes": {
+                      "displaystyle": false,
+                      "custom": "retained",
+                      "unknownCopyProbe": "kept"
+                    },
+                    "properties": {
+                      "movablelimits": true,
+                      "movesupsub": true,
+                      "texprimestyle": true
+                    },
+                    "children": [
+                      {
+                        "kind": "mi",
+                        "id": "base",
+                        "attributes": {},
+                        "properties": {
+                          "movablelimits": true
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "id": "new6",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "id": "new4",
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "id": "new12",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "id": "new5",
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "id": "new13",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "id": "new1",
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "id": "new14",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "id": "new2",
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "id": "new15",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "lists": {
+        "munderover": [],
+        "munder": [],
+        "mover": []
+      }
+    },
+    {
+      "spec": {
+        "kinds": [
+          "munder",
+          "munder"
+        ],
+        "outerFirst": false
+      },
+      "before": [
+        {
+          "name": "outer",
+          "kind": "munder",
+          "children": [
+            "inner",
+            "new1"
+          ],
+          "parent": "new2"
+        },
+        {
+          "name": "inner",
+          "kind": "munder",
+          "children": [
+            "base",
+            "new3"
+          ],
+          "parent": "outer"
+        },
+        {
+          "name": "base",
+          "kind": "mi",
+          "children": [
+            "new4"
+          ],
+          "parent": "inner"
+        },
+        {
+          "name": "detached",
+          "kind": "mover",
+          "children": [
+            "new5",
+            "new6"
+          ],
+          "parent": null
+        }
+      ],
+      "trace": [
+        {
+          "kind": "msub",
+          "children": [
+            "base",
+            "new3"
+          ],
+          "id": "new7"
+        },
+        {
+          "kind": "msub",
+          "children": [
+            "new7",
+            "new1"
+          ],
+          "id": "new8"
+        }
+      ],
+      "after": [
+        {
+          "name": "outer",
+          "kind": "munder",
+          "parent": null,
+          "children": [
+            "new7",
+            "new1"
+          ],
+          "replacement": {
+            "kind": "msub",
+            "id": "new8",
+            "attributesShared": true,
+            "propertyObjectShared": false,
+            "properties": {
+              "movablelimits": true,
+              "movesupsub": true,
+              "texprimestyle": true
+            },
+            "children": [
+              "new7",
+              "new1"
+            ],
+            "childParents": [
+              "new8",
+              "new8"
+            ]
+          }
+        },
+        {
+          "name": "inner",
+          "kind": "munder",
+          "parent": null,
+          "children": [
+            "base",
+            "new3"
+          ],
+          "replacement": {
+            "kind": "msub",
+            "id": "new7",
+            "attributesShared": true,
+            "propertyObjectShared": false,
+            "properties": {
+              "movablelimits": true,
+              "movesupsub": true,
+              "texprimestyle": true
+            },
+            "children": [
+              "base",
+              "new3"
+            ],
+            "childParents": [
+              "new7",
+              "new7"
+            ]
+          }
+        },
+        {
+          "name": "base",
+          "kind": "mi",
+          "parent": "new7",
+          "children": [
+            "new4"
+          ],
+          "replacement": null
+        },
+        {
+          "name": "detached",
+          "kind": "mover",
+          "parent": null,
+          "children": [
+            "new5",
+            "new6"
+          ],
+          "replacement": null
+        }
+      ],
+      "tree": {
+        "kind": "math",
+        "id": "new9",
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "id": "new2",
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "msub",
+                "id": "new8",
+                "attributes": {
+                  "displaystyle": false,
+                  "custom": "retained",
+                  "unknownCopyProbe": "kept"
+                },
+                "properties": {
+                  "movablelimits": true,
+                  "movesupsub": true,
+                  "texprimestyle": true
+                },
+                "children": [
+                  {
+                    "kind": "msub",
+                    "id": "new7",
+                    "attributes": {
+                      "displaystyle": false,
+                      "custom": "retained",
+                      "unknownCopyProbe": "kept"
+                    },
+                    "properties": {
+                      "movablelimits": true,
+                      "movesupsub": true,
+                      "texprimestyle": true
+                    },
+                    "children": [
+                      {
+                        "kind": "mi",
+                        "id": "base",
+                        "attributes": {},
+                        "properties": {
+                          "movablelimits": true
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "id": "new4",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "id": "new3",
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "id": "new10",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "id": "new1",
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "id": "new11",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "lists": {
+        "munderover": [],
+        "munder": [],
+        "mover": []
+      }
+    },
+    {
+      "spec": {
+        "kinds": [
+          "munder",
+          "munder"
+        ],
+        "outerFirst": true
+      },
+      "before": [
+        {
+          "name": "outer",
+          "kind": "munder",
+          "children": [
+            "inner",
+            "new1"
+          ],
+          "parent": "new2"
+        },
+        {
+          "name": "inner",
+          "kind": "munder",
+          "children": [
+            "base",
+            "new3"
+          ],
+          "parent": "outer"
+        },
+        {
+          "name": "base",
+          "kind": "mi",
+          "children": [
+            "new4"
+          ],
+          "parent": "inner"
+        },
+        {
+          "name": "detached",
+          "kind": "mover",
+          "children": [
+            "new5",
+            "new6"
+          ],
+          "parent": null
+        }
+      ],
+      "trace": [
+        {
+          "kind": "msub",
+          "children": [
+            "inner",
+            "new1"
+          ],
+          "id": "new7"
+        },
+        {
+          "kind": "msub",
+          "children": [
+            "base",
+            "new3"
+          ],
+          "id": "new8"
+        }
+      ],
+      "after": [
+        {
+          "name": "outer",
+          "kind": "munder",
+          "parent": null,
+          "children": [
+            "inner",
+            "new1"
+          ],
+          "replacement": {
+            "kind": "msub",
+            "id": "new7",
+            "attributesShared": true,
+            "propertyObjectShared": false,
+            "properties": {
+              "movablelimits": true,
+              "movesupsub": true,
+              "texprimestyle": true
+            },
+            "children": [
+              "new8",
+              "new1"
+            ],
+            "childParents": [
+              "new7",
+              "new7"
+            ]
+          }
+        },
+        {
+          "name": "inner",
+          "kind": "munder",
+          "parent": null,
+          "children": [
+            "base",
+            "new3"
+          ],
+          "replacement": {
+            "kind": "msub",
+            "id": "new8",
+            "attributesShared": true,
+            "propertyObjectShared": false,
+            "properties": {
+              "movablelimits": true,
+              "movesupsub": true,
+              "texprimestyle": true
+            },
+            "children": [
+              "base",
+              "new3"
+            ],
+            "childParents": [
+              "new8",
+              "new8"
+            ]
+          }
+        },
+        {
+          "name": "base",
+          "kind": "mi",
+          "parent": "new8",
+          "children": [
+            "new4"
+          ],
+          "replacement": null
+        },
+        {
+          "name": "detached",
+          "kind": "mover",
+          "parent": null,
+          "children": [
+            "new5",
+            "new6"
+          ],
+          "replacement": null
+        }
+      ],
+      "tree": {
+        "kind": "math",
+        "id": "new9",
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "id": "new2",
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "msub",
+                "id": "new7",
+                "attributes": {
+                  "displaystyle": false,
+                  "custom": "retained",
+                  "unknownCopyProbe": "kept"
+                },
+                "properties": {
+                  "movablelimits": true,
+                  "movesupsub": true,
+                  "texprimestyle": true
+                },
+                "children": [
+                  {
+                    "kind": "msub",
+                    "id": "new8",
+                    "attributes": {
+                      "displaystyle": false,
+                      "custom": "retained",
+                      "unknownCopyProbe": "kept"
+                    },
+                    "properties": {
+                      "movablelimits": true,
+                      "movesupsub": true,
+                      "texprimestyle": true
+                    },
+                    "children": [
+                      {
+                        "kind": "mi",
+                        "id": "base",
+                        "attributes": {},
+                        "properties": {
+                          "movablelimits": true
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "id": "new4",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "id": "new3",
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "id": "new10",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "id": "new1",
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "id": "new11",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "lists": {
+        "munderover": [],
+        "munder": [],
+        "mover": []
+      }
+    },
+    {
+      "spec": {
+        "kinds": [
+          "mover",
+          "mover"
+        ],
+        "outerFirst": false
+      },
+      "before": [
+        {
+          "name": "outer",
+          "kind": "mover",
+          "children": [
+            "inner",
+            "new1"
+          ],
+          "parent": "new2"
+        },
+        {
+          "name": "inner",
+          "kind": "mover",
+          "children": [
+            "base",
+            "new3"
+          ],
+          "parent": "outer"
+        },
+        {
+          "name": "base",
+          "kind": "mi",
+          "children": [
+            "new4"
+          ],
+          "parent": "inner"
+        },
+        {
+          "name": "detached",
+          "kind": "mover",
+          "children": [
+            "new5",
+            "new6"
+          ],
+          "parent": null
+        }
+      ],
+      "trace": [
+        {
+          "kind": "msup",
+          "children": [
+            "base",
+            "new3"
+          ],
+          "id": "new7"
+        },
+        {
+          "kind": "msup",
+          "children": [
+            "new7",
+            "new1"
+          ],
+          "id": "new8"
+        }
+      ],
+      "after": [
+        {
+          "name": "outer",
+          "kind": "mover",
+          "parent": null,
+          "children": [
+            "new7",
+            "new1"
+          ],
+          "replacement": {
+            "kind": "msup",
+            "id": "new8",
+            "attributesShared": true,
+            "propertyObjectShared": false,
+            "properties": {
+              "movablelimits": true,
+              "movesupsub": true,
+              "texprimestyle": true
+            },
+            "children": [
+              "new7",
+              "new1"
+            ],
+            "childParents": [
+              "new8",
+              "new8"
+            ]
+          }
+        },
+        {
+          "name": "inner",
+          "kind": "mover",
+          "parent": null,
+          "children": [
+            "base",
+            "new3"
+          ],
+          "replacement": {
+            "kind": "msup",
+            "id": "new7",
+            "attributesShared": true,
+            "propertyObjectShared": false,
+            "properties": {
+              "movablelimits": true,
+              "movesupsub": true,
+              "texprimestyle": true
+            },
+            "children": [
+              "base",
+              "new3"
+            ],
+            "childParents": [
+              "new7",
+              "new7"
+            ]
+          }
+        },
+        {
+          "name": "base",
+          "kind": "mi",
+          "parent": "new7",
+          "children": [
+            "new4"
+          ],
+          "replacement": null
+        },
+        {
+          "name": "detached",
+          "kind": "mover",
+          "parent": null,
+          "children": [
+            "new5",
+            "new6"
+          ],
+          "replacement": null
+        }
+      ],
+      "tree": {
+        "kind": "math",
+        "id": "new9",
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "id": "new2",
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "msup",
+                "id": "new8",
+                "attributes": {
+                  "displaystyle": false,
+                  "custom": "retained",
+                  "unknownCopyProbe": "kept"
+                },
+                "properties": {
+                  "movablelimits": true,
+                  "movesupsub": true,
+                  "texprimestyle": true
+                },
+                "children": [
+                  {
+                    "kind": "msup",
+                    "id": "new7",
+                    "attributes": {
+                      "displaystyle": false,
+                      "custom": "retained",
+                      "unknownCopyProbe": "kept"
+                    },
+                    "properties": {
+                      "movablelimits": true,
+                      "movesupsub": true,
+                      "texprimestyle": true
+                    },
+                    "children": [
+                      {
+                        "kind": "mi",
+                        "id": "base",
+                        "attributes": {},
+                        "properties": {
+                          "movablelimits": true
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "id": "new4",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "id": "new3",
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "id": "new10",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "id": "new1",
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "id": "new11",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "lists": {
+        "munderover": [],
+        "munder": [],
+        "mover": []
+      }
+    },
+    {
+      "spec": {
+        "kinds": [
+          "mover",
+          "mover"
+        ],
+        "outerFirst": true
+      },
+      "before": [
+        {
+          "name": "outer",
+          "kind": "mover",
+          "children": [
+            "inner",
+            "new1"
+          ],
+          "parent": "new2"
+        },
+        {
+          "name": "inner",
+          "kind": "mover",
+          "children": [
+            "base",
+            "new3"
+          ],
+          "parent": "outer"
+        },
+        {
+          "name": "base",
+          "kind": "mi",
+          "children": [
+            "new4"
+          ],
+          "parent": "inner"
+        },
+        {
+          "name": "detached",
+          "kind": "mover",
+          "children": [
+            "new5",
+            "new6"
+          ],
+          "parent": null
+        }
+      ],
+      "trace": [
+        {
+          "kind": "msup",
+          "children": [
+            "inner",
+            "new1"
+          ],
+          "id": "new7"
+        },
+        {
+          "kind": "msup",
+          "children": [
+            "base",
+            "new3"
+          ],
+          "id": "new8"
+        }
+      ],
+      "after": [
+        {
+          "name": "outer",
+          "kind": "mover",
+          "parent": null,
+          "children": [
+            "inner",
+            "new1"
+          ],
+          "replacement": {
+            "kind": "msup",
+            "id": "new7",
+            "attributesShared": true,
+            "propertyObjectShared": false,
+            "properties": {
+              "movablelimits": true,
+              "movesupsub": true,
+              "texprimestyle": true
+            },
+            "children": [
+              "new8",
+              "new1"
+            ],
+            "childParents": [
+              "new7",
+              "new7"
+            ]
+          }
+        },
+        {
+          "name": "inner",
+          "kind": "mover",
+          "parent": null,
+          "children": [
+            "base",
+            "new3"
+          ],
+          "replacement": {
+            "kind": "msup",
+            "id": "new8",
+            "attributesShared": true,
+            "propertyObjectShared": false,
+            "properties": {
+              "movablelimits": true,
+              "movesupsub": true,
+              "texprimestyle": true
+            },
+            "children": [
+              "base",
+              "new3"
+            ],
+            "childParents": [
+              "new8",
+              "new8"
+            ]
+          }
+        },
+        {
+          "name": "base",
+          "kind": "mi",
+          "parent": "new8",
+          "children": [
+            "new4"
+          ],
+          "replacement": null
+        },
+        {
+          "name": "detached",
+          "kind": "mover",
+          "parent": null,
+          "children": [
+            "new5",
+            "new6"
+          ],
+          "replacement": null
+        }
+      ],
+      "tree": {
+        "kind": "math",
+        "id": "new9",
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "id": "new2",
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "msup",
+                "id": "new7",
+                "attributes": {
+                  "displaystyle": false,
+                  "custom": "retained",
+                  "unknownCopyProbe": "kept"
+                },
+                "properties": {
+                  "movablelimits": true,
+                  "movesupsub": true,
+                  "texprimestyle": true
+                },
+                "children": [
+                  {
+                    "kind": "msup",
+                    "id": "new8",
+                    "attributes": {
+                      "displaystyle": false,
+                      "custom": "retained",
+                      "unknownCopyProbe": "kept"
+                    },
+                    "properties": {
+                      "movablelimits": true,
+                      "movesupsub": true,
+                      "texprimestyle": true
+                    },
+                    "children": [
+                      {
+                        "kind": "mi",
+                        "id": "base",
+                        "attributes": {},
+                        "properties": {
+                          "movablelimits": true
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "id": "new4",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "id": "new3",
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "id": "new10",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "id": "new1",
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "id": "new11",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "lists": {
+        "munderover": [],
+        "munder": [],
+        "mover": []
+      }
+    },
+    {
+      "spec": {
+        "kinds": [
+          "munderover",
+          "munder"
+        ],
+        "outerFirst": false
+      },
+      "before": [
+        {
+          "name": "outer",
+          "kind": "munderover",
+          "children": [
+            "inner",
+            "new1",
+            "new2"
+          ],
+          "parent": "new3"
+        },
+        {
+          "name": "inner",
+          "kind": "munder",
+          "children": [
+            "base",
+            "new4"
+          ],
+          "parent": "outer"
+        },
+        {
+          "name": "base",
+          "kind": "mi",
+          "children": [
+            "new5"
+          ],
+          "parent": "inner"
+        },
+        {
+          "name": "detached",
+          "kind": "mover",
+          "children": [
+            "new6",
+            "new7"
+          ],
+          "parent": null
+        }
+      ],
+      "trace": [
+        {
+          "kind": "msubsup",
+          "children": [
+            "inner",
+            "new1",
+            "new2"
+          ],
+          "id": "new8"
+        },
+        {
+          "kind": "msub",
+          "children": [
+            "base",
+            "new4"
+          ],
+          "id": "new9"
+        }
+      ],
+      "after": [
+        {
+          "name": "outer",
+          "kind": "munderover",
+          "parent": null,
+          "children": [
+            "inner",
+            "new1",
+            "new2"
+          ],
+          "replacement": {
+            "kind": "msubsup",
+            "id": "new8",
+            "attributesShared": true,
+            "propertyObjectShared": false,
+            "properties": {
+              "movablelimits": true,
+              "movesupsub": true,
+              "texprimestyle": true
+            },
+            "children": [
+              "new9",
+              "new1",
+              "new2"
+            ],
+            "childParents": [
+              "new8",
+              "new8",
+              "new8"
+            ]
+          }
+        },
+        {
+          "name": "inner",
+          "kind": "munder",
+          "parent": null,
+          "children": [
+            "base",
+            "new4"
+          ],
+          "replacement": {
+            "kind": "msub",
+            "id": "new9",
+            "attributesShared": true,
+            "propertyObjectShared": false,
+            "properties": {
+              "movablelimits": true,
+              "movesupsub": true,
+              "texprimestyle": true
+            },
+            "children": [
+              "base",
+              "new4"
+            ],
+            "childParents": [
+              "new9",
+              "new9"
+            ]
+          }
+        },
+        {
+          "name": "base",
+          "kind": "mi",
+          "parent": "new9",
+          "children": [
+            "new5"
+          ],
+          "replacement": null
+        },
+        {
+          "name": "detached",
+          "kind": "mover",
+          "parent": null,
+          "children": [
+            "new6",
+            "new7"
+          ],
+          "replacement": null
+        }
+      ],
+      "tree": {
+        "kind": "math",
+        "id": "new10",
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "id": "new3",
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "msubsup",
+                "id": "new8",
+                "attributes": {
+                  "displaystyle": false,
+                  "custom": "retained",
+                  "unknownCopyProbe": "kept"
+                },
+                "properties": {
+                  "movablelimits": true,
+                  "movesupsub": true,
+                  "texprimestyle": true
+                },
+                "children": [
+                  {
+                    "kind": "msub",
+                    "id": "new9",
+                    "attributes": {
+                      "displaystyle": false,
+                      "custom": "retained",
+                      "unknownCopyProbe": "kept"
+                    },
+                    "properties": {
+                      "movablelimits": true,
+                      "movesupsub": true,
+                      "texprimestyle": true
+                    },
+                    "children": [
+                      {
+                        "kind": "mi",
+                        "id": "base",
+                        "attributes": {},
+                        "properties": {
+                          "movablelimits": true
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "id": "new5",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "id": "new4",
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "id": "new11",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "id": "new1",
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "id": "new12",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "id": "new2",
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "id": "new13",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "lists": {
+        "munderover": [],
+        "munder": [],
+        "mover": []
+      }
+    },
+    {
+      "spec": {
+        "kinds": [
+          "munderover",
+          "munder"
+        ],
+        "outerFirst": true
+      },
+      "before": [
+        {
+          "name": "outer",
+          "kind": "munderover",
+          "children": [
+            "inner",
+            "new1",
+            "new2"
+          ],
+          "parent": "new3"
+        },
+        {
+          "name": "inner",
+          "kind": "munder",
+          "children": [
+            "base",
+            "new4"
+          ],
+          "parent": "outer"
+        },
+        {
+          "name": "base",
+          "kind": "mi",
+          "children": [
+            "new5"
+          ],
+          "parent": "inner"
+        },
+        {
+          "name": "detached",
+          "kind": "mover",
+          "children": [
+            "new6",
+            "new7"
+          ],
+          "parent": null
+        }
+      ],
+      "trace": [
+        {
+          "kind": "msubsup",
+          "children": [
+            "inner",
+            "new1",
+            "new2"
+          ],
+          "id": "new8"
+        },
+        {
+          "kind": "msub",
+          "children": [
+            "base",
+            "new4"
+          ],
+          "id": "new9"
+        }
+      ],
+      "after": [
+        {
+          "name": "outer",
+          "kind": "munderover",
+          "parent": null,
+          "children": [
+            "inner",
+            "new1",
+            "new2"
+          ],
+          "replacement": {
+            "kind": "msubsup",
+            "id": "new8",
+            "attributesShared": true,
+            "propertyObjectShared": false,
+            "properties": {
+              "movablelimits": true,
+              "movesupsub": true,
+              "texprimestyle": true
+            },
+            "children": [
+              "new9",
+              "new1",
+              "new2"
+            ],
+            "childParents": [
+              "new8",
+              "new8",
+              "new8"
+            ]
+          }
+        },
+        {
+          "name": "inner",
+          "kind": "munder",
+          "parent": null,
+          "children": [
+            "base",
+            "new4"
+          ],
+          "replacement": {
+            "kind": "msub",
+            "id": "new9",
+            "attributesShared": true,
+            "propertyObjectShared": false,
+            "properties": {
+              "movablelimits": true,
+              "movesupsub": true,
+              "texprimestyle": true
+            },
+            "children": [
+              "base",
+              "new4"
+            ],
+            "childParents": [
+              "new9",
+              "new9"
+            ]
+          }
+        },
+        {
+          "name": "base",
+          "kind": "mi",
+          "parent": "new9",
+          "children": [
+            "new5"
+          ],
+          "replacement": null
+        },
+        {
+          "name": "detached",
+          "kind": "mover",
+          "parent": null,
+          "children": [
+            "new6",
+            "new7"
+          ],
+          "replacement": null
+        }
+      ],
+      "tree": {
+        "kind": "math",
+        "id": "new10",
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "id": "new3",
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "msubsup",
+                "id": "new8",
+                "attributes": {
+                  "displaystyle": false,
+                  "custom": "retained",
+                  "unknownCopyProbe": "kept"
+                },
+                "properties": {
+                  "movablelimits": true,
+                  "movesupsub": true,
+                  "texprimestyle": true
+                },
+                "children": [
+                  {
+                    "kind": "msub",
+                    "id": "new9",
+                    "attributes": {
+                      "displaystyle": false,
+                      "custom": "retained",
+                      "unknownCopyProbe": "kept"
+                    },
+                    "properties": {
+                      "movablelimits": true,
+                      "movesupsub": true,
+                      "texprimestyle": true
+                    },
+                    "children": [
+                      {
+                        "kind": "mi",
+                        "id": "base",
+                        "attributes": {},
+                        "properties": {
+                          "movablelimits": true
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "id": "new5",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "id": "new4",
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "id": "new11",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "id": "new1",
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "id": "new12",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "id": "new2",
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "id": "new13",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "lists": {
+        "munderover": [],
+        "munder": [],
+        "mover": []
+      }
+    },
+    {
+      "spec": {
+        "kinds": [
+          "munder",
+          "mover"
+        ],
+        "outerFirst": false
+      },
+      "before": [
+        {
+          "name": "outer",
+          "kind": "munder",
+          "children": [
+            "inner",
+            "new1"
+          ],
+          "parent": "new2"
+        },
+        {
+          "name": "inner",
+          "kind": "mover",
+          "children": [
+            "base",
+            "new3"
+          ],
+          "parent": "outer"
+        },
+        {
+          "name": "base",
+          "kind": "mi",
+          "children": [
+            "new4"
+          ],
+          "parent": "inner"
+        },
+        {
+          "name": "detached",
+          "kind": "mover",
+          "children": [
+            "new5",
+            "new6"
+          ],
+          "parent": null
+        }
+      ],
+      "trace": [
+        {
+          "kind": "msub",
+          "children": [
+            "inner",
+            "new1"
+          ],
+          "id": "new7"
+        },
+        {
+          "kind": "msup",
+          "children": [
+            "base",
+            "new3"
+          ],
+          "id": "new8"
+        }
+      ],
+      "after": [
+        {
+          "name": "outer",
+          "kind": "munder",
+          "parent": null,
+          "children": [
+            "inner",
+            "new1"
+          ],
+          "replacement": {
+            "kind": "msub",
+            "id": "new7",
+            "attributesShared": true,
+            "propertyObjectShared": false,
+            "properties": {
+              "movablelimits": true,
+              "movesupsub": true,
+              "texprimestyle": true
+            },
+            "children": [
+              "new8",
+              "new1"
+            ],
+            "childParents": [
+              "new7",
+              "new7"
+            ]
+          }
+        },
+        {
+          "name": "inner",
+          "kind": "mover",
+          "parent": null,
+          "children": [
+            "base",
+            "new3"
+          ],
+          "replacement": {
+            "kind": "msup",
+            "id": "new8",
+            "attributesShared": true,
+            "propertyObjectShared": false,
+            "properties": {
+              "movablelimits": true,
+              "movesupsub": true,
+              "texprimestyle": true
+            },
+            "children": [
+              "base",
+              "new3"
+            ],
+            "childParents": [
+              "new8",
+              "new8"
+            ]
+          }
+        },
+        {
+          "name": "base",
+          "kind": "mi",
+          "parent": "new8",
+          "children": [
+            "new4"
+          ],
+          "replacement": null
+        },
+        {
+          "name": "detached",
+          "kind": "mover",
+          "parent": null,
+          "children": [
+            "new5",
+            "new6"
+          ],
+          "replacement": null
+        }
+      ],
+      "tree": {
+        "kind": "math",
+        "id": "new9",
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "id": "new2",
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "msub",
+                "id": "new7",
+                "attributes": {
+                  "displaystyle": false,
+                  "custom": "retained",
+                  "unknownCopyProbe": "kept"
+                },
+                "properties": {
+                  "movablelimits": true,
+                  "movesupsub": true,
+                  "texprimestyle": true
+                },
+                "children": [
+                  {
+                    "kind": "msup",
+                    "id": "new8",
+                    "attributes": {
+                      "displaystyle": false,
+                      "custom": "retained",
+                      "unknownCopyProbe": "kept"
+                    },
+                    "properties": {
+                      "movablelimits": true,
+                      "movesupsub": true,
+                      "texprimestyle": true
+                    },
+                    "children": [
+                      {
+                        "kind": "mi",
+                        "id": "base",
+                        "attributes": {},
+                        "properties": {
+                          "movablelimits": true
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "id": "new4",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "id": "new3",
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "id": "new10",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "id": "new1",
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "id": "new11",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "lists": {
+        "munderover": [],
+        "munder": [],
+        "mover": []
+      }
+    },
+    {
+      "spec": {
+        "kinds": [
+          "munder",
+          "mover"
+        ],
+        "outerFirst": true
+      },
+      "before": [
+        {
+          "name": "outer",
+          "kind": "munder",
+          "children": [
+            "inner",
+            "new1"
+          ],
+          "parent": "new2"
+        },
+        {
+          "name": "inner",
+          "kind": "mover",
+          "children": [
+            "base",
+            "new3"
+          ],
+          "parent": "outer"
+        },
+        {
+          "name": "base",
+          "kind": "mi",
+          "children": [
+            "new4"
+          ],
+          "parent": "inner"
+        },
+        {
+          "name": "detached",
+          "kind": "mover",
+          "children": [
+            "new5",
+            "new6"
+          ],
+          "parent": null
+        }
+      ],
+      "trace": [
+        {
+          "kind": "msub",
+          "children": [
+            "inner",
+            "new1"
+          ],
+          "id": "new7"
+        },
+        {
+          "kind": "msup",
+          "children": [
+            "base",
+            "new3"
+          ],
+          "id": "new8"
+        }
+      ],
+      "after": [
+        {
+          "name": "outer",
+          "kind": "munder",
+          "parent": null,
+          "children": [
+            "inner",
+            "new1"
+          ],
+          "replacement": {
+            "kind": "msub",
+            "id": "new7",
+            "attributesShared": true,
+            "propertyObjectShared": false,
+            "properties": {
+              "movablelimits": true,
+              "movesupsub": true,
+              "texprimestyle": true
+            },
+            "children": [
+              "new8",
+              "new1"
+            ],
+            "childParents": [
+              "new7",
+              "new7"
+            ]
+          }
+        },
+        {
+          "name": "inner",
+          "kind": "mover",
+          "parent": null,
+          "children": [
+            "base",
+            "new3"
+          ],
+          "replacement": {
+            "kind": "msup",
+            "id": "new8",
+            "attributesShared": true,
+            "propertyObjectShared": false,
+            "properties": {
+              "movablelimits": true,
+              "movesupsub": true,
+              "texprimestyle": true
+            },
+            "children": [
+              "base",
+              "new3"
+            ],
+            "childParents": [
+              "new8",
+              "new8"
+            ]
+          }
+        },
+        {
+          "name": "base",
+          "kind": "mi",
+          "parent": "new8",
+          "children": [
+            "new4"
+          ],
+          "replacement": null
+        },
+        {
+          "name": "detached",
+          "kind": "mover",
+          "parent": null,
+          "children": [
+            "new5",
+            "new6"
+          ],
+          "replacement": null
+        }
+      ],
+      "tree": {
+        "kind": "math",
+        "id": "new9",
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "id": "new2",
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "msub",
+                "id": "new7",
+                "attributes": {
+                  "displaystyle": false,
+                  "custom": "retained",
+                  "unknownCopyProbe": "kept"
+                },
+                "properties": {
+                  "movablelimits": true,
+                  "movesupsub": true,
+                  "texprimestyle": true
+                },
+                "children": [
+                  {
+                    "kind": "msup",
+                    "id": "new8",
+                    "attributes": {
+                      "displaystyle": false,
+                      "custom": "retained",
+                      "unknownCopyProbe": "kept"
+                    },
+                    "properties": {
+                      "movablelimits": true,
+                      "movesupsub": true,
+                      "texprimestyle": true
+                    },
+                    "children": [
+                      {
+                        "kind": "mi",
+                        "id": "base",
+                        "attributes": {},
+                        "properties": {
+                          "movablelimits": true
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "id": "new4",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "id": "new3",
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "id": "new10",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "id": "new1",
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "id": "new11",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "lists": {
+        "munderover": [],
+        "munder": [],
+        "mover": []
+      }
+    },
+    {
+      "spec": {
+        "kinds": [
+          "mover",
+          "munderover"
+        ],
+        "outerFirst": false
+      },
+      "before": [
+        {
+          "name": "outer",
+          "kind": "mover",
+          "children": [
+            "inner",
+            "new1"
+          ],
+          "parent": "new2"
+        },
+        {
+          "name": "inner",
+          "kind": "munderover",
+          "children": [
+            "base",
+            "new3",
+            "new4"
+          ],
+          "parent": "outer"
+        },
+        {
+          "name": "base",
+          "kind": "mi",
+          "children": [
+            "new5"
+          ],
+          "parent": "inner"
+        },
+        {
+          "name": "detached",
+          "kind": "mover",
+          "children": [
+            "new6",
+            "new7"
+          ],
+          "parent": null
+        }
+      ],
+      "trace": [
+        {
+          "kind": "msubsup",
+          "children": [
+            "base",
+            "new3",
+            "new4"
+          ],
+          "id": "new8"
+        },
+        {
+          "kind": "msup",
+          "children": [
+            "new8",
+            "new1"
+          ],
+          "id": "new9"
+        }
+      ],
+      "after": [
+        {
+          "name": "outer",
+          "kind": "mover",
+          "parent": null,
+          "children": [
+            "new8",
+            "new1"
+          ],
+          "replacement": {
+            "kind": "msup",
+            "id": "new9",
+            "attributesShared": true,
+            "propertyObjectShared": false,
+            "properties": {
+              "movablelimits": true,
+              "movesupsub": true,
+              "texprimestyle": true
+            },
+            "children": [
+              "new8",
+              "new1"
+            ],
+            "childParents": [
+              "new9",
+              "new9"
+            ]
+          }
+        },
+        {
+          "name": "inner",
+          "kind": "munderover",
+          "parent": null,
+          "children": [
+            "base",
+            "new3",
+            "new4"
+          ],
+          "replacement": {
+            "kind": "msubsup",
+            "id": "new8",
+            "attributesShared": true,
+            "propertyObjectShared": false,
+            "properties": {
+              "movablelimits": true,
+              "movesupsub": true,
+              "texprimestyle": true
+            },
+            "children": [
+              "base",
+              "new3",
+              "new4"
+            ],
+            "childParents": [
+              "new8",
+              "new8",
+              "new8"
+            ]
+          }
+        },
+        {
+          "name": "base",
+          "kind": "mi",
+          "parent": "new8",
+          "children": [
+            "new5"
+          ],
+          "replacement": null
+        },
+        {
+          "name": "detached",
+          "kind": "mover",
+          "parent": null,
+          "children": [
+            "new6",
+            "new7"
+          ],
+          "replacement": null
+        }
+      ],
+      "tree": {
+        "kind": "math",
+        "id": "new10",
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "id": "new2",
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "msup",
+                "id": "new9",
+                "attributes": {
+                  "displaystyle": false,
+                  "custom": "retained",
+                  "unknownCopyProbe": "kept"
+                },
+                "properties": {
+                  "movablelimits": true,
+                  "movesupsub": true,
+                  "texprimestyle": true
+                },
+                "children": [
+                  {
+                    "kind": "msubsup",
+                    "id": "new8",
+                    "attributes": {
+                      "displaystyle": false,
+                      "custom": "retained",
+                      "unknownCopyProbe": "kept"
+                    },
+                    "properties": {
+                      "movablelimits": true,
+                      "movesupsub": true,
+                      "texprimestyle": true
+                    },
+                    "children": [
+                      {
+                        "kind": "mi",
+                        "id": "base",
+                        "attributes": {},
+                        "properties": {
+                          "movablelimits": true
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "id": "new5",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "id": "new3",
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "id": "new11",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "id": "new4",
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "id": "new12",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "id": "new1",
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "id": "new13",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "lists": {
+        "munderover": [],
+        "munder": [],
+        "mover": []
+      }
+    },
+    {
+      "spec": {
+        "kinds": [
+          "mover",
+          "munderover"
+        ],
+        "outerFirst": true
+      },
+      "before": [
+        {
+          "name": "outer",
+          "kind": "mover",
+          "children": [
+            "inner",
+            "new1"
+          ],
+          "parent": "new2"
+        },
+        {
+          "name": "inner",
+          "kind": "munderover",
+          "children": [
+            "base",
+            "new3",
+            "new4"
+          ],
+          "parent": "outer"
+        },
+        {
+          "name": "base",
+          "kind": "mi",
+          "children": [
+            "new5"
+          ],
+          "parent": "inner"
+        },
+        {
+          "name": "detached",
+          "kind": "mover",
+          "children": [
+            "new6",
+            "new7"
+          ],
+          "parent": null
+        }
+      ],
+      "trace": [
+        {
+          "kind": "msubsup",
+          "children": [
+            "base",
+            "new3",
+            "new4"
+          ],
+          "id": "new8"
+        },
+        {
+          "kind": "msup",
+          "children": [
+            "new8",
+            "new1"
+          ],
+          "id": "new9"
+        }
+      ],
+      "after": [
+        {
+          "name": "outer",
+          "kind": "mover",
+          "parent": null,
+          "children": [
+            "new8",
+            "new1"
+          ],
+          "replacement": {
+            "kind": "msup",
+            "id": "new9",
+            "attributesShared": true,
+            "propertyObjectShared": false,
+            "properties": {
+              "movablelimits": true,
+              "movesupsub": true,
+              "texprimestyle": true
+            },
+            "children": [
+              "new8",
+              "new1"
+            ],
+            "childParents": [
+              "new9",
+              "new9"
+            ]
+          }
+        },
+        {
+          "name": "inner",
+          "kind": "munderover",
+          "parent": null,
+          "children": [
+            "base",
+            "new3",
+            "new4"
+          ],
+          "replacement": {
+            "kind": "msubsup",
+            "id": "new8",
+            "attributesShared": true,
+            "propertyObjectShared": false,
+            "properties": {
+              "movablelimits": true,
+              "movesupsub": true,
+              "texprimestyle": true
+            },
+            "children": [
+              "base",
+              "new3",
+              "new4"
+            ],
+            "childParents": [
+              "new8",
+              "new8",
+              "new8"
+            ]
+          }
+        },
+        {
+          "name": "base",
+          "kind": "mi",
+          "parent": "new8",
+          "children": [
+            "new5"
+          ],
+          "replacement": null
+        },
+        {
+          "name": "detached",
+          "kind": "mover",
+          "parent": null,
+          "children": [
+            "new6",
+            "new7"
+          ],
+          "replacement": null
+        }
+      ],
+      "tree": {
+        "kind": "math",
+        "id": "new10",
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "id": "new2",
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "msup",
+                "id": "new9",
+                "attributes": {
+                  "displaystyle": false,
+                  "custom": "retained",
+                  "unknownCopyProbe": "kept"
+                },
+                "properties": {
+                  "movablelimits": true,
+                  "movesupsub": true,
+                  "texprimestyle": true
+                },
+                "children": [
+                  {
+                    "kind": "msubsup",
+                    "id": "new8",
+                    "attributes": {
+                      "displaystyle": false,
+                      "custom": "retained",
+                      "unknownCopyProbe": "kept"
+                    },
+                    "properties": {
+                      "movablelimits": true,
+                      "movesupsub": true,
+                      "texprimestyle": true
+                    },
+                    "children": [
+                      {
+                        "kind": "mi",
+                        "id": "base",
+                        "attributes": {},
+                        "properties": {
+                          "movablelimits": true
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "id": "new5",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "id": "new3",
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "id": "new11",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "id": "new4",
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "id": "new12",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "id": "new1",
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "id": "new13",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "lists": {
+        "munderover": [],
+        "munder": [],
+        "mover": []
+      }
+    }
+  ],
+  "predicates": [
+    {
+      "spec": {
+        "name": "inline-own-true",
+        "own": true
+      },
+      "changed": true,
+      "kind": "msup",
+      "retained": false,
+      "childrenSame": true,
+      "attributesShared": true,
+      "oldDetached": true,
+      "childParent": true,
+      "propertiesShared": false
+    },
+    {
+      "spec": {
+        "name": "display-true",
+        "own": true,
+        "display": true
+      },
+      "changed": false,
+      "kind": "mover",
+      "retained": true,
+      "childrenSame": true,
+      "attributesShared": true,
+      "oldDetached": false,
+      "childParent": true,
+      "propertiesShared": true
+    },
+    {
+      "spec": {
+        "name": "display-inherited-true",
+        "own": true,
+        "displayInherited": true
+      },
+      "changed": false,
+      "kind": "mover",
+      "retained": true,
+      "childrenSame": true,
+      "attributesShared": true,
+      "oldDetached": false,
+      "childParent": true,
+      "propertiesShared": true
+    },
+    {
+      "spec": {
+        "name": "display-explicit-false-wins",
+        "own": true,
+        "display": false,
+        "displayInherited": true
+      },
+      "changed": true,
+      "kind": "msup",
+      "retained": false,
+      "childrenSame": true,
+      "attributesShared": true,
+      "oldDetached": true,
+      "childParent": true,
+      "propertiesShared": false
+    },
+    {
+      "spec": {
+        "name": "missing-own"
+      },
+      "changed": false,
+      "kind": "mover",
+      "retained": true,
+      "childrenSame": true,
+      "attributesShared": true,
+      "oldDetached": false,
+      "childParent": true,
+      "propertiesShared": true
+    },
+    {
+      "spec": {
+        "name": "false-own",
+        "own": false
+      },
+      "changed": false,
+      "kind": "mover",
+      "retained": true,
+      "childrenSame": true,
+      "attributesShared": true,
+      "oldDetached": false,
+      "childParent": true,
+      "propertiesShared": true
+    },
+    {
+      "spec": {
+        "name": "null-own",
+        "own": null
+      },
+      "changed": false,
+      "kind": "mover",
+      "retained": true,
+      "childrenSame": true,
+      "attributesShared": true,
+      "oldDetached": false,
+      "childParent": true,
+      "propertiesShared": true
+    },
+    {
+      "spec": {
+        "name": "zero-own",
+        "own": 0
+      },
+      "changed": false,
+      "kind": "mover",
+      "retained": true,
+      "childrenSame": true,
+      "attributesShared": true,
+      "oldDetached": false,
+      "childParent": true,
+      "propertiesShared": true
+    },
+    {
+      "spec": {
+        "name": "empty-own",
+        "own": ""
+      },
+      "changed": false,
+      "kind": "mover",
+      "retained": true,
+      "childrenSame": true,
+      "attributesShared": true,
+      "oldDetached": false,
+      "childParent": true,
+      "propertiesShared": true
+    },
+    {
+      "spec": {
+        "name": "string-own",
+        "own": "false"
+      },
+      "changed": true,
+      "kind": "msup",
+      "retained": false,
+      "childrenSame": true,
+      "attributesShared": true,
+      "oldDetached": true,
+      "childParent": true,
+      "propertiesShared": false
+    },
+    {
+      "spec": {
+        "name": "base-attribute-only",
+        "baseAttribute": true
+      },
+      "changed": false,
+      "kind": "mover",
+      "retained": true,
+      "childrenSame": true,
+      "attributesShared": true,
+      "oldDetached": false,
+      "childParent": true,
+      "propertiesShared": true
+    },
+    {
+      "spec": {
+        "name": "explicit-core-true",
+        "own": true,
+        "explicit": true
+      },
+      "changed": false,
+      "kind": "mover",
+      "retained": true,
+      "childrenSame": true,
+      "attributesShared": true,
+      "oldDetached": false,
+      "childParent": true,
+      "propertiesShared": true
+    },
+    {
+      "spec": {
+        "name": "explicit-core-false",
+        "own": true,
+        "explicit": false
+      },
+      "changed": true,
+      "kind": "msup",
+      "retained": false,
+      "childrenSame": true,
+      "attributesShared": true,
+      "oldDetached": true,
+      "childParent": true,
+      "propertiesShared": false
+    },
+    {
+      "spec": {
+        "name": "inherited-core-true",
+        "own": true,
+        "inherited": true
+      },
+      "changed": true,
+      "kind": "msup",
+      "retained": false,
+      "childrenSame": true,
+      "attributesShared": true,
+      "oldDetached": true,
+      "childParent": true,
+      "propertiesShared": false
+    },
+    {
+      "spec": {
+        "name": "default-core-true",
+        "own": true,
+        "coreKind": "mo"
+      },
+      "changed": true,
+      "kind": "msup",
+      "retained": false,
+      "childrenSame": true,
+      "attributesShared": true,
+      "oldDetached": true,
+      "childParent": true,
+      "propertiesShared": false
+    },
+    {
+      "spec": {
+        "name": "wrapped-core-true",
+        "own": true,
+        "wrapped": true,
+        "explicit": true
+      },
+      "changed": true,
+      "kind": "msup",
+      "retained": false,
+      "childrenSame": true,
+      "attributesShared": true,
+      "oldDetached": true,
+      "childParent": true,
+      "propertiesShared": false
+    },
+    {
+      "spec": {
+        "name": "wrapped-core-false",
+        "own": true,
+        "wrapped": true,
+        "explicit": false
+      },
+      "changed": true,
+      "kind": "msup",
+      "retained": false,
+      "childrenSame": true,
+      "attributesShared": true,
+      "oldDetached": true,
+      "childParent": true,
+      "propertiesShared": false
+    },
+    {
+      "spec": {
+        "name": "core-own-only",
+        "wrapped": true,
+        "coreOwn": true
+      },
+      "changed": false,
+      "kind": "mover",
+      "retained": true,
+      "childrenSame": true,
+      "attributesShared": true,
+      "oldDetached": false,
+      "childParent": true,
+      "propertiesShared": true
+    },
+    {
+      "spec": {
+        "name": "detached",
+        "own": true,
+        "detached": true
+      },
+      "changed": false,
+      "kind": "mover",
+      "retained": false,
+      "childrenSame": true,
+      "attributesShared": true,
+      "oldDetached": true,
+      "childParent": true,
+      "propertiesShared": true
+    },
+    {
+      "spec": {
+        "name": "display-truthy-string",
+        "own": true,
+        "display": "false"
+      },
+      "changed": false,
+      "kind": "mover",
+      "retained": true,
+      "childrenSame": true,
+      "attributesShared": true,
+      "oldDetached": false,
+      "childParent": true,
+      "propertiesShared": true
+    }
+  ]
+}

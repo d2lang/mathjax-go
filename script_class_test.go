@@ -5,7 +5,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"os"
-	"strings"
 	"testing"
 
 	mathjax "github.com/d2lang/mathjax-go"
@@ -36,18 +35,6 @@ func TestScriptClassPinnedReferences(t *testing.T) {
 			got, err := mathjax.RenderWithOptions(c.TeX, options)
 			if err != nil {
 				t.Fatal(err)
-			}
-			if c.Name == "simple-sum-inline" {
-				if h := fmt.Sprintf("%x", sha256.Sum256([]byte(got))); h != "5d02b36db1d5665598f22f32686585c24d2c346727d71553a3b9141784d38954" {
-					t.Fatal("changed accepted simple-sum inline output")
-				}
-				// Existing parser metadata boundary: identical complete paint, but the
-				// compiled inline script tag is msubsup instead of primary munderover.
-				// Permit exactly this single literal tag, with every other byte strict.
-				if strings.Count(got, `data-mml-node="msubsup"`) != 1 || strings.Contains(got, `data-mml-node="munderover"`) {
-					t.Fatal("changed simple-sum structure")
-				}
-				got = strings.Replace(got, `data-mml-node="msubsup"`, `data-mml-node="munderover"`, 1)
 			}
 			if h := fmt.Sprintf("%x", sha256.Sum256([]byte(got))); h != c.SVGSHA256 {
 				t.Errorf("complete SVG %s, want %s", h, c.SVGSHA256)

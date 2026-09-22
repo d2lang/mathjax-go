@@ -16,14 +16,8 @@ base; all recursive layout/operator helpers remain unchanged.
 
 Eighteen public cases cover sum/product display rows, integral nested scripts
 and under/over stacks in both modes, transparent groups and ordinary/script
-controls. Seventeen complete SVGs must equal primary bytes. The existing
-`simple-sum-inline` parser tag differs only as `msubsup` versus `munderover`:
-its complete accepted output hash is fixed, then exactly one literal tag is
-replaced for a full primary hash comparison. No geometry, attributes, paths
-or other markup may differ. All eighteen **same-primary-MathML** renderings
-are raw complete-SVG exact, with post-typesetting class/previous/level state
-checked on every node and repeat output unchanged. Display measurements use
-the primary dimensions.
+controls. All18 complete public SVGs equal primary bytes after D056. The former simple-sum-inline literal tag qualification is preserved historically and removed from current acceptance. All18 same-primary-MathML renderings, post-output class/previous/level state and repeat checks remain unchanged and exact.
+
 
 Twelve direct primary-derived controls cover nested embellished scripts,
 transparent rows/styles, direct operators/identifiers and nonembellished

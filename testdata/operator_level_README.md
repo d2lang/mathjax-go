@@ -11,10 +11,7 @@ the generic `getPrevClass` rule, class demotion, inheritance, or parsing.
 Six public outputs have missing spacing after a script-style change:
 `\scriptstyle x\textstyle +y`, its scriptscriptstyle equivalent, and the
 relation form, each in both modes. Sixteen fresh public references also cover
-grouped styles, current-small, sum scripts and ordinary operators. Fifteen
-complete SVGs are raw-primary exact. The unchanged inline sum control is
-bound to its entire accepted hash and permits exactly one literal script
-tag spelling before the full primary hash check; every other byte is strict.
+grouped styles, current-small, sum scripts and ordinary operators. All16 complete public SVGs are raw-primary exact after D056; the old inline tag qualification is preserved historically and removed from current acceptance.
 All sixteen same-primary-MathML SVGs and every post-output class/previous/level
 state must match raw primary, including repeated rendering.
 

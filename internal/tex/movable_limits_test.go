@@ -129,15 +129,6 @@ func TestOverUnderSetDirectMovableProperty(t *testing.T) {
 				t.Fatal(err)
 			}
 			base := root.Children[0].Children[0].Children[0]
-			if base.Kind == "TeXAtom" {
-				// Existing mathClass omits the primary's movablelimits property.
-				// Preserve this separately recorded metadata boundary; changing
-				// the constructor would exceed the direct-base caller correction.
-				if v, ok := base.Property("movablelimits"); ok {
-					t.Fatalf("mathop baseline metadata changed: %v", v)
-				}
-				continue
-			}
 			if v, ok := base.Property("movablelimits"); !ok || v != false {
 				t.Fatalf("%s direct property=%v,%v", source, v, ok)
 			}

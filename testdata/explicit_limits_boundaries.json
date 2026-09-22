@@ -1,0 +1,1477 @@
+{
+  "baseline": "0daaf607d985dfdd636e1ff9c353355541425961",
+  "rawBoundaries": {
+    "stackrel-control-inline": {
+      "tex": "\\stackrel{a}{=}",
+      "display": false,
+      "primarySHA256": "33b2922b2f9e98440cac97fb734295bad75c5e395ad72e78d4cdf5d8122cdf33",
+      "expectedSHA256": "c4bf64218b15720429839c47e9a1da37eaf76896236c4a3c058fc6341a690157",
+      "tree": {
+        "attributes": {},
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              {
+                "attributes": {},
+                "children": [
+                  {
+                    "attributes": {},
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "="
+                      }
+                    ],
+                    "kind": "mo",
+                    "properties": {
+                      "in-lists": "fixStretchy",
+                      "texprimestyle": true
+                    },
+                    "text": null
+                  },
+                  {
+                    "attributes": {},
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "a"
+                      }
+                    ],
+                    "kind": "mi",
+                    "properties": {},
+                    "text": null
+                  }
+                ],
+                "kind": "mover",
+                "properties": {},
+                "text": null
+              }
+            ],
+            "kind": "inferredMrow",
+            "properties": {},
+            "text": null
+          }
+        ],
+        "kind": "math",
+        "properties": {},
+        "text": null
+      },
+      "width": 15,
+      "height": 24,
+      "reason": "Unchanged stackrel wrapper metadata"
+    },
+    "stackrel-control-display": {
+      "tex": "\\stackrel{a}{=}",
+      "display": true,
+      "primarySHA256": "33b2922b2f9e98440cac97fb734295bad75c5e395ad72e78d4cdf5d8122cdf33",
+      "expectedSHA256": "c4bf64218b15720429839c47e9a1da37eaf76896236c4a3c058fc6341a690157",
+      "tree": {
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              {
+                "attributes": {},
+                "children": [
+                  {
+                    "attributes": {},
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "="
+                      }
+                    ],
+                    "kind": "mo",
+                    "properties": {
+                      "in-lists": "fixStretchy",
+                      "texprimestyle": true
+                    },
+                    "text": null
+                  },
+                  {
+                    "attributes": {},
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "a"
+                      }
+                    ],
+                    "kind": "mi",
+                    "properties": {},
+                    "text": null
+                  }
+                ],
+                "kind": "mover",
+                "properties": {},
+                "text": null
+              }
+            ],
+            "kind": "inferredMrow",
+            "properties": {},
+            "text": null
+          }
+        ],
+        "kind": "math",
+        "properties": {},
+        "text": null
+      },
+      "width": 15,
+      "height": 24,
+      "reason": "Unchanged stackrel wrapper metadata"
+    },
+    "prime-consumed-sup-inline": {
+      "tex": "\\sum'^n\\limits",
+      "display": false,
+      "primarySHA256": "99d8faa9bb7fa7ed60505650652e2e82265d5cd0980516fefee2cdbe3f1067c1",
+      "expectedSHA256": "f74d506d313d207f51b14cfdbf282543cd1760035865724b0ec1003b16df79fa",
+      "tree": {
+        "attributes": {},
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              {
+                "attributes": {
+                  "data-mjx-error": "Double exponent: use braces to clarify"
+                },
+                "children": [
+                  {
+                    "attributes": {},
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [
+                          {
+                            "attributes": {},
+                            "children": [],
+                            "kind": "text",
+                            "properties": {},
+                            "text": "Double exponent: use braces to clarify"
+                          }
+                        ],
+                        "kind": "mtext",
+                        "properties": {},
+                        "text": null
+                      }
+                    ],
+                    "kind": "inferredMrow",
+                    "properties": {},
+                    "text": null
+                  }
+                ],
+                "kind": "merror",
+                "properties": {},
+                "text": null
+              }
+            ],
+            "kind": "inferredMrow",
+            "properties": {},
+            "text": null
+          }
+        ],
+        "kind": "math",
+        "properties": {},
+        "text": null
+      },
+      "width": 413,
+      "height": 18,
+      "reason": "Unchanged pending prime/error handling"
+    },
+    "prime-consumed-sup-display": {
+      "tex": "\\sum'^n\\limits",
+      "display": true,
+      "primarySHA256": "65e5da04f6bf565023eb6ee9ea751f2dbd7c94e7b889d0d83ae9ae8b8b992874",
+      "expectedSHA256": "f74d506d313d207f51b14cfdbf282543cd1760035865724b0ec1003b16df79fa",
+      "tree": {
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              {
+                "attributes": {
+                  "data-mjx-error": "Double exponent: use braces to clarify"
+                },
+                "children": [
+                  {
+                    "attributes": {},
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [
+                          {
+                            "attributes": {},
+                            "children": [],
+                            "kind": "text",
+                            "properties": {},
+                            "text": "Double exponent: use braces to clarify"
+                          }
+                        ],
+                        "kind": "mtext",
+                        "properties": {},
+                        "text": null
+                      }
+                    ],
+                    "kind": "inferredMrow",
+                    "properties": {},
+                    "text": null
+                  }
+                ],
+                "kind": "merror",
+                "properties": {},
+                "text": null
+              }
+            ],
+            "kind": "inferredMrow",
+            "properties": {},
+            "text": null
+          }
+        ],
+        "kind": "math",
+        "properties": {},
+        "text": null
+      },
+      "width": 413,
+      "height": 18,
+      "reason": "Unchanged pending prime/error handling"
+    }
+  },
+  "metadataBoundaries": {
+    "brace-no-inline": {
+      "tex": "\\overbrace{x}^n\\nolimits",
+      "display": false,
+      "primarySHA256": "a5fb731ff8663cb9942a24e2b4d4f73db52bb6b018f40f69e364b5474bfdf131",
+      "baselineSHA256": "92df5e755295a30284dd6e0e404bfd31211b54e4c7d98b6973bc3c74f69a44f0",
+      "baselineTree": {
+        "attributes": {},
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              {
+                "attributes": {
+                  "movablelimits": false
+                },
+                "children": [
+                  {
+                    "attributes": {},
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [
+                          {
+                            "attributes": {
+                              "accent": true
+                            },
+                            "children": [
+                              {
+                                "attributes": {},
+                                "children": [
+                                  {
+                                    "attributes": {},
+                                    "children": [],
+                                    "kind": "text",
+                                    "properties": {},
+                                    "text": "x"
+                                  }
+                                ],
+                                "kind": "mi",
+                                "properties": {
+                                  "texprimestyle": true
+                                },
+                                "text": null
+                              },
+                              {
+                                "attributes": {},
+                                "children": [
+                                  {
+                                    "attributes": {},
+                                    "children": [],
+                                    "kind": "text",
+                                    "properties": {},
+                                    "text": "⏞"
+                                  }
+                                ],
+                                "kind": "mo",
+                                "properties": {
+                                  "texClass": 0,
+                                  "texprimestyle": true
+                                },
+                                "text": null
+                              }
+                            ],
+                            "kind": "mover",
+                            "properties": {
+                              "texprimestyle": true
+                            },
+                            "text": null
+                          }
+                        ],
+                        "kind": "inferredMrow",
+                        "properties": {
+                          "texprimestyle": true
+                        },
+                        "text": null
+                      }
+                    ],
+                    "kind": "TeXAtom",
+                    "properties": {
+                      "movesupsub": true,
+                      "subsupOK": true,
+                      "texClass": 1,
+                      "texprimestyle": true
+                    },
+                    "text": null
+                  },
+                  {
+                    "attributes": {},
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "n"
+                      }
+                    ],
+                    "kind": "mi",
+                    "properties": {},
+                    "text": null
+                  }
+                ],
+                "kind": "mover",
+                "properties": {
+                  "movesupsub": false
+                },
+                "text": null
+              }
+            ],
+            "kind": "inferredMrow",
+            "properties": {},
+            "text": null
+          }
+        ],
+        "kind": "math",
+        "properties": {},
+        "text": null
+      },
+      "adjustments": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "kind": "mover",
+          "field": "attributes",
+          "key": "accent",
+          "primaryPresent": false,
+          "primaryValue": null,
+          "baselinePresent": true,
+          "baselineValue": true
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "kind": "mo",
+          "field": "properties",
+          "key": "texClass",
+          "primaryPresent": false,
+          "primaryValue": null,
+          "baselinePresent": true,
+          "baselineValue": 0
+        }
+      ]
+    },
+    "brace-no-display": {
+      "tex": "\\overbrace{x}^n\\nolimits",
+      "display": true,
+      "primarySHA256": "a5fb731ff8663cb9942a24e2b4d4f73db52bb6b018f40f69e364b5474bfdf131",
+      "baselineSHA256": "92df5e755295a30284dd6e0e404bfd31211b54e4c7d98b6973bc3c74f69a44f0",
+      "baselineTree": {
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              {
+                "attributes": {
+                  "movablelimits": false
+                },
+                "children": [
+                  {
+                    "attributes": {},
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [
+                          {
+                            "attributes": {
+                              "accent": true
+                            },
+                            "children": [
+                              {
+                                "attributes": {},
+                                "children": [
+                                  {
+                                    "attributes": {},
+                                    "children": [],
+                                    "kind": "text",
+                                    "properties": {},
+                                    "text": "x"
+                                  }
+                                ],
+                                "kind": "mi",
+                                "properties": {
+                                  "texprimestyle": true
+                                },
+                                "text": null
+                              },
+                              {
+                                "attributes": {},
+                                "children": [
+                                  {
+                                    "attributes": {},
+                                    "children": [],
+                                    "kind": "text",
+                                    "properties": {},
+                                    "text": "⏞"
+                                  }
+                                ],
+                                "kind": "mo",
+                                "properties": {
+                                  "texClass": 0,
+                                  "texprimestyle": true
+                                },
+                                "text": null
+                              }
+                            ],
+                            "kind": "mover",
+                            "properties": {
+                              "texprimestyle": true
+                            },
+                            "text": null
+                          }
+                        ],
+                        "kind": "inferredMrow",
+                        "properties": {
+                          "texprimestyle": true
+                        },
+                        "text": null
+                      }
+                    ],
+                    "kind": "TeXAtom",
+                    "properties": {
+                      "movesupsub": true,
+                      "subsupOK": true,
+                      "texClass": 1,
+                      "texprimestyle": true
+                    },
+                    "text": null
+                  },
+                  {
+                    "attributes": {},
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "n"
+                      }
+                    ],
+                    "kind": "mi",
+                    "properties": {},
+                    "text": null
+                  }
+                ],
+                "kind": "mover",
+                "properties": {
+                  "movesupsub": false
+                },
+                "text": null
+              }
+            ],
+            "kind": "inferredMrow",
+            "properties": {},
+            "text": null
+          }
+        ],
+        "kind": "math",
+        "properties": {},
+        "text": null
+      },
+      "adjustments": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "kind": "mover",
+          "field": "attributes",
+          "key": "accent",
+          "primaryPresent": false,
+          "primaryValue": null,
+          "baselinePresent": true,
+          "baselineValue": true
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "kind": "mo",
+          "field": "properties",
+          "key": "texClass",
+          "primaryPresent": false,
+          "primaryValue": null,
+          "baselinePresent": true,
+          "baselineValue": 0
+        }
+      ]
+    },
+    "underbrace-limits-inline": {
+      "tex": "\\underbrace{x}_n\\limits",
+      "display": false,
+      "primarySHA256": "9eb21fad44db9baa0c74e9b71fea1f9578c62b110f1347f261505f7cdaaffed0",
+      "baselineSHA256": "9eb21fad44db9baa0c74e9b71fea1f9578c62b110f1347f261505f7cdaaffed0",
+      "baselineTree": {
+        "attributes": {},
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              {
+                "attributes": {
+                  "movablelimits": true
+                },
+                "children": [
+                  {
+                    "attributes": {},
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [
+                          {
+                            "attributes": {
+                              "accentunder": true
+                            },
+                            "children": [
+                              {
+                                "attributes": {},
+                                "children": [
+                                  {
+                                    "attributes": {},
+                                    "children": [],
+                                    "kind": "text",
+                                    "properties": {},
+                                    "text": "x"
+                                  }
+                                ],
+                                "kind": "mi",
+                                "properties": {},
+                                "text": null
+                              },
+                              {
+                                "attributes": {},
+                                "children": [
+                                  {
+                                    "attributes": {},
+                                    "children": [],
+                                    "kind": "text",
+                                    "properties": {},
+                                    "text": "⏟"
+                                  }
+                                ],
+                                "kind": "mo",
+                                "properties": {
+                                  "texClass": 0,
+                                  "texprimestyle": true
+                                },
+                                "text": null
+                              }
+                            ],
+                            "kind": "munder",
+                            "properties": {},
+                            "text": null
+                          }
+                        ],
+                        "kind": "inferredMrow",
+                        "properties": {},
+                        "text": null
+                      }
+                    ],
+                    "kind": "TeXAtom",
+                    "properties": {
+                      "movesupsub": true,
+                      "subsupOK": true,
+                      "texClass": 1
+                    },
+                    "text": null
+                  },
+                  {
+                    "attributes": {},
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "n"
+                      }
+                    ],
+                    "kind": "mi",
+                    "properties": {
+                      "texprimestyle": true
+                    },
+                    "text": null
+                  }
+                ],
+                "kind": "munder",
+                "properties": {
+                  "movesupsub": true
+                },
+                "text": null
+              }
+            ],
+            "kind": "inferredMrow",
+            "properties": {},
+            "text": null
+          }
+        ],
+        "kind": "math",
+        "properties": {},
+        "text": null
+      },
+      "adjustments": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "kind": "munder",
+          "field": "attributes",
+          "key": "accentunder",
+          "primaryPresent": false,
+          "primaryValue": null,
+          "baselinePresent": true,
+          "baselineValue": true
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "kind": "mo",
+          "field": "properties",
+          "key": "texClass",
+          "primaryPresent": false,
+          "primaryValue": null,
+          "baselinePresent": true,
+          "baselineValue": 0
+        }
+      ]
+    },
+    "underbrace-limits-display": {
+      "tex": "\\underbrace{x}_n\\limits",
+      "display": true,
+      "primarySHA256": "9eb21fad44db9baa0c74e9b71fea1f9578c62b110f1347f261505f7cdaaffed0",
+      "baselineSHA256": "9eb21fad44db9baa0c74e9b71fea1f9578c62b110f1347f261505f7cdaaffed0",
+      "baselineTree": {
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              {
+                "attributes": {
+                  "movablelimits": true
+                },
+                "children": [
+                  {
+                    "attributes": {},
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [
+                          {
+                            "attributes": {
+                              "accentunder": true
+                            },
+                            "children": [
+                              {
+                                "attributes": {},
+                                "children": [
+                                  {
+                                    "attributes": {},
+                                    "children": [],
+                                    "kind": "text",
+                                    "properties": {},
+                                    "text": "x"
+                                  }
+                                ],
+                                "kind": "mi",
+                                "properties": {},
+                                "text": null
+                              },
+                              {
+                                "attributes": {},
+                                "children": [
+                                  {
+                                    "attributes": {},
+                                    "children": [],
+                                    "kind": "text",
+                                    "properties": {},
+                                    "text": "⏟"
+                                  }
+                                ],
+                                "kind": "mo",
+                                "properties": {
+                                  "texClass": 0,
+                                  "texprimestyle": true
+                                },
+                                "text": null
+                              }
+                            ],
+                            "kind": "munder",
+                            "properties": {},
+                            "text": null
+                          }
+                        ],
+                        "kind": "inferredMrow",
+                        "properties": {},
+                        "text": null
+                      }
+                    ],
+                    "kind": "TeXAtom",
+                    "properties": {
+                      "movesupsub": true,
+                      "subsupOK": true,
+                      "texClass": 1
+                    },
+                    "text": null
+                  },
+                  {
+                    "attributes": {},
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "n"
+                      }
+                    ],
+                    "kind": "mi",
+                    "properties": {
+                      "texprimestyle": true
+                    },
+                    "text": null
+                  }
+                ],
+                "kind": "munder",
+                "properties": {
+                  "movesupsub": true
+                },
+                "text": null
+              }
+            ],
+            "kind": "inferredMrow",
+            "properties": {},
+            "text": null
+          }
+        ],
+        "kind": "math",
+        "properties": {},
+        "text": null
+      },
+      "adjustments": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "kind": "munder",
+          "field": "attributes",
+          "key": "accentunder",
+          "primaryPresent": false,
+          "primaryValue": null,
+          "baselinePresent": true,
+          "baselineValue": true
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "kind": "mo",
+          "field": "properties",
+          "key": "texClass",
+          "primaryPresent": false,
+          "primaryValue": null,
+          "baselinePresent": true,
+          "baselineValue": 0
+        }
+      ]
+    },
+    "prime-consumed-sub-inline": {
+      "tex": "\\sum'_i\\limits",
+      "display": false,
+      "primarySHA256": "eb4bf430b65938d4afad90c75b4a97fd3d8ec20fb406bedcb5e19333acfefd88",
+      "baselineSHA256": "3b2ca30dc67df238218e44400fca3a8e5025a7ff9d533cbe587ae4ccabd1e10d",
+      "baselineTree": {
+        "attributes": {},
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              {
+                "attributes": {
+                  "movablelimits": true
+                },
+                "children": [
+                  {
+                    "attributes": {},
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "∑"
+                      }
+                    ],
+                    "kind": "mo",
+                    "properties": {
+                      "in-lists": "fixStretchy",
+                      "movesupsub": true,
+                      "texClass": 1
+                    },
+                    "text": null
+                  },
+                  {
+                    "attributes": {},
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "i"
+                      }
+                    ],
+                    "kind": "mi",
+                    "properties": {
+                      "texprimestyle": true
+                    },
+                    "text": null
+                  },
+                  {
+                    "attributes": {
+                      "variantForm": true
+                    },
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "′"
+                      }
+                    ],
+                    "kind": "mo",
+                    "properties": {
+                      "texClass": 0
+                    },
+                    "text": null
+                  }
+                ],
+                "kind": "msubsup",
+                "properties": {
+                  "movesupsub": true
+                },
+                "text": null
+              }
+            ],
+            "kind": "inferredMrow",
+            "properties": {},
+            "text": null
+          }
+        ],
+        "kind": "math",
+        "properties": {},
+        "text": null
+      },
+      "adjustments": [
+        {
+          "path": [
+            0,
+            0,
+            2
+          ],
+          "kind": "mo",
+          "field": "attributes",
+          "key": "variantForm",
+          "primaryPresent": false,
+          "primaryValue": null,
+          "baselinePresent": true,
+          "baselineValue": true
+        },
+        {
+          "path": [
+            0,
+            0,
+            2
+          ],
+          "kind": "mo",
+          "field": "properties",
+          "key": "variantForm",
+          "primaryPresent": true,
+          "primaryValue": true,
+          "baselinePresent": false,
+          "baselineValue": null
+        },
+        {
+          "path": [
+            0,
+            0,
+            2
+          ],
+          "kind": "mo",
+          "field": "properties",
+          "key": "texClass",
+          "primaryPresent": false,
+          "primaryValue": null,
+          "baselinePresent": true,
+          "baselineValue": 0
+        },
+        {
+          "path": [
+            0,
+            0,
+            2
+          ],
+          "kind": "mo",
+          "field": "properties",
+          "key": "pseudoscript",
+          "primaryPresent": true,
+          "primaryValue": true,
+          "baselinePresent": false,
+          "baselineValue": null
+        }
+      ]
+    },
+    "prime-consumed-sub-display": {
+      "tex": "\\sum'_i\\limits",
+      "display": true,
+      "primarySHA256": "f2f7c4fe059def452040e4d35f23fcf2e4df4f45006ff43388fad6aa5512d719",
+      "baselineSHA256": "b46c661748377e7ef364d3f3e45b3e83c7e17a304da03b8dd72e019bf7ce2a7f",
+      "baselineTree": {
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              {
+                "attributes": {
+                  "movablelimits": true
+                },
+                "children": [
+                  {
+                    "attributes": {},
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "∑"
+                      }
+                    ],
+                    "kind": "mo",
+                    "properties": {
+                      "in-lists": "fixStretchy",
+                      "movesupsub": true,
+                      "texClass": 1
+                    },
+                    "text": null
+                  },
+                  {
+                    "attributes": {},
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "i"
+                      }
+                    ],
+                    "kind": "mi",
+                    "properties": {
+                      "texprimestyle": true
+                    },
+                    "text": null
+                  },
+                  {
+                    "attributes": {
+                      "variantForm": true
+                    },
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [],
+                        "kind": "text",
+                        "properties": {},
+                        "text": "′"
+                      }
+                    ],
+                    "kind": "mo",
+                    "properties": {
+                      "texClass": 0
+                    },
+                    "text": null
+                  }
+                ],
+                "kind": "msubsup",
+                "properties": {
+                  "movesupsub": true
+                },
+                "text": null
+              }
+            ],
+            "kind": "inferredMrow",
+            "properties": {},
+            "text": null
+          }
+        ],
+        "kind": "math",
+        "properties": {},
+        "text": null
+      },
+      "adjustments": [
+        {
+          "path": [
+            0,
+            0,
+            2
+          ],
+          "kind": "mo",
+          "field": "attributes",
+          "key": "variantForm",
+          "primaryPresent": false,
+          "primaryValue": null,
+          "baselinePresent": true,
+          "baselineValue": true
+        },
+        {
+          "path": [
+            0,
+            0,
+            2
+          ],
+          "kind": "mo",
+          "field": "properties",
+          "key": "variantForm",
+          "primaryPresent": true,
+          "primaryValue": true,
+          "baselinePresent": false,
+          "baselineValue": null
+        },
+        {
+          "path": [
+            0,
+            0,
+            2
+          ],
+          "kind": "mo",
+          "field": "properties",
+          "key": "texClass",
+          "primaryPresent": false,
+          "primaryValue": null,
+          "baselinePresent": true,
+          "baselineValue": 0
+        },
+        {
+          "path": [
+            0,
+            0,
+            2
+          ],
+          "kind": "mo",
+          "field": "properties",
+          "key": "pseudoscript",
+          "primaryPresent": true,
+          "primaryValue": true,
+          "baselinePresent": false,
+          "baselineValue": null
+        }
+      ]
+    },
+    "prime-closed-group-inline": {
+      "tex": "{\\sum'}\\limits",
+      "display": false,
+      "primarySHA256": "c48a27b9b74a3af0e4cd5fe55cc87666b14669c41eb3b093f50314ceb6750044",
+      "baselineSHA256": "c48a27b9b74a3af0e4cd5fe55cc87666b14669c41eb3b093f50314ceb6750044",
+      "baselineTree": {
+        "attributes": {},
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              {
+                "attributes": {
+                  "movablelimits": true
+                },
+                "children": [
+                  {
+                    "attributes": {},
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [
+                          {
+                            "attributes": {},
+                            "children": [
+                              {
+                                "attributes": {},
+                                "children": [],
+                                "kind": "text",
+                                "properties": {},
+                                "text": "∑"
+                              }
+                            ],
+                            "kind": "mo",
+                            "properties": {
+                              "in-lists": "fixStretchy",
+                              "movesupsub": true,
+                              "texClass": 1
+                            },
+                            "text": null
+                          },
+                          {
+                            "attributes": {
+                              "variantForm": true
+                            },
+                            "children": [
+                              {
+                                "attributes": {},
+                                "children": [],
+                                "kind": "text",
+                                "properties": {},
+                                "text": "′"
+                              }
+                            ],
+                            "kind": "mo",
+                            "properties": {
+                              "texClass": 0
+                            },
+                            "text": null
+                          }
+                        ],
+                        "kind": "msup",
+                        "properties": {},
+                        "text": null
+                      }
+                    ],
+                    "kind": "inferredMrow",
+                    "properties": {},
+                    "text": null
+                  }
+                ],
+                "kind": "TeXAtom",
+                "properties": {
+                  "movesupsub": true,
+                  "texClass": 0
+                },
+                "text": null
+              }
+            ],
+            "kind": "inferredMrow",
+            "properties": {},
+            "text": null
+          }
+        ],
+        "kind": "math",
+        "properties": {},
+        "text": null
+      },
+      "adjustments": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "kind": "mo",
+          "field": "attributes",
+          "key": "variantForm",
+          "primaryPresent": false,
+          "primaryValue": null,
+          "baselinePresent": true,
+          "baselineValue": true
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "kind": "mo",
+          "field": "properties",
+          "key": "variantForm",
+          "primaryPresent": true,
+          "primaryValue": true,
+          "baselinePresent": false,
+          "baselineValue": null
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "kind": "mo",
+          "field": "properties",
+          "key": "texClass",
+          "primaryPresent": false,
+          "primaryValue": null,
+          "baselinePresent": true,
+          "baselineValue": 0
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "kind": "mo",
+          "field": "properties",
+          "key": "pseudoscript",
+          "primaryPresent": true,
+          "primaryValue": false,
+          "baselinePresent": false,
+          "baselineValue": null
+        }
+      ]
+    },
+    "prime-closed-group-display": {
+      "tex": "{\\sum'}\\limits",
+      "display": true,
+      "primarySHA256": "e1528227628a0e920966121277e8385b4fcc3929d12d29ebf617ac6e9b943ade",
+      "baselineSHA256": "e1528227628a0e920966121277e8385b4fcc3929d12d29ebf617ac6e9b943ade",
+      "baselineTree": {
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              {
+                "attributes": {
+                  "movablelimits": true
+                },
+                "children": [
+                  {
+                    "attributes": {},
+                    "children": [
+                      {
+                        "attributes": {},
+                        "children": [
+                          {
+                            "attributes": {},
+                            "children": [
+                              {
+                                "attributes": {},
+                                "children": [],
+                                "kind": "text",
+                                "properties": {},
+                                "text": "∑"
+                              }
+                            ],
+                            "kind": "mo",
+                            "properties": {
+                              "in-lists": "fixStretchy",
+                              "movesupsub": true,
+                              "texClass": 1
+                            },
+                            "text": null
+                          },
+                          {
+                            "attributes": {
+                              "variantForm": true
+                            },
+                            "children": [
+                              {
+                                "attributes": {},
+                                "children": [],
+                                "kind": "text",
+                                "properties": {},
+                                "text": "′"
+                              }
+                            ],
+                            "kind": "mo",
+                            "properties": {
+                              "texClass": 0
+                            },
+                            "text": null
+                          }
+                        ],
+                        "kind": "msup",
+                        "properties": {},
+                        "text": null
+                      }
+                    ],
+                    "kind": "inferredMrow",
+                    "properties": {},
+                    "text": null
+                  }
+                ],
+                "kind": "TeXAtom",
+                "properties": {
+                  "movesupsub": true,
+                  "texClass": 0
+                },
+                "text": null
+              }
+            ],
+            "kind": "inferredMrow",
+            "properties": {},
+            "text": null
+          }
+        ],
+        "kind": "math",
+        "properties": {},
+        "text": null
+      },
+      "adjustments": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "kind": "mo",
+          "field": "attributes",
+          "key": "variantForm",
+          "primaryPresent": false,
+          "primaryValue": null,
+          "baselinePresent": true,
+          "baselineValue": true
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "kind": "mo",
+          "field": "properties",
+          "key": "variantForm",
+          "primaryPresent": true,
+          "primaryValue": true,
+          "baselinePresent": false,
+          "baselineValue": null
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "kind": "mo",
+          "field": "properties",
+          "key": "texClass",
+          "primaryPresent": false,
+          "primaryValue": null,
+          "baselinePresent": true,
+          "baselineValue": 0
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "kind": "mo",
+          "field": "properties",
+          "key": "pseudoscript",
+          "primaryPresent": true,
+          "primaryValue": false,
+          "baselinePresent": false,
+          "baselineValue": null
+        }
+      ]
+    }
+  }
+}
