@@ -9,6 +9,7 @@ import (
 
 	"github.com/d2lang/mathjax-go/internal/font"
 	"github.com/d2lang/mathjax-go/internal/layout"
+	"github.com/d2lang/mathjax-go/internal/mml"
 )
 
 func (w *wrapper) underChild() *wrapper {
@@ -28,8 +29,9 @@ func (w *wrapper) overChild() *wrapper {
 	return nil
 }
 
-// movableLimitCore follows the node-specific coreMO contract used only by
-// CommonScriptbase.hasMovableLimits. A non-operator may be the returned core.
+// movableLimitCore follows the node-specific coreMO contract used by
+// CommonScriptbase.hasMovableLimits and math-accent classification. A
+// non-operator may be the returned core.
 // Keep the distinct layout-base and accent-operator traversals unchanged.
 func movableLimitCore(base *wrapper) *wrapper {
 	for base != nil {
@@ -44,8 +46,9 @@ func movableLimitCore(base *wrapper) *wrapper {
 			"TeXAtom", "mstyle", "mpadded", "mphantom", "semantics", "mfrac", "math", "mtd":
 			// AbstractMmlBaseNode and AbstractMmlLayoutNode always use child 0.
 		case "maction":
-			selection, ok := numberAttribute(base.node, "selection")
-			if !ok || math.IsNaN(selection) {
+			value, exists := base.node.Attributes.Get("selection")
+			selection := mml.MactionSelectionNumber(value, exists)
+			if math.IsNaN(selection) {
 				return nil
 			}
 			selected := math.Max(1, math.Min(float64(len(base.children)), selection)) - 1
@@ -76,15 +79,11 @@ func (w *wrapper) lineAccent(script *wrapper) bool {
 // CommonScriptbase records the first under/over accent below transparent
 // wrappers. Its existing gap is removed before a further label is stacked.
 func (w *wrapper) baseHasAccent(attribute string) bool {
-	core := w.scriptBaseCore()
-	if core == nil {
-		return false
+	_, over, under := w.scriptBaseInfo()
+	if attribute == "accent" {
+		return over
 	}
-	switch core.node.Kind {
-	case "munder", "mover", "munderover":
-		return boolAttributeDefault(core.node, attribute, false)
-	}
-	return false
+	return attribute == "accentunder" && under
 }
 
 func (w *wrapper) overKU(base, over *layout.BBox) (separation, offset float64) {

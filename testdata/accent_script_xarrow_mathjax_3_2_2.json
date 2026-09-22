@@ -1,0 +1,1275 @@
+{
+  "oracle": "Unmodified pinned D2 MathJax3.2.2; fresh VM per case/mode; AST observed before unchanged SVG renderer",
+  "mathjaxGitCommit": "ad8f5c21cb810236551da8c6512ba733e67357ee",
+  "assetsSHA256": {
+    "polyfills.js": "7fe1d048c78b0e09854c1259f7413868a51cc8f0c822489eb1ac36ae6c85ce01",
+    "mathjax.js": "cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869",
+    "setup.js": "a52cb0bbabfbd7796b9fedd793b9386c474e3123e788ee151cbe47ca1fa6e881"
+  },
+  "cases": [
+    {
+      "name": "x-arrow-option-inline",
+      "tex": "\\xrightarrow[below]{above}",
+      "display": false,
+      "width": 42,
+      "height": 40,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "munderover",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "mstyle",
+                    "text": null,
+                    "attributes": {
+                      "scriptlevel": 0
+                    },
+                    "children": [
+                      {
+                        "kind": "inferredMrow",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "mo",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "→",
+                                "attributes": {},
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mpadded",
+                    "text": null,
+                    "attributes": {
+                      "depth": "-.15em",
+                      "lspace": "0.278em",
+                      "voffset": ".15em",
+                      "width": "+0.833em"
+                    },
+                    "children": [
+                      {
+                        "kind": "inferredMrow",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "b",
+                                "attributes": {},
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "e",
+                                "attributes": {},
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "l",
+                                "attributes": {},
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "o",
+                                "attributes": {},
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "w",
+                                "attributes": {},
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "mspace",
+                            "text": null,
+                            "attributes": {
+                              "height": ".75em"
+                            },
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mpadded",
+                    "text": null,
+                    "attributes": {
+                      "height": "-.2em",
+                      "lspace": "0.278em",
+                      "voffset": "-.2em",
+                      "width": "+0.833em"
+                    },
+                    "children": [
+                      {
+                        "kind": "inferredMrow",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "a",
+                                "attributes": {},
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "b",
+                                "attributes": {},
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "o",
+                                "attributes": {},
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "v",
+                                "attributes": {},
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "e",
+                                "attributes": {},
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "mspace",
+                            "text": null,
+                            "attributes": {
+                              "depth": ".25em"
+                            },
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "propertiesTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "isAccent": null,
+        "coreParentKind": null,
+        "coreParentParentKind": null,
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "isAccent": null,
+            "coreParentKind": null,
+            "coreParentParentKind": null,
+            "children": [
+              {
+                "kind": "munderover",
+                "text": null,
+                "attributes": {},
+                "properties": {
+                  "subsupOK": true
+                },
+                "isAccent": null,
+                "coreParentKind": null,
+                "coreParentParentKind": null,
+                "children": [
+                  {
+                    "kind": "mstyle",
+                    "text": null,
+                    "attributes": {
+                      "scriptlevel": 0
+                    },
+                    "properties": {
+                      "texprimestyle": true
+                    },
+                    "isAccent": null,
+                    "coreParentKind": null,
+                    "coreParentParentKind": null,
+                    "children": [
+                      {
+                        "kind": "inferredMrow",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": [
+                          {
+                            "kind": "mo",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {
+                              "texClass": 3
+                            },
+                            "isAccent": false,
+                            "coreParentKind": "inferredMrow",
+                            "coreParentParentKind": "math",
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "→",
+                                "attributes": {},
+                                "properties": {},
+                                "isAccent": null,
+                                "coreParentKind": null,
+                                "coreParentParentKind": null,
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mpadded",
+                    "text": null,
+                    "attributes": {
+                      "depth": "-.15em",
+                      "lspace": "0.278em",
+                      "voffset": ".15em",
+                      "width": "+0.833em"
+                    },
+                    "properties": {
+                      "texprimestyle": true
+                    },
+                    "isAccent": null,
+                    "coreParentKind": null,
+                    "coreParentParentKind": null,
+                    "children": [
+                      {
+                        "kind": "inferredMrow",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {
+                          "texprimestyle": true
+                        },
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": [
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {
+                              "texprimestyle": true
+                            },
+                            "isAccent": null,
+                            "coreParentKind": null,
+                            "coreParentParentKind": null,
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "b",
+                                "attributes": {},
+                                "properties": {},
+                                "isAccent": null,
+                                "coreParentKind": null,
+                                "coreParentParentKind": null,
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {
+                              "texprimestyle": true
+                            },
+                            "isAccent": null,
+                            "coreParentKind": null,
+                            "coreParentParentKind": null,
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "e",
+                                "attributes": {},
+                                "properties": {},
+                                "isAccent": null,
+                                "coreParentKind": null,
+                                "coreParentParentKind": null,
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {
+                              "texprimestyle": true
+                            },
+                            "isAccent": null,
+                            "coreParentKind": null,
+                            "coreParentParentKind": null,
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "l",
+                                "attributes": {},
+                                "properties": {},
+                                "isAccent": null,
+                                "coreParentKind": null,
+                                "coreParentParentKind": null,
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {
+                              "texprimestyle": true
+                            },
+                            "isAccent": null,
+                            "coreParentKind": null,
+                            "coreParentParentKind": null,
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "o",
+                                "attributes": {},
+                                "properties": {},
+                                "isAccent": null,
+                                "coreParentKind": null,
+                                "coreParentParentKind": null,
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {
+                              "texprimestyle": true
+                            },
+                            "isAccent": null,
+                            "coreParentKind": null,
+                            "coreParentParentKind": null,
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "w",
+                                "attributes": {},
+                                "properties": {},
+                                "isAccent": null,
+                                "coreParentKind": null,
+                                "coreParentParentKind": null,
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "mspace",
+                            "text": null,
+                            "attributes": {
+                              "height": ".75em"
+                            },
+                            "properties": {
+                              "texprimestyle": true
+                            },
+                            "isAccent": null,
+                            "coreParentKind": null,
+                            "coreParentParentKind": null,
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mpadded",
+                    "text": null,
+                    "attributes": {
+                      "height": "-.2em",
+                      "lspace": "0.278em",
+                      "voffset": "-.2em",
+                      "width": "+0.833em"
+                    },
+                    "properties": {},
+                    "isAccent": null,
+                    "coreParentKind": null,
+                    "coreParentParentKind": null,
+                    "children": [
+                      {
+                        "kind": "inferredMrow",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": [
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {},
+                            "isAccent": null,
+                            "coreParentKind": null,
+                            "coreParentParentKind": null,
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "a",
+                                "attributes": {},
+                                "properties": {},
+                                "isAccent": null,
+                                "coreParentKind": null,
+                                "coreParentParentKind": null,
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {},
+                            "isAccent": null,
+                            "coreParentKind": null,
+                            "coreParentParentKind": null,
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "b",
+                                "attributes": {},
+                                "properties": {},
+                                "isAccent": null,
+                                "coreParentKind": null,
+                                "coreParentParentKind": null,
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {},
+                            "isAccent": null,
+                            "coreParentKind": null,
+                            "coreParentParentKind": null,
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "o",
+                                "attributes": {},
+                                "properties": {},
+                                "isAccent": null,
+                                "coreParentKind": null,
+                                "coreParentParentKind": null,
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {},
+                            "isAccent": null,
+                            "coreParentKind": null,
+                            "coreParentParentKind": null,
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "v",
+                                "attributes": {},
+                                "properties": {},
+                                "isAccent": null,
+                                "coreParentKind": null,
+                                "coreParentParentKind": null,
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {},
+                            "isAccent": null,
+                            "coreParentKind": null,
+                            "coreParentParentKind": null,
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "e",
+                                "attributes": {},
+                                "properties": {},
+                                "isAccent": null,
+                                "coreParentKind": null,
+                                "coreParentParentKind": null,
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "mspace",
+                            "text": null,
+                            "attributes": {
+                              "depth": ".25em"
+                            },
+                            "properties": {},
+                            "isAccent": null,
+                            "coreParentKind": null,
+                            "coreParentParentKind": null,
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "5768b6b8e10c4e67861667772b4c7a95ebe98477c90b80bd093edd5cc17a04cf"
+    },
+    {
+      "name": "x-arrow-option-display",
+      "tex": "\\xrightarrow[below]{above}",
+      "display": true,
+      "width": 42,
+      "height": 40,
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "munderover",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "mstyle",
+                    "text": null,
+                    "attributes": {
+                      "scriptlevel": 0
+                    },
+                    "children": [
+                      {
+                        "kind": "inferredMrow",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "mo",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "→",
+                                "attributes": {},
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mpadded",
+                    "text": null,
+                    "attributes": {
+                      "depth": "-.15em",
+                      "lspace": "0.278em",
+                      "voffset": ".15em",
+                      "width": "+0.833em"
+                    },
+                    "children": [
+                      {
+                        "kind": "inferredMrow",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "b",
+                                "attributes": {},
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "e",
+                                "attributes": {},
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "l",
+                                "attributes": {},
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "o",
+                                "attributes": {},
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "w",
+                                "attributes": {},
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "mspace",
+                            "text": null,
+                            "attributes": {
+                              "height": ".75em"
+                            },
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mpadded",
+                    "text": null,
+                    "attributes": {
+                      "height": "-.2em",
+                      "lspace": "0.278em",
+                      "voffset": "-.2em",
+                      "width": "+0.833em"
+                    },
+                    "children": [
+                      {
+                        "kind": "inferredMrow",
+                        "text": null,
+                        "attributes": {},
+                        "children": [
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "a",
+                                "attributes": {},
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "b",
+                                "attributes": {},
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "o",
+                                "attributes": {},
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "v",
+                                "attributes": {},
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": {},
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "e",
+                                "attributes": {},
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "mspace",
+                            "text": null,
+                            "attributes": {
+                              "depth": ".25em"
+                            },
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "propertiesTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "isAccent": null,
+        "coreParentKind": null,
+        "coreParentParentKind": null,
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "isAccent": null,
+            "coreParentKind": null,
+            "coreParentParentKind": null,
+            "children": [
+              {
+                "kind": "munderover",
+                "text": null,
+                "attributes": {},
+                "properties": {
+                  "subsupOK": true
+                },
+                "isAccent": null,
+                "coreParentKind": null,
+                "coreParentParentKind": null,
+                "children": [
+                  {
+                    "kind": "mstyle",
+                    "text": null,
+                    "attributes": {
+                      "scriptlevel": 0
+                    },
+                    "properties": {
+                      "texprimestyle": true
+                    },
+                    "isAccent": null,
+                    "coreParentKind": null,
+                    "coreParentParentKind": null,
+                    "children": [
+                      {
+                        "kind": "inferredMrow",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": [
+                          {
+                            "kind": "mo",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {
+                              "texClass": 3
+                            },
+                            "isAccent": false,
+                            "coreParentKind": "inferredMrow",
+                            "coreParentParentKind": "math",
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "→",
+                                "attributes": {},
+                                "properties": {},
+                                "isAccent": null,
+                                "coreParentKind": null,
+                                "coreParentParentKind": null,
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mpadded",
+                    "text": null,
+                    "attributes": {
+                      "depth": "-.15em",
+                      "lspace": "0.278em",
+                      "voffset": ".15em",
+                      "width": "+0.833em"
+                    },
+                    "properties": {
+                      "texprimestyle": true
+                    },
+                    "isAccent": null,
+                    "coreParentKind": null,
+                    "coreParentParentKind": null,
+                    "children": [
+                      {
+                        "kind": "inferredMrow",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {
+                          "texprimestyle": true
+                        },
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": [
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {
+                              "texprimestyle": true
+                            },
+                            "isAccent": null,
+                            "coreParentKind": null,
+                            "coreParentParentKind": null,
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "b",
+                                "attributes": {},
+                                "properties": {},
+                                "isAccent": null,
+                                "coreParentKind": null,
+                                "coreParentParentKind": null,
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {
+                              "texprimestyle": true
+                            },
+                            "isAccent": null,
+                            "coreParentKind": null,
+                            "coreParentParentKind": null,
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "e",
+                                "attributes": {},
+                                "properties": {},
+                                "isAccent": null,
+                                "coreParentKind": null,
+                                "coreParentParentKind": null,
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {
+                              "texprimestyle": true
+                            },
+                            "isAccent": null,
+                            "coreParentKind": null,
+                            "coreParentParentKind": null,
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "l",
+                                "attributes": {},
+                                "properties": {},
+                                "isAccent": null,
+                                "coreParentKind": null,
+                                "coreParentParentKind": null,
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {
+                              "texprimestyle": true
+                            },
+                            "isAccent": null,
+                            "coreParentKind": null,
+                            "coreParentParentKind": null,
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "o",
+                                "attributes": {},
+                                "properties": {},
+                                "isAccent": null,
+                                "coreParentKind": null,
+                                "coreParentParentKind": null,
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {
+                              "texprimestyle": true
+                            },
+                            "isAccent": null,
+                            "coreParentKind": null,
+                            "coreParentParentKind": null,
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "w",
+                                "attributes": {},
+                                "properties": {},
+                                "isAccent": null,
+                                "coreParentKind": null,
+                                "coreParentParentKind": null,
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "mspace",
+                            "text": null,
+                            "attributes": {
+                              "height": ".75em"
+                            },
+                            "properties": {
+                              "texprimestyle": true
+                            },
+                            "isAccent": null,
+                            "coreParentKind": null,
+                            "coreParentParentKind": null,
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mpadded",
+                    "text": null,
+                    "attributes": {
+                      "height": "-.2em",
+                      "lspace": "0.278em",
+                      "voffset": "-.2em",
+                      "width": "+0.833em"
+                    },
+                    "properties": {},
+                    "isAccent": null,
+                    "coreParentKind": null,
+                    "coreParentParentKind": null,
+                    "children": [
+                      {
+                        "kind": "inferredMrow",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "isAccent": null,
+                        "coreParentKind": null,
+                        "coreParentParentKind": null,
+                        "children": [
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {},
+                            "isAccent": null,
+                            "coreParentKind": null,
+                            "coreParentParentKind": null,
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "a",
+                                "attributes": {},
+                                "properties": {},
+                                "isAccent": null,
+                                "coreParentKind": null,
+                                "coreParentParentKind": null,
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {},
+                            "isAccent": null,
+                            "coreParentKind": null,
+                            "coreParentParentKind": null,
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "b",
+                                "attributes": {},
+                                "properties": {},
+                                "isAccent": null,
+                                "coreParentKind": null,
+                                "coreParentParentKind": null,
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {},
+                            "isAccent": null,
+                            "coreParentKind": null,
+                            "coreParentParentKind": null,
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "o",
+                                "attributes": {},
+                                "properties": {},
+                                "isAccent": null,
+                                "coreParentKind": null,
+                                "coreParentParentKind": null,
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {},
+                            "isAccent": null,
+                            "coreParentKind": null,
+                            "coreParentParentKind": null,
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "v",
+                                "attributes": {},
+                                "properties": {},
+                                "isAccent": null,
+                                "coreParentKind": null,
+                                "coreParentParentKind": null,
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {},
+                            "isAccent": null,
+                            "coreParentKind": null,
+                            "coreParentParentKind": null,
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "e",
+                                "attributes": {},
+                                "properties": {},
+                                "isAccent": null,
+                                "coreParentKind": null,
+                                "coreParentParentKind": null,
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "mspace",
+                            "text": null,
+                            "attributes": {
+                              "depth": ".25em"
+                            },
+                            "properties": {},
+                            "isAccent": null,
+                            "coreParentKind": null,
+                            "coreParentParentKind": null,
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "svgSHA256": "5768b6b8e10c4e67861667772b4c7a95ebe98477c90b80bd093edd5cc17a04cf"
+    }
+  ]
+}

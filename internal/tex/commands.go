@@ -196,9 +196,9 @@ func (p *parser) command(name string) ([]*mml.Node, error) {
 	case "big", "Big", "bigg", "Bigg", "bigl", "Bigl", "biggl", "Biggl", "bigr", "Bigr", "biggr", "Biggr", "bigm", "Bigm", "biggm", "Biggm":
 		return p.bigDelimiter(name)
 
-	case "overline", "bar", "underline", "overbrace", "underbrace", "overrightarrow", "overleftarrow", "underrightarrow", "underleftarrow":
+	case "overline", "underline", "overbrace", "underbrace", "overrightarrow", "overleftarrow", "underrightarrow", "underleftarrow":
 		return p.underOver(name)
-	case "hat", "widehat", "tilde", "widetilde", "vec", "dot", "ddot", "dddot", "ddddot", "acute", "grave", "breve", "check", "mathring":
+	case "bar", "hat", "widehat", "tilde", "widetilde", "vec", "dot", "ddot", "dddot", "ddddot", "acute", "grave", "breve", "check", "mathring":
 		return p.accent(name)
 	case "overset", "stackrel":
 		return p.overSet(name)
@@ -643,7 +643,7 @@ func (p *parser) bigDelimiter(name string) ([]*mml.Node, error) {
 }
 
 var accentCharacters = map[string]string{
-	"hat": "^", "widehat": "^", "tilde": "~", "widetilde": "~", "vec": "→",
+	"bar": "¯", "hat": "^", "widehat": "^", "tilde": "~", "widetilde": "~", "vec": "→",
 	"dot": "˙", "ddot": "¨", "dddot": "⃛", "ddddot": "⃜",
 	"acute": "´", "grave": "`", "breve": "˘", "check": "ˇ", "mathring": "˚",
 }
@@ -660,6 +660,18 @@ func (p *parser) accent(name string) ([]*mml.Node, error) {
 	// SVGmo uses that internal marker to zero the accent width and translate
 	// the source glyph around its origin before the mover centers it.
 	accent.SetProperty("mathaccent", true)
+	// BaseMethods.Accent disables movable limits on its embellished core,
+	// or on a nonembellished base carrying its own movablelimits property.
+	core := base
+	if base.Flags.Embellished {
+		core = limitsCore(base)
+	}
+	if core != nil {
+		movable, _ := core.Property("movablelimits")
+		if core.Kind == "mo" || limitsTruthy(movable) {
+			applySourceObject(core, mjSourceObject{{Name: "movablelimits", Value: false}})
+		}
+	}
 	// BaseMethods.Accent leaves the parent implicit; its accent value is
 	// inherited from the operator during MathML inheritance.
 	result := node("mover", base, accent)

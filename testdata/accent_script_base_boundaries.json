@@ -1,0 +1,1895 @@
+{
+  "baseline": "f1ae550cda1fb97e41bebf86799ffeae48cd3042",
+  "cases": {
+    "accent-script-0-inline": {
+      "category": "exact-inherited-own-fields",
+      "primarySHA256": "af55eb47b1a497e75fa971c15a8a0eed952e478dcd53524dbc9bff06a4b09428",
+      "expectedSHA256": "af55eb47b1a497e75fa971c15a8a0eed952e478dcd53524dbc9bff06a4b09428",
+      "baselineTreeSHA256": "b6ac332801749951705eef9ce9561062b868c35886346e0bc7afd6d07aa618bc",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "mathaccent": true
+          },
+          "expected": {
+            "texClass": 0,
+            "mathaccent": true
+          },
+          "baselinePath": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "accent-script-0-display": {
+      "category": "exact-inherited-own-fields",
+      "primarySHA256": "1cca0138dac403a61af2bc68f43be32d5e71c38fe37222b1cdb1133391f8ac22",
+      "expectedSHA256": "1cca0138dac403a61af2bc68f43be32d5e71c38fe37222b1cdb1133391f8ac22",
+      "baselineTreeSHA256": "4f68d88ce8161316011e4e668561fccd371f2ccfd186824486331cf35abd355b",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "mathaccent": true
+          },
+          "expected": {
+            "texClass": 0,
+            "mathaccent": true
+          },
+          "baselinePath": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "accent-script-1-inline": {
+      "category": "exact-inherited-own-fields",
+      "primarySHA256": "c55afd92f7251665d5e3ed07daef1cbca7adb0e29e77a1914827bafd6d772ece",
+      "expectedSHA256": "c55afd92f7251665d5e3ed07daef1cbca7adb0e29e77a1914827bafd6d772ece",
+      "baselineTreeSHA256": "566e60852478f9e2af8f0eb3f4857473fd4e4f0b38eea25983ad2f61dfe1896b",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "mathaccent": true
+          },
+          "expected": {
+            "texClass": 0,
+            "mathaccent": true
+          },
+          "baselinePath": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "accent-script-1-display": {
+      "category": "exact-inherited-own-fields",
+      "primarySHA256": "718d80e531e1732bfbbd43ad8fb6e6a75996c7e92fb581f37678964caa823fb5",
+      "expectedSHA256": "718d80e531e1732bfbbd43ad8fb6e6a75996c7e92fb581f37678964caa823fb5",
+      "baselineTreeSHA256": "db4fe991c154ea081e061157de84f8f7c598c7899a13c394fed7558e241271cc",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "mathaccent": true
+          },
+          "expected": {
+            "texClass": 0,
+            "mathaccent": true
+          },
+          "baselinePath": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "accent-script-2-inline": {
+      "category": "exact-inherited-own-fields",
+      "primarySHA256": "ffef5fc9ebe1098d34400c974c8bff31185f6ec14b1297c681bce936be9ebfcc",
+      "expectedSHA256": "ffef5fc9ebe1098d34400c974c8bff31185f6ec14b1297c681bce936be9ebfcc",
+      "baselineTreeSHA256": "c5ebf7b5d6aceb7346b062e0006cf067255dd72497ec63a48d075b27604020f2",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "mathaccent": true
+          },
+          "expected": {
+            "texClass": 0,
+            "mathaccent": true
+          },
+          "baselinePath": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "accent-script-2-display": {
+      "category": "exact-inherited-own-fields",
+      "primarySHA256": "5ef891ad49399b67e70422370b2696fe8b572c377e5482bfed9bf073446daa4a",
+      "expectedSHA256": "5ef891ad49399b67e70422370b2696fe8b572c377e5482bfed9bf073446daa4a",
+      "baselineTreeSHA256": "c014bade9af7c0aa6bbc3414941a08316dae48611f1ae8b2cf5e49a9db518c43",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "mathaccent": true
+          },
+          "expected": {
+            "texClass": 0,
+            "mathaccent": true
+          },
+          "baselinePath": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "accent-script-3-inline": {
+      "category": "exact-inherited-own-fields",
+      "primarySHA256": "f4e70ba97cd434213f6e89782ea968b43932f45b16c8d0ca20ebe2291e3269f6",
+      "expectedSHA256": "f4e70ba97cd434213f6e89782ea968b43932f45b16c8d0ca20ebe2291e3269f6",
+      "baselineTreeSHA256": "9380714a57cd7f255aadf96562332f5db60473275d72978275edb84d435d950f",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "mathaccent": true
+          },
+          "expected": {
+            "texClass": 0,
+            "mathaccent": true
+          },
+          "baselinePath": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "accent-script-3-display": {
+      "category": "exact-inherited-own-fields",
+      "primarySHA256": "457bfa9131b6266c6382c9d5106dcaceddff90ca398ce35e640e6f523ec99c0a",
+      "expectedSHA256": "457bfa9131b6266c6382c9d5106dcaceddff90ca398ce35e640e6f523ec99c0a",
+      "baselineTreeSHA256": "69e09a24889c04815b4bc0878d4e12a6e95440826ca43fc7d602f65ab8a4da52",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "mathaccent": true
+          },
+          "expected": {
+            "texClass": 0,
+            "mathaccent": true
+          },
+          "baselinePath": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "accent-script-4-inline": {
+      "category": "exact-inherited-own-fields",
+      "primarySHA256": "9b7e454417c1d8d4d941bc62e91a4f2da80d251d30592d23533eb07fb5611469",
+      "expectedSHA256": "9b7e454417c1d8d4d941bc62e91a4f2da80d251d30592d23533eb07fb5611469",
+      "baselineTreeSHA256": "2efb1b272b1ac7b82e07f814f103eb7747fdd2db1fcc80606575444a761ae28f",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "mathaccent": true
+          },
+          "expected": {
+            "texClass": 0,
+            "mathaccent": true
+          },
+          "baselinePath": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "accent-script-4-display": {
+      "category": "exact-inherited-own-fields",
+      "primarySHA256": "fb1d300628b7ee9368276b5489b09624fe4d8d9c018dfdd9b36a26e7b9ec0f3f",
+      "expectedSHA256": "fb1d300628b7ee9368276b5489b09624fe4d8d9c018dfdd9b36a26e7b9ec0f3f",
+      "baselineTreeSHA256": "a6b92917f9d3a4e681bc209e4e4aefb2f3e1d413fd8bb04f3c4bf1509bce4502",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "mathaccent": true
+          },
+          "expected": {
+            "texClass": 0,
+            "mathaccent": true
+          },
+          "baselinePath": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "accent-script-6-inline": {
+      "category": "exact-inherited-own-fields",
+      "primarySHA256": "98b557bfb89dd38378744f023348d12dce1cb60486a11c2905013b125aae4965",
+      "expectedSHA256": "98b557bfb89dd38378744f023348d12dce1cb60486a11c2905013b125aae4965",
+      "baselineTreeSHA256": "f54a898b1d0bcb0f3d480cf8b4c471e5c44e6e6d41ec5f134ce53bec92211371",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "mathaccent": true
+          },
+          "expected": {
+            "texClass": 0,
+            "mathaccent": true
+          },
+          "baselinePath": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "accent-script-6-display": {
+      "category": "exact-inherited-own-fields",
+      "primarySHA256": "98b557bfb89dd38378744f023348d12dce1cb60486a11c2905013b125aae4965",
+      "expectedSHA256": "98b557bfb89dd38378744f023348d12dce1cb60486a11c2905013b125aae4965",
+      "baselineTreeSHA256": "5f8276aef205b4d23ed37ae858e9fc8bb3ca79959cd262299bb2cd65ef65c514",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "mathaccent": true
+          },
+          "expected": {
+            "texClass": 0,
+            "mathaccent": true
+          },
+          "baselinePath": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "accent-script-7-inline": {
+      "category": "exact-inherited-own-fields",
+      "primarySHA256": "3400d2b296c1eeb1ec17c2e60402dd80f3aa755f363e67bfa6a2ffa2e1319ab9",
+      "expectedSHA256": "3400d2b296c1eeb1ec17c2e60402dd80f3aa755f363e67bfa6a2ffa2e1319ab9",
+      "baselineTreeSHA256": "aec4c16c3a3c48bdf432853f23160247548af41f822b1a986a1bc95b0a024bc5",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "mathaccent": true
+          },
+          "expected": {
+            "texClass": 0,
+            "mathaccent": true
+          },
+          "baselinePath": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "accent-script-7-display": {
+      "category": "exact-inherited-own-fields",
+      "primarySHA256": "3400d2b296c1eeb1ec17c2e60402dd80f3aa755f363e67bfa6a2ffa2e1319ab9",
+      "expectedSHA256": "3400d2b296c1eeb1ec17c2e60402dd80f3aa755f363e67bfa6a2ffa2e1319ab9",
+      "baselineTreeSHA256": "157d89710d1cadd5b24910c3c784b3521f5d386c6ecdb755e28903b9b09cc492",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "mathaccent": true
+          },
+          "expected": {
+            "texClass": 0,
+            "mathaccent": true
+          },
+          "baselinePath": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "accent-script-8-inline": {
+      "category": "exact-inherited-own-fields",
+      "primarySHA256": "a2a8a0a2d24767489e67087336ced9e0563f7eacf769cb183e550b3bdec83c30",
+      "expectedSHA256": "a2a8a0a2d24767489e67087336ced9e0563f7eacf769cb183e550b3bdec83c30",
+      "baselineTreeSHA256": "de0d340a9e36af29e5f80c5e81f714d0828d61c4d6b6531b88236798eaa65af0",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "mathaccent": true
+          },
+          "expected": {
+            "texClass": 0,
+            "mathaccent": true
+          },
+          "baselinePath": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "accent-script-8-display": {
+      "category": "exact-inherited-own-fields",
+      "primarySHA256": "a2a8a0a2d24767489e67087336ced9e0563f7eacf769cb183e550b3bdec83c30",
+      "expectedSHA256": "a2a8a0a2d24767489e67087336ced9e0563f7eacf769cb183e550b3bdec83c30",
+      "baselineTreeSHA256": "e55a2af4ed3ca4bb223c0eda60405709c0286129dfabbfa1fafaacb902840470",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "mathaccent": true
+          },
+          "expected": {
+            "texClass": 0,
+            "mathaccent": true
+          },
+          "baselinePath": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "nested-hat-vec-inline": {
+      "category": "exact-inherited-own-fields",
+      "primarySHA256": "9078c84fa9e3be68315ee144e6423c93141b8ac9c34d8a9094ac796da252db0a",
+      "expectedSHA256": "9078c84fa9e3be68315ee144e6423c93141b8ac9c34d8a9094ac796da252db0a",
+      "baselineTreeSHA256": "a350468f7e465bfae7e9442c1382b7bd3bbcae7759bceedef518070dcda226c6",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "mathaccent": true,
+            "texprimestyle": true
+          },
+          "expected": {
+            "texClass": 0,
+            "mathaccent": true,
+            "texprimestyle": true
+          },
+          "baselinePath": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "mathaccent": true
+          },
+          "expected": {
+            "texClass": 0,
+            "mathaccent": true
+          },
+          "baselinePath": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "nested-hat-vec-display": {
+      "category": "exact-inherited-own-fields",
+      "primarySHA256": "735fec2d2e099a6ae4a00ae96b6b5f0994c3c93bf10dc31a630e8c9dcab83d9b",
+      "expectedSHA256": "735fec2d2e099a6ae4a00ae96b6b5f0994c3c93bf10dc31a630e8c9dcab83d9b",
+      "baselineTreeSHA256": "2c86731ac898f9ca02d357eab25d301a945f48bfc6082b68a29ed6236212671f",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "mathaccent": true,
+            "texprimestyle": true
+          },
+          "expected": {
+            "texClass": 0,
+            "mathaccent": true,
+            "texprimestyle": true
+          },
+          "baselinePath": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "mathaccent": true
+          },
+          "expected": {
+            "texClass": 0,
+            "mathaccent": true
+          },
+          "baselinePath": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "nested-vec-hat-inline": {
+      "category": "exact-inherited-own-fields",
+      "primarySHA256": "434aa333c024d14bdb22fee2e5e46c3f6fb727fec58131dfdd764a24d682a747",
+      "expectedSHA256": "434aa333c024d14bdb22fee2e5e46c3f6fb727fec58131dfdd764a24d682a747",
+      "baselineTreeSHA256": "8d22d9e7c159b997c8111e8b2b3108de61ba49b0719b04d42d5c9d10920b6aba",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "mathaccent": true,
+            "texprimestyle": true
+          },
+          "expected": {
+            "texClass": 0,
+            "mathaccent": true,
+            "texprimestyle": true
+          },
+          "baselinePath": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "mathaccent": true
+          },
+          "expected": {
+            "texClass": 0,
+            "mathaccent": true
+          },
+          "baselinePath": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "nested-vec-hat-display": {
+      "category": "exact-inherited-own-fields",
+      "primarySHA256": "434aa333c024d14bdb22fee2e5e46c3f6fb727fec58131dfdd764a24d682a747",
+      "expectedSHA256": "434aa333c024d14bdb22fee2e5e46c3f6fb727fec58131dfdd764a24d682a747",
+      "baselineTreeSHA256": "3a80cdb71af083c9c4ef8cb9848763df36eea40adaff05736f89f914fc57c60c",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "mathaccent": true,
+            "texprimestyle": true
+          },
+          "expected": {
+            "texClass": 0,
+            "mathaccent": true,
+            "texprimestyle": true
+          },
+          "baselinePath": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "mathaccent": true
+          },
+          "expected": {
+            "texClass": 0,
+            "mathaccent": true
+          },
+          "baselinePath": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "both-scripts-inline": {
+      "category": "exact-inherited-own-fields",
+      "primarySHA256": "0cbd5228289fd48ac5b90be7135b7648f49335d7cd83c141d569532c4136c3db",
+      "expectedSHA256": "0cbd5228289fd48ac5b90be7135b7648f49335d7cd83c141d569532c4136c3db",
+      "baselineTreeSHA256": "7b754518c115049690585214101ccba22896078a9492a061dc9d93fa3a413477",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "mathaccent": true
+          },
+          "expected": {
+            "texClass": 0,
+            "mathaccent": true
+          },
+          "baselinePath": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "both-scripts-display": {
+      "category": "exact-inherited-own-fields",
+      "primarySHA256": "1392cda07ce42f084305c174be37e3a032f50df411179eb2f5a6cdff6a09d3d9",
+      "expectedSHA256": "1392cda07ce42f084305c174be37e3a032f50df411179eb2f5a6cdff6a09d3d9",
+      "baselineTreeSHA256": "96622c54340c9c0608fc62e2bd3168b6753d2b12f54c73740be59fcb17092752",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "mathaccent": true
+          },
+          "expected": {
+            "texClass": 0,
+            "mathaccent": true
+          },
+          "baselinePath": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "multichar-inline": {
+      "category": "exact-inherited-own-fields",
+      "primarySHA256": "c8186ccd06ed6013e7b86eff9deabd6733ae3aef1af6fc6c201e695a1b8e9969",
+      "expectedSHA256": "c8186ccd06ed6013e7b86eff9deabd6733ae3aef1af6fc6c201e695a1b8e9969",
+      "baselineTreeSHA256": "2266a4b42646913d6026efad7945639d26474c7b4a024822b555359d8262e4ba",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "mathaccent": true
+          },
+          "expected": {
+            "texClass": 0,
+            "mathaccent": true
+          },
+          "baselinePath": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "multichar-display": {
+      "category": "exact-inherited-own-fields",
+      "primarySHA256": "c8186ccd06ed6013e7b86eff9deabd6733ae3aef1af6fc6c201e695a1b8e9969",
+      "expectedSHA256": "c8186ccd06ed6013e7b86eff9deabd6733ae3aef1af6fc6c201e695a1b8e9969",
+      "baselineTreeSHA256": "d9edf9685da8bb856485c359a7a5e7e8e6bf101b5ac6a50e8f47c84424085b6a",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "mathaccent": true
+          },
+          "expected": {
+            "texClass": 0,
+            "mathaccent": true
+          },
+          "baselinePath": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "group-inline": {
+      "category": "exact-inherited-own-fields",
+      "primarySHA256": "eaffb9f75b9564c8642fb25007f15b8827efadab169d952ae04f3b4cdec50c06",
+      "expectedSHA256": "eaffb9f75b9564c8642fb25007f15b8827efadab169d952ae04f3b4cdec50c06",
+      "baselineTreeSHA256": "7dedcc7fa26b79b815d73ddc962c1d052af6e6e5d0c45f2e95b2e8601202662d",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "mathaccent": true
+          },
+          "expected": {
+            "texClass": 0,
+            "mathaccent": true
+          },
+          "baselinePath": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "group-display": {
+      "category": "exact-inherited-own-fields",
+      "primarySHA256": "509f607b513fc2d94244ed035a3dac6cfd277fdeb9bca41f45e2e822e328ab0b",
+      "expectedSHA256": "509f607b513fc2d94244ed035a3dac6cfd277fdeb9bca41f45e2e822e328ab0b",
+      "baselineTreeSHA256": "6c61316e7384036248c0ad9a6c667f6611101adf4279d534c505a8b7d2be620b",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "mathaccent": true
+          },
+          "expected": {
+            "texClass": 0,
+            "mathaccent": true
+          },
+          "baselinePath": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "scaled-base-inline": {
+      "category": "exact-inherited-own-fields",
+      "primarySHA256": "f02858e4f503b960af04c69bb0d5291ac61fed053ff86a065a99178180ad488c",
+      "expectedSHA256": "f02858e4f503b960af04c69bb0d5291ac61fed053ff86a065a99178180ad488c",
+      "baselineTreeSHA256": "9bb62d7b04326345951ea22fe9fc71419a00c297f96d5c6ef1b2be5f3b77a8fb",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "mathaccent": true
+          },
+          "expected": {
+            "texClass": 0,
+            "mathaccent": true
+          },
+          "baselinePath": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "scaled-base-display": {
+      "category": "exact-inherited-own-fields",
+      "primarySHA256": "510244880ab898499bd956a4d6da956af35cc2819e887df6ae74e92e7543c952",
+      "expectedSHA256": "510244880ab898499bd956a4d6da956af35cc2819e887df6ae74e92e7543c952",
+      "baselineTreeSHA256": "974702df7fa813dbca59a974a5e87e5f5a0c275fc8f6813d7868a0a65d82f429",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "mathaccent": true
+          },
+          "expected": {
+            "texClass": 0,
+            "mathaccent": true
+          },
+          "baselinePath": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "scaled-accent-inline": {
+      "category": "exact-inherited-own-fields",
+      "primarySHA256": "3bae0c7c949dc93015ad7e69b5fdaeac8902096c40724e8a0ed08ff2a69ca8f7",
+      "expectedSHA256": "3bae0c7c949dc93015ad7e69b5fdaeac8902096c40724e8a0ed08ff2a69ca8f7",
+      "baselineTreeSHA256": "0384712a2c0ad285340861a99fb65aaa683c4e661c93d93ad574d812c132c35c",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "mathaccent": true
+          },
+          "expected": {
+            "texClass": 0,
+            "mathaccent": true
+          },
+          "baselinePath": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "scaled-accent-display": {
+      "category": "exact-inherited-own-fields",
+      "primarySHA256": "7b7c12f3b6fb9172a43c250c2a901bacfaa4e37090fbbbceadd7fed6b5934596",
+      "expectedSHA256": "7b7c12f3b6fb9172a43c250c2a901bacfaa4e37090fbbbceadd7fed6b5934596",
+      "baselineTreeSHA256": "2782f1177519d14035bbe4dcc2df76cdbbbc272aa7a15d1f2322359828a79228",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "mathaccent": true
+          },
+          "expected": {
+            "texClass": 0,
+            "mathaccent": true
+          },
+          "baselinePath": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "nested-line-inline": {
+      "category": "exact-inherited-own-fields",
+      "primarySHA256": "3483ed084ddd47bedde934a248150588412085a56e8caff62f62e2eddee85f76",
+      "expectedSHA256": "3483ed084ddd47bedde934a248150588412085a56e8caff62f62e2eddee85f76",
+      "baselineTreeSHA256": "beb5f2353cff72a355747429e257c38885593b4b610b5861b89071dc4bd7cf3a",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accent": true
+          },
+          "baselinePath": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "subsupOK": true
+          },
+          "expected": {},
+          "baselinePath": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "mathaccent": true,
+            "texprimestyle": true
+          },
+          "expected": {
+            "texClass": 0,
+            "mathaccent": true,
+            "texprimestyle": true
+          },
+          "baselinePath": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "attributes",
+          "primary": {
+            "accent": true
+          },
+          "expected": {},
+          "baselinePath": [
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {},
+          "expected": {
+            "texClass": 0
+          },
+          "baselinePath": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "nested-line-display": {
+      "category": "exact-inherited-own-fields",
+      "primarySHA256": "3483ed084ddd47bedde934a248150588412085a56e8caff62f62e2eddee85f76",
+      "expectedSHA256": "3483ed084ddd47bedde934a248150588412085a56e8caff62f62e2eddee85f76",
+      "baselineTreeSHA256": "dacba04a127af1f0eabd798ce21746bdb2451389387771c5b9eb0a6df7ac929d",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accent": true
+          },
+          "baselinePath": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "subsupOK": true
+          },
+          "expected": {},
+          "baselinePath": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "mathaccent": true,
+            "texprimestyle": true
+          },
+          "expected": {
+            "texClass": 0,
+            "mathaccent": true,
+            "texprimestyle": true
+          },
+          "baselinePath": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "attributes",
+          "primary": {
+            "accent": true
+          },
+          "expected": {},
+          "baselinePath": [
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {},
+          "expected": {
+            "texClass": 0
+          },
+          "baselinePath": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "nested-bar-inline": {
+      "category": "exact-inherited-own-fields",
+      "primarySHA256": "70eea22e6c0f55bac312afaa83d22f7a68df85ecb7a130022d536358da98573b",
+      "expectedSHA256": "70eea22e6c0f55bac312afaa83d22f7a68df85ecb7a130022d536358da98573b",
+      "baselineTreeSHA256": "4ae42a60fd8714a510b13418a2b878fcd6cddad3060ceb02ca0ace6159c23c2b",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "mathaccent": true,
+            "texprimestyle": true
+          },
+          "expected": {
+            "texClass": 0,
+            "mathaccent": true,
+            "texprimestyle": true
+          },
+          "baselinePath": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "mathaccent": true
+          },
+          "expected": {
+            "texClass": 0,
+            "mathaccent": true
+          },
+          "baselinePath": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "nested-bar-display": {
+      "category": "exact-inherited-own-fields",
+      "primarySHA256": "fc6fdaca9a48e1b71345970ead22c084e8bb8796abb9057caadf708e81a312cb",
+      "expectedSHA256": "fc6fdaca9a48e1b71345970ead22c084e8bb8796abb9057caadf708e81a312cb",
+      "baselineTreeSHA256": "06e1c1f0dc748665dcb23590e0719e1eb55281e9d7d27cd6308a2fa71d445191",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "mathaccent": true,
+            "texprimestyle": true
+          },
+          "expected": {
+            "texClass": 0,
+            "mathaccent": true,
+            "texprimestyle": true
+          },
+          "baselinePath": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "mathaccent": true
+          },
+          "expected": {
+            "texClass": 0,
+            "mathaccent": true
+          },
+          "baselinePath": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "fixed-delimiter-inline": {
+      "category": "exact-inherited-own-fields",
+      "primarySHA256": "1a89ed32530275a09648a79eaaa936e74eb6f6b42b4ed2811cec44d3ce57c342",
+      "expectedSHA256": "1a89ed32530275a09648a79eaaa936e74eb6f6b42b4ed2811cec44d3ce57c342",
+      "baselineTreeSHA256": "0bd1ac03f971d7ef99dc454dc636ce7b487d705e8335444d97f8aa6b3e58c18b",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "mathaccent": true
+          },
+          "expected": {
+            "texClass": 0,
+            "mathaccent": true
+          },
+          "baselinePath": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "fixed-delimiter-display": {
+      "category": "exact-inherited-own-fields",
+      "primarySHA256": "1a89ed32530275a09648a79eaaa936e74eb6f6b42b4ed2811cec44d3ce57c342",
+      "expectedSHA256": "1a89ed32530275a09648a79eaaa936e74eb6f6b42b4ed2811cec44d3ce57c342",
+      "baselineTreeSHA256": "c7c919dc93006ebc877a9852110dada56c5416b9d7c12e9c630eb383a8341689",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "mathaccent": true
+          },
+          "expected": {
+            "texClass": 0,
+            "mathaccent": true
+          },
+          "baselinePath": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "large-op-inline": {
+      "category": "exact-inherited-own-fields",
+      "primarySHA256": "14d675a67132d05aea7e64787593fcbb6866ea65f7bd0ae824bd98414700e2c1",
+      "expectedSHA256": "14d675a67132d05aea7e64787593fcbb6866ea65f7bd0ae824bd98414700e2c1",
+      "baselineTreeSHA256": "b4f1e74ed7a0e80a5eb74258fc94643d679430afbf0b72b7090c58b18fc8de6d",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "mathaccent": true
+          },
+          "expected": {
+            "texClass": 0,
+            "mathaccent": true
+          },
+          "baselinePath": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "large-op-display": {
+      "category": "exact-inherited-own-fields",
+      "primarySHA256": "5ac330cd20968ddaf4f4bf8196ba5c7d478548142315ed5326f959c19a656144",
+      "expectedSHA256": "5ac330cd20968ddaf4f4bf8196ba5c7d478548142315ed5326f959c19a656144",
+      "baselineTreeSHA256": "565450b708f4e2e1bb7fa315de4e5cfb75bd9f4b4e782906046d9b2bb84ccc41",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "mathaccent": true
+          },
+          "expected": {
+            "texClass": 0,
+            "mathaccent": true
+          },
+          "baselinePath": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "bar-both-inline": {
+      "category": "exact-inherited-own-fields",
+      "primarySHA256": "fbfc848377ed4addb6d60b5a4263e9f8d3abed60a04df63c8618ca71a09056a9",
+      "expectedSHA256": "fbfc848377ed4addb6d60b5a4263e9f8d3abed60a04df63c8618ca71a09056a9",
+      "baselineTreeSHA256": "1a37bb8444b2b57474acd6d10da3570ac91d87873cf27ec13c1e62f0541962d3",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "mathaccent": true
+          },
+          "expected": {
+            "texClass": 0,
+            "mathaccent": true
+          },
+          "baselinePath": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "bar-both-display": {
+      "category": "exact-inherited-own-fields",
+      "primarySHA256": "b088dfdc9dd566fafe08224dc3500fcd29ecb3cacfea14a236f4d2570f1dcf2f",
+      "expectedSHA256": "b088dfdc9dd566fafe08224dc3500fcd29ecb3cacfea14a236f4d2570f1dcf2f",
+      "baselineTreeSHA256": "62552a5348735968a7af560cb8658e7212fcff799d0d5ef52cc347042104967e",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "mathaccent": true
+          },
+          "expected": {
+            "texClass": 0,
+            "mathaccent": true
+          },
+          "baselinePath": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "bar-multichar-inline": {
+      "category": "exact-inherited-own-fields",
+      "primarySHA256": "ff9aaf3b761945c9c04777355020237ec02dba8601d4a9d5bf4f40d3e43c942f",
+      "expectedSHA256": "ff9aaf3b761945c9c04777355020237ec02dba8601d4a9d5bf4f40d3e43c942f",
+      "baselineTreeSHA256": "dabbffdd5f266248c8a3e8d79028920af118fff581b1f546f4abdd8a9a9ec92f",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "mathaccent": true
+          },
+          "expected": {
+            "texClass": 0,
+            "mathaccent": true
+          },
+          "baselinePath": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "bar-multichar-display": {
+      "category": "exact-inherited-own-fields",
+      "primarySHA256": "ff9aaf3b761945c9c04777355020237ec02dba8601d4a9d5bf4f40d3e43c942f",
+      "expectedSHA256": "ff9aaf3b761945c9c04777355020237ec02dba8601d4a9d5bf4f40d3e43c942f",
+      "baselineTreeSHA256": "6bbcf7602b4363107acf5038c9829eb24af15d65756b1c66650e6535f4f908ae",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "mathaccent": true
+          },
+          "expected": {
+            "texClass": 0,
+            "mathaccent": true
+          },
+          "baselinePath": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "nested-under-inline": {
+      "category": "unchanged-underline-subscript-error",
+      "primarySHA256": "857d88993cec308a381a0b84126be0087bcf86ae6d640c274d2e84a165cd5c34",
+      "expectedSHA256": "3c55f3ef99abff7c8b924939af339d657ef2b2d7db51ee4a836f2979400ca910",
+      "baselineTreeSHA256": "a499f498d5155a65908e41edff83860bad69a3e97bbabc0e6069fb579bbb5bda",
+      "expectedTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Double subscripts: use braces to clarify"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Double subscripts: use braces to clarify",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "differences": []
+    },
+    "nested-under-display": {
+      "category": "unchanged-underline-subscript-error",
+      "primarySHA256": "857d88993cec308a381a0b84126be0087bcf86ae6d640c274d2e84a165cd5c34",
+      "expectedSHA256": "3c55f3ef99abff7c8b924939af339d657ef2b2d7db51ee4a836f2979400ca910",
+      "baselineTreeSHA256": "02efda89be3985e67b88c83e0dd22e47407bd5dd7811f08c3581c9ce1ac6faaa",
+      "expectedTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Double subscripts: use braces to clarify"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Double subscripts: use braces to clarify",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "differences": []
+    }
+  }
+}

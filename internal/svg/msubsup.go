@@ -19,22 +19,85 @@ func (w *wrapper) scriptBase() *wrapper {
 }
 
 func (w *wrapper) scriptBaseCore() *wrapper {
-	core := w.scriptBase()
-	for core != nil && len(core.children) == 1 {
-		switch core.node.Kind {
-		case "mrow", "mstyle", "mpadded", "mphantom", "semantics":
-			core = core.children[0]
-		case "TeXAtom":
-			if effectiveTeXClass(core.node) != 8 {
-				core = core.children[0]
-				continue
-			}
-			return core
-		default:
-			return core
+	core, _, _ := w.scriptBaseInfo()
+	return core
+}
+
+// CommonScriptbase.getBaseCore keeps the first under/over accent flags while
+// descending through transparent wrappers and constructor-classified math
+// accents. A false outer flag must not be replaced by a true inner one.
+func (w *wrapper) scriptBaseInfo() (core *wrapper, over, under bool) {
+	seenAccent := false
+	record := func(current *wrapper) {
+		if current == nil || seenAccent {
+			return
+		}
+		switch current.node.Kind {
+		case "munder", "mover", "munderover":
+			seenAccent = true
+			a, _ := current.node.Attributes.Get("accent")
+			b, _ := current.node.Attributes.Get("accentunder")
+			over, under = mathAccentTruthy(a), mathAccentTruthy(b)
 		}
 	}
-	return core
+	core = w.scriptBase()
+	for core != nil {
+		descend := false
+		switch core.node.Kind {
+		case "mrow", "mstyle", "mpadded", "mphantom", "semantics":
+			descend = len(core.children) == 1
+		case "TeXAtom":
+			descend = len(core.children) == 1 && effectiveTeXClass(core.node) != 8
+		case "munder", "mover", "munderover":
+			descend = core.isMathAccent && len(core.children) != 0
+		}
+		record(core)
+		if !descend {
+			break
+		}
+		core = core.children[0]
+	}
+	return
+}
+
+// Classification precedes this wrapper's stretching, as in the source
+// CommonScriptbase constructor. Its scriptChild is child 1 even for the
+// three-child munderover family. coreMO is not restricted to an mo result.
+func (w *wrapper) initializeMathAccent() {
+	if len(w.children) < 2 {
+		return
+	}
+	// The source computes baseScale/baseIc before isCharBase; preserve the
+	// lazy base measurement that can select an operator's size.
+	w.baseIC()
+	base := w.scriptBaseCore()
+	if base == nil || base.bbox.RScale != 1 || utf8.RuneCountInString(nodeText(base.node)) != 1 {
+		return
+	}
+	switch base.node.Kind {
+	case "mi", "mn":
+	case "mo":
+		if base.sizeSet {
+			return
+		}
+	default:
+		return
+	}
+	script := movableLimitCore(w.children[1])
+	if script != nil {
+		marker, _ := script.node.Property("mathaccent")
+		w.isMathAccent = mathAccentTruthy(marker)
+	}
+}
+
+// Internal mathaccent and accent flags use JavaScript truthiness. In
+// particular, the strings "false" and "0" are true; do not change the
+// renderer's separate boolean-attribute conversion policy.
+func mathAccentTruthy(value any) bool {
+	if text, ok := value.(string); ok {
+		return text != ""
+	}
+	return truthy(value)
 }
 
 func (w *wrapper) baseScale() float64 {
