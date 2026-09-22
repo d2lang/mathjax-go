@@ -38,32 +38,6 @@ func projectStackTree(n *mml.Node) *stackTree {
 	return r
 }
 func TestStackPlacementPinnedReferences(t *testing.T) {
-	// Keep the unrelated preexisting script-attachment boundary byte-bound to the accepted
-	// parent. They are not counted as raw primary parity cases.
-	boundaryData, err := os.ReadFile("testdata/stack_placement_boundaries.json")
-	if err != nil {
-		t.Fatal(err)
-	}
-	var boundaries struct {
-		Baseline string
-		Cases    map[string]struct {
-			TeX, PrimarySHA256, ExpectedSHA256, Reason string
-			Display                                    bool
-			Width, Height                              int
-			Tree                                       *stackTree
-		}
-	}
-	if err = json.Unmarshal(boundaryData, &boundaries); err != nil {
-		t.Fatal(err)
-	}
-	if boundaries.Baseline != "5836be2e73642e7ee36e6e514ab724c2e687362a" || len(boundaries.Cases) != 2 {
-		t.Fatal("unbound stack boundary matrix")
-	}
-	for _, name := range []string{"subsequent-scripts-inline", "subsequent-scripts-display"} {
-		if _, ok := boundaries.Cases[name]; !ok {
-			t.Fatal("missing precise boundary", name)
-		}
-	}
 	data, err := os.ReadFile("testdata/stack_placement_mathjax_3_2_2.json")
 	if err != nil {
 		t.Fatal(err)
@@ -85,12 +59,6 @@ func TestStackPlacementPinnedReferences(t *testing.T) {
 	for _, c := range fixture.Cases {
 		t.Run(c.Name, func(t *testing.T) {
 			wantTree, wantSVG, wantWidth, wantHeight := c.Tree, c.SVGSHA256, c.Width, c.Height
-			if b, ok := boundaries.Cases[c.Name]; ok {
-				if b.TeX != c.TeX || b.Display != c.Display || b.PrimarySHA256 != c.SVGSHA256 || b.ExpectedSHA256 == c.SVGSHA256 || b.Reason == "" {
-					t.Fatal("changed boundary source or primary reference")
-				}
-				wantTree, wantSVG, wantWidth, wantHeight = b.Tree, b.ExpectedSHA256, b.Width, b.Height
-			}
 			root, err := tex.NewCompiler().Compile(c.TeX, c.Display)
 			if err != nil {
 				t.Fatal(err)
