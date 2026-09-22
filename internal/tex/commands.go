@@ -766,6 +766,7 @@ func (p *parser) underOver(name string) ([]*mml.Node, error) {
 		stack.SetProperty("subsupOK", true)
 		return []*mml.Node{stack}, nil
 	}
+	checkMovableLimits(base)
 	if under {
 		return []*mml.Node{setAttributes(node("munder", base, mark), map[string]any{"accentunder": true})}, nil
 	}

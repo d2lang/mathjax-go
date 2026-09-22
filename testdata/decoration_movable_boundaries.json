@@ -1,0 +1,3323 @@
+{
+  "baseline": "69ae099022c270469016a6a83f9f9ae13d98e320",
+  "cases": {
+    "underline-sub-inline": {
+      "primarySHA256": "f794abcf368f1f28690f62dccc76f7b0ac254f8a5819583ba600d014323ead6b",
+      "baselineSHA256": "3c55f3ef99abff7c8b924939af339d657ef2b2d7db51ee4a836f2979400ca910",
+      "baselineTreeSHA256": "a499f498d5155a65908e41edff83860bad69a3e97bbabc0e6069fb579bbb5bda",
+      "expectedSHA256": "3c55f3ef99abff7c8b924939af339d657ef2b2d7db51ee4a836f2979400ca910",
+      "category": "unchanged-D071-error",
+      "expectedTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Double subscripts: use braces to clarify"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Double subscripts: use braces to clarify",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "differences": []
+    },
+    "underline-sub-display": {
+      "primarySHA256": "f794abcf368f1f28690f62dccc76f7b0ac254f8a5819583ba600d014323ead6b",
+      "baselineSHA256": "3c55f3ef99abff7c8b924939af339d657ef2b2d7db51ee4a836f2979400ca910",
+      "baselineTreeSHA256": "02efda89be3985e67b88c83e0dd22e47407bd5dd7811f08c3581c9ce1ac6faaa",
+      "expectedSHA256": "3c55f3ef99abff7c8b924939af339d657ef2b2d7db51ee4a836f2979400ca910",
+      "category": "unchanged-D071-error",
+      "expectedTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Double subscripts: use braces to clarify"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Double subscripts: use braces to clarify",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "differences": []
+    },
+    "underright-sub-inline": {
+      "primarySHA256": "b2891dc906f4a68286e9e72762e3d1bebc6708bd3107fc10ebdb79558df85531",
+      "baselineSHA256": "3c55f3ef99abff7c8b924939af339d657ef2b2d7db51ee4a836f2979400ca910",
+      "baselineTreeSHA256": "a499f498d5155a65908e41edff83860bad69a3e97bbabc0e6069fb579bbb5bda",
+      "expectedSHA256": "3c55f3ef99abff7c8b924939af339d657ef2b2d7db51ee4a836f2979400ca910",
+      "category": "unchanged-D071-error",
+      "expectedTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Double subscripts: use braces to clarify"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Double subscripts: use braces to clarify",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "differences": []
+    },
+    "underright-sub-display": {
+      "primarySHA256": "b2891dc906f4a68286e9e72762e3d1bebc6708bd3107fc10ebdb79558df85531",
+      "baselineSHA256": "3c55f3ef99abff7c8b924939af339d657ef2b2d7db51ee4a836f2979400ca910",
+      "baselineTreeSHA256": "02efda89be3985e67b88c83e0dd22e47407bd5dd7811f08c3581c9ce1ac6faaa",
+      "expectedSHA256": "3c55f3ef99abff7c8b924939af339d657ef2b2d7db51ee4a836f2979400ca910",
+      "category": "unchanged-D071-error",
+      "expectedTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Double subscripts: use braces to clarify"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Double subscripts: use braces to clarify",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "differences": []
+    },
+    "underleft-sub-inline": {
+      "primarySHA256": "cf2e136554fb65a0f9a4ecc02ccbc65cc00f7a94f9e915fc27fa248d2522ce26",
+      "baselineSHA256": "3c55f3ef99abff7c8b924939af339d657ef2b2d7db51ee4a836f2979400ca910",
+      "baselineTreeSHA256": "a499f498d5155a65908e41edff83860bad69a3e97bbabc0e6069fb579bbb5bda",
+      "expectedSHA256": "3c55f3ef99abff7c8b924939af339d657ef2b2d7db51ee4a836f2979400ca910",
+      "category": "unchanged-D071-error",
+      "expectedTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Double subscripts: use braces to clarify"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Double subscripts: use braces to clarify",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "differences": []
+    },
+    "underleft-sub-display": {
+      "primarySHA256": "cf2e136554fb65a0f9a4ecc02ccbc65cc00f7a94f9e915fc27fa248d2522ce26",
+      "baselineSHA256": "3c55f3ef99abff7c8b924939af339d657ef2b2d7db51ee4a836f2979400ca910",
+      "baselineTreeSHA256": "02efda89be3985e67b88c83e0dd22e47407bd5dd7811f08c3581c9ce1ac6faaa",
+      "expectedSHA256": "3c55f3ef99abff7c8b924939af339d657ef2b2d7db51ee4a836f2979400ca910",
+      "category": "unchanged-D071-error",
+      "expectedTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Double subscripts: use braces to clarify"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Double subscripts: use braces to clarify",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "differences": []
+    },
+    "underline-both-inline": {
+      "primarySHA256": "d00fc6829323eb94c7b25e9f359617e65cea1fef905295ab09b4907af936609e",
+      "baselineSHA256": "3c55f3ef99abff7c8b924939af339d657ef2b2d7db51ee4a836f2979400ca910",
+      "baselineTreeSHA256": "a499f498d5155a65908e41edff83860bad69a3e97bbabc0e6069fb579bbb5bda",
+      "expectedSHA256": "3c55f3ef99abff7c8b924939af339d657ef2b2d7db51ee4a836f2979400ca910",
+      "category": "unchanged-D071-error",
+      "expectedTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Double subscripts: use braces to clarify"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Double subscripts: use braces to clarify",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "differences": []
+    },
+    "underline-both-display": {
+      "primarySHA256": "a1cbd1b37edb84b8aea98f2404603c6835e10094b5157bb425df807b5bfa04af",
+      "baselineSHA256": "3c55f3ef99abff7c8b924939af339d657ef2b2d7db51ee4a836f2979400ca910",
+      "baselineTreeSHA256": "02efda89be3985e67b88c83e0dd22e47407bd5dd7811f08c3581c9ce1ac6faaa",
+      "expectedSHA256": "3c55f3ef99abff7c8b924939af339d657ef2b2d7db51ee4a836f2979400ca910",
+      "category": "unchanged-D071-error",
+      "expectedTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Double subscripts: use braces to clarify"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Double subscripts: use braces to clarify",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "differences": []
+    },
+    "underarrow-both-inline": {
+      "primarySHA256": "ba43ecf605fd2bf77c1276a885bba776ea230772cad4eb00101d8753746bf5d2",
+      "baselineSHA256": "3c55f3ef99abff7c8b924939af339d657ef2b2d7db51ee4a836f2979400ca910",
+      "baselineTreeSHA256": "a499f498d5155a65908e41edff83860bad69a3e97bbabc0e6069fb579bbb5bda",
+      "expectedSHA256": "3c55f3ef99abff7c8b924939af339d657ef2b2d7db51ee4a836f2979400ca910",
+      "category": "unchanged-D071-error",
+      "expectedTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Double subscripts: use braces to clarify"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Double subscripts: use braces to clarify",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "differences": []
+    },
+    "underarrow-both-display": {
+      "primarySHA256": "36769099f144f9a952217226d27d2791d2c2500708c81b26df75a4473fc8a97b",
+      "baselineSHA256": "3c55f3ef99abff7c8b924939af339d657ef2b2d7db51ee4a836f2979400ca910",
+      "baselineTreeSHA256": "02efda89be3985e67b88c83e0dd22e47407bd5dd7811f08c3581c9ce1ac6faaa",
+      "expectedSHA256": "3c55f3ef99abff7c8b924939af339d657ef2b2d7db51ee4a836f2979400ca910",
+      "category": "unchanged-D071-error",
+      "expectedTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Double subscripts: use braces to clarify"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Double subscripts: use braces to clarify",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "differences": []
+    },
+    "underline-grouped-inline": {
+      "primarySHA256": "90ec4f683a40e861dfebd486f20a375c6bb0647c2679a9c3911f4a2b3cb08ea9",
+      "baselineSHA256": "90ec4f683a40e861dfebd486f20a375c6bb0647c2679a9c3911f4a2b3cb08ea9",
+      "baselineTreeSHA256": "662c1960238a639c2a3f60a90521098b4415b1714e80a582585767c80d54ec03",
+      "expectedSHA256": "90ec4f683a40e861dfebd486f20a375c6bb0647c2679a9c3911f4a2b3cb08ea9",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accentunder": true
+          },
+          "baselineKind": "munder",
+          "expectedKind": "munder"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "subsupOK": true
+          },
+          "expected": {},
+          "baselineKind": "munder",
+          "expectedKind": "munder"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "attributes",
+          "primary": {
+            "accent": true
+          },
+          "expected": {},
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "texprimestyle": true
+          },
+          "expected": {
+            "texClass": 0,
+            "texprimestyle": true
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "underline-grouped-display": {
+      "primarySHA256": "90ec4f683a40e861dfebd486f20a375c6bb0647c2679a9c3911f4a2b3cb08ea9",
+      "baselineSHA256": "90ec4f683a40e861dfebd486f20a375c6bb0647c2679a9c3911f4a2b3cb08ea9",
+      "baselineTreeSHA256": "2984869e1b8f40bdafada64ae348f721725e8f150f48b9b3c6c3554cb82c52a5",
+      "expectedSHA256": "90ec4f683a40e861dfebd486f20a375c6bb0647c2679a9c3911f4a2b3cb08ea9",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accentunder": true
+          },
+          "baselineKind": "munder",
+          "expectedKind": "munder"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "subsupOK": true
+          },
+          "expected": {},
+          "baselineKind": "munder",
+          "expectedKind": "munder"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "attributes",
+          "primary": {
+            "accent": true
+          },
+          "expected": {},
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "texprimestyle": true
+          },
+          "expected": {
+            "texClass": 0,
+            "texprimestyle": true
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "underline-nested-inline": {
+      "primarySHA256": "857d88993cec308a381a0b84126be0087bcf86ae6d640c274d2e84a165cd5c34",
+      "baselineSHA256": "3c55f3ef99abff7c8b924939af339d657ef2b2d7db51ee4a836f2979400ca910",
+      "baselineTreeSHA256": "a499f498d5155a65908e41edff83860bad69a3e97bbabc0e6069fb579bbb5bda",
+      "expectedSHA256": "3c55f3ef99abff7c8b924939af339d657ef2b2d7db51ee4a836f2979400ca910",
+      "category": "unchanged-D071-error",
+      "expectedTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Double subscripts: use braces to clarify"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Double subscripts: use braces to clarify",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "differences": []
+    },
+    "underline-nested-display": {
+      "primarySHA256": "857d88993cec308a381a0b84126be0087bcf86ae6d640c274d2e84a165cd5c34",
+      "baselineSHA256": "3c55f3ef99abff7c8b924939af339d657ef2b2d7db51ee4a836f2979400ca910",
+      "baselineTreeSHA256": "02efda89be3985e67b88c83e0dd22e47407bd5dd7811f08c3581c9ce1ac6faaa",
+      "expectedSHA256": "3c55f3ef99abff7c8b924939af339d657ef2b2d7db51ee4a836f2979400ca910",
+      "category": "unchanged-D071-error",
+      "expectedTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Double subscripts: use braces to clarify"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Double subscripts: use braces to clarify",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "differences": []
+    },
+    "underline-multichar-inline": {
+      "primarySHA256": "fdf26e5d433b6f535dfe0489912da03898ed8a419ae0e700d9e51f48222b10cd",
+      "baselineSHA256": "3c55f3ef99abff7c8b924939af339d657ef2b2d7db51ee4a836f2979400ca910",
+      "baselineTreeSHA256": "a499f498d5155a65908e41edff83860bad69a3e97bbabc0e6069fb579bbb5bda",
+      "expectedSHA256": "3c55f3ef99abff7c8b924939af339d657ef2b2d7db51ee4a836f2979400ca910",
+      "category": "unchanged-D071-error",
+      "expectedTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Double subscripts: use braces to clarify"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Double subscripts: use braces to clarify",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "differences": []
+    },
+    "underline-multichar-display": {
+      "primarySHA256": "fdf26e5d433b6f535dfe0489912da03898ed8a419ae0e700d9e51f48222b10cd",
+      "baselineSHA256": "3c55f3ef99abff7c8b924939af339d657ef2b2d7db51ee4a836f2979400ca910",
+      "baselineTreeSHA256": "02efda89be3985e67b88c83e0dd22e47407bd5dd7811f08c3581c9ce1ac6faaa",
+      "expectedSHA256": "3c55f3ef99abff7c8b924939af339d657ef2b2d7db51ee4a836f2979400ca910",
+      "category": "unchanged-D071-error",
+      "expectedTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Double subscripts: use braces to clarify"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Double subscripts: use braces to clarify",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "differences": []
+    },
+    "underline-bare-inline": {
+      "primarySHA256": "7ad6b49b5bf62350b2d7a1577072424eb47635e49b78aefecafbc4c46729c4e6",
+      "baselineSHA256": "7ad6b49b5bf62350b2d7a1577072424eb47635e49b78aefecafbc4c46729c4e6",
+      "baselineTreeSHA256": "387fa1210e1766d9273320dfbdfd1a1fb9b3e92d956f1f67b0037044cfcacb13",
+      "expectedSHA256": "7ad6b49b5bf62350b2d7a1577072424eb47635e49b78aefecafbc4c46729c4e6",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accentunder": true
+          },
+          "baselineKind": "munder",
+          "expectedKind": "munder"
+        },
+        {
+          "path": [
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "subsupOK": true
+          },
+          "expected": {},
+          "baselineKind": "munder",
+          "expectedKind": "munder"
+        },
+        {
+          "path": [
+            0,
+            0,
+            1
+          ],
+          "field": "attributes",
+          "primary": {
+            "accent": true
+          },
+          "expected": {},
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        },
+        {
+          "path": [
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "texprimestyle": true
+          },
+          "expected": {
+            "texClass": 0,
+            "texprimestyle": true
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "underline-bare-display": {
+      "primarySHA256": "7ad6b49b5bf62350b2d7a1577072424eb47635e49b78aefecafbc4c46729c4e6",
+      "baselineSHA256": "7ad6b49b5bf62350b2d7a1577072424eb47635e49b78aefecafbc4c46729c4e6",
+      "baselineTreeSHA256": "98f4ab58b51ac7d981a1f661536d2b0fec6573e577a9342b7269b9aa087145ed",
+      "expectedSHA256": "7ad6b49b5bf62350b2d7a1577072424eb47635e49b78aefecafbc4c46729c4e6",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accentunder": true
+          },
+          "baselineKind": "munder",
+          "expectedKind": "munder"
+        },
+        {
+          "path": [
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "subsupOK": true
+          },
+          "expected": {},
+          "baselineKind": "munder",
+          "expectedKind": "munder"
+        },
+        {
+          "path": [
+            0,
+            0,
+            1
+          ],
+          "field": "attributes",
+          "primary": {
+            "accent": true
+          },
+          "expected": {},
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        },
+        {
+          "path": [
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "texprimestyle": true
+          },
+          "expected": {
+            "texClass": 0,
+            "texprimestyle": true
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "underarrow-bare-inline": {
+      "primarySHA256": "9e8332ef3a534fc47bf735ad77a9004d6e22a7eef6cbb55812256990c58fedb7",
+      "baselineSHA256": "9e8332ef3a534fc47bf735ad77a9004d6e22a7eef6cbb55812256990c58fedb7",
+      "baselineTreeSHA256": "647a1a62e693e06b5f6cc0ddc32d76f62c3ccf5d65d3e04ad4dbf2ce10426b14",
+      "expectedSHA256": "9e8332ef3a534fc47bf735ad77a9004d6e22a7eef6cbb55812256990c58fedb7",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accentunder": true
+          },
+          "baselineKind": "munder",
+          "expectedKind": "munder"
+        },
+        {
+          "path": [
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "subsupOK": true
+          },
+          "expected": {},
+          "baselineKind": "munder",
+          "expectedKind": "munder"
+        },
+        {
+          "path": [
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "texprimestyle": true,
+            "mathaccent": true
+          },
+          "expected": {
+            "texClass": 0,
+            "texprimestyle": true,
+            "mathaccent": true
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "underarrow-bare-display": {
+      "primarySHA256": "9e8332ef3a534fc47bf735ad77a9004d6e22a7eef6cbb55812256990c58fedb7",
+      "baselineSHA256": "9e8332ef3a534fc47bf735ad77a9004d6e22a7eef6cbb55812256990c58fedb7",
+      "baselineTreeSHA256": "7afccc325c96443b104c06ea6c6e576fcae89bc402753a19237a99e2abee3534",
+      "expectedSHA256": "9e8332ef3a534fc47bf735ad77a9004d6e22a7eef6cbb55812256990c58fedb7",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accentunder": true
+          },
+          "baselineKind": "munder",
+          "expectedKind": "munder"
+        },
+        {
+          "path": [
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "subsupOK": true
+          },
+          "expected": {},
+          "baselineKind": "munder",
+          "expectedKind": "munder"
+        },
+        {
+          "path": [
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "texprimestyle": true,
+            "mathaccent": true
+          },
+          "expected": {
+            "texClass": 0,
+            "texprimestyle": true,
+            "mathaccent": true
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "overline-sup-inline": {
+      "primarySHA256": "95e0a6732200ccd63eb7034b56605736a5fd3d9ace58104555d0d10a4412bf3d",
+      "baselineSHA256": "95e0a6732200ccd63eb7034b56605736a5fd3d9ace58104555d0d10a4412bf3d",
+      "baselineTreeSHA256": "8f75469fb780d8161225016e7cd7c70fd847b22962c60dd4ece915045fd170f9",
+      "expectedSHA256": "95e0a6732200ccd63eb7034b56605736a5fd3d9ace58104555d0d10a4412bf3d",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accent": true
+          },
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "subsupOK": true
+          },
+          "expected": {},
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "attributes",
+          "primary": {
+            "accent": true
+          },
+          "expected": {},
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {},
+          "expected": {
+            "texClass": 0
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "overline-sup-display": {
+      "primarySHA256": "95e0a6732200ccd63eb7034b56605736a5fd3d9ace58104555d0d10a4412bf3d",
+      "baselineSHA256": "95e0a6732200ccd63eb7034b56605736a5fd3d9ace58104555d0d10a4412bf3d",
+      "baselineTreeSHA256": "dce75d1b6f41738ea92d98613a058fac023c1ed05e3e53eb35191adca3ce0bec",
+      "expectedSHA256": "95e0a6732200ccd63eb7034b56605736a5fd3d9ace58104555d0d10a4412bf3d",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accent": true
+          },
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "subsupOK": true
+          },
+          "expected": {},
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "attributes",
+          "primary": {
+            "accent": true
+          },
+          "expected": {},
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {},
+          "expected": {
+            "texClass": 0
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "overright-sup-inline": {
+      "primarySHA256": "0407e9b83b3dea880bbc9d0dbbcf1060b8214b3c9fd9c8b9f211c65811754747",
+      "baselineSHA256": "0407e9b83b3dea880bbc9d0dbbcf1060b8214b3c9fd9c8b9f211c65811754747",
+      "baselineTreeSHA256": "de6a35d2a9de1818b454bbf37f6e48840b414a43abe60f98be06c67948a599ae",
+      "expectedSHA256": "0407e9b83b3dea880bbc9d0dbbcf1060b8214b3c9fd9c8b9f211c65811754747",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accent": true
+          },
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "subsupOK": true
+          },
+          "expected": {},
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "mathaccent": true
+          },
+          "expected": {
+            "texClass": 0,
+            "mathaccent": true
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "overright-sup-display": {
+      "primarySHA256": "7896e33e7441d410424e33189a9ed129ae9475c78ef92e34d1e700e53769b9c4",
+      "baselineSHA256": "7896e33e7441d410424e33189a9ed129ae9475c78ef92e34d1e700e53769b9c4",
+      "baselineTreeSHA256": "ecc637254da64a6d3b2a21daf719b7a5832ea4d7fc88d24bacfc6b3e4c79e4b1",
+      "expectedSHA256": "7896e33e7441d410424e33189a9ed129ae9475c78ef92e34d1e700e53769b9c4",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accent": true
+          },
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "subsupOK": true
+          },
+          "expected": {},
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "mathaccent": true
+          },
+          "expected": {
+            "texClass": 0,
+            "mathaccent": true
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "overleft-sup-inline": {
+      "primarySHA256": "d9f11954d1552de7e12f571aec66772410026b8f79f2dc80076fca3aaea9536b",
+      "baselineSHA256": "d9f11954d1552de7e12f571aec66772410026b8f79f2dc80076fca3aaea9536b",
+      "baselineTreeSHA256": "ffc6fa326ccd7b54f2c698f81f8ab79cbfa41b04c7fbc4711df9508010ebcc67",
+      "expectedSHA256": "d9f11954d1552de7e12f571aec66772410026b8f79f2dc80076fca3aaea9536b",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accent": true
+          },
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "subsupOK": true
+          },
+          "expected": {},
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {},
+          "expected": {
+            "texClass": 0
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "overleft-sup-display": {
+      "primarySHA256": "d9f11954d1552de7e12f571aec66772410026b8f79f2dc80076fca3aaea9536b",
+      "baselineSHA256": "d9f11954d1552de7e12f571aec66772410026b8f79f2dc80076fca3aaea9536b",
+      "baselineTreeSHA256": "e812a4968185ee7dea44afa2ed8a6f79557c35fe1444c6906faaf7b29cbafde7",
+      "expectedSHA256": "d9f11954d1552de7e12f571aec66772410026b8f79f2dc80076fca3aaea9536b",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accent": true
+          },
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "subsupOK": true
+          },
+          "expected": {},
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {},
+          "expected": {
+            "texClass": 0
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "bar-sub-inline": {
+      "primarySHA256": "27e4cb9885865914d444082ae064df9e6347ef901764e6dafc8622cea9371425",
+      "baselineSHA256": "27e4cb9885865914d444082ae064df9e6347ef901764e6dafc8622cea9371425",
+      "baselineTreeSHA256": "4152c5a8022fbe98cef60d23b471c1f79cc58b5cee02ff0d1367aacbece97293",
+      "expectedSHA256": "27e4cb9885865914d444082ae064df9e6347ef901764e6dafc8622cea9371425",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "mathaccent": true
+          },
+          "expected": {
+            "texClass": 0,
+            "mathaccent": true
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "bar-sub-display": {
+      "primarySHA256": "27e4cb9885865914d444082ae064df9e6347ef901764e6dafc8622cea9371425",
+      "baselineSHA256": "27e4cb9885865914d444082ae064df9e6347ef901764e6dafc8622cea9371425",
+      "baselineTreeSHA256": "eebced0c83954b4be9777b6f6f6a427965c782a14feaa15faf1e2a7fac6fbf2b",
+      "expectedSHA256": "27e4cb9885865914d444082ae064df9e6347ef901764e6dafc8622cea9371425",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "mathaccent": true
+          },
+          "expected": {
+            "texClass": 0,
+            "mathaccent": true
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "underbrace-label-inline": {
+      "primarySHA256": "13681221e4490dc6a09f7fc68e75aac100738f435d0aa7ae694264a693c41121",
+      "baselineSHA256": "13681221e4490dc6a09f7fc68e75aac100738f435d0aa7ae694264a693c41121",
+      "baselineTreeSHA256": "5e3c5ee061b41969ebbb424f2e567c7931e9ab68130abeeea242f986fca3a129",
+      "expectedSHA256": "13681221e4490dc6a09f7fc68e75aac100738f435d0aa7ae694264a693c41121",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accentunder": true
+          },
+          "baselineKind": "munder",
+          "expectedKind": "munder"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "texprimestyle": true
+          },
+          "expected": {
+            "texClass": 0,
+            "texprimestyle": true
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "underbrace-label-display": {
+      "primarySHA256": "13681221e4490dc6a09f7fc68e75aac100738f435d0aa7ae694264a693c41121",
+      "baselineSHA256": "13681221e4490dc6a09f7fc68e75aac100738f435d0aa7ae694264a693c41121",
+      "baselineTreeSHA256": "bc73cfd45233e9baf968f253759b2a516edf791463b917e1e9f6fba382bd7630",
+      "expectedSHA256": "13681221e4490dc6a09f7fc68e75aac100738f435d0aa7ae694264a693c41121",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accentunder": true
+          },
+          "baselineKind": "munder",
+          "expectedKind": "munder"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "texprimestyle": true
+          },
+          "expected": {
+            "texClass": 0,
+            "texprimestyle": true
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "overbrace-label-inline": {
+      "primarySHA256": "92df5e755295a30284dd6e0e404bfd31211b54e4c7d98b6973bc3c74f69a44f0",
+      "baselineSHA256": "92df5e755295a30284dd6e0e404bfd31211b54e4c7d98b6973bc3c74f69a44f0",
+      "baselineTreeSHA256": "595d7c50ebd6840c912cf4732abf02c1fdb1b21d3a8d6a2f200aaee4d6a3f589",
+      "expectedSHA256": "92df5e755295a30284dd6e0e404bfd31211b54e4c7d98b6973bc3c74f69a44f0",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accent": true
+          },
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "texprimestyle": true
+          },
+          "expected": {
+            "texClass": 0,
+            "texprimestyle": true
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "overbrace-label-display": {
+      "primarySHA256": "92df5e755295a30284dd6e0e404bfd31211b54e4c7d98b6973bc3c74f69a44f0",
+      "baselineSHA256": "92df5e755295a30284dd6e0e404bfd31211b54e4c7d98b6973bc3c74f69a44f0",
+      "baselineTreeSHA256": "f9f97fe41193690272832ab69989071be5c36f99633012889a75a6add944dbf0",
+      "expectedSHA256": "92df5e755295a30284dd6e0e404bfd31211b54e4c7d98b6973bc3c74f69a44f0",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accent": true
+          },
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "texprimestyle": true
+          },
+          "expected": {
+            "texClass": 0,
+            "texprimestyle": true
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "underline-nested-script-inline": {
+      "primarySHA256": "6808c4c97e42a966fdcae5829953494be8f1f65791a0ea25120074876768f3d8",
+      "baselineSHA256": "3c55f3ef99abff7c8b924939af339d657ef2b2d7db51ee4a836f2979400ca910",
+      "baselineTreeSHA256": "a499f498d5155a65908e41edff83860bad69a3e97bbabc0e6069fb579bbb5bda",
+      "expectedSHA256": "3c55f3ef99abff7c8b924939af339d657ef2b2d7db51ee4a836f2979400ca910",
+      "category": "unchanged-D071-error",
+      "expectedTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Double subscripts: use braces to clarify"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Double subscripts: use braces to clarify",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "differences": []
+    },
+    "underline-nested-script-display": {
+      "primarySHA256": "6808c4c97e42a966fdcae5829953494be8f1f65791a0ea25120074876768f3d8",
+      "baselineSHA256": "3c55f3ef99abff7c8b924939af339d657ef2b2d7db51ee4a836f2979400ca910",
+      "baselineTreeSHA256": "02efda89be3985e67b88c83e0dd22e47407bd5dd7811f08c3581c9ce1ac6faaa",
+      "expectedSHA256": "3c55f3ef99abff7c8b924939af339d657ef2b2d7db51ee4a836f2979400ca910",
+      "category": "unchanged-D071-error",
+      "expectedTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Double subscripts: use braces to clarify"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Double subscripts: use braces to clarify",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "differences": []
+    },
+    "underline-sum-sub-inline": {
+      "primarySHA256": "e06127c1be53f82f0c528b620a933c9bdf085b515602323a827b332e03114db9",
+      "baselineSHA256": "3c55f3ef99abff7c8b924939af339d657ef2b2d7db51ee4a836f2979400ca910",
+      "baselineTreeSHA256": "a499f498d5155a65908e41edff83860bad69a3e97bbabc0e6069fb579bbb5bda",
+      "expectedSHA256": "3c55f3ef99abff7c8b924939af339d657ef2b2d7db51ee4a836f2979400ca910",
+      "category": "unchanged-D071-error",
+      "expectedTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Double subscripts: use braces to clarify"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Double subscripts: use braces to clarify",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "differences": []
+    },
+    "underline-sum-sub-display": {
+      "primarySHA256": "5870aff3b14fdec5c8fcb721c988859b8923f06f580e8610fe29cda916874680",
+      "baselineSHA256": "3c55f3ef99abff7c8b924939af339d657ef2b2d7db51ee4a836f2979400ca910",
+      "baselineTreeSHA256": "02efda89be3985e67b88c83e0dd22e47407bd5dd7811f08c3581c9ce1ac6faaa",
+      "expectedSHA256": "3c55f3ef99abff7c8b924939af339d657ef2b2d7db51ee4a836f2979400ca910",
+      "category": "unchanged-D071-error",
+      "expectedTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Double subscripts: use braces to clarify"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Double subscripts: use braces to clarify",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "differences": []
+    },
+    "underright-sum-sub-inline": {
+      "primarySHA256": "9dda36a1945f8327c9059e3b69d8e3cbd85208b89191a84a404030b68eb97181",
+      "baselineSHA256": "3c55f3ef99abff7c8b924939af339d657ef2b2d7db51ee4a836f2979400ca910",
+      "baselineTreeSHA256": "a499f498d5155a65908e41edff83860bad69a3e97bbabc0e6069fb579bbb5bda",
+      "expectedSHA256": "3c55f3ef99abff7c8b924939af339d657ef2b2d7db51ee4a836f2979400ca910",
+      "category": "unchanged-D071-error",
+      "expectedTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Double subscripts: use braces to clarify"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Double subscripts: use braces to clarify",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "differences": []
+    },
+    "underright-sum-sub-display": {
+      "primarySHA256": "724fc1266f679cc356f261fd2c63bf340483939511e11d6f72829b10c48e6238",
+      "baselineSHA256": "3c55f3ef99abff7c8b924939af339d657ef2b2d7db51ee4a836f2979400ca910",
+      "baselineTreeSHA256": "02efda89be3985e67b88c83e0dd22e47407bd5dd7811f08c3581c9ce1ac6faaa",
+      "expectedSHA256": "3c55f3ef99abff7c8b924939af339d657ef2b2d7db51ee4a836f2979400ca910",
+      "category": "unchanged-D071-error",
+      "expectedTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Double subscripts: use braces to clarify"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Double subscripts: use braces to clarify",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "differences": []
+    },
+    "overline-sum-sup-inline": {
+      "primarySHA256": "1a46b390f3bba9d2f398469a0a4096955874a8282a84346d2f7d8569bbae0f77",
+      "baselineSHA256": "c8b6c1ea4c29ddd4b5a20eaf7bebfade94d276ff1bbec35fdccf702de7a4d32d",
+      "baselineTreeSHA256": "53927af89571896d08cb31078e5b6dd69e24aa175aa9db81b4e5bd339326adc0",
+      "expectedSHA256": "1a46b390f3bba9d2f398469a0a4096955874a8282a84346d2f7d8569bbae0f77",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accent": true
+          },
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "subsupOK": true
+          },
+          "expected": {},
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "attributes",
+          "primary": {
+            "accent": true
+          },
+          "expected": {},
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {},
+          "expected": {
+            "texClass": 0
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "overline-sum-sup-display": {
+      "primarySHA256": "8b1f8ddc67d67458cdb4fdd18a84847c7d771b3a31a04cdea22b2e4d4be161ea",
+      "baselineSHA256": "8b1f8ddc67d67458cdb4fdd18a84847c7d771b3a31a04cdea22b2e4d4be161ea",
+      "baselineTreeSHA256": "c09a1a582f79dee4325a7a6d55c9d1c469bd788840405faf613bed133f4cb2c1",
+      "expectedSHA256": "8b1f8ddc67d67458cdb4fdd18a84847c7d771b3a31a04cdea22b2e4d4be161ea",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accent": true
+          },
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "subsupOK": true
+          },
+          "expected": {},
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "attributes",
+          "primary": {
+            "accent": true
+          },
+          "expected": {},
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {},
+          "expected": {
+            "texClass": 0
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "overright-sum-sup-inline": {
+      "primarySHA256": "d1508da42c02423cc1880a7b3986c1659c7dca1683b2b5d6a7c8101ee878d16d",
+      "baselineSHA256": "8662cfe629decb0896d9dd87245ae8942a5c70d79cf9b7ec5a48e4fbe2eee52b",
+      "baselineTreeSHA256": "3b45826fccd624abe6b6c95bd7ec5f1794112eb9b55a99b571d12ff44ef6631e",
+      "expectedSHA256": "d1508da42c02423cc1880a7b3986c1659c7dca1683b2b5d6a7c8101ee878d16d",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accent": true
+          },
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "subsupOK": true
+          },
+          "expected": {},
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "mathaccent": true
+          },
+          "expected": {
+            "texClass": 0,
+            "mathaccent": true
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "overright-sum-sup-display": {
+      "primarySHA256": "79a51f72cb93dbfc450fe82ce6e6c07038e9eb6e083b8cfabc32572a82af1c7c",
+      "baselineSHA256": "79a51f72cb93dbfc450fe82ce6e6c07038e9eb6e083b8cfabc32572a82af1c7c",
+      "baselineTreeSHA256": "128998ca40b97f3db61b65c896acf316d8f2cb3c1aa41eb14987d3071696e055",
+      "expectedSHA256": "79a51f72cb93dbfc450fe82ce6e6c07038e9eb6e083b8cfabc32572a82af1c7c",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accent": true
+          },
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "subsupOK": true
+          },
+          "expected": {},
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "mathaccent": true
+          },
+          "expected": {
+            "texClass": 0,
+            "mathaccent": true
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "overline-product-inline": {
+      "primarySHA256": "63ae1a3791c2d229061c1481cbf71e12a02795083fce6238db8a79a9cc1b6ece",
+      "baselineSHA256": "fc30ff619c8d31130e8b1ef821517db80fd74cd0771d325c399e90bf5d32bd56",
+      "baselineTreeSHA256": "e3ff06a32fa59c0dfbcb9496d080007478b4ab5632ec7bb47b8620ffc4194fd5",
+      "expectedSHA256": "63ae1a3791c2d229061c1481cbf71e12a02795083fce6238db8a79a9cc1b6ece",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accent": true
+          },
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "subsupOK": true
+          },
+          "expected": {},
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "attributes",
+          "primary": {
+            "accent": true
+          },
+          "expected": {},
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {},
+          "expected": {
+            "texClass": 0
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "overline-product-display": {
+      "primarySHA256": "438abe5189751920ac5b755a89c1f6cb668548d19b4442e8f6aff2d6d201042a",
+      "baselineSHA256": "438abe5189751920ac5b755a89c1f6cb668548d19b4442e8f6aff2d6d201042a",
+      "baselineTreeSHA256": "025cae979a3fce74a83bfdcc0afd26fb434c218cf8def3daf89e9e18ef63868f",
+      "expectedSHA256": "438abe5189751920ac5b755a89c1f6cb668548d19b4442e8f6aff2d6d201042a",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accent": true
+          },
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "subsupOK": true
+          },
+          "expected": {},
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "attributes",
+          "primary": {
+            "accent": true
+          },
+          "expected": {},
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {},
+          "expected": {
+            "texClass": 0
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "overline-integral-inline": {
+      "primarySHA256": "8ab008532f32355acff41b427f6e5ff4b2f0203657631026e1a75cbee3a6942f",
+      "baselineSHA256": "8ab008532f32355acff41b427f6e5ff4b2f0203657631026e1a75cbee3a6942f",
+      "baselineTreeSHA256": "ccae18930993685cffbfc491a24040b56c015765ac54a5c77b6b16279200d4a2",
+      "expectedSHA256": "8ab008532f32355acff41b427f6e5ff4b2f0203657631026e1a75cbee3a6942f",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accent": true
+          },
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "subsupOK": true
+          },
+          "expected": {},
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "attributes",
+          "primary": {
+            "accent": true
+          },
+          "expected": {},
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {},
+          "expected": {
+            "texClass": 0
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "overline-integral-display": {
+      "primarySHA256": "df4884b6d913ebcf5c90174244d3d1b9815406a988866dd5502ed5fc4eec9f2d",
+      "baselineSHA256": "df4884b6d913ebcf5c90174244d3d1b9815406a988866dd5502ed5fc4eec9f2d",
+      "baselineTreeSHA256": "2d9671f442263a034c9ea42f4ab7f0a11d9d658dc744c56f3d5be12110b3968f",
+      "expectedSHA256": "df4884b6d913ebcf5c90174244d3d1b9815406a988866dd5502ed5fc4eec9f2d",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accent": true
+          },
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "subsupOK": true
+          },
+          "expected": {},
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "attributes",
+          "primary": {
+            "accent": true
+          },
+          "expected": {},
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {},
+          "expected": {
+            "texClass": 0
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "overline-mathop-inline": {
+      "primarySHA256": "6e0eb166afd8a0345b338c6f7fe149ee37d9a94cfaeddc826c3b4b095af676cb",
+      "baselineSHA256": "7a1539c6d79620205fd37b9ef845e8fc39f5cb3327ee933c88155ae238e5628a",
+      "baselineTreeSHA256": "e366583fb5cfb8c2f61b14a3f9674602b8cee516f64aa223c36e4f4153ebca36",
+      "expectedSHA256": "6e0eb166afd8a0345b338c6f7fe149ee37d9a94cfaeddc826c3b4b095af676cb",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accent": true
+          },
+          "baselineKind": "msup",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "subsupOK": true
+          },
+          "expected": {},
+          "baselineKind": "msup",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "attributes",
+          "primary": {
+            "accent": true
+          },
+          "expected": {},
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {},
+          "expected": {
+            "texClass": 0
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "overline-mathop-display": {
+      "primarySHA256": "6e0eb166afd8a0345b338c6f7fe149ee37d9a94cfaeddc826c3b4b095af676cb",
+      "baselineSHA256": "6e0eb166afd8a0345b338c6f7fe149ee37d9a94cfaeddc826c3b4b095af676cb",
+      "baselineTreeSHA256": "50f04c811eddfe10ecdee6c312b70221cc039aacedcde7c21e0736cabcb0a185",
+      "expectedSHA256": "6e0eb166afd8a0345b338c6f7fe149ee37d9a94cfaeddc826c3b4b095af676cb",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accent": true
+          },
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "subsupOK": true
+          },
+          "expected": {},
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "attributes",
+          "primary": {
+            "accent": true
+          },
+          "expected": {},
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {},
+          "expected": {
+            "texClass": 0
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "overline-group-sum-inline": {
+      "primarySHA256": "ec982c274e020f3786d908e5a9c77f65af8c09f4576d9f7456cb265a4b35d257",
+      "baselineSHA256": "ec982c274e020f3786d908e5a9c77f65af8c09f4576d9f7456cb265a4b35d257",
+      "baselineTreeSHA256": "8493970e46a92eb5911f9a3b283e7fb5045c77596175c48709b8c546d8e299e6",
+      "expectedSHA256": "ec982c274e020f3786d908e5a9c77f65af8c09f4576d9f7456cb265a4b35d257",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accent": true
+          },
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "subsupOK": true
+          },
+          "expected": {},
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "attributes",
+          "primary": {
+            "accent": true
+          },
+          "expected": {},
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {},
+          "expected": {
+            "texClass": 0
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "overline-group-sum-display": {
+      "primarySHA256": "841bdfb41802993befb69eb250bcd88f6c2bac3efb85bd7842c4196962019274",
+      "baselineSHA256": "841bdfb41802993befb69eb250bcd88f6c2bac3efb85bd7842c4196962019274",
+      "baselineTreeSHA256": "68d257a074a78b7dd0b50e7703885f5ce2b43ff731e3226747366f2bb0a1ac21",
+      "expectedSHA256": "841bdfb41802993befb69eb250bcd88f6c2bac3efb85bd7842c4196962019274",
+      "category": "exact-inherited-fields",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "expected": {
+            "accent": true
+          },
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "subsupOK": true
+          },
+          "expected": {},
+          "baselineKind": "mover",
+          "expectedKind": "mover"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "attributes",
+          "primary": {
+            "accent": true
+          },
+          "expected": {},
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {},
+          "expected": {
+            "texClass": 0
+          },
+          "baselineKind": "mo",
+          "expectedKind": "mo"
+        }
+      ]
+    },
+    "overline-scripted-sum-inline": {
+      "primarySHA256": "d028fc2db6e5af0502e2f431eee308412401bfd41a9dcaed20b602000380f248",
+      "baselineSHA256": "b7945969efb0141d72af4fbe04c81d5f4d99e12d33b1d7b6aa00fb5a21e8d9cc",
+      "baselineTreeSHA256": "db99d6cdd15bb24b5547916d2fe2e6155021a5748557ad493ef249a87b17ccc4",
+      "expectedSHA256": "b7945969efb0141d72af4fbe04c81d5f4d99e12d33b1d7b6aa00fb5a21e8d9cc",
+      "category": "unchanged-scripted-decoration",
+      "expectedTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "msup",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mover",
+                    "text": null,
+                    "attributes": {
+                      "accent": true
+                    },
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "munderover",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {
+                          "movesupsub": true,
+                          "texprimestyle": true
+                        },
+                        "children": [
+                          {
+                            "kind": "mo",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {
+                              "texClass": 1,
+                              "movesupsub": true,
+                              "in-lists": "fixStretchy",
+                              "texprimestyle": true
+                            },
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "\u2211",
+                                "attributes": {},
+                                "properties": {},
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {
+                              "texprimestyle": true
+                            },
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "i",
+                                "attributes": {},
+                                "properties": {},
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {
+                              "texprimestyle": true
+                            },
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "n",
+                                "attributes": {},
+                                "properties": {},
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mo",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {
+                          "texClass": 0
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "\u2015",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "a",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "differences": []
+    },
+    "overline-scripted-sum-display": {
+      "primarySHA256": "fe411b8c54fa80d7c6f80b3adc09ea4026662908bbb8248eec107307283631bb",
+      "baselineSHA256": "288c89270814b906ca367a1f8d78b26380e71e9c2956293056244f971eefc00d",
+      "baselineTreeSHA256": "b08224a2569eb4f77fb19902970a238c0e189ddc7582c56478570acbf01f2913",
+      "expectedSHA256": "288c89270814b906ca367a1f8d78b26380e71e9c2956293056244f971eefc00d",
+      "category": "unchanged-scripted-decoration",
+      "expectedTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "msup",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mover",
+                    "text": null,
+                    "attributes": {
+                      "accent": true
+                    },
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "munderover",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {
+                          "movesupsub": true,
+                          "texprimestyle": true
+                        },
+                        "children": [
+                          {
+                            "kind": "mo",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {
+                              "texClass": 1,
+                              "movesupsub": true,
+                              "in-lists": "fixStretchy",
+                              "texprimestyle": true
+                            },
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "\u2211",
+                                "attributes": {},
+                                "properties": {},
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {
+                              "texprimestyle": true
+                            },
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "i",
+                                "attributes": {},
+                                "properties": {},
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {
+                              "texprimestyle": true
+                            },
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "n",
+                                "attributes": {},
+                                "properties": {},
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mo",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {
+                          "texClass": 0
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "\u2015",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "a",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "differences": []
+    },
+    "underarrow-scripted-sum-inline": {
+      "primarySHA256": "cc70487018ff838eb4f2859a9b50b09a22cd0c47ac7c04af09a07332eff0f865",
+      "baselineSHA256": "3c55f3ef99abff7c8b924939af339d657ef2b2d7db51ee4a836f2979400ca910",
+      "baselineTreeSHA256": "a499f498d5155a65908e41edff83860bad69a3e97bbabc0e6069fb579bbb5bda",
+      "expectedSHA256": "3c55f3ef99abff7c8b924939af339d657ef2b2d7db51ee4a836f2979400ca910",
+      "category": "unchanged-D071-error",
+      "expectedTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Double subscripts: use braces to clarify"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Double subscripts: use braces to clarify",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "differences": []
+    },
+    "underarrow-scripted-sum-display": {
+      "primarySHA256": "2773c3be57abe2943d728489e581b7c634d4a35d4b2838a2cc6d6a6ea11eb92f",
+      "baselineSHA256": "3c55f3ef99abff7c8b924939af339d657ef2b2d7db51ee4a836f2979400ca910",
+      "baselineTreeSHA256": "02efda89be3985e67b88c83e0dd22e47407bd5dd7811f08c3581c9ce1ac6faaa",
+      "expectedSHA256": "3c55f3ef99abff7c8b924939af339d657ef2b2d7db51ee4a836f2979400ca910",
+      "category": "unchanged-D071-error",
+      "expectedTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Double subscripts: use braces to clarify"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Double subscripts: use braces to clarify",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "differences": []
+    }
+  }
+}
