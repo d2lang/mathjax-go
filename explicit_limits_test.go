@@ -87,6 +87,11 @@ func TestExplicitLimitsPinnedReferences(t *testing.T) {
 		t.Fatal(err)
 	}
 	var boundaries struct {
+		InheritedPrimeMetadata map[string][]struct {
+			Path         []int
+			PrimaryValue bool
+			PrimaryText  string
+		}
 		Baseline      string
 		RawBoundaries map[string]struct {
 			TeX                                   string
@@ -111,17 +116,10 @@ func TestExplicitLimitsPinnedReferences(t *testing.T) {
 	if err = json.Unmarshal(data, &boundaries); err != nil {
 		t.Fatal(err)
 	}
-	if boundaries.Baseline != "0daaf607d985dfdd636e1ff9c353355541425961" || len(boundaries.RawBoundaries) != 2 || len(boundaries.MetadataBoundaries) != 8 {
+	if boundaries.Baseline != "0daaf607d985dfdd636e1ff9c353355541425961" || len(boundaries.RawBoundaries) != 0 || len(boundaries.MetadataBoundaries) != 4 || len(boundaries.InheritedPrimeMetadata) != 6 {
 		t.Fatal("unbound qualification matrix")
 	}
-	for _, stem := range []string{"prime-consumed-sup"} {
-		for _, mode := range []string{"inline", "display"} {
-			if _, ok := boundaries.RawBoundaries[stem+"-"+mode]; !ok {
-				t.Fatal("changed precise raw boundary set")
-			}
-		}
-	}
-	metadataCounts := map[string]int{"brace-no": 2, "underbrace-limits": 2, "prime-consumed-sub": 4, "prime-closed-group": 4}
+	metadataCounts := map[string]int{"brace-no": 2, "underbrace-limits": 2}
 	for stem, count := range metadataCounts {
 		for _, mode := range []string{"inline", "display"} {
 			if c, ok := boundaries.MetadataBoundaries[stem+"-"+mode]; !ok || len(c.Adjustments) != count {
@@ -164,6 +162,13 @@ func TestExplicitLimitsPinnedReferences(t *testing.T) {
 						delete(primaryFields, a.Key)
 					}
 				}
+			}
+			for _, b := range boundaries.InheritedPrimeMetadata[c.Name] {
+				n := limitsNodeAt(wantTree, b.Path)
+				if n == nil || n.Kind != "mo" || n.Properties["pseudoscript"] != b.PrimaryValue || len(n.Children) != 1 || n.Children[0].Text == nil || *n.Children[0].Text != b.PrimaryText {
+					t.Fatal("changed inherited prime metadata receipt")
+				}
+				delete(n.Properties, "pseudoscript")
 			}
 			root, err := tex.NewCompiler().Compile(c.TeX, c.Display)
 			if err != nil {

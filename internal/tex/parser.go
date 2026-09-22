@@ -80,9 +80,17 @@ type parser struct {
 // non-zero terminator is consumed.  stopRight lets a \left subparse return the
 // delimiter consumed by its matching \right.
 func (p *parser) parseRow(terminator byte, stopRight bool) ([]*mml.Node, string, error) {
-	vectorFont, vectorStar := p.vectorFont, p.vectorStar
-	defer func() { p.vectorFont, p.vectorStar = vectorFont, vectorStar }()
+	vectorFont, vectorStar, activeFont := p.vectorFont, p.vectorStar, p.activeFont
+	defer func() { p.vectorFont, p.vectorStar, p.activeFont = vectorFont, vectorStar, activeFont }()
 	var nodes []*mml.Node
+	var pending *pendingPrime
+	var pendingFont string
+	finishPrime := func() {
+		if pending != nil {
+			nodes = append(nodes, pending.finish())
+			pending = nil
+		}
+	}
 	// BaseMethods.NamedFn and PhysicsMethods.Expression push an FnItem.  It
 	// retains the function until the next stack item determines whether an
 	// ApplyFunction operator belongs between them.  Keeping this state local to
@@ -93,7 +101,11 @@ func (p *parser) parseRow(terminator byte, stopRight bool) ([]*mml.Node, string,
 		if len(created) == 0 {
 			return
 		}
+		finishPrime()
 		for _, n := range created {
+			if pendingFont != "" {
+				applyScopedMathVariant(n, pendingFont)
+			}
 			p.applyVectorFactory(n)
 		}
 		if pendingFunction {
@@ -110,6 +122,7 @@ func (p *parser) parseRow(terminator byte, stopRight bool) ([]*mml.Node, string,
 	for p.pos < len(p.source) {
 		c := p.source[p.pos]
 		if terminator != 0 && c == terminator {
+			finishPrime()
 			p.pos++
 			return nodes, "", nil
 		}
@@ -132,10 +145,12 @@ func (p *parser) parseRow(terminator byte, stopRight bool) ([]*mml.Node, string,
 				if !stopRight {
 					return nil, "", texError("ExtraRight", "Extra \\right")
 				}
+				finishPrime()
 				delim, err := p.readDelimiter(false)
 				return nodes, delim, err
 			}
 			if name == "over" || name == "atop" || name == "above" || name == "choose" || name == "brace" || name == "brack" {
+				finishPrime()
 				fraction, right, err := p.infixFraction(name, nodes, terminator, stopRight)
 				if err != nil {
 					return nil, "", err
@@ -143,6 +158,7 @@ func (p *parser) parseRow(terminator byte, stopRight bool) ([]*mml.Node, string,
 				return []*mml.Node{fraction}, right, nil
 			}
 			if name == "color" {
+				finishPrime()
 				colored, right, err := p.colorDeclaration(terminator, stopRight)
 				if err != nil {
 					return nil, "", err
@@ -151,6 +167,7 @@ func (p *parser) parseRow(terminator byte, stopRight bool) ([]*mml.Node, string,
 				return nodes, right, nil
 			}
 			if style, ok := styleDeclarations[name]; ok {
+				finishPrime()
 				rest, right, err := p.parseRow(terminator, stopRight)
 				if err != nil {
 					return nil, "", err
@@ -164,6 +181,7 @@ func (p *parser) parseRow(terminator byte, stopRight bool) ([]*mml.Node, string,
 				return nodes, right, nil
 			}
 			if size, ok := sizeDeclarations[name]; ok {
+				finishPrime()
 				rest, right, err := p.parseRow(terminator, stopRight)
 				if err != nil {
 					return nil, "", err
@@ -175,6 +193,12 @@ func (p *parser) parseRow(terminator byte, stopRight bool) ([]*mml.Node, string,
 				return nodes, right, nil
 			}
 			if variant, ok := fontDeclarations[name]; ok {
+				// SetFont changes the current environment without pushing a
+				// stack item, so a pending PrimeItem remains available to ^/_.
+				if pending != nil {
+					p.activeFont, pendingFont = variant, variant
+					continue
+				}
 				oldFont := p.activeFont
 				p.activeFont = variant
 				rest, right, err := p.parseRow(terminator, stopRight)
@@ -187,6 +211,9 @@ func (p *parser) parseRow(terminator byte, stopRight bool) ([]*mml.Node, string,
 				return nodes, right, nil
 			}
 			if name == "limits" || name == "nolimits" {
+				if pending != nil {
+					return nil, "", texError("MisplacedLimits", "%s is allowed only on operators", "\\"+name)
+				}
 				var err error
 				nodes, err = p.parseLimits(nodes, name)
 				if err != nil {
@@ -207,6 +234,7 @@ func (p *parser) parseRow(terminator byte, stopRight bool) ([]*mml.Node, string,
 
 		switch c {
 		case '{':
+			finishPrime()
 			p.pos++
 			contents, _, err := p.parseRow('}', false)
 			if err != nil {
@@ -216,7 +244,23 @@ func (p *parser) parseRow(terminator byte, stopRight bool) ([]*mml.Node, string,
 		case '^', '_':
 			p.pos++
 			var err error
-			nodes, err = p.attachScript(nodes, c)
+			if pending == nil {
+				nodes, err = p.attachScriptWithFont(nodes, c, pendingFont)
+			} else {
+				var script *mml.Node
+				script, err = p.parseScriptArgument()
+				if err == nil {
+					if pendingFont != "" {
+						applyScopedMathVariant(script, pendingFont)
+					}
+					var result *mml.Node
+					result, err = pending.attach(script, c)
+					if err == nil {
+						nodes = append(nodes, result)
+						pending = nil
+					}
+				}
+			}
 			if err != nil {
 				return nil, "", err
 			}
@@ -224,7 +268,15 @@ func (p *parser) parseRow(terminator byte, stopRight bool) ([]*mml.Node, string,
 			if c == '\'' {
 				p.pos++
 				var err error
-				nodes, err = p.attachPrimes(nodes)
+				finishPrime()
+				var base *mml.Node
+				if len(nodes) == 0 {
+					base = node("mi")
+				} else {
+					base = nodes[len(nodes)-1]
+					nodes = nodes[:len(nodes)-1]
+				}
+				pending, err = p.startPrime(base)
 				if err != nil {
 					return nil, "", err
 				}
@@ -239,6 +291,7 @@ func (p *parser) parseRow(terminator byte, stopRight bool) ([]*mml.Node, string,
 			appendNodes([]*mml.Node{p.parseCharacter()}, false)
 		}
 	}
+	finishPrime()
 	if terminator != 0 {
 		return nil, "", texError("MissingCloseBrace", "Missing close brace")
 	}
@@ -310,6 +363,10 @@ func (p *parser) parseCharacter() *mml.Node {
 }
 
 func (p *parser) attachScript(nodes []*mml.Node, marker byte) ([]*mml.Node, error) {
+	return p.attachScriptWithFont(nodes, marker, "")
+}
+
+func (p *parser) attachScriptWithFont(nodes []*mml.Node, marker byte, font string) ([]*mml.Node, error) {
 	var base *mml.Node
 	if len(nodes) == 0 {
 		base = token("mi", "")
@@ -320,6 +377,9 @@ func (p *parser) attachScript(nodes []*mml.Node, marker byte) ([]*mml.Node, erro
 	script, err := p.parseScriptArgument()
 	if err != nil {
 		return nil, err
+	}
+	if font != "" {
+		applyScopedMathVariant(script, font)
 	}
 	moves, hasMoves := base.Property("movesupsub")
 	moveLimits, _ := moves.(bool)
@@ -336,42 +396,6 @@ func (p *parser) attachScript(nodes []*mml.Node, marker byte) ([]*mml.Node, erro
 	if hasMoves {
 		result.SetProperty("movesupsub", moves)
 	}
-	return append(nodes, result), nil
-}
-
-func (p *parser) attachPrimes(nodes []*mml.Node) ([]*mml.Node, error) {
-	count := 1
-	for p.pos < len(p.source) {
-		p.skipSpaces()
-		if p.pos >= len(p.source) || p.source[p.pos] != '\'' {
-			break
-		}
-		p.pos++
-		count++
-	}
-	primes := []string{"", "′", "″", "‴", "⁗"}
-	text := strings.Repeat("′", count)
-	if count < len(primes) {
-		text = primes[count]
-	}
-	sup := operator(text, mml.TeXClassOrd, map[string]any{"variantForm": true})
-	var base *mml.Node
-	if len(nodes) == 0 {
-		base = token("mi", "")
-	} else {
-		base = nodes[len(nodes)-1]
-		nodes = nodes[:len(nodes)-1]
-	}
-	if base.Kind == "msup" || base.Kind == "msubsup" {
-		return nil, texError("DoubleExponentPrime", "Prime causes double exponent: use braces to clarify")
-	}
-	var result *mml.Node
-	if base.Kind == "msub" {
-		result = node("msubsup", base.Children[0], base.Children[1], sup)
-	} else {
-		result = node("msup", base, sup)
-	}
-	result.SetProperty(limitsScriptOrigin, "prime")
 	return append(nodes, result), nil
 }
 

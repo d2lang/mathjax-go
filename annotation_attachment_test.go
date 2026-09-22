@@ -45,7 +45,7 @@ func TestAnnotationAttachmentPinnedReferences(t *testing.T) {
 	if err = json.Unmarshal(data, &boundaries); err != nil {
 		t.Fatal(err)
 	}
-	if len(fixture.Cases) != 48 || len(boundaries.Cases) != 16 || boundaries.Baseline != "97eebae061dc96a046462472574ef2d6d4772078" {
+	if len(fixture.Cases) != 48 || len(boundaries.Cases) != 4 || boundaries.Baseline != "97eebae061dc96a046462472574ef2d6d4772078" {
 		t.Fatal("changed bound annotation/prime matrix")
 	}
 	rawBoundaries := 0
@@ -109,7 +109,7 @@ func TestAnnotationAttachmentPinnedReferences(t *testing.T) {
 			}
 		})
 	}
-	if rawBoundaries != 8 || primaryErrors != 14 {
-		t.Fatalf("prime boundaries/required primary errors=%d/%d want8/14", rawBoundaries, primaryErrors)
+	if rawBoundaries != 0 || primaryErrors != 14 {
+		t.Fatalf("prime boundaries/required primary errors=%d/%d want0/14", rawBoundaries, primaryErrors)
 	}
 }

@@ -288,41 +288,37 @@ func TestLimitsPendingPrimeLifetime(t *testing.T) {
 	base := limitToken("mo", "∑")
 	base.TeXClass = mml.TeXClassOp
 	base.SetProperty("movesupsub", true)
-	pending, err := p.attachPrimes([]*mml.Node{base})
+	pending, err := p.startPrime(base)
 	if err != nil {
 		t.Fatal(err)
 	}
-	prime := pending[0]
-	if origin, _ := prime.Property(limitsScriptOrigin); origin != "prime" {
-		t.Fatal("pending PrimeItem provenance missing")
+	if pending.base != base || pending.prime == nil {
+		t.Fatal("pending pair lost original identities")
 	}
-	for _, item := range []*mml.Node{prime, prime.Clone()} {
-		for _, command := range []string{"limits", "nolimits"} {
-			before := item.Clone()
-			_, got := p.parseLimits([]*mml.Node{item}, command)
+	for _, command := range []string{"limits", "nolimits"} {
+		for _, gap := range []string{"", " ", "\\notag"} {
+			q := &parser{state: newParseState(), source: "\\sum'" + gap + "\\" + command}
+			_, _, got := q.parseRow(0, false)
 			_, want := p.setLimits([]*mml.Node{limitToken("mo", "′")}, command)
 			if got == nil || want == nil || got.Error() != want.Error() {
 				t.Fatalf("pending prime eligibility differs: %v / %v", got, want)
 			}
-			if !reflect.DeepEqual(item, before) {
-				t.Fatal("pending rejection mutated prime")
-			}
 		}
 	}
-	p.source = "i"
-	consumed, err := p.attachScript(pending, '_')
+	result, err := pending.attach(limitToken("mi", "i"), '_')
 	if err != nil {
 		t.Fatal(err)
 	}
-	if origin, _ := consumed[0].Property(limitsScriptOrigin); origin != true {
-		t.Fatal("consumed script retained pending prime")
+	consumed := []*mml.Node{result}
+	if origin, _ := result.Property(limitsScriptOrigin); origin != true {
+		t.Fatal("consumed script origin missing")
 	}
 	for _, command := range []string{"limits", "nolimits", "limits"} {
 		consumed, err = p.parseLimits(consumed, command)
 		if err != nil {
 			t.Fatal(err)
 		}
-		if len(consumed[0].Children) != 3 || consumed[0].Children[0] != base || consumed[0].Children[2] != prime.Children[1] {
+		if len(consumed[0].Children) != 3 || consumed[0].Children[0] != base || consumed[0].Children[2] != pending.prime {
 			t.Fatal("consumed prime slot/identity changed")
 		}
 	}

@@ -1,0 +1,1185 @@
+{
+  "baseline": "7c6a5cf0ec1aaa7a5dcab78c3d68c8720c1c5abc",
+  "unicode": {
+    "unicode-right-prime-inline": {
+      "tex": "x’^n",
+      "display": false,
+      "svgSHA256": "94fdab2c63eca2cc938a02c82fffe2954a42af2bbb89d569b8287c1c29ef4954",
+      "baselineTreeSHA256": "04d9ed4bd9146efa4664196613f172690b4944eb24f1974cbcd9f8914fb7c2e1",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "children": [],
+                    "properties": {}
+                  }
+                ],
+                "properties": {}
+              },
+              {
+                "kind": "msup",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "mo",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "’",
+                        "attributes": {},
+                        "children": [],
+                        "properties": {}
+                      }
+                    ],
+                    "properties": {
+                      "in-lists": "fixStretchy"
+                    }
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "n",
+                        "attributes": {},
+                        "children": [],
+                        "properties": {}
+                      }
+                    ],
+                    "properties": {}
+                  }
+                ],
+                "properties": {}
+              }
+            ],
+            "properties": {}
+          }
+        ],
+        "properties": {}
+      },
+      "note": "Unicode dispatch/collector unchanged; mixed form contains corrected ASCII token variantForm metadata."
+    },
+    "unicode-right-prime-display": {
+      "tex": "x’^n",
+      "display": true,
+      "svgSHA256": "70239c176b361f9f0f0e0fd2c5c01c40ca3e4b6feefb39ffcdff5dc00a9fdfbd",
+      "baselineTreeSHA256": "a91f8f15a6b5aae6366660670e51d4f4423f2c446c67d7f333e8299331ffce2e",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "children": [],
+                    "properties": {}
+                  }
+                ],
+                "properties": {}
+              },
+              {
+                "kind": "msup",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "mo",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "’",
+                        "attributes": {},
+                        "children": [],
+                        "properties": {}
+                      }
+                    ],
+                    "properties": {
+                      "in-lists": "fixStretchy"
+                    }
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "n",
+                        "attributes": {},
+                        "children": [],
+                        "properties": {}
+                      }
+                    ],
+                    "properties": {}
+                  }
+                ],
+                "properties": {}
+              }
+            ],
+            "properties": {}
+          }
+        ],
+        "properties": {}
+      },
+      "note": "Unicode dispatch/collector unchanged; mixed form contains corrected ASCII token variantForm metadata."
+    },
+    "mixed-prime-inline": {
+      "tex": "x'’^n",
+      "display": false,
+      "svgSHA256": "8ca277b005b42353e9475ea56c8d324a8502f07607e9b7ab413b9fc846acac09",
+      "baselineTreeSHA256": "de4b8326ed7ed2440996b6e98fea845d8a5da3b7daf619b6076e0e6068888b37",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "msup",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "children": [],
+                        "properties": {}
+                      }
+                    ],
+                    "properties": {}
+                  },
+                  {
+                    "kind": "mo",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "′",
+                        "attributes": {},
+                        "children": [],
+                        "properties": {}
+                      }
+                    ],
+                    "properties": {
+                      "variantForm": true
+                    }
+                  }
+                ],
+                "properties": {}
+              },
+              {
+                "kind": "msup",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "mo",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "’",
+                        "attributes": {},
+                        "children": [],
+                        "properties": {}
+                      }
+                    ],
+                    "properties": {
+                      "in-lists": "fixStretchy"
+                    }
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "n",
+                        "attributes": {},
+                        "children": [],
+                        "properties": {}
+                      }
+                    ],
+                    "properties": {}
+                  }
+                ],
+                "properties": {}
+              }
+            ],
+            "properties": {}
+          }
+        ],
+        "properties": {}
+      },
+      "note": "Unicode dispatch/collector unchanged; mixed form contains corrected ASCII token variantForm metadata."
+    },
+    "mixed-prime-display": {
+      "tex": "x'’^n",
+      "display": true,
+      "svgSHA256": "cdd326f1ad09f59581d86ff08ebaa1bb1c77d1cf08f6f7e122d8b774163f6269",
+      "baselineTreeSHA256": "f5c5ed58d871028987a34bd075cdb0e8c4ec1525078c87e0ed4cabef058d4bd1",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "children": [
+              {
+                "kind": "msup",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "children": [],
+                        "properties": {}
+                      }
+                    ],
+                    "properties": {}
+                  },
+                  {
+                    "kind": "mo",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "′",
+                        "attributes": {},
+                        "children": [],
+                        "properties": {}
+                      }
+                    ],
+                    "properties": {
+                      "variantForm": true
+                    }
+                  }
+                ],
+                "properties": {}
+              },
+              {
+                "kind": "msup",
+                "text": null,
+                "attributes": {},
+                "children": [
+                  {
+                    "kind": "mo",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "’",
+                        "attributes": {},
+                        "children": [],
+                        "properties": {}
+                      }
+                    ],
+                    "properties": {
+                      "in-lists": "fixStretchy"
+                    }
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "n",
+                        "attributes": {},
+                        "children": [],
+                        "properties": {}
+                      }
+                    ],
+                    "properties": {}
+                  }
+                ],
+                "properties": {}
+              }
+            ],
+            "properties": {}
+          }
+        ],
+        "properties": {}
+      },
+      "note": "Unicode dispatch/collector unchanged; mixed form contains corrected ASCII token variantForm metadata."
+    }
+  },
+  "inheritedPrimeMetadata": {
+    "single-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "primaryValue": false,
+        "primaryText": "′"
+      }
+    ],
+    "single-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "primaryValue": false,
+        "primaryText": "′"
+      }
+    ],
+    "double-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "primaryValue": false,
+        "primaryText": "″"
+      }
+    ],
+    "double-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "primaryValue": false,
+        "primaryText": "″"
+      }
+    ],
+    "triple-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "primaryValue": false,
+        "primaryText": "‴"
+      }
+    ],
+    "triple-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "primaryValue": false,
+        "primaryText": "‴"
+      }
+    ],
+    "four-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "primaryValue": false,
+        "primaryText": "⁗"
+      }
+    ],
+    "four-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "primaryValue": false,
+        "primaryText": "⁗"
+      }
+    ],
+    "five-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "primaryValue": false,
+        "primaryText": "′′′′′"
+      }
+    ],
+    "five-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "primaryValue": false,
+        "primaryText": "′′′′′"
+      }
+    ],
+    "prime-sup-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "′"
+      }
+    ],
+    "prime-sup-display": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "′"
+      }
+    ],
+    "double-sup-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "″"
+      }
+    ],
+    "double-sup-display": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "″"
+      }
+    ],
+    "prime-sup-sub-inline": [
+      {
+        "path": [
+          0,
+          0,
+          2,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "′"
+      }
+    ],
+    "prime-sup-sub-display": [
+      {
+        "path": [
+          0,
+          0,
+          2,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "′"
+      }
+    ],
+    "sub-prime-sup-inline": [
+      {
+        "path": [
+          0,
+          0,
+          2,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "′"
+      }
+    ],
+    "sub-prime-sup-display": [
+      {
+        "path": [
+          0,
+          0,
+          2,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "′"
+      }
+    ],
+    "prime-sub-inline": [
+      {
+        "path": [
+          0,
+          0,
+          2
+        ],
+        "primaryValue": false,
+        "primaryText": "′"
+      }
+    ],
+    "prime-sub-display": [
+      {
+        "path": [
+          0,
+          0,
+          2
+        ],
+        "primaryValue": false,
+        "primaryText": "′"
+      }
+    ],
+    "sub-prime-inline": [
+      {
+        "path": [
+          0,
+          0,
+          2
+        ],
+        "primaryValue": false,
+        "primaryText": "′"
+      }
+    ],
+    "sub-prime-display": [
+      {
+        "path": [
+          0,
+          0,
+          2
+        ],
+        "primaryValue": false,
+        "primaryText": "′"
+      }
+    ],
+    "prime-group-sup-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "′"
+      }
+    ],
+    "prime-group-sup-display": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "′"
+      }
+    ],
+    "group-prime-sup-inline": [
+      {
+        "path": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "primaryValue": false,
+        "primaryText": "′"
+      }
+    ],
+    "group-prime-sup-display": [
+      {
+        "path": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "primaryValue": false,
+        "primaryText": "′"
+      }
+    ],
+    "prime-empty-sup-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "′"
+      }
+    ],
+    "prime-empty-sup-display": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "′"
+      }
+    ],
+    "bare-prime-sup-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "′"
+      }
+    ],
+    "bare-prime-sup-display": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "′"
+      }
+    ],
+    "prime-spaced-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "′"
+      }
+    ],
+    "prime-spaced-display": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "′"
+      }
+    ],
+    "prime-comment-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "′"
+      }
+    ],
+    "prime-comment-display": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "′"
+      }
+    ],
+    "prime-ordinary-then-sup-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "primaryValue": false,
+        "primaryText": "′"
+      }
+    ],
+    "prime-ordinary-then-sup-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "primaryValue": false,
+        "primaryText": "′"
+      }
+    ],
+    "over-prime-sup-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "′"
+      }
+    ],
+    "over-prime-sup-display": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "′"
+      }
+    ],
+    "under-prime-sup-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "′"
+      }
+    ],
+    "under-prime-sup-display": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "′"
+      }
+    ],
+    "over-prime-sub-inline": [
+      {
+        "path": [
+          0,
+          0,
+          2
+        ],
+        "primaryValue": false,
+        "primaryText": "′"
+      }
+    ],
+    "over-prime-sub-display": [
+      {
+        "path": [
+          0,
+          0,
+          2
+        ],
+        "primaryValue": false,
+        "primaryText": "′"
+      }
+    ],
+    "sum-prime-sup-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "′"
+      }
+    ],
+    "sum-prime-sup-display": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "′"
+      }
+    ],
+    "sum-sub-prime-sup-inline": [
+      {
+        "path": [
+          0,
+          0,
+          2,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "′"
+      }
+    ],
+    "sum-sub-prime-sup-display": [
+      {
+        "path": [
+          0,
+          0,
+          2,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "′"
+      }
+    ],
+    "sum-prime-sub-inline": [
+      {
+        "path": [
+          0,
+          0,
+          2
+        ],
+        "primaryValue": true,
+        "primaryText": "′"
+      }
+    ],
+    "sum-prime-sub-display": [
+      {
+        "path": [
+          0,
+          0,
+          2
+        ],
+        "primaryValue": true,
+        "primaryText": "′"
+      }
+    ],
+    "sum-consumed-prime-sub-limits-inline": [
+      {
+        "path": [
+          0,
+          0,
+          2
+        ],
+        "primaryValue": true,
+        "primaryText": "′"
+      }
+    ],
+    "sum-consumed-prime-sub-limits-display": [
+      {
+        "path": [
+          0,
+          0,
+          2
+        ],
+        "primaryValue": true,
+        "primaryText": "′"
+      }
+    ],
+    "sum-consumed-prime-sup-limits-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "′"
+      }
+    ],
+    "sum-consumed-prime-sup-limits-display": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "′"
+      }
+    ],
+    "sum-group-prime-limits-inline": [
+      {
+        "path": [
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "primaryValue": false,
+        "primaryText": "′"
+      }
+    ],
+    "sum-group-prime-limits-display": [
+      {
+        "path": [
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "primaryValue": false,
+        "primaryText": "′"
+      }
+    ],
+    "sum-limits-prime-sup-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "′"
+      }
+    ],
+    "sum-limits-prime-sup-display": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "′"
+      }
+    ],
+    "sum-nolimits-prime-sup-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "′"
+      }
+    ],
+    "sum-nolimits-prime-sup-display": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "′"
+      }
+    ],
+    "prime-function-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "′"
+      }
+    ],
+    "prime-function-display": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "′"
+      }
+    ],
+    "grouped-base-prime-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "′"
+      }
+    ],
+    "grouped-base-prime-display": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "′"
+      }
+    ],
+    "nested-subscript-prime-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "′"
+      }
+    ],
+    "nested-subscript-prime-display": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "′"
+      }
+    ],
+    "nested-superscript-prime-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "′"
+      }
+    ],
+    "nested-superscript-prime-display": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "′"
+      }
+    ],
+    "styled-prime-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "′"
+      }
+    ],
+    "styled-prime-display": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "primaryValue": true,
+        "primaryText": "′"
+      }
+    ]
+  }
+}
