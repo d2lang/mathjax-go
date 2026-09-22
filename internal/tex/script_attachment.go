@@ -9,11 +9,10 @@ import "github.com/d2lang/mathjax-go/internal/mml"
 // family/subtype and occupied slots before choosing whether to reuse a script
 // wrapper or wrap the entire base. This parser's own eager compact subtypes
 // represent an unfinished generic family; their transient origin bridges that
-// representation only. Pending-prime behavior is retained as a separate parser
-// boundary, rather than changing PrimeItem handling here.
+// representation only. Pending PrimeItems pass their original base here.
 func attachScriptBase(base, script *mml.Node, marker byte, moves bool) (*mml.Node, error) {
 	origin, _ := base.Property(limitsScriptOrigin)
-	eager := origin == true || origin == "prime"
+	eager := origin == true
 	side := base.Kind == "msub" || base.Kind == "msup" || base.Kind == "msubsup"
 	limits := base.Kind == "munder" || base.Kind == "mover" || base.Kind == "munderover"
 	supOnly := base.Kind == "msup" && !eager
@@ -81,12 +80,6 @@ func attachScriptBase(base, script *mml.Node, marker byte, moves bool) (*mml.Nod
 	} else {
 		children = append(children, over)
 		kind = map[bool]string{false: "msup", true: "mover"}[limits]
-	}
-	// Keep the accepted pending-prime representation boundary: consuming its
-	// subscript creates a new wrapper, leaving the old prime's child slots
-	// intact for the existing Limits lifetime/identity contract (D060).
-	if origin == "prime" {
-		return node(kind, children...), nil
 	}
 	base.Kind = kind
 	base.Flags.Arity = len(children)

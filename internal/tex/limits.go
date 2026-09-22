@@ -197,13 +197,6 @@ const limitsScriptOrigin = "_texLimitsScriptOrigin"
 func (p *parser) parseLimits(nodes []*mml.Node, name string) ([]*mml.Node, error) {
 	if len(nodes) != 0 {
 		op := nodes[len(nodes)-1]
-		// A fresh PrimeItem exposes its final prime mo through Prev(true),
-		// not the eager wrapper's operator base. That ORD token fails the
-		// source Limits eligibility check. A consumed script replaces this
-		// origin marker before another Limits command can observe it.
-		if origin, _ := op.Property(limitsScriptOrigin); origin == "prime" {
-			return nil, texError("MisplacedLimits", "%s is allowed only on operators", "\\"+name)
-		}
 		if origin, _ := op.Property(limitsScriptOrigin); origin == true && len(op.Children) == 2 {
 			children := []*mml.Node{op.Children[0], op.Children[1]}
 			switch op.Kind {
