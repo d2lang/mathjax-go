@@ -219,8 +219,6 @@ func (p *parser) command(name string) ([]*mml.Node, error) {
 		return p.hboxCommand(name, "bold", false)
 	case "textit":
 		return p.hboxCommand(name, "italic", false)
-	case "textsl":
-		return p.textCommand(name, "italic")
 	case "texttt":
 		return p.hboxCommand(name, "monospace", false)
 	case "textsf":
