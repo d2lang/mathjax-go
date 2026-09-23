@@ -81,7 +81,7 @@ func TestInfixMacroPriorityPinnedReferences(t *testing.T) {
 			t.Fatal(err)
 		}
 	}
-	if fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || len(fixture.Cases) != 82 || limits.Baseline != "b8b28469b0c6357a93048864537bbbc61c56be56" || len(limits.Boundaries) != 24 {
+	if fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || len(fixture.Cases) != 82 || limits.Baseline != "b8b28469b0c6357a93048864537bbbc61c56be56" || len(limits.Boundaries) != 22 {
 		t.Fatal("unbound infix priority references")
 	}
 	expectedBoundaries := map[string]string{
@@ -103,14 +103,12 @@ func TestInfixMacroPriorityPinnedReferences(t *testing.T) {
 		"brack-public-operator-display":   "ordinary declared-operator property insertion order",
 		"public-operator-control-inline":  "ordinary declared-operator property insertion order",
 		"public-operator-control-display": "ordinary declared-operator property insertion order",
-		"joined-infix-alias-inline":       "unchanged separate parser boundary",
-		"joined-infix-alias-display":      "unchanged separate parser boundary",
 		"choose-empty-override-inline":    "unchanged ordinary-prime metadata",
 		"choose-empty-override-display":   "unchanged ordinary-prime metadata",
 		"plain-prime-control-inline":      "unchanged ordinary-prime metadata",
 		"plain-prime-control-display":     "unchanged ordinary-prime metadata",
 	}
-	expectedErrors := map[string]string{"spaced-infix-alias-inline": "AmbiguousUseOf", "spaced-infix-alias-display": "AmbiguousUseOf", "above-missing-second-argument-inline": "MissingArgFor", "above-missing-second-argument-display": "MissingArgFor", "over-missing-argument-inline": "MissingArgFor", "over-missing-argument-display": "MissingArgFor", "joined-infix-alias-inline": "UndefinedControlSequence", "joined-infix-alias-display": "UndefinedControlSequence"}
+	expectedErrors := map[string]string{"spaced-infix-alias-inline": "AmbiguousUseOf", "spaced-infix-alias-display": "AmbiguousUseOf", "above-missing-second-argument-inline": "MissingArgFor", "above-missing-second-argument-display": "MissingArgFor", "over-missing-argument-inline": "MissingArgFor", "over-missing-argument-display": "MissingArgFor", "joined-infix-alias-inline": "AmbiguousUseOf", "joined-infix-alias-display": "AmbiguousUseOf"}
 	raw, qualified := 0, 0
 	for _, c := range fixture.Cases {
 		t.Run(c.Name, func(t *testing.T) {
@@ -207,7 +205,7 @@ func TestInfixMacroPriorityPinnedReferences(t *testing.T) {
 			}
 		})
 	}
-	if raw != 58 || qualified != 24 {
+	if raw != 60 || qualified != 22 {
 		t.Fatal("reference classification changed", raw, qualified)
 	}
 }

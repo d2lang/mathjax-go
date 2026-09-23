@@ -169,7 +169,9 @@ Four BOM cases match primary; four NEL cases preserve accepted Go outputs while
 the pinned primary throws an internal exception, so they are not parity claims.
 
 The two earlier D066 `digit-tail` whole-output qualifications now compare to
-their unchanged primary references; all other D066 qualifications stay intact.
+their unchanged primary references. Macro-boundary handling also promotes the
+registered font-macro pair and the six retained-prefix cursor records; the
+remaining D066 whole-output and precise prime-property boundaries stay intact.
 
 ### Registered macros using infix names
 
@@ -180,9 +182,8 @@ An empty registered macro also retains the existing pending-prime behavior.
 
 The 82-case fixture covers all six names, public declarations, argument errors,
 empty definitions, grouping and aliases that expand into genuine infix commands.
-Eighty complete SVGs match pinned MathJax; two macro-joining (D089) boundaries
-retain exact accepted outputs. Fifty-eight ordered full attribute/property trees
-match primary. The other 24 are bound to
+All 82 complete SVGs match pinned MathJax, including the joined infix aliases.
+Sixty ordered full attribute/property trees match primary. The other 22 are bound to
 complete accepted records or equivalent ordinary controls, including property
 insertion order, atop's existing string zero and plain-prime metadata. No fields
 are omitted from these comparisons.
@@ -213,12 +214,12 @@ color continuations retain that row; braces, left/right groups, script arguments
 and separate math parsers start independent rows. Incoming `above` dimensions
 are read before ambiguity is checked, and registered macro dispatch stays first.
 
-The 108-case pinned corpus has 99 complete primary SVG, ordered explicit/own-tree
-and structured-error matches. Nine exact accepted-output boundaries retain
-unsupported `overwithdelims`, generic macro joining,
-one inline nested fraction, and two nested-style outputs. No changed output is
-qualified: all 50 original scope fixes and the two parsed-group diagnostic upgrades
-match primary. Six parser re-entry/error-unwind
+The 108-case pinned corpus has 103 complete primary SVG, ordered explicit/own-tree
+and structured-error matches. Five exact accepted-output boundaries retain
+unsupported `overwithdelims`, one inline nested fraction, and two nested-style
+outputs. No changed output is qualified: all 50 original scope fixes, the two
+parsed-group diagnostic upgrades and four registered macro alias upgrades match
+primary. Six parser re-entry/error-unwind
 controls check independent subsequent rows and restored font state.
 
 Only the unchanged inline nested-fraction control `separate-args-inline` permits
@@ -273,4 +274,42 @@ No general error or cursor normalization is used.
 
 ```
 node testdata/generate_group_eof.cjs PINNED_ASSETS EVIDENCE_DIRECTORY
+```
+
+### Macro expansion boundaries
+
+Macro substitution preserves a control word at each literal/argument/tail join,
+uses the original escaped-hash rules, and counts UTF-16 code units against the
+5120-unit expansion buffer. It installs only expansion plus unparsed input and
+resets the cursor before checking the macro count. Argument, substitution and
+buffer errors retain the original precedence. The same rule covers the existing
+parameter-template macro route; environments and paired delimiters retain their
+separate implementations. The operator-name token consumer carries rewritten
+source and cursor together, preserving its caller and already-emitted nodes.
+
+The 85 complete-output references comprise the original 72 cases and 13 bounded
+default-buffer/UTF-16/prime/style/font controls. All 40 changed SVGs match primary;
+79 SVGs and 73 full attribute/own-property trees match without qualifications.
+Four hash-diagnostic outputs and two supplemental newcommand-environment outputs
+remain exact accepted boundaries. Two vector and four prime records have raw
+primary SVGs with precisely retained own-property differences; the prime boundary
+is independently present in the direct accepted-before control. Registered
+handlers bind 22 actual entry/return/error source, cursor and count receipts;
+28 actual helper references cover separators, escaping, UTF-16 and error order.
+Custom primary maxBuffer observations are not presented as a configurable Go API.
+
+Fourteen additional operator-name records preserve the complete primary trees
+and exact accepted property arrays: six SVGs match primary, while eight retain
+the separately tracked D103 constructor-spacing residual. The repaired macro
+composites equal the accepted direct authored route in full SVG and ordered
+trees; they are not counted as primary passes. All literal attributes and every
+own property remain asserted, including the existing insertion-order boundary.
+The child-error control also requires the caller source, cursor and shared state
+to remain intact.
+
+The original fixed-D2 package corpus remains distinct from the official-3.2.2
+newcommand augmented observations. Generate raw unchanged-primary captures with:
+
+```
+node testdata/generate_macro_boundary.cjs PINNED_ASSETS NEWCOMMAND_3_2_2_JS NEW_EVIDENCE_DIRECTORY
 ```

@@ -88,13 +88,13 @@ func TestScriptArgumentPinnedReferences(t *testing.T) {
 	var errorsFixture struct {
 		MathjaxGitCommit string
 		Rows             []struct {
-			Name, Source, Remaining, RetainedGoExpansionPrefix string
-			Cursor                                             int
-			Error                                              struct{ ID, Message string }
+			Name, Source, Remaining string
+			Cursor                  int
+			Error                   struct{ ID, Message string }
 		}
 	}
 	readArgumentJSON(t, "testdata/script_argument_error_cursors.json", &errorsFixture)
-	if fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || errorsFixture.MathjaxGitCommit != fixture.MathjaxGitCommit || len(fixture.Cases) != 120 || len(errorsFixture.Rows) != 62 || len(boundaries.Cases) != 22 || boundaries.Baseline != "e93f5eb32042cd5a772f5b8fa3c6aabe540701da" {
+	if fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || errorsFixture.MathjaxGitCommit != fixture.MathjaxGitCommit || len(fixture.Cases) != 120 || len(errorsFixture.Rows) != 62 || len(boundaries.Cases) != 20 || boundaries.Baseline != "e93f5eb32042cd5a772f5b8fa3c6aabe540701da" {
 		t.Fatal("unbound argument references")
 	}
 	registered, rawSVG, rawOwn, qualifiedOwn, errorsChecked := 0, 0, 0, 0, 0
@@ -118,11 +118,7 @@ func TestScriptArgumentPinnedReferences(t *testing.T) {
 					if p.source[p.pos:] != e.Remaining {
 						t.Fatal("error consumed a different argument suffix")
 					}
-					if e.RetainedGoExpansionPrefix != "" {
-						if c.Registration == nil || p.source[:p.pos] != e.RetainedGoExpansionPrefix {
-							t.Fatal("macro source-coordinate boundary changed")
-						}
-					} else if p.source != e.Source || len(utf16.Encode([]rune(p.source[:p.pos]))) != e.Cursor {
+					if p.source != e.Source || len(utf16.Encode([]rune(p.source[:p.pos]))) != e.Cursor {
 						t.Fatal("primary error cursor/source differs")
 					}
 				}
@@ -242,7 +238,7 @@ func TestScriptArgumentPinnedReferences(t *testing.T) {
 			}
 		})
 	}
-	if registered != 20 || rawSVG != 116 || rawOwn != 98 || qualifiedOwn != 18 || errorsChecked != 62 {
+	if registered != 20 || rawSVG != 118 || rawOwn != 100 || qualifiedOwn != 18 || errorsChecked != 62 {
 		t.Fatal("reference scope changed", registered, rawSVG, rawOwn, qualifiedOwn, errorsChecked)
 	}
 }
