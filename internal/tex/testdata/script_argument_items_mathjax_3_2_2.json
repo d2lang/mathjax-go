@@ -1,0 +1,6362 @@
+{
+  "mathjaxGitCommit": "ad8f5c21cb810236551da8c6512ba733e67357ee",
+  "assetsSHA256": {
+    "polyfills.js": "7fe1d048c78b0e09854c1259f7413868a51cc8f0c822489eb1ac36ae6c85ce01",
+    "mathjax.js": "cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869",
+    "setup.js": "a52cb0bbabfbd7796b9fedd793b9386c474e3123e788ee151cbe47ca1fa6e881"
+  },
+  "superscriptSource": "function(t,e){var Q,r,T;t.GetNext().match(/\\d/)&&(t.string=t.string.substr(0,t.i+1)+\" \"+t.string.substr(t.i+1));var n=t.stack.Top();n.isKind(\"prime\")?(T=(Q=i(n.Peek(2),2))[0],r=Q[1],t.stack.Pop()):(T=t.stack.Prev())||(T=t.create(\"token\",\"mi\",{},\"\"));var o=l.default.getProperty(T,\"movesupsub\"),a=l.default.isType(T,\"msubsup\")?T.sup:T.over;if(l.default.isType(T,\"msubsup\")&&!l.default.isType(T,\"msup\")&&l.default.getChildAt(T,T.sup)||l.default.isType(T,\"munderover\")&&!l.default.isType(T,\"mover\")&&l.default.getChildAt(T,T.over)&&!l.default.getProperty(T,\"subsupOK\"))throw new c.default(\"DoubleExponent\",\"Double exponent: use braces to clarify\");l.default.isType(T,\"msubsup\")&&!l.default.isType(T,\"msup\")||(o?((!l.default.isType(T,\"munderover\")||l.default.isType(T,\"mover\")||l.default.getChildAt(T,T.over))&&(T=t.create(\"node\",\"munderover\",[T],{movesupsub:!0})),a=T.over):a=(T=t.create(\"node\",\"msubsup\",[T])).sup),t.Push(t.itemFactory.create(\"subsup\",T).setProperties({position:a,primes:r,movesupsub:o}))}",
+  "subscriptSource": "function(t,e){var Q,r,T;t.GetNext().match(/\\d/)&&(t.string=t.string.substr(0,t.i+1)+\" \"+t.string.substr(t.i+1));var n=t.stack.Top();n.isKind(\"prime\")?(T=(Q=i(n.Peek(2),2))[0],r=Q[1],t.stack.Pop()):(T=t.stack.Prev())||(T=t.create(\"token\",\"mi\",{},\"\"));var o=l.default.getProperty(T,\"movesupsub\"),a=l.default.isType(T,\"msubsup\")?T.sub:T.under;if(l.default.isType(T,\"msubsup\")&&!l.default.isType(T,\"msup\")&&l.default.getChildAt(T,T.sub)||l.default.isType(T,\"munderover\")&&!l.default.isType(T,\"mover\")&&l.default.getChildAt(T,T.under)&&!l.default.getProperty(T,\"subsupOK\"))throw new c.default(\"DoubleSubscripts\",\"Double subscripts: use braces to clarify\");l.default.isType(T,\"msubsup\")&&!l.default.isType(T,\"msup\")||(o?((!l.default.isType(T,\"munderover\")||l.default.isType(T,\"mover\")||l.default.getChildAt(T,T.under))&&(T=t.create(\"node\",\"munderover\",[T],{movesupsub:!0})),a=T.under):a=(T=t.create(\"node\",\"msubsup\",[T])).sub),t.Push(t.itemFactory.create(\"subsup\",T).setProperties({position:a,primes:r,movesupsub:o}))}",
+  "primeSource": "function(t,e){var Q=t.stack.Prev();if(Q||(Q=t.create(\"node\",\"mi\")),l.default.isType(Q,\"msubsup\")&&!l.default.isType(Q,\"msup\")&&l.default.getChildAt(Q,Q.sup))throw new c.default(\"DoubleExponentPrime\",\"Prime causes double exponent: use braces to clarify\");var r=\"\";t.i--;do{r+=H.entities.prime,t.i++,e=t.GetNext()}while(\"'\"===e||e===H.entities.rsquo);r=[\"\",\"\\u2032\",\"\\u2033\",\"\\u2034\",\"\\u2057\"][r.length]||r;var T=t.create(\"token\",\"mo\",{variantForm:!0},r);t.Push(t.itemFactory.create(\"prime\",Q,T))}",
+  "subsupItemSource": "function(e){if(e.isKind(\"open\")||e.isKind(\"left\"))return h.BaseItem.success;var Q=this.First,r=this.getProperty(\"position\");if(e.isKind(\"mml\")){if(this.getProperty(\"primes\"))if(2!==r)p.default.setChild(Q,2,this.getProperty(\"primes\"));else{p.default.setProperty(this.getProperty(\"primes\"),\"variantForm\",!0);var T=this.create(\"node\",\"mrow\",[this.getProperty(\"primes\"),e.First]);e.First=T}return p.default.setChild(Q,r,e.First),null!=this.getProperty(\"movesupsub\")&&p.default.setProperty(Q,\"movesupsub\",this.getProperty(\"movesupsub\")),[[this.factory.create(\"mml\",Q)],!0]}if(t.prototype.checkItem.call(this,e)[1]){var i=this.getErrors([\"\",\"sub\",\"sup\"][r]);throw new(c.default.bind.apply(c.default,o([void 0,i[0],i[1]],n(i.splice(2)),!1)))}return null}",
+  "rows": [
+    {
+      "type": "mi",
+      "kind": "mi",
+      "marker": "_",
+      "moves": null,
+      "allowed": false,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 1,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingOpenForSub",
+        "message": "Missing open brace for subscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "mi",
+      "kind": "mi",
+      "marker": "_",
+      "moves": null,
+      "allowed": false,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 1,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "mi",
+      "kind": "mi",
+      "marker": "_",
+      "moves": null,
+      "allowed": true,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 1,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingOpenForSub",
+        "message": "Missing open brace for subscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "mi",
+      "kind": "mi",
+      "marker": "_",
+      "moves": null,
+      "allowed": true,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 1,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "mi",
+      "kind": "mi",
+      "marker": "_",
+      "moves": false,
+      "allowed": false,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 1,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingOpenForSub",
+        "message": "Missing open brace for subscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "mi",
+      "kind": "mi",
+      "marker": "_",
+      "moves": false,
+      "allowed": false,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 1,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "mi",
+      "kind": "mi",
+      "marker": "_",
+      "moves": false,
+      "allowed": true,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 1,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingOpenForSub",
+        "message": "Missing open brace for subscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "mi",
+      "kind": "mi",
+      "marker": "_",
+      "moves": false,
+      "allowed": true,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 1,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "mi",
+      "kind": "mi",
+      "marker": "_",
+      "moves": true,
+      "allowed": false,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "munderover",
+        "position": 1,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {
+          "movesupsub": true
+        }
+      },
+      "error": {
+        "id": "MissingOpenForSub",
+        "message": "Missing open brace for subscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "mi",
+      "kind": "mi",
+      "marker": "_",
+      "moves": true,
+      "allowed": false,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "munderover",
+        "position": 1,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {
+          "movesupsub": true
+        }
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "mi",
+      "kind": "mi",
+      "marker": "_",
+      "moves": true,
+      "allowed": true,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "munderover",
+        "position": 1,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {
+          "movesupsub": true
+        }
+      },
+      "error": {
+        "id": "MissingOpenForSub",
+        "message": "Missing open brace for subscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "mi",
+      "kind": "mi",
+      "marker": "_",
+      "moves": true,
+      "allowed": true,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "munderover",
+        "position": 1,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {
+          "movesupsub": true
+        }
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "mi",
+      "kind": "mi",
+      "marker": "^",
+      "moves": null,
+      "allowed": false,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 2,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "mi",
+      "kind": "mi",
+      "marker": "^",
+      "moves": null,
+      "allowed": false,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 2,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "mi",
+      "kind": "mi",
+      "marker": "^",
+      "moves": null,
+      "allowed": true,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 2,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "mi",
+      "kind": "mi",
+      "marker": "^",
+      "moves": null,
+      "allowed": true,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 2,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "mi",
+      "kind": "mi",
+      "marker": "^",
+      "moves": false,
+      "allowed": false,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 2,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "mi",
+      "kind": "mi",
+      "marker": "^",
+      "moves": false,
+      "allowed": false,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 2,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "mi",
+      "kind": "mi",
+      "marker": "^",
+      "moves": false,
+      "allowed": true,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 2,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "mi",
+      "kind": "mi",
+      "marker": "^",
+      "moves": false,
+      "allowed": true,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 2,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "mi",
+      "kind": "mi",
+      "marker": "^",
+      "moves": true,
+      "allowed": false,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "munderover",
+        "position": 2,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {
+          "movesupsub": true
+        }
+      },
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "mi",
+      "kind": "mi",
+      "marker": "^",
+      "moves": true,
+      "allowed": false,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "munderover",
+        "position": 2,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {
+          "movesupsub": true
+        }
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "mi",
+      "kind": "mi",
+      "marker": "^",
+      "moves": true,
+      "allowed": true,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "munderover",
+        "position": 2,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {
+          "movesupsub": true
+        }
+      },
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "mi",
+      "kind": "mi",
+      "marker": "^",
+      "moves": true,
+      "allowed": true,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "munderover",
+        "position": 2,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {
+          "movesupsub": true
+        }
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "msub",
+      "kind": "msub",
+      "marker": "_",
+      "moves": null,
+      "allowed": false,
+      "event": "prime",
+      "source": "' ’z",
+      "error": {
+        "id": "DoubleSubscripts",
+        "message": "Double subscripts: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": "' ’z"
+    },
+    {
+      "type": "msub",
+      "kind": "msub",
+      "marker": "_",
+      "moves": null,
+      "allowed": false,
+      "event": "stop",
+      "source": "",
+      "error": {
+        "id": "DoubleSubscripts",
+        "message": "Double subscripts: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "msub",
+      "kind": "msub",
+      "marker": "_",
+      "moves": null,
+      "allowed": true,
+      "event": "prime",
+      "source": "' ’z",
+      "error": {
+        "id": "DoubleSubscripts",
+        "message": "Double subscripts: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": "' ’z"
+    },
+    {
+      "type": "msub",
+      "kind": "msub",
+      "marker": "_",
+      "moves": null,
+      "allowed": true,
+      "event": "stop",
+      "source": "",
+      "error": {
+        "id": "DoubleSubscripts",
+        "message": "Double subscripts: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "msub",
+      "kind": "msub",
+      "marker": "_",
+      "moves": false,
+      "allowed": false,
+      "event": "prime",
+      "source": "' ’z",
+      "error": {
+        "id": "DoubleSubscripts",
+        "message": "Double subscripts: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": "' ’z"
+    },
+    {
+      "type": "msub",
+      "kind": "msub",
+      "marker": "_",
+      "moves": false,
+      "allowed": false,
+      "event": "stop",
+      "source": "",
+      "error": {
+        "id": "DoubleSubscripts",
+        "message": "Double subscripts: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "msub",
+      "kind": "msub",
+      "marker": "_",
+      "moves": false,
+      "allowed": true,
+      "event": "prime",
+      "source": "' ’z",
+      "error": {
+        "id": "DoubleSubscripts",
+        "message": "Double subscripts: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": "' ’z"
+    },
+    {
+      "type": "msub",
+      "kind": "msub",
+      "marker": "_",
+      "moves": false,
+      "allowed": true,
+      "event": "stop",
+      "source": "",
+      "error": {
+        "id": "DoubleSubscripts",
+        "message": "Double subscripts: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "msub",
+      "kind": "msub",
+      "marker": "_",
+      "moves": true,
+      "allowed": false,
+      "event": "prime",
+      "source": "' ’z",
+      "error": {
+        "id": "DoubleSubscripts",
+        "message": "Double subscripts: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": "' ’z"
+    },
+    {
+      "type": "msub",
+      "kind": "msub",
+      "marker": "_",
+      "moves": true,
+      "allowed": false,
+      "event": "stop",
+      "source": "",
+      "error": {
+        "id": "DoubleSubscripts",
+        "message": "Double subscripts: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "msub",
+      "kind": "msub",
+      "marker": "_",
+      "moves": true,
+      "allowed": true,
+      "event": "prime",
+      "source": "' ’z",
+      "error": {
+        "id": "DoubleSubscripts",
+        "message": "Double subscripts: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": "' ’z"
+    },
+    {
+      "type": "msub",
+      "kind": "msub",
+      "marker": "_",
+      "moves": true,
+      "allowed": true,
+      "event": "stop",
+      "source": "",
+      "error": {
+        "id": "DoubleSubscripts",
+        "message": "Double subscripts: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "msub",
+      "kind": "msub",
+      "marker": "^",
+      "moves": null,
+      "allowed": false,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "msub",
+        "position": 2,
+        "reused": true,
+        "children": [
+          "core",
+          "under"
+        ],
+        "attributes": {
+          "id": "authored"
+        },
+        "properties": {
+          "kept": 17
+        }
+      },
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "msub",
+      "kind": "msub",
+      "marker": "^",
+      "moves": null,
+      "allowed": false,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "msub",
+        "position": 2,
+        "reused": true,
+        "children": [
+          "core",
+          "under"
+        ],
+        "attributes": {
+          "id": "authored"
+        },
+        "properties": {
+          "kept": 17
+        }
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "msub",
+      "kind": "msub",
+      "marker": "^",
+      "moves": null,
+      "allowed": true,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "msub",
+        "position": 2,
+        "reused": true,
+        "children": [
+          "core",
+          "under"
+        ],
+        "attributes": {
+          "id": "authored"
+        },
+        "properties": {
+          "kept": 17,
+          "subsupOK": true
+        }
+      },
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "msub",
+      "kind": "msub",
+      "marker": "^",
+      "moves": null,
+      "allowed": true,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "msub",
+        "position": 2,
+        "reused": true,
+        "children": [
+          "core",
+          "under"
+        ],
+        "attributes": {
+          "id": "authored"
+        },
+        "properties": {
+          "kept": 17,
+          "subsupOK": true
+        }
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "msub",
+      "kind": "msub",
+      "marker": "^",
+      "moves": false,
+      "allowed": false,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "msub",
+        "position": 2,
+        "reused": true,
+        "children": [
+          "core",
+          "under"
+        ],
+        "attributes": {
+          "id": "authored"
+        },
+        "properties": {
+          "kept": 17,
+          "movesupsub": false
+        }
+      },
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "msub",
+      "kind": "msub",
+      "marker": "^",
+      "moves": false,
+      "allowed": false,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "msub",
+        "position": 2,
+        "reused": true,
+        "children": [
+          "core",
+          "under"
+        ],
+        "attributes": {
+          "id": "authored"
+        },
+        "properties": {
+          "kept": 17,
+          "movesupsub": false
+        }
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "msub",
+      "kind": "msub",
+      "marker": "^",
+      "moves": false,
+      "allowed": true,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "msub",
+        "position": 2,
+        "reused": true,
+        "children": [
+          "core",
+          "under"
+        ],
+        "attributes": {
+          "id": "authored"
+        },
+        "properties": {
+          "kept": 17,
+          "movesupsub": false,
+          "subsupOK": true
+        }
+      },
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "msub",
+      "kind": "msub",
+      "marker": "^",
+      "moves": false,
+      "allowed": true,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "msub",
+        "position": 2,
+        "reused": true,
+        "children": [
+          "core",
+          "under"
+        ],
+        "attributes": {
+          "id": "authored"
+        },
+        "properties": {
+          "kept": 17,
+          "movesupsub": false,
+          "subsupOK": true
+        }
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "msub",
+      "kind": "msub",
+      "marker": "^",
+      "moves": true,
+      "allowed": false,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "msub",
+        "position": 2,
+        "reused": true,
+        "children": [
+          "core",
+          "under"
+        ],
+        "attributes": {
+          "id": "authored"
+        },
+        "properties": {
+          "kept": 17,
+          "movesupsub": true
+        }
+      },
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "msub",
+      "kind": "msub",
+      "marker": "^",
+      "moves": true,
+      "allowed": false,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "msub",
+        "position": 2,
+        "reused": true,
+        "children": [
+          "core",
+          "under"
+        ],
+        "attributes": {
+          "id": "authored"
+        },
+        "properties": {
+          "kept": 17,
+          "movesupsub": true
+        }
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "msub",
+      "kind": "msub",
+      "marker": "^",
+      "moves": true,
+      "allowed": true,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "msub",
+        "position": 2,
+        "reused": true,
+        "children": [
+          "core",
+          "under"
+        ],
+        "attributes": {
+          "id": "authored"
+        },
+        "properties": {
+          "kept": 17,
+          "movesupsub": true,
+          "subsupOK": true
+        }
+      },
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "msub",
+      "kind": "msub",
+      "marker": "^",
+      "moves": true,
+      "allowed": true,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "msub",
+        "position": 2,
+        "reused": true,
+        "children": [
+          "core",
+          "under"
+        ],
+        "attributes": {
+          "id": "authored"
+        },
+        "properties": {
+          "kept": 17,
+          "movesupsub": true,
+          "subsupOK": true
+        }
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "msup",
+      "kind": "msup",
+      "marker": "_",
+      "moves": null,
+      "allowed": false,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 1,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingOpenForSub",
+        "message": "Missing open brace for subscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "msup",
+      "kind": "msup",
+      "marker": "_",
+      "moves": null,
+      "allowed": false,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 1,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "msup",
+      "kind": "msup",
+      "marker": "_",
+      "moves": null,
+      "allowed": true,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 1,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingOpenForSub",
+        "message": "Missing open brace for subscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "msup",
+      "kind": "msup",
+      "marker": "_",
+      "moves": null,
+      "allowed": true,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 1,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "msup",
+      "kind": "msup",
+      "marker": "_",
+      "moves": false,
+      "allowed": false,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 1,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingOpenForSub",
+        "message": "Missing open brace for subscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "msup",
+      "kind": "msup",
+      "marker": "_",
+      "moves": false,
+      "allowed": false,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 1,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "msup",
+      "kind": "msup",
+      "marker": "_",
+      "moves": false,
+      "allowed": true,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 1,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingOpenForSub",
+        "message": "Missing open brace for subscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "msup",
+      "kind": "msup",
+      "marker": "_",
+      "moves": false,
+      "allowed": true,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 1,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "msup",
+      "kind": "msup",
+      "marker": "_",
+      "moves": true,
+      "allowed": false,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "munderover",
+        "position": 1,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {
+          "movesupsub": true
+        }
+      },
+      "error": {
+        "id": "MissingOpenForSub",
+        "message": "Missing open brace for subscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "msup",
+      "kind": "msup",
+      "marker": "_",
+      "moves": true,
+      "allowed": false,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "munderover",
+        "position": 1,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {
+          "movesupsub": true
+        }
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "msup",
+      "kind": "msup",
+      "marker": "_",
+      "moves": true,
+      "allowed": true,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "munderover",
+        "position": 1,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {
+          "movesupsub": true
+        }
+      },
+      "error": {
+        "id": "MissingOpenForSub",
+        "message": "Missing open brace for subscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "msup",
+      "kind": "msup",
+      "marker": "_",
+      "moves": true,
+      "allowed": true,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "munderover",
+        "position": 1,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {
+          "movesupsub": true
+        }
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "msup",
+      "kind": "msup",
+      "marker": "^",
+      "moves": null,
+      "allowed": false,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 2,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "msup",
+      "kind": "msup",
+      "marker": "^",
+      "moves": null,
+      "allowed": false,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 2,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "msup",
+      "kind": "msup",
+      "marker": "^",
+      "moves": null,
+      "allowed": true,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 2,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "msup",
+      "kind": "msup",
+      "marker": "^",
+      "moves": null,
+      "allowed": true,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 2,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "msup",
+      "kind": "msup",
+      "marker": "^",
+      "moves": false,
+      "allowed": false,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 2,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "msup",
+      "kind": "msup",
+      "marker": "^",
+      "moves": false,
+      "allowed": false,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 2,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "msup",
+      "kind": "msup",
+      "marker": "^",
+      "moves": false,
+      "allowed": true,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 2,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "msup",
+      "kind": "msup",
+      "marker": "^",
+      "moves": false,
+      "allowed": true,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 2,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "msup",
+      "kind": "msup",
+      "marker": "^",
+      "moves": true,
+      "allowed": false,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "munderover",
+        "position": 2,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {
+          "movesupsub": true
+        }
+      },
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "msup",
+      "kind": "msup",
+      "marker": "^",
+      "moves": true,
+      "allowed": false,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "munderover",
+        "position": 2,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {
+          "movesupsub": true
+        }
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "msup",
+      "kind": "msup",
+      "marker": "^",
+      "moves": true,
+      "allowed": true,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "munderover",
+        "position": 2,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {
+          "movesupsub": true
+        }
+      },
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "msup",
+      "kind": "msup",
+      "marker": "^",
+      "moves": true,
+      "allowed": true,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "munderover",
+        "position": 2,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {
+          "movesupsub": true
+        }
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "msubsup",
+      "kind": "msubsup",
+      "marker": "_",
+      "moves": null,
+      "allowed": false,
+      "event": "prime",
+      "source": "' ’z",
+      "error": {
+        "id": "DoubleSubscripts",
+        "message": "Double subscripts: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": "' ’z"
+    },
+    {
+      "type": "msubsup",
+      "kind": "msubsup",
+      "marker": "_",
+      "moves": null,
+      "allowed": false,
+      "event": "stop",
+      "source": "",
+      "error": {
+        "id": "DoubleSubscripts",
+        "message": "Double subscripts: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "msubsup",
+      "kind": "msubsup",
+      "marker": "_",
+      "moves": null,
+      "allowed": true,
+      "event": "prime",
+      "source": "' ’z",
+      "error": {
+        "id": "DoubleSubscripts",
+        "message": "Double subscripts: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": "' ’z"
+    },
+    {
+      "type": "msubsup",
+      "kind": "msubsup",
+      "marker": "_",
+      "moves": null,
+      "allowed": true,
+      "event": "stop",
+      "source": "",
+      "error": {
+        "id": "DoubleSubscripts",
+        "message": "Double subscripts: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "msubsup",
+      "kind": "msubsup",
+      "marker": "_",
+      "moves": false,
+      "allowed": false,
+      "event": "prime",
+      "source": "' ’z",
+      "error": {
+        "id": "DoubleSubscripts",
+        "message": "Double subscripts: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": "' ’z"
+    },
+    {
+      "type": "msubsup",
+      "kind": "msubsup",
+      "marker": "_",
+      "moves": false,
+      "allowed": false,
+      "event": "stop",
+      "source": "",
+      "error": {
+        "id": "DoubleSubscripts",
+        "message": "Double subscripts: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "msubsup",
+      "kind": "msubsup",
+      "marker": "_",
+      "moves": false,
+      "allowed": true,
+      "event": "prime",
+      "source": "' ’z",
+      "error": {
+        "id": "DoubleSubscripts",
+        "message": "Double subscripts: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": "' ’z"
+    },
+    {
+      "type": "msubsup",
+      "kind": "msubsup",
+      "marker": "_",
+      "moves": false,
+      "allowed": true,
+      "event": "stop",
+      "source": "",
+      "error": {
+        "id": "DoubleSubscripts",
+        "message": "Double subscripts: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "msubsup",
+      "kind": "msubsup",
+      "marker": "_",
+      "moves": true,
+      "allowed": false,
+      "event": "prime",
+      "source": "' ’z",
+      "error": {
+        "id": "DoubleSubscripts",
+        "message": "Double subscripts: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": "' ’z"
+    },
+    {
+      "type": "msubsup",
+      "kind": "msubsup",
+      "marker": "_",
+      "moves": true,
+      "allowed": false,
+      "event": "stop",
+      "source": "",
+      "error": {
+        "id": "DoubleSubscripts",
+        "message": "Double subscripts: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "msubsup",
+      "kind": "msubsup",
+      "marker": "_",
+      "moves": true,
+      "allowed": true,
+      "event": "prime",
+      "source": "' ’z",
+      "error": {
+        "id": "DoubleSubscripts",
+        "message": "Double subscripts: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": "' ’z"
+    },
+    {
+      "type": "msubsup",
+      "kind": "msubsup",
+      "marker": "_",
+      "moves": true,
+      "allowed": true,
+      "event": "stop",
+      "source": "",
+      "error": {
+        "id": "DoubleSubscripts",
+        "message": "Double subscripts: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "msubsup",
+      "kind": "msubsup",
+      "marker": "^",
+      "moves": null,
+      "allowed": false,
+      "event": "prime",
+      "source": "' ’z",
+      "error": {
+        "id": "DoubleExponent",
+        "message": "Double exponent: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": "' ’z"
+    },
+    {
+      "type": "msubsup",
+      "kind": "msubsup",
+      "marker": "^",
+      "moves": null,
+      "allowed": false,
+      "event": "stop",
+      "source": "",
+      "error": {
+        "id": "DoubleExponent",
+        "message": "Double exponent: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "msubsup",
+      "kind": "msubsup",
+      "marker": "^",
+      "moves": null,
+      "allowed": true,
+      "event": "prime",
+      "source": "' ’z",
+      "error": {
+        "id": "DoubleExponent",
+        "message": "Double exponent: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": "' ’z"
+    },
+    {
+      "type": "msubsup",
+      "kind": "msubsup",
+      "marker": "^",
+      "moves": null,
+      "allowed": true,
+      "event": "stop",
+      "source": "",
+      "error": {
+        "id": "DoubleExponent",
+        "message": "Double exponent: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "msubsup",
+      "kind": "msubsup",
+      "marker": "^",
+      "moves": false,
+      "allowed": false,
+      "event": "prime",
+      "source": "' ’z",
+      "error": {
+        "id": "DoubleExponent",
+        "message": "Double exponent: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": "' ’z"
+    },
+    {
+      "type": "msubsup",
+      "kind": "msubsup",
+      "marker": "^",
+      "moves": false,
+      "allowed": false,
+      "event": "stop",
+      "source": "",
+      "error": {
+        "id": "DoubleExponent",
+        "message": "Double exponent: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "msubsup",
+      "kind": "msubsup",
+      "marker": "^",
+      "moves": false,
+      "allowed": true,
+      "event": "prime",
+      "source": "' ’z",
+      "error": {
+        "id": "DoubleExponent",
+        "message": "Double exponent: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": "' ’z"
+    },
+    {
+      "type": "msubsup",
+      "kind": "msubsup",
+      "marker": "^",
+      "moves": false,
+      "allowed": true,
+      "event": "stop",
+      "source": "",
+      "error": {
+        "id": "DoubleExponent",
+        "message": "Double exponent: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "msubsup",
+      "kind": "msubsup",
+      "marker": "^",
+      "moves": true,
+      "allowed": false,
+      "event": "prime",
+      "source": "' ’z",
+      "error": {
+        "id": "DoubleExponent",
+        "message": "Double exponent: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": "' ’z"
+    },
+    {
+      "type": "msubsup",
+      "kind": "msubsup",
+      "marker": "^",
+      "moves": true,
+      "allowed": false,
+      "event": "stop",
+      "source": "",
+      "error": {
+        "id": "DoubleExponent",
+        "message": "Double exponent: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "msubsup",
+      "kind": "msubsup",
+      "marker": "^",
+      "moves": true,
+      "allowed": true,
+      "event": "prime",
+      "source": "' ’z",
+      "error": {
+        "id": "DoubleExponent",
+        "message": "Double exponent: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": "' ’z"
+    },
+    {
+      "type": "msubsup",
+      "kind": "msubsup",
+      "marker": "^",
+      "moves": true,
+      "allowed": true,
+      "event": "stop",
+      "source": "",
+      "error": {
+        "id": "DoubleExponent",
+        "message": "Double exponent: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "munder",
+      "kind": "munder",
+      "marker": "_",
+      "moves": null,
+      "allowed": false,
+      "event": "prime",
+      "source": "' ’z",
+      "error": {
+        "id": "DoubleSubscripts",
+        "message": "Double subscripts: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": "' ’z"
+    },
+    {
+      "type": "munder",
+      "kind": "munder",
+      "marker": "_",
+      "moves": null,
+      "allowed": false,
+      "event": "stop",
+      "source": "",
+      "error": {
+        "id": "DoubleSubscripts",
+        "message": "Double subscripts: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "munder",
+      "kind": "munder",
+      "marker": "_",
+      "moves": null,
+      "allowed": true,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 1,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingOpenForSub",
+        "message": "Missing open brace for subscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "munder",
+      "kind": "munder",
+      "marker": "_",
+      "moves": null,
+      "allowed": true,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 1,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "munder",
+      "kind": "munder",
+      "marker": "_",
+      "moves": false,
+      "allowed": false,
+      "event": "prime",
+      "source": "' ’z",
+      "error": {
+        "id": "DoubleSubscripts",
+        "message": "Double subscripts: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": "' ’z"
+    },
+    {
+      "type": "munder",
+      "kind": "munder",
+      "marker": "_",
+      "moves": false,
+      "allowed": false,
+      "event": "stop",
+      "source": "",
+      "error": {
+        "id": "DoubleSubscripts",
+        "message": "Double subscripts: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "munder",
+      "kind": "munder",
+      "marker": "_",
+      "moves": false,
+      "allowed": true,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 1,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingOpenForSub",
+        "message": "Missing open brace for subscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "munder",
+      "kind": "munder",
+      "marker": "_",
+      "moves": false,
+      "allowed": true,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 1,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "munder",
+      "kind": "munder",
+      "marker": "_",
+      "moves": true,
+      "allowed": false,
+      "event": "prime",
+      "source": "' ’z",
+      "error": {
+        "id": "DoubleSubscripts",
+        "message": "Double subscripts: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": "' ’z"
+    },
+    {
+      "type": "munder",
+      "kind": "munder",
+      "marker": "_",
+      "moves": true,
+      "allowed": false,
+      "event": "stop",
+      "source": "",
+      "error": {
+        "id": "DoubleSubscripts",
+        "message": "Double subscripts: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "munder",
+      "kind": "munder",
+      "marker": "_",
+      "moves": true,
+      "allowed": true,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "munderover",
+        "position": 1,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {
+          "movesupsub": true
+        }
+      },
+      "error": {
+        "id": "MissingOpenForSub",
+        "message": "Missing open brace for subscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "munder",
+      "kind": "munder",
+      "marker": "_",
+      "moves": true,
+      "allowed": true,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "munderover",
+        "position": 1,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {
+          "movesupsub": true
+        }
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "munder",
+      "kind": "munder",
+      "marker": "^",
+      "moves": null,
+      "allowed": false,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 2,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "munder",
+      "kind": "munder",
+      "marker": "^",
+      "moves": null,
+      "allowed": false,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 2,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "munder",
+      "kind": "munder",
+      "marker": "^",
+      "moves": null,
+      "allowed": true,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 2,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "munder",
+      "kind": "munder",
+      "marker": "^",
+      "moves": null,
+      "allowed": true,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 2,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "munder",
+      "kind": "munder",
+      "marker": "^",
+      "moves": false,
+      "allowed": false,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 2,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "munder",
+      "kind": "munder",
+      "marker": "^",
+      "moves": false,
+      "allowed": false,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 2,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "munder",
+      "kind": "munder",
+      "marker": "^",
+      "moves": false,
+      "allowed": true,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 2,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "munder",
+      "kind": "munder",
+      "marker": "^",
+      "moves": false,
+      "allowed": true,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 2,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "munder",
+      "kind": "munder",
+      "marker": "^",
+      "moves": true,
+      "allowed": false,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "munder",
+        "position": 2,
+        "reused": true,
+        "children": [
+          "core",
+          "under"
+        ],
+        "attributes": {
+          "id": "authored"
+        },
+        "properties": {
+          "kept": 17,
+          "movesupsub": true
+        }
+      },
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "munder",
+      "kind": "munder",
+      "marker": "^",
+      "moves": true,
+      "allowed": false,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "munder",
+        "position": 2,
+        "reused": true,
+        "children": [
+          "core",
+          "under"
+        ],
+        "attributes": {
+          "id": "authored"
+        },
+        "properties": {
+          "kept": 17,
+          "movesupsub": true
+        }
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "munder",
+      "kind": "munder",
+      "marker": "^",
+      "moves": true,
+      "allowed": true,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "munder",
+        "position": 2,
+        "reused": true,
+        "children": [
+          "core",
+          "under"
+        ],
+        "attributes": {
+          "id": "authored"
+        },
+        "properties": {
+          "kept": 17,
+          "movesupsub": true,
+          "subsupOK": true
+        }
+      },
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "munder",
+      "kind": "munder",
+      "marker": "^",
+      "moves": true,
+      "allowed": true,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "munder",
+        "position": 2,
+        "reused": true,
+        "children": [
+          "core",
+          "under"
+        ],
+        "attributes": {
+          "id": "authored"
+        },
+        "properties": {
+          "kept": 17,
+          "movesupsub": true,
+          "subsupOK": true
+        }
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "mover",
+      "kind": "mover",
+      "marker": "_",
+      "moves": null,
+      "allowed": false,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 1,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingOpenForSub",
+        "message": "Missing open brace for subscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "mover",
+      "kind": "mover",
+      "marker": "_",
+      "moves": null,
+      "allowed": false,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 1,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "mover",
+      "kind": "mover",
+      "marker": "_",
+      "moves": null,
+      "allowed": true,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 1,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingOpenForSub",
+        "message": "Missing open brace for subscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "mover",
+      "kind": "mover",
+      "marker": "_",
+      "moves": null,
+      "allowed": true,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 1,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "mover",
+      "kind": "mover",
+      "marker": "_",
+      "moves": false,
+      "allowed": false,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 1,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingOpenForSub",
+        "message": "Missing open brace for subscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "mover",
+      "kind": "mover",
+      "marker": "_",
+      "moves": false,
+      "allowed": false,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 1,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "mover",
+      "kind": "mover",
+      "marker": "_",
+      "moves": false,
+      "allowed": true,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 1,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingOpenForSub",
+        "message": "Missing open brace for subscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "mover",
+      "kind": "mover",
+      "marker": "_",
+      "moves": false,
+      "allowed": true,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 1,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "mover",
+      "kind": "mover",
+      "marker": "_",
+      "moves": true,
+      "allowed": false,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "munderover",
+        "position": 1,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {
+          "movesupsub": true
+        }
+      },
+      "error": {
+        "id": "MissingOpenForSub",
+        "message": "Missing open brace for subscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "mover",
+      "kind": "mover",
+      "marker": "_",
+      "moves": true,
+      "allowed": false,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "munderover",
+        "position": 1,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {
+          "movesupsub": true
+        }
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "mover",
+      "kind": "mover",
+      "marker": "_",
+      "moves": true,
+      "allowed": true,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "munderover",
+        "position": 1,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {
+          "movesupsub": true
+        }
+      },
+      "error": {
+        "id": "MissingOpenForSub",
+        "message": "Missing open brace for subscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "mover",
+      "kind": "mover",
+      "marker": "_",
+      "moves": true,
+      "allowed": true,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "munderover",
+        "position": 1,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {
+          "movesupsub": true
+        }
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "mover",
+      "kind": "mover",
+      "marker": "^",
+      "moves": null,
+      "allowed": false,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 2,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "mover",
+      "kind": "mover",
+      "marker": "^",
+      "moves": null,
+      "allowed": false,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 2,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "mover",
+      "kind": "mover",
+      "marker": "^",
+      "moves": null,
+      "allowed": true,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 2,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "mover",
+      "kind": "mover",
+      "marker": "^",
+      "moves": null,
+      "allowed": true,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 2,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "mover",
+      "kind": "mover",
+      "marker": "^",
+      "moves": false,
+      "allowed": false,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 2,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "mover",
+      "kind": "mover",
+      "marker": "^",
+      "moves": false,
+      "allowed": false,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 2,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "mover",
+      "kind": "mover",
+      "marker": "^",
+      "moves": false,
+      "allowed": true,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 2,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "mover",
+      "kind": "mover",
+      "marker": "^",
+      "moves": false,
+      "allowed": true,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 2,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "mover",
+      "kind": "mover",
+      "marker": "^",
+      "moves": true,
+      "allowed": false,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "munderover",
+        "position": 2,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {
+          "movesupsub": true
+        }
+      },
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "mover",
+      "kind": "mover",
+      "marker": "^",
+      "moves": true,
+      "allowed": false,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "munderover",
+        "position": 2,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {
+          "movesupsub": true
+        }
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "mover",
+      "kind": "mover",
+      "marker": "^",
+      "moves": true,
+      "allowed": true,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "munderover",
+        "position": 2,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {
+          "movesupsub": true
+        }
+      },
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "mover",
+      "kind": "mover",
+      "marker": "^",
+      "moves": true,
+      "allowed": true,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "munderover",
+        "position": 2,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {
+          "movesupsub": true
+        }
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "munderover",
+      "kind": "munderover",
+      "marker": "_",
+      "moves": null,
+      "allowed": false,
+      "event": "prime",
+      "source": "' ’z",
+      "error": {
+        "id": "DoubleSubscripts",
+        "message": "Double subscripts: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": "' ’z"
+    },
+    {
+      "type": "munderover",
+      "kind": "munderover",
+      "marker": "_",
+      "moves": null,
+      "allowed": false,
+      "event": "stop",
+      "source": "",
+      "error": {
+        "id": "DoubleSubscripts",
+        "message": "Double subscripts: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "munderover",
+      "kind": "munderover",
+      "marker": "_",
+      "moves": null,
+      "allowed": true,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 1,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingOpenForSub",
+        "message": "Missing open brace for subscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "munderover",
+      "kind": "munderover",
+      "marker": "_",
+      "moves": null,
+      "allowed": true,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 1,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "munderover",
+      "kind": "munderover",
+      "marker": "_",
+      "moves": false,
+      "allowed": false,
+      "event": "prime",
+      "source": "' ’z",
+      "error": {
+        "id": "DoubleSubscripts",
+        "message": "Double subscripts: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": "' ’z"
+    },
+    {
+      "type": "munderover",
+      "kind": "munderover",
+      "marker": "_",
+      "moves": false,
+      "allowed": false,
+      "event": "stop",
+      "source": "",
+      "error": {
+        "id": "DoubleSubscripts",
+        "message": "Double subscripts: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "munderover",
+      "kind": "munderover",
+      "marker": "_",
+      "moves": false,
+      "allowed": true,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 1,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingOpenForSub",
+        "message": "Missing open brace for subscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "munderover",
+      "kind": "munderover",
+      "marker": "_",
+      "moves": false,
+      "allowed": true,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 1,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "munderover",
+      "kind": "munderover",
+      "marker": "_",
+      "moves": true,
+      "allowed": false,
+      "event": "prime",
+      "source": "' ’z",
+      "error": {
+        "id": "DoubleSubscripts",
+        "message": "Double subscripts: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": "' ’z"
+    },
+    {
+      "type": "munderover",
+      "kind": "munderover",
+      "marker": "_",
+      "moves": true,
+      "allowed": false,
+      "event": "stop",
+      "source": "",
+      "error": {
+        "id": "DoubleSubscripts",
+        "message": "Double subscripts: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "munderover",
+      "kind": "munderover",
+      "marker": "_",
+      "moves": true,
+      "allowed": true,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "munderover",
+        "position": 1,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {
+          "movesupsub": true
+        }
+      },
+      "error": {
+        "id": "MissingOpenForSub",
+        "message": "Missing open brace for subscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "munderover",
+      "kind": "munderover",
+      "marker": "_",
+      "moves": true,
+      "allowed": true,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "munderover",
+        "position": 1,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {
+          "movesupsub": true
+        }
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "munderover",
+      "kind": "munderover",
+      "marker": "^",
+      "moves": null,
+      "allowed": false,
+      "event": "prime",
+      "source": "' ’z",
+      "error": {
+        "id": "DoubleExponent",
+        "message": "Double exponent: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": "' ’z"
+    },
+    {
+      "type": "munderover",
+      "kind": "munderover",
+      "marker": "^",
+      "moves": null,
+      "allowed": false,
+      "event": "stop",
+      "source": "",
+      "error": {
+        "id": "DoubleExponent",
+        "message": "Double exponent: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "munderover",
+      "kind": "munderover",
+      "marker": "^",
+      "moves": null,
+      "allowed": true,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 2,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "munderover",
+      "kind": "munderover",
+      "marker": "^",
+      "moves": null,
+      "allowed": true,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 2,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "munderover",
+      "kind": "munderover",
+      "marker": "^",
+      "moves": false,
+      "allowed": false,
+      "event": "prime",
+      "source": "' ’z",
+      "error": {
+        "id": "DoubleExponent",
+        "message": "Double exponent: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": "' ’z"
+    },
+    {
+      "type": "munderover",
+      "kind": "munderover",
+      "marker": "^",
+      "moves": false,
+      "allowed": false,
+      "event": "stop",
+      "source": "",
+      "error": {
+        "id": "DoubleExponent",
+        "message": "Double exponent: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "munderover",
+      "kind": "munderover",
+      "marker": "^",
+      "moves": false,
+      "allowed": true,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 2,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "munderover",
+      "kind": "munderover",
+      "marker": "^",
+      "moves": false,
+      "allowed": true,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 2,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "munderover",
+      "kind": "munderover",
+      "marker": "^",
+      "moves": true,
+      "allowed": false,
+      "event": "prime",
+      "source": "' ’z",
+      "error": {
+        "id": "DoubleExponent",
+        "message": "Double exponent: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": "' ’z"
+    },
+    {
+      "type": "munderover",
+      "kind": "munderover",
+      "marker": "^",
+      "moves": true,
+      "allowed": false,
+      "event": "stop",
+      "source": "",
+      "error": {
+        "id": "DoubleExponent",
+        "message": "Double exponent: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "munderover",
+      "kind": "munderover",
+      "marker": "^",
+      "moves": true,
+      "allowed": true,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "munderover",
+        "position": 2,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {
+          "movesupsub": true
+        }
+      },
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "munderover",
+      "kind": "munderover",
+      "marker": "^",
+      "moves": true,
+      "allowed": true,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "munderover",
+        "position": 2,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {
+          "movesupsub": true
+        }
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "msubsup-no-under",
+      "kind": "msubsup",
+      "marker": "_",
+      "moves": null,
+      "allowed": false,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 1,
+        "reused": true,
+        "children": [
+          "core",
+          null,
+          "over"
+        ],
+        "attributes": {
+          "id": "authored"
+        },
+        "properties": {
+          "kept": 17
+        }
+      },
+      "error": {
+        "id": "DoubleExponentPrime",
+        "message": "Prime causes double exponent: use braces to clarify"
+      },
+      "stage": "argument",
+      "cursor": 1,
+      "remaining": " ’z"
+    },
+    {
+      "type": "msubsup-no-under",
+      "kind": "msubsup",
+      "marker": "_",
+      "moves": null,
+      "allowed": false,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 1,
+        "reused": true,
+        "children": [
+          "core",
+          null,
+          "over"
+        ],
+        "attributes": {
+          "id": "authored"
+        },
+        "properties": {
+          "kept": 17
+        }
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "msubsup-no-under",
+      "kind": "msubsup",
+      "marker": "_",
+      "moves": null,
+      "allowed": true,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 1,
+        "reused": true,
+        "children": [
+          "core",
+          null,
+          "over"
+        ],
+        "attributes": {
+          "id": "authored"
+        },
+        "properties": {
+          "kept": 17,
+          "subsupOK": true
+        }
+      },
+      "error": {
+        "id": "DoubleExponentPrime",
+        "message": "Prime causes double exponent: use braces to clarify"
+      },
+      "stage": "argument",
+      "cursor": 1,
+      "remaining": " ’z"
+    },
+    {
+      "type": "msubsup-no-under",
+      "kind": "msubsup",
+      "marker": "_",
+      "moves": null,
+      "allowed": true,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 1,
+        "reused": true,
+        "children": [
+          "core",
+          null,
+          "over"
+        ],
+        "attributes": {
+          "id": "authored"
+        },
+        "properties": {
+          "kept": 17,
+          "subsupOK": true
+        }
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "msubsup-no-under",
+      "kind": "msubsup",
+      "marker": "_",
+      "moves": false,
+      "allowed": false,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 1,
+        "reused": true,
+        "children": [
+          "core",
+          null,
+          "over"
+        ],
+        "attributes": {
+          "id": "authored"
+        },
+        "properties": {
+          "kept": 17,
+          "movesupsub": false
+        }
+      },
+      "error": {
+        "id": "DoubleExponentPrime",
+        "message": "Prime causes double exponent: use braces to clarify"
+      },
+      "stage": "argument",
+      "cursor": 1,
+      "remaining": " ’z"
+    },
+    {
+      "type": "msubsup-no-under",
+      "kind": "msubsup",
+      "marker": "_",
+      "moves": false,
+      "allowed": false,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 1,
+        "reused": true,
+        "children": [
+          "core",
+          null,
+          "over"
+        ],
+        "attributes": {
+          "id": "authored"
+        },
+        "properties": {
+          "kept": 17,
+          "movesupsub": false
+        }
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "msubsup-no-under",
+      "kind": "msubsup",
+      "marker": "_",
+      "moves": false,
+      "allowed": true,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 1,
+        "reused": true,
+        "children": [
+          "core",
+          null,
+          "over"
+        ],
+        "attributes": {
+          "id": "authored"
+        },
+        "properties": {
+          "kept": 17,
+          "movesupsub": false,
+          "subsupOK": true
+        }
+      },
+      "error": {
+        "id": "DoubleExponentPrime",
+        "message": "Prime causes double exponent: use braces to clarify"
+      },
+      "stage": "argument",
+      "cursor": 1,
+      "remaining": " ’z"
+    },
+    {
+      "type": "msubsup-no-under",
+      "kind": "msubsup",
+      "marker": "_",
+      "moves": false,
+      "allowed": true,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 1,
+        "reused": true,
+        "children": [
+          "core",
+          null,
+          "over"
+        ],
+        "attributes": {
+          "id": "authored"
+        },
+        "properties": {
+          "kept": 17,
+          "movesupsub": false,
+          "subsupOK": true
+        }
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "msubsup-no-under",
+      "kind": "msubsup",
+      "marker": "_",
+      "moves": true,
+      "allowed": false,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 1,
+        "reused": true,
+        "children": [
+          "core",
+          null,
+          "over"
+        ],
+        "attributes": {
+          "id": "authored"
+        },
+        "properties": {
+          "kept": 17,
+          "movesupsub": true
+        }
+      },
+      "error": {
+        "id": "DoubleExponentPrime",
+        "message": "Prime causes double exponent: use braces to clarify"
+      },
+      "stage": "argument",
+      "cursor": 1,
+      "remaining": " ’z"
+    },
+    {
+      "type": "msubsup-no-under",
+      "kind": "msubsup",
+      "marker": "_",
+      "moves": true,
+      "allowed": false,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 1,
+        "reused": true,
+        "children": [
+          "core",
+          null,
+          "over"
+        ],
+        "attributes": {
+          "id": "authored"
+        },
+        "properties": {
+          "kept": 17,
+          "movesupsub": true
+        }
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "msubsup-no-under",
+      "kind": "msubsup",
+      "marker": "_",
+      "moves": true,
+      "allowed": true,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 1,
+        "reused": true,
+        "children": [
+          "core",
+          null,
+          "over"
+        ],
+        "attributes": {
+          "id": "authored"
+        },
+        "properties": {
+          "kept": 17,
+          "movesupsub": true,
+          "subsupOK": true
+        }
+      },
+      "error": {
+        "id": "DoubleExponentPrime",
+        "message": "Prime causes double exponent: use braces to clarify"
+      },
+      "stage": "argument",
+      "cursor": 1,
+      "remaining": " ’z"
+    },
+    {
+      "type": "msubsup-no-under",
+      "kind": "msubsup",
+      "marker": "_",
+      "moves": true,
+      "allowed": true,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 1,
+        "reused": true,
+        "children": [
+          "core",
+          null,
+          "over"
+        ],
+        "attributes": {
+          "id": "authored"
+        },
+        "properties": {
+          "kept": 17,
+          "movesupsub": true,
+          "subsupOK": true
+        }
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "msubsup-no-under",
+      "kind": "msubsup",
+      "marker": "^",
+      "moves": null,
+      "allowed": false,
+      "event": "prime",
+      "source": "' ’z",
+      "error": {
+        "id": "DoubleExponent",
+        "message": "Double exponent: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": "' ’z"
+    },
+    {
+      "type": "msubsup-no-under",
+      "kind": "msubsup",
+      "marker": "^",
+      "moves": null,
+      "allowed": false,
+      "event": "stop",
+      "source": "",
+      "error": {
+        "id": "DoubleExponent",
+        "message": "Double exponent: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "msubsup-no-under",
+      "kind": "msubsup",
+      "marker": "^",
+      "moves": null,
+      "allowed": true,
+      "event": "prime",
+      "source": "' ’z",
+      "error": {
+        "id": "DoubleExponent",
+        "message": "Double exponent: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": "' ’z"
+    },
+    {
+      "type": "msubsup-no-under",
+      "kind": "msubsup",
+      "marker": "^",
+      "moves": null,
+      "allowed": true,
+      "event": "stop",
+      "source": "",
+      "error": {
+        "id": "DoubleExponent",
+        "message": "Double exponent: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "msubsup-no-under",
+      "kind": "msubsup",
+      "marker": "^",
+      "moves": false,
+      "allowed": false,
+      "event": "prime",
+      "source": "' ’z",
+      "error": {
+        "id": "DoubleExponent",
+        "message": "Double exponent: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": "' ’z"
+    },
+    {
+      "type": "msubsup-no-under",
+      "kind": "msubsup",
+      "marker": "^",
+      "moves": false,
+      "allowed": false,
+      "event": "stop",
+      "source": "",
+      "error": {
+        "id": "DoubleExponent",
+        "message": "Double exponent: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "msubsup-no-under",
+      "kind": "msubsup",
+      "marker": "^",
+      "moves": false,
+      "allowed": true,
+      "event": "prime",
+      "source": "' ’z",
+      "error": {
+        "id": "DoubleExponent",
+        "message": "Double exponent: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": "' ’z"
+    },
+    {
+      "type": "msubsup-no-under",
+      "kind": "msubsup",
+      "marker": "^",
+      "moves": false,
+      "allowed": true,
+      "event": "stop",
+      "source": "",
+      "error": {
+        "id": "DoubleExponent",
+        "message": "Double exponent: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "msubsup-no-under",
+      "kind": "msubsup",
+      "marker": "^",
+      "moves": true,
+      "allowed": false,
+      "event": "prime",
+      "source": "' ’z",
+      "error": {
+        "id": "DoubleExponent",
+        "message": "Double exponent: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": "' ’z"
+    },
+    {
+      "type": "msubsup-no-under",
+      "kind": "msubsup",
+      "marker": "^",
+      "moves": true,
+      "allowed": false,
+      "event": "stop",
+      "source": "",
+      "error": {
+        "id": "DoubleExponent",
+        "message": "Double exponent: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "msubsup-no-under",
+      "kind": "msubsup",
+      "marker": "^",
+      "moves": true,
+      "allowed": true,
+      "event": "prime",
+      "source": "' ’z",
+      "error": {
+        "id": "DoubleExponent",
+        "message": "Double exponent: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": "' ’z"
+    },
+    {
+      "type": "msubsup-no-under",
+      "kind": "msubsup",
+      "marker": "^",
+      "moves": true,
+      "allowed": true,
+      "event": "stop",
+      "source": "",
+      "error": {
+        "id": "DoubleExponent",
+        "message": "Double exponent: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "msubsup-no-over",
+      "kind": "msubsup",
+      "marker": "_",
+      "moves": null,
+      "allowed": false,
+      "event": "prime",
+      "source": "' ’z",
+      "error": {
+        "id": "DoubleSubscripts",
+        "message": "Double subscripts: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": "' ’z"
+    },
+    {
+      "type": "msubsup-no-over",
+      "kind": "msubsup",
+      "marker": "_",
+      "moves": null,
+      "allowed": false,
+      "event": "stop",
+      "source": "",
+      "error": {
+        "id": "DoubleSubscripts",
+        "message": "Double subscripts: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "msubsup-no-over",
+      "kind": "msubsup",
+      "marker": "_",
+      "moves": null,
+      "allowed": true,
+      "event": "prime",
+      "source": "' ’z",
+      "error": {
+        "id": "DoubleSubscripts",
+        "message": "Double subscripts: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": "' ’z"
+    },
+    {
+      "type": "msubsup-no-over",
+      "kind": "msubsup",
+      "marker": "_",
+      "moves": null,
+      "allowed": true,
+      "event": "stop",
+      "source": "",
+      "error": {
+        "id": "DoubleSubscripts",
+        "message": "Double subscripts: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "msubsup-no-over",
+      "kind": "msubsup",
+      "marker": "_",
+      "moves": false,
+      "allowed": false,
+      "event": "prime",
+      "source": "' ’z",
+      "error": {
+        "id": "DoubleSubscripts",
+        "message": "Double subscripts: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": "' ’z"
+    },
+    {
+      "type": "msubsup-no-over",
+      "kind": "msubsup",
+      "marker": "_",
+      "moves": false,
+      "allowed": false,
+      "event": "stop",
+      "source": "",
+      "error": {
+        "id": "DoubleSubscripts",
+        "message": "Double subscripts: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "msubsup-no-over",
+      "kind": "msubsup",
+      "marker": "_",
+      "moves": false,
+      "allowed": true,
+      "event": "prime",
+      "source": "' ’z",
+      "error": {
+        "id": "DoubleSubscripts",
+        "message": "Double subscripts: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": "' ’z"
+    },
+    {
+      "type": "msubsup-no-over",
+      "kind": "msubsup",
+      "marker": "_",
+      "moves": false,
+      "allowed": true,
+      "event": "stop",
+      "source": "",
+      "error": {
+        "id": "DoubleSubscripts",
+        "message": "Double subscripts: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "msubsup-no-over",
+      "kind": "msubsup",
+      "marker": "_",
+      "moves": true,
+      "allowed": false,
+      "event": "prime",
+      "source": "' ’z",
+      "error": {
+        "id": "DoubleSubscripts",
+        "message": "Double subscripts: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": "' ’z"
+    },
+    {
+      "type": "msubsup-no-over",
+      "kind": "msubsup",
+      "marker": "_",
+      "moves": true,
+      "allowed": false,
+      "event": "stop",
+      "source": "",
+      "error": {
+        "id": "DoubleSubscripts",
+        "message": "Double subscripts: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "msubsup-no-over",
+      "kind": "msubsup",
+      "marker": "_",
+      "moves": true,
+      "allowed": true,
+      "event": "prime",
+      "source": "' ’z",
+      "error": {
+        "id": "DoubleSubscripts",
+        "message": "Double subscripts: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": "' ’z"
+    },
+    {
+      "type": "msubsup-no-over",
+      "kind": "msubsup",
+      "marker": "_",
+      "moves": true,
+      "allowed": true,
+      "event": "stop",
+      "source": "",
+      "error": {
+        "id": "DoubleSubscripts",
+        "message": "Double subscripts: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "msubsup-no-over",
+      "kind": "msubsup",
+      "marker": "^",
+      "moves": null,
+      "allowed": false,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 2,
+        "reused": true,
+        "children": [
+          "core",
+          "under"
+        ],
+        "attributes": {
+          "id": "authored"
+        },
+        "properties": {
+          "kept": 17
+        }
+      },
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "msubsup-no-over",
+      "kind": "msubsup",
+      "marker": "^",
+      "moves": null,
+      "allowed": false,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 2,
+        "reused": true,
+        "children": [
+          "core",
+          "under"
+        ],
+        "attributes": {
+          "id": "authored"
+        },
+        "properties": {
+          "kept": 17
+        }
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "msubsup-no-over",
+      "kind": "msubsup",
+      "marker": "^",
+      "moves": null,
+      "allowed": true,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 2,
+        "reused": true,
+        "children": [
+          "core",
+          "under"
+        ],
+        "attributes": {
+          "id": "authored"
+        },
+        "properties": {
+          "kept": 17,
+          "subsupOK": true
+        }
+      },
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "msubsup-no-over",
+      "kind": "msubsup",
+      "marker": "^",
+      "moves": null,
+      "allowed": true,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 2,
+        "reused": true,
+        "children": [
+          "core",
+          "under"
+        ],
+        "attributes": {
+          "id": "authored"
+        },
+        "properties": {
+          "kept": 17,
+          "subsupOK": true
+        }
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "msubsup-no-over",
+      "kind": "msubsup",
+      "marker": "^",
+      "moves": false,
+      "allowed": false,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 2,
+        "reused": true,
+        "children": [
+          "core",
+          "under"
+        ],
+        "attributes": {
+          "id": "authored"
+        },
+        "properties": {
+          "kept": 17,
+          "movesupsub": false
+        }
+      },
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "msubsup-no-over",
+      "kind": "msubsup",
+      "marker": "^",
+      "moves": false,
+      "allowed": false,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 2,
+        "reused": true,
+        "children": [
+          "core",
+          "under"
+        ],
+        "attributes": {
+          "id": "authored"
+        },
+        "properties": {
+          "kept": 17,
+          "movesupsub": false
+        }
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "msubsup-no-over",
+      "kind": "msubsup",
+      "marker": "^",
+      "moves": false,
+      "allowed": true,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 2,
+        "reused": true,
+        "children": [
+          "core",
+          "under"
+        ],
+        "attributes": {
+          "id": "authored"
+        },
+        "properties": {
+          "kept": 17,
+          "movesupsub": false,
+          "subsupOK": true
+        }
+      },
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "msubsup-no-over",
+      "kind": "msubsup",
+      "marker": "^",
+      "moves": false,
+      "allowed": true,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 2,
+        "reused": true,
+        "children": [
+          "core",
+          "under"
+        ],
+        "attributes": {
+          "id": "authored"
+        },
+        "properties": {
+          "kept": 17,
+          "movesupsub": false,
+          "subsupOK": true
+        }
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "msubsup-no-over",
+      "kind": "msubsup",
+      "marker": "^",
+      "moves": true,
+      "allowed": false,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 2,
+        "reused": true,
+        "children": [
+          "core",
+          "under"
+        ],
+        "attributes": {
+          "id": "authored"
+        },
+        "properties": {
+          "kept": 17,
+          "movesupsub": true
+        }
+      },
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "msubsup-no-over",
+      "kind": "msubsup",
+      "marker": "^",
+      "moves": true,
+      "allowed": false,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 2,
+        "reused": true,
+        "children": [
+          "core",
+          "under"
+        ],
+        "attributes": {
+          "id": "authored"
+        },
+        "properties": {
+          "kept": 17,
+          "movesupsub": true
+        }
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "msubsup-no-over",
+      "kind": "msubsup",
+      "marker": "^",
+      "moves": true,
+      "allowed": true,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 2,
+        "reused": true,
+        "children": [
+          "core",
+          "under"
+        ],
+        "attributes": {
+          "id": "authored"
+        },
+        "properties": {
+          "kept": 17,
+          "movesupsub": true,
+          "subsupOK": true
+        }
+      },
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "msubsup-no-over",
+      "kind": "msubsup",
+      "marker": "^",
+      "moves": true,
+      "allowed": true,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 2,
+        "reused": true,
+        "children": [
+          "core",
+          "under"
+        ],
+        "attributes": {
+          "id": "authored"
+        },
+        "properties": {
+          "kept": 17,
+          "movesupsub": true,
+          "subsupOK": true
+        }
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "munderover-no-under",
+      "kind": "munderover",
+      "marker": "_",
+      "moves": null,
+      "allowed": false,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 1,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingOpenForSub",
+        "message": "Missing open brace for subscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "munderover-no-under",
+      "kind": "munderover",
+      "marker": "_",
+      "moves": null,
+      "allowed": false,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 1,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "munderover-no-under",
+      "kind": "munderover",
+      "marker": "_",
+      "moves": null,
+      "allowed": true,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 1,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingOpenForSub",
+        "message": "Missing open brace for subscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "munderover-no-under",
+      "kind": "munderover",
+      "marker": "_",
+      "moves": null,
+      "allowed": true,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 1,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "munderover-no-under",
+      "kind": "munderover",
+      "marker": "_",
+      "moves": false,
+      "allowed": false,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 1,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingOpenForSub",
+        "message": "Missing open brace for subscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "munderover-no-under",
+      "kind": "munderover",
+      "marker": "_",
+      "moves": false,
+      "allowed": false,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 1,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "munderover-no-under",
+      "kind": "munderover",
+      "marker": "_",
+      "moves": false,
+      "allowed": true,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 1,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingOpenForSub",
+        "message": "Missing open brace for subscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "munderover-no-under",
+      "kind": "munderover",
+      "marker": "_",
+      "moves": false,
+      "allowed": true,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 1,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "munderover-no-under",
+      "kind": "munderover",
+      "marker": "_",
+      "moves": true,
+      "allowed": false,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "munderover",
+        "position": 1,
+        "reused": true,
+        "children": [
+          "core",
+          null,
+          "over"
+        ],
+        "attributes": {
+          "id": "authored"
+        },
+        "properties": {
+          "kept": 17,
+          "movesupsub": true
+        }
+      },
+      "error": {
+        "id": "MissingOpenForSub",
+        "message": "Missing open brace for subscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "munderover-no-under",
+      "kind": "munderover",
+      "marker": "_",
+      "moves": true,
+      "allowed": false,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "munderover",
+        "position": 1,
+        "reused": true,
+        "children": [
+          "core",
+          null,
+          "over"
+        ],
+        "attributes": {
+          "id": "authored"
+        },
+        "properties": {
+          "kept": 17,
+          "movesupsub": true
+        }
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "munderover-no-under",
+      "kind": "munderover",
+      "marker": "_",
+      "moves": true,
+      "allowed": true,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "munderover",
+        "position": 1,
+        "reused": true,
+        "children": [
+          "core",
+          null,
+          "over"
+        ],
+        "attributes": {
+          "id": "authored"
+        },
+        "properties": {
+          "kept": 17,
+          "movesupsub": true,
+          "subsupOK": true
+        }
+      },
+      "error": {
+        "id": "MissingOpenForSub",
+        "message": "Missing open brace for subscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "munderover-no-under",
+      "kind": "munderover",
+      "marker": "_",
+      "moves": true,
+      "allowed": true,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "munderover",
+        "position": 1,
+        "reused": true,
+        "children": [
+          "core",
+          null,
+          "over"
+        ],
+        "attributes": {
+          "id": "authored"
+        },
+        "properties": {
+          "kept": 17,
+          "movesupsub": true,
+          "subsupOK": true
+        }
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "munderover-no-under",
+      "kind": "munderover",
+      "marker": "^",
+      "moves": null,
+      "allowed": false,
+      "event": "prime",
+      "source": "' ’z",
+      "error": {
+        "id": "DoubleExponent",
+        "message": "Double exponent: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": "' ’z"
+    },
+    {
+      "type": "munderover-no-under",
+      "kind": "munderover",
+      "marker": "^",
+      "moves": null,
+      "allowed": false,
+      "event": "stop",
+      "source": "",
+      "error": {
+        "id": "DoubleExponent",
+        "message": "Double exponent: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "munderover-no-under",
+      "kind": "munderover",
+      "marker": "^",
+      "moves": null,
+      "allowed": true,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 2,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "munderover-no-under",
+      "kind": "munderover",
+      "marker": "^",
+      "moves": null,
+      "allowed": true,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 2,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "munderover-no-under",
+      "kind": "munderover",
+      "marker": "^",
+      "moves": false,
+      "allowed": false,
+      "event": "prime",
+      "source": "' ’z",
+      "error": {
+        "id": "DoubleExponent",
+        "message": "Double exponent: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": "' ’z"
+    },
+    {
+      "type": "munderover-no-under",
+      "kind": "munderover",
+      "marker": "^",
+      "moves": false,
+      "allowed": false,
+      "event": "stop",
+      "source": "",
+      "error": {
+        "id": "DoubleExponent",
+        "message": "Double exponent: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "munderover-no-under",
+      "kind": "munderover",
+      "marker": "^",
+      "moves": false,
+      "allowed": true,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 2,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "munderover-no-under",
+      "kind": "munderover",
+      "marker": "^",
+      "moves": false,
+      "allowed": true,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 2,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "munderover-no-under",
+      "kind": "munderover",
+      "marker": "^",
+      "moves": true,
+      "allowed": false,
+      "event": "prime",
+      "source": "' ’z",
+      "error": {
+        "id": "DoubleExponent",
+        "message": "Double exponent: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": "' ’z"
+    },
+    {
+      "type": "munderover-no-under",
+      "kind": "munderover",
+      "marker": "^",
+      "moves": true,
+      "allowed": false,
+      "event": "stop",
+      "source": "",
+      "error": {
+        "id": "DoubleExponent",
+        "message": "Double exponent: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "munderover-no-under",
+      "kind": "munderover",
+      "marker": "^",
+      "moves": true,
+      "allowed": true,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "munderover",
+        "position": 2,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {
+          "movesupsub": true
+        }
+      },
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "munderover-no-under",
+      "kind": "munderover",
+      "marker": "^",
+      "moves": true,
+      "allowed": true,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "munderover",
+        "position": 2,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {
+          "movesupsub": true
+        }
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "munderover-no-over",
+      "kind": "munderover",
+      "marker": "_",
+      "moves": null,
+      "allowed": false,
+      "event": "prime",
+      "source": "' ’z",
+      "error": {
+        "id": "DoubleSubscripts",
+        "message": "Double subscripts: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": "' ’z"
+    },
+    {
+      "type": "munderover-no-over",
+      "kind": "munderover",
+      "marker": "_",
+      "moves": null,
+      "allowed": false,
+      "event": "stop",
+      "source": "",
+      "error": {
+        "id": "DoubleSubscripts",
+        "message": "Double subscripts: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "munderover-no-over",
+      "kind": "munderover",
+      "marker": "_",
+      "moves": null,
+      "allowed": true,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 1,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingOpenForSub",
+        "message": "Missing open brace for subscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "munderover-no-over",
+      "kind": "munderover",
+      "marker": "_",
+      "moves": null,
+      "allowed": true,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 1,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "munderover-no-over",
+      "kind": "munderover",
+      "marker": "_",
+      "moves": false,
+      "allowed": false,
+      "event": "prime",
+      "source": "' ’z",
+      "error": {
+        "id": "DoubleSubscripts",
+        "message": "Double subscripts: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": "' ’z"
+    },
+    {
+      "type": "munderover-no-over",
+      "kind": "munderover",
+      "marker": "_",
+      "moves": false,
+      "allowed": false,
+      "event": "stop",
+      "source": "",
+      "error": {
+        "id": "DoubleSubscripts",
+        "message": "Double subscripts: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "munderover-no-over",
+      "kind": "munderover",
+      "marker": "_",
+      "moves": false,
+      "allowed": true,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 1,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingOpenForSub",
+        "message": "Missing open brace for subscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "munderover-no-over",
+      "kind": "munderover",
+      "marker": "_",
+      "moves": false,
+      "allowed": true,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 1,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "munderover-no-over",
+      "kind": "munderover",
+      "marker": "_",
+      "moves": true,
+      "allowed": false,
+      "event": "prime",
+      "source": "' ’z",
+      "error": {
+        "id": "DoubleSubscripts",
+        "message": "Double subscripts: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": "' ’z"
+    },
+    {
+      "type": "munderover-no-over",
+      "kind": "munderover",
+      "marker": "_",
+      "moves": true,
+      "allowed": false,
+      "event": "stop",
+      "source": "",
+      "error": {
+        "id": "DoubleSubscripts",
+        "message": "Double subscripts: use braces to clarify"
+      },
+      "stage": "prepare",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "munderover-no-over",
+      "kind": "munderover",
+      "marker": "_",
+      "moves": true,
+      "allowed": true,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "munderover",
+        "position": 1,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {
+          "movesupsub": true
+        }
+      },
+      "error": {
+        "id": "MissingOpenForSub",
+        "message": "Missing open brace for subscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "munderover-no-over",
+      "kind": "munderover",
+      "marker": "_",
+      "moves": true,
+      "allowed": true,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "munderover",
+        "position": 1,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {
+          "movesupsub": true
+        }
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "munderover-no-over",
+      "kind": "munderover",
+      "marker": "^",
+      "moves": null,
+      "allowed": false,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 2,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "munderover-no-over",
+      "kind": "munderover",
+      "marker": "^",
+      "moves": null,
+      "allowed": false,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 2,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "munderover-no-over",
+      "kind": "munderover",
+      "marker": "^",
+      "moves": null,
+      "allowed": true,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 2,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "munderover-no-over",
+      "kind": "munderover",
+      "marker": "^",
+      "moves": null,
+      "allowed": true,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 2,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "munderover-no-over",
+      "kind": "munderover",
+      "marker": "^",
+      "moves": false,
+      "allowed": false,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 2,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "munderover-no-over",
+      "kind": "munderover",
+      "marker": "^",
+      "moves": false,
+      "allowed": false,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 2,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "munderover-no-over",
+      "kind": "munderover",
+      "marker": "^",
+      "moves": false,
+      "allowed": true,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 2,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "munderover-no-over",
+      "kind": "munderover",
+      "marker": "^",
+      "moves": false,
+      "allowed": true,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "msubsup",
+        "position": 2,
+        "reused": false,
+        "children": [
+          "base"
+        ],
+        "attributes": {},
+        "properties": {}
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "munderover-no-over",
+      "kind": "munderover",
+      "marker": "^",
+      "moves": true,
+      "allowed": false,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "munderover",
+        "position": 2,
+        "reused": true,
+        "children": [
+          "core",
+          "under"
+        ],
+        "attributes": {
+          "id": "authored"
+        },
+        "properties": {
+          "kept": 17,
+          "movesupsub": true
+        }
+      },
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "munderover-no-over",
+      "kind": "munderover",
+      "marker": "^",
+      "moves": true,
+      "allowed": false,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "munderover",
+        "position": 2,
+        "reused": true,
+        "children": [
+          "core",
+          "under"
+        ],
+        "attributes": {
+          "id": "authored"
+        },
+        "properties": {
+          "kept": 17,
+          "movesupsub": true
+        }
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    },
+    {
+      "type": "munderover-no-over",
+      "kind": "munderover",
+      "marker": "^",
+      "moves": true,
+      "allowed": true,
+      "event": "prime",
+      "source": "' ’z",
+      "prepared": {
+        "kind": "munderover",
+        "position": 2,
+        "reused": true,
+        "children": [
+          "core",
+          "under"
+        ],
+        "attributes": {
+          "id": "authored"
+        },
+        "properties": {
+          "kept": 17,
+          "movesupsub": true,
+          "subsupOK": true
+        }
+      },
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript"
+      },
+      "stage": "argument",
+      "cursor": 3,
+      "remaining": "z"
+    },
+    {
+      "type": "munderover-no-over",
+      "kind": "munderover",
+      "marker": "^",
+      "moves": true,
+      "allowed": true,
+      "event": "stop",
+      "source": "",
+      "prepared": {
+        "kind": "munderover",
+        "position": 2,
+        "reused": true,
+        "children": [
+          "core",
+          "under"
+        ],
+        "attributes": {
+          "id": "authored"
+        },
+        "properties": {
+          "kept": 17,
+          "movesupsub": true,
+          "subsupOK": true
+        }
+      },
+      "error": {
+        "id": "MissingScript",
+        "message": "Missing superscript or subscript argument"
+      },
+      "stage": "argument",
+      "cursor": 0,
+      "remaining": ""
+    }
+  ]
+}
