@@ -355,8 +355,8 @@ policy. The 40 public and eight actual-handler reference inputs retain complete
 primary SVGs and ordered explicit/own trees. The two unchanged accent controls
 retain their exact earlier own-class metadata; three exact named prime records
 retain only the recorded missing false `pseudoscript` property. The two escaped
-`\~` controls remain a separate command-dispatch discrepancy, with complete
-accepted output and original primary errors retained. Literal text, actual NBSP,
+`\~` controls use their original primary SVGs, structured errors, and ordered
+trees. Literal text, actual NBSP,
 relation/accent commands, fonts, vector token creation, scripts and registered
 macro source/cursor state remain separately checked. No primary output is
 regenerated or candidate output used as a new whole-reference expectation.
@@ -397,3 +397,12 @@ Eight inherited Genfrac controls also compare the original primary explicit-attr
 ### Physics StarMacro expansion budget
 
 The `va`/`vectorarrow` and `vu`/`vectorunit` aliases charge their own expansion after argument and buffer validation, before descendant parsing. Their genuine accent-argument and VectorBold children use independent expansion counters. Fourteen retained primary references cover ordinary aliases, the public 1000/1001 boundary, registered overrides, error precedence and the existing Genfrac lifetimes. Two additional Go guards protect the observed child-counter boundaries. The existing synthetic expansion still has a separate source/cursor and cannot consume a registered `vec` argument from the caller's suffix; this change does not claim complete StarMacro rewrite-state or raw-model equivalence.
+
+
+### Executable source-map fallback
+
+Command-symbol lookup skips source maps that have no parser, so data-only negation and character-remapping tables do not create TeX commands. Existing registered Macro overrides and executable symbol/delimiter fallback retain their precedence; the data tables and their ordinary consumers are unchanged.
+
+The bounded regression corpus compares 112 public and four privately registered Macro cases with complete retained primary SVGs. Public error messages are checked through the exported renderer's merror SVG; their actual error IDs were verified in the retained parser observations. The private forwarding case additionally checks the real parse error ID and message at the compiler initialization seam. These private fixtures do not add a public macro-registration API.
+
+Escaped `<`/`>` delimiter-key dispatch, the Physics laplacian symbol, compound negation, and the ordinary backtick glyph remain separate discrepancies. The twelve affected observations are excluded from primary SVG expectations here. Matching SVG does not claim full raw-model equality.
