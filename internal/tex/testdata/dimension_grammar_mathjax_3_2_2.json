@@ -1,0 +1,1501 @@
+{
+  "assetsSHA256": {
+    "polyfills.js": "7fe1d048c78b0e09854c1259f7413868a51cc8f0c822489eb1ac36ae6c85ce01",
+    "mathjax.js": "cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869",
+    "setup.js": "a52cb0bbabfbd7796b9fedd793b9386c474e3123e788ee151cbe47ca1fa6e881"
+  },
+  "node": "v24.19.0",
+  "dimensions": [
+    {
+      "source": "1em x",
+      "name": "\\kern",
+      "value": "1em",
+      "error": null,
+      "cursorUTF16": 4,
+      "sourceLengthUTF16": 5,
+      "cursorBytesWithinSource": 4,
+      "beyondUTF16": 0,
+      "remaining": "x"
+    },
+    {
+      "source": "1em x",
+      "name": "\\above",
+      "value": "1em",
+      "error": null,
+      "cursorUTF16": 4,
+      "sourceLengthUTF16": 5,
+      "cursorBytesWithinSource": 4,
+      "beyondUTF16": 0,
+      "remaining": "x"
+    },
+    {
+      "source": "1ex x",
+      "name": "\\kern",
+      "value": "1ex",
+      "error": null,
+      "cursorUTF16": 4,
+      "sourceLengthUTF16": 5,
+      "cursorBytesWithinSource": 4,
+      "beyondUTF16": 0,
+      "remaining": "x"
+    },
+    {
+      "source": "1ex x",
+      "name": "\\above",
+      "value": "1ex",
+      "error": null,
+      "cursorUTF16": 4,
+      "sourceLengthUTF16": 5,
+      "cursorBytesWithinSource": 4,
+      "beyondUTF16": 0,
+      "remaining": "x"
+    },
+    {
+      "source": "1pt x",
+      "name": "\\kern",
+      "value": "1pt",
+      "error": null,
+      "cursorUTF16": 4,
+      "sourceLengthUTF16": 5,
+      "cursorBytesWithinSource": 4,
+      "beyondUTF16": 0,
+      "remaining": "x"
+    },
+    {
+      "source": "1pt x",
+      "name": "\\above",
+      "value": "1pt",
+      "error": null,
+      "cursorUTF16": 4,
+      "sourceLengthUTF16": 5,
+      "cursorBytesWithinSource": 4,
+      "beyondUTF16": 0,
+      "remaining": "x"
+    },
+    {
+      "source": "1pc x",
+      "name": "\\kern",
+      "value": "1pc",
+      "error": null,
+      "cursorUTF16": 4,
+      "sourceLengthUTF16": 5,
+      "cursorBytesWithinSource": 4,
+      "beyondUTF16": 0,
+      "remaining": "x"
+    },
+    {
+      "source": "1pc x",
+      "name": "\\above",
+      "value": "1pc",
+      "error": null,
+      "cursorUTF16": 4,
+      "sourceLengthUTF16": 5,
+      "cursorBytesWithinSource": 4,
+      "beyondUTF16": 0,
+      "remaining": "x"
+    },
+    {
+      "source": "1px x",
+      "name": "\\kern",
+      "value": "1px",
+      "error": null,
+      "cursorUTF16": 4,
+      "sourceLengthUTF16": 5,
+      "cursorBytesWithinSource": 4,
+      "beyondUTF16": 0,
+      "remaining": "x"
+    },
+    {
+      "source": "1px x",
+      "name": "\\above",
+      "value": "1px",
+      "error": null,
+      "cursorUTF16": 4,
+      "sourceLengthUTF16": 5,
+      "cursorBytesWithinSource": 4,
+      "beyondUTF16": 0,
+      "remaining": "x"
+    },
+    {
+      "source": "1in x",
+      "name": "\\kern",
+      "value": "1in",
+      "error": null,
+      "cursorUTF16": 4,
+      "sourceLengthUTF16": 5,
+      "cursorBytesWithinSource": 4,
+      "beyondUTF16": 0,
+      "remaining": "x"
+    },
+    {
+      "source": "1in x",
+      "name": "\\above",
+      "value": "1in",
+      "error": null,
+      "cursorUTF16": 4,
+      "sourceLengthUTF16": 5,
+      "cursorBytesWithinSource": 4,
+      "beyondUTF16": 0,
+      "remaining": "x"
+    },
+    {
+      "source": "1cm x",
+      "name": "\\kern",
+      "value": "1cm",
+      "error": null,
+      "cursorUTF16": 4,
+      "sourceLengthUTF16": 5,
+      "cursorBytesWithinSource": 4,
+      "beyondUTF16": 0,
+      "remaining": "x"
+    },
+    {
+      "source": "1cm x",
+      "name": "\\above",
+      "value": "1cm",
+      "error": null,
+      "cursorUTF16": 4,
+      "sourceLengthUTF16": 5,
+      "cursorBytesWithinSource": 4,
+      "beyondUTF16": 0,
+      "remaining": "x"
+    },
+    {
+      "source": "1mm x",
+      "name": "\\kern",
+      "value": "1mm",
+      "error": null,
+      "cursorUTF16": 4,
+      "sourceLengthUTF16": 5,
+      "cursorBytesWithinSource": 4,
+      "beyondUTF16": 0,
+      "remaining": "x"
+    },
+    {
+      "source": "1mm x",
+      "name": "\\above",
+      "value": "1mm",
+      "error": null,
+      "cursorUTF16": 4,
+      "sourceLengthUTF16": 5,
+      "cursorBytesWithinSource": 4,
+      "beyondUTF16": 0,
+      "remaining": "x"
+    },
+    {
+      "source": "1mu x",
+      "name": "\\kern",
+      "value": "0.056em",
+      "error": null,
+      "cursorUTF16": 4,
+      "sourceLengthUTF16": 5,
+      "cursorBytesWithinSource": 4,
+      "beyondUTF16": 0,
+      "remaining": "x"
+    },
+    {
+      "source": "1mu x",
+      "name": "\\above",
+      "value": "0.056em",
+      "error": null,
+      "cursorUTF16": 4,
+      "sourceLengthUTF16": 5,
+      "cursorBytesWithinSource": 4,
+      "beyondUTF16": 0,
+      "remaining": "x"
+    },
+    {
+      "source": "+1.250em x",
+      "name": "\\kern",
+      "value": "+1.250em",
+      "error": null,
+      "cursorUTF16": 9,
+      "sourceLengthUTF16": 10,
+      "cursorBytesWithinSource": 9,
+      "beyondUTF16": 0,
+      "remaining": "x"
+    },
+    {
+      "source": "+1.250em x",
+      "name": "\\above",
+      "value": "+1.250em",
+      "error": null,
+      "cursorUTF16": 9,
+      "sourceLengthUTF16": 10,
+      "cursorBytesWithinSource": 9,
+      "beyondUTF16": 0,
+      "remaining": "x"
+    },
+    {
+      "source": "-.5pt x",
+      "name": "\\kern",
+      "value": "-.5pt",
+      "error": null,
+      "cursorUTF16": 6,
+      "sourceLengthUTF16": 7,
+      "cursorBytesWithinSource": 6,
+      "beyondUTF16": 0,
+      "remaining": "x"
+    },
+    {
+      "source": "-.5pt x",
+      "name": "\\above",
+      "value": "-.5pt",
+      "error": null,
+      "cursorUTF16": 6,
+      "sourceLengthUTF16": 7,
+      "cursorBytesWithinSource": 6,
+      "beyondUTF16": 0,
+      "remaining": "x"
+    },
+    {
+      "source": ",5pt x",
+      "name": "\\kern",
+      "value": ".5pt",
+      "error": null,
+      "cursorUTF16": 5,
+      "sourceLengthUTF16": 6,
+      "cursorBytesWithinSource": 5,
+      "beyondUTF16": 0,
+      "remaining": "x"
+    },
+    {
+      "source": ",5pt x",
+      "name": "\\above",
+      "value": ".5pt",
+      "error": null,
+      "cursorUTF16": 5,
+      "sourceLengthUTF16": 6,
+      "cursorBytesWithinSource": 5,
+      "beyondUTF16": 0,
+      "remaining": "x"
+    },
+    {
+      "source": "1,5mu x",
+      "name": "\\kern",
+      "value": "0.083em",
+      "error": null,
+      "cursorUTF16": 6,
+      "sourceLengthUTF16": 7,
+      "cursorBytesWithinSource": 6,
+      "beyondUTF16": 0,
+      "remaining": "x"
+    },
+    {
+      "source": "1,5mu x",
+      "name": "\\above",
+      "value": "0.083em",
+      "error": null,
+      "cursorUTF16": 6,
+      "sourceLengthUTF16": 7,
+      "cursorBytesWithinSource": 6,
+      "beyondUTF16": 0,
+      "remaining": "x"
+    },
+    {
+      "source": "8.mu x",
+      "name": "\\kern",
+      "value": "0.444em",
+      "error": null,
+      "cursorUTF16": 5,
+      "sourceLengthUTF16": 6,
+      "cursorBytesWithinSource": 5,
+      "beyondUTF16": 0,
+      "remaining": "x"
+    },
+    {
+      "source": "8.mu x",
+      "name": "\\above",
+      "value": "0.444em",
+      "error": null,
+      "cursorUTF16": 5,
+      "sourceLengthUTF16": 6,
+      "cursorBytesWithinSource": 5,
+      "beyondUTF16": 0,
+      "remaining": "x"
+    },
+    {
+      "source": "0mu x",
+      "name": "\\kern",
+      "value": "0em",
+      "error": null,
+      "cursorUTF16": 4,
+      "sourceLengthUTF16": 5,
+      "cursorBytesWithinSource": 4,
+      "beyondUTF16": 0,
+      "remaining": "x"
+    },
+    {
+      "source": "0mu x",
+      "name": "\\above",
+      "value": "0em",
+      "error": null,
+      "cursorUTF16": 4,
+      "sourceLengthUTF16": 5,
+      "cursorBytesWithinSource": 4,
+      "beyondUTF16": 0,
+      "remaining": "x"
+    },
+    {
+      "source": "-0mu x",
+      "name": "\\kern",
+      "value": "0em",
+      "error": null,
+      "cursorUTF16": 5,
+      "sourceLengthUTF16": 6,
+      "cursorBytesWithinSource": 5,
+      "beyondUTF16": 0,
+      "remaining": "x"
+    },
+    {
+      "source": "-0mu x",
+      "name": "\\above",
+      "value": "0em",
+      "error": null,
+      "cursorUTF16": 5,
+      "sourceLengthUTF16": 6,
+      "cursorBytesWithinSource": 5,
+      "beyondUTF16": 0,
+      "remaining": "x"
+    },
+    {
+      "source": "1pcxy",
+      "name": "\\kern",
+      "value": "1pc",
+      "error": null,
+      "cursorUTF16": 3,
+      "sourceLengthUTF16": 5,
+      "cursorBytesWithinSource": 3,
+      "beyondUTF16": 0,
+      "remaining": "xy"
+    },
+    {
+      "source": "1pcxy",
+      "name": "\\above",
+      "value": "1pc",
+      "error": null,
+      "cursorUTF16": 3,
+      "sourceLengthUTF16": 5,
+      "cursorBytesWithinSource": 3,
+      "beyondUTF16": 0,
+      "remaining": "xy"
+    },
+    {
+      "source": "1pc  x",
+      "name": "\\kern",
+      "value": "1pc",
+      "error": null,
+      "cursorUTF16": 4,
+      "sourceLengthUTF16": 6,
+      "cursorBytesWithinSource": 4,
+      "beyondUTF16": 0,
+      "remaining": " x"
+    },
+    {
+      "source": "1pc  x",
+      "name": "\\above",
+      "value": "1pc",
+      "error": null,
+      "cursorUTF16": 4,
+      "sourceLengthUTF16": 6,
+      "cursorBytesWithinSource": 4,
+      "beyondUTF16": 0,
+      "remaining": " x"
+    },
+    {
+      "source": "1pc\tx",
+      "name": "\\kern",
+      "value": "1pc",
+      "error": null,
+      "cursorUTF16": 3,
+      "sourceLengthUTF16": 5,
+      "cursorBytesWithinSource": 3,
+      "beyondUTF16": 0,
+      "remaining": "\tx"
+    },
+    {
+      "source": "1pc\tx",
+      "name": "\\above",
+      "value": "1pc",
+      "error": null,
+      "cursorUTF16": 3,
+      "sourceLengthUTF16": 5,
+      "cursorBytesWithinSource": 3,
+      "beyondUTF16": 0,
+      "remaining": "\tx"
+    },
+    {
+      "source": "1pc\nx",
+      "name": "\\kern",
+      "value": "1pc",
+      "error": null,
+      "cursorUTF16": 3,
+      "sourceLengthUTF16": 5,
+      "cursorBytesWithinSource": 3,
+      "beyondUTF16": 0,
+      "remaining": "\nx"
+    },
+    {
+      "source": "1pc\nx",
+      "name": "\\above",
+      "value": "1pc",
+      "error": null,
+      "cursorUTF16": 3,
+      "sourceLengthUTF16": 5,
+      "cursorBytesWithinSource": 3,
+      "beyondUTF16": 0,
+      "remaining": "\nx"
+    },
+    {
+      "source": "1pc𝑥",
+      "name": "\\kern",
+      "value": "1pc",
+      "error": null,
+      "cursorUTF16": 3,
+      "sourceLengthUTF16": 5,
+      "cursorBytesWithinSource": 3,
+      "beyondUTF16": 0,
+      "remaining": "𝑥"
+    },
+    {
+      "source": "1pc𝑥",
+      "name": "\\above",
+      "value": "1pc",
+      "error": null,
+      "cursorUTF16": 3,
+      "sourceLengthUTF16": 5,
+      "cursorBytesWithinSource": 3,
+      "beyondUTF16": 0,
+      "remaining": "𝑥"
+    },
+    {
+      "source": "1pc%comment",
+      "name": "\\kern",
+      "value": "1pc",
+      "error": null,
+      "cursorUTF16": 3,
+      "sourceLengthUTF16": 11,
+      "cursorBytesWithinSource": 3,
+      "beyondUTF16": 0,
+      "remaining": "%comment"
+    },
+    {
+      "source": "1pc%comment",
+      "name": "\\above",
+      "value": "1pc",
+      "error": null,
+      "cursorUTF16": 3,
+      "sourceLengthUTF16": 11,
+      "cursorBytesWithinSource": 3,
+      "beyondUTF16": 0,
+      "remaining": "%comment"
+    },
+    {
+      "source": "1e2mu x",
+      "name": "\\kern",
+      "value": null,
+      "error": {
+        "id": "MissingDimOrUnits",
+        "message": "Missing dimension or its units for \\kern"
+      },
+      "cursorUTF16": 0,
+      "sourceLengthUTF16": 7,
+      "cursorBytesWithinSource": 0,
+      "beyondUTF16": 0,
+      "remaining": "1e2mu x"
+    },
+    {
+      "source": "1e2mu x",
+      "name": "\\above",
+      "value": null,
+      "error": {
+        "id": "MissingDimOrUnits",
+        "message": "Missing dimension or its units for \\above"
+      },
+      "cursorUTF16": 0,
+      "sourceLengthUTF16": 7,
+      "cursorBytesWithinSource": 0,
+      "beyondUTF16": 0,
+      "remaining": "1e2mu x"
+    },
+    {
+      "source": "++8mu x",
+      "name": "\\kern",
+      "value": null,
+      "error": {
+        "id": "MissingDimOrUnits",
+        "message": "Missing dimension or its units for \\kern"
+      },
+      "cursorUTF16": 0,
+      "sourceLengthUTF16": 7,
+      "cursorBytesWithinSource": 0,
+      "beyondUTF16": 0,
+      "remaining": "++8mu x"
+    },
+    {
+      "source": "++8mu x",
+      "name": "\\above",
+      "value": null,
+      "error": {
+        "id": "MissingDimOrUnits",
+        "message": "Missing dimension or its units for \\above"
+      },
+      "cursorUTF16": 0,
+      "sourceLengthUTF16": 7,
+      "cursorBytesWithinSource": 0,
+      "beyondUTF16": 0,
+      "remaining": "++8mu x"
+    },
+    {
+      "source": "8MU x",
+      "name": "\\kern",
+      "value": null,
+      "error": {
+        "id": "MissingDimOrUnits",
+        "message": "Missing dimension or its units for \\kern"
+      },
+      "cursorUTF16": 0,
+      "sourceLengthUTF16": 5,
+      "cursorBytesWithinSource": 0,
+      "beyondUTF16": 0,
+      "remaining": "8MU x"
+    },
+    {
+      "source": "8MU x",
+      "name": "\\above",
+      "value": null,
+      "error": {
+        "id": "MissingDimOrUnits",
+        "message": "Missing dimension or its units for \\above"
+      },
+      "cursorUTF16": 0,
+      "sourceLengthUTF16": 5,
+      "cursorBytesWithinSource": 0,
+      "beyondUTF16": 0,
+      "remaining": "8MU x"
+    },
+    {
+      "source": "8qu x",
+      "name": "\\kern",
+      "value": null,
+      "error": {
+        "id": "MissingDimOrUnits",
+        "message": "Missing dimension or its units for \\kern"
+      },
+      "cursorUTF16": 0,
+      "sourceLengthUTF16": 5,
+      "cursorBytesWithinSource": 0,
+      "beyondUTF16": 0,
+      "remaining": "8qu x"
+    },
+    {
+      "source": "8qu x",
+      "name": "\\above",
+      "value": null,
+      "error": {
+        "id": "MissingDimOrUnits",
+        "message": "Missing dimension or its units for \\above"
+      },
+      "cursorUTF16": 0,
+      "sourceLengthUTF16": 5,
+      "cursorBytesWithinSource": 0,
+      "beyondUTF16": 0,
+      "remaining": "8qu x"
+    },
+    {
+      "source": "8x",
+      "name": "\\kern",
+      "value": null,
+      "error": {
+        "id": "MissingDimOrUnits",
+        "message": "Missing dimension or its units for \\kern"
+      },
+      "cursorUTF16": 0,
+      "sourceLengthUTF16": 2,
+      "cursorBytesWithinSource": 0,
+      "beyondUTF16": 0,
+      "remaining": "8x"
+    },
+    {
+      "source": "8x",
+      "name": "\\above",
+      "value": null,
+      "error": {
+        "id": "MissingDimOrUnits",
+        "message": "Missing dimension or its units for \\above"
+      },
+      "cursorUTF16": 0,
+      "sourceLengthUTF16": 2,
+      "cursorBytesWithinSource": 0,
+      "beyondUTF16": 0,
+      "remaining": "8x"
+    },
+    {
+      "source": "mu x",
+      "name": "\\kern",
+      "value": null,
+      "error": {
+        "id": "MissingDimOrUnits",
+        "message": "Missing dimension or its units for \\kern"
+      },
+      "cursorUTF16": 0,
+      "sourceLengthUTF16": 4,
+      "cursorBytesWithinSource": 0,
+      "beyondUTF16": 0,
+      "remaining": "mu x"
+    },
+    {
+      "source": "mu x",
+      "name": "\\above",
+      "value": null,
+      "error": {
+        "id": "MissingDimOrUnits",
+        "message": "Missing dimension or its units for \\above"
+      },
+      "cursorUTF16": 0,
+      "sourceLengthUTF16": 4,
+      "cursorBytesWithinSource": 0,
+      "beyondUTF16": 0,
+      "remaining": "mu x"
+    },
+    {
+      "source": ".mu x",
+      "name": "\\kern",
+      "value": null,
+      "error": {
+        "id": "MissingDimOrUnits",
+        "message": "Missing dimension or its units for \\kern"
+      },
+      "cursorUTF16": 0,
+      "sourceLengthUTF16": 5,
+      "cursorBytesWithinSource": 0,
+      "beyondUTF16": 0,
+      "remaining": ".mu x"
+    },
+    {
+      "source": ".mu x",
+      "name": "\\above",
+      "value": null,
+      "error": {
+        "id": "MissingDimOrUnits",
+        "message": "Missing dimension or its units for \\above"
+      },
+      "cursorUTF16": 0,
+      "sourceLengthUTF16": 5,
+      "cursorBytesWithinSource": 0,
+      "beyondUTF16": 0,
+      "remaining": ".mu x"
+    },
+    {
+      "source": "",
+      "name": "\\kern",
+      "value": null,
+      "error": {
+        "id": "MissingDimOrUnits",
+        "message": "Missing dimension or its units for \\kern"
+      },
+      "cursorUTF16": 0,
+      "sourceLengthUTF16": 0,
+      "cursorBytesWithinSource": 0,
+      "beyondUTF16": 0,
+      "remaining": ""
+    },
+    {
+      "source": "",
+      "name": "\\above",
+      "value": null,
+      "error": {
+        "id": "MissingDimOrUnits",
+        "message": "Missing dimension or its units for \\above"
+      },
+      "cursorUTF16": 0,
+      "sourceLengthUTF16": 0,
+      "cursorBytesWithinSource": 0,
+      "beyondUTF16": 0,
+      "remaining": ""
+    },
+    {
+      "source": "}x",
+      "name": "\\kern",
+      "value": null,
+      "error": {
+        "id": "MissingDimOrUnits",
+        "message": "Missing dimension or its units for \\kern"
+      },
+      "cursorUTF16": 0,
+      "sourceLengthUTF16": 2,
+      "cursorBytesWithinSource": 0,
+      "beyondUTF16": 0,
+      "remaining": "}x"
+    },
+    {
+      "source": "}x",
+      "name": "\\above",
+      "value": null,
+      "error": {
+        "id": "MissingDimOrUnits",
+        "message": "Missing dimension or its units for \\above"
+      },
+      "cursorUTF16": 0,
+      "sourceLengthUTF16": 2,
+      "cursorBytesWithinSource": 0,
+      "beyondUTF16": 0,
+      "remaining": "}x"
+    },
+    {
+      "source": "\\kern",
+      "name": "\\kern",
+      "value": null,
+      "error": {
+        "id": "MissingDimOrUnits",
+        "message": "Missing dimension or its units for \\kern"
+      },
+      "cursorUTF16": 0,
+      "sourceLengthUTF16": 5,
+      "cursorBytesWithinSource": 0,
+      "beyondUTF16": 0,
+      "remaining": "\\kern"
+    },
+    {
+      "source": "\\kern",
+      "name": "\\above",
+      "value": null,
+      "error": {
+        "id": "MissingDimOrUnits",
+        "message": "Missing dimension or its units for \\above"
+      },
+      "cursorUTF16": 0,
+      "sourceLengthUTF16": 5,
+      "cursorBytesWithinSource": 0,
+      "beyondUTF16": 0,
+      "remaining": "\\kern"
+    },
+    {
+      "source": "{1pc}x",
+      "name": "\\kern",
+      "value": "1pc",
+      "error": null,
+      "cursorUTF16": 5,
+      "sourceLengthUTF16": 6,
+      "cursorBytesWithinSource": 5,
+      "beyondUTF16": 0,
+      "remaining": "x"
+    },
+    {
+      "source": "{1pc}x",
+      "name": "\\above",
+      "value": "1pc",
+      "error": null,
+      "cursorUTF16": 5,
+      "sourceLengthUTF16": 6,
+      "cursorBytesWithinSource": 5,
+      "beyondUTF16": 0,
+      "remaining": "x"
+    },
+    {
+      "source": "{ 1,5 pt }x",
+      "name": "\\kern",
+      "value": "1.5pt",
+      "error": null,
+      "cursorUTF16": 10,
+      "sourceLengthUTF16": 11,
+      "cursorBytesWithinSource": 10,
+      "beyondUTF16": 0,
+      "remaining": "x"
+    },
+    {
+      "source": "{ 1,5 pt }x",
+      "name": "\\above",
+      "value": "1.5pt",
+      "error": null,
+      "cursorUTF16": 10,
+      "sourceLengthUTF16": 11,
+      "cursorBytesWithinSource": 10,
+      "beyondUTF16": 0,
+      "remaining": "x"
+    },
+    {
+      "source": "{1pc x}z",
+      "name": "\\kern",
+      "value": null,
+      "error": {
+        "id": "MissingDimOrUnits",
+        "message": "Missing dimension or its units for \\kern"
+      },
+      "cursorUTF16": 7,
+      "sourceLengthUTF16": 8,
+      "cursorBytesWithinSource": 7,
+      "beyondUTF16": 0,
+      "remaining": "z"
+    },
+    {
+      "source": "{1pc x}z",
+      "name": "\\above",
+      "value": null,
+      "error": {
+        "id": "MissingDimOrUnits",
+        "message": "Missing dimension or its units for \\above"
+      },
+      "cursorUTF16": 7,
+      "sourceLengthUTF16": 8,
+      "cursorBytesWithinSource": 7,
+      "beyondUTF16": 0,
+      "remaining": "z"
+    },
+    {
+      "source": "{}x",
+      "name": "\\kern",
+      "value": null,
+      "error": {
+        "id": "MissingDimOrUnits",
+        "message": "Missing dimension or its units for \\kern"
+      },
+      "cursorUTF16": 2,
+      "sourceLengthUTF16": 3,
+      "cursorBytesWithinSource": 2,
+      "beyondUTF16": 0,
+      "remaining": "x"
+    },
+    {
+      "source": "{}x",
+      "name": "\\above",
+      "value": null,
+      "error": {
+        "id": "MissingDimOrUnits",
+        "message": "Missing dimension or its units for \\above"
+      },
+      "cursorUTF16": 2,
+      "sourceLengthUTF16": 3,
+      "cursorBytesWithinSource": 2,
+      "beyondUTF16": 0,
+      "remaining": "x"
+    },
+    {
+      "source": "{1pc",
+      "name": "\\kern",
+      "value": null,
+      "error": {
+        "id": "MissingCloseBrace",
+        "message": "Missing close brace"
+      },
+      "cursorUTF16": 4,
+      "sourceLengthUTF16": 4,
+      "cursorBytesWithinSource": 4,
+      "beyondUTF16": 0,
+      "remaining": ""
+    },
+    {
+      "source": "{1pc",
+      "name": "\\above",
+      "value": null,
+      "error": {
+        "id": "MissingCloseBrace",
+        "message": "Missing close brace"
+      },
+      "cursorUTF16": 4,
+      "sourceLengthUTF16": 4,
+      "cursorBytesWithinSource": 4,
+      "beyondUTF16": 0,
+      "remaining": ""
+    },
+    {
+      "source": "{{1pc}}x",
+      "name": "\\kern",
+      "value": null,
+      "error": {
+        "id": "MissingDimOrUnits",
+        "message": "Missing dimension or its units for \\kern"
+      },
+      "cursorUTF16": 7,
+      "sourceLengthUTF16": 8,
+      "cursorBytesWithinSource": 7,
+      "beyondUTF16": 0,
+      "remaining": "x"
+    },
+    {
+      "source": "{{1pc}}x",
+      "name": "\\above",
+      "value": null,
+      "error": {
+        "id": "MissingDimOrUnits",
+        "message": "Missing dimension or its units for \\above"
+      },
+      "cursorUTF16": 7,
+      "sourceLengthUTF16": 8,
+      "cursorBytesWithinSource": 7,
+      "beyondUTF16": 0,
+      "remaining": "x"
+    },
+    {
+      "source": "{1pc\\}x",
+      "name": "\\kern",
+      "value": null,
+      "error": {
+        "id": "MissingCloseBrace",
+        "message": "Missing close brace"
+      },
+      "cursorUTF16": 7,
+      "sourceLengthUTF16": 7,
+      "cursorBytesWithinSource": 7,
+      "beyondUTF16": 0,
+      "remaining": ""
+    },
+    {
+      "source": "{1pc\\}x",
+      "name": "\\above",
+      "value": null,
+      "error": {
+        "id": "MissingCloseBrace",
+        "message": "Missing close brace"
+      },
+      "cursorUTF16": 7,
+      "sourceLengthUTF16": 7,
+      "cursorBytesWithinSource": 7,
+      "beyondUTF16": 0,
+      "remaining": ""
+    },
+    {
+      "source": "{1pc%comment}x",
+      "name": "\\kern",
+      "value": null,
+      "error": {
+        "id": "MissingDimOrUnits",
+        "message": "Missing dimension or its units for \\kern"
+      },
+      "cursorUTF16": 13,
+      "sourceLengthUTF16": 14,
+      "cursorBytesWithinSource": 13,
+      "beyondUTF16": 0,
+      "remaining": "x"
+    },
+    {
+      "source": "{1pc%comment}x",
+      "name": "\\above",
+      "value": null,
+      "error": {
+        "id": "MissingDimOrUnits",
+        "message": "Missing dimension or its units for \\above"
+      },
+      "cursorUTF16": 13,
+      "sourceLengthUTF16": 14,
+      "cursorBytesWithinSource": 13,
+      "beyondUTF16": 0,
+      "remaining": "x"
+    },
+    {
+      "source": "﻿1pc x",
+      "name": "\\kern",
+      "value": "1pc",
+      "error": null,
+      "cursorUTF16": 5,
+      "sourceLengthUTF16": 6,
+      "cursorBytesWithinSource": 7,
+      "beyondUTF16": 0,
+      "remaining": "x"
+    },
+    {
+      "source": "﻿1pc x",
+      "name": "\\above",
+      "value": "1pc",
+      "error": null,
+      "cursorUTF16": 5,
+      "sourceLengthUTF16": 6,
+      "cursorBytesWithinSource": 7,
+      "beyondUTF16": 0,
+      "remaining": "x"
+    },
+    {
+      "source": "1pc x",
+      "name": "\\kern",
+      "value": null,
+      "error": {
+        "id": "MissingDimOrUnits",
+        "message": "Missing dimension or its units for \\kern"
+      },
+      "cursorUTF16": 0,
+      "sourceLengthUTF16": 6,
+      "cursorBytesWithinSource": 0,
+      "beyondUTF16": 0,
+      "remaining": "1pc x"
+    },
+    {
+      "source": "1pc x",
+      "name": "\\above",
+      "value": null,
+      "error": {
+        "id": "MissingDimOrUnits",
+        "message": "Missing dimension or its units for \\above"
+      },
+      "cursorUTF16": 0,
+      "sourceLengthUTF16": 6,
+      "cursorBytesWithinSource": 0,
+      "beyondUTF16": 0,
+      "remaining": "1pc x"
+    },
+    {
+      "source": " 1pc x",
+      "name": "\\kern",
+      "value": "1pc",
+      "error": null,
+      "cursorUTF16": 5,
+      "sourceLengthUTF16": 6,
+      "cursorBytesWithinSource": 6,
+      "beyondUTF16": 0,
+      "remaining": "x"
+    },
+    {
+      "source": " 1pc x",
+      "name": "\\above",
+      "value": "1pc",
+      "error": null,
+      "cursorUTF16": 5,
+      "sourceLengthUTF16": 6,
+      "cursorBytesWithinSource": 6,
+      "beyondUTF16": 0,
+      "remaining": "x"
+    },
+    {
+      "source": "​1pc x",
+      "name": "\\kern",
+      "value": null,
+      "error": {
+        "id": "MissingDimOrUnits",
+        "message": "Missing dimension or its units for \\kern"
+      },
+      "cursorUTF16": 0,
+      "sourceLengthUTF16": 6,
+      "cursorBytesWithinSource": 0,
+      "beyondUTF16": 0,
+      "remaining": "​1pc x"
+    },
+    {
+      "source": "​1pc x",
+      "name": "\\above",
+      "value": null,
+      "error": {
+        "id": "MissingDimOrUnits",
+        "message": "Missing dimension or its units for \\above"
+      },
+      "cursorUTF16": 0,
+      "sourceLengthUTF16": 6,
+      "cursorBytesWithinSource": 0,
+      "beyondUTF16": 0,
+      "remaining": "​1pc x"
+    },
+    {
+      "source": " 1pc x",
+      "name": "\\kern",
+      "value": "1pc",
+      "error": null,
+      "cursorUTF16": 5,
+      "sourceLengthUTF16": 6,
+      "cursorBytesWithinSource": 7,
+      "beyondUTF16": 0,
+      "remaining": "x"
+    },
+    {
+      "source": " 1pc x",
+      "name": "\\above",
+      "value": "1pc",
+      "error": null,
+      "cursorUTF16": 5,
+      "sourceLengthUTF16": 6,
+      "cursorBytesWithinSource": 7,
+      "beyondUTF16": 0,
+      "remaining": "x"
+    },
+    {
+      "source": "{1﻿pc}x",
+      "name": "\\kern",
+      "value": "1pc",
+      "error": null,
+      "cursorUTF16": 6,
+      "sourceLengthUTF16": 7,
+      "cursorBytesWithinSource": 8,
+      "beyondUTF16": 0,
+      "remaining": "x"
+    },
+    {
+      "source": "{1﻿pc}x",
+      "name": "\\above",
+      "value": "1pc",
+      "error": null,
+      "cursorUTF16": 6,
+      "sourceLengthUTF16": 7,
+      "cursorBytesWithinSource": 8,
+      "beyondUTF16": 0,
+      "remaining": "x"
+    },
+    {
+      "source": "{1pc}x",
+      "name": "\\kern",
+      "value": null,
+      "error": {
+        "id": "MissingDimOrUnits",
+        "message": "Missing dimension or its units for \\kern"
+      },
+      "cursorUTF16": 6,
+      "sourceLengthUTF16": 7,
+      "cursorBytesWithinSource": 7,
+      "beyondUTF16": 0,
+      "remaining": "x"
+    },
+    {
+      "source": "{1pc}x",
+      "name": "\\above",
+      "value": null,
+      "error": {
+        "id": "MissingDimOrUnits",
+        "message": "Missing dimension or its units for \\above"
+      },
+      "cursorUTF16": 6,
+      "sourceLengthUTF16": 7,
+      "cursorBytesWithinSource": 7,
+      "beyondUTF16": 0,
+      "remaining": "x"
+    },
+    {
+      "source": "{1pc﻿}x",
+      "name": "\\kern",
+      "value": "1pc",
+      "error": null,
+      "cursorUTF16": 6,
+      "sourceLengthUTF16": 7,
+      "cursorBytesWithinSource": 8,
+      "beyondUTF16": 0,
+      "remaining": "x"
+    },
+    {
+      "source": "{1pc﻿}x",
+      "name": "\\above",
+      "value": "1pc",
+      "error": null,
+      "cursorUTF16": 6,
+      "sourceLengthUTF16": 7,
+      "cursorBytesWithinSource": 8,
+      "beyondUTF16": 0,
+      "remaining": "x"
+    },
+    {
+      "source": "{1pc}x",
+      "name": "\\kern",
+      "value": null,
+      "error": {
+        "id": "MissingDimOrUnits",
+        "message": "Missing dimension or its units for \\kern"
+      },
+      "cursorUTF16": 6,
+      "sourceLengthUTF16": 7,
+      "cursorBytesWithinSource": 7,
+      "beyondUTF16": 0,
+      "remaining": "x"
+    },
+    {
+      "source": "{1pc}x",
+      "name": "\\above",
+      "value": null,
+      "error": {
+        "id": "MissingDimOrUnits",
+        "message": "Missing dimension or its units for \\above"
+      },
+      "cursorUTF16": 6,
+      "sourceLengthUTF16": 7,
+      "cursorBytesWithinSource": 7,
+      "beyondUTF16": 0,
+      "remaining": "x"
+    },
+    {
+      "source": "{1pc\\",
+      "name": "\\kern",
+      "value": null,
+      "error": {
+        "id": "MissingCloseBrace",
+        "message": "Missing close brace"
+      },
+      "cursorUTF16": 6,
+      "sourceLengthUTF16": 5,
+      "cursorBytesWithinSource": 5,
+      "beyondUTF16": 1,
+      "remaining": ""
+    },
+    {
+      "source": "{1pc\\",
+      "name": "\\above",
+      "value": null,
+      "error": {
+        "id": "MissingCloseBrace",
+        "message": "Missing close brace"
+      },
+      "cursorUTF16": 6,
+      "sourceLengthUTF16": 5,
+      "cursorBytesWithinSource": 5,
+      "beyondUTF16": 1,
+      "remaining": ""
+    },
+    {
+      "source": "{1pc\\𝑥",
+      "name": "\\kern",
+      "value": null,
+      "error": {
+        "id": "MissingCloseBrace",
+        "message": "Missing close brace"
+      },
+      "cursorUTF16": 7,
+      "sourceLengthUTF16": 7,
+      "cursorBytesWithinSource": 9,
+      "beyondUTF16": 0,
+      "remaining": ""
+    },
+    {
+      "source": "{1pc\\𝑥",
+      "name": "\\above",
+      "value": null,
+      "error": {
+        "id": "MissingCloseBrace",
+        "message": "Missing close brace"
+      },
+      "cursorUTF16": 7,
+      "sourceLengthUTF16": 7,
+      "cursorBytesWithinSource": 9,
+      "beyondUTF16": 0,
+      "remaining": ""
+    },
+    {
+      "source": "{1pc\\{x",
+      "name": "\\kern",
+      "value": null,
+      "error": {
+        "id": "MissingCloseBrace",
+        "message": "Missing close brace"
+      },
+      "cursorUTF16": 7,
+      "sourceLengthUTF16": 7,
+      "cursorBytesWithinSource": 7,
+      "beyondUTF16": 0,
+      "remaining": ""
+    },
+    {
+      "source": "{1pc\\{x",
+      "name": "\\above",
+      "value": null,
+      "error": {
+        "id": "MissingCloseBrace",
+        "message": "Missing close brace"
+      },
+      "cursorUTF16": 7,
+      "sourceLengthUTF16": 7,
+      "cursorBytesWithinSource": 7,
+      "beyondUTF16": 0,
+      "remaining": ""
+    },
+    {
+      "source": "{1pc\\}",
+      "name": "\\kern",
+      "value": null,
+      "error": {
+        "id": "MissingCloseBrace",
+        "message": "Missing close brace"
+      },
+      "cursorUTF16": 6,
+      "sourceLengthUTF16": 6,
+      "cursorBytesWithinSource": 6,
+      "beyondUTF16": 0,
+      "remaining": ""
+    },
+    {
+      "source": "{1pc\\}",
+      "name": "\\above",
+      "value": null,
+      "error": {
+        "id": "MissingCloseBrace",
+        "message": "Missing close brace"
+      },
+      "cursorUTF16": 6,
+      "sourceLengthUTF16": 6,
+      "cursorBytesWithinSource": 6,
+      "beyondUTF16": 0,
+      "remaining": ""
+    }
+  ],
+  "labelCases": [
+    {
+      "source": "bad",
+      "name": "\\begin{spreadlines}",
+      "currentCS": "\\begin",
+      "value": null,
+      "error": {
+        "id": "MissingDimOrUnits",
+        "message": "Missing dimension or its units for \\begin"
+      },
+      "cursorUTF16": 0,
+      "sourceLengthUTF16": 3,
+      "cursorBytesWithinSource": 0,
+      "beyondUTF16": 0,
+      "remaining": "bad"
+    },
+    {
+      "source": "{bad}",
+      "name": "\\begin{spreadlines}",
+      "currentCS": "\\begin",
+      "value": null,
+      "error": {
+        "id": "MissingDimOrUnits",
+        "message": "Missing dimension or its units for \\begin"
+      },
+      "cursorUTF16": 5,
+      "sourceLengthUTF16": 5,
+      "cursorBytesWithinSource": 5,
+      "beyondUTF16": 0,
+      "remaining": ""
+    },
+    {
+      "source": "{1pt",
+      "name": "\\begin{spreadlines}",
+      "currentCS": "\\begin",
+      "value": null,
+      "error": {
+        "id": "MissingCloseBrace",
+        "message": "Missing close brace"
+      },
+      "cursorUTF16": 4,
+      "sourceLengthUTF16": 4,
+      "cursorBytesWithinSource": 4,
+      "beyondUTF16": 0,
+      "remaining": ""
+    },
+    {
+      "source": "1pt x",
+      "name": "\\begin{spreadlines}",
+      "currentCS": "\\begin",
+      "value": "1pt",
+      "error": null,
+      "cursorUTF16": 4,
+      "sourceLengthUTF16": 5,
+      "cursorBytesWithinSource": 4,
+      "beyondUTF16": 0,
+      "remaining": "x"
+    }
+  ],
+  "over": [
+    {
+      "source": "1pt z",
+      "error": null,
+      "cursorUTF16": 4,
+      "sourceLengthUTF16": 5,
+      "cursorBytesWithinSource": 4,
+      "beyondUTF16": 0,
+      "remaining": "z",
+      "pushCount": 1,
+      "pushed": [
+        {
+          "kind": "over",
+          "properties": {
+            "name": "\\above",
+            "thickness": "1pt"
+          }
+        }
+      ]
+    },
+    {
+      "source": "{1,5pt}z",
+      "error": null,
+      "cursorUTF16": 7,
+      "sourceLengthUTF16": 8,
+      "cursorBytesWithinSource": 7,
+      "beyondUTF16": 0,
+      "remaining": "z",
+      "pushCount": 1,
+      "pushed": [
+        {
+          "kind": "over",
+          "properties": {
+            "name": "\\above",
+            "thickness": "1.5pt"
+          }
+        }
+      ]
+    },
+    {
+      "source": "8mu z",
+      "error": null,
+      "cursorUTF16": 4,
+      "sourceLengthUTF16": 5,
+      "cursorBytesWithinSource": 4,
+      "beyondUTF16": 0,
+      "remaining": "z",
+      "pushCount": 1,
+      "pushed": [
+        {
+          "kind": "over",
+          "properties": {
+            "name": "\\above",
+            "thickness": "0.444em"
+          }
+        }
+      ]
+    },
+    {
+      "source": "bad z",
+      "error": {
+        "id": "MissingDimOrUnits",
+        "message": "Missing dimension or its units for \\above"
+      },
+      "cursorUTF16": 0,
+      "sourceLengthUTF16": 5,
+      "cursorBytesWithinSource": 0,
+      "beyondUTF16": 0,
+      "remaining": "bad z",
+      "pushCount": 0,
+      "pushed": []
+    },
+    {
+      "source": "",
+      "error": {
+        "id": "MissingDimOrUnits",
+        "message": "Missing dimension or its units for \\above"
+      },
+      "cursorUTF16": 0,
+      "sourceLengthUTF16": 0,
+      "cursorBytesWithinSource": 0,
+      "beyondUTF16": 0,
+      "remaining": "",
+      "pushCount": 0,
+      "pushed": []
+    },
+    {
+      "source": "{1pt",
+      "error": {
+        "id": "MissingCloseBrace",
+        "message": "Missing close brace"
+      },
+      "cursorUTF16": 4,
+      "sourceLengthUTF16": 4,
+      "cursorBytesWithinSource": 4,
+      "beyondUTF16": 0,
+      "remaining": "",
+      "pushCount": 0,
+      "pushed": []
+    },
+    {
+      "source": "{1pt\\",
+      "error": {
+        "id": "MissingCloseBrace",
+        "message": "Missing close brace"
+      },
+      "cursorUTF16": 6,
+      "sourceLengthUTF16": 5,
+      "cursorBytesWithinSource": 5,
+      "beyondUTF16": 1,
+      "remaining": "",
+      "pushCount": 0,
+      "pushed": []
+    }
+  ],
+  "methods": {
+    "GetDimen": "function(t){if(\"{\"===this.GetNext()){var e=this.GetArgument(t),Q=T(i.default.matchDimen(e),2),r=Q[0],n=Q[1];if(r)return r+n}else{e=this.string.slice(this.i);var o=T(i.default.matchDimen(e,!0),3),a=(r=o[0],n=o[1],o[2]);if(r)return this.i+=a,r+n}throw new s.default(\"MissingDimOrUnits\",\"Missing dimension or its units for %1\",this.currentCS)}",
+    "GetArgument": "function(t,e){switch(this.GetNext()){case\"\":if(!e)throw new s.default(\"MissingArgFor\",\"Missing argument for %1\",this.currentCS);return null;case\"}\":if(!e)throw new s.default(\"ExtraCloseMissingOpen\",\"Extra close brace or missing open brace\");return null;case\"\\\\\":return this.i++,\"\\\\\"+this.GetCS();case\"{\":for(var Q=++this.i,r=1;this.i<this.string.length;)switch(this.string.charAt(this.i++)){case\"\\\\\":this.i++;break;case\"{\":r++;break;case\"}\":if(0==--r)return this.string.slice(Q,this.i-1)}throw new s.default(\"MissingCloseBrace\",\"Missing close brace\")}var T=this.getCodePoint();return this.i+=T.length,T}",
+    "GetNext": "function(){for(;this.nextIsSpace();)this.i++;return this.getCodePoint()}",
+    "matchDimen": "function h(t,e){void 0===e&&(e=!1);var T=t.match(e?p:u);return T?function(t){var e=r(t,3),T=e[0],n=e[1],o=e[2];if(\"mu\"!==n)return[T,n,o];return[f(Q[n](parseFloat(T||\"1\"))).slice(0,-2),\"em\",o]}([T[1].replace(/,/,\".\"),T[4],T[0].length]):[null,null,0]}",
+    "Over": "function(t,e,Q,r){var T=t.itemFactory.create(\"over\").setProperty(\"name\",t.currentCS);Q||r?(T.setProperty(\"open\",Q),T.setProperty(\"close\",r)):e.match(/withdelims$/)&&(T.setProperty(\"open\",t.GetDelimiter(e)),T.setProperty(\"close\",t.GetDelimiter(e))),e.match(/^\\\\above/)?T.setProperty(\"thickness\",t.GetDimen(e)):(e.match(/^\\\\atop/)||Q||r)&&T.setProperty(\"thickness\",0),t.Push(T)}"
+  }
+}

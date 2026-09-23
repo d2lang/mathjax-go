@@ -166,7 +166,8 @@ func mathtoolsAppendCell(cell, child *mml.Node, prepend bool) {
 }
 
 func (p *parser) mathtoolsSpreadLines(environment string) ([]*mml.Node, error) {
-	spread, err := p.readDimension("begin{" + environment + "}")
+	// GetDimen reports parser.currentCS (\begin), not its descriptive name.
+	spread, err := p.readDimension("begin")
 	if err != nil {
 		return nil, err
 	}

@@ -826,16 +826,11 @@ func (p *parser) infixFraction(name string, left []*mml.Node, terminator byte, s
 		attributes["linethickness"] = "0"
 	}
 	if name == "above" {
-		p.skipSpaces()
-		start := p.pos
-		for p.pos < len(p.source) {
-			r := p.peekRune()
-			if unicode.IsSpace(r) || r == '{' || r == '}' || r == '\\' {
-				break
-			}
-			p.consumeRune()
+		thickness, err := p.readDimension(name)
+		if err != nil {
+			return nil, "", err
 		}
-		attributes["linethickness"] = p.source[start:p.pos]
+		attributes["linethickness"] = thickness
 	}
 	rightNodes, right, err := p.parseRow(terminator, stopRight)
 	if err != nil {

@@ -1,0 +1,3707 @@
+{
+  "mathjaxGitCommit": "ad8f5c21cb810236551da8c6512ba733e67357ee",
+  "cases": [
+    {
+      "name": "comma-inline",
+      "tex": "\\kern1,5mu x",
+      "display": false,
+      "svgSHA256": "30f98c1385eaa4af0a40cc50380d8478062ac4bec0484f4f95e01e9d7405edfc",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mspace",
+                "text": null,
+                "attributes": {
+                  "width": "0.083em"
+                },
+                "properties": {},
+                "children": []
+              },
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "comma-display",
+      "tex": "\\kern1,5mu x",
+      "display": true,
+      "svgSHA256": "30f98c1385eaa4af0a40cc50380d8478062ac4bec0484f4f95e01e9d7405edfc",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mspace",
+                "text": null,
+                "attributes": {
+                  "width": "0.083em"
+                },
+                "properties": {},
+                "children": []
+              },
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "braced-junk-inline",
+      "tex": "\\kern{8mu x}z",
+      "display": false,
+      "svgSHA256": "8bf1d435f39c52c594c904c0f0cbfde43db76a56344b00835f65507f4a01e809",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Missing dimension or its units for \\kern"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Missing dimension or its units for \\kern",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "braced-junk-display",
+      "tex": "\\kern{8mu x}z",
+      "display": true,
+      "svgSHA256": "8bf1d435f39c52c594c904c0f0cbfde43db76a56344b00835f65507f4a01e809",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Missing dimension or its units for \\kern"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Missing dimension or its units for \\kern",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "uppercase-inline",
+      "tex": "\\kern8MU x",
+      "display": false,
+      "svgSHA256": "8bf1d435f39c52c594c904c0f0cbfde43db76a56344b00835f65507f4a01e809",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Missing dimension or its units for \\kern"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Missing dimension or its units for \\kern",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "uppercase-display",
+      "tex": "\\kern8MU x",
+      "display": true,
+      "svgSHA256": "8bf1d435f39c52c594c904c0f0cbfde43db76a56344b00835f65507f4a01e809",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Missing dimension or its units for \\kern"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Missing dimension or its units for \\kern",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "pc-tail-inline",
+      "tex": "\\kern1pc x",
+      "display": false,
+      "svgSHA256": "d07bedaaa533906d4f16fba4bc57ac10662973d8808cf4201d2a97d41c98ac23",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mspace",
+                "text": null,
+                "attributes": {
+                  "width": "1pc"
+                },
+                "properties": {},
+                "children": []
+              },
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "pc-tail-display",
+      "tex": "\\kern1pc x",
+      "display": true,
+      "svgSHA256": "d07bedaaa533906d4f16fba4bc57ac10662973d8808cf4201d2a97d41c98ac23",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mspace",
+                "text": null,
+                "attributes": {
+                  "width": "1pc"
+                },
+                "properties": {},
+                "children": []
+              },
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "exponent-inline",
+      "tex": "\\kern1e2mu x",
+      "display": false,
+      "svgSHA256": "8bf1d435f39c52c594c904c0f0cbfde43db76a56344b00835f65507f4a01e809",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Missing dimension or its units for \\kern"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Missing dimension or its units for \\kern",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "exponent-display",
+      "tex": "\\kern1e2mu x",
+      "display": true,
+      "svgSHA256": "8bf1d435f39c52c594c904c0f0cbfde43db76a56344b00835f65507f4a01e809",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Missing dimension or its units for \\kern"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Missing dimension or its units for \\kern",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "double-sign-inline",
+      "tex": "\\kern++8mu x",
+      "display": false,
+      "svgSHA256": "8bf1d435f39c52c594c904c0f0cbfde43db76a56344b00835f65507f4a01e809",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Missing dimension or its units for \\kern"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Missing dimension or its units for \\kern",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "double-sign-display",
+      "tex": "\\kern++8mu x",
+      "display": true,
+      "svgSHA256": "8bf1d435f39c52c594c904c0f0cbfde43db76a56344b00835f65507f4a01e809",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Missing dimension or its units for \\kern"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Missing dimension or its units for \\kern",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "valid-mu-inline",
+      "tex": "\\kern8mu x",
+      "display": false,
+      "svgSHA256": "0edb0731683650dfd473919aea945065444d91aad56ff6d0ea493e71fc64ab80",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mspace",
+                "text": null,
+                "attributes": {
+                  "width": "0.444em"
+                },
+                "properties": {},
+                "children": []
+              },
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "valid-mu-display",
+      "tex": "\\kern8mu x",
+      "display": true,
+      "svgSHA256": "0edb0731683650dfd473919aea945065444d91aad56ff6d0ea493e71fc64ab80",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mspace",
+                "text": null,
+                "attributes": {
+                  "width": "0.444em"
+                },
+                "properties": {},
+                "children": []
+              },
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "valid-braced-inline",
+      "tex": "\\kern{8mu}x",
+      "display": false,
+      "svgSHA256": "0edb0731683650dfd473919aea945065444d91aad56ff6d0ea493e71fc64ab80",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mspace",
+                "text": null,
+                "attributes": {
+                  "width": "0.444em"
+                },
+                "properties": {},
+                "children": []
+              },
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "valid-braced-display",
+      "tex": "\\kern{8mu}x",
+      "display": true,
+      "svgSHA256": "0edb0731683650dfd473919aea945065444d91aad56ff6d0ea493e71fc64ab80",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mspace",
+                "text": null,
+                "attributes": {
+                  "width": "0.444em"
+                },
+                "properties": {},
+                "children": []
+              },
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "hskip-pc-inline",
+      "tex": "\\hskip1pc x",
+      "display": false,
+      "svgSHA256": "d07bedaaa533906d4f16fba4bc57ac10662973d8808cf4201d2a97d41c98ac23",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mspace",
+                "text": null,
+                "attributes": {
+                  "width": "1pc"
+                },
+                "properties": {},
+                "children": []
+              },
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "hskip-pc-display",
+      "tex": "\\hskip1pc x",
+      "display": true,
+      "svgSHA256": "d07bedaaa533906d4f16fba4bc57ac10662973d8808cf4201d2a97d41c98ac23",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mspace",
+                "text": null,
+                "attributes": {
+                  "width": "1pc"
+                },
+                "properties": {},
+                "children": []
+              },
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "hspace-braced-inline",
+      "tex": "\\hspace{1,5pt}x",
+      "display": false,
+      "svgSHA256": "a03252bf5259336a2a97d0b6bf25821a4ad51acd656ee719b36de4317a00c9e4",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mspace",
+                "text": null,
+                "attributes": {
+                  "width": "1.5pt"
+                },
+                "properties": {},
+                "children": []
+              },
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "hspace-braced-display",
+      "tex": "\\hspace{1,5pt}x",
+      "display": true,
+      "svgSHA256": "a03252bf5259336a2a97d0b6bf25821a4ad51acd656ee719b36de4317a00c9e4",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mspace",
+                "text": null,
+                "attributes": {
+                  "width": "1.5pt"
+                },
+                "properties": {},
+                "children": []
+              },
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "mkern-tail-inline",
+      "tex": "\\mkern1ptxy",
+      "display": false,
+      "svgSHA256": "068a576f4e6511ce87242038e116d73279d613e81ff8dbfa4143ee3d87641bc7",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mspace",
+                "text": null,
+                "attributes": {
+                  "width": "1pt"
+                },
+                "properties": {},
+                "children": []
+              },
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "y",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "mkern-tail-display",
+      "tex": "\\mkern1ptxy",
+      "display": true,
+      "svgSHA256": "068a576f4e6511ce87242038e116d73279d613e81ff8dbfa4143ee3d87641bc7",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mspace",
+                "text": null,
+                "attributes": {
+                  "width": "1pt"
+                },
+                "properties": {},
+                "children": []
+              },
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "y",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "mskip-missing-inline",
+      "tex": "\\mskip",
+      "display": false,
+      "svgSHA256": "2958b6ca77769c547c554c2a63f1ff2b75b42bc5285f70bc53c0aaa3f68f54d3",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Missing dimension or its units for \\mskip"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Missing dimension or its units for \\mskip",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "mskip-missing-display",
+      "tex": "\\mskip",
+      "display": true,
+      "svgSHA256": "2958b6ca77769c547c554c2a63f1ff2b75b42bc5285f70bc53c0aaa3f68f54d3",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Missing dimension or its units for \\mskip"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Missing dimension or its units for \\mskip",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "above-comma-inline",
+      "tex": "x\\above 1,5pt y",
+      "display": false,
+      "svgSHA256": "3b8d66674a3b792b8951028a7a35e520c4ab93326029910fb99477ff028c9b1b",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mfrac",
+                "text": null,
+                "attributes": {
+                  "linethickness": "1.5pt"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {
+                      "texprimestyle": true
+                    },
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "y",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "above-comma-display",
+      "tex": "x\\above 1,5pt y",
+      "display": true,
+      "svgSHA256": "fb2c31c58f2e82ac1f6df864a7866844cbee5f125860b4284cdf323698a86c26",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mfrac",
+                "text": null,
+                "attributes": {
+                  "linethickness": "1.5pt"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {
+                      "texprimestyle": true
+                    },
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "y",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "above-braced-inline",
+      "tex": "x\\above{ 1.5 pt }y",
+      "display": false,
+      "svgSHA256": "3b8d66674a3b792b8951028a7a35e520c4ab93326029910fb99477ff028c9b1b",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mfrac",
+                "text": null,
+                "attributes": {
+                  "linethickness": "1.5pt"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {
+                      "texprimestyle": true
+                    },
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "y",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "above-braced-display",
+      "tex": "x\\above{ 1.5 pt }y",
+      "display": true,
+      "svgSHA256": "fb2c31c58f2e82ac1f6df864a7866844cbee5f125860b4284cdf323698a86c26",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mfrac",
+                "text": null,
+                "attributes": {
+                  "linethickness": "1.5pt"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {
+                      "texprimestyle": true
+                    },
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "y",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "above-mu-inline",
+      "tex": "x\\above 8mu y",
+      "display": false,
+      "svgSHA256": "d9a58a8b63f8a4a8951100a4cfee446e92434eb2bfe22a54d367496f8385783f",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mfrac",
+                "text": null,
+                "attributes": {
+                  "linethickness": "0.444em"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {
+                      "texprimestyle": true
+                    },
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "y",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "above-mu-display",
+      "tex": "x\\above 8mu y",
+      "display": true,
+      "svgSHA256": "681afa38538c0c50256b4db793e7539dcfb64aacd0abb4cfe5873e528fbf5afc",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mfrac",
+                "text": null,
+                "attributes": {
+                  "linethickness": "0.444em"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {
+                      "texprimestyle": true
+                    },
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "y",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "above-missing-inline",
+      "tex": "x\\above",
+      "display": false,
+      "svgSHA256": "845ee1fc96b6bd4867c8a227499b6ba1549c8de7570eb17e55de8a8a407484a6",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Missing dimension or its units for \\above"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Missing dimension or its units for \\above",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "above-missing-display",
+      "tex": "x\\above",
+      "display": true,
+      "svgSHA256": "845ee1fc96b6bd4867c8a227499b6ba1549c8de7570eb17e55de8a8a407484a6",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Missing dimension or its units for \\above"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Missing dimension or its units for \\above",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "above-invalid-inline",
+      "tex": "x\\above bad y",
+      "display": false,
+      "svgSHA256": "845ee1fc96b6bd4867c8a227499b6ba1549c8de7570eb17e55de8a8a407484a6",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Missing dimension or its units for \\above"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Missing dimension or its units for \\above",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "above-invalid-display",
+      "tex": "x\\above bad y",
+      "display": true,
+      "svgSHA256": "845ee1fc96b6bd4867c8a227499b6ba1549c8de7570eb17e55de8a8a407484a6",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Missing dimension or its units for \\above"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Missing dimension or its units for \\above",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "second-above-invalid-inline",
+      "tex": "x\\choose y\\above bad z",
+      "display": false,
+      "svgSHA256": "845ee1fc96b6bd4867c8a227499b6ba1549c8de7570eb17e55de8a8a407484a6",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Missing dimension or its units for \\above"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Missing dimension or its units for \\above",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "second-above-invalid-display",
+      "tex": "x\\choose y\\above bad z",
+      "display": true,
+      "svgSHA256": "845ee1fc96b6bd4867c8a227499b6ba1549c8de7570eb17e55de8a8a407484a6",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Missing dimension or its units for \\above"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Missing dimension or its units for \\above",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "second-above-missing-inline",
+      "tex": "x\\choose y\\above",
+      "display": false,
+      "svgSHA256": "845ee1fc96b6bd4867c8a227499b6ba1549c8de7570eb17e55de8a8a407484a6",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Missing dimension or its units for \\above"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Missing dimension or its units for \\above",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "second-above-missing-display",
+      "tex": "x\\choose y\\above",
+      "display": true,
+      "svgSHA256": "845ee1fc96b6bd4867c8a227499b6ba1549c8de7570eb17e55de8a8a407484a6",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Missing dimension or its units for \\above"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Missing dimension or its units for \\above",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "second-above-valid-boundary-inline",
+      "tex": "x\\choose y\\above 1pt z",
+      "display": false,
+      "svgSHA256": "42d310fa21f19f09f27cf9a729e4fe90595af27afb59fc12b959d80250a606da",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Ambiguous use of \\above"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Ambiguous use of \\above",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "second-above-valid-boundary-display",
+      "tex": "x\\choose y\\above 1pt z",
+      "display": true,
+      "svgSHA256": "42d310fa21f19f09f27cf9a729e4fe90595af27afb59fc12b959d80250a606da",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Ambiguous use of \\above"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Ambiguous use of \\above",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "cd-width-inline",
+      "tex": "\\minCDarrowwidth{1,5em}\\begin{CD}A @>>> B\\end{CD}",
+      "display": false,
+      "svgSHA256": "8eff2b308866b792b1d65b13ff401e6cb3cc5dddfcc0247efd38edcd5ad62838",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mtable",
+                "text": null,
+                "attributes": {
+                  "columnspacing": "5pt",
+                  "rowspacing": "5pt",
+                  "displaystyle": true
+                },
+                "properties": {
+                  "useHeight": true
+                },
+                "children": [
+                  {
+                    "kind": "mtr",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtd",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {},
+                            "children": [
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": {},
+                                "properties": {},
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "A",
+                                    "attributes": {},
+                                    "properties": {},
+                                    "children": []
+                                  }
+                                ]
+                              },
+                              {
+                                "kind": "mpadded",
+                                "text": null,
+                                "attributes": {
+                                  "height": "8.5pt",
+                                  "depth": "2pt"
+                                },
+                                "properties": {},
+                                "children": [
+                                  {
+                                    "kind": "inferredMrow",
+                                    "text": null,
+                                    "attributes": {},
+                                    "properties": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mtd",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {},
+                            "children": [
+                              {
+                                "kind": "mover",
+                                "text": null,
+                                "attributes": {},
+                                "properties": {},
+                                "children": [
+                                  {
+                                    "kind": "mo",
+                                    "text": null,
+                                    "attributes": {
+                                      "minsize": "1.5em"
+                                    },
+                                    "properties": {
+                                      "texprimestyle": true
+                                    },
+                                    "children": [
+                                      {
+                                        "kind": "text",
+                                        "text": "→",
+                                        "attributes": {},
+                                        "properties": {},
+                                        "children": []
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "kind": "mpadded",
+                                    "text": null,
+                                    "attributes": {
+                                      "width": "+.67em",
+                                      "lspace": ".33em",
+                                      "voffset": ".1em"
+                                    },
+                                    "properties": {},
+                                    "children": [
+                                      {
+                                        "kind": "inferredMrow",
+                                        "text": null,
+                                        "attributes": {},
+                                        "properties": {},
+                                        "children": [
+                                          {
+                                            "kind": "mspace",
+                                            "text": null,
+                                            "attributes": {
+                                              "width": "1.5em"
+                                            },
+                                            "properties": {},
+                                            "children": []
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mtd",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {},
+                            "children": [
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": {},
+                                "properties": {},
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "B",
+                                    "attributes": {},
+                                    "properties": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "cd-width-display",
+      "tex": "\\minCDarrowwidth{1,5em}\\begin{CD}A @>>> B\\end{CD}",
+      "display": true,
+      "svgSHA256": "8eff2b308866b792b1d65b13ff401e6cb3cc5dddfcc0247efd38edcd5ad62838",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mtable",
+                "text": null,
+                "attributes": {
+                  "columnspacing": "5pt",
+                  "rowspacing": "5pt",
+                  "displaystyle": true
+                },
+                "properties": {
+                  "useHeight": true
+                },
+                "children": [
+                  {
+                    "kind": "mtr",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtd",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {},
+                            "children": [
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": {},
+                                "properties": {},
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "A",
+                                    "attributes": {},
+                                    "properties": {},
+                                    "children": []
+                                  }
+                                ]
+                              },
+                              {
+                                "kind": "mpadded",
+                                "text": null,
+                                "attributes": {
+                                  "height": "8.5pt",
+                                  "depth": "2pt"
+                                },
+                                "properties": {},
+                                "children": [
+                                  {
+                                    "kind": "inferredMrow",
+                                    "text": null,
+                                    "attributes": {},
+                                    "properties": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mtd",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {},
+                            "children": [
+                              {
+                                "kind": "mover",
+                                "text": null,
+                                "attributes": {},
+                                "properties": {},
+                                "children": [
+                                  {
+                                    "kind": "mo",
+                                    "text": null,
+                                    "attributes": {
+                                      "minsize": "1.5em"
+                                    },
+                                    "properties": {
+                                      "texprimestyle": true
+                                    },
+                                    "children": [
+                                      {
+                                        "kind": "text",
+                                        "text": "→",
+                                        "attributes": {},
+                                        "properties": {},
+                                        "children": []
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "kind": "mpadded",
+                                    "text": null,
+                                    "attributes": {
+                                      "width": "+.67em",
+                                      "lspace": ".33em",
+                                      "voffset": ".1em"
+                                    },
+                                    "properties": {},
+                                    "children": [
+                                      {
+                                        "kind": "inferredMrow",
+                                        "text": null,
+                                        "attributes": {},
+                                        "properties": {},
+                                        "children": [
+                                          {
+                                            "kind": "mspace",
+                                            "text": null,
+                                            "attributes": {
+                                              "width": "1.5em"
+                                            },
+                                            "properties": {},
+                                            "children": []
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mtd",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {},
+                            "children": [
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": {},
+                                "properties": {},
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "B",
+                                    "attributes": {},
+                                    "properties": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "cd-invalid-inline",
+      "tex": "\\minCDarrowheight{bad}x",
+      "display": false,
+      "svgSHA256": "6183fef4bd552af79e556818c85dadbf8aef65ccb390f985a2710d6e972e2fc4",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Missing dimension or its units for \\minCDarrowheight"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Missing dimension or its units for \\minCDarrowheight",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "cd-invalid-display",
+      "tex": "\\minCDarrowheight{bad}x",
+      "display": true,
+      "svgSHA256": "6183fef4bd552af79e556818c85dadbf8aef65ccb390f985a2710d6e972e2fc4",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Missing dimension or its units for \\minCDarrowheight"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Missing dimension or its units for \\minCDarrowheight",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "spreadlines-valid-inline",
+      "tex": "\\begin{spreadlines}{1,5pt}\\begin{gathered}x\\\\y\\end{gathered}\\end{spreadlines}",
+      "display": false,
+      "svgSHA256": "d56ceea67116c64e23c5f6376cfe1da3a746fa02ace0f55b647177433c049386",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mtable",
+                "text": null,
+                "attributes": {
+                  "displaystyle": true,
+                  "columnspacing": "1em",
+                  "rowspacing": "0.45em"
+                },
+                "properties": {
+                  "useHeight": true
+                },
+                "children": [
+                  {
+                    "kind": "mtr",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtd",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {},
+                            "children": [
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": {},
+                                "properties": {},
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "x",
+                                    "attributes": {},
+                                    "properties": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mtr",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtd",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {},
+                            "children": [
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": {},
+                                "properties": {},
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "y",
+                                    "attributes": {},
+                                    "properties": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "spreadlines-valid-display",
+      "tex": "\\begin{spreadlines}{1,5pt}\\begin{gathered}x\\\\y\\end{gathered}\\end{spreadlines}",
+      "display": true,
+      "svgSHA256": "d56ceea67116c64e23c5f6376cfe1da3a746fa02ace0f55b647177433c049386",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mtable",
+                "text": null,
+                "attributes": {
+                  "displaystyle": true,
+                  "columnspacing": "1em",
+                  "rowspacing": "0.45em"
+                },
+                "properties": {
+                  "useHeight": true
+                },
+                "children": [
+                  {
+                    "kind": "mtr",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtd",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {},
+                            "children": [
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": {},
+                                "properties": {},
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "x",
+                                    "attributes": {},
+                                    "properties": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mtr",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtd",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {},
+                            "children": [
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": {},
+                                "properties": {},
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "y",
+                                    "attributes": {},
+                                    "properties": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "spreadlines-invalid-inline",
+      "tex": "\\begin{spreadlines}{bad}x\\end{spreadlines}",
+      "display": false,
+      "svgSHA256": "5cc372eb46cdf360fa1a78ba883d052aeee136b94fbb080527414bb939b417e7",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Missing dimension or its units for \\begin"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Missing dimension or its units for \\begin",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "spreadlines-invalid-display",
+      "tex": "\\begin{spreadlines}{bad}x\\end{spreadlines}",
+      "display": true,
+      "svgSHA256": "5cc372eb46cdf360fa1a78ba883d052aeee136b94fbb080527414bb939b417e7",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Missing dimension or its units for \\begin"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Missing dimension or its units for \\begin",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "raise-valid-boundary-inline",
+      "tex": "\\raise{1,5pt}x",
+      "display": false,
+      "svgSHA256": "2abcb37137fa683eb55b3f386365d1d22b954eb04edb1c917244117777e5a5d1",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mpadded",
+                "text": null,
+                "attributes": {
+                  "height": "+1.5pt",
+                  "depth": "-1.5pt",
+                  "voffset": "+1.5pt"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "x",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "raise-valid-boundary-display",
+      "tex": "\\raise{1,5pt}x",
+      "display": true,
+      "svgSHA256": "2abcb37137fa683eb55b3f386365d1d22b954eb04edb1c917244117777e5a5d1",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mpadded",
+                "text": null,
+                "attributes": {
+                  "height": "+1.5pt",
+                  "depth": "-1.5pt",
+                  "voffset": "+1.5pt"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "x",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "lower-invalid-inline",
+      "tex": "\\lower{bad}x",
+      "display": false,
+      "svgSHA256": "7b873eaf5d4056f58e7280626aaf847cd61fcfb1a224dc31ccb77e80ab00eea9",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Missing dimension or its units for \\lower"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Missing dimension or its units for \\lower",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "lower-invalid-display",
+      "tex": "\\lower{bad}x",
+      "display": true,
+      "svgSHA256": "7b873eaf5d4056f58e7280626aaf847cd61fcfb1a224dc31ccb77e80ab00eea9",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Missing dimension or its units for \\lower"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Missing dimension or its units for \\lower",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "rule-unchanged-boundary-inline",
+      "tex": "\\rule{1,5pt}{2pt}x",
+      "display": false,
+      "svgSHA256": "742cb14c64e2381f3d89710b07347fdd9419e40c680f2ae54910f09e322c1881",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mspace",
+                "text": null,
+                "attributes": {
+                  "width": "1.5pt",
+                  "height": "2pt",
+                  "mathbackground": "black"
+                },
+                "properties": {},
+                "children": []
+              },
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "rule-unchanged-boundary-display",
+      "tex": "\\rule{1,5pt}{2pt}x",
+      "display": true,
+      "svgSHA256": "742cb14c64e2381f3d89710b07347fdd9419e40c680f2ae54910f09e322c1881",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mspace",
+                "text": null,
+                "attributes": {
+                  "width": "1.5pt",
+                  "height": "2pt",
+                  "mathbackground": "black"
+                },
+                "properties": {},
+                "children": []
+              },
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "vspace-dispatch-boundary-inline",
+      "tex": "\\vspace{1pt}x",
+      "display": false,
+      "svgSHA256": "b075db129d3e829daedeb6317043df8f512d217c189f15951631cd36678a0796",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Undefined control sequence \\vspace"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Undefined control sequence \\vspace",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "vspace-dispatch-boundary-display",
+      "tex": "\\vspace{1pt}x",
+      "display": true,
+      "svgSHA256": "b075db129d3e829daedeb6317043df8f512d217c189f15951631cd36678a0796",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Undefined control sequence \\vspace"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Undefined control sequence \\vspace",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "raisebox-dispatch-boundary-inline",
+      "tex": "\\raisebox{1pt}x",
+      "display": false,
+      "svgSHA256": "ab36e7d754632eb8e815bfba67e60612786588fd321ab6c91d9dfc85bc16edbe",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Undefined control sequence \\raisebox"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Undefined control sequence \\raisebox",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "raisebox-dispatch-boundary-display",
+      "tex": "\\raisebox{1pt}x",
+      "display": true,
+      "svgSHA256": "ab36e7d754632eb8e815bfba67e60612786588fd321ab6c91d9dfc85bc16edbe",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Undefined control sequence \\raisebox"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Undefined control sequence \\raisebox",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "literal-text-inline",
+      "tex": "\\text{1,5mu}x",
+      "display": false,
+      "svgSHA256": "6b1ce29e6283129d554dbe12175d69b13a5e66b3979d02b3c2cd10d1bf498c8c",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mtext",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "1,5mu",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "literal-text-display",
+      "tex": "\\text{1,5mu}x",
+      "display": true,
+      "svgSHA256": "6b1ce29e6283129d554dbe12175d69b13a5e66b3979d02b3c2cd10d1bf498c8c",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mtext",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "1,5mu",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
