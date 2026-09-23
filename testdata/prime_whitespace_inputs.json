@@ -1,0 +1,682 @@
+[
+  {
+    "name": "ascii-space-0009-inline",
+    "tex": "x'\t'",
+    "display": false
+  },
+  {
+    "name": "ascii-space-0009-display",
+    "tex": "x'\t'",
+    "display": true
+  },
+  {
+    "name": "ascii-space-000a-inline",
+    "tex": "x'\n'",
+    "display": false
+  },
+  {
+    "name": "ascii-space-000a-display",
+    "tex": "x'\n'",
+    "display": true
+  },
+  {
+    "name": "ascii-space-000b-inline",
+    "tex": "x'\u000b'",
+    "display": false
+  },
+  {
+    "name": "ascii-space-000b-display",
+    "tex": "x'\u000b'",
+    "display": true
+  },
+  {
+    "name": "ascii-space-000c-inline",
+    "tex": "x'\f'",
+    "display": false
+  },
+  {
+    "name": "ascii-space-000c-display",
+    "tex": "x'\f'",
+    "display": true
+  },
+  {
+    "name": "ascii-space-000d-inline",
+    "tex": "x'\r'",
+    "display": false
+  },
+  {
+    "name": "ascii-space-000d-display",
+    "tex": "x'\r'",
+    "display": true
+  },
+  {
+    "name": "ascii-space-0020-inline",
+    "tex": "x' '",
+    "display": false
+  },
+  {
+    "name": "ascii-space-0020-display",
+    "tex": "x' '",
+    "display": true
+  },
+  {
+    "name": "ascii-space-00a0-inline",
+    "tex": "x'\u00a0'",
+    "display": false
+  },
+  {
+    "name": "ascii-space-00a0-display",
+    "tex": "x'\u00a0'",
+    "display": true
+  },
+  {
+    "name": "ascii-space-1680-inline",
+    "tex": "x'\u1680'",
+    "display": false
+  },
+  {
+    "name": "ascii-space-1680-display",
+    "tex": "x'\u1680'",
+    "display": true
+  },
+  {
+    "name": "ascii-space-2000-inline",
+    "tex": "x'\u2000'",
+    "display": false
+  },
+  {
+    "name": "ascii-space-2000-display",
+    "tex": "x'\u2000'",
+    "display": true
+  },
+  {
+    "name": "ascii-space-2001-inline",
+    "tex": "x'\u2001'",
+    "display": false
+  },
+  {
+    "name": "ascii-space-2001-display",
+    "tex": "x'\u2001'",
+    "display": true
+  },
+  {
+    "name": "ascii-space-2002-inline",
+    "tex": "x'\u2002'",
+    "display": false
+  },
+  {
+    "name": "ascii-space-2002-display",
+    "tex": "x'\u2002'",
+    "display": true
+  },
+  {
+    "name": "ascii-space-2003-inline",
+    "tex": "x'\u2003'",
+    "display": false
+  },
+  {
+    "name": "ascii-space-2003-display",
+    "tex": "x'\u2003'",
+    "display": true
+  },
+  {
+    "name": "ascii-space-2004-inline",
+    "tex": "x'\u2004'",
+    "display": false
+  },
+  {
+    "name": "ascii-space-2004-display",
+    "tex": "x'\u2004'",
+    "display": true
+  },
+  {
+    "name": "ascii-space-2005-inline",
+    "tex": "x'\u2005'",
+    "display": false
+  },
+  {
+    "name": "ascii-space-2005-display",
+    "tex": "x'\u2005'",
+    "display": true
+  },
+  {
+    "name": "ascii-space-2006-inline",
+    "tex": "x'\u2006'",
+    "display": false
+  },
+  {
+    "name": "ascii-space-2006-display",
+    "tex": "x'\u2006'",
+    "display": true
+  },
+  {
+    "name": "ascii-space-2007-inline",
+    "tex": "x'\u2007'",
+    "display": false
+  },
+  {
+    "name": "ascii-space-2007-display",
+    "tex": "x'\u2007'",
+    "display": true
+  },
+  {
+    "name": "ascii-space-2008-inline",
+    "tex": "x'\u2008'",
+    "display": false
+  },
+  {
+    "name": "ascii-space-2008-display",
+    "tex": "x'\u2008'",
+    "display": true
+  },
+  {
+    "name": "ascii-space-2009-inline",
+    "tex": "x'\u2009'",
+    "display": false
+  },
+  {
+    "name": "ascii-space-2009-display",
+    "tex": "x'\u2009'",
+    "display": true
+  },
+  {
+    "name": "ascii-space-200a-inline",
+    "tex": "x'\u200a'",
+    "display": false
+  },
+  {
+    "name": "ascii-space-200a-display",
+    "tex": "x'\u200a'",
+    "display": true
+  },
+  {
+    "name": "ascii-space-2028-inline",
+    "tex": "x'\u2028'",
+    "display": false
+  },
+  {
+    "name": "ascii-space-2028-display",
+    "tex": "x'\u2028'",
+    "display": true
+  },
+  {
+    "name": "ascii-space-2029-inline",
+    "tex": "x'\u2029'",
+    "display": false
+  },
+  {
+    "name": "ascii-space-2029-display",
+    "tex": "x'\u2029'",
+    "display": true
+  },
+  {
+    "name": "ascii-space-202f-inline",
+    "tex": "x'\u202f'",
+    "display": false
+  },
+  {
+    "name": "ascii-space-202f-display",
+    "tex": "x'\u202f'",
+    "display": true
+  },
+  {
+    "name": "ascii-space-205f-inline",
+    "tex": "x'\u205f'",
+    "display": false
+  },
+  {
+    "name": "ascii-space-205f-display",
+    "tex": "x'\u205f'",
+    "display": true
+  },
+  {
+    "name": "ascii-space-3000-inline",
+    "tex": "x'\u3000'",
+    "display": false
+  },
+  {
+    "name": "ascii-space-3000-display",
+    "tex": "x'\u3000'",
+    "display": true
+  },
+  {
+    "name": "ascii-space-feff-inline",
+    "tex": "x'\ufeff'",
+    "display": false
+  },
+  {
+    "name": "ascii-space-feff-display",
+    "tex": "x'\ufeff'",
+    "display": true
+  },
+  {
+    "name": "ascii-bom-end-inline",
+    "tex": "x'\ufeff",
+    "display": false
+  },
+  {
+    "name": "ascii-bom-end-display",
+    "tex": "x'\ufeff",
+    "display": true
+  },
+  {
+    "name": "ascii-bom-sup-inline",
+    "tex": "x'\ufeff^n",
+    "display": false
+  },
+  {
+    "name": "ascii-bom-sup-display",
+    "tex": "x'\ufeff^n",
+    "display": true
+  },
+  {
+    "name": "ascii-bom-sub-inline",
+    "tex": "x'\ufeff_i",
+    "display": false
+  },
+  {
+    "name": "ascii-bom-sub-display",
+    "tex": "x'\ufeff_i",
+    "display": true
+  },
+  {
+    "name": "ascii-bom-token-inline",
+    "tex": "x'\ufeff y",
+    "display": false
+  },
+  {
+    "name": "ascii-bom-token-display",
+    "tex": "x'\ufeff y",
+    "display": true
+  },
+  {
+    "name": "ascii-bom-mixed-inline",
+    "tex": "x'\ufeff\u2019 '",
+    "display": false
+  },
+  {
+    "name": "ascii-bom-mixed-display",
+    "tex": "x'\ufeff\u2019 '",
+    "display": true
+  },
+  {
+    "name": "ascii-nel-inline",
+    "tex": "x'\u0085'",
+    "display": false
+  },
+  {
+    "name": "ascii-nel-display",
+    "tex": "x'\u0085'",
+    "display": true
+  },
+  {
+    "name": "unicode-space-0009-inline",
+    "tex": "x\u2019\t\u2019",
+    "display": false
+  },
+  {
+    "name": "unicode-space-0009-display",
+    "tex": "x\u2019\t\u2019",
+    "display": true
+  },
+  {
+    "name": "unicode-space-000a-inline",
+    "tex": "x\u2019\n\u2019",
+    "display": false
+  },
+  {
+    "name": "unicode-space-000a-display",
+    "tex": "x\u2019\n\u2019",
+    "display": true
+  },
+  {
+    "name": "unicode-space-000b-inline",
+    "tex": "x\u2019\u000b\u2019",
+    "display": false
+  },
+  {
+    "name": "unicode-space-000b-display",
+    "tex": "x\u2019\u000b\u2019",
+    "display": true
+  },
+  {
+    "name": "unicode-space-000c-inline",
+    "tex": "x\u2019\f\u2019",
+    "display": false
+  },
+  {
+    "name": "unicode-space-000c-display",
+    "tex": "x\u2019\f\u2019",
+    "display": true
+  },
+  {
+    "name": "unicode-space-000d-inline",
+    "tex": "x\u2019\r\u2019",
+    "display": false
+  },
+  {
+    "name": "unicode-space-000d-display",
+    "tex": "x\u2019\r\u2019",
+    "display": true
+  },
+  {
+    "name": "unicode-space-0020-inline",
+    "tex": "x\u2019 \u2019",
+    "display": false
+  },
+  {
+    "name": "unicode-space-0020-display",
+    "tex": "x\u2019 \u2019",
+    "display": true
+  },
+  {
+    "name": "unicode-space-00a0-inline",
+    "tex": "x\u2019\u00a0\u2019",
+    "display": false
+  },
+  {
+    "name": "unicode-space-00a0-display",
+    "tex": "x\u2019\u00a0\u2019",
+    "display": true
+  },
+  {
+    "name": "unicode-space-1680-inline",
+    "tex": "x\u2019\u1680\u2019",
+    "display": false
+  },
+  {
+    "name": "unicode-space-1680-display",
+    "tex": "x\u2019\u1680\u2019",
+    "display": true
+  },
+  {
+    "name": "unicode-space-2000-inline",
+    "tex": "x\u2019\u2000\u2019",
+    "display": false
+  },
+  {
+    "name": "unicode-space-2000-display",
+    "tex": "x\u2019\u2000\u2019",
+    "display": true
+  },
+  {
+    "name": "unicode-space-2001-inline",
+    "tex": "x\u2019\u2001\u2019",
+    "display": false
+  },
+  {
+    "name": "unicode-space-2001-display",
+    "tex": "x\u2019\u2001\u2019",
+    "display": true
+  },
+  {
+    "name": "unicode-space-2002-inline",
+    "tex": "x\u2019\u2002\u2019",
+    "display": false
+  },
+  {
+    "name": "unicode-space-2002-display",
+    "tex": "x\u2019\u2002\u2019",
+    "display": true
+  },
+  {
+    "name": "unicode-space-2003-inline",
+    "tex": "x\u2019\u2003\u2019",
+    "display": false
+  },
+  {
+    "name": "unicode-space-2003-display",
+    "tex": "x\u2019\u2003\u2019",
+    "display": true
+  },
+  {
+    "name": "unicode-space-2004-inline",
+    "tex": "x\u2019\u2004\u2019",
+    "display": false
+  },
+  {
+    "name": "unicode-space-2004-display",
+    "tex": "x\u2019\u2004\u2019",
+    "display": true
+  },
+  {
+    "name": "unicode-space-2005-inline",
+    "tex": "x\u2019\u2005\u2019",
+    "display": false
+  },
+  {
+    "name": "unicode-space-2005-display",
+    "tex": "x\u2019\u2005\u2019",
+    "display": true
+  },
+  {
+    "name": "unicode-space-2006-inline",
+    "tex": "x\u2019\u2006\u2019",
+    "display": false
+  },
+  {
+    "name": "unicode-space-2006-display",
+    "tex": "x\u2019\u2006\u2019",
+    "display": true
+  },
+  {
+    "name": "unicode-space-2007-inline",
+    "tex": "x\u2019\u2007\u2019",
+    "display": false
+  },
+  {
+    "name": "unicode-space-2007-display",
+    "tex": "x\u2019\u2007\u2019",
+    "display": true
+  },
+  {
+    "name": "unicode-space-2008-inline",
+    "tex": "x\u2019\u2008\u2019",
+    "display": false
+  },
+  {
+    "name": "unicode-space-2008-display",
+    "tex": "x\u2019\u2008\u2019",
+    "display": true
+  },
+  {
+    "name": "unicode-space-2009-inline",
+    "tex": "x\u2019\u2009\u2019",
+    "display": false
+  },
+  {
+    "name": "unicode-space-2009-display",
+    "tex": "x\u2019\u2009\u2019",
+    "display": true
+  },
+  {
+    "name": "unicode-space-200a-inline",
+    "tex": "x\u2019\u200a\u2019",
+    "display": false
+  },
+  {
+    "name": "unicode-space-200a-display",
+    "tex": "x\u2019\u200a\u2019",
+    "display": true
+  },
+  {
+    "name": "unicode-space-2028-inline",
+    "tex": "x\u2019\u2028\u2019",
+    "display": false
+  },
+  {
+    "name": "unicode-space-2028-display",
+    "tex": "x\u2019\u2028\u2019",
+    "display": true
+  },
+  {
+    "name": "unicode-space-2029-inline",
+    "tex": "x\u2019\u2029\u2019",
+    "display": false
+  },
+  {
+    "name": "unicode-space-2029-display",
+    "tex": "x\u2019\u2029\u2019",
+    "display": true
+  },
+  {
+    "name": "unicode-space-202f-inline",
+    "tex": "x\u2019\u202f\u2019",
+    "display": false
+  },
+  {
+    "name": "unicode-space-202f-display",
+    "tex": "x\u2019\u202f\u2019",
+    "display": true
+  },
+  {
+    "name": "unicode-space-205f-inline",
+    "tex": "x\u2019\u205f\u2019",
+    "display": false
+  },
+  {
+    "name": "unicode-space-205f-display",
+    "tex": "x\u2019\u205f\u2019",
+    "display": true
+  },
+  {
+    "name": "unicode-space-3000-inline",
+    "tex": "x\u2019\u3000\u2019",
+    "display": false
+  },
+  {
+    "name": "unicode-space-3000-display",
+    "tex": "x\u2019\u3000\u2019",
+    "display": true
+  },
+  {
+    "name": "unicode-space-feff-inline",
+    "tex": "x\u2019\ufeff\u2019",
+    "display": false
+  },
+  {
+    "name": "unicode-space-feff-display",
+    "tex": "x\u2019\ufeff\u2019",
+    "display": true
+  },
+  {
+    "name": "unicode-bom-end-inline",
+    "tex": "x\u2019\ufeff",
+    "display": false
+  },
+  {
+    "name": "unicode-bom-end-display",
+    "tex": "x\u2019\ufeff",
+    "display": true
+  },
+  {
+    "name": "unicode-bom-sup-inline",
+    "tex": "x\u2019\ufeff^n",
+    "display": false
+  },
+  {
+    "name": "unicode-bom-sup-display",
+    "tex": "x\u2019\ufeff^n",
+    "display": true
+  },
+  {
+    "name": "unicode-bom-sub-inline",
+    "tex": "x\u2019\ufeff_i",
+    "display": false
+  },
+  {
+    "name": "unicode-bom-sub-display",
+    "tex": "x\u2019\ufeff_i",
+    "display": true
+  },
+  {
+    "name": "unicode-bom-token-inline",
+    "tex": "x\u2019\ufeff y",
+    "display": false
+  },
+  {
+    "name": "unicode-bom-token-display",
+    "tex": "x\u2019\ufeff y",
+    "display": true
+  },
+  {
+    "name": "unicode-bom-mixed-inline",
+    "tex": "x\u2019\ufeff\u2019 '",
+    "display": false
+  },
+  {
+    "name": "unicode-bom-mixed-display",
+    "tex": "x\u2019\ufeff\u2019 '",
+    "display": true
+  },
+  {
+    "name": "unicode-nel-inline",
+    "tex": "x\u2019\u0085\u2019",
+    "display": false
+  },
+  {
+    "name": "unicode-nel-display",
+    "tex": "x\u2019\u0085\u2019",
+    "display": true
+  },
+  {
+    "name": "bom-no-prime-inline",
+    "tex": "x\ufeff y",
+    "display": false
+  },
+  {
+    "name": "bom-no-prime-display",
+    "tex": "x\ufeff y",
+    "display": true
+  },
+  {
+    "name": "nel-no-prime-inline",
+    "tex": "x\u0085 y",
+    "display": false
+  },
+  {
+    "name": "nel-no-prime-display",
+    "tex": "x\u0085 y",
+    "display": true
+  },
+  {
+    "name": "no-space-inline",
+    "tex": "x''",
+    "display": false
+  },
+  {
+    "name": "no-space-display",
+    "tex": "x''",
+    "display": true
+  },
+  {
+    "name": "mixed-no-space-inline",
+    "tex": "x\u2019'",
+    "display": false
+  },
+  {
+    "name": "mixed-no-space-display",
+    "tex": "x\u2019'",
+    "display": true
+  },
+  {
+    "name": "occupied-bom-inline",
+    "tex": "x^n'\ufeff'",
+    "display": false
+  },
+  {
+    "name": "occupied-bom-display",
+    "tex": "x^n'\ufeff'",
+    "display": true
+  },
+  {
+    "name": "occupied-nel-inline",
+    "tex": "x^n'\u0085'",
+    "display": false
+  },
+  {
+    "name": "occupied-nel-display",
+    "tex": "x^n'\u0085'",
+    "display": true
+  }
+]

@@ -25,7 +25,12 @@ func (p *parser) startPrime(base *mml.Node) (*pendingPrime, error) {
 	}
 	count := 1
 	for p.pos < len(p.source) {
-		p.skipSpaces()
+		// Prime uses TexParser.GetNext, whose JavaScript whitespace set differs
+		// from Go's unicode.IsSpace for U+FEFF and U+0085. Keep this lookahead
+		// local so argument and row parsing retain their existing policy.
+		for p.pos < len(p.source) && isPrimeSpace(p.peekRune()) {
+			p.consumeRune()
+		}
 		if p.pos >= len(p.source) || !isPrimeRune(p.peekRune()) {
 			break
 		}
@@ -40,6 +45,13 @@ func (p *parser) startPrime(base *mml.Node) (*pendingPrime, error) {
 	prime := token("mo", text)
 	prime.SetProperty("variantForm", true)
 	return &pendingPrime{base, prime}, nil
+}
+
+func isPrimeSpace(r rune) bool {
+	return r >= '\t' && r <= '\r' || r == ' ' || r == '\u00a0' ||
+		r == '\u1680' || r >= '\u2000' && r <= '\u200a' ||
+		r == '\u2028' || r == '\u2029' || r == '\u202f' ||
+		r == '\u205f' || r == '\u3000' || r == '\ufeff'
 }
 
 func (p *pendingPrime) finish() *mml.Node {

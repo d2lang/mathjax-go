@@ -11,6 +11,15 @@ import (
 )
 
 func TestUnicodePrimeRegisteredCollector(t *testing.T) {
+	testPrimeCollectorReferences(t, "testdata/unicode_prime_collector_mathjax_3_2_2.json", 40)
+}
+
+func TestPrimeWhitespaceRegisteredCollector(t *testing.T) {
+	testPrimeCollectorReferences(t, "testdata/prime_whitespace_collector_mathjax_3_2_2.json", 148)
+}
+
+func testPrimeCollectorReferences(t *testing.T, fixture string, count int) {
+	t.Helper()
 	var f struct {
 		Rows []struct {
 			Source                 string
@@ -24,39 +33,16 @@ func TestUnicodePrimeRegisteredCollector(t *testing.T) {
 			Attributes, Properties map[string]any
 		}
 	}
-	b, err := os.ReadFile("testdata/unicode_prime_collector_mathjax_3_2_2.json")
+	b, err := os.ReadFile(fixture)
 	if err != nil {
 		t.Fatal(err)
 	}
 	if err = json.Unmarshal(b, &f); err != nil {
 		t.Fatal(err)
 	}
-	if len(f.Rows) != 40 {
+	if len(f.Rows) != count {
 		t.Fatal("missing registered collector records")
 	}
-	// These four collect-only entries bind the frozen D061 candidate, not an
-	// assertion of accepted-D060 equivalence. Unicode-NEL also gains the intended
-	// Unicode run collection; the independent whitespace policy remains unfixed.
-	type whitespaceKey struct {
-		source string
-		reject bool
-	}
-	type whitespaceObservation struct {
-		primaryToken               string
-		primaryCursorUTF16         int
-		primaryRemaining           string
-		frozenCandidateToken       string
-		frozenCandidateByteCursor  int
-		frozenCandidateCursorUTF16 int
-		frozenCandidateRemaining   string
-	}
-	whitespace := map[whitespaceKey]whitespaceObservation{
-		{"'\uFEFF'", false}: {"″", 3, "", "′", 1, 1, "\uFEFF'"},
-		{"’\uFEFF’", false}: {"″", 3, "", "′", 3, 1, "\uFEFF’"},
-		{"'\u0085'", false}: {"′", 1, "\u0085'", "″", 4, 3, ""},
-		{"’\u0085’", false}: {"′", 1, "\u0085’", "″", 8, 3, ""},
-	}
-	usedWhitespace := map[whitespaceKey]bool{}
 
 	for _, c := range f.Rows {
 		t.Run(c.Source+map[bool]string{false: "/collect", true: "/reject"}[c.Reject], func(t *testing.T) {
@@ -87,17 +73,6 @@ func TestUnicodePrimeRegisteredCollector(t *testing.T) {
 			expectedToken, expectedRemaining := *c.Token, c.Remaining
 			expectedByteCursor := len(c.Source) - len(c.Remaining)
 			expectedCursorUTF16 := c.CursorUTF16
-			key := whitespaceKey{c.Source, c.Reject}
-			if observation, qualified := whitespace[key]; qualified {
-				if *c.Token != observation.primaryToken || c.CursorUTF16 != observation.primaryCursorUTF16 || c.Remaining != observation.primaryRemaining || usedWhitespace[key] {
-					t.Fatal("changed exact primary whitespace observation")
-				}
-				usedWhitespace[key] = true
-				expectedToken = observation.frozenCandidateToken
-				expectedByteCursor = observation.frozenCandidateByteCursor
-				expectedCursorUTF16 = observation.frozenCandidateCursorUTF16
-				expectedRemaining = observation.frozenCandidateRemaining
-			}
 			if pending.prime.Kind != "mo" || len(pending.prime.Children) != 1 || pending.prime.Children[0].Kind != "text" {
 				t.Fatal("unexpected prime token structure")
 			}
@@ -131,8 +106,5 @@ func TestUnicodePrimeRegisteredCollector(t *testing.T) {
 				t.Fatal("prime token attributes/properties differ")
 			}
 		})
-	}
-	if len(usedWhitespace) != 4 {
-		t.Fatal("missing exact whitespace observations")
 	}
 }
