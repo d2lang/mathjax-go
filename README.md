@@ -192,6 +192,11 @@ one inline nested fraction, and two nested-style outputs. No changed output is
 qualified: all 50 changed cases match primary. Six parser re-entry/error-unwind
 controls check independent subsequent rows and restored font state.
 
+Only the unchanged inline nested-fraction control `separate-args-inline` permits
+two exact whole-SVG states, captured from accepted code on ARM64 and AMD64.
+Its complete raw tree, structured error and parser state remain fixed; no other
+case gains an alternative SVG and no numerical tolerance is used.
+
 ```
 node testdata/generate_infix_scope.cjs PINNED_ASSETS EVIDENCE_DIRECTORY
 ```
