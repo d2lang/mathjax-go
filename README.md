@@ -406,3 +406,10 @@ Command-symbol lookup skips source maps that have no parser, so data-only negati
 The bounded regression corpus compares 112 public and four privately registered Macro cases with complete retained primary SVGs. Public error messages are checked through the exported renderer's merror SVG; their actual error IDs were verified in the retained parser observations. The private forwarding case additionally checks the real parse error ID and message at the compiler initialization seam. These private fixtures do not add a public macro-registration API.
 
 Escaped `<`/`>` delimiter-key dispatch, the Physics laplacian symbol, compound negation, and the ordinary backtick glyph remain separate discrepancies. The twelve affected observations are excluded from primary SVG expectations here. Matching SVG does not claim full raw-model equality.
+
+
+### Quantity followed by an unsupported star
+
+The argument-free `\qty` and `\quantity` handlers leave an unsupported `*` for ordinary parsing after an explicit empty fenced row. The star and following material are preserved. Argument-taking quantity aliases and the existing nonstar path keep their behavior.
+
+Four public `\qty` references compare whole primary SVGs in both modes, and two existing tail-preservation cases now compare their original primary SVGs, errors, and ordered explicit/own trees. All primary and accepted reference fields remain unchanged. The `\quantity` alias shares the pinned handler mapping; it has no separate runtime reference in this bounded corpus. Other unsupported-token paths and full raw-model equality remain outside this change.

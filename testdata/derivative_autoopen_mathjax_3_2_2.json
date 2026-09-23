@@ -17949,7 +17949,7 @@
         ]
       },
       "primaryError": null,
-      "classification": "unchanged-excluded-caller",
+      "classification": "whole-primary-target-or-control",
       "acceptedSVG": "e97e741cadb9b2a8b1257096eab024e8d8d851b89baa8ef0b2d3b9130d80aeee",
       "acceptedTree": {
         "kind": "math",
@@ -18288,7 +18288,7 @@
         ]
       },
       "primaryError": null,
-      "classification": "unchanged-excluded-caller",
+      "classification": "whole-primary-target-or-control",
       "acceptedSVG": "e97e741cadb9b2a8b1257096eab024e8d8d851b89baa8ef0b2d3b9130d80aeee",
       "acceptedTree": {
         "kind": "math",

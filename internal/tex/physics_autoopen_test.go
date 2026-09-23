@@ -145,8 +145,8 @@ func TestDerivativeAutoOpenPinnedOutputs(t *testing.T) {
 		"public-ignored-side-effect-display":    "unresolved-complete-D095-composite",
 		"public-star-held-inline":               "unchanged-excluded-caller",
 		"public-star-held-display":              "unchanged-excluded-caller",
-		"public-qty-held-inline":                "unchanged-excluded-caller",
-		"public-qty-held-display":               "unchanged-excluded-caller",
+		"public-qty-held-inline":                "whole-primary-target-or-control",
+		"public-qty-held-display":               "whole-primary-target-or-control",
 		"public-differential-held-inline":       "unchanged-excluded-caller",
 		"public-differential-held-display":      "unchanged-excluded-caller",
 		"private-ignore-false-one-0":            "unresolved-complete-D095-composite",
@@ -223,7 +223,7 @@ func TestDerivativeAutoOpenPinnedOutputs(t *testing.T) {
 			}
 		})
 	}
-	if counts["whole-primary-target-or-control"] != 68 || counts["unchanged-excluded-caller"] != 6 || counts["unresolved-complete-D095-composite"] != 29 || counts["inherited-prime-own-property-diagnostic"] != 3 {
+	if counts["whole-primary-target-or-control"] != 70 || counts["unchanged-excluded-caller"] != 4 || counts["unresolved-complete-D095-composite"] != 29 || counts["inherited-prime-own-property-diagnostic"] != 3 {
 		t.Fatal("scope inventory changed", counts)
 	}
 }
