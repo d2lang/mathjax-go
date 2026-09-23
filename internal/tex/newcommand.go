@@ -17,7 +17,7 @@ import (
 func (p *parser) invokeMacro(name string, definition macroDefinition) ([]*mml.Node, error) {
 	p.state.macroCount++
 	if p.state.macroCount > maxMacros {
-		return nil, texError("MaxMacroSub1", "MathJax maximum macro substitution count exceeded; is there a recursive macro call?")
+		return nil, texError("MaxMacroSub1", "MathJax maximum macro substitution count exceeded; is here a recursive macro call?")
 	}
 	if definition.prefix != "" {
 		p.skipSpaces()

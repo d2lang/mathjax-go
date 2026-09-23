@@ -110,8 +110,8 @@ style-dependent spacing, fixed parentheses, and forwarding through a registered
 trees match the pinned MathJax3.2.2 renderer. Eight surrounding controls also
 match; four `bmod` cases remain exact accepted outputs for a separate fix.
 Twenty registered-macro cases cover forwarding, argument counts, missing
-arguments and fresh parser state. Two recursive-error cases retain the existing
-Go error spelling, recorded separately from the primary output.
+arguments and fresh parser state. All twenty match the primary, including its
+original recursive-macro diagnostic wording.
 
 Regenerate the primary references with:
 
