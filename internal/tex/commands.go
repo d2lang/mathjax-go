@@ -177,7 +177,7 @@ func (p *parser) commandNodes(name string, after **derivativeAutoOpen) ([]*mml.N
 	case "left":
 		return p.leftRight(name)
 	case "middle":
-		delim, err := p.readDelimiter(false)
+		delim, err := p.readDelimiter(name, false)
 		if err != nil {
 			return nil, err
 		}
@@ -612,7 +612,7 @@ func styleAttributes(style string) map[string]any {
 }
 
 func (p *parser) leftRight(name string) ([]*mml.Node, error) {
-	open, err := p.readDelimiter(false)
+	open, err := p.readDelimiter(name, false)
 	if err != nil {
 		return nil, err
 	}
@@ -624,7 +624,7 @@ func (p *parser) leftRight(name string) ([]*mml.Node, error) {
 }
 
 func (p *parser) bigDelimiter(name string) ([]*mml.Node, error) {
-	delim, err := p.readDelimiter(true)
+	delim, err := p.readDelimiter(name, true)
 	if err != nil {
 		return nil, err
 	}
@@ -1211,10 +1211,7 @@ func (p *parser) convertDelimiterArgument(raw string) (string, error) {
 	if raw == "" || raw == "." {
 		return "", nil
 	}
-	if strings.HasPrefix(raw, "\\") {
-		raw = strings.TrimPrefix(raw, "\\")
-	}
-	if delim, ok := delimiterSymbols[raw]; ok {
+	if delim, ok := lookupDelimiter(raw); ok {
 		return delim, nil
 	}
 	return "", texError("MissingOrUnrecognizedDelim", "Missing or unrecognized delimiter")

@@ -1,0 +1,2081 @@
+{
+  "readers": [
+    {
+      "name": "known-01",
+      "source": "\\dprobe( Z",
+      "command": "dprobe",
+      "cursor": 7,
+      "braceOK": false,
+      "value": "(",
+      "error": null,
+      "primaryCursor": 8,
+      "retainedGoCursor": 8,
+      "cursorBoundary": "",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/reader-known-01/plain.json",
+          "sha256": "4bb878aec59f2fdd06483ddee888d91eed4addfca1393b2b90fb1a395c8bc263"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/reader-known-01/passive.json",
+          "sha256": "145388ac5ab0d134734a42d391fdad92a4972e475914ef87984c464c2e9db40f"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/reader-known-01/accepted.json",
+          "sha256": "571ef8c6f0ecf16176072c6119d6e06eb2f834d9001cd7c25e49efd62a725e59"
+        }
+      }
+    },
+    {
+      "name": "known-02",
+      "source": "\\dprobe) Z",
+      "command": "dprobe",
+      "cursor": 7,
+      "braceOK": false,
+      "value": ")",
+      "error": null,
+      "primaryCursor": 8,
+      "retainedGoCursor": 8,
+      "cursorBoundary": "",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/reader-known-02/plain.json",
+          "sha256": "183c9757457d6ba779577aab821b3edf890fcff3536b1dea0c1477dd9ccf45f7"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/reader-known-02/passive.json",
+          "sha256": "450889a903f055540dbfab9e9d40332911c3b48c96f3c2ffcb9bcdcc7d91be13"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/reader-known-02/accepted.json",
+          "sha256": "bdab130d1607a2c23b70d109cf3e02826da7b4f1680435c3c76fa67d9e99d925"
+        }
+      }
+    },
+    {
+      "name": "known-03",
+      "source": "\\dprobe[ Z",
+      "command": "dprobe",
+      "cursor": 7,
+      "braceOK": false,
+      "value": "[",
+      "error": null,
+      "primaryCursor": 8,
+      "retainedGoCursor": 8,
+      "cursorBoundary": "",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/reader-known-03/plain.json",
+          "sha256": "8f1d7441b27dd9424b011f20f5c3714172e266e49d0cda59155bf2695e52f0d9"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/reader-known-03/passive.json",
+          "sha256": "e9d8e506cd01a6c242ca17184475ab6c966855045c7bb2171e7d127ffc650232"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/reader-known-03/accepted.json",
+          "sha256": "c8c68a4227b01927c654de25fe8a27392ffacecbbd68238b6ee3d9dedd0ea2d0"
+        }
+      }
+    },
+    {
+      "name": "known-04",
+      "source": "\\dprobe] Z",
+      "command": "dprobe",
+      "cursor": 7,
+      "braceOK": false,
+      "value": "]",
+      "error": null,
+      "primaryCursor": 8,
+      "retainedGoCursor": 8,
+      "cursorBoundary": "",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/reader-known-04/plain.json",
+          "sha256": "0118425b1b350382ffb0e4a7bdca4e3a186b8c38c0c9dbc9ff0b5a2e4feab491"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/reader-known-04/passive.json",
+          "sha256": "f98c2346c81e40ff51bf735f1f4923c66b74f4e23cb311864929e3a89a460f40"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/reader-known-04/accepted.json",
+          "sha256": "4b9f751fd4a88493f4b98f6ffebe67db984631f3c9fd7b990bc1445bd6132fcb"
+        }
+      }
+    },
+    {
+      "name": "known-05",
+      "source": "\\dprobe< Z",
+      "command": "dprobe",
+      "cursor": 7,
+      "braceOK": false,
+      "value": "⟨",
+      "error": null,
+      "primaryCursor": 8,
+      "retainedGoCursor": 8,
+      "cursorBoundary": "",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/reader-known-05/plain.json",
+          "sha256": "b18d548795360963ccacfdaaf005873a3d608c52169a28bea0c84e8a25ee7152"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/reader-known-05/passive.json",
+          "sha256": "81583a1d555cdce2e1518bf522da3ea9f5252bde2be51872da26893b8b206022"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/reader-known-05/accepted.json",
+          "sha256": "0f4f6182d926606f398446f792218e4f16a68008e1d7e0922ea9f82fa8950fb0"
+        }
+      }
+    },
+    {
+      "name": "known-06",
+      "source": "\\dprobe> Z",
+      "command": "dprobe",
+      "cursor": 7,
+      "braceOK": false,
+      "value": "⟩",
+      "error": null,
+      "primaryCursor": 8,
+      "retainedGoCursor": 8,
+      "cursorBoundary": "",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/reader-known-06/plain.json",
+          "sha256": "937746c86c4afffc8bcc68f14e438c455f16a22b27b8064f4d690ad8ea7672b3"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/reader-known-06/passive.json",
+          "sha256": "5eb7422d41895aa63f7a167652e1a367385e79f840e3de3d7cbd907f891c4acb"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/reader-known-06/accepted.json",
+          "sha256": "45e33710268df37aea31cc96bace561d59762fe85de571ad43d55173de65b982"
+        }
+      }
+    },
+    {
+      "name": "known-07",
+      "source": "\\dprobe\\lt Z",
+      "command": "dprobe",
+      "cursor": 7,
+      "braceOK": false,
+      "value": "⟨",
+      "error": null,
+      "primaryCursor": 11,
+      "retainedGoCursor": 11,
+      "cursorBoundary": "",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/reader-known-07/plain.json",
+          "sha256": "8ab1135a5b97b3976399ba7c2622e2731713218eb7f2d7de30a679be38b6d5a1"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/reader-known-07/passive.json",
+          "sha256": "e4a2b23c481a98c7b2f8443a088aff8c16727af60c350df5a9a86d8c33bcdedc"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/reader-known-07/accepted.json",
+          "sha256": "0c8576c8282760ca3350e49af4149d04f794ee14777d4c372f5c2ddd38f72041"
+        }
+      }
+    },
+    {
+      "name": "known-08",
+      "source": "\\dprobe\\gt Z",
+      "command": "dprobe",
+      "cursor": 7,
+      "braceOK": false,
+      "value": "⟩",
+      "error": null,
+      "primaryCursor": 11,
+      "retainedGoCursor": 11,
+      "cursorBoundary": "",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/reader-known-08/plain.json",
+          "sha256": "fa84116e3b5f1c860ff67dad9d8c3f4d41e4bc373e260a018289d70f1577c0e3"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/reader-known-08/passive.json",
+          "sha256": "ac1e99341dbaf36ebaf25bb52d8956e3a91a0211a79b9c18ce8692318d79453f"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/reader-known-08/accepted.json",
+          "sha256": "e2ccfa0e257c2af81d9f916c2eaabad47d138a9b8e08f44f4f1da87ac3aa011e"
+        }
+      }
+    },
+    {
+      "name": "known-09",
+      "source": "\\dprobe/ Z",
+      "command": "dprobe",
+      "cursor": 7,
+      "braceOK": false,
+      "value": "/",
+      "error": null,
+      "primaryCursor": 8,
+      "retainedGoCursor": 8,
+      "cursorBoundary": "",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/reader-known-09/plain.json",
+          "sha256": "60661c8ad579d18f34e7ad8f5a2bb02f53067611c3b5a4a6d9f0063b37052f62"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/reader-known-09/passive.json",
+          "sha256": "b94433d489eadf1060df1b82d299179e4ec1614344cc2ded0288ebcb68ba57f9"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/reader-known-09/accepted.json",
+          "sha256": "daef2e426b9ebfd289f4d99a85f8a7d21997e1c2d9dc9c38d0c4ad3b977f2f43"
+        }
+      }
+    },
+    {
+      "name": "known-10",
+      "source": "\\dprobe| Z",
+      "command": "dprobe",
+      "cursor": 7,
+      "braceOK": false,
+      "value": "|",
+      "error": null,
+      "primaryCursor": 8,
+      "retainedGoCursor": 8,
+      "cursorBoundary": "",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/reader-known-10/plain.json",
+          "sha256": "2463c39408aa19b03c2cec1d00a720486390cb76061c41e6595806267f9949f5"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/reader-known-10/passive.json",
+          "sha256": "26ac6f80642dd9470537e7b362a3cffd1411b09769c466e8393f4c2f4d173faf"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/reader-known-10/accepted.json",
+          "sha256": "5c610a65cf40fa30e02b0edeb47e3232a9dc41f1f2a1fab8d2d4d025e42d1a0e"
+        }
+      }
+    },
+    {
+      "name": "known-11",
+      "source": "\\dprobe. Z",
+      "command": "dprobe",
+      "cursor": 7,
+      "braceOK": false,
+      "value": "",
+      "error": null,
+      "primaryCursor": 8,
+      "retainedGoCursor": 8,
+      "cursorBoundary": "",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/reader-known-11/plain.json",
+          "sha256": "c658bb68aacc1432e6980b6177dc8c111b37b7b683b0cbe9078051bd8f37231c"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/reader-known-11/passive.json",
+          "sha256": "66d5271ec75c468a5180f9c7514c5f112f9cc13d3d32937717ff15f2d90c1e17"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/reader-known-11/accepted.json",
+          "sha256": "1f71bb71db435d2518df6a18db3ea0bb8f55e1362ee9723862992d2658daf892"
+        }
+      }
+    },
+    {
+      "name": "known-12",
+      "source": "\\dprobe\\\\ Z",
+      "command": "dprobe",
+      "cursor": 7,
+      "braceOK": false,
+      "value": "\\",
+      "error": null,
+      "primaryCursor": 9,
+      "retainedGoCursor": 9,
+      "cursorBoundary": "",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/reader-known-12/plain.json",
+          "sha256": "4bafad070dcf234d50fdbe63e752a40b28537e2438ef8bd9e23a85da2459ece8"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/reader-known-12/passive.json",
+          "sha256": "85106a7e20e1a411ef5f40074b9cc9a1160f6d21b755d2cb4eed3c1d779f2bd0"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/reader-known-12/accepted.json",
+          "sha256": "b884b71f9c9ef2668c392ab41a8e41a376c94ac7944525cd64f0256d1e9d50ba"
+        }
+      }
+    },
+    {
+      "name": "known-13",
+      "source": "\\dprobe\\lmoustache Z",
+      "command": "dprobe",
+      "cursor": 7,
+      "braceOK": false,
+      "value": "⎰",
+      "error": null,
+      "primaryCursor": 19,
+      "retainedGoCursor": 19,
+      "cursorBoundary": "",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/reader-known-13/plain.json",
+          "sha256": "4226c015a0bf883ee733aec942f40060ff47749beab1a46da4abfa52069c6ffb"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/reader-known-13/passive.json",
+          "sha256": "6bd198efc35eeda6ff564abb5f7e366b96d0235b993247fefb351775efd2d99c"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/reader-known-13/accepted.json",
+          "sha256": "39da883f10c1c7fc07c60bd4e97b49afba6c4153897e83979208b8c9d48914ea"
+        }
+      }
+    },
+    {
+      "name": "known-14",
+      "source": "\\dprobe\\rmoustache Z",
+      "command": "dprobe",
+      "cursor": 7,
+      "braceOK": false,
+      "value": "⎱",
+      "error": null,
+      "primaryCursor": 19,
+      "retainedGoCursor": 19,
+      "cursorBoundary": "",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/reader-known-14/plain.json",
+          "sha256": "270e74b3e4d8b115681c8a11f8b05e9d4d6aacbe87d12956935ac8d861f9d1f4"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/reader-known-14/passive.json",
+          "sha256": "b743320edcd8f1041617b2b76a19d53d495320174385867b12e8df02038a71f9"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/reader-known-14/accepted.json",
+          "sha256": "2ef99daa8c8cb5ee126dd876a9b9e3c96ff89b33f8ab74f36ba7cc9c57a52d93"
+        }
+      }
+    },
+    {
+      "name": "known-15",
+      "source": "\\dprobe\\lgroup Z",
+      "command": "dprobe",
+      "cursor": 7,
+      "braceOK": false,
+      "value": "⟮",
+      "error": null,
+      "primaryCursor": 15,
+      "retainedGoCursor": 15,
+      "cursorBoundary": "",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/reader-known-15/plain.json",
+          "sha256": "ff3238c09009028f8c59c6353e71d562417049dbef2c91e8e7be0dcd2370c929"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/reader-known-15/passive.json",
+          "sha256": "2d5004b5e13d15c14f8382c6720d8055517802f1c05d009e74ed53395f714df2"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/reader-known-15/accepted.json",
+          "sha256": "8c582a41e51a770e187377b474980db403073a1cf378b7c13fd2600e668c3f6f"
+        }
+      }
+    },
+    {
+      "name": "known-16",
+      "source": "\\dprobe\\rgroup Z",
+      "command": "dprobe",
+      "cursor": 7,
+      "braceOK": false,
+      "value": "⟯",
+      "error": null,
+      "primaryCursor": 15,
+      "retainedGoCursor": 15,
+      "cursorBoundary": "",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/reader-known-16/plain.json",
+          "sha256": "0bf1efad4a058020f9ce023b4d781d36a1fa0aba35225ef41d8d3d2a0a1e0b90"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/reader-known-16/passive.json",
+          "sha256": "e260459556df686bb927153148ab16e0408b50bee71e409c16ab5d4aca113930"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/reader-known-16/accepted.json",
+          "sha256": "be10c922894494560de519165eeec6350ad299cc97d4a3a34a9761548a96dede"
+        }
+      }
+    },
+    {
+      "name": "known-17",
+      "source": "\\dprobe\\arrowvert Z",
+      "command": "dprobe",
+      "cursor": 7,
+      "braceOK": false,
+      "value": "⏐",
+      "error": null,
+      "primaryCursor": 18,
+      "retainedGoCursor": 18,
+      "cursorBoundary": "",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/reader-known-17/plain.json",
+          "sha256": "901f41399df5f5e1bcded7496a673e4a9ee4358293b12423c99ef40698902bc3"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/reader-known-17/passive.json",
+          "sha256": "804c40737aec89909444b5d817b4328b21d326cdd2455625d8bea750fa522b3c"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/reader-known-17/accepted.json",
+          "sha256": "9b99bcdb98f7ed05131f6727a09f1d3351f3d62dc7c81832b5c173264fa422ba"
+        }
+      }
+    },
+    {
+      "name": "known-18",
+      "source": "\\dprobe\\Arrowvert Z",
+      "command": "dprobe",
+      "cursor": 7,
+      "braceOK": false,
+      "value": "‖",
+      "error": null,
+      "primaryCursor": 18,
+      "retainedGoCursor": 18,
+      "cursorBoundary": "",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/reader-known-18/plain.json",
+          "sha256": "1b1ff1e1e67ae02707c7e904db98340d53fbb3cc81a7f479f4f56db9083804b1"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/reader-known-18/passive.json",
+          "sha256": "ed8077520325335bece50f63fa02b1f842745adf94355ccdebef66253f2e0c39"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/reader-known-18/accepted.json",
+          "sha256": "eb1fed272c93e802e1642b49d05b5ee6f62befc2f85acd5cbbfbf703544308fe"
+        }
+      }
+    },
+    {
+      "name": "known-19",
+      "source": "\\dprobe\\bracevert Z",
+      "command": "dprobe",
+      "cursor": 7,
+      "braceOK": false,
+      "value": "⎪",
+      "error": null,
+      "primaryCursor": 18,
+      "retainedGoCursor": 18,
+      "cursorBoundary": "",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/reader-known-19/plain.json",
+          "sha256": "c0d74965edaf3d2e1a0323b5bb6b7864914c069b3f7de11fa05257315af7650c"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/reader-known-19/passive.json",
+          "sha256": "f8ccfe3146dcbf428a2355df9994ec8d351fbeb8d92acc33973be68326b80ecc"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/reader-known-19/accepted.json",
+          "sha256": "15bd9da82d8781cadfbf1649da500c84a8400da97887cb78b2a2947b0f7e1ca6"
+        }
+      }
+    },
+    {
+      "name": "known-20",
+      "source": "\\dprobe\\Vert Z",
+      "command": "dprobe",
+      "cursor": 7,
+      "braceOK": false,
+      "value": "‖",
+      "error": null,
+      "primaryCursor": 13,
+      "retainedGoCursor": 13,
+      "cursorBoundary": "",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/reader-known-20/plain.json",
+          "sha256": "10dc6cfa817b305f2f09c2d6fecdf8526a714ecbd771f9c61d8ad1c5ccff13b6"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/reader-known-20/passive.json",
+          "sha256": "42d614984498e682e50bb1e1e1d7fcdbfceaceab8cd18439c4509b7ac4fa20d7"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/reader-known-20/accepted.json",
+          "sha256": "d02f1f4e78b5c77f2ed4f49d7d7ba2ceeddeb6fa8039ad75c226176573f920e9"
+        }
+      }
+    },
+    {
+      "name": "known-21",
+      "source": "\\dprobe\\| Z",
+      "command": "dprobe",
+      "cursor": 7,
+      "braceOK": false,
+      "value": "‖",
+      "error": null,
+      "primaryCursor": 9,
+      "retainedGoCursor": 9,
+      "cursorBoundary": "",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/reader-known-21/plain.json",
+          "sha256": "a3b74f91018642dc2fc964e3894d34047f20ec594ec21788cdbadbc2ba79aceb"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/reader-known-21/passive.json",
+          "sha256": "d3ec89795d19fe8a586645e8b9856b2d7023153c20a52def4bc67006b97bf6c4"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/reader-known-21/accepted.json",
+          "sha256": "335ef80a56aa3d0243b618fc5dd326859d9ff6756f5a3a9fa3fd325d4a7698b3"
+        }
+      }
+    },
+    {
+      "name": "known-22",
+      "source": "\\dprobe\\vert Z",
+      "command": "dprobe",
+      "cursor": 7,
+      "braceOK": false,
+      "value": "|",
+      "error": null,
+      "primaryCursor": 13,
+      "retainedGoCursor": 13,
+      "cursorBoundary": "",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/reader-known-22/plain.json",
+          "sha256": "bc7c7cccd8ac79d0c52b47485cc63a749eeb9c4cb01bb6cb9f63d45ddd4331cf"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/reader-known-22/passive.json",
+          "sha256": "de6b988354f38f54a9c1897ee8d42b8fb421ad444f1e7392bddaddf057c0d74f"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/reader-known-22/accepted.json",
+          "sha256": "9320399e7fb1293e0996ae76b862e6bb090152e286a84caeda99002f0956a287"
+        }
+      }
+    },
+    {
+      "name": "known-23",
+      "source": "\\dprobe\\uparrow Z",
+      "command": "dprobe",
+      "cursor": 7,
+      "braceOK": false,
+      "value": "↑",
+      "error": null,
+      "primaryCursor": 16,
+      "retainedGoCursor": 16,
+      "cursorBoundary": "",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/reader-known-23/plain.json",
+          "sha256": "e07176e48744756d066b50850ddf435126297dfaa8d093748f6e6d8f31f2b93b"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/reader-known-23/passive.json",
+          "sha256": "bfb035ee195ab9f480cec15965309b13cfb58df44d6585822d17b12accffe84b"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/reader-known-23/accepted.json",
+          "sha256": "c3f3653c5fdf585c5fcd5b7afe901bb732b5cdea9554f61141d96ce30a3e5a55"
+        }
+      }
+    },
+    {
+      "name": "known-24",
+      "source": "\\dprobe\\downarrow Z",
+      "command": "dprobe",
+      "cursor": 7,
+      "braceOK": false,
+      "value": "↓",
+      "error": null,
+      "primaryCursor": 18,
+      "retainedGoCursor": 18,
+      "cursorBoundary": "",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/reader-known-24/plain.json",
+          "sha256": "9c7881e7aaab7eac14fc0c2a97fb137e0d95ca5a59356f5c9481f2a2dcfbd8ff"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/reader-known-24/passive.json",
+          "sha256": "16facfc542e9462357e3d95a52e040efd23286425ba433bfdacbab18d3eabd14"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/reader-known-24/accepted.json",
+          "sha256": "8f5ae71bbce6b327fe6957ab8e11de2f5f54a668e5615230a6a037a8a5a09318"
+        }
+      }
+    },
+    {
+      "name": "known-25",
+      "source": "\\dprobe\\updownarrow Z",
+      "command": "dprobe",
+      "cursor": 7,
+      "braceOK": false,
+      "value": "↕",
+      "error": null,
+      "primaryCursor": 20,
+      "retainedGoCursor": 20,
+      "cursorBoundary": "",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/reader-known-25/plain.json",
+          "sha256": "911af8838adebe4399e99b3cb779d6b61a8fa679e234e4f96e13771494c15a63"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/reader-known-25/passive.json",
+          "sha256": "9a238d12a9ca872aad1b2a69fa34ce6f43daf7518c2527bcf9eb3af0fa52b3ed"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/reader-known-25/accepted.json",
+          "sha256": "3b0799fff210b0771c18a34d6aa25b7f239559a28e2330b8e33c920e6c107bed"
+        }
+      }
+    },
+    {
+      "name": "known-26",
+      "source": "\\dprobe\\Uparrow Z",
+      "command": "dprobe",
+      "cursor": 7,
+      "braceOK": false,
+      "value": "⇑",
+      "error": null,
+      "primaryCursor": 16,
+      "retainedGoCursor": 16,
+      "cursorBoundary": "",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/reader-known-26/plain.json",
+          "sha256": "4287ae36dc37a27d36220ada34b130ddee590e9cd934b08c7f4e1053e6e80a7c"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/reader-known-26/passive.json",
+          "sha256": "8ff4186f32bbd939b268a9df857b010c213a1559e0164fbeec6382f9a18f47d3"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/reader-known-26/accepted.json",
+          "sha256": "853382e9fb4bfb5d022780170e1b42b1d13aba8f1d40325854fcb070beaa17c1"
+        }
+      }
+    },
+    {
+      "name": "known-27",
+      "source": "\\dprobe\\Downarrow Z",
+      "command": "dprobe",
+      "cursor": 7,
+      "braceOK": false,
+      "value": "⇓",
+      "error": null,
+      "primaryCursor": 18,
+      "retainedGoCursor": 18,
+      "cursorBoundary": "",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/reader-known-27/plain.json",
+          "sha256": "4ca4e79062d2aee991e0fef5b9d92450b37231011aa8995548512b505d97951e"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/reader-known-27/passive.json",
+          "sha256": "e61396d63b05b121e985ece7847ef89f94d9df7264c780fbcc62ed63e2f13f3b"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/reader-known-27/accepted.json",
+          "sha256": "5c2ff47c2f581837769e082138c06808a4f76516a5e5d67b0a299752621ec298"
+        }
+      }
+    },
+    {
+      "name": "known-28",
+      "source": "\\dprobe\\Updownarrow Z",
+      "command": "dprobe",
+      "cursor": 7,
+      "braceOK": false,
+      "value": "⇕",
+      "error": null,
+      "primaryCursor": 20,
+      "retainedGoCursor": 20,
+      "cursorBoundary": "",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/reader-known-28/plain.json",
+          "sha256": "a76da88bff2036bf52713a9a82bc91799239781b10ca2cba67a0900cb25666c3"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/reader-known-28/passive.json",
+          "sha256": "4c032200cb906b566134586e246c879629de8b3408179144f7d2c10a7dd42016"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/reader-known-28/accepted.json",
+          "sha256": "aaf9389ccd7fe74a5e838ef315171996b804f3b7bab479cfd6ba0fed4949962b"
+        }
+      }
+    },
+    {
+      "name": "known-29",
+      "source": "\\dprobe\\backslash Z",
+      "command": "dprobe",
+      "cursor": 7,
+      "braceOK": false,
+      "value": "\\",
+      "error": null,
+      "primaryCursor": 18,
+      "retainedGoCursor": 18,
+      "cursorBoundary": "",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/reader-known-29/plain.json",
+          "sha256": "f1089218ad199c08af5981b5174878908029f9a0173e6003e80d1d8002a6d0fa"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/reader-known-29/passive.json",
+          "sha256": "5d98d21d624ae471527aea615b656e9b7f3e1a70c69ec287a3aa2156e5698b05"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/reader-known-29/accepted.json",
+          "sha256": "ea5d7b861a7791c98f638373a8958b5eb95c221cc924f08e3161df0a535bc8c1"
+        }
+      }
+    },
+    {
+      "name": "known-30",
+      "source": "\\dprobe\\rangle Z",
+      "command": "dprobe",
+      "cursor": 7,
+      "braceOK": false,
+      "value": "⟩",
+      "error": null,
+      "primaryCursor": 15,
+      "retainedGoCursor": 15,
+      "cursorBoundary": "",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/reader-known-30/plain.json",
+          "sha256": "9401d95298089aa4ea755933f5748432edf0bee037ca013a5ce35e49bb5979a9"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/reader-known-30/passive.json",
+          "sha256": "fd4ff359d9febaf7181f9dbebf9a205b8c3ad38927c97538e7262ff33877fc6f"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/reader-known-30/accepted.json",
+          "sha256": "aec5f55ebae39a986f9bc0f9ec11d7403fbe27c8c7dbb9bf0ddf776fb01db7ef"
+        }
+      }
+    },
+    {
+      "name": "known-31",
+      "source": "\\dprobe\\langle Z",
+      "command": "dprobe",
+      "cursor": 7,
+      "braceOK": false,
+      "value": "⟨",
+      "error": null,
+      "primaryCursor": 15,
+      "retainedGoCursor": 15,
+      "cursorBoundary": "",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/reader-known-31/plain.json",
+          "sha256": "e95fe1c98bb0af17e6a8d527d0340a971ba1f829c6492a8350e7dc42e745140e"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/reader-known-31/passive.json",
+          "sha256": "6509c31ab1f031404a507a70c502e40be7fec8acc6ed5c25554756176efa83de"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/reader-known-31/accepted.json",
+          "sha256": "3af2b2aa5184e98a75bf5488a53b5ba8fc01bb2a38cf0eebecb4d2666e76288f"
+        }
+      }
+    },
+    {
+      "name": "known-32",
+      "source": "\\dprobe\\rbrace Z",
+      "command": "dprobe",
+      "cursor": 7,
+      "braceOK": false,
+      "value": "}",
+      "error": null,
+      "primaryCursor": 15,
+      "retainedGoCursor": 15,
+      "cursorBoundary": "",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/reader-known-32/plain.json",
+          "sha256": "145691f4d5812a752ea70d7ab44ea2f32a619bef0a483681c03f3dc072c37de7"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/reader-known-32/passive.json",
+          "sha256": "c56a79e6e2edb713cd39c35423979b5f0dc8a1fd055a5a8ceaff813bb8e170e7"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/reader-known-32/accepted.json",
+          "sha256": "2eb4562de7ce9e1ac014f198c2ca75ab536aba2445ff5412db7ed925f45dadc9"
+        }
+      }
+    },
+    {
+      "name": "known-33",
+      "source": "\\dprobe\\lbrace Z",
+      "command": "dprobe",
+      "cursor": 7,
+      "braceOK": false,
+      "value": "{",
+      "error": null,
+      "primaryCursor": 15,
+      "retainedGoCursor": 15,
+      "cursorBoundary": "",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/reader-known-33/plain.json",
+          "sha256": "03a7b7c321090725d6a8097adbfdc9c7e38b47052646b19fe4ac4963c4100e1b"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/reader-known-33/passive.json",
+          "sha256": "e20f24c1333104f004482d4770f57e0b0bcff53a7ae16ff98eaa4f8f32f83476"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/reader-known-33/accepted.json",
+          "sha256": "45544f4955881d5848fef3b5ca7058558bfe669bdbe3c45261c69603de075270"
+        }
+      }
+    },
+    {
+      "name": "known-34",
+      "source": "\\dprobe\\} Z",
+      "command": "dprobe",
+      "cursor": 7,
+      "braceOK": false,
+      "value": "}",
+      "error": null,
+      "primaryCursor": 9,
+      "retainedGoCursor": 9,
+      "cursorBoundary": "",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/reader-known-34/plain.json",
+          "sha256": "2ea0e7dc9985043099d433fb0f03b8606b174a286968a21d3b71a654a3ae0822"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/reader-known-34/passive.json",
+          "sha256": "5b3762d67291c02e515e8ad475daa2f217f0ad8a8f984ea801e94343ae8e4ec1"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/reader-known-34/accepted.json",
+          "sha256": "725da8b7d6b3e565dad97e393efbf83496baae9018893d50e5daab3f61bcb281"
+        }
+      }
+    },
+    {
+      "name": "known-35",
+      "source": "\\dprobe\\{ Z",
+      "command": "dprobe",
+      "cursor": 7,
+      "braceOK": false,
+      "value": "{",
+      "error": null,
+      "primaryCursor": 9,
+      "retainedGoCursor": 9,
+      "cursorBoundary": "",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/reader-known-35/plain.json",
+          "sha256": "c3837438cc0c69063ee44672911779ec407ed9a0e24904be3b53f2d22844612b"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/reader-known-35/passive.json",
+          "sha256": "108865eaa78a39318e307136010afad04312dd7c8542758bf551fc611dc23e4d"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/reader-known-35/accepted.json",
+          "sha256": "997d995194ed2dfa950726897de2a784c65f8ce80947e621dba190217ffa444e"
+        }
+      }
+    },
+    {
+      "name": "known-36",
+      "source": "\\dprobe\\rceil Z",
+      "command": "dprobe",
+      "cursor": 7,
+      "braceOK": false,
+      "value": "⌉",
+      "error": null,
+      "primaryCursor": 14,
+      "retainedGoCursor": 14,
+      "cursorBoundary": "",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/reader-known-36/plain.json",
+          "sha256": "b3868c5f6512f2c617cbcfdffa1b93e2acf425a39e5b6d407d7647aa23eceb1f"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/reader-known-36/passive.json",
+          "sha256": "907dcc4d57984f88c6c26417bdb1a2b79616299b4e93eb66b66a0198eae1b7f0"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/reader-known-36/accepted.json",
+          "sha256": "47e5f2ed64ddbead33635a21399000958f69ddb452b27ec74ab12265f4bc33f2"
+        }
+      }
+    },
+    {
+      "name": "known-37",
+      "source": "\\dprobe\\lceil Z",
+      "command": "dprobe",
+      "cursor": 7,
+      "braceOK": false,
+      "value": "⌈",
+      "error": null,
+      "primaryCursor": 14,
+      "retainedGoCursor": 14,
+      "cursorBoundary": "",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/reader-known-37/plain.json",
+          "sha256": "62d1087f828ed5b21e74841761079f918530f0b3c4e79c3ad2e1df41ca45ea07"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/reader-known-37/passive.json",
+          "sha256": "8fcf924025489dbaf0d23985adfe327d79ef69a8b6ff702249331eb91a55bb6d"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/reader-known-37/accepted.json",
+          "sha256": "4512671b9cd5f80a3b9e16a77624a816ab76452572a29006f9d78556688103ad"
+        }
+      }
+    },
+    {
+      "name": "known-38",
+      "source": "\\dprobe\\rfloor Z",
+      "command": "dprobe",
+      "cursor": 7,
+      "braceOK": false,
+      "value": "⌋",
+      "error": null,
+      "primaryCursor": 15,
+      "retainedGoCursor": 15,
+      "cursorBoundary": "",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/reader-known-38/plain.json",
+          "sha256": "bd7c061ad5e48333c22da626d6f02ebc84827f913969a1c0d078cd283a1067ff"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/reader-known-38/passive.json",
+          "sha256": "8d304475719d47c427bdbbe3ec2bc4915bb5a6fdb3b040bbd08108bb5eb27ab9"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/reader-known-38/accepted.json",
+          "sha256": "1b6ed8da4b473be60058c22533a32eee510baedf73bbed6d74c22fbeae265fd0"
+        }
+      }
+    },
+    {
+      "name": "known-39",
+      "source": "\\dprobe\\lfloor Z",
+      "command": "dprobe",
+      "cursor": 7,
+      "braceOK": false,
+      "value": "⌊",
+      "error": null,
+      "primaryCursor": 15,
+      "retainedGoCursor": 15,
+      "cursorBoundary": "",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/reader-known-39/plain.json",
+          "sha256": "81d668bc23c4b042de2f7df567a80d603e0b4530c773eaf46abe43c4cb8a9566"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/reader-known-39/passive.json",
+          "sha256": "efddd30ba9b2b32c85fe0fc721fa7ca25ed58042d73d95fe9686fd15a8d26c10"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/reader-known-39/accepted.json",
+          "sha256": "aae782fdfc74214f5287cfe444c69b582bd6f4a9930f221477cb5ba23be2cc6a"
+        }
+      }
+    },
+    {
+      "name": "known-40",
+      "source": "\\dprobe\\lbrack Z",
+      "command": "dprobe",
+      "cursor": 7,
+      "braceOK": false,
+      "value": "[",
+      "error": null,
+      "primaryCursor": 15,
+      "retainedGoCursor": 15,
+      "cursorBoundary": "",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/reader-known-40/plain.json",
+          "sha256": "d57dbfada778391dd13268a084a470396a15d9fa786bca634a4e59c6e2e28b24"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/reader-known-40/passive.json",
+          "sha256": "42a99d89c6cdc2597bc984a420540b81514e96d31387fe68512b13780c684d37"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/reader-known-40/accepted.json",
+          "sha256": "bce5542da68754539cc7f337ef2cc95e020502a0cf367fc2091a23e6a65fedda"
+        }
+      }
+    },
+    {
+      "name": "known-41",
+      "source": "\\dprobe\\rbrack Z",
+      "command": "dprobe",
+      "cursor": 7,
+      "braceOK": false,
+      "value": "]",
+      "error": null,
+      "primaryCursor": 15,
+      "retainedGoCursor": 15,
+      "cursorBoundary": "",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/reader-known-41/plain.json",
+          "sha256": "b018f603d05773a88d1c15fcba0c666a0193b35e6d3081699a5cd7c2e05f9489"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/reader-known-41/passive.json",
+          "sha256": "c27909f38819b4827b25e6abdd2e8d9398fef3e507d9fbad0e848ef83926b04c"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/reader-known-41/accepted.json",
+          "sha256": "c90a04df3ccb0a480ac1085569d227a916ee6519f3cfeb8d29293dd36864b078"
+        }
+      }
+    },
+    {
+      "name": "known-42",
+      "source": "\\dprobe\\lvert Z",
+      "command": "dprobe",
+      "cursor": 7,
+      "braceOK": false,
+      "value": "|",
+      "error": null,
+      "primaryCursor": 14,
+      "retainedGoCursor": 14,
+      "cursorBoundary": "",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/reader-known-42/plain.json",
+          "sha256": "33e60c1457967b2e10bc5b678fad171f8471d320cb734c584f743361d9761c86"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/reader-known-42/passive.json",
+          "sha256": "c5a47e60dc3337ca00eec046af9d10be261b049a98eebba66fb8a37ecc71bfe4"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/reader-known-42/accepted.json",
+          "sha256": "72dda955989ca02234fa8aa2a0764a86da7329a1ed9ae87b71ae87eb34a5c7ce"
+        }
+      }
+    },
+    {
+      "name": "known-43",
+      "source": "\\dprobe\\rvert Z",
+      "command": "dprobe",
+      "cursor": 7,
+      "braceOK": false,
+      "value": "|",
+      "error": null,
+      "primaryCursor": 14,
+      "retainedGoCursor": 14,
+      "cursorBoundary": "",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/reader-known-43/plain.json",
+          "sha256": "cca48378e57bad17f1c47f0f2ec5a6110df9cdeb6030dbf03f8bd6bb819203de"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/reader-known-43/passive.json",
+          "sha256": "cad9aab6de8d4ab40dd7bf140acd0b7377519601654c5a308ecd3bd97a158b5f"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/reader-known-43/accepted.json",
+          "sha256": "3742ecaad5ff1f3fdcd7960740960a229c1580dedc2c063f73373a231e8c5481"
+        }
+      }
+    },
+    {
+      "name": "known-44",
+      "source": "\\dprobe\\lVert Z",
+      "command": "dprobe",
+      "cursor": 7,
+      "braceOK": false,
+      "value": "‖",
+      "error": null,
+      "primaryCursor": 14,
+      "retainedGoCursor": 14,
+      "cursorBoundary": "",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/reader-known-44/plain.json",
+          "sha256": "74c0461f834705052069c4d246821c4302f563a0df829eae8ba7490c28d7fb71"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/reader-known-44/passive.json",
+          "sha256": "888f3615d28407c0f58bb318198d214ecb72b1f78924978a3ae763cf3de5071d"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/reader-known-44/accepted.json",
+          "sha256": "8badeca8ad888ecea58a91ed1f76f081e951dd04bf88194bb90114db723f08a3"
+        }
+      }
+    },
+    {
+      "name": "known-45",
+      "source": "\\dprobe\\rVert Z",
+      "command": "dprobe",
+      "cursor": 7,
+      "braceOK": false,
+      "value": "‖",
+      "error": null,
+      "primaryCursor": 14,
+      "retainedGoCursor": 14,
+      "cursorBoundary": "",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/reader-known-45/plain.json",
+          "sha256": "fbdbb5c113e151082dac753973a5436eef4722e44748c7a57969d46fc1388916"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/reader-known-45/passive.json",
+          "sha256": "0fe30014604cb30d6fd53170005a0b173e8e2f701236a58090743db477d7d6ad"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/reader-known-45/accepted.json",
+          "sha256": "56ed78d00f146279038ae99b2a4a805bed531df389ec51a0ab3979f8bd4c249e"
+        }
+      }
+    },
+    {
+      "name": "known-46",
+      "source": "\\dprobe\\ulcorner Z",
+      "command": "dprobe",
+      "cursor": 7,
+      "braceOK": false,
+      "value": "⌜",
+      "error": null,
+      "primaryCursor": 17,
+      "retainedGoCursor": 17,
+      "cursorBoundary": "",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/reader-known-46/plain.json",
+          "sha256": "4f6e0e2e48f96e94db5c68ed2e761f951fd9b3c32f6feb8dc792eb1d49161d0c"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/reader-known-46/passive.json",
+          "sha256": "cd5f8583e5ee95d8f803b284ab1f0187858dcabe5e462c724b99407bd276b270"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/reader-known-46/accepted.json",
+          "sha256": "1847f8333a1c7ba9c87e2400d83d5b9c47b359c6d62ea8050cb0b623ccd7d752"
+        }
+      }
+    },
+    {
+      "name": "known-47",
+      "source": "\\dprobe\\urcorner Z",
+      "command": "dprobe",
+      "cursor": 7,
+      "braceOK": false,
+      "value": "⌝",
+      "error": null,
+      "primaryCursor": 17,
+      "retainedGoCursor": 17,
+      "cursorBoundary": "",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/reader-known-47/plain.json",
+          "sha256": "98b584f521876b7abc0b368e4025b8a7be24c8aa666a4230b2323fd193fe8faa"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/reader-known-47/passive.json",
+          "sha256": "f459d414c0d09362448b319c2e8e36e657edb6b7c296e047acb81434362ff6c4"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/reader-known-47/accepted.json",
+          "sha256": "c9eba81a33cdc7a858b4b2fa2f2429eee014d775158d16e3881d7999e9a1a9f2"
+        }
+      }
+    },
+    {
+      "name": "known-48",
+      "source": "\\dprobe\\llcorner Z",
+      "command": "dprobe",
+      "cursor": 7,
+      "braceOK": false,
+      "value": "⌞",
+      "error": null,
+      "primaryCursor": 17,
+      "retainedGoCursor": 17,
+      "cursorBoundary": "",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/reader-known-48/plain.json",
+          "sha256": "fe4ee63c9c594d938a1d59f9988c7923dc1e90393ce6169c89e59a2e84536cc6"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/reader-known-48/passive.json",
+          "sha256": "54e0bbb044d36e83d91a88fb6004416cf5520fc299f211ead7ebc3d1e1b19b2f"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/reader-known-48/accepted.json",
+          "sha256": "72daf4562803a9754cba164ceea5903105cdd135af2ce3445fa8128f9b4f756b"
+        }
+      }
+    },
+    {
+      "name": "known-49",
+      "source": "\\dprobe\\lrcorner Z",
+      "command": "dprobe",
+      "cursor": 7,
+      "braceOK": false,
+      "value": "⌟",
+      "error": null,
+      "primaryCursor": 17,
+      "retainedGoCursor": 17,
+      "cursorBoundary": "",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/reader-known-49/plain.json",
+          "sha256": "a4c2462331087dc26cbc7afad55645198954d0de757d930181a85a0fe8bf94b2"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/reader-known-49/passive.json",
+          "sha256": "57f48e07b3cd570b481822eac91e9cfc3da6a6148d83b589716abeb00e0f2444"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/reader-known-49/accepted.json",
+          "sha256": "f94bce6f9e6513eb180431118387bd7f98d17ade4935b1dec5b66392ce25ea60"
+        }
+      }
+    },
+    {
+      "name": "known-50",
+      "source": "\\dprobe\\lparen Z",
+      "command": "dprobe",
+      "cursor": 7,
+      "braceOK": false,
+      "value": "(",
+      "error": null,
+      "primaryCursor": 15,
+      "retainedGoCursor": 15,
+      "cursorBoundary": "",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/reader-known-50/plain.json",
+          "sha256": "32019c0a539fe8154db78bdf28d77b776d4672d1dccb3e6ed5c1c8afc6f26298"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/reader-known-50/passive.json",
+          "sha256": "279bb811162670f89d3d2b9ce027841fe40962f53b3d8939b3174038a88e93f1"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/reader-known-50/accepted.json",
+          "sha256": "b497a810a194fcf3398b39601ccdf32877a11db5b5263cbe2443201e44662733"
+        }
+      }
+    },
+    {
+      "name": "known-51",
+      "source": "\\dprobe\\rparen Z",
+      "command": "dprobe",
+      "cursor": 7,
+      "braceOK": false,
+      "value": ")",
+      "error": null,
+      "primaryCursor": 15,
+      "retainedGoCursor": 15,
+      "cursorBoundary": "",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/reader-known-51/plain.json",
+          "sha256": "6cdf164283041ee6abaa9d958acbbc6951fc4e66788aa2ca8cacd8e93e90e2f0"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/reader-known-51/passive.json",
+          "sha256": "b277c5fcf7ae06726295622133efd6971debcec187c136fc8ea569e72f54b66d"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/reader-known-51/accepted.json",
+          "sha256": "31fd9fdf5498b526d56f81b818478eb4fdfb7525308473629a543e7b73b133ed"
+        }
+      }
+    },
+    {
+      "name": "escaped-slash",
+      "source": "\\dprobe\\/ Z",
+      "command": "dprobe",
+      "cursor": 7,
+      "braceOK": false,
+      "value": null,
+      "error": {
+        "id": "MissingOrUnrecognizedDelim",
+        "message": "Missing or unrecognized delimiter for \\dprobe",
+        "name": null
+      },
+      "primaryCursor": 9,
+      "retainedGoCursor": 9,
+      "cursorBoundary": "",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/reader-escaped-slash/plain.json",
+          "sha256": "babf96c8c65b2dd2bfa5d2d154717434bb33d294c3e0a8753fa39776c07673c8"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/reader-escaped-slash/passive.json",
+          "sha256": "36ce6511c7d4004f28559e88c06c5c3ba1296448476eedad428b71e8d9d9b7af"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/reader-escaped-slash/accepted.json",
+          "sha256": "abbffa2203c918f8c225d72c03ac07eb469d2f4087b0c120de74aa6f89c271df"
+        }
+      }
+    },
+    {
+      "name": "escaped-left-paren",
+      "source": "\\dprobe\\( Z",
+      "command": "dprobe",
+      "cursor": 7,
+      "braceOK": false,
+      "value": null,
+      "error": {
+        "id": "MissingOrUnrecognizedDelim",
+        "message": "Missing or unrecognized delimiter for \\dprobe",
+        "name": null
+      },
+      "primaryCursor": 9,
+      "retainedGoCursor": 9,
+      "cursorBoundary": "",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/reader-escaped-left-paren/plain.json",
+          "sha256": "11d7988a67332ad4025691f66e0534b1f5a65943b89b8e5ebdf41f7c01a7a8c9"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/reader-escaped-left-paren/passive.json",
+          "sha256": "2be58849a1fcd3f9aa9a8abf3d538bbb8413e01ab66b0fe7402a25af0cec15cd"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/reader-escaped-left-paren/accepted.json",
+          "sha256": "4a8ed45ad3a310e1fcc9fddc01647821712202872e0381d33eb5951322f25b4c"
+        }
+      }
+    },
+    {
+      "name": "escaped-right-paren",
+      "source": "\\dprobe\\) Z",
+      "command": "dprobe",
+      "cursor": 7,
+      "braceOK": false,
+      "value": null,
+      "error": {
+        "id": "MissingOrUnrecognizedDelim",
+        "message": "Missing or unrecognized delimiter for \\dprobe",
+        "name": null
+      },
+      "primaryCursor": 9,
+      "retainedGoCursor": 9,
+      "cursorBoundary": "",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/reader-escaped-right-paren/plain.json",
+          "sha256": "d1b4839dca957c9f22b2a6c01b4a5e61db484a6a7f7768ba1c5f583f052bc103"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/reader-escaped-right-paren/passive.json",
+          "sha256": "c177e2052a6db019b47bf845a7bd065b8ad398169d580fc377ddadc456719c54"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/reader-escaped-right-paren/accepted.json",
+          "sha256": "ccf00c2c8404d4dbf69bc8422993aaf897fa91f032f27ff53124acec35bf3b7a"
+        }
+      }
+    },
+    {
+      "name": "escaped-left-bracket",
+      "source": "\\dprobe\\[ Z",
+      "command": "dprobe",
+      "cursor": 7,
+      "braceOK": false,
+      "value": null,
+      "error": {
+        "id": "MissingOrUnrecognizedDelim",
+        "message": "Missing or unrecognized delimiter for \\dprobe",
+        "name": null
+      },
+      "primaryCursor": 9,
+      "retainedGoCursor": 9,
+      "cursorBoundary": "",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/reader-escaped-left-bracket/plain.json",
+          "sha256": "b82002abab79fc45854ca2c1f4c31f94e26d292fd45abe42b76aa3e809390336"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/reader-escaped-left-bracket/passive.json",
+          "sha256": "3046029fd1aac50bccdf56227a116bea32f4a948921bd8c2b107b600a26d87db"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/reader-escaped-left-bracket/accepted.json",
+          "sha256": "58dd39d4164d46e89ee441803e0f9e134e0411845786e3df2581d9323d38bd45"
+        }
+      }
+    },
+    {
+      "name": "escaped-right-bracket",
+      "source": "\\dprobe\\] Z",
+      "command": "dprobe",
+      "cursor": 7,
+      "braceOK": false,
+      "value": null,
+      "error": {
+        "id": "MissingOrUnrecognizedDelim",
+        "message": "Missing or unrecognized delimiter for \\dprobe",
+        "name": null
+      },
+      "primaryCursor": 9,
+      "retainedGoCursor": 9,
+      "cursorBoundary": "",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/reader-escaped-right-bracket/plain.json",
+          "sha256": "c4b4268cfed76e60e6e23afe035f1b96deca0124457b312b965934a5a7903fef"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/reader-escaped-right-bracket/passive.json",
+          "sha256": "e9d4e5afd021f0fa90b1f1b0686344f7a7aec1ec573dda65fc63c7dbe32d1597"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/reader-escaped-right-bracket/accepted.json",
+          "sha256": "c6626bccc3f1cb00cbfef02aeca23758b5c7ffb59da812fbbc9d75175e680390"
+        }
+      }
+    },
+    {
+      "name": "escaped-dot",
+      "source": "\\dprobe\\. Z",
+      "command": "dprobe",
+      "cursor": 7,
+      "braceOK": false,
+      "value": null,
+      "error": {
+        "id": "MissingOrUnrecognizedDelim",
+        "message": "Missing or unrecognized delimiter for \\dprobe",
+        "name": null
+      },
+      "primaryCursor": 9,
+      "retainedGoCursor": 9,
+      "cursorBoundary": "",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/reader-escaped-dot/plain.json",
+          "sha256": "e14178857b87e49a8ad0e916e81fe67954e1928ff730679e904a66c812617837"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/reader-escaped-dot/passive.json",
+          "sha256": "6d5307abcbef83983ed8b37476e3ce316d66fbe48fa4a7a286789a9ce9344cff"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/reader-escaped-dot/accepted.json",
+          "sha256": "c538164c7cf0d8f0f66b0de0bdfa97863f496235b30db0edb8d7d770ca7ece0d"
+        }
+      }
+    },
+    {
+      "name": "raw-open-brace",
+      "source": "\\dprobe{Z",
+      "command": "dprobe",
+      "cursor": 7,
+      "braceOK": false,
+      "value": null,
+      "error": {
+        "id": "MissingOrUnrecognizedDelim",
+        "message": "Missing or unrecognized delimiter for \\dprobe",
+        "name": null
+      },
+      "primaryCursor": 8,
+      "retainedGoCursor": 8,
+      "cursorBoundary": "",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/reader-raw-open-brace/plain.json",
+          "sha256": "f332dfd32ab2cb6233ce3f32e7284b5e9a199e3d5dc354f2cf214abd39335db7"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/reader-raw-open-brace/passive.json",
+          "sha256": "a0a2dca77acc83bc2307888d6a477b012b7a23931a63e6eca241cef4036c6dbd"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/reader-raw-open-brace/accepted.json",
+          "sha256": "51e763af6452e7999c87ac26cffd92d5d37cdfc4b5efb668a7dd15db8ab0bcc1"
+        }
+      }
+    },
+    {
+      "name": "raw-close-brace",
+      "source": "\\dprobe}Z",
+      "command": "dprobe",
+      "cursor": 7,
+      "braceOK": false,
+      "value": null,
+      "error": {
+        "id": "MissingOrUnrecognizedDelim",
+        "message": "Missing or unrecognized delimiter for \\dprobe",
+        "name": null
+      },
+      "primaryCursor": 8,
+      "retainedGoCursor": 8,
+      "cursorBoundary": "",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/reader-raw-close-brace/plain.json",
+          "sha256": "31ec3a268ab25b8737fb1896f706d13d9562b2559a4fc4070d28d4bd26825f43"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/reader-raw-close-brace/passive.json",
+          "sha256": "091bf40eb60c5500177339ce008bab3afd7a849ab37d7c459cfb893c60b8857a"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/reader-raw-close-brace/accepted.json",
+          "sha256": "ea1ce431bb7e7f3310c6175e241d4a2d90e36dc24b2f5432e1f6051f18355771"
+        }
+      }
+    },
+    {
+      "name": "eof",
+      "source": "\\dprobe",
+      "command": "dprobe",
+      "cursor": 7,
+      "braceOK": false,
+      "value": null,
+      "error": {
+        "id": "MissingOrUnrecognizedDelim",
+        "message": "Missing or unrecognized delimiter for \\dprobe",
+        "name": null
+      },
+      "primaryCursor": 7,
+      "retainedGoCursor": 7,
+      "cursorBoundary": "",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/reader-eof/plain.json",
+          "sha256": "a22b555a837d4ed2737ecb7e9a5480a18bf959b2189c084f97ef846e178d5470"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/reader-eof/passive.json",
+          "sha256": "47963db49d0cfc20421a2201dca6cf17ce44531e0671597e5eb1231befa48671"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/reader-eof/accepted.json",
+          "sha256": "23bfaeb58e5ae9dca2552b6e69e161d020aab561b404e76e5c05b6e8af7d2837"
+        }
+      }
+    },
+    {
+      "name": "dangling-backslash",
+      "source": "\\dprobe\\",
+      "command": "dprobe",
+      "cursor": 7,
+      "braceOK": false,
+      "value": null,
+      "error": {
+        "id": "MissingOrUnrecognizedDelim",
+        "message": "Missing or unrecognized delimiter for \\dprobe",
+        "name": null
+      },
+      "primaryCursor": 9,
+      "retainedGoCursor": 8,
+      "cursorBoundary": "dangling-backslash",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/reader-dangling-backslash/plain.json",
+          "sha256": "e133d759c673cb25f89f700952a6b453308b5595ff12563f57a74af0be83c7ac"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/reader-dangling-backslash/passive.json",
+          "sha256": "a643e706584ebf7b68201c6e79e76d50e22735e3c21c43b8fbaa9f53adfa0d9e"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/reader-dangling-backslash/accepted.json",
+          "sha256": "8c58a4049cafa2b53a10f79f9bd29741890b61d6f896d744c74f0ff829240f44"
+        }
+      }
+    },
+    {
+      "name": "braced-slash",
+      "source": "\\dprobe{/}Z",
+      "command": "dprobe",
+      "cursor": 7,
+      "braceOK": true,
+      "value": "/",
+      "error": null,
+      "primaryCursor": 10,
+      "retainedGoCursor": 10,
+      "cursorBoundary": "",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/reader-braced-slash/plain.json",
+          "sha256": "d89d268e3d39fd5d6eb7acc3791bf2b176b4a3ac7f4ac2a920cccf862f060b70"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/reader-braced-slash/passive.json",
+          "sha256": "cb35c105f965db5015dae04855b4377b4e47aac928cc4ed57c4d193426ce938b"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/reader-braced-slash/accepted.json",
+          "sha256": "d408b588a734c2632ba69cb6e415dbb19eab7abc3d00ffc51b45d239b724a321"
+        }
+      }
+    },
+    {
+      "name": "braced-control-word",
+      "source": "\\dprobe{\\vert}Z",
+      "command": "dprobe",
+      "cursor": 7,
+      "braceOK": true,
+      "value": "|",
+      "error": null,
+      "primaryCursor": 14,
+      "retainedGoCursor": 14,
+      "cursorBoundary": "",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/reader-braced-control-word/plain.json",
+          "sha256": "5c0aa0755eed17c205132b65bc6630d3cfe5cac392c242dc3cb11283d2c30686"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/reader-braced-control-word/passive.json",
+          "sha256": "9e5ea4006f1944006dc2936d1d8628e3a55c7e6417197d72f9c92771eb8d2a4e"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/reader-braced-control-word/accepted.json",
+          "sha256": "6d18a120bb72cab8b724e8639d7939abfeb26255f436f849b29712f2804d167b"
+        }
+      }
+    },
+    {
+      "name": "braced-escaped-slash",
+      "source": "\\dprobe{\\/}Z",
+      "command": "dprobe",
+      "cursor": 7,
+      "braceOK": true,
+      "value": null,
+      "error": {
+        "id": "MissingOrUnrecognizedDelim",
+        "message": "Missing or unrecognized delimiter for \\dprobe",
+        "name": null
+      },
+      "primaryCursor": 11,
+      "retainedGoCursor": 11,
+      "cursorBoundary": "",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/reader-braced-escaped-slash/plain.json",
+          "sha256": "cc2a345376e4253371fb31fb892d40633d18a0e1e5b8c2741fd7002243ecd469"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/reader-braced-escaped-slash/passive.json",
+          "sha256": "659e799c491d3a907162cdad7037ba3683b32c5d87d9a8cdea98db7086a5bf6c"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/reader-braced-escaped-slash/accepted.json",
+          "sha256": "e857aec943320428abb762dd88a6ec2d04da7fd839b7579b225f5f40d26a08ec"
+        }
+      }
+    },
+    {
+      "name": "unclosed-brace",
+      "source": "\\dprobe{/",
+      "command": "dprobe",
+      "cursor": 7,
+      "braceOK": true,
+      "value": null,
+      "error": {
+        "id": "MissingCloseBrace",
+        "message": "Missing close brace",
+        "name": null
+      },
+      "primaryCursor": 9,
+      "retainedGoCursor": 7,
+      "cursorBoundary": "unclosed-brace",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/reader-unclosed-brace/plain.json",
+          "sha256": "871ece10fb72aa211f938383bf37ca043328be7d2606324423411ca0e89b6487"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/reader-unclosed-brace/passive.json",
+          "sha256": "0999338c5c5a55912d3014def3bf64d4f882abd5c89a0e8b667c6f6d519ec564"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/reader-unclosed-brace/accepted.json",
+          "sha256": "5bba368e0b6066da35661d42fa51655c2dc252af0b47eead3a4ec5b639c772f3"
+        }
+      }
+    }
+  ],
+  "converters": [
+    {
+      "name": "convert-01",
+      "raw": "/",
+      "trimmed": "/",
+      "registered": true,
+      "character": "/",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/converter-convert-01/plain.json",
+          "sha256": "94e750e75207d6e11aa627671b616b7fc52dd2909fb058c2d24832575d45e8df"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/converter-convert-01/passive.json",
+          "sha256": "cc29d9835379c3da24b24c0f57cebf788ae3f6da5c1ea80a06c37469776b7cf1"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/converter-convert-01/accepted.json",
+          "sha256": "06571ad0eb0ac3679ec4a4d08ae018edf2014679e0bf3e1fe868463d3d9c3959"
+        }
+      }
+    },
+    {
+      "name": "convert-02",
+      "raw": "\\/",
+      "trimmed": "\\/",
+      "registered": false,
+      "character": null,
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/converter-convert-02/plain.json",
+          "sha256": "9e14da3f147f79c942c5c0913930912d6b5de737ca88ee81d863cbc6f6b18917"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/converter-convert-02/passive.json",
+          "sha256": "14d0c60ede4fc5d4a2759f156390f05d32be785362cda532adcfcad572f0c7e4"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/converter-convert-02/accepted.json",
+          "sha256": "8244f8dd644e7e513ab6bc7cabfcb3102d065dee5c41b3e774a4da821c85fdd7"
+        }
+      }
+    },
+    {
+      "name": "convert-03",
+      "raw": "|",
+      "trimmed": "|",
+      "registered": true,
+      "character": "|",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/converter-convert-03/plain.json",
+          "sha256": "45c60d436e77066d28ac8ee6b98e120c190eb4997732bac3300958305c4fbb37"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/converter-convert-03/passive.json",
+          "sha256": "f39a6697c2ddc9f0d346fe53ca4b7174a36a754bf6810e68d0d3b2202774e005"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/converter-convert-03/accepted.json",
+          "sha256": "c9425ece3dbd859d9fe94882fbca63089ef2f182a9f5bce402f3a590c10493b4"
+        }
+      }
+    },
+    {
+      "name": "convert-04",
+      "raw": "\\|",
+      "trimmed": "\\|",
+      "registered": true,
+      "character": "‖",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/converter-convert-04/plain.json",
+          "sha256": "267daa022618d791e595412745988c46af7fccac2eb768639fc83c84756f7d80"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/converter-convert-04/passive.json",
+          "sha256": "ff4aed8288a942921347eafc1f5cbb8a6cce511089a266025c78716b89b4f386"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/converter-convert-04/accepted.json",
+          "sha256": "110e5e7f3280e4c05d536e7a491febc0df9f8f8a240435bca66f1ecc68ee2202"
+        }
+      }
+    },
+    {
+      "name": "convert-05",
+      "raw": "\\backslash",
+      "trimmed": "\\backslash",
+      "registered": true,
+      "character": "\\",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/converter-convert-05/plain.json",
+          "sha256": "13d5d6707db5d4e69d5ccf16ebb7dc0c69834fbf6b6c8e3bde56df567d481fd4"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/converter-convert-05/passive.json",
+          "sha256": "39d1859e6d81589009c23a13f7651b1cb99806aea55504835014e890b26e6ce1"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/converter-convert-05/accepted.json",
+          "sha256": "0623cf08fceef3357ba940aba9925c56fece377fab7e0a6297227165c8546458"
+        }
+      }
+    },
+    {
+      "name": "convert-06",
+      "raw": "\\\\",
+      "trimmed": "\\\\",
+      "registered": true,
+      "character": "\\",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/converter-convert-06/plain.json",
+          "sha256": "7d91e306d766f87e49c6ef8070180e49c5fe9570f24aa635cd42951d7bd05b9e"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/converter-convert-06/passive.json",
+          "sha256": "4836106b529dc262a91bcd26cedc6a58b44778407df1554d5c48be6d2a0be34e"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/converter-convert-06/accepted.json",
+          "sha256": "e68202dc199a546c59676e1c6632c0f423ce6d3879d3bd9a90e6af8f89fb7f3a"
+        }
+      }
+    },
+    {
+      "name": "convert-07",
+      "raw": "<",
+      "trimmed": "<",
+      "registered": true,
+      "character": "⟨",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/converter-convert-07/plain.json",
+          "sha256": "75832f1461e91a0574dd1dcf97e6e0eefd1e8ec28ed39cfbe1532c0b7c6d8ca0"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/converter-convert-07/passive.json",
+          "sha256": "84810fd79e719a63a5ce11e1866c6e80acb733e76816082c8e6b3e89136ca9cc"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/converter-convert-07/accepted.json",
+          "sha256": "a6e3fa1c9d412ca5facf4c7ddb229a0c69cc75d3476193753be356a2a6a33f42"
+        }
+      }
+    },
+    {
+      "name": "convert-08",
+      "raw": "\\lt",
+      "trimmed": "\\lt",
+      "registered": true,
+      "character": "⟨",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/converter-convert-08/plain.json",
+          "sha256": "feaea0dd3bb504c5719f9e04ec49383fa4dc8d4518d18885bcb58400222ce8e9"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/converter-convert-08/passive.json",
+          "sha256": "d27b9e75376442582b5e8db52d208183c295ff26ee7e3c38165d173e8db734f0"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/converter-convert-08/accepted.json",
+          "sha256": "ad3084d661b8f23f63c21ee4fc87f2a1c375646aa48cddfb8010ca629f580689"
+        }
+      }
+    },
+    {
+      "name": "convert-09",
+      "raw": "\\lparen",
+      "trimmed": "\\lparen",
+      "registered": true,
+      "character": "(",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/converter-convert-09/plain.json",
+          "sha256": "4f589f17b0a3d3910af8d64b2710ebd531c0e5a3eeafa7b884a1a0e354c567ac"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/converter-convert-09/passive.json",
+          "sha256": "ad7ea4bc4de720ce1023e25d8108a5d74b3330cf95027cf77aa06205a5d01e2c"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/converter-convert-09/accepted.json",
+          "sha256": "ee4d96f1b5e757445251b77d54cdde550b0e1ceb3715eed428ba1ffb97481e71"
+        }
+      }
+    },
+    {
+      "name": "convert-10",
+      "raw": "lparen",
+      "trimmed": "lparen",
+      "registered": false,
+      "character": null,
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/converter-convert-10/plain.json",
+          "sha256": "e11338101eaead89d65d5278f8b220fd56d0052c6409862bf855b7d86aed0da0"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/converter-convert-10/passive.json",
+          "sha256": "e20f155d0d041d7a4bce2161fccdec39db29fd52061f75f5ccab11db9949e3fe"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/converter-convert-10/accepted.json",
+          "sha256": "cad116eafdd08b1d8548cb49aff21abaf494a1cbacf4d58454c9b1dc92c337ee"
+        }
+      }
+    },
+    {
+      "name": "convert-11",
+      "raw": "",
+      "trimmed": "",
+      "registered": false,
+      "character": null,
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/converter-convert-11/plain.json",
+          "sha256": "74596ea092c7b1c3205188fd3d50fccef8009ad25f0eb1f8e46143451270bab1"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/converter-convert-11/passive.json",
+          "sha256": "f4ad8474ff354d835f6d5c89b5416f35d632b105de139175db050f4a18c798a5"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/converter-convert-11/accepted.json",
+          "sha256": "a61b4eea5d54efd4877adb240d2bad75b0f8885f7e3ecef435528790856478b5"
+        }
+      }
+    },
+    {
+      "name": "convert-12",
+      "raw": " ",
+      "trimmed": "",
+      "registered": false,
+      "character": null,
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/converter-convert-12/plain.json",
+          "sha256": "9721e55094b1adf7a95252100da71cec984c299d6027c423a07fb7c722382a21"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/converter-convert-12/passive.json",
+          "sha256": "4a5460dd347b31315d8c486b0040a2804774161ad97be2067887539118032395"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/converter-convert-12/accepted.json",
+          "sha256": "f1dbb7123755d1eb82fa74d3b695e12c936ff24844a7e7172ae17132e68266d0"
+        }
+      }
+    },
+    {
+      "name": "convert-13",
+      "raw": " . ",
+      "trimmed": ".",
+      "registered": true,
+      "character": "",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/converter-convert-13/plain.json",
+          "sha256": "937ef82836f8ecfe19b348cf10404c48acef449143ea0b9e22e1790bffb48d83"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/converter-convert-13/passive.json",
+          "sha256": "441bd5ac084b9ae96e2e7e772ffc0a2ef65eaad94e8fffb9bce25af0d083cf56"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/converter-convert-13/accepted.json",
+          "sha256": "d98b7ee6565fc23cf10c9c02eb9443ba72ebedb244fd07c1c64bd3b0e332c9bb"
+        }
+      }
+    },
+    {
+      "name": "convert-14",
+      "raw": " / ",
+      "trimmed": "/",
+      "registered": true,
+      "character": "/",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/converter-convert-14/plain.json",
+          "sha256": "175a8795915040dae48fa505eb424a797776e52295c687a9b8053dc751c492d1"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/converter-convert-14/passive.json",
+          "sha256": "fb2cbf1e4d31f875fb4fef3598119f31473771c5a609dae0ed7319f11f341963"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/converter-convert-14/accepted.json",
+          "sha256": "a055f320e6372d02edcb933d48096f616a1a1e65e8a53594824bd8da7a38f352"
+        }
+      }
+    },
+    {
+      "name": "convert-15",
+      "raw": " \\vert ",
+      "trimmed": "\\vert",
+      "registered": true,
+      "character": "|",
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/converter-convert-15/plain.json",
+          "sha256": "fbfb39c85d8ae3145b9aba010fb48aeaf0ab77116654ad8f6a0ee89ac925e0ad"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/converter-convert-15/passive.json",
+          "sha256": "8730b61c0f3a40c8cd8d6235b1d51f4a48313ac0fa811b0f761b4dd7a611df89"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/converter-convert-15/accepted.json",
+          "sha256": "999da5a9b91843d3531a3efd77470aaabe946ce7b05965201691e881801754a3"
+        }
+      }
+    },
+    {
+      "name": "convert-16",
+      "raw": "\\notADelimiter",
+      "trimmed": "\\notADelimiter",
+      "registered": false,
+      "character": null,
+      "provenance": {
+        "plain": {
+          "path": "d111-nil-state-observations/raw/converter-convert-16/plain.json",
+          "sha256": "c70e7f0c2aad01c0b3df0fac2f9c8079f2ea13dab862443ffa3ef91e4c4a733b"
+        },
+        "passive": {
+          "path": "d111-nil-state-observations/raw/converter-convert-16/passive.json",
+          "sha256": "26569d49c9189e83006b05c98888fe023347632de43cc14fab1e122dee9409da"
+        },
+        "accepted": {
+          "path": "d111-nil-state-observations/raw/converter-convert-16/accepted.json",
+          "sha256": "bbae5ea56c4a14d59cc5f081c822de7dee9c02268c7a2160e9a722c772dbc47b"
+        }
+      }
+    }
+  ],
+  "source": "Untouched MathJax 3.2.2 captures from d111-preedit-independent; selected scalar fields only. Full raw captures retained externally."
+}

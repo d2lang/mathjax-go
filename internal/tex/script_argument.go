@@ -90,7 +90,7 @@ func (p *parser) parseScriptArgument(attachment *scriptAttachment, font string) 
 					return nil, currentFont, nil, attachment.missingOpen()
 				}
 				if name == "right" {
-					if _, parseErr := p.readDelimiter(false); parseErr != nil {
+					if _, parseErr := p.readDelimiter(name, false); parseErr != nil {
 						return nil, currentFont, nil, parseErr
 					}
 					return nil, currentFont, nil, texError("MissingLeftExtraRight", "Missing \\left or extra \\right")

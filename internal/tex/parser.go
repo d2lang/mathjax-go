@@ -161,7 +161,7 @@ func (p *parser) parseRowWithAutoOpen(terminator byte, stopRight, infixPending b
 			name := p.readControlSequence()
 			if name == "right" {
 				if auto != nil {
-					if _, err := p.readDelimiter(false); err != nil {
+					if _, err := p.readDelimiter(name, false); err != nil {
 						return nil, "", err
 					}
 					return nil, "", texError("MissingLeftExtraRight", "Missing \\left or extra \\right")
@@ -170,7 +170,7 @@ func (p *parser) parseRowWithAutoOpen(terminator byte, stopRight, infixPending b
 					return nil, "", texError("ExtraRight", "Extra \\right")
 				}
 				finishPrime()
-				delim, err := p.readDelimiter(false)
+				delim, err := p.readDelimiter(name, false)
 				return nodes, delim, err
 			}
 			if _, registered := p.state.macros[name]; !registered && (name == "over" || name == "atop" || name == "above" || name == "choose" || name == "brace" || name == "brack") {
@@ -737,34 +737,27 @@ func (p *parser) readControlSequence() string {
 	return name
 }
 
-func (p *parser) readDelimiter(braceOK bool) (string, error) {
+func (p *parser) readDelimiter(command string, braceOK bool) (string, error) {
 	p.skipSpaces()
-	if p.pos >= len(p.source) {
-		return "", texError("MissingOrUnrecognizedDelim", "Missing or unrecognized delimiter")
-	}
-	var name string
-	escaped := false
-	if p.source[p.pos] == '\\' {
-		escaped = true
-		p.pos++
-		name = p.readControlSequence()
-	} else if p.source[p.pos] == '{' && braceOK {
-		raw, _, err := p.readArgument("delimiter", false)
-		if err != nil {
-			return "", err
+	if p.pos < len(p.source) {
+		var key string
+		if p.source[p.pos] == '\\' {
+			p.pos++
+			key = "\\" + p.readControlSequence()
+		} else if p.source[p.pos] == '{' && braceOK {
+			raw, _, err := p.readArgument(command, false)
+			if err != nil {
+				return "", err
+			}
+			key = strings.TrimSpace(raw)
+		} else {
+			key = string(p.consumeRune())
 		}
-		name = strings.TrimSpace(raw)
-	} else {
-		r := p.consumeRune()
-		name = string(r)
+		if delimiter, ok := lookupDelimiter(key); ok {
+			return delimiter, nil
+		}
 	}
-	if !escaped && name == "|" {
-		return "|", nil
-	}
-	if delim, ok := delimiterSymbols[name]; ok {
-		return delim, nil
-	}
-	return "", texError("MissingOrUnrecognizedDelim", "Missing or unrecognized delimiter for \\%s", name)
+	return "", texError("MissingOrUnrecognizedDelim", "Missing or unrecognized delimiter for \\%s", command)
 }
 
 func (p *parser) skipSpaces() {

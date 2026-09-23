@@ -114,18 +114,6 @@ var operatorSymbols = map[string]symbolDef{
 	"colon": op(":", mml.TeXClassPunct),
 }
 
-var delimiterSymbols = map[string]string{
-	"(": "(", ")": ")", "[": "[", "]": "]", "{": "{", "}": "}", ".": "",
-	"lparen": "(", "rparen": ")", "lbrack": "[", "rbrack": "]",
-	"lbrace": "{", "rbrace": "}",
-	"vert": "|", "lvert": "|", "rvert": "|", "|": "‖",
-	"Vert": "‖", "lVert": "‖", "rVert": "‖",
-	"langle": "⟨", "rangle": "⟩", "lceil": "⌈", "rceil": "⌉",
-	"lfloor": "⌊", "rfloor": "⌋", "backslash": "∖",
-	"uparrow": "↑", "downarrow": "↓", "updownarrow": "↕",
-	"Uparrow": "⇑", "Downarrow": "⇓", "Updownarrow": "⇕",
-}
-
 var functionNames = map[string]string{
 	"arccos": "arccos", "arcsin": "arcsin", "arctan": "arctan", "arg": "arg",
 	"cos": "cos", "cosh": "cosh", "cot": "cot", "coth": "coth", "csc": "csc",
