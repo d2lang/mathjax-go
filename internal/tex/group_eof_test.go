@@ -45,8 +45,8 @@ func TestParsedGroupEOFPinnedReferences(t *testing.T) {
 			output
 		}
 	}
-	var primaryMissingRight map[string]any
-	for name, target := range map[string]any{"group_eof_mathjax_3_2_2.json": &fixture, "group_eof_boundaries.json": &baseline, "missing_right_full_mathjax_3_2_2.json": &primaryMissingRight} {
+	var primaryMissingRight, primaryHash map[string]any
+	for name, target := range map[string]any{"group_eof_mathjax_3_2_2.json": &fixture, "group_eof_boundaries.json": &baseline, "missing_right_full_mathjax_3_2_2.json": &primaryMissingRight, "hash_diagnostic_full_mathjax_3_2_2.json": &primaryHash} {
 		b, err := os.ReadFile(filepath.Join("../../testdata", name))
 		if err != nil {
 			t.Fatal(err)
@@ -55,14 +55,12 @@ func TestParsedGroupEOFPinnedReferences(t *testing.T) {
 			t.Fatal(err)
 		}
 	}
-	// Four former missing-right controls now use the untouched primary outputs.
-	// Keep the historical accepted records for source/cursor checks; the hash
-	// diagnostic and argument-reader cursor boundaries remain separate.
+	// Six former diagnostic controls now use the untouched primary outputs.
+	// Keep the historical accepted records for source/cursor checks; the
+	// argument-reader and hash cursor boundaries remain separate.
 	promoted := map[string]bool{
 		"missing-right-inline": true, "missing-right-display": true,
 		"right-before-group-inline": true, "right-before-group-display": true,
-	}
-	outputBoundary := map[string]bool{
 		"hash-before-eof-inline": true, "hash-before-eof-display": true,
 	}
 	cursorBoundary := map[string]bool{
@@ -72,10 +70,10 @@ func TestParsedGroupEOFPinnedReferences(t *testing.T) {
 		"root-argument-inline": true, "root-argument-display": true,
 		"hash-before-eof-inline": true, "hash-before-eof-display": true,
 	}
-	if len(primaryMissingRight) != 4 || len(fixture.Cases) != 64 || len(baseline.Controls) != 40 || baseline.Baseline != "01eef36d33412dddb14af76d14720c1ff21bd6f2" {
+	if len(primaryHash) != 2 || len(primaryMissingRight) != 4 || len(fixture.Cases) != 64 || len(baseline.Controls) != 40 || baseline.Baseline != "01eef36d33412dddb14af76d14720c1ff21bd6f2" {
 		t.Fatal("unbound parsed-group corpus")
 	}
-	primary, fixed, controls, baselineOutputs, baselineCursors := 0, 0, 0, 0, 0
+	primary, fixed, controls, baselineCursors := 0, 0, 0, 0
 	seen := map[string]bool{}
 	for _, c := range fixture.Cases {
 		if seen[c.Name] {
@@ -85,8 +83,14 @@ func TestParsedGroupEOFPinnedReferences(t *testing.T) {
 		t.Run(c.Name, func(t *testing.T) {
 			want := c.output
 			b, control := baseline.Controls[c.Name]
-			if promoted[c.Name] && (!control || c.Error == nil || c.Error.ID != "ExtraLeftMissingRight" || c.Error.Message != "Extra \\left or missing \\right") {
-				t.Fatal("unbound missing-right promotion")
+			fullPrimary := primaryMissingRight[c.Name]
+			wantID, wantMessage := "ExtraLeftMissingRight", "Extra \\left or missing \\right"
+			if hash, ok := primaryHash[c.Name]; ok {
+				fullPrimary = hash
+				wantID, wantMessage = "CantUseHash1", "You can't use 'macro parameter character #' in math mode"
+			}
+			if promoted[c.Name] && (!control || fullPrimary == nil || c.Error == nil || c.Error.ID != wantID || c.Error.Message != wantMessage) {
+				t.Fatal("unbound diagnostic promotion")
 			}
 			if control {
 				controls++
@@ -99,15 +103,7 @@ func TestParsedGroupEOFPinnedReferences(t *testing.T) {
 					t.Fatal("unexpected targeted error")
 				}
 			}
-			if outputBoundary[c.Name] {
-				if !control {
-					t.Fatal("output qualification outside accepted control")
-				}
-				want = b.output
-				baselineOutputs++
-			} else {
-				primary++
-			}
+			primary++
 			p := &parser{source: c.TeX, state: newParseState(), display: c.Display}
 			_, stop, err := p.parseRow(0, false)
 			var typed *Error
@@ -137,8 +133,8 @@ func TestParsedGroupEOFPinnedReferences(t *testing.T) {
 				t.Fatal(err)
 			}
 			full := infixMacroTree(t, root)
-			if promoted[c.Name] && !reflect.DeepEqual(infixScopeValue(t, full), primaryMissingRight[c.Name]) {
-				t.Error("complete primary missing-right tree differs")
+			if promoted[c.Name] && !reflect.DeepEqual(infixScopeValue(t, full), fullPrimary) {
+				t.Error("complete primary diagnostic tree differs")
 			}
 			if !reflect.DeepEqual(infixScopeValue(t, infixScopeProjection(full)), want.Tree) {
 				t.Error("complete ordered explicit/own tree differs")
@@ -161,7 +157,7 @@ func TestParsedGroupEOFPinnedReferences(t *testing.T) {
 			}
 		})
 	}
-	if primary != 62 || fixed != 24 || controls != 40 || baselineOutputs != 2 || baselineCursors != 10 {
-		t.Fatal("changed qualification counts", primary, fixed, controls, baselineOutputs, baselineCursors)
+	if primary != 64 || fixed != 24 || controls != 40 || baselineCursors != 10 {
+		t.Fatal("changed qualification counts", primary, fixed, controls, baselineCursors)
 	}
 }

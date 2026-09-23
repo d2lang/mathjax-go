@@ -297,7 +297,7 @@ func (p *parser) parseRowWithInfix(terminator byte, stopRight, infixPending bool
 		case '&':
 			return nil, "", texError("Misplaced", "Misplaced alignment tab character &")
 		case '#':
-			return nil, "", texError("CantUseHash1", "You can't use macro parameter character # in math mode")
+			return nil, "", texError("CantUseHash1", "You can't use 'macro parameter character #' in math mode")
 		default:
 			appendNodes([]*mml.Node{p.parseCharacter()}, false)
 		}

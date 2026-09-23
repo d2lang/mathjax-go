@@ -132,6 +132,7 @@ func macroReferenceTree(n *mml.Node) map[string]any {
 }
 func TestMacroBoundaryPublicReferences(t *testing.T) {
 	f := macroReferences(t)
+	promotedHashes := 0
 	for _, c := range f.Public {
 		t.Run(c.Name, func(t *testing.T) {
 			state := newParseState()
@@ -147,7 +148,15 @@ func TestMacroBoundaryPublicReferences(t *testing.T) {
 			}
 			want := c.Primary
 			macroReferenceBoundary(t, c)
-			if c.Boundary != nil {
+			// Retain historical hash boundaries in the original fixture, but
+			// require their complete untouched primary outputs after D098.
+			promotedHash := c.Boundary != nil && c.Boundary.Reason == "D098 diagnostic quotation marks"
+			if promotedHash {
+				promotedHashes++
+				if c.Primary.Error == nil || c.Primary.Error.ID != "CantUseHash1" || c.Primary.Error.Message != "You can't use 'macro parameter character #' in math mode" {
+					t.Fatal("unbound hash promotion")
+				}
+			} else if c.Boundary != nil {
 				want = *c.Boundary
 			}
 			macroReferenceError(t, err, want.Error)
@@ -201,6 +210,9 @@ func TestMacroBoundaryPublicReferences(t *testing.T) {
 				t.Fatalf("complete SVG differs: %s", rendered)
 			}
 		})
+	}
+	if promotedHashes != 4 {
+		t.Fatal("changed hash promotion count", promotedHashes)
 	}
 }
 func TestMacroBoundaryHelpers(t *testing.T) {
