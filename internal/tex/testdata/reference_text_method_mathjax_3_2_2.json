@@ -1,0 +1,3152 @@
+{
+  "mathjaxGitCommit": "ad8f5c21cb810236551da8c6512ba733e67357ee",
+  "cases": [
+    {
+      "input": {
+        "name": "empty",
+        "category": "supported",
+        "operation": "method",
+        "source": "\\DRefObserve{t}TAIL",
+        "command": "ref",
+        "eqref": false,
+        "tag": "",
+        "id": "mjx-eqn:t",
+        "macroCount": 999,
+        "font": "",
+        "label": "t"
+      },
+      "nodes": [
+        {
+          "kind": "mrow",
+          "text": null,
+          "attributes": {
+            "href": "#mjx-eqn%3At",
+            "class": "MathJax_ref"
+          },
+          "properties": {},
+          "children": []
+        }
+      ],
+      "error": null,
+      "outer": {
+        "source": "\\DRefObserve{t}TAIL",
+        "cursorUTF16": 15,
+        "remaining": "TAIL",
+        "macroCount": 999,
+        "envBefore": {
+          "display": true
+        },
+        "envAfter": {
+          "display": true
+        },
+        "environmentIdentity": true,
+        "configurationIdentity": true,
+        "currentIdentity": true,
+        "labelsIdentity": true,
+        "factoryIdentity": true,
+        "colorIdentity": true,
+        "lateColor": "late",
+        "selectedReferenceIdentity": 6,
+        "selectedReferenceAfter": {
+          "tag": "",
+          "id": "mjx-eqn:t"
+        }
+      },
+      "parents": true,
+      "before": {
+        "tags": 1,
+        "configuration": 2,
+        "factory": 3,
+        "currentTag": {
+          "identity": 4,
+          "env": "",
+          "taggable": false,
+          "defaultTags": false,
+          "tag": null,
+          "tagId": "",
+          "tagFormat": "",
+          "noTag": false,
+          "labelId": ""
+        },
+        "labelsIdentity": 5,
+        "labels": [
+          {
+            "name": "t",
+            "identity": 6,
+            "tag": "",
+            "id": "mjx-eqn:t"
+          }
+        ],
+        "allLabelsIdentity": 7,
+        "allLabels": [],
+        "stackIdentity": 8,
+        "stack": [],
+        "historyIdentity": 9,
+        "history": [],
+        "redo": false,
+        "refUpdate": false,
+        "counter": 0,
+        "allCounter": 0
+      },
+      "after": {
+        "tags": 1,
+        "configuration": 2,
+        "factory": 3,
+        "currentTag": {
+          "identity": 4,
+          "env": "",
+          "taggable": false,
+          "defaultTags": false,
+          "tag": null,
+          "tagId": "",
+          "tagFormat": "",
+          "noTag": false,
+          "labelId": ""
+        },
+        "labelsIdentity": 5,
+        "labels": [
+          {
+            "name": "t",
+            "identity": 6,
+            "tag": "",
+            "id": "mjx-eqn:t"
+          }
+        ],
+        "allLabelsIdentity": 7,
+        "allLabels": [],
+        "stackIdentity": 8,
+        "stack": [],
+        "historyIdentity": 9,
+        "history": [],
+        "redo": false,
+        "refUpdate": false,
+        "counter": 0,
+        "allCounter": 0
+      },
+      "made": [
+        {
+          "identity": 10,
+          "requestKind": "node",
+          "requestedType": "mrow",
+          "kind": "mrow",
+          "children": []
+        }
+      ]
+    },
+    {
+      "input": {
+        "name": "literal",
+        "category": "supported",
+        "operation": "method",
+        "source": "\\DRefObserve{t}TAIL",
+        "command": "ref",
+        "eqref": false,
+        "tag": "T",
+        "id": "mjx-eqn:t",
+        "macroCount": 999,
+        "font": "",
+        "label": "t"
+      },
+      "nodes": [
+        {
+          "kind": "mrow",
+          "text": null,
+          "attributes": {
+            "href": "#mjx-eqn%3At",
+            "class": "MathJax_ref"
+          },
+          "properties": {},
+          "children": [
+            {
+              "kind": "mtext",
+              "text": null,
+              "attributes": {},
+              "properties": {},
+              "children": [
+                {
+                  "kind": "text",
+                  "text": "T",
+                  "attributes": {},
+                  "properties": {},
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "error": null,
+      "outer": {
+        "source": "\\DRefObserve{t}TAIL",
+        "cursorUTF16": 15,
+        "remaining": "TAIL",
+        "macroCount": 999,
+        "envBefore": {
+          "display": true
+        },
+        "envAfter": {
+          "display": true
+        },
+        "environmentIdentity": true,
+        "configurationIdentity": true,
+        "currentIdentity": true,
+        "labelsIdentity": true,
+        "factoryIdentity": true,
+        "colorIdentity": true,
+        "lateColor": "late",
+        "selectedReferenceIdentity": 6,
+        "selectedReferenceAfter": {
+          "tag": "T",
+          "id": "mjx-eqn:t"
+        }
+      },
+      "parents": true,
+      "before": {
+        "tags": 1,
+        "configuration": 2,
+        "factory": 3,
+        "currentTag": {
+          "identity": 4,
+          "env": "",
+          "taggable": false,
+          "defaultTags": false,
+          "tag": null,
+          "tagId": "",
+          "tagFormat": "",
+          "noTag": false,
+          "labelId": ""
+        },
+        "labelsIdentity": 5,
+        "labels": [
+          {
+            "name": "t",
+            "identity": 6,
+            "tag": "T",
+            "id": "mjx-eqn:t"
+          }
+        ],
+        "allLabelsIdentity": 7,
+        "allLabels": [],
+        "stackIdentity": 8,
+        "stack": [],
+        "historyIdentity": 9,
+        "history": [],
+        "redo": false,
+        "refUpdate": false,
+        "counter": 0,
+        "allCounter": 0
+      },
+      "after": {
+        "tags": 1,
+        "configuration": 2,
+        "factory": 3,
+        "currentTag": {
+          "identity": 4,
+          "env": "",
+          "taggable": false,
+          "defaultTags": false,
+          "tag": null,
+          "tagId": "",
+          "tagFormat": "",
+          "noTag": false,
+          "labelId": ""
+        },
+        "labelsIdentity": 5,
+        "labels": [
+          {
+            "name": "t",
+            "identity": 6,
+            "tag": "T",
+            "id": "mjx-eqn:t"
+          }
+        ],
+        "allLabelsIdentity": 7,
+        "allLabels": [],
+        "stackIdentity": 8,
+        "stack": [],
+        "historyIdentity": 9,
+        "history": [],
+        "redo": false,
+        "refUpdate": false,
+        "counter": 0,
+        "allCounter": 0
+      },
+      "made": [
+        {
+          "identity": 10,
+          "requestKind": "text",
+          "requestedType": "T",
+          "kind": "text",
+          "children": []
+        },
+        {
+          "identity": 11,
+          "requestKind": "node",
+          "requestedType": "mtext",
+          "kind": "mtext",
+          "children": [
+            10
+          ]
+        },
+        {
+          "identity": 12,
+          "requestKind": "node",
+          "requestedType": "mrow",
+          "kind": "mrow",
+          "children": [
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "input": {
+        "name": "tilde",
+        "category": "supported",
+        "operation": "method",
+        "source": "\\DRefObserve{t}TAIL",
+        "command": "ref",
+        "eqref": false,
+        "tag": "a~b",
+        "id": "mjx-eqn:t",
+        "macroCount": 999,
+        "font": "",
+        "label": "t"
+      },
+      "nodes": [
+        {
+          "kind": "mrow",
+          "text": null,
+          "attributes": {
+            "href": "#mjx-eqn%3At",
+            "class": "MathJax_ref"
+          },
+          "properties": {},
+          "children": [
+            {
+              "kind": "mtext",
+              "text": null,
+              "attributes": {},
+              "properties": {},
+              "children": [
+                {
+                  "kind": "text",
+                  "text": "a~b",
+                  "attributes": {},
+                  "properties": {},
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "error": null,
+      "outer": {
+        "source": "\\DRefObserve{t}TAIL",
+        "cursorUTF16": 15,
+        "remaining": "TAIL",
+        "macroCount": 999,
+        "envBefore": {
+          "display": true
+        },
+        "envAfter": {
+          "display": true
+        },
+        "environmentIdentity": true,
+        "configurationIdentity": true,
+        "currentIdentity": true,
+        "labelsIdentity": true,
+        "factoryIdentity": true,
+        "colorIdentity": true,
+        "lateColor": "late",
+        "selectedReferenceIdentity": 6,
+        "selectedReferenceAfter": {
+          "tag": "a~b",
+          "id": "mjx-eqn:t"
+        }
+      },
+      "parents": true,
+      "before": {
+        "tags": 1,
+        "configuration": 2,
+        "factory": 3,
+        "currentTag": {
+          "identity": 4,
+          "env": "",
+          "taggable": false,
+          "defaultTags": false,
+          "tag": null,
+          "tagId": "",
+          "tagFormat": "",
+          "noTag": false,
+          "labelId": ""
+        },
+        "labelsIdentity": 5,
+        "labels": [
+          {
+            "name": "t",
+            "identity": 6,
+            "tag": "a~b",
+            "id": "mjx-eqn:t"
+          }
+        ],
+        "allLabelsIdentity": 7,
+        "allLabels": [],
+        "stackIdentity": 8,
+        "stack": [],
+        "historyIdentity": 9,
+        "history": [],
+        "redo": false,
+        "refUpdate": false,
+        "counter": 0,
+        "allCounter": 0
+      },
+      "after": {
+        "tags": 1,
+        "configuration": 2,
+        "factory": 3,
+        "currentTag": {
+          "identity": 4,
+          "env": "",
+          "taggable": false,
+          "defaultTags": false,
+          "tag": null,
+          "tagId": "",
+          "tagFormat": "",
+          "noTag": false,
+          "labelId": ""
+        },
+        "labelsIdentity": 5,
+        "labels": [
+          {
+            "name": "t",
+            "identity": 6,
+            "tag": "a~b",
+            "id": "mjx-eqn:t"
+          }
+        ],
+        "allLabelsIdentity": 7,
+        "allLabels": [],
+        "stackIdentity": 8,
+        "stack": [],
+        "historyIdentity": 9,
+        "history": [],
+        "redo": false,
+        "refUpdate": false,
+        "counter": 0,
+        "allCounter": 0
+      },
+      "made": [
+        {
+          "identity": 10,
+          "requestKind": "text",
+          "requestedType": "a~b",
+          "kind": "text",
+          "children": []
+        },
+        {
+          "identity": 11,
+          "requestKind": "node",
+          "requestedType": "mtext",
+          "kind": "mtext",
+          "children": [
+            10
+          ]
+        },
+        {
+          "identity": 12,
+          "requestKind": "node",
+          "requestedType": "mrow",
+          "kind": "mrow",
+          "children": [
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "input": {
+        "name": "edge-space",
+        "category": "supported",
+        "operation": "method",
+        "source": "\\DRefObserve{t}TAIL",
+        "command": "ref",
+        "eqref": false,
+        "tag": " a  b ",
+        "id": "mjx-eqn:t",
+        "macroCount": 999,
+        "font": "",
+        "label": "t"
+      },
+      "nodes": [
+        {
+          "kind": "mrow",
+          "text": null,
+          "attributes": {
+            "href": "#mjx-eqn%3At",
+            "class": "MathJax_ref"
+          },
+          "properties": {},
+          "children": [
+            {
+              "kind": "mtext",
+              "text": null,
+              "attributes": {},
+              "properties": {},
+              "children": [
+                {
+                  "kind": "text",
+                  "text": " a  b ",
+                  "attributes": {},
+                  "properties": {},
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "error": null,
+      "outer": {
+        "source": "\\DRefObserve{t}TAIL",
+        "cursorUTF16": 15,
+        "remaining": "TAIL",
+        "macroCount": 999,
+        "envBefore": {
+          "display": true
+        },
+        "envAfter": {
+          "display": true
+        },
+        "environmentIdentity": true,
+        "configurationIdentity": true,
+        "currentIdentity": true,
+        "labelsIdentity": true,
+        "factoryIdentity": true,
+        "colorIdentity": true,
+        "lateColor": "late",
+        "selectedReferenceIdentity": 6,
+        "selectedReferenceAfter": {
+          "tag": " a  b ",
+          "id": "mjx-eqn:t"
+        }
+      },
+      "parents": true,
+      "before": {
+        "tags": 1,
+        "configuration": 2,
+        "factory": 3,
+        "currentTag": {
+          "identity": 4,
+          "env": "",
+          "taggable": false,
+          "defaultTags": false,
+          "tag": null,
+          "tagId": "",
+          "tagFormat": "",
+          "noTag": false,
+          "labelId": ""
+        },
+        "labelsIdentity": 5,
+        "labels": [
+          {
+            "name": "t",
+            "identity": 6,
+            "tag": " a  b ",
+            "id": "mjx-eqn:t"
+          }
+        ],
+        "allLabelsIdentity": 7,
+        "allLabels": [],
+        "stackIdentity": 8,
+        "stack": [],
+        "historyIdentity": 9,
+        "history": [],
+        "redo": false,
+        "refUpdate": false,
+        "counter": 0,
+        "allCounter": 0
+      },
+      "after": {
+        "tags": 1,
+        "configuration": 2,
+        "factory": 3,
+        "currentTag": {
+          "identity": 4,
+          "env": "",
+          "taggable": false,
+          "defaultTags": false,
+          "tag": null,
+          "tagId": "",
+          "tagFormat": "",
+          "noTag": false,
+          "labelId": ""
+        },
+        "labelsIdentity": 5,
+        "labels": [
+          {
+            "name": "t",
+            "identity": 6,
+            "tag": " a  b ",
+            "id": "mjx-eqn:t"
+          }
+        ],
+        "allLabelsIdentity": 7,
+        "allLabels": [],
+        "stackIdentity": 8,
+        "stack": [],
+        "historyIdentity": 9,
+        "history": [],
+        "redo": false,
+        "refUpdate": false,
+        "counter": 0,
+        "allCounter": 0
+      },
+      "made": [
+        {
+          "identity": 10,
+          "requestKind": "text",
+          "requestedType": " a  b ",
+          "kind": "text",
+          "children": []
+        },
+        {
+          "identity": 11,
+          "requestKind": "node",
+          "requestedType": "mtext",
+          "kind": "mtext",
+          "children": [
+            10
+          ]
+        },
+        {
+          "identity": 12,
+          "requestKind": "node",
+          "requestedType": "mrow",
+          "kind": "mrow",
+          "children": [
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "input": {
+        "name": "mixed-math",
+        "category": "supported",
+        "operation": "method",
+        "source": "\\DRefObserve{t}TAIL",
+        "command": "ref",
+        "eqref": false,
+        "tag": "a $y$ b",
+        "id": "mjx-eqn:t",
+        "macroCount": 999,
+        "font": "",
+        "label": "t"
+      },
+      "nodes": [
+        {
+          "kind": "mrow",
+          "text": null,
+          "attributes": {
+            "href": "#mjx-eqn%3At",
+            "class": "MathJax_ref"
+          },
+          "properties": {},
+          "children": [
+            {
+              "kind": "mrow",
+              "text": null,
+              "attributes": {},
+              "properties": {},
+              "children": [
+                {
+                  "kind": "mtext",
+                  "text": null,
+                  "attributes": {},
+                  "properties": {},
+                  "children": [
+                    {
+                      "kind": "text",
+                      "text": "a ",
+                      "attributes": {},
+                      "properties": {},
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "kind": "TeXAtom",
+                  "text": null,
+                  "attributes": {},
+                  "properties": {
+                    "texClass": 0
+                  },
+                  "children": [
+                    {
+                      "kind": "inferredMrow",
+                      "text": null,
+                      "attributes": {},
+                      "properties": {},
+                      "children": [
+                        {
+                          "kind": "mi",
+                          "text": null,
+                          "attributes": {},
+                          "properties": {},
+                          "children": [
+                            {
+                              "kind": "text",
+                              "text": "y",
+                              "attributes": {},
+                              "properties": {},
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "kind": "mtext",
+                  "text": null,
+                  "attributes": {},
+                  "properties": {},
+                  "children": [
+                    {
+                      "kind": "text",
+                      "text": " b",
+                      "attributes": {},
+                      "properties": {},
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "error": null,
+      "outer": {
+        "source": "\\DRefObserve{t}TAIL",
+        "cursorUTF16": 15,
+        "remaining": "TAIL",
+        "macroCount": 999,
+        "envBefore": {
+          "display": true
+        },
+        "envAfter": {
+          "display": true
+        },
+        "environmentIdentity": true,
+        "configurationIdentity": true,
+        "currentIdentity": true,
+        "labelsIdentity": true,
+        "factoryIdentity": true,
+        "colorIdentity": true,
+        "lateColor": "late",
+        "selectedReferenceIdentity": 6,
+        "selectedReferenceAfter": {
+          "tag": "a $y$ b",
+          "id": "mjx-eqn:t"
+        }
+      },
+      "parents": true,
+      "before": {
+        "tags": 1,
+        "configuration": 2,
+        "factory": 3,
+        "currentTag": {
+          "identity": 4,
+          "env": "",
+          "taggable": false,
+          "defaultTags": false,
+          "tag": null,
+          "tagId": "",
+          "tagFormat": "",
+          "noTag": false,
+          "labelId": ""
+        },
+        "labelsIdentity": 5,
+        "labels": [
+          {
+            "name": "t",
+            "identity": 6,
+            "tag": "a $y$ b",
+            "id": "mjx-eqn:t"
+          }
+        ],
+        "allLabelsIdentity": 7,
+        "allLabels": [],
+        "stackIdentity": 8,
+        "stack": [],
+        "historyIdentity": 9,
+        "history": [],
+        "redo": false,
+        "refUpdate": false,
+        "counter": 0,
+        "allCounter": 0
+      },
+      "after": {
+        "tags": 1,
+        "configuration": 2,
+        "factory": 3,
+        "currentTag": {
+          "identity": 4,
+          "env": "",
+          "taggable": false,
+          "defaultTags": false,
+          "tag": null,
+          "tagId": "",
+          "tagFormat": "",
+          "noTag": false,
+          "labelId": ""
+        },
+        "labelsIdentity": 5,
+        "labels": [
+          {
+            "name": "t",
+            "identity": 6,
+            "tag": "a $y$ b",
+            "id": "mjx-eqn:t"
+          }
+        ],
+        "allLabelsIdentity": 7,
+        "allLabels": [],
+        "stackIdentity": 8,
+        "stack": [],
+        "historyIdentity": 9,
+        "history": [],
+        "redo": false,
+        "refUpdate": false,
+        "counter": 0,
+        "allCounter": 0
+      },
+      "made": [
+        {
+          "identity": 10,
+          "requestKind": "text",
+          "requestedType": "a ",
+          "kind": "text",
+          "children": []
+        },
+        {
+          "identity": 11,
+          "requestKind": "node",
+          "requestedType": "mtext",
+          "kind": "mtext",
+          "children": [
+            10
+          ]
+        },
+        {
+          "identity": 12,
+          "requestKind": "text",
+          "requestedType": "y",
+          "kind": "text",
+          "children": []
+        },
+        {
+          "identity": 13,
+          "requestKind": "node",
+          "requestedType": "mi",
+          "kind": "mi",
+          "children": [
+            12
+          ]
+        },
+        {
+          "identity": 13,
+          "requestKind": "token",
+          "requestedType": "mi",
+          "kind": "mi",
+          "children": [
+            12
+          ]
+        },
+        {
+          "identity": 14,
+          "requestKind": "node",
+          "requestedType": "TeXAtom",
+          "kind": "TeXAtom",
+          "children": [
+            15
+          ]
+        },
+        {
+          "identity": 16,
+          "requestKind": "text",
+          "requestedType": " b",
+          "kind": "text",
+          "children": []
+        },
+        {
+          "identity": 17,
+          "requestKind": "node",
+          "requestedType": "mtext",
+          "kind": "mtext",
+          "children": [
+            16
+          ]
+        },
+        {
+          "identity": 18,
+          "requestKind": "node",
+          "requestedType": "mrow",
+          "kind": "mrow",
+          "children": [
+            11,
+            14,
+            17
+          ]
+        },
+        {
+          "identity": 19,
+          "requestKind": "node",
+          "requestedType": "mrow",
+          "kind": "mrow",
+          "children": [
+            18
+          ]
+        }
+      ]
+    },
+    {
+      "input": {
+        "name": "math-only",
+        "category": "supported",
+        "operation": "method",
+        "source": "\\DRefObserve{t}TAIL",
+        "command": "ref",
+        "eqref": false,
+        "tag": "$y$",
+        "id": "mjx-eqn:t",
+        "macroCount": 999,
+        "font": "",
+        "label": "t"
+      },
+      "nodes": [
+        {
+          "kind": "mrow",
+          "text": null,
+          "attributes": {
+            "href": "#mjx-eqn%3At",
+            "class": "MathJax_ref"
+          },
+          "properties": {},
+          "children": [
+            {
+              "kind": "TeXAtom",
+              "text": null,
+              "attributes": {},
+              "properties": {
+                "texClass": 0
+              },
+              "children": [
+                {
+                  "kind": "inferredMrow",
+                  "text": null,
+                  "attributes": {},
+                  "properties": {},
+                  "children": [
+                    {
+                      "kind": "mi",
+                      "text": null,
+                      "attributes": {},
+                      "properties": {},
+                      "children": [
+                        {
+                          "kind": "text",
+                          "text": "y",
+                          "attributes": {},
+                          "properties": {},
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "error": null,
+      "outer": {
+        "source": "\\DRefObserve{t}TAIL",
+        "cursorUTF16": 15,
+        "remaining": "TAIL",
+        "macroCount": 999,
+        "envBefore": {
+          "display": true
+        },
+        "envAfter": {
+          "display": true
+        },
+        "environmentIdentity": true,
+        "configurationIdentity": true,
+        "currentIdentity": true,
+        "labelsIdentity": true,
+        "factoryIdentity": true,
+        "colorIdentity": true,
+        "lateColor": "late",
+        "selectedReferenceIdentity": 6,
+        "selectedReferenceAfter": {
+          "tag": "$y$",
+          "id": "mjx-eqn:t"
+        }
+      },
+      "parents": true,
+      "before": {
+        "tags": 1,
+        "configuration": 2,
+        "factory": 3,
+        "currentTag": {
+          "identity": 4,
+          "env": "",
+          "taggable": false,
+          "defaultTags": false,
+          "tag": null,
+          "tagId": "",
+          "tagFormat": "",
+          "noTag": false,
+          "labelId": ""
+        },
+        "labelsIdentity": 5,
+        "labels": [
+          {
+            "name": "t",
+            "identity": 6,
+            "tag": "$y$",
+            "id": "mjx-eqn:t"
+          }
+        ],
+        "allLabelsIdentity": 7,
+        "allLabels": [],
+        "stackIdentity": 8,
+        "stack": [],
+        "historyIdentity": 9,
+        "history": [],
+        "redo": false,
+        "refUpdate": false,
+        "counter": 0,
+        "allCounter": 0
+      },
+      "after": {
+        "tags": 1,
+        "configuration": 2,
+        "factory": 3,
+        "currentTag": {
+          "identity": 4,
+          "env": "",
+          "taggable": false,
+          "defaultTags": false,
+          "tag": null,
+          "tagId": "",
+          "tagFormat": "",
+          "noTag": false,
+          "labelId": ""
+        },
+        "labelsIdentity": 5,
+        "labels": [
+          {
+            "name": "t",
+            "identity": 6,
+            "tag": "$y$",
+            "id": "mjx-eqn:t"
+          }
+        ],
+        "allLabelsIdentity": 7,
+        "allLabels": [],
+        "stackIdentity": 8,
+        "stack": [],
+        "historyIdentity": 9,
+        "history": [],
+        "redo": false,
+        "refUpdate": false,
+        "counter": 0,
+        "allCounter": 0
+      },
+      "made": [
+        {
+          "identity": 10,
+          "requestKind": "text",
+          "requestedType": "y",
+          "kind": "text",
+          "children": []
+        },
+        {
+          "identity": 11,
+          "requestKind": "node",
+          "requestedType": "mi",
+          "kind": "mi",
+          "children": [
+            10
+          ]
+        },
+        {
+          "identity": 11,
+          "requestKind": "token",
+          "requestedType": "mi",
+          "kind": "mi",
+          "children": [
+            10
+          ]
+        },
+        {
+          "identity": 12,
+          "requestKind": "node",
+          "requestedType": "TeXAtom",
+          "kind": "TeXAtom",
+          "children": [
+            13
+          ]
+        },
+        {
+          "identity": 14,
+          "requestKind": "node",
+          "requestedType": "mrow",
+          "kind": "mrow",
+          "children": [
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "input": {
+        "name": "escaped-dollar",
+        "category": "supported",
+        "operation": "method",
+        "source": "\\DRefObserve{t}TAIL",
+        "command": "ref",
+        "eqref": false,
+        "tag": "a\\$b",
+        "id": "mjx-eqn:t",
+        "macroCount": 999,
+        "font": "",
+        "label": "t"
+      },
+      "nodes": [
+        {
+          "kind": "mrow",
+          "text": null,
+          "attributes": {
+            "href": "#mjx-eqn%3At",
+            "class": "MathJax_ref"
+          },
+          "properties": {},
+          "children": [
+            {
+              "kind": "mtext",
+              "text": null,
+              "attributes": {},
+              "properties": {},
+              "children": [
+                {
+                  "kind": "text",
+                  "text": "a$b",
+                  "attributes": {},
+                  "properties": {},
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "error": null,
+      "outer": {
+        "source": "\\DRefObserve{t}TAIL",
+        "cursorUTF16": 15,
+        "remaining": "TAIL",
+        "macroCount": 999,
+        "envBefore": {
+          "display": true
+        },
+        "envAfter": {
+          "display": true
+        },
+        "environmentIdentity": true,
+        "configurationIdentity": true,
+        "currentIdentity": true,
+        "labelsIdentity": true,
+        "factoryIdentity": true,
+        "colorIdentity": true,
+        "lateColor": "late",
+        "selectedReferenceIdentity": 6,
+        "selectedReferenceAfter": {
+          "tag": "a\\$b",
+          "id": "mjx-eqn:t"
+        }
+      },
+      "parents": true,
+      "before": {
+        "tags": 1,
+        "configuration": 2,
+        "factory": 3,
+        "currentTag": {
+          "identity": 4,
+          "env": "",
+          "taggable": false,
+          "defaultTags": false,
+          "tag": null,
+          "tagId": "",
+          "tagFormat": "",
+          "noTag": false,
+          "labelId": ""
+        },
+        "labelsIdentity": 5,
+        "labels": [
+          {
+            "name": "t",
+            "identity": 6,
+            "tag": "a\\$b",
+            "id": "mjx-eqn:t"
+          }
+        ],
+        "allLabelsIdentity": 7,
+        "allLabels": [],
+        "stackIdentity": 8,
+        "stack": [],
+        "historyIdentity": 9,
+        "history": [],
+        "redo": false,
+        "refUpdate": false,
+        "counter": 0,
+        "allCounter": 0
+      },
+      "after": {
+        "tags": 1,
+        "configuration": 2,
+        "factory": 3,
+        "currentTag": {
+          "identity": 4,
+          "env": "",
+          "taggable": false,
+          "defaultTags": false,
+          "tag": null,
+          "tagId": "",
+          "tagFormat": "",
+          "noTag": false,
+          "labelId": ""
+        },
+        "labelsIdentity": 5,
+        "labels": [
+          {
+            "name": "t",
+            "identity": 6,
+            "tag": "a\\$b",
+            "id": "mjx-eqn:t"
+          }
+        ],
+        "allLabelsIdentity": 7,
+        "allLabels": [],
+        "stackIdentity": 8,
+        "stack": [],
+        "historyIdentity": 9,
+        "history": [],
+        "redo": false,
+        "refUpdate": false,
+        "counter": 0,
+        "allCounter": 0
+      },
+      "made": [
+        {
+          "identity": 10,
+          "requestKind": "text",
+          "requestedType": "a$b",
+          "kind": "text",
+          "children": []
+        },
+        {
+          "identity": 11,
+          "requestKind": "node",
+          "requestedType": "mtext",
+          "kind": "mtext",
+          "children": [
+            10
+          ]
+        },
+        {
+          "identity": 12,
+          "requestKind": "node",
+          "requestedType": "mrow",
+          "kind": "mrow",
+          "children": [
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "input": {
+        "name": "caller-font",
+        "category": "supported",
+        "operation": "method",
+        "source": "\\DRefObserve{t}TAIL",
+        "command": "ref",
+        "eqref": false,
+        "tag": "a $y$ b",
+        "id": "mjx-eqn:t",
+        "macroCount": 999,
+        "font": "bold",
+        "label": "t"
+      },
+      "nodes": [
+        {
+          "kind": "mrow",
+          "text": null,
+          "attributes": {
+            "href": "#mjx-eqn%3At",
+            "class": "MathJax_ref"
+          },
+          "properties": {},
+          "children": [
+            {
+              "kind": "mrow",
+              "text": null,
+              "attributes": {},
+              "properties": {},
+              "children": [
+                {
+                  "kind": "mtext",
+                  "text": null,
+                  "attributes": {
+                    "mathvariant": "bold"
+                  },
+                  "properties": {},
+                  "children": [
+                    {
+                      "kind": "text",
+                      "text": "a ",
+                      "attributes": {},
+                      "properties": {},
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "kind": "TeXAtom",
+                  "text": null,
+                  "attributes": {},
+                  "properties": {
+                    "texClass": 0
+                  },
+                  "children": [
+                    {
+                      "kind": "inferredMrow",
+                      "text": null,
+                      "attributes": {},
+                      "properties": {},
+                      "children": [
+                        {
+                          "kind": "mi",
+                          "text": null,
+                          "attributes": {},
+                          "properties": {},
+                          "children": [
+                            {
+                              "kind": "text",
+                              "text": "y",
+                              "attributes": {},
+                              "properties": {},
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "kind": "mtext",
+                  "text": null,
+                  "attributes": {
+                    "mathvariant": "bold"
+                  },
+                  "properties": {},
+                  "children": [
+                    {
+                      "kind": "text",
+                      "text": " b",
+                      "attributes": {},
+                      "properties": {},
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "error": null,
+      "outer": {
+        "source": "\\DRefObserve{t}TAIL",
+        "cursorUTF16": 15,
+        "remaining": "TAIL",
+        "macroCount": 999,
+        "envBefore": {
+          "display": true,
+          "font": "bold"
+        },
+        "envAfter": {
+          "display": true,
+          "font": "bold"
+        },
+        "environmentIdentity": true,
+        "configurationIdentity": true,
+        "currentIdentity": true,
+        "labelsIdentity": true,
+        "factoryIdentity": true,
+        "colorIdentity": true,
+        "lateColor": "late",
+        "selectedReferenceIdentity": 6,
+        "selectedReferenceAfter": {
+          "tag": "a $y$ b",
+          "id": "mjx-eqn:t"
+        }
+      },
+      "parents": true,
+      "before": {
+        "tags": 1,
+        "configuration": 2,
+        "factory": 3,
+        "currentTag": {
+          "identity": 4,
+          "env": "",
+          "taggable": false,
+          "defaultTags": false,
+          "tag": null,
+          "tagId": "",
+          "tagFormat": "",
+          "noTag": false,
+          "labelId": ""
+        },
+        "labelsIdentity": 5,
+        "labels": [
+          {
+            "name": "t",
+            "identity": 6,
+            "tag": "a $y$ b",
+            "id": "mjx-eqn:t"
+          }
+        ],
+        "allLabelsIdentity": 7,
+        "allLabels": [],
+        "stackIdentity": 8,
+        "stack": [],
+        "historyIdentity": 9,
+        "history": [],
+        "redo": false,
+        "refUpdate": false,
+        "counter": 0,
+        "allCounter": 0
+      },
+      "after": {
+        "tags": 1,
+        "configuration": 2,
+        "factory": 3,
+        "currentTag": {
+          "identity": 4,
+          "env": "",
+          "taggable": false,
+          "defaultTags": false,
+          "tag": null,
+          "tagId": "",
+          "tagFormat": "",
+          "noTag": false,
+          "labelId": ""
+        },
+        "labelsIdentity": 5,
+        "labels": [
+          {
+            "name": "t",
+            "identity": 6,
+            "tag": "a $y$ b",
+            "id": "mjx-eqn:t"
+          }
+        ],
+        "allLabelsIdentity": 7,
+        "allLabels": [],
+        "stackIdentity": 8,
+        "stack": [],
+        "historyIdentity": 9,
+        "history": [],
+        "redo": false,
+        "refUpdate": false,
+        "counter": 0,
+        "allCounter": 0
+      },
+      "made": [
+        {
+          "identity": 10,
+          "requestKind": "text",
+          "requestedType": "a ",
+          "kind": "text",
+          "children": []
+        },
+        {
+          "identity": 11,
+          "requestKind": "node",
+          "requestedType": "mtext",
+          "kind": "mtext",
+          "children": [
+            10
+          ]
+        },
+        {
+          "identity": 12,
+          "requestKind": "text",
+          "requestedType": "y",
+          "kind": "text",
+          "children": []
+        },
+        {
+          "identity": 13,
+          "requestKind": "node",
+          "requestedType": "mi",
+          "kind": "mi",
+          "children": [
+            12
+          ]
+        },
+        {
+          "identity": 13,
+          "requestKind": "token",
+          "requestedType": "mi",
+          "kind": "mi",
+          "children": [
+            12
+          ]
+        },
+        {
+          "identity": 14,
+          "requestKind": "node",
+          "requestedType": "TeXAtom",
+          "kind": "TeXAtom",
+          "children": [
+            15
+          ]
+        },
+        {
+          "identity": 16,
+          "requestKind": "text",
+          "requestedType": " b",
+          "kind": "text",
+          "children": []
+        },
+        {
+          "identity": 17,
+          "requestKind": "node",
+          "requestedType": "mtext",
+          "kind": "mtext",
+          "children": [
+            16
+          ]
+        },
+        {
+          "identity": 18,
+          "requestKind": "node",
+          "requestedType": "mrow",
+          "kind": "mrow",
+          "children": [
+            11,
+            14,
+            17
+          ]
+        },
+        {
+          "identity": 19,
+          "requestKind": "node",
+          "requestedType": "mrow",
+          "kind": "mrow",
+          "children": [
+            18
+          ]
+        }
+      ]
+    },
+    {
+      "input": {
+        "name": "eqref",
+        "category": "supported",
+        "operation": "method",
+        "source": "\\DRefObserve{t}TAIL",
+        "command": "eqref",
+        "eqref": true,
+        "tag": "T",
+        "id": "mjx-eqn:t",
+        "macroCount": 999,
+        "font": "",
+        "label": "t"
+      },
+      "nodes": [
+        {
+          "kind": "mrow",
+          "text": null,
+          "attributes": {
+            "href": "#mjx-eqn%3At",
+            "class": "MathJax_ref"
+          },
+          "properties": {},
+          "children": [
+            {
+              "kind": "mtext",
+              "text": null,
+              "attributes": {},
+              "properties": {},
+              "children": [
+                {
+                  "kind": "text",
+                  "text": "(T)",
+                  "attributes": {},
+                  "properties": {},
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "error": null,
+      "outer": {
+        "source": "\\DRefObserve{t}TAIL",
+        "cursorUTF16": 15,
+        "remaining": "TAIL",
+        "macroCount": 999,
+        "envBefore": {
+          "display": true
+        },
+        "envAfter": {
+          "display": true
+        },
+        "environmentIdentity": true,
+        "configurationIdentity": true,
+        "currentIdentity": true,
+        "labelsIdentity": true,
+        "factoryIdentity": true,
+        "colorIdentity": true,
+        "lateColor": "late",
+        "selectedReferenceIdentity": 6,
+        "selectedReferenceAfter": {
+          "tag": "T",
+          "id": "mjx-eqn:t"
+        }
+      },
+      "parents": true,
+      "before": {
+        "tags": 1,
+        "configuration": 2,
+        "factory": 3,
+        "currentTag": {
+          "identity": 4,
+          "env": "",
+          "taggable": false,
+          "defaultTags": false,
+          "tag": null,
+          "tagId": "",
+          "tagFormat": "",
+          "noTag": false,
+          "labelId": ""
+        },
+        "labelsIdentity": 5,
+        "labels": [
+          {
+            "name": "t",
+            "identity": 6,
+            "tag": "T",
+            "id": "mjx-eqn:t"
+          }
+        ],
+        "allLabelsIdentity": 7,
+        "allLabels": [],
+        "stackIdentity": 8,
+        "stack": [],
+        "historyIdentity": 9,
+        "history": [],
+        "redo": false,
+        "refUpdate": false,
+        "counter": 0,
+        "allCounter": 0
+      },
+      "after": {
+        "tags": 1,
+        "configuration": 2,
+        "factory": 3,
+        "currentTag": {
+          "identity": 4,
+          "env": "",
+          "taggable": false,
+          "defaultTags": false,
+          "tag": null,
+          "tagId": "",
+          "tagFormat": "",
+          "noTag": false,
+          "labelId": ""
+        },
+        "labelsIdentity": 5,
+        "labels": [
+          {
+            "name": "t",
+            "identity": 6,
+            "tag": "T",
+            "id": "mjx-eqn:t"
+          }
+        ],
+        "allLabelsIdentity": 7,
+        "allLabels": [],
+        "stackIdentity": 8,
+        "stack": [],
+        "historyIdentity": 9,
+        "history": [],
+        "redo": false,
+        "refUpdate": false,
+        "counter": 0,
+        "allCounter": 0
+      },
+      "made": [
+        {
+          "identity": 10,
+          "requestKind": "text",
+          "requestedType": "(T)",
+          "kind": "text",
+          "children": []
+        },
+        {
+          "identity": 11,
+          "requestKind": "node",
+          "requestedType": "mtext",
+          "kind": "mtext",
+          "children": [
+            10
+          ]
+        },
+        {
+          "identity": 12,
+          "requestKind": "node",
+          "requestedType": "mrow",
+          "kind": "mrow",
+          "children": [
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "input": {
+        "name": "nested-reference",
+        "category": "supported",
+        "operation": "method",
+        "source": "\\DRefObserve{t}TAIL",
+        "command": "ref",
+        "eqref": false,
+        "tag": "a \\ref{u} b",
+        "id": "mjx-eqn:t",
+        "macroCount": 999,
+        "font": "",
+        "label": "t",
+        "secondary": {
+          "tag": "U",
+          "id": "mjx-eqn:u"
+        }
+      },
+      "nodes": [
+        {
+          "kind": "mrow",
+          "text": null,
+          "attributes": {
+            "href": "#mjx-eqn%3At",
+            "class": "MathJax_ref"
+          },
+          "properties": {},
+          "children": [
+            {
+              "kind": "mrow",
+              "text": null,
+              "attributes": {},
+              "properties": {},
+              "children": [
+                {
+                  "kind": "mtext",
+                  "text": null,
+                  "attributes": {},
+                  "properties": {},
+                  "children": [
+                    {
+                      "kind": "text",
+                      "text": "a ",
+                      "attributes": {},
+                      "properties": {},
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "kind": "TeXAtom",
+                  "text": null,
+                  "attributes": {},
+                  "properties": {
+                    "texClass": 0
+                  },
+                  "children": [
+                    {
+                      "kind": "inferredMrow",
+                      "text": null,
+                      "attributes": {},
+                      "properties": {},
+                      "children": [
+                        {
+                          "kind": "mrow",
+                          "text": null,
+                          "attributes": {
+                            "href": "#mjx-eqn%3Au",
+                            "class": "MathJax_ref"
+                          },
+                          "properties": {},
+                          "children": [
+                            {
+                              "kind": "mtext",
+                              "text": null,
+                              "attributes": {},
+                              "properties": {},
+                              "children": [
+                                {
+                                  "kind": "text",
+                                  "text": "U",
+                                  "attributes": {},
+                                  "properties": {},
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "kind": "mtext",
+                  "text": null,
+                  "attributes": {},
+                  "properties": {},
+                  "children": [
+                    {
+                      "kind": "text",
+                      "text": " b",
+                      "attributes": {},
+                      "properties": {},
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "error": null,
+      "outer": {
+        "source": "\\DRefObserve{t}TAIL",
+        "cursorUTF16": 15,
+        "remaining": "TAIL",
+        "macroCount": 999,
+        "envBefore": {
+          "display": true
+        },
+        "envAfter": {
+          "display": true
+        },
+        "environmentIdentity": true,
+        "configurationIdentity": true,
+        "currentIdentity": true,
+        "labelsIdentity": true,
+        "factoryIdentity": true,
+        "colorIdentity": true,
+        "lateColor": "late",
+        "selectedReferenceIdentity": 6,
+        "selectedReferenceAfter": {
+          "tag": "a \\ref{u} b",
+          "id": "mjx-eqn:t"
+        }
+      },
+      "parents": true,
+      "before": {
+        "tags": 1,
+        "configuration": 2,
+        "factory": 3,
+        "currentTag": {
+          "identity": 4,
+          "env": "",
+          "taggable": false,
+          "defaultTags": false,
+          "tag": null,
+          "tagId": "",
+          "tagFormat": "",
+          "noTag": false,
+          "labelId": ""
+        },
+        "labelsIdentity": 5,
+        "labels": [
+          {
+            "name": "t",
+            "identity": 6,
+            "tag": "a \\ref{u} b",
+            "id": "mjx-eqn:t"
+          },
+          {
+            "name": "u",
+            "identity": 7,
+            "tag": "U",
+            "id": "mjx-eqn:u"
+          }
+        ],
+        "allLabelsIdentity": 8,
+        "allLabels": [],
+        "stackIdentity": 9,
+        "stack": [],
+        "historyIdentity": 10,
+        "history": [],
+        "redo": false,
+        "refUpdate": false,
+        "counter": 0,
+        "allCounter": 0
+      },
+      "after": {
+        "tags": 1,
+        "configuration": 2,
+        "factory": 3,
+        "currentTag": {
+          "identity": 4,
+          "env": "",
+          "taggable": false,
+          "defaultTags": false,
+          "tag": null,
+          "tagId": "",
+          "tagFormat": "",
+          "noTag": false,
+          "labelId": ""
+        },
+        "labelsIdentity": 5,
+        "labels": [
+          {
+            "name": "t",
+            "identity": 6,
+            "tag": "a \\ref{u} b",
+            "id": "mjx-eqn:t"
+          },
+          {
+            "name": "u",
+            "identity": 7,
+            "tag": "U",
+            "id": "mjx-eqn:u"
+          }
+        ],
+        "allLabelsIdentity": 8,
+        "allLabels": [],
+        "stackIdentity": 9,
+        "stack": [],
+        "historyIdentity": 10,
+        "history": [],
+        "redo": false,
+        "refUpdate": false,
+        "counter": 0,
+        "allCounter": 0
+      },
+      "made": [
+        {
+          "identity": 11,
+          "requestKind": "text",
+          "requestedType": "a ",
+          "kind": "text",
+          "children": []
+        },
+        {
+          "identity": 12,
+          "requestKind": "node",
+          "requestedType": "mtext",
+          "kind": "mtext",
+          "children": [
+            11
+          ]
+        },
+        {
+          "identity": 13,
+          "requestKind": "text",
+          "requestedType": "U",
+          "kind": "text",
+          "children": []
+        },
+        {
+          "identity": 14,
+          "requestKind": "node",
+          "requestedType": "mtext",
+          "kind": "mtext",
+          "children": [
+            13
+          ]
+        },
+        {
+          "identity": 15,
+          "requestKind": "node",
+          "requestedType": "mrow",
+          "kind": "mrow",
+          "children": [
+            14
+          ]
+        },
+        {
+          "identity": 16,
+          "requestKind": "node",
+          "requestedType": "TeXAtom",
+          "kind": "TeXAtom",
+          "children": [
+            17
+          ]
+        },
+        {
+          "identity": 18,
+          "requestKind": "text",
+          "requestedType": " b",
+          "kind": "text",
+          "children": []
+        },
+        {
+          "identity": 19,
+          "requestKind": "node",
+          "requestedType": "mtext",
+          "kind": "mtext",
+          "children": [
+            18
+          ]
+        },
+        {
+          "identity": 20,
+          "requestKind": "node",
+          "requestedType": "mrow",
+          "kind": "mrow",
+          "children": [
+            12,
+            16,
+            19
+          ]
+        },
+        {
+          "identity": 21,
+          "requestKind": "node",
+          "requestedType": "mrow",
+          "kind": "mrow",
+          "children": [
+            20
+          ]
+        }
+      ]
+    },
+    {
+      "input": {
+        "name": "missing-argument",
+        "category": "supported",
+        "operation": "method",
+        "source": "\\DRefObserve",
+        "command": "ref",
+        "eqref": false,
+        "tag": "T",
+        "id": "mjx-eqn:t",
+        "macroCount": 999,
+        "font": "",
+        "label": "t"
+      },
+      "nodes": [],
+      "error": {
+        "id": "MissingArgFor",
+        "message": "Missing argument for \\DRefObserve"
+      },
+      "outer": {
+        "source": "\\DRefObserve",
+        "cursorUTF16": 12,
+        "remaining": "",
+        "macroCount": 999,
+        "envBefore": {
+          "display": true
+        },
+        "envAfter": {
+          "display": true
+        },
+        "environmentIdentity": true,
+        "configurationIdentity": true,
+        "currentIdentity": true,
+        "labelsIdentity": true,
+        "factoryIdentity": true,
+        "colorIdentity": true,
+        "lateColor": "late",
+        "selectedReferenceIdentity": 6,
+        "selectedReferenceAfter": {
+          "tag": "T",
+          "id": "mjx-eqn:t"
+        }
+      },
+      "parents": true,
+      "before": {
+        "tags": 1,
+        "configuration": 2,
+        "factory": 3,
+        "currentTag": {
+          "identity": 4,
+          "env": "",
+          "taggable": false,
+          "defaultTags": false,
+          "tag": null,
+          "tagId": "",
+          "tagFormat": "",
+          "noTag": false,
+          "labelId": ""
+        },
+        "labelsIdentity": 5,
+        "labels": [
+          {
+            "name": "t",
+            "identity": 6,
+            "tag": "T",
+            "id": "mjx-eqn:t"
+          }
+        ],
+        "allLabelsIdentity": 7,
+        "allLabels": [],
+        "stackIdentity": 8,
+        "stack": [],
+        "historyIdentity": 9,
+        "history": [],
+        "redo": false,
+        "refUpdate": false,
+        "counter": 0,
+        "allCounter": 0
+      },
+      "after": {
+        "tags": 1,
+        "configuration": 2,
+        "factory": 3,
+        "currentTag": {
+          "identity": 4,
+          "env": "",
+          "taggable": false,
+          "defaultTags": false,
+          "tag": null,
+          "tagId": "",
+          "tagFormat": "",
+          "noTag": false,
+          "labelId": ""
+        },
+        "labelsIdentity": 5,
+        "labels": [
+          {
+            "name": "t",
+            "identity": 6,
+            "tag": "T",
+            "id": "mjx-eqn:t"
+          }
+        ],
+        "allLabelsIdentity": 7,
+        "allLabels": [],
+        "stackIdentity": 8,
+        "stack": [],
+        "historyIdentity": 9,
+        "history": [],
+        "redo": false,
+        "refUpdate": false,
+        "counter": 0,
+        "allCounter": 0
+      },
+      "made": []
+    },
+    {
+      "input": {
+        "name": "unclosed-argument",
+        "category": "supported",
+        "operation": "method",
+        "source": "\\DRefObserve{t",
+        "command": "ref",
+        "eqref": false,
+        "tag": "T",
+        "id": "mjx-eqn:t",
+        "macroCount": 999,
+        "font": "",
+        "label": "t"
+      },
+      "nodes": [],
+      "error": {
+        "id": "MissingCloseBrace",
+        "message": "Missing close brace"
+      },
+      "outer": {
+        "source": "\\DRefObserve{t",
+        "cursorUTF16": 14,
+        "remaining": "",
+        "macroCount": 999,
+        "envBefore": {
+          "display": true
+        },
+        "envAfter": {
+          "display": true
+        },
+        "environmentIdentity": true,
+        "configurationIdentity": true,
+        "currentIdentity": true,
+        "labelsIdentity": true,
+        "factoryIdentity": true,
+        "colorIdentity": true,
+        "lateColor": "late",
+        "selectedReferenceIdentity": 6,
+        "selectedReferenceAfter": {
+          "tag": "T",
+          "id": "mjx-eqn:t"
+        }
+      },
+      "parents": true,
+      "before": {
+        "tags": 1,
+        "configuration": 2,
+        "factory": 3,
+        "currentTag": {
+          "identity": 4,
+          "env": "",
+          "taggable": false,
+          "defaultTags": false,
+          "tag": null,
+          "tagId": "",
+          "tagFormat": "",
+          "noTag": false,
+          "labelId": ""
+        },
+        "labelsIdentity": 5,
+        "labels": [
+          {
+            "name": "t",
+            "identity": 6,
+            "tag": "T",
+            "id": "mjx-eqn:t"
+          }
+        ],
+        "allLabelsIdentity": 7,
+        "allLabels": [],
+        "stackIdentity": 8,
+        "stack": [],
+        "historyIdentity": 9,
+        "history": [],
+        "redo": false,
+        "refUpdate": false,
+        "counter": 0,
+        "allCounter": 0
+      },
+      "after": {
+        "tags": 1,
+        "configuration": 2,
+        "factory": 3,
+        "currentTag": {
+          "identity": 4,
+          "env": "",
+          "taggable": false,
+          "defaultTags": false,
+          "tag": null,
+          "tagId": "",
+          "tagFormat": "",
+          "noTag": false,
+          "labelId": ""
+        },
+        "labelsIdentity": 5,
+        "labels": [
+          {
+            "name": "t",
+            "identity": 6,
+            "tag": "T",
+            "id": "mjx-eqn:t"
+          }
+        ],
+        "allLabelsIdentity": 7,
+        "allLabels": [],
+        "stackIdentity": 8,
+        "stack": [],
+        "historyIdentity": 9,
+        "history": [],
+        "redo": false,
+        "refUpdate": false,
+        "counter": 0,
+        "allCounter": 0
+      },
+      "made": []
+    },
+    {
+      "input": {
+        "name": "unterminated-math",
+        "category": "supported",
+        "operation": "method",
+        "source": "\\DRefObserve{t}TAIL",
+        "command": "ref",
+        "eqref": false,
+        "tag": "a $y",
+        "id": "mjx-eqn:t",
+        "macroCount": 999,
+        "font": "",
+        "label": "t"
+      },
+      "nodes": [],
+      "error": {
+        "id": "MathNotTerminated",
+        "message": "Math not terminated in text box"
+      },
+      "outer": {
+        "source": "\\DRefObserve{t}TAIL",
+        "cursorUTF16": 15,
+        "remaining": "TAIL",
+        "macroCount": 999,
+        "envBefore": {
+          "display": true
+        },
+        "envAfter": {
+          "display": true
+        },
+        "environmentIdentity": true,
+        "configurationIdentity": true,
+        "currentIdentity": true,
+        "labelsIdentity": true,
+        "factoryIdentity": true,
+        "colorIdentity": true,
+        "lateColor": "late",
+        "selectedReferenceIdentity": 6,
+        "selectedReferenceAfter": {
+          "tag": "a $y",
+          "id": "mjx-eqn:t"
+        }
+      },
+      "parents": true,
+      "before": {
+        "tags": 1,
+        "configuration": 2,
+        "factory": 3,
+        "currentTag": {
+          "identity": 4,
+          "env": "",
+          "taggable": false,
+          "defaultTags": false,
+          "tag": null,
+          "tagId": "",
+          "tagFormat": "",
+          "noTag": false,
+          "labelId": ""
+        },
+        "labelsIdentity": 5,
+        "labels": [
+          {
+            "name": "t",
+            "identity": 6,
+            "tag": "a $y",
+            "id": "mjx-eqn:t"
+          }
+        ],
+        "allLabelsIdentity": 7,
+        "allLabels": [],
+        "stackIdentity": 8,
+        "stack": [],
+        "historyIdentity": 9,
+        "history": [],
+        "redo": false,
+        "refUpdate": false,
+        "counter": 0,
+        "allCounter": 0
+      },
+      "after": {
+        "tags": 1,
+        "configuration": 2,
+        "factory": 3,
+        "currentTag": {
+          "identity": 4,
+          "env": "",
+          "taggable": false,
+          "defaultTags": false,
+          "tag": null,
+          "tagId": "",
+          "tagFormat": "",
+          "noTag": false,
+          "labelId": ""
+        },
+        "labelsIdentity": 5,
+        "labels": [
+          {
+            "name": "t",
+            "identity": 6,
+            "tag": "a $y",
+            "id": "mjx-eqn:t"
+          }
+        ],
+        "allLabelsIdentity": 7,
+        "allLabels": [],
+        "stackIdentity": 8,
+        "stack": [],
+        "historyIdentity": 9,
+        "history": [],
+        "redo": false,
+        "refUpdate": false,
+        "counter": 0,
+        "allCounter": 0
+      },
+      "made": [
+        {
+          "identity": 10,
+          "requestKind": "text",
+          "requestedType": "a ",
+          "kind": "text",
+          "children": []
+        },
+        {
+          "identity": 11,
+          "requestKind": "node",
+          "requestedType": "mtext",
+          "kind": "mtext",
+          "children": [
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "input": {
+        "name": "inner-undefined",
+        "category": "supported",
+        "operation": "method",
+        "source": "\\DRefObserve{t}TAIL",
+        "command": "ref",
+        "eqref": false,
+        "tag": "a $\\DRefUndefined$",
+        "id": "mjx-eqn:t",
+        "macroCount": 999,
+        "font": "",
+        "label": "t"
+      },
+      "nodes": [],
+      "error": {
+        "id": "UndefinedControlSequence",
+        "message": "Undefined control sequence \\DRefUndefined"
+      },
+      "outer": {
+        "source": "\\DRefObserve{t}TAIL",
+        "cursorUTF16": 15,
+        "remaining": "TAIL",
+        "macroCount": 999,
+        "envBefore": {
+          "display": true
+        },
+        "envAfter": {
+          "display": true
+        },
+        "environmentIdentity": true,
+        "configurationIdentity": true,
+        "currentIdentity": true,
+        "labelsIdentity": true,
+        "factoryIdentity": true,
+        "colorIdentity": true,
+        "lateColor": "late",
+        "selectedReferenceIdentity": 6,
+        "selectedReferenceAfter": {
+          "tag": "a $\\DRefUndefined$",
+          "id": "mjx-eqn:t"
+        }
+      },
+      "parents": true,
+      "before": {
+        "tags": 1,
+        "configuration": 2,
+        "factory": 3,
+        "currentTag": {
+          "identity": 4,
+          "env": "",
+          "taggable": false,
+          "defaultTags": false,
+          "tag": null,
+          "tagId": "",
+          "tagFormat": "",
+          "noTag": false,
+          "labelId": ""
+        },
+        "labelsIdentity": 5,
+        "labels": [
+          {
+            "name": "t",
+            "identity": 6,
+            "tag": "a $\\DRefUndefined$",
+            "id": "mjx-eqn:t"
+          }
+        ],
+        "allLabelsIdentity": 7,
+        "allLabels": [],
+        "stackIdentity": 8,
+        "stack": [],
+        "historyIdentity": 9,
+        "history": [],
+        "redo": false,
+        "refUpdate": false,
+        "counter": 0,
+        "allCounter": 0
+      },
+      "after": {
+        "tags": 1,
+        "configuration": 2,
+        "factory": 3,
+        "currentTag": {
+          "identity": 4,
+          "env": "",
+          "taggable": false,
+          "defaultTags": false,
+          "tag": null,
+          "tagId": "",
+          "tagFormat": "",
+          "noTag": false,
+          "labelId": ""
+        },
+        "labelsIdentity": 5,
+        "labels": [
+          {
+            "name": "t",
+            "identity": 6,
+            "tag": "a $\\DRefUndefined$",
+            "id": "mjx-eqn:t"
+          }
+        ],
+        "allLabelsIdentity": 7,
+        "allLabels": [],
+        "stackIdentity": 8,
+        "stack": [],
+        "historyIdentity": 9,
+        "history": [],
+        "redo": false,
+        "refUpdate": false,
+        "counter": 0,
+        "allCounter": 0
+      },
+      "made": [
+        {
+          "identity": 10,
+          "requestKind": "text",
+          "requestedType": "a ",
+          "kind": "text",
+          "children": []
+        },
+        {
+          "identity": 11,
+          "requestKind": "node",
+          "requestedType": "mtext",
+          "kind": "mtext",
+          "children": [
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "input": {
+        "name": "shared-macro",
+        "category": "supported",
+        "operation": "method",
+        "source": "\\DRefObserve{t}TAIL",
+        "command": "ref",
+        "eqref": false,
+        "tag": "a $\\dproof$ b",
+        "id": "mjx-eqn:t",
+        "macroCount": 999,
+        "font": "",
+        "label": "t",
+        "registration": {
+          "name": "dproof",
+          "body": "y",
+          "arguments": 0
+        }
+      },
+      "nodes": [
+        {
+          "kind": "mrow",
+          "text": null,
+          "attributes": {
+            "href": "#mjx-eqn%3At",
+            "class": "MathJax_ref"
+          },
+          "properties": {},
+          "children": [
+            {
+              "kind": "mrow",
+              "text": null,
+              "attributes": {},
+              "properties": {},
+              "children": [
+                {
+                  "kind": "mtext",
+                  "text": null,
+                  "attributes": {},
+                  "properties": {},
+                  "children": [
+                    {
+                      "kind": "text",
+                      "text": "a ",
+                      "attributes": {},
+                      "properties": {},
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "kind": "TeXAtom",
+                  "text": null,
+                  "attributes": {},
+                  "properties": {
+                    "texClass": 0
+                  },
+                  "children": [
+                    {
+                      "kind": "inferredMrow",
+                      "text": null,
+                      "attributes": {},
+                      "properties": {},
+                      "children": [
+                        {
+                          "kind": "mi",
+                          "text": null,
+                          "attributes": {},
+                          "properties": {},
+                          "children": [
+                            {
+                              "kind": "text",
+                              "text": "y",
+                              "attributes": {},
+                              "properties": {},
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "kind": "mtext",
+                  "text": null,
+                  "attributes": {},
+                  "properties": {},
+                  "children": [
+                    {
+                      "kind": "text",
+                      "text": " b",
+                      "attributes": {},
+                      "properties": {},
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "error": null,
+      "outer": {
+        "source": "\\DRefObserve{t}TAIL",
+        "cursorUTF16": 15,
+        "remaining": "TAIL",
+        "macroCount": 999,
+        "envBefore": {
+          "display": true
+        },
+        "envAfter": {
+          "display": true
+        },
+        "environmentIdentity": true,
+        "configurationIdentity": true,
+        "currentIdentity": true,
+        "labelsIdentity": true,
+        "factoryIdentity": true,
+        "colorIdentity": true,
+        "lateColor": "late",
+        "selectedReferenceIdentity": 6,
+        "selectedReferenceAfter": {
+          "tag": "a $\\dproof$ b",
+          "id": "mjx-eqn:t"
+        }
+      },
+      "parents": true,
+      "before": {
+        "tags": 1,
+        "configuration": 2,
+        "factory": 3,
+        "currentTag": {
+          "identity": 4,
+          "env": "",
+          "taggable": false,
+          "defaultTags": false,
+          "tag": null,
+          "tagId": "",
+          "tagFormat": "",
+          "noTag": false,
+          "labelId": ""
+        },
+        "labelsIdentity": 5,
+        "labels": [
+          {
+            "name": "t",
+            "identity": 6,
+            "tag": "a $\\dproof$ b",
+            "id": "mjx-eqn:t"
+          }
+        ],
+        "allLabelsIdentity": 7,
+        "allLabels": [],
+        "stackIdentity": 8,
+        "stack": [],
+        "historyIdentity": 9,
+        "history": [],
+        "redo": false,
+        "refUpdate": false,
+        "counter": 0,
+        "allCounter": 0
+      },
+      "after": {
+        "tags": 1,
+        "configuration": 2,
+        "factory": 3,
+        "currentTag": {
+          "identity": 4,
+          "env": "",
+          "taggable": false,
+          "defaultTags": false,
+          "tag": null,
+          "tagId": "",
+          "tagFormat": "",
+          "noTag": false,
+          "labelId": ""
+        },
+        "labelsIdentity": 5,
+        "labels": [
+          {
+            "name": "t",
+            "identity": 6,
+            "tag": "a $\\dproof$ b",
+            "id": "mjx-eqn:t"
+          }
+        ],
+        "allLabelsIdentity": 7,
+        "allLabels": [],
+        "stackIdentity": 8,
+        "stack": [],
+        "historyIdentity": 9,
+        "history": [],
+        "redo": false,
+        "refUpdate": false,
+        "counter": 0,
+        "allCounter": 0
+      },
+      "made": [
+        {
+          "identity": 10,
+          "requestKind": "text",
+          "requestedType": "a ",
+          "kind": "text",
+          "children": []
+        },
+        {
+          "identity": 11,
+          "requestKind": "node",
+          "requestedType": "mtext",
+          "kind": "mtext",
+          "children": [
+            10
+          ]
+        },
+        {
+          "identity": 12,
+          "requestKind": "text",
+          "requestedType": "y",
+          "kind": "text",
+          "children": []
+        },
+        {
+          "identity": 13,
+          "requestKind": "node",
+          "requestedType": "mi",
+          "kind": "mi",
+          "children": [
+            12
+          ]
+        },
+        {
+          "identity": 13,
+          "requestKind": "token",
+          "requestedType": "mi",
+          "kind": "mi",
+          "children": [
+            12
+          ]
+        },
+        {
+          "identity": 14,
+          "requestKind": "node",
+          "requestedType": "TeXAtom",
+          "kind": "TeXAtom",
+          "children": [
+            15
+          ]
+        },
+        {
+          "identity": 16,
+          "requestKind": "text",
+          "requestedType": " b",
+          "kind": "text",
+          "children": []
+        },
+        {
+          "identity": 17,
+          "requestKind": "node",
+          "requestedType": "mtext",
+          "kind": "mtext",
+          "children": [
+            16
+          ]
+        },
+        {
+          "identity": 18,
+          "requestKind": "node",
+          "requestedType": "mrow",
+          "kind": "mrow",
+          "children": [
+            11,
+            14,
+            17
+          ]
+        },
+        {
+          "identity": 19,
+          "requestKind": "node",
+          "requestedType": "mrow",
+          "kind": "mrow",
+          "children": [
+            18
+          ]
+        }
+      ]
+    },
+    {
+      "input": {
+        "name": "late-color-error",
+        "category": "supported",
+        "operation": "method",
+        "source": "\\DRefObserve{t}TAIL",
+        "command": "ref",
+        "eqref": false,
+        "tag": "a $\\definecolor{late}{rgb}{1,0,0}\\DRefUndefined$",
+        "id": "mjx-eqn:t",
+        "macroCount": 999,
+        "font": "",
+        "label": "t"
+      },
+      "nodes": [],
+      "error": {
+        "id": "UndefinedControlSequence",
+        "message": "Undefined control sequence \\DRefUndefined"
+      },
+      "outer": {
+        "source": "\\DRefObserve{t}TAIL",
+        "cursorUTF16": 15,
+        "remaining": "TAIL",
+        "macroCount": 999,
+        "envBefore": {
+          "display": true
+        },
+        "envAfter": {
+          "display": true
+        },
+        "environmentIdentity": true,
+        "configurationIdentity": true,
+        "currentIdentity": true,
+        "labelsIdentity": true,
+        "factoryIdentity": true,
+        "colorIdentity": true,
+        "lateColor": "#ff0000",
+        "selectedReferenceIdentity": 6,
+        "selectedReferenceAfter": {
+          "tag": "a $\\definecolor{late}{rgb}{1,0,0}\\DRefUndefined$",
+          "id": "mjx-eqn:t"
+        }
+      },
+      "parents": true,
+      "before": {
+        "tags": 1,
+        "configuration": 2,
+        "factory": 3,
+        "currentTag": {
+          "identity": 4,
+          "env": "",
+          "taggable": false,
+          "defaultTags": false,
+          "tag": null,
+          "tagId": "",
+          "tagFormat": "",
+          "noTag": false,
+          "labelId": ""
+        },
+        "labelsIdentity": 5,
+        "labels": [
+          {
+            "name": "t",
+            "identity": 6,
+            "tag": "a $\\definecolor{late}{rgb}{1,0,0}\\DRefUndefined$",
+            "id": "mjx-eqn:t"
+          }
+        ],
+        "allLabelsIdentity": 7,
+        "allLabels": [],
+        "stackIdentity": 8,
+        "stack": [],
+        "historyIdentity": 9,
+        "history": [],
+        "redo": false,
+        "refUpdate": false,
+        "counter": 0,
+        "allCounter": 0
+      },
+      "after": {
+        "tags": 1,
+        "configuration": 2,
+        "factory": 3,
+        "currentTag": {
+          "identity": 4,
+          "env": "",
+          "taggable": false,
+          "defaultTags": false,
+          "tag": null,
+          "tagId": "",
+          "tagFormat": "",
+          "noTag": false,
+          "labelId": ""
+        },
+        "labelsIdentity": 5,
+        "labels": [
+          {
+            "name": "t",
+            "identity": 6,
+            "tag": "a $\\definecolor{late}{rgb}{1,0,0}\\DRefUndefined$",
+            "id": "mjx-eqn:t"
+          }
+        ],
+        "allLabelsIdentity": 7,
+        "allLabels": [],
+        "stackIdentity": 8,
+        "stack": [],
+        "historyIdentity": 9,
+        "history": [],
+        "redo": false,
+        "refUpdate": false,
+        "counter": 0,
+        "allCounter": 0
+      },
+      "made": [
+        {
+          "identity": 10,
+          "requestKind": "text",
+          "requestedType": "a ",
+          "kind": "text",
+          "children": []
+        },
+        {
+          "identity": 11,
+          "requestKind": "node",
+          "requestedType": "mtext",
+          "kind": "mtext",
+          "children": [
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "input": {
+        "name": "lookup-entry-identity",
+        "category": "supported",
+        "operation": "method",
+        "source": "\\DRefObserve{t}TAIL",
+        "command": "ref",
+        "eqref": false,
+        "tag": "T",
+        "id": "mjx-eqn:t",
+        "macroCount": 999,
+        "font": "",
+        "label": "t",
+        "unrelated": {
+          "tag": "P",
+          "id": "prior"
+        }
+      },
+      "nodes": [
+        {
+          "kind": "mrow",
+          "text": null,
+          "attributes": {
+            "href": "#mjx-eqn%3At",
+            "class": "MathJax_ref"
+          },
+          "properties": {},
+          "children": [
+            {
+              "kind": "mtext",
+              "text": null,
+              "attributes": {},
+              "properties": {},
+              "children": [
+                {
+                  "kind": "text",
+                  "text": "T",
+                  "attributes": {},
+                  "properties": {},
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "error": null,
+      "outer": {
+        "source": "\\DRefObserve{t}TAIL",
+        "cursorUTF16": 15,
+        "remaining": "TAIL",
+        "macroCount": 999,
+        "envBefore": {
+          "display": true
+        },
+        "envAfter": {
+          "display": true
+        },
+        "environmentIdentity": true,
+        "configurationIdentity": true,
+        "currentIdentity": true,
+        "labelsIdentity": true,
+        "factoryIdentity": true,
+        "colorIdentity": true,
+        "lateColor": "late",
+        "selectedReferenceIdentity": 6,
+        "selectedReferenceAfter": {
+          "tag": "T",
+          "id": "mjx-eqn:t"
+        }
+      },
+      "parents": true,
+      "before": {
+        "tags": 1,
+        "configuration": 2,
+        "factory": 3,
+        "currentTag": {
+          "identity": 4,
+          "env": "",
+          "taggable": false,
+          "defaultTags": false,
+          "tag": null,
+          "tagId": "",
+          "tagFormat": "",
+          "noTag": false,
+          "labelId": ""
+        },
+        "labelsIdentity": 5,
+        "labels": [
+          {
+            "name": "t",
+            "identity": 6,
+            "tag": "T",
+            "id": "mjx-eqn:t"
+          },
+          {
+            "name": "other",
+            "identity": 7,
+            "tag": "P",
+            "id": "prior"
+          }
+        ],
+        "allLabelsIdentity": 8,
+        "allLabels": [],
+        "stackIdentity": 9,
+        "stack": [],
+        "historyIdentity": 10,
+        "history": [],
+        "redo": false,
+        "refUpdate": false,
+        "counter": 0,
+        "allCounter": 0
+      },
+      "after": {
+        "tags": 1,
+        "configuration": 2,
+        "factory": 3,
+        "currentTag": {
+          "identity": 4,
+          "env": "",
+          "taggable": false,
+          "defaultTags": false,
+          "tag": null,
+          "tagId": "",
+          "tagFormat": "",
+          "noTag": false,
+          "labelId": ""
+        },
+        "labelsIdentity": 5,
+        "labels": [
+          {
+            "name": "t",
+            "identity": 6,
+            "tag": "T",
+            "id": "mjx-eqn:t"
+          },
+          {
+            "name": "other",
+            "identity": 7,
+            "tag": "P",
+            "id": "prior"
+          }
+        ],
+        "allLabelsIdentity": 8,
+        "allLabels": [],
+        "stackIdentity": 9,
+        "stack": [],
+        "historyIdentity": 10,
+        "history": [],
+        "redo": false,
+        "refUpdate": false,
+        "counter": 0,
+        "allCounter": 0
+      },
+      "made": [
+        {
+          "identity": 11,
+          "requestKind": "text",
+          "requestedType": "T",
+          "kind": "text",
+          "children": []
+        },
+        {
+          "identity": 12,
+          "requestKind": "node",
+          "requestedType": "mtext",
+          "kind": "mtext",
+          "children": [
+            11
+          ]
+        },
+        {
+          "identity": 13,
+          "requestKind": "node",
+          "requestedType": "mrow",
+          "kind": "mrow",
+          "children": [
+            12
+          ]
+        }
+      ]
+    }
+  ]
+}

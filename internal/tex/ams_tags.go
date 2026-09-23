@@ -173,7 +173,11 @@ func (p *parser) amsHandleReference(name string, equationReference bool) ([]*mml
 	if equationReference {
 		tag = p.mathtoolsFormatTag(tag)
 	}
-	result := node("mrow", textRow(tag))
+	children, err := p.internalMath(tag, "", false)
+	if err != nil {
+		return nil, err
+	}
+	result := node("mrow", children...)
 	result.Attributes.Set("href", "#"+encodeURIComponent(reference.id))
 	result.Attributes.Set("class", "MathJax_ref")
 	return []*mml.Node{result}, nil

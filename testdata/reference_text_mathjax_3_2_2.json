@@ -1,0 +1,2784 @@
+{
+  "mathjaxGitCommit": "ad8f5c21cb810236551da8c6512ba733e67357ee",
+  "cases": [
+    {
+      "name": "plain-ref-inline",
+      "tex": "\\begin{equation}x\\tag{T}\\label{t}\\end{equation}\\ref{t}",
+      "display": false,
+      "svgSHA256": "4f6cef4733a9bf56413837bf49e2e7a73aa2e171f110222255036704b3af7366",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mtable",
+                "text": null,
+                "attributes": {
+                  "displaystyle": true
+                },
+                "properties": {
+                  "useHeight": true
+                },
+                "children": [
+                  {
+                    "kind": "mlabeledtr",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtd",
+                        "text": null,
+                        "attributes": {
+                          "id": "mjx-eqn:t"
+                        },
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {},
+                            "children": [
+                              {
+                                "kind": "mtext",
+                                "text": null,
+                                "attributes": {},
+                                "properties": {},
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "(T)",
+                                    "attributes": {},
+                                    "properties": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mtd",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {},
+                            "children": [
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": {},
+                                "properties": {},
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "x",
+                                    "attributes": {},
+                                    "properties": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "mrow",
+                "text": null,
+                "attributes": {
+                  "href": "#mjx-eqn%3At",
+                  "class": "MathJax_ref"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mtext",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "T",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "plain-eqref-inline",
+      "tex": "\\begin{equation}x\\tag{T}\\label{t}\\end{equation}\\eqref{t}",
+      "display": false,
+      "svgSHA256": "3abf883449be0fb0e5b024578c7e458982c2a4dd806d77f72c04ffc3cc700fd6",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mtable",
+                "text": null,
+                "attributes": {
+                  "displaystyle": true
+                },
+                "properties": {
+                  "useHeight": true
+                },
+                "children": [
+                  {
+                    "kind": "mlabeledtr",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtd",
+                        "text": null,
+                        "attributes": {
+                          "id": "mjx-eqn:t"
+                        },
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {},
+                            "children": [
+                              {
+                                "kind": "mtext",
+                                "text": null,
+                                "attributes": {},
+                                "properties": {},
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "(T)",
+                                    "attributes": {},
+                                    "properties": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mtd",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {},
+                            "children": [
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": {},
+                                "properties": {},
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "x",
+                                    "attributes": {},
+                                    "properties": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "mrow",
+                "text": null,
+                "attributes": {
+                  "href": "#mjx-eqn%3At",
+                  "class": "MathJax_ref"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mtext",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "(T)",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "star-plain-ref-inline",
+      "tex": "\\begin{equation}x\\tag*{T}\\label{t}\\end{equation}\\ref{t}",
+      "display": false,
+      "svgSHA256": "ee68c65896f4ae4ae603289379efff059553b613ace557a78652f4987e748c79",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mtable",
+                "text": null,
+                "attributes": {
+                  "displaystyle": true
+                },
+                "properties": {
+                  "useHeight": true
+                },
+                "children": [
+                  {
+                    "kind": "mlabeledtr",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtd",
+                        "text": null,
+                        "attributes": {
+                          "id": "mjx-eqn:t"
+                        },
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {},
+                            "children": [
+                              {
+                                "kind": "mtext",
+                                "text": null,
+                                "attributes": {},
+                                "properties": {},
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "T",
+                                    "attributes": {},
+                                    "properties": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mtd",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {},
+                            "children": [
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": {},
+                                "properties": {},
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "x",
+                                    "attributes": {},
+                                    "properties": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "mrow",
+                "text": null,
+                "attributes": {
+                  "href": "#mjx-eqn%3At",
+                  "class": "MathJax_ref"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mtext",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "T",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "empty-tag-ref-inline",
+      "tex": "\\begin{equation}x\\tag{}\\label{t}\\end{equation}\\ref{t}",
+      "display": false,
+      "svgSHA256": "498431a6e434bec143ed3cf37ae46fd9de16ae12a3eb6f029e93c67df00df6d4",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "kind": "mrow",
+                "text": null,
+                "attributes": {
+                  "href": "#",
+                  "class": "MathJax_ref"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mtext",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "???",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "empty-tag-ref-display",
+      "tex": "\\begin{equation}x\\tag{}\\label{t}\\end{equation}\\ref{t}",
+      "display": true,
+      "svgSHA256": "498431a6e434bec143ed3cf37ae46fd9de16ae12a3eb6f029e93c67df00df6d4",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "kind": "mrow",
+                "text": null,
+                "attributes": {
+                  "href": "#",
+                  "class": "MathJax_ref"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mtext",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "???",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "unknown-ref-inline",
+      "tex": "x\\ref{absent}y",
+      "display": false,
+      "svgSHA256": "40bc3ef5d856e48e5cc768935a1c6236fe152ed03ef43b9e5ccd900d85adcd8b",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "kind": "mrow",
+                "text": null,
+                "attributes": {
+                  "href": "#",
+                  "class": "MathJax_ref"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mtext",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "???",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "y",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "unknown-ref-display",
+      "tex": "x\\ref{absent}y",
+      "display": true,
+      "svgSHA256": "40bc3ef5d856e48e5cc768935a1c6236fe152ed03ef43b9e5ccd900d85adcd8b",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "kind": "mrow",
+                "text": null,
+                "attributes": {
+                  "href": "#",
+                  "class": "MathJax_ref"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mtext",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "???",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "y",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "unknown-eqref-inline",
+      "tex": "x\\eqref{absent}y",
+      "display": false,
+      "svgSHA256": "edc19ec160cede306a9aac4d26ab062a604a9839a5c091e7b36c0c9eb58c0e9b",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "kind": "mrow",
+                "text": null,
+                "attributes": {
+                  "href": "#",
+                  "class": "MathJax_ref"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mtext",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "(???)",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "y",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "unknown-eqref-display",
+      "tex": "x\\eqref{absent}y",
+      "display": true,
+      "svgSHA256": "edc19ec160cede306a9aac4d26ab062a604a9839a5c091e7b36c0c9eb58c0e9b",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "kind": "mrow",
+                "text": null,
+                "attributes": {
+                  "href": "#",
+                  "class": "MathJax_ref"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mtext",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "(???)",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "y",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "placeholder-label-inline",
+      "tex": "x\\label{p}\\ref{p}",
+      "display": false,
+      "svgSHA256": "498431a6e434bec143ed3cf37ae46fd9de16ae12a3eb6f029e93c67df00df6d4",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "kind": "mrow",
+                "text": null,
+                "attributes": {
+                  "href": "#",
+                  "class": "MathJax_ref"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mtext",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "???",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "placeholder-label-display",
+      "tex": "x\\label{p}\\ref{p}",
+      "display": true,
+      "svgSHA256": "498431a6e434bec143ed3cf37ae46fd9de16ae12a3eb6f029e93c67df00df6d4",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "kind": "mrow",
+                "text": null,
+                "attributes": {
+                  "href": "#",
+                  "class": "MathJax_ref"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mtext",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "???",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "forward-plain-inline",
+      "tex": "\\ref{t}\\begin{equation}x\\tag{T}\\label{t}\\end{equation}",
+      "display": false,
+      "svgSHA256": "3c7efef91ddec82f5f0dbf116818d88ae64b4b0c6008e94885f3557fa5ff370a",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mrow",
+                "text": null,
+                "attributes": {
+                  "href": "#",
+                  "class": "MathJax_ref"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mtext",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "???",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "mtable",
+                "text": null,
+                "attributes": {
+                  "displaystyle": true
+                },
+                "properties": {
+                  "useHeight": true
+                },
+                "children": [
+                  {
+                    "kind": "mlabeledtr",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtd",
+                        "text": null,
+                        "attributes": {
+                          "id": "mjx-eqn:t"
+                        },
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {},
+                            "children": [
+                              {
+                                "kind": "mtext",
+                                "text": null,
+                                "attributes": {},
+                                "properties": {},
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "(T)",
+                                    "attributes": {},
+                                    "properties": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mtd",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {},
+                            "children": [
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": {},
+                                "properties": {},
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "x",
+                                    "attributes": {},
+                                    "properties": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "repeated-reference-inline",
+      "tex": "\\begin{equation}x\\tag{T}\\label{t}\\end{equation}\\ref{t}+\\eqref{t}",
+      "display": false,
+      "svgSHA256": "01cd190aa6db6643902f7bf2d66f0c99e4bf761e7a4e91d28f8597536e59ac4d",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mtable",
+                "text": null,
+                "attributes": {
+                  "displaystyle": true
+                },
+                "properties": {
+                  "useHeight": true
+                },
+                "children": [
+                  {
+                    "kind": "mlabeledtr",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtd",
+                        "text": null,
+                        "attributes": {
+                          "id": "mjx-eqn:t"
+                        },
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {},
+                            "children": [
+                              {
+                                "kind": "mtext",
+                                "text": null,
+                                "attributes": {},
+                                "properties": {},
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "(T)",
+                                    "attributes": {},
+                                    "properties": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mtd",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {},
+                            "children": [
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": {},
+                                "properties": {},
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "x",
+                                    "attributes": {},
+                                    "properties": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "mrow",
+                "text": null,
+                "attributes": {
+                  "href": "#mjx-eqn%3At",
+                  "class": "MathJax_ref"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mtext",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "T",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": {},
+                "properties": {
+                  "in-lists": "fixStretchy"
+                },
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "+",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "kind": "mrow",
+                "text": null,
+                "attributes": {
+                  "href": "#mjx-eqn%3At",
+                  "class": "MathJax_ref"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mtext",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "(T)",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "label-id-inline",
+      "tex": "\\begin{equation}x\\tag{T}\\label{a b~c}\\end{equation}\\ref{a b~c}",
+      "display": false,
+      "svgSHA256": "b882601f3096869698b734671e506dde2c19cc2b5cbafd876d9d5d159939d0f7",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mtable",
+                "text": null,
+                "attributes": {
+                  "displaystyle": true
+                },
+                "properties": {
+                  "useHeight": true
+                },
+                "children": [
+                  {
+                    "kind": "mlabeledtr",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtd",
+                        "text": null,
+                        "attributes": {
+                          "id": "mjx-eqn:a_b~c"
+                        },
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {},
+                            "children": [
+                              {
+                                "kind": "mtext",
+                                "text": null,
+                                "attributes": {},
+                                "properties": {},
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "(T)",
+                                    "attributes": {},
+                                    "properties": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mtd",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {},
+                            "children": [
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": {},
+                                "properties": {},
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "x",
+                                    "attributes": {},
+                                    "properties": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "mrow",
+                "text": null,
+                "attributes": {
+                  "href": "#mjx-eqn%3Aa_b~c",
+                  "class": "MathJax_ref"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mtext",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "T",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "bold-reference-inline",
+      "tex": "\\begin{equation}x\\tag{T}\\label{t}\\end{equation}\\mathbf{\\ref{t}}",
+      "display": false,
+      "svgSHA256": "93f3a4dc183056a56e055e5cc210225a4976d66f8c3083a19687c6a558f86074",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mtable",
+                "text": null,
+                "attributes": {
+                  "displaystyle": true
+                },
+                "properties": {
+                  "useHeight": true
+                },
+                "children": [
+                  {
+                    "kind": "mlabeledtr",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtd",
+                        "text": null,
+                        "attributes": {
+                          "id": "mjx-eqn:t"
+                        },
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {},
+                            "children": [
+                              {
+                                "kind": "mtext",
+                                "text": null,
+                                "attributes": {},
+                                "properties": {},
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "(T)",
+                                    "attributes": {},
+                                    "properties": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mtd",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {},
+                            "children": [
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": {},
+                                "properties": {},
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "x",
+                                    "attributes": {},
+                                    "properties": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": {},
+                "properties": {
+                  "texClass": 0
+                },
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mrow",
+                        "text": null,
+                        "attributes": {
+                          "href": "#mjx-eqn%3At",
+                          "class": "MathJax_ref"
+                        },
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "mtext",
+                            "text": null,
+                            "attributes": {
+                              "mathvariant": "bold"
+                            },
+                            "properties": {},
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "T",
+                                "attributes": {},
+                                "properties": {},
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "italic-reference-inline",
+      "tex": "\\begin{equation}x\\tag{T}\\label{t}\\end{equation}\\mathit{\\ref{t}}",
+      "display": false,
+      "svgSHA256": "1841028fa4eac59f8916a363c17e7d4b5541f297b049abca3fb8618a28597e81",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mtable",
+                "text": null,
+                "attributes": {
+                  "displaystyle": true
+                },
+                "properties": {
+                  "useHeight": true
+                },
+                "children": [
+                  {
+                    "kind": "mlabeledtr",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtd",
+                        "text": null,
+                        "attributes": {
+                          "id": "mjx-eqn:t"
+                        },
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {},
+                            "children": [
+                              {
+                                "kind": "mtext",
+                                "text": null,
+                                "attributes": {},
+                                "properties": {},
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "(T)",
+                                    "attributes": {},
+                                    "properties": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mtd",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {},
+                            "children": [
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": {},
+                                "properties": {},
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "x",
+                                    "attributes": {},
+                                    "properties": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": {},
+                "properties": {
+                  "texClass": 0
+                },
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mrow",
+                        "text": null,
+                        "attributes": {
+                          "href": "#mjx-eqn%3At",
+                          "class": "MathJax_ref"
+                        },
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "mtext",
+                            "text": null,
+                            "attributes": {
+                              "mathvariant": "-tex-mathit"
+                            },
+                            "properties": {},
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "T",
+                                "attributes": {},
+                                "properties": {},
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "text-reference-inline",
+      "tex": "\\begin{equation}x\\tag{T}\\label{t}\\end{equation}\\text{a \\ref{t} b}",
+      "display": false,
+      "svgSHA256": "bdbcd53ff1393e4f5f092d58e3a6ce6e629b1ed57ce70e8d36605a552ee68eb7",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mtable",
+                "text": null,
+                "attributes": {
+                  "displaystyle": true
+                },
+                "properties": {
+                  "useHeight": true
+                },
+                "children": [
+                  {
+                    "kind": "mlabeledtr",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtd",
+                        "text": null,
+                        "attributes": {
+                          "id": "mjx-eqn:t"
+                        },
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {},
+                            "children": [
+                              {
+                                "kind": "mtext",
+                                "text": null,
+                                "attributes": {},
+                                "properties": {},
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "(T)",
+                                    "attributes": {},
+                                    "properties": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mtd",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {},
+                            "children": [
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": {},
+                                "properties": {},
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "x",
+                                    "attributes": {},
+                                    "properties": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "mrow",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mtext",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "a ",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TeXAtom",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {
+                      "texClass": 0
+                    },
+                    "children": [
+                      {
+                        "kind": "inferredMrow",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "mrow",
+                            "text": null,
+                            "attributes": {
+                              "href": "#mjx-eqn%3At",
+                              "class": "MathJax_ref"
+                            },
+                            "properties": {},
+                            "children": [
+                              {
+                                "kind": "mtext",
+                                "text": null,
+                                "attributes": {},
+                                "properties": {},
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "T",
+                                    "attributes": {},
+                                    "properties": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mtext",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": " b",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "text-eqref-inline",
+      "tex": "\\begin{equation}x\\tag{T}\\label{t}\\end{equation}\\text{a \\eqref{t} b}",
+      "display": false,
+      "svgSHA256": "8b675935740e282f727a028deb60957db1fc6caea15f0e3247cac00de2082f23",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mtable",
+                "text": null,
+                "attributes": {
+                  "displaystyle": true
+                },
+                "properties": {
+                  "useHeight": true
+                },
+                "children": [
+                  {
+                    "kind": "mlabeledtr",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtd",
+                        "text": null,
+                        "attributes": {
+                          "id": "mjx-eqn:t"
+                        },
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {},
+                            "children": [
+                              {
+                                "kind": "mtext",
+                                "text": null,
+                                "attributes": {},
+                                "properties": {},
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "(T)",
+                                    "attributes": {},
+                                    "properties": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mtd",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {},
+                            "children": [
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": {},
+                                "properties": {},
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "x",
+                                    "attributes": {},
+                                    "properties": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "mrow",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mtext",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "a ",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TeXAtom",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {
+                      "texClass": 0
+                    },
+                    "children": [
+                      {
+                        "kind": "inferredMrow",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "mrow",
+                            "text": null,
+                            "attributes": {
+                              "href": "#mjx-eqn%3At",
+                              "class": "MathJax_ref"
+                            },
+                            "properties": {},
+                            "children": [
+                              {
+                                "kind": "mtext",
+                                "text": null,
+                                "attributes": {},
+                                "properties": {},
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "(T)",
+                                    "attributes": {},
+                                    "properties": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mtext",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": " b",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "edge-space-reference-inline",
+      "tex": "\\begin{equation}x\\tag{ a  b }\\label{t}\\end{equation}\\ref{t}",
+      "display": false,
+      "svgSHA256": "92d3bd078f948cd5f8dbd6ddb0c8fb3fa064533db83007a584965b7f44705d70",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mtable",
+                "text": null,
+                "attributes": {
+                  "displaystyle": true
+                },
+                "properties": {
+                  "useHeight": true
+                },
+                "children": [
+                  {
+                    "kind": "mlabeledtr",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtd",
+                        "text": null,
+                        "attributes": {
+                          "id": "mjx-eqn:t"
+                        },
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {},
+                            "children": [
+                              {
+                                "kind": "mtext",
+                                "text": null,
+                                "attributes": {},
+                                "properties": {},
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "(a  b)",
+                                    "attributes": {},
+                                    "properties": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mtd",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {},
+                            "children": [
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": {},
+                                "properties": {},
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "x",
+                                    "attributes": {},
+                                    "properties": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "mrow",
+                "text": null,
+                "attributes": {
+                  "href": "#mjx-eqn%3At",
+                  "class": "MathJax_ref"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mtext",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "a  b",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "missing-ref-inline",
+      "tex": "\\ref",
+      "display": false,
+      "svgSHA256": "a0ecce91c0f887443bcd1be9a5ad8b47a0aa94b7e5196917ccae3e9bb4a151be",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Missing argument for \\ref"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Missing argument for \\ref",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "missing-ref-display",
+      "tex": "\\ref",
+      "display": true,
+      "svgSHA256": "a0ecce91c0f887443bcd1be9a5ad8b47a0aa94b7e5196917ccae3e9bb4a151be",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Missing argument for \\ref"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Missing argument for \\ref",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "missing-eqref-inline",
+      "tex": "\\eqref",
+      "display": false,
+      "svgSHA256": "1476ef0eb914e6848c3eece77dd074d1ecff364d7e12143de8762e313202efe3",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Missing argument for \\eqref"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Missing argument for \\eqref",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "missing-eqref-display",
+      "tex": "\\eqref",
+      "display": true,
+      "svgSHA256": "1476ef0eb914e6848c3eece77dd074d1ecff364d7e12143de8762e313202efe3",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Missing argument for \\eqref"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Missing argument for \\eqref",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "unclosed-ref-argument-inline",
+      "tex": "\\ref{t",
+      "display": false,
+      "svgSHA256": "c2d6ee6d434a5313546972d803487c1f505ea5ad70c94f94997cec11faef148b",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Missing close brace"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Missing close brace",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "unclosed-ref-argument-display",
+      "tex": "\\ref{t",
+      "display": true,
+      "svgSHA256": "c2d6ee6d434a5313546972d803487c1f505ea5ad70c94f94997cec11faef148b",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Missing close brace"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Missing close brace",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "earlier-undefined-inline",
+      "tex": "\\UndefinedReferenceProbe\\ref",
+      "display": false,
+      "svgSHA256": "af6fabefd7a6a46726d600d48da903ca38397956dfa6ce68d1c1f6c16b26da4b",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Undefined control sequence \\UndefinedReferenceProbe"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Undefined control sequence \\UndefinedReferenceProbe",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "earlier-undefined-display",
+      "tex": "\\UndefinedReferenceProbe\\ref",
+      "display": true,
+      "svgSHA256": "af6fabefd7a6a46726d600d48da903ca38397956dfa6ce68d1c1f6c16b26da4b",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Undefined control sequence \\UndefinedReferenceProbe"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Undefined control sequence \\UndefinedReferenceProbe",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "following-undefined-inline",
+      "tex": "\\ref{absent}\\UndefinedReferenceProbe",
+      "display": false,
+      "svgSHA256": "af6fabefd7a6a46726d600d48da903ca38397956dfa6ce68d1c1f6c16b26da4b",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Undefined control sequence \\UndefinedReferenceProbe"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Undefined control sequence \\UndefinedReferenceProbe",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "following-undefined-display",
+      "tex": "\\ref{absent}\\UndefinedReferenceProbe",
+      "display": true,
+      "svgSHA256": "af6fabefd7a6a46726d600d48da903ca38397956dfa6ce68d1c1f6c16b26da4b",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Undefined control sequence \\UndefinedReferenceProbe"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Undefined control sequence \\UndefinedReferenceProbe",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

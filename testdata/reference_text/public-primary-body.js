@@ -1,0 +1,21 @@
+(()=>{
+ const r=request.registration;const methods=MathJax._.input.tex.base.BaseMethods.default;
+ if(r){const {Macro}=MathJax._.input.tex.Symbol;html.inputJax[0].configuration.handlers.retrieve('ams-declare-ops').add(r.name,new Macro(r.name,methods.Macro,[r.body,r.arguments]));}
+ const pairs=o=>Object.keys(o).map(name=>({name,value:o[name]}));
+ const full=n=>({kind:n.kind,text:n.kind==='text'?n.getText():null,attributes:n.attributes?{explicit:pairs(n.attributes.getAllAttributes()),inherited:pairs(n.attributes.getAllInherited()),defaults:pairs(n.attributes.getAllDefaults()),global:pairs(n.attributes.getAllGlobals())}:{explicit:[],inherited:[],defaults:[],global:[]},properties:pairs(n.getAllProperties()),children:n.childNodes.map(full)});
+
+ const config=html.inputJax[0].parseOptions,tags=config.tags,ids=new WeakMap();let nextID=0;
+ const id=o=>o&&typeof o==='object'?(ids.has(o)?ids.get(o):(ids.set(o,++nextID),nextID)):null;
+ const copy=x=>JSON.parse(JSON.stringify(x));
+ const tag=t=>t?{identity:id(t),env:t.env,taggable:t.taggable,defaultTags:t.defaultTags,tag:t.tag,tagId:t.tagId,tagFormat:t.tagFormat,noTag:t.noTag,labelId:t.labelId}:null;
+ const state=()=>copy({tags:id(tags),configuration:id(tags.configuration),nodeFactory:id(config.nodeFactory),current:tag(tags.currentTag),labelsIdentity:id(tags.labels),labels:tags.labels,allLabelsIdentity:id(tags.allLabels),allLabels:tags.allLabels,ids:tags.ids,allIds:tags.allIds,stackIdentity:id(tags.stack),stack:(tags.stack||[]).map(tag),historyIdentity:id(tags.history),history:(tags.history||[]).map(tag),counter:tags.counter,allCounter:tags.allCounter,redo:tags.redo,refUpdate:tags.refUpdate});
+ const tagEvents=[],methodSources={};
+ for(const name of ['makeTag','getTag','finalize','start','end','clearTag']){
+  const original=tags[name];if(typeof original!=='function')throw Error('missing actual tag method '+name);
+  methodSources[name]=original.toString();
+  tags[name]=function(...args){const event={method:name,before:state(),argumentNodeIds:args.filter(x=>x&&x.kind).map(id)};tagEvents.push(event);try{const result=Reflect.apply(original,this,args);event.returnedNode=result&&result.kind?{identity:id(result),full:copy(full(result)),children:result.childNodes.map(id)}:null;event.after=state();return result}catch(e){event.error={id:e.id||null,message:e.message||String(e)};event.after=state();throw e}};
+ }
+ let formattedError=null;const formatError=html.inputJax[0].formatError;html.inputJax[0].formatError=function(e){formattedError={id:e.id,message:e.message};return formatError.call(this,e)};const parse=MathJax._.input.tex.TexParser.default.prototype.parse;let parserError=null;MathJax._.input.tex.TexParser.default.prototype.parse=function(type,args){try{return parse.call(this,type,args)}catch(e){parserError={id:e.id||null,message:e.message||String(e),source:this.string,cursorUTF16:this.i,remaining:this.string.slice(this.i)};throw e}};let parserCompletion=null;const push=MathJax._.input.tex.TexParser.default.prototype.Push;MathJax._.input.tex.TexParser.default.prototype.Push=function(...args){try{const result=Reflect.apply(push,this,args);if(args[0]?.kind==='stop')parserCompletion={source:this.string,cursorUTF16:this.i,remaining:this.string.slice(this.i)};return result}catch(e){if(parserError===null)parserError={id:e.id||null,message:e.message||String(e),source:this.string,cursorUTF16:this.i,remaining:this.string.slice(this.i)};throw e}};let tree;const original=html.outputJax.typeset;html.outputJax.typeset=function(math,doc){tree=JSON.parse(JSON.stringify(full(math.root)));return original.call(this,math,doc)};
+ let svg=null,error=null;try{svg=adaptor.innerHTML(html.convert(request.tex,{display:request.display,em:16,ex:8}));}catch(e){error={id:e.id||null,message:e.message||String(e),type:e.constructor?.name||null};}
+ return{tree,svg,error,formattedError,parserError,parserCompletion,tagEvents,tagState:state(),methodSources,trace:null};
+})()
