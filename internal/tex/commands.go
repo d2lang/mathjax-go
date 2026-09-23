@@ -30,7 +30,7 @@ import (
 	"github.com/d2lang/mathjax-go/internal/tex/extensions/gensymb"
 )
 
-func (p *parser) command(name string) ([]*mml.Node, error) {
+func (p *parser) commandNodes(name string, after **derivativeAutoOpen) ([]*mml.Node, error) {
 	if definition, ok := p.state.macros[name]; ok {
 		return p.invokeMacro(name, definition)
 	}
@@ -335,7 +335,7 @@ func (p *parser) command(name string) ([]*mml.Node, error) {
 	case "qty", "quantity", "pqty", "bqty", "vqty", "absolutevalue", "abs", "norm", "evaluated", "eval", "order":
 		return p.quantity(name)
 	case "dd", "differential", "variation", "var", "dv", "derivative", "pdv", "pderivative", "partialderivative", "fdv", "fderivative", "functionalderivative":
-		return p.derivative(name)
+		return p.derivative(name, after)
 	case "diffd":
 		return []*mml.Node{physicsDifferential("d")}, nil
 	case "commutator", "comm", "anticommutator", "acomm", "poissonbracket", "pb":
@@ -1958,7 +1958,7 @@ func unwrapInferred(n *mml.Node) []*mml.Node {
 	return []*mml.Node{n}
 }
 
-func (p *parser) derivative(name string) ([]*mml.Node, error) {
+func (p *parser) derivative(name string, after **derivativeAutoOpen) ([]*mml.Node, error) {
 	if name == "dd" || name == "differential" || name == "variation" || name == "var" {
 		power, hasPower, err := p.readBrackets(nil)
 		if err != nil {
@@ -2097,6 +2097,9 @@ func (p *parser) derivative(name string) ([]*mml.Node, error) {
 		denominator.Flags.Inferred = false
 		denominator.Flags.NotParent = false
 	}
+	// Derivative pushes its fraction before GetNext/AutoOpen. The recipient
+	// activates this invocation-local action only after delivering that node.
+	*after = &derivativeAutoOpen{ignore: argMax > 2 && (len(args) > 2 || (len(args) > 1 && hasOrder))}
 	return []*mml.Node{node("mfrac", numerator, denominator)}, nil
 }
 

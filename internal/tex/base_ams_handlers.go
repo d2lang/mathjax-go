@@ -241,11 +241,16 @@ func (p *parser) amsOperatorName(name string) ([]*mml.Node, error) {
 			continue
 		}
 		sub := &parser{source: raw, pos: position, state: p.state, display: p.display}
-		parsed, err := sub.parseOneToken()
+		result, err := sub.parseOneTokenEvent()
 		if err != nil {
 			return nil, err
 		}
-		children = append(children, parsed...)
+		children = append(children, result.nodes...)
+		tail, err := result.afterNode.complete(sub)
+		if err != nil {
+			return nil, err
+		}
+		children = append(children, tail...)
 		raw, position = sub.source, sub.pos
 	}
 	var result *mml.Node

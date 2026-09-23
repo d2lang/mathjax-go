@@ -88,6 +88,13 @@ func (p *parser) parseRow(terminator byte, stopRight bool) ([]*mml.Node, string,
 // continuations of the same logical row. Real groups and subparsers enter via
 // parseRow, so they cannot inherit an outer row's pending fraction.
 func (p *parser) parseRowWithInfix(terminator byte, stopRight, infixPending bool) ([]*mml.Node, string, error) {
+	return p.parseRowWithAutoOpen(terminator, stopRight, infixPending, nil)
+}
+
+// Only a direct AutoOpen recipient may consume its matching AutoClose item.
+// Style/size/color and OverItem continuations use parseRowWithInfix instead;
+// SetFont changes the environment without adding such a stack barrier.
+func (p *parser) parseRowWithAutoOpen(terminator byte, stopRight, infixPending bool, auto *derivativeAutoOpen) ([]*mml.Node, string, error) {
 	vectorFont, vectorStar, activeFont := p.vectorFont, p.vectorStar, p.activeFont
 	defer func() { p.vectorFont, p.vectorStar, p.activeFont = vectorFont, vectorStar, activeFont }()
 	var nodes []*mml.Node
@@ -110,6 +117,9 @@ func (p *parser) parseRowWithInfix(terminator byte, stopRight, infixPending bool
 			return
 		}
 		finishPrime()
+		if auto != nil {
+			auto.observe(created)
+		}
 		for _, n := range created {
 			if pendingFont != "" {
 				applyScopedMathVariant(n, pendingFont)
@@ -150,6 +160,12 @@ func (p *parser) parseRowWithInfix(terminator byte, stopRight, infixPending bool
 			p.pos++
 			name := p.readControlSequence()
 			if name == "right" {
+				if auto != nil {
+					if _, err := p.readDelimiter(false); err != nil {
+						return nil, "", err
+					}
+					return nil, "", texError("MissingLeftExtraRight", "Missing \\left or extra \\right")
+				}
 				if !stopRight {
 					return nil, "", texError("ExtraRight", "Extra \\right")
 				}
@@ -163,6 +179,9 @@ func (p *parser) parseRowWithInfix(terminator byte, stopRight, infixPending bool
 				if err != nil {
 					return nil, "", err
 				}
+				if auto != nil {
+					return nil, "", auto.stopError()
+				}
 				return []*mml.Node{fraction}, right, nil
 			}
 			if name == "color" {
@@ -172,6 +191,9 @@ func (p *parser) parseRowWithInfix(terminator byte, stopRight, infixPending bool
 					return nil, "", err
 				}
 				appendNodes(colored, false)
+				if auto != nil {
+					return nil, "", auto.stopError()
+				}
 				return nodes, right, nil
 			}
 			if style, ok := styleDeclarations[name]; ok {
@@ -186,6 +208,9 @@ func (p *parser) parseRowWithInfix(terminator byte, stopRight, infixPending bool
 				styled.Attributes.Set("displaystyle", style["displaystyle"])
 				styled.Attributes.Set("scriptlevel", style["scriptlevel"])
 				appendNodes([]*mml.Node{styled}, false)
+				if auto != nil {
+					return nil, "", auto.stopError()
+				}
 				return nodes, right, nil
 			}
 			if size, ok := sizeDeclarations[name]; ok {
@@ -198,6 +223,9 @@ func (p *parser) parseRowWithInfix(terminator byte, stopRight, infixPending bool
 				// declaration over the remainder of the current group.
 				styled := setAttributes(node("mstyle", row(rest, true)), map[string]any{"mathsize": emLength(size)})
 				appendNodes([]*mml.Node{styled}, false)
+				if auto != nil {
+					return nil, "", auto.stopError()
+				}
 				return nodes, right, nil
 			}
 			if variant, ok := fontDeclarations[name]; ok {
@@ -209,7 +237,7 @@ func (p *parser) parseRowWithInfix(terminator byte, stopRight, infixPending bool
 				}
 				oldFont := p.activeFont
 				p.activeFont = variant
-				rest, right, err := p.parseRowWithInfix(terminator, stopRight, infixPending)
+				rest, right, err := p.parseRowWithAutoOpen(terminator, stopRight, infixPending, auto)
 				p.activeFont = oldFont
 				if err != nil {
 					return nil, "", err
@@ -229,14 +257,16 @@ func (p *parser) parseRowWithInfix(terminator byte, stopRight, infixPending bool
 				}
 				continue
 			}
-			p.commandNamedFunction = false
-			created, err := p.command(name)
+			result, err := p.commandEvent(name)
 			if err != nil {
 				return nil, "", err
 			}
-			namedFunction := p.commandNamedFunction
-			p.commandNamedFunction = false
-			appendNodes(created, namedFunction)
+			appendNodes(result.nodes, result.namedFunction)
+			tail, err := result.afterNode.complete(p)
+			if err != nil {
+				return nil, "", err
+			}
+			appendNodes(tail, false)
 			continue
 		}
 
@@ -252,8 +282,9 @@ func (p *parser) parseRowWithInfix(terminator byte, stopRight, infixPending bool
 		case '^', '_':
 			p.pos++
 			var err error
+			var after *derivativeAutoOpen
 			if pending == nil {
-				nodes, pendingFont, err = p.attachScriptWithFont(nodes, c, pendingFont)
+				nodes, pendingFont, after, err = p.attachScriptWithFont(nodes, c, pendingFont)
 			} else {
 				var script *mml.Node
 				p.scriptInitialLookahead()
@@ -261,7 +292,7 @@ func (p *parser) parseRowWithInfix(terminator byte, stopRight, infixPending bool
 				var attachment *scriptAttachment
 				attachment, err = prepareScriptAttachment(pending.base, c, limitsTruthy(moves))
 				if err == nil {
-					script, pendingFont, err = p.parseScriptArgument(attachment, pendingFont)
+					script, pendingFont, after, err = p.parseScriptArgument(attachment, pendingFont)
 				}
 				if err == nil {
 					var result *mml.Node
@@ -275,6 +306,11 @@ func (p *parser) parseRowWithInfix(terminator byte, stopRight, infixPending bool
 			if err != nil {
 				return nil, "", err
 			}
+			tail, err := after.complete(p)
+			if err != nil {
+				return nil, "", err
+			}
+			appendNodes(tail, false)
 		case '\'', 0xE2: // Only ASCII apostrophe and U+2019 enter Prime.
 			if isPrimeRune(p.peekRune()) {
 				p.consumeRune()
@@ -299,10 +335,20 @@ func (p *parser) parseRowWithInfix(terminator byte, stopRight, infixPending bool
 		case '#':
 			return nil, "", texError("CantUseHash1", "You can't use 'macro parameter character #' in math mode")
 		default:
-			appendNodes([]*mml.Node{p.parseCharacter()}, false)
+			created := p.parseCharacter()
+			// The registered raw ')' handler creates an AutoClose item. A
+			// command that merely returns the same mo has no such marker.
+			if auto != nil && c == ')' && auto.close() {
+				finishPrime()
+				return nodes, "", nil
+			}
+			appendNodes([]*mml.Node{created}, false)
 		}
 	}
 	finishPrime()
+	if auto != nil {
+		return nil, "", auto.stopError()
+	}
 	if terminator != 0 {
 		return nil, "", texError("ExtraOpenMissingClose", "Extra open brace or missing close brace")
 	}
@@ -409,11 +455,15 @@ func (p *parser) parseCharacter() *mml.Node {
 }
 
 func (p *parser) attachScript(nodes []*mml.Node, marker byte) ([]*mml.Node, error) {
-	result, _, err := p.attachScriptWithFont(nodes, marker, "")
-	return result, err
+	result, _, after, err := p.attachScriptWithFont(nodes, marker, "")
+	if err != nil {
+		return nil, err
+	}
+	tail, err := after.complete(p)
+	return append(result, tail...), err
 }
 
-func (p *parser) attachScriptWithFont(nodes []*mml.Node, marker byte, font string) ([]*mml.Node, string, error) {
+func (p *parser) attachScriptWithFont(nodes []*mml.Node, marker byte, font string) ([]*mml.Node, string, *derivativeAutoOpen, error) {
 	var base *mml.Node
 	if len(nodes) == 0 {
 		base = token("mi", "")
@@ -429,11 +479,11 @@ func (p *parser) attachScriptWithFont(nodes []*mml.Node, marker byte, font strin
 	p.scriptInitialLookahead()
 	attachment, err := prepareScriptAttachment(base, marker, moveLimits)
 	if err != nil {
-		return nil, font, err
+		return nil, font, nil, err
 	}
-	script, font, err := p.parseScriptArgument(attachment, font)
+	script, font, after, err := p.parseScriptArgument(attachment, font)
 	if err != nil {
-		return nil, font, err
+		return nil, font, nil, err
 	}
 	result := attachment.fill(script)
 	result.Flags.Embellished = base.Flags.Embellished
@@ -442,37 +492,44 @@ func (p *parser) attachScriptWithFont(nodes []*mml.Node, marker byte, font strin
 	if hasMoves {
 		result.SetProperty("movesupsub", moves)
 	}
-	return append(nodes, result), font, nil
+	return append(nodes, result), font, after, nil
 }
 
-func (p *parser) parseOneToken() (created []*mml.Node, err error) {
+func (p *parser) parseOneToken() ([]*mml.Node, error) {
+	result, err := p.parseOneTokenEvent()
+	if err != nil {
+		return nil, err
+	}
+	tail, err := result.afterNode.complete(p)
+	return append(result.nodes, tail...), err
+}
+
+func (p *parser) parseOneTokenEvent() (result commandResult, err error) {
 	defer func() {
 		if err == nil {
-			for _, n := range created {
+			for _, n := range result.nodes {
 				p.applyVectorFactory(n)
 			}
 		}
 	}()
 	p.skipSpaces()
 	if p.pos >= len(p.source) {
-		return nil, texError("MissingArgFor", "Missing argument")
+		return result, texError("MissingArgFor", "Missing argument")
 	}
 	if p.source[p.pos] == '\\' {
 		p.pos++
-		// A one-token argument has its own stack boundary.  A named function is
-		// finalized there, so its pending FnItem must not escape into the row
-		// that owns the argument.
-		p.commandNamedFunction = false
-		nodes, err := p.command(p.readControlSequence())
-		p.commandNamedFunction = false
-		return nodes, err
+		result, err = p.commandEvent(p.readControlSequence())
+		// A one-token argument finalizes any FnItem at this boundary.
+		result.namedFunction = false
+		return result, err
 	}
 	if p.source[p.pos] == '{' {
 		p.pos++
-		children, _, err := p.parseRow('}', false)
-		return children, err
+		result.nodes, _, err = p.parseRow('}', false)
+		return result, err
 	}
-	return []*mml.Node{p.parseCharacter()}, nil
+	result.nodes = []*mml.Node{p.parseCharacter()}
+	return result, nil
 }
 
 func (p *parser) parseArgument(name string) (*mml.Node, error) {
