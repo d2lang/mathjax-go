@@ -1,0 +1,858 @@
+{
+  "runtime": "v24.19.0",
+  "assetsSHA256": {
+    "polyfills.js": "7fe1d048c78b0e09854c1259f7413868a51cc8f0c822489eb1ac36ae6c85ce01",
+    "mathjax.js": "cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869",
+    "setup.js": "a52cb0bbabfbd7796b9fedd793b9386c474e3123e788ee151cbe47ca1fa6e881"
+  },
+  "rows": [
+    {
+      "input": {
+        "name": "fbox-empty",
+        "command": "fbox",
+        "source": "{}Z"
+      },
+      "error": null,
+      "nodes": [
+        {
+          "kind": "menclose",
+          "text": null,
+          "attributes": {
+            "notation": "box"
+          },
+          "properties": {},
+          "children": [
+            {
+              "kind": "inferredMrow",
+              "text": null,
+              "attributes": {},
+              "properties": {},
+              "children": []
+            }
+          ]
+        }
+      ],
+      "cursor": 2,
+      "remaining": "Z",
+      "sourceUnchanged": true,
+      "envBefore": {},
+      "envAfter": {},
+      "envIdentity": true,
+      "configIdentity": true,
+      "colorModelIdentity": true,
+      "counter": 0,
+      "lateColor": "late",
+      "pushCount": 1,
+      "outerCreationCount": 1,
+      "allPushedCreated": true,
+      "rootParentsNull": true,
+      "unique": true,
+      "parents": true,
+      "method": "function(t,e){var Q=h.default.internalMath(t,t.GetArgument(e)),r=t.create(\"node\",\"menclose\",Q,{notation:\"box\"});t.Push(r)}"
+    },
+    {
+      "input": {
+        "name": "colorbox-mixed",
+        "command": "colorbox",
+        "source": "{red}{a $x$ b}Z"
+      },
+      "error": null,
+      "nodes": [
+        {
+          "kind": "mpadded",
+          "text": null,
+          "attributes": {
+            "mathbackground": "red",
+            "width": "+10px",
+            "height": "+5px",
+            "depth": "+5px",
+            "lspace": "5px"
+          },
+          "properties": {},
+          "children": [
+            {
+              "kind": "inferredMrow",
+              "text": null,
+              "attributes": {},
+              "properties": {},
+              "children": [
+                {
+                  "kind": "mrow",
+                  "text": null,
+                  "attributes": {},
+                  "properties": {},
+                  "children": [
+                    {
+                      "kind": "mtext",
+                      "text": null,
+                      "attributes": {},
+                      "properties": {},
+                      "children": [
+                        {
+                          "kind": "text",
+                          "text": "a ",
+                          "attributes": {},
+                          "properties": {},
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "kind": "TeXAtom",
+                      "text": null,
+                      "attributes": {},
+                      "properties": {
+                        "texClass": 0
+                      },
+                      "children": [
+                        {
+                          "kind": "inferredMrow",
+                          "text": null,
+                          "attributes": {},
+                          "properties": {},
+                          "children": [
+                            {
+                              "kind": "mi",
+                              "text": null,
+                              "attributes": {},
+                              "properties": {},
+                              "children": [
+                                {
+                                  "kind": "text",
+                                  "text": "x",
+                                  "attributes": {},
+                                  "properties": {},
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "kind": "mtext",
+                      "text": null,
+                      "attributes": {},
+                      "properties": {},
+                      "children": [
+                        {
+                          "kind": "text",
+                          "text": " b",
+                          "attributes": {},
+                          "properties": {},
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "cursor": 14,
+      "remaining": "Z",
+      "sourceUnchanged": true,
+      "envBefore": {},
+      "envAfter": {},
+      "envIdentity": true,
+      "configIdentity": true,
+      "colorModelIdentity": true,
+      "counter": 0,
+      "lateColor": "late",
+      "pushCount": 1,
+      "outerCreationCount": 1,
+      "allPushedCreated": true,
+      "rootParentsNull": true,
+      "unique": true,
+      "parents": true,
+      "method": "function(t,e){var Q=t.GetArgument(e),r=n.default.internalMath(t,t.GetArgument(e)),i=t.configuration.packageData.get(\"color\").model,a=t.create(\"node\",\"mpadded\",r,{mathbackground:i.getColor(\"named\",Q)});T.default.setProperties(a,o(t.options.color.padding)),t.Push(a)}"
+    },
+    {
+      "input": {
+        "name": "fcolorbox-mixed",
+        "command": "fcolorbox",
+        "source": "{blue}{red}{a $x$ b}Z"
+      },
+      "error": null,
+      "nodes": [
+        {
+          "kind": "mpadded",
+          "text": null,
+          "attributes": {
+            "mathbackground": "red",
+            "style": "border: 2px solid blue",
+            "width": "+10px",
+            "height": "+5px",
+            "depth": "+5px",
+            "lspace": "5px"
+          },
+          "properties": {},
+          "children": [
+            {
+              "kind": "inferredMrow",
+              "text": null,
+              "attributes": {},
+              "properties": {},
+              "children": [
+                {
+                  "kind": "mrow",
+                  "text": null,
+                  "attributes": {},
+                  "properties": {},
+                  "children": [
+                    {
+                      "kind": "mtext",
+                      "text": null,
+                      "attributes": {},
+                      "properties": {},
+                      "children": [
+                        {
+                          "kind": "text",
+                          "text": "a ",
+                          "attributes": {},
+                          "properties": {},
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "kind": "TeXAtom",
+                      "text": null,
+                      "attributes": {},
+                      "properties": {
+                        "texClass": 0
+                      },
+                      "children": [
+                        {
+                          "kind": "inferredMrow",
+                          "text": null,
+                          "attributes": {},
+                          "properties": {},
+                          "children": [
+                            {
+                              "kind": "mi",
+                              "text": null,
+                              "attributes": {},
+                              "properties": {},
+                              "children": [
+                                {
+                                  "kind": "text",
+                                  "text": "x",
+                                  "attributes": {},
+                                  "properties": {},
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "kind": "mtext",
+                      "text": null,
+                      "attributes": {},
+                      "properties": {},
+                      "children": [
+                        {
+                          "kind": "text",
+                          "text": " b",
+                          "attributes": {},
+                          "properties": {},
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "cursor": 20,
+      "remaining": "Z",
+      "sourceUnchanged": true,
+      "envBefore": {},
+      "envAfter": {},
+      "envIdentity": true,
+      "configIdentity": true,
+      "colorModelIdentity": true,
+      "counter": 0,
+      "lateColor": "late",
+      "pushCount": 1,
+      "outerCreationCount": 1,
+      "allPushedCreated": true,
+      "rootParentsNull": true,
+      "unique": true,
+      "parents": true,
+      "method": "function(t,e){var Q=t.GetArgument(e),r=t.GetArgument(e),i=n.default.internalMath(t,t.GetArgument(e)),a=t.options.color,s=t.configuration.packageData.get(\"color\").model,l=t.create(\"node\",\"mpadded\",i,{mathbackground:s.getColor(\"named\",r),style:\"border: \".concat(a.borderWidth,\" solid \").concat(s.getColor(\"named\",Q))});T.default.setProperties(l,o(a.padding)),t.Push(l)}"
+    },
+    {
+      "input": {
+        "name": "font-environment",
+        "command": "fbox",
+        "source": "{a $x$ b}Z",
+        "font": "bold"
+      },
+      "error": null,
+      "nodes": [
+        {
+          "kind": "menclose",
+          "text": null,
+          "attributes": {
+            "notation": "box"
+          },
+          "properties": {},
+          "children": [
+            {
+              "kind": "inferredMrow",
+              "text": null,
+              "attributes": {},
+              "properties": {},
+              "children": [
+                {
+                  "kind": "mrow",
+                  "text": null,
+                  "attributes": {},
+                  "properties": {},
+                  "children": [
+                    {
+                      "kind": "mtext",
+                      "text": null,
+                      "attributes": {
+                        "mathvariant": "bold"
+                      },
+                      "properties": {},
+                      "children": [
+                        {
+                          "kind": "text",
+                          "text": "a ",
+                          "attributes": {},
+                          "properties": {},
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "kind": "TeXAtom",
+                      "text": null,
+                      "attributes": {},
+                      "properties": {
+                        "texClass": 0
+                      },
+                      "children": [
+                        {
+                          "kind": "inferredMrow",
+                          "text": null,
+                          "attributes": {},
+                          "properties": {},
+                          "children": [
+                            {
+                              "kind": "mi",
+                              "text": null,
+                              "attributes": {},
+                              "properties": {},
+                              "children": [
+                                {
+                                  "kind": "text",
+                                  "text": "x",
+                                  "attributes": {},
+                                  "properties": {},
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "kind": "mtext",
+                      "text": null,
+                      "attributes": {
+                        "mathvariant": "bold"
+                      },
+                      "properties": {},
+                      "children": [
+                        {
+                          "kind": "text",
+                          "text": " b",
+                          "attributes": {},
+                          "properties": {},
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "cursor": 9,
+      "remaining": "Z",
+      "sourceUnchanged": true,
+      "envBefore": {
+        "font": "bold"
+      },
+      "envAfter": {
+        "font": "bold"
+      },
+      "envIdentity": true,
+      "configIdentity": true,
+      "colorModelIdentity": true,
+      "counter": 0,
+      "lateColor": "late",
+      "pushCount": 1,
+      "outerCreationCount": 1,
+      "allPushedCreated": true,
+      "rootParentsNull": true,
+      "unique": true,
+      "parents": true,
+      "method": "function(t,e){var Q=h.default.internalMath(t,t.GetArgument(e)),r=t.create(\"node\",\"menclose\",Q,{notation:\"box\"});t.Push(r)}"
+    },
+    {
+      "input": {
+        "name": "shared-macro-success",
+        "command": "fbox",
+        "source": "{a $\\dproof$ b}Z",
+        "outerMacroCount": 999,
+        "registration": {
+          "name": "dproof",
+          "body": "x",
+          "arguments": 0
+        }
+      },
+      "error": null,
+      "nodes": [
+        {
+          "kind": "menclose",
+          "text": null,
+          "attributes": {
+            "notation": "box"
+          },
+          "properties": {},
+          "children": [
+            {
+              "kind": "inferredMrow",
+              "text": null,
+              "attributes": {},
+              "properties": {},
+              "children": [
+                {
+                  "kind": "mrow",
+                  "text": null,
+                  "attributes": {},
+                  "properties": {},
+                  "children": [
+                    {
+                      "kind": "mtext",
+                      "text": null,
+                      "attributes": {},
+                      "properties": {},
+                      "children": [
+                        {
+                          "kind": "text",
+                          "text": "a ",
+                          "attributes": {},
+                          "properties": {},
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "kind": "TeXAtom",
+                      "text": null,
+                      "attributes": {},
+                      "properties": {
+                        "texClass": 0
+                      },
+                      "children": [
+                        {
+                          "kind": "inferredMrow",
+                          "text": null,
+                          "attributes": {},
+                          "properties": {},
+                          "children": [
+                            {
+                              "kind": "mi",
+                              "text": null,
+                              "attributes": {},
+                              "properties": {},
+                              "children": [
+                                {
+                                  "kind": "text",
+                                  "text": "x",
+                                  "attributes": {},
+                                  "properties": {},
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "kind": "mtext",
+                      "text": null,
+                      "attributes": {},
+                      "properties": {},
+                      "children": [
+                        {
+                          "kind": "text",
+                          "text": " b",
+                          "attributes": {},
+                          "properties": {},
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "cursor": 15,
+      "remaining": "Z",
+      "sourceUnchanged": true,
+      "envBefore": {},
+      "envAfter": {},
+      "envIdentity": true,
+      "configIdentity": true,
+      "colorModelIdentity": true,
+      "counter": 999,
+      "lateColor": "late",
+      "pushCount": 1,
+      "outerCreationCount": 1,
+      "allPushedCreated": true,
+      "rootParentsNull": true,
+      "unique": true,
+      "parents": true,
+      "method": "function(t,e){var Q=h.default.internalMath(t,t.GetArgument(e)),r=t.create(\"node\",\"menclose\",Q,{notation:\"box\"});t.Push(r)}"
+    },
+    {
+      "input": {
+        "name": "shared-macro-error",
+        "command": "colorbox",
+        "source": "{late}{a $\\dproof$}Z",
+        "outerMacroCount": 999,
+        "registration": {
+          "name": "dproof",
+          "body": "\\definecolor{late}{RGB}{255,0,0}\\notADefinedCommand",
+          "arguments": 0
+        }
+      },
+      "error": {
+        "id": "UndefinedControlSequence",
+        "message": "Undefined control sequence \\notADefinedCommand"
+      },
+      "nodes": [],
+      "cursor": 19,
+      "remaining": "Z",
+      "sourceUnchanged": true,
+      "envBefore": {},
+      "envAfter": {},
+      "envIdentity": true,
+      "configIdentity": true,
+      "colorModelIdentity": true,
+      "counter": 999,
+      "lateColor": "#ff0000",
+      "pushCount": 0,
+      "outerCreationCount": 0,
+      "allPushedCreated": true,
+      "rootParentsNull": true,
+      "unique": true,
+      "parents": true,
+      "method": "function(t,e){var Q=t.GetArgument(e),r=n.default.internalMath(t,t.GetArgument(e)),i=t.configuration.packageData.get(\"color\").model,a=t.create(\"node\",\"mpadded\",r,{mathbackground:i.getColor(\"named\",Q)});T.default.setProperties(a,o(t.options.color.padding)),t.Push(a)}"
+    },
+    {
+      "input": {
+        "name": "late-color",
+        "command": "colorbox",
+        "source": "{late}{$\\definecolor{late}{RGB}{255,0,0}x$}Z"
+      },
+      "error": null,
+      "nodes": [
+        {
+          "kind": "mpadded",
+          "text": null,
+          "attributes": {
+            "mathbackground": "#ff0000",
+            "width": "+10px",
+            "height": "+5px",
+            "depth": "+5px",
+            "lspace": "5px"
+          },
+          "properties": {},
+          "children": [
+            {
+              "kind": "inferredMrow",
+              "text": null,
+              "attributes": {},
+              "properties": {},
+              "children": [
+                {
+                  "kind": "TeXAtom",
+                  "text": null,
+                  "attributes": {},
+                  "properties": {
+                    "texClass": 0
+                  },
+                  "children": [
+                    {
+                      "kind": "inferredMrow",
+                      "text": null,
+                      "attributes": {},
+                      "properties": {},
+                      "children": [
+                        {
+                          "kind": "mi",
+                          "text": null,
+                          "attributes": {},
+                          "properties": {},
+                          "children": [
+                            {
+                              "kind": "text",
+                              "text": "x",
+                              "attributes": {},
+                              "properties": {},
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "cursor": 43,
+      "remaining": "Z",
+      "sourceUnchanged": true,
+      "envBefore": {},
+      "envAfter": {},
+      "envIdentity": true,
+      "configIdentity": true,
+      "colorModelIdentity": true,
+      "counter": 0,
+      "lateColor": "#ff0000",
+      "pushCount": 1,
+      "outerCreationCount": 1,
+      "allPushedCreated": true,
+      "rootParentsNull": true,
+      "unique": true,
+      "parents": true,
+      "method": "function(t,e){var Q=t.GetArgument(e),r=n.default.internalMath(t,t.GetArgument(e)),i=t.configuration.packageData.get(\"color\").model,a=t.create(\"node\",\"mpadded\",r,{mathbackground:i.getColor(\"named\",Q)});T.default.setProperties(a,o(t.options.color.padding)),t.Push(a)}"
+    },
+    {
+      "input": {
+        "name": "late-frame",
+        "command": "fcolorbox",
+        "source": "{late}{yellow}{$\\definecolor{late}{RGB}{0,0,255}x$}Z"
+      },
+      "error": null,
+      "nodes": [
+        {
+          "kind": "mpadded",
+          "text": null,
+          "attributes": {
+            "mathbackground": "yellow",
+            "style": "border: 2px solid #0000ff",
+            "width": "+10px",
+            "height": "+5px",
+            "depth": "+5px",
+            "lspace": "5px"
+          },
+          "properties": {},
+          "children": [
+            {
+              "kind": "inferredMrow",
+              "text": null,
+              "attributes": {},
+              "properties": {},
+              "children": [
+                {
+                  "kind": "TeXAtom",
+                  "text": null,
+                  "attributes": {},
+                  "properties": {
+                    "texClass": 0
+                  },
+                  "children": [
+                    {
+                      "kind": "inferredMrow",
+                      "text": null,
+                      "attributes": {},
+                      "properties": {},
+                      "children": [
+                        {
+                          "kind": "mi",
+                          "text": null,
+                          "attributes": {},
+                          "properties": {},
+                          "children": [
+                            {
+                              "kind": "text",
+                              "text": "x",
+                              "attributes": {},
+                              "properties": {},
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "cursor": 51,
+      "remaining": "Z",
+      "sourceUnchanged": true,
+      "envBefore": {},
+      "envAfter": {},
+      "envIdentity": true,
+      "configIdentity": true,
+      "colorModelIdentity": true,
+      "counter": 0,
+      "lateColor": "#0000ff",
+      "pushCount": 1,
+      "outerCreationCount": 1,
+      "allPushedCreated": true,
+      "rootParentsNull": true,
+      "unique": true,
+      "parents": true,
+      "method": "function(t,e){var Q=t.GetArgument(e),r=t.GetArgument(e),i=n.default.internalMath(t,t.GetArgument(e)),a=t.options.color,s=t.configuration.packageData.get(\"color\").model,l=t.create(\"node\",\"mpadded\",i,{mathbackground:s.getColor(\"named\",r),style:\"border: \".concat(a.borderWidth,\" solid \").concat(s.getColor(\"named\",Q))});T.default.setProperties(l,o(a.padding)),t.Push(l)}"
+    },
+    {
+      "input": {
+        "name": "fbox-missing",
+        "command": "fbox",
+        "source": ""
+      },
+      "error": {
+        "id": "MissingArgFor",
+        "message": "Missing argument for \\fbox"
+      },
+      "nodes": [],
+      "cursor": 0,
+      "remaining": "",
+      "sourceUnchanged": true,
+      "envBefore": {},
+      "envAfter": {},
+      "envIdentity": true,
+      "configIdentity": true,
+      "colorModelIdentity": true,
+      "counter": 0,
+      "lateColor": "late",
+      "pushCount": 0,
+      "outerCreationCount": 0,
+      "allPushedCreated": true,
+      "rootParentsNull": true,
+      "unique": true,
+      "parents": true,
+      "method": "function(t,e){var Q=h.default.internalMath(t,t.GetArgument(e)),r=t.create(\"node\",\"menclose\",Q,{notation:\"box\"});t.Push(r)}"
+    },
+    {
+      "input": {
+        "name": "colorbox-missing",
+        "command": "colorbox",
+        "source": "{red}"
+      },
+      "error": {
+        "id": "MissingArgFor",
+        "message": "Missing argument for \\colorbox"
+      },
+      "nodes": [],
+      "cursor": 5,
+      "remaining": "",
+      "sourceUnchanged": true,
+      "envBefore": {},
+      "envAfter": {},
+      "envIdentity": true,
+      "configIdentity": true,
+      "colorModelIdentity": true,
+      "counter": 0,
+      "lateColor": "late",
+      "pushCount": 0,
+      "outerCreationCount": 0,
+      "allPushedCreated": true,
+      "rootParentsNull": true,
+      "unique": true,
+      "parents": true,
+      "method": "function(t,e){var Q=t.GetArgument(e),r=n.default.internalMath(t,t.GetArgument(e)),i=t.configuration.packageData.get(\"color\").model,a=t.create(\"node\",\"mpadded\",r,{mathbackground:i.getColor(\"named\",Q)});T.default.setProperties(a,o(t.options.color.padding)),t.Push(a)}"
+    },
+    {
+      "input": {
+        "name": "fcolorbox-missing",
+        "command": "fcolorbox",
+        "source": "{blue}{red}"
+      },
+      "error": {
+        "id": "MissingArgFor",
+        "message": "Missing argument for \\fcolorbox"
+      },
+      "nodes": [],
+      "cursor": 11,
+      "remaining": "",
+      "sourceUnchanged": true,
+      "envBefore": {},
+      "envAfter": {},
+      "envIdentity": true,
+      "configIdentity": true,
+      "colorModelIdentity": true,
+      "counter": 0,
+      "lateColor": "late",
+      "pushCount": 0,
+      "outerCreationCount": 0,
+      "allPushedCreated": true,
+      "rootParentsNull": true,
+      "unique": true,
+      "parents": true,
+      "method": "function(t,e){var Q=t.GetArgument(e),r=t.GetArgument(e),i=n.default.internalMath(t,t.GetArgument(e)),a=t.options.color,s=t.configuration.packageData.get(\"color\").model,l=t.create(\"node\",\"mpadded\",i,{mathbackground:s.getColor(\"named\",r),style:\"border: \".concat(a.borderWidth,\" solid \").concat(s.getColor(\"named\",Q))});T.default.setProperties(l,o(a.padding)),t.Push(l)}"
+    },
+    {
+      "input": {
+        "name": "incomplete-math",
+        "command": "fbox",
+        "source": "{a $x}Z"
+      },
+      "error": {
+        "id": "MathNotTerminated",
+        "message": "Math not terminated in text box"
+      },
+      "nodes": [],
+      "cursor": 6,
+      "remaining": "Z",
+      "sourceUnchanged": true,
+      "envBefore": {},
+      "envAfter": {},
+      "envIdentity": true,
+      "configIdentity": true,
+      "colorModelIdentity": true,
+      "counter": 0,
+      "lateColor": "late",
+      "pushCount": 0,
+      "outerCreationCount": 0,
+      "allPushedCreated": true,
+      "rootParentsNull": true,
+      "unique": true,
+      "parents": true,
+      "method": "function(t,e){var Q=h.default.internalMath(t,t.GetArgument(e)),r=t.create(\"node\",\"menclose\",Q,{notation:\"box\"});t.Push(r)}"
+    }
+  ]
+}
