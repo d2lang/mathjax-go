@@ -1,0 +1,9 @@
+# Positioning arithmetic rounding
+
+These exact numeric expectations come from the pinned D2 MathJax 3.2.2 component (bundle SHA-256 `cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869`). All values retain binary64 round-trip precision; no tolerance, formatting or zero normalization is used.
+
+Five multiscript cases retain actual primary `place` x arguments for centered k/4 and right-aligned i/b/a. Their child width and relative scale come from those primary wrappers. Column widths are the separately rounded maximum paired-child products in the unchanged primary `addScripts` implementation, using actual returned primary outer boxes. The tests call the real `multiscriptAlign` helper with dynamic multiplication expressions, including observed zero and nonzero cases; they do not duplicate the alignment formula to compute expectations.
+
+The root case retains the complete actual `getRootDimens` return `[x, h, dx]` and its actual surd, height, surd size and nested root `getOuterBBox` return. The test constructs the actual Go root wrapper, preloads the captured primary root box, and calls the existing `rootDimensions` method. This isolates arithmetic from D117's separate effective script-scale policy. No Go measurement is used as a golden. All 11 primary BBox fields are retained; JSON capitalization maps their names to Go fields without changing values.
+
+The broader diagnostic preserves plain/passive primary pairs, complete raw models, DOM identities, SVGs, call events and bounded compiler procedures. Its execution freeze is `5951d3e0591489dd374b4daba1f093de6da85f89a16aa3e215b3174e82e55f54`, and exact arithmetic classification freeze is `d8a6ae92de5767c6a9c26521016904bb38542dfdd0a39b3b60059668cf61214a`. The constructor root witness is distinct from a public Go parser witness. These tests make no general raw-model, script-scale, or Studio parity claim.
