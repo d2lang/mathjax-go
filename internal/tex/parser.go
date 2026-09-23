@@ -306,7 +306,7 @@ func (p *parser) parseRowWithInfix(terminator byte, stopRight, infixPending bool
 		return nil, "", texError("ExtraOpenMissingClose", "Extra open brace or missing close brace")
 	}
 	if stopRight {
-		return nil, "", texError("MissingRight", "Missing \\right")
+		return nil, "", texError("ExtraLeftMissingRight", "Extra \\left or missing \\right")
 	}
 	return nodes, "", nil
 }

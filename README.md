@@ -265,11 +265,14 @@ or missing close brace"). Argument readers retain their separate
 nested, fractional, script, font, style, color and size groups, earlier errors,
 and valid controls in both modes. Twenty-four parsed-group errors now match
 complete primary SVGs, ordered explicit/own trees, errors and source cursors.
-All 40 controls retain their complete accepted trees, SVGs and parser state.
+Four missing-right controls now match the primary `ExtraLeftMissingRight`
+identity and "Extra \left or missing \right" message, complete SVG and ordered
+explicit/own tree. All 40 historical controls keep the same source/cursor state;
+the other 36 also retain their complete accepted trees and SVGs.
 
-Of those controls, six existing missing-right/hash error outputs retain exact
-accepted references; eight argument-reader and two hash cursor differences
-also remain explicitly bound. The untouched primary references are preserved.
+The two hash diagnostic outputs, eight argument-reader cursor differences and
+two hash cursor differences remain explicitly bound. The untouched primary and
+historical accepted references are preserved.
 No general error or cursor normalization is used.
 
 ```
