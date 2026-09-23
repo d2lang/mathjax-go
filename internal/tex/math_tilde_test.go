@@ -286,27 +286,17 @@ func TestMathTildePinnedOutputs(t *testing.T) {
 			got := mathTildeCanonical(mathTildeNodeTree(root))
 			want := mathTildePrimaryTree(primary.Tree)
 			isAccent := c.Scope == "public" && (c.Name == "accent-inline" || c.Name == "accent-display")
-			isEscaped := c.Scope == "public" && (c.Name == "escaped-inline" || c.Name == "escaped-display")
-			if isAccent || isEscaped {
+			if isAccent {
 				tex := `\tilde{x}`
-				if isEscaped {
-					tex = `\~`
-				}
 				if c.Input.TeX != tex || c.Input.Display != strings.HasSuffix(c.Name, "-display") || c.Input.Registration != nil {
 					t.Fatal("boundary input")
 				}
 				if !reflect.DeepEqual(got, mathTildePrimaryTree(old.Tree)) || !reflect.DeepEqual(pe, old.Error) {
 					t.Fatal("whole accepted control changed")
 				}
-				if isEscaped {
-					if primary.FormattedError == nil || primary.FormattedError.ID != "UndefinedControlSequence" || primary.FormattedError.Message != `Undefined control sequence \~` || old.Error != nil {
-						t.Fatal("escaped-command diagnostic authority")
-					}
-				} else {
-					pn, an := mathTildeNodeAt(want, []int{0, 0, 0, 0, 1}), mathTildeNodeAt(got, []int{0, 0, 0, 0, 1})
-					if pn == nil || an == nil || !reflect.DeepEqual(pn.Properties, []mathTildeField{{"mathaccent", true}}) || !reflect.DeepEqual(an.Properties, []mathTildeField{{"texClass", float64(0)}, {"mathaccent", true}}) {
-						t.Fatal("accent property authority")
-					}
+				pn, an := mathTildeNodeAt(want, []int{0, 0, 0, 0, 1}), mathTildeNodeAt(got, []int{0, 0, 0, 0, 1})
+				if pn == nil || an == nil || !reflect.DeepEqual(pn.Properties, []mathTildeField{{"mathaccent", true}}) || !reflect.DeepEqual(an.Properties, []mathTildeField{{"texClass", float64(0)}, {"mathaccent", true}}) {
+					t.Fatal("accent property authority")
 				}
 			} else {
 				if !reflect.DeepEqual(pe, primary.FormattedError) {
@@ -323,9 +313,6 @@ func TestMathTildePinnedOutputs(t *testing.T) {
 				t.Fatal(err)
 			}
 			expected := primary.SVG
-			if isEscaped {
-				expected = old.SVG
-			}
 			if s != expected {
 				t.Fatalf("whole SVG differs: got %x want %x", sha256.Sum256([]byte(s)), sha256.Sum256([]byte(expected)))
 			}

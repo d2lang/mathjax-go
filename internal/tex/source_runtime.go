@@ -17,7 +17,7 @@ import (
 func lookupMJSourceEntry(kind mjSourceMapKind, name string) (mjSourceMap, mjSourceEntry, bool) {
 	for mapIndex := len(mjSourceMaps) - 1; mapIndex >= 0; mapIndex-- {
 		sourceMap := mjSourceMaps[mapIndex]
-		if sourceMap.Kind != kind {
+		if sourceMap.Kind != kind || sourceMap.Parser == "" {
 			continue
 		}
 		for entryIndex := len(sourceMap.Entries) - 1; entryIndex >= 0; entryIndex-- {
