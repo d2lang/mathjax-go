@@ -1,0 +1,1861 @@
+{
+  "oracle": "Unmodified pinned D2 MathJax3.2.2; fresh VM per case/mode; AST observed before unchanged SVG renderer",
+  "mathjaxGitCommit": "ad8f5c21cb810236551da8c6512ba733e67357ee",
+  "assetsSHA256": {
+    "polyfills.js": "7fe1d048c78b0e09854c1259f7413868a51cc8f0c822489eb1ac36ae6c85ce01",
+    "mathjax.js": "cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869",
+    "setup.js": "a52cb0bbabfbd7796b9fedd793b9386c474e3123e788ee151cbe47ca1fa6e881"
+  },
+  "cases": [
+    {
+      "name": "token-row-inline",
+      "tex": "x\\mmlToken{mi}{mod}y",
+      "display": false,
+      "width": 60,
+      "height": 17,
+      "identifiers": [
+        {
+          "path": "root/0/0",
+          "text": "x",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        },
+        {
+          "path": "root/0/1",
+          "text": "mod",
+          "texClass": 1,
+          "properties": {
+            "autoOP": true
+          },
+          "variant": "normal"
+        },
+        {
+          "path": "root/0/2",
+          "text": "y",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        }
+      ],
+      "svgSHA256": "96574eeb6305d612f37513b43a4196ee2317f082a6a562dba62bd75cb335c430"
+    },
+    {
+      "name": "token-row-display",
+      "tex": "x\\mmlToken{mi}{mod}y",
+      "display": true,
+      "width": 60,
+      "height": 17,
+      "identifiers": [
+        {
+          "path": "root/0/0",
+          "text": "x",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        },
+        {
+          "path": "root/0/1",
+          "text": "mod",
+          "texClass": 1,
+          "properties": {
+            "autoOP": true
+          },
+          "variant": "normal"
+        },
+        {
+          "path": "root/0/2",
+          "text": "y",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        }
+      ],
+      "svgSHA256": "96574eeb6305d612f37513b43a4196ee2317f082a6a562dba62bd75cb335c430"
+    },
+    {
+      "name": "token-alone-inline",
+      "tex": "\\mmlToken{mi}{mod}",
+      "display": false,
+      "width": 35,
+      "height": 13,
+      "identifiers": [
+        {
+          "path": "root/0/0",
+          "text": "mod",
+          "texClass": 1,
+          "properties": {
+            "autoOP": true
+          },
+          "variant": "normal"
+        }
+      ],
+      "svgSHA256": "eba922e15dd93fdd902578b882a25c362f4c342fb584ec179c20d0417f645acf"
+    },
+    {
+      "name": "token-alone-display",
+      "tex": "\\mmlToken{mi}{mod}",
+      "display": true,
+      "width": 35,
+      "height": 13,
+      "identifiers": [
+        {
+          "path": "root/0/0",
+          "text": "mod",
+          "texClass": 1,
+          "properties": {
+            "autoOP": true
+          },
+          "variant": "normal"
+        }
+      ],
+      "svgSHA256": "eba922e15dd93fdd902578b882a25c362f4c342fb584ec179c20d0417f645acf"
+    },
+    {
+      "name": "token-bin-inline",
+      "tex": "\\mmlToken{mi}{mod}+x",
+      "display": false,
+      "width": 67,
+      "height": 15,
+      "identifiers": [
+        {
+          "path": "root/0/0",
+          "text": "mod",
+          "texClass": 0,
+          "properties": {
+            "autoOP": true
+          },
+          "variant": "normal"
+        },
+        {
+          "path": "root/0/2",
+          "text": "x",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        }
+      ],
+      "svgSHA256": "c0a0bfe38841dbdf9018a19d544300d864ac7ada20bc578125810a5153a06d4a"
+    },
+    {
+      "name": "token-bin-display",
+      "tex": "\\mmlToken{mi}{mod}+x",
+      "display": true,
+      "width": 67,
+      "height": 15,
+      "identifiers": [
+        {
+          "path": "root/0/0",
+          "text": "mod",
+          "texClass": 0,
+          "properties": {
+            "autoOP": true
+          },
+          "variant": "normal"
+        },
+        {
+          "path": "root/0/2",
+          "text": "x",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        }
+      ],
+      "svgSHA256": "c0a0bfe38841dbdf9018a19d544300d864ac7ada20bc578125810a5153a06d4a"
+    },
+    {
+      "name": "token-rel-inline",
+      "tex": "\\mmlToken{mi}{mod}=x",
+      "display": false,
+      "width": 69,
+      "height": 15,
+      "identifiers": [
+        {
+          "path": "root/0/0",
+          "text": "mod",
+          "texClass": 0,
+          "properties": {
+            "autoOP": true
+          },
+          "variant": "normal"
+        },
+        {
+          "path": "root/0/2",
+          "text": "x",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        }
+      ],
+      "svgSHA256": "27a855ef0944d819491e34b9f36323134be4cf86b71a18125d8f99ead1acf26f"
+    },
+    {
+      "name": "token-rel-display",
+      "tex": "\\mmlToken{mi}{mod}=x",
+      "display": true,
+      "width": 69,
+      "height": 15,
+      "identifiers": [
+        {
+          "path": "root/0/0",
+          "text": "mod",
+          "texClass": 0,
+          "properties": {
+            "autoOP": true
+          },
+          "variant": "normal"
+        },
+        {
+          "path": "root/0/2",
+          "text": "x",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        }
+      ],
+      "svgSHA256": "27a855ef0944d819491e34b9f36323134be4cf86b71a18125d8f99ead1acf26f"
+    },
+    {
+      "name": "token-uppercase-inline",
+      "tex": "x\\mmlToken{mi}{Ab12}y",
+      "display": false,
+      "width": 67,
+      "height": 17,
+      "identifiers": [
+        {
+          "path": "root/0/0",
+          "text": "x",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        },
+        {
+          "path": "root/0/1",
+          "text": "Ab12",
+          "texClass": 1,
+          "properties": {
+            "autoOP": true
+          },
+          "variant": "normal"
+        },
+        {
+          "path": "root/0/2",
+          "text": "y",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        }
+      ],
+      "svgSHA256": "6a7f971f7d8ac3b69195579040a62f1405bcea7e478e73c6fb971f783bf19abb"
+    },
+    {
+      "name": "token-uppercase-display",
+      "tex": "x\\mmlToken{mi}{Ab12}y",
+      "display": true,
+      "width": 67,
+      "height": 17,
+      "identifiers": [
+        {
+          "path": "root/0/0",
+          "text": "x",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        },
+        {
+          "path": "root/0/1",
+          "text": "Ab12",
+          "texClass": 1,
+          "properties": {
+            "autoOP": true
+          },
+          "variant": "normal"
+        },
+        {
+          "path": "root/0/2",
+          "text": "y",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        }
+      ],
+      "svgSHA256": "6a7f971f7d8ac3b69195579040a62f1405bcea7e478e73c6fb971f783bf19abb"
+    },
+    {
+      "name": "token-single-inline",
+      "tex": "x\\mmlToken{mi}{a}y",
+      "display": false,
+      "width": 29,
+      "height": 12,
+      "identifiers": [
+        {
+          "path": "root/0/0",
+          "text": "x",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        },
+        {
+          "path": "root/0/1",
+          "text": "a",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        },
+        {
+          "path": "root/0/2",
+          "text": "y",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        }
+      ],
+      "svgSHA256": "560f0b4cb9eeb7481b94b50dc5fbbade5a8f6afe9a80d09bca52a79c657be6e4"
+    },
+    {
+      "name": "token-single-display",
+      "tex": "x\\mmlToken{mi}{a}y",
+      "display": true,
+      "width": 29,
+      "height": 12,
+      "identifiers": [
+        {
+          "path": "root/0/0",
+          "text": "x",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        },
+        {
+          "path": "root/0/1",
+          "text": "a",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        },
+        {
+          "path": "root/0/2",
+          "text": "y",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        }
+      ],
+      "svgSHA256": "560f0b4cb9eeb7481b94b50dc5fbbade5a8f6afe9a80d09bca52a79c657be6e4"
+    },
+    {
+      "name": "token-digit-first-inline",
+      "tex": "x\\mmlToken{mi}{1a}y",
+      "display": false,
+      "width": 38,
+      "height": 16,
+      "identifiers": [
+        {
+          "path": "root/0/0",
+          "text": "x",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        },
+        {
+          "path": "root/0/1",
+          "text": "1a",
+          "texClass": 0,
+          "properties": {},
+          "variant": "normal"
+        },
+        {
+          "path": "root/0/2",
+          "text": "y",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        }
+      ],
+      "svgSHA256": "b4c05f2b33d44366aaaef6063bec29a0744081f2785104ef920eef0c0d33a4e1"
+    },
+    {
+      "name": "token-digit-first-display",
+      "tex": "x\\mmlToken{mi}{1a}y",
+      "display": true,
+      "width": 38,
+      "height": 16,
+      "identifiers": [
+        {
+          "path": "root/0/0",
+          "text": "x",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        },
+        {
+          "path": "root/0/1",
+          "text": "1a",
+          "texClass": 0,
+          "properties": {},
+          "variant": "normal"
+        },
+        {
+          "path": "root/0/2",
+          "text": "y",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        }
+      ],
+      "svgSHA256": "b4c05f2b33d44366aaaef6063bec29a0744081f2785104ef920eef0c0d33a4e1"
+    },
+    {
+      "name": "token-punctuation-inline",
+      "tex": "x\\mmlToken{mi}{a.b}y",
+      "display": false,
+      "width": 44,
+      "height": 17,
+      "identifiers": [
+        {
+          "path": "root/0/0",
+          "text": "x",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        },
+        {
+          "path": "root/0/1",
+          "text": "a.b",
+          "texClass": 0,
+          "properties": {},
+          "variant": "normal"
+        },
+        {
+          "path": "root/0/2",
+          "text": "y",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        }
+      ],
+      "svgSHA256": "e6ac19e95798ae08c6d67395fc8295f740834bbc39542eee11760001acb46754"
+    },
+    {
+      "name": "token-punctuation-display",
+      "tex": "x\\mmlToken{mi}{a.b}y",
+      "display": true,
+      "width": 44,
+      "height": 17,
+      "identifiers": [
+        {
+          "path": "root/0/0",
+          "text": "x",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        },
+        {
+          "path": "root/0/1",
+          "text": "a.b",
+          "texClass": 0,
+          "properties": {},
+          "variant": "normal"
+        },
+        {
+          "path": "root/0/2",
+          "text": "y",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        }
+      ],
+      "svgSHA256": "e6ac19e95798ae08c6d67395fc8295f740834bbc39542eee11760001acb46754"
+    },
+    {
+      "name": "token-greek-inline",
+      "tex": "x\\mmlToken{mi}{αβ}y",
+      "display": false,
+      "width": 41,
+      "height": 18,
+      "identifiers": [
+        {
+          "path": "root/0/0",
+          "text": "x",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        },
+        {
+          "path": "root/0/1",
+          "text": "αβ",
+          "texClass": 0,
+          "properties": {},
+          "variant": "normal"
+        },
+        {
+          "path": "root/0/2",
+          "text": "y",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        }
+      ],
+      "svgSHA256": "74960c1e01a9b3d51b3e53bd833590d79fa8634a923655979de7c760906e6bd7"
+    },
+    {
+      "name": "token-greek-display",
+      "tex": "x\\mmlToken{mi}{αβ}y",
+      "display": true,
+      "width": 41,
+      "height": 18,
+      "identifiers": [
+        {
+          "path": "root/0/0",
+          "text": "x",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        },
+        {
+          "path": "root/0/1",
+          "text": "αβ",
+          "texClass": 0,
+          "properties": {},
+          "variant": "normal"
+        },
+        {
+          "path": "root/0/2",
+          "text": "y",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        }
+      ],
+      "svgSHA256": "74960c1e01a9b3d51b3e53bd833590d79fa8634a923655979de7c760906e6bd7"
+    },
+    {
+      "name": "token-kelvin-inline",
+      "tex": "x\\mmlToken{mi}{Ka}y",
+      "display": false,
+      "width": 40,
+      "height": 18,
+      "identifiers": [
+        {
+          "path": "root/0/0",
+          "text": "x",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        },
+        {
+          "path": "root/0/1",
+          "text": "Ka",
+          "texClass": 0,
+          "properties": {},
+          "variant": "normal"
+        },
+        {
+          "path": "root/0/2",
+          "text": "y",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        }
+      ],
+      "svgSHA256": "246d19e45d3dd84b79121bd6dff1e0df284a4e67935aa1d374786ea26a74dfb0"
+    },
+    {
+      "name": "token-kelvin-display",
+      "tex": "x\\mmlToken{mi}{Ka}y",
+      "display": true,
+      "width": 40,
+      "height": 18,
+      "identifiers": [
+        {
+          "path": "root/0/0",
+          "text": "x",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        },
+        {
+          "path": "root/0/1",
+          "text": "Ka",
+          "texClass": 0,
+          "properties": {},
+          "variant": "normal"
+        },
+        {
+          "path": "root/0/2",
+          "text": "y",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        }
+      ],
+      "svgSHA256": "246d19e45d3dd84b79121bd6dff1e0df284a4e67935aa1d374786ea26a74dfb0"
+    },
+    {
+      "name": "token-long-s-inline",
+      "tex": "x\\mmlToken{mi}{ſa}y",
+      "display": false,
+      "width": 40,
+      "height": 18,
+      "identifiers": [
+        {
+          "path": "root/0/0",
+          "text": "x",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        },
+        {
+          "path": "root/0/1",
+          "text": "ſa",
+          "texClass": 0,
+          "properties": {},
+          "variant": "normal"
+        },
+        {
+          "path": "root/0/2",
+          "text": "y",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        }
+      ],
+      "svgSHA256": "7ed25b0fb92c572fb52b9d526233915a79be75924deec9e14b8faa349538e0c0"
+    },
+    {
+      "name": "token-long-s-display",
+      "tex": "x\\mmlToken{mi}{ſa}y",
+      "display": true,
+      "width": 40,
+      "height": 18,
+      "identifiers": [
+        {
+          "path": "root/0/0",
+          "text": "x",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        },
+        {
+          "path": "root/0/1",
+          "text": "ſa",
+          "texClass": 0,
+          "properties": {},
+          "variant": "normal"
+        },
+        {
+          "path": "root/0/2",
+          "text": "y",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        }
+      ],
+      "svgSHA256": "7ed25b0fb92c572fb52b9d526233915a79be75924deec9e14b8faa349538e0c0"
+    },
+    {
+      "name": "token-bold-inline",
+      "tex": "x\\mmlToken{mi}[mathvariant=\"bold\"]{mod}y",
+      "display": false,
+      "width": 59,
+      "height": 17,
+      "identifiers": [
+        {
+          "path": "root/0/0",
+          "text": "x",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        },
+        {
+          "path": "root/0/1",
+          "text": "mod",
+          "texClass": 0,
+          "properties": {},
+          "variant": "bold"
+        },
+        {
+          "path": "root/0/2",
+          "text": "y",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        }
+      ],
+      "svgSHA256": "bac7bba23de0d22a213b46bb9afef2b5b8b2ac52c4b9be4ebc199ff503f79b78"
+    },
+    {
+      "name": "token-bold-display",
+      "tex": "x\\mmlToken{mi}[mathvariant=\"bold\"]{mod}y",
+      "display": true,
+      "width": 59,
+      "height": 17,
+      "identifiers": [
+        {
+          "path": "root/0/0",
+          "text": "x",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        },
+        {
+          "path": "root/0/1",
+          "text": "mod",
+          "texClass": 0,
+          "properties": {},
+          "variant": "bold"
+        },
+        {
+          "path": "root/0/2",
+          "text": "y",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        }
+      ],
+      "svgSHA256": "bac7bba23de0d22a213b46bb9afef2b5b8b2ac52c4b9be4ebc199ff503f79b78"
+    },
+    {
+      "name": "token-italic-inline",
+      "tex": "x\\mmlToken{mi}[mathvariant=\"italic\"]{mod}y",
+      "display": false,
+      "width": 54,
+      "height": 17,
+      "identifiers": [
+        {
+          "path": "root/0/0",
+          "text": "x",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        },
+        {
+          "path": "root/0/1",
+          "text": "mod",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        },
+        {
+          "path": "root/0/2",
+          "text": "y",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        }
+      ],
+      "svgSHA256": "038de5331757a61baf2f5ea68dac8b3138877036add0399748cb47062da7c0a4"
+    },
+    {
+      "name": "token-italic-display",
+      "tex": "x\\mmlToken{mi}[mathvariant=\"italic\"]{mod}y",
+      "display": true,
+      "width": 54,
+      "height": 17,
+      "identifiers": [
+        {
+          "path": "root/0/0",
+          "text": "x",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        },
+        {
+          "path": "root/0/1",
+          "text": "mod",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        },
+        {
+          "path": "root/0/2",
+          "text": "y",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        }
+      ],
+      "svgSHA256": "038de5331757a61baf2f5ea68dac8b3138877036add0399748cb47062da7c0a4"
+    },
+    {
+      "name": "token-normal-inline",
+      "tex": "x\\mmlToken{mi}[mathvariant=\"normal\"]{mod}y",
+      "display": false,
+      "width": 60,
+      "height": 17,
+      "identifiers": [
+        {
+          "path": "root/0/0",
+          "text": "x",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        },
+        {
+          "path": "root/0/1",
+          "text": "mod",
+          "texClass": 1,
+          "properties": {
+            "autoOP": true
+          },
+          "variant": "normal"
+        },
+        {
+          "path": "root/0/2",
+          "text": "y",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        }
+      ],
+      "svgSHA256": "96574eeb6305d612f37513b43a4196ee2317f082a6a562dba62bd75cb335c430"
+    },
+    {
+      "name": "token-normal-display",
+      "tex": "x\\mmlToken{mi}[mathvariant=\"normal\"]{mod}y",
+      "display": true,
+      "width": 60,
+      "height": 17,
+      "identifiers": [
+        {
+          "path": "root/0/0",
+          "text": "x",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        },
+        {
+          "path": "root/0/1",
+          "text": "mod",
+          "texClass": 1,
+          "properties": {
+            "autoOP": true
+          },
+          "variant": "normal"
+        },
+        {
+          "path": "root/0/2",
+          "text": "y",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        }
+      ],
+      "svgSHA256": "96574eeb6305d612f37513b43a4196ee2317f082a6a562dba62bd75cb335c430"
+    },
+    {
+      "name": "bold-scope-inline",
+      "tex": "\\mathbf{x\\mmlToken{mi}{mod}y}",
+      "display": false,
+      "width": 63,
+      "height": 17,
+      "identifiers": [
+        {
+          "path": "root/0/0/0/0",
+          "text": "x",
+          "texClass": 0,
+          "properties": {},
+          "variant": "bold"
+        },
+        {
+          "path": "root/0/0/0/1",
+          "text": "mod",
+          "texClass": 1,
+          "properties": {
+            "autoOP": true
+          },
+          "variant": "normal"
+        },
+        {
+          "path": "root/0/0/0/2",
+          "text": "y",
+          "texClass": 0,
+          "properties": {},
+          "variant": "bold"
+        }
+      ],
+      "svgSHA256": "e2a3345fd06f6ba7f028ee79755dacf41c86fe08358d9d5bb9eb1bf60823964f"
+    },
+    {
+      "name": "bold-scope-display",
+      "tex": "\\mathbf{x\\mmlToken{mi}{mod}y}",
+      "display": true,
+      "width": 63,
+      "height": 17,
+      "identifiers": [
+        {
+          "path": "root/0/0/0/0",
+          "text": "x",
+          "texClass": 0,
+          "properties": {},
+          "variant": "bold"
+        },
+        {
+          "path": "root/0/0/0/1",
+          "text": "mod",
+          "texClass": 1,
+          "properties": {
+            "autoOP": true
+          },
+          "variant": "normal"
+        },
+        {
+          "path": "root/0/0/0/2",
+          "text": "y",
+          "texClass": 0,
+          "properties": {},
+          "variant": "bold"
+        }
+      ],
+      "svgSHA256": "e2a3345fd06f6ba7f028ee79755dacf41c86fe08358d9d5bb9eb1bf60823964f"
+    },
+    {
+      "name": "normal-kept-inline",
+      "tex": "\\mathit{x\\mmlToken{mi}[mathvariant=\"normal\"]{mod}y}",
+      "display": false,
+      "width": 58,
+      "height": 17,
+      "identifiers": [
+        {
+          "path": "root/0/0/0/0",
+          "text": "x",
+          "texClass": 0,
+          "properties": {},
+          "variant": "-tex-mathit"
+        },
+        {
+          "path": "root/0/0/0/1",
+          "text": "mod",
+          "texClass": 1,
+          "properties": {
+            "autoOP": true
+          },
+          "variant": "normal"
+        },
+        {
+          "path": "root/0/0/0/2",
+          "text": "y",
+          "texClass": 0,
+          "properties": {},
+          "variant": "-tex-mathit"
+        }
+      ],
+      "svgSHA256": "2a2f6c3eda1d7094bb1e4a8af6bc18b5f1ed7df45708ca57f0b3e52a482c88ee"
+    },
+    {
+      "name": "normal-kept-display",
+      "tex": "\\mathit{x\\mmlToken{mi}[mathvariant=\"normal\"]{mod}y}",
+      "display": true,
+      "width": 58,
+      "height": 17,
+      "identifiers": [
+        {
+          "path": "root/0/0/0/0",
+          "text": "x",
+          "texClass": 0,
+          "properties": {},
+          "variant": "-tex-mathit"
+        },
+        {
+          "path": "root/0/0/0/1",
+          "text": "mod",
+          "texClass": 1,
+          "properties": {
+            "autoOP": true
+          },
+          "variant": "normal"
+        },
+        {
+          "path": "root/0/0/0/2",
+          "text": "y",
+          "texClass": 0,
+          "properties": {},
+          "variant": "-tex-mathit"
+        }
+      ],
+      "svgSHA256": "2a2f6c3eda1d7094bb1e4a8af6bc18b5f1ed7df45708ca57f0b3e52a482c88ee"
+    },
+    {
+      "name": "ordinary-roman-inline",
+      "tex": "x\\mathrm{mod}y",
+      "display": false,
+      "width": 54,
+      "height": 17,
+      "identifiers": [
+        {
+          "path": "root/0/0",
+          "text": "x",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        },
+        {
+          "path": "root/0/1/0/0",
+          "text": "mod",
+          "texClass": 0,
+          "properties": {
+            "autoOP": false
+          },
+          "variant": "normal"
+        },
+        {
+          "path": "root/0/2",
+          "text": "y",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        }
+      ],
+      "svgSHA256": "066be3ce9d042c63dc196fa7c260fe487d8e63b6039ebc9dc83eb6440ebb81ab"
+    },
+    {
+      "name": "ordinary-roman-display",
+      "tex": "x\\mathrm{mod}y",
+      "display": true,
+      "width": 54,
+      "height": 17,
+      "identifiers": [
+        {
+          "path": "root/0/0",
+          "text": "x",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        },
+        {
+          "path": "root/0/1/0/0",
+          "text": "mod",
+          "texClass": 0,
+          "properties": {
+            "autoOP": false
+          },
+          "variant": "normal"
+        },
+        {
+          "path": "root/0/2",
+          "text": "y",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        }
+      ],
+      "svgSHA256": "066be3ce9d042c63dc196fa7c260fe487d8e63b6039ebc9dc83eb6440ebb81ab"
+    },
+    {
+      "name": "ordinary-letters-inline",
+      "tex": "x m o d y",
+      "display": false,
+      "width": 54,
+      "height": 17,
+      "identifiers": [
+        {
+          "path": "root/0/0",
+          "text": "x",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        },
+        {
+          "path": "root/0/1",
+          "text": "m",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        },
+        {
+          "path": "root/0/2",
+          "text": "o",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        },
+        {
+          "path": "root/0/3",
+          "text": "d",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        },
+        {
+          "path": "root/0/4",
+          "text": "y",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        }
+      ],
+      "svgSHA256": "46e429dd0cd05ec5ccc76a314b35ce1e143b8782a047a02f2036204b889af822"
+    },
+    {
+      "name": "ordinary-letters-display",
+      "tex": "x m o d y",
+      "display": true,
+      "width": 54,
+      "height": 17,
+      "identifiers": [
+        {
+          "path": "root/0/0",
+          "text": "x",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        },
+        {
+          "path": "root/0/1",
+          "text": "m",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        },
+        {
+          "path": "root/0/2",
+          "text": "o",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        },
+        {
+          "path": "root/0/3",
+          "text": "d",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        },
+        {
+          "path": "root/0/4",
+          "text": "y",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        }
+      ],
+      "svgSHA256": "46e429dd0cd05ec5ccc76a314b35ce1e143b8782a047a02f2036204b889af822"
+    },
+    {
+      "name": "named-operator-inline",
+      "tex": "x\\operatorname{mod}y",
+      "display": false,
+      "width": 60,
+      "height": 17,
+      "identifiers": [
+        {
+          "path": "root/0/0",
+          "text": "x",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        },
+        {
+          "path": "root/0/1",
+          "text": "mod",
+          "texClass": 1,
+          "properties": {
+            "movesupsub": false,
+            "movablelimits": true,
+            "texClass": 1
+          },
+          "variant": "normal"
+        },
+        {
+          "path": "root/0/2",
+          "text": "y",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        }
+      ],
+      "svgSHA256": "96574eeb6305d612f37513b43a4196ee2317f082a6a562dba62bd75cb335c430"
+    },
+    {
+      "name": "named-operator-display",
+      "tex": "x\\operatorname{mod}y",
+      "display": true,
+      "width": 60,
+      "height": 17,
+      "identifiers": [
+        {
+          "path": "root/0/0",
+          "text": "x",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        },
+        {
+          "path": "root/0/1",
+          "text": "mod",
+          "texClass": 1,
+          "properties": {
+            "movesupsub": false,
+            "movablelimits": true,
+            "texClass": 1
+          },
+          "variant": "normal"
+        },
+        {
+          "path": "root/0/2",
+          "text": "y",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        }
+      ],
+      "svgSHA256": "96574eeb6305d612f37513b43a4196ee2317f082a6a562dba62bd75cb335c430"
+    },
+    {
+      "name": "fixed-sin-inline",
+      "tex": "x\\sin y",
+      "display": false,
+      "width": 48,
+      "height": 16,
+      "identifiers": [
+        {
+          "path": "root/0/0",
+          "text": "x",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        },
+        {
+          "path": "root/0/1",
+          "text": "sin",
+          "texClass": 1,
+          "properties": {
+            "texClass": 1
+          },
+          "variant": "normal"
+        },
+        {
+          "path": "root/0/3",
+          "text": "y",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        }
+      ],
+      "svgSHA256": "7a21bbadeb563b2905f59500a080936fc714c2d0f162c8cc86540bc7072b8a02"
+    },
+    {
+      "name": "fixed-sin-display",
+      "tex": "x\\sin y",
+      "display": true,
+      "width": 48,
+      "height": 16,
+      "identifiers": [
+        {
+          "path": "root/0/0",
+          "text": "x",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        },
+        {
+          "path": "root/0/1",
+          "text": "sin",
+          "texClass": 1,
+          "properties": {
+            "texClass": 1
+          },
+          "variant": "normal"
+        },
+        {
+          "path": "root/0/3",
+          "text": "y",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        }
+      ],
+      "svgSHA256": "7a21bbadeb563b2905f59500a080936fc714c2d0f162c8cc86540bc7072b8a02"
+    },
+    {
+      "name": "grouped-inline",
+      "tex": "x{\\mmlToken{mi}{mod}}y",
+      "display": false,
+      "width": 54,
+      "height": 17,
+      "identifiers": [
+        {
+          "path": "root/0/0",
+          "text": "x",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        },
+        {
+          "path": "root/0/1/0/0",
+          "text": "mod",
+          "texClass": 1,
+          "properties": {
+            "autoOP": true
+          },
+          "variant": "normal"
+        },
+        {
+          "path": "root/0/2",
+          "text": "y",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        }
+      ],
+      "svgSHA256": "066be3ce9d042c63dc196fa7c260fe487d8e63b6039ebc9dc83eb6440ebb81ab"
+    },
+    {
+      "name": "grouped-display",
+      "tex": "x{\\mmlToken{mi}{mod}}y",
+      "display": true,
+      "width": 54,
+      "height": 17,
+      "identifiers": [
+        {
+          "path": "root/0/0",
+          "text": "x",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        },
+        {
+          "path": "root/0/1/0/0",
+          "text": "mod",
+          "texClass": 1,
+          "properties": {
+            "autoOP": true
+          },
+          "variant": "normal"
+        },
+        {
+          "path": "root/0/2",
+          "text": "y",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        }
+      ],
+      "svgSHA256": "066be3ce9d042c63dc196fa7c260fe487d8e63b6039ebc9dc83eb6440ebb81ab"
+    },
+    {
+      "name": "script-inline",
+      "tex": "x^{a\\mmlToken{mi}{mod}b}",
+      "display": false,
+      "width": 53,
+      "height": 16,
+      "identifiers": [
+        {
+          "path": "root/0/0/0",
+          "text": "x",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        },
+        {
+          "path": "root/0/0/1/0/0",
+          "text": "a",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        },
+        {
+          "path": "root/0/0/1/0/1",
+          "text": "mod",
+          "texClass": 1,
+          "properties": {
+            "autoOP": true
+          },
+          "variant": "normal"
+        },
+        {
+          "path": "root/0/0/1/0/2",
+          "text": "b",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        }
+      ],
+      "svgSHA256": "12f5ca3fe52686a0fee922bfc8938034acd346753576460ba045f122a112cb99"
+    },
+    {
+      "name": "script-display",
+      "tex": "x^{a\\mmlToken{mi}{mod}b}",
+      "display": true,
+      "width": 53,
+      "height": 17,
+      "identifiers": [
+        {
+          "path": "root/0/0/0",
+          "text": "x",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        },
+        {
+          "path": "root/0/0/1/0/0",
+          "text": "a",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        },
+        {
+          "path": "root/0/0/1/0/1",
+          "text": "mod",
+          "texClass": 1,
+          "properties": {
+            "autoOP": true
+          },
+          "variant": "normal"
+        },
+        {
+          "path": "root/0/0/1/0/2",
+          "text": "b",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        }
+      ],
+      "svgSHA256": "52d77624cb584976e0929c5f07b0ab2e557d8a77219f3b23e81e2fbe040d5d01"
+    },
+    {
+      "name": "scripted-token-inline",
+      "tex": "x\\mmlToken{mi}{mod}_i^n y",
+      "display": false,
+      "width": 69,
+      "height": 18,
+      "identifiers": [
+        {
+          "path": "root/0/0",
+          "text": "x",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        },
+        {
+          "path": "root/0/1/0",
+          "text": "mod",
+          "texClass": 1,
+          "properties": {
+            "autoOP": true
+          },
+          "variant": "normal"
+        },
+        {
+          "path": "root/0/1/1",
+          "text": "i",
+          "texClass": 0,
+          "properties": {
+            "texprimestyle": true
+          },
+          "variant": "italic"
+        },
+        {
+          "path": "root/0/1/2",
+          "text": "n",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        },
+        {
+          "path": "root/0/2",
+          "text": "y",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        }
+      ],
+      "svgSHA256": "f728374f7b8eccc00c1ddd42ea52461991f21c3564e52c0d1cad8ea73e29a304"
+    },
+    {
+      "name": "scripted-token-display",
+      "tex": "x\\mmlToken{mi}{mod}_i^n y",
+      "display": true,
+      "width": 69,
+      "height": 18,
+      "identifiers": [
+        {
+          "path": "root/0/0",
+          "text": "x",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        },
+        {
+          "path": "root/0/1/0",
+          "text": "mod",
+          "texClass": 1,
+          "properties": {
+            "autoOP": true
+          },
+          "variant": "normal"
+        },
+        {
+          "path": "root/0/1/1",
+          "text": "i",
+          "texClass": 0,
+          "properties": {
+            "texprimestyle": true
+          },
+          "variant": "italic"
+        },
+        {
+          "path": "root/0/1/2",
+          "text": "n",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        },
+        {
+          "path": "root/0/2",
+          "text": "y",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        }
+      ],
+      "svgSHA256": "f728374f7b8eccc00c1ddd42ea52461991f21c3564e52c0d1cad8ea73e29a304"
+    },
+    {
+      "name": "fraction-inline",
+      "tex": "\\frac{x\\mmlToken{mi}{mod}y}{z}",
+      "display": false,
+      "width": 50,
+      "height": 25,
+      "identifiers": [
+        {
+          "path": "root/0/0/0/0",
+          "text": "x",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        },
+        {
+          "path": "root/0/0/0/1",
+          "text": "mod",
+          "texClass": 1,
+          "properties": {
+            "autoOP": true
+          },
+          "variant": "normal"
+        },
+        {
+          "path": "root/0/0/0/2",
+          "text": "y",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        },
+        {
+          "path": "root/0/0/1",
+          "text": "z",
+          "texClass": 0,
+          "properties": {
+            "texprimestyle": true
+          },
+          "variant": "italic"
+        }
+      ],
+      "svgSHA256": "f61d14371274a8f51e8086def8ddc90e53d0da55ed7f8e624d1a5e0c6372d4f0"
+    },
+    {
+      "name": "fraction-display",
+      "tex": "\\frac{x\\mmlToken{mi}{mod}y}{z}",
+      "display": true,
+      "width": 68,
+      "height": 38,
+      "identifiers": [
+        {
+          "path": "root/0/0/0/0",
+          "text": "x",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        },
+        {
+          "path": "root/0/0/0/1",
+          "text": "mod",
+          "texClass": 1,
+          "properties": {
+            "autoOP": true
+          },
+          "variant": "normal"
+        },
+        {
+          "path": "root/0/0/0/2",
+          "text": "y",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        },
+        {
+          "path": "root/0/0/1",
+          "text": "z",
+          "texClass": 0,
+          "properties": {
+            "texprimestyle": true
+          },
+          "variant": "italic"
+        }
+      ],
+      "svgSHA256": "d775a0d83072cede3680e8f579e7dcc87c456131274066dd26e3d82b23ddda5d"
+    },
+    {
+      "name": "small-style-inline",
+      "tex": "\\scriptstyle x\\mmlToken{mi}{mod}y",
+      "display": false,
+      "width": 43,
+      "height": 12,
+      "identifiers": [
+        {
+          "path": "root/0/0/0/0",
+          "text": "x",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        },
+        {
+          "path": "root/0/0/0/1",
+          "text": "mod",
+          "texClass": 1,
+          "properties": {
+            "autoOP": true
+          },
+          "variant": "normal"
+        },
+        {
+          "path": "root/0/0/0/2",
+          "text": "y",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        }
+      ],
+      "svgSHA256": "c2c4f5c7c90302563c04644a7cbf6cfd37ced44cea5bf14996235869981c1310"
+    },
+    {
+      "name": "small-style-display",
+      "tex": "\\scriptstyle x\\mmlToken{mi}{mod}y",
+      "display": true,
+      "width": 43,
+      "height": 12,
+      "identifiers": [
+        {
+          "path": "root/0/0/0/0",
+          "text": "x",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        },
+        {
+          "path": "root/0/0/0/1",
+          "text": "mod",
+          "texClass": 1,
+          "properties": {
+            "autoOP": true
+          },
+          "variant": "normal"
+        },
+        {
+          "path": "root/0/0/0/2",
+          "text": "y",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        }
+      ],
+      "svgSHA256": "c2c4f5c7c90302563c04644a7cbf6cfd37ced44cea5bf14996235869981c1310"
+    },
+    {
+      "name": "nested-inline",
+      "tex": "\\sqrt{x\\mmlToken{mi}{mod}y}",
+      "display": false,
+      "width": 78,
+      "height": 23,
+      "identifiers": [
+        {
+          "path": "root/0/0/0/0",
+          "text": "x",
+          "texClass": 0,
+          "properties": {
+            "texprimestyle": true
+          },
+          "variant": "italic"
+        },
+        {
+          "path": "root/0/0/0/1",
+          "text": "mod",
+          "texClass": 1,
+          "properties": {
+            "texprimestyle": true,
+            "autoOP": true
+          },
+          "variant": "normal"
+        },
+        {
+          "path": "root/0/0/0/2",
+          "text": "y",
+          "texClass": 0,
+          "properties": {
+            "texprimestyle": true
+          },
+          "variant": "italic"
+        }
+      ],
+      "svgSHA256": "7595e258c8955b5ff662079f154877fe306904c8a6483a9060feb8158b87e613"
+    },
+    {
+      "name": "nested-display",
+      "tex": "\\sqrt{x\\mmlToken{mi}{mod}y}",
+      "display": true,
+      "width": 78,
+      "height": 23,
+      "identifiers": [
+        {
+          "path": "root/0/0/0/0",
+          "text": "x",
+          "texClass": 0,
+          "properties": {
+            "texprimestyle": true
+          },
+          "variant": "italic"
+        },
+        {
+          "path": "root/0/0/0/1",
+          "text": "mod",
+          "texClass": 1,
+          "properties": {
+            "texprimestyle": true,
+            "autoOP": true
+          },
+          "variant": "normal"
+        },
+        {
+          "path": "root/0/0/0/2",
+          "text": "y",
+          "texClass": 0,
+          "properties": {
+            "texprimestyle": true
+          },
+          "variant": "italic"
+        }
+      ],
+      "svgSHA256": "e30b883aef5772b44cc3ab281b827ff806464a9a15f9435d2ccb1a23fff784eb"
+    },
+    {
+      "name": "color-inline",
+      "tex": "x\\mmlToken{mi}[mathcolor=\"red\"]{mod}y",
+      "display": false,
+      "width": 60,
+      "height": 17,
+      "identifiers": [
+        {
+          "path": "root/0/0",
+          "text": "x",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        },
+        {
+          "path": "root/0/1",
+          "text": "mod",
+          "texClass": 1,
+          "properties": {
+            "autoOP": true
+          },
+          "variant": "normal"
+        },
+        {
+          "path": "root/0/2",
+          "text": "y",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        }
+      ],
+      "svgSHA256": "891cd05e186bb6022fd076ff6d1a954ad4cc7e08fdac277874de906c217aaa9a"
+    },
+    {
+      "name": "color-display",
+      "tex": "x\\mmlToken{mi}[mathcolor=\"red\"]{mod}y",
+      "display": true,
+      "width": 60,
+      "height": 17,
+      "identifiers": [
+        {
+          "path": "root/0/0",
+          "text": "x",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        },
+        {
+          "path": "root/0/1",
+          "text": "mod",
+          "texClass": 1,
+          "properties": {
+            "autoOP": true
+          },
+          "variant": "normal"
+        },
+        {
+          "path": "root/0/2",
+          "text": "y",
+          "texClass": 0,
+          "properties": {},
+          "variant": "italic"
+        }
+      ],
+      "svgSHA256": "891cd05e186bb6022fd076ff6d1a954ad4cc7e08fdac277874de906c217aaa9a"
+    },
+    {
+      "name": "missing-content-inline",
+      "tex": "\\mmlToken{mi}",
+      "display": false,
+      "width": 326,
+      "height": 18,
+      "identifiers": [],
+      "svgSHA256": "60f60165029f111e593c04aa6b6994fde2fb8015bdb1fc87040339f9801012d3"
+    },
+    {
+      "name": "missing-content-display",
+      "tex": "\\mmlToken{mi}",
+      "display": true,
+      "width": 326,
+      "height": 18,
+      "identifiers": [],
+      "svgSHA256": "60f60165029f111e593c04aa6b6994fde2fb8015bdb1fc87040339f9801012d3"
+    },
+    {
+      "name": "bad-attribute-inline",
+      "tex": "\\mmlToken{mi}[bad=\"x\"]{mod}",
+      "display": false,
+      "width": 435,
+      "height": 18,
+      "identifiers": [],
+      "svgSHA256": "811eebac71ddb01abdde24b90acba0bd59897c4a9495db55662a6301a39f5bfe"
+    },
+    {
+      "name": "bad-attribute-display",
+      "tex": "\\mmlToken{mi}[bad=\"x\"]{mod}",
+      "display": true,
+      "width": 435,
+      "height": 18,
+      "identifiers": [],
+      "svgSHA256": "811eebac71ddb01abdde24b90acba0bd59897c4a9495db55662a6301a39f5bfe"
+    },
+    {
+      "name": "duplicate-script-inline",
+      "tex": "\\mmlToken{mi}{mod}^a^b",
+      "display": false,
+      "width": 413,
+      "height": 18,
+      "identifiers": [],
+      "svgSHA256": "f74d506d313d207f51b14cfdbf282543cd1760035865724b0ec1003b16df79fa"
+    },
+    {
+      "name": "duplicate-script-display",
+      "tex": "\\mmlToken{mi}{mod}^a^b",
+      "display": true,
+      "width": 413,
+      "height": 18,
+      "identifiers": [],
+      "svgSHA256": "f74d506d313d207f51b14cfdbf282543cd1760035865724b0ec1003b16df79fa"
+    }
+  ]
+}
