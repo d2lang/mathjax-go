@@ -393,3 +393,7 @@ and alignment allocation/anchor behavior remain separately documented limits.
 The regression corpus retains 48 complete primary SVGs, 45 raw delimiter-reader contracts and five fence identity/property cases. Fourteen Go-only seeded guards protect the observed palette parser lifetimes. Prefix-style parsing (D120) and Physics StarMacro's own expansion charge (D121) remain separate; the tests do not assert full raw-model parity or the known-wrong StarMacro total count.
 
 Eight inherited Genfrac controls also compare the original primary explicit-attribute and own-property trees. Their resolved fence-property qualifications are removed; the two prime and two atop qualifications remain unchanged.
+
+### Physics StarMacro expansion budget
+
+The `va`/`vectorarrow` and `vu`/`vectorunit` aliases charge their own expansion after argument and buffer validation, before descendant parsing. Their genuine accent-argument and VectorBold children use independent expansion counters. Fourteen retained primary references cover ordinary aliases, the public 1000/1001 boundary, registered overrides, error precedence and the existing Genfrac lifetimes. Two additional Go guards protect the observed child-counter boundaries. The existing synthetic expansion still has a separate source/cursor and cannot consume a registered `vec` argument from the caller's suffix; this change does not claim complete StarMacro rewrite-state or raw-model equivalence.
