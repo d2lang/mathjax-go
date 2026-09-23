@@ -1,0 +1,3040 @@
+{
+  "mathjaxGitCommit": "ad8f5c21cb810236551da8c6512ba733e67357ee",
+  "cases": [
+    {
+      "input": {
+        "name": "make-tag-tilde",
+        "operation": "makeTag",
+        "tag": "a~b",
+        "format": "(a~b)"
+      },
+      "fullTreePrimary": true,
+      "tree": {
+        "kind": "mtd",
+        "text": null,
+        "attributes": [
+          {
+            "name": "id",
+            "value": "mjx-eqn:a~b"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mtext",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "(a~b)",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": null,
+      "outer": {
+        "source": "outer remaining",
+        "cursor": 2,
+        "remaining": "ter remaining",
+        "macroCount": 0,
+        "envBefore": {},
+        "envAfter": {},
+        "environmentIdentity": true,
+        "configurationIdentity": true,
+        "currentIdentity": true,
+        "labelsIdentity": true,
+        "stackIdentity": true,
+        "historyIdentity": true,
+        "factoryIdentity": true,
+        "colorIdentity": true,
+        "lateColor": "late"
+      },
+      "after": {
+        "tags": 1,
+        "configuration": 2,
+        "nodeFactory": 3,
+        "current": {
+          "identity": 4,
+          "env": "",
+          "taggable": false,
+          "defaultTags": false,
+          "tag": "a~b",
+          "tagId": "mjx-eqn:a~b",
+          "tagFormat": "(a~b)",
+          "noTag": false,
+          "labelId": ""
+        },
+        "labelsIdentity": 5,
+        "labels": {},
+        "allLabelsIdentity": 6,
+        "allLabels": {},
+        "stackIdentity": 7,
+        "stack": [],
+        "historyIdentity": 8,
+        "history": [],
+        "counter": 0,
+        "allCounter": 0,
+        "redo": false,
+        "refUpdate": false
+      },
+      "contentReused": null,
+      "returnIsInput": false,
+      "parents": true,
+      "provenance": [
+        {
+          "path": [
+            0,
+            0
+          ],
+          "kind": "mtext",
+          "text": null,
+          "attributes": [],
+          "primary": [],
+          "sourceProvenance": [
+            {
+              "name": "go-resolved-font-scope",
+              "value": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "input": {
+        "name": "empty-star",
+        "operation": "makeTag",
+        "tag": "",
+        "format": ""
+      },
+      "fullTreePrimary": true,
+      "tree": {
+        "kind": "mtd",
+        "text": null,
+        "attributes": [
+          {
+            "name": "id",
+            "value": "mjx-eqn:"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": []
+          }
+        ]
+      },
+      "error": null,
+      "outer": {
+        "source": "outer remaining",
+        "cursor": 2,
+        "remaining": "ter remaining",
+        "macroCount": 0,
+        "envBefore": {},
+        "envAfter": {},
+        "environmentIdentity": true,
+        "configurationIdentity": true,
+        "currentIdentity": true,
+        "labelsIdentity": true,
+        "stackIdentity": true,
+        "historyIdentity": true,
+        "factoryIdentity": true,
+        "colorIdentity": true,
+        "lateColor": "late"
+      },
+      "after": {
+        "tags": 1,
+        "configuration": 2,
+        "nodeFactory": 3,
+        "current": {
+          "identity": 4,
+          "env": "",
+          "taggable": false,
+          "defaultTags": false,
+          "tag": "",
+          "tagId": "mjx-eqn:",
+          "tagFormat": "",
+          "noTag": false,
+          "labelId": ""
+        },
+        "labelsIdentity": 5,
+        "labels": {},
+        "allLabelsIdentity": 6,
+        "allLabels": {},
+        "stackIdentity": 7,
+        "stack": [],
+        "historyIdentity": 8,
+        "history": [],
+        "counter": 0,
+        "allCounter": 0,
+        "redo": false,
+        "refUpdate": false
+      },
+      "contentReused": null,
+      "returnIsInput": false,
+      "parents": true,
+      "provenance": []
+    },
+    {
+      "input": {
+        "name": "formatted-empty",
+        "operation": "makeTag",
+        "tag": "",
+        "format": "()"
+      },
+      "fullTreePrimary": true,
+      "tree": {
+        "kind": "mtd",
+        "text": null,
+        "attributes": [
+          {
+            "name": "id",
+            "value": "mjx-eqn:"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mtext",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "()",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": null,
+      "outer": {
+        "source": "outer remaining",
+        "cursor": 2,
+        "remaining": "ter remaining",
+        "macroCount": 0,
+        "envBefore": {},
+        "envAfter": {},
+        "environmentIdentity": true,
+        "configurationIdentity": true,
+        "currentIdentity": true,
+        "labelsIdentity": true,
+        "stackIdentity": true,
+        "historyIdentity": true,
+        "factoryIdentity": true,
+        "colorIdentity": true,
+        "lateColor": "late"
+      },
+      "after": {
+        "tags": 1,
+        "configuration": 2,
+        "nodeFactory": 3,
+        "current": {
+          "identity": 4,
+          "env": "",
+          "taggable": false,
+          "defaultTags": false,
+          "tag": "",
+          "tagId": "mjx-eqn:",
+          "tagFormat": "()",
+          "noTag": false,
+          "labelId": ""
+        },
+        "labelsIdentity": 5,
+        "labels": {},
+        "allLabelsIdentity": 6,
+        "allLabels": {},
+        "stackIdentity": 7,
+        "stack": [],
+        "historyIdentity": 8,
+        "history": [],
+        "counter": 0,
+        "allCounter": 0,
+        "redo": false,
+        "refUpdate": false
+      },
+      "contentReused": null,
+      "returnIsInput": false,
+      "parents": true,
+      "provenance": [
+        {
+          "path": [
+            0,
+            0
+          ],
+          "kind": "mtext",
+          "text": null,
+          "attributes": [],
+          "primary": [],
+          "sourceProvenance": [
+            {
+              "name": "go-resolved-font-scope",
+              "value": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "input": {
+        "name": "outer-bold-empty-env",
+        "operation": "makeTag",
+        "tag": "a $x$",
+        "format": "(a $x$)",
+        "font": "bold",
+        "macroCount": 999
+      },
+      "fullTreePrimary": true,
+      "tree": {
+        "kind": "mtd",
+        "text": null,
+        "attributes": [
+          {
+            "name": "id",
+            "value": "mjx-eqn:a_$x$"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mrow",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "mtext",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "(a ",
+                        "attributes": [],
+                        "properties": [],
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TeXAtom",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [
+                      {
+                        "name": "texClass",
+                        "value": 0
+                      }
+                    ],
+                    "children": [
+                      {
+                        "kind": "inferredMrow",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": [],
+                            "properties": [],
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "x",
+                                "attributes": [],
+                                "properties": [],
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mtext",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": ")",
+                        "attributes": [],
+                        "properties": [],
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": null,
+      "outer": {
+        "source": "outer remaining",
+        "cursor": 2,
+        "remaining": "ter remaining",
+        "macroCount": 999,
+        "envBefore": {
+          "font": "bold"
+        },
+        "envAfter": {
+          "font": "bold"
+        },
+        "environmentIdentity": true,
+        "configurationIdentity": true,
+        "currentIdentity": true,
+        "labelsIdentity": true,
+        "stackIdentity": true,
+        "historyIdentity": true,
+        "factoryIdentity": true,
+        "colorIdentity": true,
+        "lateColor": "late"
+      },
+      "after": {
+        "tags": 1,
+        "configuration": 2,
+        "nodeFactory": 3,
+        "current": {
+          "identity": 4,
+          "env": "",
+          "taggable": false,
+          "defaultTags": false,
+          "tag": "a $x$",
+          "tagId": "mjx-eqn:a_$x$",
+          "tagFormat": "(a $x$)",
+          "noTag": false,
+          "labelId": ""
+        },
+        "labelsIdentity": 5,
+        "labels": {},
+        "allLabelsIdentity": 6,
+        "allLabels": {},
+        "stackIdentity": 7,
+        "stack": [],
+        "historyIdentity": 8,
+        "history": [],
+        "counter": 0,
+        "allCounter": 0,
+        "redo": false,
+        "refUpdate": false
+      },
+      "contentReused": null,
+      "returnIsInput": false,
+      "parents": true,
+      "provenance": [
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "kind": "mtext",
+          "text": null,
+          "attributes": [],
+          "primary": [],
+          "sourceProvenance": [
+            {
+              "name": "go-resolved-font-scope",
+              "value": true
+            }
+          ]
+        },
+        {
+          "path": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "kind": "mi",
+          "text": null,
+          "attributes": [],
+          "primary": [],
+          "sourceProvenance": [
+            {
+              "name": "go-vector-factory-token",
+              "value": true
+            },
+            {
+              "name": "go-ambient-font-source",
+              "value": true
+            },
+            {
+              "name": "go-resolved-font-scope",
+              "value": true
+            }
+          ]
+        },
+        {
+          "path": [
+            0,
+            0,
+            2
+          ],
+          "kind": "mtext",
+          "text": null,
+          "attributes": [],
+          "primary": [],
+          "sourceProvenance": [
+            {
+              "name": "go-resolved-font-scope",
+              "value": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "input": {
+        "name": "text-override-one-argument",
+        "operation": "makeTag",
+        "tag": "a~b",
+        "format": "(a~b)",
+        "registration": {
+          "name": "text",
+          "body": "x+#1",
+          "arguments": 1
+        }
+      },
+      "fullTreePrimary": true,
+      "tree": {
+        "kind": "mtd",
+        "text": null,
+        "attributes": [
+          {
+            "name": "id",
+            "value": "mjx-eqn:a~b"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": [],
+                "properties": [
+                  {
+                    "name": "fixStretchy",
+                    "value": true
+                  },
+                  {
+                    "name": "in-lists",
+                    "value": "fixStretchy"
+                  }
+                ],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "+",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": [],
+                "properties": [
+                  {
+                    "name": "fixStretchy",
+                    "value": true
+                  },
+                  {
+                    "name": "in-lists",
+                    "value": "fixStretchy"
+                  }
+                ],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "(",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "a",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "kind": "mtext",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": " ",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "b",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": [
+                  {
+                    "name": "stretchy",
+                    "value": false
+                  }
+                ],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": ")",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": null,
+      "outer": {
+        "source": "outer remaining",
+        "cursor": 2,
+        "remaining": "ter remaining",
+        "macroCount": 0,
+        "envBefore": {},
+        "envAfter": {},
+        "environmentIdentity": true,
+        "configurationIdentity": true,
+        "currentIdentity": true,
+        "labelsIdentity": true,
+        "stackIdentity": true,
+        "historyIdentity": true,
+        "factoryIdentity": true,
+        "colorIdentity": true,
+        "lateColor": "late"
+      },
+      "after": {
+        "tags": 1,
+        "configuration": 2,
+        "nodeFactory": 3,
+        "current": {
+          "identity": 4,
+          "env": "",
+          "taggable": false,
+          "defaultTags": false,
+          "tag": "a~b",
+          "tagId": "mjx-eqn:a~b",
+          "tagFormat": "(a~b)",
+          "noTag": false,
+          "labelId": ""
+        },
+        "labelsIdentity": 5,
+        "labels": {},
+        "allLabelsIdentity": 6,
+        "allLabels": {},
+        "stackIdentity": 7,
+        "stack": [],
+        "historyIdentity": 8,
+        "history": [],
+        "counter": 0,
+        "allCounter": 0,
+        "redo": false,
+        "refUpdate": false
+      },
+      "contentReused": null,
+      "returnIsInput": false,
+      "parents": true,
+      "provenance": [
+        {
+          "path": [
+            0,
+            0
+          ],
+          "kind": "mi",
+          "text": null,
+          "attributes": [],
+          "primary": [],
+          "sourceProvenance": [
+            {
+              "name": "go-vector-factory-token",
+              "value": true
+            },
+            {
+              "name": "go-ambient-font-source",
+              "value": true
+            },
+            {
+              "name": "go-resolved-font-scope",
+              "value": true
+            }
+          ]
+        },
+        {
+          "path": [
+            0,
+            1
+          ],
+          "kind": "mo",
+          "text": null,
+          "attributes": [],
+          "primary": [
+            {
+              "name": "fixStretchy",
+              "value": true
+            },
+            {
+              "name": "in-lists",
+              "value": "fixStretchy"
+            }
+          ],
+          "sourceProvenance": [
+            {
+              "name": "go-vector-factory-token",
+              "value": true
+            },
+            {
+              "name": "go-ambient-font-source",
+              "value": true
+            },
+            {
+              "name": "fixStretchy",
+              "value": true
+            },
+            {
+              "name": "in-lists",
+              "value": "fixStretchy"
+            },
+            {
+              "name": "go-resolved-font-scope",
+              "value": true
+            }
+          ]
+        },
+        {
+          "path": [
+            0,
+            2
+          ],
+          "kind": "mo",
+          "text": null,
+          "attributes": [],
+          "primary": [
+            {
+              "name": "fixStretchy",
+              "value": true
+            },
+            {
+              "name": "in-lists",
+              "value": "fixStretchy"
+            }
+          ],
+          "sourceProvenance": [
+            {
+              "name": "go-vector-factory-token",
+              "value": true
+            },
+            {
+              "name": "go-ambient-font-source",
+              "value": true
+            },
+            {
+              "name": "fixStretchy",
+              "value": true
+            },
+            {
+              "name": "in-lists",
+              "value": "fixStretchy"
+            },
+            {
+              "name": "go-resolved-font-scope",
+              "value": true
+            }
+          ]
+        },
+        {
+          "path": [
+            0,
+            3
+          ],
+          "kind": "mi",
+          "text": null,
+          "attributes": [],
+          "primary": [],
+          "sourceProvenance": [
+            {
+              "name": "go-vector-factory-token",
+              "value": true
+            },
+            {
+              "name": "go-ambient-font-source",
+              "value": true
+            },
+            {
+              "name": "go-resolved-font-scope",
+              "value": true
+            }
+          ]
+        },
+        {
+          "path": [
+            0,
+            4
+          ],
+          "kind": "mtext",
+          "text": null,
+          "attributes": [],
+          "primary": [],
+          "sourceProvenance": [
+            {
+              "name": "go-vector-factory-token",
+              "value": true
+            },
+            {
+              "name": "go-resolved-font-scope",
+              "value": true
+            }
+          ]
+        },
+        {
+          "path": [
+            0,
+            5
+          ],
+          "kind": "mi",
+          "text": null,
+          "attributes": [],
+          "primary": [],
+          "sourceProvenance": [
+            {
+              "name": "go-vector-factory-token",
+              "value": true
+            },
+            {
+              "name": "go-ambient-font-source",
+              "value": true
+            },
+            {
+              "name": "go-resolved-font-scope",
+              "value": true
+            }
+          ]
+        },
+        {
+          "path": [
+            0,
+            6
+          ],
+          "kind": "mo",
+          "text": null,
+          "attributes": [
+            {
+              "name": "stretchy",
+              "value": false
+            }
+          ],
+          "primary": [],
+          "sourceProvenance": [
+            {
+              "name": "go-vector-factory-token",
+              "value": true
+            },
+            {
+              "name": "go-resolved-font-scope",
+              "value": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "input": {
+        "name": "text-override-zero-argument",
+        "operation": "makeTag",
+        "tag": "a~b",
+        "format": "(a~b)",
+        "registration": {
+          "name": "text",
+          "body": "x",
+          "arguments": 0
+        }
+      },
+      "fullTreePrimary": true,
+      "tree": {
+        "kind": "mtd",
+        "text": null,
+        "attributes": [
+          {
+            "name": "id",
+            "value": "mjx-eqn:a~b"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": [],
+                "properties": [
+                  {
+                    "name": "texClass",
+                    "value": 0
+                  }
+                ],
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "mo",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [
+                          {
+                            "name": "fixStretchy",
+                            "value": true
+                          },
+                          {
+                            "name": "in-lists",
+                            "value": "fixStretchy"
+                          }
+                        ],
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "(",
+                            "attributes": [],
+                            "properties": [],
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "a",
+                            "attributes": [],
+                            "properties": [],
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": " ",
+                            "attributes": [],
+                            "properties": [],
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "b",
+                            "attributes": [],
+                            "properties": [],
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mo",
+                        "text": null,
+                        "attributes": [
+                          {
+                            "name": "stretchy",
+                            "value": false
+                          }
+                        ],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": ")",
+                            "attributes": [],
+                            "properties": [],
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": null,
+      "outer": {
+        "source": "outer remaining",
+        "cursor": 2,
+        "remaining": "ter remaining",
+        "macroCount": 0,
+        "envBefore": {},
+        "envAfter": {},
+        "environmentIdentity": true,
+        "configurationIdentity": true,
+        "currentIdentity": true,
+        "labelsIdentity": true,
+        "stackIdentity": true,
+        "historyIdentity": true,
+        "factoryIdentity": true,
+        "colorIdentity": true,
+        "lateColor": "late"
+      },
+      "after": {
+        "tags": 1,
+        "configuration": 2,
+        "nodeFactory": 3,
+        "current": {
+          "identity": 4,
+          "env": "",
+          "taggable": false,
+          "defaultTags": false,
+          "tag": "a~b",
+          "tagId": "mjx-eqn:a~b",
+          "tagFormat": "(a~b)",
+          "noTag": false,
+          "labelId": ""
+        },
+        "labelsIdentity": 5,
+        "labels": {},
+        "allLabelsIdentity": 6,
+        "allLabels": {},
+        "stackIdentity": 7,
+        "stack": [],
+        "historyIdentity": 8,
+        "history": [],
+        "counter": 0,
+        "allCounter": 0,
+        "redo": false,
+        "refUpdate": false
+      },
+      "contentReused": null,
+      "returnIsInput": false,
+      "parents": true,
+      "provenance": [
+        {
+          "path": [
+            0,
+            0
+          ],
+          "kind": "mi",
+          "text": null,
+          "attributes": [],
+          "primary": [],
+          "sourceProvenance": [
+            {
+              "name": "go-vector-factory-token",
+              "value": true
+            },
+            {
+              "name": "go-ambient-font-source",
+              "value": true
+            },
+            {
+              "name": "go-resolved-font-scope",
+              "value": true
+            }
+          ]
+        },
+        {
+          "path": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "kind": "mo",
+          "text": null,
+          "attributes": [],
+          "primary": [
+            {
+              "name": "fixStretchy",
+              "value": true
+            },
+            {
+              "name": "in-lists",
+              "value": "fixStretchy"
+            }
+          ],
+          "sourceProvenance": [
+            {
+              "name": "go-vector-factory-token",
+              "value": true
+            },
+            {
+              "name": "go-ambient-font-source",
+              "value": true
+            },
+            {
+              "name": "fixStretchy",
+              "value": true
+            },
+            {
+              "name": "in-lists",
+              "value": "fixStretchy"
+            },
+            {
+              "name": "go-resolved-font-scope",
+              "value": true
+            }
+          ]
+        },
+        {
+          "path": [
+            0,
+            1,
+            0,
+            1
+          ],
+          "kind": "mi",
+          "text": null,
+          "attributes": [],
+          "primary": [],
+          "sourceProvenance": [
+            {
+              "name": "go-vector-factory-token",
+              "value": true
+            },
+            {
+              "name": "go-ambient-font-source",
+              "value": true
+            },
+            {
+              "name": "go-resolved-font-scope",
+              "value": true
+            }
+          ]
+        },
+        {
+          "path": [
+            0,
+            1,
+            0,
+            2
+          ],
+          "kind": "mtext",
+          "text": null,
+          "attributes": [],
+          "primary": [],
+          "sourceProvenance": [
+            {
+              "name": "go-vector-factory-token",
+              "value": true
+            },
+            {
+              "name": "go-resolved-font-scope",
+              "value": true
+            }
+          ]
+        },
+        {
+          "path": [
+            0,
+            1,
+            0,
+            3
+          ],
+          "kind": "mi",
+          "text": null,
+          "attributes": [],
+          "primary": [],
+          "sourceProvenance": [
+            {
+              "name": "go-vector-factory-token",
+              "value": true
+            },
+            {
+              "name": "go-ambient-font-source",
+              "value": true
+            },
+            {
+              "name": "go-resolved-font-scope",
+              "value": true
+            }
+          ]
+        },
+        {
+          "path": [
+            0,
+            1,
+            0,
+            4
+          ],
+          "kind": "mo",
+          "text": null,
+          "attributes": [
+            {
+              "name": "stretchy",
+              "value": false
+            }
+          ],
+          "primary": [],
+          "sourceProvenance": [
+            {
+              "name": "go-vector-factory-token",
+              "value": true
+            },
+            {
+              "name": "go-resolved-font-scope",
+              "value": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "input": {
+        "name": "text-override-two-arguments",
+        "operation": "makeTag",
+        "tag": "T",
+        "format": "(T)",
+        "registration": {
+          "name": "text",
+          "body": "#1+#2",
+          "arguments": 2
+        }
+      },
+      "fullTreePrimary": true,
+      "tree": null,
+      "error": {
+        "id": "MissingArgFor",
+        "message": "Missing argument for \\text"
+      },
+      "outer": {
+        "source": "outer remaining",
+        "cursor": 2,
+        "remaining": "ter remaining",
+        "macroCount": 0,
+        "envBefore": {},
+        "envAfter": {},
+        "environmentIdentity": true,
+        "configurationIdentity": true,
+        "currentIdentity": true,
+        "labelsIdentity": true,
+        "stackIdentity": true,
+        "historyIdentity": true,
+        "factoryIdentity": true,
+        "colorIdentity": true,
+        "lateColor": "late"
+      },
+      "after": {
+        "tags": 1,
+        "configuration": 2,
+        "nodeFactory": 3,
+        "current": {
+          "identity": 4,
+          "env": "",
+          "taggable": false,
+          "defaultTags": false,
+          "tag": "T",
+          "tagId": "mjx-eqn:T",
+          "tagFormat": "(T)",
+          "noTag": false,
+          "labelId": ""
+        },
+        "labelsIdentity": 5,
+        "labels": {},
+        "allLabelsIdentity": 6,
+        "allLabels": {},
+        "stackIdentity": 7,
+        "stack": [],
+        "historyIdentity": 8,
+        "history": [],
+        "counter": 0,
+        "allCounter": 0,
+        "redo": false,
+        "refUpdate": false
+      },
+      "contentReused": null,
+      "returnIsInput": true,
+      "parents": true,
+      "provenance": []
+    },
+    {
+      "input": {
+        "name": "inner-macro-success",
+        "operation": "makeTag",
+        "tag": "$\\dtag$",
+        "format": "($\\dtag$)",
+        "macroCount": 999,
+        "registration": {
+          "name": "dtag",
+          "body": "x",
+          "arguments": 0
+        }
+      },
+      "fullTreePrimary": true,
+      "tree": {
+        "kind": "mtd",
+        "text": null,
+        "attributes": [
+          {
+            "name": "id",
+            "value": "mjx-eqn:$\\dtag$"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mrow",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "mtext",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "(",
+                        "attributes": [],
+                        "properties": [],
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TeXAtom",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [
+                      {
+                        "name": "texClass",
+                        "value": 0
+                      }
+                    ],
+                    "children": [
+                      {
+                        "kind": "inferredMrow",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": [],
+                            "properties": [],
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "x",
+                                "attributes": [],
+                                "properties": [],
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mtext",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": ")",
+                        "attributes": [],
+                        "properties": [],
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": null,
+      "outer": {
+        "source": "outer remaining",
+        "cursor": 2,
+        "remaining": "ter remaining",
+        "macroCount": 999,
+        "envBefore": {},
+        "envAfter": {},
+        "environmentIdentity": true,
+        "configurationIdentity": true,
+        "currentIdentity": true,
+        "labelsIdentity": true,
+        "stackIdentity": true,
+        "historyIdentity": true,
+        "factoryIdentity": true,
+        "colorIdentity": true,
+        "lateColor": "late"
+      },
+      "after": {
+        "tags": 1,
+        "configuration": 2,
+        "nodeFactory": 3,
+        "current": {
+          "identity": 4,
+          "env": "",
+          "taggable": false,
+          "defaultTags": false,
+          "tag": "$\\dtag$",
+          "tagId": "mjx-eqn:$\\dtag$",
+          "tagFormat": "($\\dtag$)",
+          "noTag": false,
+          "labelId": ""
+        },
+        "labelsIdentity": 5,
+        "labels": {},
+        "allLabelsIdentity": 6,
+        "allLabels": {},
+        "stackIdentity": 7,
+        "stack": [],
+        "historyIdentity": 8,
+        "history": [],
+        "counter": 0,
+        "allCounter": 0,
+        "redo": false,
+        "refUpdate": false
+      },
+      "contentReused": null,
+      "returnIsInput": false,
+      "parents": true,
+      "provenance": [
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "kind": "mtext",
+          "text": null,
+          "attributes": [],
+          "primary": [],
+          "sourceProvenance": [
+            {
+              "name": "go-resolved-font-scope",
+              "value": true
+            }
+          ]
+        },
+        {
+          "path": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "kind": "mi",
+          "text": null,
+          "attributes": [],
+          "primary": [],
+          "sourceProvenance": [
+            {
+              "name": "go-vector-factory-token",
+              "value": true
+            },
+            {
+              "name": "go-ambient-font-source",
+              "value": true
+            },
+            {
+              "name": "go-resolved-font-scope",
+              "value": true
+            }
+          ]
+        },
+        {
+          "path": [
+            0,
+            0,
+            2
+          ],
+          "kind": "mtext",
+          "text": null,
+          "attributes": [],
+          "primary": [],
+          "sourceProvenance": [
+            {
+              "name": "go-resolved-font-scope",
+              "value": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "input": {
+        "name": "inner-macro-error",
+        "operation": "makeTag",
+        "tag": "$\\dtag$",
+        "format": "($\\dtag$)",
+        "macroCount": 999,
+        "registration": {
+          "name": "dtag",
+          "body": "\\definecolor{late}{RGB}{255,0,0}\\notADefinedCommand",
+          "arguments": 0
+        }
+      },
+      "fullTreePrimary": true,
+      "tree": null,
+      "error": {
+        "id": "UndefinedControlSequence",
+        "message": "Undefined control sequence \\notADefinedCommand"
+      },
+      "outer": {
+        "source": "outer remaining",
+        "cursor": 2,
+        "remaining": "ter remaining",
+        "macroCount": 999,
+        "envBefore": {},
+        "envAfter": {},
+        "environmentIdentity": true,
+        "configurationIdentity": true,
+        "currentIdentity": true,
+        "labelsIdentity": true,
+        "stackIdentity": true,
+        "historyIdentity": true,
+        "factoryIdentity": true,
+        "colorIdentity": true,
+        "lateColor": "#ff0000"
+      },
+      "after": {
+        "tags": 1,
+        "configuration": 2,
+        "nodeFactory": 3,
+        "current": {
+          "identity": 4,
+          "env": "",
+          "taggable": false,
+          "defaultTags": false,
+          "tag": "$\\dtag$",
+          "tagId": "mjx-eqn:$\\dtag$",
+          "tagFormat": "($\\dtag$)",
+          "noTag": false,
+          "labelId": ""
+        },
+        "labelsIdentity": 5,
+        "labels": {},
+        "allLabelsIdentity": 6,
+        "allLabels": {},
+        "stackIdentity": 7,
+        "stack": [],
+        "historyIdentity": 8,
+        "history": [],
+        "counter": 0,
+        "allCounter": 0,
+        "redo": false,
+        "refUpdate": false
+      },
+      "contentReused": null,
+      "returnIsInput": true,
+      "parents": true,
+      "provenance": []
+    },
+    {
+      "input": {
+        "name": "label-before-content-error",
+        "operation": "makeTag",
+        "tag": "$\\notADefinedCommand$",
+        "format": "($\\notADefinedCommand$)",
+        "label": "L"
+      },
+      "fullTreePrimary": true,
+      "tree": null,
+      "error": {
+        "id": "UndefinedControlSequence",
+        "message": "Undefined control sequence \\notADefinedCommand"
+      },
+      "outer": {
+        "source": "outer remaining",
+        "cursor": 2,
+        "remaining": "ter remaining",
+        "macroCount": 0,
+        "envBefore": {},
+        "envAfter": {},
+        "environmentIdentity": true,
+        "configurationIdentity": true,
+        "currentIdentity": true,
+        "labelsIdentity": true,
+        "stackIdentity": true,
+        "historyIdentity": true,
+        "factoryIdentity": true,
+        "colorIdentity": true,
+        "lateColor": "late"
+      },
+      "after": {
+        "tags": 1,
+        "configuration": 2,
+        "nodeFactory": 3,
+        "current": {
+          "identity": 4,
+          "env": "",
+          "taggable": false,
+          "defaultTags": false,
+          "tag": "$\\notADefinedCommand$",
+          "tagId": "mjx-eqn:L",
+          "tagFormat": "($\\notADefinedCommand$)",
+          "noTag": false,
+          "labelId": "L"
+        },
+        "labelsIdentity": 5,
+        "labels": {
+          "L": {
+            "tag": "$\\notADefinedCommand$",
+            "id": "mjx-eqn:L"
+          }
+        },
+        "allLabelsIdentity": 6,
+        "allLabels": {},
+        "stackIdentity": 7,
+        "stack": [],
+        "historyIdentity": 8,
+        "history": [],
+        "counter": 0,
+        "allCounter": 0,
+        "redo": false,
+        "refUpdate": false
+      },
+      "contentReused": null,
+      "returnIsInput": true,
+      "parents": true,
+      "provenance": []
+    },
+    {
+      "input": {
+        "name": "tag-state-identity",
+        "operation": "makeTag",
+        "tag": "T",
+        "format": "(T)",
+        "label": "L",
+        "priorLabel": true
+      },
+      "fullTreePrimary": true,
+      "tree": {
+        "kind": "mtd",
+        "text": null,
+        "attributes": [
+          {
+            "name": "id",
+            "value": "mjx-eqn:L"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mtext",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "(T)",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": null,
+      "outer": {
+        "source": "outer remaining",
+        "cursor": 2,
+        "remaining": "ter remaining",
+        "macroCount": 0,
+        "envBefore": {},
+        "envAfter": {},
+        "environmentIdentity": true,
+        "configurationIdentity": true,
+        "currentIdentity": true,
+        "labelsIdentity": true,
+        "stackIdentity": true,
+        "historyIdentity": true,
+        "factoryIdentity": true,
+        "colorIdentity": true,
+        "lateColor": "late"
+      },
+      "after": {
+        "tags": 1,
+        "configuration": 2,
+        "nodeFactory": 3,
+        "current": {
+          "identity": 4,
+          "env": "",
+          "taggable": false,
+          "defaultTags": false,
+          "tag": "T",
+          "tagId": "mjx-eqn:L",
+          "tagFormat": "(T)",
+          "noTag": false,
+          "labelId": "L"
+        },
+        "labelsIdentity": 5,
+        "labels": {
+          "previous": {
+            "tag": "P",
+            "id": "prior"
+          },
+          "L": {
+            "tag": "T",
+            "id": "mjx-eqn:L"
+          }
+        },
+        "allLabelsIdentity": 6,
+        "allLabels": {},
+        "stackIdentity": 7,
+        "stack": [],
+        "historyIdentity": 8,
+        "history": [],
+        "counter": 0,
+        "allCounter": 0,
+        "redo": false,
+        "refUpdate": false
+      },
+      "contentReused": null,
+      "returnIsInput": false,
+      "parents": true,
+      "provenance": [
+        {
+          "path": [
+            0,
+            0
+          ],
+          "kind": "mtext",
+          "text": null,
+          "attributes": [],
+          "primary": [],
+          "sourceProvenance": [
+            {
+              "name": "go-resolved-font-scope",
+              "value": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "input": {
+        "name": "get-tag-nontaggable",
+        "operation": "getTag",
+        "tag": "$bad",
+        "format": "($bad)",
+        "environment": "aligned",
+        "taggable": false
+      },
+      "fullTreePrimary": true,
+      "tree": null,
+      "error": null,
+      "outer": {
+        "source": "outer remaining",
+        "cursor": 2,
+        "remaining": "ter remaining",
+        "macroCount": 0,
+        "envBefore": {},
+        "envAfter": {},
+        "environmentIdentity": true,
+        "configurationIdentity": true,
+        "currentIdentity": true,
+        "labelsIdentity": true,
+        "stackIdentity": true,
+        "historyIdentity": true,
+        "factoryIdentity": true,
+        "colorIdentity": true,
+        "lateColor": "late"
+      },
+      "after": {
+        "tags": 1,
+        "configuration": 2,
+        "nodeFactory": 3,
+        "current": {
+          "identity": 4,
+          "env": "aligned",
+          "taggable": false,
+          "defaultTags": false,
+          "tag": "$bad",
+          "tagId": "",
+          "tagFormat": "($bad)",
+          "noTag": false,
+          "labelId": ""
+        },
+        "labelsIdentity": 5,
+        "labels": {},
+        "allLabelsIdentity": 6,
+        "allLabels": {},
+        "stackIdentity": 7,
+        "stack": [],
+        "historyIdentity": 8,
+        "history": [],
+        "counter": 0,
+        "allCounter": 0,
+        "redo": false,
+        "refUpdate": false
+      },
+      "contentReused": null,
+      "returnIsInput": true,
+      "parents": true,
+      "provenance": []
+    },
+    {
+      "input": {
+        "name": "get-tag-no-tag",
+        "operation": "getTag",
+        "tag": "",
+        "format": "",
+        "noTag": true,
+        "taggable": true,
+        "defaultTags": true
+      },
+      "fullTreePrimary": true,
+      "tree": null,
+      "error": null,
+      "outer": {
+        "source": "outer remaining",
+        "cursor": 2,
+        "remaining": "ter remaining",
+        "macroCount": 0,
+        "envBefore": {},
+        "envAfter": {},
+        "environmentIdentity": true,
+        "configurationIdentity": true,
+        "currentIdentity": true,
+        "labelsIdentity": true,
+        "stackIdentity": true,
+        "historyIdentity": true,
+        "factoryIdentity": true,
+        "colorIdentity": true,
+        "lateColor": "late"
+      },
+      "after": {
+        "tags": 1,
+        "configuration": 2,
+        "nodeFactory": 3,
+        "current": {
+          "identity": 4,
+          "env": "",
+          "taggable": true,
+          "defaultTags": true,
+          "tag": "",
+          "tagId": "",
+          "tagFormat": "",
+          "noTag": true,
+          "labelId": ""
+        },
+        "labelsIdentity": 5,
+        "labels": {},
+        "allLabelsIdentity": 6,
+        "allLabels": {},
+        "stackIdentity": 7,
+        "stack": [],
+        "historyIdentity": 8,
+        "history": [],
+        "counter": 0,
+        "allCounter": 0,
+        "redo": false,
+        "refUpdate": false
+      },
+      "contentReused": null,
+      "returnIsInput": true,
+      "parents": true,
+      "provenance": []
+    },
+    {
+      "input": {
+        "name": "finalize-inline",
+        "operation": "finalize",
+        "tag": "T",
+        "format": "(T)",
+        "display": false
+      },
+      "fullTreePrimary": true,
+      "tree": {
+        "kind": "mi",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": [],
+            "properties": [],
+            "children": []
+          }
+        ]
+      },
+      "error": null,
+      "outer": {
+        "source": "outer remaining",
+        "cursor": 2,
+        "remaining": "ter remaining",
+        "macroCount": 0,
+        "envBefore": {},
+        "envAfter": {},
+        "environmentIdentity": true,
+        "configurationIdentity": true,
+        "currentIdentity": true,
+        "labelsIdentity": true,
+        "stackIdentity": true,
+        "historyIdentity": true,
+        "factoryIdentity": true,
+        "colorIdentity": true,
+        "lateColor": "late"
+      },
+      "after": {
+        "tags": 1,
+        "configuration": 2,
+        "nodeFactory": 3,
+        "current": {
+          "identity": 4,
+          "env": "",
+          "taggable": false,
+          "defaultTags": false,
+          "tag": "T",
+          "tagId": "",
+          "tagFormat": "(T)",
+          "noTag": false,
+          "labelId": ""
+        },
+        "labelsIdentity": 5,
+        "labels": {},
+        "allLabelsIdentity": 6,
+        "allLabels": {},
+        "stackIdentity": 7,
+        "stack": [],
+        "historyIdentity": 8,
+        "history": [],
+        "counter": 0,
+        "allCounter": 0,
+        "redo": false,
+        "refUpdate": false
+      },
+      "contentReused": true,
+      "returnIsInput": true,
+      "parents": true,
+      "provenance": [
+        {
+          "path": [],
+          "kind": "mi",
+          "text": null,
+          "attributes": [],
+          "primary": [],
+          "sourceProvenance": [
+            {
+              "name": "go-vector-factory-token",
+              "value": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "input": {
+        "name": "finalize-display",
+        "operation": "finalize",
+        "tag": "a~b",
+        "format": "(a~b)",
+        "display": true
+      },
+      "fullTreePrimary": true,
+      "tree": {
+        "kind": "mtable",
+        "text": null,
+        "attributes": [
+          {
+            "name": "side",
+            "value": "right"
+          },
+          {
+            "name": "minlabelspacing",
+            "value": "0.8em"
+          },
+          {
+            "name": "displaystyle",
+            "value": true
+          }
+        ],
+        "properties": [
+          {
+            "name": "useHeight",
+            "value": true
+          }
+        ],
+        "children": [
+          {
+            "kind": "mlabeledtr",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mtd",
+                "text": null,
+                "attributes": [
+                  {
+                    "name": "id",
+                    "value": "mjx-eqn:a~b"
+                  }
+                ],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "(a~b)",
+                            "attributes": [],
+                            "properties": [],
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "mtd",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "x",
+                            "attributes": [],
+                            "properties": [],
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": null,
+      "outer": {
+        "source": "outer remaining",
+        "cursor": 2,
+        "remaining": "ter remaining",
+        "macroCount": 0,
+        "envBefore": {},
+        "envAfter": {},
+        "environmentIdentity": true,
+        "configurationIdentity": true,
+        "currentIdentity": true,
+        "labelsIdentity": true,
+        "stackIdentity": true,
+        "historyIdentity": true,
+        "factoryIdentity": true,
+        "colorIdentity": true,
+        "lateColor": "late"
+      },
+      "after": {
+        "tags": 1,
+        "configuration": 2,
+        "nodeFactory": 3,
+        "current": {
+          "identity": 4,
+          "env": "",
+          "taggable": false,
+          "defaultTags": false,
+          "tag": "a~b",
+          "tagId": "mjx-eqn:a~b",
+          "tagFormat": "(a~b)",
+          "noTag": false,
+          "labelId": ""
+        },
+        "labelsIdentity": 5,
+        "labels": {},
+        "allLabelsIdentity": 6,
+        "allLabels": {},
+        "stackIdentity": 7,
+        "stack": [],
+        "historyIdentity": 8,
+        "history": [],
+        "counter": 0,
+        "allCounter": 0,
+        "redo": false,
+        "refUpdate": false
+      },
+      "contentReused": true,
+      "returnIsInput": false,
+      "parents": true,
+      "provenance": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "kind": "mtext",
+          "text": null,
+          "attributes": [],
+          "primary": [],
+          "sourceProvenance": [
+            {
+              "name": "go-resolved-font-scope",
+              "value": true
+            }
+          ]
+        },
+        {
+          "path": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "kind": "mi",
+          "text": null,
+          "attributes": [],
+          "primary": [],
+          "sourceProvenance": [
+            {
+              "name": "go-vector-factory-token",
+              "value": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "input": {
+        "name": "equation-error-teardown",
+        "operation": "compile",
+        "tex": "\\begin{equation}x\\tag{$\\notADefinedCommand$}\\label{L}\\end{equation}",
+        "display": true
+      },
+      "stages": [
+        {
+          "tex": "\\begin{equation}x\\tag{$\\notADefinedCommand$}\\label{L}\\end{equation}",
+          "tree": {
+            "kind": "math",
+            "text": null,
+            "attributes": [
+              {
+                "name": "display",
+                "value": "block"
+              }
+            ],
+            "properties": [],
+            "children": [
+              {
+                "kind": "inferredMrow",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "merror",
+                    "text": null,
+                    "attributes": [
+                      {
+                        "name": "data-mjx-error",
+                        "value": "Undefined control sequence \\notADefinedCommand"
+                      }
+                    ],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "inferredMrow",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "mtext",
+                            "text": null,
+                            "attributes": [],
+                            "properties": [],
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "Undefined control sequence \\notADefinedCommand",
+                                "attributes": [],
+                                "properties": [],
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "error": {
+            "id": "UndefinedControlSequence",
+            "message": "Undefined control sequence \\notADefinedCommand"
+          },
+          "svgSHA256": "04f63220b7a7e3b8223dc47acb77fadb7477407d31f7a24d382fc21e79126eb4",
+          "completeSVGPrimary": true
+        }
+      ]
+    },
+    {
+      "input": {
+        "name": "alignment-row-order",
+        "operation": "compile",
+        "tex": "\\begin{align}x&=y\\tag{A}\\\\a&=b\\tag{B}\\end{align}",
+        "display": true
+      },
+      "stages": [
+        {
+          "tex": "\\begin{align}x&=y\\tag{A}\\\\a&=b\\tag{B}\\end{align}",
+          "tree": {
+            "kind": "math",
+            "text": null,
+            "attributes": [
+              {
+                "name": "display",
+                "value": "block"
+              }
+            ],
+            "properties": [],
+            "children": [
+              {
+                "kind": "inferredMrow",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "mtable",
+                    "text": null,
+                    "attributes": [
+                      {
+                        "name": "displaystyle",
+                        "value": true
+                      },
+                      {
+                        "name": "columnalign",
+                        "value": "right left"
+                      },
+                      {
+                        "name": "columnspacing",
+                        "value": "0em"
+                      },
+                      {
+                        "name": "rowspacing",
+                        "value": "3pt"
+                      }
+                    ],
+                    "properties": [
+                      {
+                        "name": "useHeight",
+                        "value": true
+                      }
+                    ],
+                    "children": [
+                      {
+                        "kind": "mlabeledtr",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "mtd",
+                            "text": null,
+                            "attributes": [
+                              {
+                                "name": "id",
+                                "value": "mjx-eqn:A"
+                              }
+                            ],
+                            "properties": [],
+                            "children": [
+                              {
+                                "kind": "inferredMrow",
+                                "text": null,
+                                "attributes": [],
+                                "properties": [],
+                                "children": [
+                                  {
+                                    "kind": "mtext",
+                                    "text": null,
+                                    "attributes": [],
+                                    "properties": [],
+                                    "children": [
+                                      {
+                                        "kind": "text",
+                                        "text": "(A)",
+                                        "attributes": [],
+                                        "properties": [],
+                                        "children": []
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "mtd",
+                            "text": null,
+                            "attributes": [],
+                            "properties": [],
+                            "children": [
+                              {
+                                "kind": "inferredMrow",
+                                "text": null,
+                                "attributes": [],
+                                "properties": [],
+                                "children": [
+                                  {
+                                    "kind": "mi",
+                                    "text": null,
+                                    "attributes": [],
+                                    "properties": [],
+                                    "children": [
+                                      {
+                                        "kind": "text",
+                                        "text": "x",
+                                        "attributes": [],
+                                        "properties": [],
+                                        "children": []
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "mtd",
+                            "text": null,
+                            "attributes": [],
+                            "properties": [],
+                            "children": [
+                              {
+                                "kind": "inferredMrow",
+                                "text": null,
+                                "attributes": [],
+                                "properties": [],
+                                "children": [
+                                  {
+                                    "kind": "mi",
+                                    "text": null,
+                                    "attributes": [],
+                                    "properties": [],
+                                    "children": []
+                                  },
+                                  {
+                                    "kind": "mo",
+                                    "text": null,
+                                    "attributes": [],
+                                    "properties": [
+                                      {
+                                        "name": "in-lists",
+                                        "value": "fixStretchy"
+                                      }
+                                    ],
+                                    "children": [
+                                      {
+                                        "kind": "text",
+                                        "text": "=",
+                                        "attributes": [],
+                                        "properties": [],
+                                        "children": []
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "kind": "mi",
+                                    "text": null,
+                                    "attributes": [],
+                                    "properties": [],
+                                    "children": [
+                                      {
+                                        "kind": "text",
+                                        "text": "y",
+                                        "attributes": [],
+                                        "properties": [],
+                                        "children": []
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mlabeledtr",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "mtd",
+                            "text": null,
+                            "attributes": [
+                              {
+                                "name": "id",
+                                "value": "mjx-eqn:B"
+                              }
+                            ],
+                            "properties": [],
+                            "children": [
+                              {
+                                "kind": "inferredMrow",
+                                "text": null,
+                                "attributes": [],
+                                "properties": [],
+                                "children": [
+                                  {
+                                    "kind": "mtext",
+                                    "text": null,
+                                    "attributes": [],
+                                    "properties": [],
+                                    "children": [
+                                      {
+                                        "kind": "text",
+                                        "text": "(B)",
+                                        "attributes": [],
+                                        "properties": [],
+                                        "children": []
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "mtd",
+                            "text": null,
+                            "attributes": [],
+                            "properties": [],
+                            "children": [
+                              {
+                                "kind": "inferredMrow",
+                                "text": null,
+                                "attributes": [],
+                                "properties": [],
+                                "children": [
+                                  {
+                                    "kind": "mi",
+                                    "text": null,
+                                    "attributes": [],
+                                    "properties": [],
+                                    "children": [
+                                      {
+                                        "kind": "text",
+                                        "text": "a",
+                                        "attributes": [],
+                                        "properties": [],
+                                        "children": []
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "mtd",
+                            "text": null,
+                            "attributes": [],
+                            "properties": [],
+                            "children": [
+                              {
+                                "kind": "inferredMrow",
+                                "text": null,
+                                "attributes": [],
+                                "properties": [],
+                                "children": [
+                                  {
+                                    "kind": "mi",
+                                    "text": null,
+                                    "attributes": [],
+                                    "properties": [],
+                                    "children": []
+                                  },
+                                  {
+                                    "kind": "mo",
+                                    "text": null,
+                                    "attributes": [],
+                                    "properties": [
+                                      {
+                                        "name": "in-lists",
+                                        "value": "fixStretchy"
+                                      }
+                                    ],
+                                    "children": [
+                                      {
+                                        "kind": "text",
+                                        "text": "=",
+                                        "attributes": [],
+                                        "properties": [],
+                                        "children": []
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "kind": "mi",
+                                    "text": null,
+                                    "attributes": [],
+                                    "properties": [],
+                                    "children": [
+                                      {
+                                        "kind": "text",
+                                        "text": "b",
+                                        "attributes": [],
+                                        "properties": [],
+                                        "children": []
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "error": null,
+          "svgSHA256": "4833f8a19d275314dab6dd8fefa2fe0ced5aa4f306570d6ebf9cb80adcc02410",
+          "completeSVGPrimary": false
+        }
+      ]
+    },
+    {
+      "input": {
+        "name": "compiler-success-error-success",
+        "operation": "sequence",
+        "sources": [
+          "{\\bf x\\tag{A}}",
+          "x\\tag{$\\notADefinedCommand$}",
+          "x\\tag{C}"
+        ],
+        "display": true
+      },
+      "stages": [
+        {
+          "tex": "{\\bf x\\tag{A}}",
+          "tree": {
+            "kind": "math",
+            "text": null,
+            "attributes": [
+              {
+                "name": "display",
+                "value": "block"
+              }
+            ],
+            "properties": [],
+            "children": [
+              {
+                "kind": "inferredMrow",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "mtable",
+                    "text": null,
+                    "attributes": [
+                      {
+                        "name": "displaystyle",
+                        "value": true
+                      }
+                    ],
+                    "properties": [
+                      {
+                        "name": "useHeight",
+                        "value": true
+                      }
+                    ],
+                    "children": [
+                      {
+                        "kind": "mlabeledtr",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "mtd",
+                            "text": null,
+                            "attributes": [
+                              {
+                                "name": "id",
+                                "value": "mjx-eqn:A"
+                              }
+                            ],
+                            "properties": [],
+                            "children": [
+                              {
+                                "kind": "inferredMrow",
+                                "text": null,
+                                "attributes": [],
+                                "properties": [],
+                                "children": [
+                                  {
+                                    "kind": "mtext",
+                                    "text": null,
+                                    "attributes": [],
+                                    "properties": [],
+                                    "children": [
+                                      {
+                                        "kind": "text",
+                                        "text": "(A)",
+                                        "attributes": [],
+                                        "properties": [],
+                                        "children": []
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "mtd",
+                            "text": null,
+                            "attributes": [],
+                            "properties": [],
+                            "children": [
+                              {
+                                "kind": "inferredMrow",
+                                "text": null,
+                                "attributes": [],
+                                "properties": [],
+                                "children": [
+                                  {
+                                    "kind": "TeXAtom",
+                                    "text": null,
+                                    "attributes": [],
+                                    "properties": [
+                                      {
+                                        "name": "texClass",
+                                        "value": 0
+                                      }
+                                    ],
+                                    "children": [
+                                      {
+                                        "kind": "inferredMrow",
+                                        "text": null,
+                                        "attributes": [],
+                                        "properties": [],
+                                        "children": [
+                                          {
+                                            "kind": "mi",
+                                            "text": null,
+                                            "attributes": [
+                                              {
+                                                "name": "mathvariant",
+                                                "value": "bold"
+                                              }
+                                            ],
+                                            "properties": [],
+                                            "children": [
+                                              {
+                                                "kind": "text",
+                                                "text": "x",
+                                                "attributes": [],
+                                                "properties": [],
+                                                "children": []
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "error": null,
+          "svgSHA256": "7f5578f8e96601365b9ef97a50b00aaad0cadf4c62c3f6d0cf8e0674dc3c6ec0",
+          "completeSVGPrimary": true
+        },
+        {
+          "tex": "x\\tag{$\\notADefinedCommand$}",
+          "tree": {
+            "kind": "math",
+            "text": null,
+            "attributes": [
+              {
+                "name": "display",
+                "value": "block"
+              }
+            ],
+            "properties": [],
+            "children": [
+              {
+                "kind": "inferredMrow",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "merror",
+                    "text": null,
+                    "attributes": [
+                      {
+                        "name": "data-mjx-error",
+                        "value": "Undefined control sequence \\notADefinedCommand"
+                      }
+                    ],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "inferredMrow",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "mtext",
+                            "text": null,
+                            "attributes": [],
+                            "properties": [],
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "Undefined control sequence \\notADefinedCommand",
+                                "attributes": [],
+                                "properties": [],
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "error": {
+            "id": "UndefinedControlSequence",
+            "message": "Undefined control sequence \\notADefinedCommand"
+          },
+          "svgSHA256": "04f63220b7a7e3b8223dc47acb77fadb7477407d31f7a24d382fc21e79126eb4",
+          "completeSVGPrimary": true
+        },
+        {
+          "tex": "x\\tag{C}",
+          "tree": {
+            "kind": "math",
+            "text": null,
+            "attributes": [
+              {
+                "name": "display",
+                "value": "block"
+              }
+            ],
+            "properties": [],
+            "children": [
+              {
+                "kind": "inferredMrow",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "mtable",
+                    "text": null,
+                    "attributes": [
+                      {
+                        "name": "displaystyle",
+                        "value": true
+                      }
+                    ],
+                    "properties": [
+                      {
+                        "name": "useHeight",
+                        "value": true
+                      }
+                    ],
+                    "children": [
+                      {
+                        "kind": "mlabeledtr",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "mtd",
+                            "text": null,
+                            "attributes": [
+                              {
+                                "name": "id",
+                                "value": "mjx-eqn:C"
+                              }
+                            ],
+                            "properties": [],
+                            "children": [
+                              {
+                                "kind": "inferredMrow",
+                                "text": null,
+                                "attributes": [],
+                                "properties": [],
+                                "children": [
+                                  {
+                                    "kind": "mtext",
+                                    "text": null,
+                                    "attributes": [],
+                                    "properties": [],
+                                    "children": [
+                                      {
+                                        "kind": "text",
+                                        "text": "(C)",
+                                        "attributes": [],
+                                        "properties": [],
+                                        "children": []
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "mtd",
+                            "text": null,
+                            "attributes": [],
+                            "properties": [],
+                            "children": [
+                              {
+                                "kind": "inferredMrow",
+                                "text": null,
+                                "attributes": [],
+                                "properties": [],
+                                "children": [
+                                  {
+                                    "kind": "mi",
+                                    "text": null,
+                                    "attributes": [],
+                                    "properties": [],
+                                    "children": [
+                                      {
+                                        "kind": "text",
+                                        "text": "x",
+                                        "attributes": [],
+                                        "properties": [],
+                                        "children": []
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "error": null,
+          "svgSHA256": "e386bc31b36443c61118b5f872f2a796cabcd7d8a7330724a41bbe6d7660e85c",
+          "completeSVGPrimary": true
+        }
+      ]
+    }
+  ]
+}

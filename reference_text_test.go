@@ -14,7 +14,7 @@ import (
 )
 
 // Only complete primary outputs belong to this test. The separate captured
-// equation/tag composites remain unresolved D083/D101 evidence (see README).
+// equation/tag composites are covered by the separate tag caller tests.
 func TestReferenceInternalTextPrimary(t *testing.T) {
 	var fixture struct {
 		MathjaxGitCommit string
