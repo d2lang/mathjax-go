@@ -993,10 +993,7 @@ func (w *wrapper) computeTableBBox(bbox *layout.BBox) {
 }
 
 func tableBackground(element *Element) *Element {
-	if element == nil || len(element.Children) == 0 {
-		return nil
-	}
-	rect, ok := element.Children[0].(*Element)
+	rect, ok := elementFirstChild(element).(*Element)
 	if !ok || rect.Tag != "rect" {
 		return nil
 	}
@@ -1239,7 +1236,7 @@ func (w *wrapper) tableToSVG(parent *Element) {
 		}
 		row.renderTableRow(element, t, i, h, d, space[i], space[i+1], topLine, bottomLine, labels)
 		baseline := y - space[i] - h
-		row.place(0, baseline, row.element)
+		row.place(0, baseline)
 		y -= space[i] + h + d + space[i+1] + bottomLine
 	}
 	t.addColumnLines(element)

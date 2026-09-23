@@ -270,19 +270,19 @@ func (w *wrapper) scriptsToSVG(parent *Element) {
 	case "msub":
 		script := w.children[1]
 		script.toSVG(element)
-		script.place(width, -w.subShift(script, w.renderer.params.Sub1), script.element)
+		script.place(width, -w.subShift(script, w.renderer.params.Sub1))
 	case "msup":
 		script := w.children[1]
 		script.toSVG(element)
 		x := w.adjustedIC() - w.baseIC()
-		script.place(width+x, w.supShift(script), script.element)
+		script.place(width+x, w.supShift(script))
 	case "msubsup":
 		sub, sup := w.children[1], w.children[2]
 		subY, supY := w.scriptOffsets()
 		// MathJax emits the superscript before the subscript.
 		sup.toSVG(element)
 		sub.toSVG(element)
-		sub.place(width, subY, sub.element)
-		sup.place(width+w.adjustedIC(), supY, sup.element)
+		sub.place(width, subY)
+		sup.place(width+w.adjustedIC(), supY)
 	}
 }

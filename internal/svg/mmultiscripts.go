@@ -221,11 +221,11 @@ func (w *wrapper) addMultiscripts(element *Element, pairs []multiscriptPair, x, 
 		width := math.Max(subbox.W*subbox.RScale, supbox.W*supbox.RScale)
 		if pair.sub != nil {
 			pair.sub.toSVG(subRow)
-			pair.sub.place(dx+multiscriptAlign(align, subbox.W*subbox.RScale, width), 0, pair.sub.element)
+			pair.sub.place(dx+multiscriptAlign(align, subbox.W*subbox.RScale, width), 0)
 		}
 		if pair.sup != nil {
 			pair.sup.toSVG(supRow)
-			pair.sup.place(dx+multiscriptAlign(align, supbox.W*supbox.RScale, width), 0, pair.sup.element)
+			pair.sup.place(dx+multiscriptAlign(align, supbox.W*supbox.RScale, width), 0)
 		}
 		dx += width
 	}
@@ -248,7 +248,7 @@ func (w *wrapper) multiscriptsToSVG(parent *Element) {
 		x = w.addMultiscripts(element, data.pre, w.renderer.params.ScriptSpace, u, v, preAlign)
 	}
 	data.base.toSVG(element)
-	data.base.place(x, 0, data.base.element)
+	data.base.place(x, 0)
 	x += data.base.outerBBox().W
 	if len(data.post) != 0 {
 		w.addMultiscripts(element, data.post, x, u, v, postAlign)

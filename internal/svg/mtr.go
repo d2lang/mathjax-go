@@ -146,6 +146,6 @@ func (w *wrapper) placeTableCell(x, y, width, H, D float64, columnAlign, rowAlig
 	d := math.Max(bbox.D*bbox.RScale, .25)
 	dx := tableAlignX(width, bbox, columnAlign)
 	dy := tableAlignY(H, D, h, d, rowAlign)
-	w.place(x+dx, y+dy, w.element)
+	w.place(x+dx, y+dy)
 	return dx, dy
 }

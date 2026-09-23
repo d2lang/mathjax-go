@@ -12,6 +12,7 @@ import (
 	"unicode/utf8"
 
 	"github.com/d2lang/mathjax-go/internal/font"
+	"github.com/d2lang/mathjax-go/internal/jscompat"
 	"github.com/d2lang/mathjax-go/internal/layout"
 	"github.com/d2lang/mathjax-go/internal/mml"
 )
@@ -687,7 +688,7 @@ func (w *wrapper) addChildren(parent *Element) {
 		child.toSVG(parent)
 		bbox := child.outerBBox()
 		if child.element != nil {
-			child.place(x+bbox.L*bbox.RScale, 0, child.element)
+			child.place(x+bbox.L*bbox.RScale, 0)
 		}
 		x += (bbox.L + bbox.W + bbox.R) * bbox.RScale
 	}
@@ -862,22 +863,93 @@ func jsFixed(value float64, digits int) string {
 	return result
 }
 
-func (w *wrapper) place(x, y float64, element *Element) {
-	if element == nil {
+// An omitted or nil element selects the wrapper's own element. An explicit
+// element bypasses ID compensation even when it is the same element pointer.
+func (w *wrapper) place(x, y float64, elements ...*Element) {
+	x += w.dx
+	if !jscompat.TruthyNumber(x) && !jscompat.TruthyNumber(y) {
 		return
 	}
-	x += w.dx
-	if fixed(x) == "0" && fixed(y) == "0" {
-		return
+	var element *Element
+	if len(elements) != 0 {
+		element = elements[0]
+	}
+	if element == nil {
+		element = w.element
+		if element == nil {
+			return
+		}
+		y = w.handleID(y)
 	}
 	translate := fmt.Sprintf("translate(%s,%s)", fixed(x), fixed(y))
 	for i := range element.Attributes {
 		if element.Attributes[i].Name == "transform" {
-			element.Attributes[i].Value = translate + " " + element.Attributes[i].Value
+			if previous := element.Attributes[i].Value; previous != "" {
+				translate += " " + previous
+			}
+			element.Attributes[i].Value = translate
 			return
 		}
 	}
 	element.SetAttr("transform", translate)
+}
+
+// SVGWrapper.handleId compensates browser anchor placement without moving
+// the rendered content. The original child objects stay in their original order.
+func (w *wrapper) handleID(y float64) float64 {
+	id := attribute(w.node, "id", nil)
+	hasID := truthy(id)
+	if text, ok := id.(string); ok {
+		hasID = text != ""
+	}
+	if !hasID {
+		return y
+	}
+	h := w.getBBox().H
+	children := w.element.Children
+	w.element.Children = nil
+	box := NewElement("g", children...).SetAttr("data-idbox", "true").SetAttr("transform", "translate(0,"+fixed(-h)+")")
+	w.element.Append(NewElement("text", Text("")).SetAttr("data-id-align", "true"), box)
+	return y + h
+}
+
+func (w *wrapper) firstChild() Node { return elementFirstChild(w.element) }
+
+// Match SVGWrapper.firstChild's one-level traversal, including the order in
+// which it skips alignment text and a single href hitbox.
+func elementFirstChild(element *Element) Node {
+	if element == nil || len(element.Children) == 0 {
+		return nil
+	}
+	children := element.Children
+	child := children[0]
+	if e, ok := child.(*Element); ok && e.Tag == "text" && elementAttributeTruthy(e, "data-id-align") {
+		if len(children) < 2 {
+			return nil
+		}
+		group, ok := children[1].(*Element)
+		if !ok || len(group.Children) == 0 {
+			return nil
+		}
+		children = group.Children
+		child = children[0]
+	}
+	if e, ok := child.(*Element); ok && e.Tag == "rect" && elementAttributeTruthy(e, "data-hitbox") {
+		if len(children) < 2 {
+			return nil
+		}
+		child = children[1]
+	}
+	return child
+}
+
+func elementAttributeTruthy(element *Element, name string) bool {
+	for _, attribute := range element.Attributes {
+		if attribute.Name == name {
+			return attribute.Value != ""
+		}
+	}
+	return false
 }
 
 func (w *wrapper) handleColor(element *Element) {

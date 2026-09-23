@@ -1,0 +1,17 @@
+# ID anchor placement regression fixtures
+
+These fixtures retain complete primary SVG/scene strings from the saved MathJax 3.2.2 bundle (`ad8f5c21cb810236551da8c6512ba733e67357ee`, bundle SHA-256 `cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869`). Expected output was extracted from primary records, never generated from Go output.
+
+`id_anchor_render_mathjax_3_2_2.json` contains 14 public TeX inputs and 26 directly constructed MathML inputs whose complete primary SVG matched the reviewed D107 candidate. Each SVG is preserved as a full string with its hash and source-record hashes. The two manual align/tag cases reuse their existing D083 primary SVG files. Committed fixture specs omit only the stale planning flag `unexecuted`; all actual request fields are unchanged, and the complete original specs remain preserved in external primary evidence and the provenance manifest.
+
+The test lives in `internal/tex` so it can use the real private node constructors and inheritance path without exporting a production test helper. Construction preserves attribute/property insertion order. These tests assert complete SVG equality only: they do not assert that primary and Go raw MathML maps are equal. The existing raw-model differences remain retained in the audit.
+
+`../../svg/testdata/id_anchor_private_mathjax_3_2_2.json` contains 30 placement scenes (33 calls) and eight firstChild cases. Complete scene strings and existing-element movement paths come from untouched saved primary records. Per-call DOM serialization preserves ordered attributes and is checked against the original final scene bytes. The tests compare actual object pointers at those paths, so repeated wrapping must retain the original elements and their order. Go text is a value, not an element-object identity.
+
+Private tests use actual mi/text wrappers from compiling `x`, then apply the bound fixture's ID, DOM, displacement, and bbox values before calling the existing private placement/getter methods. The primary text-node fixture has no Attributes object; Go's genuine text node has an empty one. Neither supplies an effective ID. Omitted/undefined arguments use the Go optional argument omission, null uses an explicit nil, and explicit own/other arguments preserve their distinct behavior. Negative zero is retained without tolerance.
+
+The firstChild expected returned object comes from the actual primary firstChild result. The additional tableBackground expected path is a separate source contract: the selected node must be a rect with `data-bgcolor="true"`. It is not presented as an old or primary firstChild API. Both calls must leave SVG objects, wrapper state, MathML state, and all identity relationships unchanged.
+
+Six rendered fixtures remain excluded and unaccepted: bevelled fraction (D-113), inferred-row alias normalization (D-114), annotation and annotation-xml inheritance (two D-115 cases), multiscript prescripts arithmetic/FMSUB and scale (D-116/D-117), and TeXAtom default/property semantics (D-118). The corrected one-fixture TeXAtom capture remains diagnostic. No epsilon, model-field stripping, or fixture waiver is used.
+
+The source-bound provenance, full historical records, exclusion table, corrected TeXAtom addendum, and preparation/execution receipts are retained in the D107 parity audit. This fixture installation does not by itself claim that current-parent tests ran or that any excluded case is accepted.

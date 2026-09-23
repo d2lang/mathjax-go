@@ -66,7 +66,7 @@ func (w *wrapper) actionToSVG(parent *Element) {
 		SetAttr("pointer-events", "all")
 	element.Append(rect)
 	selected.toSVG(element)
-	selected.place(bbox.L*bbox.RScale, 0, selected.element)
+	selected.place(bbox.L*bbox.RScale, 0)
 
 	action := stringAttribute(w.node, "actiontype", "toggle")
 	switch action {
