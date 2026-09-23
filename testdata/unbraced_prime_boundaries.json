@@ -1,0 +1,1119 @@
+{
+  "baseline": "e93f5eb32042cd5a772f5b8fa3c6aabe540701da",
+  "cases": {
+    "public-15-inline": {
+      "tex": "x^{'}",
+      "display": false,
+      "kind": "unchanged-pseudoscript-own-property",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "variantForm": true,
+            "pseudoscript": false
+          },
+          "accepted": {
+            "variantForm": true
+          }
+        }
+      ]
+    },
+    "public-15-display": {
+      "tex": "x^{'}",
+      "display": true,
+      "kind": "unchanged-pseudoscript-own-property",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "variantForm": true,
+            "pseudoscript": false
+          },
+          "accepted": {
+            "variantForm": true
+          }
+        }
+      ]
+    },
+    "public-16-inline": {
+      "tex": "x^{\u2019}",
+      "display": false,
+      "kind": "unchanged-pseudoscript-own-property",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "variantForm": true,
+            "pseudoscript": false
+          },
+          "accepted": {
+            "variantForm": true
+          }
+        }
+      ]
+    },
+    "public-16-display": {
+      "tex": "x^{\u2019}",
+      "display": true,
+      "kind": "unchanged-pseudoscript-own-property",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "variantForm": true,
+            "pseudoscript": false
+          },
+          "accepted": {
+            "variantForm": true
+          }
+        }
+      ]
+    },
+    "public-19-inline": {
+      "tex": "\\sqrt'",
+      "display": false,
+      "kind": "unchanged-pseudoscript-own-property",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "variantForm": true,
+            "texprimestyle": true,
+            "pseudoscript": false
+          },
+          "accepted": {
+            "variantForm": true,
+            "texprimestyle": true
+          }
+        }
+      ]
+    },
+    "public-19-display": {
+      "tex": "\\sqrt'",
+      "display": true,
+      "kind": "unchanged-pseudoscript-own-property",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "variantForm": true,
+            "texprimestyle": true,
+            "pseudoscript": false
+          },
+          "accepted": {
+            "variantForm": true,
+            "texprimestyle": true
+          }
+        }
+      ]
+    },
+    "public-20-inline": {
+      "tex": "\\frac'2",
+      "display": false,
+      "kind": "unchanged-pseudoscript-own-property",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "variantForm": true,
+            "pseudoscript": false
+          },
+          "accepted": {
+            "variantForm": true
+          }
+        }
+      ]
+    },
+    "public-20-display": {
+      "tex": "\\frac'2",
+      "display": true,
+      "kind": "unchanged-pseudoscript-own-property",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "variantForm": true,
+            "pseudoscript": false
+          },
+          "accepted": {
+            "variantForm": true
+          }
+        }
+      ]
+    },
+    "public-21-inline": {
+      "tex": "\\mathit{\u2019}",
+      "display": false,
+      "kind": "unchanged-pseudoscript-own-property",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "variantForm": true,
+            "pseudoscript": false
+          },
+          "accepted": {
+            "variantForm": true
+          }
+        }
+      ]
+    },
+    "public-21-display": {
+      "tex": "\\mathit{\u2019}",
+      "display": true,
+      "kind": "unchanged-pseudoscript-own-property",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "variantForm": true,
+            "pseudoscript": false
+          },
+          "accepted": {
+            "variantForm": true
+          }
+        }
+      ]
+    },
+    "public-22-inline": {
+      "tex": "\\operatorname{\u2019}",
+      "display": false,
+      "kind": "unchanged-output",
+      "svgSHA256": "de5e6106ecafa18a6f8621fa1c09c3cf7060356da05a856cd6548cdab64cb165",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": {},
+                "properties": {
+                  "texClass": 1,
+                  "movesupsub": false,
+                  "movablelimits": true
+                },
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mo",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {
+                          "in-lists": "fixStretchy"
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "\u2019",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "primaryDifferences": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "field": "kind",
+          "primary": "msup",
+          "accepted": "mo"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {},
+          "accepted": {
+            "in-lists": "fixStretchy"
+          }
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "field": "children-length",
+          "primary": 2,
+          "accepted": 1
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "field": "kind",
+          "primary": "mi",
+          "accepted": "text"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "field": "text",
+          "primary": null,
+          "accepted": "\u2019"
+        }
+      ]
+    },
+    "public-22-display": {
+      "tex": "\\operatorname{\u2019}",
+      "display": true,
+      "kind": "unchanged-output",
+      "svgSHA256": "de5e6106ecafa18a6f8621fa1c09c3cf7060356da05a856cd6548cdab64cb165",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": {},
+                "properties": {
+                  "texClass": 1,
+                  "movesupsub": false,
+                  "movablelimits": true
+                },
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mo",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {
+                          "in-lists": "fixStretchy"
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "\u2019",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "primaryDifferences": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "field": "kind",
+          "primary": "msup",
+          "accepted": "mo"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "field": "properties",
+          "primary": {},
+          "accepted": {
+            "in-lists": "fixStretchy"
+          }
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "field": "children-length",
+          "primary": 2,
+          "accepted": 1
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "field": "kind",
+          "primary": "mi",
+          "accepted": "text"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "field": "text",
+          "primary": null,
+          "accepted": "\u2019"
+        }
+      ]
+    },
+    "public-27-inline": {
+      "tex": "x'^n",
+      "display": false,
+      "kind": "unchanged-pseudoscript-own-property",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "variantForm": true,
+            "pseudoscript": true
+          },
+          "accepted": {
+            "variantForm": true
+          }
+        }
+      ]
+    },
+    "public-27-display": {
+      "tex": "x'^n",
+      "display": true,
+      "kind": "unchanged-pseudoscript-own-property",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "field": "properties",
+          "primary": {
+            "variantForm": true,
+            "pseudoscript": true
+          },
+          "accepted": {
+            "variantForm": true
+          }
+        }
+      ]
+    },
+    "public-28-inline": {
+      "tex": "x'_i",
+      "display": false,
+      "kind": "unchanged-pseudoscript-own-property",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            2
+          ],
+          "field": "properties",
+          "primary": {
+            "variantForm": true,
+            "pseudoscript": false
+          },
+          "accepted": {
+            "variantForm": true
+          }
+        }
+      ]
+    },
+    "public-28-display": {
+      "tex": "x'_i",
+      "display": true,
+      "kind": "unchanged-pseudoscript-own-property",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            2
+          ],
+          "field": "properties",
+          "primary": {
+            "variantForm": true,
+            "pseudoscript": false
+          },
+          "accepted": {
+            "variantForm": true
+          }
+        }
+      ]
+    },
+    "registered-04-inline": {
+      "tex": "x^\\probe",
+      "display": false,
+      "kind": "unchanged-pseudoscript-own-property",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "variantForm": true,
+            "pseudoscript": false
+          },
+          "accepted": {
+            "variantForm": true
+          },
+          "baselinePath": [
+            0,
+            1,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "registered-04-display": {
+      "tex": "x^\\probe",
+      "display": true,
+      "kind": "unchanged-pseudoscript-own-property",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "variantForm": true,
+            "pseudoscript": false
+          },
+          "accepted": {
+            "variantForm": true
+          },
+          "baselinePath": [
+            0,
+            1,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "registered-07-inline": {
+      "tex": "x^\\probe y",
+      "display": false,
+      "kind": "unchanged-output",
+      "svgSHA256": "5d5419880100b4e1bb72957200a7464bdf31f3ddece95c1df8aa5248b6a2d7f7",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Undefined control sequence \\bfy"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Undefined control sequence \\bfy",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "primaryDifferences": [
+        {
+          "path": [
+            0,
+            0
+          ],
+          "field": "kind",
+          "primary": "msup",
+          "accepted": "merror"
+        },
+        {
+          "path": [
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "accepted": {
+            "data-mjx-error": "Undefined control sequence \\bfy"
+          }
+        },
+        {
+          "path": [
+            0,
+            0
+          ],
+          "field": "children-length",
+          "primary": 2,
+          "accepted": 1
+        },
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "field": "kind",
+          "primary": "mi",
+          "accepted": "inferredMrow"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "field": "kind",
+          "primary": "text",
+          "accepted": "mtext"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "field": "text",
+          "primary": "x",
+          "accepted": null
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "field": "children-length",
+          "primary": 0,
+          "accepted": 1
+        }
+      ]
+    },
+    "registered-07-display": {
+      "tex": "x^\\probe y",
+      "display": true,
+      "kind": "unchanged-output",
+      "svgSHA256": "5d5419880100b4e1bb72957200a7464bdf31f3ddece95c1df8aa5248b6a2d7f7",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "Undefined control sequence \\bfy"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Undefined control sequence \\bfy",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "primaryDifferences": [
+        {
+          "path": [
+            0,
+            0
+          ],
+          "field": "kind",
+          "primary": "msup",
+          "accepted": "merror"
+        },
+        {
+          "path": [
+            0,
+            0
+          ],
+          "field": "attributes",
+          "primary": {},
+          "accepted": {
+            "data-mjx-error": "Undefined control sequence \\bfy"
+          }
+        },
+        {
+          "path": [
+            0,
+            0
+          ],
+          "field": "children-length",
+          "primary": 2,
+          "accepted": 1
+        },
+        {
+          "path": [
+            0,
+            0,
+            0
+          ],
+          "field": "kind",
+          "primary": "mi",
+          "accepted": "inferredMrow"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "field": "kind",
+          "primary": "text",
+          "accepted": "mtext"
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "field": "text",
+          "primary": "x",
+          "accepted": null
+        },
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "field": "children-length",
+          "primary": 0,
+          "accepted": 1
+        }
+      ]
+    },
+    "left-prime-inline": {
+      "tex": "x^\\left('y\\right)z",
+      "display": false,
+      "kind": "unchanged-pseudoscript-own-property",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "variantForm": true,
+            "pseudoscript": false
+          },
+          "accepted": {
+            "variantForm": true
+          }
+        }
+      ]
+    },
+    "left-prime-display": {
+      "tex": "x^\\left('y\\right)z",
+      "display": true,
+      "kind": "unchanged-pseudoscript-own-property",
+      "differences": [
+        {
+          "path": [
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "field": "properties",
+          "primary": {
+            "variantForm": true,
+            "pseudoscript": false
+          },
+          "accepted": {
+            "variantForm": true
+          }
+        }
+      ]
+    },
+    "digit-tail-inline": {
+      "tex": "x^12",
+      "display": false,
+      "kind": "unchanged-output",
+      "svgSHA256": "487ef39255e718661e914be496b92c71ccc3882e2bebd3c636d0d6fa6b6298fe",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "msup",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mn",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "12",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "primaryDifferences": [
+        {
+          "path": [
+            0
+          ],
+          "field": "children-length",
+          "primary": 2,
+          "accepted": 1
+        },
+        {
+          "path": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "field": "text",
+          "primary": "1",
+          "accepted": "12"
+        }
+      ]
+    },
+    "digit-tail-display": {
+      "tex": "x^12",
+      "display": true,
+      "kind": "unchanged-output",
+      "svgSHA256": "542bca38b72bf7025c9270e4c3849920ac95be426b2104e23acedabfbd7d77ed",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "msup",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mn",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "12",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "primaryDifferences": [
+        {
+          "path": [
+            0
+          ],
+          "field": "children-length",
+          "primary": 2,
+          "accepted": 1
+        },
+        {
+          "path": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "field": "text",
+          "primary": "1",
+          "accepted": "12"
+        }
+      ]
+    }
+  }
+}

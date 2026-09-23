@@ -1,0 +1,822 @@
+[
+  {
+    "name": "public-00-inline",
+    "tex": "x^'",
+    "display": false,
+    "scope": "public fixed D2 package set"
+  },
+  {
+    "name": "public-00-display",
+    "tex": "x^'",
+    "display": true,
+    "scope": "public fixed D2 package set"
+  },
+  {
+    "name": "public-01-inline",
+    "tex": "x^’",
+    "display": false,
+    "scope": "public fixed D2 package set"
+  },
+  {
+    "name": "public-01-display",
+    "tex": "x^’",
+    "display": true,
+    "scope": "public fixed D2 package set"
+  },
+  {
+    "name": "public-02-inline",
+    "tex": "x_'",
+    "display": false,
+    "scope": "public fixed D2 package set"
+  },
+  {
+    "name": "public-02-display",
+    "tex": "x_'",
+    "display": true,
+    "scope": "public fixed D2 package set"
+  },
+  {
+    "name": "public-03-inline",
+    "tex": "x_’",
+    "display": false,
+    "scope": "public fixed D2 package set"
+  },
+  {
+    "name": "public-03-display",
+    "tex": "x_’",
+    "display": true,
+    "scope": "public fixed D2 package set"
+  },
+  {
+    "name": "public-04-inline",
+    "tex": "x^’y",
+    "display": false,
+    "scope": "public fixed D2 package set"
+  },
+  {
+    "name": "public-04-display",
+    "tex": "x^’y",
+    "display": true,
+    "scope": "public fixed D2 package set"
+  },
+  {
+    "name": "public-05-inline",
+    "tex": "^'",
+    "display": false,
+    "scope": "public fixed D2 package set"
+  },
+  {
+    "name": "public-05-display",
+    "tex": "^'",
+    "display": true,
+    "scope": "public fixed D2 package set"
+  },
+  {
+    "name": "public-06-inline",
+    "tex": "_'",
+    "display": false,
+    "scope": "public fixed D2 package set"
+  },
+  {
+    "name": "public-06-display",
+    "tex": "_'",
+    "display": true,
+    "scope": "public fixed D2 package set"
+  },
+  {
+    "name": "public-07-inline",
+    "tex": "x^''",
+    "display": false,
+    "scope": "public fixed D2 package set"
+  },
+  {
+    "name": "public-07-display",
+    "tex": "x^''",
+    "display": true,
+    "scope": "public fixed D2 package set"
+  },
+  {
+    "name": "public-08-inline",
+    "tex": "x^’'y",
+    "display": false,
+    "scope": "public fixed D2 package set"
+  },
+  {
+    "name": "public-08-display",
+    "tex": "x^’'y",
+    "display": true,
+    "scope": "public fixed D2 package set"
+  },
+  {
+    "name": "public-09-inline",
+    "tex": "x^a^'",
+    "display": false,
+    "scope": "public fixed D2 package set"
+  },
+  {
+    "name": "public-09-display",
+    "tex": "x^a^'",
+    "display": true,
+    "scope": "public fixed D2 package set"
+  },
+  {
+    "name": "public-10-inline",
+    "tex": "x_i_'",
+    "display": false,
+    "scope": "public fixed D2 package set"
+  },
+  {
+    "name": "public-10-display",
+    "tex": "x_i_'",
+    "display": true,
+    "scope": "public fixed D2 package set"
+  },
+  {
+    "name": "public-11-inline",
+    "tex": "x^a_'",
+    "display": false,
+    "scope": "public fixed D2 package set"
+  },
+  {
+    "name": "public-11-display",
+    "tex": "x^a_'",
+    "display": true,
+    "scope": "public fixed D2 package set"
+  },
+  {
+    "name": "public-12-inline",
+    "tex": "x_i^'",
+    "display": false,
+    "scope": "public fixed D2 package set"
+  },
+  {
+    "name": "public-12-display",
+    "tex": "x_i^'",
+    "display": true,
+    "scope": "public fixed D2 package set"
+  },
+  {
+    "name": "public-13-inline",
+    "tex": "x'^'",
+    "display": false,
+    "scope": "public fixed D2 package set"
+  },
+  {
+    "name": "public-13-display",
+    "tex": "x'^'",
+    "display": true,
+    "scope": "public fixed D2 package set"
+  },
+  {
+    "name": "public-14-inline",
+    "tex": "x'_'",
+    "display": false,
+    "scope": "public fixed D2 package set"
+  },
+  {
+    "name": "public-14-display",
+    "tex": "x'_'",
+    "display": true,
+    "scope": "public fixed D2 package set"
+  },
+  {
+    "name": "public-15-inline",
+    "tex": "x^{'}",
+    "display": false,
+    "scope": "public fixed D2 package set"
+  },
+  {
+    "name": "public-15-display",
+    "tex": "x^{'}",
+    "display": true,
+    "scope": "public fixed D2 package set"
+  },
+  {
+    "name": "public-16-inline",
+    "tex": "x^{’}",
+    "display": false,
+    "scope": "public fixed D2 package set"
+  },
+  {
+    "name": "public-16-display",
+    "tex": "x^{’}",
+    "display": true,
+    "scope": "public fixed D2 package set"
+  },
+  {
+    "name": "public-17-inline",
+    "tex": "x^\\prime",
+    "display": false,
+    "scope": "public fixed D2 package set"
+  },
+  {
+    "name": "public-17-display",
+    "tex": "x^\\prime",
+    "display": true,
+    "scope": "public fixed D2 package set"
+  },
+  {
+    "name": "public-18-inline",
+    "tex": "x^\\text{'}",
+    "display": false,
+    "scope": "public fixed D2 package set"
+  },
+  {
+    "name": "public-18-display",
+    "tex": "x^\\text{'}",
+    "display": true,
+    "scope": "public fixed D2 package set"
+  },
+  {
+    "name": "public-19-inline",
+    "tex": "\\sqrt'",
+    "display": false,
+    "scope": "public fixed D2 package set"
+  },
+  {
+    "name": "public-19-display",
+    "tex": "\\sqrt'",
+    "display": true,
+    "scope": "public fixed D2 package set"
+  },
+  {
+    "name": "public-20-inline",
+    "tex": "\\frac'2",
+    "display": false,
+    "scope": "public fixed D2 package set"
+  },
+  {
+    "name": "public-20-display",
+    "tex": "\\frac'2",
+    "display": true,
+    "scope": "public fixed D2 package set"
+  },
+  {
+    "name": "public-21-inline",
+    "tex": "\\mathit{’}",
+    "display": false,
+    "scope": "public fixed D2 package set"
+  },
+  {
+    "name": "public-21-display",
+    "tex": "\\mathit{’}",
+    "display": true,
+    "scope": "public fixed D2 package set"
+  },
+  {
+    "name": "public-22-inline",
+    "tex": "\\operatorname{’}",
+    "display": false,
+    "scope": "public fixed D2 package set"
+  },
+  {
+    "name": "public-22-display",
+    "tex": "\\operatorname{’}",
+    "display": true,
+    "scope": "public fixed D2 package set"
+  },
+  {
+    "name": "public-23-inline",
+    "tex": "x^\\bf'",
+    "display": false,
+    "scope": "public fixed D2 package set"
+  },
+  {
+    "name": "public-23-display",
+    "tex": "x^\\bf'",
+    "display": true,
+    "scope": "public fixed D2 package set"
+  },
+  {
+    "name": "public-24-inline",
+    "tex": "\\sum\\limits^'",
+    "display": false,
+    "scope": "public fixed D2 package set"
+  },
+  {
+    "name": "public-24-display",
+    "tex": "\\sum\\limits^'",
+    "display": true,
+    "scope": "public fixed D2 package set"
+  },
+  {
+    "name": "public-25-inline",
+    "tex": "\\overset{a}{x}^'",
+    "display": false,
+    "scope": "public fixed D2 package set"
+  },
+  {
+    "name": "public-25-display",
+    "tex": "\\overset{a}{x}^'",
+    "display": true,
+    "scope": "public fixed D2 package set"
+  },
+  {
+    "name": "public-26-inline",
+    "tex": "x_i^n",
+    "display": false,
+    "scope": "public fixed D2 package set"
+  },
+  {
+    "name": "public-26-display",
+    "tex": "x_i^n",
+    "display": true,
+    "scope": "public fixed D2 package set"
+  },
+  {
+    "name": "public-27-inline",
+    "tex": "x'^n",
+    "display": false,
+    "scope": "public fixed D2 package set"
+  },
+  {
+    "name": "public-27-display",
+    "tex": "x'^n",
+    "display": true,
+    "scope": "public fixed D2 package set"
+  },
+  {
+    "name": "public-28-inline",
+    "tex": "x'_i",
+    "display": false,
+    "scope": "public fixed D2 package set"
+  },
+  {
+    "name": "public-28-display",
+    "tex": "x'_i",
+    "display": true,
+    "scope": "public fixed D2 package set"
+  },
+  {
+    "name": "public-29-inline",
+    "tex": "x^\\bf y",
+    "display": false,
+    "scope": "public fixed D2 package set"
+  },
+  {
+    "name": "public-29-display",
+    "tex": "x^\\bf y",
+    "display": true,
+    "scope": "public fixed D2 package set"
+  },
+  {
+    "name": "public-30-inline",
+    "tex": "x^\\notag y",
+    "display": false,
+    "scope": "public fixed D2 package set"
+  },
+  {
+    "name": "public-30-display",
+    "tex": "x^\\notag y",
+    "display": true,
+    "scope": "public fixed D2 package set"
+  },
+  {
+    "name": "public-31-inline",
+    "tex": "x^\\left(y\\right)",
+    "display": false,
+    "scope": "public fixed D2 package set"
+  },
+  {
+    "name": "public-31-display",
+    "tex": "x^\\left(y\\right)",
+    "display": true,
+    "scope": "public fixed D2 package set"
+  },
+  {
+    "name": "registered-00-inline",
+    "tex": "x^\\probe",
+    "display": false,
+    "scope": "actual registered macro, not invented public command",
+    "registration": {
+      "name": "probe",
+      "body": "'",
+      "arguments": 0
+    }
+  },
+  {
+    "name": "registered-00-display",
+    "tex": "x^\\probe",
+    "display": true,
+    "scope": "actual registered macro, not invented public command",
+    "registration": {
+      "name": "probe",
+      "body": "'",
+      "arguments": 0
+    }
+  },
+  {
+    "name": "registered-01-inline",
+    "tex": "x^\\probe'",
+    "display": false,
+    "scope": "actual registered macro, not invented public command",
+    "registration": {
+      "name": "probe",
+      "body": "",
+      "arguments": 0
+    }
+  },
+  {
+    "name": "registered-01-display",
+    "tex": "x^\\probe'",
+    "display": true,
+    "scope": "actual registered macro, not invented public command",
+    "registration": {
+      "name": "probe",
+      "body": "",
+      "arguments": 0
+    }
+  },
+  {
+    "name": "registered-02-inline",
+    "tex": "x^\\probe",
+    "display": false,
+    "scope": "actual registered macro, not invented public command",
+    "registration": {
+      "name": "probe",
+      "body": "y",
+      "arguments": 0
+    }
+  },
+  {
+    "name": "registered-02-display",
+    "tex": "x^\\probe",
+    "display": true,
+    "scope": "actual registered macro, not invented public command",
+    "registration": {
+      "name": "probe",
+      "body": "y",
+      "arguments": 0
+    }
+  },
+  {
+    "name": "registered-03-inline",
+    "tex": "x^\\probe",
+    "display": false,
+    "scope": "actual registered macro, not invented public command",
+    "registration": {
+      "name": "probe",
+      "body": "\\bf\\prime",
+      "arguments": 0
+    }
+  },
+  {
+    "name": "registered-03-display",
+    "tex": "x^\\probe",
+    "display": true,
+    "scope": "actual registered macro, not invented public command",
+    "registration": {
+      "name": "probe",
+      "body": "\\bf\\prime",
+      "arguments": 0
+    }
+  },
+  {
+    "name": "registered-04-inline",
+    "tex": "x^\\probe",
+    "display": false,
+    "scope": "actual registered macro, not invented public command",
+    "registration": {
+      "name": "probe",
+      "body": "{'}",
+      "arguments": 0
+    }
+  },
+  {
+    "name": "registered-04-display",
+    "tex": "x^\\probe",
+    "display": true,
+    "scope": "actual registered macro, not invented public command",
+    "registration": {
+      "name": "probe",
+      "body": "{'}",
+      "arguments": 0
+    }
+  },
+  {
+    "name": "registered-05-inline",
+    "tex": "x^a^\\probe",
+    "display": false,
+    "scope": "actual registered macro, not invented public command",
+    "registration": {
+      "name": "probe",
+      "body": "'",
+      "arguments": 0
+    }
+  },
+  {
+    "name": "registered-05-display",
+    "tex": "x^a^\\probe",
+    "display": true,
+    "scope": "actual registered macro, not invented public command",
+    "registration": {
+      "name": "probe",
+      "body": "'",
+      "arguments": 0
+    }
+  },
+  {
+    "name": "registered-06-inline",
+    "tex": "x'^\\probe",
+    "display": false,
+    "scope": "actual registered macro, not invented public command",
+    "registration": {
+      "name": "probe",
+      "body": "'",
+      "arguments": 0
+    }
+  },
+  {
+    "name": "registered-06-display",
+    "tex": "x'^\\probe",
+    "display": true,
+    "scope": "actual registered macro, not invented public command",
+    "registration": {
+      "name": "probe",
+      "body": "'",
+      "arguments": 0
+    }
+  },
+  {
+    "name": "registered-07-inline",
+    "tex": "x^\\probe y",
+    "display": false,
+    "scope": "actual registered macro, not invented public command",
+    "registration": {
+      "name": "probe",
+      "body": "\\bf",
+      "arguments": 0
+    }
+  },
+  {
+    "name": "registered-07-display",
+    "tex": "x^\\probe y",
+    "display": true,
+    "scope": "actual registered macro, not invented public command",
+    "registration": {
+      "name": "probe",
+      "body": "\\bf",
+      "arguments": 0
+    }
+  },
+  {
+    "name": "empty-sup-inline",
+    "tex": "x^",
+    "display": false,
+    "scope": "continuation"
+  },
+  {
+    "name": "empty-sup-display",
+    "tex": "x^",
+    "display": true,
+    "scope": "continuation"
+  },
+  {
+    "name": "empty-sub-inline",
+    "tex": "x_",
+    "display": false,
+    "scope": "continuation"
+  },
+  {
+    "name": "empty-sub-display",
+    "tex": "x_",
+    "display": true,
+    "scope": "continuation"
+  },
+  {
+    "name": "close-sup-inline",
+    "tex": "x^}",
+    "display": false,
+    "scope": "continuation"
+  },
+  {
+    "name": "close-sup-display",
+    "tex": "x^}",
+    "display": true,
+    "scope": "continuation"
+  },
+  {
+    "name": "close-sub-inline",
+    "tex": "{x_}",
+    "display": false,
+    "scope": "continuation"
+  },
+  {
+    "name": "close-sub-display",
+    "tex": "{x_}",
+    "display": true,
+    "scope": "continuation"
+  },
+  {
+    "name": "left-sup-inline",
+    "tex": "x^\\left(y\\right)z",
+    "display": false,
+    "scope": "continuation"
+  },
+  {
+    "name": "left-sup-display",
+    "tex": "x^\\left(y\\right)z",
+    "display": true,
+    "scope": "continuation"
+  },
+  {
+    "name": "left-prime-inline",
+    "tex": "x^\\left('y\\right)z",
+    "display": false,
+    "scope": "continuation"
+  },
+  {
+    "name": "left-prime-display",
+    "tex": "x^\\left('y\\right)z",
+    "display": true,
+    "scope": "continuation"
+  },
+  {
+    "name": "comment-prime-inline",
+    "tex": "x^%c\n'",
+    "display": false,
+    "scope": "continuation"
+  },
+  {
+    "name": "comment-prime-display",
+    "tex": "x^%c\n'",
+    "display": true,
+    "scope": "continuation"
+  },
+  {
+    "name": "font-scope-inline",
+    "tex": "x^\\bf y+z",
+    "display": false,
+    "scope": "continuation"
+  },
+  {
+    "name": "font-scope-display",
+    "tex": "x^\\bf y+z",
+    "display": true,
+    "scope": "continuation"
+  },
+  {
+    "name": "font-group-inline",
+    "tex": "{x^\\bf y}+z",
+    "display": false,
+    "scope": "continuation"
+  },
+  {
+    "name": "font-group-display",
+    "tex": "{x^\\bf y}+z",
+    "display": true,
+    "scope": "continuation"
+  },
+  {
+    "name": "font-group-arg-inline",
+    "tex": "x^{\\bf y}+z",
+    "display": false,
+    "scope": "continuation"
+  },
+  {
+    "name": "font-group-arg-display",
+    "tex": "x^{\\bf y}+z",
+    "display": true,
+    "scope": "continuation"
+  },
+  {
+    "name": "font-declaration-group-inline",
+    "tex": "x^\\bf{y}+z",
+    "display": false,
+    "scope": "continuation"
+  },
+  {
+    "name": "font-declaration-group-display",
+    "tex": "x^\\bf{y}+z",
+    "display": true,
+    "scope": "continuation"
+  },
+  {
+    "name": "empty-macro-end-inline",
+    "tex": "x^\\dmacro",
+    "display": false,
+    "scope": "registered-continuation",
+    "registration": {
+      "name": "dmacro",
+      "body": "",
+      "arguments": 0
+    }
+  },
+  {
+    "name": "empty-macro-end-display",
+    "tex": "x^\\dmacro",
+    "display": true,
+    "scope": "registered-continuation",
+    "registration": {
+      "name": "dmacro",
+      "body": "",
+      "arguments": 0
+    }
+  },
+  {
+    "name": "macro-mml-tail-inline",
+    "tex": "x^\\dmacro+z",
+    "display": false,
+    "scope": "registered-continuation",
+    "registration": {
+      "name": "dmacro",
+      "body": "y",
+      "arguments": 0
+    }
+  },
+  {
+    "name": "macro-mml-tail-display",
+    "tex": "x^\\dmacro+z",
+    "display": true,
+    "scope": "registered-continuation",
+    "registration": {
+      "name": "dmacro",
+      "body": "y",
+      "arguments": 0
+    }
+  },
+  {
+    "name": "style-prime-inline",
+    "tex": "x^\\displaystyle'",
+    "display": false,
+    "scope": "continuation"
+  },
+  {
+    "name": "style-prime-display",
+    "tex": "x^\\displaystyle'",
+    "display": true,
+    "scope": "continuation"
+  },
+  {
+    "name": "size-prime-inline",
+    "tex": "x^\\Huge'",
+    "display": false,
+    "scope": "continuation"
+  },
+  {
+    "name": "size-prime-display",
+    "tex": "x^\\Huge'",
+    "display": true,
+    "scope": "continuation"
+  },
+  {
+    "name": "double-marker-inline",
+    "tex": "x^^y",
+    "display": false,
+    "scope": "continuation"
+  },
+  {
+    "name": "double-marker-display",
+    "tex": "x^^y",
+    "display": true,
+    "scope": "continuation"
+  },
+  {
+    "name": "mixed-marker-inline",
+    "tex": "x^_y",
+    "display": false,
+    "scope": "continuation"
+  },
+  {
+    "name": "mixed-marker-display",
+    "tex": "x^_y",
+    "display": true,
+    "scope": "continuation"
+  },
+  {
+    "name": "opposite-filled-marker-inline",
+    "tex": "x_i^^y",
+    "display": false,
+    "scope": "continuation"
+  },
+  {
+    "name": "opposite-filled-marker-display",
+    "tex": "x_i^^y",
+    "display": true,
+    "scope": "continuation"
+  },
+  {
+    "name": "right-sup-inline",
+    "tex": "x^\\right)",
+    "display": false,
+    "scope": "continuation"
+  },
+  {
+    "name": "right-sup-display",
+    "tex": "x^\\right)",
+    "display": true,
+    "scope": "continuation"
+  },
+  {
+    "name": "digit-tail-inline",
+    "tex": "x^12",
+    "display": false,
+    "scope": "continuation"
+  },
+  {
+    "name": "digit-tail-display",
+    "tex": "x^12",
+    "display": true,
+    "scope": "continuation"
+  }
+]

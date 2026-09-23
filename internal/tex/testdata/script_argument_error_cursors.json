@@ -1,0 +1,699 @@
+{
+  "rows": [
+    {
+      "name": "public-00-inline",
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript",
+        "type": "t"
+      },
+      "cursor": 3,
+      "source": "x^'",
+      "remaining": ""
+    },
+    {
+      "name": "public-00-display",
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript",
+        "type": "t"
+      },
+      "cursor": 3,
+      "source": "x^'",
+      "remaining": ""
+    },
+    {
+      "name": "public-01-inline",
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript",
+        "type": "t"
+      },
+      "cursor": 3,
+      "source": "x^\u2019",
+      "remaining": ""
+    },
+    {
+      "name": "public-01-display",
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript",
+        "type": "t"
+      },
+      "cursor": 3,
+      "source": "x^\u2019",
+      "remaining": ""
+    },
+    {
+      "name": "public-02-inline",
+      "error": {
+        "id": "MissingOpenForSub",
+        "message": "Missing open brace for subscript",
+        "type": "t"
+      },
+      "cursor": 3,
+      "source": "x_'",
+      "remaining": ""
+    },
+    {
+      "name": "public-02-display",
+      "error": {
+        "id": "MissingOpenForSub",
+        "message": "Missing open brace for subscript",
+        "type": "t"
+      },
+      "cursor": 3,
+      "source": "x_'",
+      "remaining": ""
+    },
+    {
+      "name": "public-03-inline",
+      "error": {
+        "id": "MissingOpenForSub",
+        "message": "Missing open brace for subscript",
+        "type": "t"
+      },
+      "cursor": 3,
+      "source": "x_\u2019",
+      "remaining": ""
+    },
+    {
+      "name": "public-03-display",
+      "error": {
+        "id": "MissingOpenForSub",
+        "message": "Missing open brace for subscript",
+        "type": "t"
+      },
+      "cursor": 3,
+      "source": "x_\u2019",
+      "remaining": ""
+    },
+    {
+      "name": "public-04-inline",
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript",
+        "type": "t"
+      },
+      "cursor": 3,
+      "source": "x^\u2019y",
+      "remaining": "y"
+    },
+    {
+      "name": "public-04-display",
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript",
+        "type": "t"
+      },
+      "cursor": 3,
+      "source": "x^\u2019y",
+      "remaining": "y"
+    },
+    {
+      "name": "public-05-inline",
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript",
+        "type": "t"
+      },
+      "cursor": 2,
+      "source": "^'",
+      "remaining": ""
+    },
+    {
+      "name": "public-05-display",
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript",
+        "type": "t"
+      },
+      "cursor": 2,
+      "source": "^'",
+      "remaining": ""
+    },
+    {
+      "name": "public-06-inline",
+      "error": {
+        "id": "MissingOpenForSub",
+        "message": "Missing open brace for subscript",
+        "type": "t"
+      },
+      "cursor": 2,
+      "source": "_'",
+      "remaining": ""
+    },
+    {
+      "name": "public-06-display",
+      "error": {
+        "id": "MissingOpenForSub",
+        "message": "Missing open brace for subscript",
+        "type": "t"
+      },
+      "cursor": 2,
+      "source": "_'",
+      "remaining": ""
+    },
+    {
+      "name": "public-07-inline",
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript",
+        "type": "t"
+      },
+      "cursor": 4,
+      "source": "x^''",
+      "remaining": ""
+    },
+    {
+      "name": "public-07-display",
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript",
+        "type": "t"
+      },
+      "cursor": 4,
+      "source": "x^''",
+      "remaining": ""
+    },
+    {
+      "name": "public-08-inline",
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript",
+        "type": "t"
+      },
+      "cursor": 4,
+      "source": "x^\u2019'y",
+      "remaining": "y"
+    },
+    {
+      "name": "public-08-display",
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript",
+        "type": "t"
+      },
+      "cursor": 4,
+      "source": "x^\u2019'y",
+      "remaining": "y"
+    },
+    {
+      "name": "public-09-inline",
+      "error": {
+        "id": "DoubleExponent",
+        "message": "Double exponent: use braces to clarify",
+        "type": "t"
+      },
+      "cursor": 4,
+      "source": "x^a^'",
+      "remaining": "'"
+    },
+    {
+      "name": "public-09-display",
+      "error": {
+        "id": "DoubleExponent",
+        "message": "Double exponent: use braces to clarify",
+        "type": "t"
+      },
+      "cursor": 4,
+      "source": "x^a^'",
+      "remaining": "'"
+    },
+    {
+      "name": "public-10-inline",
+      "error": {
+        "id": "DoubleSubscripts",
+        "message": "Double subscripts: use braces to clarify",
+        "type": "t"
+      },
+      "cursor": 4,
+      "source": "x_i_'",
+      "remaining": "'"
+    },
+    {
+      "name": "public-10-display",
+      "error": {
+        "id": "DoubleSubscripts",
+        "message": "Double subscripts: use braces to clarify",
+        "type": "t"
+      },
+      "cursor": 4,
+      "source": "x_i_'",
+      "remaining": "'"
+    },
+    {
+      "name": "public-11-inline",
+      "error": {
+        "id": "DoubleExponentPrime",
+        "message": "Prime causes double exponent: use braces to clarify",
+        "type": "t"
+      },
+      "cursor": 5,
+      "source": "x^a_'",
+      "remaining": ""
+    },
+    {
+      "name": "public-11-display",
+      "error": {
+        "id": "DoubleExponentPrime",
+        "message": "Prime causes double exponent: use braces to clarify",
+        "type": "t"
+      },
+      "cursor": 5,
+      "source": "x^a_'",
+      "remaining": ""
+    },
+    {
+      "name": "public-12-inline",
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript",
+        "type": "t"
+      },
+      "cursor": 5,
+      "source": "x_i^'",
+      "remaining": ""
+    },
+    {
+      "name": "public-12-display",
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript",
+        "type": "t"
+      },
+      "cursor": 5,
+      "source": "x_i^'",
+      "remaining": ""
+    },
+    {
+      "name": "public-13-inline",
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript",
+        "type": "t"
+      },
+      "cursor": 4,
+      "source": "x'^'",
+      "remaining": ""
+    },
+    {
+      "name": "public-13-display",
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript",
+        "type": "t"
+      },
+      "cursor": 4,
+      "source": "x'^'",
+      "remaining": ""
+    },
+    {
+      "name": "public-14-inline",
+      "error": {
+        "id": "MissingOpenForSub",
+        "message": "Missing open brace for subscript",
+        "type": "t"
+      },
+      "cursor": 4,
+      "source": "x'_'",
+      "remaining": ""
+    },
+    {
+      "name": "public-14-display",
+      "error": {
+        "id": "MissingOpenForSub",
+        "message": "Missing open brace for subscript",
+        "type": "t"
+      },
+      "cursor": 4,
+      "source": "x'_'",
+      "remaining": ""
+    },
+    {
+      "name": "public-23-inline",
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript",
+        "type": "t"
+      },
+      "cursor": 6,
+      "source": "x^\\bf'",
+      "remaining": ""
+    },
+    {
+      "name": "public-23-display",
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript",
+        "type": "t"
+      },
+      "cursor": 6,
+      "source": "x^\\bf'",
+      "remaining": ""
+    },
+    {
+      "name": "public-24-inline",
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript",
+        "type": "t"
+      },
+      "cursor": 13,
+      "source": "\\sum\\limits^'",
+      "remaining": ""
+    },
+    {
+      "name": "public-24-display",
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript",
+        "type": "t"
+      },
+      "cursor": 13,
+      "source": "\\sum\\limits^'",
+      "remaining": ""
+    },
+    {
+      "name": "public-25-inline",
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript",
+        "type": "t"
+      },
+      "cursor": 16,
+      "source": "\\overset{a}{x}^'",
+      "remaining": ""
+    },
+    {
+      "name": "public-25-display",
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript",
+        "type": "t"
+      },
+      "cursor": 16,
+      "source": "\\overset{a}{x}^'",
+      "remaining": ""
+    },
+    {
+      "name": "registered-00-inline",
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript",
+        "type": "t"
+      },
+      "cursor": 1,
+      "source": "'",
+      "remaining": "",
+      "retainedGoExpansionPrefix": "x^\\probe'",
+      "coordinateNote": "Existing Go expansion keeps already consumed source prefix; compare actual unconsumed suffix and typed error, not a false absolute primary cursor identity."
+    },
+    {
+      "name": "registered-00-display",
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript",
+        "type": "t"
+      },
+      "cursor": 1,
+      "source": "'",
+      "remaining": "",
+      "retainedGoExpansionPrefix": "x^\\probe'",
+      "coordinateNote": "Existing Go expansion keeps already consumed source prefix; compare actual unconsumed suffix and typed error, not a false absolute primary cursor identity."
+    },
+    {
+      "name": "registered-01-inline",
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript",
+        "type": "t"
+      },
+      "cursor": 1,
+      "source": "'",
+      "remaining": "",
+      "retainedGoExpansionPrefix": "x^\\probe'",
+      "coordinateNote": "Existing Go expansion keeps already consumed source prefix; compare actual unconsumed suffix and typed error, not a false absolute primary cursor identity."
+    },
+    {
+      "name": "registered-01-display",
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript",
+        "type": "t"
+      },
+      "cursor": 1,
+      "source": "'",
+      "remaining": "",
+      "retainedGoExpansionPrefix": "x^\\probe'",
+      "coordinateNote": "Existing Go expansion keeps already consumed source prefix; compare actual unconsumed suffix and typed error, not a false absolute primary cursor identity."
+    },
+    {
+      "name": "registered-05-inline",
+      "error": {
+        "id": "DoubleExponent",
+        "message": "Double exponent: use braces to clarify",
+        "type": "t"
+      },
+      "cursor": 4,
+      "source": "x^a^\\probe",
+      "remaining": "\\probe"
+    },
+    {
+      "name": "registered-05-display",
+      "error": {
+        "id": "DoubleExponent",
+        "message": "Double exponent: use braces to clarify",
+        "type": "t"
+      },
+      "cursor": 4,
+      "source": "x^a^\\probe",
+      "remaining": "\\probe"
+    },
+    {
+      "name": "registered-06-inline",
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript",
+        "type": "t"
+      },
+      "cursor": 1,
+      "source": "'",
+      "remaining": "",
+      "retainedGoExpansionPrefix": "x'^\\probe'",
+      "coordinateNote": "Existing Go expansion keeps already consumed source prefix; compare actual unconsumed suffix and typed error, not a false absolute primary cursor identity."
+    },
+    {
+      "name": "registered-06-display",
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript",
+        "type": "t"
+      },
+      "cursor": 1,
+      "source": "'",
+      "remaining": "",
+      "retainedGoExpansionPrefix": "x'^\\probe'",
+      "coordinateNote": "Existing Go expansion keeps already consumed source prefix; compare actual unconsumed suffix and typed error, not a false absolute primary cursor identity."
+    },
+    {
+      "name": "close-sup-inline",
+      "error": {
+        "id": "ExtraCloseMissingOpen",
+        "message": "Extra close brace or missing open brace",
+        "type": "t"
+      },
+      "cursor": 3,
+      "source": "x^}",
+      "remaining": ""
+    },
+    {
+      "name": "close-sup-display",
+      "error": {
+        "id": "ExtraCloseMissingOpen",
+        "message": "Extra close brace or missing open brace",
+        "type": "t"
+      },
+      "cursor": 3,
+      "source": "x^}",
+      "remaining": ""
+    },
+    {
+      "name": "close-sub-inline",
+      "error": {
+        "id": "ExtraCloseMissingOpen",
+        "message": "Extra close brace or missing open brace",
+        "type": "t"
+      },
+      "cursor": 4,
+      "source": "{x_}",
+      "remaining": ""
+    },
+    {
+      "name": "close-sub-display",
+      "error": {
+        "id": "ExtraCloseMissingOpen",
+        "message": "Extra close brace or missing open brace",
+        "type": "t"
+      },
+      "cursor": 4,
+      "source": "{x_}",
+      "remaining": ""
+    },
+    {
+      "name": "comment-prime-inline",
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript",
+        "type": "t"
+      },
+      "cursor": 6,
+      "source": "x^%c\n'",
+      "remaining": ""
+    },
+    {
+      "name": "comment-prime-display",
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript",
+        "type": "t"
+      },
+      "cursor": 6,
+      "source": "x^%c\n'",
+      "remaining": ""
+    },
+    {
+      "name": "style-prime-inline",
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript",
+        "type": "t"
+      },
+      "cursor": 15,
+      "source": "x^\\displaystyle'",
+      "remaining": "'"
+    },
+    {
+      "name": "style-prime-display",
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript",
+        "type": "t"
+      },
+      "cursor": 15,
+      "source": "x^\\displaystyle'",
+      "remaining": "'"
+    },
+    {
+      "name": "size-prime-inline",
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript",
+        "type": "t"
+      },
+      "cursor": 7,
+      "source": "x^\\Huge'",
+      "remaining": "'"
+    },
+    {
+      "name": "size-prime-display",
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript",
+        "type": "t"
+      },
+      "cursor": 7,
+      "source": "x^\\Huge'",
+      "remaining": "'"
+    },
+    {
+      "name": "double-marker-inline",
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript",
+        "type": "t"
+      },
+      "cursor": 3,
+      "source": "x^^y",
+      "remaining": "y"
+    },
+    {
+      "name": "double-marker-display",
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript",
+        "type": "t"
+      },
+      "cursor": 3,
+      "source": "x^^y",
+      "remaining": "y"
+    },
+    {
+      "name": "mixed-marker-inline",
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript",
+        "type": "t"
+      },
+      "cursor": 3,
+      "source": "x^_y",
+      "remaining": "y"
+    },
+    {
+      "name": "mixed-marker-display",
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript",
+        "type": "t"
+      },
+      "cursor": 3,
+      "source": "x^_y",
+      "remaining": "y"
+    },
+    {
+      "name": "opposite-filled-marker-inline",
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript",
+        "type": "t"
+      },
+      "cursor": 5,
+      "source": "x_i^^y",
+      "remaining": "y"
+    },
+    {
+      "name": "opposite-filled-marker-display",
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript",
+        "type": "t"
+      },
+      "cursor": 5,
+      "source": "x_i^^y",
+      "remaining": "y"
+    },
+    {
+      "name": "right-sup-inline",
+      "error": {
+        "id": "MissingLeftExtraRight",
+        "message": "Missing \\left or extra \\right",
+        "type": "t"
+      },
+      "cursor": 9,
+      "source": "x^\\right)",
+      "remaining": ""
+    },
+    {
+      "name": "right-sup-display",
+      "error": {
+        "id": "MissingLeftExtraRight",
+        "message": "Missing \\left or extra \\right",
+        "type": "t"
+      },
+      "cursor": 9,
+      "source": "x^\\right)",
+      "remaining": ""
+    }
+  ],
+  "mathjaxGitCommit": "ad8f5c21cb810236551da8c6512ba733e67357ee"
+}

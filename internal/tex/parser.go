@@ -245,14 +245,17 @@ func (p *parser) parseRow(terminator byte, stopRight bool) ([]*mml.Node, string,
 			p.pos++
 			var err error
 			if pending == nil {
-				nodes, err = p.attachScriptWithFont(nodes, c, pendingFont)
+				nodes, pendingFont, err = p.attachScriptWithFont(nodes, c, pendingFont)
 			} else {
 				var script *mml.Node
-				script, err = p.parseScriptArgument()
+				p.skipSpaces()
+				moves, _ := pending.base.Property("movesupsub")
+				var attachment *scriptAttachment
+				attachment, err = prepareScriptAttachment(pending.base, c, limitsTruthy(moves))
 				if err == nil {
-					if pendingFont != "" {
-						applyScopedMathVariant(script, pendingFont)
-					}
+					script, pendingFont, err = p.parseScriptArgument(attachment, pendingFont)
+				}
+				if err == nil {
 					var result *mml.Node
 					result, err = pending.attach(script, c)
 					if err == nil {
@@ -363,10 +366,11 @@ func (p *parser) parseCharacter() *mml.Node {
 }
 
 func (p *parser) attachScript(nodes []*mml.Node, marker byte) ([]*mml.Node, error) {
-	return p.attachScriptWithFont(nodes, marker, "")
+	result, _, err := p.attachScriptWithFont(nodes, marker, "")
+	return result, err
 }
 
-func (p *parser) attachScriptWithFont(nodes []*mml.Node, marker byte, font string) ([]*mml.Node, error) {
+func (p *parser) attachScriptWithFont(nodes []*mml.Node, marker byte, font string) ([]*mml.Node, string, error) {
 	var base *mml.Node
 	if len(nodes) == 0 {
 		base = token("mi", "")
@@ -374,49 +378,28 @@ func (p *parser) attachScriptWithFont(nodes []*mml.Node, marker byte, font strin
 		base = nodes[len(nodes)-1]
 		nodes = nodes[:len(nodes)-1]
 	}
-	script, err := p.parseScriptArgument()
-	if err != nil {
-		return nil, err
-	}
-	if font != "" {
-		applyScopedMathVariant(script, font)
-	}
 	moves, hasMoves := base.Property("movesupsub")
 	moveLimits, _ := moves.(bool)
 	if value, ok := base.Attributes.Get("movesupsub"); ok {
 		moveLimits, _ = value.(bool)
 	}
-	result, err := attachScriptBase(base, script, marker, moveLimits)
+	p.skipSpaces()
+	attachment, err := prepareScriptAttachment(base, marker, moveLimits)
 	if err != nil {
-		return nil, err
+		return nil, font, err
 	}
+	script, font, err := p.parseScriptArgument(attachment, font)
+	if err != nil {
+		return nil, font, err
+	}
+	result := attachment.fill(script)
 	result.Flags.Embellished = base.Flags.Embellished
 	result.Flags.CoreIndex = 0
 	result.SetProperty(limitsScriptOrigin, true)
 	if hasMoves {
 		result.SetProperty("movesupsub", moves)
 	}
-	return append(nodes, result), nil
-}
-
-func (p *parser) parseScriptArgument() (*mml.Node, error) {
-	p.skipSpaces()
-	if p.pos >= len(p.source) {
-		return nil, texError("MissingScript", "Missing superscript or subscript argument")
-	}
-	if p.source[p.pos] == '{' {
-		p.pos++
-		children, _, err := p.parseRow('}', false)
-		if err != nil {
-			return nil, err
-		}
-		return texAtom(row(children, true), mml.TeXClassOrd), nil
-	}
-	created, err := p.parseOneToken()
-	if err != nil {
-		return nil, err
-	}
-	return row(created, true), nil
+	return append(nodes, result), font, nil
 }
 
 func (p *parser) parseOneToken() (created []*mml.Node, err error) {
