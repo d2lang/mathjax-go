@@ -142,3 +142,25 @@ the pinned primary throws an internal exception, so they are not parity claims.
 
 The two earlier D066 `digit-tail` whole-output qualifications now compare to
 their unchanged primary references; all other D066 qualifications stay intact.
+
+### Registered macros using infix names
+
+Registered definitions of `over`, `atop`, `above`, `choose`, `brace` and `brack`
+use normal macro dispatch before the built-in fraction handler. For example,
+`\DeclareMathOperator{\choose}{pick}x\choose y` renders the declared operator.
+An empty registered macro also retains the existing pending-prime behavior.
+
+The 82-case fixture covers all six names, public declarations, argument errors,
+empty definitions, grouping and aliases that expand into genuine infix commands.
+Seventy-four complete SVGs match pinned MathJax; eight separate repeated-fraction
+(D070) and macro-joining (D089) boundaries retain exact accepted outputs. Fifty-two ordered
+full attribute/property trees match primary. The other 30 are bound to
+complete accepted records or equivalent ordinary controls, including property
+insertion order, atop's existing string zero and plain-prime metadata. No fields
+are omitted from these comparisons.
+
+Regenerate the unmodified primary references with:
+
+```
+node testdata/generate_infix_macro_priority.cjs PINNED_ASSETS [EVIDENCE_DIRECTORY]
+```
