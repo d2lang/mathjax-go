@@ -86,7 +86,7 @@ func TestInfixScopePinnedReferences(t *testing.T) {
 			t.Fatal(e)
 		}
 	}
-	allowed := map[string]bool{"separate-args-inline": true, "unclosed-nested-inline": true, "unclosed-nested-display": true, "unsupported-delims-inline": true, "unsupported-delims-display": true, "registered-alias-inline": true, "registered-alias-display": true, "registered-above-inline": true, "registered-above-display": true, "nested-style-group-inline": true, "nested-style-group-display": true}
+	allowed := map[string]bool{"separate-args-inline": true, "unsupported-delims-inline": true, "unsupported-delims-display": true, "registered-alias-inline": true, "registered-alias-display": true, "registered-above-inline": true, "registered-above-display": true, "nested-style-group-inline": true, "nested-style-group-display": true}
 	if len(fixture.Cases) != 108 || len(boundaries.Unchanged) != len(allowed) || boundaries.Baseline != "2b829a798d95a4e93b6d8ff6d71b3b348b3d26fe" {
 		t.Fatal("unbound infix scope corpus")
 	}
@@ -195,7 +195,7 @@ func TestInfixScopePinnedReferences(t *testing.T) {
 			}
 		})
 	}
-	if primary != 97 || unchanged != 11 {
+	if primary != 99 || unchanged != 9 {
 		t.Fatal("changed qualification counts", primary, unchanged)
 	}
 }

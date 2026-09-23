@@ -1,0 +1,4712 @@
+{
+  "oracle": "Untouched pinned MathJax3.2.2 with delegating pre-render/error observers",
+  "assetsSHA256": {
+    "polyfills.js": "7fe1d048c78b0e09854c1259f7413868a51cc8f0c822489eb1ac36ae6c85ce01",
+    "mathjax.js": "cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869",
+    "setup.js": "a52cb0bbabfbd7796b9fedd793b9386c474e3123e788ee151cbe47ca1fa6e881"
+  },
+  "cases": [
+    {
+      "name": "open-empty-inline",
+      "tex": "{",
+      "display": false,
+      "svgSHA256": "cb40e855e240c32b83a173c11290156d45dda885aceee9962da5a137a37a347f",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": [
+                  {
+                    "name": "data-mjx-error",
+                    "value": "Extra open brace or missing close brace"
+                  }
+                ],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Extra open brace or missing close brace",
+                            "attributes": [],
+                            "properties": [],
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "ExtraOpenMissingClose",
+        "message": "Extra open brace or missing close brace"
+      },
+      "cursor": {
+        "source": "{",
+        "byteCursor": 1,
+        "remaining": ""
+      }
+    },
+    {
+      "name": "open-empty-display",
+      "tex": "{",
+      "display": true,
+      "svgSHA256": "cb40e855e240c32b83a173c11290156d45dda885aceee9962da5a137a37a347f",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": [
+          {
+            "name": "display",
+            "value": "block"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": [
+                  {
+                    "name": "data-mjx-error",
+                    "value": "Extra open brace or missing close brace"
+                  }
+                ],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Extra open brace or missing close brace",
+                            "attributes": [],
+                            "properties": [],
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "ExtraOpenMissingClose",
+        "message": "Extra open brace or missing close brace"
+      },
+      "cursor": {
+        "source": "{",
+        "byteCursor": 1,
+        "remaining": ""
+      }
+    },
+    {
+      "name": "open-one-inline",
+      "tex": "{x",
+      "display": false,
+      "svgSHA256": "cb40e855e240c32b83a173c11290156d45dda885aceee9962da5a137a37a347f",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": [
+                  {
+                    "name": "data-mjx-error",
+                    "value": "Extra open brace or missing close brace"
+                  }
+                ],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Extra open brace or missing close brace",
+                            "attributes": [],
+                            "properties": [],
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "ExtraOpenMissingClose",
+        "message": "Extra open brace or missing close brace"
+      },
+      "cursor": {
+        "source": "{x",
+        "byteCursor": 2,
+        "remaining": ""
+      }
+    },
+    {
+      "name": "open-one-display",
+      "tex": "{x",
+      "display": true,
+      "svgSHA256": "cb40e855e240c32b83a173c11290156d45dda885aceee9962da5a137a37a347f",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": [
+          {
+            "name": "display",
+            "value": "block"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": [
+                  {
+                    "name": "data-mjx-error",
+                    "value": "Extra open brace or missing close brace"
+                  }
+                ],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Extra open brace or missing close brace",
+                            "attributes": [],
+                            "properties": [],
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "ExtraOpenMissingClose",
+        "message": "Extra open brace or missing close brace"
+      },
+      "cursor": {
+        "source": "{x",
+        "byteCursor": 2,
+        "remaining": ""
+      }
+    },
+    {
+      "name": "nested-open-inline",
+      "tex": "{{x}",
+      "display": false,
+      "svgSHA256": "cb40e855e240c32b83a173c11290156d45dda885aceee9962da5a137a37a347f",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": [
+                  {
+                    "name": "data-mjx-error",
+                    "value": "Extra open brace or missing close brace"
+                  }
+                ],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Extra open brace or missing close brace",
+                            "attributes": [],
+                            "properties": [],
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "ExtraOpenMissingClose",
+        "message": "Extra open brace or missing close brace"
+      },
+      "cursor": {
+        "source": "{{x}",
+        "byteCursor": 4,
+        "remaining": ""
+      }
+    },
+    {
+      "name": "nested-open-display",
+      "tex": "{{x}",
+      "display": true,
+      "svgSHA256": "cb40e855e240c32b83a173c11290156d45dda885aceee9962da5a137a37a347f",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": [
+          {
+            "name": "display",
+            "value": "block"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": [
+                  {
+                    "name": "data-mjx-error",
+                    "value": "Extra open brace or missing close brace"
+                  }
+                ],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Extra open brace or missing close brace",
+                            "attributes": [],
+                            "properties": [],
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "ExtraOpenMissingClose",
+        "message": "Extra open brace or missing close brace"
+      },
+      "cursor": {
+        "source": "{{x}",
+        "byteCursor": 4,
+        "remaining": ""
+      }
+    },
+    {
+      "name": "open-fraction-inline",
+      "tex": "{x\\over y",
+      "display": false,
+      "svgSHA256": "cb40e855e240c32b83a173c11290156d45dda885aceee9962da5a137a37a347f",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": [
+                  {
+                    "name": "data-mjx-error",
+                    "value": "Extra open brace or missing close brace"
+                  }
+                ],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Extra open brace or missing close brace",
+                            "attributes": [],
+                            "properties": [],
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "ExtraOpenMissingClose",
+        "message": "Extra open brace or missing close brace"
+      },
+      "cursor": {
+        "source": "{x\\over y",
+        "byteCursor": 9,
+        "remaining": ""
+      }
+    },
+    {
+      "name": "open-fraction-display",
+      "tex": "{x\\over y",
+      "display": true,
+      "svgSHA256": "cb40e855e240c32b83a173c11290156d45dda885aceee9962da5a137a37a347f",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": [
+          {
+            "name": "display",
+            "value": "block"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": [
+                  {
+                    "name": "data-mjx-error",
+                    "value": "Extra open brace or missing close brace"
+                  }
+                ],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Extra open brace or missing close brace",
+                            "attributes": [],
+                            "properties": [],
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "ExtraOpenMissingClose",
+        "message": "Extra open brace or missing close brace"
+      },
+      "cursor": {
+        "source": "{x\\over y",
+        "byteCursor": 9,
+        "remaining": ""
+      }
+    },
+    {
+      "name": "nested-denominator-inline",
+      "tex": "x\\choose{y\\choose z",
+      "display": false,
+      "svgSHA256": "cb40e855e240c32b83a173c11290156d45dda885aceee9962da5a137a37a347f",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": [
+                  {
+                    "name": "data-mjx-error",
+                    "value": "Extra open brace or missing close brace"
+                  }
+                ],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Extra open brace or missing close brace",
+                            "attributes": [],
+                            "properties": [],
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "ExtraOpenMissingClose",
+        "message": "Extra open brace or missing close brace"
+      },
+      "cursor": {
+        "source": "x\\choose{y\\choose z",
+        "byteCursor": 19,
+        "remaining": ""
+      }
+    },
+    {
+      "name": "nested-denominator-display",
+      "tex": "x\\choose{y\\choose z",
+      "display": true,
+      "svgSHA256": "cb40e855e240c32b83a173c11290156d45dda885aceee9962da5a137a37a347f",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": [
+          {
+            "name": "display",
+            "value": "block"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": [
+                  {
+                    "name": "data-mjx-error",
+                    "value": "Extra open brace or missing close brace"
+                  }
+                ],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Extra open brace or missing close brace",
+                            "attributes": [],
+                            "properties": [],
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "ExtraOpenMissingClose",
+        "message": "Extra open brace or missing close brace"
+      },
+      "cursor": {
+        "source": "x\\choose{y\\choose z",
+        "byteCursor": 19,
+        "remaining": ""
+      }
+    },
+    {
+      "name": "open-font-inline",
+      "tex": "{\\bf x",
+      "display": false,
+      "svgSHA256": "cb40e855e240c32b83a173c11290156d45dda885aceee9962da5a137a37a347f",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": [
+                  {
+                    "name": "data-mjx-error",
+                    "value": "Extra open brace or missing close brace"
+                  }
+                ],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Extra open brace or missing close brace",
+                            "attributes": [],
+                            "properties": [],
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "ExtraOpenMissingClose",
+        "message": "Extra open brace or missing close brace"
+      },
+      "cursor": {
+        "source": "{\\bf x",
+        "byteCursor": 6,
+        "remaining": ""
+      }
+    },
+    {
+      "name": "open-font-display",
+      "tex": "{\\bf x",
+      "display": true,
+      "svgSHA256": "cb40e855e240c32b83a173c11290156d45dda885aceee9962da5a137a37a347f",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": [
+          {
+            "name": "display",
+            "value": "block"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": [
+                  {
+                    "name": "data-mjx-error",
+                    "value": "Extra open brace or missing close brace"
+                  }
+                ],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Extra open brace or missing close brace",
+                            "attributes": [],
+                            "properties": [],
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "ExtraOpenMissingClose",
+        "message": "Extra open brace or missing close brace"
+      },
+      "cursor": {
+        "source": "{\\bf x",
+        "byteCursor": 6,
+        "remaining": ""
+      }
+    },
+    {
+      "name": "open-style-inline",
+      "tex": "{\\displaystyle x",
+      "display": false,
+      "svgSHA256": "cb40e855e240c32b83a173c11290156d45dda885aceee9962da5a137a37a347f",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": [
+                  {
+                    "name": "data-mjx-error",
+                    "value": "Extra open brace or missing close brace"
+                  }
+                ],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Extra open brace or missing close brace",
+                            "attributes": [],
+                            "properties": [],
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "ExtraOpenMissingClose",
+        "message": "Extra open brace or missing close brace"
+      },
+      "cursor": {
+        "source": "{\\displaystyle x",
+        "byteCursor": 16,
+        "remaining": ""
+      }
+    },
+    {
+      "name": "open-style-display",
+      "tex": "{\\displaystyle x",
+      "display": true,
+      "svgSHA256": "cb40e855e240c32b83a173c11290156d45dda885aceee9962da5a137a37a347f",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": [
+          {
+            "name": "display",
+            "value": "block"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": [
+                  {
+                    "name": "data-mjx-error",
+                    "value": "Extra open brace or missing close brace"
+                  }
+                ],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Extra open brace or missing close brace",
+                            "attributes": [],
+                            "properties": [],
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "ExtraOpenMissingClose",
+        "message": "Extra open brace or missing close brace"
+      },
+      "cursor": {
+        "source": "{\\displaystyle x",
+        "byteCursor": 16,
+        "remaining": ""
+      }
+    },
+    {
+      "name": "open-color-inline",
+      "tex": "{\\color{red}x",
+      "display": false,
+      "svgSHA256": "cb40e855e240c32b83a173c11290156d45dda885aceee9962da5a137a37a347f",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": [
+                  {
+                    "name": "data-mjx-error",
+                    "value": "Extra open brace or missing close brace"
+                  }
+                ],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Extra open brace or missing close brace",
+                            "attributes": [],
+                            "properties": [],
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "ExtraOpenMissingClose",
+        "message": "Extra open brace or missing close brace"
+      },
+      "cursor": {
+        "source": "{\\color{red}x",
+        "byteCursor": 13,
+        "remaining": ""
+      }
+    },
+    {
+      "name": "open-color-display",
+      "tex": "{\\color{red}x",
+      "display": true,
+      "svgSHA256": "cb40e855e240c32b83a173c11290156d45dda885aceee9962da5a137a37a347f",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": [
+          {
+            "name": "display",
+            "value": "block"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": [
+                  {
+                    "name": "data-mjx-error",
+                    "value": "Extra open brace or missing close brace"
+                  }
+                ],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Extra open brace or missing close brace",
+                            "attributes": [],
+                            "properties": [],
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "ExtraOpenMissingClose",
+        "message": "Extra open brace or missing close brace"
+      },
+      "cursor": {
+        "source": "{\\color{red}x",
+        "byteCursor": 13,
+        "remaining": ""
+      }
+    },
+    {
+      "name": "open-size-inline",
+      "tex": "{\\large x",
+      "display": false,
+      "svgSHA256": "cb40e855e240c32b83a173c11290156d45dda885aceee9962da5a137a37a347f",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": [
+                  {
+                    "name": "data-mjx-error",
+                    "value": "Extra open brace or missing close brace"
+                  }
+                ],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Extra open brace or missing close brace",
+                            "attributes": [],
+                            "properties": [],
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "ExtraOpenMissingClose",
+        "message": "Extra open brace or missing close brace"
+      },
+      "cursor": {
+        "source": "{\\large x",
+        "byteCursor": 9,
+        "remaining": ""
+      }
+    },
+    {
+      "name": "open-size-display",
+      "tex": "{\\large x",
+      "display": true,
+      "svgSHA256": "cb40e855e240c32b83a173c11290156d45dda885aceee9962da5a137a37a347f",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": [
+          {
+            "name": "display",
+            "value": "block"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": [
+                  {
+                    "name": "data-mjx-error",
+                    "value": "Extra open brace or missing close brace"
+                  }
+                ],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Extra open brace or missing close brace",
+                            "attributes": [],
+                            "properties": [],
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "ExtraOpenMissingClose",
+        "message": "Extra open brace or missing close brace"
+      },
+      "cursor": {
+        "source": "{\\large x",
+        "byteCursor": 9,
+        "remaining": ""
+      }
+    },
+    {
+      "name": "later-open-inline",
+      "tex": "{a}+{b\\atop c",
+      "display": false,
+      "svgSHA256": "cb40e855e240c32b83a173c11290156d45dda885aceee9962da5a137a37a347f",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": [
+                  {
+                    "name": "data-mjx-error",
+                    "value": "Extra open brace or missing close brace"
+                  }
+                ],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Extra open brace or missing close brace",
+                            "attributes": [],
+                            "properties": [],
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "ExtraOpenMissingClose",
+        "message": "Extra open brace or missing close brace"
+      },
+      "cursor": {
+        "source": "{a}+{b\\atop c",
+        "byteCursor": 13,
+        "remaining": ""
+      }
+    },
+    {
+      "name": "later-open-display",
+      "tex": "{a}+{b\\atop c",
+      "display": true,
+      "svgSHA256": "cb40e855e240c32b83a173c11290156d45dda885aceee9962da5a137a37a347f",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": [
+          {
+            "name": "display",
+            "value": "block"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": [
+                  {
+                    "name": "data-mjx-error",
+                    "value": "Extra open brace or missing close brace"
+                  }
+                ],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Extra open brace or missing close brace",
+                            "attributes": [],
+                            "properties": [],
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "ExtraOpenMissingClose",
+        "message": "Extra open brace or missing close brace"
+      },
+      "cursor": {
+        "source": "{a}+{b\\atop c",
+        "byteCursor": 13,
+        "remaining": ""
+      }
+    },
+    {
+      "name": "open-script-inline",
+      "tex": "x^{a",
+      "display": false,
+      "svgSHA256": "cb40e855e240c32b83a173c11290156d45dda885aceee9962da5a137a37a347f",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": [
+                  {
+                    "name": "data-mjx-error",
+                    "value": "Extra open brace or missing close brace"
+                  }
+                ],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Extra open brace or missing close brace",
+                            "attributes": [],
+                            "properties": [],
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "ExtraOpenMissingClose",
+        "message": "Extra open brace or missing close brace"
+      },
+      "cursor": {
+        "source": "x^{a",
+        "byteCursor": 4,
+        "remaining": ""
+      }
+    },
+    {
+      "name": "open-script-display",
+      "tex": "x^{a",
+      "display": true,
+      "svgSHA256": "cb40e855e240c32b83a173c11290156d45dda885aceee9962da5a137a37a347f",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": [
+          {
+            "name": "display",
+            "value": "block"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": [
+                  {
+                    "name": "data-mjx-error",
+                    "value": "Extra open brace or missing close brace"
+                  }
+                ],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Extra open brace or missing close brace",
+                            "attributes": [],
+                            "properties": [],
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "ExtraOpenMissingClose",
+        "message": "Extra open brace or missing close brace"
+      },
+      "cursor": {
+        "source": "x^{a",
+        "byteCursor": 4,
+        "remaining": ""
+      }
+    },
+    {
+      "name": "open-within-left-inline",
+      "tex": "\\left({x",
+      "display": false,
+      "svgSHA256": "cb40e855e240c32b83a173c11290156d45dda885aceee9962da5a137a37a347f",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": [
+                  {
+                    "name": "data-mjx-error",
+                    "value": "Extra open brace or missing close brace"
+                  }
+                ],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Extra open brace or missing close brace",
+                            "attributes": [],
+                            "properties": [],
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "ExtraOpenMissingClose",
+        "message": "Extra open brace or missing close brace"
+      },
+      "cursor": {
+        "source": "\\left({x",
+        "byteCursor": 8,
+        "remaining": ""
+      }
+    },
+    {
+      "name": "open-within-left-display",
+      "tex": "\\left({x",
+      "display": true,
+      "svgSHA256": "cb40e855e240c32b83a173c11290156d45dda885aceee9962da5a137a37a347f",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": [
+          {
+            "name": "display",
+            "value": "block"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": [
+                  {
+                    "name": "data-mjx-error",
+                    "value": "Extra open brace or missing close brace"
+                  }
+                ],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Extra open brace or missing close brace",
+                            "attributes": [],
+                            "properties": [],
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "ExtraOpenMissingClose",
+        "message": "Extra open brace or missing close brace"
+      },
+      "cursor": {
+        "source": "\\left({x",
+        "byteCursor": 8,
+        "remaining": ""
+      }
+    },
+    {
+      "name": "closed-inline",
+      "tex": "{x}",
+      "display": false,
+      "svgSHA256": "6a3eb3efadafdd009bbb778acee95cc362ef0829ca524a45f5cb105a5017ada5",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": [],
+                "properties": [
+                  {
+                    "name": "texClass",
+                    "value": 0
+                  }
+                ],
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "x",
+                            "attributes": [],
+                            "properties": [],
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": null,
+      "cursor": {
+        "source": "{x}",
+        "byteCursor": 3,
+        "remaining": ""
+      }
+    },
+    {
+      "name": "closed-display",
+      "tex": "{x}",
+      "display": true,
+      "svgSHA256": "6a3eb3efadafdd009bbb778acee95cc362ef0829ca524a45f5cb105a5017ada5",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": [
+          {
+            "name": "display",
+            "value": "block"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": [],
+                "properties": [
+                  {
+                    "name": "texClass",
+                    "value": 0
+                  }
+                ],
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "x",
+                            "attributes": [],
+                            "properties": [],
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": null,
+      "cursor": {
+        "source": "{x}",
+        "byteCursor": 3,
+        "remaining": ""
+      }
+    },
+    {
+      "name": "nested-closed-inline",
+      "tex": "{{x}}",
+      "display": false,
+      "svgSHA256": "0285fc1513f65b46833f32a2ac10cdfefe30604a7c4a4da675a434b62fd57ff7",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": [],
+                "properties": [
+                  {
+                    "name": "texClass",
+                    "value": 0
+                  }
+                ],
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "TeXAtom",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [
+                          {
+                            "name": "texClass",
+                            "value": 0
+                          }
+                        ],
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": [],
+                            "properties": [],
+                            "children": [
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": [],
+                                "properties": [],
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "x",
+                                    "attributes": [],
+                                    "properties": [],
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": null,
+      "cursor": {
+        "source": "{{x}}",
+        "byteCursor": 5,
+        "remaining": ""
+      }
+    },
+    {
+      "name": "nested-closed-display",
+      "tex": "{{x}}",
+      "display": true,
+      "svgSHA256": "0285fc1513f65b46833f32a2ac10cdfefe30604a7c4a4da675a434b62fd57ff7",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": [
+          {
+            "name": "display",
+            "value": "block"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": [],
+                "properties": [
+                  {
+                    "name": "texClass",
+                    "value": 0
+                  }
+                ],
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "TeXAtom",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [
+                          {
+                            "name": "texClass",
+                            "value": 0
+                          }
+                        ],
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": [],
+                            "properties": [],
+                            "children": [
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": [],
+                                "properties": [],
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "x",
+                                    "attributes": [],
+                                    "properties": [],
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": null,
+      "cursor": {
+        "source": "{{x}}",
+        "byteCursor": 5,
+        "remaining": ""
+      }
+    },
+    {
+      "name": "fraction-closed-inline",
+      "tex": "{x\\over y}",
+      "display": false,
+      "svgSHA256": "adba918cd6653b74057a2dbbe2cd5e13ea9e1072abd9f70ae0216bb05ab2925b",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": [],
+                "properties": [
+                  {
+                    "name": "texClass",
+                    "value": 0
+                  }
+                ],
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "mfrac",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": [],
+                            "properties": [],
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "x",
+                                "attributes": [],
+                                "properties": [],
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": [],
+                            "properties": [
+                              {
+                                "name": "texprimestyle",
+                                "value": true
+                              }
+                            ],
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "y",
+                                "attributes": [],
+                                "properties": [],
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": null,
+      "cursor": {
+        "source": "{x\\over y}",
+        "byteCursor": 10,
+        "remaining": ""
+      }
+    },
+    {
+      "name": "fraction-closed-display",
+      "tex": "{x\\over y}",
+      "display": true,
+      "svgSHA256": "a70e44157bce0d0014e39f7e23315386dd4256f175a9814a19d71cb269da8f90",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": [
+          {
+            "name": "display",
+            "value": "block"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": [],
+                "properties": [
+                  {
+                    "name": "texClass",
+                    "value": 0
+                  }
+                ],
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "mfrac",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": [],
+                            "properties": [],
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "x",
+                                "attributes": [],
+                                "properties": [],
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": [],
+                            "properties": [
+                              {
+                                "name": "texprimestyle",
+                                "value": true
+                              }
+                            ],
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "y",
+                                "attributes": [],
+                                "properties": [],
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": null,
+      "cursor": {
+        "source": "{x\\over y}",
+        "byteCursor": 10,
+        "remaining": ""
+      }
+    },
+    {
+      "name": "font-closed-inline",
+      "tex": "{\\bf x}",
+      "display": false,
+      "svgSHA256": "4fa2300af121b336bb0d7845b8e2b3e34be5a517a1bca45b4ec7b6514b2c544d",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": [],
+                "properties": [
+                  {
+                    "name": "texClass",
+                    "value": 0
+                  }
+                ],
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": [
+                          {
+                            "name": "mathvariant",
+                            "value": "bold"
+                          }
+                        ],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "x",
+                            "attributes": [],
+                            "properties": [],
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": null,
+      "cursor": {
+        "source": "{\\bf x}",
+        "byteCursor": 7,
+        "remaining": ""
+      }
+    },
+    {
+      "name": "font-closed-display",
+      "tex": "{\\bf x}",
+      "display": true,
+      "svgSHA256": "4fa2300af121b336bb0d7845b8e2b3e34be5a517a1bca45b4ec7b6514b2c544d",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": [
+          {
+            "name": "display",
+            "value": "block"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": [],
+                "properties": [
+                  {
+                    "name": "texClass",
+                    "value": 0
+                  }
+                ],
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": [
+                          {
+                            "name": "mathvariant",
+                            "value": "bold"
+                          }
+                        ],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "x",
+                            "attributes": [],
+                            "properties": [],
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": null,
+      "cursor": {
+        "source": "{\\bf x}",
+        "byteCursor": 7,
+        "remaining": ""
+      }
+    },
+    {
+      "name": "style-closed-inline",
+      "tex": "{\\displaystyle x}",
+      "display": false,
+      "svgSHA256": "4f5223cf46619e5d2d7b03b7ed7d6b4d8c407f1763099eda91a9cd0448a1ebd4",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": [],
+                "properties": [
+                  {
+                    "name": "texClass",
+                    "value": 0
+                  }
+                ],
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "mstyle",
+                        "text": null,
+                        "attributes": [
+                          {
+                            "name": "displaystyle",
+                            "value": true
+                          },
+                          {
+                            "name": "scriptlevel",
+                            "value": 0
+                          }
+                        ],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": [],
+                            "properties": [],
+                            "children": [
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": [],
+                                "properties": [],
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "x",
+                                    "attributes": [],
+                                    "properties": [],
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": null,
+      "cursor": {
+        "source": "{\\displaystyle x}",
+        "byteCursor": 17,
+        "remaining": ""
+      }
+    },
+    {
+      "name": "style-closed-display",
+      "tex": "{\\displaystyle x}",
+      "display": true,
+      "svgSHA256": "4f5223cf46619e5d2d7b03b7ed7d6b4d8c407f1763099eda91a9cd0448a1ebd4",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": [
+          {
+            "name": "display",
+            "value": "block"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": [],
+                "properties": [
+                  {
+                    "name": "texClass",
+                    "value": 0
+                  }
+                ],
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "mstyle",
+                        "text": null,
+                        "attributes": [
+                          {
+                            "name": "displaystyle",
+                            "value": true
+                          },
+                          {
+                            "name": "scriptlevel",
+                            "value": 0
+                          }
+                        ],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": [],
+                            "properties": [],
+                            "children": [
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": [],
+                                "properties": [],
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "x",
+                                    "attributes": [],
+                                    "properties": [],
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": null,
+      "cursor": {
+        "source": "{\\displaystyle x}",
+        "byteCursor": 17,
+        "remaining": ""
+      }
+    },
+    {
+      "name": "color-closed-inline",
+      "tex": "{\\color{red}x}",
+      "display": false,
+      "svgSHA256": "6812d74d9989564149bf111228bcdcdaabb712cd81a80ce3f26d71f019b24a0e",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": [],
+                "properties": [
+                  {
+                    "name": "texClass",
+                    "value": 0
+                  }
+                ],
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "mstyle",
+                        "text": null,
+                        "attributes": [
+                          {
+                            "name": "mathcolor",
+                            "value": "red"
+                          }
+                        ],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": [],
+                            "properties": [],
+                            "children": [
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": [],
+                                "properties": [],
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "x",
+                                    "attributes": [],
+                                    "properties": [],
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": null,
+      "cursor": {
+        "source": "{\\color{red}x}",
+        "byteCursor": 14,
+        "remaining": ""
+      }
+    },
+    {
+      "name": "color-closed-display",
+      "tex": "{\\color{red}x}",
+      "display": true,
+      "svgSHA256": "6812d74d9989564149bf111228bcdcdaabb712cd81a80ce3f26d71f019b24a0e",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": [
+          {
+            "name": "display",
+            "value": "block"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": [],
+                "properties": [
+                  {
+                    "name": "texClass",
+                    "value": 0
+                  }
+                ],
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "mstyle",
+                        "text": null,
+                        "attributes": [
+                          {
+                            "name": "mathcolor",
+                            "value": "red"
+                          }
+                        ],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": [],
+                            "properties": [],
+                            "children": [
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": [],
+                                "properties": [],
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "x",
+                                    "attributes": [],
+                                    "properties": [],
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": null,
+      "cursor": {
+        "source": "{\\color{red}x}",
+        "byteCursor": 14,
+        "remaining": ""
+      }
+    },
+    {
+      "name": "fraction-argument-valid-inline",
+      "tex": "\\frac{x}{y}",
+      "display": false,
+      "svgSHA256": "b8086171c46c3a5fdf6155a9f80fb964ae767789c08975d19624b900cd093bcc",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mfrac",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": [],
+                        "properties": [],
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [
+                      {
+                        "name": "texprimestyle",
+                        "value": true
+                      }
+                    ],
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "y",
+                        "attributes": [],
+                        "properties": [],
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": null,
+      "cursor": {
+        "source": "\\frac{x}{y}",
+        "byteCursor": 11,
+        "remaining": ""
+      }
+    },
+    {
+      "name": "fraction-argument-valid-display",
+      "tex": "\\frac{x}{y}",
+      "display": true,
+      "svgSHA256": "677d4ecf52de00eb2886e0d621b9414c74bbb2a1f34315b6830827a418d4bb46",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": [
+          {
+            "name": "display",
+            "value": "block"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mfrac",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": [],
+                        "properties": [],
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [
+                      {
+                        "name": "texprimestyle",
+                        "value": true
+                      }
+                    ],
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "y",
+                        "attributes": [],
+                        "properties": [],
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": null,
+      "cursor": {
+        "source": "\\frac{x}{y}",
+        "byteCursor": 11,
+        "remaining": ""
+      }
+    },
+    {
+      "name": "argument-first-inline",
+      "tex": "\\frac{x",
+      "display": false,
+      "svgSHA256": "c2d6ee6d434a5313546972d803487c1f505ea5ad70c94f94997cec11faef148b",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": [
+                  {
+                    "name": "data-mjx-error",
+                    "value": "Missing close brace"
+                  }
+                ],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Missing close brace",
+                            "attributes": [],
+                            "properties": [],
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "MissingCloseBrace",
+        "message": "Missing close brace"
+      },
+      "cursor": {
+        "source": "\\frac{x",
+        "byteCursor": 7,
+        "remaining": ""
+      }
+    },
+    {
+      "name": "argument-first-display",
+      "tex": "\\frac{x",
+      "display": true,
+      "svgSHA256": "c2d6ee6d434a5313546972d803487c1f505ea5ad70c94f94997cec11faef148b",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": [
+          {
+            "name": "display",
+            "value": "block"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": [
+                  {
+                    "name": "data-mjx-error",
+                    "value": "Missing close brace"
+                  }
+                ],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Missing close brace",
+                            "attributes": [],
+                            "properties": [],
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "MissingCloseBrace",
+        "message": "Missing close brace"
+      },
+      "cursor": {
+        "source": "\\frac{x",
+        "byteCursor": 7,
+        "remaining": ""
+      }
+    },
+    {
+      "name": "argument-second-inline",
+      "tex": "\\frac{x}{y",
+      "display": false,
+      "svgSHA256": "c2d6ee6d434a5313546972d803487c1f505ea5ad70c94f94997cec11faef148b",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": [
+                  {
+                    "name": "data-mjx-error",
+                    "value": "Missing close brace"
+                  }
+                ],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Missing close brace",
+                            "attributes": [],
+                            "properties": [],
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "MissingCloseBrace",
+        "message": "Missing close brace"
+      },
+      "cursor": {
+        "source": "\\frac{x}{y",
+        "byteCursor": 10,
+        "remaining": ""
+      }
+    },
+    {
+      "name": "argument-second-display",
+      "tex": "\\frac{x}{y",
+      "display": true,
+      "svgSHA256": "c2d6ee6d434a5313546972d803487c1f505ea5ad70c94f94997cec11faef148b",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": [
+          {
+            "name": "display",
+            "value": "block"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": [
+                  {
+                    "name": "data-mjx-error",
+                    "value": "Missing close brace"
+                  }
+                ],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Missing close brace",
+                            "attributes": [],
+                            "properties": [],
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "MissingCloseBrace",
+        "message": "Missing close brace"
+      },
+      "cursor": {
+        "source": "\\frac{x}{y",
+        "byteCursor": 10,
+        "remaining": ""
+      }
+    },
+    {
+      "name": "font-argument-inline",
+      "tex": "\\mathbf{x",
+      "display": false,
+      "svgSHA256": "c2d6ee6d434a5313546972d803487c1f505ea5ad70c94f94997cec11faef148b",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": [
+                  {
+                    "name": "data-mjx-error",
+                    "value": "Missing close brace"
+                  }
+                ],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Missing close brace",
+                            "attributes": [],
+                            "properties": [],
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "MissingCloseBrace",
+        "message": "Missing close brace"
+      },
+      "cursor": {
+        "source": "\\mathbf{x",
+        "byteCursor": 9,
+        "remaining": ""
+      }
+    },
+    {
+      "name": "font-argument-display",
+      "tex": "\\mathbf{x",
+      "display": true,
+      "svgSHA256": "c2d6ee6d434a5313546972d803487c1f505ea5ad70c94f94997cec11faef148b",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": [
+          {
+            "name": "display",
+            "value": "block"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": [
+                  {
+                    "name": "data-mjx-error",
+                    "value": "Missing close brace"
+                  }
+                ],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Missing close brace",
+                            "attributes": [],
+                            "properties": [],
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "MissingCloseBrace",
+        "message": "Missing close brace"
+      },
+      "cursor": {
+        "source": "\\mathbf{x",
+        "byteCursor": 9,
+        "remaining": ""
+      }
+    },
+    {
+      "name": "root-argument-inline",
+      "tex": "\\sqrt{x",
+      "display": false,
+      "svgSHA256": "c2d6ee6d434a5313546972d803487c1f505ea5ad70c94f94997cec11faef148b",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": [
+                  {
+                    "name": "data-mjx-error",
+                    "value": "Missing close brace"
+                  }
+                ],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Missing close brace",
+                            "attributes": [],
+                            "properties": [],
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "MissingCloseBrace",
+        "message": "Missing close brace"
+      },
+      "cursor": {
+        "source": "\\sqrt{x",
+        "byteCursor": 7,
+        "remaining": ""
+      }
+    },
+    {
+      "name": "root-argument-display",
+      "tex": "\\sqrt{x",
+      "display": true,
+      "svgSHA256": "c2d6ee6d434a5313546972d803487c1f505ea5ad70c94f94997cec11faef148b",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": [
+          {
+            "name": "display",
+            "value": "block"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": [
+                  {
+                    "name": "data-mjx-error",
+                    "value": "Missing close brace"
+                  }
+                ],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Missing close brace",
+                            "attributes": [],
+                            "properties": [],
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "MissingCloseBrace",
+        "message": "Missing close brace"
+      },
+      "cursor": {
+        "source": "\\sqrt{x",
+        "byteCursor": 7,
+        "remaining": ""
+      }
+    },
+    {
+      "name": "dimension-argument-inline",
+      "tex": "\\kern{1em",
+      "display": false,
+      "svgSHA256": "c2d6ee6d434a5313546972d803487c1f505ea5ad70c94f94997cec11faef148b",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": [
+                  {
+                    "name": "data-mjx-error",
+                    "value": "Missing close brace"
+                  }
+                ],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Missing close brace",
+                            "attributes": [],
+                            "properties": [],
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "MissingCloseBrace",
+        "message": "Missing close brace"
+      },
+      "cursor": {
+        "source": "\\kern{1em",
+        "byteCursor": 9,
+        "remaining": ""
+      }
+    },
+    {
+      "name": "dimension-argument-display",
+      "tex": "\\kern{1em",
+      "display": true,
+      "svgSHA256": "c2d6ee6d434a5313546972d803487c1f505ea5ad70c94f94997cec11faef148b",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": [
+          {
+            "name": "display",
+            "value": "block"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": [
+                  {
+                    "name": "data-mjx-error",
+                    "value": "Missing close brace"
+                  }
+                ],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Missing close brace",
+                            "attributes": [],
+                            "properties": [],
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "MissingCloseBrace",
+        "message": "Missing close brace"
+      },
+      "cursor": {
+        "source": "\\kern{1em",
+        "byteCursor": 9,
+        "remaining": ""
+      }
+    },
+    {
+      "name": "above-argument-inline",
+      "tex": "x\\above{1em",
+      "display": false,
+      "svgSHA256": "c2d6ee6d434a5313546972d803487c1f505ea5ad70c94f94997cec11faef148b",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": [
+                  {
+                    "name": "data-mjx-error",
+                    "value": "Missing close brace"
+                  }
+                ],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Missing close brace",
+                            "attributes": [],
+                            "properties": [],
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "MissingCloseBrace",
+        "message": "Missing close brace"
+      },
+      "cursor": {
+        "source": "x\\above{1em",
+        "byteCursor": 11,
+        "remaining": ""
+      }
+    },
+    {
+      "name": "above-argument-display",
+      "tex": "x\\above{1em",
+      "display": true,
+      "svgSHA256": "c2d6ee6d434a5313546972d803487c1f505ea5ad70c94f94997cec11faef148b",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": [
+          {
+            "name": "display",
+            "value": "block"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": [
+                  {
+                    "name": "data-mjx-error",
+                    "value": "Missing close brace"
+                  }
+                ],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Missing close brace",
+                            "attributes": [],
+                            "properties": [],
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "MissingCloseBrace",
+        "message": "Missing close brace"
+      },
+      "cursor": {
+        "source": "x\\above{1em",
+        "byteCursor": 11,
+        "remaining": ""
+      }
+    },
+    {
+      "name": "missing-right-inline",
+      "tex": "\\left(x",
+      "display": false,
+      "svgSHA256": "2d4f9cfadea29f2a7d1a20124a9e94b1a450792bbed5d83563f9416fa747c330",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": [
+                  {
+                    "name": "data-mjx-error",
+                    "value": "Extra \\left or missing \\right"
+                  }
+                ],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Extra \\left or missing \\right",
+                            "attributes": [],
+                            "properties": [],
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "ExtraLeftMissingRight",
+        "message": "Extra \\left or missing \\right"
+      },
+      "cursor": {
+        "source": "\\left(x",
+        "byteCursor": 7,
+        "remaining": ""
+      }
+    },
+    {
+      "name": "missing-right-display",
+      "tex": "\\left(x",
+      "display": true,
+      "svgSHA256": "2d4f9cfadea29f2a7d1a20124a9e94b1a450792bbed5d83563f9416fa747c330",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": [
+          {
+            "name": "display",
+            "value": "block"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": [
+                  {
+                    "name": "data-mjx-error",
+                    "value": "Extra \\left or missing \\right"
+                  }
+                ],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Extra \\left or missing \\right",
+                            "attributes": [],
+                            "properties": [],
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "ExtraLeftMissingRight",
+        "message": "Extra \\left or missing \\right"
+      },
+      "cursor": {
+        "source": "\\left(x",
+        "byteCursor": 7,
+        "remaining": ""
+      }
+    },
+    {
+      "name": "right-before-group-inline",
+      "tex": "{\\left(x",
+      "display": false,
+      "svgSHA256": "2d4f9cfadea29f2a7d1a20124a9e94b1a450792bbed5d83563f9416fa747c330",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": [
+                  {
+                    "name": "data-mjx-error",
+                    "value": "Extra \\left or missing \\right"
+                  }
+                ],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Extra \\left or missing \\right",
+                            "attributes": [],
+                            "properties": [],
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "ExtraLeftMissingRight",
+        "message": "Extra \\left or missing \\right"
+      },
+      "cursor": {
+        "source": "{\\left(x",
+        "byteCursor": 8,
+        "remaining": ""
+      }
+    },
+    {
+      "name": "right-before-group-display",
+      "tex": "{\\left(x",
+      "display": true,
+      "svgSHA256": "2d4f9cfadea29f2a7d1a20124a9e94b1a450792bbed5d83563f9416fa747c330",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": [
+          {
+            "name": "display",
+            "value": "block"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": [
+                  {
+                    "name": "data-mjx-error",
+                    "value": "Extra \\left or missing \\right"
+                  }
+                ],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Extra \\left or missing \\right",
+                            "attributes": [],
+                            "properties": [],
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "ExtraLeftMissingRight",
+        "message": "Extra \\left or missing \\right"
+      },
+      "cursor": {
+        "source": "{\\left(x",
+        "byteCursor": 8,
+        "remaining": ""
+      }
+    },
+    {
+      "name": "undefined-before-eof-inline",
+      "tex": "{\\notADefinedCommand",
+      "display": false,
+      "svgSHA256": "04f63220b7a7e3b8223dc47acb77fadb7477407d31f7a24d382fc21e79126eb4",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": [
+                  {
+                    "name": "data-mjx-error",
+                    "value": "Undefined control sequence \\notADefinedCommand"
+                  }
+                ],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Undefined control sequence \\notADefinedCommand",
+                            "attributes": [],
+                            "properties": [],
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "UndefinedControlSequence",
+        "message": "Undefined control sequence \\notADefinedCommand"
+      },
+      "cursor": {
+        "source": "{\\notADefinedCommand",
+        "byteCursor": 20,
+        "remaining": ""
+      }
+    },
+    {
+      "name": "undefined-before-eof-display",
+      "tex": "{\\notADefinedCommand",
+      "display": true,
+      "svgSHA256": "04f63220b7a7e3b8223dc47acb77fadb7477407d31f7a24d382fc21e79126eb4",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": [
+          {
+            "name": "display",
+            "value": "block"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": [
+                  {
+                    "name": "data-mjx-error",
+                    "value": "Undefined control sequence \\notADefinedCommand"
+                  }
+                ],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Undefined control sequence \\notADefinedCommand",
+                            "attributes": [],
+                            "properties": [],
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "UndefinedControlSequence",
+        "message": "Undefined control sequence \\notADefinedCommand"
+      },
+      "cursor": {
+        "source": "{\\notADefinedCommand",
+        "byteCursor": 20,
+        "remaining": ""
+      }
+    },
+    {
+      "name": "hash-before-eof-inline",
+      "tex": "{#",
+      "display": false,
+      "svgSHA256": "031af391e1a105f5ebc52092458f0aac9fe1f3a21a442fc7588796a3a2778c3b",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": [
+                  {
+                    "name": "data-mjx-error",
+                    "value": "You can't use 'macro parameter character #' in math mode"
+                  }
+                ],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "You can't use 'macro parameter character #' in math mode",
+                            "attributes": [],
+                            "properties": [],
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "CantUseHash1",
+        "message": "You can't use 'macro parameter character #' in math mode"
+      },
+      "cursor": {
+        "source": "{#",
+        "byteCursor": 2,
+        "remaining": ""
+      }
+    },
+    {
+      "name": "hash-before-eof-display",
+      "tex": "{#",
+      "display": true,
+      "svgSHA256": "031af391e1a105f5ebc52092458f0aac9fe1f3a21a442fc7588796a3a2778c3b",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": [
+          {
+            "name": "display",
+            "value": "block"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": [
+                  {
+                    "name": "data-mjx-error",
+                    "value": "You can't use 'macro parameter character #' in math mode"
+                  }
+                ],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "You can't use 'macro parameter character #' in math mode",
+                            "attributes": [],
+                            "properties": [],
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "CantUseHash1",
+        "message": "You can't use 'macro parameter character #' in math mode"
+      },
+      "cursor": {
+        "source": "{#",
+        "byteCursor": 2,
+        "remaining": ""
+      }
+    },
+    {
+      "name": "duplicate-script-before-eof-inline",
+      "tex": "{x^a^b",
+      "display": false,
+      "svgSHA256": "f74d506d313d207f51b14cfdbf282543cd1760035865724b0ec1003b16df79fa",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": [
+                  {
+                    "name": "data-mjx-error",
+                    "value": "Double exponent: use braces to clarify"
+                  }
+                ],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Double exponent: use braces to clarify",
+                            "attributes": [],
+                            "properties": [],
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "DoubleExponent",
+        "message": "Double exponent: use braces to clarify"
+      },
+      "cursor": {
+        "source": "{x^a^b",
+        "byteCursor": 5,
+        "remaining": "b"
+      }
+    },
+    {
+      "name": "duplicate-script-before-eof-display",
+      "tex": "{x^a^b",
+      "display": true,
+      "svgSHA256": "f74d506d313d207f51b14cfdbf282543cd1760035865724b0ec1003b16df79fa",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": [
+          {
+            "name": "display",
+            "value": "block"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": [
+                  {
+                    "name": "data-mjx-error",
+                    "value": "Double exponent: use braces to clarify"
+                  }
+                ],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Double exponent: use braces to clarify",
+                            "attributes": [],
+                            "properties": [],
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "DoubleExponent",
+        "message": "Double exponent: use braces to clarify"
+      },
+      "cursor": {
+        "source": "{x^a^b",
+        "byteCursor": 5,
+        "remaining": "b"
+      }
+    },
+    {
+      "name": "ambiguous-before-eof-inline",
+      "tex": "{x\\over y\\over z",
+      "display": false,
+      "svgSHA256": "9ad74e89e7af29a32506df64e7296629beb78909ffbdbe47a3a067932ba8fd73",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": [
+                  {
+                    "name": "data-mjx-error",
+                    "value": "Ambiguous use of \\over"
+                  }
+                ],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Ambiguous use of \\over",
+                            "attributes": [],
+                            "properties": [],
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "AmbiguousUseOf",
+        "message": "Ambiguous use of \\over"
+      },
+      "cursor": {
+        "source": "{x\\over y\\over z",
+        "byteCursor": 15,
+        "remaining": "z"
+      }
+    },
+    {
+      "name": "ambiguous-before-eof-display",
+      "tex": "{x\\over y\\over z",
+      "display": true,
+      "svgSHA256": "9ad74e89e7af29a32506df64e7296629beb78909ffbdbe47a3a067932ba8fd73",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": [
+          {
+            "name": "display",
+            "value": "block"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": [
+                  {
+                    "name": "data-mjx-error",
+                    "value": "Ambiguous use of \\over"
+                  }
+                ],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Ambiguous use of \\over",
+                            "attributes": [],
+                            "properties": [],
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": {
+        "id": "AmbiguousUseOf",
+        "message": "Ambiguous use of \\over"
+      },
+      "cursor": {
+        "source": "{x\\over y\\over z",
+        "byteCursor": 15,
+        "remaining": "z"
+      }
+    },
+    {
+      "name": "ordinary-closed-script-inline",
+      "tex": "{x^{a}}",
+      "display": false,
+      "svgSHA256": "957e9f051ebb1e99177065c60417cbf267ee000d995c5cd34567826f2d7ac21b",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": [],
+                "properties": [
+                  {
+                    "name": "texClass",
+                    "value": 0
+                  }
+                ],
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "msup",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": [],
+                            "properties": [],
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "x",
+                                "attributes": [],
+                                "properties": [],
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "TeXAtom",
+                            "text": null,
+                            "attributes": [],
+                            "properties": [
+                              {
+                                "name": "texClass",
+                                "value": 0
+                              }
+                            ],
+                            "children": [
+                              {
+                                "kind": "inferredMrow",
+                                "text": null,
+                                "attributes": [],
+                                "properties": [],
+                                "children": [
+                                  {
+                                    "kind": "mi",
+                                    "text": null,
+                                    "attributes": [],
+                                    "properties": [],
+                                    "children": [
+                                      {
+                                        "kind": "text",
+                                        "text": "a",
+                                        "attributes": [],
+                                        "properties": [],
+                                        "children": []
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": null,
+      "cursor": {
+        "source": "{x^{a}}",
+        "byteCursor": 7,
+        "remaining": ""
+      }
+    },
+    {
+      "name": "ordinary-closed-script-display",
+      "tex": "{x^{a}}",
+      "display": true,
+      "svgSHA256": "7db40f33849d1bda5161f5d8d13d20fe95310fac851394b56735ddeb8400ca94",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": [
+          {
+            "name": "display",
+            "value": "block"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "TeXAtom",
+                "text": null,
+                "attributes": [],
+                "properties": [
+                  {
+                    "name": "texClass",
+                    "value": 0
+                  }
+                ],
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": [],
+                    "properties": [],
+                    "children": [
+                      {
+                        "kind": "msup",
+                        "text": null,
+                        "attributes": [],
+                        "properties": [],
+                        "children": [
+                          {
+                            "kind": "mi",
+                            "text": null,
+                            "attributes": [],
+                            "properties": [],
+                            "children": [
+                              {
+                                "kind": "text",
+                                "text": "x",
+                                "attributes": [],
+                                "properties": [],
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "TeXAtom",
+                            "text": null,
+                            "attributes": [],
+                            "properties": [
+                              {
+                                "name": "texClass",
+                                "value": 0
+                              }
+                            ],
+                            "children": [
+                              {
+                                "kind": "inferredMrow",
+                                "text": null,
+                                "attributes": [],
+                                "properties": [],
+                                "children": [
+                                  {
+                                    "kind": "mi",
+                                    "text": null,
+                                    "attributes": [],
+                                    "properties": [],
+                                    "children": [
+                                      {
+                                        "kind": "text",
+                                        "text": "a",
+                                        "attributes": [],
+                                        "properties": [],
+                                        "children": []
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "error": null,
+      "cursor": {
+        "source": "{x^{a}}",
+        "byteCursor": 7,
+        "remaining": ""
+      }
+    }
+  ]
+}

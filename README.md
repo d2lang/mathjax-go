@@ -186,11 +186,12 @@ color continuations retain that row; braces, left/right groups, script arguments
 and separate math parsers start independent rows. Incoming `above` dimensions
 are read before ambiguity is checked, and registered macro dispatch stays first.
 
-The 108-case pinned corpus has 97 complete primary SVG, ordered explicit/own-tree
-and structured-error matches. Eleven exact accepted-output boundaries retain
-unsupported `overwithdelims`, unclosed-group wording, generic macro joining,
+The 108-case pinned corpus has 99 complete primary SVG, ordered explicit/own-tree
+and structured-error matches. Nine exact accepted-output boundaries retain
+unsupported `overwithdelims`, generic macro joining,
 one inline nested fraction, and two nested-style outputs. No changed output is
-qualified: all 50 changed cases match primary. Six parser re-entry/error-unwind
+qualified: all 50 original scope fixes and the two parsed-group diagnostic upgrades
+match primary. Six parser re-entry/error-unwind
 controls check independent subsequent rows and restored font state.
 
 Only the unchanged inline nested-fraction control `separate-args-inline` permits
@@ -226,4 +227,23 @@ Regenerate the unmodified primary references with:
 
 ```
 node testdata/generate_multi_text_renderer.cjs PINNED_ASSETS [EVIDENCE_DIRECTORY]
+```
+
+### Parsed-group end-of-input diagnostics
+
+An unfinished literal group reports `ExtraOpenMissingClose` ("Extra open brace
+or missing close brace"). Argument readers retain their separate
+`MissingCloseBrace` diagnostic. The 64-case pinned corpus covers ordinary,
+nested, fractional, script, font, style, color and size groups, earlier errors,
+and valid controls in both modes. Twenty-four parsed-group errors now match
+complete primary SVGs, ordered explicit/own trees, errors and source cursors.
+All 40 controls retain their complete accepted trees, SVGs and parser state.
+
+Of those controls, six existing missing-right/hash error outputs retain exact
+accepted references; eight argument-reader and two hash cursor differences
+also remain explicitly bound. The untouched primary references are preserved.
+No general error or cursor normalization is used.
+
+```
+node testdata/generate_group_eof.cjs PINNED_ASSETS EVIDENCE_DIRECTORY
 ```

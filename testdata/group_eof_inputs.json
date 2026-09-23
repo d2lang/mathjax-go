@@ -1,0 +1,324 @@
+{
+  "cases": [
+    {
+      "name": "open-empty-inline",
+      "tex": "{",
+      "display": false
+    },
+    {
+      "name": "open-empty-display",
+      "tex": "{",
+      "display": true
+    },
+    {
+      "name": "open-one-inline",
+      "tex": "{x",
+      "display": false
+    },
+    {
+      "name": "open-one-display",
+      "tex": "{x",
+      "display": true
+    },
+    {
+      "name": "nested-open-inline",
+      "tex": "{{x}",
+      "display": false
+    },
+    {
+      "name": "nested-open-display",
+      "tex": "{{x}",
+      "display": true
+    },
+    {
+      "name": "open-fraction-inline",
+      "tex": "{x\\over y",
+      "display": false
+    },
+    {
+      "name": "open-fraction-display",
+      "tex": "{x\\over y",
+      "display": true
+    },
+    {
+      "name": "nested-denominator-inline",
+      "tex": "x\\choose{y\\choose z",
+      "display": false
+    },
+    {
+      "name": "nested-denominator-display",
+      "tex": "x\\choose{y\\choose z",
+      "display": true
+    },
+    {
+      "name": "open-font-inline",
+      "tex": "{\\bf x",
+      "display": false
+    },
+    {
+      "name": "open-font-display",
+      "tex": "{\\bf x",
+      "display": true
+    },
+    {
+      "name": "open-style-inline",
+      "tex": "{\\displaystyle x",
+      "display": false
+    },
+    {
+      "name": "open-style-display",
+      "tex": "{\\displaystyle x",
+      "display": true
+    },
+    {
+      "name": "open-color-inline",
+      "tex": "{\\color{red}x",
+      "display": false
+    },
+    {
+      "name": "open-color-display",
+      "tex": "{\\color{red}x",
+      "display": true
+    },
+    {
+      "name": "open-size-inline",
+      "tex": "{\\large x",
+      "display": false
+    },
+    {
+      "name": "open-size-display",
+      "tex": "{\\large x",
+      "display": true
+    },
+    {
+      "name": "later-open-inline",
+      "tex": "{a}+{b\\atop c",
+      "display": false
+    },
+    {
+      "name": "later-open-display",
+      "tex": "{a}+{b\\atop c",
+      "display": true
+    },
+    {
+      "name": "open-script-inline",
+      "tex": "x^{a",
+      "display": false
+    },
+    {
+      "name": "open-script-display",
+      "tex": "x^{a",
+      "display": true
+    },
+    {
+      "name": "open-within-left-inline",
+      "tex": "\\left({x",
+      "display": false
+    },
+    {
+      "name": "open-within-left-display",
+      "tex": "\\left({x",
+      "display": true
+    },
+    {
+      "name": "closed-inline",
+      "tex": "{x}",
+      "display": false
+    },
+    {
+      "name": "closed-display",
+      "tex": "{x}",
+      "display": true
+    },
+    {
+      "name": "nested-closed-inline",
+      "tex": "{{x}}",
+      "display": false
+    },
+    {
+      "name": "nested-closed-display",
+      "tex": "{{x}}",
+      "display": true
+    },
+    {
+      "name": "fraction-closed-inline",
+      "tex": "{x\\over y}",
+      "display": false
+    },
+    {
+      "name": "fraction-closed-display",
+      "tex": "{x\\over y}",
+      "display": true
+    },
+    {
+      "name": "font-closed-inline",
+      "tex": "{\\bf x}",
+      "display": false
+    },
+    {
+      "name": "font-closed-display",
+      "tex": "{\\bf x}",
+      "display": true
+    },
+    {
+      "name": "style-closed-inline",
+      "tex": "{\\displaystyle x}",
+      "display": false
+    },
+    {
+      "name": "style-closed-display",
+      "tex": "{\\displaystyle x}",
+      "display": true
+    },
+    {
+      "name": "color-closed-inline",
+      "tex": "{\\color{red}x}",
+      "display": false
+    },
+    {
+      "name": "color-closed-display",
+      "tex": "{\\color{red}x}",
+      "display": true
+    },
+    {
+      "name": "fraction-argument-valid-inline",
+      "tex": "\\frac{x}{y}",
+      "display": false
+    },
+    {
+      "name": "fraction-argument-valid-display",
+      "tex": "\\frac{x}{y}",
+      "display": true
+    },
+    {
+      "name": "argument-first-inline",
+      "tex": "\\frac{x",
+      "display": false
+    },
+    {
+      "name": "argument-first-display",
+      "tex": "\\frac{x",
+      "display": true
+    },
+    {
+      "name": "argument-second-inline",
+      "tex": "\\frac{x}{y",
+      "display": false
+    },
+    {
+      "name": "argument-second-display",
+      "tex": "\\frac{x}{y",
+      "display": true
+    },
+    {
+      "name": "font-argument-inline",
+      "tex": "\\mathbf{x",
+      "display": false
+    },
+    {
+      "name": "font-argument-display",
+      "tex": "\\mathbf{x",
+      "display": true
+    },
+    {
+      "name": "root-argument-inline",
+      "tex": "\\sqrt{x",
+      "display": false
+    },
+    {
+      "name": "root-argument-display",
+      "tex": "\\sqrt{x",
+      "display": true
+    },
+    {
+      "name": "dimension-argument-inline",
+      "tex": "\\kern{1em",
+      "display": false
+    },
+    {
+      "name": "dimension-argument-display",
+      "tex": "\\kern{1em",
+      "display": true
+    },
+    {
+      "name": "above-argument-inline",
+      "tex": "x\\above{1em",
+      "display": false
+    },
+    {
+      "name": "above-argument-display",
+      "tex": "x\\above{1em",
+      "display": true
+    },
+    {
+      "name": "missing-right-inline",
+      "tex": "\\left(x",
+      "display": false
+    },
+    {
+      "name": "missing-right-display",
+      "tex": "\\left(x",
+      "display": true
+    },
+    {
+      "name": "right-before-group-inline",
+      "tex": "{\\left(x",
+      "display": false
+    },
+    {
+      "name": "right-before-group-display",
+      "tex": "{\\left(x",
+      "display": true
+    },
+    {
+      "name": "undefined-before-eof-inline",
+      "tex": "{\\notADefinedCommand",
+      "display": false
+    },
+    {
+      "name": "undefined-before-eof-display",
+      "tex": "{\\notADefinedCommand",
+      "display": true
+    },
+    {
+      "name": "hash-before-eof-inline",
+      "tex": "{#",
+      "display": false
+    },
+    {
+      "name": "hash-before-eof-display",
+      "tex": "{#",
+      "display": true
+    },
+    {
+      "name": "duplicate-script-before-eof-inline",
+      "tex": "{x^a^b",
+      "display": false
+    },
+    {
+      "name": "duplicate-script-before-eof-display",
+      "tex": "{x^a^b",
+      "display": true
+    },
+    {
+      "name": "ambiguous-before-eof-inline",
+      "tex": "{x\\over y\\over z",
+      "display": false
+    },
+    {
+      "name": "ambiguous-before-eof-display",
+      "tex": "{x\\over y\\over z",
+      "display": true
+    },
+    {
+      "name": "ordinary-closed-script-inline",
+      "tex": "{x^{a}}",
+      "display": false
+    },
+    {
+      "name": "ordinary-closed-script-display",
+      "tex": "{x^{a}}",
+      "display": true
+    }
+  ]
+}
