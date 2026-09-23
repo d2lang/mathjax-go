@@ -209,16 +209,22 @@ func (p *parser) command(name string) ([]*mml.Node, error) {
 	case "xrightarrow", "xleftarrow", "xleftrightarrow", "xLeftarrow", "xRightarrow", "xLeftrightarrow", "xhookleftarrow", "xhookrightarrow", "xmapsto", "xrightharpoondown", "xleftharpoondown", "xrightleftharpoons", "xrightharpoonup", "xleftharpoonup", "xleftrightharpoons":
 		return p.xArrow(name)
 
-	case "text", "textrm", "textnormal", "mbox", "hbox":
-		return p.textCommand(name, "normal")
+	case "text", "textnormal":
+		return p.hboxCommand(name, "", false)
+	case "textrm":
+		return p.hboxCommand(name, "normal", false)
+	case "mbox", "hbox":
+		return p.hboxCommand(name, "", true)
 	case "textbf":
-		return p.textCommand(name, "bold")
-	case "textit", "textsl":
+		return p.hboxCommand(name, "bold", false)
+	case "textit":
+		return p.hboxCommand(name, "italic", false)
+	case "textsl":
 		return p.textCommand(name, "italic")
 	case "texttt":
-		return p.textCommand(name, "monospace")
+		return p.hboxCommand(name, "monospace", false)
 	case "textsf":
-		return p.textCommand(name, "sans-serif")
+		return p.hboxCommand(name, "sans-serif", false)
 	case "mathrm", "mathbf", "mathit", "mathsf", "mathtt", "mathbb", "mathcal", "mathscr", "mathfrak", "boldsymbol":
 		return p.mathFont(name)
 	case "operatorname":

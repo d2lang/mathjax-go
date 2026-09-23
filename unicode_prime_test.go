@@ -52,7 +52,7 @@ func TestUnicodePrimePinnedReferences(t *testing.T) {
 	if err = json.Unmarshal(data, &boundaries); err != nil {
 		t.Fatal(err)
 	}
-	if len(fixture.Cases) != 118 || len(boundaries.UnchangedNonPrime) != 12 || len(boundaries.InheritedPrimeMetadata) != 86 || boundaries.Baseline != "3dcb09030b4404c4c5982a9cebfbe5c1b6e51cd9" {
+	if len(fixture.Cases) != 118 || len(boundaries.UnchangedNonPrime) != 10 || len(boundaries.InheritedPrimeMetadata) != 86 || boundaries.Baseline != "3dcb09030b4404c4c5982a9cebfbe5c1b6e51cd9" {
 		t.Fatal("unbound Unicode prime matrix")
 	}
 	primaryErrors := 0
