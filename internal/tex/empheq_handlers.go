@@ -49,7 +49,7 @@ func (p *parser) empheqCommand(name string) (nodes []*mml.Node, handled bool, er
 	if !empheqDelimiters[name] {
 		return nil, false, nil
 	}
-	delimiter, err := p.readDelimiter(false)
+	delimiter, err := p.readDelimiter(name, false)
 	if err != nil {
 		// TexParser.GetDelimiter reports the calling control sequence, rather
 		// than the invalid delimiter token, in this diagnostic.
