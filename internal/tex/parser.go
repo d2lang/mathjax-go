@@ -149,7 +149,7 @@ func (p *parser) parseRow(terminator byte, stopRight bool) ([]*mml.Node, string,
 				delim, err := p.readDelimiter(false)
 				return nodes, delim, err
 			}
-			if name == "over" || name == "atop" || name == "above" || name == "choose" || name == "brace" || name == "brack" {
+			if _, registered := p.state.macros[name]; !registered && (name == "over" || name == "atop" || name == "above" || name == "choose" || name == "brace" || name == "brack") {
 				finishPrime()
 				fraction, right, err := p.infixFraction(name, nodes, terminator, stopRight)
 				if err != nil {
