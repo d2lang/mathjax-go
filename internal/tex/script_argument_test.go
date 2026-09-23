@@ -119,7 +119,7 @@ func TestScriptArgumentPrimaryItems(t *testing.T) {
 				if !reflect.DeepEqual(maps["attributes"], c.Prepared.Attributes) || !reflect.DeepEqual(maps["properties"], c.Prepared.Properties) {
 					t.Fatalf("prepared explicit/own maps differ: %s", encoded)
 				}
-				_, _, actualErr = p.parseScriptArgument(attachment, "")
+				_, _, _, actualErr = p.parseScriptArgument(attachment, "")
 			}
 			var typed *Error
 			if !errors.As(actualErr, &typed) || typed.ID != c.Error.ID || typed.Message != c.Error.Message || stage != c.Stage {
