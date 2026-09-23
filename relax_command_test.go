@@ -46,10 +46,10 @@ func TestRelaxCommandPinnedReferences(t *testing.T) {
 	if err = json.Unmarshal(data, &boundaries); err != nil {
 		t.Fatal(err)
 	}
-	if len(fixture.Cases) != 70 || fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || boundaries.Baseline != "03c34cde20d3c98f326a7cb3961290e0264375ab" || len(boundaries.Unchanged) != 2 {
+	if len(fixture.Cases) != 70 || fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || boundaries.Baseline != "03c34cde20d3c98f326a7cb3961290e0264375ab" || len(boundaries.Unchanged) != 0 {
 		t.Fatal("unbound command references")
 	}
-	expectedBoundaries := map[string]string{"pmod-macro-inline": `\pmod{\relax}`, "pmod-macro-display": `\pmod{\relax}`}
+	expectedBoundaries := map[string]string{}
 	for name, c := range boundaries.Unchanged {
 		if expectedBoundaries[name] != c.TeX {
 			t.Fatal("unexpected non-dispatch boundary", name)

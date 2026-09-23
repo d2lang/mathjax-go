@@ -1,0 +1,112 @@
+{
+  "baseline": "91e9c36681e39a4e8b1482208cd905643bcfcbe5",
+  "reason": "Unchanged generic macro-limit error spelling; primary says is here, Go says is there.",
+  "unchanged": {
+    "recursive-limit-inline": {
+      "svgSHA256": "e0ae1cbb12f4fcabcad598a7ca2665f50984638b680ddfa18f5e07ddffd31139",
+      "propertiesTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "MathJax maximum macro substitution count exceeded; is there a recursive macro call?"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "MathJax maximum macro substitution count exceeded; is there a recursive macro call?",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "recursive-limit-display": {
+      "svgSHA256": "e0ae1cbb12f4fcabcad598a7ca2665f50984638b680ddfa18f5e07ddffd31139",
+      "propertiesTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "merror",
+                "text": null,
+                "attributes": {
+                  "data-mjx-error": "MathJax maximum macro substitution count exceeded; is there a recursive macro call?"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtext",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "MathJax maximum macro substitution count exceeded; is there a recursive macro call?",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
