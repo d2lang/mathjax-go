@@ -15,17 +15,20 @@ D070 now rejects repeated valid infix fractions; registered macro priority is
 covered separately.
 The generic argument reader and global whitespace scanner are unchanged.
 
-The 60 public cases have 54 raw-primary SVGs and 52 raw-primary complete
+The 60 public cases have 58 raw-primary SVGs and 56 raw-primary complete
 explicit/own trees. The two `raise-valid-boundary` cases have primary SVGs and
 only the inherited `voffset` spelling `1.5pt` versus primary `+1.5pt`; the test
 binds that exact attribute on the exact primary tree and compares every other
-field. Six unchanged cases retain complete accepted-parent SVG/tree receipts:
-the independent `rule` handler and unsupported `vspace`/`raisebox` dispatch,
-each in both modes. The two repeated `above` cases use their unchanged primary
-references after the D070 row-scope correction. The latter two aliases keep the
-unchanged legacy reader temporarily; they are not claimed primary-equivalent.
-Twelve extra public controls bind valid/malformed aliases unchanged and four
-supported malformed arguments to complete primary errors.
+field. Two unchanged `rule` cases retain complete accepted-parent SVG/tree receipts.
+The two repeated `above` cases use their unchanged primary references after the
+D070 row-scope correction. The unsupported `vspace` and `raisebox` commands now
+use the same undefined-command errors as pinned MathJax, before their arguments
+are read. Their unused handlers and legacy dimension reader are removed;
+supported `raise`, `lower` and dimension consumers retain the strict reader.
+Twelve extra public controls require complete primary SVGs and trees for valid
+and malformed unsupported-command inputs and four supported malformed arguments.
+The old alias output fields remain historical receipts, not expected live output.
+Registered macro dispatch still precedes the built-in command switch.
 
 The registered fixture contains 106 exact value/error/cursor/suffix calls,
 four invoking-control-sequence label cases, and seven primary Over push
