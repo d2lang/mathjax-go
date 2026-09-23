@@ -75,3 +75,28 @@ claiming complete `GetDimen` grammar compatibility. Regenerate the primary files
 with `testdata/generate_tex_mu_dimensions.cjs` and
 `internal/tex/testdata/generate_mu_dimension.cjs`, passing the pinned asset
 directory and output directory/file respectively.
+
+
+### Math inside text boxes
+
+The supported `text`, text-font, `hbox` and `mbox` commands parse embedded
+`$...$` and `\(...\)` math with MathJax's empty inner lexical environment and
+shared macro/tag configuration. Literal chunks preserve internal whitespace
+and tilde; only the source's four literal escapes and edge whitespace rules
+apply. `hbox` and `mbox` retain their level-zero wrapper, including empty input.
+
+`TestInternalTextPinnedReferences` checks70 complete unmodified-primary SVGs
+and explicit/own-property trees, plus20 unchanged shared-caller controls.
+FBox/colorbox embedded math, AMS tag text, the extra `textsl` alias and missing
+`textup` dispatch remain separately recorded boundaries. The28 actual-method
+references also bind delimiter errors, cardinality, child ownership, font and
+macro-counter isolation. Two private pre-postfilter script nodes retain the
+existing Go `msub` versus primary two-child `msubsup` representation; public
+compiler trees have no such normalization.
+
+Regenerate the references with the pinned D2 MathJax3.2.2 assets:
+
+```
+node testdata/generate_internal_text.cjs PINNED_ASSETS [EVIDENCE_DIRECTORY]
+node internal/tex/testdata/generate_internal_text_method.cjs PINNED_ASSETS
+```

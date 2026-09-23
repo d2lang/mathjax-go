@@ -1,0 +1,2540 @@
+{
+  "runtime": "v24.19.0",
+  "assetsSHA256": {
+    "polyfills.js": "7fe1d048c78b0e09854c1259f7413868a51cc8f0c822489eb1ac36ae6c85ce01",
+    "mathjax.js": "cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869",
+    "setup.js": "a52cb0bbabfbd7796b9fedd793b9386c474e3123e788ee151cbe47ca1fa6e881"
+  },
+  "rows": [
+    {
+      "input": {
+        "name": "empty",
+        "text": ""
+      },
+      "error": null,
+      "nodes": [],
+      "creation": [],
+      "returnedNodesCreated": true,
+      "envBefore": {},
+      "envAfter": {},
+      "counterBefore": 0,
+      "counterAfter": 0,
+      "currentParserIsOuter": true
+    },
+    {
+      "input": {
+        "name": "literal",
+        "text": "abc"
+      },
+      "error": null,
+      "nodes": [
+        {
+          "kind": "mtext",
+          "text": null,
+          "attributes": {},
+          "properties": {},
+          "children": [
+            {
+              "kind": "text",
+              "text": "abc",
+              "attributes": {},
+              "properties": {},
+              "children": []
+            }
+          ]
+        }
+      ],
+      "creation": [
+        {
+          "type": "text",
+          "kind": "text"
+        },
+        {
+          "type": "node",
+          "kind": "mtext"
+        }
+      ],
+      "returnedNodesCreated": true,
+      "envBefore": {},
+      "envAfter": {},
+      "counterBefore": 0,
+      "counterAfter": 0,
+      "currentParserIsOuter": true
+    },
+    {
+      "input": {
+        "name": "all-space",
+        "text": "   "
+      },
+      "error": null,
+      "nodes": [
+        {
+          "kind": "mtext",
+          "text": null,
+          "attributes": {},
+          "properties": {},
+          "children": [
+            {
+              "kind": "text",
+              "text": " ",
+              "attributes": {},
+              "properties": {},
+              "children": []
+            }
+          ]
+        }
+      ],
+      "creation": [
+        {
+          "type": "text",
+          "kind": "text"
+        },
+        {
+          "type": "node",
+          "kind": "mtext"
+        }
+      ],
+      "returnedNodesCreated": true,
+      "envBefore": {},
+      "envAfter": {},
+      "counterBefore": 0,
+      "counterAfter": 0,
+      "currentParserIsOuter": true
+    },
+    {
+      "input": {
+        "name": "edges",
+        "text": "  a  b  "
+      },
+      "error": null,
+      "nodes": [
+        {
+          "kind": "mtext",
+          "text": null,
+          "attributes": {},
+          "properties": {},
+          "children": [
+            {
+              "kind": "text",
+              "text": " a  b ",
+              "attributes": {},
+              "properties": {},
+              "children": []
+            }
+          ]
+        }
+      ],
+      "creation": [
+        {
+          "type": "text",
+          "kind": "text"
+        },
+        {
+          "type": "node",
+          "kind": "mtext"
+        }
+      ],
+      "returnedNodesCreated": true,
+      "envBefore": {},
+      "envAfter": {},
+      "counterBefore": 0,
+      "counterAfter": 0,
+      "currentParserIsOuter": true
+    },
+    {
+      "input": {
+        "name": "bom",
+        "text": "﻿a﻿"
+      },
+      "error": null,
+      "nodes": [
+        {
+          "kind": "mtext",
+          "text": null,
+          "attributes": {},
+          "properties": {},
+          "children": [
+            {
+              "kind": "text",
+              "text": " a ",
+              "attributes": {},
+              "properties": {},
+              "children": []
+            }
+          ]
+        }
+      ],
+      "creation": [
+        {
+          "type": "text",
+          "kind": "text"
+        },
+        {
+          "type": "node",
+          "kind": "mtext"
+        }
+      ],
+      "returnedNodesCreated": true,
+      "envBefore": {},
+      "envAfter": {},
+      "counterBefore": 0,
+      "counterAfter": 0,
+      "currentParserIsOuter": true
+    },
+    {
+      "input": {
+        "name": "nel",
+        "text": "a"
+      },
+      "error": null,
+      "nodes": [
+        {
+          "kind": "mtext",
+          "text": null,
+          "attributes": {},
+          "properties": {},
+          "children": [
+            {
+              "kind": "text",
+              "text": "a",
+              "attributes": {},
+              "properties": {},
+              "children": []
+            }
+          ]
+        }
+      ],
+      "creation": [
+        {
+          "type": "text",
+          "kind": "text"
+        },
+        {
+          "type": "node",
+          "kind": "mtext"
+        }
+      ],
+      "returnedNodesCreated": true,
+      "envBefore": {},
+      "envAfter": {},
+      "counterBefore": 0,
+      "counterAfter": 0,
+      "currentParserIsOuter": true
+    },
+    {
+      "input": {
+        "name": "tilde",
+        "text": "a~b"
+      },
+      "error": null,
+      "nodes": [
+        {
+          "kind": "mtext",
+          "text": null,
+          "attributes": {},
+          "properties": {},
+          "children": [
+            {
+              "kind": "text",
+              "text": "a~b",
+              "attributes": {},
+              "properties": {},
+              "children": []
+            }
+          ]
+        }
+      ],
+      "creation": [
+        {
+          "type": "text",
+          "kind": "text"
+        },
+        {
+          "type": "node",
+          "kind": "mtext"
+        }
+      ],
+      "returnedNodesCreated": true,
+      "envBefore": {},
+      "envAfter": {},
+      "counterBefore": 0,
+      "counterAfter": 0,
+      "currentParserIsOuter": true
+    },
+    {
+      "input": {
+        "name": "escaped",
+        "text": "\\$x\\$ \\{a\\} \\\\ b"
+      },
+      "error": null,
+      "nodes": [
+        {
+          "kind": "mtext",
+          "text": null,
+          "attributes": {},
+          "properties": {},
+          "children": [
+            {
+              "kind": "text",
+              "text": "$x$ {a} \\ b",
+              "attributes": {},
+              "properties": {},
+              "children": []
+            }
+          ]
+        }
+      ],
+      "creation": [
+        {
+          "type": "text",
+          "kind": "text"
+        },
+        {
+          "type": "node",
+          "kind": "mtext"
+        }
+      ],
+      "returnedNodesCreated": true,
+      "envBefore": {},
+      "envAfter": {},
+      "counterBefore": 0,
+      "counterAfter": 0,
+      "currentParserIsOuter": true
+    },
+    {
+      "input": {
+        "name": "literal-command",
+        "text": "\\alpha \\relax"
+      },
+      "error": null,
+      "nodes": [
+        {
+          "kind": "mtext",
+          "text": null,
+          "attributes": {},
+          "properties": {},
+          "children": [
+            {
+              "kind": "text",
+              "text": "\\alpha \\relax",
+              "attributes": {},
+              "properties": {},
+              "children": []
+            }
+          ]
+        }
+      ],
+      "creation": [
+        {
+          "type": "text",
+          "kind": "text"
+        },
+        {
+          "type": "node",
+          "kind": "mtext"
+        }
+      ],
+      "returnedNodesCreated": true,
+      "envBefore": {},
+      "envAfter": {},
+      "counterBefore": 0,
+      "counterAfter": 0,
+      "currentParserIsOuter": true
+    },
+    {
+      "input": {
+        "name": "dollar-only",
+        "text": "$x$"
+      },
+      "error": null,
+      "nodes": [
+        {
+          "kind": "TeXAtom",
+          "text": null,
+          "attributes": {},
+          "properties": {
+            "texClass": 0
+          },
+          "children": [
+            {
+              "kind": "inferredMrow",
+              "text": null,
+              "attributes": {},
+              "properties": {},
+              "children": [
+                {
+                  "kind": "mi",
+                  "text": null,
+                  "attributes": {},
+                  "properties": {},
+                  "children": [
+                    {
+                      "kind": "text",
+                      "text": "x",
+                      "attributes": {},
+                      "properties": {},
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "creation": [
+        {
+          "type": "text",
+          "kind": "text"
+        },
+        {
+          "type": "node",
+          "kind": "mi"
+        },
+        {
+          "type": "token",
+          "kind": "mi"
+        },
+        {
+          "type": "node",
+          "kind": "TeXAtom"
+        }
+      ],
+      "returnedNodesCreated": true,
+      "envBefore": {},
+      "envAfter": {},
+      "counterBefore": 0,
+      "counterAfter": 0,
+      "currentParserIsOuter": true
+    },
+    {
+      "input": {
+        "name": "mixed",
+        "text": "a $x_i$ b $y$ c"
+      },
+      "error": null,
+      "nodes": [
+        {
+          "kind": "mrow",
+          "text": null,
+          "attributes": {},
+          "properties": {},
+          "children": [
+            {
+              "kind": "mtext",
+              "text": null,
+              "attributes": {},
+              "properties": {},
+              "children": [
+                {
+                  "kind": "text",
+                  "text": "a ",
+                  "attributes": {},
+                  "properties": {},
+                  "children": []
+                }
+              ]
+            },
+            {
+              "kind": "TeXAtom",
+              "text": null,
+              "attributes": {},
+              "properties": {
+                "texClass": 0
+              },
+              "children": [
+                {
+                  "kind": "inferredMrow",
+                  "text": null,
+                  "attributes": {},
+                  "properties": {},
+                  "children": [
+                    {
+                      "kind": "msubsup",
+                      "text": null,
+                      "attributes": {},
+                      "properties": {},
+                      "children": [
+                        {
+                          "kind": "mi",
+                          "text": null,
+                          "attributes": {},
+                          "properties": {},
+                          "children": [
+                            {
+                              "kind": "text",
+                              "text": "x",
+                              "attributes": {},
+                              "properties": {},
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "kind": "mi",
+                          "text": null,
+                          "attributes": {},
+                          "properties": {},
+                          "children": [
+                            {
+                              "kind": "text",
+                              "text": "i",
+                              "attributes": {},
+                              "properties": {},
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "kind": "mtext",
+              "text": null,
+              "attributes": {},
+              "properties": {},
+              "children": [
+                {
+                  "kind": "text",
+                  "text": " b ",
+                  "attributes": {},
+                  "properties": {},
+                  "children": []
+                }
+              ]
+            },
+            {
+              "kind": "TeXAtom",
+              "text": null,
+              "attributes": {},
+              "properties": {
+                "texClass": 0
+              },
+              "children": [
+                {
+                  "kind": "inferredMrow",
+                  "text": null,
+                  "attributes": {},
+                  "properties": {},
+                  "children": [
+                    {
+                      "kind": "mi",
+                      "text": null,
+                      "attributes": {},
+                      "properties": {},
+                      "children": [
+                        {
+                          "kind": "text",
+                          "text": "y",
+                          "attributes": {},
+                          "properties": {},
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "kind": "mtext",
+              "text": null,
+              "attributes": {},
+              "properties": {},
+              "children": [
+                {
+                  "kind": "text",
+                  "text": " c",
+                  "attributes": {},
+                  "properties": {},
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "creation": [
+        {
+          "type": "text",
+          "kind": "text"
+        },
+        {
+          "type": "node",
+          "kind": "mtext"
+        },
+        {
+          "type": "text",
+          "kind": "text"
+        },
+        {
+          "type": "node",
+          "kind": "mi"
+        },
+        {
+          "type": "token",
+          "kind": "mi"
+        },
+        {
+          "type": "node",
+          "kind": "msubsup"
+        },
+        {
+          "type": "text",
+          "kind": "text"
+        },
+        {
+          "type": "node",
+          "kind": "mi"
+        },
+        {
+          "type": "token",
+          "kind": "mi"
+        },
+        {
+          "type": "node",
+          "kind": "TeXAtom"
+        },
+        {
+          "type": "text",
+          "kind": "text"
+        },
+        {
+          "type": "node",
+          "kind": "mtext"
+        },
+        {
+          "type": "text",
+          "kind": "text"
+        },
+        {
+          "type": "node",
+          "kind": "mi"
+        },
+        {
+          "type": "token",
+          "kind": "mi"
+        },
+        {
+          "type": "node",
+          "kind": "TeXAtom"
+        },
+        {
+          "type": "text",
+          "kind": "text"
+        },
+        {
+          "type": "node",
+          "kind": "mtext"
+        },
+        {
+          "type": "node",
+          "kind": "mrow"
+        }
+      ],
+      "returnedNodesCreated": true,
+      "envBefore": {},
+      "envAfter": {},
+      "counterBefore": 0,
+      "counterAfter": 0,
+      "currentParserIsOuter": true
+    },
+    {
+      "input": {
+        "name": "parenthesis",
+        "text": "a \\(x+y\\) b"
+      },
+      "error": null,
+      "nodes": [
+        {
+          "kind": "mrow",
+          "text": null,
+          "attributes": {},
+          "properties": {},
+          "children": [
+            {
+              "kind": "mtext",
+              "text": null,
+              "attributes": {},
+              "properties": {},
+              "children": [
+                {
+                  "kind": "text",
+                  "text": "a ",
+                  "attributes": {},
+                  "properties": {},
+                  "children": []
+                }
+              ]
+            },
+            {
+              "kind": "TeXAtom",
+              "text": null,
+              "attributes": {},
+              "properties": {
+                "texClass": 0
+              },
+              "children": [
+                {
+                  "kind": "inferredMrow",
+                  "text": null,
+                  "attributes": {},
+                  "properties": {},
+                  "children": [
+                    {
+                      "kind": "mi",
+                      "text": null,
+                      "attributes": {},
+                      "properties": {},
+                      "children": [
+                        {
+                          "kind": "text",
+                          "text": "x",
+                          "attributes": {},
+                          "properties": {},
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "kind": "mo",
+                      "text": null,
+                      "attributes": {},
+                      "properties": {
+                        "fixStretchy": true,
+                        "in-lists": "fixStretchy"
+                      },
+                      "children": [
+                        {
+                          "kind": "text",
+                          "text": "+",
+                          "attributes": {},
+                          "properties": {},
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "kind": "mi",
+                      "text": null,
+                      "attributes": {},
+                      "properties": {},
+                      "children": [
+                        {
+                          "kind": "text",
+                          "text": "y",
+                          "attributes": {},
+                          "properties": {},
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "kind": "mtext",
+              "text": null,
+              "attributes": {},
+              "properties": {},
+              "children": [
+                {
+                  "kind": "text",
+                  "text": " b",
+                  "attributes": {},
+                  "properties": {},
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "creation": [
+        {
+          "type": "text",
+          "kind": "text"
+        },
+        {
+          "type": "node",
+          "kind": "mtext"
+        },
+        {
+          "type": "text",
+          "kind": "text"
+        },
+        {
+          "type": "node",
+          "kind": "mi"
+        },
+        {
+          "type": "token",
+          "kind": "mi"
+        },
+        {
+          "type": "text",
+          "kind": "text"
+        },
+        {
+          "type": "node",
+          "kind": "mo"
+        },
+        {
+          "type": "token",
+          "kind": "mo"
+        },
+        {
+          "type": "text",
+          "kind": "text"
+        },
+        {
+          "type": "node",
+          "kind": "mi"
+        },
+        {
+          "type": "token",
+          "kind": "mi"
+        },
+        {
+          "type": "node",
+          "kind": "inferredMrow"
+        },
+        {
+          "type": "node",
+          "kind": "TeXAtom"
+        },
+        {
+          "type": "text",
+          "kind": "text"
+        },
+        {
+          "type": "node",
+          "kind": "mtext"
+        },
+        {
+          "type": "node",
+          "kind": "mrow"
+        }
+      ],
+      "returnedNodesCreated": true,
+      "envBefore": {},
+      "envAfter": {},
+      "counterBefore": 0,
+      "counterAfter": 0,
+      "currentParserIsOuter": true
+    },
+    {
+      "input": {
+        "name": "nested-braces",
+        "text": "a ${x_i}$ b"
+      },
+      "error": null,
+      "nodes": [
+        {
+          "kind": "mrow",
+          "text": null,
+          "attributes": {},
+          "properties": {},
+          "children": [
+            {
+              "kind": "mtext",
+              "text": null,
+              "attributes": {},
+              "properties": {},
+              "children": [
+                {
+                  "kind": "text",
+                  "text": "a ",
+                  "attributes": {},
+                  "properties": {},
+                  "children": []
+                }
+              ]
+            },
+            {
+              "kind": "TeXAtom",
+              "text": null,
+              "attributes": {},
+              "properties": {
+                "texClass": 0
+              },
+              "children": [
+                {
+                  "kind": "inferredMrow",
+                  "text": null,
+                  "attributes": {},
+                  "properties": {},
+                  "children": [
+                    {
+                      "kind": "TeXAtom",
+                      "text": null,
+                      "attributes": {},
+                      "properties": {
+                        "texClass": 0
+                      },
+                      "children": [
+                        {
+                          "kind": "inferredMrow",
+                          "text": null,
+                          "attributes": {},
+                          "properties": {},
+                          "children": [
+                            {
+                              "kind": "msubsup",
+                              "text": null,
+                              "attributes": {},
+                              "properties": {},
+                              "children": [
+                                {
+                                  "kind": "mi",
+                                  "text": null,
+                                  "attributes": {},
+                                  "properties": {},
+                                  "children": [
+                                    {
+                                      "kind": "text",
+                                      "text": "x",
+                                      "attributes": {},
+                                      "properties": {},
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "kind": "mi",
+                                  "text": null,
+                                  "attributes": {},
+                                  "properties": {},
+                                  "children": [
+                                    {
+                                      "kind": "text",
+                                      "text": "i",
+                                      "attributes": {},
+                                      "properties": {},
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "kind": "mtext",
+              "text": null,
+              "attributes": {},
+              "properties": {},
+              "children": [
+                {
+                  "kind": "text",
+                  "text": " b",
+                  "attributes": {},
+                  "properties": {},
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "creation": [
+        {
+          "type": "text",
+          "kind": "text"
+        },
+        {
+          "type": "node",
+          "kind": "mtext"
+        },
+        {
+          "type": "text",
+          "kind": "text"
+        },
+        {
+          "type": "node",
+          "kind": "mi"
+        },
+        {
+          "type": "token",
+          "kind": "mi"
+        },
+        {
+          "type": "node",
+          "kind": "msubsup"
+        },
+        {
+          "type": "text",
+          "kind": "text"
+        },
+        {
+          "type": "node",
+          "kind": "mi"
+        },
+        {
+          "type": "token",
+          "kind": "mi"
+        },
+        {
+          "type": "node",
+          "kind": "TeXAtom"
+        },
+        {
+          "type": "node",
+          "kind": "TeXAtom"
+        },
+        {
+          "type": "text",
+          "kind": "text"
+        },
+        {
+          "type": "node",
+          "kind": "mtext"
+        },
+        {
+          "type": "node",
+          "kind": "mrow"
+        }
+      ],
+      "returnedNodesCreated": true,
+      "envBefore": {},
+      "envAfter": {},
+      "counterBefore": 0,
+      "counterAfter": 0,
+      "currentParserIsOuter": true
+    },
+    {
+      "input": {
+        "name": "empty-level-zero",
+        "text": "",
+        "level": 0
+      },
+      "error": null,
+      "nodes": [
+        {
+          "kind": "mstyle",
+          "text": null,
+          "attributes": {
+            "displaystyle": false,
+            "scriptlevel": 0
+          },
+          "properties": {},
+          "children": [
+            {
+              "kind": "inferredMrow",
+              "text": null,
+              "attributes": {},
+              "properties": {},
+              "children": []
+            }
+          ]
+        }
+      ],
+      "creation": [
+        {
+          "type": "node",
+          "kind": "mstyle"
+        }
+      ],
+      "returnedNodesCreated": true,
+      "envBefore": {},
+      "envAfter": {},
+      "counterBefore": 0,
+      "counterAfter": 0,
+      "currentParserIsOuter": true
+    },
+    {
+      "input": {
+        "name": "mixed-level-zero",
+        "text": "a $x$ b",
+        "level": 0
+      },
+      "error": null,
+      "nodes": [
+        {
+          "kind": "mstyle",
+          "text": null,
+          "attributes": {
+            "displaystyle": false,
+            "scriptlevel": 0
+          },
+          "properties": {},
+          "children": [
+            {
+              "kind": "inferredMrow",
+              "text": null,
+              "attributes": {},
+              "properties": {},
+              "children": [
+                {
+                  "kind": "mtext",
+                  "text": null,
+                  "attributes": {},
+                  "properties": {},
+                  "children": [
+                    {
+                      "kind": "text",
+                      "text": "a ",
+                      "attributes": {},
+                      "properties": {},
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "kind": "TeXAtom",
+                  "text": null,
+                  "attributes": {},
+                  "properties": {
+                    "texClass": 0
+                  },
+                  "children": [
+                    {
+                      "kind": "inferredMrow",
+                      "text": null,
+                      "attributes": {},
+                      "properties": {},
+                      "children": [
+                        {
+                          "kind": "mi",
+                          "text": null,
+                          "attributes": {},
+                          "properties": {},
+                          "children": [
+                            {
+                              "kind": "text",
+                              "text": "x",
+                              "attributes": {},
+                              "properties": {},
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "kind": "mtext",
+                  "text": null,
+                  "attributes": {},
+                  "properties": {},
+                  "children": [
+                    {
+                      "kind": "text",
+                      "text": " b",
+                      "attributes": {},
+                      "properties": {},
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "creation": [
+        {
+          "type": "text",
+          "kind": "text"
+        },
+        {
+          "type": "node",
+          "kind": "mtext"
+        },
+        {
+          "type": "text",
+          "kind": "text"
+        },
+        {
+          "type": "node",
+          "kind": "mi"
+        },
+        {
+          "type": "token",
+          "kind": "mi"
+        },
+        {
+          "type": "node",
+          "kind": "TeXAtom"
+        },
+        {
+          "type": "text",
+          "kind": "text"
+        },
+        {
+          "type": "node",
+          "kind": "mtext"
+        },
+        {
+          "type": "node",
+          "kind": "mstyle"
+        }
+      ],
+      "returnedNodesCreated": true,
+      "envBefore": {},
+      "envAfter": {},
+      "counterBefore": 0,
+      "counterAfter": 0,
+      "currentParserIsOuter": true
+    },
+    {
+      "input": {
+        "name": "ambient-font",
+        "text": "a $x+\\mathit{yz}$ b",
+        "env": {
+          "font": "bold"
+        }
+      },
+      "error": null,
+      "nodes": [
+        {
+          "kind": "mrow",
+          "text": null,
+          "attributes": {},
+          "properties": {},
+          "children": [
+            {
+              "kind": "mtext",
+              "text": null,
+              "attributes": {
+                "mathvariant": "bold"
+              },
+              "properties": {},
+              "children": [
+                {
+                  "kind": "text",
+                  "text": "a ",
+                  "attributes": {},
+                  "properties": {},
+                  "children": []
+                }
+              ]
+            },
+            {
+              "kind": "TeXAtom",
+              "text": null,
+              "attributes": {},
+              "properties": {
+                "texClass": 0
+              },
+              "children": [
+                {
+                  "kind": "inferredMrow",
+                  "text": null,
+                  "attributes": {},
+                  "properties": {},
+                  "children": [
+                    {
+                      "kind": "mi",
+                      "text": null,
+                      "attributes": {},
+                      "properties": {},
+                      "children": [
+                        {
+                          "kind": "text",
+                          "text": "x",
+                          "attributes": {},
+                          "properties": {},
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "kind": "mo",
+                      "text": null,
+                      "attributes": {},
+                      "properties": {
+                        "fixStretchy": true,
+                        "in-lists": "fixStretchy"
+                      },
+                      "children": [
+                        {
+                          "kind": "text",
+                          "text": "+",
+                          "attributes": {},
+                          "properties": {},
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "kind": "TeXAtom",
+                      "text": null,
+                      "attributes": {},
+                      "properties": {
+                        "texClass": 0
+                      },
+                      "children": [
+                        {
+                          "kind": "inferredMrow",
+                          "text": null,
+                          "attributes": {},
+                          "properties": {},
+                          "children": [
+                            {
+                              "kind": "mi",
+                              "text": null,
+                              "attributes": {
+                                "mathvariant": "-tex-mathit"
+                              },
+                              "properties": {},
+                              "children": [
+                                {
+                                  "kind": "text",
+                                  "text": "yz",
+                                  "attributes": {},
+                                  "properties": {},
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "kind": "mtext",
+              "text": null,
+              "attributes": {
+                "mathvariant": "bold"
+              },
+              "properties": {},
+              "children": [
+                {
+                  "kind": "text",
+                  "text": " b",
+                  "attributes": {},
+                  "properties": {},
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "creation": [
+        {
+          "type": "text",
+          "kind": "text"
+        },
+        {
+          "type": "node",
+          "kind": "mtext"
+        },
+        {
+          "type": "text",
+          "kind": "text"
+        },
+        {
+          "type": "node",
+          "kind": "mi"
+        },
+        {
+          "type": "token",
+          "kind": "mi"
+        },
+        {
+          "type": "text",
+          "kind": "text"
+        },
+        {
+          "type": "node",
+          "kind": "mo"
+        },
+        {
+          "type": "token",
+          "kind": "mo"
+        },
+        {
+          "type": "text",
+          "kind": "text"
+        },
+        {
+          "type": "node",
+          "kind": "mi"
+        },
+        {
+          "type": "token",
+          "kind": "mi"
+        },
+        {
+          "type": "node",
+          "kind": "TeXAtom"
+        },
+        {
+          "type": "node",
+          "kind": "inferredMrow"
+        },
+        {
+          "type": "node",
+          "kind": "TeXAtom"
+        },
+        {
+          "type": "text",
+          "kind": "text"
+        },
+        {
+          "type": "node",
+          "kind": "mtext"
+        },
+        {
+          "type": "node",
+          "kind": "mrow"
+        }
+      ],
+      "returnedNodesCreated": true,
+      "envBefore": {
+        "font": "bold"
+      },
+      "envAfter": {
+        "font": "bold"
+      },
+      "counterBefore": 0,
+      "counterAfter": 0,
+      "currentParserIsOuter": true
+    },
+    {
+      "input": {
+        "name": "explicit-normal",
+        "text": "a $x$ b",
+        "env": {
+          "font": "bold"
+        },
+        "font": "normal"
+      },
+      "error": null,
+      "nodes": [
+        {
+          "kind": "mrow",
+          "text": null,
+          "attributes": {},
+          "properties": {},
+          "children": [
+            {
+              "kind": "mtext",
+              "text": null,
+              "attributes": {
+                "mathvariant": "normal"
+              },
+              "properties": {},
+              "children": [
+                {
+                  "kind": "text",
+                  "text": "a ",
+                  "attributes": {},
+                  "properties": {},
+                  "children": []
+                }
+              ]
+            },
+            {
+              "kind": "TeXAtom",
+              "text": null,
+              "attributes": {},
+              "properties": {
+                "texClass": 0
+              },
+              "children": [
+                {
+                  "kind": "inferredMrow",
+                  "text": null,
+                  "attributes": {},
+                  "properties": {},
+                  "children": [
+                    {
+                      "kind": "mi",
+                      "text": null,
+                      "attributes": {},
+                      "properties": {},
+                      "children": [
+                        {
+                          "kind": "text",
+                          "text": "x",
+                          "attributes": {},
+                          "properties": {},
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "kind": "mtext",
+              "text": null,
+              "attributes": {
+                "mathvariant": "normal"
+              },
+              "properties": {},
+              "children": [
+                {
+                  "kind": "text",
+                  "text": " b",
+                  "attributes": {},
+                  "properties": {},
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "creation": [
+        {
+          "type": "text",
+          "kind": "text"
+        },
+        {
+          "type": "node",
+          "kind": "mtext"
+        },
+        {
+          "type": "text",
+          "kind": "text"
+        },
+        {
+          "type": "node",
+          "kind": "mi"
+        },
+        {
+          "type": "token",
+          "kind": "mi"
+        },
+        {
+          "type": "node",
+          "kind": "TeXAtom"
+        },
+        {
+          "type": "text",
+          "kind": "text"
+        },
+        {
+          "type": "node",
+          "kind": "mtext"
+        },
+        {
+          "type": "node",
+          "kind": "mrow"
+        }
+      ],
+      "returnedNodesCreated": true,
+      "envBefore": {
+        "font": "bold"
+      },
+      "envAfter": {
+        "font": "bold"
+      },
+      "counterBefore": 0,
+      "counterAfter": 0,
+      "currentParserIsOuter": true
+    },
+    {
+      "input": {
+        "name": "explicit-italic",
+        "text": "a $x$ b",
+        "font": "italic"
+      },
+      "error": null,
+      "nodes": [
+        {
+          "kind": "mrow",
+          "text": null,
+          "attributes": {},
+          "properties": {},
+          "children": [
+            {
+              "kind": "mtext",
+              "text": null,
+              "attributes": {
+                "mathvariant": "italic"
+              },
+              "properties": {},
+              "children": [
+                {
+                  "kind": "text",
+                  "text": "a ",
+                  "attributes": {},
+                  "properties": {},
+                  "children": []
+                }
+              ]
+            },
+            {
+              "kind": "TeXAtom",
+              "text": null,
+              "attributes": {},
+              "properties": {
+                "texClass": 0
+              },
+              "children": [
+                {
+                  "kind": "inferredMrow",
+                  "text": null,
+                  "attributes": {},
+                  "properties": {},
+                  "children": [
+                    {
+                      "kind": "mi",
+                      "text": null,
+                      "attributes": {},
+                      "properties": {},
+                      "children": [
+                        {
+                          "kind": "text",
+                          "text": "x",
+                          "attributes": {},
+                          "properties": {},
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "kind": "mtext",
+              "text": null,
+              "attributes": {
+                "mathvariant": "italic"
+              },
+              "properties": {},
+              "children": [
+                {
+                  "kind": "text",
+                  "text": " b",
+                  "attributes": {},
+                  "properties": {},
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "creation": [
+        {
+          "type": "text",
+          "kind": "text"
+        },
+        {
+          "type": "node",
+          "kind": "mtext"
+        },
+        {
+          "type": "text",
+          "kind": "text"
+        },
+        {
+          "type": "node",
+          "kind": "mi"
+        },
+        {
+          "type": "token",
+          "kind": "mi"
+        },
+        {
+          "type": "node",
+          "kind": "TeXAtom"
+        },
+        {
+          "type": "text",
+          "kind": "text"
+        },
+        {
+          "type": "node",
+          "kind": "mtext"
+        },
+        {
+          "type": "node",
+          "kind": "mrow"
+        }
+      ],
+      "returnedNodesCreated": true,
+      "envBefore": {},
+      "envAfter": {},
+      "counterBefore": 0,
+      "counterAfter": 0,
+      "currentParserIsOuter": true
+    },
+    {
+      "input": {
+        "name": "missing-dollar",
+        "text": "a $x"
+      },
+      "error": {
+        "id": "MathNotTerminated",
+        "message": "Math not terminated in text box"
+      },
+      "nodes": null,
+      "creation": [
+        {
+          "type": "text",
+          "kind": "text"
+        },
+        {
+          "type": "node",
+          "kind": "mtext"
+        }
+      ],
+      "returnedNodesCreated": null,
+      "envBefore": {},
+      "envAfter": {},
+      "counterBefore": 0,
+      "counterAfter": 0,
+      "currentParserIsOuter": true
+    },
+    {
+      "input": {
+        "name": "missing-parenthesis",
+        "text": "a \\(x"
+      },
+      "error": {
+        "id": "MathNotTerminated",
+        "message": "Math not terminated in text box"
+      },
+      "nodes": null,
+      "creation": [
+        {
+          "type": "text",
+          "kind": "text"
+        },
+        {
+          "type": "node",
+          "kind": "mtext"
+        }
+      ],
+      "returnedNodesCreated": null,
+      "envBefore": {},
+      "envAfter": {},
+      "counterBefore": 0,
+      "counterAfter": 0,
+      "currentParserIsOuter": true
+    },
+    {
+      "input": {
+        "name": "completed-inner-error",
+        "text": "a $x\\relax$ b"
+      },
+      "error": {
+        "id": "UndefinedControlSequence",
+        "message": "Undefined control sequence \\relax"
+      },
+      "nodes": null,
+      "creation": [
+        {
+          "type": "text",
+          "kind": "text"
+        },
+        {
+          "type": "node",
+          "kind": "mtext"
+        },
+        {
+          "type": "text",
+          "kind": "text"
+        },
+        {
+          "type": "node",
+          "kind": "mi"
+        },
+        {
+          "type": "token",
+          "kind": "mi"
+        }
+      ],
+      "returnedNodesCreated": null,
+      "envBefore": {},
+      "envAfter": {},
+      "counterBefore": 0,
+      "counterAfter": 0,
+      "currentParserIsOuter": false
+    },
+    {
+      "input": {
+        "name": "reference",
+        "text": "a \\ref{missing} b",
+        "font": "italic"
+      },
+      "error": null,
+      "nodes": [
+        {
+          "kind": "mrow",
+          "text": null,
+          "attributes": {},
+          "properties": {},
+          "children": [
+            {
+              "kind": "mtext",
+              "text": null,
+              "attributes": {
+                "mathvariant": "italic"
+              },
+              "properties": {},
+              "children": [
+                {
+                  "kind": "text",
+                  "text": "a ",
+                  "attributes": {},
+                  "properties": {},
+                  "children": []
+                }
+              ]
+            },
+            {
+              "kind": "TeXAtom",
+              "text": null,
+              "attributes": {
+                "mathvariant": "italic"
+              },
+              "properties": {
+                "texClass": 0
+              },
+              "children": [
+                {
+                  "kind": "inferredMrow",
+                  "text": null,
+                  "attributes": {},
+                  "properties": {},
+                  "children": [
+                    {
+                      "kind": "mrow",
+                      "text": null,
+                      "attributes": {
+                        "href": "#",
+                        "class": "MathJax_ref"
+                      },
+                      "properties": {},
+                      "children": [
+                        {
+                          "kind": "mtext",
+                          "text": null,
+                          "attributes": {},
+                          "properties": {},
+                          "children": [
+                            {
+                              "kind": "text",
+                              "text": "???",
+                              "attributes": {},
+                              "properties": {},
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "kind": "mtext",
+              "text": null,
+              "attributes": {
+                "mathvariant": "italic"
+              },
+              "properties": {},
+              "children": [
+                {
+                  "kind": "text",
+                  "text": " b",
+                  "attributes": {},
+                  "properties": {},
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "creation": [
+        {
+          "type": "text",
+          "kind": "text"
+        },
+        {
+          "type": "node",
+          "kind": "mtext"
+        },
+        {
+          "type": "text",
+          "kind": "text"
+        },
+        {
+          "type": "node",
+          "kind": "mtext"
+        },
+        {
+          "type": "node",
+          "kind": "mrow"
+        },
+        {
+          "type": "node",
+          "kind": "TeXAtom"
+        },
+        {
+          "type": "text",
+          "kind": "text"
+        },
+        {
+          "type": "node",
+          "kind": "mtext"
+        },
+        {
+          "type": "node",
+          "kind": "mrow"
+        }
+      ],
+      "returnedNodesCreated": true,
+      "envBefore": {},
+      "envAfter": {},
+      "counterBefore": 0,
+      "counterAfter": 0,
+      "currentParserIsOuter": true
+    },
+    {
+      "input": {
+        "name": "equation-reference",
+        "text": "a \\eqref {missing} b",
+        "env": {
+          "font": "bold"
+        }
+      },
+      "error": null,
+      "nodes": [
+        {
+          "kind": "mrow",
+          "text": null,
+          "attributes": {},
+          "properties": {},
+          "children": [
+            {
+              "kind": "mtext",
+              "text": null,
+              "attributes": {
+                "mathvariant": "bold"
+              },
+              "properties": {},
+              "children": [
+                {
+                  "kind": "text",
+                  "text": "a ",
+                  "attributes": {},
+                  "properties": {},
+                  "children": []
+                }
+              ]
+            },
+            {
+              "kind": "TeXAtom",
+              "text": null,
+              "attributes": {
+                "mathvariant": "bold"
+              },
+              "properties": {
+                "texClass": 0
+              },
+              "children": [
+                {
+                  "kind": "inferredMrow",
+                  "text": null,
+                  "attributes": {},
+                  "properties": {},
+                  "children": [
+                    {
+                      "kind": "mrow",
+                      "text": null,
+                      "attributes": {
+                        "href": "#",
+                        "class": "MathJax_ref"
+                      },
+                      "properties": {},
+                      "children": [
+                        {
+                          "kind": "mtext",
+                          "text": null,
+                          "attributes": {},
+                          "properties": {},
+                          "children": [
+                            {
+                              "kind": "text",
+                              "text": "(???)",
+                              "attributes": {},
+                              "properties": {},
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "kind": "mtext",
+              "text": null,
+              "attributes": {
+                "mathvariant": "bold"
+              },
+              "properties": {},
+              "children": [
+                {
+                  "kind": "text",
+                  "text": " b",
+                  "attributes": {},
+                  "properties": {},
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "creation": [
+        {
+          "type": "text",
+          "kind": "text"
+        },
+        {
+          "type": "node",
+          "kind": "mtext"
+        },
+        {
+          "type": "text",
+          "kind": "text"
+        },
+        {
+          "type": "node",
+          "kind": "mtext"
+        },
+        {
+          "type": "node",
+          "kind": "mrow"
+        },
+        {
+          "type": "node",
+          "kind": "TeXAtom"
+        },
+        {
+          "type": "text",
+          "kind": "text"
+        },
+        {
+          "type": "node",
+          "kind": "mtext"
+        },
+        {
+          "type": "node",
+          "kind": "mrow"
+        }
+      ],
+      "returnedNodesCreated": true,
+      "envBefore": {
+        "font": "bold"
+      },
+      "envAfter": {
+        "font": "bold"
+      },
+      "counterBefore": 0,
+      "counterAfter": 0,
+      "currentParserIsOuter": true
+    },
+    {
+      "input": {
+        "name": "registered-inner",
+        "text": "a $\\dproof$ b",
+        "registration": {
+          "name": "dproof",
+          "body": "\\alpha",
+          "arguments": 0
+        }
+      },
+      "error": null,
+      "nodes": [
+        {
+          "kind": "mrow",
+          "text": null,
+          "attributes": {},
+          "properties": {},
+          "children": [
+            {
+              "kind": "mtext",
+              "text": null,
+              "attributes": {},
+              "properties": {},
+              "children": [
+                {
+                  "kind": "text",
+                  "text": "a ",
+                  "attributes": {},
+                  "properties": {},
+                  "children": []
+                }
+              ]
+            },
+            {
+              "kind": "TeXAtom",
+              "text": null,
+              "attributes": {},
+              "properties": {
+                "texClass": 0
+              },
+              "children": [
+                {
+                  "kind": "inferredMrow",
+                  "text": null,
+                  "attributes": {},
+                  "properties": {},
+                  "children": [
+                    {
+                      "kind": "mi",
+                      "text": null,
+                      "attributes": {
+                        "mathvariant": "italic"
+                      },
+                      "properties": {},
+                      "children": [
+                        {
+                          "kind": "text",
+                          "text": "α",
+                          "attributes": {},
+                          "properties": {},
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "kind": "mtext",
+              "text": null,
+              "attributes": {},
+              "properties": {},
+              "children": [
+                {
+                  "kind": "text",
+                  "text": " b",
+                  "attributes": {},
+                  "properties": {},
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "creation": [
+        {
+          "type": "text",
+          "kind": "text"
+        },
+        {
+          "type": "node",
+          "kind": "mtext"
+        },
+        {
+          "type": "text",
+          "kind": "text"
+        },
+        {
+          "type": "node",
+          "kind": "mi"
+        },
+        {
+          "type": "token",
+          "kind": "mi"
+        },
+        {
+          "type": "node",
+          "kind": "TeXAtom"
+        },
+        {
+          "type": "text",
+          "kind": "text"
+        },
+        {
+          "type": "node",
+          "kind": "mtext"
+        },
+        {
+          "type": "node",
+          "kind": "mrow"
+        }
+      ],
+      "returnedNodesCreated": true,
+      "envBefore": {},
+      "envAfter": {},
+      "counterBefore": 0,
+      "counterAfter": 0,
+      "currentParserIsOuter": true
+    },
+    {
+      "input": {
+        "name": "registered-literal",
+        "text": "a \\dproof b",
+        "registration": {
+          "name": "dproof",
+          "body": "\\alpha",
+          "arguments": 0
+        }
+      },
+      "error": null,
+      "nodes": [
+        {
+          "kind": "mtext",
+          "text": null,
+          "attributes": {},
+          "properties": {},
+          "children": [
+            {
+              "kind": "text",
+              "text": "a \\dproof b",
+              "attributes": {},
+              "properties": {},
+              "children": []
+            }
+          ]
+        }
+      ],
+      "creation": [
+        {
+          "type": "text",
+          "kind": "text"
+        },
+        {
+          "type": "node",
+          "kind": "mtext"
+        }
+      ],
+      "returnedNodesCreated": true,
+      "envBefore": {},
+      "envAfter": {},
+      "counterBefore": 0,
+      "counterAfter": 0,
+      "currentParserIsOuter": true
+    },
+    {
+      "input": {
+        "name": "outer-macro-limit",
+        "text": "$\\dproof$ $\\dproof$",
+        "outerMacroCount": 10000,
+        "registration": {
+          "name": "dproof",
+          "body": "x",
+          "arguments": 0
+        }
+      },
+      "error": null,
+      "nodes": [
+        {
+          "kind": "mrow",
+          "text": null,
+          "attributes": {},
+          "properties": {},
+          "children": [
+            {
+              "kind": "TeXAtom",
+              "text": null,
+              "attributes": {},
+              "properties": {
+                "texClass": 0
+              },
+              "children": [
+                {
+                  "kind": "inferredMrow",
+                  "text": null,
+                  "attributes": {},
+                  "properties": {},
+                  "children": [
+                    {
+                      "kind": "mi",
+                      "text": null,
+                      "attributes": {},
+                      "properties": {},
+                      "children": [
+                        {
+                          "kind": "text",
+                          "text": "x",
+                          "attributes": {},
+                          "properties": {},
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "kind": "mtext",
+              "text": null,
+              "attributes": {},
+              "properties": {},
+              "children": [
+                {
+                  "kind": "text",
+                  "text": " ",
+                  "attributes": {},
+                  "properties": {},
+                  "children": []
+                }
+              ]
+            },
+            {
+              "kind": "TeXAtom",
+              "text": null,
+              "attributes": {},
+              "properties": {
+                "texClass": 0
+              },
+              "children": [
+                {
+                  "kind": "inferredMrow",
+                  "text": null,
+                  "attributes": {},
+                  "properties": {},
+                  "children": [
+                    {
+                      "kind": "mi",
+                      "text": null,
+                      "attributes": {},
+                      "properties": {},
+                      "children": [
+                        {
+                          "kind": "text",
+                          "text": "x",
+                          "attributes": {},
+                          "properties": {},
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "creation": [
+        {
+          "type": "text",
+          "kind": "text"
+        },
+        {
+          "type": "node",
+          "kind": "mi"
+        },
+        {
+          "type": "token",
+          "kind": "mi"
+        },
+        {
+          "type": "node",
+          "kind": "TeXAtom"
+        },
+        {
+          "type": "text",
+          "kind": "text"
+        },
+        {
+          "type": "node",
+          "kind": "mtext"
+        },
+        {
+          "type": "text",
+          "kind": "text"
+        },
+        {
+          "type": "node",
+          "kind": "mi"
+        },
+        {
+          "type": "token",
+          "kind": "mi"
+        },
+        {
+          "type": "node",
+          "kind": "TeXAtom"
+        },
+        {
+          "type": "node",
+          "kind": "mrow"
+        }
+      ],
+      "returnedNodesCreated": true,
+      "envBefore": {},
+      "envAfter": {},
+      "counterBefore": 10000,
+      "counterAfter": 10000,
+      "currentParserIsOuter": true
+    },
+    {
+      "input": {
+        "name": "inner-error-counter",
+        "text": "$\\dproof$",
+        "outerMacroCount": 9999,
+        "registration": {
+          "name": "dproof",
+          "body": "\\relax",
+          "arguments": 0
+        }
+      },
+      "error": {
+        "id": "UndefinedControlSequence",
+        "message": "Undefined control sequence \\relax"
+      },
+      "nodes": null,
+      "creation": [],
+      "returnedNodesCreated": null,
+      "envBefore": {},
+      "envAfter": {},
+      "counterBefore": 9999,
+      "counterAfter": 9999,
+      "currentParserIsOuter": false
+    },
+    {
+      "input": {
+        "name": "supplementary",
+        "text": "a𝛼 $x$ 𝛽"
+      },
+      "error": null,
+      "nodes": [
+        {
+          "kind": "mrow",
+          "text": null,
+          "attributes": {},
+          "properties": {},
+          "children": [
+            {
+              "kind": "mtext",
+              "text": null,
+              "attributes": {},
+              "properties": {},
+              "children": [
+                {
+                  "kind": "text",
+                  "text": "a𝛼 ",
+                  "attributes": {},
+                  "properties": {},
+                  "children": []
+                }
+              ]
+            },
+            {
+              "kind": "TeXAtom",
+              "text": null,
+              "attributes": {},
+              "properties": {
+                "texClass": 0
+              },
+              "children": [
+                {
+                  "kind": "inferredMrow",
+                  "text": null,
+                  "attributes": {},
+                  "properties": {},
+                  "children": [
+                    {
+                      "kind": "mi",
+                      "text": null,
+                      "attributes": {},
+                      "properties": {},
+                      "children": [
+                        {
+                          "kind": "text",
+                          "text": "x",
+                          "attributes": {},
+                          "properties": {},
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "kind": "mtext",
+              "text": null,
+              "attributes": {},
+              "properties": {},
+              "children": [
+                {
+                  "kind": "text",
+                  "text": " 𝛽",
+                  "attributes": {},
+                  "properties": {},
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "creation": [
+        {
+          "type": "text",
+          "kind": "text"
+        },
+        {
+          "type": "node",
+          "kind": "mtext"
+        },
+        {
+          "type": "text",
+          "kind": "text"
+        },
+        {
+          "type": "node",
+          "kind": "mi"
+        },
+        {
+          "type": "token",
+          "kind": "mi"
+        },
+        {
+          "type": "node",
+          "kind": "TeXAtom"
+        },
+        {
+          "type": "text",
+          "kind": "text"
+        },
+        {
+          "type": "node",
+          "kind": "mtext"
+        },
+        {
+          "type": "node",
+          "kind": "mrow"
+        }
+      ],
+      "returnedNodesCreated": true,
+      "envBefore": {},
+      "envAfter": {},
+      "counterBefore": 0,
+      "counterAfter": 0,
+      "currentParserIsOuter": true
+    }
+  ]
+}

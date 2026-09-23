@@ -1,84 +1,8 @@
 {
   "baseline": "3dcb09030b4404c4c5982a9cebfbe5c1b6e51cd9",
   "unchangedNonPrime": {
-    "mbox-literal-inline": {
-      "tex": "\\mbox{x\u2019}",
-      "display": false,
-      "svgSHA256": "834d4d26d57dfd4476989b2224513321a84f5bd760ad391a8bc5b5a20cd433ca",
-      "baselineTreeSHA256": "247c517b2cade6708c3cefe7637e540039b3e4128f9c9782e3e8753b1827eeb8",
-      "tree": {
-        "kind": "math",
-        "text": null,
-        "attributes": {},
-        "children": [
-          {
-            "kind": "inferredMrow",
-            "text": null,
-            "attributes": {},
-            "children": [
-              {
-                "kind": "mtext",
-                "text": null,
-                "attributes": {},
-                "children": [
-                  {
-                    "kind": "text",
-                    "text": "x\u2019",
-                    "attributes": {},
-                    "children": [],
-                    "properties": {}
-                  }
-                ],
-                "properties": {}
-              }
-            ],
-            "properties": {}
-          }
-        ],
-        "properties": {}
-      }
-    },
-    "mbox-literal-display": {
-      "tex": "\\mbox{x\u2019}",
-      "display": true,
-      "svgSHA256": "834d4d26d57dfd4476989b2224513321a84f5bd760ad391a8bc5b5a20cd433ca",
-      "baselineTreeSHA256": "ac2b207cdf794ac3438a200f7bdc4e161e134c3c57ab4e84c4965925f8487e97",
-      "tree": {
-        "kind": "math",
-        "text": null,
-        "attributes": {
-          "display": "block"
-        },
-        "children": [
-          {
-            "kind": "inferredMrow",
-            "text": null,
-            "attributes": {},
-            "children": [
-              {
-                "kind": "mtext",
-                "text": null,
-                "attributes": {},
-                "children": [
-                  {
-                    "kind": "text",
-                    "text": "x\u2019",
-                    "attributes": {},
-                    "children": [],
-                    "properties": {}
-                  }
-                ],
-                "properties": {}
-              }
-            ],
-            "properties": {}
-          }
-        ],
-        "properties": {}
-      }
-    },
     "operator-literal-inline": {
-      "tex": "\\operatorname{x\u2019}",
+      "tex": "\\operatorname{x’}",
       "display": false,
       "svgSHA256": "79e7f3bd2c5c355b8727e4245e9f096e005df483e24e215fb2dbe0d0d47d483e",
       "baselineTreeSHA256": "fa339cc5579e0a2ed5808e582ea4ed4a0b3924dbd930112aa0ac4f14100fb17b",
@@ -128,7 +52,7 @@
                         "children": [
                           {
                             "kind": "text",
-                            "text": "\u2019",
+                            "text": "’",
                             "attributes": {},
                             "children": [],
                             "properties": {}
@@ -156,7 +80,7 @@
       }
     },
     "operator-literal-display": {
-      "tex": "\\operatorname{x\u2019}",
+      "tex": "\\operatorname{x’}",
       "display": true,
       "svgSHA256": "79e7f3bd2c5c355b8727e4245e9f096e005df483e24e215fb2dbe0d0d47d483e",
       "baselineTreeSHA256": "4cdedf2f81380e44120484e535a498298b548fb369d5cb2d3312ba3454c3859e",
@@ -208,7 +132,7 @@
                         "children": [
                           {
                             "kind": "text",
-                            "text": "\u2019",
+                            "text": "’",
                             "attributes": {},
                             "children": [],
                             "properties": {}
@@ -236,7 +160,7 @@
       }
     },
     "left-quote-inline": {
-      "tex": "x\u2018",
+      "tex": "x‘",
       "display": false,
       "svgSHA256": "1c159c019b036278fcce09efdbe3a941f532c551810a61a71881d4c389536ea8",
       "baselineTreeSHA256": "482b664cdf1702abb99ae834786aafaf82edb771fb9185a3109ccf4cfd547ffc",
@@ -272,7 +196,7 @@
                 "children": [
                   {
                     "kind": "text",
-                    "text": "\u2018",
+                    "text": "‘",
                     "attributes": {},
                     "children": [],
                     "properties": {}
@@ -290,7 +214,7 @@
       }
     },
     "left-quote-display": {
-      "tex": "x\u2018",
+      "tex": "x‘",
       "display": true,
       "svgSHA256": "1c159c019b036278fcce09efdbe3a941f532c551810a61a71881d4c389536ea8",
       "baselineTreeSHA256": "7760df93bc539c093c0d79593ecf194344012af5a66c36855fd56ab9cba457de",
@@ -328,7 +252,7 @@
                 "children": [
                   {
                     "kind": "text",
-                    "text": "\u2018",
+                    "text": "‘",
                     "attributes": {},
                     "children": [],
                     "properties": {}
@@ -346,7 +270,7 @@
       }
     },
     "literal-single-inline": {
-      "tex": "x\u2032",
+      "tex": "x′",
       "display": false,
       "svgSHA256": "0653cfd5424474e2721d87114f5ee51958ef028f5ccb516866382be1b1611ec5",
       "baselineTreeSHA256": "149c345541579b0139e178276bfd3faf159ccca89cf08a1fd13782338abc4f97",
@@ -382,7 +306,7 @@
                 "children": [
                   {
                     "kind": "text",
-                    "text": "\u2032",
+                    "text": "′",
                     "attributes": {},
                     "children": [],
                     "properties": {}
@@ -400,7 +324,7 @@
       }
     },
     "literal-single-display": {
-      "tex": "x\u2032",
+      "tex": "x′",
       "display": true,
       "svgSHA256": "0653cfd5424474e2721d87114f5ee51958ef028f5ccb516866382be1b1611ec5",
       "baselineTreeSHA256": "aa152f0da3bd62764576b14990274307c55e5da4ce2fc7c569eabcbab134c9cb",
@@ -438,7 +362,7 @@
                 "children": [
                   {
                     "kind": "text",
-                    "text": "\u2032",
+                    "text": "′",
                     "attributes": {},
                     "children": [],
                     "properties": {}
@@ -456,7 +380,7 @@
       }
     },
     "literal-double-inline": {
-      "tex": "x\u2033",
+      "tex": "x″",
       "display": false,
       "svgSHA256": "a7fd173a9256ae2d8caa14653f369020427eb1f9affda952f4a3b5c25c1ab9a4",
       "baselineTreeSHA256": "46eed27ff6390bc726d99456f91deb4ecbb161cbf9b94b6032610b2e92086f40",
@@ -492,7 +416,7 @@
                 "children": [
                   {
                     "kind": "text",
-                    "text": "\u2033",
+                    "text": "″",
                     "attributes": {},
                     "children": [],
                     "properties": {}
@@ -510,7 +434,7 @@
       }
     },
     "literal-double-display": {
-      "tex": "x\u2033",
+      "tex": "x″",
       "display": true,
       "svgSHA256": "a7fd173a9256ae2d8caa14653f369020427eb1f9affda952f4a3b5c25c1ab9a4",
       "baselineTreeSHA256": "d0e904b35cad72993b96df1ec7d23ee624134f445893594b8b7e7a2aa19216a5",
@@ -548,7 +472,7 @@
                 "children": [
                   {
                     "kind": "text",
-                    "text": "\u2033",
+                    "text": "″",
                     "attributes": {},
                     "children": [],
                     "properties": {}
@@ -566,7 +490,7 @@
       }
     },
     "unrelated-punctuation-inline": {
-      "tex": "x\u2013y",
+      "tex": "x–y",
       "display": false,
       "svgSHA256": "da145fc081301bd7d1a195f506b8b8fb3875699b4c49ef6663e396535bc62e76",
       "baselineTreeSHA256": "34d52e467bc7bc336491c84c863c5ce8cff60af1a8b4eed21c79e21eed4ae239",
@@ -602,7 +526,7 @@
                 "children": [
                   {
                     "kind": "text",
-                    "text": "\u2013",
+                    "text": "–",
                     "attributes": {},
                     "children": [],
                     "properties": {}
@@ -635,7 +559,7 @@
       }
     },
     "unrelated-punctuation-display": {
-      "tex": "x\u2013y",
+      "tex": "x–y",
       "display": true,
       "svgSHA256": "da145fc081301bd7d1a195f506b8b8fb3875699b4c49ef6663e396535bc62e76",
       "baselineTreeSHA256": "e84d7ef5d6b2b5bfdd8b53e5fba4b51df2be9ffcbfef76c7374836a894db1d06",
@@ -673,7 +597,7 @@
                 "children": [
                   {
                     "kind": "text",
-                    "text": "\u2013",
+                    "text": "–",
                     "attributes": {},
                     "children": [],
                     "properties": {}
@@ -715,7 +639,7 @@
           1
         ],
         "primaryValue": false,
-        "primaryText": "\u2032"
+        "primaryText": "′"
       }
     ],
     "unicode-1-display": [
@@ -726,7 +650,7 @@
           1
         ],
         "primaryValue": false,
-        "primaryText": "\u2032"
+        "primaryText": "′"
       }
     ],
     "unicode-2-inline": [
@@ -737,7 +661,7 @@
           1
         ],
         "primaryValue": false,
-        "primaryText": "\u2033"
+        "primaryText": "″"
       }
     ],
     "unicode-2-display": [
@@ -748,7 +672,7 @@
           1
         ],
         "primaryValue": false,
-        "primaryText": "\u2033"
+        "primaryText": "″"
       }
     ],
     "unicode-3-inline": [
@@ -759,7 +683,7 @@
           1
         ],
         "primaryValue": false,
-        "primaryText": "\u2034"
+        "primaryText": "‴"
       }
     ],
     "unicode-3-display": [
@@ -770,7 +694,7 @@
           1
         ],
         "primaryValue": false,
-        "primaryText": "\u2034"
+        "primaryText": "‴"
       }
     ],
     "unicode-4-inline": [
@@ -781,7 +705,7 @@
           1
         ],
         "primaryValue": false,
-        "primaryText": "\u2057"
+        "primaryText": "⁗"
       }
     ],
     "unicode-4-display": [
@@ -792,7 +716,7 @@
           1
         ],
         "primaryValue": false,
-        "primaryText": "\u2057"
+        "primaryText": "⁗"
       }
     ],
     "unicode-5-inline": [
@@ -803,7 +727,7 @@
           1
         ],
         "primaryValue": false,
-        "primaryText": "\u2032\u2032\u2032\u2032\u2032"
+        "primaryText": "′′′′′"
       }
     ],
     "unicode-5-display": [
@@ -814,7 +738,7 @@
           1
         ],
         "primaryValue": false,
-        "primaryText": "\u2032\u2032\u2032\u2032\u2032"
+        "primaryText": "′′′′′"
       }
     ],
     "mixed-ascii-first-inline": [
@@ -825,7 +749,7 @@
           1
         ],
         "primaryValue": false,
-        "primaryText": "\u2033"
+        "primaryText": "″"
       }
     ],
     "mixed-ascii-first-display": [
@@ -836,7 +760,7 @@
           1
         ],
         "primaryValue": false,
-        "primaryText": "\u2033"
+        "primaryText": "″"
       }
     ],
     "mixed-unicode-first-inline": [
@@ -847,7 +771,7 @@
           1
         ],
         "primaryValue": false,
-        "primaryText": "\u2033"
+        "primaryText": "″"
       }
     ],
     "mixed-unicode-first-display": [
@@ -858,7 +782,7 @@
           1
         ],
         "primaryValue": false,
-        "primaryText": "\u2033"
+        "primaryText": "″"
       }
     ],
     "mixed-three-inline": [
@@ -869,7 +793,7 @@
           1
         ],
         "primaryValue": false,
-        "primaryText": "\u2034"
+        "primaryText": "‴"
       }
     ],
     "mixed-three-display": [
@@ -880,7 +804,7 @@
           1
         ],
         "primaryValue": false,
-        "primaryText": "\u2034"
+        "primaryText": "‴"
       }
     ],
     "mixed-four-inline": [
@@ -891,7 +815,7 @@
           1
         ],
         "primaryValue": false,
-        "primaryText": "\u2057"
+        "primaryText": "⁗"
       }
     ],
     "mixed-four-display": [
@@ -902,7 +826,7 @@
           1
         ],
         "primaryValue": false,
-        "primaryText": "\u2057"
+        "primaryText": "⁗"
       }
     ],
     "mixed-five-inline": [
@@ -913,7 +837,7 @@
           1
         ],
         "primaryValue": false,
-        "primaryText": "\u2032\u2032\u2032\u2032\u2032"
+        "primaryText": "′′′′′"
       }
     ],
     "mixed-five-display": [
@@ -924,7 +848,7 @@
           1
         ],
         "primaryValue": false,
-        "primaryText": "\u2032\u2032\u2032\u2032\u2032"
+        "primaryText": "′′′′′"
       }
     ],
     "following-ascii-inline": [
@@ -935,7 +859,7 @@
           1
         ],
         "primaryValue": false,
-        "primaryText": "\u2032"
+        "primaryText": "′"
       }
     ],
     "following-ascii-display": [
@@ -946,7 +870,7 @@
           1
         ],
         "primaryValue": false,
-        "primaryText": "\u2032"
+        "primaryText": "′"
       }
     ],
     "following-multibyte-inline": [
@@ -957,7 +881,7 @@
           1
         ],
         "primaryValue": false,
-        "primaryText": "\u2032"
+        "primaryText": "′"
       }
     ],
     "following-multibyte-display": [
@@ -968,7 +892,7 @@
           1
         ],
         "primaryValue": false,
-        "primaryText": "\u2032"
+        "primaryText": "′"
       }
     ],
     "bare-inline": [
@@ -979,7 +903,7 @@
           1
         ],
         "primaryValue": false,
-        "primaryText": "\u2032"
+        "primaryText": "′"
       }
     ],
     "bare-display": [
@@ -990,7 +914,7 @@
           1
         ],
         "primaryValue": false,
-        "primaryText": "\u2032"
+        "primaryText": "′"
       }
     ],
     "bare-sup-inline": [
@@ -1002,7 +926,7 @@
           0
         ],
         "primaryValue": true,
-        "primaryText": "\u2032"
+        "primaryText": "′"
       }
     ],
     "bare-sup-display": [
@@ -1014,7 +938,7 @@
           0
         ],
         "primaryValue": true,
-        "primaryText": "\u2032"
+        "primaryText": "′"
       }
     ],
     "group-base-inline": [
@@ -1026,7 +950,7 @@
           0
         ],
         "primaryValue": true,
-        "primaryText": "\u2032"
+        "primaryText": "′"
       }
     ],
     "group-base-display": [
@@ -1038,7 +962,7 @@
           0
         ],
         "primaryValue": true,
-        "primaryText": "\u2032"
+        "primaryText": "′"
       }
     ],
     "group-prime-inline": [
@@ -1052,7 +976,7 @@
           1
         ],
         "primaryValue": false,
-        "primaryText": "\u2032"
+        "primaryText": "′"
       }
     ],
     "group-prime-display": [
@@ -1066,7 +990,7 @@
           1
         ],
         "primaryValue": false,
-        "primaryText": "\u2032"
+        "primaryText": "′"
       }
     ],
     "unicode-sup-inline": [
@@ -1078,7 +1002,7 @@
           0
         ],
         "primaryValue": true,
-        "primaryText": "\u2032"
+        "primaryText": "′"
       }
     ],
     "unicode-sup-display": [
@@ -1090,7 +1014,7 @@
           0
         ],
         "primaryValue": true,
-        "primaryText": "\u2032"
+        "primaryText": "′"
       }
     ],
     "unicode-sub-inline": [
@@ -1101,7 +1025,7 @@
           2
         ],
         "primaryValue": false,
-        "primaryText": "\u2032"
+        "primaryText": "′"
       }
     ],
     "unicode-sub-display": [
@@ -1112,7 +1036,7 @@
           2
         ],
         "primaryValue": false,
-        "primaryText": "\u2032"
+        "primaryText": "′"
       }
     ],
     "sup-sub-inline": [
@@ -1124,7 +1048,7 @@
           0
         ],
         "primaryValue": true,
-        "primaryText": "\u2032"
+        "primaryText": "′"
       }
     ],
     "sup-sub-display": [
@@ -1136,7 +1060,7 @@
           0
         ],
         "primaryValue": true,
-        "primaryText": "\u2032"
+        "primaryText": "′"
       }
     ],
     "base-sub-inline": [
@@ -1148,7 +1072,7 @@
           0
         ],
         "primaryValue": true,
-        "primaryText": "\u2032"
+        "primaryText": "′"
       }
     ],
     "base-sub-display": [
@@ -1160,7 +1084,7 @@
           0
         ],
         "primaryValue": true,
-        "primaryText": "\u2032"
+        "primaryText": "′"
       }
     ],
     "mixed-sup-inline": [
@@ -1172,7 +1096,7 @@
           0
         ],
         "primaryValue": true,
-        "primaryText": "\u2033"
+        "primaryText": "″"
       }
     ],
     "mixed-sup-display": [
@@ -1184,7 +1108,7 @@
           0
         ],
         "primaryValue": true,
-        "primaryText": "\u2033"
+        "primaryText": "″"
       }
     ],
     "mixed-sub-inline": [
@@ -1195,7 +1119,7 @@
           2
         ],
         "primaryValue": false,
-        "primaryText": "\u2033"
+        "primaryText": "″"
       }
     ],
     "mixed-sub-display": [
@@ -1206,7 +1130,7 @@
           2
         ],
         "primaryValue": false,
-        "primaryText": "\u2033"
+        "primaryText": "″"
       }
     ],
     "sup-group-inline": [
@@ -1218,7 +1142,7 @@
           0
         ],
         "primaryValue": true,
-        "primaryText": "\u2032"
+        "primaryText": "′"
       }
     ],
     "sup-group-display": [
@@ -1230,7 +1154,7 @@
           0
         ],
         "primaryValue": true,
-        "primaryText": "\u2032"
+        "primaryText": "′"
       }
     ],
     "empty-sup-inline": [
@@ -1242,7 +1166,7 @@
           0
         ],
         "primaryValue": true,
-        "primaryText": "\u2032"
+        "primaryText": "′"
       }
     ],
     "empty-sup-display": [
@@ -1254,7 +1178,7 @@
           0
         ],
         "primaryValue": true,
-        "primaryText": "\u2032"
+        "primaryText": "′"
       }
     ],
     "sum-sup-inline": [
@@ -1266,7 +1190,7 @@
           0
         ],
         "primaryValue": true,
-        "primaryText": "\u2032"
+        "primaryText": "′"
       }
     ],
     "sum-sup-display": [
@@ -1278,7 +1202,7 @@
           0
         ],
         "primaryValue": true,
-        "primaryText": "\u2032"
+        "primaryText": "′"
       }
     ],
     "sum-sub-inline": [
@@ -1289,7 +1213,7 @@
           2
         ],
         "primaryValue": true,
-        "primaryText": "\u2032"
+        "primaryText": "′"
       }
     ],
     "sum-sub-display": [
@@ -1300,7 +1224,7 @@
           2
         ],
         "primaryValue": true,
-        "primaryText": "\u2032"
+        "primaryText": "′"
       }
     ],
     "sum-limits-first-inline": [
@@ -1312,7 +1236,7 @@
           0
         ],
         "primaryValue": true,
-        "primaryText": "\u2032"
+        "primaryText": "′"
       }
     ],
     "sum-limits-first-display": [
@@ -1324,7 +1248,7 @@
           0
         ],
         "primaryValue": true,
-        "primaryText": "\u2032"
+        "primaryText": "′"
       }
     ],
     "sum-no-limits-first-inline": [
@@ -1336,7 +1260,7 @@
           0
         ],
         "primaryValue": true,
-        "primaryText": "\u2032"
+        "primaryText": "′"
       }
     ],
     "sum-no-limits-first-display": [
@@ -1348,7 +1272,7 @@
           0
         ],
         "primaryValue": true,
-        "primaryText": "\u2032"
+        "primaryText": "′"
       }
     ],
     "sum-consumed-limits-inline": [
@@ -1359,7 +1283,7 @@
           2
         ],
         "primaryValue": true,
-        "primaryText": "\u2032"
+        "primaryText": "′"
       }
     ],
     "sum-consumed-limits-display": [
@@ -1370,7 +1294,7 @@
           2
         ],
         "primaryValue": true,
-        "primaryText": "\u2032"
+        "primaryText": "′"
       }
     ],
     "overset-sup-inline": [
@@ -1382,7 +1306,7 @@
           0
         ],
         "primaryValue": true,
-        "primaryText": "\u2032"
+        "primaryText": "′"
       }
     ],
     "overset-sup-display": [
@@ -1394,7 +1318,7 @@
           0
         ],
         "primaryValue": true,
-        "primaryText": "\u2032"
+        "primaryText": "′"
       }
     ],
     "overset-sub-inline": [
@@ -1405,7 +1329,7 @@
           2
         ],
         "primaryValue": false,
-        "primaryText": "\u2032"
+        "primaryText": "′"
       }
     ],
     "overset-sub-display": [
@@ -1416,7 +1340,7 @@
           2
         ],
         "primaryValue": false,
-        "primaryText": "\u2032"
+        "primaryText": "′"
       }
     ],
     "underset-sup-inline": [
@@ -1428,7 +1352,7 @@
           0
         ],
         "primaryValue": true,
-        "primaryText": "\u2032"
+        "primaryText": "′"
       }
     ],
     "underset-sup-display": [
@@ -1440,7 +1364,7 @@
           0
         ],
         "primaryValue": true,
-        "primaryText": "\u2032"
+        "primaryText": "′"
       }
     ],
     "font-base-inline": [
@@ -1452,7 +1376,7 @@
           0
         ],
         "primaryValue": true,
-        "primaryText": "\u2032"
+        "primaryText": "′"
       }
     ],
     "font-base-display": [
@@ -1464,7 +1388,7 @@
           0
         ],
         "primaryValue": true,
-        "primaryText": "\u2032"
+        "primaryText": "′"
       }
     ],
     "font-scope-inline": [
@@ -1478,7 +1402,7 @@
           0
         ],
         "primaryValue": true,
-        "primaryText": "\u2032"
+        "primaryText": "′"
       }
     ],
     "font-scope-display": [
@@ -1492,7 +1416,7 @@
           0
         ],
         "primaryValue": true,
-        "primaryText": "\u2032"
+        "primaryText": "′"
       }
     ],
     "font-pending-inline": [
@@ -1504,7 +1428,7 @@
           0
         ],
         "primaryValue": true,
-        "primaryText": "\u2032"
+        "primaryText": "′"
       }
     ],
     "font-pending-display": [
@@ -1516,7 +1440,7 @@
           0
         ],
         "primaryValue": true,
-        "primaryText": "\u2032"
+        "primaryText": "′"
       }
     ],
     "nested-sub-inline": [
@@ -1531,7 +1455,7 @@
           0
         ],
         "primaryValue": true,
-        "primaryText": "\u2032"
+        "primaryText": "′"
       }
     ],
     "nested-sub-display": [
@@ -1546,7 +1470,7 @@
           0
         ],
         "primaryValue": true,
-        "primaryText": "\u2032"
+        "primaryText": "′"
       }
     ],
     "nested-sup-inline": [
@@ -1561,7 +1485,7 @@
           0
         ],
         "primaryValue": true,
-        "primaryText": "\u2032"
+        "primaryText": "′"
       }
     ],
     "nested-sup-display": [
@@ -1576,7 +1500,7 @@
           0
         ],
         "primaryValue": true,
-        "primaryText": "\u2032"
+        "primaryText": "′"
       }
     ],
     "space-run-inline": [
@@ -1588,7 +1512,7 @@
           0
         ],
         "primaryValue": true,
-        "primaryText": "\u2034"
+        "primaryText": "‴"
       }
     ],
     "space-run-display": [
@@ -1600,7 +1524,7 @@
           0
         ],
         "primaryValue": true,
-        "primaryText": "\u2034"
+        "primaryText": "‴"
       }
     ],
     "tab-run-inline": [
@@ -1612,7 +1536,7 @@
           0
         ],
         "primaryValue": true,
-        "primaryText": "\u2034"
+        "primaryText": "‴"
       }
     ],
     "tab-run-display": [
@@ -1624,7 +1548,7 @@
           0
         ],
         "primaryValue": true,
-        "primaryText": "\u2034"
+        "primaryText": "‴"
       }
     ],
     "nbsp-run-inline": [
@@ -1636,7 +1560,7 @@
           0
         ],
         "primaryValue": true,
-        "primaryText": "\u2034"
+        "primaryText": "‴"
       }
     ],
     "nbsp-run-display": [
@@ -1648,7 +1572,7 @@
           0
         ],
         "primaryValue": true,
-        "primaryText": "\u2034"
+        "primaryText": "‴"
       }
     ],
     "comment-script-inline": [
@@ -1660,7 +1584,7 @@
           0
         ],
         "primaryValue": true,
-        "primaryText": "\u2032"
+        "primaryText": "′"
       }
     ],
     "comment-script-display": [
@@ -1672,7 +1596,7 @@
           0
         ],
         "primaryValue": true,
-        "primaryText": "\u2032"
+        "primaryText": "′"
       }
     ],
     "ordinary-then-sup-inline": [
@@ -1683,7 +1607,7 @@
           1
         ],
         "primaryValue": false,
-        "primaryText": "\u2032"
+        "primaryText": "′"
       }
     ],
     "ordinary-then-sup-display": [
@@ -1694,7 +1618,7 @@
           1
         ],
         "primaryValue": false,
-        "primaryText": "\u2032"
+        "primaryText": "′"
       }
     ],
     "ascii-control-inline": [
@@ -1706,7 +1630,7 @@
           0
         ],
         "primaryValue": true,
-        "primaryText": "\u2032"
+        "primaryText": "′"
       }
     ],
     "ascii-control-display": [
@@ -1718,7 +1642,7 @@
           0
         ],
         "primaryValue": true,
-        "primaryText": "\u2032"
+        "primaryText": "′"
       }
     ]
   }
