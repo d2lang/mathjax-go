@@ -349,3 +349,15 @@ zero-width/inline behavior and the private math alignment policy have focused
 controls; existing table layout consumers are unchanged. The fixture notes in
 `testdata/responsive_minwidth_README.md` distinguish complete primary outputs
 from unchanged accepted controls and unresolved equation/table composites.
+
+Raw math `~` follows the pinned `Tilde` handler: one token-factory `mtext`
+containing a nonbreaking space, without ordinary-character font or stretch
+policy. The 40 public and eight actual-handler reference inputs retain complete
+primary SVGs and ordered explicit/own trees. The two unchanged accent controls
+retain their exact earlier own-class metadata; three exact named prime records
+retain only the recorded missing false `pseudoscript` property. The two escaped
+`\~` controls remain a separate command-dispatch discrepancy, with complete
+accepted output and original primary errors retained. Literal text, actual NBSP,
+relation/accent commands, fonts, vector token creation, scripts and registered
+macro source/cursor state remain separately checked. No primary output is
+regenerated or candidate output used as a new whole-reference expectation.

@@ -364,6 +364,10 @@ var ordinaryNumberPattern = regexp.MustCompile(`^(?:[0-9]+(?:\{,\}[0-9]{3})*(?:\
 
 func (p *parser) parseCharacter() *mml.Node {
 	r := p.consumeRune()
+	// BaseMethods.Tilde uses the token factory without getFontDef or Other.
+	if r == '~' {
+		return token("mtext", "\u00a0")
+	}
 	if unicode.IsLetter(r) {
 		text := string(r)
 		if p.multiLetterFont != "" && isASCIILetter(r) {
