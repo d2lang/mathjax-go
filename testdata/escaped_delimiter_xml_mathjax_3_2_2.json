@@ -1,0 +1,32 @@
+{
+  "mathjaxGitCommit": "ad8f5c21cb810236551da8c6512ba733e67357ee",
+  "primaryAssets": {
+    "mathjax.js": "cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869",
+    "polyfills.js": "7fe1d048c78b0e09854c1259f7413868a51cc8f0c822489eb1ac36ae6c85ce01",
+    "setup.js": "a52cb0bbabfbd7796b9fedd793b9386c474e3123e788ee151cbe47ca1fa6e881"
+  },
+  "cases": [
+    {
+      "name": "not_remap-U003C-inline",
+      "tex": "\\<",
+      "display": false,
+      "qualification": "XML-safe Go error; not a whole-primary-SVG reference",
+      "primarySVG": "<svg style=\"vertical-align: -0.452ex;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"39.367ex\" height=\"2.149ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -750 17400 950\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"merror\" data-mjx-error=\"Undefined control sequence \\<\"><rect data-background=\"true\" width=\"17400\" height=\"950\" y=\"-200\"></rect><g data-mml-node=\"mtext\" style=\"font-family: serif;\"><text data-variant=\"-explicitFont\" transform=\"scale(1,-1)\" font-size=\"884px\">Undefined control sequence \\&lt;</text></g></g></g></g></svg>",
+      "primaryRecordSHA256": "083ea1aa88d07e06c43308576ad5d98405eb931f6819f13e345c26b04bab998c",
+      "primaryErrorID": "UndefinedControlSequence",
+      "expectedMessage": "Undefined control sequence \\<",
+      "expectedText": "Undefined control sequence \\<"
+    },
+    {
+      "name": "not_remap-U003C-display",
+      "tex": "\\<",
+      "display": true,
+      "qualification": "XML-safe Go error; not a whole-primary-SVG reference",
+      "primarySVG": "<svg style=\"vertical-align: -0.452ex;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"39.367ex\" height=\"2.149ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -750 17400 950\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"merror\" data-mjx-error=\"Undefined control sequence \\<\"><rect data-background=\"true\" width=\"17400\" height=\"950\" y=\"-200\"></rect><g data-mml-node=\"mtext\" style=\"font-family: serif;\"><text data-variant=\"-explicitFont\" transform=\"scale(1,-1)\" font-size=\"884px\">Undefined control sequence \\&lt;</text></g></g></g></g></svg>",
+      "primaryRecordSHA256": "fafc272b9514ce632c18066719dfca6bf88f8e99095de951c0c1cdbda33c20ca",
+      "primaryErrorID": "UndefinedControlSequence",
+      "expectedMessage": "Undefined control sequence \\<",
+      "expectedText": "Undefined control sequence \\<"
+    }
+  ]
+}
