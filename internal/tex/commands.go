@@ -211,7 +211,7 @@ func (p *parser) command(name string) ([]*mml.Node, error) {
 
 	case "text", "textnormal":
 		return p.hboxCommand(name, "", false)
-	case "textrm":
+	case "textrm", "textup":
 		return p.hboxCommand(name, "normal", false)
 	case "mbox", "hbox":
 		return p.hboxCommand(name, "", true)

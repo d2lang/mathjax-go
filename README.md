@@ -85,10 +85,11 @@ shared macro/tag configuration. Literal chunks preserve internal whitespace
 and tilde; only the source's four literal escapes and edge whitespace rules
 apply. `hbox` and `mbox` retain their level-zero wrapper, including empty input.
 
-`TestInternalTextPinnedReferences` checks70 complete unmodified-primary SVGs
-and explicit/own-property trees, plus20 unchanged shared-caller controls.
-FBox/colorbox embedded math, AMS tag text, the extra `textsl` alias and missing
-`textup` dispatch remain separately recorded boundaries. The28 actual-method
+`TestInternalTextPinnedReferences` checks72 complete unmodified-primary SVGs
+and explicit/own-property trees, plus18 unchanged shared-caller controls.
+`textup` uses the same normal-font HBox mapping as `textrm`. FBox/colorbox
+embedded math, AMS tag text and the extra `textsl` alias remain separately
+recorded boundaries. The28 actual-method
 references also bind delimiter errors, cardinality, child ownership, font and
 macro-counter isolation. Two private pre-postfilter script nodes retain the
 existing Go `msub` versus primary two-child `msubsup` representation; public
