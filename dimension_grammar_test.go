@@ -68,10 +68,10 @@ func TestDimensionGrammarPinnedReferences(t *testing.T) {
 	}
 	read("testdata/dimension_grammar_mathjax_3_2_2.json", &f)
 	read("testdata/dimension_grammar_boundaries.json", &boundaries)
-	if f.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || len(f.Cases) != 60 || boundaries.Baseline != "6a3573f7f15fc67b5abde6fdf8b548e89d6c7e48" || len(boundaries.Cases) != 8 {
+	if f.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || len(f.Cases) != 60 || boundaries.Baseline != "6a3573f7f15fc67b5abde6fdf8b548e89d6c7e48" || len(boundaries.Cases) != 6 {
 		t.Fatal("unbound dimension corpus")
 	}
-	stems := map[string]bool{"second-above-valid-boundary": true, "rule-unchanged-boundary": true, "vspace-dispatch-boundary": true, "raisebox-dispatch-boundary": true}
+	stems := map[string]bool{"rule-unchanged-boundary": true, "vspace-dispatch-boundary": true, "raisebox-dispatch-boundary": true}
 	for name := range boundaries.Cases {
 		stem := strings.TrimSuffix(strings.TrimSuffix(name, "-inline"), "-display")
 		if !stems[stem] {

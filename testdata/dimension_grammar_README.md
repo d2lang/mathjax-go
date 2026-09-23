@@ -11,16 +11,18 @@ or comma, all nine units, local ECMAScript whitespace, a complete braced value
 or an unbraced prefix with at most one following ASCII space. It preserves
 D077's mu conversion. `above` now reads the dimension before its existing
 fraction construction, and spreadlines uses the invoking `begin` error label.
-Repeated valid infix-fraction rejection remains D070; macro priority is separate.
+D070 now rejects repeated valid infix fractions; registered macro priority is
+covered separately.
 The generic argument reader and global whitespace scanner are unchanged.
 
-The 60 public cases have 52 raw-primary SVGs and 50 raw-primary complete
+The 60 public cases have 54 raw-primary SVGs and 52 raw-primary complete
 explicit/own trees. The two `raise-valid-boundary` cases have primary SVGs and
 only the inherited `voffset` spelling `1.5pt` versus primary `+1.5pt`; the test
 binds that exact attribute on the exact primary tree and compares every other
-field. Eight unchanged cases retain complete accepted-parent SVG/tree receipts:
-valid repeated `above`, the independent `rule` handler, and unsupported
-`vspace`/`raisebox` dispatch, each in both modes. The latter two aliases keep the
+field. Six unchanged cases retain complete accepted-parent SVG/tree receipts:
+the independent `rule` handler and unsupported `vspace`/`raisebox` dispatch,
+each in both modes. The two repeated `above` cases use their unchanged primary
+references after the D070 row-scope correction. The latter two aliases keep the
 unchanged legacy reader temporarily; they are not claimed primary-equivalent.
 Twelve extra public controls bind valid/malformed aliases unchanged and four
 supported malformed arguments to complete primary errors.

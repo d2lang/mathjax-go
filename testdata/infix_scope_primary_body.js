@@ -1,0 +1,9 @@
+(()=>{
+ const r=request.registration;const methods=MathJax._.input.tex.base.BaseMethods.default;
+ if(r){const {Macro}=MathJax._.input.tex.Symbol;html.inputJax[0].configuration.handlers.retrieve('ams-declare-ops').add(r.name,new Macro(r.name,methods.Macro,[r.body,r.arguments]));}
+ const pairs=o=>Object.keys(o).map(name=>({name,value:o[name]}));
+ const full=n=>({kind:n.kind,text:n.kind==='text'?n.getText():null,attributes:n.attributes?{explicit:pairs(n.attributes.getAllAttributes()),inherited:pairs(n.attributes.getAllInherited()),defaults:pairs(n.attributes.getAllDefaults()),global:pairs(n.attributes.getAllGlobals())}:{explicit:[],inherited:[],defaults:[],global:[]},properties:pairs(n.getAllProperties()),children:n.childNodes.map(full)});
+ let formattedError=null;const formatError=html.inputJax[0].formatError;html.inputJax[0].formatError=function(e){formattedError={id:e.id,message:e.message};return formatError.call(this,e)};const parse=MathJax._.input.tex.TexParser.default.prototype.parse;let parserError=null;MathJax._.input.tex.TexParser.default.prototype.parse=function(type,args){try{return parse.call(this,type,args)}catch(e){parserError={id:e.id||null,message:e.message||String(e),source:this.string,cursorUTF16:this.i,remaining:this.string.slice(this.i)};throw e}};let tree;const original=html.outputJax.typeset;html.outputJax.typeset=function(math,doc){tree=full(math.root);return original.call(this,math,doc)};
+ let svg=null,error=null;try{svg=adaptor.innerHTML(html.convert(request.tex,{display:request.display,em:16,ex:8}));}catch(e){error={id:e.id||null,message:e.message||String(e),type:e.constructor?.name||null};}
+ return{tree,svg,error,formattedError,parserError,trace:globalThis.d070Trace||null};
+})()

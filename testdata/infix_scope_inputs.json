@@ -1,0 +1,640 @@
+{
+  "cases": [
+    {
+      "name": "choose-repeat-inline",
+      "tex": "x\\choose y\\choose z",
+      "display": false
+    },
+    {
+      "name": "choose-repeat-display",
+      "tex": "x\\choose y\\choose z",
+      "display": true
+    },
+    {
+      "name": "over-repeat-inline",
+      "tex": "x\\over y\\over z",
+      "display": false
+    },
+    {
+      "name": "over-repeat-display",
+      "tex": "x\\over y\\over z",
+      "display": true
+    },
+    {
+      "name": "atop-repeat-inline",
+      "tex": "x\\atop y\\atop z",
+      "display": false
+    },
+    {
+      "name": "atop-repeat-display",
+      "tex": "x\\atop y\\atop z",
+      "display": true
+    },
+    {
+      "name": "above-repeat-inline",
+      "tex": "x\\above 1pt y\\above 2pt z",
+      "display": false
+    },
+    {
+      "name": "above-repeat-display",
+      "tex": "x\\above 1pt y\\above 2pt z",
+      "display": true
+    },
+    {
+      "name": "brace-repeat-inline",
+      "tex": "x\\brace y\\brace z",
+      "display": false
+    },
+    {
+      "name": "brace-repeat-display",
+      "tex": "x\\brace y\\brace z",
+      "display": true
+    },
+    {
+      "name": "brack-repeat-inline",
+      "tex": "x\\brack y\\brack z",
+      "display": false
+    },
+    {
+      "name": "brack-repeat-display",
+      "tex": "x\\brack y\\brack z",
+      "display": true
+    },
+    {
+      "name": "incoming-over-inline",
+      "tex": "x\\choose y\\over z",
+      "display": false
+    },
+    {
+      "name": "incoming-over-display",
+      "tex": "x\\choose y\\over z",
+      "display": true
+    },
+    {
+      "name": "incoming-choose-inline",
+      "tex": "x\\over y\\choose z",
+      "display": false
+    },
+    {
+      "name": "incoming-choose-display",
+      "tex": "x\\over y\\choose z",
+      "display": true
+    },
+    {
+      "name": "incoming-above-inline",
+      "tex": "x\\choose y\\above 1pt z",
+      "display": false
+    },
+    {
+      "name": "incoming-above-display",
+      "tex": "x\\choose y\\above 1pt z",
+      "display": true
+    },
+    {
+      "name": "display-continuation-inline",
+      "tex": "x\\choose\\displaystyle y\\choose z",
+      "display": false
+    },
+    {
+      "name": "display-continuation-display",
+      "tex": "x\\choose\\displaystyle y\\choose z",
+      "display": true
+    },
+    {
+      "name": "size-continuation-inline",
+      "tex": "x\\choose\\large y\\choose z",
+      "display": false
+    },
+    {
+      "name": "size-continuation-display",
+      "tex": "x\\choose\\large y\\choose z",
+      "display": true
+    },
+    {
+      "name": "font-continuation-inline",
+      "tex": "x\\choose\\rm y\\choose z",
+      "display": false
+    },
+    {
+      "name": "font-continuation-display",
+      "tex": "x\\choose\\rm y\\choose z",
+      "display": true
+    },
+    {
+      "name": "color-continuation-inline",
+      "tex": "x\\choose\\color{red}y\\choose z",
+      "display": false
+    },
+    {
+      "name": "color-continuation-display",
+      "tex": "x\\choose\\color{red}y\\choose z",
+      "display": true
+    },
+    {
+      "name": "macro-introduced-inline",
+      "tex": "\\newcommand{\\pick}{\\choose}x\\pick y\\pick z",
+      "display": false
+    },
+    {
+      "name": "macro-introduced-display",
+      "tex": "\\newcommand{\\pick}{\\choose}x\\pick y\\pick z",
+      "display": true
+    },
+    {
+      "name": "nested-numerator-inline",
+      "tex": "{x\\choose y}\\choose z",
+      "display": false
+    },
+    {
+      "name": "nested-numerator-display",
+      "tex": "{x\\choose y}\\choose z",
+      "display": true
+    },
+    {
+      "name": "nested-denominator-inline",
+      "tex": "x\\choose{y\\choose z}",
+      "display": false
+    },
+    {
+      "name": "nested-denominator-display",
+      "tex": "x\\choose{y\\choose z}",
+      "display": true
+    },
+    {
+      "name": "nested-left-inline",
+      "tex": "x\\choose\\left(y\\choose z\\right)",
+      "display": false
+    },
+    {
+      "name": "nested-left-display",
+      "tex": "x\\choose\\left(y\\choose z\\right)",
+      "display": true
+    },
+    {
+      "name": "neighbor-groups-inline",
+      "tex": "{x\\choose y}+{a\\choose b}",
+      "display": false
+    },
+    {
+      "name": "neighbor-groups-display",
+      "tex": "{x\\choose y}+{a\\choose b}",
+      "display": true
+    },
+    {
+      "name": "separate-args-inline",
+      "tex": "\\frac{x\\choose y}{a\\choose b}",
+      "display": false
+    },
+    {
+      "name": "separate-args-display",
+      "tex": "\\frac{x\\choose y}{a\\choose b}",
+      "display": true
+    },
+    {
+      "name": "nested-script-inline",
+      "tex": "x^{y\\choose z}",
+      "display": false
+    },
+    {
+      "name": "nested-script-display",
+      "tex": "x^{y\\choose z}",
+      "display": true
+    },
+    {
+      "name": "single-choose-inline",
+      "tex": "x\\choose y",
+      "display": false
+    },
+    {
+      "name": "single-choose-display",
+      "tex": "x\\choose y",
+      "display": true
+    },
+    {
+      "name": "single-over-inline",
+      "tex": "x\\over y",
+      "display": false
+    },
+    {
+      "name": "single-over-display",
+      "tex": "x\\over y",
+      "display": true
+    },
+    {
+      "name": "single-above-inline",
+      "tex": "x\\above 1pt y",
+      "display": false
+    },
+    {
+      "name": "single-above-display",
+      "tex": "x\\above 1pt y",
+      "display": true
+    },
+    {
+      "name": "literal-text-inline",
+      "tex": "\\text{\\choose}\\choose z",
+      "display": false
+    },
+    {
+      "name": "literal-text-display",
+      "tex": "\\text{\\choose}\\choose z",
+      "display": true
+    },
+    {
+      "name": "malformed-incoming-above-inline",
+      "tex": "x\\choose y\\above bad z",
+      "display": false
+    },
+    {
+      "name": "malformed-incoming-above-display",
+      "tex": "x\\choose y\\above bad z",
+      "display": true
+    },
+    {
+      "name": "missing-incoming-above-inline",
+      "tex": "x\\choose y\\above",
+      "display": false
+    },
+    {
+      "name": "missing-incoming-above-display",
+      "tex": "x\\choose y\\above",
+      "display": true
+    },
+    {
+      "name": "earlier-undefined-inline",
+      "tex": "x\\choose\\undefined y\\choose z",
+      "display": false
+    },
+    {
+      "name": "earlier-undefined-display",
+      "tex": "x\\choose\\undefined y\\choose z",
+      "display": true
+    },
+    {
+      "name": "unclosed-nested-inline",
+      "tex": "x\\choose{y\\choose z",
+      "display": false
+    },
+    {
+      "name": "unclosed-nested-display",
+      "tex": "x\\choose{y\\choose z",
+      "display": true
+    },
+    {
+      "name": "unsupported-delims-inline",
+      "tex": "x\\overwithdelims()y",
+      "display": false
+    },
+    {
+      "name": "unsupported-delims-display",
+      "tex": "x\\overwithdelims()y",
+      "display": true
+    },
+    {
+      "name": "registered-choose-boundary-inline",
+      "tex": "\\renewcommand{\\choose}{+}x\\choose y\\choose z",
+      "display": false
+    },
+    {
+      "name": "registered-choose-boundary-display",
+      "tex": "\\renewcommand{\\choose}{+}x\\choose y\\choose z",
+      "display": true
+    },
+    {
+      "name": "registered-alias-inline",
+      "tex": "x\\pick y\\pick z",
+      "display": false,
+      "scope": "registered actual macro",
+      "registration": {
+        "name": "pick",
+        "body": "\\choose",
+        "arguments": 0
+      }
+    },
+    {
+      "name": "registered-alias-display",
+      "tex": "x\\pick y\\pick z",
+      "display": true,
+      "scope": "registered actual macro",
+      "registration": {
+        "name": "pick",
+        "body": "\\choose",
+        "arguments": 0
+      }
+    },
+    {
+      "name": "registered-replacement-inline",
+      "tex": "x\\choose y\\choose z",
+      "display": false,
+      "scope": "registered actual macro",
+      "registration": {
+        "name": "choose",
+        "body": "+",
+        "arguments": 0
+      }
+    },
+    {
+      "name": "registered-replacement-display",
+      "tex": "x\\choose y\\choose z",
+      "display": true,
+      "scope": "registered actual macro",
+      "registration": {
+        "name": "choose",
+        "body": "+",
+        "arguments": 0
+      }
+    },
+    {
+      "name": "registered-group-inline",
+      "tex": "x\\pick{y\\choose z}",
+      "display": false,
+      "scope": "registered actual macro",
+      "registration": {
+        "name": "pick",
+        "body": "\\choose{#1}",
+        "arguments": 1
+      }
+    },
+    {
+      "name": "registered-group-display",
+      "tex": "x\\pick{y\\choose z}",
+      "display": true,
+      "scope": "registered actual macro",
+      "registration": {
+        "name": "pick",
+        "body": "\\choose{#1}",
+        "arguments": 1
+      }
+    },
+    {
+      "name": "registered-above-inline",
+      "tex": "x\\choose y\\raiseLine bad z",
+      "display": false,
+      "scope": "registered actual macro",
+      "registration": {
+        "name": "raiseLine",
+        "body": "\\above",
+        "arguments": 0
+      }
+    },
+    {
+      "name": "registered-above-display",
+      "tex": "x\\choose y\\raiseLine bad z",
+      "display": true,
+      "scope": "registered actual macro",
+      "registration": {
+        "name": "raiseLine",
+        "body": "\\above",
+        "arguments": 0
+      }
+    },
+    {
+      "name": "style-before-infix-inline",
+      "tex": "\\displaystyle x\\over y\\atop z",
+      "display": false
+    },
+    {
+      "name": "style-before-infix-display",
+      "tex": "\\displaystyle x\\over y\\atop z",
+      "display": true
+    },
+    {
+      "name": "size-before-infix-inline",
+      "tex": "\\large x\\over y\\atop z",
+      "display": false
+    },
+    {
+      "name": "size-before-infix-display",
+      "tex": "\\large x\\over y\\atop z",
+      "display": true
+    },
+    {
+      "name": "font-before-infix-inline",
+      "tex": "\\rm x\\over y\\atop z",
+      "display": false
+    },
+    {
+      "name": "font-before-infix-display",
+      "tex": "\\rm x\\over y\\atop z",
+      "display": true
+    },
+    {
+      "name": "color-before-infix-inline",
+      "tex": "\\color{red}x\\over y\\atop z",
+      "display": false
+    },
+    {
+      "name": "color-before-infix-display",
+      "tex": "\\color{red}x\\over y\\atop z",
+      "display": true
+    },
+    {
+      "name": "chained-continuations-inline",
+      "tex": "x\\over\\color{red}\\large\\rm\\displaystyle y\\choose z",
+      "display": false
+    },
+    {
+      "name": "chained-continuations-display",
+      "tex": "x\\over\\color{red}\\large\\rm\\displaystyle y\\choose z",
+      "display": true
+    },
+    {
+      "name": "nested-style-group-inline",
+      "tex": "x\\over{\\displaystyle y\\over z}",
+      "display": false
+    },
+    {
+      "name": "nested-style-group-display",
+      "tex": "x\\over{\\displaystyle y\\over z}",
+      "display": true
+    },
+    {
+      "name": "group-closes-before-second-inline",
+      "tex": "{x\\over y}\\over z",
+      "display": false
+    },
+    {
+      "name": "group-closes-before-second-display",
+      "tex": "{x\\over y}\\over z",
+      "display": true
+    },
+    {
+      "name": "left-closes-before-second-inline",
+      "tex": "\\left(x\\over y\\right)\\over z",
+      "display": false
+    },
+    {
+      "name": "left-closes-before-second-display",
+      "tex": "\\left(x\\over y\\right)\\over z",
+      "display": true
+    },
+    {
+      "name": "text-independent-math-inline",
+      "tex": "x\\over\\text{$a\\over b$}",
+      "display": false
+    },
+    {
+      "name": "text-independent-math-display",
+      "tex": "x\\over\\text{$a\\over b$}",
+      "display": true
+    },
+    {
+      "name": "font-argument-independent-inline",
+      "tex": "x\\over\\mathbf{a\\over b}",
+      "display": false
+    },
+    {
+      "name": "font-argument-independent-display",
+      "tex": "x\\over\\mathbf{a\\over b}",
+      "display": true
+    },
+    {
+      "name": "prime-before-infix-inline",
+      "tex": "x'\\over y\\choose z",
+      "display": false
+    },
+    {
+      "name": "prime-before-infix-display",
+      "tex": "x'\\over y\\choose z",
+      "display": true
+    },
+    {
+      "name": "function-before-infix-inline",
+      "tex": "\\sin x\\over y\\choose z",
+      "display": false
+    },
+    {
+      "name": "function-before-infix-display",
+      "tex": "\\sin x\\over y\\choose z",
+      "display": true
+    },
+    {
+      "name": "incoming-above-valid-mu-inline",
+      "tex": "x\\over y\\above 8mu z",
+      "display": false
+    },
+    {
+      "name": "incoming-above-valid-mu-display",
+      "tex": "x\\over y\\above 8mu z",
+      "display": true
+    },
+    {
+      "name": "incoming-above-invalid-prefix-inline",
+      "tex": "x\\over y\\above 1zz z",
+      "display": false
+    },
+    {
+      "name": "incoming-above-invalid-prefix-display",
+      "tex": "x\\over y\\above 1zz z",
+      "display": true
+    },
+    {
+      "name": "incoming-above-explicit-group-inline",
+      "tex": "x\\over y\\above{1pt}z",
+      "display": false
+    },
+    {
+      "name": "incoming-above-explicit-group-display",
+      "tex": "x\\over y\\above{1pt}z",
+      "display": true
+    },
+    {
+      "name": "dimension-before-first-inline",
+      "tex": "x\\above bad y\\choose z",
+      "display": false
+    },
+    {
+      "name": "dimension-before-first-display",
+      "tex": "x\\above bad y\\choose z",
+      "display": true
+    },
+    {
+      "name": "registered-spaced-alias-inline",
+      "tex": "x\\pick y\\pick z",
+      "display": false,
+      "scope": "registered actual macro",
+      "registration": {
+        "name": "pick",
+        "body": "\\choose ",
+        "arguments": 0
+      }
+    },
+    {
+      "name": "registered-spaced-alias-display",
+      "tex": "x\\pick y\\pick z",
+      "display": true,
+      "scope": "registered actual macro",
+      "registration": {
+        "name": "pick",
+        "body": "\\choose ",
+        "arguments": 0
+      }
+    },
+    {
+      "name": "registered-spaced-above-inline",
+      "tex": "x\\choose y\\raiseLine bad z",
+      "display": false,
+      "scope": "registered actual macro",
+      "registration": {
+        "name": "raiseLine",
+        "body": "\\above ",
+        "arguments": 0
+      }
+    },
+    {
+      "name": "registered-spaced-above-display",
+      "tex": "x\\choose y\\raiseLine bad z",
+      "display": true,
+      "scope": "registered actual macro",
+      "registration": {
+        "name": "raiseLine",
+        "body": "\\above ",
+        "arguments": 0
+      }
+    },
+    {
+      "name": "registered-spaced-valid-above-inline",
+      "tex": "x\\choose y\\raiseLine 1pt z",
+      "display": false,
+      "scope": "registered actual macro",
+      "registration": {
+        "name": "raiseLine",
+        "body": "\\above ",
+        "arguments": 0
+      }
+    },
+    {
+      "name": "registered-spaced-valid-above-display",
+      "tex": "x\\choose y\\raiseLine 1pt z",
+      "display": true,
+      "scope": "registered actual macro",
+      "registration": {
+        "name": "raiseLine",
+        "body": "\\above ",
+        "arguments": 0
+      }
+    },
+    {
+      "name": "registered-style-inline",
+      "tex": "x\\over\\decl y\\choose z",
+      "display": false,
+      "scope": "registered actual macro",
+      "registration": {
+        "name": "decl",
+        "body": "\\displaystyle ",
+        "arguments": 0
+      }
+    },
+    {
+      "name": "registered-style-display",
+      "tex": "x\\over\\decl y\\choose z",
+      "display": true,
+      "scope": "registered actual macro",
+      "registration": {
+        "name": "decl",
+        "body": "\\displaystyle ",
+        "arguments": 0
+      }
+    }
+  ]
+}

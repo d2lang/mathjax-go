@@ -1520,12 +1520,12 @@ func keyvalOptions(raw string, allowed []string) (map[string]any, error) {
 	return result, nil
 }
 
-func (p *parser) colorDeclaration(terminator byte, stopRight bool) ([]*mml.Node, string, error) {
+func (p *parser) colorDeclaration(terminator byte, stopRight, infixPending bool) ([]*mml.Node, string, error) {
 	color, err := p.readColor("color")
 	if err != nil {
 		return nil, "", err
 	}
-	rest, right, err := p.parseRow(terminator, stopRight)
+	rest, right, err := p.parseRowWithInfix(terminator, stopRight, infixPending)
 	if err != nil {
 		return nil, "", err
 	}
