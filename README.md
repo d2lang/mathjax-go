@@ -85,11 +85,10 @@ shared macro/tag configuration. Literal chunks preserve internal whitespace
 and tilde; only the source's four literal escapes and edge whitespace rules
 apply. `hbox` and `mbox` retain their level-zero wrapper, including empty input.
 
-`TestInternalTextPinnedReferences` checks 78 complete unmodified-primary SVGs
-and explicit/own-property trees, plus 12 unchanged shared-caller controls.
+`TestInternalTextPinnedReferences` checks 80 complete unmodified-primary SVGs
+and explicit/own-property trees, plus 10 unchanged shared-caller controls.
 `textup` uses the same normal-font HBox mapping as `textrm`; `textsl` retains
-the pinned undefined-command behavior. AMS tag text remains a separately
-recorded boundary. The28 actual-method
+the pinned undefined-command behavior. AMS tag text uses its wrapped fresh-parser caller. The 28 actual-method
 references also bind delimiter errors, cardinality, child ownership, font and
 macro-counter isolation. Two private pre-postfilter script nodes retain the
 existing Go `msub` versus primary two-child `msubsup` representation; public
@@ -361,3 +360,24 @@ accepted output and original primary errors retained. Literal text, actual NBSP,
 relation/accent commands, fonts, vector token creation, scripts and registered
 macro source/cursor state remain separately checked. No primary output is
 regenerated or candidate output used as a new whole-reference expectation.
+
+### AMS tag text
+
+Tag cells invoke the registered `text` command through MathJax's wrapped fresh
+parser contract. The lexical environment and expansion counter are fresh while
+configuration, labels, colors and macros remain shared. ID and label writes
+precede content errors; errors prevent the outer cell/table from being returned.
+The final cell reads the live tag ID. Reference construction is unchanged.
+
+The focused corpus has 62 complete primary SVG/ordered explicit-own-tree cases
+and 18 actual tag-method/lifetime cases. Four rich tag/reference composites and
+the root-width interaction are complete primary matches. Two public composites
+remain separately captured diagnostics: the existing alignment anchor-scroll
+differences. Their full outputs
+are retained, not accepted through alternate expected snapshots.
+
+Private checks retain exact constructor provenance at 25 named node paths and
+assert shared identities, early labels, counter/font isolation and errors.
+Both registered text override controls compare their complete method trees,
+including nonbreaking-space tokens, with those finite provenance pairs. Existing equation error teardown
+and alignment allocation/anchor behavior remain separately documented limits.

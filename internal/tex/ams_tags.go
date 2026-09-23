@@ -191,24 +191,27 @@ func (p *parser) amsTagFinalize(children []*mml.Node) ([]*mml.Node, error) {
 	if !p.display || state.current.environment != "" || state.current.tag == nil {
 		return children, nil
 	}
-	tag := state.makeTag()
+	tag, err := state.makeTag(p)
+	if err != nil {
+		return nil, err
+	}
 	content := row(children, true)
 	return []*mml.Node{amsEnTag(content, tag)}, nil
 }
 
 // getTag is the NoTags override followed by AbstractTags.getTag.  Automatic
 // numbering is deliberately absent; only a non-empty explicit tag survives.
-func (s *amsTagState) getTag() *mml.Node {
+func (s *amsTagState) getTag(p *parser) (*mml.Node, error) {
 	if s.current.tag == nil || *s.current.tag == "" {
-		return nil
+		return nil, nil
 	}
 	if !s.current.taggable || s.current.noTag {
-		return nil
+		return nil, nil
 	}
-	return s.makeTag()
+	return s.makeTag(p)
 }
 
-func (s *amsTagState) makeTag() *mml.Node {
+func (s *amsTagState) makeTag(p *parser) (*mml.Node, error) {
 	current := s.current
 	idSource := ""
 	if current.labelID != "" {
@@ -225,14 +228,16 @@ func (s *amsTagState) makeTag() *mml.Node {
 		s.labels[current.labelID] = amsLabel{tag: tag, id: current.tagID}
 	}
 
-	var cell *mml.Node
-	if current.tagFormat == "" {
-		cell = node("mtd")
-	} else {
-		cell = node("mtd", textRow(current.tagFormat))
+	// Tags.makeTag parses the wrapped text command in an empty lexical
+	// environment with shared configuration, after assigning the ID/label.
+	content, err := p.parseInternalMath("\\text{" + s.current.tagFormat + "}")
+	if err != nil {
+		return nil, err
 	}
-	cell.Attributes.Set("id", current.tagID)
-	return cell
+	cell := node("mtd", content)
+	// Inner parsing can mutate tag state; the source reads the live tag ID.
+	cell.Attributes.Set("id", s.current.tagID)
+	return cell, nil
 }
 
 func amsEnTag(content, tag *mml.Node) *mml.Node {

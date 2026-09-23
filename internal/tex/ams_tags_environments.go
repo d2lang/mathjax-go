@@ -45,7 +45,10 @@ func (p *parser) amsEquation(environment string) (nodes []*mml.Node, err error) 
 	if err != nil {
 		return nil, err
 	}
-	tag := state.getTag()
+	tag, err := state.getTag(p)
+	if err != nil {
+		return nil, err
+	}
 	state.end()
 	ended = true
 	if tag != nil {
@@ -100,7 +103,11 @@ func (p *parser) amsAlignment(environment string) (nodes []*mml.Node, err error)
 			maximumColumns = len(mtds)
 		}
 		mrows = append(mrows, node("mtr", mtds...))
-		tags = append(tags, state.getTag())
+		tag, tagErr := state.getTag(p)
+		if tagErr != nil {
+			return nil, tagErr
+		}
+		tags = append(tags, tag)
 		state.clearTag()
 	}
 
