@@ -109,6 +109,7 @@ func (p *parser) amsGenfrac(name string) ([]*mml.Node, error) {
 	if err != nil {
 		return nil, err
 	}
+	style = amsGenfracTrimStyle(style)
 	numerator, err := p.parseArgument(name)
 	if err != nil {
 		return nil, err
@@ -129,18 +130,18 @@ func (p *parser) amsGenfrac(name string) ([]*mml.Node, error) {
 			return nil, err
 		}
 	}
-	style = strings.TrimSpace(style)
 	if style != "" {
+		styleIndex, ok := amsGenfracStyleIndex(style)
+		if !ok {
+			return nil, texError("BadMathStyleFor", "Bad math style for \\%s", name)
+		}
 		attributes := map[string]any{}
-		switch style {
-		case "0":
+		if styleIndex == 0 {
 			attributes["displaystyle"] = true
 			attributes["scriptlevel"] = 0
-		case "1", "2", "3":
+		} else {
 			attributes["displaystyle"] = false
-			attributes["scriptlevel"] = int(style[0] - '1')
-		default:
-			return nil, texError("BadMathStyleFor", "Bad math style for \\%s", name)
+			attributes["scriptlevel"] = styleIndex - 1
 		}
 		styled := node("mstyle", content)
 		styled.Attributes.Set("displaystyle", attributes["displaystyle"])
@@ -148,6 +149,41 @@ func (p *parser) amsGenfrac(name string) ([]*mml.Node, error) {
 		content = styled
 	}
 	return []*mml.Node{content}, nil
+}
+
+// Genfrac reads its style with ParseUtil.trimSpaces, including the one-space
+// restoration for a terminal backslash followed by an original ASCII space.
+func amsGenfracTrimStyle(raw string) string {
+	style := strings.TrimFunc(raw, internalTextSpace)
+	if strings.HasSuffix(style, "\\") && strings.HasSuffix(raw, " ") {
+		style += " "
+	}
+	return style
+}
+
+// Genfrac only observes whether parseInt(style, 10) selects an index 0..3.
+// Keep that decision independent of machine integer width: an accumulated
+// value above 3 cannot return to range as further decimal digits are read.
+func amsGenfracStyleIndex(style string) (int, bool) {
+	i := 0
+	negative := false
+	if len(style) != 0 && (style[0] == '+' || style[0] == '-') {
+		negative = style[0] == '-'
+		i++
+	}
+	start := i
+	value := 0
+	for i < len(style) && style[i] >= '0' && style[i] <= '9' {
+		value = value*10 + int(style[i]-'0')
+		if value > 3 {
+			return 0, false
+		}
+		i++
+	}
+	if i == start || (negative && value != 0) {
+		return 0, false
+	}
+	return value, true
 }
 
 // amsFixedFencePalette ports ParseUtil.mathPalette.  MathChoice selects bigg
