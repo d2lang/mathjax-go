@@ -78,6 +78,12 @@ func (r *renderer) wrap(node *mml.Node, parent *wrapper, level int, display bool
 		w.initializeStringQuotes()
 	}
 	if node.Kind == "mtable" {
+		// CommonMtable selects the last top table in constructor order, even
+		// when it is unlabelled or empty. Do not select during lazy layout.
+		container, _ := findTableContainer(w)
+		if container == nil || (container.node.Kind == "math" && container.parent == nil) {
+			r.table = w
+		}
 		initializeTablePWidth(w)
 	}
 	// CommonMrow has fixesPWidth=false, but its constructor explicitly marks
@@ -609,6 +615,9 @@ func (w *wrapper) toSVG(parent *Element) {
 	}
 	element := w.standardSVG(parent)
 	w.addChildren(element)
+	if w.node.Kind == "math" && attribute(w.node, "display", "inline") == "block" {
+		w.handleMathMinWidth()
+	}
 }
 
 func (w *wrapper) standardSVG(parent *Element) *Element {

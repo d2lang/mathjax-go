@@ -26,9 +26,11 @@ func NewTypesetter() *Typesetter { return &Typesetter{} }
 var _ pipeline.Typesetter = (*Typesetter)(nil)
 
 type renderer struct {
-	options pipeline.Options
-	params  layout.Parameters
-	pxPerEm float64
+	options  pipeline.Options
+	params   layout.Parameters
+	pxPerEm  float64
+	table    *wrapper // Last eligible top table, assigned during wrapper construction.
+	minWidth float64
 }
 
 // Typeset lays out root and returns D2's bare SVG element.
@@ -82,6 +84,11 @@ func (t *Typesetter) Typeset(root *mml.Node, options pipeline.Options) (string, 
 		scale := jscompat.Fixed(options.Ex/(r.params.XHeight*1000), 6)
 		g.SetAttr("transform", fmt.Sprintf("scale(%s,-%s) translate(0, %s)",
 			scale, scale, jscompat.Fixed(-bbox.H*1000, 1)))
+	}
+	// SVGOutputJax.typesetSVG applies the display math wrapper's late width
+	// only when it is truthy, preserving createRoot's initial width for zero.
+	if r.minWidth != 0 && !math.IsNaN(r.minWidth) {
+		svg.SetStyle("min-width", r.ex(r.minWidth))
 	}
 	return svg.String(), nil
 }

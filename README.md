@@ -327,3 +327,11 @@ newcommand augmented observations. Generate raw unchanged-primary captures with:
 ```
 node testdata/generate_macro_boundary.cjs PINNED_ASSETS NEWCOMMAND_3_2_2_JS NEW_EVIDENCE_DIRECTORY
 ```
+
+Responsive display math now applies the final minimum width of the last eligible
+constructed top table. Six labelled-equation cases with surrounding material
+match complete pinned-primary SVGs. Constructor identity, reverse measurement,
+zero-width/inline behavior and the private math alignment policy have focused
+controls; existing table layout consumers are unchanged. The fixture notes in
+`testdata/responsive_minwidth_README.md` distinguish complete primary outputs
+from unchanged accepted controls and unresolved equation/table composites.
