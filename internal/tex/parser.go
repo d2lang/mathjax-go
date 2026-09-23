@@ -80,6 +80,13 @@ type parser struct {
 // non-zero terminator is consumed.  stopRight lets a \left subparse return the
 // delimiter consumed by its matching \right.
 func (p *parser) parseRow(terminator byte, stopRight bool) ([]*mml.Node, string, error) {
+	return p.parseRowWithInfix(terminator, stopRight, false)
+}
+
+// parseRowWithInfix retains an OverItem across denominator and declaration
+// continuations of the same logical row. Real groups and subparsers enter via
+// parseRow, so they cannot inherit an outer row's pending fraction.
+func (p *parser) parseRowWithInfix(terminator byte, stopRight, infixPending bool) ([]*mml.Node, string, error) {
 	vectorFont, vectorStar, activeFont := p.vectorFont, p.vectorStar, p.activeFont
 	defer func() { p.vectorFont, p.vectorStar, p.activeFont = vectorFont, vectorStar, activeFont }()
 	var nodes []*mml.Node
@@ -151,7 +158,7 @@ func (p *parser) parseRow(terminator byte, stopRight bool) ([]*mml.Node, string,
 			}
 			if _, registered := p.state.macros[name]; !registered && (name == "over" || name == "atop" || name == "above" || name == "choose" || name == "brace" || name == "brack") {
 				finishPrime()
-				fraction, right, err := p.infixFraction(name, nodes, terminator, stopRight)
+				fraction, right, err := p.infixFraction(name, nodes, terminator, stopRight, infixPending)
 				if err != nil {
 					return nil, "", err
 				}
@@ -159,7 +166,7 @@ func (p *parser) parseRow(terminator byte, stopRight bool) ([]*mml.Node, string,
 			}
 			if name == "color" {
 				finishPrime()
-				colored, right, err := p.colorDeclaration(terminator, stopRight)
+				colored, right, err := p.colorDeclaration(terminator, stopRight, infixPending)
 				if err != nil {
 					return nil, "", err
 				}
@@ -168,7 +175,7 @@ func (p *parser) parseRow(terminator byte, stopRight bool) ([]*mml.Node, string,
 			}
 			if style, ok := styleDeclarations[name]; ok {
 				finishPrime()
-				rest, right, err := p.parseRow(terminator, stopRight)
+				rest, right, err := p.parseRowWithInfix(terminator, stopRight, infixPending)
 				if err != nil {
 					return nil, "", err
 				}
@@ -182,7 +189,7 @@ func (p *parser) parseRow(terminator byte, stopRight bool) ([]*mml.Node, string,
 			}
 			if size, ok := sizeDeclarations[name]; ok {
 				finishPrime()
-				rest, right, err := p.parseRow(terminator, stopRight)
+				rest, right, err := p.parseRowWithInfix(terminator, stopRight, infixPending)
 				if err != nil {
 					return nil, "", err
 				}
@@ -201,7 +208,7 @@ func (p *parser) parseRow(terminator byte, stopRight bool) ([]*mml.Node, string,
 				}
 				oldFont := p.activeFont
 				p.activeFont = variant
-				rest, right, err := p.parseRow(terminator, stopRight)
+				rest, right, err := p.parseRowWithInfix(terminator, stopRight, infixPending)
 				p.activeFont = oldFont
 				if err != nil {
 					return nil, "", err
@@ -820,7 +827,7 @@ var fontDeclarations = map[string]string{
 	"tt": "monospace", "sf": "sans-serif",
 }
 
-func (p *parser) infixFraction(name string, left []*mml.Node, terminator byte, stopRight bool) (*mml.Node, string, error) {
+func (p *parser) infixFraction(name string, left []*mml.Node, terminator byte, stopRight, infixPending bool) (*mml.Node, string, error) {
 	attributes := map[string]any{}
 	if name == "atop" || name == "choose" || name == "brace" || name == "brack" {
 		attributes["linethickness"] = "0"
@@ -832,7 +839,12 @@ func (p *parser) infixFraction(name string, left []*mml.Node, terminator byte, s
 		}
 		attributes["linethickness"] = thickness
 	}
-	rightNodes, right, err := p.parseRow(terminator, stopRight)
+	// BaseMethods.Over reads its arguments before OverItem checks ambiguity.
+	// In particular, malformed incoming above dimensions keep their own error.
+	if infixPending {
+		return nil, "", texError("AmbiguousUseOf", "Ambiguous use of \\%s", name)
+	}
+	rightNodes, right, err := p.parseRowWithInfix(terminator, stopRight, true)
 	if err != nil {
 		return nil, "", err
 	}

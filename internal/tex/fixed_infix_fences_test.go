@@ -17,7 +17,7 @@ func TestFixedInfixFenceOwnership(t *testing.T) {
 				numerator.Attributes.Set("mathvariant", "bold")
 				numerator.SetProperty("ownershipWitness", "retained")
 				p := &parser{source: "y", state: newParseState(), display: display}
-				root, stop, err := p.infixFraction(c.name, []*mml.Node{numerator}, 0, false)
+				root, stop, err := p.infixFraction(c.name, []*mml.Node{numerator}, 0, false, false)
 				if err != nil || stop != "" {
 					t.Fatal(err, stop)
 				}

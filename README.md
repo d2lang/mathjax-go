@@ -152,9 +152,9 @@ An empty registered macro also retains the existing pending-prime behavior.
 
 The 82-case fixture covers all six names, public declarations, argument errors,
 empty definitions, grouping and aliases that expand into genuine infix commands.
-Seventy-four complete SVGs match pinned MathJax; eight separate repeated-fraction
-(D070) and macro-joining (D089) boundaries retain exact accepted outputs. Fifty-two ordered
-full attribute/property trees match primary. The other 30 are bound to
+Eighty complete SVGs match pinned MathJax; two macro-joining (D089) boundaries
+retain exact accepted outputs. Fifty-eight ordered full attribute/property trees
+match primary. The other 24 are bound to
 complete accepted records or equivalent ordinary controls, including property
 insertion order, atop's existing string zero and plain-prime metadata. No fields
 are omitted from these comparisons.
@@ -176,3 +176,26 @@ primary; the two separate `bmod` row-spacing cases remain unchanged.
 ```
 node testdata/generate_mod_command.cjs PINNED_ASSETS [EVIDENCE_DIRECTORY]
 ```
+
+### Infix fraction row scope
+
+A second supported infix fraction command in the same logical row reports the
+incoming command's `AmbiguousUseOf` error. Denominator, style, size, font and
+color continuations retain that row; braces, left/right groups, script arguments
+and separate math parsers start independent rows. Incoming `above` dimensions
+are read before ambiguity is checked, and registered macro dispatch stays first.
+
+The 108-case pinned corpus has 97 complete primary SVG, ordered explicit/own-tree
+and structured-error matches. Eleven exact accepted-output boundaries retain
+unsupported `overwithdelims`, unclosed-group wording, generic macro joining,
+one inline nested fraction, and two nested-style outputs. No changed output is
+qualified: all 50 changed cases match primary. Six parser re-entry/error-unwind
+controls check independent subsequent rows and restored font state.
+
+```
+node testdata/generate_infix_scope.cjs PINNED_ASSETS EVIDENCE_DIRECTORY
+```
+
+The two earlier dimension-parser repeated-`above` cases and six registered-infix
+ambiguity cases now use their untouched primary references; all other inherited
+qualifications remain unchanged.
