@@ -48,7 +48,7 @@ func (w *wrapper) annotationXMLToSVG(parent *Element) {
 			child.toSVG(element)
 		}
 		bbox := child.outerBBox()
-		child.place(x+bbox.L*bbox.RScale, 0, child.element)
+		child.place(x+bbox.L*bbox.RScale, 0)
 		x += (bbox.L + bbox.W + bbox.R) * bbox.RScale
 	}
 }

@@ -1,0 +1,3509 @@
+{
+  "mathJaxGitCommit": "ad8f5c21cb810236551da8c6512ba733e67357ee",
+  "scope": "Primary private scene/identity contract; tableBackground is a separate source predicate.",
+  "cases": [
+    {
+      "name": "own-default",
+      "spec": {
+        "name": "own-default",
+        "method": "place",
+        "x": 0.25,
+        "y": 0.5,
+        "dx": 0,
+        "h": 0.75,
+        "rscale": 1,
+        "nodeID": {
+          "present": true,
+          "value": "target"
+        },
+        "domID": "target",
+        "elementArgument": "omitted",
+        "existingTransform": "",
+        "children": [
+          "path-A",
+          "g-B"
+        ]
+      },
+      "expectedScene": "<svg><g id=\"target\" transform=\"translate(250,1250)\"><text data-id-align=\"true\"></text><g data-idbox=\"true\" transform=\"translate(0,-750)\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+      "primaryEvidenceSHA256": "e98f767ee5c487ff29d428cfd0ccc1b990b6d41f5c549b4b599661a1fa3bfefc",
+      "calls": [
+        {
+          "beforeScene": "<svg><g id=\"target\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "afterScene": "<svg><g id=\"target\" transform=\"translate(250,1250)\"><text data-id-align=\"true\"></text><g data-idbox=\"true\" transform=\"translate(0,-750)\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "originalElements": [
+            {
+              "beforePath": [],
+              "afterPath": []
+            },
+            {
+              "beforePath": [
+                0
+              ],
+              "afterPath": [
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                0
+              ],
+              "afterPath": [
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                1
+              ],
+              "afterPath": [
+                0,
+                1,
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1
+              ],
+              "afterPath": [
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1,
+                0
+              ],
+              "afterPath": [
+                1,
+                0
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "own-null",
+      "spec": {
+        "name": "own-null",
+        "method": "place",
+        "x": 0.25,
+        "y": 0.5,
+        "dx": 0,
+        "h": 0.75,
+        "rscale": 1,
+        "nodeID": {
+          "present": true,
+          "value": "target"
+        },
+        "domID": "target",
+        "elementArgument": "null",
+        "existingTransform": "",
+        "children": [
+          "path-A",
+          "g-B"
+        ]
+      },
+      "expectedScene": "<svg><g id=\"target\" transform=\"translate(250,1250)\"><text data-id-align=\"true\"></text><g data-idbox=\"true\" transform=\"translate(0,-750)\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+      "primaryEvidenceSHA256": "005dca858f6bc315762893b3a8122aeaaf45e632894ce7d4d98bc1d484d93721",
+      "calls": [
+        {
+          "beforeScene": "<svg><g id=\"target\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "afterScene": "<svg><g id=\"target\" transform=\"translate(250,1250)\"><text data-id-align=\"true\"></text><g data-idbox=\"true\" transform=\"translate(0,-750)\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "originalElements": [
+            {
+              "beforePath": [],
+              "afterPath": []
+            },
+            {
+              "beforePath": [
+                0
+              ],
+              "afterPath": [
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                0
+              ],
+              "afterPath": [
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                1
+              ],
+              "afterPath": [
+                0,
+                1,
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1
+              ],
+              "afterPath": [
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1,
+                0
+              ],
+              "afterPath": [
+                1,
+                0
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "own-undefined",
+      "spec": {
+        "name": "own-undefined",
+        "method": "place",
+        "x": 0.25,
+        "y": 0.5,
+        "dx": 0,
+        "h": 0.75,
+        "rscale": 1,
+        "nodeID": {
+          "present": true,
+          "value": "target"
+        },
+        "domID": "target",
+        "elementArgument": "undefined",
+        "existingTransform": "",
+        "children": [
+          "path-A",
+          "g-B"
+        ]
+      },
+      "expectedScene": "<svg><g id=\"target\" transform=\"translate(250,1250)\"><text data-id-align=\"true\"></text><g data-idbox=\"true\" transform=\"translate(0,-750)\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+      "primaryEvidenceSHA256": "77ffc0bb1a7d5a0cfc5993121a37060a76ce0a5c106350c9c30c1e2df9680956",
+      "calls": [
+        {
+          "beforeScene": "<svg><g id=\"target\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "afterScene": "<svg><g id=\"target\" transform=\"translate(250,1250)\"><text data-id-align=\"true\"></text><g data-idbox=\"true\" transform=\"translate(0,-750)\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "originalElements": [
+            {
+              "beforePath": [],
+              "afterPath": []
+            },
+            {
+              "beforePath": [
+                0
+              ],
+              "afterPath": [
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                0
+              ],
+              "afterPath": [
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                1
+              ],
+              "afterPath": [
+                0,
+                1,
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1
+              ],
+              "afterPath": [
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1,
+                0
+              ],
+              "afterPath": [
+                1,
+                0
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "explicit-same",
+      "spec": {
+        "name": "explicit-same",
+        "method": "place",
+        "x": 0.25,
+        "y": 0.5,
+        "dx": 0,
+        "h": 0.75,
+        "rscale": 1,
+        "nodeID": {
+          "present": true,
+          "value": "target"
+        },
+        "domID": "target",
+        "elementArgument": "sameOwnElement",
+        "existingTransform": "",
+        "children": [
+          "path-A",
+          "g-B"
+        ]
+      },
+      "expectedScene": "<svg><g id=\"target\" transform=\"translate(250,500)\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+      "primaryEvidenceSHA256": "5cc32baeb633ade4a3ab381cd85a7412caa1cadd5cb95176157b619085def4cd",
+      "calls": [
+        {
+          "beforeScene": "<svg><g id=\"target\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "afterScene": "<svg><g id=\"target\" transform=\"translate(250,500)\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "originalElements": [
+            {
+              "beforePath": [],
+              "afterPath": []
+            },
+            {
+              "beforePath": [
+                0
+              ],
+              "afterPath": [
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                0
+              ],
+              "afterPath": [
+                0,
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                1
+              ],
+              "afterPath": [
+                0,
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1
+              ],
+              "afterPath": [
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1,
+                0
+              ],
+              "afterPath": [
+                1,
+                0
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "explicit-other",
+      "spec": {
+        "name": "explicit-other",
+        "method": "place",
+        "x": 0.25,
+        "y": 0.5,
+        "dx": 0,
+        "h": 0.75,
+        "rscale": 1,
+        "nodeID": {
+          "present": true,
+          "value": "target"
+        },
+        "domID": "target",
+        "elementArgument": "otherElement",
+        "existingTransform": "",
+        "children": [
+          "path-A",
+          "g-B"
+        ]
+      },
+      "expectedScene": "<svg><g id=\"target\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g><g data-fixture=\"other\" transform=\"translate(250,500)\"><path data-fixture=\"other-path\"></path></g></svg>",
+      "primaryEvidenceSHA256": "b761956d6f3b907449eba58040615f0e2bbb9b1f8d598cbd28515c27092f021c",
+      "calls": [
+        {
+          "beforeScene": "<svg><g id=\"target\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "afterScene": "<svg><g id=\"target\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g><g data-fixture=\"other\" transform=\"translate(250,500)\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "originalElements": [
+            {
+              "beforePath": [],
+              "afterPath": []
+            },
+            {
+              "beforePath": [
+                0
+              ],
+              "afterPath": [
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                0
+              ],
+              "afterPath": [
+                0,
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                1
+              ],
+              "afterPath": [
+                0,
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1
+              ],
+              "afterPath": [
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1,
+                0
+              ],
+              "afterPath": [
+                1,
+                0
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "own-raw-zero",
+      "spec": {
+        "name": "own-raw-zero",
+        "method": "place",
+        "x": 0,
+        "y": 0,
+        "dx": 0,
+        "h": 0.75,
+        "rscale": 1,
+        "nodeID": {
+          "present": true,
+          "value": "target"
+        },
+        "domID": "target",
+        "elementArgument": "omitted",
+        "existingTransform": "",
+        "children": [
+          "path-A",
+          "g-B"
+        ]
+      },
+      "expectedScene": "<svg><g id=\"target\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+      "primaryEvidenceSHA256": "10610c79d93c27a5793c55bdd7b4788c216b85c51895c28ee9b9d80eed1ffbdf",
+      "calls": [
+        {
+          "beforeScene": "<svg><g id=\"target\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "afterScene": "<svg><g id=\"target\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "originalElements": [
+            {
+              "beforePath": [],
+              "afterPath": []
+            },
+            {
+              "beforePath": [
+                0
+              ],
+              "afterPath": [
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                0
+              ],
+              "afterPath": [
+                0,
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                1
+              ],
+              "afterPath": [
+                0,
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1
+              ],
+              "afterPath": [
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1,
+                0
+              ],
+              "afterPath": [
+                1,
+                0
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "own-negative-zero",
+      "spec": {
+        "name": "own-negative-zero",
+        "method": "place",
+        "x": {
+          "negativeZero": true
+        },
+        "y": 0,
+        "dx": 0,
+        "h": 0.75,
+        "rscale": 1,
+        "nodeID": {
+          "present": true,
+          "value": "target"
+        },
+        "domID": "target",
+        "elementArgument": "omitted",
+        "existingTransform": "",
+        "children": [
+          "path-A",
+          "g-B"
+        ]
+      },
+      "expectedScene": "<svg><g id=\"target\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+      "primaryEvidenceSHA256": "4ab0f67fdc5ab0f32f1ab2748224acedbbe52ab51e9e45db35bcd89f1a56491a",
+      "calls": [
+        {
+          "beforeScene": "<svg><g id=\"target\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "afterScene": "<svg><g id=\"target\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "originalElements": [
+            {
+              "beforePath": [],
+              "afterPath": []
+            },
+            {
+              "beforePath": [
+                0
+              ],
+              "afterPath": [
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                0
+              ],
+              "afterPath": [
+                0,
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                1
+              ],
+              "afterPath": [
+                0,
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1
+              ],
+              "afterPath": [
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1,
+                0
+              ],
+              "afterPath": [
+                1,
+                0
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "dx-only",
+      "spec": {
+        "name": "dx-only",
+        "method": "place",
+        "x": 0,
+        "y": 0,
+        "dx": 0.25,
+        "h": 0.75,
+        "rscale": 1,
+        "nodeID": {
+          "present": true,
+          "value": "target"
+        },
+        "domID": "target",
+        "elementArgument": "omitted",
+        "existingTransform": "",
+        "children": [
+          "path-A",
+          "g-B"
+        ]
+      },
+      "expectedScene": "<svg><g id=\"target\" transform=\"translate(250,750)\"><text data-id-align=\"true\"></text><g data-idbox=\"true\" transform=\"translate(0,-750)\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+      "primaryEvidenceSHA256": "58a1910704843b4c19a428b5c944312915a82dc4646f395b29eaa4c82098ff3e",
+      "calls": [
+        {
+          "beforeScene": "<svg><g id=\"target\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "afterScene": "<svg><g id=\"target\" transform=\"translate(250,750)\"><text data-id-align=\"true\"></text><g data-idbox=\"true\" transform=\"translate(0,-750)\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "originalElements": [
+            {
+              "beforePath": [],
+              "afterPath": []
+            },
+            {
+              "beforePath": [
+                0
+              ],
+              "afterPath": [
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                0
+              ],
+              "afterPath": [
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                1
+              ],
+              "afterPath": [
+                0,
+                1,
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1
+              ],
+              "afterPath": [
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1,
+                0
+              ],
+              "afterPath": [
+                1,
+                0
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "dx-cancellation",
+      "spec": {
+        "name": "dx-cancellation",
+        "method": "place",
+        "x": -0.25,
+        "y": 0,
+        "dx": 0.25,
+        "h": 0.75,
+        "rscale": 1,
+        "nodeID": {
+          "present": true,
+          "value": "target"
+        },
+        "domID": "target",
+        "elementArgument": "omitted",
+        "existingTransform": "",
+        "children": [
+          "path-A",
+          "g-B"
+        ]
+      },
+      "expectedScene": "<svg><g id=\"target\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+      "primaryEvidenceSHA256": "08581bcb4b4aaa477e0b006aa33a14e97406b51e3965519f8430cf0d571b6be8",
+      "calls": [
+        {
+          "beforeScene": "<svg><g id=\"target\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "afterScene": "<svg><g id=\"target\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "originalElements": [
+            {
+              "beforePath": [],
+              "afterPath": []
+            },
+            {
+              "beforePath": [
+                0
+              ],
+              "afterPath": [
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                0
+              ],
+              "afterPath": [
+                0,
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                1
+              ],
+              "afterPath": [
+                0,
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1
+              ],
+              "afterPath": [
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1,
+                0
+              ],
+              "afterPath": [
+                1,
+                0
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "tiny-own-x",
+      "spec": {
+        "name": "tiny-own-x",
+        "method": "place",
+        "x": 1e-05,
+        "y": 0,
+        "dx": 0,
+        "h": 0.75,
+        "rscale": 1,
+        "nodeID": {
+          "present": true,
+          "value": "target"
+        },
+        "domID": "target",
+        "elementArgument": "omitted",
+        "existingTransform": "",
+        "children": [
+          "path-A",
+          "g-B"
+        ]
+      },
+      "expectedScene": "<svg><g id=\"target\" transform=\"translate(0,750)\"><text data-id-align=\"true\"></text><g data-idbox=\"true\" transform=\"translate(0,-750)\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+      "primaryEvidenceSHA256": "def6dce61ab3cb638c6494f4958df61c36f5b5c4ac9509c23d844fc492c19479",
+      "calls": [
+        {
+          "beforeScene": "<svg><g id=\"target\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "afterScene": "<svg><g id=\"target\" transform=\"translate(0,750)\"><text data-id-align=\"true\"></text><g data-idbox=\"true\" transform=\"translate(0,-750)\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "originalElements": [
+            {
+              "beforePath": [],
+              "afterPath": []
+            },
+            {
+              "beforePath": [
+                0
+              ],
+              "afterPath": [
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                0
+              ],
+              "afterPath": [
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                1
+              ],
+              "afterPath": [
+                0,
+                1,
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1
+              ],
+              "afterPath": [
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1,
+                0
+              ],
+              "afterPath": [
+                1,
+                0
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "tiny-own-y",
+      "spec": {
+        "name": "tiny-own-y",
+        "method": "place",
+        "x": 0,
+        "y": -1e-05,
+        "dx": 0,
+        "h": 0.75,
+        "rscale": 1,
+        "nodeID": {
+          "present": true,
+          "value": "target"
+        },
+        "domID": "target",
+        "elementArgument": "omitted",
+        "existingTransform": "",
+        "children": [
+          "path-A",
+          "g-B"
+        ]
+      },
+      "expectedScene": "<svg><g id=\"target\" transform=\"translate(0,750)\"><text data-id-align=\"true\"></text><g data-idbox=\"true\" transform=\"translate(0,-750)\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+      "primaryEvidenceSHA256": "c785059e9e6b557d90ae02b341d27660a7ab7b8f3fca29b9ea35dc3e1b4d511a",
+      "calls": [
+        {
+          "beforeScene": "<svg><g id=\"target\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "afterScene": "<svg><g id=\"target\" transform=\"translate(0,750)\"><text data-id-align=\"true\"></text><g data-idbox=\"true\" transform=\"translate(0,-750)\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "originalElements": [
+            {
+              "beforePath": [],
+              "afterPath": []
+            },
+            {
+              "beforePath": [
+                0
+              ],
+              "afterPath": [
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                0
+              ],
+              "afterPath": [
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                1
+              ],
+              "afterPath": [
+                0,
+                1,
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1
+              ],
+              "afterPath": [
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1,
+                0
+              ],
+              "afterPath": [
+                1,
+                0
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "tiny-explicit",
+      "spec": {
+        "name": "tiny-explicit",
+        "method": "place",
+        "x": 1e-05,
+        "y": 0,
+        "dx": 0,
+        "h": 0.75,
+        "rscale": 1,
+        "nodeID": {
+          "present": true,
+          "value": "target"
+        },
+        "domID": "target",
+        "elementArgument": "sameOwnElement",
+        "existingTransform": "",
+        "children": [
+          "path-A",
+          "g-B"
+        ]
+      },
+      "expectedScene": "<svg><g id=\"target\" transform=\"translate(0,0)\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+      "primaryEvidenceSHA256": "facd1daca2ac1b5dd4f0c2b2b9bdfbf329cfdd0078f963edb8aeb0f4be0cf58e",
+      "calls": [
+        {
+          "beforeScene": "<svg><g id=\"target\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "afterScene": "<svg><g id=\"target\" transform=\"translate(0,0)\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "originalElements": [
+            {
+              "beforePath": [],
+              "afterPath": []
+            },
+            {
+              "beforePath": [
+                0
+              ],
+              "afterPath": [
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                0
+              ],
+              "afterPath": [
+                0,
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                1
+              ],
+              "afterPath": [
+                0,
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1
+              ],
+              "afterPath": [
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1,
+                0
+              ],
+              "afterPath": [
+                1,
+                0
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "height-zero",
+      "spec": {
+        "name": "height-zero",
+        "method": "place",
+        "x": 0.25,
+        "y": 0.5,
+        "dx": 0,
+        "h": 0,
+        "rscale": 1,
+        "nodeID": {
+          "present": true,
+          "value": "target"
+        },
+        "domID": "target",
+        "elementArgument": "omitted",
+        "existingTransform": "",
+        "children": [
+          "path-A",
+          "g-B"
+        ]
+      },
+      "expectedScene": "<svg><g id=\"target\" transform=\"translate(250,500)\"><text data-id-align=\"true\"></text><g data-idbox=\"true\" transform=\"translate(0,0)\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+      "primaryEvidenceSHA256": "ac343e51e01bdf7972baa3a6284dba9a15a7e0b3ec838ffdf2d4a90c13fbe598",
+      "calls": [
+        {
+          "beforeScene": "<svg><g id=\"target\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "afterScene": "<svg><g id=\"target\" transform=\"translate(250,500)\"><text data-id-align=\"true\"></text><g data-idbox=\"true\" transform=\"translate(0,0)\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "originalElements": [
+            {
+              "beforePath": [],
+              "afterPath": []
+            },
+            {
+              "beforePath": [
+                0
+              ],
+              "afterPath": [
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                0
+              ],
+              "afterPath": [
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                1
+              ],
+              "afterPath": [
+                0,
+                1,
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1
+              ],
+              "afterPath": [
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1,
+                0
+              ],
+              "afterPath": [
+                1,
+                0
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "height-negative",
+      "spec": {
+        "name": "height-negative",
+        "method": "place",
+        "x": 0.25,
+        "y": 0.5,
+        "dx": 0,
+        "h": -0.25,
+        "rscale": 1,
+        "nodeID": {
+          "present": true,
+          "value": "target"
+        },
+        "domID": "target",
+        "elementArgument": "omitted",
+        "existingTransform": "",
+        "children": [
+          "path-A",
+          "g-B"
+        ]
+      },
+      "expectedScene": "<svg><g id=\"target\" transform=\"translate(250,250)\"><text data-id-align=\"true\"></text><g data-idbox=\"true\" transform=\"translate(0,250)\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+      "primaryEvidenceSHA256": "e001ac19757428b22632d748631f431d660c05654421be9dde3823fac171bd71",
+      "calls": [
+        {
+          "beforeScene": "<svg><g id=\"target\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "afterScene": "<svg><g id=\"target\" transform=\"translate(250,250)\"><text data-id-align=\"true\"></text><g data-idbox=\"true\" transform=\"translate(0,250)\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "originalElements": [
+            {
+              "beforePath": [],
+              "afterPath": []
+            },
+            {
+              "beforePath": [
+                0
+              ],
+              "afterPath": [
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                0
+              ],
+              "afterPath": [
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                1
+              ],
+              "afterPath": [
+                0,
+                1,
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1
+              ],
+              "afterPath": [
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1,
+                0
+              ],
+              "afterPath": [
+                1,
+                0
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "unscaled-height-rscale2",
+      "spec": {
+        "name": "unscaled-height-rscale2",
+        "method": "place",
+        "x": 0.25,
+        "y": 0.5,
+        "dx": 0,
+        "h": 0.75,
+        "rscale": 2,
+        "nodeID": {
+          "present": true,
+          "value": "target"
+        },
+        "domID": "target",
+        "elementArgument": "omitted",
+        "existingTransform": "scale(0.002)",
+        "children": [
+          "path-A",
+          "g-B"
+        ]
+      },
+      "expectedScene": "<svg><g id=\"target\" transform=\"translate(250,1250) scale(0.002)\"><text data-id-align=\"true\"></text><g data-idbox=\"true\" transform=\"translate(0,-750)\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+      "primaryEvidenceSHA256": "3361dc5e576d34ad846503e94ce656738dd8606705ccb259f8e9c7eaa43a1428",
+      "calls": [
+        {
+          "beforeScene": "<svg><g id=\"target\" transform=\"scale(0.002)\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "afterScene": "<svg><g id=\"target\" transform=\"translate(250,1250) scale(0.002)\"><text data-id-align=\"true\"></text><g data-idbox=\"true\" transform=\"translate(0,-750)\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "originalElements": [
+            {
+              "beforePath": [],
+              "afterPath": []
+            },
+            {
+              "beforePath": [
+                0
+              ],
+              "afterPath": [
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                0
+              ],
+              "afterPath": [
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                1
+              ],
+              "afterPath": [
+                0,
+                1,
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1
+              ],
+              "afterPath": [
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1,
+                0
+              ],
+              "afterPath": [
+                1,
+                0
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "unscaled-height-rscale-half",
+      "spec": {
+        "name": "unscaled-height-rscale-half",
+        "method": "place",
+        "x": 0.25,
+        "y": 0.5,
+        "dx": 0,
+        "h": 0.75,
+        "rscale": 0.5,
+        "nodeID": {
+          "present": true,
+          "value": "target"
+        },
+        "domID": "target",
+        "elementArgument": "omitted",
+        "existingTransform": "scale(0.0005)",
+        "children": [
+          "path-A",
+          "g-B"
+        ]
+      },
+      "expectedScene": "<svg><g id=\"target\" transform=\"translate(250,1250) scale(0.0005)\"><text data-id-align=\"true\"></text><g data-idbox=\"true\" transform=\"translate(0,-750)\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+      "primaryEvidenceSHA256": "a84c74a0539cad678acaaf65eacebf740251dc1b9413168c5b1661c04705a677",
+      "calls": [
+        {
+          "beforeScene": "<svg><g id=\"target\" transform=\"scale(0.0005)\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "afterScene": "<svg><g id=\"target\" transform=\"translate(250,1250) scale(0.0005)\"><text data-id-align=\"true\"></text><g data-idbox=\"true\" transform=\"translate(0,-750)\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "originalElements": [
+            {
+              "beforePath": [],
+              "afterPath": []
+            },
+            {
+              "beforePath": [
+                0
+              ],
+              "afterPath": [
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                0
+              ],
+              "afterPath": [
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                1
+              ],
+              "afterPath": [
+                0,
+                1,
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1
+              ],
+              "afterPath": [
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1,
+                0
+              ],
+              "afterPath": [
+                1,
+                0
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "existing-transform",
+      "spec": {
+        "name": "existing-transform",
+        "method": "place",
+        "x": 0.25,
+        "y": 0.5,
+        "dx": 0,
+        "h": 0.75,
+        "rscale": 1,
+        "nodeID": {
+          "present": true,
+          "value": "target"
+        },
+        "domID": "target",
+        "elementArgument": "omitted",
+        "existingTransform": "rotate(12) scale(2)",
+        "children": [
+          "path-A",
+          "g-B"
+        ]
+      },
+      "expectedScene": "<svg><g id=\"target\" transform=\"translate(250,1250) rotate(12) scale(2)\"><text data-id-align=\"true\"></text><g data-idbox=\"true\" transform=\"translate(0,-750)\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+      "primaryEvidenceSHA256": "8e081cd4da0a35f10232f3badf93bace16b931181a198c57bf93e7d4b1d06214",
+      "calls": [
+        {
+          "beforeScene": "<svg><g id=\"target\" transform=\"rotate(12) scale(2)\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "afterScene": "<svg><g id=\"target\" transform=\"translate(250,1250) rotate(12) scale(2)\"><text data-id-align=\"true\"></text><g data-idbox=\"true\" transform=\"translate(0,-750)\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "originalElements": [
+            {
+              "beforePath": [],
+              "afterPath": []
+            },
+            {
+              "beforePath": [
+                0
+              ],
+              "afterPath": [
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                0
+              ],
+              "afterPath": [
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                1
+              ],
+              "afterPath": [
+                0,
+                1,
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1
+              ],
+              "afterPath": [
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1,
+                0
+              ],
+              "afterPath": [
+                1,
+                0
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "node-id-absent-dom-present",
+      "spec": {
+        "name": "node-id-absent-dom-present",
+        "method": "place",
+        "x": 0.25,
+        "y": 0.5,
+        "dx": 0,
+        "h": 0.75,
+        "rscale": 1,
+        "nodeID": {
+          "present": false
+        },
+        "domID": "target",
+        "elementArgument": "omitted",
+        "existingTransform": "",
+        "children": [
+          "path-A",
+          "g-B"
+        ]
+      },
+      "expectedScene": "<svg><g id=\"target\" transform=\"translate(250,500)\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+      "primaryEvidenceSHA256": "834fdcf80114f47434f9e30cb41be5114b91582e7848ab4a1ad2db60be06ae2b",
+      "calls": [
+        {
+          "beforeScene": "<svg><g id=\"target\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "afterScene": "<svg><g id=\"target\" transform=\"translate(250,500)\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "originalElements": [
+            {
+              "beforePath": [],
+              "afterPath": []
+            },
+            {
+              "beforePath": [
+                0
+              ],
+              "afterPath": [
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                0
+              ],
+              "afterPath": [
+                0,
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                1
+              ],
+              "afterPath": [
+                0,
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1
+              ],
+              "afterPath": [
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1,
+                0
+              ],
+              "afterPath": [
+                1,
+                0
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "node-id-present-dom-absent",
+      "spec": {
+        "name": "node-id-present-dom-absent",
+        "method": "place",
+        "x": 0.25,
+        "y": 0.5,
+        "dx": 0,
+        "h": 0.75,
+        "rscale": 1,
+        "nodeID": {
+          "present": true,
+          "value": "target"
+        },
+        "domID": null,
+        "elementArgument": "omitted",
+        "existingTransform": "",
+        "children": [
+          "path-A",
+          "g-B"
+        ]
+      },
+      "expectedScene": "<svg><g transform=\"translate(250,1250)\"><text data-id-align=\"true\"></text><g data-idbox=\"true\" transform=\"translate(0,-750)\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+      "primaryEvidenceSHA256": "10451d38753e40bb4c01b0525a40e04724804cb32b00dfa9cf21c82171974c4c",
+      "calls": [
+        {
+          "beforeScene": "<svg><g><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "afterScene": "<svg><g transform=\"translate(250,1250)\"><text data-id-align=\"true\"></text><g data-idbox=\"true\" transform=\"translate(0,-750)\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "originalElements": [
+            {
+              "beforePath": [],
+              "afterPath": []
+            },
+            {
+              "beforePath": [
+                0
+              ],
+              "afterPath": [
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                0
+              ],
+              "afterPath": [
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                1
+              ],
+              "afterPath": [
+                0,
+                1,
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1
+              ],
+              "afterPath": [
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1,
+                0
+              ],
+              "afterPath": [
+                1,
+                0
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "id-empty",
+      "spec": {
+        "name": "id-empty",
+        "method": "place",
+        "x": 0.25,
+        "y": 0.5,
+        "dx": 0,
+        "h": 0.75,
+        "rscale": 1,
+        "nodeID": {
+          "present": true,
+          "value": ""
+        },
+        "domID": "target",
+        "elementArgument": "omitted",
+        "existingTransform": "",
+        "children": [
+          "path-A",
+          "g-B"
+        ]
+      },
+      "expectedScene": "<svg><g id=\"target\" transform=\"translate(250,500)\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+      "primaryEvidenceSHA256": "599d74cbe4053879de5a6c5a5e7808a1987b278184b58af09c027f04926940b3",
+      "calls": [
+        {
+          "beforeScene": "<svg><g id=\"target\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "afterScene": "<svg><g id=\"target\" transform=\"translate(250,500)\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "originalElements": [
+            {
+              "beforePath": [],
+              "afterPath": []
+            },
+            {
+              "beforePath": [
+                0
+              ],
+              "afterPath": [
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                0
+              ],
+              "afterPath": [
+                0,
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                1
+              ],
+              "afterPath": [
+                0,
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1
+              ],
+              "afterPath": [
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1,
+                0
+              ],
+              "afterPath": [
+                1,
+                0
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "id-numeric-zero",
+      "spec": {
+        "name": "id-numeric-zero",
+        "method": "place",
+        "x": 0.25,
+        "y": 0.5,
+        "dx": 0,
+        "h": 0.75,
+        "rscale": 1,
+        "nodeID": {
+          "present": true,
+          "value": 0
+        },
+        "domID": "target",
+        "elementArgument": "omitted",
+        "existingTransform": "",
+        "children": [
+          "path-A",
+          "g-B"
+        ]
+      },
+      "expectedScene": "<svg><g id=\"target\" transform=\"translate(250,500)\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+      "primaryEvidenceSHA256": "be2c953969bfe27c6f1f8fcf56af9501d91258a7af61ae452b5f49bc4442dc8e",
+      "calls": [
+        {
+          "beforeScene": "<svg><g id=\"target\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "afterScene": "<svg><g id=\"target\" transform=\"translate(250,500)\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "originalElements": [
+            {
+              "beforePath": [],
+              "afterPath": []
+            },
+            {
+              "beforePath": [
+                0
+              ],
+              "afterPath": [
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                0
+              ],
+              "afterPath": [
+                0,
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                1
+              ],
+              "afterPath": [
+                0,
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1
+              ],
+              "afterPath": [
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1,
+                0
+              ],
+              "afterPath": [
+                1,
+                0
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "id-false",
+      "spec": {
+        "name": "id-false",
+        "method": "place",
+        "x": 0.25,
+        "y": 0.5,
+        "dx": 0,
+        "h": 0.75,
+        "rscale": 1,
+        "nodeID": {
+          "present": true,
+          "value": false
+        },
+        "domID": "target",
+        "elementArgument": "omitted",
+        "existingTransform": "",
+        "children": [
+          "path-A",
+          "g-B"
+        ]
+      },
+      "expectedScene": "<svg><g id=\"target\" transform=\"translate(250,500)\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+      "primaryEvidenceSHA256": "f21e0f0c91a6899ad44f2d7639cd48f5ba4525e05793347385b6b7c52d1bc9aa",
+      "calls": [
+        {
+          "beforeScene": "<svg><g id=\"target\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "afterScene": "<svg><g id=\"target\" transform=\"translate(250,500)\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "originalElements": [
+            {
+              "beforePath": [],
+              "afterPath": []
+            },
+            {
+              "beforePath": [
+                0
+              ],
+              "afterPath": [
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                0
+              ],
+              "afterPath": [
+                0,
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                1
+              ],
+              "afterPath": [
+                0,
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1
+              ],
+              "afterPath": [
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1,
+                0
+              ],
+              "afterPath": [
+                1,
+                0
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "id-null",
+      "spec": {
+        "name": "id-null",
+        "method": "place",
+        "x": 0.25,
+        "y": 0.5,
+        "dx": 0,
+        "h": 0.75,
+        "rscale": 1,
+        "nodeID": {
+          "present": true,
+          "value": null
+        },
+        "domID": "target",
+        "elementArgument": "omitted",
+        "existingTransform": "",
+        "children": [
+          "path-A",
+          "g-B"
+        ]
+      },
+      "expectedScene": "<svg><g id=\"target\" transform=\"translate(250,500)\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+      "primaryEvidenceSHA256": "50355285d0fc2dea98c44663b9efbb7d06fb6f370f875761d3016f7112aa3a77",
+      "calls": [
+        {
+          "beforeScene": "<svg><g id=\"target\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "afterScene": "<svg><g id=\"target\" transform=\"translate(250,500)\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "originalElements": [
+            {
+              "beforePath": [],
+              "afterPath": []
+            },
+            {
+              "beforePath": [
+                0
+              ],
+              "afterPath": [
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                0
+              ],
+              "afterPath": [
+                0,
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                1
+              ],
+              "afterPath": [
+                0,
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1
+              ],
+              "afterPath": [
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1,
+                0
+              ],
+              "afterPath": [
+                1,
+                0
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "id-string-zero",
+      "spec": {
+        "name": "id-string-zero",
+        "method": "place",
+        "x": 0.25,
+        "y": 0.5,
+        "dx": 0,
+        "h": 0.75,
+        "rscale": 1,
+        "nodeID": {
+          "present": true,
+          "value": "0"
+        },
+        "domID": "target",
+        "elementArgument": "omitted",
+        "existingTransform": "",
+        "children": [
+          "path-A",
+          "g-B"
+        ]
+      },
+      "expectedScene": "<svg><g id=\"target\" transform=\"translate(250,1250)\"><text data-id-align=\"true\"></text><g data-idbox=\"true\" transform=\"translate(0,-750)\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+      "primaryEvidenceSHA256": "83ecdf6b9cf127e3585f9670258153e09861e9de8564a08470dd2cac168875ee",
+      "calls": [
+        {
+          "beforeScene": "<svg><g id=\"target\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "afterScene": "<svg><g id=\"target\" transform=\"translate(250,1250)\"><text data-id-align=\"true\"></text><g data-idbox=\"true\" transform=\"translate(0,-750)\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "originalElements": [
+            {
+              "beforePath": [],
+              "afterPath": []
+            },
+            {
+              "beforePath": [
+                0
+              ],
+              "afterPath": [
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                0
+              ],
+              "afterPath": [
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                1
+              ],
+              "afterPath": [
+                0,
+                1,
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1
+              ],
+              "afterPath": [
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1,
+                0
+              ],
+              "afterPath": [
+                1,
+                0
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "id-inherited",
+      "spec": {
+        "name": "id-inherited",
+        "method": "place",
+        "x": 0.25,
+        "y": 0.5,
+        "dx": 0,
+        "h": 0.75,
+        "rscale": 1,
+        "nodeID": {
+          "present": true,
+          "channel": "inherited",
+          "value": "inherited-id"
+        },
+        "domID": "target",
+        "elementArgument": "omitted",
+        "existingTransform": "",
+        "children": [
+          "path-A",
+          "g-B"
+        ]
+      },
+      "expectedScene": "<svg><g id=\"target\" transform=\"translate(250,1250)\"><text data-id-align=\"true\"></text><g data-idbox=\"true\" transform=\"translate(0,-750)\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+      "primaryEvidenceSHA256": "c38f6011f84e982cb36457d903c7836114a97bcac9a80afce04ec7cfdb943aba",
+      "calls": [
+        {
+          "beforeScene": "<svg><g id=\"target\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "afterScene": "<svg><g id=\"target\" transform=\"translate(250,1250)\"><text data-id-align=\"true\"></text><g data-idbox=\"true\" transform=\"translate(0,-750)\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "originalElements": [
+            {
+              "beforePath": [],
+              "afterPath": []
+            },
+            {
+              "beforePath": [
+                0
+              ],
+              "afterPath": [
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                0
+              ],
+              "afterPath": [
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                1
+              ],
+              "afterPath": [
+                0,
+                1,
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1
+              ],
+              "afterPath": [
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1,
+                0
+              ],
+              "afterPath": [
+                1,
+                0
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "no-attributes",
+      "spec": {
+        "name": "no-attributes",
+        "method": "place",
+        "x": 0.25,
+        "y": 0.5,
+        "dx": 0,
+        "h": 0.75,
+        "rscale": 1,
+        "nodeID": {
+          "attributesObjectAbsent": true
+        },
+        "domID": "target",
+        "elementArgument": "omitted",
+        "existingTransform": "",
+        "children": [
+          "path-A",
+          "g-B"
+        ],
+        "diagnostic": "Text-node wrapper path; use genuine wrapper class whose node has no Attributes"
+      },
+      "expectedScene": "<svg><g id=\"target\" transform=\"translate(250,500)\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+      "primaryEvidenceSHA256": "061852d91d2c8beeb0b05a564262aec6a0666e17297e58c80574534b49cf4d08",
+      "calls": [
+        {
+          "beforeScene": "<svg><g id=\"target\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "afterScene": "<svg><g id=\"target\" transform=\"translate(250,500)\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "originalElements": [
+            {
+              "beforePath": [],
+              "afterPath": []
+            },
+            {
+              "beforePath": [
+                0
+              ],
+              "afterPath": [
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                0
+              ],
+              "afterPath": [
+                0,
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                1
+              ],
+              "afterPath": [
+                0,
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1
+              ],
+              "afterPath": [
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1,
+                0
+              ],
+              "afterPath": [
+                1,
+                0
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "zero-children",
+      "spec": {
+        "name": "zero-children",
+        "method": "place",
+        "x": 0.25,
+        "y": 0.5,
+        "dx": 0,
+        "h": 0.75,
+        "rscale": 1,
+        "nodeID": {
+          "present": true,
+          "value": "target"
+        },
+        "domID": "target",
+        "elementArgument": "omitted",
+        "existingTransform": "",
+        "children": []
+      },
+      "expectedScene": "<svg><g id=\"target\" transform=\"translate(250,1250)\"><text data-id-align=\"true\"></text><g data-idbox=\"true\" transform=\"translate(0,-750)\"></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+      "primaryEvidenceSHA256": "2d07a31cfb25684cd24b49bdeaee24619e44ffe235ed142081f0dfa92b1ba7e7",
+      "calls": [
+        {
+          "beforeScene": "<svg><g id=\"target\"></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "afterScene": "<svg><g id=\"target\" transform=\"translate(250,1250)\"><text data-id-align=\"true\"></text><g data-idbox=\"true\" transform=\"translate(0,-750)\"></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "originalElements": [
+            {
+              "beforePath": [],
+              "afterPath": []
+            },
+            {
+              "beforePath": [
+                0
+              ],
+              "afterPath": [
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                1
+              ],
+              "afterPath": [
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1,
+                0
+              ],
+              "afterPath": [
+                1,
+                0
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "repeat-own",
+      "spec": {
+        "name": "repeat-own",
+        "method": "place",
+        "x": 0.25,
+        "y": 0.5,
+        "dx": 0,
+        "h": 0.75,
+        "rscale": 1,
+        "nodeID": {
+          "present": true,
+          "value": "target"
+        },
+        "domID": "target",
+        "elementArgument": "omitted",
+        "existingTransform": "",
+        "children": [
+          "path-A",
+          "g-B"
+        ],
+        "calls": [
+          {
+            "x": 0.25,
+            "y": 0.5,
+            "elementArgument": "omitted"
+          },
+          {
+            "x": 0.5,
+            "y": -0.25,
+            "elementArgument": "omitted"
+          }
+        ]
+      },
+      "expectedScene": "<svg><g id=\"target\" transform=\"translate(500,500) translate(250,1250)\"><text data-id-align=\"true\"></text><g data-idbox=\"true\" transform=\"translate(0,-750)\"><text data-id-align=\"true\"></text><g data-idbox=\"true\" transform=\"translate(0,-750)\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+      "primaryEvidenceSHA256": "d4c55a464752f9edc073baf8fd76ae03e025ce50f0601457762d8ed081f2f1e4",
+      "calls": [
+        {
+          "beforeScene": "<svg><g id=\"target\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "afterScene": "<svg><g id=\"target\" transform=\"translate(250,1250)\"><text data-id-align=\"true\"></text><g data-idbox=\"true\" transform=\"translate(0,-750)\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "originalElements": [
+            {
+              "beforePath": [],
+              "afterPath": []
+            },
+            {
+              "beforePath": [
+                0
+              ],
+              "afterPath": [
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                0
+              ],
+              "afterPath": [
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                1
+              ],
+              "afterPath": [
+                0,
+                1,
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1
+              ],
+              "afterPath": [
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1,
+                0
+              ],
+              "afterPath": [
+                1,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "beforeScene": "<svg><g id=\"target\" transform=\"translate(250,1250)\"><text data-id-align=\"true\"></text><g data-idbox=\"true\" transform=\"translate(0,-750)\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "afterScene": "<svg><g id=\"target\" transform=\"translate(500,500) translate(250,1250)\"><text data-id-align=\"true\"></text><g data-idbox=\"true\" transform=\"translate(0,-750)\"><text data-id-align=\"true\"></text><g data-idbox=\"true\" transform=\"translate(0,-750)\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "originalElements": [
+            {
+              "beforePath": [],
+              "afterPath": []
+            },
+            {
+              "beforePath": [
+                0
+              ],
+              "afterPath": [
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                0
+              ],
+              "afterPath": [
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                1
+              ],
+              "afterPath": [
+                0,
+                1,
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                1,
+                0
+              ],
+              "afterPath": [
+                0,
+                1,
+                1,
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                1,
+                1
+              ],
+              "afterPath": [
+                0,
+                1,
+                1,
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1
+              ],
+              "afterPath": [
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1,
+                0
+              ],
+              "afterPath": [
+                1,
+                0
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "own-then-explicit",
+      "spec": {
+        "name": "own-then-explicit",
+        "method": "place",
+        "x": 0.25,
+        "y": 0.5,
+        "dx": 0,
+        "h": 0.75,
+        "rscale": 1,
+        "nodeID": {
+          "present": true,
+          "value": "target"
+        },
+        "domID": "target",
+        "elementArgument": "omitted",
+        "existingTransform": "",
+        "children": [
+          "path-A",
+          "g-B"
+        ],
+        "calls": [
+          {
+            "x": 0.25,
+            "y": 0.5,
+            "elementArgument": "omitted"
+          },
+          {
+            "x": 0.5,
+            "y": -0.25,
+            "elementArgument": "sameOwnElement"
+          }
+        ]
+      },
+      "expectedScene": "<svg><g id=\"target\" transform=\"translate(500,-250) translate(250,1250)\"><text data-id-align=\"true\"></text><g data-idbox=\"true\" transform=\"translate(0,-750)\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+      "primaryEvidenceSHA256": "e8b5d8fabf7fb37744b5609d04ee6e3a2fd17a7e5c602286e90527eae71b1179",
+      "calls": [
+        {
+          "beforeScene": "<svg><g id=\"target\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "afterScene": "<svg><g id=\"target\" transform=\"translate(250,1250)\"><text data-id-align=\"true\"></text><g data-idbox=\"true\" transform=\"translate(0,-750)\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "originalElements": [
+            {
+              "beforePath": [],
+              "afterPath": []
+            },
+            {
+              "beforePath": [
+                0
+              ],
+              "afterPath": [
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                0
+              ],
+              "afterPath": [
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                1
+              ],
+              "afterPath": [
+                0,
+                1,
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1
+              ],
+              "afterPath": [
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1,
+                0
+              ],
+              "afterPath": [
+                1,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "beforeScene": "<svg><g id=\"target\" transform=\"translate(250,1250)\"><text data-id-align=\"true\"></text><g data-idbox=\"true\" transform=\"translate(0,-750)\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "afterScene": "<svg><g id=\"target\" transform=\"translate(500,-250) translate(250,1250)\"><text data-id-align=\"true\"></text><g data-idbox=\"true\" transform=\"translate(0,-750)\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "originalElements": [
+            {
+              "beforePath": [],
+              "afterPath": []
+            },
+            {
+              "beforePath": [
+                0
+              ],
+              "afterPath": [
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                0
+              ],
+              "afterPath": [
+                0,
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                1
+              ],
+              "afterPath": [
+                0,
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                1,
+                0
+              ],
+              "afterPath": [
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                1,
+                1
+              ],
+              "afterPath": [
+                0,
+                1,
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1
+              ],
+              "afterPath": [
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1,
+                0
+              ],
+              "afterPath": [
+                1,
+                0
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "explicit-then-own",
+      "spec": {
+        "name": "explicit-then-own",
+        "method": "place",
+        "x": 0.25,
+        "y": 0.5,
+        "dx": 0,
+        "h": 0.75,
+        "rscale": 1,
+        "nodeID": {
+          "present": true,
+          "value": "target"
+        },
+        "domID": "target",
+        "elementArgument": "omitted",
+        "existingTransform": "",
+        "children": [
+          "path-A",
+          "g-B"
+        ],
+        "calls": [
+          {
+            "x": 0.25,
+            "y": 0.5,
+            "elementArgument": "sameOwnElement"
+          },
+          {
+            "x": 0.5,
+            "y": -0.25,
+            "elementArgument": "omitted"
+          }
+        ]
+      },
+      "expectedScene": "<svg><g id=\"target\" transform=\"translate(500,500) translate(250,500)\"><text data-id-align=\"true\"></text><g data-idbox=\"true\" transform=\"translate(0,-750)\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+      "primaryEvidenceSHA256": "336c84fcf91012b3cd7813d524074f3908fe7a8fa3237435b5dd4faa557786f4",
+      "calls": [
+        {
+          "beforeScene": "<svg><g id=\"target\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "afterScene": "<svg><g id=\"target\" transform=\"translate(250,500)\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "originalElements": [
+            {
+              "beforePath": [],
+              "afterPath": []
+            },
+            {
+              "beforePath": [
+                0
+              ],
+              "afterPath": [
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                0
+              ],
+              "afterPath": [
+                0,
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                1
+              ],
+              "afterPath": [
+                0,
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1
+              ],
+              "afterPath": [
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1,
+                0
+              ],
+              "afterPath": [
+                1,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "beforeScene": "<svg><g id=\"target\" transform=\"translate(250,500)\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "afterScene": "<svg><g id=\"target\" transform=\"translate(500,500) translate(250,500)\"><text data-id-align=\"true\"></text><g data-idbox=\"true\" transform=\"translate(0,-750)\"><path data-fixture=\"path-A\" d=\"M0 0L1 1\"></path><g data-fixture=\"g-B\"></g></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "originalElements": [
+            {
+              "beforePath": [],
+              "afterPath": []
+            },
+            {
+              "beforePath": [
+                0
+              ],
+              "afterPath": [
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                0
+              ],
+              "afterPath": [
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                1
+              ],
+              "afterPath": [
+                0,
+                1,
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1
+              ],
+              "afterPath": [
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1,
+                0
+              ],
+              "afterPath": [
+                1,
+                0
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "firstChild-empty",
+      "spec": {
+        "name": "firstChild-empty",
+        "method": "firstChild",
+        "children": [],
+        "calls": 1
+      },
+      "expectedScene": "<svg><g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+      "primaryEvidenceSHA256": "9407d6bcdb830e13456795f3c53df386c644406a54239f24e46a9c8dea9d9d9e",
+      "calls": [
+        {
+          "beforeScene": "<svg><g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "afterScene": "<svg><g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "originalElements": [
+            {
+              "beforePath": [],
+              "afterPath": []
+            },
+            {
+              "beforePath": [
+                0
+              ],
+              "afterPath": [
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                1
+              ],
+              "afterPath": [
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1,
+                0
+              ],
+              "afterPath": [
+                1,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "firstChildPath": null,
+      "tableBackgroundPath": null
+    },
+    {
+      "name": "firstChild-plain-content",
+      "spec": {
+        "name": "firstChild-plain-content",
+        "method": "firstChild",
+        "children": [
+          "content"
+        ],
+        "calls": 1
+      },
+      "expectedScene": "<svg><g><g data-fixture=\"content\"></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+      "primaryEvidenceSHA256": "ea163a4bfc2393ce376b5ce091934682cf626983a7ee07d01cce54ce4fcdac47",
+      "calls": [
+        {
+          "beforeScene": "<svg><g><g data-fixture=\"content\"></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "afterScene": "<svg><g><g data-fixture=\"content\"></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "originalElements": [
+            {
+              "beforePath": [],
+              "afterPath": []
+            },
+            {
+              "beforePath": [
+                0
+              ],
+              "afterPath": [
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                0
+              ],
+              "afterPath": [
+                0,
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                1
+              ],
+              "afterPath": [
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1,
+                0
+              ],
+              "afterPath": [
+                1,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "firstChildPath": [
+        0
+      ],
+      "tableBackgroundPath": null
+    },
+    {
+      "name": "firstChild-href-only",
+      "spec": {
+        "name": "firstChild-href-only",
+        "method": "firstChild",
+        "children": [
+          "hitbox",
+          "content"
+        ],
+        "calls": 1
+      },
+      "expectedScene": "<svg><g><rect data-hitbox=\"true\" fill=\"none\" stroke=\"none\" width=\"100\" height=\"200\"></rect><g data-fixture=\"content\"></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+      "primaryEvidenceSHA256": "fdd0b8da57b2f2dffbb877626b3235e492cb937a60eeb730a02302a38d6a19fe",
+      "calls": [
+        {
+          "beforeScene": "<svg><g><rect data-hitbox=\"true\" fill=\"none\" stroke=\"none\" width=\"100\" height=\"200\"></rect><g data-fixture=\"content\"></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "afterScene": "<svg><g><rect data-hitbox=\"true\" fill=\"none\" stroke=\"none\" width=\"100\" height=\"200\"></rect><g data-fixture=\"content\"></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "originalElements": [
+            {
+              "beforePath": [],
+              "afterPath": []
+            },
+            {
+              "beforePath": [
+                0
+              ],
+              "afterPath": [
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                0
+              ],
+              "afterPath": [
+                0,
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                1
+              ],
+              "afterPath": [
+                0,
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1
+              ],
+              "afterPath": [
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1,
+                0
+              ],
+              "afterPath": [
+                1,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "firstChildPath": [
+        1
+      ],
+      "tableBackgroundPath": null
+    },
+    {
+      "name": "firstChild-idbox-content",
+      "spec": {
+        "name": "firstChild-idbox-content",
+        "method": "firstChild",
+        "children": [
+          "alignmentText",
+          {
+            "idbox": [
+              "content"
+            ]
+          }
+        ],
+        "calls": 1
+      },
+      "expectedScene": "<svg><g><text data-id-align=\"true\"></text><g data-idbox=\"true\"><g data-fixture=\"content\"></g></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+      "primaryEvidenceSHA256": "34e25b9f5c6f93ddb40f18dd31643df719ebffd5ca31b6d482d46acd7a1cb231",
+      "calls": [
+        {
+          "beforeScene": "<svg><g><text data-id-align=\"true\"></text><g data-idbox=\"true\"><g data-fixture=\"content\"></g></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "afterScene": "<svg><g><text data-id-align=\"true\"></text><g data-idbox=\"true\"><g data-fixture=\"content\"></g></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "originalElements": [
+            {
+              "beforePath": [],
+              "afterPath": []
+            },
+            {
+              "beforePath": [
+                0
+              ],
+              "afterPath": [
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                0
+              ],
+              "afterPath": [
+                0,
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                1
+              ],
+              "afterPath": [
+                0,
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                1,
+                0
+              ],
+              "afterPath": [
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                1
+              ],
+              "afterPath": [
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1,
+                0
+              ],
+              "afterPath": [
+                1,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "firstChildPath": [
+        1,
+        0
+      ],
+      "tableBackgroundPath": null
+    },
+    {
+      "name": "firstChild-idbox-href",
+      "spec": {
+        "name": "firstChild-idbox-href",
+        "method": "firstChild",
+        "children": [
+          "alignmentText",
+          {
+            "idbox": [
+              "hitbox",
+              "content"
+            ]
+          }
+        ],
+        "calls": 1
+      },
+      "expectedScene": "<svg><g><text data-id-align=\"true\"></text><g data-idbox=\"true\"><rect data-hitbox=\"true\" fill=\"none\" stroke=\"none\" width=\"100\" height=\"200\"></rect><g data-fixture=\"content\"></g></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+      "primaryEvidenceSHA256": "2f6cd712d051d62f607364b1a1e714685ef87a77167404cd498c8d8b2c56e2d3",
+      "calls": [
+        {
+          "beforeScene": "<svg><g><text data-id-align=\"true\"></text><g data-idbox=\"true\"><rect data-hitbox=\"true\" fill=\"none\" stroke=\"none\" width=\"100\" height=\"200\"></rect><g data-fixture=\"content\"></g></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "afterScene": "<svg><g><text data-id-align=\"true\"></text><g data-idbox=\"true\"><rect data-hitbox=\"true\" fill=\"none\" stroke=\"none\" width=\"100\" height=\"200\"></rect><g data-fixture=\"content\"></g></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "originalElements": [
+            {
+              "beforePath": [],
+              "afterPath": []
+            },
+            {
+              "beforePath": [
+                0
+              ],
+              "afterPath": [
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                0
+              ],
+              "afterPath": [
+                0,
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                1
+              ],
+              "afterPath": [
+                0,
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                1,
+                0
+              ],
+              "afterPath": [
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                1,
+                1
+              ],
+              "afterPath": [
+                0,
+                1,
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1
+              ],
+              "afterPath": [
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1,
+                0
+              ],
+              "afterPath": [
+                1,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "firstChildPath": [
+        1,
+        1
+      ],
+      "tableBackgroundPath": null
+    },
+    {
+      "name": "firstChild-idbox-background-first",
+      "spec": {
+        "name": "firstChild-idbox-background-first",
+        "method": "firstChild",
+        "children": [
+          "alignmentText",
+          {
+            "idbox": [
+              "background",
+              "hitbox",
+              "content"
+            ]
+          }
+        ],
+        "calls": 1
+      },
+      "expectedScene": "<svg><g><text data-id-align=\"true\"></text><g data-idbox=\"true\"><rect data-bgcolor=\"true\" fill=\"yellow\" width=\"100\" height=\"200\"></rect><rect data-hitbox=\"true\" fill=\"none\" stroke=\"none\" width=\"100\" height=\"200\"></rect><g data-fixture=\"content\"></g></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+      "primaryEvidenceSHA256": "2b1c75dc04f7e7673679e237699e466617ac9f08065d0d8ead7e11627e8b5a2a",
+      "calls": [
+        {
+          "beforeScene": "<svg><g><text data-id-align=\"true\"></text><g data-idbox=\"true\"><rect data-bgcolor=\"true\" fill=\"yellow\" width=\"100\" height=\"200\"></rect><rect data-hitbox=\"true\" fill=\"none\" stroke=\"none\" width=\"100\" height=\"200\"></rect><g data-fixture=\"content\"></g></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "afterScene": "<svg><g><text data-id-align=\"true\"></text><g data-idbox=\"true\"><rect data-bgcolor=\"true\" fill=\"yellow\" width=\"100\" height=\"200\"></rect><rect data-hitbox=\"true\" fill=\"none\" stroke=\"none\" width=\"100\" height=\"200\"></rect><g data-fixture=\"content\"></g></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "originalElements": [
+            {
+              "beforePath": [],
+              "afterPath": []
+            },
+            {
+              "beforePath": [
+                0
+              ],
+              "afterPath": [
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                0
+              ],
+              "afterPath": [
+                0,
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                1
+              ],
+              "afterPath": [
+                0,
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                1,
+                0
+              ],
+              "afterPath": [
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                1,
+                1
+              ],
+              "afterPath": [
+                0,
+                1,
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                1,
+                2
+              ],
+              "afterPath": [
+                0,
+                1,
+                2
+              ]
+            },
+            {
+              "beforePath": [
+                1
+              ],
+              "afterPath": [
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1,
+                0
+              ],
+              "afterPath": [
+                1,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "firstChildPath": [
+        1,
+        0
+      ],
+      "tableBackgroundPath": [
+        1,
+        0
+      ]
+    },
+    {
+      "name": "firstChild-nested-repeat",
+      "spec": {
+        "name": "firstChild-nested-repeat",
+        "method": "firstChild",
+        "children": [
+          "alignmentText",
+          {
+            "idbox": [
+              "alignmentText",
+              {
+                "idbox": [
+                  "hitbox",
+                  "content"
+                ]
+              }
+            ]
+          }
+        ],
+        "calls": 1
+      },
+      "expectedScene": "<svg><g><text data-id-align=\"true\"></text><g data-idbox=\"true\"><text data-id-align=\"true\"></text><g data-idbox=\"true\"><rect data-hitbox=\"true\" fill=\"none\" stroke=\"none\" width=\"100\" height=\"200\"></rect><g data-fixture=\"content\"></g></g></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+      "primaryEvidenceSHA256": "4b68f72cefd5cbaaf10dae690c3203779b204553160aef61b40d367cc8bed4fe",
+      "calls": [
+        {
+          "beforeScene": "<svg><g><text data-id-align=\"true\"></text><g data-idbox=\"true\"><text data-id-align=\"true\"></text><g data-idbox=\"true\"><rect data-hitbox=\"true\" fill=\"none\" stroke=\"none\" width=\"100\" height=\"200\"></rect><g data-fixture=\"content\"></g></g></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "afterScene": "<svg><g><text data-id-align=\"true\"></text><g data-idbox=\"true\"><text data-id-align=\"true\"></text><g data-idbox=\"true\"><rect data-hitbox=\"true\" fill=\"none\" stroke=\"none\" width=\"100\" height=\"200\"></rect><g data-fixture=\"content\"></g></g></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "originalElements": [
+            {
+              "beforePath": [],
+              "afterPath": []
+            },
+            {
+              "beforePath": [
+                0
+              ],
+              "afterPath": [
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                0
+              ],
+              "afterPath": [
+                0,
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                1
+              ],
+              "afterPath": [
+                0,
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                1,
+                0
+              ],
+              "afterPath": [
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                1,
+                1
+              ],
+              "afterPath": [
+                0,
+                1,
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                1,
+                1,
+                0
+              ],
+              "afterPath": [
+                0,
+                1,
+                1,
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                1,
+                1,
+                1
+              ],
+              "afterPath": [
+                0,
+                1,
+                1,
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1
+              ],
+              "afterPath": [
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1,
+                0
+              ],
+              "afterPath": [
+                1,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "firstChildPath": [
+        1,
+        0
+      ],
+      "tableBackgroundPath": null
+    },
+    {
+      "name": "firstChild-empty-marker-not-truthy",
+      "spec": {
+        "name": "firstChild-empty-marker-not-truthy",
+        "method": "firstChild",
+        "children": [
+          "emptyMarkerText",
+          {
+            "idbox": [
+              "content"
+            ]
+          }
+        ],
+        "calls": 1
+      },
+      "expectedScene": "<svg><g><text data-id-align=\"\"></text><g data-idbox=\"true\"><g data-fixture=\"content\"></g></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+      "primaryEvidenceSHA256": "e11ab5d9b8db255f0ca894c69c549abc5c76ce35e0da78dae09428a55e2c7f08",
+      "calls": [
+        {
+          "beforeScene": "<svg><g><text data-id-align=\"\"></text><g data-idbox=\"true\"><g data-fixture=\"content\"></g></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "afterScene": "<svg><g><text data-id-align=\"\"></text><g data-idbox=\"true\"><g data-fixture=\"content\"></g></g></g><g data-fixture=\"other\"><path data-fixture=\"other-path\"></path></g></svg>",
+          "originalElements": [
+            {
+              "beforePath": [],
+              "afterPath": []
+            },
+            {
+              "beforePath": [
+                0
+              ],
+              "afterPath": [
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                0
+              ],
+              "afterPath": [
+                0,
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                1
+              ],
+              "afterPath": [
+                0,
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                0,
+                1,
+                0
+              ],
+              "afterPath": [
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "beforePath": [
+                1
+              ],
+              "afterPath": [
+                1
+              ]
+            },
+            {
+              "beforePath": [
+                1,
+                0
+              ],
+              "afterPath": [
+                1,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "firstChildPath": [
+        0
+      ],
+      "tableBackgroundPath": null
+    }
+  ]
+}

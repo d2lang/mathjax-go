@@ -130,13 +130,13 @@ func (w *wrapper) rootToSVG(parent *Element) {
 		root.toSVG(element)
 		x, rootHeight, dx := w.rootDimensions(surdBox, height)
 		rootBox := root.outerBBox()
-		root.place(dx*rootBox.RScale, rootHeight, root.element)
+		root.place(dx*rootBox.RScale, rootHeight)
 		w.dx = x
 	}
 	surd.toSVG(element)
-	surd.place(w.dx, height-surdBox.H, surd.element)
+	surd.place(w.dx, height-surdBox.H)
 	base.toSVG(baseContainer)
-	base.place(w.dx+surdBox.W, 0, base.element)
+	base.place(w.dx+surdBox.W, 0)
 	element.Append(NewElement("rect").
 		SetAttr("width", fixed(baseBox.W)).
 		SetAttr("height", fixed(t)).

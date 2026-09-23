@@ -371,8 +371,8 @@ func (w *wrapper) underOverToSVG(parent *Element) {
 		}
 		_, v := w.underKV(baseBox, underBox)
 		x := w.stackOffsets([]*layout.BBox{baseBox, underBox}, []float64{0, -delta})
-		base.place(x[0], 0, base.element)
-		under.place(x[1], v, under.element)
+		base.place(x[0], 0)
+		under.place(x[1], v)
 	case "mover":
 		over := w.overChild()
 		overBox := over.outerBBox()
@@ -383,8 +383,8 @@ func (w *wrapper) underOverToSVG(parent *Element) {
 		}
 		_, u := w.overKU(baseBox, overBox)
 		x := w.stackOffsets([]*layout.BBox{baseBox, overBox}, []float64{0, delta})
-		base.place(x[0], 0, base.element)
-		over.place(x[1], u, over.element)
+		base.place(x[0], 0)
+		over.place(x[1], u)
 	case "munderover":
 		under, over := w.underChild(), w.overChild()
 		underBox, overBox := under.outerBBox(), over.outerBBox()
@@ -401,9 +401,9 @@ func (w *wrapper) underOverToSVG(parent *Element) {
 		_, u := w.overKU(baseBox, overBox)
 		_, v := w.underKV(baseBox, underBox)
 		x := w.stackOffsets([]*layout.BBox{baseBox, underBox, overBox}, []float64{0, underDelta, overDelta})
-		base.place(x[0], 0, base.element)
-		under.place(x[1], v, under.element)
-		over.place(x[2], u, over.element)
+		base.place(x[0], 0)
+		under.place(x[1], v)
+		over.place(x[2], u)
 	}
 }
 
@@ -416,17 +416,17 @@ func (w *wrapper) movableLimitsToSVG(parent *Element) {
 	case "munder":
 		sub := w.underChild()
 		sub.toSVG(element)
-		sub.place(width, -w.subShift(sub, w.renderer.params.Sub1), sub.element)
+		sub.place(width, -w.subShift(sub, w.renderer.params.Sub1))
 	case "mover":
 		sup := w.overChild()
 		sup.toSVG(element)
-		sup.place(width+w.adjustedIC()-w.baseIC(), w.supShift(sup), sup.element)
+		sup.place(width+w.adjustedIC()-w.baseIC(), w.supShift(sup))
 	case "munderover":
 		sub, sup := w.underChild(), w.overChild()
 		subY, supY := w.scriptOffsetsFor(sub, sup)
 		sup.toSVG(element)
 		sub.toSVG(element)
-		sub.place(width, subY, sub.element)
-		sup.place(width+w.adjustedIC(), supY, sup.element)
+		sub.place(width, subY)
+		sup.place(width+w.adjustedIC(), supY)
 	}
 }

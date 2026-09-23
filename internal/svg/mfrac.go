@@ -137,9 +137,9 @@ func (w *wrapper) ruledFractionToSVG(element *Element, display bool, thickness f
 	T, u, v := w.fractionTUV(display, thickness)
 	a := w.renderer.params.Axis
 	numerator.toSVG(element)
-	numerator.place(nx, a+T+math.Max(nbox.D*nbox.RScale, u), numerator.element)
+	numerator.place(nx, a+T+math.Max(nbox.D*nbox.RScale, u))
 	denominator.toSVG(element)
-	denominator.place(dx, a-T-math.Max(dbox.H*dbox.RScale, v), denominator.element)
+	denominator.place(dx, a-T-math.Max(dbox.H*dbox.RScale, v))
 	element.Append(NewElement("rect").
 		SetAttr("width", fixed(width+2*.1)).
 		SetAttr("height", fixed(thickness)).
@@ -156,9 +156,9 @@ func (w *wrapper) atopToSVG(element *Element, display bool) {
 	dx := alignX(width, dbox, stringAttribute(w.node, "denomalign", "center")) + pad
 	u, v, _, _, _ := w.fractionUVQ(display)
 	numerator.toSVG(element)
-	numerator.place(nx, u, numerator.element)
+	numerator.place(nx, u)
 	denominator.toSVG(element)
-	denominator.place(dx, -v, denominator.element)
+	denominator.place(dx, -v)
 }
 
 func (w *wrapper) bevelledToSVG(element *Element, display bool) {
@@ -168,14 +168,14 @@ func (w *wrapper) bevelledToSVG(element *Element, display bool) {
 	u, v, delta, nbox, dbox := w.bevelData(display)
 	width := (nbox.L + nbox.W + nbox.R) * nbox.RScale
 	numerator.toSVG(element)
-	numerator.place(nbox.L*nbox.RScale, u, numerator.element)
+	numerator.place(nbox.L*nbox.RScale, u)
 	slash := NewElement("g").SetAttr("data-mml-node", "mo")
 	element.Append(slash)
 	temporary := &wrapper{renderer: w.renderer, variant: font.Normal}
 	temporary.placeChar('/', 0, 0, slash, font.Normal)
 	temporary.place(width-delta/2, 0, slash)
 	denominator.toSVG(element)
-	denominator.place(width+.5+dbox.L*dbox.RScale-delta, v, denominator.element)
+	denominator.place(width+.5+dbox.L*dbox.RScale-delta, v)
 }
 
 func alignX(width float64, bbox *layout.BBox, align string) float64 {
