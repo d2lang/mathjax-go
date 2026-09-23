@@ -1,0 +1,1759 @@
+{
+  "public": [
+    {
+      "name": "single-infix-inline",
+      "tex": "x\\pick y",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "\\choose",
+          "arguments": 0
+        }
+      ],
+      "profile": "fixed-packages",
+      "purpose": "retained successful-primary witness",
+      "display": false
+    },
+    {
+      "name": "single-infix-display",
+      "tex": "x\\pick y",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "\\choose",
+          "arguments": 0
+        }
+      ],
+      "profile": "fixed-packages",
+      "purpose": "retained successful-primary witness",
+      "display": true
+    },
+    {
+      "name": "repeated-infix-inline",
+      "tex": "x\\pick y\\pick z",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "\\choose",
+          "arguments": 0
+        }
+      ],
+      "profile": "fixed-packages",
+      "purpose": "join first; D070 must then report actual ambiguity",
+      "display": false
+    },
+    {
+      "name": "repeated-infix-display",
+      "tex": "x\\pick y\\pick z",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "\\choose",
+          "arguments": 0
+        }
+      ],
+      "profile": "fixed-packages",
+      "purpose": "join first; D070 must then report actual ambiguity",
+      "display": true
+    },
+    {
+      "name": "explicit-infix-space-inline",
+      "tex": "x\\pick y",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "\\choose ",
+          "arguments": 0
+        }
+      ],
+      "profile": "fixed-packages",
+      "purpose": "already-delimited unchanged control",
+      "display": false
+    },
+    {
+      "name": "explicit-infix-space-display",
+      "tex": "x\\pick y",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "\\choose ",
+          "arguments": 0
+        }
+      ],
+      "profile": "fixed-packages",
+      "purpose": "already-delimited unchanged control",
+      "display": true
+    },
+    {
+      "name": "group-tail-inline",
+      "tex": "x\\pick{y}",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "\\choose",
+          "arguments": 0
+        }
+      ],
+      "profile": "fixed-packages",
+      "purpose": "brace needs no separator",
+      "display": false
+    },
+    {
+      "name": "group-tail-display",
+      "tex": "x\\pick{y}",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "\\choose",
+          "arguments": 0
+        }
+      ],
+      "profile": "fixed-packages",
+      "purpose": "brace needs no separator",
+      "display": true
+    },
+    {
+      "name": "nested-group-inline",
+      "tex": "{x\\pick y}+z",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "\\choose",
+          "arguments": 0
+        }
+      ],
+      "profile": "fixed-packages",
+      "purpose": "same-row continuation with real terminator",
+      "display": false
+    },
+    {
+      "name": "nested-group-display",
+      "tex": "{x\\pick y}+z",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "\\choose",
+          "arguments": 0
+        }
+      ],
+      "profile": "fixed-packages",
+      "purpose": "same-row continuation with real terminator",
+      "display": true
+    },
+    {
+      "name": "script-macro-inline",
+      "tex": "x^\\pick y",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "\\alpha",
+          "arguments": 0
+        }
+      ],
+      "profile": "fixed-packages",
+      "purpose": "D066 pending script continuation, no fabricated empty argument",
+      "display": false
+    },
+    {
+      "name": "script-macro-display",
+      "tex": "x^\\pick y",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "\\alpha",
+          "arguments": 0
+        }
+      ],
+      "profile": "fixed-packages",
+      "purpose": "D066 pending script continuation, no fabricated empty argument",
+      "display": true
+    },
+    {
+      "name": "prime-macro-inline",
+      "tex": "x'\\pick y",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "\\alpha",
+          "arguments": 0
+        }
+      ],
+      "profile": "fixed-packages",
+      "purpose": "pending prime lifetime unchanged",
+      "display": false
+    },
+    {
+      "name": "prime-macro-display",
+      "tex": "x'\\pick y",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "\\alpha",
+          "arguments": 0
+        }
+      ],
+      "profile": "fixed-packages",
+      "purpose": "pending prime lifetime unchanged",
+      "display": true
+    },
+    {
+      "name": "function-macro-inline",
+      "tex": "\\sin\\pick y",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "\\alpha",
+          "arguments": 0
+        }
+      ],
+      "profile": "fixed-packages",
+      "purpose": "pending function and ApplyFunction unchanged",
+      "display": false
+    },
+    {
+      "name": "function-macro-display",
+      "tex": "\\sin\\pick y",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "\\alpha",
+          "arguments": 0
+        }
+      ],
+      "profile": "fixed-packages",
+      "purpose": "pending function and ApplyFunction unchanged",
+      "display": true
+    },
+    {
+      "name": "uppercase-tail-inline",
+      "tex": "\\pick Y",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "\\alpha",
+          "arguments": 0
+        }
+      ],
+      "profile": "fixed-packages",
+      "purpose": "ASCII upper-case tail requires separator",
+      "display": false
+    },
+    {
+      "name": "uppercase-tail-display",
+      "tex": "\\pick Y",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "\\alpha",
+          "arguments": 0
+        }
+      ],
+      "profile": "fixed-packages",
+      "purpose": "ASCII upper-case tail requires separator",
+      "display": true
+    },
+    {
+      "name": "digit-tail-inline",
+      "tex": "\\pick 2",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "\\alpha",
+          "arguments": 0
+        }
+      ],
+      "profile": "fixed-packages",
+      "purpose": "numeric tail needs none",
+      "display": false
+    },
+    {
+      "name": "digit-tail-display",
+      "tex": "\\pick 2",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "\\alpha",
+          "arguments": 0
+        }
+      ],
+      "profile": "fixed-packages",
+      "purpose": "numeric tail needs none",
+      "display": true
+    },
+    {
+      "name": "unicode-tail-inline",
+      "tex": "\\pick é",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "\\alpha",
+          "arguments": 0
+        }
+      ],
+      "profile": "fixed-packages",
+      "purpose": "non-ASCII tail needs none; no Unicode case folding",
+      "display": false
+    },
+    {
+      "name": "unicode-tail-display",
+      "tex": "\\pick é",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "\\alpha",
+          "arguments": 0
+        }
+      ],
+      "profile": "fixed-packages",
+      "purpose": "non-ASCII tail needs none; no Unicode case folding",
+      "display": true
+    },
+    {
+      "name": "command-tail-inline",
+      "tex": "\\pick\\beta",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "\\alpha",
+          "arguments": 0
+        }
+      ],
+      "profile": "fixed-packages",
+      "purpose": "backslash tail needs none",
+      "display": false
+    },
+    {
+      "name": "command-tail-display",
+      "tex": "\\pick\\beta",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "\\alpha",
+          "arguments": 0
+        }
+      ],
+      "profile": "fixed-packages",
+      "purpose": "backslash tail needs none",
+      "display": true
+    },
+    {
+      "name": "existing-space-tail-inline",
+      "tex": "\\pick  y",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "\\alpha",
+          "arguments": 0
+        }
+      ],
+      "profile": "fixed-packages",
+      "purpose": "GetCS eats one literal space only; remaining space stays",
+      "display": false
+    },
+    {
+      "name": "existing-space-tail-display",
+      "tex": "\\pick  y",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "\\alpha",
+          "arguments": 0
+        }
+      ],
+      "profile": "fixed-packages",
+      "purpose": "GetCS eats one literal space only; remaining space stays",
+      "display": true
+    },
+    {
+      "name": "comment-tail-inline",
+      "tex": "\\pick%comment\ny",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "\\alpha",
+          "arguments": 0
+        }
+      ],
+      "profile": "fixed-packages",
+      "purpose": "comment is not initial ASCII letter",
+      "display": false
+    },
+    {
+      "name": "comment-tail-display",
+      "tex": "\\pick%comment\ny",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "\\alpha",
+          "arguments": 0
+        }
+      ],
+      "profile": "fixed-packages",
+      "purpose": "comment is not initial ASCII letter",
+      "display": true
+    },
+    {
+      "name": "punctuation-tail-inline",
+      "tex": "\\pick+y",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "\\alpha",
+          "arguments": 0
+        }
+      ],
+      "profile": "fixed-packages",
+      "purpose": "ordinary separator unchanged",
+      "display": false
+    },
+    {
+      "name": "punctuation-tail-display",
+      "tex": "\\pick+y",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "\\alpha",
+          "arguments": 0
+        }
+      ],
+      "profile": "fixed-packages",
+      "purpose": "ordinary separator unchanged",
+      "display": true
+    },
+    {
+      "name": "empty-expansion-inline",
+      "tex": "x\\pick y",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "",
+          "arguments": 0
+        }
+      ],
+      "profile": "fixed-packages",
+      "purpose": "no materialized empty atom",
+      "display": false
+    },
+    {
+      "name": "empty-expansion-display",
+      "tex": "x\\pick y",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "",
+          "arguments": 0
+        }
+      ],
+      "profile": "fixed-packages",
+      "purpose": "no materialized empty atom",
+      "display": true
+    },
+    {
+      "name": "control-symbol-end-inline",
+      "tex": "\\pick y",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "\\,",
+          "arguments": 0
+        }
+      ],
+      "profile": "fixed-packages",
+      "purpose": "nonletter command does not need inserted separator",
+      "display": false
+    },
+    {
+      "name": "control-symbol-end-display",
+      "tex": "\\pick y",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "\\,",
+          "arguments": 0
+        }
+      ],
+      "profile": "fixed-packages",
+      "purpose": "nonletter command does not need inserted separator",
+      "display": true
+    },
+    {
+      "name": "argument-to-literal-inline",
+      "tex": "\\pick{\\alpha}",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "#1x",
+          "arguments": 1
+        }
+      ],
+      "profile": "fixed-packages",
+      "purpose": "substituted command immediately before literal letters",
+      "display": false
+    },
+    {
+      "name": "argument-to-literal-display",
+      "tex": "\\pick{\\alpha}",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "#1x",
+          "arguments": 1
+        }
+      ],
+      "profile": "fixed-packages",
+      "purpose": "substituted command immediately before literal letters",
+      "display": true
+    },
+    {
+      "name": "literal-to-argument-inline",
+      "tex": "\\pick{x}",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "\\alpha#1",
+          "arguments": 1
+        }
+      ],
+      "profile": "fixed-packages",
+      "purpose": "literal command immediately before argument letters",
+      "display": false
+    },
+    {
+      "name": "literal-to-argument-display",
+      "tex": "\\pick{x}",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "\\alpha#1",
+          "arguments": 1
+        }
+      ],
+      "profile": "fixed-packages",
+      "purpose": "literal command immediately before argument letters",
+      "display": true
+    },
+    {
+      "name": "argument-to-argument-inline",
+      "tex": "\\pick{\\alpha}{x}",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "#1#2",
+          "arguments": 2
+        }
+      ],
+      "profile": "fixed-packages",
+      "purpose": "two substituted chunks must use same addArgs contract",
+      "display": false
+    },
+    {
+      "name": "argument-to-argument-display",
+      "tex": "\\pick{\\alpha}{x}",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "#1#2",
+          "arguments": 2
+        }
+      ],
+      "profile": "fixed-packages",
+      "purpose": "two substituted chunks must use same addArgs contract",
+      "display": true
+    },
+    {
+      "name": "argument-to-tail-inline",
+      "tex": "\\pick{\\alpha}y",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "#1",
+          "arguments": 1
+        }
+      ],
+      "profile": "fixed-packages",
+      "purpose": "substitution result to remaining source",
+      "display": false
+    },
+    {
+      "name": "argument-to-tail-display",
+      "tex": "\\pick{\\alpha}y",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "#1",
+          "arguments": 1
+        }
+      ],
+      "profile": "fixed-packages",
+      "purpose": "substitution result to remaining source",
+      "display": true
+    },
+    {
+      "name": "nested-macro-inline",
+      "tex": "\\pick y",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "\\second",
+          "arguments": 0
+        },
+        {
+          "name": "second",
+          "body": "\\alpha",
+          "arguments": 0
+        }
+      ],
+      "profile": "fixed-packages",
+      "purpose": "nested invocation source/count order",
+      "display": false
+    },
+    {
+      "name": "nested-macro-display",
+      "tex": "\\pick y",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "\\second",
+          "arguments": 0
+        },
+        {
+          "name": "second",
+          "body": "\\alpha",
+          "arguments": 0
+        }
+      ],
+      "profile": "fixed-packages",
+      "purpose": "nested invocation source/count order",
+      "display": true
+    },
+    {
+      "name": "optional-default-inline",
+      "tex": "\\pick{x}",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "#1#2",
+          "arguments": 2,
+          "optionalDefault": "\\alpha"
+        }
+      ],
+      "profile": "fixed-packages",
+      "purpose": "normal BaseMethods.Macro optional/default read",
+      "display": false
+    },
+    {
+      "name": "optional-default-display",
+      "tex": "\\pick{x}",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "#1#2",
+          "arguments": 2,
+          "optionalDefault": "\\alpha"
+        }
+      ],
+      "profile": "fixed-packages",
+      "purpose": "normal BaseMethods.Macro optional/default read",
+      "display": true
+    },
+    {
+      "name": "optional-explicit-inline",
+      "tex": "\\pick[\\beta]{x}",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "#1#2",
+          "arguments": 2,
+          "optionalDefault": "\\alpha"
+        }
+      ],
+      "profile": "fixed-packages",
+      "purpose": "explicit optional argument boundary",
+      "display": false
+    },
+    {
+      "name": "optional-explicit-display",
+      "tex": "\\pick[\\beta]{x}",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "#1#2",
+          "arguments": 2,
+          "optionalDefault": "\\alpha"
+        }
+      ],
+      "profile": "fixed-packages",
+      "purpose": "explicit optional argument boundary",
+      "display": true
+    },
+    {
+      "name": "escaped-parameter-inline",
+      "tex": "\\pick{x}",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "\\#1",
+          "arguments": 1
+        }
+      ],
+      "profile": "fixed-packages",
+      "purpose": "escape pair is literal, not parameter substitution",
+      "display": false
+    },
+    {
+      "name": "escaped-parameter-display",
+      "tex": "\\pick{x}",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "\\#1",
+          "arguments": 1
+        }
+      ],
+      "profile": "fixed-packages",
+      "purpose": "escape pair is literal, not parameter substitution",
+      "display": true
+    },
+    {
+      "name": "literal-hash-inline",
+      "tex": "\\pick{x}",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "##1",
+          "arguments": 1
+        }
+      ],
+      "profile": "fixed-packages",
+      "purpose": "literal hash behavior and actual downstream errors retained",
+      "display": false
+    },
+    {
+      "name": "literal-hash-display",
+      "tex": "\\pick{x}",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "##1",
+          "arguments": 1
+        }
+      ],
+      "profile": "fixed-packages",
+      "purpose": "literal hash behavior and actual downstream errors retained",
+      "display": true
+    },
+    {
+      "name": "zero-arg-hash-inline",
+      "tex": "\\pick",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "##",
+          "arguments": 0
+        }
+      ],
+      "profile": "fixed-packages",
+      "purpose": "zero-argument Macro bypasses substituteArgs; raw source/error capture",
+      "display": false
+    },
+    {
+      "name": "zero-arg-hash-display",
+      "tex": "\\pick",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "##",
+          "arguments": 0
+        }
+      ],
+      "profile": "fixed-packages",
+      "purpose": "zero-argument Macro bypasses substituteArgs; raw source/error capture",
+      "display": true
+    },
+    {
+      "name": "missing-argument-inline",
+      "tex": "\\pick",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "#1",
+          "arguments": 1
+        }
+      ],
+      "profile": "fixed-packages",
+      "purpose": "argument error before counter/buffer check",
+      "display": false
+    },
+    {
+      "name": "missing-argument-display",
+      "tex": "\\pick",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "#1",
+          "arguments": 1
+        }
+      ],
+      "profile": "fixed-packages",
+      "purpose": "argument error before counter/buffer check",
+      "display": true
+    },
+    {
+      "name": "invalid-parameter-inline",
+      "tex": "\\pick{x}",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "#2",
+          "arguments": 1
+        }
+      ],
+      "profile": "fixed-packages",
+      "purpose": "actual handler IllegalMacroParam before final join",
+      "display": false
+    },
+    {
+      "name": "invalid-parameter-display",
+      "tex": "\\pick{x}",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "#2",
+          "arguments": 1
+        }
+      ],
+      "profile": "fixed-packages",
+      "purpose": "actual handler IllegalMacroParam before final join",
+      "display": true
+    },
+    {
+      "name": "override-infix-inline",
+      "tex": "x\\choose y",
+      "registrations": [
+        {
+          "name": "choose",
+          "body": "q",
+          "arguments": 0
+        }
+      ],
+      "profile": "fixed-packages",
+      "purpose": "D080 exact registry priority must remain",
+      "display": false
+    },
+    {
+      "name": "override-infix-display",
+      "tex": "x\\choose y",
+      "registrations": [
+        {
+          "name": "choose",
+          "body": "q",
+          "arguments": 0
+        }
+      ],
+      "profile": "fixed-packages",
+      "purpose": "D080 exact registry priority must remain",
+      "display": true
+    },
+    {
+      "name": "direct-infix-inline",
+      "tex": "x\\choose y",
+      "registrations": [],
+      "profile": "fixed-packages",
+      "purpose": "unregistered infix control",
+      "display": false
+    },
+    {
+      "name": "direct-infix-display",
+      "tex": "x\\choose y",
+      "registrations": [],
+      "profile": "fixed-packages",
+      "purpose": "unregistered infix control",
+      "display": true
+    },
+    {
+      "name": "mhchem-control-inline",
+      "tex": "\\ce{H2O}x",
+      "registrations": [],
+      "profile": "fixed-packages",
+      "purpose": "Machine raw splice is intentionally separate",
+      "display": false
+    },
+    {
+      "name": "mhchem-control-display",
+      "tex": "\\ce{H2O}x",
+      "registrations": [],
+      "profile": "fixed-packages",
+      "purpose": "Machine raw splice is intentionally separate",
+      "display": true
+    },
+    {
+      "name": "vector-control-inline",
+      "tex": "\\va{x}y",
+      "registrations": [],
+      "profile": "fixed-packages",
+      "purpose": "Physics StarMacro modeled subparse remains unchanged",
+      "display": false
+    },
+    {
+      "name": "vector-control-display",
+      "tex": "\\va{x}y",
+      "registrations": [],
+      "profile": "fixed-packages",
+      "purpose": "Physics StarMacro modeled subparse remains unchanged",
+      "display": true
+    },
+    {
+      "name": "paired-control-inline",
+      "tex": "\\DeclarePairedDelimiter{\\pair}{(}{)}\\pair{\\alpha}y",
+      "registrations": [],
+      "profile": "fixed-packages",
+      "purpose": "paired helper consumer control; do not assume raw parity",
+      "display": false
+    },
+    {
+      "name": "paired-control-display",
+      "tex": "\\DeclarePairedDelimiter{\\pair}{(}{)}\\pair{\\alpha}y",
+      "registrations": [],
+      "profile": "fixed-packages",
+      "purpose": "paired helper consumer control; do not assume raw parity",
+      "display": true
+    },
+    {
+      "name": "environment-control-inline",
+      "tex": "\\newenvironment{wrap}{\\alpha}{z}\\begin{wrap}x\\end{wrap}y",
+      "registrations": [],
+      "profile": "official-newcommand-augmented",
+      "purpose": "explicit source-profile boundary, no environment rewrite",
+      "display": false
+    },
+    {
+      "name": "environment-control-display",
+      "tex": "\\newenvironment{wrap}{\\alpha}{z}\\begin{wrap}x\\end{wrap}y",
+      "registrations": [],
+      "profile": "official-newcommand-augmented",
+      "purpose": "explicit source-profile boundary, no environment rewrite",
+      "display": true
+    },
+    {
+      "name": "template-control-inline",
+      "tex": "\\def\\pick#1!{#1x}\\pick\\alpha!",
+      "registrations": [],
+      "profile": "official-newcommand-augmented",
+      "purpose": "actual MacroWithTemplate route, not a replacement handler",
+      "display": false
+    },
+    {
+      "name": "template-control-display",
+      "tex": "\\def\\pick#1!{#1x}\\pick\\alpha!",
+      "registrations": [],
+      "profile": "official-newcommand-augmented",
+      "purpose": "actual MacroWithTemplate route, not a replacement handler",
+      "display": true
+    },
+    {
+      "name": "direct-prime-inline",
+      "tex": "x'\\alpha y",
+      "display": false,
+      "profile": "fixed-packages",
+      "registrations": []
+    },
+    {
+      "name": "direct-prime-display",
+      "tex": "x'\\alpha y",
+      "display": true,
+      "profile": "fixed-packages",
+      "registrations": []
+    },
+    {
+      "name": "style-row-inline",
+      "tex": "\\displaystyle x\\pick y",
+      "display": false,
+      "profile": "fixed-packages",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "\\alpha",
+          "arguments": 0
+        }
+      ]
+    },
+    {
+      "name": "style-row-display",
+      "tex": "\\displaystyle x\\pick y",
+      "display": true,
+      "profile": "fixed-packages",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "\\alpha",
+          "arguments": 0
+        }
+      ]
+    },
+    {
+      "name": "font-group-inline",
+      "tex": "{\\bf x\\pick y}+z",
+      "display": false,
+      "profile": "fixed-packages",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "\\alpha",
+          "arguments": 0
+        }
+      ]
+    },
+    {
+      "name": "font-group-display",
+      "tex": "{\\bf x\\pick y}+z",
+      "display": true,
+      "profile": "fixed-packages",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "\\alpha",
+          "arguments": 0
+        }
+      ]
+    },
+    {
+      "name": "font-pending-script-inline",
+      "tex": "x^\\pick y",
+      "display": false,
+      "profile": "fixed-packages",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "\\bf\\alpha",
+          "arguments": 0
+        }
+      ]
+    },
+    {
+      "name": "font-pending-script-display",
+      "tex": "x^\\pick y",
+      "display": true,
+      "profile": "fixed-packages",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "\\bf\\alpha",
+          "arguments": 0
+        }
+      ]
+    },
+    {
+      "name": "default-fit",
+      "tex": "\\pick y",
+      "display": false,
+      "profile": "fixed-packages",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ",
+          "arguments": 0
+        }
+      ],
+      "initialCount": 999
+    },
+    {
+      "name": "default-over-before-count",
+      "tex": "\\pick y",
+      "display": false,
+      "profile": "fixed-packages",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ",
+          "arguments": 0
+        }
+      ],
+      "initialCount": 1000
+    },
+    {
+      "name": "utf16-fit",
+      "tex": "\\pick y",
+      "display": false,
+      "profile": "fixed-packages",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "%😀\n                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ",
+          "arguments": 0
+        }
+      ],
+      "initialCount": 999
+    },
+    {
+      "name": "utf16-over-before-count",
+      "tex": "\\pick y",
+      "display": false,
+      "profile": "fixed-packages",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "%😀\n                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ",
+          "arguments": 0
+        }
+      ],
+      "initialCount": 1000
+    },
+    {
+      "name": "consumed-prefix-budget",
+      "tex": "                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 \\pick y",
+      "display": false,
+      "profile": "fixed-packages",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "z",
+          "arguments": 0
+        }
+      ],
+      "initialCount": 0
+    }
+  ],
+  "helpers": [
+    {
+      "name": "addArgs-ascii-lower",
+      "method": "actual exported ParseUtil.addArgs",
+      "s1": "\\alpha",
+      "s2": "x",
+      "capture": "exact returned source or TexError; primary handler unchanged"
+    },
+    {
+      "name": "addArgs-ascii-upper",
+      "method": "actual exported ParseUtil.addArgs",
+      "s1": "\\ALPHA",
+      "s2": "X",
+      "capture": "exact returned source or TexError; primary handler unchanged"
+    },
+    {
+      "name": "addArgs-even-slashes",
+      "method": "actual exported ParseUtil.addArgs",
+      "s1": "\\\\alpha",
+      "s2": "x",
+      "capture": "exact returned source or TexError; primary handler unchanged"
+    },
+    {
+      "name": "addArgs-odd-slashes",
+      "method": "actual exported ParseUtil.addArgs",
+      "s1": "\\\\\\alpha",
+      "s2": "x",
+      "capture": "exact returned source or TexError; primary handler unchanged"
+    },
+    {
+      "name": "addArgs-prefixed-odd",
+      "method": "actual exported ParseUtil.addArgs",
+      "s1": "q\\\\\\alpha",
+      "s2": "x",
+      "capture": "exact returned source or TexError; primary handler unchanged"
+    },
+    {
+      "name": "addArgs-escaped-control-symbol",
+      "method": "actual exported ParseUtil.addArgs",
+      "s1": "\\,",
+      "s2": "x",
+      "capture": "exact returned source or TexError; primary handler unchanged"
+    },
+    {
+      "name": "addArgs-empty-left",
+      "method": "actual exported ParseUtil.addArgs",
+      "s1": "",
+      "s2": "x",
+      "capture": "exact returned source or TexError; primary handler unchanged"
+    },
+    {
+      "name": "addArgs-empty-right",
+      "method": "actual exported ParseUtil.addArgs",
+      "s1": "\\alpha",
+      "s2": "",
+      "capture": "exact returned source or TexError; primary handler unchanged"
+    },
+    {
+      "name": "addArgs-digit-right",
+      "method": "actual exported ParseUtil.addArgs",
+      "s1": "\\alpha",
+      "s2": "2",
+      "capture": "exact returned source or TexError; primary handler unchanged"
+    },
+    {
+      "name": "addArgs-unicode-right",
+      "method": "actual exported ParseUtil.addArgs",
+      "s1": "\\alpha",
+      "s2": "é",
+      "capture": "exact returned source or TexError; primary handler unchanged"
+    },
+    {
+      "name": "addArgs-existing-space",
+      "method": "actual exported ParseUtil.addArgs",
+      "s1": "\\alpha",
+      "s2": " x",
+      "capture": "exact returned source or TexError; primary handler unchanged"
+    },
+    {
+      "name": "addArgs-nonword-suffix",
+      "method": "actual exported ParseUtil.addArgs",
+      "s1": "\\alpha1",
+      "s2": "x",
+      "capture": "exact returned source or TexError; primary handler unchanged"
+    },
+    {
+      "name": "addArgs-command-right",
+      "method": "actual exported ParseUtil.addArgs",
+      "s1": "\\alpha",
+      "s2": "\\beta",
+      "capture": "exact returned source or TexError; primary handler unchanged"
+    },
+    {
+      "name": "addArgs-nonascii-end",
+      "method": "actual exported ParseUtil.addArgs",
+      "s1": "\\é",
+      "s2": "x",
+      "capture": "exact returned source or TexError; primary handler unchanged"
+    },
+    {
+      "name": "buffer-at-limit",
+      "method": "actual ParseUtil.addArgs",
+      "s1": "abcd",
+      "s2": "e",
+      "maxBuffer": 5
+    },
+    {
+      "name": "buffer-over-limit",
+      "method": "actual ParseUtil.addArgs",
+      "s1": "abcde",
+      "s2": "f",
+      "maxBuffer": 5
+    },
+    {
+      "name": "buffer-separator-crosses-limit",
+      "method": "actual ParseUtil.addArgs",
+      "s1": "\\a",
+      "s2": "b",
+      "maxBuffer": 3
+    },
+    {
+      "name": "buffer-utf16-fit",
+      "method": "actual ParseUtil.addArgs",
+      "s1": "😀",
+      "s2": "x",
+      "maxBuffer": 3
+    },
+    {
+      "name": "buffer-utf16-over",
+      "method": "actual ParseUtil.addArgs",
+      "s1": "😀",
+      "s2": "xy",
+      "maxBuffer": 3
+    },
+    {
+      "name": "buffer-default-boundary",
+      "method": "actual ParseUtil.addArgs",
+      "s1Repeat": {
+        "text": "x",
+        "count": 5119
+      },
+      "s2": "y",
+      "maxBuffer": 5120
+    },
+    {
+      "name": "buffer-default-over",
+      "method": "actual ParseUtil.addArgs",
+      "s1Repeat": {
+        "text": "x",
+        "count": 5120
+      },
+      "s2": "y",
+      "maxBuffer": 5120
+    },
+    {
+      "name": "substitute-escaped-marker",
+      "method": "actual ParseUtil.substituteArgs",
+      "body": "\\#1",
+      "args": [
+        "x"
+      ],
+      "capture": "each original addArgs call entry/exit, exact final/error; observer may not replace algorithm"
+    },
+    {
+      "name": "substitute-doubled-marker",
+      "method": "actual ParseUtil.substituteArgs",
+      "body": "##1",
+      "args": [
+        "x"
+      ],
+      "capture": "each original addArgs call entry/exit, exact final/error; observer may not replace algorithm"
+    },
+    {
+      "name": "substitute-backslash-pair-before-param",
+      "method": "actual ParseUtil.substituteArgs",
+      "body": "\\\\#1",
+      "args": [
+        "x"
+      ],
+      "capture": "each original addArgs call entry/exit, exact final/error; observer may not replace algorithm"
+    },
+    {
+      "name": "substitute-dangling-slash",
+      "method": "actual ParseUtil.substituteArgs",
+      "body": "x\\",
+      "args": [
+        "x"
+      ],
+      "capture": "each original addArgs call entry/exit, exact final/error; observer may not replace algorithm"
+    },
+    {
+      "name": "substitute-invalid-zero",
+      "method": "actual ParseUtil.substituteArgs",
+      "body": "#0",
+      "args": [
+        "x"
+      ],
+      "capture": "each original addArgs call entry/exit, exact final/error; observer may not replace algorithm"
+    },
+    {
+      "name": "substitute-trailing-hash",
+      "method": "actual ParseUtil.substituteArgs",
+      "body": "x#",
+      "args": [
+        "x"
+      ],
+      "capture": "each original addArgs call entry/exit, exact final/error; observer may not replace algorithm"
+    },
+    {
+      "name": "substitute-argument-join",
+      "method": "actual ParseUtil.substituteArgs",
+      "body": "#1#2",
+      "args": [
+        "\\alpha",
+        "x"
+      ],
+      "capture": "each original addArgs call entry/exit, exact final/error; observer may not replace algorithm"
+    }
+  ],
+  "handlers": [
+    {
+      "name": "macro-count-success",
+      "cases": [
+        {
+          "name": "below-limit",
+          "tex": "\\pick y",
+          "display": false,
+          "profile": "fixed-packages",
+          "registrations": [
+            {
+              "name": "pick",
+              "body": "x",
+              "arguments": 0
+            }
+          ],
+          "initialCount": 999
+        },
+        {
+          "name": "at-limit",
+          "tex": "\\pick y",
+          "display": false,
+          "profile": "fixed-packages",
+          "registrations": [
+            {
+              "name": "pick",
+              "body": "x",
+              "arguments": 0
+            }
+          ],
+          "initialCount": 1000
+        }
+      ]
+    },
+    {
+      "name": "macro-error-order",
+      "cases": [
+        {
+          "name": "missing-at-limit",
+          "tex": "\\pick",
+          "display": false,
+          "profile": "fixed-packages",
+          "registrations": [
+            {
+              "name": "pick",
+              "body": "#1",
+              "arguments": 1
+            }
+          ],
+          "initialCount": 1000
+        },
+        {
+          "name": "invalid-at-limit",
+          "tex": "\\pick{x}",
+          "display": false,
+          "profile": "fixed-packages",
+          "registrations": [
+            {
+              "name": "pick",
+              "body": "#2",
+              "arguments": 1
+            }
+          ],
+          "initialCount": 1000
+        },
+        {
+          "name": "buffer-at-limit",
+          "tex": "\\pick y",
+          "display": false,
+          "profile": "fixed-packages",
+          "registrations": [
+            {
+              "name": "pick",
+              "body": "abc",
+              "arguments": 0
+            }
+          ],
+          "initialCount": 1000,
+          "options": {
+            "maxBuffer": 3
+          }
+        }
+      ]
+    },
+    {
+      "name": "macro-prefix-budget",
+      "cases": [
+        {
+          "name": "historic-prefix",
+          "tex": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\\pick y",
+          "display": false,
+          "profile": "fixed-packages",
+          "registrations": [
+            {
+              "name": "pick",
+              "body": "z",
+              "arguments": 0
+            }
+          ],
+          "options": {
+            "maxBuffer": 4
+          }
+        }
+      ]
+    },
+    {
+      "name": "macro-zero-args",
+      "cases": [
+        {
+          "name": "zero",
+          "tex": "\\pick",
+          "display": false,
+          "profile": "fixed-packages",
+          "registrations": [
+            {
+              "name": "pick",
+              "body": "##",
+              "arguments": 0
+            }
+          ]
+        },
+        {
+          "name": "one",
+          "tex": "\\pick{x}",
+          "display": false,
+          "profile": "fixed-packages",
+          "registrations": [
+            {
+              "name": "pick",
+              "body": "##",
+              "arguments": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "macro-template",
+      "cases": [
+        {
+          "name": "template-ok",
+          "tex": "\\pick!\\alpha?y",
+          "display": false,
+          "profile": "official-newcommand-augmented",
+          "registrations": [
+            {
+              "name": "pick",
+              "body": "#1x",
+              "arguments": 1,
+              "handler": "MacroWithTemplate",
+              "parameters": [
+                "!",
+                "?"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "template-prefix-error",
+          "tex": "\\pick?\\alpha?y",
+          "display": false,
+          "profile": "official-newcommand-augmented",
+          "initialCount": 1000,
+          "registrations": [
+            {
+              "name": "pick",
+              "body": "#1x",
+              "arguments": 1,
+              "handler": "MacroWithTemplate",
+              "parameters": [
+                "!",
+                "?"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "environment-boundary",
+      "cases": [
+        {
+          "name": "zero",
+          "tex": "\\newenvironment{wrap}{\\alpha}{z}\\begin{wrap}x\\end{wrap}y",
+          "display": false,
+          "profile": "official-newcommand-augmented",
+          "registrations": []
+        },
+        {
+          "name": "one",
+          "tex": "\\newenvironment{wrap}[1]{#1x}{z}\\begin{wrap}{\\alpha}y\\end{wrap}q",
+          "display": false,
+          "profile": "official-newcommand-augmented",
+          "registrations": []
+        },
+        {
+          "name": "invalid-end",
+          "tex": "\\newenvironment{wrap}[1]{#1}{#1}\\begin{wrap}{x}y\\end{wrap}q",
+          "display": false,
+          "profile": "official-newcommand-augmented",
+          "registrations": []
+        }
+      ]
+    },
+    {
+      "name": "paired-boundary",
+      "cases": [
+        {
+          "name": "ordinary",
+          "tex": "\\DeclarePairedDelimiterX{\\pair}[1]{(}{)}{#1x}\\pair{\\alpha}y",
+          "display": false,
+          "profile": "fixed-packages",
+          "registrations": []
+        },
+        {
+          "name": "star",
+          "tex": "\\DeclarePairedDelimiterX{\\pair}[1]{(}{)}{#1x}\\pair*{\\alpha}y",
+          "display": false,
+          "profile": "fixed-packages",
+          "registrations": []
+        },
+        {
+          "name": "size",
+          "tex": "\\DeclarePairedDelimiterX{\\pair}[1]{(}{)}{#1x}\\pair[\\Big]{\\alpha}y",
+          "display": false,
+          "profile": "fixed-packages",
+          "registrations": []
+        }
+      ]
+    },
+    {
+      "name": "success-error-success",
+      "reuseDocument": true,
+      "cases": [
+        {
+          "name": "first",
+          "tex": "\\pick y",
+          "display": false,
+          "profile": "fixed-packages",
+          "registrations": [
+            {
+              "name": "pick",
+              "body": "\\alpha",
+              "arguments": 0
+            }
+          ]
+        },
+        {
+          "name": "error",
+          "tex": "\\pick",
+          "display": false,
+          "profile": "fixed-packages",
+          "registrations": [
+            {
+              "name": "pick",
+              "body": "#1",
+              "arguments": 1
+            }
+          ]
+        },
+        {
+          "name": "last",
+          "tex": "\\pick y",
+          "display": false,
+          "profile": "fixed-packages",
+          "registrations": [
+            {
+              "name": "pick",
+              "body": "\\alpha",
+              "arguments": 0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "operatorname": [
+    {
+      "name": "empty-inline",
+      "tex": "\\operatorname{a\\pick b}",
+      "display": false,
+      "profile": "fixed-packages",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "",
+          "arguments": 0
+        }
+      ]
+    },
+    {
+      "name": "empty-display",
+      "tex": "\\operatorname{a\\pick b}",
+      "display": true,
+      "profile": "fixed-packages",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "",
+          "arguments": 0
+        }
+      ]
+    },
+    {
+      "name": "control-word-inline",
+      "tex": "\\operatorname{a\\pick y}",
+      "display": false,
+      "profile": "fixed-packages",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "\\alpha",
+          "arguments": 0
+        }
+      ]
+    },
+    {
+      "name": "control-word-display",
+      "tex": "\\operatorname{a\\pick y}",
+      "display": true,
+      "profile": "fixed-packages",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "\\alpha",
+          "arguments": 0
+        }
+      ]
+    },
+    {
+      "name": "leading-prefix-inline",
+      "tex": "\\operatorname{ab\\pick c}",
+      "display": false,
+      "profile": "fixed-packages",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "x",
+          "arguments": 0
+        }
+      ]
+    },
+    {
+      "name": "leading-prefix-display",
+      "tex": "\\operatorname{ab\\pick c}",
+      "display": true,
+      "profile": "fixed-packages",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "x",
+          "arguments": 0
+        }
+      ]
+    },
+    {
+      "name": "registered-inline",
+      "tex": "\\operatorname{a\\pick b}",
+      "display": false,
+      "profile": "fixed-packages",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "x",
+          "arguments": 0
+        }
+      ]
+    },
+    {
+      "name": "registered-display",
+      "tex": "\\operatorname{a\\pick b}",
+      "display": true,
+      "profile": "fixed-packages",
+      "registrations": [
+        {
+          "name": "pick",
+          "body": "x",
+          "arguments": 0
+        }
+      ]
+    },
+    {
+      "name": "direct-control-inline",
+      "tex": "\\operatorname{axb}",
+      "display": false,
+      "profile": "fixed-packages",
+      "registrations": []
+    },
+    {
+      "name": "direct-control-display",
+      "tex": "\\operatorname{axb}",
+      "display": true,
+      "profile": "fixed-packages",
+      "registrations": []
+    },
+    {
+      "name": "empty-direct-inline",
+      "tex": "\\operatorname{a b}",
+      "display": false,
+      "profile": "fixed-packages",
+      "registrations": []
+    },
+    {
+      "name": "empty-direct-display",
+      "tex": "\\operatorname{a b}",
+      "display": true,
+      "profile": "fixed-packages",
+      "registrations": []
+    },
+    {
+      "name": "alpha-direct-inline",
+      "tex": "\\operatorname{a\\alpha y}",
+      "display": false,
+      "profile": "fixed-packages",
+      "registrations": []
+    },
+    {
+      "name": "alpha-direct-display",
+      "tex": "\\operatorname{a\\alpha y}",
+      "display": true,
+      "profile": "fixed-packages",
+      "registrations": []
+    }
+  ]
+}

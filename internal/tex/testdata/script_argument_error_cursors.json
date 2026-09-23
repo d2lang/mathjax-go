@@ -405,9 +405,7 @@
       },
       "cursor": 1,
       "source": "'",
-      "remaining": "",
-      "retainedGoExpansionPrefix": "x^\\probe'",
-      "coordinateNote": "Existing Go expansion keeps already consumed source prefix; compare actual unconsumed suffix and typed error, not a false absolute primary cursor identity."
+      "remaining": ""
     },
     {
       "name": "registered-00-display",
@@ -418,9 +416,7 @@
       },
       "cursor": 1,
       "source": "'",
-      "remaining": "",
-      "retainedGoExpansionPrefix": "x^\\probe'",
-      "coordinateNote": "Existing Go expansion keeps already consumed source prefix; compare actual unconsumed suffix and typed error, not a false absolute primary cursor identity."
+      "remaining": ""
     },
     {
       "name": "registered-01-inline",
@@ -431,9 +427,7 @@
       },
       "cursor": 1,
       "source": "'",
-      "remaining": "",
-      "retainedGoExpansionPrefix": "x^\\probe'",
-      "coordinateNote": "Existing Go expansion keeps already consumed source prefix; compare actual unconsumed suffix and typed error, not a false absolute primary cursor identity."
+      "remaining": ""
     },
     {
       "name": "registered-01-display",
@@ -444,9 +438,7 @@
       },
       "cursor": 1,
       "source": "'",
-      "remaining": "",
-      "retainedGoExpansionPrefix": "x^\\probe'",
-      "coordinateNote": "Existing Go expansion keeps already consumed source prefix; compare actual unconsumed suffix and typed error, not a false absolute primary cursor identity."
+      "remaining": ""
     },
     {
       "name": "registered-05-inline",
@@ -479,9 +471,7 @@
       },
       "cursor": 1,
       "source": "'",
-      "remaining": "",
-      "retainedGoExpansionPrefix": "x'^\\probe'",
-      "coordinateNote": "Existing Go expansion keeps already consumed source prefix; compare actual unconsumed suffix and typed error, not a false absolute primary cursor identity."
+      "remaining": ""
     },
     {
       "name": "registered-06-display",
@@ -492,9 +482,7 @@
       },
       "cursor": 1,
       "source": "'",
-      "remaining": "",
-      "retainedGoExpansionPrefix": "x'^\\probe'",
-      "coordinateNote": "Existing Go expansion keeps already consumed source prefix; compare actual unconsumed suffix and typed error, not a false absolute primary cursor identity."
+      "remaining": ""
     },
     {
       "name": "close-sup-inline",

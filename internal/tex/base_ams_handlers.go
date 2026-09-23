@@ -246,7 +246,7 @@ func (p *parser) amsOperatorName(name string) ([]*mml.Node, error) {
 			return nil, err
 		}
 		children = append(children, parsed...)
-		position = sub.pos
+		raw, position = sub.source, sub.pos
 	}
 	var result *mml.Node
 	if len(children) == 1 && children[0].Kind == "mi" {

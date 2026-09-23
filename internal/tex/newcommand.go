@@ -15,51 +15,57 @@ import (
 )
 
 func (p *parser) invokeMacro(name string, definition macroDefinition) ([]*mml.Node, error) {
+	expansion := definition.body
+	if definition.arguments != 0 {
+		if definition.prefix != "" {
+			p.skipSpaces()
+			if !strings.HasPrefix(p.source[p.pos:], definition.prefix) {
+				return nil, texError("MismatchUseDef", "Use of \\%s doesn't match its definition", name)
+			}
+			p.pos += len(definition.prefix)
+		}
+		args := make([]string, 0, definition.arguments)
+		if definition.optionalDefault != nil {
+			arg, present, err := p.readBrackets(definition.optionalDefault)
+			if err != nil {
+				return nil, err
+			}
+			if !present {
+				arg = *definition.optionalDefault
+			}
+			args = append(args, arg)
+		}
+		for len(args) < definition.arguments {
+			var arg string
+			var err error
+			index := len(args)
+			if index < len(definition.delimiters) && definition.delimiters[index] != "" {
+				arg, err = p.readDelimitedParameter(name, definition.delimiters[index])
+			} else {
+				arg, _, err = p.readArgument(name, false)
+			}
+			if err != nil {
+				return nil, err
+			}
+			args = append(args, arg)
+		}
+		var err error
+		expansion, err = substituteMacroArguments(expansion, args)
+		if err != nil {
+			return nil, err
+		}
+	}
+	joined, err := macroAddArgs(expansion, p.source[p.pos:], maxMacroBuffer)
+	if err != nil {
+		return nil, err
+	}
+	// Macro and MacroWithTemplate install only the unparsed program before
+	// charging the counter. Existing row/prime/script state remains in place.
+	p.source, p.pos = joined, 0
 	p.state.macroCount++
 	if p.state.macroCount > maxMacros {
 		return nil, texError("MaxMacroSub1", "MathJax maximum macro substitution count exceeded; is here a recursive macro call?")
 	}
-	if definition.prefix != "" {
-		p.skipSpaces()
-		if !strings.HasPrefix(p.source[p.pos:], definition.prefix) {
-			return nil, texError("MismatchUseDef", "Use of \\%s doesn't match its definition", name)
-		}
-		p.pos += len(definition.prefix)
-	}
-	args := make([]string, 0, definition.arguments)
-	if definition.optionalDefault != nil {
-		arg, present, err := p.readBrackets(definition.optionalDefault)
-		if err != nil {
-			return nil, err
-		}
-		if !present {
-			arg = *definition.optionalDefault
-		}
-		args = append(args, arg)
-	}
-	for len(args) < definition.arguments {
-		var arg string
-		var err error
-		index := len(args)
-		if index < len(definition.delimiters) && definition.delimiters[index] != "" {
-			arg, err = p.readDelimitedParameter(name, definition.delimiters[index])
-		} else {
-			arg, _, err = p.readArgument(name, false)
-		}
-		if err != nil {
-			return nil, err
-		}
-		args = append(args, arg)
-	}
-	expansion, err := substituteArguments(definition.body, args)
-	if err != nil {
-		return nil, err
-	}
-	// BaseMethods.Macro prepends the expansion to the unparsed input. Splicing
-	// at the current byte position preserves interactions with infix \over,
-	// style declarations, and environment delimiters that a detached subparse
-	// would lose.
-	p.source = p.source[:p.pos] + expansion + p.source[p.pos:]
 	return nil, nil
 }
 
