@@ -100,3 +100,22 @@ Regenerate the references with the pinned D2 MathJax3.2.2 assets:
 node testdata/generate_internal_text.cjs PINNED_ASSETS [EVIDENCE_DIRECTORY]
 node internal/tex/testdata/generate_internal_text_method.cjs PINNED_ASSETS
 ```
+
+
+### Parenthesized modulo commands
+
+`pod` and `pmod` use the original one-argument macro definitions, including
+style-dependent spacing, fixed parentheses, and forwarding through a registered
+`pod` override. All52 targeted public SVGs and complete explicit/own-property
+trees match the pinned MathJax3.2.2 renderer. Four surrounding controls also
+match; eight `mod`/`bmod` cases remain exact accepted outputs for separate fixes.
+Twenty registered-macro cases cover forwarding, argument counts, missing
+arguments and fresh parser state. Two recursive-error cases retain the existing
+Go error spelling, recorded separately from the primary output.
+
+Regenerate the primary references with:
+
+```
+node testdata/generate_pod_commands.cjs PINNED_ASSETS [EVIDENCE_DIRECTORY]
+node testdata/generate_pod_macros.cjs PINNED_ASSETS [EVIDENCE_DIRECTORY]
+```
