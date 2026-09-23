@@ -1,0 +1,986 @@
+[
+  {
+    "name": "sup-digits-inline",
+    "tex": "x^12",
+    "display": false,
+    "registration": null,
+    "purpose": "digits",
+    "marker": "^"
+  },
+  {
+    "name": "sup-digits-display",
+    "tex": "x^12",
+    "display": true,
+    "registration": null,
+    "purpose": "digits",
+    "marker": "^"
+  },
+  {
+    "name": "sup-leading-zero-inline",
+    "tex": "x^012",
+    "display": false,
+    "registration": null,
+    "purpose": "leading-zero",
+    "marker": "^"
+  },
+  {
+    "name": "sup-leading-zero-display",
+    "tex": "x^012",
+    "display": true,
+    "registration": null,
+    "purpose": "leading-zero",
+    "marker": "^"
+  },
+  {
+    "name": "sup-long-run-inline",
+    "tex": "x^12345",
+    "display": false,
+    "registration": null,
+    "purpose": "long-run",
+    "marker": "^"
+  },
+  {
+    "name": "sup-long-run-display",
+    "tex": "x^12345",
+    "display": true,
+    "registration": null,
+    "purpose": "long-run",
+    "marker": "^"
+  },
+  {
+    "name": "sup-digit-decimal-inline",
+    "tex": "x^1.25",
+    "display": false,
+    "registration": null,
+    "purpose": "digit-decimal",
+    "marker": "^"
+  },
+  {
+    "name": "sup-digit-decimal-display",
+    "tex": "x^1.25",
+    "display": true,
+    "registration": null,
+    "purpose": "digit-decimal",
+    "marker": "^"
+  },
+  {
+    "name": "sup-leading-decimal-inline",
+    "tex": "x^.25",
+    "display": false,
+    "registration": null,
+    "purpose": "leading-decimal",
+    "marker": "^"
+  },
+  {
+    "name": "sup-leading-decimal-display",
+    "tex": "x^.25",
+    "display": true,
+    "registration": null,
+    "purpose": "leading-decimal",
+    "marker": "^"
+  },
+  {
+    "name": "sup-digit-comma-inline",
+    "tex": "x^1,234",
+    "display": false,
+    "registration": null,
+    "purpose": "digit-comma",
+    "marker": "^"
+  },
+  {
+    "name": "sup-digit-comma-display",
+    "tex": "x^1,234",
+    "display": true,
+    "registration": null,
+    "purpose": "digit-comma",
+    "marker": "^"
+  },
+  {
+    "name": "sup-scientific-inline",
+    "tex": "x^12e-3",
+    "display": false,
+    "registration": null,
+    "purpose": "scientific",
+    "marker": "^"
+  },
+  {
+    "name": "sup-scientific-display",
+    "tex": "x^12e-3",
+    "display": true,
+    "registration": null,
+    "purpose": "scientific",
+    "marker": "^"
+  },
+  {
+    "name": "sup-plus-inline",
+    "tex": "x^+12",
+    "display": false,
+    "registration": null,
+    "purpose": "plus",
+    "marker": "^"
+  },
+  {
+    "name": "sup-plus-display",
+    "tex": "x^+12",
+    "display": true,
+    "registration": null,
+    "purpose": "plus",
+    "marker": "^"
+  },
+  {
+    "name": "sup-minus-inline",
+    "tex": "x^-12",
+    "display": false,
+    "registration": null,
+    "purpose": "minus",
+    "marker": "^"
+  },
+  {
+    "name": "sup-minus-display",
+    "tex": "x^-12",
+    "display": true,
+    "registration": null,
+    "purpose": "minus",
+    "marker": "^"
+  },
+  {
+    "name": "sup-space-inline",
+    "tex": "x^ 12",
+    "display": false,
+    "registration": null,
+    "purpose": "space",
+    "marker": "^"
+  },
+  {
+    "name": "sup-space-display",
+    "tex": "x^ 12",
+    "display": true,
+    "registration": null,
+    "purpose": "space",
+    "marker": "^"
+  },
+  {
+    "name": "sup-tab-inline",
+    "tex": "x^\t12",
+    "display": false,
+    "registration": null,
+    "purpose": "tab",
+    "marker": "^"
+  },
+  {
+    "name": "sup-tab-display",
+    "tex": "x^\t12",
+    "display": true,
+    "registration": null,
+    "purpose": "tab",
+    "marker": "^"
+  },
+  {
+    "name": "sup-comment-inline",
+    "tex": "x^%c\n12",
+    "display": false,
+    "registration": null,
+    "purpose": "comment",
+    "marker": "^"
+  },
+  {
+    "name": "sup-comment-display",
+    "tex": "x^%c\n12",
+    "display": true,
+    "registration": null,
+    "purpose": "comment",
+    "marker": "^"
+  },
+  {
+    "name": "sup-font-inline",
+    "tex": "x^\\bf12",
+    "display": false,
+    "registration": null,
+    "purpose": "font",
+    "marker": "^"
+  },
+  {
+    "name": "sup-font-display",
+    "tex": "x^\\bf12",
+    "display": true,
+    "registration": null,
+    "purpose": "font",
+    "marker": "^"
+  },
+  {
+    "name": "sup-macro-digits-inline",
+    "tex": "x^\\dnum",
+    "display": false,
+    "registration": {
+      "name": "dnum",
+      "body": "12",
+      "arguments": 0
+    },
+    "purpose": "macro-digits",
+    "marker": "^"
+  },
+  {
+    "name": "sup-macro-digits-display",
+    "tex": "x^\\dnum",
+    "display": true,
+    "registration": {
+      "name": "dnum",
+      "body": "12",
+      "arguments": 0
+    },
+    "purpose": "macro-digits",
+    "marker": "^"
+  },
+  {
+    "name": "sup-macro-empty-inline",
+    "tex": "x^\\dnum12",
+    "display": false,
+    "registration": {
+      "name": "dnum",
+      "body": "",
+      "arguments": 0
+    },
+    "purpose": "macro-empty",
+    "marker": "^"
+  },
+  {
+    "name": "sup-macro-empty-display",
+    "tex": "x^\\dnum12",
+    "display": true,
+    "registration": {
+      "name": "dnum",
+      "body": "",
+      "arguments": 0
+    },
+    "purpose": "macro-empty",
+    "marker": "^"
+  },
+  {
+    "name": "sup-macro-initial-digit-inline",
+    "tex": "x^1\\dnum",
+    "display": false,
+    "registration": {
+      "name": "dnum",
+      "body": "23",
+      "arguments": 0
+    },
+    "purpose": "macro-initial-digit",
+    "marker": "^"
+  },
+  {
+    "name": "sup-macro-initial-digit-display",
+    "tex": "x^1\\dnum",
+    "display": true,
+    "registration": {
+      "name": "dnum",
+      "body": "23",
+      "arguments": 0
+    },
+    "purpose": "macro-initial-digit",
+    "marker": "^"
+  },
+  {
+    "name": "sup-braced-inline",
+    "tex": "x^{12}",
+    "display": false,
+    "registration": null,
+    "purpose": "braced",
+    "marker": "^"
+  },
+  {
+    "name": "sup-braced-display",
+    "tex": "x^{12}",
+    "display": true,
+    "registration": null,
+    "purpose": "braced",
+    "marker": "^"
+  },
+  {
+    "name": "sup-braced-decimal-inline",
+    "tex": "x^{1.25}",
+    "display": false,
+    "registration": null,
+    "purpose": "braced-decimal",
+    "marker": "^"
+  },
+  {
+    "name": "sup-braced-decimal-display",
+    "tex": "x^{1.25}",
+    "display": true,
+    "registration": null,
+    "purpose": "braced-decimal",
+    "marker": "^"
+  },
+  {
+    "name": "sup-fullwidth-inline",
+    "tex": "x^１２",
+    "display": false,
+    "registration": null,
+    "purpose": "fullwidth",
+    "marker": "^"
+  },
+  {
+    "name": "sup-fullwidth-display",
+    "tex": "x^１２",
+    "display": true,
+    "registration": null,
+    "purpose": "fullwidth",
+    "marker": "^"
+  },
+  {
+    "name": "sup-arabic-inline",
+    "tex": "x^١٢",
+    "display": false,
+    "registration": null,
+    "purpose": "arabic",
+    "marker": "^"
+  },
+  {
+    "name": "sup-arabic-display",
+    "tex": "x^١٢",
+    "display": true,
+    "registration": null,
+    "purpose": "arabic",
+    "marker": "^"
+  },
+  {
+    "name": "sup-supplementary-digit-inline",
+    "tex": "x^𝟙𝟚",
+    "display": false,
+    "registration": null,
+    "purpose": "supplementary-digit",
+    "marker": "^"
+  },
+  {
+    "name": "sup-supplementary-digit-display",
+    "tex": "x^𝟙𝟚",
+    "display": true,
+    "registration": null,
+    "purpose": "supplementary-digit",
+    "marker": "^"
+  },
+  {
+    "name": "sup-eof-inline",
+    "tex": "x^",
+    "display": false,
+    "registration": null,
+    "purpose": "eof",
+    "marker": "^"
+  },
+  {
+    "name": "sup-eof-display",
+    "tex": "x^",
+    "display": true,
+    "registration": null,
+    "purpose": "eof",
+    "marker": "^"
+  },
+  {
+    "name": "sup-close-error-inline",
+    "tex": "x^}",
+    "display": false,
+    "registration": null,
+    "purpose": "close-error",
+    "marker": "^"
+  },
+  {
+    "name": "sup-close-error-display",
+    "tex": "x^}",
+    "display": true,
+    "registration": null,
+    "purpose": "close-error",
+    "marker": "^"
+  },
+  {
+    "name": "sup-undefined-inline",
+    "tex": "x^\\relax",
+    "display": false,
+    "registration": null,
+    "purpose": "undefined",
+    "marker": "^"
+  },
+  {
+    "name": "sup-undefined-display",
+    "tex": "x^\\relax",
+    "display": true,
+    "registration": null,
+    "purpose": "undefined",
+    "marker": "^"
+  },
+  {
+    "name": "sup-prime-digit-inline",
+    "tex": "x'^12",
+    "display": false,
+    "purpose": "prime-digit",
+    "marker": "^"
+  },
+  {
+    "name": "sup-prime-digit-display",
+    "tex": "x'^12",
+    "display": true,
+    "purpose": "prime-digit",
+    "marker": "^"
+  },
+  {
+    "name": "sup-occupied-error-inline",
+    "tex": "x^i^12",
+    "display": false,
+    "purpose": "occupied-error",
+    "marker": "^"
+  },
+  {
+    "name": "sup-occupied-error-display",
+    "tex": "x^i^12",
+    "display": true,
+    "purpose": "occupied-error",
+    "marker": "^"
+  },
+  {
+    "name": "sup-nested-marker-inline",
+    "tex": "x^^12",
+    "display": false,
+    "purpose": "nested-marker",
+    "marker": "^"
+  },
+  {
+    "name": "sup-nested-marker-display",
+    "tex": "x^^12",
+    "display": true,
+    "purpose": "nested-marker",
+    "marker": "^"
+  },
+  {
+    "name": "sup-other-marker-inline",
+    "tex": "x^_12",
+    "display": false,
+    "purpose": "other-marker",
+    "marker": "^"
+  },
+  {
+    "name": "sup-other-marker-display",
+    "tex": "x^_12",
+    "display": true,
+    "purpose": "other-marker",
+    "marker": "^"
+  },
+  {
+    "name": "sub-digits-inline",
+    "tex": "x_12",
+    "display": false,
+    "registration": null,
+    "purpose": "digits",
+    "marker": "_"
+  },
+  {
+    "name": "sub-digits-display",
+    "tex": "x_12",
+    "display": true,
+    "registration": null,
+    "purpose": "digits",
+    "marker": "_"
+  },
+  {
+    "name": "sub-leading-zero-inline",
+    "tex": "x_012",
+    "display": false,
+    "registration": null,
+    "purpose": "leading-zero",
+    "marker": "_"
+  },
+  {
+    "name": "sub-leading-zero-display",
+    "tex": "x_012",
+    "display": true,
+    "registration": null,
+    "purpose": "leading-zero",
+    "marker": "_"
+  },
+  {
+    "name": "sub-long-run-inline",
+    "tex": "x_12345",
+    "display": false,
+    "registration": null,
+    "purpose": "long-run",
+    "marker": "_"
+  },
+  {
+    "name": "sub-long-run-display",
+    "tex": "x_12345",
+    "display": true,
+    "registration": null,
+    "purpose": "long-run",
+    "marker": "_"
+  },
+  {
+    "name": "sub-digit-decimal-inline",
+    "tex": "x_1.25",
+    "display": false,
+    "registration": null,
+    "purpose": "digit-decimal",
+    "marker": "_"
+  },
+  {
+    "name": "sub-digit-decimal-display",
+    "tex": "x_1.25",
+    "display": true,
+    "registration": null,
+    "purpose": "digit-decimal",
+    "marker": "_"
+  },
+  {
+    "name": "sub-leading-decimal-inline",
+    "tex": "x_.25",
+    "display": false,
+    "registration": null,
+    "purpose": "leading-decimal",
+    "marker": "_"
+  },
+  {
+    "name": "sub-leading-decimal-display",
+    "tex": "x_.25",
+    "display": true,
+    "registration": null,
+    "purpose": "leading-decimal",
+    "marker": "_"
+  },
+  {
+    "name": "sub-digit-comma-inline",
+    "tex": "x_1,234",
+    "display": false,
+    "registration": null,
+    "purpose": "digit-comma",
+    "marker": "_"
+  },
+  {
+    "name": "sub-digit-comma-display",
+    "tex": "x_1,234",
+    "display": true,
+    "registration": null,
+    "purpose": "digit-comma",
+    "marker": "_"
+  },
+  {
+    "name": "sub-scientific-inline",
+    "tex": "x_12e-3",
+    "display": false,
+    "registration": null,
+    "purpose": "scientific",
+    "marker": "_"
+  },
+  {
+    "name": "sub-scientific-display",
+    "tex": "x_12e-3",
+    "display": true,
+    "registration": null,
+    "purpose": "scientific",
+    "marker": "_"
+  },
+  {
+    "name": "sub-plus-inline",
+    "tex": "x_+12",
+    "display": false,
+    "registration": null,
+    "purpose": "plus",
+    "marker": "_"
+  },
+  {
+    "name": "sub-plus-display",
+    "tex": "x_+12",
+    "display": true,
+    "registration": null,
+    "purpose": "plus",
+    "marker": "_"
+  },
+  {
+    "name": "sub-minus-inline",
+    "tex": "x_-12",
+    "display": false,
+    "registration": null,
+    "purpose": "minus",
+    "marker": "_"
+  },
+  {
+    "name": "sub-minus-display",
+    "tex": "x_-12",
+    "display": true,
+    "registration": null,
+    "purpose": "minus",
+    "marker": "_"
+  },
+  {
+    "name": "sub-space-inline",
+    "tex": "x_ 12",
+    "display": false,
+    "registration": null,
+    "purpose": "space",
+    "marker": "_"
+  },
+  {
+    "name": "sub-space-display",
+    "tex": "x_ 12",
+    "display": true,
+    "registration": null,
+    "purpose": "space",
+    "marker": "_"
+  },
+  {
+    "name": "sub-tab-inline",
+    "tex": "x_\t12",
+    "display": false,
+    "registration": null,
+    "purpose": "tab",
+    "marker": "_"
+  },
+  {
+    "name": "sub-tab-display",
+    "tex": "x_\t12",
+    "display": true,
+    "registration": null,
+    "purpose": "tab",
+    "marker": "_"
+  },
+  {
+    "name": "sub-comment-inline",
+    "tex": "x_%c\n12",
+    "display": false,
+    "registration": null,
+    "purpose": "comment",
+    "marker": "_"
+  },
+  {
+    "name": "sub-comment-display",
+    "tex": "x_%c\n12",
+    "display": true,
+    "registration": null,
+    "purpose": "comment",
+    "marker": "_"
+  },
+  {
+    "name": "sub-font-inline",
+    "tex": "x_\\bf12",
+    "display": false,
+    "registration": null,
+    "purpose": "font",
+    "marker": "_"
+  },
+  {
+    "name": "sub-font-display",
+    "tex": "x_\\bf12",
+    "display": true,
+    "registration": null,
+    "purpose": "font",
+    "marker": "_"
+  },
+  {
+    "name": "sub-macro-digits-inline",
+    "tex": "x_\\dnum",
+    "display": false,
+    "registration": {
+      "name": "dnum",
+      "body": "12",
+      "arguments": 0
+    },
+    "purpose": "macro-digits",
+    "marker": "_"
+  },
+  {
+    "name": "sub-macro-digits-display",
+    "tex": "x_\\dnum",
+    "display": true,
+    "registration": {
+      "name": "dnum",
+      "body": "12",
+      "arguments": 0
+    },
+    "purpose": "macro-digits",
+    "marker": "_"
+  },
+  {
+    "name": "sub-macro-empty-inline",
+    "tex": "x_\\dnum12",
+    "display": false,
+    "registration": {
+      "name": "dnum",
+      "body": "",
+      "arguments": 0
+    },
+    "purpose": "macro-empty",
+    "marker": "_"
+  },
+  {
+    "name": "sub-macro-empty-display",
+    "tex": "x_\\dnum12",
+    "display": true,
+    "registration": {
+      "name": "dnum",
+      "body": "",
+      "arguments": 0
+    },
+    "purpose": "macro-empty",
+    "marker": "_"
+  },
+  {
+    "name": "sub-macro-initial-digit-inline",
+    "tex": "x_1\\dnum",
+    "display": false,
+    "registration": {
+      "name": "dnum",
+      "body": "23",
+      "arguments": 0
+    },
+    "purpose": "macro-initial-digit",
+    "marker": "_"
+  },
+  {
+    "name": "sub-macro-initial-digit-display",
+    "tex": "x_1\\dnum",
+    "display": true,
+    "registration": {
+      "name": "dnum",
+      "body": "23",
+      "arguments": 0
+    },
+    "purpose": "macro-initial-digit",
+    "marker": "_"
+  },
+  {
+    "name": "sub-braced-inline",
+    "tex": "x_{12}",
+    "display": false,
+    "registration": null,
+    "purpose": "braced",
+    "marker": "_"
+  },
+  {
+    "name": "sub-braced-display",
+    "tex": "x_{12}",
+    "display": true,
+    "registration": null,
+    "purpose": "braced",
+    "marker": "_"
+  },
+  {
+    "name": "sub-braced-decimal-inline",
+    "tex": "x_{1.25}",
+    "display": false,
+    "registration": null,
+    "purpose": "braced-decimal",
+    "marker": "_"
+  },
+  {
+    "name": "sub-braced-decimal-display",
+    "tex": "x_{1.25}",
+    "display": true,
+    "registration": null,
+    "purpose": "braced-decimal",
+    "marker": "_"
+  },
+  {
+    "name": "sub-fullwidth-inline",
+    "tex": "x_１２",
+    "display": false,
+    "registration": null,
+    "purpose": "fullwidth",
+    "marker": "_"
+  },
+  {
+    "name": "sub-fullwidth-display",
+    "tex": "x_１２",
+    "display": true,
+    "registration": null,
+    "purpose": "fullwidth",
+    "marker": "_"
+  },
+  {
+    "name": "sub-arabic-inline",
+    "tex": "x_١٢",
+    "display": false,
+    "registration": null,
+    "purpose": "arabic",
+    "marker": "_"
+  },
+  {
+    "name": "sub-arabic-display",
+    "tex": "x_١٢",
+    "display": true,
+    "registration": null,
+    "purpose": "arabic",
+    "marker": "_"
+  },
+  {
+    "name": "sub-supplementary-digit-inline",
+    "tex": "x_𝟙𝟚",
+    "display": false,
+    "registration": null,
+    "purpose": "supplementary-digit",
+    "marker": "_"
+  },
+  {
+    "name": "sub-supplementary-digit-display",
+    "tex": "x_𝟙𝟚",
+    "display": true,
+    "registration": null,
+    "purpose": "supplementary-digit",
+    "marker": "_"
+  },
+  {
+    "name": "sub-eof-inline",
+    "tex": "x_",
+    "display": false,
+    "registration": null,
+    "purpose": "eof",
+    "marker": "_"
+  },
+  {
+    "name": "sub-eof-display",
+    "tex": "x_",
+    "display": true,
+    "registration": null,
+    "purpose": "eof",
+    "marker": "_"
+  },
+  {
+    "name": "sub-close-error-inline",
+    "tex": "x_}",
+    "display": false,
+    "registration": null,
+    "purpose": "close-error",
+    "marker": "_"
+  },
+  {
+    "name": "sub-close-error-display",
+    "tex": "x_}",
+    "display": true,
+    "registration": null,
+    "purpose": "close-error",
+    "marker": "_"
+  },
+  {
+    "name": "sub-undefined-inline",
+    "tex": "x_\\relax",
+    "display": false,
+    "registration": null,
+    "purpose": "undefined",
+    "marker": "_"
+  },
+  {
+    "name": "sub-undefined-display",
+    "tex": "x_\\relax",
+    "display": true,
+    "registration": null,
+    "purpose": "undefined",
+    "marker": "_"
+  },
+  {
+    "name": "sub-prime-digit-inline",
+    "tex": "x'_12",
+    "display": false,
+    "purpose": "prime-digit",
+    "marker": "_"
+  },
+  {
+    "name": "sub-prime-digit-display",
+    "tex": "x'_12",
+    "display": true,
+    "purpose": "prime-digit",
+    "marker": "_"
+  },
+  {
+    "name": "sub-occupied-error-inline",
+    "tex": "x_i_12",
+    "display": false,
+    "purpose": "occupied-error",
+    "marker": "_"
+  },
+  {
+    "name": "sub-occupied-error-display",
+    "tex": "x_i_12",
+    "display": true,
+    "purpose": "occupied-error",
+    "marker": "_"
+  },
+  {
+    "name": "sub-nested-marker-inline",
+    "tex": "x__12",
+    "display": false,
+    "purpose": "nested-marker",
+    "marker": "_"
+  },
+  {
+    "name": "sub-nested-marker-display",
+    "tex": "x__12",
+    "display": true,
+    "purpose": "nested-marker",
+    "marker": "_"
+  },
+  {
+    "name": "sub-other-marker-inline",
+    "tex": "x_^12",
+    "display": false,
+    "purpose": "other-marker",
+    "marker": "_"
+  },
+  {
+    "name": "sub-other-marker-display",
+    "tex": "x_^12",
+    "display": true,
+    "purpose": "other-marker",
+    "marker": "_"
+  },
+  {
+    "name": "ordinary-digits-inline",
+    "tex": "12",
+    "display": false,
+    "purpose": "ordinary scanner control",
+    "marker": null
+  },
+  {
+    "name": "ordinary-digits-display",
+    "tex": "12",
+    "display": true,
+    "purpose": "ordinary scanner control",
+    "marker": null
+  },
+  {
+    "name": "ordinary-decimal-inline",
+    "tex": "1.25",
+    "display": false,
+    "purpose": "ordinary scanner control",
+    "marker": null
+  },
+  {
+    "name": "ordinary-decimal-display",
+    "tex": "1.25",
+    "display": true,
+    "purpose": "ordinary scanner control",
+    "marker": null
+  },
+  {
+    "name": "ordinary-comma-inline",
+    "tex": "1,234",
+    "display": false,
+    "purpose": "ordinary scanner control",
+    "marker": null
+  },
+  {
+    "name": "ordinary-comma-display",
+    "tex": "1,234",
+    "display": true,
+    "purpose": "ordinary scanner control",
+    "marker": null
+  },
+  {
+    "name": "ordinary-unicode-inline",
+    "tex": "１２",
+    "display": false,
+    "purpose": "ordinary scanner control",
+    "marker": null
+  },
+  {
+    "name": "ordinary-unicode-display",
+    "tex": "１２",
+    "display": true,
+    "purpose": "ordinary scanner control",
+    "marker": null
+  }
+]

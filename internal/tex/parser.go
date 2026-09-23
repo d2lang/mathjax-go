@@ -248,7 +248,7 @@ func (p *parser) parseRow(terminator byte, stopRight bool) ([]*mml.Node, string,
 				nodes, pendingFont, err = p.attachScriptWithFont(nodes, c, pendingFont)
 			} else {
 				var script *mml.Node
-				p.skipSpaces()
+				p.scriptInitialLookahead()
 				moves, _ := pending.base.Property("movesupsub")
 				var attachment *scriptAttachment
 				attachment, err = prepareScriptAttachment(pending.base, c, limitsTruthy(moves))
@@ -383,7 +383,7 @@ func (p *parser) attachScriptWithFont(nodes []*mml.Node, marker byte, font strin
 	if value, ok := base.Attributes.Get("movesupsub"); ok {
 		moveLimits, _ = value.(bool)
 	}
-	p.skipSpaces()
+	p.scriptInitialLookahead()
 	attachment, err := prepareScriptAttachment(base, marker, moveLimits)
 	if err != nil {
 		return nil, font, err

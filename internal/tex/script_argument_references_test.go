@@ -94,7 +94,7 @@ func TestScriptArgumentPinnedReferences(t *testing.T) {
 		}
 	}
 	readArgumentJSON(t, "testdata/script_argument_error_cursors.json", &errorsFixture)
-	if fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || errorsFixture.MathjaxGitCommit != fixture.MathjaxGitCommit || len(fixture.Cases) != 120 || len(errorsFixture.Rows) != 62 || len(boundaries.Cases) != 24 || boundaries.Baseline != "e93f5eb32042cd5a772f5b8fa3c6aabe540701da" {
+	if fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || errorsFixture.MathjaxGitCommit != fixture.MathjaxGitCommit || len(fixture.Cases) != 120 || len(errorsFixture.Rows) != 62 || len(boundaries.Cases) != 22 || boundaries.Baseline != "e93f5eb32042cd5a772f5b8fa3c6aabe540701da" {
 		t.Fatal("unbound argument references")
 	}
 	registered, rawSVG, rawOwn, qualifiedOwn, errorsChecked := 0, 0, 0, 0, 0
@@ -242,7 +242,7 @@ func TestScriptArgumentPinnedReferences(t *testing.T) {
 			}
 		})
 	}
-	if registered != 20 || rawSVG != 114 || rawOwn != 96 || qualifiedOwn != 18 || errorsChecked != 62 {
+	if registered != 20 || rawSVG != 116 || rawOwn != 98 || qualifiedOwn != 18 || errorsChecked != 62 {
 		t.Fatal("reference scope changed", registered, rawSVG, rawOwn, qualifiedOwn, errorsChecked)
 	}
 }

@@ -1,0 +1,577 @@
+{
+  "scope": "Four BOM primary successes and four unchanged accepted Go NEL observations. NEL primary throws TypeError, not a parity oracle.",
+  "cases": [
+    {
+      "name": "sup-bom-inline",
+      "tex": "x^﻿12",
+      "display": false,
+      "purpose": "existing GetNext/skipSpaces boundary",
+      "status": "raw-primary",
+      "svgSHA256": "3313212ef28b7e2e1298d37688173ce91e84183c962ca6d3401e78759934bae3",
+      "propertiesTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "msup",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mn",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "1",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "mn",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "2",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "sup-bom-display",
+      "tex": "x^﻿12",
+      "display": true,
+      "purpose": "existing GetNext/skipSpaces boundary",
+      "status": "raw-primary",
+      "svgSHA256": "bed0cb66701741136250ee54e4bd265002f84db2e457ccb304832f7fafcd6ac5",
+      "propertiesTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "msup",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mn",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "1",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "mn",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "2",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "sup-nel-inline",
+      "tex": "x^12",
+      "display": false,
+      "purpose": "existing GetNext/skipSpaces boundary",
+      "status": "uncomparable-primary-exception-unchanged-Go",
+      "svgSHA256": "487ef39255e718661e914be496b92c71ccc3882e2bebd3c636d0d6fa6b6298fe",
+      "propertiesTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "msup",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mn",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "12",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "sup-nel-display",
+      "tex": "x^12",
+      "display": true,
+      "purpose": "existing GetNext/skipSpaces boundary",
+      "status": "uncomparable-primary-exception-unchanged-Go",
+      "svgSHA256": "542bca38b72bf7025c9270e4c3849920ac95be426b2104e23acedabfbd7d77ed",
+      "propertiesTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "msup",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mn",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "12",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "sub-bom-inline",
+      "tex": "x_﻿12",
+      "display": false,
+      "purpose": "existing GetNext/skipSpaces boundary",
+      "status": "raw-primary",
+      "svgSHA256": "31a3e0f56df3e525a389cf43247df607fc4e5cdd66c72d1e77a95322c39a6b40",
+      "propertiesTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "msub",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mn",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {
+                      "texprimestyle": true
+                    },
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "1",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "mn",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "2",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "sub-bom-display",
+      "tex": "x_﻿12",
+      "display": true,
+      "purpose": "existing GetNext/skipSpaces boundary",
+      "status": "raw-primary",
+      "svgSHA256": "31a3e0f56df3e525a389cf43247df607fc4e5cdd66c72d1e77a95322c39a6b40",
+      "propertiesTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "msub",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mn",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {
+                      "texprimestyle": true
+                    },
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "1",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "mn",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "2",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "sub-nel-inline",
+      "tex": "x_12",
+      "display": false,
+      "purpose": "existing GetNext/skipSpaces boundary",
+      "status": "uncomparable-primary-exception-unchanged-Go",
+      "svgSHA256": "cfc3b792d2b94d55d2fb0df56802df610cf1609c7d6f6b631ae08ddf8c5f43d9",
+      "propertiesTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "msub",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mn",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {
+                      "texprimestyle": true
+                    },
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "12",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "sub-nel-display",
+      "tex": "x_12",
+      "display": true,
+      "purpose": "existing GetNext/skipSpaces boundary",
+      "status": "uncomparable-primary-exception-unchanged-Go",
+      "svgSHA256": "cfc3b792d2b94d55d2fb0df56802df610cf1609c7d6f6b631ae08ddf8c5f43d9",
+      "propertiesTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "msub",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mn",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {
+                      "texprimestyle": true
+                    },
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "12",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
