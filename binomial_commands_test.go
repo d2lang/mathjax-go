@@ -51,7 +51,7 @@ func TestBinomialCommandPinnedReferences(t *testing.T) {
 	}
 	read("testdata/binomial_commands_mathjax_3_2_2.json", &fixture)
 	read("testdata/binomial_commands_boundaries.json", &boundaries)
-	if fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || len(fixture.Cases) != 48 || boundaries.Baseline != "46e9024262e80131193abaa119a965789ec1c9ac" || len(boundaries.MetadataBoundaries) != 4 {
+	if fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || len(fixture.Cases) != 48 || boundaries.Baseline != "46e9024262e80131193abaa119a965789ec1c9ac" || len(boundaries.MetadataBoundaries) != 2 {
 		t.Fatal("unbound fixed-fence reference corpus")
 	}
 	metadataCount := 0
@@ -60,7 +60,7 @@ func TestBinomialCommandPinnedReferences(t *testing.T) {
 			wantSVG, wantTree := c.SVGSHA256, c.PropertiesTree
 			if b, ok := boundaries.MetadataBoundaries[c.Name]; ok {
 				metadataCount++
-				if !(strings.HasPrefix(c.Name, "prime-") || strings.HasPrefix(c.Name, "genfrac-control-")) || b.TeX != c.TeX || b.Display != c.Display || b.PrimarySHA256 != c.SVGSHA256 {
+				if !strings.HasPrefix(c.Name, "prime-") || b.TeX != c.TeX || b.Display != c.Display || b.PrimarySHA256 != c.SVGSHA256 {
 					t.Fatal("unexpected preexisting metadata boundary")
 				}
 				for _, a := range b.Adjustments {
@@ -119,7 +119,7 @@ func TestBinomialCommandPinnedReferences(t *testing.T) {
 			}
 		})
 	}
-	if metadataCount != 4 {
+	if metadataCount != 2 {
 		t.Fatal("reference classification changed", metadataCount)
 	}
 }

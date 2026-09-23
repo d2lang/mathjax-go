@@ -385,3 +385,11 @@ and alignment allocation/anchor behavior remain separately documented limits.
 ### Flat fractions
 
 `\flatfrac` is registered as the primary Physics macro, so its two arguments use the existing macro expansion and override rules. Regression coverage compares 28 complete primary SVG outputs and checks eight private Macro scenarios, including argument errors, source installation, count limits, forwarding, and overrides. Two tall middle-delimiter cases (D119), two derivative composites (D095), and the inherited unclosed-argument cursor difference remain explicit boundaries; matching SVG does not assert complete internal-tree equality.
+
+### Generalized fraction delimiters
+
+`\genfrac` validates each raw delimiter argument before reading later arguments and preserves the distinction between an absent fence and `.`. Its fixed fences use the registered `\mathchoice` and size commands with fresh child-parser counters and shared configuration.
+
+The regression corpus retains 48 complete primary SVGs, 45 raw delimiter-reader contracts and five fence identity/property cases. Fourteen Go-only seeded guards protect the observed palette parser lifetimes. Prefix-style parsing (D120) and Physics StarMacro's own expansion charge (D121) remain separate; the tests do not assert full raw-model parity or the known-wrong StarMacro total count.
+
+Eight inherited Genfrac controls also compare the original primary explicit-attribute and own-property trees. Their resolved fence-property qualifications are removed; the two prime and two atop qualifications remain unchanged.

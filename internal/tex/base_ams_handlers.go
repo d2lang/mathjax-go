@@ -93,11 +93,11 @@ func (p *parser) baseAMSEnvironment(name string) (nodes []*mml.Node, handled boo
 }
 
 func (p *parser) amsGenfrac(name string) ([]*mml.Node, error) {
-	leftRaw, _, err := p.readArgument(name, false)
+	left, err := p.amsGenfracDelimiter(name)
 	if err != nil {
 		return nil, err
 	}
-	rightRaw, _, err := p.readArgument(name, false)
+	right, err := p.amsGenfracDelimiter(name)
 	if err != nil {
 		return nil, err
 	}
@@ -121,26 +121,13 @@ func (p *parser) amsGenfrac(name string) ([]*mml.Node, error) {
 	if thickness != "" {
 		fraction.Attributes.Set("linethickness", thickness)
 	}
-	left, err := p.convertDelimiterArgument(leftRaw)
-	if err != nil {
-		return nil, err
-	}
-	right, err := p.convertDelimiterArgument(rightRaw)
-	if err != nil {
-		return nil, err
-	}
 	var content *mml.Node = fraction
-	if left != "" || right != "" {
+	if left != nil || right != nil {
 		fraction.SetProperty("withDelims", true)
-		children := make([]*mml.Node, 0, 3)
-		if left != "" {
-			children = append(children, amsFixedFencePalette(left, mml.TeXClassOpen))
+		content, err = p.amsGenfracFixedFence(left, fraction, right)
+		if err != nil {
+			return nil, err
 		}
-		children = append(children, fraction)
-		if right != "" {
-			children = append(children, amsFixedFencePalette(right, mml.TeXClassClose))
-		}
-		content = forcedRow(children, false)
 	}
 	style = strings.TrimSpace(style)
 	if style != "" {

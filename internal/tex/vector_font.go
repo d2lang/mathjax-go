@@ -42,12 +42,19 @@ func (p *parser) applyVectorFactory(n *mml.Node) {
 }
 
 func (p *parser) parseVectorString(source string, star bool) (*mml.Node, error) {
+	if p.genfracPalette {
+		// VectorBold creates a genuine child TexParser with its own count.
+		count := p.state.macroCount
+		p.state.macroCount = 0
+		defer func() { p.state.macroCount = count }()
+	}
 	variant := "bold"
 	if star {
 		variant = "bold-italic"
 	}
 	sub := &parser{source: source, state: p.state, display: p.display,
-		multiLetterFont: p.multiLetterFont, vectorFactory: true, vectorFont: variant, vectorStar: star}
+		multiLetterFont: p.multiLetterFont, vectorFactory: true, vectorFont: variant, vectorStar: star,
+		genfracPalette: p.genfracPalette}
 	children, _, err := sub.parseRow(0, false)
 	if err != nil {
 		return nil, err
