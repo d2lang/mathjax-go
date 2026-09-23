@@ -9,3 +9,14 @@ D061 is based on accepted D060 merge `3dcb09030b4404c4c5982a9cebfbe5c1b6e51cd9`.
 The collector now follows the pinned JavaScript whitespace set, including BOM and excluding U+0085/NEL. All40 records are strict primary collector comparisons, including rejection before whitespace lookahead. The separate prime-whitespace fixture covers every source whitespace character; its README distinguishes successful public references from the unmodified primary's NEL TypeErrors. Unbraced `x^'`, `x^’`, `x_'` and `x_’` remain unchanged literal-script behavior in Go while primary reports missing-open-brace errors; they are separately reported, not silently fixed or treated as parity.
 
 The original96 pending-prime primary fixture is byte-identical; only its four D061 qualifications are removed in favor of raw SVG/explicit AST equality. The other92 raw compiler trees are unchanged. Existing66 lifetime/font controls,162 private ownership cases,48 annotation,50 stack,72 stackrel and98 limits references remain unchanged and must pass. No generic Unicode replacement, parser argument rewrite, renderer change, or D062–D064 correction is included.
+
+D103 composition retains both original primary and historical boundary JSON files
+byte for byte. The current 118-case test has 108 primary-SVG references, eight
+unchanged literal/non-prime residuals, and exactly two composed D106 diagnostics
+(`operator-literal-inline` and `operator-literal-display`). The latter retain the
+exact old nonprimary SVG and literal U+2019 structure. Only the inner normal mi(x)
+class is corrected: its complete explicit/own subtree equals the untouched
+primary msup-base mi(x), with no own texClass. A comparison copy of the immutable
+old boundary changes only that one source- and primary-validated property; every
+other field remains strict. Neither whole candidate trees nor normalized SVGs
+become expected outputs, and the separate full child-parser repair remains D106.
