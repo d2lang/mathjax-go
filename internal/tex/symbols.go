@@ -143,7 +143,7 @@ var simpleMacros = map[string]string{
 	"tfrac":     "\\textstyle\\frac{#1}{#2}",
 	"pmod":      "\\pod{\\mmlToken{mi}{mod}\\kern 6mu #1}",
 	"pod":       "\\mathchoice{\\kern18mu}{\\kern8mu}{\\kern8mu}{\\kern8mu}(#1)",
-	"mod":       "\\mathop{\\rm mod}\\nolimits\\ ",
+	"mod":       "\\mathchoice{\\kern18mu}{\\kern12mu}{\\kern12mu}{\\kern12mu}\\mmlToken{mi}{mod}\\,\\,#1",
 	"bmod":      "\\mathbin{\\rm mod}",
 	"iff":       "\\;\\Longleftrightarrow\\;",
 	"implies":   "\\;\\Longrightarrow\\;",

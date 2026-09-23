@@ -107,8 +107,8 @@ node internal/tex/testdata/generate_internal_text_method.cjs PINNED_ASSETS
 `pod` and `pmod` use the original one-argument macro definitions, including
 style-dependent spacing, fixed parentheses, and forwarding through a registered
 `pod` override. All52 targeted public SVGs and complete explicit/own-property
-trees match the pinned MathJax3.2.2 renderer. Four surrounding controls also
-match; eight `mod`/`bmod` cases remain exact accepted outputs for separate fixes.
+trees match the pinned MathJax3.2.2 renderer. Eight surrounding controls also
+match; four `bmod` cases remain exact accepted outputs for a separate fix.
 Twenty registered-macro cases cover forwarding, argument counts, missing
 arguments and fresh parser state. Two recursive-error cases retain the existing
 Go error spelling, recorded separately from the primary output.
@@ -163,4 +163,16 @@ Regenerate the unmodified primary references with:
 
 ```
 node testdata/generate_infix_macro_priority.cjs PINNED_ASSETS [EVIDENCE_DIRECTORY]
+```
+
+### Modulo argument and style spacing
+
+The default `mod` macro consumes one argument and uses the original mathchoice
+spacing for display, text and both script styles. The44-case pinned corpus
+covers unbraced, grouped, nested and missing arguments, script placement, and a
+user-defined override. All42 scoped/control SVGs and explicit/own trees match
+primary; the two separate `bmod` row-spacing cases remain unchanged.
+
+```
+node testdata/generate_mod_command.cjs PINNED_ASSETS [EVIDENCE_DIRECTORY]
 ```
