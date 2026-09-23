@@ -24,6 +24,9 @@ func lookupMJSourceEntry(kind mjSourceMapKind, name string) (mjSourceMap, mjSour
 			entry := sourceMap.Entries[entryIndex]
 			entryName := entry.Name
 			if kind == mjSourceDelimiterMap {
+				if !strings.HasPrefix(entryName, "\\") {
+					continue
+				}
 				entryName = strings.TrimPrefix(entryName, "\\")
 			}
 			if entryName == name {

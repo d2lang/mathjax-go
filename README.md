@@ -403,9 +403,11 @@ The `va`/`vectorarrow` and `vu`/`vectorunit` aliases charge their own expansion 
 
 Command-symbol lookup skips source maps that have no parser, so data-only negation and character-remapping tables do not create TeX commands. Existing registered Macro overrides and executable symbol/delimiter fallback retain their precedence; the data tables and their ordinary consumers are unchanged.
 
-The bounded regression corpus compares 112 public and four privately registered Macro cases with complete retained primary SVGs. Public error messages are checked through the exported renderer's merror SVG; their actual error IDs were verified in the retained parser observations. The private forwarding case additionally checks the real parse error ID and message at the compiler initialization seam. These private fixtures do not add a public macro-registration API.
+The bounded regression corpus compares 126 public and four privately registered Macro cases with complete retained primary SVGs. Public error messages are checked through the exported renderer's merror SVG; their actual error IDs were verified in the retained parser observations. The private forwarding case additionally checks the real parse error ID and message at the compiler initialization seam. These private fixtures do not add a public macro-registration API.
 
-Escaped `<`/`>` delimiter-key dispatch, the Physics laplacian symbol, compound negation, and the ordinary backtick glyph remain separate discrepancies. The twelve affected observations are excluded from primary SVG expectations here. Matching SVG does not claim full raw-model equality.
+Delimiter fallback accepts only explicitly backslash-prefixed command entries; raw delimiter keys remain available to their delimiter consumers. Fourteen additional public references compare complete unchanged primary SVGs for escaped raw-key errors and greater-than spacing. Two escaped less-than cases separately require XML-valid Go output with the exact decoded primary error message and text. Their fixture retains the untouched primary SVG: its error attribute contains a literal `<`, whereas Go retains XML-safe `&lt;`. These two cases are explicitly not whole-primary-SVG matches.
+
+The Physics laplacian symbol, compound negation, ordinary backtick glyph, and escaped-pipe Braket dispatch remain separate discrepancies and are excluded from exact SVG expectations here. Matching SVG does not claim full raw-model equality.
 
 
 ### Quantity followed by an unsupported star

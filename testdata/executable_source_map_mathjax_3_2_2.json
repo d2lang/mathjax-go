@@ -1297,6 +1297,160 @@
       "errorID": "",
       "errorMessage": "",
       "primaryRecordSHA256": "c8df42ccf243f1fe3530e4483045c295d4c59b1dc6ad45e032f09d44b171622c"
+    },
+    {
+      "name": "escaped-U0028-inline",
+      "tex": "\\(",
+      "display": false,
+      "public": true,
+      "registration": null,
+      "SVG": "<svg style=\"vertical-align: -0.452ex;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"39.367ex\" height=\"2.149ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -750 17400 950\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"merror\" data-mjx-error=\"Undefined control sequence \\(\"><rect data-background=\"true\" width=\"17400\" height=\"950\" y=\"-200\"></rect><g data-mml-node=\"mtext\" style=\"font-family: serif;\"><text data-variant=\"-explicitFont\" transform=\"scale(1,-1)\" font-size=\"884px\">Undefined control sequence \\(</text></g></g></g></g></svg>",
+      "errorID": "UndefinedControlSequence",
+      "errorMessage": "Undefined control sequence \\(",
+      "primaryRecordSHA256": "19447402b808050aba43cf905a1994517ecc9083de240fd41208510c1813280b"
+    },
+    {
+      "name": "escaped-U0028-display",
+      "tex": "\\(",
+      "display": true,
+      "public": true,
+      "registration": null,
+      "SVG": "<svg style=\"vertical-align: -0.452ex;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"39.367ex\" height=\"2.149ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -750 17400 950\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"merror\" data-mjx-error=\"Undefined control sequence \\(\"><rect data-background=\"true\" width=\"17400\" height=\"950\" y=\"-200\"></rect><g data-mml-node=\"mtext\" style=\"font-family: serif;\"><text data-variant=\"-explicitFont\" transform=\"scale(1,-1)\" font-size=\"884px\">Undefined control sequence \\(</text></g></g></g></g></svg>",
+      "errorID": "UndefinedControlSequence",
+      "errorMessage": "Undefined control sequence \\(",
+      "primaryRecordSHA256": "4c1e718e4253124c6bfe20a297f94ebbcc828eb85fe3c2ead39b3e07f3c1c786"
+    },
+    {
+      "name": "escaped-U0029-inline",
+      "tex": "\\)",
+      "display": false,
+      "public": true,
+      "registration": null,
+      "SVG": "<svg style=\"vertical-align: -0.452ex;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"39.367ex\" height=\"2.149ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -750 17400 950\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"merror\" data-mjx-error=\"Undefined control sequence \\)\"><rect data-background=\"true\" width=\"17400\" height=\"950\" y=\"-200\"></rect><g data-mml-node=\"mtext\" style=\"font-family: serif;\"><text data-variant=\"-explicitFont\" transform=\"scale(1,-1)\" font-size=\"884px\">Undefined control sequence \\)</text></g></g></g></g></svg>",
+      "errorID": "UndefinedControlSequence",
+      "errorMessage": "Undefined control sequence \\)",
+      "primaryRecordSHA256": "7b244423b0100420439ebed3392a0ef6a7082a9f607256db03751fe417f9eab8"
+    },
+    {
+      "name": "escaped-U0029-display",
+      "tex": "\\)",
+      "display": true,
+      "public": true,
+      "registration": null,
+      "SVG": "<svg style=\"vertical-align: -0.452ex;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"39.367ex\" height=\"2.149ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -750 17400 950\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"merror\" data-mjx-error=\"Undefined control sequence \\)\"><rect data-background=\"true\" width=\"17400\" height=\"950\" y=\"-200\"></rect><g data-mml-node=\"mtext\" style=\"font-family: serif;\"><text data-variant=\"-explicitFont\" transform=\"scale(1,-1)\" font-size=\"884px\">Undefined control sequence \\)</text></g></g></g></g></svg>",
+      "errorID": "UndefinedControlSequence",
+      "errorMessage": "Undefined control sequence \\)",
+      "primaryRecordSHA256": "236fd925a16d98e497d59bf2f7b71b1b1bc9d72e654cdf11e0978ca579943c56"
+    },
+    {
+      "name": "escaped-U005B-inline",
+      "tex": "\\[",
+      "display": false,
+      "public": true,
+      "registration": null,
+      "SVG": "<svg style=\"vertical-align: -0.452ex;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"39.367ex\" height=\"2.149ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -750 17400 950\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"merror\" data-mjx-error=\"Undefined control sequence \\[\"><rect data-background=\"true\" width=\"17400\" height=\"950\" y=\"-200\"></rect><g data-mml-node=\"mtext\" style=\"font-family: serif;\"><text data-variant=\"-explicitFont\" transform=\"scale(1,-1)\" font-size=\"884px\">Undefined control sequence \\[</text></g></g></g></g></svg>",
+      "errorID": "UndefinedControlSequence",
+      "errorMessage": "Undefined control sequence \\[",
+      "primaryRecordSHA256": "44c70d6ae2965df780c35365987ec24255ebae29f8fd5550d3fb7b0cb6098e12"
+    },
+    {
+      "name": "escaped-U005B-display",
+      "tex": "\\[",
+      "display": true,
+      "public": true,
+      "registration": null,
+      "SVG": "<svg style=\"vertical-align: -0.452ex;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"39.367ex\" height=\"2.149ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -750 17400 950\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"merror\" data-mjx-error=\"Undefined control sequence \\[\"><rect data-background=\"true\" width=\"17400\" height=\"950\" y=\"-200\"></rect><g data-mml-node=\"mtext\" style=\"font-family: serif;\"><text data-variant=\"-explicitFont\" transform=\"scale(1,-1)\" font-size=\"884px\">Undefined control sequence \\[</text></g></g></g></g></svg>",
+      "errorID": "UndefinedControlSequence",
+      "errorMessage": "Undefined control sequence \\[",
+      "primaryRecordSHA256": "05821f6130e80a6b376aea349034bc3fc69ec4d510204f13919a4ff4af0194eb"
+    },
+    {
+      "name": "escaped-U005D-inline",
+      "tex": "\\]",
+      "display": false,
+      "public": true,
+      "registration": null,
+      "SVG": "<svg style=\"vertical-align: -0.452ex;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"39.367ex\" height=\"2.149ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -750 17400 950\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"merror\" data-mjx-error=\"Undefined control sequence \\]\"><rect data-background=\"true\" width=\"17400\" height=\"950\" y=\"-200\"></rect><g data-mml-node=\"mtext\" style=\"font-family: serif;\"><text data-variant=\"-explicitFont\" transform=\"scale(1,-1)\" font-size=\"884px\">Undefined control sequence \\]</text></g></g></g></g></svg>",
+      "errorID": "UndefinedControlSequence",
+      "errorMessage": "Undefined control sequence \\]",
+      "primaryRecordSHA256": "ee9731f8699b785e5d5ad5df8aa2dc8692c9cf26eb9b732fb5e59c67e339d5c9"
+    },
+    {
+      "name": "escaped-U005D-display",
+      "tex": "\\]",
+      "display": true,
+      "public": true,
+      "registration": null,
+      "SVG": "<svg style=\"vertical-align: -0.452ex;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"39.367ex\" height=\"2.149ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -750 17400 950\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"merror\" data-mjx-error=\"Undefined control sequence \\]\"><rect data-background=\"true\" width=\"17400\" height=\"950\" y=\"-200\"></rect><g data-mml-node=\"mtext\" style=\"font-family: serif;\"><text data-variant=\"-explicitFont\" transform=\"scale(1,-1)\" font-size=\"884px\">Undefined control sequence \\]</text></g></g></g></g></svg>",
+      "errorID": "UndefinedControlSequence",
+      "errorMessage": "Undefined control sequence \\]",
+      "primaryRecordSHA256": "9c47f72cbacc398e64dbba13ea20cb6c688619f1790a16ce0f0407aee2704057"
+    },
+    {
+      "name": "not_remap-U003E-inline",
+      "tex": "\\>",
+      "display": false,
+      "public": true,
+      "registration": null,
+      "SVG": "<svg style=\"vertical-align: 0;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"0.502ex\" height=\"0.036ex\" role=\"img\" focusable=\"false\" viewBox=\"0 0 222 16\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"mstyle\"><g data-mml-node=\"mspace\"></g></g></g></g></svg>",
+      "errorID": "",
+      "errorMessage": "",
+      "primaryRecordSHA256": "24210a07bcdecd3b00b1f480ffaea5ef69682165b0bd74106352f294c1109ffa"
+    },
+    {
+      "name": "not_remap-U003E-display",
+      "tex": "\\>",
+      "display": true,
+      "public": true,
+      "registration": null,
+      "SVG": "<svg style=\"vertical-align: 0;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"0.502ex\" height=\"0.036ex\" role=\"img\" focusable=\"false\" viewBox=\"0 0 222 16\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"mstyle\"><g data-mml-node=\"mspace\"></g></g></g></g></svg>",
+      "errorID": "",
+      "errorMessage": "",
+      "primaryRecordSHA256": "ddc76cba80a67feae3f21f4817214297799d13f8329430f2153f5c72bc2608a0"
+    },
+    {
+      "name": "escaped-U002F-inline",
+      "tex": "\\/",
+      "display": false,
+      "public": true,
+      "registration": null,
+      "SVG": "<svg style=\"vertical-align: -0.452ex;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"39.367ex\" height=\"2.149ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -750 17400 950\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"merror\" data-mjx-error=\"Undefined control sequence \\/\"><rect data-background=\"true\" width=\"17400\" height=\"950\" y=\"-200\"></rect><g data-mml-node=\"mtext\" style=\"font-family: serif;\"><text data-variant=\"-explicitFont\" transform=\"scale(1,-1)\" font-size=\"884px\">Undefined control sequence \\/</text></g></g></g></g></svg>",
+      "errorID": "UndefinedControlSequence",
+      "errorMessage": "Undefined control sequence \\/",
+      "primaryRecordSHA256": "8a8df17567abaab282c8da9fedaedeb31b66c1c4bb434ad04878f1cff27617b2"
+    },
+    {
+      "name": "escaped-U002F-display",
+      "tex": "\\/",
+      "display": true,
+      "public": true,
+      "registration": null,
+      "SVG": "<svg style=\"vertical-align: -0.452ex;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"39.367ex\" height=\"2.149ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -750 17400 950\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"merror\" data-mjx-error=\"Undefined control sequence \\/\"><rect data-background=\"true\" width=\"17400\" height=\"950\" y=\"-200\"></rect><g data-mml-node=\"mtext\" style=\"font-family: serif;\"><text data-variant=\"-explicitFont\" transform=\"scale(1,-1)\" font-size=\"884px\">Undefined control sequence \\/</text></g></g></g></g></svg>",
+      "errorID": "UndefinedControlSequence",
+      "errorMessage": "Undefined control sequence \\/",
+      "primaryRecordSHA256": "fb0d0618a01216a369b28539a5b5014abc0ba65a5bbf215cbc232cde94ef0648"
+    },
+    {
+      "name": "escaped-U002E-inline",
+      "tex": "\\.",
+      "display": false,
+      "public": true,
+      "registration": null,
+      "SVG": "<svg style=\"vertical-align: -0.452ex;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"39.367ex\" height=\"2.149ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -750 17400 950\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"merror\" data-mjx-error=\"Undefined control sequence \\.\"><rect data-background=\"true\" width=\"17400\" height=\"950\" y=\"-200\"></rect><g data-mml-node=\"mtext\" style=\"font-family: serif;\"><text data-variant=\"-explicitFont\" transform=\"scale(1,-1)\" font-size=\"884px\">Undefined control sequence \\.</text></g></g></g></g></svg>",
+      "errorID": "UndefinedControlSequence",
+      "errorMessage": "Undefined control sequence \\.",
+      "primaryRecordSHA256": "f114dd6c42479adf62526b47897d0c48e5ef87ef44ef35307cb6525bcc19d8fe"
+    },
+    {
+      "name": "escaped-U002E-display",
+      "tex": "\\.",
+      "display": true,
+      "public": true,
+      "registration": null,
+      "SVG": "<svg style=\"vertical-align: -0.452ex;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"39.367ex\" height=\"2.149ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -750 17400 950\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"merror\" data-mjx-error=\"Undefined control sequence \\.\"><rect data-background=\"true\" width=\"17400\" height=\"950\" y=\"-200\"></rect><g data-mml-node=\"mtext\" style=\"font-family: serif;\"><text data-variant=\"-explicitFont\" transform=\"scale(1,-1)\" font-size=\"884px\">Undefined control sequence \\.</text></g></g></g></g></svg>",
+      "errorID": "UndefinedControlSequence",
+      "errorMessage": "Undefined control sequence \\.",
+      "primaryRecordSHA256": "f0d064f30f76f4407646e91bc1cc2bd8de3381ba4e91ca701a9f48c0b32b4e22"
     }
   ]
 }
