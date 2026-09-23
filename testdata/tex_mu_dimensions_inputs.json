@@ -1,0 +1,442 @@
+{
+  "cases": [
+    {
+      "name": "mu-8-inline",
+      "tex": "\\kern8mu x",
+      "display": false
+    },
+    {
+      "name": "mu-8-display",
+      "tex": "\\kern8mu x",
+      "display": true
+    },
+    {
+      "name": "mu-6-inline",
+      "tex": "\\kern6mu x",
+      "display": false
+    },
+    {
+      "name": "mu-6-display",
+      "tex": "\\kern6mu x",
+      "display": true
+    },
+    {
+      "name": "mu-18-inline",
+      "tex": "\\kern18mu x",
+      "display": false
+    },
+    {
+      "name": "mu-18-display",
+      "tex": "\\kern18mu x",
+      "display": true
+    },
+    {
+      "name": "mu-neg8-inline",
+      "tex": "\\kern-8mu x",
+      "display": false
+    },
+    {
+      "name": "mu-neg8-display",
+      "tex": "\\kern-8mu x",
+      "display": true
+    },
+    {
+      "name": "mu-plus6-inline",
+      "tex": "\\kern+6mu x",
+      "display": false
+    },
+    {
+      "name": "mu-plus6-display",
+      "tex": "\\kern+6mu x",
+      "display": true
+    },
+    {
+      "name": "mu-0-inline",
+      "tex": "\\kern0mu x",
+      "display": false
+    },
+    {
+      "name": "mu-0-display",
+      "tex": "\\kern0mu x",
+      "display": true
+    },
+    {
+      "name": "mu-neg0-inline",
+      "tex": "\\kern-0mu x",
+      "display": false
+    },
+    {
+      "name": "mu-neg0-display",
+      "tex": "\\kern-0mu x",
+      "display": true
+    },
+    {
+      "name": "mu-dot010799-inline",
+      "tex": "\\kern.010799mu x",
+      "display": false
+    },
+    {
+      "name": "mu-dot010799-display",
+      "tex": "\\kern.010799mu x",
+      "display": true
+    },
+    {
+      "name": "mu-dot0108-inline",
+      "tex": "\\kern.0108mu x",
+      "display": false
+    },
+    {
+      "name": "mu-dot0108-display",
+      "tex": "\\kern.0108mu x",
+      "display": true
+    },
+    {
+      "name": "mu-dot027-inline",
+      "tex": "\\kern.027mu x",
+      "display": false
+    },
+    {
+      "name": "mu-dot027-display",
+      "tex": "\\kern.027mu x",
+      "display": true
+    },
+    {
+      "name": "mu-dot045-inline",
+      "tex": "\\kern.045mu x",
+      "display": false
+    },
+    {
+      "name": "mu-dot045-display",
+      "tex": "\\kern.045mu x",
+      "display": true
+    },
+    {
+      "name": "mu-dot063-inline",
+      "tex": "\\kern.063mu x",
+      "display": false
+    },
+    {
+      "name": "mu-dot063-display",
+      "tex": "\\kern.063mu x",
+      "display": true
+    },
+    {
+      "name": "mu-1dot5-inline",
+      "tex": "\\kern1.5mu x",
+      "display": false
+    },
+    {
+      "name": "mu-1dot5-display",
+      "tex": "\\kern1.5mu x",
+      "display": true
+    },
+    {
+      "name": "mu-8dot-inline",
+      "tex": "\\kern8.mu x",
+      "display": false
+    },
+    {
+      "name": "mu-8dot-display",
+      "tex": "\\kern8.mu x",
+      "display": true
+    },
+    {
+      "name": "braced-comma-inline",
+      "tex": "\\kern{1,5mu}x",
+      "display": false
+    },
+    {
+      "name": "braced-comma-display",
+      "tex": "\\kern{1,5mu}x",
+      "display": true
+    },
+    {
+      "name": "braced-comma-leading-inline",
+      "tex": "\\kern{,5mu}x",
+      "display": false
+    },
+    {
+      "name": "braced-comma-leading-display",
+      "tex": "\\kern{,5mu}x",
+      "display": true
+    },
+    {
+      "name": "braced-spaces-inline",
+      "tex": "\\kern{ 8 mu }x",
+      "display": false
+    },
+    {
+      "name": "braced-spaces-display",
+      "tex": "\\kern{ 8 mu }x",
+      "display": true
+    },
+    {
+      "name": "row-inline",
+      "tex": "x\\kern8mu y",
+      "display": false
+    },
+    {
+      "name": "row-display",
+      "tex": "x\\kern8mu y",
+      "display": true
+    },
+    {
+      "name": "scriptstyle-inline",
+      "tex": "{\\scriptstyle\\kern8mu x}",
+      "display": false
+    },
+    {
+      "name": "scriptstyle-display",
+      "tex": "{\\scriptstyle\\kern8mu x}",
+      "display": true
+    },
+    {
+      "name": "subscript-inline",
+      "tex": "x_{\\kern6mu y}",
+      "display": false
+    },
+    {
+      "name": "subscript-display",
+      "tex": "x_{\\kern6mu y}",
+      "display": true
+    },
+    {
+      "name": "mkern-inline",
+      "tex": "\\mkern8mu x",
+      "display": false
+    },
+    {
+      "name": "mkern-display",
+      "tex": "\\mkern8mu x",
+      "display": true
+    },
+    {
+      "name": "hskip-inline",
+      "tex": "\\hskip8mu x",
+      "display": false
+    },
+    {
+      "name": "hskip-display",
+      "tex": "\\hskip8mu x",
+      "display": true
+    },
+    {
+      "name": "mskip-inline",
+      "tex": "\\mskip8mu x",
+      "display": false
+    },
+    {
+      "name": "mskip-display",
+      "tex": "\\mskip8mu x",
+      "display": true
+    },
+    {
+      "name": "hspace-inline",
+      "tex": "\\hspace8mu x",
+      "display": false
+    },
+    {
+      "name": "hspace-display",
+      "tex": "\\hspace8mu x",
+      "display": true
+    },
+    {
+      "name": "raise-inline",
+      "tex": "\\raise8mu{x}",
+      "display": false
+    },
+    {
+      "name": "raise-display",
+      "tex": "\\raise8mu{x}",
+      "display": true
+    },
+    {
+      "name": "lower-inline",
+      "tex": "\\lower6mu{x}",
+      "display": false
+    },
+    {
+      "name": "lower-display",
+      "tex": "\\lower6mu{x}",
+      "display": true
+    },
+    {
+      "name": "cd-width-inline",
+      "tex": "\\minCDarrowwidth8mu\\begin{CD}A@>>>B\\end{CD}",
+      "display": false
+    },
+    {
+      "name": "cd-width-display",
+      "tex": "\\minCDarrowwidth8mu\\begin{CD}A@>>>B\\end{CD}",
+      "display": true
+    },
+    {
+      "name": "cd-height-inline",
+      "tex": "\\minCDarrowheight6mu\\begin{CD}A@VVV\\\\B\\end{CD}",
+      "display": false
+    },
+    {
+      "name": "cd-height-display",
+      "tex": "\\minCDarrowheight6mu\\begin{CD}A@VVV\\\\B\\end{CD}",
+      "display": true
+    },
+    {
+      "name": "spreadlines-inline",
+      "tex": "\\begin{spreadlines}{8mu}\\begin{gathered}a\\\\b\\end{gathered}\\end{spreadlines}",
+      "display": false
+    },
+    {
+      "name": "spreadlines-display",
+      "tex": "\\begin{spreadlines}{8mu}\\begin{gathered}a\\\\b\\end{gathered}\\end{spreadlines}",
+      "display": true
+    },
+    {
+      "name": "em-control-inline",
+      "tex": "\\kern+1.250em x",
+      "display": false
+    },
+    {
+      "name": "em-control-display",
+      "tex": "\\kern+1.250em x",
+      "display": true
+    },
+    {
+      "name": "pt-control-inline",
+      "tex": "\\kern1.5pt x",
+      "display": false
+    },
+    {
+      "name": "pt-control-display",
+      "tex": "\\kern1.5pt x",
+      "display": true
+    },
+    {
+      "name": "literal-inline",
+      "tex": "\\text{8mu}",
+      "display": false
+    },
+    {
+      "name": "literal-display",
+      "tex": "\\text{8mu}",
+      "display": true
+    },
+    {
+      "name": "braced-junk-inline",
+      "tex": "\\kern{8mu x}z",
+      "display": false
+    },
+    {
+      "name": "braced-junk-display",
+      "tex": "\\kern{8mu x}z",
+      "display": true
+    },
+    {
+      "name": "exponent-inline",
+      "tex": "\\kern1e2mu x",
+      "display": false
+    },
+    {
+      "name": "exponent-display",
+      "tex": "\\kern1e2mu x",
+      "display": true
+    },
+    {
+      "name": "double-sign-inline",
+      "tex": "\\kern++8mu x",
+      "display": false
+    },
+    {
+      "name": "double-sign-display",
+      "tex": "\\kern++8mu x",
+      "display": true
+    },
+    {
+      "name": "uppercase-inline",
+      "tex": "\\kern8MU x",
+      "display": false
+    },
+    {
+      "name": "uppercase-display",
+      "tex": "\\kern8MU x",
+      "display": true
+    },
+    {
+      "name": "unbraced-comma-inline",
+      "tex": "\\kern1,5mu x",
+      "display": false
+    },
+    {
+      "name": "unbraced-comma-display",
+      "tex": "\\kern1,5mu x",
+      "display": true
+    },
+    {
+      "name": "pc-inline",
+      "tex": "\\kern1pc x",
+      "display": false
+    },
+    {
+      "name": "pc-display",
+      "tex": "\\kern1pc x",
+      "display": true
+    },
+    {
+      "name": "missing-close-inline",
+      "tex": "\\kern{8mu",
+      "display": false
+    },
+    {
+      "name": "missing-close-display",
+      "tex": "\\kern{8mu",
+      "display": true
+    },
+    {
+      "name": "direct-mml-8mu-inline",
+      "tex": "\\kern18mu x",
+      "display": false,
+      "directMathMLWidth": "8mu"
+    },
+    {
+      "name": "direct-mml-8mu-display",
+      "tex": "\\kern18mu x",
+      "display": true,
+      "directMathMLWidth": "8mu"
+    },
+    {
+      "name": "direct-mml-6mu-inline",
+      "tex": "\\kern18mu x",
+      "display": false,
+      "directMathMLWidth": "6mu"
+    },
+    {
+      "name": "direct-mml-6mu-display",
+      "tex": "\\kern18mu x",
+      "display": true,
+      "directMathMLWidth": "6mu"
+    },
+    {
+      "name": "direct-mml-18mu-inline",
+      "tex": "\\kern18mu x",
+      "display": false,
+      "directMathMLWidth": "18mu"
+    },
+    {
+      "name": "direct-mml-18mu-display",
+      "tex": "\\kern18mu x",
+      "display": true,
+      "directMathMLWidth": "18mu"
+    },
+    {
+      "name": "direct-mml-.0108mu-inline",
+      "tex": "\\kern18mu x",
+      "display": false,
+      "directMathMLWidth": ".0108mu"
+    },
+    {
+      "name": "direct-mml-.0108mu-display",
+      "tex": "\\kern18mu x",
+      "display": true,
+      "directMathMLWidth": ".0108mu"
+    }
+  ]
+}

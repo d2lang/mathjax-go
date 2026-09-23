@@ -53,3 +53,25 @@ the exact SHA-256 values recorded in [PROVENANCE.md](PROVENANCE.md).
 Apache License 2.0, with identified MIT-derived portions. See
 [LICENSE](LICENSE), [LICENSES](LICENSES), [NOTICE](NOTICE), and
 [PROVENANCE.md](PROVENANCE.md).
+
+### TeX mu dimension references
+
+The TeX parser converts valid, fully extracted `mu` values with the pinned
+`ParseUtil.muReplace/Em` precision before creating MathML. The existing dimension
+scanner and direct MathML length conversion are separate and unchanged.
+
+The dimension corpus keeps 86 full SVG/explicit/own-tree records: 68 raw-primary
+results (including eight direct-MathML controls), 12 unchanged grammar boundaries,
+two CD-height renderer boundaries with exact primary trees, and four raise/lower
+consumer controls. The last four retain inherited structure and sign handling;
+only their three dimension strings change. Their SVG hashes are candidate
+regression captures, not claims of primary renderer parity. The untouched primary
+records are retained beside every qualification.
+
+Registered parser fixtures also bind 44 full-token conversion controls, three
+large-number formatting cases, and 38 accepted extraction/cursor/error controls.
+The extraction records explicitly preserve scanner differences rather than
+claiming complete `GetDimen` grammar compatibility. Regenerate the primary files
+with `testdata/generate_tex_mu_dimensions.cjs` and
+`internal/tex/testdata/generate_mu_dimension.cjs`, passing the pinned asset
+directory and output directory/file respectively.

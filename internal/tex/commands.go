@@ -1046,7 +1046,7 @@ func (p *parser) readDimension(name string) (string, error) {
 		if strings.TrimSpace(raw) == "" {
 			return "", texError("MissingDimOrUnits", "Missing dimension or its units for \\%s", name)
 		}
-		return strings.TrimSpace(raw), nil
+		return normalizeTeXMu(strings.TrimSpace(raw)), nil
 	}
 	start := p.pos
 	for p.pos < len(p.source) {
@@ -1071,7 +1071,7 @@ func (p *parser) readDimension(name string) (string, error) {
 	if value == "" {
 		return "", texError("MissingDimOrUnits", "Missing dimension or its units for \\%s", name)
 	}
-	return value, nil
+	return normalizeTeXMu(value), nil
 }
 
 func (p *parser) phantom(name string) ([]*mml.Node, error) {

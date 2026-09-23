@@ -1,0 +1,312 @@
+{
+  "base": "ab6c3c973d305288864a96a8bbab5d5471762c6b",
+  "commandsSHA256": "b214a780ed3ca6fc91e58512422abdbbe55f4bcd99b22e5803bf579e6c7a6aee",
+  "observationBase": "e93f5eb32042cd5a772f5b8fa3c6aabe540701da",
+  "commandsByteExact": true,
+  "rows": [
+    {
+      "cursorBytesUTF8": 3,
+      "error": null,
+      "remaining": " x",
+      "source": "8mu x",
+      "sourceUnchanged": true,
+      "value": "8mu"
+    },
+    {
+      "cursorBytesUTF8": 3,
+      "error": null,
+      "remaining": " x",
+      "source": "6mu x",
+      "sourceUnchanged": true,
+      "value": "6mu"
+    },
+    {
+      "cursorBytesUTF8": 4,
+      "error": null,
+      "remaining": " x",
+      "source": "18mu x",
+      "sourceUnchanged": true,
+      "value": "18mu"
+    },
+    {
+      "cursorBytesUTF8": 4,
+      "error": null,
+      "remaining": " x",
+      "source": "-8mu x",
+      "sourceUnchanged": true,
+      "value": "-8mu"
+    },
+    {
+      "cursorBytesUTF8": 4,
+      "error": null,
+      "remaining": " x",
+      "source": "+6mu x",
+      "sourceUnchanged": true,
+      "value": "+6mu"
+    },
+    {
+      "cursorBytesUTF8": 3,
+      "error": null,
+      "remaining": " x",
+      "source": "0mu x",
+      "sourceUnchanged": true,
+      "value": "0mu"
+    },
+    {
+      "cursorBytesUTF8": 9,
+      "error": null,
+      "remaining": " x",
+      "source": ".010799mu x",
+      "sourceUnchanged": true,
+      "value": ".010799mu"
+    },
+    {
+      "cursorBytesUTF8": 7,
+      "error": null,
+      "remaining": " x",
+      "source": ".0108mu x",
+      "sourceUnchanged": true,
+      "value": ".0108mu"
+    },
+    {
+      "cursorBytesUTF8": 6,
+      "error": null,
+      "remaining": " x",
+      "source": ".027mu x",
+      "sourceUnchanged": true,
+      "value": ".027mu"
+    },
+    {
+      "cursorBytesUTF8": 1,
+      "error": null,
+      "remaining": ",5mu x",
+      "source": "1,5mu x",
+      "sourceUnchanged": true,
+      "value": "1"
+    },
+    {
+      "cursorBytesUTF8": 0,
+      "error": "Missing dimension or its units for \\kern",
+      "remaining": ",5mu x",
+      "source": ",5mu x",
+      "sourceUnchanged": true,
+      "value": ""
+    },
+    {
+      "cursorBytesUTF8": 4,
+      "error": null,
+      "remaining": " x",
+      "source": "8.mu x",
+      "sourceUnchanged": true,
+      "value": "8.mu"
+    },
+    {
+      "cursorBytesUTF8": 4,
+      "error": null,
+      "remaining": "  x",
+      "source": " 8mu  x",
+      "sourceUnchanged": true,
+      "value": "8mu"
+    },
+    {
+      "cursorBytesUTF8": 3,
+      "error": null,
+      "remaining": "\tx",
+      "source": "8mu\tx",
+      "sourceUnchanged": true,
+      "value": "8mu"
+    },
+    {
+      "cursorBytesUTF8": 3,
+      "error": null,
+      "remaining": "\nx",
+      "source": "8mu\nx",
+      "sourceUnchanged": true,
+      "value": "8mu"
+    },
+    {
+      "cursorBytesUTF8": 3,
+      "error": null,
+      "remaining": "\ud835\udc65",
+      "source": "8mu\ud835\udc65",
+      "sourceUnchanged": true,
+      "value": "8mu"
+    },
+    {
+      "cursorBytesUTF8": 3,
+      "error": null,
+      "remaining": "mu",
+      "source": "8mumu",
+      "sourceUnchanged": true,
+      "value": "8mu"
+    },
+    {
+      "cursorBytesUTF8": 3,
+      "error": null,
+      "remaining": "%comment",
+      "source": "8mu%comment",
+      "sourceUnchanged": true,
+      "value": "8mu"
+    },
+    {
+      "cursorBytesUTF8": 5,
+      "error": null,
+      "remaining": "x",
+      "source": "{8mu}x",
+      "sourceUnchanged": true,
+      "value": "8mu"
+    },
+    {
+      "cursorBytesUTF8": 8,
+      "error": null,
+      "remaining": "x",
+      "source": "{ 8 mu }x",
+      "sourceUnchanged": true,
+      "value": "8 mu"
+    },
+    {
+      "cursorBytesUTF8": 7,
+      "error": null,
+      "remaining": "z",
+      "source": "{8mu x}z",
+      "sourceUnchanged": true,
+      "value": "8mu x"
+    },
+    {
+      "cursorBytesUTF8": 7,
+      "error": null,
+      "remaining": "x",
+      "source": "{1,5mu}x",
+      "sourceUnchanged": true,
+      "value": "1,5mu"
+    },
+    {
+      "cursorBytesUTF8": 7,
+      "error": null,
+      "remaining": "x",
+      "source": "{8mu  }x",
+      "sourceUnchanged": true,
+      "value": "8mu"
+    },
+    {
+      "cursorBytesUTF8": 2,
+      "error": "Missing dimension or its units for \\kern",
+      "remaining": "x",
+      "source": "{}x",
+      "sourceUnchanged": true,
+      "value": ""
+    },
+    {
+      "cursorBytesUTF8": 0,
+      "error": "Missing close brace",
+      "remaining": "{8mu",
+      "source": "{8mu",
+      "sourceUnchanged": true,
+      "value": ""
+    },
+    {
+      "cursorBytesUTF8": 5,
+      "error": null,
+      "remaining": "",
+      "source": "8MU x",
+      "sourceUnchanged": true,
+      "value": "8MU x"
+    },
+    {
+      "cursorBytesUTF8": 5,
+      "error": null,
+      "remaining": " x",
+      "source": "1e2mu x",
+      "sourceUnchanged": true,
+      "value": "1e2mu"
+    },
+    {
+      "cursorBytesUTF8": 5,
+      "error": null,
+      "remaining": " x",
+      "source": "++8mu x",
+      "sourceUnchanged": true,
+      "value": "++8mu"
+    },
+    {
+      "cursorBytesUTF8": 2,
+      "error": null,
+      "remaining": "",
+      "source": "8x",
+      "sourceUnchanged": true,
+      "value": "8x"
+    },
+    {
+      "cursorBytesUTF8": 2,
+      "error": null,
+      "remaining": " x",
+      "source": "mu x",
+      "sourceUnchanged": true,
+      "value": "mu"
+    },
+    {
+      "cursorBytesUTF8": 3,
+      "error": null,
+      "remaining": " x",
+      "source": ".mu x",
+      "sourceUnchanged": true,
+      "value": ".mu"
+    },
+    {
+      "cursorBytesUTF8": 5,
+      "error": null,
+      "remaining": "",
+      "source": "8qu x",
+      "sourceUnchanged": true,
+      "value": "8qu x"
+    },
+    {
+      "cursorBytesUTF8": 0,
+      "error": "Missing dimension or its units for \\kern",
+      "remaining": "",
+      "source": "",
+      "sourceUnchanged": true,
+      "value": ""
+    },
+    {
+      "cursorBytesUTF8": 5,
+      "error": null,
+      "remaining": "",
+      "source": "1pc x",
+      "sourceUnchanged": true,
+      "value": "1pc x"
+    },
+    {
+      "cursorBytesUTF8": 8,
+      "error": null,
+      "remaining": " x",
+      "source": "+1.250em x",
+      "sourceUnchanged": true,
+      "value": "+1.250em"
+    },
+    {
+      "cursorBytesUTF8": 7,
+      "error": null,
+      "remaining": "x",
+      "source": "{1,5pt}x",
+      "sourceUnchanged": true,
+      "value": "1,5pt"
+    },
+    {
+      "cursorBytesUTF8": 0,
+      "error": "Missing dimension or its units for \\kern",
+      "remaining": "\ufeff8mu x",
+      "source": "\ufeff8mu x",
+      "sourceUnchanged": true,
+      "value": ""
+    },
+    {
+      "cursorBytesUTF8": 5,
+      "error": null,
+      "remaining": " x",
+      "source": "\u00858mu x",
+      "sourceUnchanged": true,
+      "value": "8mu"
+    }
+  ]
+}
