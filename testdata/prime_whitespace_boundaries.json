@@ -1,0 +1,1895 @@
+{
+  "baseline": "c499d398cdfa3a34b0dae88dd0dd9c205c261ee2",
+  "inheritedPrimeMetadata": {
+    "ascii-space-0009-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "ascii-space-0009-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "ascii-space-000a-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "ascii-space-000a-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "ascii-space-000b-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "ascii-space-000b-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "ascii-space-000c-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "ascii-space-000c-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "ascii-space-000d-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "ascii-space-000d-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "ascii-space-0020-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "ascii-space-0020-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "ascii-space-00a0-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "ascii-space-00a0-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "ascii-space-1680-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "ascii-space-1680-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "ascii-space-2000-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "ascii-space-2000-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "ascii-space-2001-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "ascii-space-2001-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "ascii-space-2002-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "ascii-space-2002-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "ascii-space-2003-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "ascii-space-2003-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "ascii-space-2004-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "ascii-space-2004-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "ascii-space-2005-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "ascii-space-2005-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "ascii-space-2006-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "ascii-space-2006-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "ascii-space-2007-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "ascii-space-2007-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "ascii-space-2008-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "ascii-space-2008-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "ascii-space-2009-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "ascii-space-2009-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "ascii-space-200a-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "ascii-space-200a-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "ascii-space-2028-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "ascii-space-2028-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "ascii-space-2029-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "ascii-space-2029-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "ascii-space-202f-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "ascii-space-202f-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "ascii-space-205f-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "ascii-space-205f-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "ascii-space-3000-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "ascii-space-3000-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "ascii-space-feff-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "ascii-space-feff-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "ascii-bom-end-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "ascii-bom-end-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "ascii-bom-sup-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": true
+        }
+      }
+    ],
+    "ascii-bom-sup-display": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": true
+        }
+      }
+    ],
+    "ascii-bom-sub-inline": [
+      {
+        "path": [
+          0,
+          0,
+          2
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "ascii-bom-sub-display": [
+      {
+        "path": [
+          0,
+          0,
+          2
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "ascii-bom-token-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "ascii-bom-token-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "ascii-bom-mixed-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "ascii-bom-mixed-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "unicode-space-0009-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "unicode-space-0009-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "unicode-space-000a-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "unicode-space-000a-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "unicode-space-000b-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "unicode-space-000b-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "unicode-space-000c-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "unicode-space-000c-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "unicode-space-000d-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "unicode-space-000d-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "unicode-space-0020-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "unicode-space-0020-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "unicode-space-00a0-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "unicode-space-00a0-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "unicode-space-1680-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "unicode-space-1680-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "unicode-space-2000-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "unicode-space-2000-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "unicode-space-2001-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "unicode-space-2001-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "unicode-space-2002-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "unicode-space-2002-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "unicode-space-2003-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "unicode-space-2003-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "unicode-space-2004-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "unicode-space-2004-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "unicode-space-2005-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "unicode-space-2005-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "unicode-space-2006-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "unicode-space-2006-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "unicode-space-2007-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "unicode-space-2007-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "unicode-space-2008-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "unicode-space-2008-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "unicode-space-2009-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "unicode-space-2009-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "unicode-space-200a-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "unicode-space-200a-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "unicode-space-2028-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "unicode-space-2028-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "unicode-space-2029-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "unicode-space-2029-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "unicode-space-202f-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "unicode-space-202f-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "unicode-space-205f-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "unicode-space-205f-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "unicode-space-3000-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "unicode-space-3000-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "unicode-space-feff-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "unicode-space-feff-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "unicode-bom-end-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "unicode-bom-end-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "unicode-bom-sup-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": true
+        }
+      }
+    ],
+    "unicode-bom-sup-display": [
+      {
+        "path": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": true
+        }
+      }
+    ],
+    "unicode-bom-sub-inline": [
+      {
+        "path": [
+          0,
+          0,
+          2
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "unicode-bom-sub-display": [
+      {
+        "path": [
+          0,
+          0,
+          2
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "unicode-bom-token-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "unicode-bom-token-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "unicode-bom-mixed-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "unicode-bom-mixed-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "no-space-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "no-space-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "mixed-no-space-inline": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ],
+    "mixed-no-space-display": [
+      {
+        "path": [
+          0,
+          0,
+          1
+        ],
+        "properties": {
+          "variantForm": true,
+          "pseudoscript": false
+        }
+      }
+    ]
+  },
+  "unchangedNonPrime": {
+    "bom-no-prime-inline": {
+      "svgSHA256": "2f196cac014ad684afc0c78ca26abe1bc88c825c85cc8d299b2b7e4f7141dd73",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": {},
+                "properties": {
+                  "in-lists": "fixStretchy"
+                },
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "\ufeff",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "y",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "bom-no-prime-display": {
+      "svgSHA256": "2f196cac014ad684afc0c78ca26abe1bc88c825c85cc8d299b2b7e4f7141dd73",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": {},
+                "properties": {
+                  "in-lists": "fixStretchy"
+                },
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "\ufeff",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "y",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "nel-no-prime-inline": {
+      "svgSHA256": "39303ee53d6cd0a654e183557bb493fd0ba5b887f96f5d7d871a9be772ce1808",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "y",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "nel-no-prime-display": {
+      "svgSHA256": "39303ee53d6cd0a654e183557bb493fd0ba5b887f96f5d7d871a9be772ce1808",
+      "tree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "y",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "primaryRuntimeErrors": [
+    {
+      "name": "ascii-nel-inline",
+      "primaryError": "TypeError: Cannot read properties of null (reading '4')",
+      "baselineSHA256": "0696bb535d1432475dc606f8163f5a1931a160562d6654dde4eb78e7f7d2e35c",
+      "candidateSHA256": "567950b04956638a3f33867adcc87e11975a398c31d65c2cd746500c27392d61"
+    },
+    {
+      "name": "ascii-nel-display",
+      "primaryError": "TypeError: Cannot read properties of null (reading '4')",
+      "baselineSHA256": "51689f2c66034a9cd60a6255d2891f664d869f3180bb23db2a37f680aa558b66",
+      "candidateSHA256": "a06e3a03e0f2d0bdbdec87dab1b59d644fc2a29211aafb97d6dbb8f5da50ead6"
+    },
+    {
+      "name": "unicode-nel-inline",
+      "primaryError": "TypeError: Cannot read properties of null (reading '4')",
+      "baselineSHA256": "0696bb535d1432475dc606f8163f5a1931a160562d6654dde4eb78e7f7d2e35c",
+      "candidateSHA256": "567950b04956638a3f33867adcc87e11975a398c31d65c2cd746500c27392d61"
+    },
+    {
+      "name": "unicode-nel-display",
+      "primaryError": "TypeError: Cannot read properties of null (reading '4')",
+      "baselineSHA256": "51689f2c66034a9cd60a6255d2891f664d869f3180bb23db2a37f680aa558b66",
+      "candidateSHA256": "a06e3a03e0f2d0bdbdec87dab1b59d644fc2a29211aafb97d6dbb8f5da50ead6"
+    },
+    {
+      "name": "nel-no-prime-inline",
+      "primaryError": "TypeError: Cannot read properties of null (reading '4')",
+      "baselineSHA256": "39303ee53d6cd0a654e183557bb493fd0ba5b887f96f5d7d871a9be772ce1808",
+      "candidateSHA256": "39303ee53d6cd0a654e183557bb493fd0ba5b887f96f5d7d871a9be772ce1808"
+    },
+    {
+      "name": "nel-no-prime-display",
+      "primaryError": "TypeError: Cannot read properties of null (reading '4')",
+      "baselineSHA256": "39303ee53d6cd0a654e183557bb493fd0ba5b887f96f5d7d871a9be772ce1808",
+      "candidateSHA256": "39303ee53d6cd0a654e183557bb493fd0ba5b887f96f5d7d871a9be772ce1808"
+    }
+  ]
+}
