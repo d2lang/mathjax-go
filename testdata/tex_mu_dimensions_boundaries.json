@@ -1,0 +1,1270 @@
+{
+  "baseline": "ab6c3c973d305288864a96a8bbab5d5471762c6b",
+  "boundaryNote": "12 inherited unchanged SVG/tree outputs; two CD-height SVG-only boundaries retain exact primary trees; four raise/lower outputs bind accepted structure plus exact registered mu strings. Their candidate SVG digests are regression captures, not primary-equivalence evidence. Primary files remain intact.",
+  "cases": {
+    "raise-inline": {
+      "tex": "\\raise8mu{x}",
+      "display": false,
+      "mode": "mu-consumer",
+      "baselineSVG": "95b9aa8dd7b54d1ce15e307d36abacfc5faf8c6e13ad954a004a0caf82d9f002",
+      "expectedSVG": "ba4f39e4da4f1e7d7525c15719b467eb88aa484b73229632ba4eed43aa10c7ca",
+      "baselineTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mpadded",
+                "text": null,
+                "attributes": {
+                  "voffset": "8mu",
+                  "height": "+8mu",
+                  "depth": "-8mu"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "x",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "attributesAtRootFirstChild": {
+        "voffset": "0.444em",
+        "height": "+0.444em",
+        "depth": "-0.444em"
+      },
+      "primarySVG": "e1b165654f1de1cceff42dfa6ef2622107b6038106e62e413798c9f0c626309e"
+    },
+    "raise-display": {
+      "tex": "\\raise8mu{x}",
+      "display": true,
+      "mode": "mu-consumer",
+      "baselineSVG": "95b9aa8dd7b54d1ce15e307d36abacfc5faf8c6e13ad954a004a0caf82d9f002",
+      "expectedSVG": "ba4f39e4da4f1e7d7525c15719b467eb88aa484b73229632ba4eed43aa10c7ca",
+      "baselineTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mpadded",
+                "text": null,
+                "attributes": {
+                  "voffset": "8mu",
+                  "height": "+8mu",
+                  "depth": "-8mu"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "x",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "attributesAtRootFirstChild": {
+        "voffset": "0.444em",
+        "height": "+0.444em",
+        "depth": "-0.444em"
+      },
+      "primarySVG": "e1b165654f1de1cceff42dfa6ef2622107b6038106e62e413798c9f0c626309e"
+    },
+    "lower-inline": {
+      "tex": "\\lower6mu{x}",
+      "display": false,
+      "mode": "mu-consumer",
+      "baselineSVG": "132b9e05a69a7e944d4a7452a6a9a91a34c920fd95bf2600a9e911d161ebbe1c",
+      "expectedSVG": "ea65501964f86eef874ee97580f482f87527b7b9f355b92db40d62700aab1c73",
+      "baselineTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mpadded",
+                "text": null,
+                "attributes": {
+                  "depth": "--6mu",
+                  "voffset": "-6mu",
+                  "height": "+-6mu"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "x",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "attributesAtRootFirstChild": {
+        "voffset": "-0.333em",
+        "height": "+-0.333em",
+        "depth": "--0.333em"
+      },
+      "primarySVG": "da10e4fbf38af468d16de536f084114f03e87b7beb8ba009f1580a245166779e"
+    },
+    "lower-display": {
+      "tex": "\\lower6mu{x}",
+      "display": true,
+      "mode": "mu-consumer",
+      "baselineSVG": "132b9e05a69a7e944d4a7452a6a9a91a34c920fd95bf2600a9e911d161ebbe1c",
+      "expectedSVG": "ea65501964f86eef874ee97580f482f87527b7b9f355b92db40d62700aab1c73",
+      "baselineTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mpadded",
+                "text": null,
+                "attributes": {
+                  "voffset": "-6mu",
+                  "height": "+-6mu",
+                  "depth": "--6mu"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "inferredMrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mi",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "x",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "attributesAtRootFirstChild": {
+        "voffset": "-0.333em",
+        "height": "+-0.333em",
+        "depth": "--0.333em"
+      },
+      "primarySVG": "da10e4fbf38af468d16de536f084114f03e87b7beb8ba009f1580a245166779e"
+    },
+    "cd-height-inline": {
+      "tex": "\\minCDarrowheight6mu\\begin{CD}A@VVV\\\\B\\end{CD}",
+      "display": false,
+      "mode": "svg-only",
+      "baselineSVG": "aeb56ba31385252d5e259ccb61e722f2a568608927d238971c06c3df28c2db32",
+      "expectedSVG": "aeb56ba31385252d5e259ccb61e722f2a568608927d238971c06c3df28c2db32",
+      "baselineTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mtable",
+                "text": null,
+                "attributes": {
+                  "columnspacing": "5pt",
+                  "rowspacing": "5pt",
+                  "displaystyle": true
+                },
+                "properties": {
+                  "useHeight": true
+                },
+                "children": [
+                  {
+                    "kind": "mtr",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtd",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {},
+                            "children": [
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": {},
+                                "properties": {},
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "A",
+                                    "attributes": {},
+                                    "properties": {},
+                                    "children": []
+                                  }
+                                ]
+                              },
+                              {
+                                "kind": "mpadded",
+                                "text": null,
+                                "attributes": {
+                                  "height": "8.5pt",
+                                  "depth": "2pt"
+                                },
+                                "properties": {},
+                                "children": [
+                                  {
+                                    "kind": "inferredMrow",
+                                    "text": null,
+                                    "attributes": {},
+                                    "properties": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mtd",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {},
+                            "children": [
+                              {
+                                "kind": "mo",
+                                "text": null,
+                                "attributes": {
+                                  "minsize": "6mu",
+                                  "symmetric": true,
+                                  "lspace": 0,
+                                  "rspace": 0
+                                },
+                                "properties": {},
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "\u2193",
+                                    "attributes": {},
+                                    "properties": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mtd",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mtr",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtd",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {},
+                            "children": [
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": {},
+                                "properties": {},
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "B",
+                                    "attributes": {},
+                                    "properties": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "attributesAtRootFirstChild": {},
+      "primarySVG": "5aaf35378c628a7b3ef93f75cabcc4fb4f53ef47d842e142da0d410704e007ab"
+    },
+    "cd-height-display": {
+      "tex": "\\minCDarrowheight6mu\\begin{CD}A@VVV\\\\B\\end{CD}",
+      "display": true,
+      "mode": "svg-only",
+      "baselineSVG": "aeb56ba31385252d5e259ccb61e722f2a568608927d238971c06c3df28c2db32",
+      "expectedSVG": "aeb56ba31385252d5e259ccb61e722f2a568608927d238971c06c3df28c2db32",
+      "baselineTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mtable",
+                "text": null,
+                "attributes": {
+                  "columnspacing": "5pt",
+                  "rowspacing": "5pt",
+                  "displaystyle": true
+                },
+                "properties": {
+                  "useHeight": true
+                },
+                "children": [
+                  {
+                    "kind": "mtr",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtd",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {},
+                            "children": [
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": {},
+                                "properties": {},
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "A",
+                                    "attributes": {},
+                                    "properties": {},
+                                    "children": []
+                                  }
+                                ]
+                              },
+                              {
+                                "kind": "mpadded",
+                                "text": null,
+                                "attributes": {
+                                  "height": "8.5pt",
+                                  "depth": "2pt"
+                                },
+                                "properties": {},
+                                "children": [
+                                  {
+                                    "kind": "inferredMrow",
+                                    "text": null,
+                                    "attributes": {},
+                                    "properties": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mtd",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {},
+                            "children": [
+                              {
+                                "kind": "mo",
+                                "text": null,
+                                "attributes": {
+                                  "minsize": "6mu",
+                                  "symmetric": true,
+                                  "lspace": 0,
+                                  "rspace": 0
+                                },
+                                "properties": {},
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "\u2193",
+                                    "attributes": {},
+                                    "properties": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mtd",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mtr",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mtd",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "inferredMrow",
+                            "text": null,
+                            "attributes": {},
+                            "properties": {},
+                            "children": [
+                              {
+                                "kind": "mi",
+                                "text": null,
+                                "attributes": {},
+                                "properties": {},
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "B",
+                                    "attributes": {},
+                                    "properties": {},
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "attributesAtRootFirstChild": {},
+      "primarySVG": "5aaf35378c628a7b3ef93f75cabcc4fb4f53ef47d842e142da0d410704e007ab"
+    },
+    "braced-junk-inline": {
+      "tex": "\\kern{8mu x}z",
+      "display": false,
+      "mode": "unchanged",
+      "baselineSVG": "f9e502ad553ba18cc1220fb850930c0b827552fdb7fffac5d37753dd016b5c09",
+      "expectedSVG": "f9e502ad553ba18cc1220fb850930c0b827552fdb7fffac5d37753dd016b5c09",
+      "baselineTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mspace",
+                "text": null,
+                "attributes": {
+                  "width": "8mu x"
+                },
+                "properties": {},
+                "children": []
+              },
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "z",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "attributesAtRootFirstChild": {},
+      "primarySVG": "8bf1d435f39c52c594c904c0f0cbfde43db76a56344b00835f65507f4a01e809"
+    },
+    "braced-junk-display": {
+      "tex": "\\kern{8mu x}z",
+      "display": true,
+      "mode": "unchanged",
+      "baselineSVG": "f9e502ad553ba18cc1220fb850930c0b827552fdb7fffac5d37753dd016b5c09",
+      "expectedSVG": "f9e502ad553ba18cc1220fb850930c0b827552fdb7fffac5d37753dd016b5c09",
+      "baselineTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mspace",
+                "text": null,
+                "attributes": {
+                  "width": "8mu x"
+                },
+                "properties": {},
+                "children": []
+              },
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "z",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "attributesAtRootFirstChild": {},
+      "primarySVG": "8bf1d435f39c52c594c904c0f0cbfde43db76a56344b00835f65507f4a01e809"
+    },
+    "exponent-inline": {
+      "tex": "\\kern1e2mu x",
+      "display": false,
+      "mode": "unchanged",
+      "baselineSVG": "2300d71ce997e4249f7d51e9e0597cb104c2b32f885d23a155c54d003465a520",
+      "expectedSVG": "2300d71ce997e4249f7d51e9e0597cb104c2b32f885d23a155c54d003465a520",
+      "baselineTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mspace",
+                "text": null,
+                "attributes": {
+                  "width": "1e2mu"
+                },
+                "properties": {},
+                "children": []
+              },
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "attributesAtRootFirstChild": {},
+      "primarySVG": "8bf1d435f39c52c594c904c0f0cbfde43db76a56344b00835f65507f4a01e809"
+    },
+    "exponent-display": {
+      "tex": "\\kern1e2mu x",
+      "display": true,
+      "mode": "unchanged",
+      "baselineSVG": "2300d71ce997e4249f7d51e9e0597cb104c2b32f885d23a155c54d003465a520",
+      "expectedSVG": "2300d71ce997e4249f7d51e9e0597cb104c2b32f885d23a155c54d003465a520",
+      "baselineTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mspace",
+                "text": null,
+                "attributes": {
+                  "width": "1e2mu"
+                },
+                "properties": {},
+                "children": []
+              },
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "attributesAtRootFirstChild": {},
+      "primarySVG": "8bf1d435f39c52c594c904c0f0cbfde43db76a56344b00835f65507f4a01e809"
+    },
+    "double-sign-inline": {
+      "tex": "\\kern++8mu x",
+      "display": false,
+      "mode": "unchanged",
+      "baselineSVG": "2300d71ce997e4249f7d51e9e0597cb104c2b32f885d23a155c54d003465a520",
+      "expectedSVG": "2300d71ce997e4249f7d51e9e0597cb104c2b32f885d23a155c54d003465a520",
+      "baselineTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mspace",
+                "text": null,
+                "attributes": {
+                  "width": "++8mu"
+                },
+                "properties": {},
+                "children": []
+              },
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "attributesAtRootFirstChild": {},
+      "primarySVG": "8bf1d435f39c52c594c904c0f0cbfde43db76a56344b00835f65507f4a01e809"
+    },
+    "double-sign-display": {
+      "tex": "\\kern++8mu x",
+      "display": true,
+      "mode": "unchanged",
+      "baselineSVG": "2300d71ce997e4249f7d51e9e0597cb104c2b32f885d23a155c54d003465a520",
+      "expectedSVG": "2300d71ce997e4249f7d51e9e0597cb104c2b32f885d23a155c54d003465a520",
+      "baselineTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mspace",
+                "text": null,
+                "attributes": {
+                  "width": "++8mu"
+                },
+                "properties": {},
+                "children": []
+              },
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "attributesAtRootFirstChild": {},
+      "primarySVG": "8bf1d435f39c52c594c904c0f0cbfde43db76a56344b00835f65507f4a01e809"
+    },
+    "uppercase-inline": {
+      "tex": "\\kern8MU x",
+      "display": false,
+      "mode": "unchanged",
+      "baselineSVG": "237ce2b0f1e0334b895d540f0e6ba1faa6bd48fd3984f349f131ab35de125e9c",
+      "expectedSVG": "237ce2b0f1e0334b895d540f0e6ba1faa6bd48fd3984f349f131ab35de125e9c",
+      "baselineTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mspace",
+                "text": null,
+                "attributes": {
+                  "width": "8MU x"
+                },
+                "properties": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "attributesAtRootFirstChild": {},
+      "primarySVG": "8bf1d435f39c52c594c904c0f0cbfde43db76a56344b00835f65507f4a01e809"
+    },
+    "uppercase-display": {
+      "tex": "\\kern8MU x",
+      "display": true,
+      "mode": "unchanged",
+      "baselineSVG": "237ce2b0f1e0334b895d540f0e6ba1faa6bd48fd3984f349f131ab35de125e9c",
+      "expectedSVG": "237ce2b0f1e0334b895d540f0e6ba1faa6bd48fd3984f349f131ab35de125e9c",
+      "baselineTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mspace",
+                "text": null,
+                "attributes": {
+                  "width": "8MU x"
+                },
+                "properties": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "attributesAtRootFirstChild": {},
+      "primarySVG": "8bf1d435f39c52c594c904c0f0cbfde43db76a56344b00835f65507f4a01e809"
+    },
+    "unbraced-comma-inline": {
+      "tex": "\\kern1,5mu x",
+      "display": false,
+      "mode": "unchanged",
+      "baselineSVG": "c862c7b84e27f229c1492c9e59e476ae5cc94d7e54c0af3879099d51bacffa77",
+      "expectedSVG": "c862c7b84e27f229c1492c9e59e476ae5cc94d7e54c0af3879099d51bacffa77",
+      "baselineTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mspace",
+                "text": null,
+                "attributes": {
+                  "width": "1"
+                },
+                "properties": {},
+                "children": []
+              },
+              {
+                "kind": "mn",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": ",5",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "m",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "u",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "attributesAtRootFirstChild": {},
+      "primarySVG": "30f98c1385eaa4af0a40cc50380d8478062ac4bec0484f4f95e01e9d7405edfc"
+    },
+    "unbraced-comma-display": {
+      "tex": "\\kern1,5mu x",
+      "display": true,
+      "mode": "unchanged",
+      "baselineSVG": "c862c7b84e27f229c1492c9e59e476ae5cc94d7e54c0af3879099d51bacffa77",
+      "expectedSVG": "c862c7b84e27f229c1492c9e59e476ae5cc94d7e54c0af3879099d51bacffa77",
+      "baselineTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mspace",
+                "text": null,
+                "attributes": {
+                  "width": "1"
+                },
+                "properties": {},
+                "children": []
+              },
+              {
+                "kind": "mn",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": ",5",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "m",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "u",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "x",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "attributesAtRootFirstChild": {},
+      "primarySVG": "30f98c1385eaa4af0a40cc50380d8478062ac4bec0484f4f95e01e9d7405edfc"
+    },
+    "pc-inline": {
+      "tex": "\\kern1pc x",
+      "display": false,
+      "mode": "unchanged",
+      "baselineSVG": "d83cb5c0ddddc9080d66bf7fbc7a99e0cd875501855df412cf724e091e85b2ed",
+      "expectedSVG": "d83cb5c0ddddc9080d66bf7fbc7a99e0cd875501855df412cf724e091e85b2ed",
+      "baselineTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mspace",
+                "text": null,
+                "attributes": {
+                  "width": "1pc x"
+                },
+                "properties": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "attributesAtRootFirstChild": {},
+      "primarySVG": "d07bedaaa533906d4f16fba4bc57ac10662973d8808cf4201d2a97d41c98ac23"
+    },
+    "pc-display": {
+      "tex": "\\kern1pc x",
+      "display": true,
+      "mode": "unchanged",
+      "baselineSVG": "d83cb5c0ddddc9080d66bf7fbc7a99e0cd875501855df412cf724e091e85b2ed",
+      "expectedSVG": "d83cb5c0ddddc9080d66bf7fbc7a99e0cd875501855df412cf724e091e85b2ed",
+      "baselineTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mspace",
+                "text": null,
+                "attributes": {
+                  "width": "1pc x"
+                },
+                "properties": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "attributesAtRootFirstChild": {},
+      "primarySVG": "d07bedaaa533906d4f16fba4bc57ac10662973d8808cf4201d2a97d41c98ac23"
+    }
+  }
+}
