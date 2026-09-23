@@ -55,6 +55,16 @@ func setTeXClass(node, previous *mml.Node) *mml.Node {
 		}
 		return adjustTeXClass(node, previous)
 
+	case "mi":
+		setPreviousClass(node, previous)
+		_, hasAutoOP := node.Property("autoOP")
+		_, hasTeXClass := node.Property("texClass")
+		if !hasAutoOP && !hasTeXClass && stringAttribute(node, "mathvariant", "") == "normal" && isIdentifierOperatorName(nodeText(node)) {
+			node.TeXClass = mml.TeXClassOp
+			node.SetProperty("autoOP", true)
+		}
+		return node
+
 	case "mo":
 		// Explicit MathML spacing without an assigned TeX class stops the
 		// inter-atom TeX spacing chain (MmlMo.setTeXclass).
@@ -82,6 +92,22 @@ func setTeXClass(node, previous *mml.Node) *mml.Node {
 		return previous
 	}
 	return node
+}
+
+// MmlMi.operatorName is the non-Unicode JavaScript /^[a-z][a-z0-9]*$/i.
+// Only multi-character ASCII names participate in automatic OP spacing.
+func isIdentifierOperatorName(name string) bool {
+	if len(name) < 2 {
+		return false
+	}
+	for i := 0; i < len(name); i++ {
+		c := name[i]
+		if c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z' || i > 0 && c >= '0' && c <= '9' {
+			continue
+		}
+		return false
+	}
+	return true
 }
 
 func setRowTeXClass(node, previous *mml.Node) *mml.Node {

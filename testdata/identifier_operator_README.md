@@ -1,0 +1,9 @@
+# Automatic identifier operator spacing
+
+This ports the pinned MathJax 3.2.2 `MmlMi.setTeXclass` method. A multi-character ASCII identifier matching `/^[a-z][a-z0-9]*$/i` becomes OP only with effective normal mathvariant and absent own `autoOP` and `texClass` properties. Explicit false, null, zero and empty property values suppress inference. The mi method returns its own node even when its class is NONE. No token parsing, macro, unit or general font behavior changes.
+
+The public generator uses fresh VMs and hash-verifies the three original D2 MathJax assets. Its 60 inline/display references contain complete SVG hashes, dimensions and raw identifier class/property/variant state observed after the unchanged primary renderer. They cover normal and nonnormal fonts, explicit inherited precedence, ASCII and non-ASCII names, operators, grouping, scripts, fractions, color and required errors. All 60 SVGs and identifier records match primary; 22 previously differing SVGs change. `x\mmlToken{mi}{mod}y` changes from 54×17 to primary 60×17.
+
+The private generator in `internal/svg/testdata` calls the actual factory-created primary node method for 167 cases, twice per case. It binds both call results, node/child/parent identity, previous-node preservation, complete own properties and explicit/inherited attributes. It covers absent versus explicitly falsy properties, initial NONE/ORD/REL class, predecessor class/level, name boundaries including newline, non-ASCII case-folding negatives, and explicit-versus-inherited variant precedence. Primary null previous state on a fresh node is represented by the established Go NONE/0 state; this is asserted only in the declared no-predecessor cases. Every other field compares directly.
+
+The full accepted/candidate compiler trees and post-render trees are retained in the parity audit evidence. No serialization or numeric tolerance is used for public SVG comparisons.
