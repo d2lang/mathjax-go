@@ -76,6 +76,7 @@ type parser struct {
 	vectorStar           bool
 	vectorAlias          bool
 	genfracPalette       bool
+	starMacroChildren    bool
 }
 
 // parseRow corresponds to TexParser.Parse plus the base Stack reduction.  A
@@ -542,9 +543,9 @@ func (p *parser) parseArgument(name string) (*mml.Node, error) {
 	if err != nil {
 		return nil, err
 	}
-	if p.genfracPalette {
-		// TexParser.ParseArg creates a genuine child parser. Only Genfrac's
-		// palette region opts into its independent expansion count.
+	if p.genfracPalette || p.starMacroChildren {
+		// TexParser.ParseArg creates a genuine child parser. Genfrac's palette
+		// and StarMacro's accent argument retain its independent count.
 		count := p.state.macroCount
 		p.state.macroCount = 0
 		defer func() { p.state.macroCount = count }()
@@ -556,7 +557,7 @@ func (p *parser) parseString(source string) (*mml.Node, error) {
 	sub := &parser{source: source, state: p.state, display: p.display,
 		activeFont: p.activeFont, vectorFactory: p.vectorFactory,
 		vectorFont: p.vectorFont, vectorStar: p.vectorStar, vectorAlias: p.vectorAlias,
-		genfracPalette: p.genfracPalette}
+		genfracPalette: p.genfracPalette, starMacroChildren: p.starMacroChildren}
 	if p.vectorFactory || p.vectorAlias {
 		sub.multiLetterFont = p.multiLetterFont
 	}

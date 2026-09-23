@@ -1846,12 +1846,28 @@ func (p *parser) vectorAccent(name string) ([]*mml.Node, error) {
 	if star {
 		bold += "*"
 	}
+	expansion, err := substituteMacroArguments("\\"+accent+"{\\"+bold+"{#1}}", []string{raw})
+	if err != nil {
+		return nil, err
+	}
+	// StarMacro checks the complete replacement plus unparsed input before
+	// charging. The existing synthetic expansion still owns a separate source
+	// and cursor; this validates the joined buffer without installing it.
+	if _, err := macroAddArgs(expansion, p.source[p.pos:], maxMacroBuffer); err != nil {
+		return nil, err
+	}
+	p.state.macroCount++
+	if p.state.macroCount > maxMacros {
+		return nil, texError("MaxMacroSub1", "MathJax maximum macro substitution count exceeded; is here a recursive macro call?")
+	}
 	// PhysicsMethods.StarMacro preserves the ordinary accent handler around
 	// the vector argument; the accent is outside VectorBold's font reset.
-	sub := &parser{source: "\\" + accent + "{\\" + bold + "{" + raw + "}}", state: p.state, display: p.display,
+	// This synthetic continuation carries the charged caller budget. Only its
+	// genuine ParseArg and VectorBold children receive a fresh count.
+	sub := &parser{source: expansion, state: p.state, display: p.display,
 		multiLetterFont: p.multiLetterFont, activeFont: p.activeFont,
 		vectorFactory: p.vectorFactory, vectorFont: p.vectorFont, vectorStar: p.vectorStar, vectorAlias: true,
-		genfracPalette: p.genfracPalette}
+		genfracPalette: p.genfracPalette, starMacroChildren: true}
 	children, _, err := sub.parseRow(0, false)
 	if err != nil {
 		return nil, err
