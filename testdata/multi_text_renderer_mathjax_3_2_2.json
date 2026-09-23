@@ -1,0 +1,2965 @@
+{
+  "oracle": "Unmodified pinned MathJax3.2.2 output jax; explicitly constructed token graph, no TeX relation filter",
+  "primaryCommit": "ad8f5c21cb810236551da8c6512ba733e67357ee",
+  "assetsSHA256": {
+    "polyfills.js": "7fe1d048c78b0e09854c1259f7413868a51cc8f0c822489eb1ac36ae6c85ce01",
+    "mathjax.js": "cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869",
+    "setup.js": "a52cb0bbabfbd7796b9fedd793b9386c474e3123e788ee151cbe47ca1fa6e881"
+  },
+  "cases": [
+    {
+      "name": "mo-multi-inline",
+      "kind": "mo",
+      "parts": [
+        "=",
+        "<"
+      ],
+      "display": false,
+      "attrs": {},
+      "svg": "<svg style=\"vertical-align: -0.186ex;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"3.52ex\" height=\"1.505ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -583 1556 665\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"mo\"><g data-mml-node=\"text\"><path data-c=\"3D\" d=\"M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z\"></path></g><g data-mml-node=\"text\" transform=\"translate(778,0)\"><path data-c=\"3C\" d=\"M694 -11T694 -19T688 -33T678 -40Q671 -40 524 29T234 166L90 235Q83 240 83 250Q83 261 91 266Q664 540 678 540Q681 540 687 534T694 519T687 505Q686 504 417 376L151 250L417 124Q686 -4 687 -5Q694 -11 694 -19Z\"></path></g></g></g></g></svg>",
+      "svgSHA256": "8b0ec992e44f149a62ec60e48857370044c10a49114eab9122e8578f70940889",
+      "before": {
+        "kind": "math",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "=",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  },
+                  {
+                    "kind": "text",
+                    "text": "<",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "kind": "math",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "=",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  },
+                  {
+                    "kind": "text",
+                    "text": "<",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "mo-multi-display",
+      "kind": "mo",
+      "parts": [
+        "=",
+        "<"
+      ],
+      "display": true,
+      "attrs": {},
+      "svg": "<svg style=\"vertical-align: -0.186ex;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"3.52ex\" height=\"1.505ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -583 1556 665\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"mo\"><g data-mml-node=\"text\"><path data-c=\"3D\" d=\"M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z\"></path></g><g data-mml-node=\"text\" transform=\"translate(778,0)\"><path data-c=\"3C\" d=\"M694 -11T694 -19T688 -33T678 -40Q671 -40 524 29T234 166L90 235Q83 240 83 250Q83 261 91 266Q664 540 678 540Q681 540 687 534T694 519T687 505Q686 504 417 376L151 250L417 124Q686 -4 687 -5Q694 -11 694 -19Z\"></path></g></g></g></g></svg>",
+      "svgSHA256": "8b0ec992e44f149a62ec60e48857370044c10a49114eab9122e8578f70940889",
+      "before": {
+        "kind": "math",
+        "text": null,
+        "attributes": [
+          {
+            "name": "display",
+            "value": "block"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "=",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  },
+                  {
+                    "kind": "text",
+                    "text": "<",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "kind": "math",
+        "text": null,
+        "attributes": [
+          {
+            "name": "display",
+            "value": "block"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "=",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  },
+                  {
+                    "kind": "text",
+                    "text": "<",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "mo-single-inline",
+      "kind": "mo",
+      "parts": [
+        "=<"
+      ],
+      "display": false,
+      "attrs": {},
+      "svg": "<svg style=\"vertical-align: -0.186ex;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"3.52ex\" height=\"1.505ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -583 1556 665\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"mo\"><path data-c=\"3D\" d=\"M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z\"></path><path data-c=\"3C\" d=\"M694 -11T694 -19T688 -33T678 -40Q671 -40 524 29T234 166L90 235Q83 240 83 250Q83 261 91 266Q664 540 678 540Q681 540 687 534T694 519T687 505Q686 504 417 376L151 250L417 124Q686 -4 687 -5Q694 -11 694 -19Z\" transform=\"translate(778,0)\"></path></g></g></g></svg>",
+      "svgSHA256": "bf7e52831fc9f8bfe68b9bdbdc0a7adfa0adc51be31add754a8f456fccd8c7b9",
+      "before": {
+        "kind": "math",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "=<",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "kind": "math",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "=<",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "mo-single-display",
+      "kind": "mo",
+      "parts": [
+        "=<"
+      ],
+      "display": true,
+      "attrs": {},
+      "svg": "<svg style=\"vertical-align: -0.186ex;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"3.52ex\" height=\"1.505ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -583 1556 665\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"mo\"><path data-c=\"3D\" d=\"M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z\"></path><path data-c=\"3C\" d=\"M694 -11T694 -19T688 -33T678 -40Q671 -40 524 29T234 166L90 235Q83 240 83 250Q83 261 91 266Q664 540 678 540Q681 540 687 534T694 519T687 505Q686 504 417 376L151 250L417 124Q686 -4 687 -5Q694 -11 694 -19Z\" transform=\"translate(778,0)\"></path></g></g></g></svg>",
+      "svgSHA256": "bf7e52831fc9f8bfe68b9bdbdc0a7adfa0adc51be31add754a8f456fccd8c7b9",
+      "before": {
+        "kind": "math",
+        "text": null,
+        "attributes": [
+          {
+            "name": "display",
+            "value": "block"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "=<",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "kind": "math",
+        "text": null,
+        "attributes": [
+          {
+            "name": "display",
+            "value": "block"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "=<",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "mi-multi-inline",
+      "kind": "mi",
+      "parts": [
+        "a",
+        "b"
+      ],
+      "display": false,
+      "attrs": {},
+      "svg": "<svg style=\"vertical-align: -0.025ex;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"2.389ex\" height=\"1.595ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -694 1056 705\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"mi\"><g data-mml-node=\"text\"><path data-c=\"61\" d=\"M137 305T115 305T78 320T63 359Q63 394 97 421T218 448Q291 448 336 416T396 340Q401 326 401 309T402 194V124Q402 76 407 58T428 40Q443 40 448 56T453 109V145H493V106Q492 66 490 59Q481 29 455 12T400 -6T353 12T329 54V58L327 55Q325 52 322 49T314 40T302 29T287 17T269 6T247 -2T221 -8T190 -11Q130 -11 82 20T34 107Q34 128 41 147T68 188T116 225T194 253T304 268H318V290Q318 324 312 340Q290 411 215 411Q197 411 181 410T156 406T148 403Q170 388 170 359Q170 334 154 320ZM126 106Q126 75 150 51T209 26Q247 26 276 49T315 109Q317 116 318 175Q318 233 317 233Q309 233 296 232T251 223T193 203T147 166T126 106Z\"></path></g><g data-mml-node=\"text\" transform=\"translate(500,0)\"><path data-c=\"62\" d=\"M307 -11Q234 -11 168 55L158 37Q156 34 153 28T147 17T143 10L138 1L118 0H98V298Q98 599 97 603Q94 622 83 628T38 637H20V660Q20 683 22 683L32 684Q42 685 61 686T98 688Q115 689 135 690T165 693T176 694H179V543Q179 391 180 391L183 394Q186 397 192 401T207 411T228 421T254 431T286 439T323 442Q401 442 461 379T522 216Q522 115 458 52T307 -11ZM182 98Q182 97 187 90T196 79T206 67T218 55T233 44T250 35T271 29T295 26Q330 26 363 46T412 113Q424 148 424 212Q424 287 412 323Q385 405 300 405Q270 405 239 390T188 347L182 339V98Z\"></path></g></g></g></g></svg>",
+      "svgSHA256": "ba365112654ae7a546c6fa1c3bdf0f7ee5e16e602df79f7bce20cf39cb6a9e63",
+      "before": {
+        "kind": "math",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "a",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  },
+                  {
+                    "kind": "text",
+                    "text": "b",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "kind": "math",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": [],
+                "properties": [
+                  {
+                    "name": "autoOP",
+                    "value": true
+                  }
+                ],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "a",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  },
+                  {
+                    "kind": "text",
+                    "text": "b",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "mi-multi-display",
+      "kind": "mi",
+      "parts": [
+        "a",
+        "b"
+      ],
+      "display": true,
+      "attrs": {},
+      "svg": "<svg style=\"vertical-align: -0.025ex;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"2.389ex\" height=\"1.595ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -694 1056 705\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"mi\"><g data-mml-node=\"text\"><path data-c=\"61\" d=\"M137 305T115 305T78 320T63 359Q63 394 97 421T218 448Q291 448 336 416T396 340Q401 326 401 309T402 194V124Q402 76 407 58T428 40Q443 40 448 56T453 109V145H493V106Q492 66 490 59Q481 29 455 12T400 -6T353 12T329 54V58L327 55Q325 52 322 49T314 40T302 29T287 17T269 6T247 -2T221 -8T190 -11Q130 -11 82 20T34 107Q34 128 41 147T68 188T116 225T194 253T304 268H318V290Q318 324 312 340Q290 411 215 411Q197 411 181 410T156 406T148 403Q170 388 170 359Q170 334 154 320ZM126 106Q126 75 150 51T209 26Q247 26 276 49T315 109Q317 116 318 175Q318 233 317 233Q309 233 296 232T251 223T193 203T147 166T126 106Z\"></path></g><g data-mml-node=\"text\" transform=\"translate(500,0)\"><path data-c=\"62\" d=\"M307 -11Q234 -11 168 55L158 37Q156 34 153 28T147 17T143 10L138 1L118 0H98V298Q98 599 97 603Q94 622 83 628T38 637H20V660Q20 683 22 683L32 684Q42 685 61 686T98 688Q115 689 135 690T165 693T176 694H179V543Q179 391 180 391L183 394Q186 397 192 401T207 411T228 421T254 431T286 439T323 442Q401 442 461 379T522 216Q522 115 458 52T307 -11ZM182 98Q182 97 187 90T196 79T206 67T218 55T233 44T250 35T271 29T295 26Q330 26 363 46T412 113Q424 148 424 212Q424 287 412 323Q385 405 300 405Q270 405 239 390T188 347L182 339V98Z\"></path></g></g></g></g></svg>",
+      "svgSHA256": "ba365112654ae7a546c6fa1c3bdf0f7ee5e16e602df79f7bce20cf39cb6a9e63",
+      "before": {
+        "kind": "math",
+        "text": null,
+        "attributes": [
+          {
+            "name": "display",
+            "value": "block"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "a",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  },
+                  {
+                    "kind": "text",
+                    "text": "b",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "kind": "math",
+        "text": null,
+        "attributes": [
+          {
+            "name": "display",
+            "value": "block"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": [],
+                "properties": [
+                  {
+                    "name": "autoOP",
+                    "value": true
+                  }
+                ],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "a",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  },
+                  {
+                    "kind": "text",
+                    "text": "b",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "mi-single-inline",
+      "kind": "mi",
+      "parts": [
+        "ab"
+      ],
+      "display": false,
+      "attrs": {},
+      "svg": "<svg style=\"vertical-align: -0.025ex;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"2.389ex\" height=\"1.595ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -694 1056 705\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"mi\"><path data-c=\"61\" d=\"M137 305T115 305T78 320T63 359Q63 394 97 421T218 448Q291 448 336 416T396 340Q401 326 401 309T402 194V124Q402 76 407 58T428 40Q443 40 448 56T453 109V145H493V106Q492 66 490 59Q481 29 455 12T400 -6T353 12T329 54V58L327 55Q325 52 322 49T314 40T302 29T287 17T269 6T247 -2T221 -8T190 -11Q130 -11 82 20T34 107Q34 128 41 147T68 188T116 225T194 253T304 268H318V290Q318 324 312 340Q290 411 215 411Q197 411 181 410T156 406T148 403Q170 388 170 359Q170 334 154 320ZM126 106Q126 75 150 51T209 26Q247 26 276 49T315 109Q317 116 318 175Q318 233 317 233Q309 233 296 232T251 223T193 203T147 166T126 106Z\"></path><path data-c=\"62\" d=\"M307 -11Q234 -11 168 55L158 37Q156 34 153 28T147 17T143 10L138 1L118 0H98V298Q98 599 97 603Q94 622 83 628T38 637H20V660Q20 683 22 683L32 684Q42 685 61 686T98 688Q115 689 135 690T165 693T176 694H179V543Q179 391 180 391L183 394Q186 397 192 401T207 411T228 421T254 431T286 439T323 442Q401 442 461 379T522 216Q522 115 458 52T307 -11ZM182 98Q182 97 187 90T196 79T206 67T218 55T233 44T250 35T271 29T295 26Q330 26 363 46T412 113Q424 148 424 212Q424 287 412 323Q385 405 300 405Q270 405 239 390T188 347L182 339V98Z\" transform=\"translate(500,0)\"></path></g></g></g></svg>",
+      "svgSHA256": "9e04b9c59e498939a68b3b89120226df73ec4148d4b43a077893741fdbda3715",
+      "before": {
+        "kind": "math",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "ab",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "kind": "math",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": [],
+                "properties": [
+                  {
+                    "name": "autoOP",
+                    "value": true
+                  }
+                ],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "ab",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "mi-single-display",
+      "kind": "mi",
+      "parts": [
+        "ab"
+      ],
+      "display": true,
+      "attrs": {},
+      "svg": "<svg style=\"vertical-align: -0.025ex;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"2.389ex\" height=\"1.595ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -694 1056 705\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"mi\"><path data-c=\"61\" d=\"M137 305T115 305T78 320T63 359Q63 394 97 421T218 448Q291 448 336 416T396 340Q401 326 401 309T402 194V124Q402 76 407 58T428 40Q443 40 448 56T453 109V145H493V106Q492 66 490 59Q481 29 455 12T400 -6T353 12T329 54V58L327 55Q325 52 322 49T314 40T302 29T287 17T269 6T247 -2T221 -8T190 -11Q130 -11 82 20T34 107Q34 128 41 147T68 188T116 225T194 253T304 268H318V290Q318 324 312 340Q290 411 215 411Q197 411 181 410T156 406T148 403Q170 388 170 359Q170 334 154 320ZM126 106Q126 75 150 51T209 26Q247 26 276 49T315 109Q317 116 318 175Q318 233 317 233Q309 233 296 232T251 223T193 203T147 166T126 106Z\"></path><path data-c=\"62\" d=\"M307 -11Q234 -11 168 55L158 37Q156 34 153 28T147 17T143 10L138 1L118 0H98V298Q98 599 97 603Q94 622 83 628T38 637H20V660Q20 683 22 683L32 684Q42 685 61 686T98 688Q115 689 135 690T165 693T176 694H179V543Q179 391 180 391L183 394Q186 397 192 401T207 411T228 421T254 431T286 439T323 442Q401 442 461 379T522 216Q522 115 458 52T307 -11ZM182 98Q182 97 187 90T196 79T206 67T218 55T233 44T250 35T271 29T295 26Q330 26 363 46T412 113Q424 148 424 212Q424 287 412 323Q385 405 300 405Q270 405 239 390T188 347L182 339V98Z\" transform=\"translate(500,0)\"></path></g></g></g></svg>",
+      "svgSHA256": "9e04b9c59e498939a68b3b89120226df73ec4148d4b43a077893741fdbda3715",
+      "before": {
+        "kind": "math",
+        "text": null,
+        "attributes": [
+          {
+            "name": "display",
+            "value": "block"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "ab",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "kind": "math",
+        "text": null,
+        "attributes": [
+          {
+            "name": "display",
+            "value": "block"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": [],
+                "properties": [
+                  {
+                    "name": "autoOP",
+                    "value": true
+                  }
+                ],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "ab",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "mn-multi-inline",
+      "kind": "mn",
+      "parts": [
+        "1",
+        "2"
+      ],
+      "display": false,
+      "attrs": {},
+      "svg": "<svg style=\"vertical-align: 0;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"2.262ex\" height=\"1.507ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -666 1000 666\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"mn\"><g data-mml-node=\"text\"><path data-c=\"31\" d=\"M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z\"></path></g><g data-mml-node=\"text\" transform=\"translate(500,0)\"><path data-c=\"32\" d=\"M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z\"></path></g></g></g></g></svg>",
+      "svgSHA256": "9f6c1956c5bdba9f6409e97569a0acd558d20cd660ac52ab2382cda30c05dd62",
+      "before": {
+        "kind": "math",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mn",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "1",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  },
+                  {
+                    "kind": "text",
+                    "text": "2",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "kind": "math",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mn",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "1",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  },
+                  {
+                    "kind": "text",
+                    "text": "2",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "mn-multi-display",
+      "kind": "mn",
+      "parts": [
+        "1",
+        "2"
+      ],
+      "display": true,
+      "attrs": {},
+      "svg": "<svg style=\"vertical-align: 0;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"2.262ex\" height=\"1.507ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -666 1000 666\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"mn\"><g data-mml-node=\"text\"><path data-c=\"31\" d=\"M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z\"></path></g><g data-mml-node=\"text\" transform=\"translate(500,0)\"><path data-c=\"32\" d=\"M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z\"></path></g></g></g></g></svg>",
+      "svgSHA256": "9f6c1956c5bdba9f6409e97569a0acd558d20cd660ac52ab2382cda30c05dd62",
+      "before": {
+        "kind": "math",
+        "text": null,
+        "attributes": [
+          {
+            "name": "display",
+            "value": "block"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mn",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "1",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  },
+                  {
+                    "kind": "text",
+                    "text": "2",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "kind": "math",
+        "text": null,
+        "attributes": [
+          {
+            "name": "display",
+            "value": "block"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mn",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "1",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  },
+                  {
+                    "kind": "text",
+                    "text": "2",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "mn-single-inline",
+      "kind": "mn",
+      "parts": [
+        "12"
+      ],
+      "display": false,
+      "attrs": {},
+      "svg": "<svg style=\"vertical-align: 0;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"2.262ex\" height=\"1.507ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -666 1000 666\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"mn\"><path data-c=\"31\" d=\"M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z\"></path><path data-c=\"32\" d=\"M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z\" transform=\"translate(500,0)\"></path></g></g></g></svg>",
+      "svgSHA256": "f5a17e5e4e88d2fd8eed0ac09f0e02d77507121fac42d5f696cf407aaab6185c",
+      "before": {
+        "kind": "math",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mn",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "12",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "kind": "math",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mn",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "12",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "mn-single-display",
+      "kind": "mn",
+      "parts": [
+        "12"
+      ],
+      "display": true,
+      "attrs": {},
+      "svg": "<svg style=\"vertical-align: 0;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"2.262ex\" height=\"1.507ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -666 1000 666\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"mn\"><path data-c=\"31\" d=\"M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z\"></path><path data-c=\"32\" d=\"M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z\" transform=\"translate(500,0)\"></path></g></g></g></svg>",
+      "svgSHA256": "f5a17e5e4e88d2fd8eed0ac09f0e02d77507121fac42d5f696cf407aaab6185c",
+      "before": {
+        "kind": "math",
+        "text": null,
+        "attributes": [
+          {
+            "name": "display",
+            "value": "block"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mn",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "12",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "kind": "math",
+        "text": null,
+        "attributes": [
+          {
+            "name": "display",
+            "value": "block"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mn",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "12",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "mtext-multi-inline",
+      "kind": "mtext",
+      "parts": [
+        "a",
+        "b"
+      ],
+      "display": false,
+      "attrs": {},
+      "svg": "<svg style=\"vertical-align: -0.025ex;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"2.389ex\" height=\"1.595ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -694 1056 705\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"mtext\"><g data-mml-node=\"text\"><path data-c=\"61\" d=\"M137 305T115 305T78 320T63 359Q63 394 97 421T218 448Q291 448 336 416T396 340Q401 326 401 309T402 194V124Q402 76 407 58T428 40Q443 40 448 56T453 109V145H493V106Q492 66 490 59Q481 29 455 12T400 -6T353 12T329 54V58L327 55Q325 52 322 49T314 40T302 29T287 17T269 6T247 -2T221 -8T190 -11Q130 -11 82 20T34 107Q34 128 41 147T68 188T116 225T194 253T304 268H318V290Q318 324 312 340Q290 411 215 411Q197 411 181 410T156 406T148 403Q170 388 170 359Q170 334 154 320ZM126 106Q126 75 150 51T209 26Q247 26 276 49T315 109Q317 116 318 175Q318 233 317 233Q309 233 296 232T251 223T193 203T147 166T126 106Z\"></path></g><g data-mml-node=\"text\" transform=\"translate(500,0)\"><path data-c=\"62\" d=\"M307 -11Q234 -11 168 55L158 37Q156 34 153 28T147 17T143 10L138 1L118 0H98V298Q98 599 97 603Q94 622 83 628T38 637H20V660Q20 683 22 683L32 684Q42 685 61 686T98 688Q115 689 135 690T165 693T176 694H179V543Q179 391 180 391L183 394Q186 397 192 401T207 411T228 421T254 431T286 439T323 442Q401 442 461 379T522 216Q522 115 458 52T307 -11ZM182 98Q182 97 187 90T196 79T206 67T218 55T233 44T250 35T271 29T295 26Q330 26 363 46T412 113Q424 148 424 212Q424 287 412 323Q385 405 300 405Q270 405 239 390T188 347L182 339V98Z\"></path></g></g></g></g></svg>",
+      "svgSHA256": "3a208fa10f48a1e00b32add67f3dd8db07d4e2bcaa2311eedf4615f85cfd5fdd",
+      "before": {
+        "kind": "math",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mtext",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "a",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  },
+                  {
+                    "kind": "text",
+                    "text": "b",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "kind": "math",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mtext",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "a",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  },
+                  {
+                    "kind": "text",
+                    "text": "b",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "mtext-multi-display",
+      "kind": "mtext",
+      "parts": [
+        "a",
+        "b"
+      ],
+      "display": true,
+      "attrs": {},
+      "svg": "<svg style=\"vertical-align: -0.025ex;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"2.389ex\" height=\"1.595ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -694 1056 705\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"mtext\"><g data-mml-node=\"text\"><path data-c=\"61\" d=\"M137 305T115 305T78 320T63 359Q63 394 97 421T218 448Q291 448 336 416T396 340Q401 326 401 309T402 194V124Q402 76 407 58T428 40Q443 40 448 56T453 109V145H493V106Q492 66 490 59Q481 29 455 12T400 -6T353 12T329 54V58L327 55Q325 52 322 49T314 40T302 29T287 17T269 6T247 -2T221 -8T190 -11Q130 -11 82 20T34 107Q34 128 41 147T68 188T116 225T194 253T304 268H318V290Q318 324 312 340Q290 411 215 411Q197 411 181 410T156 406T148 403Q170 388 170 359Q170 334 154 320ZM126 106Q126 75 150 51T209 26Q247 26 276 49T315 109Q317 116 318 175Q318 233 317 233Q309 233 296 232T251 223T193 203T147 166T126 106Z\"></path></g><g data-mml-node=\"text\" transform=\"translate(500,0)\"><path data-c=\"62\" d=\"M307 -11Q234 -11 168 55L158 37Q156 34 153 28T147 17T143 10L138 1L118 0H98V298Q98 599 97 603Q94 622 83 628T38 637H20V660Q20 683 22 683L32 684Q42 685 61 686T98 688Q115 689 135 690T165 693T176 694H179V543Q179 391 180 391L183 394Q186 397 192 401T207 411T228 421T254 431T286 439T323 442Q401 442 461 379T522 216Q522 115 458 52T307 -11ZM182 98Q182 97 187 90T196 79T206 67T218 55T233 44T250 35T271 29T295 26Q330 26 363 46T412 113Q424 148 424 212Q424 287 412 323Q385 405 300 405Q270 405 239 390T188 347L182 339V98Z\"></path></g></g></g></g></svg>",
+      "svgSHA256": "3a208fa10f48a1e00b32add67f3dd8db07d4e2bcaa2311eedf4615f85cfd5fdd",
+      "before": {
+        "kind": "math",
+        "text": null,
+        "attributes": [
+          {
+            "name": "display",
+            "value": "block"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mtext",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "a",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  },
+                  {
+                    "kind": "text",
+                    "text": "b",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "kind": "math",
+        "text": null,
+        "attributes": [
+          {
+            "name": "display",
+            "value": "block"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mtext",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "a",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  },
+                  {
+                    "kind": "text",
+                    "text": "b",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "mtext-single-inline",
+      "kind": "mtext",
+      "parts": [
+        "ab"
+      ],
+      "display": false,
+      "attrs": {},
+      "svg": "<svg style=\"vertical-align: -0.025ex;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"2.389ex\" height=\"1.595ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -694 1056 705\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"mtext\"><path data-c=\"61\" d=\"M137 305T115 305T78 320T63 359Q63 394 97 421T218 448Q291 448 336 416T396 340Q401 326 401 309T402 194V124Q402 76 407 58T428 40Q443 40 448 56T453 109V145H493V106Q492 66 490 59Q481 29 455 12T400 -6T353 12T329 54V58L327 55Q325 52 322 49T314 40T302 29T287 17T269 6T247 -2T221 -8T190 -11Q130 -11 82 20T34 107Q34 128 41 147T68 188T116 225T194 253T304 268H318V290Q318 324 312 340Q290 411 215 411Q197 411 181 410T156 406T148 403Q170 388 170 359Q170 334 154 320ZM126 106Q126 75 150 51T209 26Q247 26 276 49T315 109Q317 116 318 175Q318 233 317 233Q309 233 296 232T251 223T193 203T147 166T126 106Z\"></path><path data-c=\"62\" d=\"M307 -11Q234 -11 168 55L158 37Q156 34 153 28T147 17T143 10L138 1L118 0H98V298Q98 599 97 603Q94 622 83 628T38 637H20V660Q20 683 22 683L32 684Q42 685 61 686T98 688Q115 689 135 690T165 693T176 694H179V543Q179 391 180 391L183 394Q186 397 192 401T207 411T228 421T254 431T286 439T323 442Q401 442 461 379T522 216Q522 115 458 52T307 -11ZM182 98Q182 97 187 90T196 79T206 67T218 55T233 44T250 35T271 29T295 26Q330 26 363 46T412 113Q424 148 424 212Q424 287 412 323Q385 405 300 405Q270 405 239 390T188 347L182 339V98Z\" transform=\"translate(500,0)\"></path></g></g></g></svg>",
+      "svgSHA256": "a821b624cc45978a8739d24a94ae5abef1a54246b596a1f0fd8ed345c04164ca",
+      "before": {
+        "kind": "math",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mtext",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "ab",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "kind": "math",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mtext",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "ab",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "mtext-single-display",
+      "kind": "mtext",
+      "parts": [
+        "ab"
+      ],
+      "display": true,
+      "attrs": {},
+      "svg": "<svg style=\"vertical-align: -0.025ex;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"2.389ex\" height=\"1.595ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -694 1056 705\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"mtext\"><path data-c=\"61\" d=\"M137 305T115 305T78 320T63 359Q63 394 97 421T218 448Q291 448 336 416T396 340Q401 326 401 309T402 194V124Q402 76 407 58T428 40Q443 40 448 56T453 109V145H493V106Q492 66 490 59Q481 29 455 12T400 -6T353 12T329 54V58L327 55Q325 52 322 49T314 40T302 29T287 17T269 6T247 -2T221 -8T190 -11Q130 -11 82 20T34 107Q34 128 41 147T68 188T116 225T194 253T304 268H318V290Q318 324 312 340Q290 411 215 411Q197 411 181 410T156 406T148 403Q170 388 170 359Q170 334 154 320ZM126 106Q126 75 150 51T209 26Q247 26 276 49T315 109Q317 116 318 175Q318 233 317 233Q309 233 296 232T251 223T193 203T147 166T126 106Z\"></path><path data-c=\"62\" d=\"M307 -11Q234 -11 168 55L158 37Q156 34 153 28T147 17T143 10L138 1L118 0H98V298Q98 599 97 603Q94 622 83 628T38 637H20V660Q20 683 22 683L32 684Q42 685 61 686T98 688Q115 689 135 690T165 693T176 694H179V543Q179 391 180 391L183 394Q186 397 192 401T207 411T228 421T254 431T286 439T323 442Q401 442 461 379T522 216Q522 115 458 52T307 -11ZM182 98Q182 97 187 90T196 79T206 67T218 55T233 44T250 35T271 29T295 26Q330 26 363 46T412 113Q424 148 424 212Q424 287 412 323Q385 405 300 405Q270 405 239 390T188 347L182 339V98Z\" transform=\"translate(500,0)\"></path></g></g></g></svg>",
+      "svgSHA256": "a821b624cc45978a8739d24a94ae5abef1a54246b596a1f0fd8ed345c04164ca",
+      "before": {
+        "kind": "math",
+        "text": null,
+        "attributes": [
+          {
+            "name": "display",
+            "value": "block"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mtext",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "ab",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "kind": "math",
+        "text": null,
+        "attributes": [
+          {
+            "name": "display",
+            "value": "block"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mtext",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "ab",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "ms-quotes-inline",
+      "kind": "ms",
+      "parts": [
+        "ab"
+      ],
+      "display": false,
+      "attrs": {},
+      "svg": "<svg style=\"vertical-align: -0.025ex;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"4.652ex\" height=\"1.595ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -694 2056 705\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"ms\"><g data-mml-node=\"text\"><path data-c=\"201C\" d=\"M128 494Q128 528 137 560T158 616T185 658T209 685T223 694T236 685T245 670Q244 668 231 654T204 622T178 571T164 501Q164 489 165 489T170 491T183 497T201 500Q226 500 244 483T262 440T245 397T202 379Q173 379 151 405T128 494ZM332 494Q332 528 341 560T362 616T389 658T413 685T427 694T439 685T449 672Q449 669 437 656T411 625T383 573T368 501Q368 489 369 489T374 491T387 497T405 500Q430 500 448 483T466 440T449 397T406 379Q377 379 355 405T332 494Z\"></path></g><g data-mml-node=\"text\" transform=\"translate(500,0)\"><path data-c=\"61\" d=\"M137 305T115 305T78 320T63 359Q63 394 97 421T218 448Q291 448 336 416T396 340Q401 326 401 309T402 194V124Q402 76 407 58T428 40Q443 40 448 56T453 109V145H493V106Q492 66 490 59Q481 29 455 12T400 -6T353 12T329 54V58L327 55Q325 52 322 49T314 40T302 29T287 17T269 6T247 -2T221 -8T190 -11Q130 -11 82 20T34 107Q34 128 41 147T68 188T116 225T194 253T304 268H318V290Q318 324 312 340Q290 411 215 411Q197 411 181 410T156 406T148 403Q170 388 170 359Q170 334 154 320ZM126 106Q126 75 150 51T209 26Q247 26 276 49T315 109Q317 116 318 175Q318 233 317 233Q309 233 296 232T251 223T193 203T147 166T126 106Z\"></path><path data-c=\"62\" d=\"M307 -11Q234 -11 168 55L158 37Q156 34 153 28T147 17T143 10L138 1L118 0H98V298Q98 599 97 603Q94 622 83 628T38 637H20V660Q20 683 22 683L32 684Q42 685 61 686T98 688Q115 689 135 690T165 693T176 694H179V543Q179 391 180 391L183 394Q186 397 192 401T207 411T228 421T254 431T286 439T323 442Q401 442 461 379T522 216Q522 115 458 52T307 -11ZM182 98Q182 97 187 90T196 79T206 67T218 55T233 44T250 35T271 29T295 26Q330 26 363 46T412 113Q424 148 424 212Q424 287 412 323Q385 405 300 405Q270 405 239 390T188 347L182 339V98Z\" transform=\"translate(500,0)\"></path></g><g data-mml-node=\"text\" transform=\"translate(1556,0)\"><path data-c=\"201D\" d=\"M34 634Q34 659 50 676T93 694Q121 694 144 668T168 579Q168 525 146 476T101 403T73 379Q69 379 60 388T50 401Q50 404 62 417T88 448T116 500T131 572Q131 584 130 584T125 581T112 576T94 573Q69 573 52 590T34 634ZM238 634Q238 659 254 676T297 694Q325 694 348 668T372 579Q372 525 350 476T305 403T277 379Q273 379 264 388T254 401Q254 404 266 417T292 448T320 500T335 572Q335 584 334 584T329 581T316 576T298 573Q273 573 256 590T238 634Z\"></path></g></g></g></g></svg>",
+      "svgSHA256": "7063af6d3fb7180983b7d7a18b1580f583276f395542b00f43f5e233af13961a",
+      "before": {
+        "kind": "math",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "ms",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "ab",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "kind": "math",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "ms",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "ab",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "ms-quotes-display",
+      "kind": "ms",
+      "parts": [
+        "ab"
+      ],
+      "display": true,
+      "attrs": {},
+      "svg": "<svg style=\"vertical-align: -0.025ex;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"4.652ex\" height=\"1.595ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -694 2056 705\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"ms\"><g data-mml-node=\"text\"><path data-c=\"201C\" d=\"M128 494Q128 528 137 560T158 616T185 658T209 685T223 694T236 685T245 670Q244 668 231 654T204 622T178 571T164 501Q164 489 165 489T170 491T183 497T201 500Q226 500 244 483T262 440T245 397T202 379Q173 379 151 405T128 494ZM332 494Q332 528 341 560T362 616T389 658T413 685T427 694T439 685T449 672Q449 669 437 656T411 625T383 573T368 501Q368 489 369 489T374 491T387 497T405 500Q430 500 448 483T466 440T449 397T406 379Q377 379 355 405T332 494Z\"></path></g><g data-mml-node=\"text\" transform=\"translate(500,0)\"><path data-c=\"61\" d=\"M137 305T115 305T78 320T63 359Q63 394 97 421T218 448Q291 448 336 416T396 340Q401 326 401 309T402 194V124Q402 76 407 58T428 40Q443 40 448 56T453 109V145H493V106Q492 66 490 59Q481 29 455 12T400 -6T353 12T329 54V58L327 55Q325 52 322 49T314 40T302 29T287 17T269 6T247 -2T221 -8T190 -11Q130 -11 82 20T34 107Q34 128 41 147T68 188T116 225T194 253T304 268H318V290Q318 324 312 340Q290 411 215 411Q197 411 181 410T156 406T148 403Q170 388 170 359Q170 334 154 320ZM126 106Q126 75 150 51T209 26Q247 26 276 49T315 109Q317 116 318 175Q318 233 317 233Q309 233 296 232T251 223T193 203T147 166T126 106Z\"></path><path data-c=\"62\" d=\"M307 -11Q234 -11 168 55L158 37Q156 34 153 28T147 17T143 10L138 1L118 0H98V298Q98 599 97 603Q94 622 83 628T38 637H20V660Q20 683 22 683L32 684Q42 685 61 686T98 688Q115 689 135 690T165 693T176 694H179V543Q179 391 180 391L183 394Q186 397 192 401T207 411T228 421T254 431T286 439T323 442Q401 442 461 379T522 216Q522 115 458 52T307 -11ZM182 98Q182 97 187 90T196 79T206 67T218 55T233 44T250 35T271 29T295 26Q330 26 363 46T412 113Q424 148 424 212Q424 287 412 323Q385 405 300 405Q270 405 239 390T188 347L182 339V98Z\" transform=\"translate(500,0)\"></path></g><g data-mml-node=\"text\" transform=\"translate(1556,0)\"><path data-c=\"201D\" d=\"M34 634Q34 659 50 676T93 694Q121 694 144 668T168 579Q168 525 146 476T101 403T73 379Q69 379 60 388T50 401Q50 404 62 417T88 448T116 500T131 572Q131 584 130 584T125 581T112 576T94 573Q69 573 52 590T34 634ZM238 634Q238 659 254 676T297 694Q325 694 348 668T372 579Q372 525 350 476T305 403T277 379Q273 379 264 388T254 401Q254 404 266 417T292 448T320 500T335 572Q335 584 334 584T329 581T316 576T298 573Q273 573 256 590T238 634Z\"></path></g></g></g></g></svg>",
+      "svgSHA256": "7063af6d3fb7180983b7d7a18b1580f583276f395542b00f43f5e233af13961a",
+      "before": {
+        "kind": "math",
+        "text": null,
+        "attributes": [
+          {
+            "name": "display",
+            "value": "block"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "ms",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "ab",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "kind": "math",
+        "text": null,
+        "attributes": [
+          {
+            "name": "display",
+            "value": "block"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "ms",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "ab",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "mo-empty-first-inline",
+      "kind": "mo",
+      "parts": [
+        "",
+        "="
+      ],
+      "display": false,
+      "attrs": {},
+      "svg": "<svg style=\"vertical-align: -0.186ex;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"1.76ex\" height=\"1.505ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -583 778 665\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"mo\"><g data-mml-node=\"text\"><path data-c=\"3D\" d=\"M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z\"></path></g></g></g></g></svg>",
+      "svgSHA256": "f1c9bcf8ecd0aee4110ddb3031e73c7f1be5db5ddb5d18bf0bb67da070c8e153",
+      "before": {
+        "kind": "math",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  },
+                  {
+                    "kind": "text",
+                    "text": "=",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "kind": "math",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  },
+                  {
+                    "kind": "text",
+                    "text": "=",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "mo-empty-first-display",
+      "kind": "mo",
+      "parts": [
+        "",
+        "="
+      ],
+      "display": true,
+      "attrs": {},
+      "svg": "<svg style=\"vertical-align: -0.186ex;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"1.76ex\" height=\"1.505ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -583 778 665\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"mo\"><g data-mml-node=\"text\"><path data-c=\"3D\" d=\"M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z\"></path></g></g></g></g></svg>",
+      "svgSHA256": "f1c9bcf8ecd0aee4110ddb3031e73c7f1be5db5ddb5d18bf0bb67da070c8e153",
+      "before": {
+        "kind": "math",
+        "text": null,
+        "attributes": [
+          {
+            "name": "display",
+            "value": "block"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  },
+                  {
+                    "kind": "text",
+                    "text": "=",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "kind": "math",
+        "text": null,
+        "attributes": [
+          {
+            "name": "display",
+            "value": "block"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  },
+                  {
+                    "kind": "text",
+                    "text": "=",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "mo-explicit-font-inline",
+      "kind": "mo",
+      "parts": [
+        "=",
+        "<"
+      ],
+      "display": false,
+      "attrs": {
+        "fontfamily": "serif"
+      },
+      "svg": "<svg style=\"vertical-align: -0.452ex;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"2.715ex\" height=\"2.149ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -750 1200 950\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"mo\" style=\"font-family: serif;\"><text data-variant=\"-explicitFont\" transform=\"scale(1,-1)\" font-size=\"884px\">=</text><text data-variant=\"-explicitFont\" transform=\"translate(600,0) scale(1,-1)\" font-size=\"884px\">&lt;</text></g></g></g></svg>",
+      "svgSHA256": "9c54f3e185f1cf34f8dcfa7797c379fcd8243e53f5eee580712d5bbd1c257fcf",
+      "before": {
+        "kind": "math",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": [
+                  {
+                    "name": "fontfamily",
+                    "value": "serif"
+                  }
+                ],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "=",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  },
+                  {
+                    "kind": "text",
+                    "text": "<",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "kind": "math",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": [
+                  {
+                    "name": "fontfamily",
+                    "value": "serif"
+                  }
+                ],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "=",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  },
+                  {
+                    "kind": "text",
+                    "text": "<",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "mo-explicit-font-display",
+      "kind": "mo",
+      "parts": [
+        "=",
+        "<"
+      ],
+      "display": true,
+      "attrs": {
+        "fontfamily": "serif"
+      },
+      "svg": "<svg style=\"vertical-align: -0.452ex;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"2.715ex\" height=\"2.149ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -750 1200 950\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"mo\" style=\"font-family: serif;\"><text data-variant=\"-explicitFont\" transform=\"scale(1,-1)\" font-size=\"884px\">=</text><text data-variant=\"-explicitFont\" transform=\"translate(600,0) scale(1,-1)\" font-size=\"884px\">&lt;</text></g></g></g></svg>",
+      "svgSHA256": "9c54f3e185f1cf34f8dcfa7797c379fcd8243e53f5eee580712d5bbd1c257fcf",
+      "before": {
+        "kind": "math",
+        "text": null,
+        "attributes": [
+          {
+            "name": "display",
+            "value": "block"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": [
+                  {
+                    "name": "fontfamily",
+                    "value": "serif"
+                  }
+                ],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "=",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  },
+                  {
+                    "kind": "text",
+                    "text": "<",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "kind": "math",
+        "text": null,
+        "attributes": [
+          {
+            "name": "display",
+            "value": "block"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": [
+                  {
+                    "name": "fontfamily",
+                    "value": "serif"
+                  }
+                ],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "=",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  },
+                  {
+                    "kind": "text",
+                    "text": "<",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "mo-three-children-inline",
+      "kind": "mo",
+      "parts": [
+        "=",
+        "<",
+        ">"
+      ],
+      "attrs": {},
+      "display": false,
+      "svg": "<svg style=\"vertical-align: -0.186ex;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"5.281ex\" height=\"1.505ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -583 2334 665\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"mo\"><g data-mml-node=\"text\"><path data-c=\"3D\" d=\"M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z\"></path></g><g data-mml-node=\"text\" transform=\"translate(778,0)\"><path data-c=\"3C\" d=\"M694 -11T694 -19T688 -33T678 -40Q671 -40 524 29T234 166L90 235Q83 240 83 250Q83 261 91 266Q664 540 678 540Q681 540 687 534T694 519T687 505Q686 504 417 376L151 250L417 124Q686 -4 687 -5Q694 -11 694 -19Z\"></path></g><g data-mml-node=\"text\" transform=\"translate(1556,0)\"><path data-c=\"3E\" d=\"M84 520Q84 528 88 533T96 539L99 540Q106 540 253 471T544 334L687 265Q694 260 694 250T687 235Q685 233 395 96L107 -40H101Q83 -38 83 -20Q83 -19 83 -17Q82 -10 98 -1Q117 9 248 71Q326 108 378 132L626 250L378 368Q90 504 86 509Q84 513 84 520Z\"></path></g></g></g></g></svg>",
+      "svgSHA256": "9123574c62cd5c87f1c8a29f8da8826d306f2917397b576a5a809b5883c39a14",
+      "before": {
+        "kind": "math",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "=",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  },
+                  {
+                    "kind": "text",
+                    "text": "<",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  },
+                  {
+                    "kind": "text",
+                    "text": ">",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "kind": "math",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "=",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  },
+                  {
+                    "kind": "text",
+                    "text": "<",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  },
+                  {
+                    "kind": "text",
+                    "text": ">",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "mo-three-children-display",
+      "kind": "mo",
+      "parts": [
+        "=",
+        "<",
+        ">"
+      ],
+      "attrs": {},
+      "display": true,
+      "svg": "<svg style=\"vertical-align: -0.186ex;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"5.281ex\" height=\"1.505ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -583 2334 665\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"mo\"><g data-mml-node=\"text\"><path data-c=\"3D\" d=\"M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z\"></path></g><g data-mml-node=\"text\" transform=\"translate(778,0)\"><path data-c=\"3C\" d=\"M694 -11T694 -19T688 -33T678 -40Q671 -40 524 29T234 166L90 235Q83 240 83 250Q83 261 91 266Q664 540 678 540Q681 540 687 534T694 519T687 505Q686 504 417 376L151 250L417 124Q686 -4 687 -5Q694 -11 694 -19Z\"></path></g><g data-mml-node=\"text\" transform=\"translate(1556,0)\"><path data-c=\"3E\" d=\"M84 520Q84 528 88 533T96 539L99 540Q106 540 253 471T544 334L687 265Q694 260 694 250T687 235Q685 233 395 96L107 -40H101Q83 -38 83 -20Q83 -19 83 -17Q82 -10 98 -1Q117 9 248 71Q326 108 378 132L626 250L378 368Q90 504 86 509Q84 513 84 520Z\"></path></g></g></g></g></svg>",
+      "svgSHA256": "9123574c62cd5c87f1c8a29f8da8826d306f2917397b576a5a809b5883c39a14",
+      "before": {
+        "kind": "math",
+        "text": null,
+        "attributes": [
+          {
+            "name": "display",
+            "value": "block"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "=",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  },
+                  {
+                    "kind": "text",
+                    "text": "<",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  },
+                  {
+                    "kind": "text",
+                    "text": ">",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "kind": "math",
+        "text": null,
+        "attributes": [
+          {
+            "name": "display",
+            "value": "block"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "=",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  },
+                  {
+                    "kind": "text",
+                    "text": "<",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  },
+                  {
+                    "kind": "text",
+                    "text": ">",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "mo-empty-middle-inline",
+      "kind": "mo",
+      "parts": [
+        "=",
+        "",
+        ">"
+      ],
+      "attrs": {},
+      "display": false,
+      "svg": "<svg style=\"vertical-align: -0.186ex;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"3.52ex\" height=\"1.505ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -583 1556 665\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"mo\"><g data-mml-node=\"text\"><path data-c=\"3D\" d=\"M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z\"></path></g><g data-mml-node=\"text\" transform=\"translate(778,0)\"><path data-c=\"3E\" d=\"M84 520Q84 528 88 533T96 539L99 540Q106 540 253 471T544 334L687 265Q694 260 694 250T687 235Q685 233 395 96L107 -40H101Q83 -38 83 -20Q83 -19 83 -17Q82 -10 98 -1Q117 9 248 71Q326 108 378 132L626 250L378 368Q90 504 86 509Q84 513 84 520Z\"></path></g></g></g></g></svg>",
+      "svgSHA256": "b187b6c478008dc8fd4092cdf2f01dfd5dbbf82cf55cb2fc1b08801cc2248e10",
+      "before": {
+        "kind": "math",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "=",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  },
+                  {
+                    "kind": "text",
+                    "text": "",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  },
+                  {
+                    "kind": "text",
+                    "text": ">",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "kind": "math",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "=",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  },
+                  {
+                    "kind": "text",
+                    "text": "",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  },
+                  {
+                    "kind": "text",
+                    "text": ">",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "mo-empty-middle-display",
+      "kind": "mo",
+      "parts": [
+        "=",
+        "",
+        ">"
+      ],
+      "attrs": {},
+      "display": true,
+      "svg": "<svg style=\"vertical-align: -0.186ex;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"3.52ex\" height=\"1.505ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -583 1556 665\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"mo\"><g data-mml-node=\"text\"><path data-c=\"3D\" d=\"M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z\"></path></g><g data-mml-node=\"text\" transform=\"translate(778,0)\"><path data-c=\"3E\" d=\"M84 520Q84 528 88 533T96 539L99 540Q106 540 253 471T544 334L687 265Q694 260 694 250T687 235Q685 233 395 96L107 -40H101Q83 -38 83 -20Q83 -19 83 -17Q82 -10 98 -1Q117 9 248 71Q326 108 378 132L626 250L378 368Q90 504 86 509Q84 513 84 520Z\"></path></g></g></g></g></svg>",
+      "svgSHA256": "b187b6c478008dc8fd4092cdf2f01dfd5dbbf82cf55cb2fc1b08801cc2248e10",
+      "before": {
+        "kind": "math",
+        "text": null,
+        "attributes": [
+          {
+            "name": "display",
+            "value": "block"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "=",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  },
+                  {
+                    "kind": "text",
+                    "text": "",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  },
+                  {
+                    "kind": "text",
+                    "text": ">",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "kind": "math",
+        "text": null,
+        "attributes": [
+          {
+            "name": "display",
+            "value": "block"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "=",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  },
+                  {
+                    "kind": "text",
+                    "text": "",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  },
+                  {
+                    "kind": "text",
+                    "text": ">",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "mo-empty-last-inline",
+      "kind": "mo",
+      "parts": [
+        "=",
+        ""
+      ],
+      "attrs": {},
+      "display": false,
+      "svg": "<svg style=\"vertical-align: -0.186ex;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"1.76ex\" height=\"1.505ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -583 778 665\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"mo\"><g data-mml-node=\"text\"><path data-c=\"3D\" d=\"M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z\"></path></g></g></g></g></svg>",
+      "svgSHA256": "f1c9bcf8ecd0aee4110ddb3031e73c7f1be5db5ddb5d18bf0bb67da070c8e153",
+      "before": {
+        "kind": "math",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "=",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  },
+                  {
+                    "kind": "text",
+                    "text": "",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "kind": "math",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "=",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  },
+                  {
+                    "kind": "text",
+                    "text": "",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "mo-empty-last-display",
+      "kind": "mo",
+      "parts": [
+        "=",
+        ""
+      ],
+      "attrs": {},
+      "display": true,
+      "svg": "<svg style=\"vertical-align: -0.186ex;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"1.76ex\" height=\"1.505ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -583 778 665\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"mo\"><g data-mml-node=\"text\"><path data-c=\"3D\" d=\"M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z\"></path></g></g></g></g></svg>",
+      "svgSHA256": "f1c9bcf8ecd0aee4110ddb3031e73c7f1be5db5ddb5d18bf0bb67da070c8e153",
+      "before": {
+        "kind": "math",
+        "text": null,
+        "attributes": [
+          {
+            "name": "display",
+            "value": "block"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "=",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  },
+                  {
+                    "kind": "text",
+                    "text": "",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "kind": "math",
+        "text": null,
+        "attributes": [
+          {
+            "name": "display",
+            "value": "block"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "=",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  },
+                  {
+                    "kind": "text",
+                    "text": "",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "mo-multichar-first-inline",
+      "kind": "mo",
+      "parts": [
+        "=<",
+        ">"
+      ],
+      "attrs": {},
+      "display": false,
+      "svg": "<svg style=\"vertical-align: -0.186ex;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"5.281ex\" height=\"1.505ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -583 2334 665\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"mo\"><g data-mml-node=\"text\"><path data-c=\"3D\" d=\"M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z\"></path><path data-c=\"3C\" d=\"M694 -11T694 -19T688 -33T678 -40Q671 -40 524 29T234 166L90 235Q83 240 83 250Q83 261 91 266Q664 540 678 540Q681 540 687 534T694 519T687 505Q686 504 417 376L151 250L417 124Q686 -4 687 -5Q694 -11 694 -19Z\" transform=\"translate(778,0)\"></path></g><g data-mml-node=\"text\" transform=\"translate(1556,0)\"><path data-c=\"3E\" d=\"M84 520Q84 528 88 533T96 539L99 540Q106 540 253 471T544 334L687 265Q694 260 694 250T687 235Q685 233 395 96L107 -40H101Q83 -38 83 -20Q83 -19 83 -17Q82 -10 98 -1Q117 9 248 71Q326 108 378 132L626 250L378 368Q90 504 86 509Q84 513 84 520Z\"></path></g></g></g></g></svg>",
+      "svgSHA256": "657add026b396d26a3e176ff43f69c15475175611c00a484efd4c9adfb6ba31e",
+      "before": {
+        "kind": "math",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "=<",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  },
+                  {
+                    "kind": "text",
+                    "text": ">",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "kind": "math",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "=<",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  },
+                  {
+                    "kind": "text",
+                    "text": ">",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "mo-multichar-first-display",
+      "kind": "mo",
+      "parts": [
+        "=<",
+        ">"
+      ],
+      "attrs": {},
+      "display": true,
+      "svg": "<svg style=\"vertical-align: -0.186ex;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"5.281ex\" height=\"1.505ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -583 2334 665\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"mo\"><g data-mml-node=\"text\"><path data-c=\"3D\" d=\"M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z\"></path><path data-c=\"3C\" d=\"M694 -11T694 -19T688 -33T678 -40Q671 -40 524 29T234 166L90 235Q83 240 83 250Q83 261 91 266Q664 540 678 540Q681 540 687 534T694 519T687 505Q686 504 417 376L151 250L417 124Q686 -4 687 -5Q694 -11 694 -19Z\" transform=\"translate(778,0)\"></path></g><g data-mml-node=\"text\" transform=\"translate(1556,0)\"><path data-c=\"3E\" d=\"M84 520Q84 528 88 533T96 539L99 540Q106 540 253 471T544 334L687 265Q694 260 694 250T687 235Q685 233 395 96L107 -40H101Q83 -38 83 -20Q83 -19 83 -17Q82 -10 98 -1Q117 9 248 71Q326 108 378 132L626 250L378 368Q90 504 86 509Q84 513 84 520Z\"></path></g></g></g></g></svg>",
+      "svgSHA256": "657add026b396d26a3e176ff43f69c15475175611c00a484efd4c9adfb6ba31e",
+      "before": {
+        "kind": "math",
+        "text": null,
+        "attributes": [
+          {
+            "name": "display",
+            "value": "block"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "=<",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  },
+                  {
+                    "kind": "text",
+                    "text": ">",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "kind": "math",
+        "text": null,
+        "attributes": [
+          {
+            "name": "display",
+            "value": "block"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "=<",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  },
+                  {
+                    "kind": "text",
+                    "text": ">",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "mo-bold-inline",
+      "kind": "mo",
+      "parts": [
+        "=",
+        "<"
+      ],
+      "attrs": {
+        "mathvariant": "bold"
+      },
+      "display": false,
+      "svg": "<svg style=\"vertical-align: -0.192ex;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"4.045ex\" height=\"1.52ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -587 1788 672\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"mo\"><g data-mml-node=\"text\"><path data-c=\"3D\" d=\"M87 333Q64 343 64 362Q64 383 84 391Q89 393 448 393H807Q808 392 811 390T817 386T823 381T827 374T829 363Q829 345 807 333H87ZM87 109Q64 118 64 139Q64 159 86 168Q89 169 448 169H807L812 166Q816 163 818 162T823 157T827 149T829 139Q829 118 807 109H87Z\"></path></g><g data-mml-node=\"text\" transform=\"translate(894,0)\"><path data-c=\"3C\" d=\"M797 -56Q797 -68 790 -76T767 -85H759L434 70Q108 226 105 229Q96 238 96 250Q96 263 105 272Q109 276 271 354T595 508T757 585Q763 587 766 587Q780 587 788 578T797 556Q797 544 788 535Q784 531 490 391L197 251Q213 242 359 173T644 37T788 -34Q797 -43 797 -56Z\"></path></g></g></g></g></svg>",
+      "svgSHA256": "74ae946202ffcf094d769e7b0b0538e2f6f824ed43d6d2f9742800cf8ae1dcb0",
+      "before": {
+        "kind": "math",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": [
+                  {
+                    "name": "mathvariant",
+                    "value": "bold"
+                  }
+                ],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "=",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  },
+                  {
+                    "kind": "text",
+                    "text": "<",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "kind": "math",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": [
+                  {
+                    "name": "mathvariant",
+                    "value": "bold"
+                  }
+                ],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "=",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  },
+                  {
+                    "kind": "text",
+                    "text": "<",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "mo-bold-display",
+      "kind": "mo",
+      "parts": [
+        "=",
+        "<"
+      ],
+      "attrs": {
+        "mathvariant": "bold"
+      },
+      "display": true,
+      "svg": "<svg style=\"vertical-align: -0.192ex;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"4.045ex\" height=\"1.52ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -587 1788 672\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"mo\"><g data-mml-node=\"text\"><path data-c=\"3D\" d=\"M87 333Q64 343 64 362Q64 383 84 391Q89 393 448 393H807Q808 392 811 390T817 386T823 381T827 374T829 363Q829 345 807 333H87ZM87 109Q64 118 64 139Q64 159 86 168Q89 169 448 169H807L812 166Q816 163 818 162T823 157T827 149T829 139Q829 118 807 109H87Z\"></path></g><g data-mml-node=\"text\" transform=\"translate(894,0)\"><path data-c=\"3C\" d=\"M797 -56Q797 -68 790 -76T767 -85H759L434 70Q108 226 105 229Q96 238 96 250Q96 263 105 272Q109 276 271 354T595 508T757 585Q763 587 766 587Q780 587 788 578T797 556Q797 544 788 535Q784 531 490 391L197 251Q213 242 359 173T644 37T788 -34Q797 -43 797 -56Z\"></path></g></g></g></g></svg>",
+      "svgSHA256": "74ae946202ffcf094d769e7b0b0538e2f6f824ed43d6d2f9742800cf8ae1dcb0",
+      "before": {
+        "kind": "math",
+        "text": null,
+        "attributes": [
+          {
+            "name": "display",
+            "value": "block"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": [
+                  {
+                    "name": "mathvariant",
+                    "value": "bold"
+                  }
+                ],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "=",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  },
+                  {
+                    "kind": "text",
+                    "text": "<",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "kind": "math",
+        "text": null,
+        "attributes": [
+          {
+            "name": "display",
+            "value": "block"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mo",
+                "text": null,
+                "attributes": [
+                  {
+                    "name": "mathvariant",
+                    "value": "bold"
+                  }
+                ],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "=",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  },
+                  {
+                    "kind": "text",
+                    "text": "<",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

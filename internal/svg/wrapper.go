@@ -705,10 +705,9 @@ func (w *wrapper) textToSVG(parent *Element) {
 		text = "−" + strings.TrimPrefix(text, "-")
 	}
 	text = remapAccentText(w.parent, text)
-	// SVGTextNode gives multiple text wrappers positionable groups. CommonMs
-	// now has separate opening/body/closing wrappers; keep this correction
-	// scoped to those string tokens rather than alter unrelated text output.
-	if w.parent != nil && w.parent.node.Kind == "ms" && len(w.parent.children) > 1 {
+	// SVGTextNode gives each text child a positionable group whenever its
+	// parent has multiple children, so addChildren can apply their advances.
+	if w.parent != nil && len(w.parent.children) > 1 {
 		w.element = NewElement("g").SetAttr("data-mml-node", "text")
 		parent.Append(w.element)
 		parent = w.element

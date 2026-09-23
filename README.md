@@ -204,3 +204,25 @@ node testdata/generate_infix_scope.cjs PINNED_ASSETS EVIDENCE_DIRECTORY
 The two earlier dimension-parser repeated-`above` cases and six registered-infix
 ambiguity cases now use their untouched primary references; all other inherited
 qualifications remain unchanged.
+
+### Tokens with multiple text children
+
+The SVG renderer gives each nonempty text child a positionable group when its
+parent has multiple children. This preserves each child and its measured
+advance instead of painting successive children at the same origin. Single
+children, empty text and the separate explicit-font path retain their source
+behavior.
+
+Thirty-two constructed-token cases compare complete SVG and all explicit
+attributes and own properties before and after rendering, while checking
+original text-node identity. They cover `mo`, `mi`, `mn`, `mtext`, `ms` quotes,
+empty children, multiple advances, a bold variant and explicit fonts in both
+modes, including repeated rendering. This is an internal
+renderer contract prerequisite for the separate adjacent-relation filter;
+it is not a claim that accepted TeX parsing already produces every input.
+
+Regenerate the unmodified primary references with:
+
+```
+node testdata/generate_multi_text_renderer.cjs PINNED_ASSETS [EVIDENCE_DIRECTORY]
+```
