@@ -85,11 +85,11 @@ shared macro/tag configuration. Literal chunks preserve internal whitespace
 and tilde; only the source's four literal escapes and edge whitespace rules
 apply. `hbox` and `mbox` retain their level-zero wrapper, including empty input.
 
-`TestInternalTextPinnedReferences` checks74 complete unmodified-primary SVGs
-and explicit/own-property trees, plus16 unchanged shared-caller controls.
+`TestInternalTextPinnedReferences` checks 78 complete unmodified-primary SVGs
+and explicit/own-property trees, plus 12 unchanged shared-caller controls.
 `textup` uses the same normal-font HBox mapping as `textrm`; `textsl` retains
-the pinned undefined-command behavior. FBox/colorbox embedded math and AMS tag
-text remain separately recorded boundaries. The28 actual-method
+the pinned undefined-command behavior. AMS tag text remains a separately
+recorded boundary. The28 actual-method
 references also bind delimiter errors, cardinality, child ownership, font and
 macro-counter isolation. Two private pre-postfilter script nodes retain the
 existing Go `msub` versus primary two-child `msubsup` representation; public
@@ -100,6 +100,33 @@ Regenerate the references with the pinned D2 MathJax3.2.2 assets:
 ```
 node testdata/generate_internal_text.cjs PINNED_ASSETS [EVIDENCE_DIRECTORY]
 node internal/tex/testdata/generate_internal_text_method.cjs PINNED_ASSETS
+```
+
+
+`fbox`, `colorbox` and `fcolorbox` use the same internal text/math parser. Content
+is parsed before resolving the outer background or frame color, so a color
+created by embedded math is available to its box. The existing notation,
+5px padding and 2px border are unchanged. A content error prevents the outer
+box from being returned; an earlier shared color definition is not rolled back.
+
+`TestFramedInternalTextPinnedReferences` binds 64 complete primary SVGs and
+explicit/own-property trees across both modes, including twelve required error
+outputs and unchanged `boxed` controls. The two `macro-inside` cases retain
+the fixed package set's unsupported `def` error; successful registered macros
+are exercised by the direct handler records instead. Twelve direct primary handler records
+also bind argument consumption, node ownership, font/macro lifetime and color
+lookup timing. Six private inner `mi(x)` nodes carry exactly three true Go
+scope markers before compiler cleanup; the direct test checks that exact
+triple and count, then compares every remaining explicit attribute and own
+property. Public trees are compared without this qualification. Complete raw
+map-layer snapshots remain diagnostic evidence, not a claim that the internal
+attribute-storage representations are identical.
+
+Regenerate the framed caller references with:
+
+```
+node testdata/generate_framed_internal_text.cjs PINNED_ASSETS [EVIDENCE_DIRECTORY]
+node internal/tex/testdata/generate_framed_text_method.cjs PINNED_ASSETS
 ```
 
 

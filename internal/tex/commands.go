@@ -281,7 +281,11 @@ func (p *parser) command(name string) ([]*mml.Node, error) {
 		if err != nil {
 			return nil, err
 		}
-		return []*mml.Node{setAttributes(node("menclose", textRow(raw)), map[string]any{"notation": "box"})}, nil
+		content, err := p.internalMath(raw, "", false)
+		if err != nil {
+			return nil, err
+		}
+		return []*mml.Node{setAttributes(node("menclose", content...), map[string]any{"notation": "box"})}, nil
 
 	case "begin":
 		return p.beginEnvironment(name)
@@ -1358,11 +1362,15 @@ func (p *parser) colorBox(name string, framed bool) ([]*mml.Node, error) {
 	if err != nil {
 		return nil, err
 	}
+	content, err := p.internalMath(raw, "", false)
+	if err != nil {
+		return nil, err
+	}
 	background, err = p.state.colorModel.GetColor("named", background)
 	if err != nil {
 		return nil, translateColorError(err)
 	}
-	box := setAttributes(node("mpadded", textRow(raw)), map[string]any{"mathbackground": background})
+	box := setAttributes(node("mpadded", content...), map[string]any{"mathbackground": background})
 	for _, attribute := range texcolor.PaddingProperties("5px") {
 		box.Attributes.Set(attribute.Name, attribute.Value)
 	}
