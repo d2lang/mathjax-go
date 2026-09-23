@@ -1671,6 +1671,14 @@ func (p *parser) quantity(name string) ([]*mml.Node, error) {
 }
 
 func (p *parser) quantityWithDelimiters(name, open, close string) ([]*mml.Node, error) {
+	// Argument-free Quantity leaves an unsupported star for ordinary parsing.
+	// Its empty fallback uses ParseUtil.fenced, not the AutoOpen row policy.
+	if name == "qty" || name == "quantity" {
+		p.skipSpaces()
+		if p.pos < len(p.source) && p.source[p.pos] == '*' {
+			return []*mml.Node{leftRightFenced(open, forcedRow(nil, false), close, true)}, nil
+		}
+	}
 	star := p.readStar()
 	p.skipSpaces()
 	if p.pos >= len(p.source) {
