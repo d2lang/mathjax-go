@@ -278,11 +278,10 @@ complete primary SVGs, ordered explicit/own trees, errors and source cursors.
 Four missing-right controls now match the primary `ExtraLeftMissingRight`
 identity and "Extra \left or missing \right" message, complete SVG and ordered
 explicit/own tree. All 40 historical controls keep the same source/cursor state;
-the other 36 also retain their complete accepted trees and SVGs.
-
-The two hash diagnostic outputs, eight argument-reader cursor differences and
-two hash cursor differences remain explicitly bound. The untouched primary and
-historical accepted references are preserved.
+two hash diagnostic controls now also match their complete primary outputs,
+including the quoted diagnostic. The other 34 complete accepted outputs stay
+unchanged. Eight argument-reader and two hash cursor differences remain bound.
+The untouched primary and historical accepted references are preserved.
 No general error or cursor normalization is used.
 
 ```
@@ -302,10 +301,12 @@ source and cursor together, preserving its caller and already-emitted nodes.
 
 The 85 complete-output references comprise the original 72 cases and 13 bounded
 default-buffer/UTF-16/prime/style/font controls. All 40 changed SVGs match primary;
-79 SVGs and 73 full attribute/own-property trees match without qualifications.
-Four hash-diagnostic outputs and two supplemental newcommand-environment outputs
-remain exact accepted boundaries. Two vector and four prime records have raw
-primary SVGs with precisely retained own-property differences; the prime boundary
+83 SVGs and 77 full attribute/own-property trees match without qualifications.
+The four hash-diagnostic outputs now use their untouched primary outputs; their
+historical accepted records remain in the fixture. Two supplemental
+newcommand-environment outputs remain exact accepted boundaries. Two vector and
+four prime records have raw primary SVGs with precisely retained own-property
+differences; the prime boundary
 is independently present in the direct accepted-before control. Registered
 handlers bind 22 actual entry/return/error source, cursor and count receipts;
 28 actual helper references cover separators, escaping, UTF-16 and error order.
