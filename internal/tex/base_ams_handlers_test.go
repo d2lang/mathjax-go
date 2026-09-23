@@ -41,25 +41,6 @@ func TestBaseAMSHandlerFrozenShapes(t *testing.T) {
 	}
 }
 
-func TestOperatorNameGroupsUseOperatorClass(t *testing.T) {
-	root, err := NewCompiler().Compile(`\operatorname*{arg\,max}_{x}`, true)
-	if err != nil {
-		t.Fatal(err)
-	}
-	identifiers := root.Find("mi")
-	if len(identifiers) < 3 {
-		t.Fatalf("got %d identifiers, want at least arg, max, and x", len(identifiers))
-	}
-	for _, identifier := range identifiers[:2] {
-		if identifier.TeXClass != mml.TeXClassOp {
-			t.Fatalf("operator identifier %q TeX class = %d, want OP", textContent(identifier), identifier.TeXClass)
-		}
-		if value, ok := identifier.Property("texClass"); !ok || value != mml.TeXClassOp {
-			t.Fatalf("operator identifier %q texClass property = %#v, present %v", textContent(identifier), value, ok)
-		}
-	}
-}
-
 func TestBaseAMSXArrowAttributeOrder(t *testing.T) {
 	p := &parser{source: `[below]{above}`, state: newParseState(), display: true}
 	nodes, handled, err := p.baseAMSCommand("xrightarrow")

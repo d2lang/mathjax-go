@@ -226,13 +226,6 @@ func (p *parser) amsOperatorName(name string) ([]*mml.Node, error) {
 			}
 			identifier := token("mi", raw[start:position])
 			identifier.Attributes.Set("mathvariant", "normal")
-			// HandleOperatorName reparses with operatorLetters=true, which
-			// assigns OP to every grouped identifier (not only the outer
-			// TeXAtom).  That preserves OP-to-OP thin spacing across an
-			// intervening spacelike node such as \,, in addition to its own
-			// explicit mspace width.
-			identifier.TeXClass = mml.TeXClassOp
-			identifier.SetProperty("texClass", mml.TeXClassOp)
 			children = append(children, identifier)
 			continue
 		}
@@ -269,9 +262,14 @@ func (p *parser) amsOperatorName(name string) ([]*mml.Node, error) {
 		return true
 	})
 	result.TeXClass = mml.TeXClassOp
-	result.SetProperty("texClass", mml.TeXClassOp)
+	// The primary TeXAtom constructor owns texClass before the final writes.
+	// A singular mi receives those properties in the handler's source order.
+	if result.Kind != "mi" {
+		result.SetProperty("texClass", mml.TeXClassOp)
+	}
 	result.SetProperty("movesupsub", star)
 	result.SetProperty("movablelimits", true)
+	result.SetProperty("texClass", mml.TeXClassOp)
 	if !star {
 		start := p.pos
 		p.skipSpaces()

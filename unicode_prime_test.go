@@ -56,6 +56,7 @@ func TestUnicodePrimePinnedReferences(t *testing.T) {
 		t.Fatal("unbound Unicode prime matrix")
 	}
 	primaryErrors := 0
+	composedD106, unchangedNonPrime := 0, 0
 	for _, c := range fixture.Cases {
 		if c.Tree.Children[0].Children[0].Kind == "merror" {
 			primaryErrors++
@@ -68,6 +69,41 @@ func TestUnicodePrimePinnedReferences(t *testing.T) {
 					t.Fatal("changed preexisting literal/non-prime boundary")
 				}
 				wantSVG, wantTree = boundary.SVGSHA256, boundary.Tree
+				// These two D106 composites retain their historical literal-prime
+				// structure and SVG. Only the source-defined inner-mi class is
+				// primary: assert its exact primary subtree, and compare every
+				// other field to the immutable old boundary.
+				if c.Name == "operator-literal-inline" || c.Name == "operator-literal-display" {
+					composedD106++
+					if c.TeX != `\operatorname{x’}` || c.Display != (c.Name == "operator-literal-display") {
+						t.Fatal("changed exact D106 composite input")
+					}
+					encoded, err := json.Marshal(boundary.Tree)
+					if err != nil {
+						t.Fatal(err)
+					}
+					var comparison limitsTree
+					if err = json.Unmarshal(encoded, &comparison); err != nil {
+						t.Fatal(err)
+					}
+					legacyX := limitsNodeAt(&comparison, []int{0, 0, 0, 0})
+					primaryX := limitsNodeAt(c.PropertiesTree, []int{0, 0, 0, 0, 0})
+					if legacyX == nil || primaryX == nil || legacyX.Kind != "mi" || primaryX.Kind != "mi" || len(legacyX.Properties) != 1 || legacyX.Properties["texClass"] != float64(1) {
+						t.Fatal("changed source-bound inner-mi class path")
+					}
+					if _, present := primaryX.Properties["texClass"]; present {
+						t.Fatal("primary inner mi must not own texClass")
+					}
+					// Change only this exact field in a decoded comparison copy.
+					// Neither historical fixture nor actual compiler tree is changed.
+					delete(legacyX.Properties, "texClass")
+					if !reflect.DeepEqual(legacyX, primaryX) {
+						t.Fatal("inner-mi subtree is not exactly the untouched primary")
+					}
+					wantTree = &comparison
+				} else {
+					unchangedNonPrime++
+				}
 			} else {
 				for _, b := range boundaries.InheritedPrimeMetadata[c.Name] {
 					n := limitsNodeAt(wantTree, b.Path)
@@ -91,6 +127,13 @@ func TestUnicodePrimePinnedReferences(t *testing.T) {
 			var got *limitsTree
 			if err = json.Unmarshal(raw, &got); err != nil {
 				t.Fatal(err)
+			}
+			if c.Name == "operator-literal-inline" || c.Name == "operator-literal-display" {
+				x := limitsNodeAt(got, []int{0, 0, 0, 0})
+				primaryX := limitsNodeAt(c.PropertiesTree, []int{0, 0, 0, 0, 0})
+				if x == nil || !reflect.DeepEqual(x, primaryX) {
+					t.Error("D106 composite inner-mi subtree must equal primary")
+				}
 			}
 			if !reflect.DeepEqual(got, wantTree) {
 				t.Error("complete explicit/own-property tree differs")
@@ -123,6 +166,9 @@ func TestUnicodePrimePinnedReferences(t *testing.T) {
 				}
 			}
 		})
+	}
+	if composedD106 != 2 || unchangedNonPrime != 8 {
+		t.Fatal("D106 composed/unchanged diagnostic inventory changed", composedD106, unchangedNonPrime)
 	}
 	if primaryErrors != 16 {
 		t.Fatal("required primary errors changed")

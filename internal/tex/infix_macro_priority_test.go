@@ -81,32 +81,18 @@ func TestInfixMacroPriorityPinnedReferences(t *testing.T) {
 			t.Fatal(err)
 		}
 	}
-	if fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || len(fixture.Cases) != 82 || limits.Baseline != "b8b28469b0c6357a93048864537bbbc61c56be56" || len(limits.Boundaries) != 22 {
+	if fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || len(fixture.Cases) != 82 || limits.Baseline != "b8b28469b0c6357a93048864537bbbc61c56be56" || len(limits.Boundaries) != 8 {
 		t.Fatal("unbound infix priority references")
 	}
 	expectedBoundaries := map[string]string{
-		"over-public-operator-inline":     "ordinary declared-operator property insertion order",
-		"over-public-operator-display":    "ordinary declared-operator property insertion order",
-		"atop-public-operator-inline":     "ordinary declared-operator property insertion order",
-		"atop-public-operator-display":    "ordinary declared-operator property insertion order",
-		"atop-ordinary-inline":            "unchanged atop linethickness string type",
-		"atop-ordinary-display":           "unchanged atop linethickness string type",
-		"atop-true-alias-inline":          "unchanged atop linethickness string type",
-		"atop-true-alias-display":         "unchanged atop linethickness string type",
-		"above-public-operator-inline":    "ordinary declared-operator property insertion order",
-		"above-public-operator-display":   "ordinary declared-operator property insertion order",
-		"choose-public-operator-inline":   "ordinary declared-operator property insertion order",
-		"choose-public-operator-display":  "ordinary declared-operator property insertion order",
-		"brace-public-operator-inline":    "ordinary declared-operator property insertion order",
-		"brace-public-operator-display":   "ordinary declared-operator property insertion order",
-		"brack-public-operator-inline":    "ordinary declared-operator property insertion order",
-		"brack-public-operator-display":   "ordinary declared-operator property insertion order",
-		"public-operator-control-inline":  "ordinary declared-operator property insertion order",
-		"public-operator-control-display": "ordinary declared-operator property insertion order",
-		"choose-empty-override-inline":    "unchanged ordinary-prime metadata",
-		"choose-empty-override-display":   "unchanged ordinary-prime metadata",
-		"plain-prime-control-inline":      "unchanged ordinary-prime metadata",
-		"plain-prime-control-display":     "unchanged ordinary-prime metadata",
+		"atop-ordinary-inline":          "unchanged atop linethickness string type",
+		"atop-ordinary-display":         "unchanged atop linethickness string type",
+		"atop-true-alias-inline":        "unchanged atop linethickness string type",
+		"atop-true-alias-display":       "unchanged atop linethickness string type",
+		"choose-empty-override-inline":  "unchanged ordinary-prime metadata",
+		"choose-empty-override-display": "unchanged ordinary-prime metadata",
+		"plain-prime-control-inline":    "unchanged ordinary-prime metadata",
+		"plain-prime-control-display":   "unchanged ordinary-prime metadata",
 	}
 	expectedErrors := map[string]string{"spaced-infix-alias-inline": "AmbiguousUseOf", "spaced-infix-alias-display": "AmbiguousUseOf", "above-missing-second-argument-inline": "MissingArgFor", "above-missing-second-argument-display": "MissingArgFor", "over-missing-argument-inline": "MissingArgFor", "over-missing-argument-display": "MissingArgFor", "joined-infix-alias-inline": "AmbiguousUseOf", "joined-infix-alias-display": "AmbiguousUseOf"}
 	raw, qualified := 0, 0
@@ -205,7 +191,7 @@ func TestInfixMacroPriorityPinnedReferences(t *testing.T) {
 			}
 		})
 	}
-	if raw != 60 || qualified != 22 {
+	if raw != 74 || qualified != 8 {
 		t.Fatal("reference classification changed", raw, qualified)
 	}
 }

@@ -193,10 +193,10 @@ An empty registered macro also retains the existing pending-prime behavior.
 The 82-case fixture covers all six names, public declarations, argument errors,
 empty definitions, grouping and aliases that expand into genuine infix commands.
 All 82 complete SVGs match pinned MathJax, including the joined infix aliases.
-Sixty ordered full attribute/property trees match primary. The other 22 are bound to
-complete accepted records or equivalent ordinary controls, including property
-insertion order, atop's existing string zero and plain-prime metadata. No fields
-are omitted from these comparisons.
+Seventy-four ordered full attribute/property trees match primary. The other eight
+retain their exact existing atop string-zero or plain-prime metadata records.
+The fourteen declared-operator property-order qualifications are removed using
+the unchanged primary references. No fields are omitted from these comparisons.
 
 Regenerate the unmodified primary references with:
 
@@ -312,14 +312,28 @@ handlers bind 22 actual entry/return/error source, cursor and count receipts;
 28 actual helper references cover separators, escaping, UTF-16 and error order.
 Custom primary maxBuffer observations are not presented as a configurable Go API.
 
-Fourteen additional operator-name records preserve the complete primary trees
-and exact accepted property arrays: six SVGs match primary, while eight retain
-the separately tracked D103 constructor-spacing residual. The repaired macro
-composites equal the accepted direct authored route in full SVG and ordered
-trees; they are not counted as primary passes. All literal attributes and every
-own property remain asserted, including the existing insertion-order boundary.
+Fourteen additional operator-name records now match complete primary SVGs and
+all ordered attribute and own-property maps. The fixture retains the historical
+accepted outputs and property arrays, but the tests no longer accept them.
 The child-error control also requires the caller source, cursor and shared state
 to remain intact.
+
+Operator-name identifiers start with ordinary classification, allowing the
+renderer to apply the primary automatic class for multi-letter names. Only the
+returned operator receives explicit OP; singular identifiers and wrapped
+TeXAtoms preserve their distinct primary property insertion order. Twenty-six
+additional whole-output references and eight actual-handler cases check this
+behavior, retained node identity, font/vector provenance, cursor/error state and
+classification before and after rendering. Two nested-group D106 composites
+remain separately captured, nonprimary diagnostics; no new expected-output
+qualification is introduced for those changed composites.
+
+Two inherited Unicode-prime operator-name cases remain D106 diagnostics with
+exact unchanged nonprimary SVGs and literal-prime structure. Their inner normal
+mi(x) now matches the untouched primary subtree with no own texClass. Tests
+assert that exact source-defined fact and every remaining field against the
+immutable historical boundary; they do not accept a new candidate snapshot or
+claim whole-output parity for these two composites.
 
 The original fixed-D2 package corpus remains distinct from the official-3.2.2
 newcommand augmented observations. Generate raw unchanged-primary captures with:
