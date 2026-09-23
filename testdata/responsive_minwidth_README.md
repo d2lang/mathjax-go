@@ -1,0 +1,13 @@
+# Responsive table minimum width
+
+These fixtures target the pinned D2 MathJax 3.2.2 component (bundle SHA-256 `cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869`). They preserve the original pre-edit D101 public, constructed-MathML and actual-wrapper observations.
+
+The public fixture has 24 complete primary SVG expectations and six explicitly named, byte-exact accepted-parent controls: the two `align-labelled`, two `gather-labelled`, and two inline `two-tables` cases. Their original complete primary SVGs are retained separately in each record; those six are not primary-equality claims. The two displayed sequential-equation cases are diagnostic-only: the missing equation-environment error (D105) remains unresolved and their changed output is not an accepted fixture.
+
+The private fixture has 42 constructor cases with the actual primary selected-table node path, 31 complete primary SVGs, and 81 actual `SVGmath.handleDisplay`/`getAlignShift` call envelopes. Constructor inputs retain the accepted Go full attribute layers, ordered own properties, node flags and child structure, then compare the selected node identity with the actual primary path. These inputs are not a claim that every full internal MathML representation is identical. Reverse measurement must not change the selected pointer. A fresh renderer must not inherit an earlier selection.
+
+The 81 method expectations retain the actual primary root attributes, scale, container metric, outer-box argument and before/after minimum width. They test the math-wrapper policy independently of existing table-layout geometry. In particular, raw pixel `containerWidth` is the percentage reference here; table layout uses a different em reference. No table layout consumer was replaced.
+
+The larger frozen evidence contains all original 32 public, 42 MathML and 26 private conversions, with plain/passive pairs, full before/after trees, raw primary/accepted/candidate SVGs and construction/error observations. Of 100 conversions, 77 complete SVGs match primary, including 37 upgrades and all six public width fixes. Sixteen changed nonprimary composites remain diagnostics (14 internal table alignment/padding/style composites and two D105 displayed equation sequences). Seven further nonprimary outputs are unchanged. No normalization or candidate-backed expected SVG is used to accept a changed nonprimary composite.
+
+Original `fontCache` warnings and the inconclusive rootless primary construction failure remain preserved in the evidence. No new claim of authored reachability is made for constructed-MathML alignment/padding boundaries.
