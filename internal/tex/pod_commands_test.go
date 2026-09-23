@@ -36,10 +36,6 @@ func TestPodRegisteredMacroReferences(t *testing.T) {
 			output
 		}
 	}
-	var boundaries struct {
-		Baseline  string
-		Unchanged map[string]output
-	}
 	data, err := os.ReadFile("../../testdata/pod_macros_mathjax_3_2_2.json")
 	if err != nil {
 		t.Fatal(err)
@@ -47,27 +43,12 @@ func TestPodRegisteredMacroReferences(t *testing.T) {
 	if err = json.Unmarshal(data, &fixture); err != nil {
 		t.Fatal(err)
 	}
-	data, err = os.ReadFile("../../testdata/pod_macro_boundaries.json")
-	if err != nil {
-		t.Fatal(err)
-	}
-	if err = json.Unmarshal(data, &boundaries); err != nil {
-		t.Fatal(err)
-	}
-	if fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || len(fixture.Cases) != 20 || boundaries.Baseline != "91e9c36681e39a4e8b1482208cd905643bcfcbe5" || len(boundaries.Unchanged) != 2 {
+	if fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || len(fixture.Cases) != 20 {
 		t.Fatal("unbound registered pod/pmod references")
 	}
-	unchanged := 0
 	for _, c := range fixture.Cases {
 		t.Run(c.Name, func(t *testing.T) {
 			want := c.output
-			if b, ok := boundaries.Unchanged[c.Name]; ok {
-				if c.Name != "recursive-limit-inline" && c.Name != "recursive-limit-display" {
-					t.Fatal("unexpected shared error boundary")
-				}
-				want = b
-				unchanged++
-			}
 			state := newParseState()
 			state.macros[c.Registration.Name] = macroDefinition{body: c.Registration.Body, arguments: c.Registration.Arguments}
 			p := &parser{source: c.TeX, state: state, display: c.Display}
@@ -140,9 +121,6 @@ func TestPodRegisteredMacroReferences(t *testing.T) {
 				}
 			}
 		})
-	}
-	if unchanged != 2 {
-		t.Fatal("recursive-error boundary coverage changed")
 	}
 	// Each compiler call restores the default registration after the explicit
 	// zero-, one- and two-argument overrides and recursive error cases above.
