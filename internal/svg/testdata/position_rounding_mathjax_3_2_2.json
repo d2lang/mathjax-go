@@ -1,0 +1,89 @@
+{
+  "source": {
+    "component": "pinned D2 MathJax 3.2.2",
+    "bundleSHA256": "cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869",
+    "diagnosticFreezeSHA256": "5951d3e0591489dd374b4daba1f093de6da85f89a16aa3e215b3174e82e55f54",
+    "classificationFreezeSHA256": "d8a6ae92de5767c6a9c26521016904bb38542dfdd0a39b3b60059668cf61214a",
+    "numericExpectations": "Actual primary placement arguments and rootDimensions returns; no Go output golden"
+  },
+  "multiscripts": [
+    {
+      "name": "center-k-zero",
+      "alignment": "center",
+      "width": 0.521,
+      "scale": 0.7071067811865475,
+      "column": 0.36840263299819126,
+      "want": 0
+    },
+    {
+      "name": "center-four-nonzero",
+      "alignment": "center",
+      "width": 0.5,
+      "scale": 0.7071067811865475,
+      "column": 0.36840263299819126,
+      "want": 0.007424621202458764
+    },
+    {
+      "name": "right-i-nonzero",
+      "alignment": "right",
+      "width": 0.345,
+      "scale": 0.7071067811865475,
+      "column": 0.35355339059327373,
+      "want": 0.10960155108391487
+    },
+    {
+      "name": "right-b-nonzero",
+      "alignment": "right",
+      "width": 0.429,
+      "scale": 0.7071067811865475,
+      "column": 0.3740594872476836,
+      "want": 0.07071067811865478
+    },
+    {
+      "name": "right-a-zero",
+      "alignment": "right",
+      "width": 0.529,
+      "scale": 0.7071067811865475,
+      "column": 0.3740594872476836,
+      "want": 0
+    }
+  ],
+  "roots": [
+    {
+      "name": "sqrt3-primary-operands",
+      "root": {
+        "W": 0.5,
+        "H": 0.665,
+        "D": 0.022,
+        "Scale": 0.4999999999999999,
+        "RScale": 0.4999999999999999,
+        "L": 0,
+        "R": 0,
+        "PWidth": "",
+        "IC": 0,
+        "Skew": 0,
+        "DX": 0
+      },
+      "surd": {
+        "W": 0.853,
+        "H": 0.8,
+        "D": 0.2,
+        "Scale": 1,
+        "RScale": 1,
+        "L": 0,
+        "R": 0,
+        "PWidth": "",
+        "IC": 0.02,
+        "Skew": 0,
+        "DX": 0
+      },
+      "surdSize": 0,
+      "height": 0.8307500000000001,
+      "want": [
+        0,
+        0.39175000000000015,
+        0.5236000000000001
+      ]
+    }
+  ]
+}

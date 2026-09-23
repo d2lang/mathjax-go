@@ -185,6 +185,9 @@ func (w *wrapper) computeMultiscriptsBBox(bbox *layout.BBox) {
 }
 
 func multiscriptAlign(name string, width, column float64) float64 {
+	// MathJax rounds the scaled width before AlignX subtracts it. Keep that
+	// rounding even when this helper is inlined into a multiplication.
+	width = float64(width)
 	switch name {
 	case "center":
 		return (column - width) / 2

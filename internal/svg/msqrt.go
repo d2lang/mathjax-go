@@ -75,7 +75,8 @@ func (w *wrapper) rootDimensions(surd *layout.BBox, height float64) (x, h, dx fl
 	if surdWrapper.size < 0 {
 		offsetFactor = .5
 	}
-	offset := offsetFactor * surd.W
+	// JavaScript rounds both products before the final subtraction.
+	offset := float64(offsetFactor * surd.W)
 	width := math.Max(root.W, offset/root.RScale)
 	dx = math.Max(0, width-root.W)
 	total := surd.H + surd.D
@@ -84,7 +85,7 @@ func (w *wrapper) rootDimensions(surd *layout.BBox, height float64) (x, h, dx fl
 		b = 1.9
 	}
 	h = b - (total - height) + math.Max(0, root.D*root.RScale)
-	x = width*root.RScale - offset
+	x = float64(width*root.RScale) - offset
 	return
 }
 
