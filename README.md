@@ -381,3 +381,7 @@ assert shared identities, early labels, counter/font isolation and errors.
 Both registered text override controls compare their complete method trees,
 including nonbreaking-space tokens, with those finite provenance pairs. Existing equation error teardown
 and alignment allocation/anchor behavior remain separately documented limits.
+
+### Flat fractions
+
+`\flatfrac` is registered as the primary Physics macro, so its two arguments use the existing macro expansion and override rules. Regression coverage compares 28 complete primary SVG outputs and checks eight private Macro scenarios, including argument errors, source installation, count limits, forwarding, and overrides. Two tall middle-delimiter cases (D119), two derivative composites (D095), and the inherited unclosed-argument cursor difference remain explicit boundaries; matching SVG does not assert complete internal-tree equality.
