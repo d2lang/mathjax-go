@@ -1,0 +1,669 @@
+{
+  "cases": [
+    {
+      "profile": "public",
+      "name": "integer-inline",
+      "tex": "1234",
+      "display": false
+    },
+    {
+      "profile": "public",
+      "name": "integer-display",
+      "tex": "1234",
+      "display": true
+    },
+    {
+      "profile": "public",
+      "name": "leading-zero-inline",
+      "tex": "0012",
+      "display": false
+    },
+    {
+      "profile": "public",
+      "name": "leading-zero-display",
+      "tex": "0012",
+      "display": true
+    },
+    {
+      "profile": "public",
+      "name": "decimal-inline",
+      "tex": "12.34",
+      "display": false
+    },
+    {
+      "profile": "public",
+      "name": "decimal-display",
+      "tex": "12.34",
+      "display": true
+    },
+    {
+      "profile": "public",
+      "name": "leading-dot-inline",
+      "tex": ".34",
+      "display": false
+    },
+    {
+      "profile": "public",
+      "name": "leading-dot-display",
+      "tex": ".34",
+      "display": true
+    },
+    {
+      "profile": "public",
+      "name": "trailing-dot-inline",
+      "tex": "12.",
+      "display": false
+    },
+    {
+      "profile": "public",
+      "name": "trailing-dot-display",
+      "tex": "12.",
+      "display": true
+    },
+    {
+      "profile": "public",
+      "name": "dot-inline",
+      "tex": ".",
+      "display": false
+    },
+    {
+      "profile": "public",
+      "name": "dot-display",
+      "tex": ".",
+      "display": true
+    },
+    {
+      "profile": "public",
+      "name": "comma-inline",
+      "tex": ",",
+      "display": false
+    },
+    {
+      "profile": "public",
+      "name": "comma-display",
+      "tex": ",",
+      "display": true
+    },
+    {
+      "profile": "public",
+      "name": "plain-thousands-inline",
+      "tex": "1,234",
+      "display": false
+    },
+    {
+      "profile": "public",
+      "name": "plain-thousands-display",
+      "tex": "1,234",
+      "display": true
+    },
+    {
+      "profile": "public",
+      "name": "leading-comma-inline",
+      "tex": ",123",
+      "display": false
+    },
+    {
+      "profile": "public",
+      "name": "leading-comma-display",
+      "tex": ",123",
+      "display": true
+    },
+    {
+      "profile": "public",
+      "name": "double-comma-inline",
+      "tex": "1,,2",
+      "display": false
+    },
+    {
+      "profile": "public",
+      "name": "double-comma-display",
+      "tex": "1,,2",
+      "display": true
+    },
+    {
+      "profile": "public",
+      "name": "double-dot-inline",
+      "tex": "1..2",
+      "display": false
+    },
+    {
+      "profile": "public",
+      "name": "double-dot-display",
+      "tex": "1..2",
+      "display": true
+    },
+    {
+      "profile": "public",
+      "name": "mixed-punctuation-inline",
+      "tex": "1.2,3.4",
+      "display": false
+    },
+    {
+      "profile": "public",
+      "name": "mixed-punctuation-display",
+      "tex": "1.2,3.4",
+      "display": true
+    },
+    {
+      "profile": "public",
+      "name": "braced-thousands-inline",
+      "tex": "1{,}234",
+      "display": false
+    },
+    {
+      "profile": "public",
+      "name": "braced-thousands-display",
+      "tex": "1{,}234",
+      "display": true
+    },
+    {
+      "profile": "public",
+      "name": "repeated-braced-inline",
+      "tex": "12{,}345{,}678.9",
+      "display": false
+    },
+    {
+      "profile": "public",
+      "name": "repeated-braced-display",
+      "tex": "12{,}345{,}678.9",
+      "display": true
+    },
+    {
+      "profile": "public",
+      "name": "short-braced-inline",
+      "tex": "1{,}23",
+      "display": false
+    },
+    {
+      "profile": "public",
+      "name": "short-braced-display",
+      "tex": "1{,}23",
+      "display": true
+    },
+    {
+      "profile": "public",
+      "name": "long-braced-inline",
+      "tex": "1{,}2345",
+      "display": false
+    },
+    {
+      "profile": "public",
+      "name": "long-braced-display",
+      "tex": "1{,}2345",
+      "display": true
+    },
+    {
+      "profile": "public",
+      "name": "spaced-braced-inline",
+      "tex": "1{,} 234",
+      "display": false
+    },
+    {
+      "profile": "public",
+      "name": "spaced-braced-display",
+      "tex": "1{,} 234",
+      "display": true
+    },
+    {
+      "profile": "public",
+      "name": "decimal-braced-inline",
+      "tex": "1.2{,}345",
+      "display": false
+    },
+    {
+      "profile": "public",
+      "name": "decimal-braced-display",
+      "tex": "1.2{,}345",
+      "display": true
+    },
+    {
+      "profile": "public",
+      "name": "trailing-braced-inline",
+      "tex": "1{,}",
+      "display": false
+    },
+    {
+      "profile": "public",
+      "name": "trailing-braced-display",
+      "tex": "1{,}",
+      "display": true
+    },
+    {
+      "profile": "public",
+      "name": "exponent-like-inline",
+      "tex": "1e23",
+      "display": false
+    },
+    {
+      "profile": "public",
+      "name": "exponent-like-display",
+      "tex": "1e23",
+      "display": true
+    },
+    {
+      "profile": "public",
+      "name": "unicode-arabic-inline",
+      "tex": "١٢٣",
+      "display": false
+    },
+    {
+      "profile": "public",
+      "name": "unicode-arabic-display",
+      "tex": "١٢٣",
+      "display": true
+    },
+    {
+      "profile": "public",
+      "name": "unicode-fullwidth-inline",
+      "tex": "１２３",
+      "display": false
+    },
+    {
+      "profile": "public",
+      "name": "unicode-fullwidth-display",
+      "tex": "１２３",
+      "display": true
+    },
+    {
+      "profile": "public",
+      "name": "unicode-math-bold-inline",
+      "tex": "𝟏𝟐𝟑",
+      "display": false
+    },
+    {
+      "profile": "public",
+      "name": "unicode-math-bold-display",
+      "tex": "𝟏𝟐𝟑",
+      "display": true
+    },
+    {
+      "profile": "public",
+      "name": "unicode-segmented-inline",
+      "tex": "🯱🯲",
+      "display": false
+    },
+    {
+      "profile": "public",
+      "name": "unicode-segmented-display",
+      "tex": "🯱🯲",
+      "display": true
+    },
+    {
+      "profile": "public",
+      "name": "ascii-unicode-inline",
+      "tex": "1٢3",
+      "display": false
+    },
+    {
+      "profile": "public",
+      "name": "ascii-unicode-display",
+      "tex": "1٢3",
+      "display": true
+    },
+    {
+      "profile": "public",
+      "name": "unicode-decimal-inline",
+      "tex": "١.٢",
+      "display": false
+    },
+    {
+      "profile": "public",
+      "name": "unicode-decimal-display",
+      "tex": "١.٢",
+      "display": true
+    },
+    {
+      "profile": "public",
+      "name": "script-comma-inline",
+      "tex": "x^1,234",
+      "display": false
+    },
+    {
+      "profile": "public",
+      "name": "script-comma-display",
+      "tex": "x^1,234",
+      "display": true
+    },
+    {
+      "profile": "public",
+      "name": "script-braced-thousands-inline",
+      "tex": "x^1{,}234",
+      "display": false
+    },
+    {
+      "profile": "public",
+      "name": "script-braced-thousands-display",
+      "tex": "x^1{,}234",
+      "display": true
+    },
+    {
+      "profile": "public",
+      "name": "script-leading-dot-inline",
+      "tex": "x^.12",
+      "display": false
+    },
+    {
+      "profile": "public",
+      "name": "script-leading-dot-display",
+      "tex": "x^.12",
+      "display": true
+    },
+    {
+      "profile": "public",
+      "name": "script-unicode-inline",
+      "tex": "x^１２",
+      "display": false
+    },
+    {
+      "profile": "public",
+      "name": "script-unicode-display",
+      "tex": "x^１２",
+      "display": true
+    },
+    {
+      "profile": "public",
+      "name": "explicit-script-inline",
+      "tex": "x^{1,234}",
+      "display": false
+    },
+    {
+      "profile": "public",
+      "name": "explicit-script-display",
+      "tex": "x^{1,234}",
+      "display": true
+    },
+    {
+      "profile": "public",
+      "name": "subscript-inline",
+      "tex": "x_1.234",
+      "display": false
+    },
+    {
+      "profile": "public",
+      "name": "subscript-display",
+      "tex": "x_1.234",
+      "display": true
+    },
+    {
+      "profile": "public",
+      "name": "bold-declaration-inline",
+      "tex": "{\\bf 1,234.5}",
+      "display": false
+    },
+    {
+      "profile": "public",
+      "name": "bold-declaration-display",
+      "tex": "{\\bf 1,234.5}",
+      "display": true
+    },
+    {
+      "profile": "public",
+      "name": "bold-wrapper-inline",
+      "tex": "\\mathbf{1{,}234}",
+      "display": false
+    },
+    {
+      "profile": "public",
+      "name": "bold-wrapper-display",
+      "tex": "\\mathbf{1{,}234}",
+      "display": true
+    },
+    {
+      "profile": "public",
+      "name": "italic-wrapper-inline",
+      "tex": "\\mathit{.1,2}",
+      "display": false
+    },
+    {
+      "profile": "public",
+      "name": "italic-wrapper-display",
+      "tex": "\\mathit{.1,2}",
+      "display": true
+    },
+    {
+      "profile": "public",
+      "name": "physics-vector-inline",
+      "tex": "\\va{1,234}",
+      "display": false
+    },
+    {
+      "profile": "public",
+      "name": "physics-vector-display",
+      "tex": "\\va{1,234}",
+      "display": true
+    },
+    {
+      "profile": "public",
+      "name": "fraction-inline",
+      "tex": "\\frac{1,234}{.5}",
+      "display": false
+    },
+    {
+      "profile": "public",
+      "name": "fraction-display",
+      "tex": "\\frac{1,234}{.5}",
+      "display": true
+    },
+    {
+      "profile": "public",
+      "name": "group-inline",
+      "tex": "{1{,}234}",
+      "display": false
+    },
+    {
+      "profile": "public",
+      "name": "group-display",
+      "tex": "{1{,}234}",
+      "display": true
+    },
+    {
+      "profile": "public",
+      "name": "prime-after-inline",
+      "tex": "1,234'",
+      "display": false
+    },
+    {
+      "profile": "public",
+      "name": "prime-after-display",
+      "tex": "1,234'",
+      "display": true
+    },
+    {
+      "profile": "public",
+      "name": "earlier-error-inline",
+      "tex": "\\DNumberUndefined 1,234",
+      "display": false
+    },
+    {
+      "profile": "public",
+      "name": "earlier-error-display",
+      "tex": "\\DNumberUndefined 1,234",
+      "display": true
+    },
+    {
+      "profile": "private",
+      "name": "digit-start",
+      "entry": "digit",
+      "source": "1234TAIL",
+      "tex": "1234TAIL",
+      "display": false,
+      "font": "",
+      "expectedFirstCharacter": "1",
+      "expectedPrimaryHandlerCursorUTF16": 1,
+      "setup": "genuine parser reaches the original registered handler after consuming its first codepoint; no synthetic parser or replaced scanner"
+    },
+    {
+      "profile": "private",
+      "name": "digit-comma-tail",
+      "entry": "digit",
+      "source": "1,234TAIL",
+      "tex": "1,234TAIL",
+      "display": false,
+      "font": "",
+      "expectedFirstCharacter": "1",
+      "expectedPrimaryHandlerCursorUTF16": 1,
+      "setup": "genuine parser reaches the original registered handler after consuming its first codepoint; no synthetic parser or replaced scanner"
+    },
+    {
+      "profile": "private",
+      "name": "digit-braced-length",
+      "entry": "digit",
+      "source": "12{,}345.6TAIL",
+      "tex": "12{,}345.6TAIL",
+      "display": false,
+      "font": "",
+      "expectedFirstCharacter": "1",
+      "expectedPrimaryHandlerCursorUTF16": 1,
+      "setup": "genuine parser reaches the original registered handler after consuming its first codepoint; no synthetic parser or replaced scanner"
+    },
+    {
+      "profile": "private",
+      "name": "digit-malformed-group",
+      "entry": "digit",
+      "source": "1{,}23TAIL",
+      "tex": "1{,}23TAIL",
+      "display": false,
+      "font": "",
+      "expectedFirstCharacter": "1",
+      "expectedPrimaryHandlerCursorUTF16": 1,
+      "setup": "genuine parser reaches the original registered handler after consuming its first codepoint; no synthetic parser or replaced scanner"
+    },
+    {
+      "profile": "private",
+      "name": "digit-dot",
+      "entry": "digit",
+      "source": ".TAIL",
+      "tex": ".TAIL",
+      "display": false,
+      "font": "",
+      "expectedFirstCharacter": ".",
+      "expectedPrimaryHandlerCursorUTF16": 1,
+      "setup": "genuine parser reaches the original registered handler after consuming its first codepoint; no synthetic parser or replaced scanner"
+    },
+    {
+      "profile": "private",
+      "name": "digit-comma",
+      "entry": "digit",
+      "source": ",TAIL",
+      "tex": ",TAIL",
+      "display": false,
+      "font": "",
+      "expectedFirstCharacter": ",",
+      "expectedPrimaryHandlerCursorUTF16": 1,
+      "setup": "genuine parser reaches the original registered handler after consuming its first codepoint; no synthetic parser or replaced scanner"
+    },
+    {
+      "profile": "private",
+      "name": "digit-leading-decimal",
+      "entry": "digit",
+      "source": ".25TAIL",
+      "tex": ".25TAIL",
+      "display": false,
+      "font": "",
+      "expectedFirstCharacter": ".",
+      "expectedPrimaryHandlerCursorUTF16": 1,
+      "setup": "genuine parser reaches the original registered handler after consuming its first codepoint; no synthetic parser or replaced scanner"
+    },
+    {
+      "profile": "private",
+      "name": "digit-font",
+      "entry": "digit",
+      "source": "12.3TAIL",
+      "tex": "\\bf 12.3TAIL",
+      "display": false,
+      "font": "bold",
+      "expectedFirstCharacter": "1",
+      "expectedPrimaryHandlerCursorUTF16": 5,
+      "setup": "genuine parser reaches the original registered handler after consuming its first codepoint; no synthetic parser or replaced scanner"
+    },
+    {
+      "profile": "private",
+      "name": "other-arabic",
+      "entry": "Other",
+      "source": "١TAIL",
+      "tex": "١TAIL",
+      "display": false,
+      "font": "",
+      "expectedFirstCharacter": "١",
+      "expectedPrimaryHandlerCursorUTF16": 1,
+      "setup": "genuine parser reaches the original registered handler after consuming its first codepoint; no synthetic parser or replaced scanner"
+    },
+    {
+      "profile": "private",
+      "name": "other-fullwidth",
+      "entry": "Other",
+      "source": "１TAIL",
+      "tex": "１TAIL",
+      "display": false,
+      "font": "",
+      "expectedFirstCharacter": "１",
+      "expectedPrimaryHandlerCursorUTF16": 1,
+      "setup": "genuine parser reaches the original registered handler after consuming its first codepoint; no synthetic parser or replaced scanner"
+    },
+    {
+      "profile": "private",
+      "name": "other-math-bold",
+      "entry": "Other",
+      "source": "𝟏TAIL",
+      "tex": "𝟏TAIL",
+      "display": false,
+      "font": "",
+      "expectedFirstCharacter": "𝟏",
+      "expectedPrimaryHandlerCursorUTF16": 2,
+      "setup": "genuine parser reaches the original registered handler after consuming its first codepoint; no synthetic parser or replaced scanner"
+    },
+    {
+      "profile": "private",
+      "name": "other-segmented",
+      "entry": "Other",
+      "source": "🯱TAIL",
+      "tex": "🯱TAIL",
+      "display": false,
+      "font": "",
+      "expectedFirstCharacter": "🯱",
+      "expectedPrimaryHandlerCursorUTF16": 2,
+      "setup": "genuine parser reaches the original registered handler after consuming its first codepoint; no synthetic parser or replaced scanner"
+    },
+    {
+      "profile": "private",
+      "name": "script-continuation",
+      "entry": "actual-parser",
+      "source": "x^1,234",
+      "tex": "x^1,234",
+      "display": false,
+      "font": "",
+      "expectedFirstCharacter": "x",
+      "expectedPrimaryHandlerCursorUTF16": null,
+      "setup": "genuine parser reaches the original registered handler after consuming its first codepoint; no synthetic parser or replaced scanner"
+    },
+    {
+      "profile": "private",
+      "name": "registered-number-tail",
+      "entry": "actual-parser",
+      "source": "\\numtail y",
+      "tex": "\\numtail y",
+      "display": false,
+      "font": "",
+      "expectedFirstCharacter": "\\",
+      "expectedPrimaryHandlerCursorUTF16": null,
+      "setup": "genuine parser reaches the original registered handler after consuming its first codepoint; no synthetic parser or replaced scanner",
+      "registration": {
+        "name": "numtail",
+        "body": "12{,}345.6",
+        "arguments": 0
+      }
+    },
+    {
+      "profile": "private",
+      "name": "other-osmanya-bold",
+      "entry": "Other",
+      "source": "𐒠TAIL",
+      "tex": "\\bf 𐒠TAIL",
+      "display": false,
+      "font": "bold",
+      "expectedFirstCharacter": "𐒠",
+      "expectedPrimaryHandlerCursorUTF16": 6,
+      "setup": "genuine parser reaches the original registered handler after consuming its first codepoint; no synthetic parser or replaced scanner"
+    }
+  ]
+}

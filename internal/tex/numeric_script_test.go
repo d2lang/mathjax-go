@@ -43,7 +43,7 @@ func TestNumericScriptPinnedReferences(t *testing.T) {
 		}
 	}
 	readArgumentJSON(t, "../../testdata/numeric_script_boundaries.json", &b)
-	if f.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || len(f.Cases) != 120 || len(b.Cases) != 24 || b.AcceptedBase != "6a3573f7f15fc67b5abde6fdf8b548e89d6c7e48" {
+	if f.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || len(f.Cases) != 120 || len(b.Cases) != 4 || b.AcceptedBase != "6a3573f7f15fc67b5abde6fdf8b548e89d6c7e48" {
 		t.Fatal("unbound numeric references")
 	}
 	counts := map[string]int{}
@@ -112,14 +112,6 @@ func TestNumericScriptPinnedReferences(t *testing.T) {
 				}
 				counts[q.Kind]++
 				switch q.Kind {
-				case "unchanged-scanner":
-					if q.CandidateSVGSHA256 != q.AcceptedSVGSHA256 || !reflect.DeepEqual(q.CandidateTree, q.AcceptedTree) {
-						t.Fatal("unchanged scanner boundary changed")
-					}
-				case "initial-split-with-retained-comma-scanner":
-					if q.CandidateSVGSHA256 == q.AcceptedSVGSHA256 || q.CandidateSVGSHA256 == c.SVGSHA256 || reflect.DeepEqual(q.CandidateTree, q.AcceptedTree) {
-						t.Fatal("comma observation lost its partial-change boundary")
-					}
 				case "inherited-prime-pseudoscript":
 					if q.CandidateSVGSHA256 != c.SVGSHA256 || len(q.Fields) != 1 {
 						t.Fatal("prime SVG/field scope changed")
@@ -178,7 +170,7 @@ func TestNumericScriptPinnedReferences(t *testing.T) {
 			}
 		})
 	}
-	if !reflect.DeepEqual(counts, map[string]int{"raw-primary": 96, "inherited-prime-pseudoscript": 4, "initial-split-with-retained-comma-scanner": 4, "unchanged-scanner": 16}) {
+	if !reflect.DeepEqual(counts, map[string]int{"raw-primary": 116, "inherited-prime-pseudoscript": 4}) {
 		t.Fatal("reference classification changed", counts)
 	}
 }

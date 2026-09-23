@@ -10,6 +10,7 @@ package tex
 
 import (
 	"fmt"
+	"regexp"
 	"strconv"
 	"strings"
 	"unicode"
@@ -311,6 +312,10 @@ func (p *parser) parseRowWithInfix(terminator byte, stopRight, infixPending bool
 	return nodes, "", nil
 }
 
+// The pinned TeX digits option matches the original source, including braces
+// in thousands separators; only the token text removes those braces.
+var ordinaryNumberPattern = regexp.MustCompile(`^(?:[0-9]+(?:\{,\}[0-9]{3})*(?:\.[0-9]*)?|\.[0-9]+)`)
+
 func (p *parser) parseCharacter() *mml.Node {
 	r := p.consumeRune()
 	if unicode.IsLetter(r) {
@@ -333,7 +338,38 @@ func (p *parser) parseCharacter() *mml.Node {
 		}
 		return ambientLiteralToken(identifier, r)
 	}
-	if unicode.IsDigit(r) || ((r == '.' || r == ',') && p.pos < len(p.source) && unicode.IsDigit(p.peekRune())) {
+	if r >= '0' && r <= '9' || r == '.' || r == ',' {
+		start := p.pos - 1
+		if number := ordinaryNumberPattern.FindString(p.source[start:]); number != "" {
+			p.pos = start + len(number)
+			text := strings.NewReplacer("{", "", "}", "").Replace(number)
+			return ambientFontToken(token("mn", text))
+		}
+		// ParseMethods.digit uses getFontDef even when matching fails. Unlike
+		// BaseConfiguration.Other, it does not register fixStretchy.
+		return ambientFontToken(token("mo", string(r)))
+	}
+	if unicode.IsDigit(r) {
+		// Non-ASCII Nd characters enter Other individually. Reuse its pinned
+		// range Kind and the existing range-variant/font policy, not a run of
+		// Unicode digits. Other token classes remain outside this branch.
+		for _, interval := range mjOperatorRanges {
+			if int(r) < interval.First {
+				break
+			}
+			if int(r) <= interval.Last {
+				n := token(interval.Kind, string(r))
+				if p.activeFont != "" {
+					n.Attributes.Set("mathvariant", p.activeFont)
+				}
+				// Other's range override follows the creating token factory.
+				// Its existing done marker prevents a second vector application.
+				p.applyVectorFactory(n)
+				return ambientLiteralToken(n, r)
+			}
+		}
+		// A missing pinned range throws in primary Other, without an SVG.
+		// Preserve the accepted Go fallback instead of inventing that error.
 		start := p.pos - utf8.RuneLen(r)
 		for p.pos < len(p.source) {
 			next := p.peekRune()

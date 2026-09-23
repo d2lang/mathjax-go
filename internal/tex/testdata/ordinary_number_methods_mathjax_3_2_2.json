@@ -1,0 +1,725 @@
+{
+  "mathjaxGitCommit": "ad8f5c21cb810236551da8c6512ba733e67357ee",
+  "cases": [
+    {
+      "name": "digit-start",
+      "character": "1",
+      "handler": "digit",
+      "before": {
+        "source": "1234TAIL",
+        "cursorUTF16": 1,
+        "remaining": "234TAIL",
+        "environment": {
+          "display": false
+        },
+        "environmentIdentity": 1,
+        "configurationIdentity": 2,
+        "macroCount": 0
+      },
+      "after": {
+        "source": "1234TAIL",
+        "cursorUTF16": 4,
+        "remaining": "TAIL",
+        "environment": {
+          "display": false
+        },
+        "environmentIdentity": 1,
+        "configurationIdentity": 2,
+        "macroCount": 0
+      },
+      "createdToken": {
+        "kind": "mn",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "text",
+            "text": "1234",
+            "attributes": [],
+            "properties": [],
+            "children": []
+          }
+        ]
+      },
+      "pushedToken": {
+        "kind": "mn",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "text",
+            "text": "1234",
+            "attributes": [],
+            "properties": [],
+            "children": []
+          }
+        ]
+      },
+      "sameCreatedAndPushedIdentity": true
+    },
+    {
+      "name": "digit-comma-tail",
+      "character": "1",
+      "handler": "digit",
+      "before": {
+        "source": "1,234TAIL",
+        "cursorUTF16": 1,
+        "remaining": ",234TAIL",
+        "environment": {
+          "display": false
+        },
+        "environmentIdentity": 1,
+        "configurationIdentity": 2,
+        "macroCount": 0
+      },
+      "after": {
+        "source": "1,234TAIL",
+        "cursorUTF16": 1,
+        "remaining": ",234TAIL",
+        "environment": {
+          "display": false
+        },
+        "environmentIdentity": 1,
+        "configurationIdentity": 2,
+        "macroCount": 0
+      },
+      "createdToken": {
+        "kind": "mn",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "text",
+            "text": "1",
+            "attributes": [],
+            "properties": [],
+            "children": []
+          }
+        ]
+      },
+      "pushedToken": {
+        "kind": "mn",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "text",
+            "text": "1",
+            "attributes": [],
+            "properties": [],
+            "children": []
+          }
+        ]
+      },
+      "sameCreatedAndPushedIdentity": true
+    },
+    {
+      "name": "digit-braced-length",
+      "character": "1",
+      "handler": "digit",
+      "before": {
+        "source": "12{,}345.6TAIL",
+        "cursorUTF16": 1,
+        "remaining": "2{,}345.6TAIL",
+        "environment": {
+          "display": false
+        },
+        "environmentIdentity": 1,
+        "configurationIdentity": 2,
+        "macroCount": 0
+      },
+      "after": {
+        "source": "12{,}345.6TAIL",
+        "cursorUTF16": 10,
+        "remaining": "TAIL",
+        "environment": {
+          "display": false
+        },
+        "environmentIdentity": 1,
+        "configurationIdentity": 2,
+        "macroCount": 0
+      },
+      "createdToken": {
+        "kind": "mn",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "text",
+            "text": "12,345.6",
+            "attributes": [],
+            "properties": [],
+            "children": []
+          }
+        ]
+      },
+      "pushedToken": {
+        "kind": "mn",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "text",
+            "text": "12,345.6",
+            "attributes": [],
+            "properties": [],
+            "children": []
+          }
+        ]
+      },
+      "sameCreatedAndPushedIdentity": true
+    },
+    {
+      "name": "digit-malformed-group",
+      "character": "1",
+      "handler": "digit",
+      "before": {
+        "source": "1{,}23TAIL",
+        "cursorUTF16": 1,
+        "remaining": "{,}23TAIL",
+        "environment": {
+          "display": false
+        },
+        "environmentIdentity": 1,
+        "configurationIdentity": 2,
+        "macroCount": 0
+      },
+      "after": {
+        "source": "1{,}23TAIL",
+        "cursorUTF16": 1,
+        "remaining": "{,}23TAIL",
+        "environment": {
+          "display": false
+        },
+        "environmentIdentity": 1,
+        "configurationIdentity": 2,
+        "macroCount": 0
+      },
+      "createdToken": {
+        "kind": "mn",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "text",
+            "text": "1",
+            "attributes": [],
+            "properties": [],
+            "children": []
+          }
+        ]
+      },
+      "pushedToken": {
+        "kind": "mn",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "text",
+            "text": "1",
+            "attributes": [],
+            "properties": [],
+            "children": []
+          }
+        ]
+      },
+      "sameCreatedAndPushedIdentity": true
+    },
+    {
+      "name": "digit-dot",
+      "character": ".",
+      "handler": "digit",
+      "before": {
+        "source": ".TAIL",
+        "cursorUTF16": 1,
+        "remaining": "TAIL",
+        "environment": {
+          "display": false
+        },
+        "environmentIdentity": 1,
+        "configurationIdentity": 2,
+        "macroCount": 0
+      },
+      "after": {
+        "source": ".TAIL",
+        "cursorUTF16": 1,
+        "remaining": "TAIL",
+        "environment": {
+          "display": false
+        },
+        "environmentIdentity": 1,
+        "configurationIdentity": 2,
+        "macroCount": 0
+      },
+      "createdToken": {
+        "kind": "mo",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "text",
+            "text": ".",
+            "attributes": [],
+            "properties": [],
+            "children": []
+          }
+        ]
+      },
+      "pushedToken": {
+        "kind": "mo",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "text",
+            "text": ".",
+            "attributes": [],
+            "properties": [],
+            "children": []
+          }
+        ]
+      },
+      "sameCreatedAndPushedIdentity": true
+    },
+    {
+      "name": "digit-comma",
+      "character": ",",
+      "handler": "digit",
+      "before": {
+        "source": ",TAIL",
+        "cursorUTF16": 1,
+        "remaining": "TAIL",
+        "environment": {
+          "display": false
+        },
+        "environmentIdentity": 1,
+        "configurationIdentity": 2,
+        "macroCount": 0
+      },
+      "after": {
+        "source": ",TAIL",
+        "cursorUTF16": 1,
+        "remaining": "TAIL",
+        "environment": {
+          "display": false
+        },
+        "environmentIdentity": 1,
+        "configurationIdentity": 2,
+        "macroCount": 0
+      },
+      "createdToken": {
+        "kind": "mo",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "text",
+            "text": ",",
+            "attributes": [],
+            "properties": [],
+            "children": []
+          }
+        ]
+      },
+      "pushedToken": {
+        "kind": "mo",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "text",
+            "text": ",",
+            "attributes": [],
+            "properties": [],
+            "children": []
+          }
+        ]
+      },
+      "sameCreatedAndPushedIdentity": true
+    },
+    {
+      "name": "digit-leading-decimal",
+      "character": ".",
+      "handler": "digit",
+      "before": {
+        "source": ".25TAIL",
+        "cursorUTF16": 1,
+        "remaining": "25TAIL",
+        "environment": {
+          "display": false
+        },
+        "environmentIdentity": 1,
+        "configurationIdentity": 2,
+        "macroCount": 0
+      },
+      "after": {
+        "source": ".25TAIL",
+        "cursorUTF16": 3,
+        "remaining": "TAIL",
+        "environment": {
+          "display": false
+        },
+        "environmentIdentity": 1,
+        "configurationIdentity": 2,
+        "macroCount": 0
+      },
+      "createdToken": {
+        "kind": "mn",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "text",
+            "text": ".25",
+            "attributes": [],
+            "properties": [],
+            "children": []
+          }
+        ]
+      },
+      "pushedToken": {
+        "kind": "mn",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "text",
+            "text": ".25",
+            "attributes": [],
+            "properties": [],
+            "children": []
+          }
+        ]
+      },
+      "sameCreatedAndPushedIdentity": true
+    },
+    {
+      "name": "digit-font",
+      "character": "1",
+      "handler": "digit",
+      "before": {
+        "source": "\\bf 12.3TAIL",
+        "cursorUTF16": 5,
+        "remaining": "2.3TAIL",
+        "environment": {
+          "display": false,
+          "font": "bold"
+        },
+        "environmentIdentity": 1,
+        "configurationIdentity": 2,
+        "macroCount": 0
+      },
+      "after": {
+        "source": "\\bf 12.3TAIL",
+        "cursorUTF16": 8,
+        "remaining": "TAIL",
+        "environment": {
+          "display": false,
+          "font": "bold"
+        },
+        "environmentIdentity": 1,
+        "configurationIdentity": 2,
+        "macroCount": 0
+      },
+      "createdToken": {
+        "kind": "mn",
+        "text": null,
+        "attributes": [
+          {
+            "name": "mathvariant",
+            "value": "bold"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "text",
+            "text": "12.3",
+            "attributes": [],
+            "properties": [],
+            "children": []
+          }
+        ]
+      },
+      "pushedToken": {
+        "kind": "mn",
+        "text": null,
+        "attributes": [
+          {
+            "name": "mathvariant",
+            "value": "bold"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "text",
+            "text": "12.3",
+            "attributes": [],
+            "properties": [],
+            "children": []
+          }
+        ]
+      },
+      "sameCreatedAndPushedIdentity": true
+    },
+    {
+      "name": "other-arabic",
+      "character": "١",
+      "handler": "Other",
+      "before": {
+        "source": "١TAIL",
+        "cursorUTF16": 1,
+        "remaining": "TAIL",
+        "environment": {
+          "display": false
+        },
+        "environmentIdentity": 1,
+        "configurationIdentity": 2,
+        "macroCount": 0
+      },
+      "after": {
+        "source": "١TAIL",
+        "cursorUTF16": 1,
+        "remaining": "TAIL",
+        "environment": {
+          "display": false
+        },
+        "environmentIdentity": 1,
+        "configurationIdentity": 2,
+        "macroCount": 0
+      },
+      "createdToken": {
+        "kind": "mi",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "text",
+            "text": "١",
+            "attributes": [],
+            "properties": [],
+            "children": []
+          }
+        ]
+      },
+      "pushedToken": {
+        "kind": "mi",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "text",
+            "text": "١",
+            "attributes": [],
+            "properties": [],
+            "children": []
+          }
+        ]
+      },
+      "sameCreatedAndPushedIdentity": true
+    },
+    {
+      "name": "other-fullwidth",
+      "character": "１",
+      "handler": "Other",
+      "before": {
+        "source": "１TAIL",
+        "cursorUTF16": 1,
+        "remaining": "TAIL",
+        "environment": {
+          "display": false
+        },
+        "environmentIdentity": 1,
+        "configurationIdentity": 2,
+        "macroCount": 0
+      },
+      "after": {
+        "source": "１TAIL",
+        "cursorUTF16": 1,
+        "remaining": "TAIL",
+        "environment": {
+          "display": false
+        },
+        "environmentIdentity": 1,
+        "configurationIdentity": 2,
+        "macroCount": 0
+      },
+      "createdToken": {
+        "kind": "mi",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "text",
+            "text": "１",
+            "attributes": [],
+            "properties": [],
+            "children": []
+          }
+        ]
+      },
+      "pushedToken": {
+        "kind": "mi",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "text",
+            "text": "１",
+            "attributes": [],
+            "properties": [],
+            "children": []
+          }
+        ]
+      },
+      "sameCreatedAndPushedIdentity": true
+    },
+    {
+      "name": "other-math-bold",
+      "character": "𝟏",
+      "handler": "Other",
+      "before": {
+        "source": "𝟏TAIL",
+        "cursorUTF16": 2,
+        "remaining": "TAIL",
+        "environment": {
+          "display": false
+        },
+        "environmentIdentity": 1,
+        "configurationIdentity": 2,
+        "macroCount": 0
+      },
+      "after": {
+        "source": "𝟏TAIL",
+        "cursorUTF16": 2,
+        "remaining": "TAIL",
+        "environment": {
+          "display": false
+        },
+        "environmentIdentity": 1,
+        "configurationIdentity": 2,
+        "macroCount": 0
+      },
+      "createdToken": {
+        "kind": "mn",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "text",
+            "text": "𝟏",
+            "attributes": [],
+            "properties": [],
+            "children": []
+          }
+        ]
+      },
+      "pushedToken": {
+        "kind": "mn",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "text",
+            "text": "𝟏",
+            "attributes": [],
+            "properties": [],
+            "children": []
+          }
+        ]
+      },
+      "sameCreatedAndPushedIdentity": true
+    },
+    {
+      "name": "other-osmanya-bold",
+      "character": "𐒠",
+      "handler": "Other",
+      "before": {
+        "source": "\\bf 𐒠TAIL",
+        "cursorUTF16": 6,
+        "remaining": "TAIL",
+        "environment": {
+          "display": false,
+          "font": "bold"
+        },
+        "environmentIdentity": 1,
+        "configurationIdentity": 2,
+        "macroCount": 0
+      },
+      "after": {
+        "source": "\\bf 𐒠TAIL",
+        "cursorUTF16": 6,
+        "remaining": "TAIL",
+        "environment": {
+          "display": false,
+          "font": "bold"
+        },
+        "environmentIdentity": 1,
+        "configurationIdentity": 2,
+        "macroCount": 0
+      },
+      "createdToken": {
+        "kind": "mi",
+        "text": null,
+        "attributes": [
+          {
+            "name": "mathvariant",
+            "value": "bold"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "text",
+            "text": "𐒠",
+            "attributes": [],
+            "properties": [],
+            "children": []
+          }
+        ]
+      },
+      "pushedToken": {
+        "kind": "mi",
+        "text": null,
+        "attributes": [
+          {
+            "name": "mathvariant",
+            "value": "normal"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "text",
+            "text": "𐒠",
+            "attributes": [],
+            "properties": [],
+            "children": []
+          }
+        ]
+      },
+      "sameCreatedAndPushedIdentity": true
+    }
+  ]
+}

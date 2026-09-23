@@ -1,0 +1,466 @@
+{
+  "acceptedBase": "bca7909b2de5fc00d0057b24092c31ebd15ac7b6",
+  "cases": {
+    "public-unicode-segmented-inline": {
+      "status": "unsupported-primary-unchanged-Go",
+      "primaryThrown": {
+        "id": null,
+        "message": "Cannot read properties of null (reading '4')",
+        "type": "TypeError"
+      },
+      "baselineSVG": "6557df9b8e6731ee1e5a5c9d9fae0a4d36bff594908edf419af348be053d387a",
+      "baselineTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mn",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "🯱🯲",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "public-unicode-segmented-display": {
+      "status": "unsupported-primary-unchanged-Go",
+      "primaryThrown": {
+        "id": null,
+        "message": "Cannot read properties of null (reading '4')",
+        "type": "TypeError"
+      },
+      "baselineSVG": "6557df9b8e6731ee1e5a5c9d9fae0a4d36bff594908edf419af348be053d387a",
+      "baselineTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": [
+          {
+            "name": "display",
+            "value": "block"
+          }
+        ],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mn",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "🯱🯲",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "public-physics-vector-inline": {
+      "status": "exact-inherited-token-properties",
+      "fields": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "primaryNode": {
+            "kind": "mo",
+            "text": null,
+            "attributes": [
+              {
+                "name": "stretchy",
+                "value": false
+              }
+            ],
+            "properties": [
+              {
+                "name": "mathaccent",
+                "value": true
+              }
+            ],
+            "children": [
+              {
+                "kind": "text",
+                "text": "→",
+                "attributes": [],
+                "properties": [],
+                "children": []
+              }
+            ]
+          },
+          "baselineNode": {
+            "kind": "mo",
+            "text": null,
+            "attributes": [
+              {
+                "name": "stretchy",
+                "value": false
+              }
+            ],
+            "properties": [
+              {
+                "name": "texClass",
+                "value": 0
+              },
+              {
+                "name": "mathaccent",
+                "value": true
+              }
+            ],
+            "children": [
+              {
+                "kind": "text",
+                "text": "→",
+                "attributes": [],
+                "properties": [],
+                "children": []
+              }
+            ]
+          }
+        }
+      ],
+      "baselineFullTreeSHA256": "10566151dfef028ec3650cdfa09f1284f8b93cf1984aec5796696eb39adfb341"
+    },
+    "public-physics-vector-display": {
+      "status": "exact-inherited-token-properties",
+      "fields": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "primaryNode": {
+            "kind": "mo",
+            "text": null,
+            "attributes": [
+              {
+                "name": "stretchy",
+                "value": false
+              }
+            ],
+            "properties": [
+              {
+                "name": "mathaccent",
+                "value": true
+              }
+            ],
+            "children": [
+              {
+                "kind": "text",
+                "text": "→",
+                "attributes": [],
+                "properties": [],
+                "children": []
+              }
+            ]
+          },
+          "baselineNode": {
+            "kind": "mo",
+            "text": null,
+            "attributes": [
+              {
+                "name": "stretchy",
+                "value": false
+              }
+            ],
+            "properties": [
+              {
+                "name": "texClass",
+                "value": 0
+              },
+              {
+                "name": "mathaccent",
+                "value": true
+              }
+            ],
+            "children": [
+              {
+                "kind": "text",
+                "text": "→",
+                "attributes": [],
+                "properties": [],
+                "children": []
+              }
+            ]
+          }
+        }
+      ],
+      "baselineFullTreeSHA256": "2e825b8cee17bf6442d0914a1d80993f66d748210dae67139ff9793806c7fd23"
+    },
+    "public-prime-after-inline": {
+      "status": "exact-inherited-token-properties",
+      "fields": [
+        {
+          "path": [
+            0,
+            2,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            1
+          ],
+          "primaryNode": {
+            "kind": "mo",
+            "text": null,
+            "attributes": [],
+            "properties": [
+              {
+                "name": "variantForm",
+                "value": true
+              },
+              {
+                "name": "pseudoscript",
+                "value": false
+              }
+            ],
+            "children": [
+              {
+                "kind": "text",
+                "text": "′",
+                "attributes": [],
+                "properties": [],
+                "children": []
+              }
+            ]
+          },
+          "baselineNode": {
+            "kind": "mo",
+            "text": null,
+            "attributes": [],
+            "properties": [
+              {
+                "name": "variantForm",
+                "value": true
+              }
+            ],
+            "children": [
+              {
+                "kind": "text",
+                "text": "′",
+                "attributes": [],
+                "properties": [],
+                "children": []
+              }
+            ]
+          }
+        }
+      ],
+      "baselineFullTreeSHA256": "c939e368b98b8eba19424169e38a89aa8fae95ef5c1e2f01060cfd0620a3b3eb"
+    },
+    "public-prime-after-display": {
+      "status": "exact-inherited-token-properties",
+      "fields": [
+        {
+          "path": [
+            0,
+            2,
+            1
+          ],
+          "baselinePath": [
+            0,
+            0,
+            1
+          ],
+          "primaryNode": {
+            "kind": "mo",
+            "text": null,
+            "attributes": [],
+            "properties": [
+              {
+                "name": "variantForm",
+                "value": true
+              },
+              {
+                "name": "pseudoscript",
+                "value": false
+              }
+            ],
+            "children": [
+              {
+                "kind": "text",
+                "text": "′",
+                "attributes": [],
+                "properties": [],
+                "children": []
+              }
+            ]
+          },
+          "baselineNode": {
+            "kind": "mo",
+            "text": null,
+            "attributes": [],
+            "properties": [
+              {
+                "name": "variantForm",
+                "value": true
+              }
+            ],
+            "children": [
+              {
+                "kind": "text",
+                "text": "′",
+                "attributes": [],
+                "properties": [],
+                "children": []
+              }
+            ]
+          }
+        }
+      ],
+      "baselineFullTreeSHA256": "af3871c400c00daa1fcf270b6234ec92ef32e3ca64bc7f258908dba26603b29f"
+    },
+    "private-other-segmented": {
+      "status": "unsupported-primary-unchanged-Go",
+      "primaryThrown": {
+        "id": null,
+        "message": "Cannot read properties of null (reading '4')",
+        "type": "TypeError"
+      },
+      "baselineSVG": "f5f175a6d4e766253fe8cb115bedd63d1a193df954dfb8340eaa8769ddb233b9",
+      "baselineTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": [],
+        "properties": [],
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": [],
+            "properties": [],
+            "children": [
+              {
+                "kind": "mn",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "🯱",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "T",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "A",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "I",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "kind": "mi",
+                "text": null,
+                "attributes": [],
+                "properties": [],
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "L",
+                    "attributes": [],
+                    "properties": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
