@@ -706,7 +706,7 @@
                                 "children": [
                                   {
                                     "kind": "text",
-                                    "text": "(a b)",
+                                    "text": "(a\u00a0b)",
                                     "attributes": {},
                                     "properties": {},
                                     "children": []
@@ -915,112 +915,6 @@
                     "attributes": {},
                     "properties": {},
                     "children": []
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      }
-    },
-    "textup-inline": {
-      "svgSHA256": "f34bcee2d7b6f24c59f5135728a7130bfd359651ffa51996360fc4aa4e91b742",
-      "tree": {
-        "kind": "math",
-        "text": null,
-        "attributes": {},
-        "properties": {},
-        "children": [
-          {
-            "kind": "inferredMrow",
-            "text": null,
-            "attributes": {},
-            "properties": {},
-            "children": [
-              {
-                "kind": "merror",
-                "text": null,
-                "attributes": {
-                  "data-mjx-error": "Undefined control sequence \\textup"
-                },
-                "properties": {},
-                "children": [
-                  {
-                    "kind": "inferredMrow",
-                    "text": null,
-                    "attributes": {},
-                    "properties": {},
-                    "children": [
-                      {
-                        "kind": "mtext",
-                        "text": null,
-                        "attributes": {},
-                        "properties": {},
-                        "children": [
-                          {
-                            "kind": "text",
-                            "text": "Undefined control sequence \\textup",
-                            "attributes": {},
-                            "properties": {},
-                            "children": []
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      }
-    },
-    "textup-display": {
-      "svgSHA256": "f34bcee2d7b6f24c59f5135728a7130bfd359651ffa51996360fc4aa4e91b742",
-      "tree": {
-        "kind": "math",
-        "text": null,
-        "attributes": {
-          "display": "block"
-        },
-        "properties": {},
-        "children": [
-          {
-            "kind": "inferredMrow",
-            "text": null,
-            "attributes": {},
-            "properties": {},
-            "children": [
-              {
-                "kind": "merror",
-                "text": null,
-                "attributes": {
-                  "data-mjx-error": "Undefined control sequence \\textup"
-                },
-                "properties": {},
-                "children": [
-                  {
-                    "kind": "inferredMrow",
-                    "text": null,
-                    "attributes": {},
-                    "properties": {},
-                    "children": [
-                      {
-                        "kind": "mtext",
-                        "text": null,
-                        "attributes": {},
-                        "properties": {},
-                        "children": [
-                          {
-                            "kind": "text",
-                            "text": "Undefined control sequence \\textup",
-                            "attributes": {},
-                            "properties": {},
-                            "children": []
-                          }
-                        ]
-                      }
-                    ]
                   }
                 ]
               }

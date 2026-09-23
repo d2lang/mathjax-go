@@ -43,7 +43,7 @@ func TestInternalTextPinnedReferences(t *testing.T) {
 			t.Fatal(err)
 		}
 	}
-	if fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || len(fixture.Cases) != 90 || bounds.Baseline != "ab6c3c973d305288864a96a8bbab5d5471762c6b" || len(bounds.UnchangedCallers) != 20 {
+	if fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || len(fixture.Cases) != 90 || bounds.Baseline != "ab6c3c973d305288864a96a8bbab5d5471762c6b" || len(bounds.UnchangedCallers) != 18 {
 		t.Fatal("unbound text-box references")
 	}
 	primary, unchanged := 0, 0
@@ -85,7 +85,7 @@ func TestInternalTextPinnedReferences(t *testing.T) {
 			}
 		})
 	}
-	if primary != 70 || unchanged != 20 {
+	if primary != 72 || unchanged != 18 {
 		t.Fatal("changed primary/caller coverage")
 	}
 }
