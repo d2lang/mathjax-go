@@ -548,7 +548,7 @@ func (p *parser) sqrt(name string) ([]*mml.Node, error) {
 	if !present {
 		return []*mml.Node{node("msqrt", radical)}, nil
 	}
-	root, err := p.parseString(index)
+	root, err := p.parseRootIndex(index)
 	if err != nil {
 		return nil, err
 	}
@@ -566,7 +566,7 @@ func (p *parser) root(name string) ([]*mml.Node, error) {
 			if err != nil {
 				return nil, err
 			}
-			root, err := p.parseString(index)
+			root, err := p.parseRootIndex(index)
 			if err != nil {
 				return nil, err
 			}
@@ -1850,7 +1850,8 @@ func (p *parser) vectorAccent(name string) ([]*mml.Node, error) {
 	// the vector argument; the accent is outside VectorBold's font reset.
 	sub := &parser{source: "\\" + accent + "{\\" + bold + "{" + raw + "}}", state: p.state, display: p.display,
 		multiLetterFont: p.multiLetterFont, activeFont: p.activeFont,
-		vectorFactory: p.vectorFactory, vectorFont: p.vectorFont, vectorStar: p.vectorStar, vectorAlias: true}
+		vectorFactory: p.vectorFactory, vectorFont: p.vectorFont, vectorStar: p.vectorStar, vectorAlias: true,
+		genfracPalette: p.genfracPalette}
 	children, _, err := sub.parseRow(0, false)
 	if err != nil {
 		return nil, err

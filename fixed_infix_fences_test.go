@@ -51,7 +51,7 @@ func TestFixedInfixFencePinnedReferences(t *testing.T) {
 	}
 	read("testdata/fixed_infix_fences_mathjax_3_2_2.json", &fixture)
 	read("testdata/fixed_infix_fences_boundaries.json", &boundaries)
-	if fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || len(fixture.Cases) != 48 || boundaries.Baseline != "06fcb3e2df8c5800d3b26cc7e1586c2ff59bd041" || len(boundaries.MetadataBoundaries) != 8 {
+	if fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || len(fixture.Cases) != 48 || boundaries.Baseline != "06fcb3e2df8c5800d3b26cc7e1586c2ff59bd041" || len(boundaries.MetadataBoundaries) != 2 {
 		t.Fatal("unbound fixed-fence reference corpus")
 	}
 	metadataCount, fixedCount := 0, 0
@@ -60,7 +60,7 @@ func TestFixedInfixFencePinnedReferences(t *testing.T) {
 			wantSVG, wantTree := c.SVGSHA256, c.PropertiesTree
 			if b, ok := boundaries.MetadataBoundaries[c.Name]; ok {
 				metadataCount++
-				if !(strings.HasPrefix(c.Name, "atop-control-") || strings.HasPrefix(c.Name, "genfrac-")) || b.TeX != c.TeX || b.Display != c.Display || b.PrimarySHA256 != c.SVGSHA256 || b.BaselineSHA256 != c.SVGSHA256 {
+				if !strings.HasPrefix(c.Name, "atop-control-") || b.TeX != c.TeX || b.Display != c.Display || b.PrimarySHA256 != c.SVGSHA256 || b.BaselineSHA256 != c.SVGSHA256 {
 					t.Fatal("unexpected preexisting metadata boundary")
 				}
 				for _, a := range b.Adjustments {
@@ -122,7 +122,7 @@ func TestFixedInfixFencePinnedReferences(t *testing.T) {
 			}
 		})
 	}
-	if metadataCount != 8 || fixedCount != 30 {
+	if metadataCount != 2 || fixedCount != 30 {
 		t.Fatal("reference classification changed", metadataCount, fixedCount)
 	}
 }

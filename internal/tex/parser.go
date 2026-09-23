@@ -75,6 +75,7 @@ type parser struct {
 	vectorFont           string
 	vectorStar           bool
 	vectorAlias          bool
+	genfracPalette       bool
 }
 
 // parseRow corresponds to TexParser.Parse plus the base Stack reduction.  A
@@ -541,13 +542,21 @@ func (p *parser) parseArgument(name string) (*mml.Node, error) {
 	if err != nil {
 		return nil, err
 	}
+	if p.genfracPalette {
+		// TexParser.ParseArg creates a genuine child parser. Only Genfrac's
+		// palette region opts into its independent expansion count.
+		count := p.state.macroCount
+		p.state.macroCount = 0
+		defer func() { p.state.macroCount = count }()
+	}
 	return p.parseString(raw)
 }
 
 func (p *parser) parseString(source string) (*mml.Node, error) {
 	sub := &parser{source: source, state: p.state, display: p.display,
 		activeFont: p.activeFont, vectorFactory: p.vectorFactory,
-		vectorFont: p.vectorFont, vectorStar: p.vectorStar, vectorAlias: p.vectorAlias}
+		vectorFont: p.vectorFont, vectorStar: p.vectorStar, vectorAlias: p.vectorAlias,
+		genfracPalette: p.genfracPalette}
 	if p.vectorFactory || p.vectorAlias {
 		sub.multiLetterFont = p.multiLetterFont
 	}
@@ -563,6 +572,12 @@ func (p *parser) parseString(source string) (*mml.Node, error) {
 // letter run into one mi and noAutoOP prevents a multi-letter roman identifier
 // from being reclassified as a named operator.
 func (p *parser) parseMathFontString(source, variant string, ambientOnly bool) (*mml.Node, error) {
+	if p.genfracPalette {
+		// MathFont creates a genuine child TexParser with its own count.
+		count := p.state.macroCount
+		p.state.macroCount = 0
+		defer func() { p.state.macroCount = count }()
+	}
 	sub := &parser{
 		source:          source,
 		state:           p.state,
@@ -573,6 +588,7 @@ func (p *parser) parseMathFontString(source, variant string, ambientOnly bool) (
 		vectorFont:      p.vectorFont,
 		vectorStar:      p.vectorStar,
 		vectorAlias:     p.vectorAlias,
+		genfracPalette:  p.genfracPalette,
 	}
 	children, _, err := sub.parseRow(0, false)
 	if err != nil {
