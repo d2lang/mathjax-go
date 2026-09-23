@@ -5,6 +5,20 @@ package tex
 
 import "github.com/d2lang/mathjax-go/internal/mml"
 
+// Superscript and Subscript call GetNext once on entry and insert a space
+// after an immediate ASCII digit, before checking the base's occupied slots.
+// Keep this out of the pending argument loop: font/comment/macro continuation
+// must still use the ordinary number scanner. Prime uses the same GetNext
+// whitespace set; generic row and argument whitespace remain unchanged.
+func (p *parser) scriptInitialLookahead() {
+	for p.pos < len(p.source) && isPrimeSpace(p.peekRune()) {
+		p.consumeRune()
+	}
+	if p.pos < len(p.source) && p.source[p.pos] >= '0' && p.source[p.pos] <= '9' {
+		p.source = p.source[:p.pos+1] + " " + p.source[p.pos+1:]
+	}
+}
+
 func (a *scriptAttachment) missingOpen() error {
 	if a.marker == '_' {
 		return texError("MissingOpenForSub", "Missing open brace for subscript")
@@ -52,7 +66,7 @@ func (p *parser) parseScriptArgument(attachment *scriptAttachment, font string) 
 		}
 		if c := p.source[p.pos]; c == '^' || c == '_' {
 			p.pos++
-			p.skipSpaces()
+			p.scriptInitialLookahead()
 			base := attachment.pendingBase()
 			moves, _ := base.Property("movesupsub")
 			if _, prepareErr := prepareScriptAttachment(base, c, limitsTruthy(moves)); prepareErr != nil {

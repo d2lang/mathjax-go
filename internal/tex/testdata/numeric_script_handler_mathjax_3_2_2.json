@@ -1,0 +1,3657 @@
+{
+  "assetsSHA256": {
+    "polyfills.js": "7fe1d048c78b0e09854c1259f7413868a51cc8f0c822489eb1ac36ae6c85ce01",
+    "mathjax.js": "cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869",
+    "setup.js": "a52cb0bbabfbd7796b9fedd793b9386c474e3123e788ee151cbe47ca1fa6e881"
+  },
+  "node": "v24.19.0",
+  "rows": [
+    {
+      "marker": "^",
+      "tail": "12",
+      "occupied": false,
+      "beforeBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "afterBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "sourceAfter": "1 2",
+      "cursorUTF16": 0,
+      "remaining": "1 2",
+      "error": null,
+      "prepared": {
+        "kind": "msubsup",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "x",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "reusedBase": false,
+      "preparedOwnsOriginalBase": true
+    },
+    {
+      "marker": "^",
+      "tail": "12",
+      "occupied": true,
+      "beforeBase": {
+        "kind": "msubsup",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "x",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          },
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "i",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          },
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "n",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "afterBase": {
+        "kind": "msubsup",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "x",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          },
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "i",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          },
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "n",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "sourceAfter": "1 2",
+      "cursorUTF16": 0,
+      "remaining": "1 2",
+      "error": {
+        "id": "DoubleExponent",
+        "message": "Double exponent: use braces to clarify"
+      },
+      "prepared": null,
+      "reusedBase": null,
+      "preparedOwnsOriginalBase": null
+    },
+    {
+      "marker": "^",
+      "tail": "1.25",
+      "occupied": false,
+      "beforeBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "afterBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "sourceAfter": "1 .25",
+      "cursorUTF16": 0,
+      "remaining": "1 .25",
+      "error": null,
+      "prepared": {
+        "kind": "msubsup",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "x",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "reusedBase": false,
+      "preparedOwnsOriginalBase": true
+    },
+    {
+      "marker": "^",
+      "tail": ".25",
+      "occupied": false,
+      "beforeBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "afterBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "sourceAfter": ".25",
+      "cursorUTF16": 0,
+      "remaining": ".25",
+      "error": null,
+      "prepared": {
+        "kind": "msubsup",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "x",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "reusedBase": false,
+      "preparedOwnsOriginalBase": true
+    },
+    {
+      "marker": "^",
+      "tail": "1,234",
+      "occupied": false,
+      "beforeBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "afterBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "sourceAfter": "1 ,234",
+      "cursorUTF16": 0,
+      "remaining": "1 ,234",
+      "error": null,
+      "prepared": {
+        "kind": "msubsup",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "x",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "reusedBase": false,
+      "preparedOwnsOriginalBase": true
+    },
+    {
+      "marker": "^",
+      "tail": "+12",
+      "occupied": false,
+      "beforeBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "afterBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "sourceAfter": "+12",
+      "cursorUTF16": 0,
+      "remaining": "+12",
+      "error": null,
+      "prepared": {
+        "kind": "msubsup",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "x",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "reusedBase": false,
+      "preparedOwnsOriginalBase": true
+    },
+    {
+      "marker": "^",
+      "tail": "-12",
+      "occupied": false,
+      "beforeBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "afterBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "sourceAfter": "-12",
+      "cursorUTF16": 0,
+      "remaining": "-12",
+      "error": null,
+      "prepared": {
+        "kind": "msubsup",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "x",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "reusedBase": false,
+      "preparedOwnsOriginalBase": true
+    },
+    {
+      "marker": "^",
+      "tail": " 12",
+      "occupied": false,
+      "beforeBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "afterBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "sourceAfter": " 1 2",
+      "cursorUTF16": 1,
+      "remaining": "1 2",
+      "error": null,
+      "prepared": {
+        "kind": "msubsup",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "x",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "reusedBase": false,
+      "preparedOwnsOriginalBase": true
+    },
+    {
+      "marker": "^",
+      "tail": "\t12",
+      "occupied": false,
+      "beforeBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "afterBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "sourceAfter": "\t1 2",
+      "cursorUTF16": 1,
+      "remaining": "1 2",
+      "error": null,
+      "prepared": {
+        "kind": "msubsup",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "x",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "reusedBase": false,
+      "preparedOwnsOriginalBase": true
+    },
+    {
+      "marker": "^",
+      "tail": "%c\n12",
+      "occupied": false,
+      "beforeBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "afterBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "sourceAfter": "%c\n12",
+      "cursorUTF16": 0,
+      "remaining": "%c\n12",
+      "error": null,
+      "prepared": {
+        "kind": "msubsup",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "x",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "reusedBase": false,
+      "preparedOwnsOriginalBase": true
+    },
+    {
+      "marker": "^",
+      "tail": "\\bf12",
+      "occupied": false,
+      "beforeBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "afterBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "sourceAfter": "\\bf12",
+      "cursorUTF16": 0,
+      "remaining": "\\bf12",
+      "error": null,
+      "prepared": {
+        "kind": "msubsup",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "x",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "reusedBase": false,
+      "preparedOwnsOriginalBase": true
+    },
+    {
+      "marker": "^",
+      "tail": "\\dnum",
+      "occupied": false,
+      "beforeBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "afterBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "sourceAfter": "\\dnum",
+      "cursorUTF16": 0,
+      "remaining": "\\dnum",
+      "error": null,
+      "prepared": {
+        "kind": "msubsup",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "x",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "reusedBase": false,
+      "preparedOwnsOriginalBase": true
+    },
+    {
+      "marker": "^",
+      "tail": "{12}",
+      "occupied": false,
+      "beforeBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "afterBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "sourceAfter": "{12}",
+      "cursorUTF16": 0,
+      "remaining": "{12}",
+      "error": null,
+      "prepared": {
+        "kind": "msubsup",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "x",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "reusedBase": false,
+      "preparedOwnsOriginalBase": true
+    },
+    {
+      "marker": "^",
+      "tail": "１２",
+      "occupied": false,
+      "beforeBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "afterBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "sourceAfter": "１２",
+      "cursorUTF16": 0,
+      "remaining": "１２",
+      "error": null,
+      "prepared": {
+        "kind": "msubsup",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "x",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "reusedBase": false,
+      "preparedOwnsOriginalBase": true
+    },
+    {
+      "marker": "^",
+      "tail": "١٢",
+      "occupied": false,
+      "beforeBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "afterBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "sourceAfter": "١٢",
+      "cursorUTF16": 0,
+      "remaining": "١٢",
+      "error": null,
+      "prepared": {
+        "kind": "msubsup",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "x",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "reusedBase": false,
+      "preparedOwnsOriginalBase": true
+    },
+    {
+      "marker": "^",
+      "tail": "𝟙𝟚",
+      "occupied": false,
+      "beforeBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "afterBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "sourceAfter": "𝟙𝟚",
+      "cursorUTF16": 0,
+      "remaining": "𝟙𝟚",
+      "error": null,
+      "prepared": {
+        "kind": "msubsup",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "x",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "reusedBase": false,
+      "preparedOwnsOriginalBase": true
+    },
+    {
+      "marker": "^",
+      "tail": "",
+      "occupied": false,
+      "beforeBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "afterBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "sourceAfter": "",
+      "cursorUTF16": 0,
+      "remaining": "",
+      "error": null,
+      "prepared": {
+        "kind": "msubsup",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "x",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "reusedBase": false,
+      "preparedOwnsOriginalBase": true
+    },
+    {
+      "marker": "^",
+      "tail": "}",
+      "occupied": false,
+      "beforeBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "afterBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "sourceAfter": "}",
+      "cursorUTF16": 0,
+      "remaining": "}",
+      "error": null,
+      "prepared": {
+        "kind": "msubsup",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "x",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "reusedBase": false,
+      "preparedOwnsOriginalBase": true
+    },
+    {
+      "marker": "^",
+      "tail": "﻿12",
+      "occupied": false,
+      "beforeBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "afterBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "sourceAfter": "﻿1 2",
+      "cursorUTF16": 1,
+      "remaining": "1 2",
+      "error": null,
+      "prepared": {
+        "kind": "msubsup",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "x",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "reusedBase": false,
+      "preparedOwnsOriginalBase": true
+    },
+    {
+      "marker": "^",
+      "tail": "12",
+      "occupied": false,
+      "beforeBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "afterBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "sourceAfter": "12",
+      "cursorUTF16": 0,
+      "remaining": "12",
+      "error": null,
+      "prepared": {
+        "kind": "msubsup",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "x",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "reusedBase": false,
+      "preparedOwnsOriginalBase": true
+    },
+    {
+      "marker": "_",
+      "tail": "12",
+      "occupied": false,
+      "beforeBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "afterBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "sourceAfter": "1 2",
+      "cursorUTF16": 0,
+      "remaining": "1 2",
+      "error": null,
+      "prepared": {
+        "kind": "msubsup",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "x",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "reusedBase": false,
+      "preparedOwnsOriginalBase": true
+    },
+    {
+      "marker": "_",
+      "tail": "12",
+      "occupied": true,
+      "beforeBase": {
+        "kind": "msubsup",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "x",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          },
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "i",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          },
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "n",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "afterBase": {
+        "kind": "msubsup",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "x",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          },
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "i",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          },
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "n",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "sourceAfter": "1 2",
+      "cursorUTF16": 0,
+      "remaining": "1 2",
+      "error": {
+        "id": "DoubleSubscripts",
+        "message": "Double subscripts: use braces to clarify"
+      },
+      "prepared": null,
+      "reusedBase": null,
+      "preparedOwnsOriginalBase": null
+    },
+    {
+      "marker": "_",
+      "tail": "1.25",
+      "occupied": false,
+      "beforeBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "afterBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "sourceAfter": "1 .25",
+      "cursorUTF16": 0,
+      "remaining": "1 .25",
+      "error": null,
+      "prepared": {
+        "kind": "msubsup",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "x",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "reusedBase": false,
+      "preparedOwnsOriginalBase": true
+    },
+    {
+      "marker": "_",
+      "tail": ".25",
+      "occupied": false,
+      "beforeBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "afterBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "sourceAfter": ".25",
+      "cursorUTF16": 0,
+      "remaining": ".25",
+      "error": null,
+      "prepared": {
+        "kind": "msubsup",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "x",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "reusedBase": false,
+      "preparedOwnsOriginalBase": true
+    },
+    {
+      "marker": "_",
+      "tail": "1,234",
+      "occupied": false,
+      "beforeBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "afterBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "sourceAfter": "1 ,234",
+      "cursorUTF16": 0,
+      "remaining": "1 ,234",
+      "error": null,
+      "prepared": {
+        "kind": "msubsup",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "x",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "reusedBase": false,
+      "preparedOwnsOriginalBase": true
+    },
+    {
+      "marker": "_",
+      "tail": "+12",
+      "occupied": false,
+      "beforeBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "afterBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "sourceAfter": "+12",
+      "cursorUTF16": 0,
+      "remaining": "+12",
+      "error": null,
+      "prepared": {
+        "kind": "msubsup",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "x",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "reusedBase": false,
+      "preparedOwnsOriginalBase": true
+    },
+    {
+      "marker": "_",
+      "tail": "-12",
+      "occupied": false,
+      "beforeBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "afterBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "sourceAfter": "-12",
+      "cursorUTF16": 0,
+      "remaining": "-12",
+      "error": null,
+      "prepared": {
+        "kind": "msubsup",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "x",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "reusedBase": false,
+      "preparedOwnsOriginalBase": true
+    },
+    {
+      "marker": "_",
+      "tail": " 12",
+      "occupied": false,
+      "beforeBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "afterBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "sourceAfter": " 1 2",
+      "cursorUTF16": 1,
+      "remaining": "1 2",
+      "error": null,
+      "prepared": {
+        "kind": "msubsup",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "x",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "reusedBase": false,
+      "preparedOwnsOriginalBase": true
+    },
+    {
+      "marker": "_",
+      "tail": "\t12",
+      "occupied": false,
+      "beforeBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "afterBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "sourceAfter": "\t1 2",
+      "cursorUTF16": 1,
+      "remaining": "1 2",
+      "error": null,
+      "prepared": {
+        "kind": "msubsup",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "x",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "reusedBase": false,
+      "preparedOwnsOriginalBase": true
+    },
+    {
+      "marker": "_",
+      "tail": "%c\n12",
+      "occupied": false,
+      "beforeBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "afterBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "sourceAfter": "%c\n12",
+      "cursorUTF16": 0,
+      "remaining": "%c\n12",
+      "error": null,
+      "prepared": {
+        "kind": "msubsup",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "x",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "reusedBase": false,
+      "preparedOwnsOriginalBase": true
+    },
+    {
+      "marker": "_",
+      "tail": "\\bf12",
+      "occupied": false,
+      "beforeBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "afterBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "sourceAfter": "\\bf12",
+      "cursorUTF16": 0,
+      "remaining": "\\bf12",
+      "error": null,
+      "prepared": {
+        "kind": "msubsup",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "x",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "reusedBase": false,
+      "preparedOwnsOriginalBase": true
+    },
+    {
+      "marker": "_",
+      "tail": "\\dnum",
+      "occupied": false,
+      "beforeBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "afterBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "sourceAfter": "\\dnum",
+      "cursorUTF16": 0,
+      "remaining": "\\dnum",
+      "error": null,
+      "prepared": {
+        "kind": "msubsup",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "x",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "reusedBase": false,
+      "preparedOwnsOriginalBase": true
+    },
+    {
+      "marker": "_",
+      "tail": "{12}",
+      "occupied": false,
+      "beforeBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "afterBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "sourceAfter": "{12}",
+      "cursorUTF16": 0,
+      "remaining": "{12}",
+      "error": null,
+      "prepared": {
+        "kind": "msubsup",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "x",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "reusedBase": false,
+      "preparedOwnsOriginalBase": true
+    },
+    {
+      "marker": "_",
+      "tail": "１２",
+      "occupied": false,
+      "beforeBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "afterBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "sourceAfter": "１２",
+      "cursorUTF16": 0,
+      "remaining": "１２",
+      "error": null,
+      "prepared": {
+        "kind": "msubsup",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "x",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "reusedBase": false,
+      "preparedOwnsOriginalBase": true
+    },
+    {
+      "marker": "_",
+      "tail": "١٢",
+      "occupied": false,
+      "beforeBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "afterBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "sourceAfter": "١٢",
+      "cursorUTF16": 0,
+      "remaining": "١٢",
+      "error": null,
+      "prepared": {
+        "kind": "msubsup",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "x",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "reusedBase": false,
+      "preparedOwnsOriginalBase": true
+    },
+    {
+      "marker": "_",
+      "tail": "𝟙𝟚",
+      "occupied": false,
+      "beforeBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "afterBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "sourceAfter": "𝟙𝟚",
+      "cursorUTF16": 0,
+      "remaining": "𝟙𝟚",
+      "error": null,
+      "prepared": {
+        "kind": "msubsup",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "x",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "reusedBase": false,
+      "preparedOwnsOriginalBase": true
+    },
+    {
+      "marker": "_",
+      "tail": "",
+      "occupied": false,
+      "beforeBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "afterBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "sourceAfter": "",
+      "cursorUTF16": 0,
+      "remaining": "",
+      "error": null,
+      "prepared": {
+        "kind": "msubsup",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "x",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "reusedBase": false,
+      "preparedOwnsOriginalBase": true
+    },
+    {
+      "marker": "_",
+      "tail": "}",
+      "occupied": false,
+      "beforeBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "afterBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "sourceAfter": "}",
+      "cursorUTF16": 0,
+      "remaining": "}",
+      "error": null,
+      "prepared": {
+        "kind": "msubsup",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "x",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "reusedBase": false,
+      "preparedOwnsOriginalBase": true
+    },
+    {
+      "marker": "_",
+      "tail": "﻿12",
+      "occupied": false,
+      "beforeBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "afterBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "sourceAfter": "﻿1 2",
+      "cursorUTF16": 1,
+      "remaining": "1 2",
+      "error": null,
+      "prepared": {
+        "kind": "msubsup",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "x",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "reusedBase": false,
+      "preparedOwnsOriginalBase": true
+    },
+    {
+      "marker": "_",
+      "tail": "12",
+      "occupied": false,
+      "beforeBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "afterBase": {
+        "kind": "mi",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "text",
+            "text": "x",
+            "attributes": {},
+            "properties": {},
+            "children": []
+          }
+        ]
+      },
+      "sourceAfter": "12",
+      "cursorUTF16": 0,
+      "remaining": "12",
+      "error": null,
+      "prepared": {
+        "kind": "msubsup",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "x",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "reusedBase": false,
+      "preparedOwnsOriginalBase": true
+    },
+    {
+      "marker": "^",
+      "tail": " 12",
+      "occupied": true,
+      "beforeBase": {
+        "kind": "msubsup",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "x",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          },
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "i",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          },
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "n",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "afterBase": {
+        "kind": "msubsup",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "x",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          },
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "i",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          },
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "n",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "sourceAfter": " 1 2",
+      "cursorUTF16": 1,
+      "remaining": "1 2",
+      "error": {
+        "id": "DoubleExponent",
+        "message": "Double exponent: use braces to clarify"
+      },
+      "prepared": null,
+      "reusedBase": null,
+      "preparedOwnsOriginalBase": null
+    },
+    {
+      "marker": "^",
+      "tail": "\t12",
+      "occupied": true,
+      "beforeBase": {
+        "kind": "msubsup",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "x",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          },
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "i",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          },
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "n",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "afterBase": {
+        "kind": "msubsup",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "x",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          },
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "i",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          },
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "n",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "sourceAfter": "\t1 2",
+      "cursorUTF16": 1,
+      "remaining": "1 2",
+      "error": {
+        "id": "DoubleExponent",
+        "message": "Double exponent: use braces to clarify"
+      },
+      "prepared": null,
+      "reusedBase": null,
+      "preparedOwnsOriginalBase": null
+    },
+    {
+      "marker": "^",
+      "tail": "﻿12",
+      "occupied": true,
+      "beforeBase": {
+        "kind": "msubsup",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "x",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          },
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "i",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          },
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "n",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "afterBase": {
+        "kind": "msubsup",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "x",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          },
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "i",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          },
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "n",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "sourceAfter": "﻿1 2",
+      "cursorUTF16": 1,
+      "remaining": "1 2",
+      "error": {
+        "id": "DoubleExponent",
+        "message": "Double exponent: use braces to clarify"
+      },
+      "prepared": null,
+      "reusedBase": null,
+      "preparedOwnsOriginalBase": null
+    },
+    {
+      "marker": "^",
+      "tail": "12",
+      "occupied": true,
+      "beforeBase": {
+        "kind": "msubsup",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "x",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          },
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "i",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          },
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "n",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "afterBase": {
+        "kind": "msubsup",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "x",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          },
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "i",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          },
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "n",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "sourceAfter": "12",
+      "cursorUTF16": 0,
+      "remaining": "12",
+      "error": {
+        "id": "DoubleExponent",
+        "message": "Double exponent: use braces to clarify"
+      },
+      "prepared": null,
+      "reusedBase": null,
+      "preparedOwnsOriginalBase": null
+    },
+    {
+      "marker": "_",
+      "tail": " 12",
+      "occupied": true,
+      "beforeBase": {
+        "kind": "msubsup",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "x",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          },
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "i",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          },
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "n",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "afterBase": {
+        "kind": "msubsup",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "x",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          },
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "i",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          },
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "n",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "sourceAfter": " 1 2",
+      "cursorUTF16": 1,
+      "remaining": "1 2",
+      "error": {
+        "id": "DoubleSubscripts",
+        "message": "Double subscripts: use braces to clarify"
+      },
+      "prepared": null,
+      "reusedBase": null,
+      "preparedOwnsOriginalBase": null
+    },
+    {
+      "marker": "_",
+      "tail": "\t12",
+      "occupied": true,
+      "beforeBase": {
+        "kind": "msubsup",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "x",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          },
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "i",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          },
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "n",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "afterBase": {
+        "kind": "msubsup",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "x",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          },
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "i",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          },
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "n",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "sourceAfter": "\t1 2",
+      "cursorUTF16": 1,
+      "remaining": "1 2",
+      "error": {
+        "id": "DoubleSubscripts",
+        "message": "Double subscripts: use braces to clarify"
+      },
+      "prepared": null,
+      "reusedBase": null,
+      "preparedOwnsOriginalBase": null
+    },
+    {
+      "marker": "_",
+      "tail": "﻿12",
+      "occupied": true,
+      "beforeBase": {
+        "kind": "msubsup",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "x",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          },
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "i",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          },
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "n",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "afterBase": {
+        "kind": "msubsup",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "x",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          },
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "i",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          },
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "n",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "sourceAfter": "﻿1 2",
+      "cursorUTF16": 1,
+      "remaining": "1 2",
+      "error": {
+        "id": "DoubleSubscripts",
+        "message": "Double subscripts: use braces to clarify"
+      },
+      "prepared": null,
+      "reusedBase": null,
+      "preparedOwnsOriginalBase": null
+    },
+    {
+      "marker": "_",
+      "tail": "12",
+      "occupied": true,
+      "beforeBase": {
+        "kind": "msubsup",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "x",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          },
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "i",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          },
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "n",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "afterBase": {
+        "kind": "msubsup",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "x",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          },
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "i",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          },
+          {
+            "kind": "mi",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "text",
+                "text": "n",
+                "attributes": {},
+                "properties": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "sourceAfter": "12",
+      "cursorUTF16": 0,
+      "remaining": "12",
+      "error": {
+        "id": "DoubleSubscripts",
+        "message": "Double subscripts: use braces to clarify"
+      },
+      "prepared": null,
+      "reusedBase": null,
+      "preparedOwnsOriginalBase": null
+    }
+  ],
+  "registeredSuperscript": "function(t,e){var Q,r,T;t.GetNext().match(/\\d/)&&(t.string=t.string.substr(0,t.i+1)+\" \"+t.string.substr(t.i+1));var n=t.stack.Top();n.isKind(\"prime\")?(T=(Q=i(n.Peek(2),2))[0],r=Q[1],t.stack.Pop()):(T=t.stack.Prev())||(T=t.create(\"token\",\"mi\",{},\"\"));var o=l.default.getProperty(T,\"movesupsub\"),a=l.default.isType(T,\"msubsup\")?T.sup:T.over;if(l.default.isType(T,\"msubsup\")&&!l.default.isType(T,\"msup\")&&l.default.getChildAt(T,T.sup)||l.default.isType(T,\"munderover\")&&!l.default.isType(T,\"mover\")&&l.default.getChildAt(T,T.over)&&!l.default.getProperty(T,\"subsupOK\"))throw new c.default(\"DoubleExponent\",\"Double exponent: use braces to clarify\");l.default.isType(T,\"msubsup\")&&!l.default.isType(T,\"msup\")||(o?((!l.default.isType(T,\"munderover\")||l.default.isType(T,\"mover\")||l.default.getChildAt(T,T.over))&&(T=t.create(\"node\",\"munderover\",[T],{movesupsub:!0})),a=T.over):a=(T=t.create(\"node\",\"msubsup\",[T])).sup),t.Push(t.itemFactory.create(\"subsup\",T).setProperties({position:a,primes:r,movesupsub:o}))}",
+  "registeredSubscript": "function(t,e){var Q,r,T;t.GetNext().match(/\\d/)&&(t.string=t.string.substr(0,t.i+1)+\" \"+t.string.substr(t.i+1));var n=t.stack.Top();n.isKind(\"prime\")?(T=(Q=i(n.Peek(2),2))[0],r=Q[1],t.stack.Pop()):(T=t.stack.Prev())||(T=t.create(\"token\",\"mi\",{},\"\"));var o=l.default.getProperty(T,\"movesupsub\"),a=l.default.isType(T,\"msubsup\")?T.sub:T.under;if(l.default.isType(T,\"msubsup\")&&!l.default.isType(T,\"msup\")&&l.default.getChildAt(T,T.sub)||l.default.isType(T,\"munderover\")&&!l.default.isType(T,\"mover\")&&l.default.getChildAt(T,T.under)&&!l.default.getProperty(T,\"subsupOK\"))throw new c.default(\"DoubleSubscripts\",\"Double subscripts: use braces to clarify\");l.default.isType(T,\"msubsup\")&&!l.default.isType(T,\"msup\")||(o?((!l.default.isType(T,\"munderover\")||l.default.isType(T,\"mover\")||l.default.getChildAt(T,T.under))&&(T=t.create(\"node\",\"munderover\",[T],{movesupsub:!0})),a=T.under):a=(T=t.create(\"node\",\"msubsup\",[T])).sub),t.Push(t.itemFactory.create(\"subsup\",T).setProperties({position:a,primes:r,movesupsub:o}))}",
+  "GetNext": "function(){for(;this.nextIsSpace();)this.i++;return this.getCodePoint()}",
+  "ParseDigit": "function(t,e){var Q,r=t.configuration.options.digits,T=t.string.slice(t.i-1).match(r),n=s.default.getFontDef(t);T?(Q=t.create(\"token\",\"mn\",n,T[0].replace(/[{}]/g,\"\")),t.i+=T[0].length-1):Q=t.create(\"token\",\"mo\",n,e),t.Push(Q)}",
+  "mathjaxGitCommit": "ad8f5c21cb810236551da8c6512ba733e67357ee"
+}

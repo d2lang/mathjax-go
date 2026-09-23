@@ -1,0 +1,3080 @@
+{
+  "acceptedBase": "6a3573f7f15fc67b5abde6fdf8b548e89d6c7e48",
+  "scope": "No generic number scanner or prime metadata fix. Changed comma cases are frozen candidate observations, not accepted-source invariance.",
+  "cases": {
+    "sup-digit-comma-inline": {
+      "kind": "initial-split-with-retained-comma-scanner",
+      "tex": "x^1,234",
+      "display": false,
+      "primarySVGSHA256": "13af9b0e75b6ade2cfe1194f02bfb5eee331569d5d51e5adc23b29a6fe5fdd10",
+      "acceptedSVGSHA256": "c57f5f432d2e31a902959efa753bb71b3271d95b3a6f5ae320d3bf0bc3fa1d19",
+      "candidateSVGSHA256": "dd5b16df6d2b12a6885a3be4dcaac1ef4bc18284507a3dc6592be3122d957b99",
+      "acceptedTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "msup",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mn",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "1,234",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "candidateTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "msup",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mn",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "1",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "mn",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": ",234",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "fields": []
+    },
+    "sup-digit-comma-display": {
+      "kind": "initial-split-with-retained-comma-scanner",
+      "tex": "x^1,234",
+      "display": true,
+      "primarySVGSHA256": "cf28b1443d39953a8b6b312bc7d607f9ea549b4dc1f3ce85413f88177a0496ca",
+      "acceptedSVGSHA256": "881b80090127fabc5e78a0e3d6df4440b307df5b1f2e9dfd07b6c2f08e652b52",
+      "candidateSVGSHA256": "f6dcf7d1da133669958337ebbe96db3836428edb217250d20a0e594950b3df51",
+      "acceptedTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "msup",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mn",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "1,234",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "candidateTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "msup",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mn",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "1",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "mn",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": ",234",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "fields": []
+    },
+    "sup-fullwidth-inline": {
+      "kind": "unchanged-scanner",
+      "tex": "x^１２",
+      "display": false,
+      "primarySVGSHA256": "ed9738aed98a46a5c239d58fa9534fa49c5599f2aa10a464d8531d72d7815a48",
+      "acceptedSVGSHA256": "6401bd85a8f5cba2c4f5df1f61de9efb1d1147104b28e3b42c041e38efd8005d",
+      "candidateSVGSHA256": "6401bd85a8f5cba2c4f5df1f61de9efb1d1147104b28e3b42c041e38efd8005d",
+      "acceptedTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "msup",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mn",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "１２",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "candidateTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "msup",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mn",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "１２",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "fields": []
+    },
+    "sup-fullwidth-display": {
+      "kind": "unchanged-scanner",
+      "tex": "x^１２",
+      "display": true,
+      "primarySVGSHA256": "00a43d25bef077bad57e5560eedc84ccc4018fd9291fc683c0c3959e9d827b90",
+      "acceptedSVGSHA256": "7606d2c829f2a1f3b1ab7239927f15cb1473c58366c8de6b1080fc65921f8a19",
+      "candidateSVGSHA256": "7606d2c829f2a1f3b1ab7239927f15cb1473c58366c8de6b1080fc65921f8a19",
+      "acceptedTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "msup",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mn",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "１２",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "candidateTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "msup",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mn",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "１２",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "fields": []
+    },
+    "sup-arabic-inline": {
+      "kind": "unchanged-scanner",
+      "tex": "x^١٢",
+      "display": false,
+      "primarySVGSHA256": "688d344e4e6f11b7609e8c8045319e3b27cb29edbab2842d803d965ef2b57ef2",
+      "acceptedSVGSHA256": "50e96d7cd631bc3d69c7b8ea7af271a2f4faf236d67f9a3d51fa44c77311e07e",
+      "candidateSVGSHA256": "50e96d7cd631bc3d69c7b8ea7af271a2f4faf236d67f9a3d51fa44c77311e07e",
+      "acceptedTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "msup",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mn",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "١٢",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "candidateTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "msup",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mn",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "١٢",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "fields": []
+    },
+    "sup-arabic-display": {
+      "kind": "unchanged-scanner",
+      "tex": "x^١٢",
+      "display": true,
+      "primarySVGSHA256": "d77c1dcbb5db6ed48bb7e54df62f475b225675f0a765d81585fc0251a44e645a",
+      "acceptedSVGSHA256": "0e7406289e6feb62df070ec43e9183ac7ae1d0e625355d24ad6ffcdd26f1996a",
+      "candidateSVGSHA256": "0e7406289e6feb62df070ec43e9183ac7ae1d0e625355d24ad6ffcdd26f1996a",
+      "acceptedTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "msup",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mn",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "١٢",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "candidateTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "msup",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mn",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "١٢",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "fields": []
+    },
+    "sup-supplementary-digit-inline": {
+      "kind": "unchanged-scanner",
+      "tex": "x^𝟙𝟚",
+      "display": false,
+      "primarySVGSHA256": "2779260118f2227165c358cefe53810156b21fa72768e194783469e89e510a5e",
+      "acceptedSVGSHA256": "e1cba7d935c0a5a48697fb6bfa5f383a49ef3db128de4465d5a155844f2e7723",
+      "candidateSVGSHA256": "e1cba7d935c0a5a48697fb6bfa5f383a49ef3db128de4465d5a155844f2e7723",
+      "acceptedTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "msup",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mn",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "𝟙𝟚",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "candidateTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "msup",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mn",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "𝟙𝟚",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "fields": []
+    },
+    "sup-supplementary-digit-display": {
+      "kind": "unchanged-scanner",
+      "tex": "x^𝟙𝟚",
+      "display": true,
+      "primarySVGSHA256": "642c24a1ce13ba2274f7ecdea39a44a6ef1656e876704c27902ed77a48779e44",
+      "acceptedSVGSHA256": "4e413f82ef5a2bb6ed426dfb14851f4ea04e7a914263448c4e0288c726ac2132",
+      "candidateSVGSHA256": "4e413f82ef5a2bb6ed426dfb14851f4ea04e7a914263448c4e0288c726ac2132",
+      "acceptedTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "msup",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mn",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "𝟙𝟚",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "candidateTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "msup",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mn",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "𝟙𝟚",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "fields": []
+    },
+    "sup-prime-digit-inline": {
+      "kind": "inherited-prime-pseudoscript",
+      "tex": "x'^12",
+      "display": false,
+      "primarySVGSHA256": "0ad44eb262ae33592f2713e64c0110bde98da12bd5b28328c6b1da767f7aecd1",
+      "acceptedSVGSHA256": "46d693741075988ae187434b72e68032e890afcd45e36d66421780b3ed2055b3",
+      "candidateSVGSHA256": "0ad44eb262ae33592f2713e64c0110bde98da12bd5b28328c6b1da767f7aecd1",
+      "acceptedTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "msup",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mo",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {
+                          "variantForm": true
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "′",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mn",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "12",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "candidateTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "msup",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mo",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {
+                          "variantForm": true
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "′",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mn",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "1",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "mn",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "2",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "fields": [
+        {
+          "path": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "primary": {
+            "variantForm": true,
+            "pseudoscript": true
+          },
+          "accepted": {
+            "variantForm": true
+          },
+          "candidate": {
+            "variantForm": true
+          }
+        }
+      ]
+    },
+    "sup-prime-digit-display": {
+      "kind": "inherited-prime-pseudoscript",
+      "tex": "x'^12",
+      "display": true,
+      "primarySVGSHA256": "c329f0e12a9d5c9da643e76d521ef9d6293c45c1b913989ea26c6e9cd39ecc73",
+      "acceptedSVGSHA256": "f10f0077df98ab188e4aed2128a4d30c9748e2a2788381c1a88feb722024b619",
+      "candidateSVGSHA256": "c329f0e12a9d5c9da643e76d521ef9d6293c45c1b913989ea26c6e9cd39ecc73",
+      "acceptedTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "msup",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mo",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {
+                          "variantForm": true
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "′",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mn",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "12",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "candidateTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "msup",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mrow",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "mo",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {
+                          "variantForm": true
+                        },
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "′",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "mn",
+                        "text": null,
+                        "attributes": {},
+                        "properties": {},
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "1",
+                            "attributes": {},
+                            "properties": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "mn",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "2",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "fields": [
+        {
+          "path": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "primary": {
+            "variantForm": true,
+            "pseudoscript": true
+          },
+          "accepted": {
+            "variantForm": true
+          },
+          "candidate": {
+            "variantForm": true
+          }
+        }
+      ]
+    },
+    "sub-digit-comma-inline": {
+      "kind": "initial-split-with-retained-comma-scanner",
+      "tex": "x_1,234",
+      "display": false,
+      "primarySVGSHA256": "8547ceb3f1f8d421fd9dfb7daef04aac9b133570d714f1d8ba8f345fabdfdcba",
+      "acceptedSVGSHA256": "66b8144cede865a30cee36e30eac06e68d37040a620a090e87349c2e0a9f6806",
+      "candidateSVGSHA256": "494273d0e0d925903ec40b0c62c2abc8ed3e8f0e900af366668b4a913257fb8d",
+      "acceptedTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "msub",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mn",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {
+                      "texprimestyle": true
+                    },
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "1,234",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "candidateTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "msub",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mn",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {
+                      "texprimestyle": true
+                    },
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "1",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "mn",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": ",234",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "fields": []
+    },
+    "sub-digit-comma-display": {
+      "kind": "initial-split-with-retained-comma-scanner",
+      "tex": "x_1,234",
+      "display": true,
+      "primarySVGSHA256": "8547ceb3f1f8d421fd9dfb7daef04aac9b133570d714f1d8ba8f345fabdfdcba",
+      "acceptedSVGSHA256": "66b8144cede865a30cee36e30eac06e68d37040a620a090e87349c2e0a9f6806",
+      "candidateSVGSHA256": "494273d0e0d925903ec40b0c62c2abc8ed3e8f0e900af366668b4a913257fb8d",
+      "acceptedTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "msub",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mn",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {
+                      "texprimestyle": true
+                    },
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "1,234",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "candidateTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "msub",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mn",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {
+                      "texprimestyle": true
+                    },
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "1",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "mn",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": ",234",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "fields": []
+    },
+    "sub-fullwidth-inline": {
+      "kind": "unchanged-scanner",
+      "tex": "x_１２",
+      "display": false,
+      "primarySVGSHA256": "b0163ee1a293a0e1e556ce8a4324a5e3b6e95752d7a397ec6d4e4216ef2ad5c7",
+      "acceptedSVGSHA256": "6ad4a61602079d4eb8de1e077543aafacf8ab218711dfb3c058b636f4ac00a24",
+      "candidateSVGSHA256": "6ad4a61602079d4eb8de1e077543aafacf8ab218711dfb3c058b636f4ac00a24",
+      "acceptedTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "msub",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mn",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {
+                      "texprimestyle": true
+                    },
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "１２",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "candidateTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "msub",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mn",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {
+                      "texprimestyle": true
+                    },
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "１２",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "fields": []
+    },
+    "sub-fullwidth-display": {
+      "kind": "unchanged-scanner",
+      "tex": "x_１２",
+      "display": true,
+      "primarySVGSHA256": "b0163ee1a293a0e1e556ce8a4324a5e3b6e95752d7a397ec6d4e4216ef2ad5c7",
+      "acceptedSVGSHA256": "6ad4a61602079d4eb8de1e077543aafacf8ab218711dfb3c058b636f4ac00a24",
+      "candidateSVGSHA256": "6ad4a61602079d4eb8de1e077543aafacf8ab218711dfb3c058b636f4ac00a24",
+      "acceptedTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "msub",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mn",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {
+                      "texprimestyle": true
+                    },
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "１２",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "candidateTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "msub",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mn",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {
+                      "texprimestyle": true
+                    },
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "１２",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "fields": []
+    },
+    "sub-arabic-inline": {
+      "kind": "unchanged-scanner",
+      "tex": "x_١٢",
+      "display": false,
+      "primarySVGSHA256": "50a625c2f839c8bde65fcbe4bf25729c3d8a5924094ab88aa29d63ad00919b0f",
+      "acceptedSVGSHA256": "f1b7803e7567b5d939ed58c6f2553325fdff41da1b477d547e10cb357d321fc3",
+      "candidateSVGSHA256": "f1b7803e7567b5d939ed58c6f2553325fdff41da1b477d547e10cb357d321fc3",
+      "acceptedTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "msub",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mn",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {
+                      "texprimestyle": true
+                    },
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "١٢",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "candidateTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "msub",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mn",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {
+                      "texprimestyle": true
+                    },
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "١٢",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "fields": []
+    },
+    "sub-arabic-display": {
+      "kind": "unchanged-scanner",
+      "tex": "x_١٢",
+      "display": true,
+      "primarySVGSHA256": "50a625c2f839c8bde65fcbe4bf25729c3d8a5924094ab88aa29d63ad00919b0f",
+      "acceptedSVGSHA256": "f1b7803e7567b5d939ed58c6f2553325fdff41da1b477d547e10cb357d321fc3",
+      "candidateSVGSHA256": "f1b7803e7567b5d939ed58c6f2553325fdff41da1b477d547e10cb357d321fc3",
+      "acceptedTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "msub",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mn",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {
+                      "texprimestyle": true
+                    },
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "١٢",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "candidateTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "msub",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mn",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {
+                      "texprimestyle": true
+                    },
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "١٢",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "fields": []
+    },
+    "sub-supplementary-digit-inline": {
+      "kind": "unchanged-scanner",
+      "tex": "x_𝟙𝟚",
+      "display": false,
+      "primarySVGSHA256": "bf1e111833c3d33397667327ece27dd04ca5e952b63a22e5ff058ea534d98ee4",
+      "acceptedSVGSHA256": "7a2ae708b2864001491fe77f961daca726c4c304e5aa0c8ff66eef957175c28d",
+      "candidateSVGSHA256": "7a2ae708b2864001491fe77f961daca726c4c304e5aa0c8ff66eef957175c28d",
+      "acceptedTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "msub",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mn",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {
+                      "texprimestyle": true
+                    },
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "𝟙𝟚",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "candidateTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "msub",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mn",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {
+                      "texprimestyle": true
+                    },
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "𝟙𝟚",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "fields": []
+    },
+    "sub-supplementary-digit-display": {
+      "kind": "unchanged-scanner",
+      "tex": "x_𝟙𝟚",
+      "display": true,
+      "primarySVGSHA256": "bf1e111833c3d33397667327ece27dd04ca5e952b63a22e5ff058ea534d98ee4",
+      "acceptedSVGSHA256": "7a2ae708b2864001491fe77f961daca726c4c304e5aa0c8ff66eef957175c28d",
+      "candidateSVGSHA256": "7a2ae708b2864001491fe77f961daca726c4c304e5aa0c8ff66eef957175c28d",
+      "acceptedTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "msub",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mn",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {
+                      "texprimestyle": true
+                    },
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "𝟙𝟚",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "candidateTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "msub",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mn",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {
+                      "texprimestyle": true
+                    },
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "𝟙𝟚",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "fields": []
+    },
+    "sub-prime-digit-inline": {
+      "kind": "inherited-prime-pseudoscript",
+      "tex": "x'_12",
+      "display": false,
+      "primarySVGSHA256": "f387cea84ed158bda731567c1c3e676ad350f2cf6cacf87bf7116ae038094bb2",
+      "acceptedSVGSHA256": "a57db3eb3dcc2113ec9eda120873ea2a96da7c98a79819112615e0c1e19d4f73",
+      "candidateSVGSHA256": "f387cea84ed158bda731567c1c3e676ad350f2cf6cacf87bf7116ae038094bb2",
+      "acceptedTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "msubsup",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mn",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {
+                      "texprimestyle": true
+                    },
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "12",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mo",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {
+                      "variantForm": true
+                    },
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "′",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "candidateTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "msubsup",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mn",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {
+                      "texprimestyle": true
+                    },
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "1",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mo",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {
+                      "variantForm": true
+                    },
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "′",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "mn",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "2",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "fields": [
+        {
+          "path": [
+            0,
+            0,
+            2
+          ],
+          "primary": {
+            "variantForm": true,
+            "pseudoscript": false
+          },
+          "accepted": {
+            "variantForm": true
+          },
+          "candidate": {
+            "variantForm": true
+          }
+        }
+      ]
+    },
+    "sub-prime-digit-display": {
+      "kind": "inherited-prime-pseudoscript",
+      "tex": "x'_12",
+      "display": true,
+      "primarySVGSHA256": "ad4683cb86de79a4e8835f316197b2baa04ef0951105586cc829f103d2693fd5",
+      "acceptedSVGSHA256": "44bb6035f3a91995e431e69b5d625e011c5b82e6213f1a8ac710e4fb0af9b379",
+      "candidateSVGSHA256": "ad4683cb86de79a4e8835f316197b2baa04ef0951105586cc829f103d2693fd5",
+      "acceptedTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "msubsup",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mn",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {
+                      "texprimestyle": true
+                    },
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "12",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mo",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {
+                      "variantForm": true
+                    },
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "′",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "candidateTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "msubsup",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "mi",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {},
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "x",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mn",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {
+                      "texprimestyle": true
+                    },
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "1",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "mo",
+                    "text": null,
+                    "attributes": {},
+                    "properties": {
+                      "variantForm": true
+                    },
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "′",
+                        "attributes": {},
+                        "properties": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "mn",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "2",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "fields": [
+        {
+          "path": [
+            0,
+            0,
+            2
+          ],
+          "primary": {
+            "variantForm": true,
+            "pseudoscript": false
+          },
+          "accepted": {
+            "variantForm": true
+          },
+          "candidate": {
+            "variantForm": true
+          }
+        }
+      ]
+    },
+    "ordinary-comma-inline": {
+      "kind": "unchanged-scanner",
+      "tex": "1,234",
+      "display": false,
+      "primarySVGSHA256": "09343a4d2f6a200114fcd2b3e04d796763cb0a81a02eec1f4c53eee0aa0284c8",
+      "acceptedSVGSHA256": "c42af80bbbf885f063a22f68560f0e67f1b7b4cc267fdc82217f84ce45818d59",
+      "candidateSVGSHA256": "c42af80bbbf885f063a22f68560f0e67f1b7b4cc267fdc82217f84ce45818d59",
+      "acceptedTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mn",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "1,234",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "candidateTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mn",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "1,234",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "fields": []
+    },
+    "ordinary-comma-display": {
+      "kind": "unchanged-scanner",
+      "tex": "1,234",
+      "display": true,
+      "primarySVGSHA256": "09343a4d2f6a200114fcd2b3e04d796763cb0a81a02eec1f4c53eee0aa0284c8",
+      "acceptedSVGSHA256": "c42af80bbbf885f063a22f68560f0e67f1b7b4cc267fdc82217f84ce45818d59",
+      "candidateSVGSHA256": "c42af80bbbf885f063a22f68560f0e67f1b7b4cc267fdc82217f84ce45818d59",
+      "acceptedTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mn",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "1,234",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "candidateTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mn",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "1,234",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "fields": []
+    },
+    "ordinary-unicode-inline": {
+      "kind": "unchanged-scanner",
+      "tex": "１２",
+      "display": false,
+      "primarySVGSHA256": "a88c6f7d70c10c5cf62333faeb74b35b691842e30e89d2a04d9fe69c54e11a2e",
+      "acceptedSVGSHA256": "9151fb938c243759188c93f291ddbfaed35ebe8cad8202254ccd5e87420df48b",
+      "candidateSVGSHA256": "9151fb938c243759188c93f291ddbfaed35ebe8cad8202254ccd5e87420df48b",
+      "acceptedTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mn",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "１２",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "candidateTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {},
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mn",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "１２",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "fields": []
+    },
+    "ordinary-unicode-display": {
+      "kind": "unchanged-scanner",
+      "tex": "１２",
+      "display": true,
+      "primarySVGSHA256": "a88c6f7d70c10c5cf62333faeb74b35b691842e30e89d2a04d9fe69c54e11a2e",
+      "acceptedSVGSHA256": "9151fb938c243759188c93f291ddbfaed35ebe8cad8202254ccd5e87420df48b",
+      "candidateSVGSHA256": "9151fb938c243759188c93f291ddbfaed35ebe8cad8202254ccd5e87420df48b",
+      "acceptedTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mn",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "１２",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "candidateTree": {
+        "kind": "math",
+        "text": null,
+        "attributes": {
+          "display": "block"
+        },
+        "properties": {},
+        "children": [
+          {
+            "kind": "inferredMrow",
+            "text": null,
+            "attributes": {},
+            "properties": {},
+            "children": [
+              {
+                "kind": "mn",
+                "text": null,
+                "attributes": {},
+                "properties": {},
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "１２",
+                    "attributes": {},
+                    "properties": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "fields": []
+    }
+  }
+}

@@ -119,3 +119,26 @@ Regenerate the primary references with:
 node testdata/generate_pod_commands.cjs PINNED_ASSETS [EVIDENCE_DIRECTORY]
 node testdata/generate_pod_macros.cjs PINNED_ASSETS [EVIDENCE_DIRECTORY]
 ```
+
+### Initial numeric script arguments
+
+The pinned Superscript/Subscript handlers call GetNext once, then insert a space
+following an immediate ASCII digit before checking the existing script slot.
+Thus `x^12` scripts `1` and leaves `2`; a macro, font declaration, or comment
+encountered first retains the ordinary number scanner. The same initial handler
+rule applies after a pending prime and before a nested-marker error. This
+script-local lookahead uses the primary JavaScript whitespace set, without
+changing ordinary row parsing or number tokenization.
+
+The dedicated 120-case matrix binds complete SVG and explicit/own-property
+MathML, including 12 registered macro cases. It has 96 raw primary cases, four
+exact-SVG prime cases retaining the precise inherited `pseudoscript` metadata
+boundary, 16 unchanged ordinary/Unicode scanner boundaries, and four changed
+comma-tail observations that remain nonprimary. Those comma cases are not
+claimed fixed. Another 48 actual registered-handler records and 108 delegated
+parser traces bind source insertion, cursor/error order and base ownership.
+Four BOM cases match primary; four NEL cases preserve accepted Go outputs while
+the pinned primary throws an internal exception, so they are not parity claims.
+
+The two earlier D066 `digit-tail` whole-output qualifications now compare to
+their unchanged primary references; all other D066 qualifications stay intact.

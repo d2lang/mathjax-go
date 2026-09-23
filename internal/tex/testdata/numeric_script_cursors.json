@@ -1,0 +1,2033 @@
+{
+  "mathjaxGitCommit": "ad8f5c21cb810236551da8c6512ba733e67357ee",
+  "rows": [
+    {
+      "name": "sup-digits-inline",
+      "tex": "x^12",
+      "display": false,
+      "sourceBefore": "x^12",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": false
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x^1 2",
+      "cursorAfterUTF16": 5,
+      "remaining": "",
+      "envAfter": {
+        "display": false
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sup-digits-display",
+      "tex": "x^12",
+      "display": true,
+      "sourceBefore": "x^12",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": true
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x^1 2",
+      "cursorAfterUTF16": 5,
+      "remaining": "",
+      "envAfter": {
+        "display": true
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sup-leading-zero-inline",
+      "tex": "x^012",
+      "display": false,
+      "sourceBefore": "x^012",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": false
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x^0 12",
+      "cursorAfterUTF16": 6,
+      "remaining": "",
+      "envAfter": {
+        "display": false
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sup-leading-zero-display",
+      "tex": "x^012",
+      "display": true,
+      "sourceBefore": "x^012",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": true
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x^0 12",
+      "cursorAfterUTF16": 6,
+      "remaining": "",
+      "envAfter": {
+        "display": true
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sup-long-run-inline",
+      "tex": "x^12345",
+      "display": false,
+      "sourceBefore": "x^12345",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": false
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x^1 2345",
+      "cursorAfterUTF16": 8,
+      "remaining": "",
+      "envAfter": {
+        "display": false
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sup-long-run-display",
+      "tex": "x^12345",
+      "display": true,
+      "sourceBefore": "x^12345",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": true
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x^1 2345",
+      "cursorAfterUTF16": 8,
+      "remaining": "",
+      "envAfter": {
+        "display": true
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sup-digit-decimal-inline",
+      "tex": "x^1.25",
+      "display": false,
+      "sourceBefore": "x^1.25",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": false
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x^1 .25",
+      "cursorAfterUTF16": 7,
+      "remaining": "",
+      "envAfter": {
+        "display": false
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sup-digit-decimal-display",
+      "tex": "x^1.25",
+      "display": true,
+      "sourceBefore": "x^1.25",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": true
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x^1 .25",
+      "cursorAfterUTF16": 7,
+      "remaining": "",
+      "envAfter": {
+        "display": true
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sup-leading-decimal-inline",
+      "tex": "x^.25",
+      "display": false,
+      "sourceBefore": "x^.25",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": false
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x^.25",
+      "cursorAfterUTF16": 5,
+      "remaining": "",
+      "envAfter": {
+        "display": false
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sup-leading-decimal-display",
+      "tex": "x^.25",
+      "display": true,
+      "sourceBefore": "x^.25",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": true
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x^.25",
+      "cursorAfterUTF16": 5,
+      "remaining": "",
+      "envAfter": {
+        "display": true
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sup-digit-comma-inline",
+      "tex": "x^1,234",
+      "display": false,
+      "sourceBefore": "x^1,234",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": false
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x^1 ,234",
+      "cursorAfterUTF16": 8,
+      "remaining": "",
+      "envAfter": {
+        "display": false
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sup-digit-comma-display",
+      "tex": "x^1,234",
+      "display": true,
+      "sourceBefore": "x^1,234",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": true
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x^1 ,234",
+      "cursorAfterUTF16": 8,
+      "remaining": "",
+      "envAfter": {
+        "display": true
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sup-scientific-inline",
+      "tex": "x^12e-3",
+      "display": false,
+      "sourceBefore": "x^12e-3",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": false
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x^1 2e-3",
+      "cursorAfterUTF16": 8,
+      "remaining": "",
+      "envAfter": {
+        "display": false
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sup-scientific-display",
+      "tex": "x^12e-3",
+      "display": true,
+      "sourceBefore": "x^12e-3",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": true
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x^1 2e-3",
+      "cursorAfterUTF16": 8,
+      "remaining": "",
+      "envAfter": {
+        "display": true
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sup-plus-inline",
+      "tex": "x^+12",
+      "display": false,
+      "sourceBefore": "x^+12",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": false
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x^+12",
+      "cursorAfterUTF16": 5,
+      "remaining": "",
+      "envAfter": {
+        "display": false
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sup-plus-display",
+      "tex": "x^+12",
+      "display": true,
+      "sourceBefore": "x^+12",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": true
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x^+12",
+      "cursorAfterUTF16": 5,
+      "remaining": "",
+      "envAfter": {
+        "display": true
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sup-minus-inline",
+      "tex": "x^-12",
+      "display": false,
+      "sourceBefore": "x^-12",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": false
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x^-12",
+      "cursorAfterUTF16": 5,
+      "remaining": "",
+      "envAfter": {
+        "display": false
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sup-minus-display",
+      "tex": "x^-12",
+      "display": true,
+      "sourceBefore": "x^-12",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": true
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x^-12",
+      "cursorAfterUTF16": 5,
+      "remaining": "",
+      "envAfter": {
+        "display": true
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sup-space-inline",
+      "tex": "x^ 12",
+      "display": false,
+      "sourceBefore": "x^ 12",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": false
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x^ 1 2",
+      "cursorAfterUTF16": 6,
+      "remaining": "",
+      "envAfter": {
+        "display": false
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sup-space-display",
+      "tex": "x^ 12",
+      "display": true,
+      "sourceBefore": "x^ 12",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": true
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x^ 1 2",
+      "cursorAfterUTF16": 6,
+      "remaining": "",
+      "envAfter": {
+        "display": true
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sup-tab-inline",
+      "tex": "x^\t12",
+      "display": false,
+      "sourceBefore": "x^\t12",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": false
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x^\t1 2",
+      "cursorAfterUTF16": 6,
+      "remaining": "",
+      "envAfter": {
+        "display": false
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sup-tab-display",
+      "tex": "x^\t12",
+      "display": true,
+      "sourceBefore": "x^\t12",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": true
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x^\t1 2",
+      "cursorAfterUTF16": 6,
+      "remaining": "",
+      "envAfter": {
+        "display": true
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sup-comment-inline",
+      "tex": "x^%c\n12",
+      "display": false,
+      "sourceBefore": "x^%c\n12",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": false
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x^%c\n12",
+      "cursorAfterUTF16": 7,
+      "remaining": "",
+      "envAfter": {
+        "display": false
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sup-comment-display",
+      "tex": "x^%c\n12",
+      "display": true,
+      "sourceBefore": "x^%c\n12",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": true
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x^%c\n12",
+      "cursorAfterUTF16": 7,
+      "remaining": "",
+      "envAfter": {
+        "display": true
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sup-font-inline",
+      "tex": "x^\\bf12",
+      "display": false,
+      "sourceBefore": "x^\\bf12",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": false
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x^\\bf12",
+      "cursorAfterUTF16": 7,
+      "remaining": "",
+      "envAfter": {
+        "display": false,
+        "font": "bold"
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sup-font-display",
+      "tex": "x^\\bf12",
+      "display": true,
+      "sourceBefore": "x^\\bf12",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": true
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x^\\bf12",
+      "cursorAfterUTF16": 7,
+      "remaining": "",
+      "envAfter": {
+        "display": true,
+        "font": "bold"
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sup-braced-inline",
+      "tex": "x^{12}",
+      "display": false,
+      "sourceBefore": "x^{12}",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": false
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x^{12}",
+      "cursorAfterUTF16": 6,
+      "remaining": "",
+      "envAfter": {
+        "display": false
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sup-braced-display",
+      "tex": "x^{12}",
+      "display": true,
+      "sourceBefore": "x^{12}",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": true
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x^{12}",
+      "cursorAfterUTF16": 6,
+      "remaining": "",
+      "envAfter": {
+        "display": true
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sup-braced-decimal-inline",
+      "tex": "x^{1.25}",
+      "display": false,
+      "sourceBefore": "x^{1.25}",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": false
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x^{1.25}",
+      "cursorAfterUTF16": 8,
+      "remaining": "",
+      "envAfter": {
+        "display": false
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sup-braced-decimal-display",
+      "tex": "x^{1.25}",
+      "display": true,
+      "sourceBefore": "x^{1.25}",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": true
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x^{1.25}",
+      "cursorAfterUTF16": 8,
+      "remaining": "",
+      "envAfter": {
+        "display": true
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sup-fullwidth-inline",
+      "tex": "x^１２",
+      "display": false,
+      "sourceBefore": "x^１２",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": false
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x^１２",
+      "cursorAfterUTF16": 4,
+      "remaining": "",
+      "envAfter": {
+        "display": false
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sup-fullwidth-display",
+      "tex": "x^１２",
+      "display": true,
+      "sourceBefore": "x^１２",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": true
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x^１２",
+      "cursorAfterUTF16": 4,
+      "remaining": "",
+      "envAfter": {
+        "display": true
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sup-arabic-inline",
+      "tex": "x^١٢",
+      "display": false,
+      "sourceBefore": "x^١٢",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": false
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x^١٢",
+      "cursorAfterUTF16": 4,
+      "remaining": "",
+      "envAfter": {
+        "display": false
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sup-arabic-display",
+      "tex": "x^١٢",
+      "display": true,
+      "sourceBefore": "x^١٢",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": true
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x^١٢",
+      "cursorAfterUTF16": 4,
+      "remaining": "",
+      "envAfter": {
+        "display": true
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sup-supplementary-digit-inline",
+      "tex": "x^𝟙𝟚",
+      "display": false,
+      "sourceBefore": "x^𝟙𝟚",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": false
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x^𝟙𝟚",
+      "cursorAfterUTF16": 6,
+      "remaining": "",
+      "envAfter": {
+        "display": false
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sup-supplementary-digit-display",
+      "tex": "x^𝟙𝟚",
+      "display": true,
+      "sourceBefore": "x^𝟙𝟚",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": true
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x^𝟙𝟚",
+      "cursorAfterUTF16": 6,
+      "remaining": "",
+      "envAfter": {
+        "display": true
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sup-eof-inline",
+      "tex": "x^",
+      "display": false,
+      "sourceBefore": "x^",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": false
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x^",
+      "cursorAfterUTF16": 2,
+      "remaining": "",
+      "envAfter": {
+        "display": false
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sup-eof-display",
+      "tex": "x^",
+      "display": true,
+      "sourceBefore": "x^",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": true
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x^",
+      "cursorAfterUTF16": 2,
+      "remaining": "",
+      "envAfter": {
+        "display": true
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sup-close-error-inline",
+      "tex": "x^}",
+      "display": false,
+      "sourceBefore": "x^}",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": false
+      },
+      "macroCountBefore": 0,
+      "error": {
+        "id": "ExtraCloseMissingOpen",
+        "message": "Extra close brace or missing open brace"
+      },
+      "sourceAfter": "x^}",
+      "cursorAfterUTF16": 3,
+      "remaining": "",
+      "envAfter": {
+        "display": false
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sup-close-error-display",
+      "tex": "x^}",
+      "display": true,
+      "sourceBefore": "x^}",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": true
+      },
+      "macroCountBefore": 0,
+      "error": {
+        "id": "ExtraCloseMissingOpen",
+        "message": "Extra close brace or missing open brace"
+      },
+      "sourceAfter": "x^}",
+      "cursorAfterUTF16": 3,
+      "remaining": "",
+      "envAfter": {
+        "display": true
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sup-undefined-inline",
+      "tex": "x^\\relax",
+      "display": false,
+      "sourceBefore": "x^\\relax",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": false
+      },
+      "macroCountBefore": 0,
+      "error": {
+        "id": "UndefinedControlSequence",
+        "message": "Undefined control sequence \\relax"
+      },
+      "sourceAfter": "x^\\relax",
+      "cursorAfterUTF16": 8,
+      "remaining": "",
+      "envAfter": {
+        "display": false
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sup-undefined-display",
+      "tex": "x^\\relax",
+      "display": true,
+      "sourceBefore": "x^\\relax",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": true
+      },
+      "macroCountBefore": 0,
+      "error": {
+        "id": "UndefinedControlSequence",
+        "message": "Undefined control sequence \\relax"
+      },
+      "sourceAfter": "x^\\relax",
+      "cursorAfterUTF16": 8,
+      "remaining": "",
+      "envAfter": {
+        "display": true
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sup-prime-digit-inline",
+      "tex": "x'^12",
+      "display": false,
+      "sourceBefore": "x'^12",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": false
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x'^1 2",
+      "cursorAfterUTF16": 6,
+      "remaining": "",
+      "envAfter": {
+        "display": false
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sup-prime-digit-display",
+      "tex": "x'^12",
+      "display": true,
+      "sourceBefore": "x'^12",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": true
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x'^1 2",
+      "cursorAfterUTF16": 6,
+      "remaining": "",
+      "envAfter": {
+        "display": true
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sup-occupied-error-inline",
+      "tex": "x^i^12",
+      "display": false,
+      "sourceBefore": "x^i^12",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": false
+      },
+      "macroCountBefore": 0,
+      "error": {
+        "id": "DoubleExponent",
+        "message": "Double exponent: use braces to clarify"
+      },
+      "sourceAfter": "x^i^1 2",
+      "cursorAfterUTF16": 4,
+      "remaining": "1 2",
+      "envAfter": {
+        "display": false
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sup-occupied-error-display",
+      "tex": "x^i^12",
+      "display": true,
+      "sourceBefore": "x^i^12",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": true
+      },
+      "macroCountBefore": 0,
+      "error": {
+        "id": "DoubleExponent",
+        "message": "Double exponent: use braces to clarify"
+      },
+      "sourceAfter": "x^i^1 2",
+      "cursorAfterUTF16": 4,
+      "remaining": "1 2",
+      "envAfter": {
+        "display": true
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sup-nested-marker-inline",
+      "tex": "x^^12",
+      "display": false,
+      "sourceBefore": "x^^12",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": false
+      },
+      "macroCountBefore": 0,
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript"
+      },
+      "sourceAfter": "x^^1 2",
+      "cursorAfterUTF16": 3,
+      "remaining": "1 2",
+      "envAfter": {
+        "display": false
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sup-nested-marker-display",
+      "tex": "x^^12",
+      "display": true,
+      "sourceBefore": "x^^12",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": true
+      },
+      "macroCountBefore": 0,
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript"
+      },
+      "sourceAfter": "x^^1 2",
+      "cursorAfterUTF16": 3,
+      "remaining": "1 2",
+      "envAfter": {
+        "display": true
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sup-other-marker-inline",
+      "tex": "x^_12",
+      "display": false,
+      "sourceBefore": "x^_12",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": false
+      },
+      "macroCountBefore": 0,
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript"
+      },
+      "sourceAfter": "x^_1 2",
+      "cursorAfterUTF16": 3,
+      "remaining": "1 2",
+      "envAfter": {
+        "display": false
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sup-other-marker-display",
+      "tex": "x^_12",
+      "display": true,
+      "sourceBefore": "x^_12",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": true
+      },
+      "macroCountBefore": 0,
+      "error": {
+        "id": "MissingOpenForSup",
+        "message": "Missing open brace for superscript"
+      },
+      "sourceAfter": "x^_1 2",
+      "cursorAfterUTF16": 3,
+      "remaining": "1 2",
+      "envAfter": {
+        "display": true
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sub-digits-inline",
+      "tex": "x_12",
+      "display": false,
+      "sourceBefore": "x_12",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": false
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x_1 2",
+      "cursorAfterUTF16": 5,
+      "remaining": "",
+      "envAfter": {
+        "display": false
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sub-digits-display",
+      "tex": "x_12",
+      "display": true,
+      "sourceBefore": "x_12",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": true
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x_1 2",
+      "cursorAfterUTF16": 5,
+      "remaining": "",
+      "envAfter": {
+        "display": true
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sub-leading-zero-inline",
+      "tex": "x_012",
+      "display": false,
+      "sourceBefore": "x_012",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": false
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x_0 12",
+      "cursorAfterUTF16": 6,
+      "remaining": "",
+      "envAfter": {
+        "display": false
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sub-leading-zero-display",
+      "tex": "x_012",
+      "display": true,
+      "sourceBefore": "x_012",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": true
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x_0 12",
+      "cursorAfterUTF16": 6,
+      "remaining": "",
+      "envAfter": {
+        "display": true
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sub-long-run-inline",
+      "tex": "x_12345",
+      "display": false,
+      "sourceBefore": "x_12345",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": false
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x_1 2345",
+      "cursorAfterUTF16": 8,
+      "remaining": "",
+      "envAfter": {
+        "display": false
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sub-long-run-display",
+      "tex": "x_12345",
+      "display": true,
+      "sourceBefore": "x_12345",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": true
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x_1 2345",
+      "cursorAfterUTF16": 8,
+      "remaining": "",
+      "envAfter": {
+        "display": true
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sub-digit-decimal-inline",
+      "tex": "x_1.25",
+      "display": false,
+      "sourceBefore": "x_1.25",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": false
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x_1 .25",
+      "cursorAfterUTF16": 7,
+      "remaining": "",
+      "envAfter": {
+        "display": false
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sub-digit-decimal-display",
+      "tex": "x_1.25",
+      "display": true,
+      "sourceBefore": "x_1.25",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": true
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x_1 .25",
+      "cursorAfterUTF16": 7,
+      "remaining": "",
+      "envAfter": {
+        "display": true
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sub-leading-decimal-inline",
+      "tex": "x_.25",
+      "display": false,
+      "sourceBefore": "x_.25",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": false
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x_.25",
+      "cursorAfterUTF16": 5,
+      "remaining": "",
+      "envAfter": {
+        "display": false
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sub-leading-decimal-display",
+      "tex": "x_.25",
+      "display": true,
+      "sourceBefore": "x_.25",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": true
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x_.25",
+      "cursorAfterUTF16": 5,
+      "remaining": "",
+      "envAfter": {
+        "display": true
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sub-digit-comma-inline",
+      "tex": "x_1,234",
+      "display": false,
+      "sourceBefore": "x_1,234",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": false
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x_1 ,234",
+      "cursorAfterUTF16": 8,
+      "remaining": "",
+      "envAfter": {
+        "display": false
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sub-digit-comma-display",
+      "tex": "x_1,234",
+      "display": true,
+      "sourceBefore": "x_1,234",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": true
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x_1 ,234",
+      "cursorAfterUTF16": 8,
+      "remaining": "",
+      "envAfter": {
+        "display": true
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sub-scientific-inline",
+      "tex": "x_12e-3",
+      "display": false,
+      "sourceBefore": "x_12e-3",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": false
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x_1 2e-3",
+      "cursorAfterUTF16": 8,
+      "remaining": "",
+      "envAfter": {
+        "display": false
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sub-scientific-display",
+      "tex": "x_12e-3",
+      "display": true,
+      "sourceBefore": "x_12e-3",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": true
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x_1 2e-3",
+      "cursorAfterUTF16": 8,
+      "remaining": "",
+      "envAfter": {
+        "display": true
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sub-plus-inline",
+      "tex": "x_+12",
+      "display": false,
+      "sourceBefore": "x_+12",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": false
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x_+12",
+      "cursorAfterUTF16": 5,
+      "remaining": "",
+      "envAfter": {
+        "display": false
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sub-plus-display",
+      "tex": "x_+12",
+      "display": true,
+      "sourceBefore": "x_+12",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": true
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x_+12",
+      "cursorAfterUTF16": 5,
+      "remaining": "",
+      "envAfter": {
+        "display": true
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sub-minus-inline",
+      "tex": "x_-12",
+      "display": false,
+      "sourceBefore": "x_-12",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": false
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x_-12",
+      "cursorAfterUTF16": 5,
+      "remaining": "",
+      "envAfter": {
+        "display": false
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sub-minus-display",
+      "tex": "x_-12",
+      "display": true,
+      "sourceBefore": "x_-12",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": true
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x_-12",
+      "cursorAfterUTF16": 5,
+      "remaining": "",
+      "envAfter": {
+        "display": true
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sub-space-inline",
+      "tex": "x_ 12",
+      "display": false,
+      "sourceBefore": "x_ 12",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": false
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x_ 1 2",
+      "cursorAfterUTF16": 6,
+      "remaining": "",
+      "envAfter": {
+        "display": false
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sub-space-display",
+      "tex": "x_ 12",
+      "display": true,
+      "sourceBefore": "x_ 12",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": true
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x_ 1 2",
+      "cursorAfterUTF16": 6,
+      "remaining": "",
+      "envAfter": {
+        "display": true
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sub-tab-inline",
+      "tex": "x_\t12",
+      "display": false,
+      "sourceBefore": "x_\t12",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": false
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x_\t1 2",
+      "cursorAfterUTF16": 6,
+      "remaining": "",
+      "envAfter": {
+        "display": false
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sub-tab-display",
+      "tex": "x_\t12",
+      "display": true,
+      "sourceBefore": "x_\t12",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": true
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x_\t1 2",
+      "cursorAfterUTF16": 6,
+      "remaining": "",
+      "envAfter": {
+        "display": true
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sub-comment-inline",
+      "tex": "x_%c\n12",
+      "display": false,
+      "sourceBefore": "x_%c\n12",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": false
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x_%c\n12",
+      "cursorAfterUTF16": 7,
+      "remaining": "",
+      "envAfter": {
+        "display": false
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sub-comment-display",
+      "tex": "x_%c\n12",
+      "display": true,
+      "sourceBefore": "x_%c\n12",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": true
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x_%c\n12",
+      "cursorAfterUTF16": 7,
+      "remaining": "",
+      "envAfter": {
+        "display": true
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sub-font-inline",
+      "tex": "x_\\bf12",
+      "display": false,
+      "sourceBefore": "x_\\bf12",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": false
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x_\\bf12",
+      "cursorAfterUTF16": 7,
+      "remaining": "",
+      "envAfter": {
+        "display": false,
+        "font": "bold"
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sub-font-display",
+      "tex": "x_\\bf12",
+      "display": true,
+      "sourceBefore": "x_\\bf12",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": true
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x_\\bf12",
+      "cursorAfterUTF16": 7,
+      "remaining": "",
+      "envAfter": {
+        "display": true,
+        "font": "bold"
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sub-braced-inline",
+      "tex": "x_{12}",
+      "display": false,
+      "sourceBefore": "x_{12}",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": false
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x_{12}",
+      "cursorAfterUTF16": 6,
+      "remaining": "",
+      "envAfter": {
+        "display": false
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sub-braced-display",
+      "tex": "x_{12}",
+      "display": true,
+      "sourceBefore": "x_{12}",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": true
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x_{12}",
+      "cursorAfterUTF16": 6,
+      "remaining": "",
+      "envAfter": {
+        "display": true
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sub-braced-decimal-inline",
+      "tex": "x_{1.25}",
+      "display": false,
+      "sourceBefore": "x_{1.25}",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": false
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x_{1.25}",
+      "cursorAfterUTF16": 8,
+      "remaining": "",
+      "envAfter": {
+        "display": false
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sub-braced-decimal-display",
+      "tex": "x_{1.25}",
+      "display": true,
+      "sourceBefore": "x_{1.25}",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": true
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x_{1.25}",
+      "cursorAfterUTF16": 8,
+      "remaining": "",
+      "envAfter": {
+        "display": true
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sub-fullwidth-inline",
+      "tex": "x_１２",
+      "display": false,
+      "sourceBefore": "x_１２",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": false
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x_１２",
+      "cursorAfterUTF16": 4,
+      "remaining": "",
+      "envAfter": {
+        "display": false
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sub-fullwidth-display",
+      "tex": "x_１２",
+      "display": true,
+      "sourceBefore": "x_１２",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": true
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x_１２",
+      "cursorAfterUTF16": 4,
+      "remaining": "",
+      "envAfter": {
+        "display": true
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sub-arabic-inline",
+      "tex": "x_١٢",
+      "display": false,
+      "sourceBefore": "x_١٢",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": false
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x_١٢",
+      "cursorAfterUTF16": 4,
+      "remaining": "",
+      "envAfter": {
+        "display": false
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sub-arabic-display",
+      "tex": "x_١٢",
+      "display": true,
+      "sourceBefore": "x_١٢",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": true
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x_١٢",
+      "cursorAfterUTF16": 4,
+      "remaining": "",
+      "envAfter": {
+        "display": true
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sub-supplementary-digit-inline",
+      "tex": "x_𝟙𝟚",
+      "display": false,
+      "sourceBefore": "x_𝟙𝟚",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": false
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x_𝟙𝟚",
+      "cursorAfterUTF16": 6,
+      "remaining": "",
+      "envAfter": {
+        "display": false
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sub-supplementary-digit-display",
+      "tex": "x_𝟙𝟚",
+      "display": true,
+      "sourceBefore": "x_𝟙𝟚",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": true
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x_𝟙𝟚",
+      "cursorAfterUTF16": 6,
+      "remaining": "",
+      "envAfter": {
+        "display": true
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sub-eof-inline",
+      "tex": "x_",
+      "display": false,
+      "sourceBefore": "x_",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": false
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x_",
+      "cursorAfterUTF16": 2,
+      "remaining": "",
+      "envAfter": {
+        "display": false
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sub-eof-display",
+      "tex": "x_",
+      "display": true,
+      "sourceBefore": "x_",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": true
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x_",
+      "cursorAfterUTF16": 2,
+      "remaining": "",
+      "envAfter": {
+        "display": true
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sub-close-error-inline",
+      "tex": "x_}",
+      "display": false,
+      "sourceBefore": "x_}",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": false
+      },
+      "macroCountBefore": 0,
+      "error": {
+        "id": "ExtraCloseMissingOpen",
+        "message": "Extra close brace or missing open brace"
+      },
+      "sourceAfter": "x_}",
+      "cursorAfterUTF16": 3,
+      "remaining": "",
+      "envAfter": {
+        "display": false
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sub-close-error-display",
+      "tex": "x_}",
+      "display": true,
+      "sourceBefore": "x_}",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": true
+      },
+      "macroCountBefore": 0,
+      "error": {
+        "id": "ExtraCloseMissingOpen",
+        "message": "Extra close brace or missing open brace"
+      },
+      "sourceAfter": "x_}",
+      "cursorAfterUTF16": 3,
+      "remaining": "",
+      "envAfter": {
+        "display": true
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sub-undefined-inline",
+      "tex": "x_\\relax",
+      "display": false,
+      "sourceBefore": "x_\\relax",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": false
+      },
+      "macroCountBefore": 0,
+      "error": {
+        "id": "UndefinedControlSequence",
+        "message": "Undefined control sequence \\relax"
+      },
+      "sourceAfter": "x_\\relax",
+      "cursorAfterUTF16": 8,
+      "remaining": "",
+      "envAfter": {
+        "display": false
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sub-undefined-display",
+      "tex": "x_\\relax",
+      "display": true,
+      "sourceBefore": "x_\\relax",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": true
+      },
+      "macroCountBefore": 0,
+      "error": {
+        "id": "UndefinedControlSequence",
+        "message": "Undefined control sequence \\relax"
+      },
+      "sourceAfter": "x_\\relax",
+      "cursorAfterUTF16": 8,
+      "remaining": "",
+      "envAfter": {
+        "display": true
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sub-prime-digit-inline",
+      "tex": "x'_12",
+      "display": false,
+      "sourceBefore": "x'_12",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": false
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x'_1 2",
+      "cursorAfterUTF16": 6,
+      "remaining": "",
+      "envAfter": {
+        "display": false
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sub-prime-digit-display",
+      "tex": "x'_12",
+      "display": true,
+      "sourceBefore": "x'_12",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": true
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "x'_1 2",
+      "cursorAfterUTF16": 6,
+      "remaining": "",
+      "envAfter": {
+        "display": true
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sub-occupied-error-inline",
+      "tex": "x_i_12",
+      "display": false,
+      "sourceBefore": "x_i_12",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": false
+      },
+      "macroCountBefore": 0,
+      "error": {
+        "id": "DoubleSubscripts",
+        "message": "Double subscripts: use braces to clarify"
+      },
+      "sourceAfter": "x_i_1 2",
+      "cursorAfterUTF16": 4,
+      "remaining": "1 2",
+      "envAfter": {
+        "display": false
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sub-occupied-error-display",
+      "tex": "x_i_12",
+      "display": true,
+      "sourceBefore": "x_i_12",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": true
+      },
+      "macroCountBefore": 0,
+      "error": {
+        "id": "DoubleSubscripts",
+        "message": "Double subscripts: use braces to clarify"
+      },
+      "sourceAfter": "x_i_1 2",
+      "cursorAfterUTF16": 4,
+      "remaining": "1 2",
+      "envAfter": {
+        "display": true
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sub-nested-marker-inline",
+      "tex": "x__12",
+      "display": false,
+      "sourceBefore": "x__12",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": false
+      },
+      "macroCountBefore": 0,
+      "error": {
+        "id": "MissingOpenForSub",
+        "message": "Missing open brace for subscript"
+      },
+      "sourceAfter": "x__1 2",
+      "cursorAfterUTF16": 3,
+      "remaining": "1 2",
+      "envAfter": {
+        "display": false
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sub-nested-marker-display",
+      "tex": "x__12",
+      "display": true,
+      "sourceBefore": "x__12",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": true
+      },
+      "macroCountBefore": 0,
+      "error": {
+        "id": "MissingOpenForSub",
+        "message": "Missing open brace for subscript"
+      },
+      "sourceAfter": "x__1 2",
+      "cursorAfterUTF16": 3,
+      "remaining": "1 2",
+      "envAfter": {
+        "display": true
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sub-other-marker-inline",
+      "tex": "x_^12",
+      "display": false,
+      "sourceBefore": "x_^12",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": false
+      },
+      "macroCountBefore": 0,
+      "error": {
+        "id": "MissingOpenForSub",
+        "message": "Missing open brace for subscript"
+      },
+      "sourceAfter": "x_^1 2",
+      "cursorAfterUTF16": 3,
+      "remaining": "1 2",
+      "envAfter": {
+        "display": false
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "sub-other-marker-display",
+      "tex": "x_^12",
+      "display": true,
+      "sourceBefore": "x_^12",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": true
+      },
+      "macroCountBefore": 0,
+      "error": {
+        "id": "MissingOpenForSub",
+        "message": "Missing open brace for subscript"
+      },
+      "sourceAfter": "x_^1 2",
+      "cursorAfterUTF16": 3,
+      "remaining": "1 2",
+      "envAfter": {
+        "display": true
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "ordinary-digits-inline",
+      "tex": "12",
+      "display": false,
+      "sourceBefore": "12",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": false
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "12",
+      "cursorAfterUTF16": 2,
+      "remaining": "",
+      "envAfter": {
+        "display": false
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "ordinary-digits-display",
+      "tex": "12",
+      "display": true,
+      "sourceBefore": "12",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": true
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "12",
+      "cursorAfterUTF16": 2,
+      "remaining": "",
+      "envAfter": {
+        "display": true
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "ordinary-decimal-inline",
+      "tex": "1.25",
+      "display": false,
+      "sourceBefore": "1.25",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": false
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "1.25",
+      "cursorAfterUTF16": 4,
+      "remaining": "",
+      "envAfter": {
+        "display": false
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "ordinary-decimal-display",
+      "tex": "1.25",
+      "display": true,
+      "sourceBefore": "1.25",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": true
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "1.25",
+      "cursorAfterUTF16": 4,
+      "remaining": "",
+      "envAfter": {
+        "display": true
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "ordinary-comma-inline",
+      "tex": "1,234",
+      "display": false,
+      "sourceBefore": "1,234",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": false
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "1,234",
+      "cursorAfterUTF16": 5,
+      "remaining": "",
+      "envAfter": {
+        "display": false
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "ordinary-comma-display",
+      "tex": "1,234",
+      "display": true,
+      "sourceBefore": "1,234",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": true
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "1,234",
+      "cursorAfterUTF16": 5,
+      "remaining": "",
+      "envAfter": {
+        "display": true
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "ordinary-unicode-inline",
+      "tex": "１２",
+      "display": false,
+      "sourceBefore": "１２",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": false
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "１２",
+      "cursorAfterUTF16": 2,
+      "remaining": "",
+      "envAfter": {
+        "display": false
+      },
+      "macroCountAfter": 0
+    },
+    {
+      "name": "ordinary-unicode-display",
+      "tex": "１２",
+      "display": true,
+      "sourceBefore": "１２",
+      "cursorBeforeUTF16": 0,
+      "envBefore": {
+        "display": true
+      },
+      "macroCountBefore": 0,
+      "sourceAfter": "１２",
+      "cursorAfterUTF16": 2,
+      "remaining": "",
+      "envAfter": {
+        "display": true
+      },
+      "macroCountAfter": 0
+    }
+  ]
+}
