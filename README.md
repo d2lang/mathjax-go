@@ -159,11 +159,10 @@ script-local lookahead uses the primary JavaScript whitespace set, without
 changing ordinary row parsing or number tokenization.
 
 The dedicated 120-case matrix binds complete SVG and explicit/own-property
-MathML, including 12 registered macro cases. It has 96 raw primary cases, four
+MathML, including 12 registered macro cases. It has 116 raw primary cases and four
 exact-SVG prime cases retaining the precise inherited `pseudoscript` metadata
-boundary, 16 unchanged ordinary/Unicode scanner boundaries, and four changed
-comma-tail observations that remain nonprimary. Those comma cases are not
-claimed fixed. Another 48 actual registered-handler records and 108 delegated
+boundary. The ordinary/Unicode scanner and comma-tail cases now use their
+unchanged primary references. Another 48 actual registered-handler records and 108 delegated
 parser traces bind source insertion, cursor/error order and base ownership.
 Four BOM cases match primary; four NEL cases preserve accepted Go outputs while
 the pinned primary throws an internal exception, so they are not parity claims.
@@ -172,6 +171,17 @@ The two earlier D066 `digit-tail` whole-output qualifications now compare to
 their unchanged primary references. Macro-boundary handling also promotes the
 registered font-macro pair and the six retained-prefix cursor records; the
 remaining D066 whole-output and precise prime-property boundaries stay intact.
+
+### Ordinary numbers
+
+Ordinary numeric tokens use the pinned ASCII scanner: `1,234` has a comma
+operator, while `1{,}234` forms one number. Decimal and source-cursor behavior
+follows that same pattern. Supported non-ASCII decimal digits use the pinned
+range token kind and variant individually, without changing script lookahead.
+The dedicated corpus covers 80 public expressions and 15 parser observations;
+92 SVGs are primary, with four precise inherited metadata boundaries and
+three explicitly unsupported-primary inputs retained as accepted Go controls.
+See `testdata/ordinary_number_README.md` for provenance and regeneration.
 
 ### Registered macros using infix names
 
