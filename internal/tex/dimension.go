@@ -21,9 +21,6 @@ var (
 // balanced-brace scan and failure cursor do not change generic argument parsing.
 // name is the invoking control sequence used by primary parser.currentCS.
 func (p *parser) readDimension(name string) (string, error) {
-	if name == "vspace" || name == "raisebox" {
-		return p.readLegacyDimension(name)
-	}
 	missing := func() (string, error) {
 		return "", texError("MissingDimOrUnits", "Missing dimension or its units for \\%s", name)
 	}

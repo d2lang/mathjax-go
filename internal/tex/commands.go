@@ -21,7 +21,6 @@ import (
 	"fmt"
 	"strconv"
 	"strings"
-	"unicode"
 
 	"github.com/d2lang/mathjax-go/internal/mhchem"
 	"github.com/d2lang/mathjax-go/internal/mml"
@@ -248,8 +247,6 @@ func (p *parser) command(name string) ([]*mml.Node, error) {
 		return p.horizontalSpace(name)
 	case "hspace*":
 		return p.horizontalSpace(name)
-	case "vspace":
-		return p.verticalSpace(name)
 	case "phantom", "hphantom", "vphantom":
 		return p.phantom(name)
 	case "smash":
@@ -262,7 +259,7 @@ func (p *parser) command(name string) ([]*mml.Node, error) {
 		return p.mathMBox(name)
 	case "mathmakebox":
 		return p.mathMakeBox(name)
-	case "raise", "lower", "raisebox":
+	case "raise", "lower":
 		return p.raiseLower(name)
 	case "rule":
 		return p.rule(name)
@@ -1030,55 +1027,6 @@ func (p *parser) horizontalSpace(name string) ([]*mml.Node, error) {
 		return nil, err
 	}
 	return []*mml.Node{space(width)}, nil
-}
-
-func (p *parser) verticalSpace(name string) ([]*mml.Node, error) {
-	height, err := p.readDimension(name)
-	if err != nil {
-		return nil, err
-	}
-	return []*mml.Node{setAttributes(node("mspace"), map[string]any{"height": height})}, nil
-}
-
-// readLegacyDimension preserves the two non-primary vspace/raisebox aliases
-// until their separate dispatch correction. Supported GetDimen consumers use
-// the strict reader in dimension.go.
-func (p *parser) readLegacyDimension(name string) (string, error) {
-	p.skipSpaces()
-	if p.pos < len(p.source) && p.source[p.pos] == '{' {
-		raw, _, err := p.readArgument(name, false)
-		if err != nil {
-			return "", err
-		}
-		if strings.TrimSpace(raw) == "" {
-			return "", texError("MissingDimOrUnits", "Missing dimension or its units for \\%s", name)
-		}
-		return normalizeTeXMu(strings.TrimSpace(raw)), nil
-	}
-	start := p.pos
-	for p.pos < len(p.source) {
-		r := p.peekRune()
-		if !(unicode.IsDigit(r) || unicode.IsLetter(r) || strings.ContainsRune("+-. ", r)) {
-			break
-		}
-		p.consumeRune()
-		if unicode.IsLetter(r) && p.pos-start >= 2 {
-			// TeX dimensions used by the selected packages all have two-letter
-			// units. Stop after the unit rather than absorbing the next symbol.
-			segment := strings.TrimSpace(p.source[start:p.pos])
-			if len(segment) >= 2 {
-				last := segment[len(segment)-2:]
-				if last == "em" || last == "ex" || last == "mu" || last == "pt" || last == "px" || last == "in" || last == "cm" || last == "mm" {
-					break
-				}
-			}
-		}
-	}
-	value := strings.TrimSpace(p.source[start:p.pos])
-	if value == "" {
-		return "", texError("MissingDimOrUnits", "Missing dimension or its units for \\%s", name)
-	}
-	return normalizeTeXMu(value), nil
 }
 
 func (p *parser) phantom(name string) ([]*mml.Node, error) {

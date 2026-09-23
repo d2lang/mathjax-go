@@ -68,10 +68,10 @@ func TestDimensionGrammarPinnedReferences(t *testing.T) {
 	}
 	read("testdata/dimension_grammar_mathjax_3_2_2.json", &f)
 	read("testdata/dimension_grammar_boundaries.json", &boundaries)
-	if f.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || len(f.Cases) != 60 || boundaries.Baseline != "6a3573f7f15fc67b5abde6fdf8b548e89d6c7e48" || len(boundaries.Cases) != 6 {
+	if f.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || len(f.Cases) != 60 || boundaries.Baseline != "6a3573f7f15fc67b5abde6fdf8b548e89d6c7e48" || len(boundaries.Cases) != 2 {
 		t.Fatal("unbound dimension corpus")
 	}
-	stems := map[string]bool{"rule-unchanged-boundary": true, "vspace-dispatch-boundary": true, "raisebox-dispatch-boundary": true}
+	stems := map[string]bool{"rule-unchanged-boundary": true}
 	for name := range boundaries.Cases {
 		stem := strings.TrimSuffix(strings.TrimSuffix(name, "-inline"), "-display")
 		if !stems[stem] {
@@ -130,7 +130,7 @@ func TestDimensionGrammarPinnedReferences(t *testing.T) {
 	}
 }
 
-func TestDimensionGrammarUnsupportedAliasesStaySeparate(t *testing.T) {
+func TestDimensionGrammarUnsupportedCommandErrors(t *testing.T) {
 	var f struct {
 		Baseline string
 		Cases    []struct {
@@ -154,7 +154,7 @@ func TestDimensionGrammarUnsupportedAliasesStaySeparate(t *testing.T) {
 			alias := strings.HasPrefix(c.Name, "vspace-") || strings.HasPrefix(c.Name, "raisebox-")
 			if alias {
 				if c.ExpectedSVG == c.PrimarySVG {
-					t.Fatal("alias qualification lost")
+					t.Fatal("historical alias witness changed")
 				}
 			} else if c.ExpectedSVG != c.PrimarySVG || !reflect.DeepEqual(c.Tree, c.PrimaryTree) {
 				t.Fatal("supported reader control must be raw primary")
@@ -168,7 +168,7 @@ func TestDimensionGrammarUnsupportedAliasesStaySeparate(t *testing.T) {
 			if e = json.Unmarshal(b, &got); e != nil {
 				t.Fatal(e)
 			}
-			if !reflect.DeepEqual(got, c.Tree) {
+			if !reflect.DeepEqual(got, c.PrimaryTree) {
 				t.Fatal("complete alias/control tree differs")
 			}
 			opts := mathjax.DefaultOptions()
@@ -177,7 +177,7 @@ func TestDimensionGrammarUnsupportedAliasesStaySeparate(t *testing.T) {
 			if e != nil {
 				t.Fatal(e)
 			}
-			if fmt.Sprintf("%x", sha256.Sum256([]byte(s))) != c.ExpectedSVG {
+			if fmt.Sprintf("%x", sha256.Sum256([]byte(s))) != c.PrimarySVG {
 				t.Fatal("complete alias/control SVG differs")
 			}
 		})
