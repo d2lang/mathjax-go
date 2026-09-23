@@ -1,0 +1,231 @@
+{
+  "baseline": "787559bb7c9515893592f04861dcac78ff83e399",
+  "markers": [
+    {
+      "name": "mixed-math",
+      "nodes": [
+        {
+          "path": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "kind": "mi",
+          "text": null,
+          "attributes": [],
+          "properties": [
+            {
+              "name": "go-vector-factory-token",
+              "value": true
+            },
+            {
+              "name": "go-ambient-font-source",
+              "value": true
+            },
+            {
+              "name": "go-resolved-font-scope",
+              "value": true
+            }
+          ],
+          "markers": [
+            {
+              "name": "go-vector-factory-token",
+              "value": true
+            },
+            {
+              "name": "go-ambient-font-source",
+              "value": true
+            },
+            {
+              "name": "go-resolved-font-scope",
+              "value": true
+            }
+          ]
+        }
+      ],
+      "acceptedHelperSHA256": "d4df7b0633a2c5cbdc91d0041ecb59e9394bab6f161b0456691933938f4dd524"
+    },
+    {
+      "name": "math-only",
+      "nodes": [
+        {
+          "path": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "kind": "mi",
+          "text": null,
+          "attributes": [],
+          "properties": [
+            {
+              "name": "go-vector-factory-token",
+              "value": true
+            },
+            {
+              "name": "go-ambient-font-source",
+              "value": true
+            },
+            {
+              "name": "go-resolved-font-scope",
+              "value": true
+            }
+          ],
+          "markers": [
+            {
+              "name": "go-vector-factory-token",
+              "value": true
+            },
+            {
+              "name": "go-ambient-font-source",
+              "value": true
+            },
+            {
+              "name": "go-resolved-font-scope",
+              "value": true
+            }
+          ]
+        }
+      ],
+      "acceptedHelperSHA256": "d4df7b0633a2c5cbdc91d0041ecb59e9394bab6f161b0456691933938f4dd524"
+    },
+    {
+      "name": "caller-font",
+      "nodes": [
+        {
+          "path": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "kind": "mi",
+          "text": null,
+          "attributes": [],
+          "properties": [
+            {
+              "name": "go-vector-factory-token",
+              "value": true
+            },
+            {
+              "name": "go-ambient-font-source",
+              "value": true
+            },
+            {
+              "name": "go-resolved-font-scope",
+              "value": true
+            }
+          ],
+          "markers": [
+            {
+              "name": "go-vector-factory-token",
+              "value": true
+            },
+            {
+              "name": "go-ambient-font-source",
+              "value": true
+            },
+            {
+              "name": "go-resolved-font-scope",
+              "value": true
+            }
+          ]
+        }
+      ],
+      "acceptedHelperSHA256": "d4df7b0633a2c5cbdc91d0041ecb59e9394bab6f161b0456691933938f4dd524"
+    },
+    {
+      "name": "nested-reference",
+      "nodes": [
+        {
+          "path": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "kind": "mtext",
+          "text": null,
+          "attributes": [],
+          "properties": [
+            {
+              "name": "go-resolved-font-scope",
+              "value": true
+            }
+          ],
+          "markers": [
+            {
+              "name": "go-resolved-font-scope",
+              "value": true
+            }
+          ]
+        }
+      ],
+      "acceptedHelperSHA256": "d4df7b0633a2c5cbdc91d0041ecb59e9394bab6f161b0456691933938f4dd524"
+    },
+    {
+      "name": "shared-macro",
+      "nodes": [
+        {
+          "path": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "kind": "mi",
+          "text": null,
+          "attributes": [],
+          "properties": [
+            {
+              "name": "go-vector-factory-token",
+              "value": true
+            },
+            {
+              "name": "go-ambient-font-source",
+              "value": true
+            },
+            {
+              "name": "go-resolved-font-scope",
+              "value": true
+            }
+          ],
+          "markers": [
+            {
+              "name": "go-vector-factory-token",
+              "value": true
+            },
+            {
+              "name": "go-ambient-font-source",
+              "value": true
+            },
+            {
+              "name": "go-resolved-font-scope",
+              "value": true
+            }
+          ]
+        }
+      ],
+      "acceptedHelperSHA256": "d4df7b0633a2c5cbdc91d0041ecb59e9394bab6f161b0456691933938f4dd524"
+    }
+  ],
+  "unclosedArgument": {
+    "name": "unclosed-argument",
+    "primaryCursor": 14,
+    "acceptedCursor": 12,
+    "primaryRemaining": "",
+    "acceptedRemaining": "{t"
+  },
+  "observerError": {
+    "name": "missing-argument",
+    "primary": "Missing argument for \\DRefObserve",
+    "accepted": "Missing argument for \\ref"
+  }
+}

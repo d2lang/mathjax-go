@@ -1,0 +1,149 @@
+{
+  "cases": [
+    {
+      "name": "plain-ref-inline",
+      "tex": "\\begin{equation}x\\tag{T}\\label{t}\\end{equation}\\ref{t}",
+      "display": false
+    },
+    {
+      "name": "plain-eqref-inline",
+      "tex": "\\begin{equation}x\\tag{T}\\label{t}\\end{equation}\\eqref{t}",
+      "display": false
+    },
+    {
+      "name": "star-plain-ref-inline",
+      "tex": "\\begin{equation}x\\tag*{T}\\label{t}\\end{equation}\\ref{t}",
+      "display": false
+    },
+    {
+      "name": "empty-tag-ref-inline",
+      "tex": "\\begin{equation}x\\tag{}\\label{t}\\end{equation}\\ref{t}",
+      "display": false
+    },
+    {
+      "name": "empty-tag-ref-display",
+      "tex": "\\begin{equation}x\\tag{}\\label{t}\\end{equation}\\ref{t}",
+      "display": true
+    },
+    {
+      "name": "unknown-ref-inline",
+      "tex": "x\\ref{absent}y",
+      "display": false
+    },
+    {
+      "name": "unknown-ref-display",
+      "tex": "x\\ref{absent}y",
+      "display": true
+    },
+    {
+      "name": "unknown-eqref-inline",
+      "tex": "x\\eqref{absent}y",
+      "display": false
+    },
+    {
+      "name": "unknown-eqref-display",
+      "tex": "x\\eqref{absent}y",
+      "display": true
+    },
+    {
+      "name": "placeholder-label-inline",
+      "tex": "x\\label{p}\\ref{p}",
+      "display": false
+    },
+    {
+      "name": "placeholder-label-display",
+      "tex": "x\\label{p}\\ref{p}",
+      "display": true
+    },
+    {
+      "name": "forward-plain-inline",
+      "tex": "\\ref{t}\\begin{equation}x\\tag{T}\\label{t}\\end{equation}",
+      "display": false
+    },
+    {
+      "name": "repeated-reference-inline",
+      "tex": "\\begin{equation}x\\tag{T}\\label{t}\\end{equation}\\ref{t}+\\eqref{t}",
+      "display": false
+    },
+    {
+      "name": "label-id-inline",
+      "tex": "\\begin{equation}x\\tag{T}\\label{a b~c}\\end{equation}\\ref{a b~c}",
+      "display": false
+    },
+    {
+      "name": "bold-reference-inline",
+      "tex": "\\begin{equation}x\\tag{T}\\label{t}\\end{equation}\\mathbf{\\ref{t}}",
+      "display": false
+    },
+    {
+      "name": "italic-reference-inline",
+      "tex": "\\begin{equation}x\\tag{T}\\label{t}\\end{equation}\\mathit{\\ref{t}}",
+      "display": false
+    },
+    {
+      "name": "text-reference-inline",
+      "tex": "\\begin{equation}x\\tag{T}\\label{t}\\end{equation}\\text{a \\ref{t} b}",
+      "display": false
+    },
+    {
+      "name": "text-eqref-inline",
+      "tex": "\\begin{equation}x\\tag{T}\\label{t}\\end{equation}\\text{a \\eqref{t} b}",
+      "display": false
+    },
+    {
+      "name": "edge-space-reference-inline",
+      "tex": "\\begin{equation}x\\tag{ a  b }\\label{t}\\end{equation}\\ref{t}",
+      "display": false
+    },
+    {
+      "name": "missing-ref-inline",
+      "tex": "\\ref",
+      "display": false
+    },
+    {
+      "name": "missing-ref-display",
+      "tex": "\\ref",
+      "display": true
+    },
+    {
+      "name": "missing-eqref-inline",
+      "tex": "\\eqref",
+      "display": false
+    },
+    {
+      "name": "missing-eqref-display",
+      "tex": "\\eqref",
+      "display": true
+    },
+    {
+      "name": "unclosed-ref-argument-inline",
+      "tex": "\\ref{t",
+      "display": false
+    },
+    {
+      "name": "unclosed-ref-argument-display",
+      "tex": "\\ref{t",
+      "display": true
+    },
+    {
+      "name": "earlier-undefined-inline",
+      "tex": "\\UndefinedReferenceProbe\\ref",
+      "display": false
+    },
+    {
+      "name": "earlier-undefined-display",
+      "tex": "\\UndefinedReferenceProbe\\ref",
+      "display": true
+    },
+    {
+      "name": "following-undefined-inline",
+      "tex": "\\ref{absent}\\UndefinedReferenceProbe",
+      "display": false
+    },
+    {
+      "name": "following-undefined-display",
+      "tex": "\\ref{absent}\\UndefinedReferenceProbe",
+      "display": true
+    }
+  ]
+}
