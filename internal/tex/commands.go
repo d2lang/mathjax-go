@@ -1042,7 +1042,10 @@ func (p *parser) verticalSpace(name string) ([]*mml.Node, error) {
 	return []*mml.Node{setAttributes(node("mspace"), map[string]any{"height": height})}, nil
 }
 
-func (p *parser) readDimension(name string) (string, error) {
+// readLegacyDimension preserves the two non-primary vspace/raisebox aliases
+// until their separate dispatch correction. Supported GetDimen consumers use
+// the strict reader in dimension.go.
+func (p *parser) readLegacyDimension(name string) (string, error) {
 	p.skipSpaces()
 	if p.pos < len(p.source) && p.source[p.pos] == '{' {
 		raw, _, err := p.readArgument(name, false)

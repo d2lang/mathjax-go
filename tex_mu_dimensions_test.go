@@ -60,6 +60,17 @@ func TestTeXMuDimensionsPinnedReferences(t *testing.T) {
 			t.Fatal("inherited SVG boundary changed", name)
 		}
 	}
+	// D079: these exact 12 historical grammar qualifications now compare raw
+	// primary SVG and trees. Their unchanged original receipts remain on disk.
+	for _, stem := range []string{"braced-junk", "exponent", "double-sign", "uppercase", "unbraced-comma", "pc"} {
+		for _, mode := range []string{"inline", "display"} {
+			name := stem + "-" + mode
+			if boundaries.Cases[name].Mode != "unchanged" {
+				t.Fatal("missing historical grammar receipt", name)
+			}
+			delete(boundaries.Cases, name)
+		}
+	}
 	for _, c := range fixture.Cases {
 		t.Run(c.Name, func(t *testing.T) {
 			root, err := tex.NewCompiler().Compile(c.TeX, c.Display)

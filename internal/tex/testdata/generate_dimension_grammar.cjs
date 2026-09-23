@@ -1,0 +1,17 @@
+const fs=require('fs'),vm=require('vm'),path=require('path'),crypto=require('crypto');
+if(process.env.NODE_OPTIONS)throw Error('Normal Node only');
+const base=process.argv[2],output=process.argv[3]||require('path').join(__dirname,'dimension_grammar_mathjax_3_2_2.json');if(!base)throw Error('usage: node generate_dimension_grammar.cjs PINNED_ASSETS [OUTPUT]');
+const hashes={'polyfills.js':'7fe1d048c78b0e09854c1259f7413868a51cc8f0c822489eb1ac36ae6c85ce01','mathjax.js':'cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869','setup.js':'a52cb0bbabfbd7796b9fedd793b9386c474e3123e788ee151cbe47ca1fa6e881'};
+const c=vm.createContext({console});for(const[n,h]of Object.entries(hashes)){let b=fs.readFileSync(path.join(base,n));if(crypto.createHash('sha256').update(b).digest('hex')!==h)throw Error(n);vm.runInContext(b.toString(),c,{filename:n});}
+c.inputs=["1em x", "1ex x", "1pt x", "1pc x", "1px x", "1in x", "1cm x", "1mm x", "1mu x", "+1.250em x", "-.5pt x", ",5pt x", "1,5mu x", "8.mu x", "0mu x", "-0mu x", "1pcxy", "1pc  x", "1pc\tx", "1pc\nx", "1pc𝑥", "1pc%comment", "1e2mu x", "++8mu x", "8MU x", "8qu x", "8x", "mu x", ".mu x", "", "}x", "\\kern", "{1pc}x", "{ 1,5 pt }x", "{1pc x}z", "{}x", "{1pc", "{{1pc}}x", "{1pc\\}x", "{1pc%comment}x", "﻿1pc x", "1pc x", " 1pc x", "​1pc x", " 1pc x", "{1﻿pc}x", "{1pc}x", "{1pc﻿}x", "{1pc}x", "{1pc\\", "{1pc\\𝑥", "{1pc\\{x", "{1pc\\}"];
+const r=vm.runInContext(`(()=>{
+ const proto=MathJax._.input.tex.TexParser.default.prototype,util=MathJax._.input.tex.ParseUtil.default,methods=MathJax._.input.tex.base.BaseMethods.default,options=html.inputJax[0].parseOptions;
+ const error=e=>({id:e.id||null,message:e.message||String(e)});
+ function parser(source,name){const p=Object.create(proto);p.string=source;p.i=0;p.currentCS=name;p.configuration=options;return p;}
+ const snapshot=p=>({source:p.string,cursorUTF16:p.i,sourceLengthUTF16:p.string.length,cursorBytesWithinSource:unescape(encodeURIComponent(p.string.slice(0,p.i))).length,beyondUTF16:Math.max(0,p.i-p.string.length),remaining:p.string.slice(p.i)});
+ const dimensions=[];for(const source of inputs)for(const name of ['\\\\kern','\\\\above']){const p=parser(source,name);let value=null,failure=null;try{value=proto.GetDimen.call(p,name)}catch(e){failure=error(e)}dimensions.push({source,name,value,error:failure,...snapshot(p)});}
+ const labelCases=['bad','{bad}','{1pt','1pt x'].map(source=>{const p=parser(source,'\\\\begin');let value=null,failure=null;try{value=p.GetDimen('\\\\begin{spreadlines}')}catch(e){failure=error(e)}return{source,name:'\\\\begin{spreadlines}',currentCS:p.currentCS,value,error:failure,...snapshot(p)};});
+ const over=['1pt z','{1,5pt}z','8mu z','bad z','','{1pt','{1pt\\\\'].map(source=>{const p=parser(source,'\\\\above'),pushed=[];p.Push=item=>pushed.push(item);let failure=null;try{methods.Over(p,'\\\\above')}catch(e){failure=error(e)}return{source,error:failure,...snapshot(p),pushCount:pushed.length,pushed:pushed.map(i=>({kind:i.kind,properties:{...i._properties}}))};});
+ return{dimensions,labelCases,over,methods:{GetDimen:proto.GetDimen.toString(),GetArgument:proto.GetArgument.toString(),GetNext:proto.GetNext.toString(),matchDimen:util.matchDimen.toString(),Over:methods.Over.toString()}};
+})()`,c);
+fs.writeFileSync(output,JSON.stringify({assetsSHA256:hashes,node:process.version,...r},null,2)+'\n');console.log(JSON.stringify({dimensions:r.dimensions.length,labelCases:r.labelCases.length,over:r.over.length}));

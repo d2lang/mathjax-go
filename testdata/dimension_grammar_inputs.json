@@ -1,0 +1,304 @@
+{
+  "cases": [
+    {
+      "name": "comma-inline",
+      "tex": "\\kern1,5mu x",
+      "display": false
+    },
+    {
+      "name": "comma-display",
+      "tex": "\\kern1,5mu x",
+      "display": true
+    },
+    {
+      "name": "braced-junk-inline",
+      "tex": "\\kern{8mu x}z",
+      "display": false
+    },
+    {
+      "name": "braced-junk-display",
+      "tex": "\\kern{8mu x}z",
+      "display": true
+    },
+    {
+      "name": "uppercase-inline",
+      "tex": "\\kern8MU x",
+      "display": false
+    },
+    {
+      "name": "uppercase-display",
+      "tex": "\\kern8MU x",
+      "display": true
+    },
+    {
+      "name": "pc-tail-inline",
+      "tex": "\\kern1pc x",
+      "display": false
+    },
+    {
+      "name": "pc-tail-display",
+      "tex": "\\kern1pc x",
+      "display": true
+    },
+    {
+      "name": "exponent-inline",
+      "tex": "\\kern1e2mu x",
+      "display": false
+    },
+    {
+      "name": "exponent-display",
+      "tex": "\\kern1e2mu x",
+      "display": true
+    },
+    {
+      "name": "double-sign-inline",
+      "tex": "\\kern++8mu x",
+      "display": false
+    },
+    {
+      "name": "double-sign-display",
+      "tex": "\\kern++8mu x",
+      "display": true
+    },
+    {
+      "name": "valid-mu-inline",
+      "tex": "\\kern8mu x",
+      "display": false
+    },
+    {
+      "name": "valid-mu-display",
+      "tex": "\\kern8mu x",
+      "display": true
+    },
+    {
+      "name": "valid-braced-inline",
+      "tex": "\\kern{8mu}x",
+      "display": false
+    },
+    {
+      "name": "valid-braced-display",
+      "tex": "\\kern{8mu}x",
+      "display": true
+    },
+    {
+      "name": "hskip-pc-inline",
+      "tex": "\\hskip1pc x",
+      "display": false
+    },
+    {
+      "name": "hskip-pc-display",
+      "tex": "\\hskip1pc x",
+      "display": true
+    },
+    {
+      "name": "hspace-braced-inline",
+      "tex": "\\hspace{1,5pt}x",
+      "display": false
+    },
+    {
+      "name": "hspace-braced-display",
+      "tex": "\\hspace{1,5pt}x",
+      "display": true
+    },
+    {
+      "name": "mkern-tail-inline",
+      "tex": "\\mkern1ptxy",
+      "display": false
+    },
+    {
+      "name": "mkern-tail-display",
+      "tex": "\\mkern1ptxy",
+      "display": true
+    },
+    {
+      "name": "mskip-missing-inline",
+      "tex": "\\mskip",
+      "display": false
+    },
+    {
+      "name": "mskip-missing-display",
+      "tex": "\\mskip",
+      "display": true
+    },
+    {
+      "name": "above-comma-inline",
+      "tex": "x\\above 1,5pt y",
+      "display": false
+    },
+    {
+      "name": "above-comma-display",
+      "tex": "x\\above 1,5pt y",
+      "display": true
+    },
+    {
+      "name": "above-braced-inline",
+      "tex": "x\\above{ 1.5 pt }y",
+      "display": false
+    },
+    {
+      "name": "above-braced-display",
+      "tex": "x\\above{ 1.5 pt }y",
+      "display": true
+    },
+    {
+      "name": "above-mu-inline",
+      "tex": "x\\above 8mu y",
+      "display": false
+    },
+    {
+      "name": "above-mu-display",
+      "tex": "x\\above 8mu y",
+      "display": true
+    },
+    {
+      "name": "above-missing-inline",
+      "tex": "x\\above",
+      "display": false
+    },
+    {
+      "name": "above-missing-display",
+      "tex": "x\\above",
+      "display": true
+    },
+    {
+      "name": "above-invalid-inline",
+      "tex": "x\\above bad y",
+      "display": false
+    },
+    {
+      "name": "above-invalid-display",
+      "tex": "x\\above bad y",
+      "display": true
+    },
+    {
+      "name": "second-above-invalid-inline",
+      "tex": "x\\choose y\\above bad z",
+      "display": false
+    },
+    {
+      "name": "second-above-invalid-display",
+      "tex": "x\\choose y\\above bad z",
+      "display": true
+    },
+    {
+      "name": "second-above-missing-inline",
+      "tex": "x\\choose y\\above",
+      "display": false
+    },
+    {
+      "name": "second-above-missing-display",
+      "tex": "x\\choose y\\above",
+      "display": true
+    },
+    {
+      "name": "second-above-valid-boundary-inline",
+      "tex": "x\\choose y\\above 1pt z",
+      "display": false
+    },
+    {
+      "name": "second-above-valid-boundary-display",
+      "tex": "x\\choose y\\above 1pt z",
+      "display": true
+    },
+    {
+      "name": "cd-width-inline",
+      "tex": "\\minCDarrowwidth{1,5em}\\begin{CD}A @>>> B\\end{CD}",
+      "display": false
+    },
+    {
+      "name": "cd-width-display",
+      "tex": "\\minCDarrowwidth{1,5em}\\begin{CD}A @>>> B\\end{CD}",
+      "display": true
+    },
+    {
+      "name": "cd-invalid-inline",
+      "tex": "\\minCDarrowheight{bad}x",
+      "display": false
+    },
+    {
+      "name": "cd-invalid-display",
+      "tex": "\\minCDarrowheight{bad}x",
+      "display": true
+    },
+    {
+      "name": "spreadlines-valid-inline",
+      "tex": "\\begin{spreadlines}{1,5pt}\\begin{gathered}x\\\\y\\end{gathered}\\end{spreadlines}",
+      "display": false
+    },
+    {
+      "name": "spreadlines-valid-display",
+      "tex": "\\begin{spreadlines}{1,5pt}\\begin{gathered}x\\\\y\\end{gathered}\\end{spreadlines}",
+      "display": true
+    },
+    {
+      "name": "spreadlines-invalid-inline",
+      "tex": "\\begin{spreadlines}{bad}x\\end{spreadlines}",
+      "display": false
+    },
+    {
+      "name": "spreadlines-invalid-display",
+      "tex": "\\begin{spreadlines}{bad}x\\end{spreadlines}",
+      "display": true
+    },
+    {
+      "name": "raise-valid-boundary-inline",
+      "tex": "\\raise{1,5pt}x",
+      "display": false
+    },
+    {
+      "name": "raise-valid-boundary-display",
+      "tex": "\\raise{1,5pt}x",
+      "display": true
+    },
+    {
+      "name": "lower-invalid-inline",
+      "tex": "\\lower{bad}x",
+      "display": false
+    },
+    {
+      "name": "lower-invalid-display",
+      "tex": "\\lower{bad}x",
+      "display": true
+    },
+    {
+      "name": "rule-unchanged-boundary-inline",
+      "tex": "\\rule{1,5pt}{2pt}x",
+      "display": false
+    },
+    {
+      "name": "rule-unchanged-boundary-display",
+      "tex": "\\rule{1,5pt}{2pt}x",
+      "display": true
+    },
+    {
+      "name": "vspace-dispatch-boundary-inline",
+      "tex": "\\vspace{1pt}x",
+      "display": false
+    },
+    {
+      "name": "vspace-dispatch-boundary-display",
+      "tex": "\\vspace{1pt}x",
+      "display": true
+    },
+    {
+      "name": "raisebox-dispatch-boundary-inline",
+      "tex": "\\raisebox{1pt}x",
+      "display": false
+    },
+    {
+      "name": "raisebox-dispatch-boundary-display",
+      "tex": "\\raisebox{1pt}x",
+      "display": true
+    },
+    {
+      "name": "literal-text-inline",
+      "tex": "\\text{1,5mu}x",
+      "display": false
+    },
+    {
+      "name": "literal-text-display",
+      "tex": "\\text{1,5mu}x",
+      "display": true
+    }
+  ]
+}
