@@ -99,16 +99,27 @@ func (p *parser) parseRowWithInfix(terminator byte, stopRight, infixPending bool
 }
 
 // Only a direct AutoOpen recipient may consume its matching AutoClose item.
-// Style/size/color and OverItem continuations use parseRowWithInfix instead;
-// SetFont changes the environment without adding such a stack barrier.
+// Local style frames and the denominator continuation retain those barriers;
+// SetFont changes the environment without adding a stack item.
 func (p *parser) parseRowWithAutoOpen(terminator byte, stopRight, infixPending bool, auto *derivativeAutoOpen) ([]*mml.Node, string, error) {
+	return p.parseRowContinuation(terminator, stopRight, infixPending, auto, "")
+}
+
+type rowStyleFrame struct {
+	prefix     []*mml.Node
+	attributes mjSourceObject
+}
+
+// pendingFont continues a SetFont in this logical row across OverItem. Real
+// groups and child parsers still enter through the ordinary row entry points.
+func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending bool, auto *derivativeAutoOpen, pendingFont string) ([]*mml.Node, string, error) {
 	vectorFont, vectorStar, activeFont := p.vectorFont, p.vectorStar, p.activeFont
 	defer func() { p.vectorFont, p.vectorStar, p.activeFont = vectorFont, vectorStar, activeFont }()
 	var nodes []*mml.Node
 	var pending *pendingPrime
 	var negation pendingNot
 	var dots pendingDots
-	var pendingFont string
+	var styles []rowStyleFrame
 	finishNot := func() { nodes = append(nodes, negation.finish()...) }
 	finishDots := func() { nodes = append(nodes, dots.finish()...) }
 	finishPrime := func() {
@@ -123,6 +134,33 @@ func (p *parser) parseRowWithAutoOpen(terminator byte, stopRight, infixPending b
 	// one parseRow call is important: closing a group finalizes the function
 	// without letting it act on the first item outside that group.
 	pendingFunction := false
+	finishPending := func() {
+		finishPrime()
+		finishNot()
+		finishDots()
+		pendingFunction = false
+	}
+	pushStyle := func(attributes mjSourceObject) {
+		// StyleItem is a non-MML successor, so an earlier FnItem finishes
+		// without ApplyFunction. Prime/Not/Dots also reduce before it.
+		finishPending()
+		styles = append(styles, rowStyleFrame{nodes, attributes})
+		nodes = nil
+	}
+	closeStyles := func() {
+		finishPending()
+		// StyleItem.checkItem reduces on every isClose item, including
+		// OverItem. Each resulting mstyle is delivered to its actual parent.
+		for i := len(styles) - 1; i >= 0; i-- {
+			frame := styles[i]
+			styled := node("mstyle", row(nodes, true))
+			for _, attribute := range frame.attributes {
+				styled.Attributes.Set(attribute.Name, attribute.Value)
+			}
+			nodes = append(frame.prefix, styled)
+		}
+		styles = nil
+	}
 	appendNodes := func(created []*mml.Node, namedFunction bool) {
 		if len(created) == 0 {
 			return
@@ -141,7 +179,7 @@ func (p *parser) parseRowWithAutoOpen(terminator byte, stopRight, infixPending b
 		} else {
 			created = negation.apply(created)
 		}
-		if auto != nil {
+		if auto != nil && len(styles) == 0 {
 			auto.observe(created)
 		}
 		created = dots.apply(created)
@@ -159,9 +197,7 @@ func (p *parser) parseRowWithAutoOpen(terminator byte, stopRight, infixPending b
 	for p.pos < len(p.source) {
 		c := p.source[p.pos]
 		if terminator != 0 && c == terminator {
-			finishPrime()
-			finishNot()
-			finishDots()
+			closeStyles()
 			p.pos++
 			return nodes, "", nil
 		}
@@ -190,17 +226,21 @@ func (p *parser) parseRowWithAutoOpen(terminator byte, stopRight, infixPending b
 				if !stopRight {
 					return nil, "", texError("ExtraRight", "Extra \\right")
 				}
-				finishPrime()
-				finishNot()
-				finishDots()
 				delim, err := p.readDelimiter(name, false)
+				if err == nil {
+					closeStyles()
+				}
 				return nodes, delim, err
 			}
 			if _, registered := p.state.macros[name]; !registered && (name == "over" || name == "atop" || name == "above" || name == "choose" || name == "brace" || name == "brack") {
-				finishPrime()
-				finishNot()
-				finishDots()
-				fraction, right, err := p.infixFraction(name, nodes, terminator, stopRight, infixPending)
+				// BaseMethods.Over reads arguments before pushing the closing
+				// item that reduces styles and checks an earlier OverItem.
+				attributes, err := p.readInfixAttributes(name)
+				if err != nil {
+					return nil, "", err
+				}
+				closeStyles()
+				fraction, right, err := p.finishInfixFraction(name, nodes, attributes, terminator, stopRight, infixPending, pendingFont)
 				if err != nil {
 					return nil, "", err
 				}
@@ -210,59 +250,29 @@ func (p *parser) parseRowWithAutoOpen(terminator byte, stopRight, infixPending b
 				return []*mml.Node{fraction}, right, nil
 			}
 			if name == "color" {
-				finishPrime()
-				finishNot()
-				finishDots()
-				colored, right, err := p.colorDeclaration(terminator, stopRight, infixPending)
+				attributes, err := p.colorDeclaration()
 				if err != nil {
 					return nil, "", err
 				}
-				appendNodes(colored, false)
-				if auto != nil {
-					return nil, "", auto.stopError()
-				}
-				return nodes, right, nil
+				pushStyle(attributes)
+				continue
 			}
 			if style, ok := styleDeclarations[name]; ok {
-				finishPrime()
-				finishNot()
-				finishDots()
-				rest, right, err := p.parseRowWithInfix(terminator, stopRight, infixPending)
-				if err != nil {
-					return nil, "", err
-				}
-				styled := node("mstyle", row(rest, true))
 				// BaseMethods.SetStyle writes displaystyle before scriptlevel.
-				// Preserve that order rather than ranging over the Go map.
-				styled.Attributes.Set("displaystyle", style["displaystyle"])
-				styled.Attributes.Set("scriptlevel", style["scriptlevel"])
-				appendNodes([]*mml.Node{styled}, false)
-				if auto != nil {
-					return nil, "", auto.stopError()
-				}
-				return nodes, right, nil
+				pushStyle(mjSourceObject{
+					{Name: "displaystyle", Value: style["displaystyle"]},
+					{Name: "scriptlevel", Value: style["scriptlevel"]},
+				})
+				continue
 			}
 			if size, ok := sizeDeclarations[name]; ok {
-				finishPrime()
-				finishNot()
-				finishDots()
-				rest, right, err := p.parseRowWithInfix(terminator, stopRight, infixPending)
-				if err != nil {
-					return nil, "", err
-				}
-				// BaseMethods.SetSize pushes a style item that scopes the
-				// declaration over the remainder of the current group.
-				styled := setAttributes(node("mstyle", row(rest, true)), map[string]any{"mathsize": emLength(size)})
-				appendNodes([]*mml.Node{styled}, false)
-				if auto != nil {
-					return nil, "", auto.stopError()
-				}
-				return nodes, right, nil
+				pushStyle(mjSourceObject{{Name: "mathsize", Value: emLength(size)}})
+				continue
 			}
 			if variant, ok := fontDeclarations[name]; ok {
 				// SetFont changes the current environment without pushing a
 				// stack item, so pending Prime/Not/Dots items stay in this row.
-				if pending != nil || bool(negation) || dots.active() {
+				if len(styles) != 0 || pending != nil || bool(negation) || dots.active() {
 					p.activeFont, pendingFont = variant, variant
 					continue
 				}
@@ -397,18 +407,14 @@ func (p *parser) parseRowWithAutoOpen(terminator byte, stopRight, infixPending b
 			created := p.parseCharacter()
 			// The registered raw ')' handler creates an AutoClose item. A
 			// command that merely returns the same mo has no such marker.
-			if auto != nil && c == ')' && auto.close() {
-				finishPrime()
-				finishNot()
-				finishDots()
+			if auto != nil && len(styles) == 0 && c == ')' && auto.close() {
+				closeStyles()
 				return nodes, "", nil
 			}
 			appendNodes([]*mml.Node{created}, false)
 		}
 	}
-	finishPrime()
-	finishNot()
-	finishDots()
+	closeStyles()
 	if auto != nil {
 		return nil, "", auto.stopError()
 	}
@@ -1002,6 +1008,14 @@ var fontDeclarations = map[string]string{
 }
 
 func (p *parser) infixFraction(name string, left []*mml.Node, terminator byte, stopRight, infixPending bool) (*mml.Node, string, error) {
+	attributes, err := p.readInfixAttributes(name)
+	if err != nil {
+		return nil, "", err
+	}
+	return p.finishInfixFraction(name, left, attributes, terminator, stopRight, infixPending, "")
+}
+
+func (p *parser) readInfixAttributes(name string) (map[string]any, error) {
 	attributes := map[string]any{}
 	if name == "atop" || name == "choose" || name == "brace" || name == "brack" {
 		attributes["linethickness"] = "0"
@@ -1009,16 +1023,20 @@ func (p *parser) infixFraction(name string, left []*mml.Node, terminator byte, s
 	if name == "above" {
 		thickness, err := p.readDimension(name)
 		if err != nil {
-			return nil, "", err
+			return nil, err
 		}
 		attributes["linethickness"] = thickness
 	}
+	return attributes, nil
+}
+
+func (p *parser) finishInfixFraction(name string, left []*mml.Node, attributes map[string]any, terminator byte, stopRight, infixPending bool, pendingFont string) (*mml.Node, string, error) {
 	// BaseMethods.Over reads its arguments before OverItem checks ambiguity.
 	// In particular, malformed incoming above dimensions keep their own error.
 	if infixPending {
 		return nil, "", texError("AmbiguousUseOf", "Ambiguous use of \\%s", name)
 	}
-	rightNodes, right, err := p.parseRowWithInfix(terminator, stopRight, true)
+	rightNodes, right, err := p.parseRowContinuation(terminator, stopRight, true, nil, pendingFont)
 	if err != nil {
 		return nil, "", err
 	}
