@@ -1899,7 +1899,7 @@ func (p *parser) operatorApplication(name string, vector bool) ([]*mml.Node, err
 		// SVG glyph width (and therefore the fenced operand's x position).
 		prefix = []*mml.Node{operatorNode, operator(char, operatorClass(char), attributes)}
 	} else if name == "laplacian" {
-		operatorNode = node("msup", texAtom(operator("∇", mml.TeXClassOrd, map[string]any{"mathvariant": "bold"}), mml.TeXClassOrd), token("mn", "2"))
+		operatorNode = node("msup", setAttributes(token("mi", "∇"), map[string]any{"mathvariant": "normal"}), token("mn", "2"))
 	} else {
 		operatorNode = physicsNabla()
 	}
