@@ -190,17 +190,25 @@ func amsGenfracStyleIndex(style string) (int, bool) {
 // in display style and big in text, script, and scriptscript styles during
 // the inherited-attribute pass.
 func amsFixedFencePalette(character string, class mml.TeXClass) *mml.Node {
-	display := amsFixedFence(character, class, "2.047em")
-	text := amsFixedFence(character, class, "1.2em")
-	script := amsFixedFence(character, class, "1.2em")
-	scriptScript := amsFixedFence(character, class, "1.2em")
+	return amsFixedFencePaletteWithToken(character, class, token)
+}
+
+func amsFixedFencePaletteWithToken(character string, class mml.TeXClass, makeToken func(string, string) *mml.Node) *mml.Node {
+	display := amsFixedFenceWithToken(character, class, "2.047em", makeToken)
+	text := amsFixedFenceWithToken(character, class, "1.2em", makeToken)
+	script := amsFixedFenceWithToken(character, class, "1.2em", makeToken)
+	scriptScript := amsFixedFenceWithToken(character, class, "1.2em", makeToken)
 	return node("MathChoice", display, text, script, scriptScript)
 }
 
 // amsFixedFence ports BaseMethods.MakeBig.  The sizes preserve JavaScript's
 // source truncation after multiplying by P_HEIGHT (1.2/.85).
 func amsFixedFence(character string, class mml.TeXClass, size string) *mml.Node {
-	mo := token("mo", character)
+	return amsFixedFenceWithToken(character, class, size, token)
+}
+
+func amsFixedFenceWithToken(character string, class mml.TeXClass, size string, makeToken func(string, string) *mml.Node) *mml.Node {
+	mo := makeToken("mo", character)
 	mo.Attributes.Set("minsize", size)
 	mo.Attributes.Set("maxsize", size)
 	mo.Attributes.Set("fence", true)
@@ -419,7 +427,7 @@ func (p *parser) amsXArrow(name string) ([]*mml.Node, error) {
 		return nil, err
 	}
 	size := amsArrowSizes[name]
-	arrow := operator(size.character, mml.TeXClassRel, nil)
+	arrow := p.operator(size.character, mml.TeXClassRel, nil)
 	arrow.Attributes.Set("stretchy", true)
 	arrowStyle := node("mstyle", arrow)
 	arrowStyle.Attributes.Set("scriptlevel", 0)

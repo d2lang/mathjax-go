@@ -151,7 +151,7 @@ func (p *parser) beginEnvironment(name string) ([]*mml.Node, error) {
 		applyColumnSpec(table, columnSpec)
 		open, close := matrixDelimiters(environment)
 		if open != "" || close != "" {
-			table = leftRightFenced(open, table, close, true)
+			table = p.leftRightFenced(open, table, close, true)
 		}
 		return []*mml.Node{table}, nil
 	case "cases", "dcases", "rcases", "drcases", "cases*", "dcases*", "rcases*", "drcases*":
@@ -176,7 +176,7 @@ func (p *parser) beginEnvironment(name string) ([]*mml.Node, error) {
 		if strings.Contains(environment, "rcases") {
 			open, close = "", "}"
 		}
-		return []*mml.Node{leftRightFenced(open, table, close, true)}, nil
+		return []*mml.Node{p.leftRightFenced(open, table, close, true)}, nil
 	case "numcases", "subnumcases":
 		left, _, err := p.readArgument("begin{"+environment+"}", true)
 		if err != nil {
@@ -191,9 +191,9 @@ func (p *parser) beginEnvironment(name string) ([]*mml.Node, error) {
 			if err != nil {
 				return nil, err
 			}
-			return []*mml.Node{prefix, leftRightFenced("{", table, "", true)}, nil
+			return []*mml.Node{prefix, p.leftRightFenced("{", table, "", true)}, nil
 		}
-		return []*mml.Node{leftRightFenced("{", table, "", true)}, nil
+		return []*mml.Node{p.leftRightFenced("{", table, "", true)}, nil
 	case "align", "align*", "alignat", "alignat*", "xalignat", "xalignat*", "xxalignat", "aligned", "alignedat", "gather", "gather*", "gathered", "multline", "multline*", "multlined", "lgathered", "rgathered", "spreadlines":
 		table, err := p.parseTable(body, "D")
 		if err != nil {
@@ -707,10 +707,10 @@ func (p *parser) parseCDArrow(raw string, at int) (*mml.Node, int, error) {
 		return forcedRow(nil, true), position, nil
 	}
 	if kind == '|' {
-		return cdVerticalArrow("‖"), position, nil
+		return p.cdVerticalArrow("‖"), position, nil
 	}
 	if kind == '=' {
-		return cdHorizontalArrow("="), position, nil
+		return p.cdHorizontalArrow("="), position, nil
 	}
 	first, next, err := cdLabel(raw, position, kind)
 	if err != nil {
@@ -721,9 +721,9 @@ func (p *parser) parseCDArrow(raw string, at int) (*mml.Node, int, error) {
 		return nil, at, err
 	}
 	arrows := map[byte]string{'>': "→", '<': "←", 'V': "↓", 'A': "↑"}
-	arrow := cdHorizontalArrow(arrows[kind])
+	arrow := p.cdHorizontalArrow(arrows[kind])
 	if kind == 'V' || kind == 'A' {
-		arrow = cdVerticalArrow(arrows[kind])
+		arrow = p.cdVerticalArrow(arrows[kind])
 	}
 	if kind == '>' || kind == '<' {
 		if first == "" {
@@ -834,11 +834,11 @@ func (p *parser) parseEmpheq(body string) ([]*mml.Node, error) {
 	settings := keyvalString(options)
 	if left := settings["left"]; left != "" {
 		open, _ := p.convertDelimiterArgument(left)
-		content = fenced(open, content, "", true)
+		content = p.fenced(open, content, "", true)
 	}
 	if right := settings["right"]; right != "" {
 		close, _ := p.convertDelimiterArgument(right)
-		content = fenced("", content, close, true)
+		content = p.fenced("", content, close, true)
 	}
 	return []*mml.Node{content}, nil
 }

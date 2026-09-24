@@ -79,10 +79,10 @@ func (p *parser) commandNodes(name string, after **derivativeAutoOpen) ([]*mml.N
 	if definition, ok := p.state.pairedDelimiters[name]; ok {
 		return p.invokePairedDelimiter(name, definition)
 	}
-	if symbol, ok := lookupExtensionSymbol(name); ok {
+	if symbol, ok := p.lookupExtensionSymbol(name); ok {
 		return []*mml.Node{symbol}, nil
 	}
-	if symbol, ok := lookupMJSourceSymbol(name); ok {
+	if symbol, ok := p.lookupMJSourceSymbol(name); ok {
 		return []*mml.Node{symbol}, nil
 	}
 	if symbol, ok := identifierSymbols[name]; ok {
@@ -95,7 +95,7 @@ func (p *parser) commandNodes(name string, after **derivativeAutoOpen) ([]*mml.N
 		return []*mml.Node{n}, nil
 	}
 	if symbol, ok := operatorSymbols[name]; ok {
-		n := operator(symbol.char, symbol.class, symbol.attrs)
+		n := p.operator(symbol.char, symbol.class, symbol.attrs)
 		if symbol.attrs != nil {
 			if moves, ok := symbol.attrs["movesupsub"]; ok {
 				n.SetProperty("movesupsub", moves)
@@ -106,10 +106,10 @@ func (p *parser) commandNodes(name string, after **derivativeAutoOpen) ([]*mml.N
 	if function, ok := functionNames[name]; ok {
 		if name == "injlim" || name == "projlim" {
 			text := map[string]string{"injlim": "inj\u2006lim", "projlim": "proj\u2006lim"}[name]
-			return []*mml.Node{namedOperator(text)}, nil
+			return []*mml.Node{p.namedOperator(text)}, nil
 		}
 		if name == "lim" || name == "liminf" || name == "limsup" || name == "max" || name == "min" || name == "sup" || name == "inf" {
-			return []*mml.Node{namedOperator(function)}, nil
+			return []*mml.Node{p.namedOperator(function)}, nil
 		}
 		fn := token("mi", function)
 		fn.TeXClass = mml.TeXClassOp
@@ -149,15 +149,15 @@ func (p *parser) commandNodes(name string, after **derivativeAutoOpen) ([]*mml.N
 	case " ", "space":
 		return []*mml.Node{token("mtext", "\u00a0")}, nil
 	case "{", "}", "$", "%", "#", "&", "_":
-		return []*mml.Node{token("mo", name)}, nil
+		return []*mml.Node{p.token("mo", name)}, nil
 	case "backslash":
-		return []*mml.Node{token("mo", "∖")}, nil
+		return []*mml.Node{p.token("mo", "∖")}, nil
 	case "|":
-		return []*mml.Node{operator("‖", mml.TeXClassOrd, map[string]any{"fence": false, "stretchy": false})}, nil
+		return []*mml.Node{p.operator("‖", mml.TeXClassOrd, map[string]any{"fence": false, "stretchy": false})}, nil
 	case "Vert":
-		return []*mml.Node{operator("‖", mml.TeXClassOrd, map[string]any{"fence": false, "stretchy": false})}, nil
+		return []*mml.Node{p.operator("‖", mml.TeXClassOrd, map[string]any{"fence": false, "stretchy": false})}, nil
 	case "vert":
-		return []*mml.Node{operator("|", mml.TeXClassOrd, map[string]any{"fence": false, "stretchy": false})}, nil
+		return []*mml.Node{p.operator("|", mml.TeXClassOrd, map[string]any{"fence": false, "stretchy": false})}, nil
 	case "frac":
 		return p.fraction(name, "")
 	case "dfrac":
@@ -196,7 +196,7 @@ func (p *parser) commandNodes(name string, after **derivativeAutoOpen) ([]*mml.N
 		// The middle mo has no explicit texClass upstream.  In infix form the
 		// delimiter dictionary classifies the selected fence (notably '|') as
 		// ORD, so it must not introduce relation spacing.
-		middle := token("mo", delim)
+		middle := p.token("mo", delim)
 		middle.Attributes.Set("stretchy", true)
 		return []*mml.Node{close, middle, open}, nil
 	case "big", "Big", "bigg", "Bigg", "bigl", "Bigl", "biggl", "Biggl", "bigr", "Bigr", "biggr", "Biggr", "bigm", "Bigm", "biggm", "Biggm":
@@ -246,7 +246,7 @@ func (p *parser) commandNodes(name string, after **derivativeAutoOpen) ([]*mml.N
 		return []*mml.Node{fn}, nil
 	case "injlim", "projlim":
 		text := map[string]string{"injlim": "inj\u2006lim", "projlim": "proj\u2006lim"}[name]
-		op := operator(text, mml.TeXClassOp, map[string]any{"movablelimits": true})
+		op := p.operator(text, mml.TeXClassOp, map[string]any{"movablelimits": true})
 		op.SetProperty("movesupsub", true)
 		return []*mml.Node{op}, nil
 
@@ -352,7 +352,7 @@ func (p *parser) commandNodes(name string, after **derivativeAutoOpen) ([]*mml.N
 	case "vectorarrow", "va", "vectorunit", "vu":
 		return p.vectorAccent(name)
 	case "vnabla":
-		return []*mml.Node{physicsNabla()}, nil
+		return []*mml.Node{p.physicsNabla()}, nil
 	case "gradient", "grad", "laplacian":
 		return p.operatorApplication(name, false)
 	case "divergence", "div", "curl":
@@ -453,9 +453,9 @@ func (p *parser) binomial(name, style string) ([]*mml.Node, error) {
 	// around the entire fenced expression (including its MathChoice fences).
 	frac.SetProperty("withDelims", true)
 	content := forcedRow([]*mml.Node{
-		amsFixedFencePalette("(", mml.TeXClassOpen),
+		p.amsFixedFencePalette("(", mml.TeXClassOpen),
 		frac,
-		amsFixedFencePalette(")", mml.TeXClassClose),
+		p.amsFixedFencePalette(")", mml.TeXClassClose),
 	}, false)
 	content.SetProperty("open", "(")
 	content.SetProperty("close", ")")
@@ -509,7 +509,7 @@ func (p *parser) generalizedFraction(name string) ([]*mml.Node, error) {
 		return nil, err
 	}
 	if open != "" || close != "" {
-		content = fenced(open, content, close, true)
+		content = p.fenced(open, content, close, true)
 	}
 	return []*mml.Node{content}, nil
 }
@@ -627,7 +627,7 @@ func (p *parser) leftRight(name string) ([]*mml.Node, error) {
 	if err != nil {
 		return nil, err
 	}
-	return []*mml.Node{leftRightFenced(open, row(children, true), close, true)}, nil
+	return []*mml.Node{p.leftRightFenced(open, row(children, true), close, true)}, nil
 }
 
 func (p *parser) bigDelimiter(name string) ([]*mml.Node, error) {
@@ -645,7 +645,7 @@ func (p *parser) bigDelimiter(name string) ([]*mml.Node, error) {
 	} else if strings.HasSuffix(name, "m") {
 		class = mml.TeXClassRel
 	}
-	mo := token("mo", delim)
+	mo := p.token("mo", delim)
 	mo.Attributes.Set("minsize", size[base])
 	mo.Attributes.Set("maxsize", size[base])
 	mo.Attributes.Set("fence", true)
@@ -666,7 +666,7 @@ func (p *parser) accent(name string) ([]*mml.Node, error) {
 		return nil, err
 	}
 	wide := strings.HasPrefix(name, "wide")
-	accent := operator(accentCharacters[name], mml.TeXClassOrd, map[string]any{"accent": true, "stretchy": wide})
+	accent := p.operator(accentCharacters[name], mml.TeXClassOrd, map[string]any{"accent": true, "stretchy": wide})
 	ambientFontToken(accent)
 	// BaseMethods.Accent passes mathaccent through NodeUtil's property layer.
 	// SVGmo uses that internal marker to zero the accent width and translate
@@ -710,7 +710,7 @@ func (p *parser) underOver(name string) ([]*mml.Node, error) {
 	case "overleftarrow", "underleftarrow":
 		char = "←"
 	}
-	mark := operator(char, mml.TeXClassOrd, map[string]any{"stretchy": stretchy})
+	mark := p.operator(char, mml.TeXClassOrd, map[string]any{"stretchy": stretchy})
 	if name == "overbrace" || name == "underbrace" {
 		// The parser represents inline movable limits as side scripts. Restore
 		// their under/over form for ParseUtil.underOver's brace normalization;
@@ -761,7 +761,7 @@ func (p *parser) underOver(name string) ([]*mml.Node, error) {
 				core.Attributes.Set("lspace", 0)
 				core.Attributes.Set("rspace", 0)
 			}
-			empty := node("mo")
+			empty := p.noteMO(node("mo"))
 			empty.Attributes.Set("rspace", 0)
 			base = node("mrow", empty, base)
 		}
@@ -779,7 +779,7 @@ func (p *parser) underOver(name string) ([]*mml.Node, error) {
 		return []*mml.Node{stack}, nil
 	}
 	checkMovableLimits(base)
-	base = normalizeDecorationBase(base)
+	base = p.normalizeDecorationBase(base)
 	if under {
 		decoration := setAttributes(node("munder", base, mark), map[string]any{"accentunder": true})
 		decoration.SetProperty("subsupOK", true)
@@ -793,11 +793,15 @@ func (p *parser) underOver(name string) ([]*mml.Node, error) {
 // normalizeDecorationBase preserves ParseUtil.underOver's embellished-base
 // row. Side-script families and grouped bases are deliberately excluded.
 func normalizeDecorationBase(base *mml.Node) *mml.Node {
+	return normalizeDecorationBaseWithMO(base, func() *mml.Node { return node("mo") })
+}
+
+func normalizeDecorationBaseWithMO(base *mml.Node, makeMO func() *mml.Node) *mml.Node {
 	if (base.Kind != "munder" && base.Kind != "mover" && base.Kind != "munderover") || !base.Flags.Embellished {
 		return base
 	}
 	applySourceObject(limitsCore(base), mjSourceObject{{Name: "lspace", Value: 0}, {Name: "rspace", Value: 0}})
-	empty := node("mo")
+	empty := makeMO()
 	empty.Attributes.Set("rspace", 0)
 	return node("mrow", empty, base)
 }
@@ -931,7 +935,7 @@ func (p *parser) xArrow(name string) ([]*mml.Node, error) {
 	if err != nil {
 		return nil, err
 	}
-	arrow := operator(arrowCharacters[name], mml.TeXClassRel, map[string]any{"stretchy": true})
+	arrow := p.operator(arrowCharacters[name], mml.TeXClassRel, map[string]any{"stretchy": true})
 	if hasBelow {
 		below, err := p.parseString(belowRaw)
 		if err != nil {
@@ -991,7 +995,7 @@ func (p *parser) operatorName(name string) ([]*mml.Node, error) {
 	if err != nil {
 		return nil, err
 	}
-	n := operator(strings.TrimSpace(raw), mml.TeXClassOp, map[string]any{"mathvariant": "normal", "movablelimits": star})
+	n := p.operator(strings.TrimSpace(raw), mml.TeXClassOp, map[string]any{"mathvariant": "normal", "movablelimits": star})
 	n.SetProperty("movesupsub", star)
 	return []*mml.Node{n}, nil
 }
@@ -1294,7 +1298,7 @@ func (p *parser) invokePairedDelimiter(name string, definition pairedDelimiter) 
 	if hasSize && size != "" {
 		stretchy = true
 	}
-	return []*mml.Node{fenced(open, content, close, stretchy)}, nil
+	return []*mml.Node{p.fenced(open, content, close, stretchy)}, nil
 }
 
 func (p *parser) readColor(name string) (string, error) {
@@ -1519,7 +1523,7 @@ func (p *parser) braket(name string) ([]*mml.Node, error) {
 		open, close = "{", "}"
 	}
 	stretchy := name == "Bra" || name == "Ket" || name == "Braket" || name == "Set"
-	return []*mml.Node{leftRightFenced(open, content, close, stretchy)}, nil
+	return []*mml.Node{p.leftRightFenced(open, content, close, stretchy)}, nil
 }
 
 func (p *parser) physicsBraket(name string) ([]*mml.Node, error) {
@@ -1615,7 +1619,7 @@ func (p *parser) physicsBraket(name string) ([]*mml.Node, error) {
 		if err != nil {
 			return nil, err
 		}
-		return []*mml.Node{fenced("|", left, "⟩", true), fenced("⟨", right, "|", true)}, nil
+		return []*mml.Node{p.fenced("|", left, "⟩", true), p.fenced("⟨", right, "|", true)}, nil
 	case "expectationvalue", "expval", "ev":
 		raw, _, err := p.readArgument(name, false)
 		if err != nil {
@@ -1625,7 +1629,7 @@ func (p *parser) physicsBraket(name string) ([]*mml.Node, error) {
 		if err != nil {
 			return nil, err
 		}
-		return []*mml.Node{fenced("⟨", texAtom(arg, mml.TeXClassOrd), "⟩", true)}, nil
+		return []*mml.Node{p.fenced("⟨", texAtom(arg, mml.TeXClassOrd), "⟩", true)}, nil
 	case "matrixelement", "matrixel", "mel":
 		bra, _, err := p.readArgument(name, false)
 		if err != nil {
@@ -1643,7 +1647,7 @@ func (p *parser) physicsBraket(name string) ([]*mml.Node, error) {
 		if err != nil {
 			return nil, err
 		}
-		return []*mml.Node{fenced("⟨", content, "⟩", true)}, nil
+		return []*mml.Node{p.fenced("⟨", content, "⟩", true)}, nil
 	}
 	return nil, nil
 }
@@ -1672,7 +1676,7 @@ func (p *parser) quantity(name string) ([]*mml.Node, error) {
 		if err != nil {
 			return nil, err
 		}
-		return []*mml.Node{token("mi", "O"), physicsFenced("(", arg, ")", true)}, nil
+		return []*mml.Node{token("mi", "O"), p.physicsFenced("(", arg, ")", true)}, nil
 	}
 	return p.quantityWithDelimiters(name, pair[0], pair[1])
 }
@@ -1683,13 +1687,13 @@ func (p *parser) quantityWithDelimiters(name, open, close string) ([]*mml.Node, 
 	if name == "qty" || name == "quantity" {
 		p.skipSpaces()
 		if p.pos < len(p.source) && p.source[p.pos] == '*' {
-			return []*mml.Node{leftRightFenced(open, forcedRow(nil, false), close, true)}, nil
+			return []*mml.Node{p.leftRightFenced(open, forcedRow(nil, false), close, true)}, nil
 		}
 	}
 	star := p.readStar()
 	p.skipSpaces()
 	if p.pos >= len(p.source) {
-		return []*mml.Node{physicsFenced(open, forcedRow(nil, true), close, !star)}, nil
+		return []*mml.Node{p.physicsFenced(open, forcedRow(nil, true), close, !star)}, nil
 	}
 	var raw string
 	var err error
@@ -1706,7 +1710,7 @@ func (p *parser) quantityWithDelimiters(name, open, close string) ([]*mml.Node, 
 	if err != nil {
 		return nil, err
 	}
-	return []*mml.Node{physicsFenced(open, content, close, !star)}, nil
+	return []*mml.Node{p.physicsFenced(open, content, close, !star)}, nil
 }
 
 func physicsFenced(open string, content *mml.Node, close string, stretchy bool) *mml.Node {
@@ -1801,7 +1805,11 @@ func physicsDifferential(character string) *mml.Node {
 }
 
 func physicsNabla() *mml.Node {
-	inner := texAtom(operator("∇", mml.TeXClassOrd, map[string]any{"mathvariant": "bold"}), mml.TeXClassOrd)
+	return physicsNablaWithOperator(operator)
+}
+
+func physicsNablaWithOperator(makeOperator func(string, mml.TeXClass, map[string]any) *mml.Node) *mml.Node {
+	inner := texAtom(makeOperator("∇", mml.TeXClassOrd, map[string]any{"mathvariant": "bold"}), mml.TeXClassOrd)
 	return texAtom(inner, mml.TeXClassOrd)
 }
 
@@ -1822,16 +1830,16 @@ func (p *parser) commutator(name string) ([]*mml.Node, error) {
 	if err != nil {
 		return nil, err
 	}
-	comma := operator(",", mml.TeXClassPunct, nil)
+	comma := p.operator(",", mml.TeXClassPunct, nil)
 	separator := ","
 	if name == "anticommutator" || name == "acomm" {
 		separator = ","
-		comma = operator(separator, mml.TeXClassPunct, nil)
+		comma = p.operator(separator, mml.TeXClassPunct, nil)
 	}
 	if name == "poissonbracket" || name == "pb" {
-		return []*mml.Node{fenced("{", forcedRow([]*mml.Node{left, comma, right}, true), "}", true)}, nil
+		return []*mml.Node{p.fenced("{", forcedRow([]*mml.Node{left, comma, right}, true), "}", true)}, nil
 	}
-	return []*mml.Node{fenced("[", forcedRow([]*mml.Node{left, comma, right}, true), "]", true)}, nil
+	return []*mml.Node{p.fenced("[", forcedRow([]*mml.Node{left, comma, right}, true), "]", true)}, nil
 }
 
 func (p *parser) vectorBold(name string) ([]*mml.Node, error) {
@@ -1895,7 +1903,7 @@ func (p *parser) operatorApplication(name string, vector bool) ([]*mml.Node, err
 	var operatorNode *mml.Node
 	var prefix []*mml.Node
 	if vector {
-		operatorNode = physicsNabla()
+		operatorNode = p.physicsNabla()
 		char := "⋅"
 		attributes := map[string]any{"mathvariant": "bold"}
 		if name == "curl" {
@@ -1905,16 +1913,16 @@ func (p *parser) operatorApplication(name string, vector bool) ([]*mml.Node, err
 		// PhysicsMappings maps \vdot to a bold U+22C5, whereas
 		// \crossproduct is an unmodified U+00D7.  The distinction changes the
 		// SVG glyph width (and therefore the fenced operand's x position).
-		prefix = []*mml.Node{operatorNode, operator(char, operatorClass(char), attributes)}
+		prefix = []*mml.Node{operatorNode, p.operator(char, operatorClass(char), attributes)}
 	} else if name == "laplacian" {
 		operatorNode = node("msup", setAttributes(token("mi", "∇"), map[string]any{"mathvariant": "normal"}), token("mn", "2"))
 	} else {
-		operatorNode = physicsNabla()
+		operatorNode = p.physicsNabla()
 	}
 	if prefix == nil {
 		prefix = []*mml.Node{operatorNode}
 	}
-	apply := operator("\u2061", mml.TeXClassNone, nil)
+	apply := p.operator("\u2061", mml.TeXClassNone, nil)
 	p.skipSpaces()
 	if p.pos >= len(p.source) {
 		return prefix, nil
@@ -1938,9 +1946,9 @@ func (p *parser) operatorApplication(name string, vector bool) ([]*mml.Node, err
 		return nil, err
 	}
 	if vector {
-		return append(prefix, fenced("(", arg, ")", true)), nil
+		return append(prefix, p.fenced("(", arg, ")", true)), nil
 	}
-	return append(prefix, apply, fenced("(", arg, ")", true)), nil
+	return append(prefix, apply, p.fenced("(", arg, ")", true)), nil
 }
 
 func (p *parser) quickQuadText(name string) ([]*mml.Node, error) {
@@ -2014,7 +2022,7 @@ func (p *parser) derivative(name string, after **derivativeAutoOpen) ([]*mml.Nod
 			if err != nil {
 				return nil, err
 			}
-			parens := fenced("(", arg, ")", true)
+			parens := p.fenced("(", arg, ")", true)
 			// Physics' AutoOpen item reduces to an INNER row through TeX-class
 			// processing, without materializing a texClass node property.
 			parens.TeXClass = mml.TeXClassInner
@@ -2147,7 +2155,7 @@ func (p *parser) matrixQuantity(name string) ([]*mml.Node, error) {
 		open, close = "‖", "‖"
 	}
 	if open != "" {
-		table = fenced(open, table, close, true)
+		table = p.fenced(open, table, close, true)
 	}
 	return []*mml.Node{table}, nil
 }

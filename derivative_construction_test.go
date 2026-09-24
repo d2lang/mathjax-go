@@ -30,14 +30,10 @@ func TestDerivativeConstructionPublicReferences(t *testing.T) {
 	// Preserve these original outputs as explicit boundaries. They are not
 	// passing reference assertions and have no alternative Go goldens.
 	diagnostics := map[string]string{
-		"relations-inline":           "D081 adjacent relations",
-		"relations-display":          "D081 adjacent relations",
-		"separate-relations-inline":  "D081 adjacent relations",
-		"separate-relations-display": "D081 adjacent relations",
-		"differential-inline":        "unchanged Differential caller",
-		"differential-display":       "unchanged Differential caller",
-		"variation-inline":           "unchanged variation caller",
-		"variation-display":          "unchanged variation caller",
+		"differential-inline":  "unchanged Differential caller",
+		"differential-display": "unchanged Differential caller",
+		"variation-inline":     "unchanged variation caller",
+		"variation-display":    "unchanged variation caller",
 	}
 	seen := map[string]bool{}
 	asserted, retained := 0, 0
@@ -63,7 +59,7 @@ func TestDerivativeConstructionPublicReferences(t *testing.T) {
 			}
 		})
 	}
-	if asserted != 80 || retained != len(diagnostics) {
+	if asserted != 84 || retained != len(diagnostics) {
 		t.Fatal("derivative reference scope changed", asserted, retained)
 	}
 }

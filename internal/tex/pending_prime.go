@@ -42,7 +42,7 @@ func (p *parser) startPrime(base *mml.Node) (*pendingPrime, error) {
 	if count < len(primes) {
 		text = primes[count]
 	}
-	prime := token("mo", text)
+	prime := p.token("mo", text)
 	prime.SetProperty("variantForm", true)
 	return &pendingPrime{base, prime}, nil
 }

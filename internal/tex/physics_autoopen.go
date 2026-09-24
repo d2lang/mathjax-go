@@ -73,9 +73,9 @@ func (a *derivativeAutoOpen) complete(p *parser) ([]*mml.Node, error) {
 	}
 	// AutoOpen.toMml delegates to fenced, then removes the row's open/close/
 	// texClass properties. Fence nodes use the node factory, not token factory.
-	children := []*mml.Node{autoOpenFence("(", mml.TeXClassOpen)}
+	children := []*mml.Node{p.autoOpenFence("(", mml.TeXClassOpen)}
 	children = append(children, content...)
-	children = append(children, autoOpenFence(")", mml.TeXClassClose))
+	children = append(children, p.autoOpenFence(")", mml.TeXClassClose))
 	return []*mml.Node{forcedRow(children, false)}, nil
 }
 

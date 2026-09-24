@@ -58,7 +58,7 @@ func (p *parser) mathtoolsSmallMatrix(environment string) ([]*mml.Node, error) {
 	table.SetProperty("scriptlevel", 1)
 	open, close := matrixDelimiters(environment)
 	if open != "" || close != "" {
-		table = leftRightFenced(open, table, close, true)
+		table = p.leftRightFenced(open, table, close, true)
 	}
 	return []*mml.Node{table}, nil
 }
@@ -242,7 +242,7 @@ func (p *parser) mathtoolsCases(environment string) ([]*mml.Node, error) {
 	if strings.Contains(environment, "rcases") {
 		open, close = "", "}"
 	}
-	return []*mml.Node{leftRightFenced(open, table, close, true)}, nil
+	return []*mml.Node{p.leftRightFenced(open, table, close, true)}, nil
 }
 
 func (p *parser) mathtoolsAlignment(environment string) ([]*mml.Node, error) {
@@ -440,7 +440,7 @@ func (p *parser) mathtoolsVDots(argument string, flush bool) *mml.Node {
 	baseChildren := []*mml.Node{token("mi", "")}
 	baseChildren = append(baseChildren, unwrapInferred(arg)...)
 	baseChildren = append(baseChildren, token("mi", ""))
-	dots := token("mo", "⋮")
+	dots := p.token("mo", "⋮")
 	inner := node("mpadded", dots)
 	inner.Attributes.Set("width", 0)
 	inner.Attributes.Set("lspace", "-.5width")

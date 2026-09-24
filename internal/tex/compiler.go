@@ -76,6 +76,7 @@ func (c *Compiler) Compile(source string, display bool) (*mml.Node, error) {
 	setMathMLInheritance(root, display)
 	root = moveMathLimits(root)
 	cleanMathMLAttributes(root)
+	state.operators = combineRelations(root, state.operators)
 	return root, nil
 }
 
