@@ -5,20 +5,22 @@ package tex
 
 import "github.com/d2lang/mathjax-go/internal/mml"
 
-// commandResult owns a single invocation's after-node action. No action lives
-// in shared parseState or escapes a genuine child parser. Recipients deliver
-// nodes (including a pending script attachment) before activating afterNode.
+// commandResult carries one invocation's stack item and after-node action.
+// Neither lives in shared parseState or escapes a genuine child parser.
+// Recipients deliver nodes before activating afterNode.
 type commandResult struct {
 	nodes         []*mml.Node
 	namedFunction bool
+	notItem       bool
 	afterNode     *derivativeAutoOpen
 }
 
 func (p *parser) commandEvent(name string) (result commandResult, err error) {
-	p.commandNamedFunction = false
+	namedFunction, notItem := p.commandNamedFunction, p.commandNot
+	p.commandNamedFunction, p.commandNot = false, false
+	defer func() { p.commandNamedFunction, p.commandNot = namedFunction, notItem }()
 	result.nodes, err = p.commandNodes(name, &result.afterNode)
-	result.namedFunction = p.commandNamedFunction
-	p.commandNamedFunction = false
+	result.namedFunction, result.notItem = p.commandNamedFunction, p.commandNot
 	return result, err
 }
 
@@ -28,6 +30,9 @@ func (p *parser) command(name string) ([]*mml.Node, error) {
 	result, err := p.commandEvent(name)
 	if err != nil {
 		return nil, err
+	}
+	if result.notItem {
+		result.nodes = append(result.nodes, notFallback())
 	}
 	tail, err := result.afterNode.complete(p)
 	return append(result.nodes, tail...), err

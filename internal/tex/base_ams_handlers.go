@@ -235,6 +235,7 @@ func (p *parser) amsOperatorName(name string) ([]*mml.Node, error) {
 	}
 	raw = strings.TrimSpace(raw)
 	children := make([]*mml.Node, 0, 3)
+	var negation pendingNot
 	for position := 0; position < len(raw); {
 		r, size := utf8.DecodeRuneInString(raw[position:])
 		if unicode.IsLetter(r) || r == '-' || r == '*' {
@@ -249,7 +250,7 @@ func (p *parser) amsOperatorName(name string) ([]*mml.Node, error) {
 			}
 			identifier := token("mi", raw[start:position])
 			identifier.Attributes.Set("mathvariant", "normal")
-			children = append(children, identifier)
+			children = append(children, negation.apply([]*mml.Node{identifier})...)
 			continue
 		}
 		if unicode.IsSpace(r) {
@@ -261,14 +262,25 @@ func (p *parser) amsOperatorName(name string) ([]*mml.Node, error) {
 		if err != nil {
 			return nil, err
 		}
-		children = append(children, result.nodes...)
+		if result.notItem {
+			children = append(children, negation.start()...)
+		}
+		if negation && raw[position] == '{' {
+			// OpenItem reduces to a TeXAtom before the outer NotItem sees it.
+			result.nodes = []*mml.Node{texAtom(row(result.nodes, true), mml.TeXClassOrd)}
+		}
+		if result.namedFunction {
+			children = append(children, negation.finish()...)
+		}
+		children = append(children, negation.apply(result.nodes)...)
 		tail, err := result.afterNode.complete(sub)
 		if err != nil {
 			return nil, err
 		}
-		children = append(children, tail...)
+		children = append(children, negation.apply(tail)...)
 		raw, position = sub.source, sub.pos
 	}
+	children = append(children, negation.finish()...)
 	var result *mml.Node
 	if len(children) == 1 && children[0].Kind == "mi" {
 		result = children[0]

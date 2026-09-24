@@ -102,9 +102,13 @@ func (p *parser) parseScriptArgument(attachment *scriptAttachment, font string) 
 		if parseErr != nil {
 			return nil, currentFont, nil, parseErr
 		}
+		if result.notItem {
+			return nil, currentFont, nil, attachment.missingOpen()
+		}
 		if len(result.nodes) == 0 {
 			continue
 		}
+		// A SubsupItem accepts the completed function node at this boundary.
 		return row(result.nodes, true), currentFont, result.afterNode, nil
 	}
 }

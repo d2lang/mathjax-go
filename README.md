@@ -409,7 +409,13 @@ Delimiter fallback accepts only explicitly backslash-prefixed command entries; r
 
 Bare `\laplacian` constructs a normal-variant `mi` nabla as the base of its square. Two additional public references compare its complete primary SVG in inline and display modes. This coverage is limited to the bare command; D106 operand and child-parser lifetime behavior remains outside this symbol-construction change.
 
-Compound negation, the ordinary backtick glyph, and escaped-pipe Braket dispatch remain separate discrepancies and are excluded from exact SVG expectations here. Matching SVG does not claim full raw-model equality.
+The ordinary backtick glyph and escaped-pipe Braket dispatch remain separate discrepancies and are excluded from exact SVG expectations here. Matching SVG does not claim full raw-model equality.
+
+### Negation
+
+`\not` waits for the next parsed item, applies the primary token remap or combining mark when eligible, and otherwise emits the zero-width slash fallback. Groups, argument-taking commands, nested negation, end-of-input and registered overrides retain their own parsing behavior. A base identifier with combining marks keeps its automatic italic variant.
+
+Twenty public references compare complete original MathJax SVGs in inline and display modes, including the two unchanged override controls. These tests cover rendered output; they do not claim complete internal-model or general operator-name parser equivalence.
 
 
 ### Quantity followed by an unsupported star

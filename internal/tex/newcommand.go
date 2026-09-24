@@ -255,6 +255,11 @@ func (p *parser) letCommand(name string) error {
 			p.state.macros[cs] = definition
 			return nil
 		}
+		if _, paired := p.state.pairedDelimiters[source]; source == "not" && !paired {
+			// Capture the builtin handler, not a macro that resolves \not later.
+			p.state.macros[cs] = macroDefinition{builtinNot: true}
+			return nil
+		}
 		if _, ok := identifierSymbols[source]; ok {
 			p.state.macros[cs] = macroDefinition{body: "\\" + source}
 			return nil
