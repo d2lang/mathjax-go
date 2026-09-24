@@ -1817,6 +1817,22 @@ func physicsNablaWithOperator(makeOperator func(string, mml.TeXClass, map[string
 }
 
 func (p *parser) commutator(name string) ([]*mml.Node, error) {
+	star := p.readStar()
+	p.skipSpaces()
+	big := ""
+	if p.pos < len(p.source) && p.source[p.pos] == '\\' {
+		p.pos++
+		big = p.readControlSequence()
+		switch big {
+		case "big", "Big", "bigg", "Bigg":
+		default:
+			return nil, texError("MissingArgFor", "Missing argument for %s", "\\"+name)
+		}
+		p.skipSpaces()
+	}
+	if p.pos >= len(p.source) || p.source[p.pos] != '{' {
+		return nil, texError("MissingArgFor", "Missing argument for %s", "\\"+name)
+	}
 	leftRaw, _, err := p.readArgument(name, false)
 	if err != nil {
 		return nil, err
@@ -1825,24 +1841,27 @@ func (p *parser) commutator(name string) ([]*mml.Node, error) {
 	if err != nil {
 		return nil, err
 	}
-	left, err := p.parseString(leftRaw)
+	open, close := "[", "]"
+	switch name {
+	case "anticommutator", "acomm", "poissonbracket", "pb":
+		open, close = "\\{", "\\}"
+	}
+	// PhysicsMethods.Commutator parses both raw arguments in one child
+	// expression. Their comma is a real token in the same lexical row.
+	argument := leftRaw + "," + rightRaw
+	switch {
+	case star:
+		argument = open + " " + argument + " " + close
+	case big != "":
+		argument = "\\" + big + "l" + open + " " + argument + " " + "\\" + big + "r" + close
+	default:
+		argument = "\\left" + open + " " + argument + " " + "\\right" + close
+	}
+	parsed, err := p.parsePhysicsChild(argument)
 	if err != nil {
 		return nil, err
 	}
-	right, err := p.parseString(rightRaw)
-	if err != nil {
-		return nil, err
-	}
-	comma := p.operator(",", mml.TeXClassPunct, nil)
-	separator := ","
-	if name == "anticommutator" || name == "acomm" {
-		separator = ","
-		comma = p.operator(separator, mml.TeXClassPunct, nil)
-	}
-	if name == "poissonbracket" || name == "pb" {
-		return []*mml.Node{p.fenced("{", forcedRow([]*mml.Node{left, comma, right}, true), "}", true)}, nil
-	}
-	return []*mml.Node{p.fenced("[", forcedRow([]*mml.Node{left, comma, right}, true), "]", true)}, nil
+	return unwrapInferred(parsed), nil
 }
 
 func (p *parser) vectorBold(name string) ([]*mml.Node, error) {
@@ -2115,7 +2134,7 @@ func (p *parser) derivative(name string, after **derivativeAutoOpen) ([]*mml.Nod
 	// occurrence is parsed independently by the actual fraction handler.
 	expansion := frac + "{" + op + power1 + first + "}" +
 		"{" + op + " " + second + power2 + " " + rest + "}"
-	parsed, err := p.parseDerivativeExpansion(expansion)
+	parsed, err := p.parsePhysicsChild(expansion)
 	if err != nil {
 		return nil, err
 	}
