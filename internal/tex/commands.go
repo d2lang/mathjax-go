@@ -32,6 +32,10 @@ import (
 
 func (p *parser) commandNodes(name string, after **derivativeAutoOpen) ([]*mml.Node, error) {
 	if definition, ok := p.state.macros[name]; ok {
+		if definition.builtinNot {
+			p.commandNot = true
+			return nil, nil
+		}
 		return p.invokeMacro(name, definition)
 	}
 	if nodes, handled, err := p.amsTagCommand(name); handled {
@@ -115,6 +119,9 @@ func (p *parser) commandNodes(name string, after **derivativeAutoOpen) ([]*mml.N
 	}
 
 	switch name {
+	case "not":
+		p.commandNot = true
+		return nil, nil
 	case "mmlToken":
 		return p.mmlToken(name)
 	case ",":

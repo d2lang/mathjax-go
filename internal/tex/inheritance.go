@@ -11,9 +11,9 @@ package tex
 
 import (
 	"reflect"
+	"regexp"
 	"strconv"
 	"strings"
-	"unicode/utf8"
 
 	"github.com/d2lang/mathjax-go/internal/mml"
 	"github.com/d2lang/mathjax-go/internal/ordered"
@@ -27,6 +27,11 @@ type inheritedAttribute struct {
 }
 
 type inheritedAttributes = ordered.Map[inheritedAttribute]
+
+// MmlMi.singleCharacter permits a base plus these combining marks. Go's rune
+// matcher consumes a supplementary scalar as the primary's surrogate pair;
+// the negated class preserves JavaScript dot's four line-terminator exclusions.
+var miSingleCharacter = regexp.MustCompile("^[^\n\r\u2028\u2029][\u0300-\u036F\u1AB0-\u1ABE\u1DC0-\u1DFF\u20D0-\u20EF]*$")
 
 // setMathMLInheritance ports AbstractMmlNode.setInheritedAttributes() and the
 // kind-specific overrides used by the complete MML registry.  MathJax runs
@@ -321,10 +326,9 @@ func setChildInheritedAttributes(n *mml.Node, attributes *inheritedAttributes, d
 		return
 
 	case "mi":
-		// Token nodes have only internal text children.  Plain one-character
-		// identifiers acquire italic as an inherited value, not an explicit
-		// parser attribute.
-		if utf8.RuneCountInString(textContent(n)) == 1 && !attributes.Has("mathvariant") {
+		// A base with combining marks still acquires italic as an inherited
+		// value, not an explicit parser attribute (MmlMi.singleCharacter).
+		if miSingleCharacter.MatchString(textContent(n)) && !attributes.Has("mathvariant") {
 			n.Attributes.SetInherited("mathvariant", "italic")
 		}
 		return
