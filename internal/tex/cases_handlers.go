@@ -22,6 +22,9 @@ func (p *parser) casesEnvironment(name string) (nodes []*mml.Node, handled bool,
 	if err != nil {
 		return nil, true, err
 	}
+	if err := p.checkEquationEnvironment(); err != nil {
+		return nil, true, err
+	}
 	body, err := p.captureEnvironment(name)
 	if err != nil {
 		return nil, true, err
@@ -38,7 +41,7 @@ func (p *parser) casesEnvironment(name string) (nodes []*mml.Node, handled bool,
 				mtds = append(mtds, node("mtd", node("mstyle", node("mtext", mml.NewText(strings.TrimLeft(raw, " \t\r\n"))))))
 				continue
 			}
-			content, err := p.parseString(strings.TrimSpace(raw))
+			content, err := p.parseContinuationString(strings.TrimSpace(raw))
 			if err != nil {
 				return nil, true, err
 			}

@@ -84,7 +84,7 @@ func (p *parser) beginEnvironment(name string) ([]*mml.Node, error) {
 		if err != nil {
 			return nil, err
 		}
-		parsed, err := p.parseString(begin + body + end)
+		parsed, err := p.parseContinuationString(begin + body + end)
 		if err != nil {
 			return nil, err
 		}
@@ -108,8 +108,12 @@ func (p *parser) beginEnvironment(name string) ([]*mml.Node, error) {
 	if strings.Contains(environment, "alignat") {
 		// AMS consumes the maximum pair count before the environment body; it
 		// does not appear in the resulting MathML table.
-		_, _, err = p.readArgument("begin{"+environment+"}", false)
-		if err != nil {
+		if err := p.readEquationPairCount(environment); err != nil {
+			return nil, err
+		}
+	}
+	if isGuardedEquationEnvironment(environment) {
+		if err := p.checkEquationEnvironment(); err != nil {
 			return nil, err
 		}
 	}
@@ -120,7 +124,7 @@ func (p *parser) beginEnvironment(name string) ([]*mml.Node, error) {
 
 	switch environment {
 	case "equation", "equation*", "displaymath", "math", "split":
-		contents, err := p.parseString(body)
+		contents, err := p.parseContinuationString(body)
 		if err != nil {
 			return nil, err
 		}
@@ -231,6 +235,35 @@ func (p *parser) beginEnvironment(name string) ([]*mml.Node, error) {
 	default:
 		return nil, texError("UnknownEnv", "Unknown environment '%s'", environment)
 	}
+}
+
+// These are the supported AMS routes that call ParseUtil.checkEqnEnv.
+// Untaggable arrays such as split, aligned and gathered do not set the flag.
+func isGuardedEquationEnvironment(environment string) bool {
+	switch environment {
+	case "equation", "equation*", "align", "align*", "gather", "gather*",
+		"multline", "multline*", "alignat", "alignat*", "xalignat", "xalignat*",
+		"xxalignat", "flalign", "flalign*":
+		return true
+	}
+	return false
+}
+
+func (p *parser) readEquationPairCount(environment string) error {
+	count, _, err := p.readArgument("begin{"+environment+"}", false)
+	if err != nil {
+		return err
+	}
+	if environment == "alignat" || environment == "alignat*" || isAMSXAlignAt(environment) {
+		// AlignAt/XalignAt reject /[^0-9]/ before checking equation nesting.
+		// In particular, their source regexp accepts empty and zero counts.
+		for _, c := range count {
+			if c < '0' || c > '9' {
+				return texError("PositiveIntegerArg", "Argument to \\begin{%s} must me a positive integer", environment)
+			}
+		}
+	}
+	return nil
 }
 
 func isAMSXAlignAt(environment string) bool {
@@ -393,7 +426,7 @@ func (p *parser) parseTable(body, style string) (*mml.Node, error) {
 		}
 		mtdNodes := make([]*mml.Node, 0, len(cells))
 		for _, cell := range cells {
-			contents, err := p.parseString(strings.TrimSpace(cell))
+			contents, err := p.parseContinuationString(strings.TrimSpace(cell))
 			if err != nil {
 				return nil, err
 			}
@@ -624,7 +657,7 @@ func (p *parser) parseCDRow(raw string, rowIndex int) ([]*mml.Node, error) {
 		at += position
 		prefix := strings.TrimSpace(raw[position:at])
 		if prefix != "" {
-			contents, err := p.parseString(prefix)
+			contents, err := p.parseContinuationString(prefix)
 			if err != nil {
 				return nil, err
 			}
@@ -645,7 +678,7 @@ func (p *parser) parseCDRow(raw string, rowIndex int) ([]*mml.Node, error) {
 	}
 	tail := strings.TrimSpace(raw[position:])
 	if tail != "" {
-		contents, err := p.parseString(tail)
+		contents, err := p.parseContinuationString(tail)
 		if err != nil {
 			return nil, err
 		}

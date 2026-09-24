@@ -52,6 +52,12 @@ type parseState struct {
 	colorModel        *texcolor.Model
 }
 
+// Stack.global belongs to one logical TexParser, not its shared configuration.
+// Synthetic body and cell parsers share it; genuine child parsers start fresh.
+type parserStackGlobal struct {
+	eqnEnv bool
+}
+
 func newParseState() *parseState {
 	s := &parseState{
 		macros:           make(map[string]macroDefinition),
@@ -81,6 +87,7 @@ type parser struct {
 	source               string
 	pos                  int
 	state                *parseState
+	stackGlobal          *parserStackGlobal
 	display              bool
 	commandNamedFunction bool
 	commandNot           bool
@@ -98,6 +105,22 @@ type parser struct {
 	genfracPalette       bool
 	starMacroChildren    bool
 	derivativeChildren   bool
+}
+
+func (p *parser) ensureStackGlobal() *parserStackGlobal {
+	if p.stackGlobal == nil {
+		p.stackGlobal = &parserStackGlobal{}
+	}
+	return p.stackGlobal
+}
+
+func (p *parser) checkEquationEnvironment() error {
+	global := p.ensureStackGlobal()
+	if global.eqnEnv {
+		return texError("ErroneousNestingEq", "Erroneous nesting of equation structures")
+	}
+	global.eqnEnv = true
+	return nil
 }
 
 // parseRow corresponds to TexParser.Parse plus the base Stack reduction.  A
@@ -671,7 +694,15 @@ func (p *parser) parseArgument(name string) (*mml.Node, error) {
 }
 
 func (p *parser) parseString(source string) (*mml.Node, error) {
-	sub := &parser{source: source, state: p.state, display: p.display,
+	return p.parseStringWithStack(source, nil)
+}
+
+func (p *parser) parseContinuationString(source string) (*mml.Node, error) {
+	return p.parseStringWithStack(source, p.ensureStackGlobal())
+}
+
+func (p *parser) parseStringWithStack(source string, global *parserStackGlobal) (*mml.Node, error) {
+	sub := &parser{source: source, state: p.state, stackGlobal: global, display: p.display,
 		activeFont: p.activeFont, vectorFactory: p.vectorFactory,
 		operatorLetters: p.operatorLetters, noAutoOP: p.noAutoOP, fontExplicitEmpty: p.fontExplicitEmpty,
 		vectorFont: p.vectorFont, vectorStar: p.vectorStar, vectorAlias: p.vectorAlias,

@@ -124,7 +124,7 @@ func (p *parser) physicsExpression(name string) ([]*mml.Node, error) {
 	if err != nil {
 		return nil, err
 	}
-	content, err := p.parseString(raw)
+	content, err := p.parseContinuationString(raw)
 	if err != nil {
 		return nil, err
 	}
@@ -160,7 +160,7 @@ func (p *parser) physicsEval(name string) ([]*mml.Node, error) {
 	if star {
 		raw = "\\smash{" + raw + "}"
 	}
-	return p.parseExpansion("\\left. " + raw + " \\vphantom{\\int}\\right|")
+	return p.parseContinuationExpansion("\\left. " + raw + " \\vphantom{\\int}\\right|")
 }
 
 func (p *parser) physicsKetBra(name string) ([]*mml.Node, error) {

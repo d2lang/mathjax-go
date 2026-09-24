@@ -45,6 +45,9 @@ func (p *parser) baseAMSEnvironment(name string) (nodes []*mml.Node, handled boo
 	if name != "flalign" && name != "flalign*" {
 		return nil, false, nil
 	}
+	if err := p.checkEquationEnvironment(); err != nil {
+		return nil, true, err
+	}
 	body, err := p.captureEnvironment(name)
 	if err != nil {
 		return nil, true, err
@@ -54,7 +57,7 @@ func (p *parser) baseAMSEnvironment(name string) (nodes []*mml.Node, handled boo
 	for _, cells := range rows {
 		parsed := make([]*mml.Node, 0, len(cells)+1)
 		for _, raw := range cells {
-			content, err := p.parseString(strings.TrimSpace(raw))
+			content, err := p.parseContinuationString(strings.TrimSpace(raw))
 			if err != nil {
 				return nil, true, err
 			}
@@ -302,7 +305,7 @@ func (p *parser) amsBoxed(name string) ([]*mml.Node, error) {
 }
 
 func (p *parser) amsMultiIntegral(_ string) ([]*mml.Node, error) {
-	return p.parseExpansion("\\int\\cdots\\int")
+	return p.parseContinuationExpansion("\\int\\cdots\\int")
 }
 
 func (p *parser) amsSideSet(name string) ([]*mml.Node, error) {
