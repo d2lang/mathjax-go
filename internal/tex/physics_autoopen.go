@@ -44,9 +44,9 @@ type derivativeAutoOpen struct {
 	closed    bool
 }
 
-func (a *derivativeAutoOpen) complete(p *parser) ([]*mml.Node, error) {
+func (a *derivativeAutoOpen) start(p *parser) bool {
 	if a == nil {
-		return nil, nil
+		return false
 	}
 	// TexParser.GetNext uses ECMAScript whitespace; this is not a change to
 	// ordinary character scanning or argument readers.
@@ -54,9 +54,16 @@ func (a *derivativeAutoOpen) complete(p *parser) ([]*mml.Node, error) {
 		p.consumeRune()
 	}
 	if p.pos == len(p.source) || p.source[p.pos] != '(' {
-		return nil, nil
+		return false
 	}
 	p.pos++
+	return true
+}
+
+func (a *derivativeAutoOpen) complete(p *parser) ([]*mml.Node, error) {
+	if !a.start(p) {
+		return nil, nil
+	}
 	content, _, err := p.parseRowWithAutoOpen(0, false, false, a)
 	if err != nil {
 		return nil, err

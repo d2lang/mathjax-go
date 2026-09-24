@@ -257,7 +257,8 @@ func (p *parser) amsOperatorName(name string) ([]*mml.Node, error) {
 			position += size
 			continue
 		}
-		sub := &parser{source: raw, pos: position, state: p.state, display: p.display}
+		sub := &parser{source: raw, pos: position, state: p.state, display: p.display,
+			derivativeChildren: p.derivativeChildren}
 		result, err := sub.parseOneTokenEvent()
 		if err != nil {
 			return nil, err

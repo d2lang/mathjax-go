@@ -165,7 +165,8 @@ func (p *parser) parseInternalMath(source string) (*mml.Node, error) {
 	count := p.state.macroCount
 	p.state.macroCount = 0
 	defer func() { p.state.macroCount = count }()
-	sub := &parser{source: source, state: p.state, vectorFactory: p.vectorFactory, genfracPalette: p.genfracPalette}
+	sub := &parser{source: source, state: p.state, vectorFactory: p.vectorFactory,
+		genfracPalette: p.genfracPalette, derivativeChildren: p.derivativeChildren}
 	children, _, err := sub.parseRow(0, false)
 	if err != nil {
 		return nil, err
