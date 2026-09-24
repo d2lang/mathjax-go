@@ -423,3 +423,7 @@ Twenty public references compare complete original MathJax SVGs in inline and di
 The argument-free `\qty` and `\quantity` handlers leave an unsupported `*` for ordinary parsing after an explicit empty fenced row. The star and following material are preserved. Argument-taking quantity aliases and the existing nonstar path keep their behavior.
 
 Four public `\qty` references compare whole primary SVGs in both modes, and two existing tail-preservation cases now compare their original primary SVGs, errors, and ordered explicit/own trees. All primary and accepted reference fields remain unchanged. The `\quantity` alias shares the pinned handler mapping; it has no separate runtime reference in this bounded corpus. Other unsupported-token paths and full raw-model equality remain outside this change.
+
+### Middle delimiters
+
+`\middle` sets the primary stretchy attribute without forcing fence or symmetric attributes. A slash between scripted operands therefore keeps the primary glyph size and baseline. Four public references compare complete primary SVGs in inline and display modes: two scripted `\flatfrac` cases and two unchanged basic controls.
