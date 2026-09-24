@@ -1857,7 +1857,7 @@ func (p *parser) commutator(name string) ([]*mml.Node, error) {
 	default:
 		argument = "\\left" + open + " " + argument + " " + "\\right" + close
 	}
-	parsed, err := p.parsePhysicsChild(argument)
+	parsed, err := p.parseChild(argument)
 	if err != nil {
 		return nil, err
 	}
@@ -2134,7 +2134,7 @@ func (p *parser) derivative(name string, after **derivativeAutoOpen) ([]*mml.Nod
 	// occurrence is parsed independently by the actual fraction handler.
 	expansion := frac + "{" + op + power1 + first + "}" +
 		"{" + op + " " + second + power2 + " " + rest + "}"
-	parsed, err := p.parsePhysicsChild(expansion)
+	parsed, err := p.parseChild(expansion)
 	if err != nil {
 		return nil, err
 	}
