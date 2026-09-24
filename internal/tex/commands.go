@@ -1499,7 +1499,7 @@ func (p *parser) braket(name string) ([]*mml.Node, error) {
 	if err != nil {
 		return nil, err
 	}
-	content, err := p.parseString(raw)
+	content, err := p.parseContinuationString(raw)
 	if err != nil {
 		return nil, err
 	}
@@ -1653,7 +1653,15 @@ func (p *parser) physicsBraket(name string) ([]*mml.Node, error) {
 }
 
 func (p *parser) parseExpansion(source string) ([]*mml.Node, error) {
-	parsed, err := p.parseString(source)
+	return p.parseExpansionWithStack(source, nil)
+}
+
+func (p *parser) parseContinuationExpansion(source string) ([]*mml.Node, error) {
+	return p.parseExpansionWithStack(source, p.ensureStackGlobal())
+}
+
+func (p *parser) parseExpansionWithStack(source string, global *parserStackGlobal) ([]*mml.Node, error) {
+	parsed, err := p.parseStringWithStack(source, global)
 	if err != nil {
 		return nil, err
 	}
@@ -1697,7 +1705,9 @@ func (p *parser) quantityWithDelimiters(name, open, close string) ([]*mml.Node, 
 	}
 	var raw string
 	var err error
+	continuation := false
 	if closing, ok := map[byte]byte{'(': ')', '[': ']', '|': '|'}[p.source[p.pos]]; ok {
+		continuation = true
 		p.pos++
 		raw, err = p.readUpToByte(closing)
 	} else {
@@ -1706,7 +1716,14 @@ func (p *parser) quantityWithDelimiters(name, open, close string) ([]*mml.Node, 
 	if err != nil {
 		return nil, err
 	}
-	content, err := p.parseString(raw)
+	// Quantity's raw fences use AutoOpen on the caller; its braced argument
+	// is parsed by a genuine child TexParser.
+	var content *mml.Node
+	if continuation {
+		content, err = p.parseContinuationString(raw)
+	} else {
+		content, err = p.parseString(raw)
+	}
 	if err != nil {
 		return nil, err
 	}
@@ -1906,7 +1923,7 @@ func (p *parser) vectorAccent(name string) ([]*mml.Node, error) {
 	// the vector argument; the accent is outside VectorBold's font reset.
 	// This synthetic continuation carries the charged caller budget. Only its
 	// genuine ParseArg and VectorBold children receive a fresh count.
-	sub := &parser{source: expansion, state: p.state, display: p.display,
+	sub := &parser{source: expansion, state: p.state, stackGlobal: p.ensureStackGlobal(), display: p.display,
 		multiLetterFont: p.multiLetterFont, activeFont: p.activeFont,
 		identifierPattern: p.identifierPattern, operatorLetters: p.operatorLetters,
 		noAutoOP: p.noAutoOP, fontExplicitEmpty: p.fontExplicitEmpty,
@@ -1962,7 +1979,7 @@ func (p *parser) operatorApplication(name string, vector bool) ([]*mml.Node, err
 	if err != nil {
 		return nil, err
 	}
-	arg, err := p.parseString(raw)
+	arg, err := p.parseContinuationString(raw)
 	if err != nil {
 		return nil, err
 	}
@@ -2039,7 +2056,7 @@ func (p *parser) derivative(name string, after **derivativeAutoOpen) ([]*mml.Nod
 			if err != nil {
 				return nil, err
 			}
-			arg, err := p.parseString(raw)
+			arg, err := p.parseContinuationString(raw)
 			if err != nil {
 				return nil, err
 			}

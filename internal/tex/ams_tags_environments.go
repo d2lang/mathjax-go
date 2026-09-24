@@ -28,6 +28,9 @@ func (p *parser) amsTagEnvironment(environment string) (nodes []*mml.Node, handl
 }
 
 func (p *parser) amsEquation(environment string) (nodes []*mml.Node, err error) {
+	if err := p.checkEquationEnvironment(); err != nil {
+		return nil, err
+	}
 	state := p.amsTags()
 	state.start("equation", true, environment == "equation")
 	ended := false
@@ -41,7 +44,7 @@ func (p *parser) amsEquation(environment string) (nodes []*mml.Node, err error) 
 	if err != nil {
 		return nil, err
 	}
-	content, err := p.parseString(body)
+	content, err := p.parseContinuationString(body)
 	if err != nil {
 		return nil, err
 	}
@@ -67,12 +70,17 @@ func (p *parser) amsAlignment(environment string) (nodes []*mml.Node, err error)
 			return nil, err
 		}
 	}
+	taggable := environment == "align" || environment == "align*"
+	if taggable {
+		if err := p.checkEquationEnvironment(); err != nil {
+			return nil, err
+		}
+	}
 	body, err := p.captureEnvironment(environment)
 	if err != nil {
 		return nil, err
 	}
 
-	taggable := environment == "align" || environment == "align*"
 	defaultTags := environment == "align"
 	state := p.amsTags()
 	state.start(environment, taggable, defaultTags)
@@ -93,7 +101,7 @@ func (p *parser) amsAlignment(environment string) (nodes []*mml.Node, err error)
 		}
 		mtds := make([]*mml.Node, 0, len(cells))
 		for _, cell := range cells {
-			content, parseErr := p.parseString(strings.TrimSpace(cell))
+			content, parseErr := p.parseContinuationString(strings.TrimSpace(cell))
 			if parseErr != nil {
 				return nil, parseErr
 			}

@@ -258,7 +258,7 @@ func (p *parser) mathtoolsRelation(name string) ([]*mml.Node, error) {
 	}
 	expansion := strings.ReplaceAll(relation[0], ":", "\\MTThinColon")
 	expansion = strings.ReplaceAll(expansion, "-", "\\mathrel{-}")
-	return p.parseExpansion("\\mathrel{" + expansion + "}")
+	return p.parseContinuationExpansion("\\mathrel{" + expansion + "}")
 }
 
 func mathtoolsNArrow(name string) *mml.Node {
@@ -377,7 +377,7 @@ func (p *parser) mathtoolsAdjustLimits(name string) ([]*mml.Node, error) {
 	}
 	expansion := "\\mathop{{" + first + "}\\vphantom{{" + second + "}}}_{{" + firstSub + "}\\vphantom{{" + secondSub + "}}}" +
 		"\\mathop{{" + second + "}\\vphantom{{" + first + "}}}_{{" + secondSub + "}\\vphantom{{" + firstSub + "}}}"
-	nodes, err := p.parseExpansion(expansion)
+	nodes, err := p.parseContinuationExpansion(expansion)
 	if err != nil {
 		return nil, err
 	}

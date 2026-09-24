@@ -101,7 +101,7 @@ func (p *parser) mathtoolsMultlined(environment string) ([]*mml.Node, error) {
 				return nil, err
 			}
 		}
-		content, err := p.parseString(raw)
+		content, err := p.parseContinuationString(raw)
 		if err != nil {
 			return nil, err
 		}
@@ -175,7 +175,7 @@ func (p *parser) mathtoolsSpreadLines(environment string) ([]*mml.Node, error) {
 	if err != nil {
 		return nil, err
 	}
-	content, err := p.parseString(body)
+	content, err := p.parseContinuationString(body)
 	if err != nil {
 		return nil, err
 	}
@@ -223,7 +223,7 @@ func (p *parser) mathtoolsCases(environment string) ([]*mml.Node, error) {
 				mtds = append(mtds, node("mtd", text))
 				continue
 			}
-			content, err := p.parseString(strings.TrimSpace(raw))
+			content, err := p.parseContinuationString(strings.TrimSpace(raw))
 			if err != nil {
 				return nil, err
 			}
@@ -247,7 +247,12 @@ func (p *parser) mathtoolsCases(environment string) ([]*mml.Node, error) {
 
 func (p *parser) mathtoolsAlignment(environment string) ([]*mml.Node, error) {
 	if strings.Contains(environment, "alignat") {
-		if _, _, err := p.readArgument("begin{"+environment+"}", false); err != nil {
+		if err := p.readEquationPairCount(environment); err != nil {
+			return nil, err
+		}
+	}
+	if isGuardedEquationEnvironment(environment) {
+		if err := p.checkEquationEnvironment(); err != nil {
 			return nil, err
 		}
 	}
@@ -322,7 +327,7 @@ func (p *parser) mathtoolsAlignment(environment string) ([]*mml.Node, error) {
 		}
 		mtds := make([]*mml.Node, 0, len(cells))
 		for _, raw := range cells {
-			content, err := p.parseString(strings.TrimSpace(raw))
+			content, err := p.parseContinuationString(strings.TrimSpace(raw))
 			if err != nil {
 				return nil, err
 			}
@@ -385,7 +390,7 @@ func (p *parser) mathtoolsMultlineBody(body string) ([]*mml.Node, error) {
 			shove = "right"
 			raw, _ = mathtoolsOnlyCommandArgument(raw, "shoveright")
 		}
-		content, err := p.parseString(raw)
+		content, err := p.parseContinuationString(raw)
 		if err != nil {
 			return nil, err
 		}
@@ -456,7 +461,7 @@ func (p *parser) mathtoolsVDots(argument string, flush bool) *mml.Node {
 func (p *parser) mathtoolsAboxedRow(cells []string) (*mml.Node, error) {
 	mtds := make([]*mml.Node, 0, len(cells)+2)
 	for _, raw := range cells[:len(cells)-1] {
-		content, err := p.parseString(strings.TrimSpace(raw))
+		content, err := p.parseContinuationString(strings.TrimSpace(raw))
 		if err != nil {
 			return nil, err
 		}
@@ -475,11 +480,11 @@ func (p *parser) mathtoolsAboxedRow(cells []string) (*mml.Node, error) {
 	if len(parts) > 1 {
 		right = parts[1]
 	}
-	first, err := p.parseString("\\rlap{\\boxed{" + left + "{}" + right + "}}\\kern.267em\\phantom{" + left + "}")
+	first, err := p.parseContinuationString("\\rlap{\\boxed{" + left + "{}" + right + "}}\\kern.267em\\phantom{" + left + "}")
 	if err != nil {
 		return nil, err
 	}
-	second, err := p.parseString("\\phantom{{}" + right + "}\\kern.267em")
+	second, err := p.parseContinuationString("\\phantom{{}" + right + "}\\kern.267em")
 	if err != nil {
 		return nil, err
 	}
@@ -490,7 +495,7 @@ func (p *parser) mathtoolsAboxedRow(cells []string) (*mml.Node, error) {
 func (p *parser) mathtoolsPlainRow(cells []string) (*mml.Node, error) {
 	mtds := make([]*mml.Node, 0, len(cells))
 	for _, raw := range cells {
-		content, err := p.parseString(strings.TrimSpace(raw))
+		content, err := p.parseContinuationString(strings.TrimSpace(raw))
 		if err != nil {
 			return nil, err
 		}
