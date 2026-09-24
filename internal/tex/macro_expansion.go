@@ -37,8 +37,8 @@ func macroAddArgs(left, right string, limit int) (string, error) {
 	return left + right, nil
 }
 
-// Keep this substitution local to macros: environments and paired delimiters
-// have separate source/cursor lifetimes and still use substituteArguments.
+// Macros and paired delimiters use ParseUtil.substituteArgs before replacing
+// their caller source. Environments retain their separate substitution path.
 func substituteMacroArguments(body string, args []string) (string, error) {
 	return substituteMacroArgumentsWithLimit(body, args, maxMacroBuffer)
 }
