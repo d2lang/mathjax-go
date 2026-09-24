@@ -54,7 +54,10 @@ func (p *parser) parseVectorString(source string, star bool) (*mml.Node, error) 
 	}
 	sub := &parser{source: source, state: p.state, display: p.display,
 		multiLetterFont: p.multiLetterFont, vectorFactory: true, vectorFont: variant, vectorStar: star,
-		genfracPalette: p.genfracPalette, starMacroChildren: p.starMacroChildren,
+		identifierPattern: p.identifierPattern, operatorLetters: p.operatorLetters, noAutoOP: p.noAutoOP,
+		// VectorBold deletes font; an absent font still permits identifier grouping.
+		fontExplicitEmpty: false,
+		genfracPalette:    p.genfracPalette, starMacroChildren: p.starMacroChildren,
 		derivativeChildren: p.derivativeChildren}
 	children, _, err := sub.parseRow(0, false)
 	if err != nil {
@@ -73,5 +76,6 @@ func (p *parser) parseVectorString(source string, star bool) (*mml.Node, error) 
 	// A nested VectorBold thus clears that env for later tokens in the same row.
 	p.vectorFont = ""
 	p.vectorStar = false
+	p.fontExplicitEmpty = false
 	return result, nil
 }

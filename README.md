@@ -309,8 +309,8 @@ uses the original escaped-hash rules, and counts UTF-16 code units against the
 resets the cursor before checking the macro count. Argument, substitution and
 buffer errors retain the original precedence. The same rule covers the existing
 parameter-template macro route; environments and paired delimiters retain their
-separate implementations. The operator-name token consumer carries rewritten
-source and cursor together, preserving its caller and already-emitted nodes.
+separate implementations. Operator-name arguments use a complete child parser, preserving the caller
+source/cursor and shared command definitions while isolating expansion counts.
 
 The 85 complete-output references comprise the original 72 cases and 13 bounded
 default-buffer/UTF-16/prime/style/font controls. All 40 changed SVGs match primary;
@@ -337,16 +337,22 @@ returned operator receives explicit OP; singular identifiers and wrapped
 TeXAtoms preserve their distinct primary property insertion order. Twenty-six
 additional whole-output references and eight actual-handler cases check this
 behavior, retained node identity, font/vector provenance, cursor/error state and
-classification before and after rendering. Two nested-group D106 composites
-remain separately captured, nonprimary diagnostics; no new expected-output
-qualification is introduced for those changed composites.
+classification before and after rendering.
 
-Two inherited Unicode-prime operator-name cases remain D106 diagnostics with
-exact unchanged nonprimary SVGs and literal-prime structure. Their inner normal
-mi(x) now matches the untouched primary subtree with no own texClass. Tests
-assert that exact source-defined fact and every remaining field against the
-immutable historical boundary; they do not accept a new candidate snapshot or
-claim whole-output parity for these two composites.
+Operator-name arguments retain one full child parser for groups, scripts,
+primes and deferred derivative arguments. The copied identifier pattern,
+operator-letter dispatch, font state and automatic-class suppression remain
+independent. Eight retained public references assert complete original SVGs,
+with four display measurements, covering grouped names, derivative operands,
+scripted derivatives and Unicode primes.
+
+The two inherited Unicode-prime operator-name cases now use their original SVGs,
+explicit trees and display measurements. Their own-property comparison retains
+one precise pre-existing inheritance difference: the original stores
+pseudoscript=false on the prime. Tests remove only that field from a comparison
+copy at the recorded path. Historical fixture bytes, the other eight non-prime
+boundaries and the 86 existing prime-metadata boundaries remain unchanged; this
+does not claim full own-property parity or original private whitespace cursors. The two retained prime-only operator-name examples also use their original SVGs and trees with the same precise metadata qualification. Original traces require the caller macro count to remain unchanged across these genuine children; historical shared-counter fixture fields remain preserved.
 
 The original fixed-D2 package corpus remains distinct from the official-3.2.2
 newcommand augmented observations. Generate raw unchanged-primary captures with:

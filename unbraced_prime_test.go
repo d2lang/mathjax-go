@@ -42,7 +42,7 @@ func TestUnbracedPrimePublicRendering(t *testing.T) {
 	if f.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || len(f.Cases) != 120 {
 		t.Fatal("unbound references")
 	}
-	count := 0
+	count, promotedOperators := 0, 0
 	for _, c := range f.Cases {
 		if len(c.Registration) > 0 {
 			continue
@@ -52,6 +52,15 @@ func TestUnbracedPrimePublicRendering(t *testing.T) {
 			want := c.SVGSHA256
 			boundary := boundaries.Cases[c.Name]
 			unchanged := boundary.Kind == "unchanged-output"
+			if c.Name == "public-22-inline" || c.Name == "public-22-display" {
+				if c.TeX != `\operatorname{’}` || c.Display != (c.Name == "public-22-display") || !unchanged || boundary.SVGSHA256 == c.SVGSHA256 {
+					t.Fatal("changed original operator-name prime boundary")
+				}
+				// Complete child parsing now matches the untouched original output.
+				// Keep the historical boundary record without selecting its old SVG.
+				promotedOperators++
+				unchanged = false
+			}
 			if unchanged {
 				want = boundary.SVGSHA256
 			}
@@ -80,7 +89,7 @@ func TestUnbracedPrimePublicRendering(t *testing.T) {
 			}
 		})
 	}
-	if count != 100 {
+	if count != 100 || promotedOperators != 2 {
 		t.Fatal("public/registered scope changed", count)
 	}
 }

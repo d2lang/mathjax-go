@@ -15,6 +15,7 @@ func TestMacroBoundaryOperatorNameReferences(t *testing.T) {
 		MathjaxGitCommit string
 		Cases            []struct {
 			macroReferenceCase
+			// Preserve the historical shared-counter expectation in the fixture.
 			MacroCount int
 		}
 	}
@@ -39,7 +40,8 @@ func TestMacroBoundaryOperatorNameReferences(t *testing.T) {
 			if err != nil || stop != "" {
 				t.Fatalf("parse error %v, stop %q", err, stop)
 			}
-			if p.source != c.TeX || p.pos != len(c.TeX) || p.state != state || state.macroCount != c.MacroCount {
+			// Original OperatorName uses a genuine child with its own macro count.
+			if p.source != c.TeX || p.pos != len(c.TeX) || p.state != state || state.macroCount != 0 {
 				t.Fatal("child expansion changed caller source/cursor/state or revisited old input")
 			}
 			operatorNameReferenceOutput(t, operatorNameFinalize(children, c.Display), c.Display, c.Primary)

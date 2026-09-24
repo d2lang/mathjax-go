@@ -9,8 +9,6 @@ package tex
 
 import (
 	"strings"
-	"unicode"
-	"unicode/utf8"
 
 	"github.com/d2lang/mathjax-go/internal/mml"
 )
@@ -242,69 +240,19 @@ func (p *parser) amsOperatorName(name string) ([]*mml.Node, error) {
 		return nil, err
 	}
 	raw = strings.TrimSpace(raw)
-	children := make([]*mml.Node, 0, 3)
-	var negation pendingNot
-	var dots pendingDots
-	finishDots := func() { children = append(children, dots.finish()...) }
-	for position := 0; position < len(raw); {
-		r, size := utf8.DecodeRuneInString(raw[position:])
-		if unicode.IsLetter(r) || r == '-' || r == '*' {
-			start := position
-			position += size
-			for position < len(raw) {
-				next, nextSize := utf8.DecodeRuneInString(raw[position:])
-				if !unicode.IsLetter(next) && next != '-' && next != '*' {
-					break
-				}
-				position += nextSize
-			}
-			identifier := token("mi", raw[start:position])
-			identifier.Attributes.Set("mathvariant", "normal")
-			children = append(children, dots.apply(negation.apply([]*mml.Node{identifier}))...)
-			continue
-		}
-		if unicode.IsSpace(r) {
-			position += size
-			continue
-		}
-		sub := &parser{source: raw, pos: position, state: p.state, display: p.display,
-			derivativeChildren: p.derivativeChildren}
-		result, err := sub.parseOneTokenEvent()
-		if err != nil {
-			return nil, err
-		}
-		if result.notItem {
-			finishDots()
-			children = append(children, negation.start()...)
-		}
-		if result.dotsItem != nil {
-			children = append(children, negation.finish()...)
-			finishDots()
-			dots = *result.dotsItem
-		}
-		if (bool(negation) || dots.active()) && raw[position] == '{' {
-			// OpenItem reduces to a TeXAtom before an outer pending item sees it.
-			result.nodes = []*mml.Node{texAtom(row(result.nodes, true), mml.TeXClassOrd)}
-		}
-		if result.namedFunction {
-			children = append(children, negation.finish()...)
-			finishDots()
-		}
-		children = append(children, dots.apply(negation.apply(result.nodes))...)
-		tail, err := result.afterNode.completeAfter(sub, finishDots)
-		if err != nil {
-			return nil, err
-		}
-		children = append(children, dots.apply(negation.apply(tail))...)
-		raw, position = sub.source, sub.pos
+	// HandleOperatorName creates one child parser with a copied environment.
+	// Its regex and font replace the caller's choices; noAutoOP is inherited.
+	operatorParser := *p
+	operatorParser.activeFont = "normal"
+	operatorParser.fontExplicitEmpty = false
+	operatorParser.identifierPattern = identifierPatternOperator
+	operatorParser.operatorLetters = true
+	result, err := operatorParser.parseChild(raw)
+	if err != nil {
+		return nil, err
 	}
-	children = append(children, negation.finish()...)
-	finishDots()
-	var result *mml.Node
-	if len(children) == 1 && children[0].Kind == "mi" {
-		result = children[0]
-	} else {
-		result = node("TeXAtom", children...)
+	if result.Kind != "mi" {
+		result = node("TeXAtom", result)
 	}
 	// HandleOperatorName reparses in an explicit normal-font environment.
 	// That environment suppresses Physics' vector token factory, including
