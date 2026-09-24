@@ -15,7 +15,7 @@ import (
 	"github.com/d2lang/mathjax-go/internal/tex"
 )
 
-func TestModCommandPinnedReferences(t *testing.T) {
+func TestBmodCommandPinnedReferences(t *testing.T) {
 	type output struct {
 		SVGSHA256      string
 		PropertiesTree *limitsTree
@@ -38,8 +38,8 @@ func TestModCommandPinnedReferences(t *testing.T) {
 		}
 	}
 	for name, target := range map[string]any{
-		"testdata/mod_command_mathjax_3_2_2.json": &fixture,
-		"testdata/mod_command_boundaries.json":    &boundaries,
+		"testdata/bmod_command_mathjax_3_2_2.json": &fixture,
+		"testdata/bmod_command_boundaries.json":    &boundaries,
 	} {
 		b, err := os.ReadFile(name)
 		if err != nil {
@@ -49,8 +49,8 @@ func TestModCommandPinnedReferences(t *testing.T) {
 			t.Fatal(err)
 		}
 	}
-	if fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || len(fixture.Cases) != 44 || boundaries.Baseline != "91e9c36681e39a4e8b1482208cd905643bcfcbe5" || len(boundaries.Unchanged) != 2 {
-		t.Fatal("unbound mod references")
+	if fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || len(fixture.Cases) != 52 || boundaries.Baseline != "91e9c36681e39a4e8b1482208cd905643bcfcbe5" || len(boundaries.Unchanged) != 2 {
+		t.Fatal("unbound bmod references")
 	}
 	compiler := tex.NewCompiler()
 	primary, historical := 0, 0
@@ -58,7 +58,7 @@ func TestModCommandPinnedReferences(t *testing.T) {
 		t.Run(c.Name, func(t *testing.T) {
 			want := c.output
 			if b, ok := boundaries.Unchanged[c.Name]; ok {
-				if !strings.HasPrefix(c.Name, "bmod-control-") || b.TeX != c.TeX || b.Display != c.Display {
+				if !strings.HasPrefix(c.Name, "mod-control-") || b.TeX != c.TeX || b.Display != c.Display {
 					t.Fatal("unexpected separate-command boundary")
 				}
 				// Keep the former boundary bound to its original request;
@@ -98,7 +98,7 @@ func TestModCommandPinnedReferences(t *testing.T) {
 			}
 		})
 	}
-	if primary != 44 || historical != 2 {
+	if primary != 52 || historical != 2 {
 		t.Fatal("changed reference provenance", primary, historical)
 	}
 }

@@ -53,7 +53,7 @@ func TestPodCommandsPinnedReferences(t *testing.T) {
 		t.Fatal("unbound pod/pmod references")
 	}
 	compiler := tex.NewCompiler()
-	primary, unchanged := 0, 0
+	primary, historical := 0, 0
 	for _, c := range fixture.Cases {
 		t.Run(c.Name, func(t *testing.T) {
 			want := c.output
@@ -61,11 +61,11 @@ func TestPodCommandsPinnedReferences(t *testing.T) {
 				if !strings.HasPrefix(c.Name, "bmod-") || b.TeX != c.TeX || b.Display != c.Display {
 					t.Fatal("unexpected separate-command boundary")
 				}
-				want = b.output
-				unchanged++
-			} else {
-				primary++
+				// Keep the former boundary bound to its original request;
+				// every case now uses the untouched primary reference.
+				historical++
 			}
+			primary++
 			o := mathjax.DefaultOptions()
 			o.Display = c.Display
 			svg, err := mathjax.RenderWithOptions(c.TeX, o)
@@ -90,7 +90,7 @@ func TestPodCommandsPinnedReferences(t *testing.T) {
 			if !reflect.DeepEqual(got, want.PropertiesTree) {
 				t.Error("complete explicit-attribute and own-property tree differs")
 			}
-			if c.Display && want.SVGSHA256 == c.SVGSHA256 {
+			if c.Display {
 				width, height, err := mathjax.Measure(c.TeX)
 				if err != nil || width != c.Width || height != c.Height {
 					t.Errorf("measure %dx%d, %v; want %dx%d", width, height, err, c.Width, c.Height)
@@ -98,7 +98,7 @@ func TestPodCommandsPinnedReferences(t *testing.T) {
 			}
 		})
 	}
-	if primary != 60 || unchanged != 4 {
-		t.Fatal("changed reference classification", primary, unchanged)
+	if primary != 64 || historical != 4 {
+		t.Fatal("changed reference provenance", primary, historical)
 	}
 }
