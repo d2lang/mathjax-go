@@ -32,54 +32,41 @@ func TestOperatorCreationCoverage(t *testing.T) {
 	if len(fixture.Cases) != 68 {
 		t.Fatalf("requests = %d, want 68", len(fixture.Cases))
 	}
-	// The accepted current Compiler renders these two unresolved errors.
-	// They are partial-construction coverage, not successful primary renders.
-	boundaries := map[string]string{
-		"construction-dots-inline":  `Undefined control sequence \dots`,
-		"construction-dots-display": `Undefined control sequence \dots`,
-	}
 	seen := make(map[string]bool)
 	foreign := make(map[*mml.Node]string)
-	boundaryCount := 0
 	for _, c := range fixture.Cases {
 		if seen[c.Name] {
 			t.Fatalf("duplicate request %q", c.Name)
 		}
 		seen[c.Name] = true
-		if _, boundary := boundaries[c.Name]; boundary {
-			boundaryCount++
-		}
 		t.Run(c.Name, func(t *testing.T) {
 			root, state, parseErr := operatorCreationParse(c.TeX, c.Display)
 			operatorCreationCheck(t, root, state.operators, foreign)
-			if message, boundary := boundaries[c.Name]; boundary {
-				var texErr *Error
-				if !errors.As(parseErr, &texErr) || texErr.ID != "UndefinedControlSequence" || texErr.Message != message {
-					t.Fatalf("accepted-baseline parse boundary = %#v, want UndefinedControlSequence %q", parseErr, message)
-				}
-				merrors := root.Find("merror")
-				if len(merrors) != 1 {
-					t.Fatalf("merror count = %d, want 1", len(merrors))
-				}
-				if value, _ := merrors[0].Attributes.GetExplicit("data-mjx-error"); value != message {
-					t.Fatalf("accepted-baseline merror = %#v, want %q", value, message)
-				}
-				return // Actual Compile returns here, before the relation filter.
-			}
 			if parseErr != nil {
 				t.Fatal(parseErr)
 			}
 			if len(root.Find("merror")) != 0 {
 				t.Fatal("unexpected rendered error")
 			}
+			if c.Name == "construction-dots-inline" || c.Name == "construction-dots-display" {
+				// The retained original trace creates both variants before the
+				// following relation, even though the baseline ellipsis is unused.
+				want := []string{"=", "…", "⋯", "="}
+				if len(state.operators) != len(want) {
+					t.Fatalf("dots operator registrations = %d, want %d", len(state.operators), len(want))
+				}
+				for i, n := range state.operators {
+					if textContent(n) != want[i] || operatorCreationAttached(root, n) != (i != 1) {
+						t.Fatalf("dots creation order or attachment differs at %d", i)
+					}
+				}
+			}
 			before := append([]*mml.Node(nil), state.operators...)
 			state.operators = combineRelations(root, state.operators)
 			operatorCreationCheckAfter(t, root, before, state.operators)
 		})
 	}
-	if boundaryCount != 2 {
-		t.Fatalf("accepted-baseline boundaries = %d, want 2", boundaryCount)
-	}
+
 }
 
 // These exact strings come from TestCasesNumCasesFrozenShape and

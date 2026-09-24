@@ -453,6 +453,15 @@ The finite public corpus preserves 88 original references: 84 complete SVG asser
 
 Adjacent relation operators use the per-parse operator creation list after MathML cleanup. Compatible neighbors retain their original text-child identities when combined; incompatible explicit attributes receive the source-defined missing-side spacing. Ancestor semantic flags refresh after sibling removal so decorated relation bases keep their spacing.
 
-The public corpus retains 68 original references and checks 60 complete primary SVGs, including four decoration cases and four derivative relation cases. Four SideSet cases (D090), two dots cases (D129), and two Physics Commutator cases (D130) remain explicit diagnostics with their original references. The internal method corpus checks 58 complete before/after graphs and ordered lists. Creation coverage uses the same 68 requests plus three existing direct-method copy controls; its two dots errors are partial-construction boundaries, not primary-render matches. This does not claim universal internal-model equality or Studio adoption.
+The public corpus retains 68 original references and checks 62 complete primary SVGs, including four decoration cases and four derivative relation cases. Four SideSet cases (D090) and two Physics Commutator cases (D130) remain explicit diagnostics with their original references. The internal method corpus checks 58 complete before/after graphs and ordered lists. Creation coverage uses the same 68 requests plus three existing direct-method copy controls; the two dots cases now cover successful construction, both initial ellipsis registrations and the unused token’s removal from the live list. This does not claim universal internal-model equality or Studio adoption.
 
 The existing ordinary-arrow controls also use their original combined-token SVGs, dimensions, and math-accent markers. Their earlier Go-output exceptions are removed; the historical fixture retains both original and pre-fix outputs for provenance.
+
+### Context-sensitive dots
+
+The `dots` command chooses the original baseline or centered ellipsis when the
+following stack item is delivered. It preserves groups, font changes, scripts,
+and function/negation ordering. The 48-case public fixture checks complete
+original SVGs and display dimensions, including the original script-argument
+error. The two retained adjacent-relation examples now use their original SVGs;
+creation coverage checks both ellipsis tokens in the original order.

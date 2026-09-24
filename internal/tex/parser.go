@@ -72,6 +72,7 @@ type parser struct {
 	display              bool
 	commandNamedFunction bool
 	commandNot           bool
+	commandDots          *pendingDots
 	multiLetterFont      string
 	activeFont           string
 	vectorFactory        bool
@@ -106,8 +107,10 @@ func (p *parser) parseRowWithAutoOpen(terminator byte, stopRight, infixPending b
 	var nodes []*mml.Node
 	var pending *pendingPrime
 	var negation pendingNot
+	var dots pendingDots
 	var pendingFont string
 	finishNot := func() { nodes = append(nodes, negation.finish()...) }
+	finishDots := func() { nodes = append(nodes, dots.finish()...) }
 	finishPrime := func() {
 		if pending != nil {
 			nodes = append(nodes, pending.finish())
@@ -134,12 +137,14 @@ func (p *parser) parseRowWithAutoOpen(terminator byte, stopRight, infixPending b
 		// FnItem is a distinct successor; it cannot be negated as a token.
 		if namedFunction {
 			finishNot()
+			finishDots()
 		} else {
 			created = negation.apply(created)
 		}
 		if auto != nil {
 			auto.observe(created)
 		}
+		created = dots.apply(created)
 		if pendingFunction {
 			if !suppressesFunctionApplication(created[0]) {
 				nodes = append(nodes, p.operator("\u2061", mml.TeXClassNone, nil))
@@ -156,6 +161,7 @@ func (p *parser) parseRowWithAutoOpen(terminator byte, stopRight, infixPending b
 		if terminator != 0 && c == terminator {
 			finishPrime()
 			finishNot()
+			finishDots()
 			p.pos++
 			return nodes, "", nil
 		}
@@ -186,12 +192,14 @@ func (p *parser) parseRowWithAutoOpen(terminator byte, stopRight, infixPending b
 				}
 				finishPrime()
 				finishNot()
+				finishDots()
 				delim, err := p.readDelimiter(name, false)
 				return nodes, delim, err
 			}
 			if _, registered := p.state.macros[name]; !registered && (name == "over" || name == "atop" || name == "above" || name == "choose" || name == "brace" || name == "brack") {
 				finishPrime()
 				finishNot()
+				finishDots()
 				fraction, right, err := p.infixFraction(name, nodes, terminator, stopRight, infixPending)
 				if err != nil {
 					return nil, "", err
@@ -204,6 +212,7 @@ func (p *parser) parseRowWithAutoOpen(terminator byte, stopRight, infixPending b
 			if name == "color" {
 				finishPrime()
 				finishNot()
+				finishDots()
 				colored, right, err := p.colorDeclaration(terminator, stopRight, infixPending)
 				if err != nil {
 					return nil, "", err
@@ -217,6 +226,7 @@ func (p *parser) parseRowWithAutoOpen(terminator byte, stopRight, infixPending b
 			if style, ok := styleDeclarations[name]; ok {
 				finishPrime()
 				finishNot()
+				finishDots()
 				rest, right, err := p.parseRowWithInfix(terminator, stopRight, infixPending)
 				if err != nil {
 					return nil, "", err
@@ -235,6 +245,7 @@ func (p *parser) parseRowWithAutoOpen(terminator byte, stopRight, infixPending b
 			if size, ok := sizeDeclarations[name]; ok {
 				finishPrime()
 				finishNot()
+				finishDots()
 				rest, right, err := p.parseRowWithInfix(terminator, stopRight, infixPending)
 				if err != nil {
 					return nil, "", err
@@ -250,8 +261,8 @@ func (p *parser) parseRowWithAutoOpen(terminator byte, stopRight, infixPending b
 			}
 			if variant, ok := fontDeclarations[name]; ok {
 				// SetFont changes the current environment without pushing a
-				// stack item, so pending Prime/Not items stay in this row.
-				if pending != nil || negation {
+				// stack item, so pending Prime/Not/Dots items stay in this row.
+				if pending != nil || bool(negation) || dots.active() {
 					p.activeFont, pendingFont = variant, variant
 					continue
 				}
@@ -267,7 +278,7 @@ func (p *parser) parseRowWithAutoOpen(terminator byte, stopRight, infixPending b
 				return nodes, right, nil
 			}
 			if name == "limits" || name == "nolimits" {
-				if pending != nil || negation {
+				if pending != nil || bool(negation) || dots.active() {
 					return nil, "", texError("MisplacedLimits", "%s is allowed only on operators", "\\"+name)
 				}
 				var err error
@@ -283,12 +294,22 @@ func (p *parser) parseRowWithAutoOpen(terminator byte, stopRight, infixPending b
 			}
 			if result.notItem {
 				finishPrime()
+				finishDots()
 				// An incoming NotItem finalizes a prior FnItem without U2061.
 				pendingFunction = false
 				nodes = append(nodes, negation.start()...)
 			}
+			if result.dotsItem != nil {
+				finishPrime()
+				finishNot()
+				finishDots()
+				// DotsItem is not MML: it settles a prior FnItem without
+				// ApplyFunction and cannot be negated as an eventual token.
+				pendingFunction = false
+				dots = *result.dotsItem
+			}
 			appendNodes(result.nodes, result.namedFunction)
-			tail, err := result.afterNode.complete(p)
+			tail, err := result.afterNode.completeAfter(p, finishDots)
 			if err != nil {
 				return nil, "", err
 			}
@@ -309,9 +330,11 @@ func (p *parser) parseRowWithAutoOpen(terminator byte, stopRight, infixPending b
 			p.pos++
 			var err error
 			var after *derivativeAutoOpen
-			if negation {
-				// Stack.Prev sees the empty NotItem, not the preceding row node.
+			if bool(negation) || dots.active() {
+				// Stack.Prev sees an empty NotItem/DotsItem, not the preceding
+				// row node or the fallback emitted when this item is pushed.
 				finishNot()
+				finishDots()
 				var scriptNodes []*mml.Node
 				scriptNodes, pendingFont, after, err = p.attachScriptWithFont(nil, c, pendingFont)
 				nodes = append(nodes, scriptNodes...)
@@ -349,8 +372,9 @@ func (p *parser) parseRowWithAutoOpen(terminator byte, stopRight, infixPending b
 				var err error
 				finishPrime()
 				var base *mml.Node
-				if negation {
+				if bool(negation) || dots.active() {
 					finishNot()
+					finishDots()
 					base = node("mi")
 				} else if len(nodes) == 0 {
 					base = node("mi")
@@ -376,6 +400,7 @@ func (p *parser) parseRowWithAutoOpen(terminator byte, stopRight, infixPending b
 			if auto != nil && c == ')' && auto.close() {
 				finishPrime()
 				finishNot()
+				finishDots()
 				return nodes, "", nil
 			}
 			appendNodes([]*mml.Node{created}, false)
@@ -383,6 +408,7 @@ func (p *parser) parseRowWithAutoOpen(terminator byte, stopRight, infixPending b
 	}
 	finishPrime()
 	finishNot()
+	finishDots()
 	if auto != nil {
 		return nil, "", auto.stopError()
 	}
@@ -543,6 +569,9 @@ func (p *parser) parseOneToken() ([]*mml.Node, error) {
 	}
 	if result.notItem {
 		result.nodes = append(result.nodes, notFallback())
+	}
+	if result.dotsItem != nil {
+		result.nodes = append(result.nodes, result.dotsItem.finish()...)
 	}
 	tail, err := result.afterNode.complete(p)
 	return append(result.nodes, tail...), err
