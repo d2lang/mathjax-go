@@ -237,13 +237,13 @@ color continuations retain that row; braces, left/right groups, script arguments
 and separate math parsers start independent rows. Incoming `above` dimensions
 are read before ambiguity is checked, and registered macro dispatch stays first.
 
-The 108-case pinned corpus has 103 complete primary SVG, ordered explicit/own-tree
-and structured-error matches. Five exact accepted-output boundaries retain
-unsupported `overwithdelims`, one inline nested fraction, and two nested-style
-outputs. No changed output is qualified: all 50 original scope fixes, the two
-parsed-group diagnostic upgrades and four registered macro alias upgrades match
-primary. Six parser re-entry/error-unwind
-controls check independent subsequent rows and restored font state.
+The 108-case pinned corpus has 105 complete primary SVG, ordered explicit/own-tree
+and structured-error matches. Three active accepted-output boundaries retain
+unsupported `overwithdelims` in both modes and one inline nested fraction. The
+two pre-fix nested-style records remain historical evidence; their tests now
+assert the untouched primary outputs. No changed output is qualified. Six parser
+re-entry/error-unwind controls check independent subsequent rows and restored
+font state.
 
 Only the unchanged inline nested-fraction control `separate-args-inline` permits
 two exact whole-SVG states, captured from accepted code on ARM64 and AMD64.
@@ -473,3 +473,5 @@ Commutator, anticommutator and Poisson-bracket aliases parse the original combin
 The finite public corpus checks 48 unchanged original SVGs and 24 display measurements, including six rendered-error controls. The two retained adjacent-relation examples now assert their original SVGs. Existing creation and derivative regressions remain in force; this does not claim universal internal-model equality or Studio adoption.
 
 SideSet preserves non-script material before and after the operator, splits only the original leading-script cases, and constructs phantom bases and multiscripts in the original order. Its three argument parsers share command definitions while preserving each argument’s font scope. A fixed 48-case public corpus checks complete original MathJax SVGs and 24 display measurements, including ordinary scripts, mixed content, explicit groups, primes, and a missing-argument error.
+
+Style, size and color declarations close before an incoming infix fraction, so they affect the numerator rather than wrapping the whole fraction. Real groups and left/right bodies retain their own boundaries. A fixed 48-case public corpus compares complete original SVGs and 24 display measurements, including font continuation, pending-item boundaries and six rendered-error controls.

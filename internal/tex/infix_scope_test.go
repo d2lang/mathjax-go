@@ -86,8 +86,11 @@ func TestInfixScopePinnedReferences(t *testing.T) {
 			t.Fatal(e)
 		}
 	}
-	allowed := map[string]bool{"separate-args-inline": true, "unsupported-delims-inline": true, "unsupported-delims-display": true, "nested-style-group-inline": true, "nested-style-group-display": true}
-	if len(fixture.Cases) != 108 || len(boundaries.Unchanged) != len(allowed) || boundaries.Baseline != "2b829a798d95a4e93b6d8ff6d71b3b348b3d26fe" {
+	allowed := map[string]bool{"separate-args-inline": true, "unsupported-delims-inline": true, "unsupported-delims-display": true}
+	// Keep both pre-fix records as historical evidence, but assert their
+	// untouched primary outputs now that style closes before Over.
+	promoted := map[string]bool{"nested-style-group-inline": true, "nested-style-group-display": true}
+	if len(fixture.Cases) != 108 || len(boundaries.Unchanged) != len(allowed)+len(promoted) || boundaries.Baseline != "2b829a798d95a4e93b6d8ff6d71b3b348b3d26fe" {
 		t.Fatal("unbound infix scope corpus")
 	}
 	primary, unchanged := 0, 0
@@ -95,6 +98,12 @@ func TestInfixScopePinnedReferences(t *testing.T) {
 		t.Run(c.Name, func(t *testing.T) {
 			want := c.output
 			b, bounded := boundaries.Unchanged[c.Name]
+			if promoted[c.Name] {
+				if !bounded || b.TeX != c.TeX || b.Display != c.Display || b.Registration != nil {
+					t.Fatal("missing historical style boundary")
+				}
+				bounded = false
+			}
 			if bounded {
 				if !allowed[c.Name] || b.TeX != c.TeX || b.Display != c.Display || !reflect.DeepEqual(b.Registration, c.Registration) {
 					t.Fatal("unexpected baseline qualification")
@@ -195,7 +204,7 @@ func TestInfixScopePinnedReferences(t *testing.T) {
 			}
 		})
 	}
-	if primary != 103 || unchanged != 5 {
+	if primary != 105 || unchanged != 3 {
 		t.Fatal("changed qualification counts", primary, unchanged)
 	}
 }

@@ -1485,16 +1485,13 @@ func keyvalOptions(raw string, allowed []string) (map[string]any, error) {
 	return result, nil
 }
 
-func (p *parser) colorDeclaration(terminator byte, stopRight, infixPending bool) ([]*mml.Node, string, error) {
+func (p *parser) colorDeclaration() (mjSourceObject, error) {
 	color, err := p.readColor("color")
 	if err != nil {
-		return nil, "", err
+		return nil, err
 	}
-	rest, right, err := p.parseRowWithInfix(terminator, stopRight, infixPending)
-	if err != nil {
-		return nil, "", err
-	}
-	return []*mml.Node{setAttributes(node("mstyle", row(rest, true)), map[string]any{"mathcolor": color})}, right, nil
+	// Color reads and validates its arguments before pushing a StyleItem.
+	return mjSourceObject{{Name: "mathcolor", Value: color}}, nil
 }
 
 func (p *parser) braket(name string) ([]*mml.Node, error) {
