@@ -358,56 +358,123 @@ func (p *parser) amsMultiIntegral(_ string) ([]*mml.Node, error) {
 }
 
 func (p *parser) amsSideSet(name string) ([]*mml.Node, error) {
-	pre, err := p.parseArgument(name)
+	pre, err := p.parseSideSetArgument(name)
 	if err != nil {
 		return nil, err
 	}
-	post, err := p.parseArgument(name)
+	preScripts, preRest := splitSideSet(pre)
+	post, err := p.parseSideSetArgument(name)
 	if err != nil {
 		return nil, err
 	}
-	base, err := p.parseArgument(name)
+	postScripts, postRest := splitSideSet(post)
+	base, err := p.parseSideSetArgument(name)
 	if err != nil {
 		return nil, err
 	}
-	preSub, preSup := amsSideScripts(pre)
-	postSub, postSup := amsSideScripts(post)
-	if postSub == nil {
-		postSub = node("none")
+	mmlNode := base
+	if preScripts != nil {
+		if preRest != nil {
+			// Copy only at the original phantom-construction point, after
+			// all three arguments have registered their creation events.
+			padded := node("mpadded", p.copyNode(base))
+			padded.Attributes.Set("width", 0)
+			phantom := node("mphantom", padded)
+			if err := preScripts.ReplaceChild(phantom, preScripts.Children[0]); err != nil {
+				return nil, err
+			}
+			refreshDynamicFlags(preScripts)
+		} else {
+			children := []*mml.Node{base}
+			if postScripts != nil {
+				children = append(children, sideSetScript(postScripts, 1), sideSetScript(postScripts, 2))
+			}
+			children = append(children, node("mprescripts"), sideSetScript(preScripts, 1), sideSetScript(preScripts, 2))
+			mmlNode = node("mmultiscripts", children...)
+			mmlNode.SetProperty("scriptalign", "left")
+		}
 	}
-	if postSup == nil {
-		postSup = node("none")
+	if postScripts != nil && mmlNode == base {
+		if err := postScripts.ReplaceChild(base, postScripts.Children[0]); err != nil {
+			return nil, err
+		}
+		refreshDynamicFlags(postScripts)
+		mmlNode = postScripts
 	}
-	if preSub == nil {
-		preSub = node("none")
+
+	// TeXAtom.appendChild appends into its inferred row and flattens an
+	// inferred child there. Preserve explicit groups and reuse actual nodes.
+	var children []*mml.Node
+	appendPart := func(n *mml.Node) {
+		if n == nil {
+			return
+		}
+		if n.Flags.Inferred {
+			children = append(children, n.Children...)
+		} else {
+			children = append(children, n)
+		}
 	}
-	if preSup == nil {
-		preSup = node("none")
+	if preRest != nil {
+		appendPart(preScripts)
+		appendPart(preRest)
 	}
-	multi := node("mmultiscripts", base, postSub, postSup, node("mprescripts"), preSub, preSup)
-	multi.SetProperty("scriptalign", "left")
-	result := texAtom(multi, mml.TeXClassOp)
+	appendPart(mmlNode)
+	appendPart(postRest)
+	result := texAtom(forcedRow(children, true), mml.TeXClassOp)
 	result.SetProperty("movesupsub", true)
 	result.SetProperty("movablelimits", true)
 	return []*mml.Node{result}, nil
 }
 
-func amsSideScripts(script *mml.Node) (*mml.Node, *mml.Node) {
-	if script == nil {
+func (p *parser) parseSideSetArgument(name string) (*mml.Node, error) {
+	raw, _, err := p.readArgument(name, false)
+	if err != nil {
+		return nil, err
+	}
+	return p.parseChild(raw)
+}
+
+// splitSideSet removes only the source's qualifying leading node. In the
+// inferred-row branch the source checks its empty mi base, not its family.
+// Keep the same non-nil rest row even if removing that child leaves it empty.
+func splitSideSet(n *mml.Node) (scripts, rest *mml.Node) {
+	if n == nil || n.Flags.Inferred && len(n.Children) == 0 {
 		return nil, nil
 	}
-	if script.Kind == "mrow" && script.Flags.Inferred && len(script.Children) == 1 {
-		script = script.Children[0]
+	if (n.Kind == "msubsup" || n.Kind == "msub" || n.Kind == "msup" || n.Kind == "mmultiscripts") && sideSetEmptyBase(n) {
+		return n, nil
 	}
-	switch script.Kind {
-	case "msubsup":
-		return script.Children[1], script.Children[2]
-	case "msub":
-		return script.Children[1], nil
-	case "msup":
-		return nil, script.Children[1]
+	if !n.Flags.Inferred || len(n.Children) == 0 || !sideSetEmptyBase(n.Children[0]) {
+		return nil, n
 	}
-	return nil, nil
+	scripts = n.Children[0]
+	// The source splices the slot without clearing the removed child's
+	// parent. Later constructor delivery reparents the actual node.
+	n.Children = n.Children[1:]
+	refreshDynamicFlags(n)
+	return scripts, n
+}
+
+func sideSetEmptyBase(n *mml.Node) bool {
+	return n != nil && len(n.Children) != 0 && n.Children[0] != nil &&
+		n.Children[0].Kind == "mi" && textContent(n.Children[0]) == ""
+}
+
+// SideSet reads literal slots 1 and 2. Only the parser's marked eager msup
+// represents the source's still-generic [base, nil, sup] at this boundary.
+// Genuine PrimeItem msup keeps its literal child1, as in the original method.
+func sideSetScript(n *mml.Node, index int) *mml.Node {
+	if origin, _ := n.Property(limitsScriptOrigin); origin == true && n.Kind == "msup" {
+		if index == 1 {
+			return node("none")
+		}
+		index = 1
+	}
+	if index < len(n.Children) && n.Children[index] != nil {
+		return n.Children[index]
+	}
+	return node("none")
 }
 
 type amsArrowSize struct {

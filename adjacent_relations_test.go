@@ -27,14 +27,7 @@ func TestAdjacentRelationsPublicReferences(t *testing.T) {
 	if fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || len(fixture.Cases) != 68 {
 		t.Fatal("unbound adjacent-relation references")
 	}
-	// Retain the original primary outputs for separate unresolved findings.
-	// These entries are not passing SVG assertions or alternative Go goldens.
-	diagnostics := map[string]string{
-		"ownership-sideset-reordered-inline":      "D090 SideSet construction",
-		"ownership-sideset-reordered-display":     "D090 SideSet construction",
-		"ownership-sideset-equal-control-inline":  "D090 SideSet construction",
-		"ownership-sideset-equal-control-display": "D090 SideSet construction",
-	}
+	diagnostics := map[string]string{}
 	seen := map[string]bool{}
 	asserted, retained := 0, 0
 	for _, c := range fixture.Cases {
@@ -59,7 +52,7 @@ func TestAdjacentRelationsPublicReferences(t *testing.T) {
 			}
 		})
 	}
-	if asserted != 64 || retained != len(diagnostics) {
+	if asserted != 68 || retained != len(diagnostics) {
 		t.Fatal("adjacent-relation reference scope changed", asserted, retained)
 	}
 }
