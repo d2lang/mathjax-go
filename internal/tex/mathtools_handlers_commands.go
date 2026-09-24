@@ -180,32 +180,49 @@ func (p *parser) mathtoolsPairedDelimiter(name string, definition pairedDelimite
 			return nil, err
 		}
 	}
-	args := make([]string, definition.arguments)
-	for i := range args {
-		var err error
-		args[i], _, err = p.readArgument(name, false)
-		if err != nil {
-			return nil, err
-		}
-	}
-	var err error
-	if pre, err = substituteArguments(pre, args); err != nil {
-		return nil, err
-	}
-	if body, err = substituteArguments(body, args); err != nil {
-		return nil, err
-	}
-	if post, err = substituteArguments(post, args); err != nil {
-		return nil, err
-	}
 	left, right, middle := "", "", ""
 	if star {
 		left, right, middle = "\\left", "\\right", "\\middle"
 	} else if size != "" {
-		left, right, middle = "\\"+size+"l", "\\"+size+"r", "\\"+size
+		left, right, middle = size+"l", size+"r", size
+	}
+	if definition.arguments > 0 {
+		args := make([]string, definition.arguments)
+		for i := range args {
+			var err error
+			args[i], _, err = p.readArgument(name, false)
+			if err != nil {
+				return nil, err
+			}
+		}
+		var err error
+		if pre, err = substituteMacroArguments(pre, args); err != nil {
+			return nil, err
+		}
+		if body, err = substituteMacroArguments(body, args); err != nil {
+			return nil, err
+		}
+		if post, err = substituteMacroArguments(post, args); err != nil {
+			return nil, err
+		}
 	}
 	body = strings.ReplaceAll(body, "\\delimsize", middle)
-	return p.parseExpansion(pre + left + definition.open + body + right + definition.close + post)
+	expansion := ""
+	for _, part := range []string{pre, left, definition.open, body, right, definition.close, post, p.source[p.pos:]} {
+		var err error
+		expansion, err = macroAddArgs(expansion, part, maxMacroBuffer)
+		if err != nil {
+			return nil, err
+		}
+	}
+	// PairedDelimiters rewrites this caller before charging the expansion.
+	// Its pending row/script items consume the resulting source directly.
+	p.source, p.pos = expansion, 0
+	p.state.macroCount++
+	if p.state.macroCount > maxMacros {
+		return nil, texError("MaxMacroSub1", "MathJax maximum macro substitution count exceeded; is here a recursive macro call?")
+	}
+	return nil, nil
 }
 
 func (p *parser) mathtoolsCenterColon(center, force, thin bool) *mml.Node {
