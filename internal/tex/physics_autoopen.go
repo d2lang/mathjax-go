@@ -12,15 +12,22 @@ type commandResult struct {
 	nodes         []*mml.Node
 	namedFunction bool
 	notItem       bool
+	dotsItem      *pendingDots
 	afterNode     *derivativeAutoOpen
 }
 
 func (p *parser) commandEvent(name string) (result commandResult, err error) {
 	namedFunction, notItem := p.commandNamedFunction, p.commandNot
+	dotsItem := p.commandDots
 	p.commandNamedFunction, p.commandNot = false, false
-	defer func() { p.commandNamedFunction, p.commandNot = namedFunction, notItem }()
+	p.commandDots = nil
+	defer func() {
+		p.commandNamedFunction, p.commandNot = namedFunction, notItem
+		p.commandDots = dotsItem
+	}()
 	result.nodes, err = p.commandNodes(name, &result.afterNode)
 	result.namedFunction, result.notItem = p.commandNamedFunction, p.commandNot
+	result.dotsItem = p.commandDots
 	return result, err
 }
 
@@ -33,6 +40,9 @@ func (p *parser) command(name string) ([]*mml.Node, error) {
 	}
 	if result.notItem {
 		result.nodes = append(result.nodes, notFallback())
+	}
+	if result.dotsItem != nil {
+		result.nodes = append(result.nodes, result.dotsItem.finish()...)
 	}
 	tail, err := result.afterNode.complete(p)
 	return append(result.nodes, tail...), err
@@ -61,8 +71,17 @@ func (a *derivativeAutoOpen) start(p *parser) bool {
 }
 
 func (a *derivativeAutoOpen) complete(p *parser) ([]*mml.Node, error) {
+	return a.completeAfter(p, nil)
+}
+
+// A real AutoOpen is a non-MML successor. Notify its recipient only if it
+// starts, after the command's initial nodes but before parsing its body.
+func (a *derivativeAutoOpen) completeAfter(p *parser, before func()) ([]*mml.Node, error) {
 	if !a.start(p) {
 		return nil, nil
+	}
+	if before != nil {
+		before()
 	}
 	content, _, err := p.parseRowWithAutoOpen(0, false, false, a)
 	if err != nil {

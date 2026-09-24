@@ -34,8 +34,6 @@ func TestAdjacentRelationsPublicReferences(t *testing.T) {
 		"ownership-sideset-reordered-display":     "D090 SideSet construction",
 		"ownership-sideset-equal-control-inline":  "D090 SideSet construction",
 		"ownership-sideset-equal-control-display": "D090 SideSet construction",
-		"construction-dots-inline":                "D129 dots dispatch",
-		"construction-dots-display":               "D129 dots dispatch",
 		"construction-physics-comm-inline":        "D130 Commutator construction",
 		"construction-physics-comm-display":       "D130 Commutator construction",
 	}
@@ -63,7 +61,7 @@ func TestAdjacentRelationsPublicReferences(t *testing.T) {
 			}
 		})
 	}
-	if asserted != 60 || retained != len(diagnostics) {
+	if asserted != 62 || retained != len(diagnostics) {
 		t.Fatal("adjacent-relation reference scope changed", asserted, retained)
 	}
 }
