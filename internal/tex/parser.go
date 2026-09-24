@@ -232,15 +232,15 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 				}
 				return nodes, delim, err
 			}
-			if _, registered := p.state.macros[name]; !registered && (name == "over" || name == "atop" || name == "above" || name == "choose" || name == "brace" || name == "brack") {
+			if _, registered := p.state.macros[name]; !registered && (name == "over" || name == "atop" || name == "above" || name == "choose" || name == "brace" || name == "brack" || name == "overwithdelims" || name == "atopwithdelims" || name == "abovewithdelims") {
 				// BaseMethods.Over reads arguments before pushing the closing
 				// item that reduces styles and checks an earlier OverItem.
-				attributes, err := p.readInfixAttributes(name)
+				spec, err := p.readInfixSpec(name)
 				if err != nil {
 					return nil, "", err
 				}
 				closeStyles()
-				fraction, right, err := p.finishInfixFraction(name, nodes, attributes, terminator, stopRight, infixPending, pendingFont)
+				fraction, right, err := p.finishInfixFraction(name, nodes, spec, terminator, stopRight, infixPending, pendingFont)
 				if err != nil {
 					return nil, "", err
 				}
@@ -1007,30 +1007,50 @@ var fontDeclarations = map[string]string{
 	"tt": "monospace", "sf": "sans-serif",
 }
 
+type infixFractionSpec struct {
+	attributes  map[string]any
+	open, close string
+}
+
 func (p *parser) infixFraction(name string, left []*mml.Node, terminator byte, stopRight, infixPending bool) (*mml.Node, string, error) {
-	attributes, err := p.readInfixAttributes(name)
+	spec, err := p.readInfixSpec(name)
 	if err != nil {
 		return nil, "", err
 	}
-	return p.finishInfixFraction(name, left, attributes, terminator, stopRight, infixPending, "")
+	return p.finishInfixFraction(name, left, spec, terminator, stopRight, infixPending, "")
 }
 
-func (p *parser) readInfixAttributes(name string) (map[string]any, error) {
-	attributes := map[string]any{}
-	if name == "atop" || name == "choose" || name == "brace" || name == "brack" {
-		attributes["linethickness"] = "0"
+func (p *parser) readInfixSpec(name string) (infixFractionSpec, error) {
+	spec := infixFractionSpec{attributes: map[string]any{}}
+	if strings.HasSuffix(name, "withdelims") {
+		// BaseMethods.Over reads both converted delimiters before any
+		// thickness argument and before pushing its closing stack item.
+		var err error
+		spec.open, err = p.readDelimiter(name, false)
+		if err != nil {
+			return spec, err
+		}
+		spec.close, err = p.readDelimiter(name, false)
+		if err != nil {
+			return spec, err
+		}
 	}
-	if name == "above" {
+	if name == "atop" || name == "choose" || name == "brace" || name == "brack" {
+		spec.attributes["linethickness"] = "0"
+	} else if name == "atopwithdelims" {
+		spec.attributes["linethickness"] = 0
+	}
+	if name == "above" || name == "abovewithdelims" {
 		thickness, err := p.readDimension(name)
 		if err != nil {
-			return nil, err
+			return spec, err
 		}
-		attributes["linethickness"] = thickness
+		spec.attributes["linethickness"] = thickness
 	}
-	return attributes, nil
+	return spec, nil
 }
 
-func (p *parser) finishInfixFraction(name string, left []*mml.Node, attributes map[string]any, terminator byte, stopRight, infixPending bool, pendingFont string) (*mml.Node, string, error) {
+func (p *parser) finishInfixFraction(name string, left []*mml.Node, spec infixFractionSpec, terminator byte, stopRight, infixPending bool, pendingFont string) (*mml.Node, string, error) {
 	// BaseMethods.Over reads its arguments before OverItem checks ambiguity.
 	// In particular, malformed incoming above dimensions keep their own error.
 	if infixPending {
@@ -1040,7 +1060,7 @@ func (p *parser) finishInfixFraction(name string, left []*mml.Node, attributes m
 	if err != nil {
 		return nil, "", err
 	}
-	frac := setAttributes(node("mfrac", row(left, true), row(rightNodes, true)), attributes)
+	frac := setAttributes(node("mfrac", row(left, true), row(rightNodes, true)), spec.attributes)
 	if name == "choose" || name == "brace" || name == "brack" {
 		open, close := "(", ")"
 		if name == "brace" {
@@ -1062,6 +1082,34 @@ func (p *parser) finishInfixFraction(name string, left []*mml.Node, attributes m
 		frac.SetProperty("close", close)
 		frac.SetProperty("texClass", mml.TeXClassOrd)
 		frac.TeXClass = mml.TeXClassOrd
+	} else if spec.open != "" || spec.close != "" {
+		// GetDelimiter converts '.' to empty. OverItem calls fixedFence
+		// only when at least one converted side is nonempty, independently
+		// of its default, zero, or explicitly supplied line thickness.
+		frac.SetProperty("withDelims", true)
+		fenced := forcedRow(nil, false)
+		fenced.SetProperty("open", spec.open)
+		fenced.SetProperty("close", spec.close)
+		fenced.SetProperty("texClass", mml.TeXClassOrd)
+		fenced.TeXClass = mml.TeXClassOrd
+		if spec.open != "" {
+			// Reuse the source-shaped mathPalette child parser: converted
+			// glyphs must still pass its generated bigg/big delimiter read.
+			open, err := p.amsGenfracPalette(spec.open, "l")
+			if err != nil {
+				return nil, "", err
+			}
+			fenced.AppendChild(open)
+		}
+		fenced.AppendChild(frac)
+		if spec.close != "" {
+			close, err := p.amsGenfracPalette(spec.close, "r")
+			if err != nil {
+				return nil, "", err
+			}
+			fenced.AppendChild(close)
+		}
+		frac = fenced
 	}
 	return frac, right, nil
 }

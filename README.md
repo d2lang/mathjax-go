@@ -237,11 +237,11 @@ color continuations retain that row; braces, left/right groups, script arguments
 and separate math parsers start independent rows. Incoming `above` dimensions
 are read before ambiguity is checked, and registered macro dispatch stays first.
 
-The 108-case pinned corpus has 105 complete primary SVG, ordered explicit/own-tree
-and structured-error matches. Three active accepted-output boundaries retain
-unsupported `overwithdelims` in both modes and one inline nested fraction. The
-two pre-fix nested-style records remain historical evidence; their tests now
-assert the untouched primary outputs. No changed output is qualified. Six parser
+The 108-case pinned corpus has 107 complete primary SVG, ordered explicit/own-tree
+and structured-error matches. One active accepted-output boundary retains an
+inline nested fraction. The four pre-fix nested-style and explicit-delimiter
+records remain historical evidence; their tests now assert the untouched primary
+outputs. No changed output is qualified. Six parser
 re-entry/error-unwind controls check independent subsequent rows and restored
 font state.
 
@@ -475,3 +475,5 @@ The finite public corpus checks 48 unchanged original SVGs and 24 display measur
 SideSet preserves non-script material before and after the operator, splits only the original leading-script cases, and constructs phantom bases and multiscripts in the original order. Its three argument parsers share command definitions while preserving each argument’s font scope. A fixed 48-case public corpus checks complete original MathJax SVGs and 24 display measurements, including ordinary scripts, mixed content, explicit groups, primes, and a missing-argument error.
 
 Style, size and color declarations close before an incoming infix fraction, so they affect the numerator rather than wrapping the whole fraction. Real groups and left/right bodies retain their own boundaries. A fixed 48-case public corpus compares complete original SVGs and 24 display measurements, including font continuation, pending-item boundaries and six rendered-error controls.
+
+Explicit-delimiter infix commands (`overwithdelims`, `atopwithdelims` and `abovewithdelims`) read both delimiters before thickness and ambiguity checks. Fraction thickness is independent of fence presence, including one-sided and empty fences. A fixed 48-case public corpus checks complete original SVGs and 24 display measurements, including 20 rendered-error controls; existing registration, style, group and fixed-fence regressions remain in force.
