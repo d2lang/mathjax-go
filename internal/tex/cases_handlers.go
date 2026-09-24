@@ -51,7 +51,7 @@ func (p *parser) casesEnvironment(name string) (nodes []*mml.Node, handled bool,
 	table.Attributes.Set("rowspacing", ".2em")
 	table.Attributes.Set("columnalign", "left left")
 	table.Attributes.Set("columnspacing", "1em")
-	original := table.Clone()
+	original := p.copyNode(table)
 	if !p.state.augmentedPackages {
 		// D2 activates cases without activating EmpheqConfiguration.  The
 		// Cases implementation reaches EmpheqUtil internally, but its emitted

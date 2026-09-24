@@ -54,7 +54,7 @@ func (p *parser) mmlToken(name string) ([]*mml.Node, error) {
 	if !ok || !definition.Flags.Token {
 		return nil, texError("NotMathMLToken", "%s is not a token element", kind)
 	}
-	n := node(kind)
+	n := p.noteMO(node(kind))
 	var properties mjSourceObject
 	var keep []string
 	for attributes != "" {

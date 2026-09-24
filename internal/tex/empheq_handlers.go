@@ -44,7 +44,7 @@ var empheqDelimiters = map[string]bool{
 // helpers.  It must run before the generic source-symbol fallback.
 func (p *parser) empheqCommand(name string) (nodes []*mml.Node, handled bool, err error) {
 	if character, ok := empheqMO[name]; ok {
-		return []*mml.Node{token("mo", character)}, true, nil
+		return []*mml.Node{p.token("mo", character)}, true, nil
 	}
 	if !empheqDelimiters[name] {
 		return nil, false, nil
@@ -58,7 +58,7 @@ func (p *parser) empheqCommand(name string) (nodes []*mml.Node, handled bool, er
 		}
 		return nil, true, err
 	}
-	mo := token("mo", delimiter)
+	mo := p.token("mo", delimiter)
 	mo.Attributes.Set("stretchy", true)
 	mo.Attributes.Set("symmetric", true)
 	return []*mml.Node{mo}, true, nil
@@ -126,7 +126,7 @@ func (p *parser) empheqEnvironment(name string) (nodes []*mml.Node, handled bool
 	left, hasLeft := settings["left"]
 	right, hasRight := settings["right"]
 	if (hasLeft && empheqTruthy(left)) || (hasRight && empheqTruthy(right)) {
-		original := result.Clone()
+		original := p.copyNode(result)
 		if hasLeft && empheqTruthy(left) {
 			if err := p.empheqAddLeft(result, original, empheqOptionTeX(left)); err != nil {
 				return nil, true, err
@@ -320,7 +320,10 @@ func (p *parser) empheqCellBlock(tex string, table *mml.Node) (*mml.Node, error)
 }
 
 func empheqTopRowTable(original *mml.Node) *mml.Node {
-	table := original.Clone()
+	return empheqCopiedTopRowTable(original.Clone())
+}
+
+func empheqCopiedTopRowTable(table *mml.Node) *mml.Node {
 	if len(table.Children) > 1 {
 		table.SetChildren(table.Children[:1])
 	}
@@ -331,11 +334,11 @@ func empheqTopRowTable(original *mml.Node) *mml.Node {
 }
 
 func (p *parser) empheqRowspanCell(cell *mml.Node, tex string, table *mml.Node) error {
-	block, err := p.empheqCellBlock(tex, table.Clone())
+	block, err := p.empheqCellBlock(tex, p.copyNode(table))
 	if err != nil {
 		return err
 	}
-	content := node("mpadded", block, empheqTopRowTable(table))
+	content := node("mpadded", block, p.empheqTopRowTable(table))
 	content.Attributes.Set("height", 0)
 	content.Attributes.Set("depth", 0)
 	content.Attributes.Set("voffset", "height")

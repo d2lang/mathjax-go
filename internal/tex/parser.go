@@ -42,6 +42,7 @@ type environmentDefinition struct {
 }
 
 type parseState struct {
+	operators         []*mml.Node
 	macros            map[string]macroDefinition
 	pairedDelimiters  map[string]pairedDelimiter
 	environments      map[string]environmentDefinition
@@ -141,7 +142,7 @@ func (p *parser) parseRowWithAutoOpen(terminator byte, stopRight, infixPending b
 		}
 		if pendingFunction {
 			if !suppressesFunctionApplication(created[0]) {
-				nodes = append(nodes, operator("\u2061", mml.TeXClassNone, nil))
+				nodes = append(nodes, p.operator("\u2061", mml.TeXClassNone, nil))
 			}
 			pendingFunction = false
 		}
@@ -433,7 +434,7 @@ func (p *parser) parseCharacter() *mml.Node {
 		}
 		// ParseMethods.digit uses getFontDef even when matching fails. Unlike
 		// BaseConfiguration.Other, it does not register fixStretchy.
-		return ambientFontToken(token("mo", string(r)))
+		return ambientFontToken(p.token("mo", string(r)))
 	}
 	if unicode.IsDigit(r) {
 		// Non-ASCII Nd characters enter Other individually. Reuse its pinned
@@ -444,7 +445,7 @@ func (p *parser) parseCharacter() *mml.Node {
 				break
 			}
 			if int(r) <= interval.Last {
-				n := token(interval.Kind, string(r))
+				n := p.token(interval.Kind, string(r))
 				if p.activeFont != "" {
 					n.Attributes.Set("mathvariant", p.activeFont)
 				}
@@ -472,10 +473,10 @@ func (p *parser) parseCharacter() *mml.Node {
 	// creates a non-stretchy closer.  Neither node is placed on Base's
 	// fixStretchy list, so retaining the marker is observable in copied trees.
 	if r == ':' {
-		return token("mo", ":")
+		return p.token("mo", ":")
 	}
 	if r == ')' || r == ']' || r == '|' {
-		return setAttributes(token("mo", string(r)), map[string]any{"stretchy": false})
+		return setAttributes(p.token("mo", string(r)), map[string]any{"stretchy": false})
 	}
 	text := string(r)
 	if r == '-' {
@@ -485,7 +486,7 @@ func (p *parser) parseCharacter() *mml.Node {
 	} else if r == '`' {
 		text = "‘"
 	}
-	mo := ambientLiteralToken(token("mo", text), r)
+	mo := ambientLiteralToken(p.token("mo", text), r)
 	// BaseConfiguration.Other records raw operators for the fixStretchy
 	// postfilter.  addNode() leaves the observable in-lists marker even after
 	// the temporary fixStretchy property is removed.
@@ -1006,9 +1007,9 @@ func (p *parser) infixFraction(name string, left []*mml.Node, terminator byte, s
 		frac.Attributes.Set("linethickness", 0)
 		frac.SetProperty("withDelims", true)
 		frac = forcedRow([]*mml.Node{
-			amsFixedFencePalette(open, mml.TeXClassOpen),
+			p.amsFixedFencePalette(open, mml.TeXClassOpen),
 			frac,
-			amsFixedFencePalette(close, mml.TeXClassClose),
+			p.amsFixedFencePalette(close, mml.TeXClassClose),
 		}, false)
 		frac.SetProperty("open", open)
 		frac.SetProperty("close", close)
@@ -1019,8 +1020,12 @@ func (p *parser) infixFraction(name string, left []*mml.Node, terminator byte, s
 }
 
 func fenced(open string, content *mml.Node, close string, stretchy bool) *mml.Node {
+	return fencedWithOperator(open, content, close, stretchy, operator)
+}
+
+func fencedWithOperator(open string, content *mml.Node, close string, stretchy bool, makeOperator func(string, mml.TeXClass, map[string]any) *mml.Node) *mml.Node {
 	children := make([]*mml.Node, 0, 3)
-	openNode := operator(open, mml.TeXClassOpen, nil)
+	openNode := makeOperator(open, mml.TeXClassOpen, nil)
 	openNode.Attributes.Set("fence", true)
 	openNode.Attributes.Set("stretchy", stretchy)
 	openNode.Attributes.Set("symmetric", true)
@@ -1030,7 +1035,7 @@ func fenced(open string, content *mml.Node, close string, stretchy bool) *mml.No
 	} else {
 		children = append(children, content)
 	}
-	closeNode := operator(close, mml.TeXClassClose, nil)
+	closeNode := makeOperator(close, mml.TeXClassClose, nil)
 	closeNode.Attributes.Set("fence", true)
 	closeNode.Attributes.Set("stretchy", stretchy)
 	closeNode.Attributes.Set("symmetric", true)

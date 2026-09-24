@@ -48,16 +48,6 @@ func TestMathAccentPinnedMarkers(t *testing.T) {
 				return true
 			})
 			want := c.Markers
-			if c.Name == "ordinary-arrows-inline" || c.Name == "ordinary-arrows-display" {
-				// The pinned post-filter combines adjacent up/down mo tokens.
-				// Preserve that recorded tree boundary explicitly: neither the
-				// combined primary text nor either Go token is a math accent.
-				primary := []accentMarker{{"→", false, nil}, {"+", false, nil}, {"↑↓", false, nil}}
-				if !reflect.DeepEqual(want, primary) {
-					t.Fatal("ordinary-arrow primary token grouping changed")
-				}
-				want = []accentMarker{{"→", false, nil}, {"+", false, nil}, {"↑", false, nil}, {"↓", false, nil}}
-			}
 			if !reflect.DeepEqual(got, want) {
 				t.Errorf("operator marker policy %v, want %v", got, want)
 			}

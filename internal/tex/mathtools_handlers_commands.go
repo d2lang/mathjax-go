@@ -209,7 +209,7 @@ func (p *parser) mathtoolsPairedDelimiter(name string, definition pairedDelimite
 }
 
 func (p *parser) mathtoolsCenterColon(center, force, thin bool) *mml.Node {
-	colon := token("mo", ":")
+	colon := p.token("mo", ":")
 	if !center || (!force && !p.mathtoolsOptionBool("centercolon")) {
 		return colon
 	}
@@ -237,7 +237,7 @@ func (p *parser) mathtoolsRelation(name string) ([]*mml.Node, error) {
 	}
 	relation := table[name]
 	if p.mathtoolsOptionBool("use-unicode") && relation[1] != "" {
-		return []*mml.Node{operator(relation[1], mml.TeXClassRel, nil)}, nil
+		return []*mml.Node{p.operator(relation[1], mml.TeXClassRel, nil)}, nil
 	}
 	expansion := strings.ReplaceAll(relation[0], ":", "\\MTThinColon")
 	expansion = strings.ReplaceAll(expansion, "-", "\\mathrel{-}")
@@ -321,7 +321,7 @@ func (p *parser) mathtoolsXMathStrut(name string) ([]*mml.Node, error) {
 	if err != nil {
 		return nil, err
 	}
-	paren := token("mo", "(")
+	paren := p.token("mo", "(")
 	paren.Attributes.Set("stretchy", false)
 	padded := node("mpadded", node("mphantom", paren))
 	padded.Attributes.Set("width", 0)
@@ -365,7 +365,7 @@ func (p *parser) mathtoolsAdjustLimits(name string) ([]*mml.Node, error) {
 		return nil, err
 	}
 	if len(nodes) == 2 {
-		nodes = []*mml.Node{nodes[0], operator("\u2061", mml.TeXClassNone, nil), nodes[1]}
+		nodes = []*mml.Node{nodes[0], p.operator("\u2061", mml.TeXClassNone, nil), nodes[1]}
 	}
 	return nodes, nil
 }

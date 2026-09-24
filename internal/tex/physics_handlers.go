@@ -75,7 +75,7 @@ func (p *parser) physicsEnvironment(name string) (nodes []*mml.Node, handled boo
 	applyColumnSpec(table, columnSpec)
 	open, close := matrixDelimiters(name)
 	if open != "" || close != "" {
-		table = leftRightFenced(open, table, close, true)
+		table = p.leftRightFenced(open, table, close, true)
 	}
 	return []*mml.Node{table}, true, nil
 }
@@ -131,7 +131,7 @@ func (p *parser) physicsExpression(name string) ([]*mml.Node, error) {
 	// Physics' AutoOpen item emits fixed fence tokens around the argument; it
 	// does not mark the resulting mrow as a \left...\right INNER atom.  That
 	// keeps the function-to-opening-delimiter spacing at zero.
-	return []*mml.Node{base, operator("\u2061", mml.TeXClassNone, nil), fenced("(", content, ")", true)}, nil
+	return []*mml.Node{base, p.operator("\u2061", mml.TeXClassNone, nil), p.fenced("(", content, ")", true)}, nil
 }
 
 func (p *parser) physicsEval(name string) ([]*mml.Node, error) {

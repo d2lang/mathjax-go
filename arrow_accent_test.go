@@ -77,10 +77,11 @@ func TestArrowAccentPinnedReferences(t *testing.T) {
 				if q.PrimarySHA256 != c.SVGSHA256 {
 					t.Fatal("primary reference changed")
 				}
-				expected := q.BaselineSVG
-				width, height = q.Width, q.Height
+				// The historical fixture keeps both outputs; the relation
+				// filter now restores the original combined-arrow rendering.
+				expected := q.PrimarySVG
 				if actual != expected {
-					t.Error("complete qualified SVG differs from exact permitted bytes")
+					t.Error("complete SVG differs from original primary bytes")
 				}
 			} else if got := fmt.Sprintf("%x", sha256.Sum256([]byte(actual))); got != c.SVGSHA256 {
 				t.Errorf("complete SVG %s, want %s", got, c.SVGSHA256)
