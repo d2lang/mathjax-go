@@ -2520,7 +2520,7 @@
         ]
       },
       "primaryError": null,
-      "classification": "unresolved-complete-D095-composite"
+      "classification": "whole-primary-target-or-control"
     },
     {
       "name": "public-optional-dv-display",
@@ -2915,7 +2915,7 @@
         ]
       },
       "primaryError": null,
-      "classification": "unresolved-complete-D095-composite"
+      "classification": "whole-primary-target-or-control"
     },
     {
       "name": "public-optional-pdv-inline",
@@ -3181,7 +3181,7 @@
         ]
       },
       "primaryError": null,
-      "classification": "unresolved-complete-D095-composite"
+      "classification": "whole-primary-target-or-control"
     },
     {
       "name": "public-optional-pdv-display",
@@ -3452,7 +3452,7 @@
         ]
       },
       "primaryError": null,
-      "classification": "unresolved-complete-D095-composite"
+      "classification": "whole-primary-target-or-control"
     },
     {
       "name": "public-optional-pdv-one-inline",
@@ -3758,7 +3758,7 @@
         ]
       },
       "primaryError": null,
-      "classification": "unresolved-complete-D095-composite"
+      "classification": "whole-primary-target-or-control"
     },
     {
       "name": "public-optional-pdv-one-display",
@@ -4069,7 +4069,7 @@
         ]
       },
       "primaryError": null,
-      "classification": "unresolved-complete-D095-composite"
+      "classification": "whole-primary-target-or-control"
     },
     {
       "name": "public-plain-pdv-inline",
@@ -4291,7 +4291,7 @@
         ]
       },
       "primaryError": null,
-      "classification": "unresolved-complete-D095-composite"
+      "classification": "whole-primary-target-or-control"
     },
     {
       "name": "public-plain-pdv-display",
@@ -4518,7 +4518,7 @@
         ]
       },
       "primaryError": null,
-      "classification": "unresolved-complete-D095-composite"
+      "classification": "whole-primary-target-or-control"
     },
     {
       "name": "public-mixed-pdv-inline",
@@ -4761,7 +4761,7 @@
         ]
       },
       "primaryError": null,
-      "classification": "unresolved-complete-D095-composite"
+      "classification": "whole-primary-target-or-control"
     },
     {
       "name": "public-mixed-pdv-display",
@@ -5009,7 +5009,7 @@
         ]
       },
       "primaryError": null,
-      "classification": "unresolved-complete-D095-composite"
+      "classification": "whole-primary-target-or-control"
     },
     {
       "name": "public-partial-alias-inline",
@@ -5275,7 +5275,7 @@
         ]
       },
       "primaryError": null,
-      "classification": "unresolved-complete-D095-composite"
+      "classification": "whole-primary-target-or-control"
     },
     {
       "name": "public-partial-alias-display",
@@ -5546,7 +5546,7 @@
         ]
       },
       "primaryError": null,
-      "classification": "unresolved-complete-D095-composite"
+      "classification": "whole-primary-target-or-control"
     },
     {
       "name": "public-short-partial-alias-inline",
@@ -5812,7 +5812,7 @@
         ]
       },
       "primaryError": null,
-      "classification": "unresolved-complete-D095-composite"
+      "classification": "whole-primary-target-or-control"
     },
     {
       "name": "public-short-partial-alias-display",
@@ -6083,7 +6083,7 @@
         ]
       },
       "primaryError": null,
-      "classification": "unresolved-complete-D095-composite"
+      "classification": "whole-primary-target-or-control"
     },
     {
       "name": "public-functional-tail-inline",
@@ -6305,7 +6305,7 @@
         ]
       },
       "primaryError": null,
-      "classification": "unresolved-complete-D095-composite"
+      "classification": "whole-primary-target-or-control"
     },
     {
       "name": "public-functional-tail-display",
@@ -6532,7 +6532,7 @@
         ]
       },
       "primaryError": null,
-      "classification": "unresolved-complete-D095-composite"
+      "classification": "whole-primary-target-or-control"
     },
     {
       "name": "public-functional-alias-inline",
@@ -6754,7 +6754,7 @@
         ]
       },
       "primaryError": null,
-      "classification": "unresolved-complete-D095-composite"
+      "classification": "whole-primary-target-or-control"
     },
     {
       "name": "public-functional-alias-display",
@@ -6981,7 +6981,7 @@
         ]
       },
       "primaryError": null,
-      "classification": "unresolved-complete-D095-composite"
+      "classification": "whole-primary-target-or-control"
     },
     {
       "name": "public-short-functional-alias-inline",
@@ -7203,7 +7203,7 @@
         ]
       },
       "primaryError": null,
-      "classification": "unresolved-complete-D095-composite"
+      "classification": "whole-primary-target-or-control"
     },
     {
       "name": "public-short-functional-alias-display",
@@ -7430,7 +7430,7 @@
         ]
       },
       "primaryError": null,
-      "classification": "unresolved-complete-D095-composite"
+      "classification": "whole-primary-target-or-control"
     },
     {
       "name": "public-nested-inline",
@@ -15741,7 +15741,7 @@
         ]
       },
       "primaryError": null,
-      "classification": "unresolved-complete-D095-composite"
+      "classification": "whole-primary-target-or-control"
     },
     {
       "name": "public-ignored-side-effect-display",
@@ -16019,7 +16019,7 @@
         ]
       },
       "primaryError": null,
-      "classification": "unresolved-complete-D095-composite"
+      "classification": "whole-primary-target-or-control"
     },
     {
       "name": "public-star-held-inline",
@@ -16489,7 +16489,7 @@
         ]
       },
       "primaryError": null,
-      "classification": "unchanged-excluded-caller",
+      "classification": "whole-primary-target-or-control",
       "acceptedSVG": "437ca278c6a35de3c062d91cc55206c95559479c253feaffe724d210335596b2",
       "acceptedTree": {
         "kind": "math",
@@ -17350,7 +17350,7 @@
         ]
       },
       "primaryError": null,
-      "classification": "unchanged-excluded-caller",
+      "classification": "whole-primary-target-or-control",
       "acceptedSVG": "efba109343b191aa56e2ac0d8b34a34c0df6203c1a15fdb24f39aa4f71f8bc20",
       "acceptedTree": {
         "kind": "math",
@@ -20053,7 +20053,7 @@
         ]
       },
       "primaryError": null,
-      "classification": "unresolved-complete-D095-composite"
+      "classification": "whole-primary-target-or-control"
     },
     {
       "name": "private-ignore-true-two-0",
@@ -20326,7 +20326,7 @@
         ]
       },
       "primaryError": null,
-      "classification": "unresolved-complete-D095-composite"
+      "classification": "whole-primary-target-or-control"
     },
     {
       "name": "private-ignore-true-mixed-0",
@@ -20576,7 +20576,7 @@
         ]
       },
       "primaryError": null,
-      "classification": "unresolved-complete-D095-composite"
+      "classification": "whole-primary-target-or-control"
     },
     {
       "name": "private-ignore-true-empty-0",
@@ -20812,7 +20812,7 @@
         ]
       },
       "primaryError": null,
-      "classification": "unresolved-complete-D095-composite"
+      "classification": "whole-primary-target-or-control"
     },
     {
       "name": "private-emitted-open-close-0",
@@ -23651,7 +23651,7 @@
         ]
       },
       "primaryError": null,
-      "classification": "unresolved-complete-D095-composite"
+      "classification": "whole-primary-target-or-control"
     },
     {
       "name": "private-ignored-error-after-effect-0",
@@ -24660,7 +24660,7 @@
         ]
       },
       "primaryError": null,
-      "classification": "unresolved-complete-D095-composite"
+      "classification": "whole-primary-target-or-control"
     },
     {
       "name": "private-pending-prime-0",
@@ -26603,7 +26603,7 @@
         ]
       },
       "primaryError": null,
-      "classification": "unresolved-complete-D095-composite"
+      "classification": "whole-primary-target-or-control"
     },
     {
       "name": "private-same-document-0",

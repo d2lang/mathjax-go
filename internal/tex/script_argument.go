@@ -106,6 +106,11 @@ func (p *parser) parseScriptArgument(attachment *scriptAttachment, font string) 
 			return nil, currentFont, nil, attachment.missingOpen()
 		}
 		if len(result.nodes) == 0 {
+			// Empty PushAll leaves the SubsupItem pending. A following auto
+			// open item is rejected here, before its tail can be parsed.
+			if result.afterNode.start(p) {
+				return nil, currentFont, nil, attachment.missingOpen()
+			}
 			continue
 		}
 		// A SubsupItem accepts the completed function node at this boundary.

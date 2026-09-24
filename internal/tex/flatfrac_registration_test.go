@@ -62,7 +62,7 @@ func flatfracReferences(t *testing.T) flatfracFixture {
 	if err = json.Unmarshal(data, &f); err != nil {
 		t.Fatal(err)
 	}
-	if f.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || len(f.Cases) != 28 || len(f.MacroCases) != 8 || len(f.ExcludedDiagnostics) != 4 || len(f.UnclosedCursorBoundaries) != 2 {
+	if f.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || len(f.Cases) != 32 || len(f.MacroCases) != 8 || len(f.ExcludedDiagnostics) != 0 || len(f.UnclosedCursorBoundaries) != 2 {
 		t.Fatal("unbound flatfrac primary references")
 	}
 	return f
@@ -88,8 +88,8 @@ func flatfracExpectState(t *testing.T, p *parser, want flatfracState) {
 	}
 }
 
-// Compare complete untouched primary SVG strings. The four retained D119/D095
-// diagnostics are deliberately absent from this success corpus. No raw-tree or
+// Compare complete untouched primary SVG strings, including the retained D119
+// tall fractions and D095 registered-result continuations. No raw-tree or
 // ordered-property equivalence is inferred from matching SVG.
 func TestFlatfracWholeSVG(t *testing.T) {
 	for _, c := range flatfracReferences(t).Cases {

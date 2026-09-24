@@ -1882,7 +1882,8 @@ func (p *parser) vectorAccent(name string) ([]*mml.Node, error) {
 	sub := &parser{source: expansion, state: p.state, display: p.display,
 		multiLetterFont: p.multiLetterFont, activeFont: p.activeFont,
 		vectorFactory: p.vectorFactory, vectorFont: p.vectorFont, vectorStar: p.vectorStar, vectorAlias: true,
-		genfracPalette: p.genfracPalette, starMacroChildren: true}
+		genfracPalette: p.genfracPalette, starMacroChildren: true,
+		derivativeChildren: p.derivativeChildren}
 	children, _, err := sub.parseRow(0, false)
 	if err != nil {
 		return nil, err
@@ -2042,8 +2043,13 @@ func (p *parser) derivative(name string, after **derivativeAutoOpen) ([]*mml.Nod
 		}
 		return []*mml.Node{combined}, nil
 	}
+	star := p.readStar()
 	order, hasOrder, err := p.readBrackets(nil)
 	if err != nil {
+		var failure *Error
+		if errors.As(err, &failure) && failure.ID == "MissingCloseBracket" {
+			return nil, texError(failure.ID, "Could not find closing ']' for argument to %s", "\\"+name)
+		}
 		return nil, err
 	}
 	firstRaw, _, err := p.readArgument(name, false)
@@ -2052,12 +2058,17 @@ func (p *parser) derivative(name string, after **derivativeAutoOpen) ([]*mml.Nod
 	}
 	args := []string{firstRaw}
 	argMax := 2
-	if strings.Contains(name, "partial") || strings.HasPrefix(name, "pdv") || strings.HasPrefix(name, "pderivative") {
+	op := "\\diffd"
+	switch name {
+	case "pdv", "pderivative", "partialderivative":
 		argMax = 3
+		op = "\\partial"
+	case "fdv", "fderivative", "functionalderivative":
+		op = "\\delta"
 	}
-	for len(args) < argMax {
+	for {
 		p.skipSpaces()
-		if p.pos >= len(p.source) || p.source[p.pos] != '{' {
+		if p.pos >= len(p.source) || p.source[p.pos] != '{' || len(args) == argMax {
 			break
 		}
 		arg, _, err := p.readArgument(name, false)
@@ -2066,70 +2077,42 @@ func (p *parser) derivative(name string, after **derivativeAutoOpen) ([]*mml.Nod
 		}
 		args = append(args, arg)
 	}
-	diffText := "d"
-	if strings.Contains(name, "partial") || strings.HasPrefix(name, "pdv") || strings.HasPrefix(name, "pderivative") {
-		diffText = "∂"
-	} else if strings.HasPrefix(name, "f") || strings.Contains(name, "functional") {
-		diffText = "δ"
+	ignore := false
+	power1, power2 := " ", " "
+	if argMax > 2 && len(args) > 2 {
+		power1 = "^{" + strconv.Itoa(len(args)-1) + "}"
+		ignore = true
+	} else if hasOrder {
+		ignore = argMax > 2 && len(args) > 1
+		power1 = "^{" + order + "}"
+		power2 = power1
 	}
-	differential := func() *mml.Node {
-		if diffText == "d" {
-			d := token("mi", "d")
-			d.Attributes.Set("mathvariant", "normal")
-			return texAtom(d, mml.TeXClassOrd)
-		}
-		return texAtom(token("mi", diffText), mml.TeXClassOrd)
+	frac := "\\frac"
+	if star {
+		frac = "\\flatfrac"
 	}
-	functionRaw := ""
-	variableRaw := args[0]
+	first, second := "", args[0]
 	if len(args) > 1 {
-		functionRaw, variableRaw = args[0], args[1]
+		first, second = args[0], args[1]
 	}
-	numeratorNodes := []*mml.Node{differential()}
-	denominatorNodes := []*mml.Node{differential()}
-	if functionRaw != "" {
-		function, err := p.parseString(functionRaw)
-		if err != nil {
-			return nil, err
-		}
-		numeratorNodes = append(numeratorNodes, function)
+	rest := ""
+	for i := 2; i < len(args) && args[i] != ""; i++ {
+		rest += op + " " + args[i]
 	}
-	variable, err := p.parseString(variableRaw)
+	// PhysicsMethods.Derivative reparses this literal source. In particular,
+	// the denominator power belongs after the raw variable, and each order
+	// occurrence is parsed independently by the actual fraction handler.
+	expansion := frac + "{" + op + power1 + first + "}" +
+		"{" + op + " " + second + power2 + " " + rest + "}"
+	parsed, err := p.parseDerivativeExpansion(expansion)
 	if err != nil {
 		return nil, err
 	}
-	denominatorNodes = append(denominatorNodes, variable)
-	if hasOrder {
-		exponent, err := p.parseString(order)
-		if err != nil {
-			return nil, err
-		}
-		numeratorNodes[0] = node("msup", numeratorNodes[0], exponent)
-		denominatorNodes[0] = node("msup", denominatorNodes[0], exponent.Clone())
-	}
-	if len(args) > 2 {
-		for _, raw := range args[2:] {
-			variable, err := p.parseString(raw)
-			if err != nil {
-				return nil, err
-			}
-			denominatorNodes = append(denominatorNodes, differential(), variable)
-		}
-	}
-	numerator := row(numeratorNodes, true)
-	denominator := row(denominatorNodes, true)
-	if numerator.Kind == "mrow" && numerator.Flags.Inferred {
-		numerator.Flags.Inferred = false
-		numerator.Flags.NotParent = false
-	}
-	if denominator.Kind == "mrow" && denominator.Flags.Inferred {
-		denominator.Flags.Inferred = false
-		denominator.Flags.NotParent = false
-	}
-	// Derivative pushes its fraction before GetNext/AutoOpen. The recipient
-	// activates this invocation-local action only after delivering that node.
-	*after = &derivativeAutoOpen{ignore: argMax > 2 && (len(args) > 2 || (len(args) > 1 && hasOrder))}
-	return []*mml.Node{node("mfrac", numerator, denominator)}, nil
+	// Push/PushAll forwards the actual parser result, including zero or many
+	// children from registered frac/flatfrac overrides. Only then may its
+	// recipient activate AutoOpen on the original parser.
+	*after = &derivativeAutoOpen{ignore: ignore}
+	return unwrapInferred(parsed), nil
 }
 
 func (p *parser) matrixQuantity(name string) ([]*mml.Node, error) {

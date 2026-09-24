@@ -74,7 +74,8 @@ func (p *parser) amsGenfracPalette(fence, side string) (*mml.Node, error) {
 	count := p.state.macroCount
 	p.state.macroCount = 0
 	defer func() { p.state.macroCount = count }()
-	sub := &parser{source: source, state: p.state, vectorFactory: p.vectorFactory, genfracPalette: true}
+	sub := &parser{source: source, state: p.state, vectorFactory: p.vectorFactory,
+		genfracPalette: true, derivativeChildren: p.derivativeChildren}
 	children, _, err := sub.parseRow(0, false)
 	if err != nil {
 		return nil, err
@@ -92,10 +93,10 @@ func (p *parser) amsGenfracPalette(fence, side string) (*mml.Node, error) {
 }
 
 // Both Sqrt and Root call the source's fresh parseRoot index parser. Keep the
-// counter policy local to Genfrac palette descendants; parseString continues
-// to carry lexical state and the palette flag without a global counter reset.
+// counter policy local to generated-expression descendants; parseString
+// continues to carry lexical state without a global counter reset.
 func (p *parser) parseRootIndex(source string) (*mml.Node, error) {
-	if p.genfracPalette {
+	if p.genfracPalette || p.derivativeChildren {
 		count := p.state.macroCount
 		p.state.macroCount = 0
 		defer func() { p.state.macroCount = count }()

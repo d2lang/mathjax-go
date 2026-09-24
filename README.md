@@ -384,7 +384,7 @@ and alignment allocation/anchor behavior remain separately documented limits.
 
 ### Flat fractions
 
-`\flatfrac` is registered as the primary Physics macro, so its two arguments use the existing macro expansion and override rules. Regression coverage compares 28 complete primary SVG outputs and checks eight private Macro scenarios, including argument errors, source installation, count limits, forwarding, and overrides. Two tall middle-delimiter cases (D119), two derivative composites (D095), and the inherited unclosed-argument cursor difference remain explicit boundaries; matching SVG does not assert complete internal-tree equality.
+`\flatfrac` is registered as the primary Physics macro, so its two arguments use the existing macro expansion and override rules. Regression coverage compares 32 complete primary SVG outputs and checks eight private Macro scenarios, including argument errors, source installation, count limits, forwarding, and overrides. The corpus includes the original tall middle-delimiter cases and the two derivative continuations with registered fraction results. The inherited unclosed-argument cursor difference remains an explicit boundary; matching SVG does not assert complete internal-tree equality.
 
 ### Generalized fraction delimiters
 
@@ -427,3 +427,10 @@ Four public `\qty` references compare whole primary SVGs in both modes, and two 
 ### Middle delimiters
 
 `\middle` sets the primary stretchy attribute without forcing fence or symmetric attributes. A slash between scripted operands therefore keeps the primary glyph size and baseline. Four public references compare complete primary SVGs in inline and display modes: two scripted `\flatfrac` cases and two unchanged basic controls.
+
+
+### Derivative construction
+
+The eight derivative aliases reparse the primary Physics fraction expansion. Optional orders attach after the raw denominator variable; mixed partials count their variables and ignore the optional order. Starred forms use the registered `\flatfrac` command. Generated children share configuration but copy the font environment and keep independent expansion counters at genuine parser boundaries. Registered fraction results are delivered before trailing AutoOpen processing, including empty and multiple-node results.
+
+The finite public corpus preserves 88 original references: 80 complete SVG assertions cover ordinary and starred derivatives, aliases, variable grouping, orders, fonts, errors and following parentheses. Four adjacent-relation examples remain D081 diagnostics, and four Differential/variation examples remain unchanged caller diagnostics; none is counted as a passing primary match. The existing AutoOpen fixture now checks 101 primary SVG/ordered-tree cases and two historical Differential controls, while its three prime-property diagnostics remain separate. Seven registered-result cases, empty-result pending-prime rejection, and two independent/shared macro-budget cases guard the observed child and delivery contracts. This does not assert universal internal-tree equality or general pending-script delivery for multiple-node overrides.
