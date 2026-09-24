@@ -65,6 +65,18 @@ func newParseState() *parseState {
 	return s
 }
 
+type identifierPattern uint8
+
+const (
+	identifierPatternNone identifierPattern = iota
+	identifierPatternLetters
+	identifierPatternOperator
+)
+
+func (pattern identifierPattern) matches(r rune) bool {
+	return isASCIILetter(r) || pattern == identifierPatternOperator && (r == '-' || r == '*')
+}
+
 type parser struct {
 	source               string
 	pos                  int
@@ -75,6 +87,10 @@ type parser struct {
 	commandDots          *pendingDots
 	multiLetterFont      string
 	activeFont           string
+	identifierPattern    identifierPattern
+	operatorLetters      bool
+	noAutoOP             bool
+	fontExplicitEmpty    bool
 	vectorFactory        bool
 	vectorFont           string
 	vectorStar           bool
@@ -114,7 +130,11 @@ type rowStyleFrame struct {
 // groups and child parsers still enter through the ordinary row entry points.
 func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending bool, auto *derivativeAutoOpen, pendingFont string) ([]*mml.Node, string, error) {
 	vectorFont, vectorStar, activeFont := p.vectorFont, p.vectorStar, p.activeFont
-	defer func() { p.vectorFont, p.vectorStar, p.activeFont = vectorFont, vectorStar, activeFont }()
+	fontExplicitEmpty := p.fontExplicitEmpty
+	defer func() {
+		p.vectorFont, p.vectorStar, p.activeFont = vectorFont, vectorStar, activeFont
+		p.fontExplicitEmpty = fontExplicitEmpty
+	}()
 	var nodes []*mml.Node
 	var pending *pendingPrime
 	var negation pendingNot
@@ -274,12 +294,16 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 				// stack item, so pending Prime/Not/Dots items stay in this row.
 				if len(styles) != 0 || pending != nil || bool(negation) || dots.active() {
 					p.activeFont, pendingFont = variant, variant
+					p.fontExplicitEmpty = variant == ""
 					continue
 				}
 				oldFont := p.activeFont
+				oldFontExplicitEmpty := p.fontExplicitEmpty
 				p.activeFont = variant
+				p.fontExplicitEmpty = variant == ""
 				rest, right, err := p.parseRowWithAutoOpen(terminator, stopRight, infixPending, auto)
 				p.activeFont = oldFont
+				p.fontExplicitEmpty = oldFontExplicitEmpty
 				if err != nil {
 					return nil, "", err
 				}
@@ -397,14 +421,21 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 					return nil, "", err
 				}
 			} else {
-				appendNodes([]*mml.Node{p.parseCharacter()}, false)
+				created, err := p.parseCharacterChecked()
+				if err != nil {
+					return nil, "", err
+				}
+				appendNodes([]*mml.Node{created}, false)
 			}
 		case '&':
 			return nil, "", texError("Misplaced", "Misplaced alignment tab character &")
 		case '#':
 			return nil, "", texError("CantUseHash1", "You can't use 'macro parameter character #' in math mode")
 		default:
-			created := p.parseCharacter()
+			created, err := p.parseCharacterChecked()
+			if err != nil {
+				return nil, "", err
+			}
 			// The registered raw ')' handler creates an AutoClose item. A
 			// command that merely returns the same mo has no such marker.
 			if auto != nil && len(styles) == 0 && c == ')' && auto.close() {
@@ -431,29 +462,40 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 // in thousands separators; only the token text removes those braces.
 var ordinaryNumberPattern = regexp.MustCompile(`^(?:[0-9]+(?:\{,\}[0-9]{3})*(?:\.[0-9]*)?|\.[0-9]+)`)
 
+// ParseMethods.variable indexes the selected regular expression's match.
+// A literal operator letter cannot match MathFont's letters-only pattern;
+// that source failure is an ordinary error, not a rendered TeX error.
+func (p *parser) parseCharacterChecked() (*mml.Node, error) {
+	r := p.peekRune()
+	if p.operatorLetters && (r == '-' || r == '*') &&
+		p.identifierPattern == identifierPatternLetters && !p.fontExplicitEmpty {
+		p.consumeRune()
+		return nil, fmt.Errorf("identifier pattern does not match %q", string(r))
+	}
+	return p.parseCharacter(), nil
+}
+
 func (p *parser) parseCharacter() *mml.Node {
 	r := p.consumeRune()
 	// BaseMethods.Tilde uses the token factory without getFontDef or Other.
 	if r == '~' {
 		return token("mtext", "\u00a0")
 	}
-	if unicode.IsLetter(r) {
+	if unicode.IsLetter(r) || p.operatorLetters && (r == '-' || r == '*') {
 		text := string(r)
-		if p.multiLetterFont != "" && isASCIILetter(r) {
+		grouping := p.identifierPattern != identifierPatternNone && !p.fontExplicitEmpty && p.identifierPattern.matches(r)
+		if grouping {
 			start := p.pos - utf8.RuneLen(r)
-			for p.pos < len(p.source) && isASCIILetter(p.peekRune()) {
+			for p.pos < len(p.source) && p.identifierPattern.matches(p.peekRune()) {
 				p.consumeRune()
 			}
 			text = p.source[start:p.pos]
 		}
 		identifier := token("mi", text)
-		if p.multiLetterFont != "" {
-			if p.multiLetterFont == "normal" && len(text) > 1 {
-				// ParseMethods.variable records noAutoOP as the internal autoOP
-				// property, rather than allowing MmlMi to promote a roman run to
-				// an operator during TeX-class assignment.
-				identifier.SetProperty("autoOP", false)
-			}
+		if grouping && p.noAutoOP && p.activeFont == "normal" && len(text) > 1 {
+			// noAutoOP is copied independently of the selected pattern and font.
+			// OperatorName changes both without installing MathFont's flag.
+			identifier.SetProperty("autoOP", false)
 		}
 		return ambientLiteralToken(identifier, r)
 	}
@@ -605,7 +647,11 @@ func (p *parser) parseOneTokenEvent() (result commandResult, err error) {
 		result.nodes, _, err = p.parseRow('}', false)
 		return result, err
 	}
-	result.nodes = []*mml.Node{p.parseCharacter()}
+	created, err := p.parseCharacterChecked()
+	if err != nil {
+		return result, err
+	}
+	result.nodes = []*mml.Node{created}
 	return result, nil
 }
 
@@ -627,11 +673,13 @@ func (p *parser) parseArgument(name string) (*mml.Node, error) {
 func (p *parser) parseString(source string) (*mml.Node, error) {
 	sub := &parser{source: source, state: p.state, display: p.display,
 		activeFont: p.activeFont, vectorFactory: p.vectorFactory,
+		operatorLetters: p.operatorLetters, noAutoOP: p.noAutoOP, fontExplicitEmpty: p.fontExplicitEmpty,
 		vectorFont: p.vectorFont, vectorStar: p.vectorStar, vectorAlias: p.vectorAlias,
 		genfracPalette: p.genfracPalette, starMacroChildren: p.starMacroChildren,
 		derivativeChildren: p.derivativeChildren}
 	if p.vectorFactory || p.vectorAlias || p.derivativeChildren {
 		sub.multiLetterFont = p.multiLetterFont
+		sub.identifierPattern = p.identifierPattern
 	}
 	children, _, err := sub.parseRow(0, false)
 	if err != nil {
@@ -657,6 +705,10 @@ func (p *parser) parseMathFontString(source, variant string, ambientOnly bool) (
 		display:            p.display,
 		multiLetterFont:    variant,
 		activeFont:         variant,
+		identifierPattern:  identifierPatternLetters,
+		operatorLetters:    p.operatorLetters,
+		noAutoOP:           true,
+		fontExplicitEmpty:  variant == "",
 		vectorFactory:      p.vectorFactory,
 		vectorFont:         p.vectorFont,
 		vectorStar:         p.vectorStar,

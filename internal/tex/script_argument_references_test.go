@@ -97,7 +97,7 @@ func TestScriptArgumentPinnedReferences(t *testing.T) {
 	if fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || errorsFixture.MathjaxGitCommit != fixture.MathjaxGitCommit || len(fixture.Cases) != 120 || len(errorsFixture.Rows) != 62 || len(boundaries.Cases) != 20 || boundaries.Baseline != "e93f5eb32042cd5a772f5b8fa3c6aabe540701da" {
 		t.Fatal("unbound argument references")
 	}
-	registered, rawSVG, rawOwn, qualifiedOwn, errorsChecked := 0, 0, 0, 0, 0
+	registered, rawSVG, rawOwn, qualifiedOwn, errorsChecked, promotedOperators := 0, 0, 0, 0, 0, 0
 	for _, c := range fixture.Cases {
 		t.Run(c.Name, func(t *testing.T) {
 			state := newParseState()
@@ -186,7 +186,38 @@ func TestScriptArgumentPinnedReferences(t *testing.T) {
 					if b.SVGSHA256 == c.SVGSHA256 || b.Tree == nil {
 						t.Fatal("invalid unchanged output")
 					}
-					wantTree, wantSVG = b.Tree, b.SVGSHA256
+					if c.Name == "public-22-inline" || c.Name == "public-22-display" {
+						if c.TeX != `\operatorname{’}` || c.Display != (c.Name == "public-22-display") {
+							t.Fatal("changed operator-name prime input")
+						}
+						encoded, err := json.Marshal(c.PropertiesTree)
+						if err != nil {
+							t.Fatal(err)
+						}
+						var comparison argumentTree
+						if err := json.Unmarshal(encoded, &comparison); err != nil {
+							t.Fatal(err)
+						}
+						prime := &comparison
+						for _, i := range []int{0, 0, 0, 0, 1} {
+							if i >= len(prime.Children) {
+								t.Fatal("changed operator-name prime path")
+							}
+							prime = prime.Children[i]
+						}
+						if prime.Kind != "mo" || !reflect.DeepEqual(prime.Properties, map[string]any{"variantForm": true, "pseudoscript": false}) || len(prime.Children) != 1 || prime.Children[0].Text == nil || *prime.Children[0].Text != "′" {
+							t.Fatal("changed exact inherited prime metadata boundary")
+						}
+						// Preserve the known inheritance omission only in a comparison
+						// copy. Original SVG and every other tree field stay primary.
+						delete(prime.Properties, "pseudoscript")
+						wantTree = &comparison
+						promotedOperators++
+						qualifiedOwn++
+						rawSVG++
+					} else {
+						wantTree, wantSVG = b.Tree, b.SVGSHA256
+					}
 				case "unchanged-pseudoscript-own-property":
 					qualifiedOwn++
 					rawSVG++
@@ -238,7 +269,7 @@ func TestScriptArgumentPinnedReferences(t *testing.T) {
 			}
 		})
 	}
-	if registered != 20 || rawSVG != 118 || rawOwn != 100 || qualifiedOwn != 18 || errorsChecked != 62 {
+	if registered != 20 || rawSVG != 120 || rawOwn != 100 || qualifiedOwn != 20 || errorsChecked != 62 || promotedOperators != 2 {
 		t.Fatal("reference scope changed", registered, rawSVG, rawOwn, qualifiedOwn, errorsChecked)
 	}
 }

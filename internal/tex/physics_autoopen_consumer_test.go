@@ -12,7 +12,8 @@ import (
 // These are the actual parser inputs and source/node contracts retained in
 // d099-d089-consumer-capture (freeze 38b36eb7). They exercise real registered
 // macro expansion without renderer calls or whole-output expected snapshots.
-// Complete operatorname rendering still has separate D095/D106 discrepancies.
+// These contracts complement the public operator-name rendering references.
+// OperatorName children keep their macro counts separate from the caller.
 func TestDerivativeAutoOpenConsumerMacroClose(t *testing.T) {
 	const input = `\operatorname{a\dv{f}{x}(g\tailclose b}+Z`
 	state := newParseState()
@@ -22,7 +23,7 @@ func TestDerivativeAutoOpenConsumerMacroClose(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	if stop != "" || p.source != input || p.pos != len(input) || p.state != state || state.macroCount != 1 {
+	if stop != "" || p.source != input || p.pos != len(input) || p.state != state || state.macroCount != 0 {
 		t.Fatalf("outer source/cursor/state changed: %q %d %q %d", p.source, p.pos, stop, state.macroCount)
 	}
 	if len(nodes) != 3 || nodes[0].Kind != "TeXAtom" || textContent(nodes[1]) != "+" || textContent(nodes[2]) != "Z" {
@@ -59,7 +60,7 @@ func TestDerivativeAutoOpenConsumerErrorOwnership(t *testing.T) {
 			if !errors.As(err, &pe) || pe.ID != "UndefinedControlSequence" || pe.Message != `Undefined control sequence \undefinedTail` {
 				t.Fatalf("tail error suppressed or replaced: %v", err)
 			}
-			if p.source != c.input || p.pos != c.cursor || p.source[p.pos:] != "+Z" || p.state != state || state.macroCount != 1 {
+			if p.source != c.input || p.pos != c.cursor || p.source[p.pos:] != "+Z" || p.state != state || state.macroCount != 0 {
 				t.Fatalf("child error changed outer source/cursor/shared state: %q %d %d", p.source, p.pos, state.macroCount)
 			}
 			if c.color {

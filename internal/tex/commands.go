@@ -1908,6 +1908,8 @@ func (p *parser) vectorAccent(name string) ([]*mml.Node, error) {
 	// genuine ParseArg and VectorBold children receive a fresh count.
 	sub := &parser{source: expansion, state: p.state, display: p.display,
 		multiLetterFont: p.multiLetterFont, activeFont: p.activeFont,
+		identifierPattern: p.identifierPattern, operatorLetters: p.operatorLetters,
+		noAutoOP: p.noAutoOP, fontExplicitEmpty: p.fontExplicitEmpty,
 		vectorFactory: p.vectorFactory, vectorFont: p.vectorFont, vectorStar: p.vectorStar, vectorAlias: true,
 		genfracPalette: p.genfracPalette, starMacroChildren: true,
 		derivativeChildren: p.derivativeChildren}
