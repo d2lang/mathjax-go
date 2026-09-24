@@ -197,7 +197,7 @@ func (p *parser) commandNodes(name string, after **derivativeAutoOpen) ([]*mml.N
 		// delimiter dictionary classifies the selected fence (notably '|') as
 		// ORD, so it must not introduce relation spacing.
 		middle := token("mo", delim)
-		setAttributes(middle, map[string]any{"fence": true, "stretchy": true, "symmetric": true})
+		middle.Attributes.Set("stretchy", true)
 		return []*mml.Node{close, middle, open}, nil
 	case "big", "Big", "bigg", "Bigg", "bigl", "Bigl", "biggl", "Biggl", "bigr", "Bigr", "biggr", "Biggr", "bigm", "Bigm", "biggm", "Biggm":
 		return p.bigDelimiter(name)
