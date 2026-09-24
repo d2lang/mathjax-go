@@ -29,7 +29,7 @@ func TestExecutableSourceMapPublicReferences(t *testing.T) {
 	if err = json.Unmarshal(data, &fixture); err != nil {
 		t.Fatal(err)
 	}
-	if fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || len(fixture.Cases) != 130 {
+	if fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || len(fixture.Cases) != 132 {
 		t.Fatal("unbound executable source-map references")
 	}
 	count := 0
@@ -50,8 +50,8 @@ func TestExecutableSourceMapPublicReferences(t *testing.T) {
 			}
 		})
 	}
-	if count != 126 {
-		t.Fatalf("public references %d; want 126", count)
+	if count != 128 {
+		t.Fatalf("public references %d; want 128", count)
 	}
 }
 
