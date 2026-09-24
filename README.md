@@ -133,9 +133,9 @@ node internal/tex/testdata/generate_framed_text_method.cjs PINNED_ASSETS
 
 `pod` and `pmod` use the original one-argument macro definitions, including
 style-dependent spacing, fixed parentheses, and forwarding through a registered
-`pod` override. All52 targeted public SVGs and complete explicit/own-property
-trees match the pinned MathJax3.2.2 renderer. Eight surrounding controls also
-match; four `bmod` cases remain exact accepted outputs for a separate fix.
+`pod` override. The 64-case public corpus checks complete original SVGs,
+explicit attributes, own properties, and display dimensions for all 52 targeted
+cases and 12 surrounding controls, including the four `bmod` cases.
 Twenty registered-macro cases cover forwarding, argument counts, missing
 arguments and fresh parser state. All twenty match the primary, including its
 original recursive-macro diagnostic wording.
@@ -208,11 +208,25 @@ node testdata/generate_infix_macro_priority.cjs PINNED_ASSETS [EVIDENCE_DIRECTOR
 The default `mod` macro consumes one argument and uses the original mathchoice
 spacing for display, text and both script styles. The44-case pinned corpus
 covers unbraced, grouped, nested and missing arguments, script placement, and a
-user-defined override. All42 scoped/control SVGs and explicit/own trees match
-primary; the two separate `bmod` row-spacing cases remain unchanged.
+user-defined override. All 44 cases, including the two `bmod` controls, check
+complete original SVGs, explicit attributes, own properties, and display dimensions.
 
 ```
 node testdata/generate_mod_command.cjs PINNED_ASSETS [EVIDENCE_DIRECTORY]
+```
+
+### Binary modulo operator spacing
+
+The default `bmod` macro creates the original `mo` token with explicit
+`thickmathspace` on both sides. The adjacent-relation filter supplies the
+neighboring zero-side spacing when relations surround it. The 52-case corpus
+checks complete original SVGs, explicit attributes, own properties, and display
+dimensions, including relation neighbors, script styles, registered overrides,
+and the original duplicate-superscript error. Historical boundary fixtures
+remain as provenance; their pre-fix Go outputs are no longer expected results.
+
+```
+node testdata/generate_bmod_command.cjs PINNED_ASSETS [EVIDENCE_DIRECTORY]
 ```
 
 ### Infix fraction row scope
