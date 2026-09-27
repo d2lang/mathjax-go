@@ -42,12 +42,11 @@ func (p *parser) applyVectorFactory(n *mml.Node) {
 }
 
 func (p *parser) parseVectorString(source string, star bool) (*mml.Node, error) {
-	if p.genfracPalette || p.starMacroChildren || p.derivativeChildren {
-		// VectorBold creates a genuine child TexParser with its own count.
-		count := p.state.macroCount
-		p.state.macroCount = 0
-		defer func() { p.state.macroCount = count }()
-	}
+	// VectorBold always creates a genuine child TexParser, including when
+	// reached through a registered macro in a StarMacro continuation.
+	count := p.state.macroCount
+	p.state.macroCount = 0
+	defer func() { p.state.macroCount = count }()
 	variant := "bold"
 	if star {
 		variant = "bold-italic"
