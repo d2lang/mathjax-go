@@ -41,6 +41,7 @@ type wrapper struct {
 	sizeSet      bool
 	surdHeight   float64
 	isMathAccent bool
+	bevel        *wrapper // Generated fraction slash; not an authored child.
 
 	// table retains CommonMtable's natural and resolved percentage-width
 	// state for the lifetime of this wrapped render tree.  It is nil for every
@@ -99,6 +100,9 @@ func (r *renderer) wrap(node *mml.Node, parent *wrapper, level int, display bool
 	}
 	if node.Kind == "msqrt" || node.Kind == "mroot" {
 		w.initializeRoot()
+	}
+	if node.Kind == "mfrac" {
+		w.initializeBevel()
 	}
 	// CommonMunder, CommonMover, and CommonMunderover stretch their children
 	// once in their constructors.  Keep this out of computeBBox: table layout
