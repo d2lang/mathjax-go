@@ -19,7 +19,7 @@ func (p *parser) amsTagEnvironment(environment string) (nodes []*mml.Node, handl
 	switch environment {
 	case "equation", "equation*":
 		nodes, err = p.amsEquation(environment)
-	case "split", "align", "align*", "aligned":
+	case "split", "align", "align*", "aligned", "gather", "gather*":
 		nodes, err = p.amsAlignment(environment)
 	default:
 		return nil, false, nil
@@ -70,7 +70,8 @@ func (p *parser) amsAlignment(environment string) (nodes []*mml.Node, err error)
 			return nil, err
 		}
 	}
-	taggable := environment == "align" || environment == "align*"
+	taggable := environment == "align" || environment == "align*" ||
+		environment == "gather" || environment == "gather*"
 	if taggable {
 		if err := p.checkEquationEnvironment(); err != nil {
 			return nil, err
@@ -81,7 +82,7 @@ func (p *parser) amsAlignment(environment string) (nodes []*mml.Node, err error)
 		return nil, err
 	}
 
-	defaultTags := environment == "align"
+	defaultTags := environment == "align" || environment == "gather"
 	state := p.amsTags()
 	state.start(environment, taggable, defaultTags)
 	ended := false
@@ -120,7 +121,13 @@ func (p *parser) amsAlignment(environment string) (nodes []*mml.Node, err error)
 	}
 
 	table := node("mtable", mrows...)
-	prefixRelationColumns(table)
+	if environment == "gather" || environment == "gather*" {
+		// EqnArrayItem.EndEntry repairs an initial relation in every entry
+		// after the first, including additional authored gather columns.
+		prefixEquationRelationColumns(table, 1)
+	} else {
+		prefixRelationColumns(table)
+	}
 	for i, tag := range tags {
 		if tag == nil {
 			continue

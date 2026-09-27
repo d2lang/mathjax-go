@@ -263,21 +263,80 @@ func (p *parser) mathtoolsAlignment(environment string) ([]*mml.Node, error) {
 	if strings.Contains(environment, "multline") {
 		return p.mathtoolsMultlineBody(body)
 	}
+	// Mathtools intercepts gather before the ordinary AMS environment handler.
+	// Keep its special rows, but retain the same row-local tag lifetime.
+	var tagState *amsTagState
+	if environment == "gather" || environment == "gather*" {
+		tagState = p.amsTags()
+		tagState.start(environment, true, environment == "gather")
+		defer tagState.end()
+	}
 	rows := splitTable(body)
 	mrows := make([]*mml.Node, 0, len(rows)+1)
+	rowTags := make(map[*mml.Node]*mml.Node)
+	appendRows := func(rows ...*mml.Node) error {
+		if tagState != nil {
+			tag, err := tagState.getTag(p)
+			if err != nil {
+				return err
+			}
+			if tag != nil {
+				rowTags[rows[0]] = tag
+			}
+			tagState.clearTag()
+		}
+		mrows = append(mrows, rows...)
+		return nil
+	}
+	appendContinuation := func(raw string, force bool) error {
+		row, err := p.mathtoolsPlainRow(splitTopLevel(strings.TrimSpace(raw), '&'))
+		if err != nil {
+			return err
+		}
+		// ArrowBetweenLines, ShortVDotsWithin and FlushSpaceBelow end a row
+		// themselves. A following tag alone does not create an empty final row.
+		if !force && !mathtoolsRowHasContent(row) {
+			return nil
+		}
+		return appendRows(row)
+	}
 	adjustedRowSpacing := map[int]bool{}
-	for _, cells := range rows {
+	for rowIndex, cells := range rows {
 		joined := strings.TrimSpace(strings.Join(cells, "&"))
-		if strings.HasPrefix(joined, "\\ArrowBetweenLines") {
-			arrowRows, err := p.mathtoolsArrowBetweenLines(joined)
+		if tagState != nil && joined == "" && rowIndex == len(rows)-1 && len(rows) > 1 {
+			continue
+		}
+		arrowIndex := strings.Index(joined, "\\ArrowBetweenLines")
+		if arrowIndex == 0 || (tagState != nil && arrowIndex > 0) {
+			if tagState != nil {
+				prefix, err := p.mathtoolsContinuationNodes(joined[:arrowIndex])
+				if err != nil {
+					return nil, err
+				}
+				if len(prefix) != 0 {
+					return nil, texError("BetweenLines", "%s must be on a row by itself", "\\ArrowBetweenLines")
+				}
+			}
+			arrowRows, rest, err := p.mathtoolsArrowBetweenLines(joined[arrowIndex:])
 			if err != nil {
 				return nil, err
 			}
-			mrows = append(mrows, arrowRows...)
+			if tagState == nil {
+				if err := appendRows(arrowRows...); err != nil {
+					return nil, err
+				}
+			} else {
+				if err := appendRows(arrowRows[0]); err != nil {
+					return nil, err
+				}
+				if err := appendContinuation(rest, rowIndex < len(rows)-1); err != nil {
+					return nil, err
+				}
+			}
 			continue
 		}
 		if strings.Contains(joined, "\\shortvdotswithin") {
-			arg, err := mathtoolsCommandArgument(joined, "shortvdotswithin")
+			before, arg, rest, err := mathtoolsCommandParts(joined, "shortvdotswithin")
 			if err != nil {
 				return nil, err
 			}
@@ -285,15 +344,30 @@ func (p *parser) mathtoolsAlignment(environment string) ([]*mml.Node, error) {
 				adjustedRowSpacing[len(mrows)-1] = true
 			}
 			dotsRow := len(mrows)
-			mrows = append(mrows,
-				node("mtr", node("mtd"), node("mtd", p.mathtoolsVDots(arg, true))),
-				node("mtr", node("mtd")),
-			)
+			if tagState == nil {
+				if err := appendRows(
+					node("mtr", node("mtd"), node("mtd", p.mathtoolsVDots(arg, true))),
+					node("mtr", node("mtd")),
+				); err != nil {
+					return nil, err
+				}
+			} else {
+				prefix, err := p.mathtoolsContinuationNodes(before)
+				if err != nil {
+					return nil, err
+				}
+				if err := appendRows(node("mtr", node("mtd", prefix...), node("mtd", p.mathtoolsVDots(arg, true)))); err != nil {
+					return nil, err
+				}
+				if err := appendContinuation(rest, rowIndex < len(rows)-1); err != nil {
+					return nil, err
+				}
+			}
 			adjustedRowSpacing[dotsRow] = true
 			continue
 		}
 		if strings.Contains(joined, "\\vdotswithin") {
-			arg, err := mathtoolsCommandArgument(joined, "vdotswithin")
+			before, arg, after, err := mathtoolsCommandParts(joined, "vdotswithin")
 			if err != nil {
 				return nil, err
 			}
@@ -302,27 +376,58 @@ func (p *parser) mathtoolsAlignment(environment string) ([]*mml.Node, error) {
 				adjustedRowSpacing[len(mrows)-1] = true
 			}
 			dotsRow := len(mrows)
-			mrows = append(mrows, node("mtr", node("mtd", p.mathtoolsVDots(arg, flushAbove))))
-			if flush := strings.Index(joined, "\\MTFlushSpaceBelow"); flush >= 0 {
+			contents := []*mml.Node{}
+			if tagState != nil {
+				contents, err = p.mathtoolsContinuationNodes(strings.ReplaceAll(before, "\\MTFlushSpaceAbove", ""))
+				if err != nil {
+					return nil, err
+				}
+			}
+			contents = append(contents, p.mathtoolsVDots(arg, flushAbove))
+			flushSource := joined
+			if tagState != nil {
+				flushSource = after
+				tail := after
+				if flush := strings.Index(tail, "\\MTFlushSpaceBelow"); flush >= 0 {
+					tail = tail[:flush]
+				}
+				suffix, err := p.mathtoolsContinuationNodes(tail)
+				if err != nil {
+					return nil, err
+				}
+				contents = append(contents, suffix...)
+			}
+			if err := appendRows(node("mtr", node("mtd", contents...))); err != nil {
+				return nil, err
+			}
+			if flush := strings.Index(flushSource, "\\MTFlushSpaceBelow"); flush >= 0 {
 				adjustedRowSpacing[dotsRow] = true
-				rest := strings.TrimSpace(joined[flush+len("\\MTFlushSpaceBelow"):])
-				if rest != "" {
+				rest := strings.TrimSpace(flushSource[flush+len("\\MTFlushSpaceBelow"):])
+				if tagState != nil {
+					if err := appendContinuation(rest, rowIndex < len(rows)-1); err != nil {
+						return nil, err
+					}
+				} else if rest != "" {
 					restCells := splitTopLevel(rest, '&')
 					row, err := p.mathtoolsPlainRow(restCells)
 					if err != nil {
 						return nil, err
 					}
-					mrows = append(mrows, row)
+					if err := appendRows(row); err != nil {
+						return nil, err
+					}
 				}
 			}
 			continue
 		}
 		if len(cells) != 0 && strings.Contains(cells[len(cells)-1], "\\Aboxed") {
-			row, err := p.mathtoolsAboxedRow(cells)
+			row, err := p.mathtoolsAboxedRow(cells, tagState != nil)
 			if err != nil {
 				return nil, err
 			}
-			mrows = append(mrows, row)
+			if err := appendRows(row); err != nil {
+				return nil, err
+			}
 			continue
 		}
 		mtds := make([]*mml.Node, 0, len(cells))
@@ -333,9 +438,20 @@ func (p *parser) mathtoolsAlignment(environment string) ([]*mml.Node, error) {
 			}
 			mtds = append(mtds, node("mtd", content))
 		}
-		mrows = append(mrows, node("mtr", mtds...))
+		if err := appendRows(node("mtr", mtds...)); err != nil {
+			return nil, err
+		}
 	}
 	table := node("mtable", mrows...)
+	if tagState != nil {
+		prefixEquationRelationColumns(table, 1)
+		for i, row := range table.Children {
+			if tag := rowTags[row]; tag != nil {
+				table.Children[i] = node("mlabeledtr", append([]*mml.Node{tag}, row.Children...)...)
+				table.Children[i].Parent = table
+			}
+		}
+	}
 	if strings.Contains(environment, "gather") {
 		resetTableAttributes(table,
 			"displaystyle", true,
@@ -408,7 +524,7 @@ func (p *parser) mathtoolsMultlineBody(body string) ([]*mml.Node, error) {
 	return []*mml.Node{table}, nil
 }
 
-func (p *parser) mathtoolsArrowBetweenLines(raw string) ([]*mml.Node, error) {
+func (p *parser) mathtoolsArrowBetweenLines(raw string) ([]*mml.Node, string, error) {
 	scanner := &parser{source: raw, state: p.state, display: p.display}
 	scanner.skipSpaces()
 	scanner.pos++
@@ -417,7 +533,7 @@ func (p *parser) mathtoolsArrowBetweenLines(raw string) ([]*mml.Node, error) {
 	defaultArrow := "\\Updownarrow"
 	symbol, _, err := scanner.readBrackets(&defaultArrow)
 	if err != nil {
-		return nil, err
+		return nil, "", err
 	}
 	expansion := symbol + "\\quad"
 	if star {
@@ -425,7 +541,7 @@ func (p *parser) mathtoolsArrowBetweenLines(raw string) ([]*mml.Node, error) {
 	}
 	content, err := p.parseString(symbol)
 	if err != nil {
-		return nil, err
+		return nil, "", err
 	}
 	space := node("mstyle", mathtoolsSpace("1em"))
 	children := unwrapInferred(content)
@@ -437,7 +553,7 @@ func (p *parser) mathtoolsArrowBetweenLines(raw string) ([]*mml.Node, error) {
 	content = forcedRow(children, true)
 	_ = name
 	_ = expansion
-	return []*mml.Node{node("mtr", node("mtd", content)), node("mtr", node("mtd"))}, nil
+	return []*mml.Node{node("mtr", node("mtd", content)), node("mtr", node("mtd"))}, raw[scanner.pos:], nil
 }
 
 func (p *parser) mathtoolsVDots(argument string, flush bool) *mml.Node {
@@ -458,7 +574,7 @@ func (p *parser) mathtoolsVDots(argument string, flush bool) *mml.Node {
 	return outer
 }
 
-func (p *parser) mathtoolsAboxedRow(cells []string) (*mml.Node, error) {
+func (p *parser) mathtoolsAboxedRow(cells []string, preserveContinuation bool) (*mml.Node, error) {
 	mtds := make([]*mml.Node, 0, len(cells)+2)
 	for _, raw := range cells[:len(cells)-1] {
 		content, err := p.parseContinuationString(strings.TrimSpace(raw))
@@ -471,7 +587,7 @@ func (p *parser) mathtoolsAboxedRow(cells []string) (*mml.Node, error) {
 		mtds = append(mtds, node("mtd"))
 	}
 	raw := strings.TrimSpace(cells[len(cells)-1])
-	argument, err := mathtoolsCommandArgument(raw, "Aboxed")
+	before, argument, after, err := mathtoolsCommandParts(raw, "Aboxed")
 	if err != nil {
 		return nil, err
 	}
@@ -480,11 +596,14 @@ func (p *parser) mathtoolsAboxedRow(cells []string) (*mml.Node, error) {
 	if len(parts) > 1 {
 		right = parts[1]
 	}
-	first, err := p.parseContinuationString("\\rlap{\\boxed{" + left + "{}" + right + "}}\\kern.267em\\phantom{" + left + "}")
+	if !preserveContinuation {
+		before, after = "", ""
+	}
+	first, err := p.parseContinuationString(before + "\\rlap{\\boxed{" + left + "{}" + right + "}}\\kern.267em\\phantom{" + left + "}")
 	if err != nil {
 		return nil, err
 	}
-	second, err := p.parseContinuationString("\\phantom{{}" + right + "}\\kern.267em")
+	second, err := p.parseContinuationString("\\phantom{{}" + right + "}\\kern.267em" + after)
 	if err != nil {
 		return nil, err
 	}
@@ -505,13 +624,43 @@ func (p *parser) mathtoolsPlainRow(cells []string) (*mml.Node, error) {
 }
 
 func mathtoolsCommandArgument(source, command string) (string, error) {
+	_, argument, _, err := mathtoolsCommandParts(source, command)
+	return argument, err
+}
+
+func mathtoolsCommandParts(source, command string) (string, string, string, error) {
 	index := strings.Index(source, "\\"+command)
 	if index < 0 {
-		return "", texError("MissingArgFor", "Missing argument for \\%s", command)
+		return "", "", "", texError("MissingArgFor", "Missing argument for \\%s", command)
 	}
 	scanner := &parser{source: source, pos: index + len(command) + 1}
 	argument, _, err := scanner.readArgument(command, false)
-	return argument, err
+	if err != nil {
+		return "", "", "", err
+	}
+	return source[:index], argument, source[scanner.pos:], nil
+}
+
+func (p *parser) mathtoolsContinuationNodes(source string) ([]*mml.Node, error) {
+	if strings.TrimSpace(source) == "" {
+		return nil, nil
+	}
+	content, err := p.parseContinuationString(source)
+	if err != nil {
+		return nil, err
+	}
+	return unwrapInferred(content), nil
+}
+
+func mathtoolsRowHasContent(row *mml.Node) bool {
+	for _, cell := range row.Children {
+		for _, child := range cell.Children {
+			if len(unwrapInferred(child)) != 0 {
+				return true
+			}
+		}
+	}
+	return false
 }
 
 func mathtoolsOnlyCommandArgument(source, command string) (string, error) {

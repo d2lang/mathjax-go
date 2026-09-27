@@ -23,7 +23,7 @@ func TestResponsiveMinWidthPublic(t *testing.T) {
 	if len(fixture.Cases) != 30 {
 		t.Fatal("fixture count", len(fixture.Cases))
 	}
-	promoted := 0
+	promoted, gatherPromoted := 0, 0
 	for _, c := range fixture.Cases {
 		want, acceptance := c.SVG, c.Acceptance
 		if c.Name == "public-two-tables-inline" || c.Name == "public-two-tables-reversed-inline" {
@@ -32,6 +32,13 @@ func TestResponsiveMinWidthPublic(t *testing.T) {
 			}
 			want, acceptance = c.PrimarySVG, "original equation-nesting error"
 			promoted++
+		}
+		if c.Name == "public-gather-labelled-inline" || c.Name == "public-gather-labelled-display" {
+			if c.PrimarySVG == "" {
+				t.Fatal("missing original gather row-tag reference", c.Name)
+			}
+			want, acceptance = c.PrimarySVG, "original gather row tags"
+			gatherPromoted++
 		}
 		t.Run(c.Name, func(t *testing.T) {
 			o := DefaultOptions()
@@ -47,5 +54,8 @@ func TestResponsiveMinWidthPublic(t *testing.T) {
 	}
 	if promoted != 2 {
 		t.Fatal("changed equation-nesting promotion inventory")
+	}
+	if gatherPromoted != 2 {
+		t.Fatal("changed gather row-tag promotion inventory")
 	}
 }
