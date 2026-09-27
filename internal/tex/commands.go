@@ -79,6 +79,10 @@ func (p *parser) commandNodes(name string, after **derivativeAutoOpen) ([]*mml.N
 	if definition, ok := p.state.pairedDelimiters[name]; ok {
 		return p.invokePairedDelimiter(name, definition)
 	}
+	// Braket's command map precedes the delimiter symbol fallback.
+	if name == "|" {
+		return p.braketBar(), nil
+	}
 	if symbol, ok := p.lookupExtensionSymbol(name); ok {
 		return []*mml.Node{symbol}, nil
 	}
@@ -155,8 +159,6 @@ func (p *parser) commandNodes(name string, after **derivativeAutoOpen) ([]*mml.N
 		return []*mml.Node{p.token("mo", name)}, nil
 	case "backslash":
 		return []*mml.Node{p.token("mo", "∖")}, nil
-	case "|":
-		return []*mml.Node{p.operator("‖", mml.TeXClassOrd, map[string]any{"fence": false, "stretchy": false})}, nil
 	case "Vert":
 		return []*mml.Node{p.operator("‖", mml.TeXClassOrd, map[string]any{"fence": false, "stretchy": false})}, nil
 	case "vert":
@@ -340,7 +342,7 @@ func (p *parser) commandNodes(name string, after **derivativeAutoOpen) ([]*mml.N
 
 	case "bra", "ket", "braket", "innerproduct", "ip", "outerproduct", "dyad", "ketbra", "op", "expectationvalue", "expval", "ev", "matrixelement", "matrixel", "mel":
 		return p.physicsBraket(name)
-	case "Bra", "Ket", "Braket", "Set", "set":
+	case "Braket", "Set", "set":
 		return p.braket(name)
 	case "qty", "quantity", "pqty", "bqty", "vqty", "absolutevalue", "abs", "norm", "evaluated", "eval", "order":
 		return p.quantity(name)
@@ -1499,38 +1501,6 @@ func (p *parser) colorDeclaration() (mjSourceObject, error) {
 	}
 	// Color reads and validates its arguments before pushing a StyleItem.
 	return mjSourceObject{{Name: "mathcolor", Value: color}}, nil
-}
-
-func (p *parser) braket(name string) ([]*mml.Node, error) {
-	raw, _, err := p.readArgument(name, false)
-	if err != nil {
-		return nil, err
-	}
-	content, err := p.parseContinuationString(raw)
-	if err != nil {
-		return nil, err
-	}
-	// Braket's active vertical-bar handler creates the separator token itself;
-	// unlike BaseConfiguration.Other it is not registered in fixStretchy's
-	// observable in-lists metadata.  Keep the temporary fixStretchy marker so
-	// the postfilter still materializes stretchy=false.
-	content.Walk(func(n *mml.Node) bool {
-		if n.Kind == "mo" && textContent(n) == "|" {
-			n.RemoveProperty("in-lists")
-		}
-		return true
-	})
-	open, close := "⟨", "⟩"
-	switch name {
-	case "bra", "Bra":
-		close = "|"
-	case "ket", "Ket":
-		open = "|"
-	case "set", "Set":
-		open, close = "{", "}"
-	}
-	stretchy := name == "Bra" || name == "Ket" || name == "Braket" || name == "Set"
-	return []*mml.Node{p.leftRightFenced(open, content, close, stretchy)}, nil
 }
 
 func (p *parser) physicsBraket(name string) ([]*mml.Node, error) {

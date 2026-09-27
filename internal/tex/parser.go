@@ -105,6 +105,7 @@ type parser struct {
 	genfracPalette       bool
 	starMacroChildren    bool
 	derivativeChildren   bool
+	braketOwner          *braketItem
 }
 
 func (p *parser) ensureStackGlobal() *parserStackGlobal {
@@ -127,6 +128,11 @@ func (p *parser) checkEquationEnvironment() error {
 // non-zero terminator is consumed.  stopRight lets a \left subparse return the
 // delimiter consumed by its matching \right.
 func (p *parser) parseRow(terminator byte, stopRight bool) ([]*mml.Node, string, error) {
+	// Ordinary groups and LeftItems mask an enclosing BraketItem. Its own
+	// body enters through parseRowWithInfix, retaining the active owner.
+	owner := p.braketOwner
+	p.braketOwner = nil
+	defer func() { p.braketOwner = owner }()
 	return p.parseRowWithInfix(terminator, stopRight, false)
 }
 
@@ -141,6 +147,11 @@ func (p *parser) parseRowWithInfix(terminator byte, stopRight, infixPending bool
 // Local style frames and the denominator continuation retain those barriers;
 // SetFont changes the environment without adding a stack item.
 func (p *parser) parseRowWithAutoOpen(terminator byte, stopRight, infixPending bool, auto *derivativeAutoOpen) ([]*mml.Node, string, error) {
+	if auto != nil {
+		owner := p.braketOwner
+		p.braketOwner = nil
+		defer func() { p.braketOwner = owner }()
+	}
 	return p.parseRowContinuation(terminator, stopRight, infixPending, auto, "")
 }
 
@@ -152,6 +163,8 @@ type rowStyleFrame struct {
 // pendingFont continues a SetFont in this logical row across OverItem. Real
 // groups and child parsers still enter through the ordinary row entry points.
 func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending bool, auto *derivativeAutoOpen, pendingFont string) ([]*mml.Node, string, error) {
+	owner := p.braketOwner
+	defer func() { p.braketOwner = owner }()
 	vectorFont, vectorStar, activeFont := p.vectorFont, p.vectorStar, p.activeFont
 	fontExplicitEmpty := p.fontExplicitEmpty
 	defer func() {
@@ -188,6 +201,7 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 		// without ApplyFunction. Prime/Not/Dots also reduce before it.
 		finishPending()
 		styles = append(styles, rowStyleFrame{nodes, attributes})
+		p.braketOwner = nil // StyleItem is now the actual stack top.
 		nodes = nil
 	}
 	closeStyles := func() {
@@ -238,6 +252,16 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 		}
 	}
 	for p.pos < len(p.source) {
+		// A single BraketItem closes on its first MML delivery. Any remaining
+		// nodes in that delivery belong to the caller, not to its fenced body.
+		if owner != nil && owner.single && len(nodes) > 0 && len(styles) == 0 && !pendingFunction {
+			closeStyles()
+			return nodes, "", nil
+		}
+		p.braketOwner = owner
+		if len(styles) != 0 || pending != nil || bool(negation) || dots.active() || pendingFunction || auto != nil {
+			p.braketOwner = nil // An intervening stack item owns this token.
+		}
 		c := p.source[p.pos]
 		if terminator != 0 && c == terminator {
 			closeStyles()
@@ -283,6 +307,7 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 					return nil, "", err
 				}
 				closeStyles()
+				p.braketOwner = nil // OverItem owns the denominator.
 				fraction, right, err := p.finishInfixFraction(name, nodes, spec, terminator, stopRight, infixPending, pendingFont)
 				if err != nil {
 					return nil, "", err

@@ -138,8 +138,6 @@ var simpleMacros = map[string]string{
 	"implies":   "\\;\\Longrightarrow\\;",
 	"impliedby": "\\;\\Longleftarrow\\;",
 	"substack":  "\\begin{subarray}{c}#1\\end{subarray}",
-	"Bra":       "\\left\\langle #1\\right|",
-	"Ket":       "\\left|#1\\right\\rangle",
-	"Braket":    "\\left\\langle #1\\right\\rangle",
-	"Set":       "\\left\\{#1\\right\\}",
+	"Bra":       "{\\left\\langle {#1} \\right\\vert}",
+	"Ket":       "{\\left\\vert {#1} \\right\\rangle}",
 }

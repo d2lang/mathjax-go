@@ -30,6 +30,10 @@ func (a *scriptAttachment) missingOpen() error {
 // particular, a macro expansion and SetFont do not supply an empty argument.
 // Keep this event boundary local to scripts; GetArgument callers are separate.
 func (p *parser) parseScriptArgument(attachment *scriptAttachment, font string) (script *mml.Node, currentFont string, after *derivativeAutoOpen, err error) {
+	// SubsupItem is the recipient, so an outer Braket cannot own this token.
+	owner := p.braketOwner
+	p.braketOwner = nil
+	defer func() { p.braketOwner = owner }()
 	currentFont = font
 	defer func() {
 		if err == nil && currentFont != "" {
