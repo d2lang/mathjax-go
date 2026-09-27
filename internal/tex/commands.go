@@ -664,6 +664,13 @@ var accentCharacters = map[string]string{
 }
 
 func (p *parser) accent(name string) ([]*mml.Node, error) {
+	if name == "vec" || name == "hat" {
+		// StarMacro now continues in the caller. Keep its genuine accent
+		// ParseArg child independent without changing the caller's later input.
+		alias, children := p.vectorAlias, p.starMacroChildren
+		p.vectorAlias, p.starMacroChildren = true, true
+		defer func() { p.vectorAlias, p.starMacroChildren = alias, children }()
+	}
 	base, err := p.parseArgument(name)
 	if err != nil {
 		return nil, err
@@ -1909,32 +1916,19 @@ func (p *parser) vectorAccent(name string) ([]*mml.Node, error) {
 	if err != nil {
 		return nil, err
 	}
-	// StarMacro checks the complete replacement plus unparsed input before
-	// charging. The existing synthetic expansion still owns a separate source
-	// and cursor; this validates the joined buffer without installing it.
-	if _, err := macroAddArgs(expansion, p.source[p.pos:], maxMacroBuffer); err != nil {
+	joined, err := macroAddArgs(expansion, p.source[p.pos:], maxMacroBuffer)
+	if err != nil {
 		return nil, err
 	}
+	// PhysicsMethods.StarMacro installs the replacement and caller suffix
+	// before charging. The current row then parses the same continuing program,
+	// so a registered accent Macro can consume arguments from that suffix.
+	p.source, p.pos = joined, 0
 	p.state.macroCount++
 	if p.state.macroCount > maxMacros {
 		return nil, texError("MaxMacroSub1", "MathJax maximum macro substitution count exceeded; is here a recursive macro call?")
 	}
-	// PhysicsMethods.StarMacro preserves the ordinary accent handler around
-	// the vector argument; the accent is outside VectorBold's font reset.
-	// This synthetic continuation carries the charged caller budget. Only its
-	// genuine ParseArg and VectorBold children receive a fresh count.
-	sub := &parser{source: expansion, state: p.state, stackGlobal: p.ensureStackGlobal(), display: p.display,
-		multiLetterFont: p.multiLetterFont, activeFont: p.activeFont,
-		identifierPattern: p.identifierPattern, operatorLetters: p.operatorLetters,
-		noAutoOP: p.noAutoOP, fontExplicitEmpty: p.fontExplicitEmpty,
-		vectorFactory: p.vectorFactory, vectorFont: p.vectorFont, vectorStar: p.vectorStar, vectorAlias: true,
-		genfracPalette: p.genfracPalette, starMacroChildren: true,
-		derivativeChildren: p.derivativeChildren}
-	children, _, err := sub.parseRow(0, false)
-	if err != nil {
-		return nil, err
-	}
-	return children, nil
+	return nil, nil
 }
 
 func (p *parser) operatorApplication(name string, vector bool) ([]*mml.Node, error) {
