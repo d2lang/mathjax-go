@@ -76709,8 +76709,13 @@
                   "token": false
                 },
                 "kind": "TeXAtom",
-                "properties": [],
-                "texClass": -1,
+                "properties": [
+                  {
+                    "name": "texClass",
+                    "value": 0
+                  }
+                ],
+                "texClass": 0,
                 "text": null
               },
               {
