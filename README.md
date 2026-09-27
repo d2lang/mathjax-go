@@ -429,7 +429,7 @@ Delimiter fallback accepts only explicitly backslash-prefixed command entries; r
 
 Bare `\laplacian` constructs a normal-variant `mi` nabla as the base of its square. Two additional public references compare its complete primary SVG in inline and display modes. This coverage is limited to the bare command; D106 operand and child-parser lifetime behavior remains outside this symbol-construction change.
 
-The ordinary backtick glyph and escaped-pipe Braket dispatch remain separate discrepancies and are excluded from exact SVG expectations here. Matching SVG does not claim full raw-model equality.
+The ordinary backtick glyph and escaped-pipe Braket dispatch were excluded from this corpus; the separate Braket correction below now covers escaped-pipe dispatch. Matching SVG does not claim full raw-model equality.
 
 ### Negation
 
@@ -495,3 +495,9 @@ Constructed bevelled MathML fractions retain a generated stretchy slash wrapper 
 `gather` and `gather*` keep explicit tags and labels local to each row, clear them before the next row, and restore the enclosing tag state when the table ends, including the Mathtools special-row route. Their centered tables retain the equation-nesting guard and repair initial relations in every column after the first. A fixed 67-case corpus compares complete original SVGs in inline and display modes, covering tag suppression/replacement, labels and references, duplicate errors, nesting, three-column rows, and tags before, on, and after special rows. Special commands that end a row preserve the following row and omit an empty final row. Eight state-lifetime guards cover success and error exits from the intercepted route. The two retained responsive-width gather examples now select their unchanged original SVGs.
 
 Physics StarMacro aliases preserve their caller source and suffix, install the joined program before charging the expansion, and continue in the existing row. A retained registered-vec witness compares its complete original SVG and final source/cursor/count; public continuation controls and the fourteen existing StarMacro references preserve alias, font, error and limit behavior. The actual vec/hat argument and VectorBold child parsers retain independent counters without leaking temporary context into the caller suffix. The registered-macro witness is an engine boundary case, not evidence of ordinary original Studio reachability.
+
+### Braket escaped-pipe dispatch
+
+The ordinary `\|` command follows Braket's U+2225 handler before delimiter-symbol lookup, while explicit delimiter readers retain their own U+2016 aliases. Braket and Set retain caller-local separator ownership, group, script and left/right barriers, Set's one-stretchy-separator limit, and single-item completion. Fixed `\set` separators do not advance the limit. The capital Bra/Ket commands retain the original registered macro expansions, and user-defined macros retain precedence. The SVG output preserves the original `braketbar` attribute.
+
+A finite 18-case inline/display corpus checks complete SVGs against D2's pinned MathJax 3.2.2: two retained ordinary-pipe outputs and sixteen newly captured Braket, Set, nesting, macro/Physics, literal-bar, explicit-delimiter and single-item controls. Twenty-one additional source-derived guards check caller argument consumption, owner masking/restoration, macro precedence, the retained ordinary token's compiled attributes, and single-item operator construction order. These tests do not claim general Braket or private-model conformance.

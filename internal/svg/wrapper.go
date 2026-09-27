@@ -661,10 +661,10 @@ func (w *wrapper) handleAttributes(element *Element) {
 		return
 	}
 	for _, name := range w.node.Attributes.ExplicitNames() {
-		// MathJax's handleAttributes copies non-MathML data and ARIA
+		// MathJax's handleAttributes copies non-MathML Braket, data and ARIA
 		// attributes after styles, scale, borders, and colors.  Standard
 		// MathML attributes are consumed by their wrappers instead.
-		if name != "id" && !strings.HasPrefix(name, "data-") && !strings.HasPrefix(name, "aria-") {
+		if name != "id" && name != "braketbar" && !strings.HasPrefix(name, "data-") && !strings.HasPrefix(name, "aria-") {
 			continue
 		}
 		if hasElementAttribute(element, name) {
