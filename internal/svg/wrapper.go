@@ -180,6 +180,22 @@ func (w *wrapper) getVariant() {
 	if w.authoredFontFamily() {
 		return
 	}
+	// CommonMo chooses large operators and contextual pseudo-script variants
+	// before the ordinary variant policy. Authored family handling above also
+	// removes CSS font declarations when these specialized variants apply.
+	if w.node.Kind == "mo" {
+		if boolAttributeDefault(w.node, "largeop", false) {
+			w.variant = font.SmallOp
+			if w.displayStyle {
+				w.variant = font.LargeOp
+			}
+			return
+		}
+		if w.pseudoScriptVariant() {
+			w.variant = font.TeXVariant
+			return
+		}
+	}
 	if name := stringAttribute(w.node, "mathvariant", ""); name != "" && font.ValidVariant(font.Variant(name)) {
 		w.variant = font.Variant(name)
 	} else if w.node.Kind == "mi" {
@@ -188,16 +204,15 @@ func (w *wrapper) getVariant() {
 			w.variant = font.Italic
 		}
 	}
-	if w.node.Kind == "mo" && boolAttributeDefault(w.node, "largeop", false) {
-		if w.displayStyle {
-			w.variant = font.LargeOp
-		} else {
-			w.variant = font.SmallOp
-		}
-	}
 	if value, ok := w.node.Property("variantForm"); ok && truthy(value) {
 		w.variant = font.TeXVariant
 	}
+}
+
+func (w *wrapper) pseudoScriptVariant() bool {
+	explicit, _ := w.node.Attributes.GetExplicit("mathvariant")
+	pseudo, defined := w.node.Property("pseudoscript")
+	return !truthy(explicit) && defined && pseudo == false
 }
 
 // CommonWrapper.getVariant selects explicit-font text for an authored family.
@@ -235,9 +250,9 @@ func (w *wrapper) authoredFontFamily() bool {
 		}
 	}
 	w.styles.other = kept
-	// CommonMo selects its large-operator variant before the generic font
-	// family resolution; CSS font declarations have already been removed.
-	if w.node.Kind == "mo" && boolAttributeDefault(w.node, "largeop", false) {
+	// CommonMo selects large-operator and contextual pseudo-script variants
+	// before family resolution; CSS declarations have already been removed.
+	if w.node.Kind == "mo" && (boolAttributeDefault(w.node, "largeop", false) || w.pseudoScriptVariant()) {
 		return false
 	}
 	if value, ok := w.node.Attributes.GetExplicit("mathvariant"); ok && truthy(value) {
@@ -471,14 +486,7 @@ func (w *wrapper) computeTextBBox(bbox *layout.BBox) {
 	if w.parent != nil {
 		variant = w.parent.variant
 	}
-	text := w.node.Text
-	if w.parent != nil && w.parent.stretchGlyph != 0 {
-		text = string(w.parent.stretchGlyph)
-	}
-	if w.parent != nil && w.parent.node.Kind == "mn" && strings.HasPrefix(text, "-") {
-		text = "−" + strings.TrimPrefix(text, "-")
-	}
-	text = remapAccentText(w.parent, text)
+	text := w.remappedText()
 	for _, codepoint := range text {
 		glyph, ok := font.Lookup(variant, codepoint)
 		if !ok {
@@ -716,14 +724,7 @@ func (w *wrapper) textToSVG(parent *Element) {
 	if w.parent != nil {
 		variant = w.parent.variant
 	}
-	text := w.node.Text
-	if w.parent != nil && w.parent.stretchGlyph != 0 {
-		text = string(w.parent.stretchGlyph)
-	}
-	if w.parent != nil && w.parent.node.Kind == "mn" && strings.HasPrefix(text, "-") {
-		text = "−" + strings.TrimPrefix(text, "-")
-	}
-	text = remapAccentText(w.parent, text)
+	text := w.remappedText()
 	// SVGTextNode gives each text child a positionable group whenever its
 	// parent has multiple children, so addChildren can apply their advances.
 	if w.parent != nil && len(w.parent.children) > 1 {
@@ -735,6 +736,27 @@ func (w *wrapper) textToSVG(parent *Element) {
 	for _, codepoint := range text {
 		x += w.placeChar(codepoint, x, 0, parent, variant)
 	}
+}
+
+// remappedText is shared by measurement and emission. Explicit fonts are
+// handled by each caller; a selected stretch glyph precedes CommonMo's primes
+// property, which in turn precedes the ordinary accent/mo character remap.
+func (w *wrapper) remappedText() string {
+	text := w.node.Text
+	if w.parent != nil && w.parent.stretchGlyph != 0 {
+		return remapAccentText(w.parent, string(w.parent.stretchGlyph))
+	}
+	if w.parent != nil && w.parent.node.Kind == "mo" {
+		if primes, ok := w.parent.node.Property("primes"); ok {
+			if text, ok := primes.(string); ok && text != "" {
+				return text
+			}
+		}
+	}
+	if w.parent != nil && w.parent.node.Kind == "mn" && strings.HasPrefix(text, "-") {
+		text = "−" + strings.TrimPrefix(text, "-")
+	}
+	return remapAccentText(w.parent, text)
 }
 
 func (w *wrapper) hasAncestor(kind string) bool {

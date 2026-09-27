@@ -56,7 +56,7 @@ func TestUnicodePrimePinnedReferences(t *testing.T) {
 		t.Fatal("unbound Unicode prime matrix")
 	}
 	primaryErrors := 0
-	promotedOperatorNames, unchangedNonPrime := 0, 0
+	promotedOperatorNames, promotedLeftQuotes, unchangedNonPrime := 0, 0, 0
 	for _, c := range fixture.Cases {
 		if c.Tree.Children[0].Children[0].Kind == "merror" {
 			primaryErrors++
@@ -91,6 +91,14 @@ func TestUnicodePrimePinnedReferences(t *testing.T) {
 					}
 					delete(prime.Properties, "pseudoscript")
 					wantTree = &comparison
+					unchanged = false
+				} else if c.Name == "left-quote-inline" || c.Name == "left-quote-display" {
+					if c.TeX != "x‘" || c.Display != (c.Name == "left-quote-display") {
+						t.Fatal("changed exact left-quote input")
+					}
+					// D125 restores both original metadata and the rendered prime
+					// without changing the original retained fixture.
+					promotedLeftQuotes++
 					unchanged = false
 				} else {
 					wantSVG, wantTree = boundary.SVGSHA256, boundary.Tree
@@ -153,8 +161,8 @@ func TestUnicodePrimePinnedReferences(t *testing.T) {
 			}
 		})
 	}
-	if promotedOperatorNames != 2 || unchangedNonPrime != 8 {
-		t.Fatal("promoted operator-name/unchanged diagnostic inventory changed", promotedOperatorNames, unchangedNonPrime)
+	if promotedOperatorNames != 2 || promotedLeftQuotes != 2 || unchangedNonPrime != 6 {
+		t.Fatal("promoted operator-name/left-quote/unchanged diagnostic inventory changed", promotedOperatorNames, promotedLeftQuotes, unchangedNonPrime)
 	}
 	if primaryErrors != 16 {
 		t.Fatal("required primary errors changed")
