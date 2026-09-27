@@ -273,8 +273,13 @@ func (w *wrapper) authoredFontFamily() bool {
 func (w *wrapper) getScale() {
 	scale := 1.0
 	if w.scriptLevel != 0 {
-		scale = math.Pow(1/math.Sqrt2, float64(w.scriptLevel))
-		minimum := layout.Length2Em("8px", .8, 1, w.renderer.pxPerEm)
+		multiplier, ok := numberAttribute(w.node, "scriptsizemultiplier")
+		if !ok {
+			// Raw MathML nodes can lack the registered global defaults.
+			multiplier = 0.7071067811865475
+		}
+		scale = math.Pow(multiplier, float64(w.scriptLevel))
+		minimum := layout.Length2Em(stringAttribute(w.node, "scriptminsize", "8px"), .8, 1, w.renderer.pxPerEm)
 		if scale < minimum {
 			scale = minimum
 		}
