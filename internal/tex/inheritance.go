@@ -4,7 +4,7 @@
 // This file is a Go translation and modification of MathJax 3.2.2.
 // Sources: ts/core/MmlTree/{MmlNode,OperatorDictionary}.ts;
 // MmlNodes/{math,mathchoice,mstyle,mfrac,msqrt,mroot,msubsup,munderover,
-// mmultiscripts,mtable,mtr,mi,mo,maligngroup,mn,mtext,mspace,ms,mglyph}.ts;
+// mmultiscripts,mtable,mtr,mi,mo,maligngroup,mn,mtext,mspace,ms,mglyph,semantics}.ts;
 // and ts/input/tex/FilterUtil.ts.
 
 package tex
@@ -179,6 +179,11 @@ func addInheritedValues(current *inheritedAttributes, source string, values ...a
 
 func setChildInheritedAttributes(n *mml.Node, attributes *inheritedAttributes, display bool, level int, prime bool) {
 	switch n.Kind {
+	case "annotation", "annotation-xml":
+		// MmlAnnotationXML stops child inheritance; MmlAnnotation inherits
+		// that no-op. The annotation itself still receives its attributes.
+		return
+
 	case "math":
 		attributes = addInheritedAttributes(attributes, n.Kind, n.Attributes.Explicit())
 		displaystyle, _ := n.Attributes.Get("displaystyle")
