@@ -16,9 +16,24 @@ import (
 
 func node(kind string, children ...*mml.Node) *mml.Node {
 	if hasInferredMrow(kind) {
-		if len(children) != 1 || children[0] == nil || children[0].Kind != "mrow" || !children[0].Flags.Inferred {
-			children = []*mml.Node{forcedRow(children, true)}
+		// Negative-arity constructors create their own inferred content row,
+		// then append the supplied children through that unbounded row. Even
+		// one supplied inferred row is flattened, never reused as the owner.
+		children = []*mml.Node{forcedRow(children, true)}
+	}
+	if definition, ok := texMMLFactory.Definition(kind); ok && definition.Flags.Arity == mmlUnboundedArity {
+		// AbstractMmlNode.appendChild appends an inferred child's contents
+		// directly into an unbounded parent. Preserve their identities/order
+		// and the caller's slice; the factory links their new parent below.
+		flattened := make([]*mml.Node, 0, len(children))
+		for _, child := range children {
+			if child != nil && child.Flags.Inferred {
+				flattened = append(flattened, child.Children...)
+			} else {
+				flattened = append(flattened, child)
+			}
 		}
+		children = flattened
 	}
 	// AbstractMmlNode.appendChild converts an inferred mrow to an explicit
 	// mrow when it is inserted into a fixed-arity node (mfrac, mroot,
