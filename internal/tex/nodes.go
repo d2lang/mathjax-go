@@ -57,6 +57,11 @@ func node(kind string, children ...*mml.Node) *mml.Node {
 	}
 	n := texMMLFactory.Create(kind, children...)
 	switch kind {
+	case "TeXAtom":
+		// TeXAtom initializes its actual class to ORD and records a separate
+		// serialization property. Changing that property does not set the field.
+		n.TeXClass = mml.TeXClassOrd
+		n.SetProperty("texClass", mml.TeXClassOrd)
 	case "mi", "mn", "mtext", "ms", "mglyph", "msqrt", "mroot", "merror", "mphantom", "menclose", "mtable":
 		n.TeXClass = mml.TeXClassOrd
 	case "mfenced":

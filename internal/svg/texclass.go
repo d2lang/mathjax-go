@@ -265,7 +265,9 @@ func effectiveTeXClass(node *mml.Node) mml.TeXClass {
 	if node == nil {
 		return mml.TeXClassNone
 	}
-	if node.TeXClass != mml.TeXClassNone {
+	// TeXAtom has a concrete class field even when it is explicitly NONE.
+	// Its serialization property is independent and cannot override the field.
+	if node.Kind == "TeXAtom" || node.TeXClass != mml.TeXClassNone {
 		return node.TeXClass
 	}
 	// MmlNode.texClass can be supplied as an internal property on any node,
