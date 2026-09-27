@@ -359,9 +359,14 @@ func alignAMSMultlineCells(table *mml.Node) {
 }
 
 func prefixRelationColumns(table *mml.Node) {
+	prefixEquationRelationColumns(table, 2)
+}
+
+func prefixEquationRelationColumns(table *mml.Node, step int) {
 	for _, tableRow := range table.Children {
-		for column, cell := range tableRow.Children {
-			if column%2 == 0 || len(cell.Children) == 0 {
+		for column := 1; column < len(tableRow.Children); column += step {
+			cell := tableRow.Children[column]
+			if len(cell.Children) == 0 {
 				continue
 			}
 			contents := cell.Children[0]
@@ -470,6 +475,17 @@ func repeatAMSEqnArrayDefinition(definition string, maximum int) string {
 // finishAMSEqnArrayTable applies the source map's initial EqnArray column
 // definitions followed by EqnArrayItem.EndTable's repetition pass.
 func finishAMSEqnArrayTable(table *mml.Node, environment string, maximum int) {
+	if environment == "gather" || environment == "gather*" {
+		resetTableAttributes(table,
+			"displaystyle", true,
+			"columnalign", "center",
+			"columnspacing", "1em",
+			"rowspacing", "3pt",
+			"side", "right",
+			"minlabelspacing", "0.8em",
+		)
+		return
+	}
 	spacing := "0em"
 	switch environment {
 	case "align", "align*", "aligned":
