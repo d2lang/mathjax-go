@@ -340,6 +340,7 @@ func setChildInheritedAttributes(n *mml.Node, attributes *inheritedAttributes, d
 
 	case "mo":
 		applyOperatorInheritance(n)
+		checkBacktickPseudoScript(n)
 		checkMathAccent(n)
 		return
 
@@ -350,6 +351,40 @@ func setChildInheritedAttributes(n *mml.Node, attributes *inheritedAttributes, d
 	for _, child := range n.Children {
 		setInheritedAttributes(child, attributes, display, level, prime)
 	}
+}
+
+// checkBacktickPseudoScript ports MmlMo's pseudo-script and prime checks for
+// U+2018, the token produced by both a literal backtick and a direct left quote.
+// Keep the raw token intact: the renderer consumes the separate primes value.
+// Other quote/prime families retain their separately qualified behavior.
+func checkBacktickPseudoScript(n *mml.Node) {
+	text := textContent(n)
+	if text == "" || strings.Trim(text, "‘") != "" {
+		return
+	}
+	core := n
+	for parent := core.Parent; parent != nil && parent.Kind != "math" && parent.Flags.Embellished; parent = core.Parent {
+		operator := parent
+		for operator.Kind != "mo" && operator.Flags.Embellished {
+			next := operator.Core()
+			if next == nil || next == operator {
+				break
+			}
+			operator = next
+		}
+		if operator != n {
+			break
+		}
+		core = parent
+	}
+	parent := core.ParentNode()
+	pseudo := parent == nil || (parent.Kind != "msup" && parent.Kind != "msubsup" && parent.Kind != "mmultiscripts")
+	n.SetProperty("pseudoscript", pseudo)
+	if pseudo {
+		n.Attributes.SetInherited("lspace", 0)
+		n.Attributes.SetInherited("rspace", 0)
+	}
+	n.SetProperty("primes", strings.ReplaceAll(text, "‘", "‵"))
 }
 
 // applyOperatorInheritance ports MmlMo.checkOperatorTable.  The form lookup is
