@@ -9,7 +9,42 @@ import (
 
 	"github.com/d2lang/mathjax-go/internal/font"
 	"github.com/d2lang/mathjax-go/internal/layout"
+	"github.com/d2lang/mathjax-go/internal/mml"
+	"github.com/d2lang/mathjax-go/internal/ordered"
 )
+
+// CommonMfrac constructs the slash after its authored children are wrapped.
+// Keep its node separate from the input MathML, and size it once, just as the
+// original constructor does rather than recreating it during bbox queries.
+func (w *wrapper) initializeBevel() {
+	if len(w.children) < 2 || !boolAttributeDefault(w.node, "bevelled", false) {
+		return
+	}
+	_, _, delta, numerator, denominator := w.bevelData(w.fractionDisplay())
+	height := math.Max(numerator.Scale*(numerator.H+numerator.D),
+		denominator.Scale*(denominator.H+denominator.D)) + 2*delta
+
+	defaults := ordered.New[mml.Property]()
+	defaults.Set("mathvariant", "normal")
+	defaults.Set("mathsize", mml.Inherit)
+	mo := mml.NewNode("mo", defaults, w.node.Attributes.Globals(), mml.NewText("/"))
+	mo.Flags.Token, mo.Flags.Embellished = true, true
+	mo.Attributes.Set("stretchy", true)
+	// AbstractMmlNode.inheritAttributesFrom copies only these effective values,
+	// not authored IDs, fonts, colors, or other fraction attributes.
+	mo.Attributes.SetInherited("displaystyle", attribute(w.node, "displaystyle", w.displayStyle))
+	mo.Attributes.SetInherited("scriptlevel", attribute(w.node, "scriptlevel", w.scriptLevel))
+	if w.node.Attributes.IsSet("mathsize") {
+		mo.Attributes.SetInherited("mathsize", attribute(w.node, "mathsize", "normal"))
+	}
+	if prime, ok := w.node.Property("texprimestyle"); ok && truthy(prime) {
+		mo.SetProperty("texprimestyle", true)
+	}
+	w.bevel = w.renderer.wrap(mo, w, w.scriptLevel, w.displayStyle)
+	mo.Attributes.Set("symmetric", true)
+	w.bevel.canStretch(font.DirectionVertical)
+	w.bevel.getStretchedVariant([]float64{height}, true)
+}
 
 func (w *wrapper) fractionPad() float64 {
 	if value, ok := w.node.Property("withDelims"); ok && truthy(value) {
@@ -88,12 +123,9 @@ func (w *wrapper) fractionUVQ(display bool) (u, v, q float64, numerator, denomin
 }
 
 func (w *wrapper) computeBevelledBBox(bbox *layout.BBox, display bool) {
-	// The bevel glyph is added by the stretchy-delimiter tranche. Retain the
-	// exact numerator/denominator offsets and a conservative slash width until
-	// that internal wrapper is available.
 	u, v, delta, numerator, denominator := w.bevelData(display)
 	bbox.Combine(numerator, 0, u)
-	bbox.Combine(layout.NewBBox(.5, .75, .25), bbox.W-delta/2, 0)
+	bbox.Combine(w.bevel.outerBBox(), bbox.W-delta/2, 0)
 	bbox.Combine(denominator, bbox.W-delta/2, v)
 }
 
@@ -162,20 +194,15 @@ func (w *wrapper) atopToSVG(element *Element, display bool) {
 }
 
 func (w *wrapper) bevelledToSVG(element *Element, display bool) {
-	// Stretchy slash assembly is completed together with mo. This fallback is
-	// deterministic and keeps child placement/source order intact.
 	numerator, denominator := w.children[0], w.children[1]
 	u, v, delta, nbox, dbox := w.bevelData(display)
 	width := (nbox.L + nbox.W + nbox.R) * nbox.RScale
 	numerator.toSVG(element)
-	numerator.place(nbox.L*nbox.RScale, u)
-	slash := NewElement("g").SetAttr("data-mml-node", "mo")
-	element.Append(slash)
-	temporary := &wrapper{renderer: w.renderer, variant: font.Normal}
-	temporary.placeChar('/', 0, 0, slash, font.Normal)
-	temporary.place(width-delta/2, 0, slash)
+	w.bevel.toSVG(element)
 	denominator.toSVG(element)
-	denominator.place(width+.5+dbox.L*dbox.RScale-delta, v)
+	numerator.place(nbox.L*nbox.RScale, u)
+	w.bevel.place(width-delta/2, 0)
+	denominator.place(width+w.bevel.outerBBox().W+dbox.L*dbox.RScale-delta, v)
 }
 
 func alignX(width float64, bbox *layout.BBox, align string) float64 {
