@@ -348,6 +348,20 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 			_, registeredMacro := p.state.macros[name]
 			_, registeredDelimiter := p.state.pairedDelimiters[name]
 			registered := registeredMacro || registeredDelimiter
+			if name == "ArrowBetweenLines" && !registered {
+				if p.arrayCell == nil || p.arrayCell.equation == nil || owner != nil || auto != nil || infixPending ||
+					len(styles) != 0 || len(positions) != 0 || pending != nil ||
+					bool(negation) || dots.active() || pendingFunction {
+					return nil, "", notInAlignment(name)
+				}
+				if p.arrayCell.offset+len(nodes) != 0 || p.arrayCell.equation.columns != 0 {
+					return nil, "", texError("BetweenLines", "%s must be on a row by itself", "\\"+name)
+				}
+				if err := p.arrowBetweenLines(name); err != nil {
+					return nil, "", err
+				}
+				continue
+			}
 			if isHFill(name) && !registered {
 				// HFill requires the actual top item to be ArrayItem. Pending
 				// items and real child scopes reject it before reduction.

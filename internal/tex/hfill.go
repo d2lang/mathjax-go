@@ -8,8 +8,9 @@ import "github.com/d2lang/mathjax-go/internal/mml"
 // HFill records ArrayItem.Size without emitting an MML node. SetFont changes
 // the same environment, so its continuation retains the preceding node count.
 type arrayCellState struct {
-	fills  []int
-	offset int
+	fills    []int
+	offset   int
+	equation *equationRowState
 }
 
 func isHFill(name string) bool {

@@ -16,7 +16,7 @@ import (
 
 func mathtoolsEnvironmentHasSpecial(source string) bool {
 	for _, command := range []string{
-		"\\Aboxed", "\\ArrowBetweenLines", "\\vdotswithin", "\\shortvdotswithin",
+		"\\Aboxed", "\\vdotswithin", "\\shortvdotswithin",
 		"\\MTFlushSpaceAbove", "\\MTFlushSpaceBelow", "\\shoveleft", "\\shoveright",
 	} {
 		if strings.Contains(source, command) {
@@ -342,35 +342,6 @@ func (p *parser) mathtoolsAlignment(environment string) ([]*mml.Node, error) {
 	adjustedRowSpacing := map[int]bool{}
 	for rowIndex, cells := range rows {
 		joined := strings.TrimSpace(strings.Join(cells, "&"))
-		arrowIndex := strings.Index(joined, "\\ArrowBetweenLines")
-		if arrowIndex == 0 || (tagState != nil && arrowIndex > 0) {
-			if tagState != nil {
-				prefix, err := p.mathtoolsContinuationNodes(joined[:arrowIndex])
-				if err != nil {
-					return nil, err
-				}
-				if len(prefix) != 0 {
-					return nil, texError("BetweenLines", "%s must be on a row by itself", "\\ArrowBetweenLines")
-				}
-			}
-			arrowRows, rest, err := p.mathtoolsArrowBetweenLines(joined[arrowIndex:])
-			if err != nil {
-				return nil, err
-			}
-			if tagState == nil {
-				if err := appendRows(arrowRows...); err != nil {
-					return nil, err
-				}
-			} else {
-				if err := appendRows(arrowRows[0]); err != nil {
-					return nil, err
-				}
-				if err := appendContinuation(rest, rowIndex < len(rows)-1); err != nil {
-					return nil, err
-				}
-			}
-			continue
-		}
 		if strings.Contains(joined, "\\shortvdotswithin") {
 			before, arg, rest, err := mathtoolsCommandParts(joined, "shortvdotswithin")
 			if err != nil {
@@ -466,24 +437,25 @@ func (p *parser) mathtoolsAlignment(environment string) ([]*mml.Node, error) {
 			}
 			continue
 		}
-		mtds := make([]*mml.Node, 0, len(cells))
-		for _, raw := range cells {
-			content, err := p.parseArrayCellString(strings.TrimSpace(raw))
-			if err != nil {
+		if isEquationArray(environment) {
+			if err := p.parseEquationRow(cells, rowIndex == len(rows)-1, func(row *mml.Node) error { return appendRows(row) }); err != nil {
 				return nil, err
 			}
-			mtds = append(mtds, node("mtd", content))
-			if flalign != nil {
-				if err := flalign.endEntry(len(mtds)); err != nil {
+		} else {
+			mtds := make([]*mml.Node, 0, len(cells))
+			for _, raw := range cells {
+				content, err := p.parseArrayCellString(strings.TrimSpace(raw))
+				if err != nil {
 					return nil, err
 				}
+				mtds = append(mtds, node("mtd", content))
 			}
-		}
-		if omitFinalArrayRow(rowIndex, len(rows), mtds) {
-			continue
-		}
-		if err := appendRows(node("mtr", mtds...)); err != nil {
-			return nil, err
+			if omitFinalArrayRow(rowIndex, len(rows), mtds) {
+				continue
+			}
+			if err := appendRows(node("mtr", mtds...)); err != nil {
+				return nil, err
+			}
 		}
 	}
 	table := node("mtable", mrows...)
@@ -570,38 +542,6 @@ func (p *parser) mathtoolsMultlineBody(body string) ([]*mml.Node, error) {
 	table := node("mtable", mrows...)
 	finishAMSMultlineTable(table)
 	return []*mml.Node{table}, nil
-}
-
-func (p *parser) mathtoolsArrowBetweenLines(raw string) ([]*mml.Node, string, error) {
-	scanner := &parser{source: raw, state: p.state, display: p.display}
-	scanner.skipSpaces()
-	scanner.pos++
-	name := scanner.readControlSequence()
-	star := scanner.readStar()
-	defaultArrow := "\\Updownarrow"
-	symbol, _, err := scanner.readBrackets(&defaultArrow)
-	if err != nil {
-		return nil, "", err
-	}
-	expansion := symbol + "\\quad"
-	if star {
-		expansion = "\\quad" + symbol
-	}
-	content, err := p.parseString(symbol)
-	if err != nil {
-		return nil, "", err
-	}
-	space := node("mstyle", mathtoolsSpace("1em"))
-	children := unwrapInferred(content)
-	if star {
-		children = append([]*mml.Node{space}, children...)
-	} else {
-		children = append(children, space)
-	}
-	content = forcedRow(children, true)
-	_ = name
-	_ = expansion
-	return []*mml.Node{node("mtr", node("mtd", content)), node("mtr", node("mtd"))}, raw[scanner.pos:], nil
 }
 
 func (p *parser) mathtoolsVDots(argument string, flush bool) *mml.Node {
