@@ -63,7 +63,7 @@ func TestNonscriptArrayCompositionOriginalReferences(t *testing.T) {
 	if err := json.Unmarshal(data, &fixture); err != nil {
 		t.Fatal(err)
 	}
-	if fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || len(fixture.Cases) != 476 {
+	if fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || len(fixture.Cases) != 572 {
 		t.Fatal("unbound Nonscript array references")
 	}
 	seen := map[string]bool{}

@@ -84,16 +84,27 @@ runtime failures and eight existing shoveleft/shoveright diagnostic-wording
 differences; every residual is byte-unchanged from the reviewed Nonscript source.
 The original runtime outputs remain raw, and Go stays nonpanicking.
 
-Together the two inventories contain **2,768 unique inputs, 2,508 complete
-original SVG assertions, and 260 raw observations**. Against main146 there are
-**2,352 fixes and 156 exact controls**. The 118 dedicated required-child failure
+Together the two inventories contain **2,864 unique inputs, 2,604 complete
+original SVG assertions, and 260 raw observations**. Against main147 there are
+**2,448 fixes and 156 exact controls**. The 118 dedicated required-child failure
 checks remain unchanged. No original reference was replaced by Go output.
 
-The main146 published-input replay covers 3,919 unique inputs. Its only two
-byte differences are known cancel attribute-order changes. Forty-eight repeat
-runs per input and binary show both exact serializations, with identical full
-parsed XML trees. `nonscript_array_published_replay.json` preserves the actual
-outputs and proof; no rendering or source regression is hidden by a qualifier.
+The candidate is finally composed with merged main147,
+`8c7516e9747a72ef7ecae4ac8d6d6cfc4bfd3332`, which adds the original optional
+cramped styles. All 2,768 preceding baseline and candidate outcomes remain
+byte-identical. Another 96 fresh original inputs exercise all four optional
+styles with ordinary/fixed spaces, font declarations, grouped spaces and
+aligned entries, both alone and in superscripts. All 96 are exact and all 96
+fix baseline failures. They are included in the array-composition fixture;
+its earlier 486-case metadata remains historical, with the additional 96
+explicitly recorded as `crampedStyleComposition`.
+
+The main147 published-input replay covers 4,011 unique inputs. Its only three
+byte differences are known cancel attribute-order changes, with no source
+change. Forty-eight repeat runs per input and binary bind outputs to the same
+two exact serializations, with identical full parsed XML trees.
+`nonscript_array_published_replay.json` preserves those outputs and proof.
+No rendering or source regression is hidden by a qualifier.
 
 Regenerate all four original-reference files with:
 
@@ -109,3 +120,14 @@ WebAssembly build all pass. The rebased production source is identical to
 the independently reviewed composed main143 candidate; no gate repair or
 reference substitution was needed. Both reference files were regenerated
 again after recording the merged baseline and remained byte-identical.
+
+## Final validation on main147
+
+The full frozen-original suite, race tests, vet, and WebAssembly build pass
+after composing with merged array alignment and optional cramped styles. All
+four original files regenerate byte-identically. Independent review confirms
+unchanged prior outcomes, exact fresh style controls, and zero source-related
+changes in the historical replay. All 52 D2 witnesses match their original
+SVGs. The new `parity/nonscript-spacing` witness preserves the ordinary gap and
+removes the gap inside the exponent; its before SVG records the formerly
+undefined command, and fixed/original SVGs are byte-identical.
