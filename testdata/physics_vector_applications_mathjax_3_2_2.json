@@ -5,7 +5,7 @@
     "polyfills.js": "7fe1d048c78b0e09854c1259f7413868a51cc8f0c822489eb1ac36ae6c85ce01",
     "setup.js": "a52cb0bbabfbd7796b9fedd793b9386c474e3123e788ee151cbe47ca1fa6e881"
   },
-  "baselineCommit": "cdb9a591483e6ed813956a3ac6312b732559ab47",
+  "baselineCommit": "3335ca93f6865eca2ce7baa595d29cf17a981cab",
   "cases": [
     {
       "name": "vector-application-0000",

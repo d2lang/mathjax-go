@@ -5,6 +5,8 @@ The Go handlers for `gradient`, `grad`, `laplacian`, `divergence`, `div`, and
 added parentheses around braced and unbraced operands, converted square
 brackets to parentheses, and isolated argument declarations from the caller.
 They also bypassed redefinitions of commands inside the operator.
+The generic symbol fallback intercepted `\div` before its vector handler,
+so it rendered a division sign instead of the Physics divergence operator.
 
 The pinned MathJax 3.2.2
 [PhysicsMappings.ts](https://github.com/mathjax/MathJax-src/blob/ad8f5c21cb810236551da8c6512ba733e67357ee/ts/input/tex/physics/PhysicsMappings.ts#L76)
@@ -43,7 +45,7 @@ and 754 original error SVGs. The fixture records source commit
 Each reference uses a fresh VM, font cache none, `em=16`, `ex=8`, and the
 recorded display mode.
 
-Against main127 (`cdb9a591483e6ed813956a3ac6312b732559ab47`), 1,750 of these
+Against main128 (`3335ca93f6865eca2ce7baa595d29cf17a981cab`), 1,750 of these
 references failed and now match exactly. The 2,464-case audit has no formerly
 exact regressions. All 72 vector controls preserved with the preceding
 OperatorApplication change now match, including its 52 mismatches. Their
@@ -87,3 +89,7 @@ cells, empty and nonempty alignment positions, font continuation, positions,
 and EqnArray/Multline subclasses; all 276 match, including 188 baseline
 failures. Rechecking the preceding 2,122 references and all 66 raw receipts
 on main127 changed no results.
+
+The full reference inventory and all 66 historical residual outputs remain
+unchanged when composed with main128. The full frozen-oracle, race, vet and
+WebAssembly checks also pass on that combined source.
