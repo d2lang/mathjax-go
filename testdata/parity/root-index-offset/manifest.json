@@ -1,10 +1,10 @@
 {
   "d2Commit": "01bc7ecdbdd04c13d6fe5df1967d2d9aa14ae579",
   "beforeMathjaxCommit": "bfc9bc01fe498fda63402dc8633ee6f8e999b7e8",
-  "afterCodeCommit": "80c300b0049f81b9ffccf475f3929acd617026db",
+  "afterCodeCommit": "f4308018e3693d9b0645c93ac252265786d76400",
   "tex": "\\sqrt[\\uproot{8}\\leftroot{-8}3]{x}",
   "files": {
-    "README.md": "653d6f588bfe31472353f1b095cae575dfbc2e5ffff3a41f06bcdbf1d13c2fab",
+    "README.md": "0674b962a3a9622fdfa17be1c9762c5062aa35154a2aa8156f5190ef93740fd5",
     "after.png": "83b298a1ffd9bd3ecfc0faa06adddb16c3abe030a4cc2df46ebe5f6aac5f1691",
     "after.svg": "b303ce470ca129bb39cf33c88be5bad8d427edadeee0eb626ae84a0cfbe78715",
     "before.png": "3c7f9aa37e2a8737a1c5225c12bb8e8c3d27b32bb6669bb962f834489075e8ca",

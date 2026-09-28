@@ -7,7 +7,7 @@ dimensions. `after.svg` and `original.svg` are byte-identical.
 
 - D2 renderer: `01bc7ecdbdd04c13d6fe5df1967d2d9aa14ae579`.
 - Before mathjax-go: `bfc9bc01fe498fda63402dc8633ee6f8e999b7e8`.
-- After mathjax-go code: `80c300b0049f81b9ffccf475f3929acd617026db` (plus these evidence files).
+- After mathjax-go code: `f4308018e3693d9b0645c93ac252265786d76400` (plus these evidence files).
 - Original: D2's frozen MathJax 3.2.2 assets, fetched from D2 commit
   `5666d9337c77a4803b9cd60cb1c5a24439d0f949`; SHA-256 values are in `manifest.json`
   and repository `PROVENANCE.md`.
