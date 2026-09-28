@@ -5,7 +5,7 @@
     "polyfills.js": "7fe1d048c78b0e09854c1259f7413868a51cc8f0c822489eb1ac36ae6c85ce01",
     "setup.js": "a52cb0bbabfbd7796b9fedd793b9386c474e3123e788ee151cbe47ca1fa6e881"
   },
-  "baselineCommit": "0e6318fe3b8754346a07577f98dbe5632c81161a",
+  "baselineCommit": "a161cb04f8bd20d459604c283ffc9a4dcf190f2e",
   "note": "Raw untouched original, baseline and candidate responses for inherited differences. None was exact at baseline; these are not passing references. No output normalization.",
   "cases": [
     {
@@ -1570,7 +1570,7 @@
     },
     {
       "name": "delimiter-cache-1374",
-      "tex": "\\overline{\\mmlToken{mo}[stretchy=\"true\",minsize=\"1.199em\",maxsize=\"1.199em\"]{\u2192}}",
+      "tex": "\\overline{\\mmlToken{mo}[stretchy=\"true\",minsize=\"1.199em\",maxsize=\"1.199em\"]{→}}",
       "display": false,
       "category": "authored-fixed-size",
       "original": {
@@ -1585,7 +1585,7 @@
     },
     {
       "name": "delimiter-cache-1375",
-      "tex": "\\overline{\\mmlToken{mo}[stretchy=\"true\",minsize=\"1.199em\",maxsize=\"1.199em\"]{\u2192}}",
+      "tex": "\\overline{\\mmlToken{mo}[stretchy=\"true\",minsize=\"1.199em\",maxsize=\"1.199em\"]{→}}",
       "display": true,
       "category": "authored-fixed-size",
       "original": {
@@ -1600,7 +1600,7 @@
     },
     {
       "name": "delimiter-cache-1386",
-      "tex": "\\overline{\\mmlToken{mo}[stretchy=\"true\",minsize=\"2.399em\",maxsize=\"2.399em\"]{\u2192}}",
+      "tex": "\\overline{\\mmlToken{mo}[stretchy=\"true\",minsize=\"2.399em\",maxsize=\"2.399em\"]{→}}",
       "display": false,
       "category": "authored-fixed-size",
       "original": {
@@ -1615,7 +1615,7 @@
     },
     {
       "name": "delimiter-cache-1387",
-      "tex": "\\overline{\\mmlToken{mo}[stretchy=\"true\",minsize=\"2.399em\",maxsize=\"2.399em\"]{\u2192}}",
+      "tex": "\\overline{\\mmlToken{mo}[stretchy=\"true\",minsize=\"2.399em\",maxsize=\"2.399em\"]{→}}",
       "display": true,
       "category": "authored-fixed-size",
       "original": {
@@ -1630,7 +1630,7 @@
     },
     {
       "name": "delimiter-cache-1392",
-      "tex": "\\overline{\\mmlToken{mo}[stretchy=\"true\",minsize=\"2.401em\",maxsize=\"2.401em\"]{\u2192}}",
+      "tex": "\\overline{\\mmlToken{mo}[stretchy=\"true\",minsize=\"2.401em\",maxsize=\"2.401em\"]{→}}",
       "display": false,
       "category": "authored-fixed-size",
       "original": {
@@ -1645,7 +1645,7 @@
     },
     {
       "name": "delimiter-cache-1393",
-      "tex": "\\overline{\\mmlToken{mo}[stretchy=\"true\",minsize=\"2.401em\",maxsize=\"2.401em\"]{\u2192}}",
+      "tex": "\\overline{\\mmlToken{mo}[stretchy=\"true\",minsize=\"2.401em\",maxsize=\"2.401em\"]{→}}",
       "display": true,
       "category": "authored-fixed-size",
       "original": {

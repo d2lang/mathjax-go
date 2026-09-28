@@ -36,8 +36,8 @@ comes from the untouched frozen runtime.
 
 `delimiter_cache_mathjax_3_2_2.json` contains **1,414 complete original SVGs**:
 1,356 valid renderings and 58 original error renderings. It records the pinned
-source, verified frozen D2 asset hashes, and merged main132 baseline
-`0e6318fe3b8754346a07577f98dbe5632c81161a`. The baseline fails 510 references.
+source, verified frozen D2 asset hashes, and merged main133 baseline
+`a161cb04f8bd20d459604c283ffc9a4dcf190f2e`. The baseline fails 510 references.
 The full 1,534-input corpus has zero formerly exact regressions.
 
 Coverage includes fixed and assembled size boundaries, six fence families,
@@ -71,6 +71,11 @@ separate sizing/depth difference. Three border-style forms now have the
 original glyph placements and viewport; their remaining differences are
 CSS declaration order and 0.1 SVG-unit border-corner rounding. No new visible
 regression was found. The unchanged and changed residuals remain raw.
+
+A further composition check renders all 1,656 distinct inputs in the 15
+published residual inventories against merged main133 and this candidate.
+Of 288 changed results, 266 become exact and the other 22 are precisely the
+changed residuals inspected above. No formerly exact case regresses.
 
 Regenerate both files with
 `python3 testdata/generate_delimiter_cache.py PINNED_ASSETS NODE`. The generator
