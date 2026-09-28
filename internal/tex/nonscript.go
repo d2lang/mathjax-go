@@ -3,7 +3,11 @@
 // Sources: BaseItems.NonscriptItem and BaseConfiguration.filterNonscript.
 package tex
 
-import "github.com/d2lang/mathjax-go/internal/mml"
+import (
+	"fmt"
+
+	"github.com/d2lang/mathjax-go/internal/mml"
+)
 
 // NonscriptItem remembers only the immediately following MML item when it
 // contains a space. Other stack items consume it; commands which push no item
@@ -35,7 +39,7 @@ func (p *parser) nonscriptSpace(space *mml.Node) *mml.Node {
 // The source filter runs after inheritance, before moveLimits/cleanStretchy.
 // Retained styled spaces shed only the temporary row; script spaces are
 // removed with their wrapper. Genuine authored groups never enter this list.
-func filterNonscript(spaces []*mml.Node) {
+func filterNonscript(spaces []*mml.Node) error {
 	for _, space := range spaces {
 		parent := space.Parent
 		if parent == nil {
@@ -45,9 +49,16 @@ func filterNonscript(spaces []*mml.Node) {
 		// The source's > 0 comparison uses the same ECMAScript scalar
 		// number conversion as the existing maction selection helper.
 		if mml.MactionSelectionNumber(level, exists) > 0 {
+			// The original filter splices required children too, which can
+			// make its output wrapper throw. Report that conversion failure
+			// instead of handing an incomplete fixed-arity node to layout.
+			if arity := parent.Flags.Arity; arity > 0 && arity != mmlUnboundedArity && len(parent.Children)-1 < arity {
+				return fmt.Errorf("nonscript removal leaves %s without a required child", parent.Kind)
+			}
 			_ = parent.RemoveChild(space)
 		} else if space.Kind == "mrow" && len(space.Children) != 0 {
 			_ = parent.ReplaceChild(space.Children[0], space)
 		}
 	}
+	return nil
 }
