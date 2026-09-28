@@ -395,7 +395,11 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 				pushStyle(mjSourceObject{{Name: "mathsize", Value: emLength(size)}})
 				continue
 			}
-			if variant, ok := fontDeclarations[name]; ok {
+			// User registrations have command-map precedence over SetFont.
+			// Let commandNodes invoke an overriding macro or paired delimiter.
+			_, fontMacro := p.state.macros[name]
+			_, fontDelimiter := p.state.pairedDelimiters[name]
+			if variant, ok := fontDeclarations[name]; ok && !fontMacro && !fontDelimiter {
 				// SetFont changes the current environment without pushing a
 				// stack item, so pending Prime/Not/Dots items stay in this row.
 				if len(styles) != 0 || pending != nil || bool(negation) || dots.active() || len(positions) != 0 {
@@ -1204,10 +1208,7 @@ func emLength(value float64) string {
 	return formatted + "em"
 }
 
-var fontDeclarations = map[string]string{
-	"rm": "normal", "bf": "bold", "it": "-tex-mathit", "cal": "-tex-calligraphic",
-	"tt": "monospace", "sf": "sans-serif",
-}
+var fontDeclarations = baseFontMappings("SetFont")
 
 type infixFractionSpec struct {
 	attributes  map[string]any

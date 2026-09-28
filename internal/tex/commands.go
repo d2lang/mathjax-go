@@ -122,6 +122,10 @@ func (p *parser) commandNodes(name string, after **derivativeAutoOpen) ([]*mml.N
 		return []*mml.Node{fn}, nil
 	}
 
+	if _, ok := mathVariants[name]; ok {
+		return p.mathFont(name)
+	}
+
 	switch name {
 	case "not":
 		p.commandNot = true
@@ -227,8 +231,6 @@ func (p *parser) commandNodes(name string, after **derivativeAutoOpen) ([]*mml.N
 		return p.hboxCommand(name, "monospace", false)
 	case "textsf":
 		return p.hboxCommand(name, "sans-serif", false)
-	case "mathrm", "mathbf", "mathit", "mathsf", "mathtt", "mathbb", "mathcal", "mathscr", "mathfrak", "boldsymbol":
-		return p.mathFont(name)
 	case "operatorname":
 		return p.operatorName(name)
 	case "DeclareMathOperator":
@@ -983,11 +985,12 @@ func textRow(raw string) *mml.Node {
 	return node("mtext", mml.NewText(strings.ReplaceAll(raw, "~", "\u00a0")))
 }
 
-var mathVariants = map[string]string{
-	"mathrm": "normal", "mathbf": "bold", "mathit": "-tex-mathit", "mathsf": "sans-serif",
-	"mathtt": "monospace", "mathbb": "double-struck", "mathcal": "-tex-calligraphic",
-	"mathscr": "script", "mathfrak": "fraktur", "boldsymbol": "bold-italic",
-}
+var mathVariants = func() map[string]string {
+	variants := baseFontMappings("MathFont")
+	// Preserve the pre-existing Go-only extension separately from source aliases.
+	variants["boldsymbol"] = "bold-italic"
+	return variants
+}()
 
 func (p *parser) mathFont(name string) ([]*mml.Node, error) {
 	raw, _, err := p.readArgument(name, false)
