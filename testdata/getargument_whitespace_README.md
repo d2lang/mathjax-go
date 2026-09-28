@@ -37,14 +37,13 @@ published here. These are per-fix input counts, not globally unique MathJax
 coverage totals.
 
 The independent method fixture under `internal/tex/testdata` retains all
-308 original GetArgument observations. Of these, 302 assert the returned
-value or exact error, consumed UTF-8 byte cursor, and remaining source. The
-original UTF-16 cursor is also preserved. Six observations of an escaped LF,
-CR, or U+2028 retain a pre-existing GetCS value mismatch: the original returns
-control-space, while Go returns the escaped line character. Their source path
-and baseline value/cursor are bound separately; these are not normalized into
-passing assertions and their input begins with a backslash, so the changed
-leading-whitespace loop is never entered.
+308 original GetArgument observations. All now assert the returned value or
+exact error, consumed UTF-8 byte cursor, and remaining source. The original
+UTF-16 cursor is also preserved. The whitespace change initially asserted 302
+and kept six escaped LF, CR or U+2028 observations raw. The subsequent GetCS
+line-ending correction promotes those six unchanged originals to complete
+method assertions. Their historical baseline receipts remain in
+`getargument_whitespace_method_residuals.json` for provenance.
 
 Public controls include both fraction arguments, font and text readers,
 phantoms, decorations, macros, environment names and column specifications,

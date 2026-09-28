@@ -1,0 +1,603 @@
+{
+  "mathjaxGitCommit": "ad8f5c21cb810236551da8c6512ba733e67357ee",
+  "assetsSHA256": {
+    "polyfills.js": "7fe1d048c78b0e09854c1259f7413868a51cc8f0c822489eb1ac36ae6c85ce01",
+    "mathjax.js": "cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869",
+    "setup.js": "a52cb0bbabfbd7796b9fedd793b9386c474e3123e788ee151cbe47ca1fa6e881"
+  },
+  "method": "function(){var t=this.string.slice(this.i).match(/^(([a-z]+) ?|[\\uD800-\\uDBFF].|.)/i);return t?(this.i+=t[0].length,t[2]||t[1]):(this.i++,\" \")}",
+  "cases": [
+    {
+      "source": "\n",
+      "label": "LF",
+      "value": " ",
+      "cursorCodeUnits": 1,
+      "consumedBytes": 1,
+      "remaining": ""
+    },
+    {
+      "source": "\nx",
+      "label": "LF",
+      "value": " ",
+      "cursorCodeUnits": 1,
+      "consumedBytes": 1,
+      "remaining": "x"
+    },
+    {
+      "source": "\n{x}",
+      "label": "LF",
+      "value": " ",
+      "cursorCodeUnits": 1,
+      "consumedBytes": 1,
+      "remaining": "{x}"
+    },
+    {
+      "source": "\n\n",
+      "label": "LF",
+      "value": " ",
+      "cursorCodeUnits": 1,
+      "consumedBytes": 1,
+      "remaining": "\n"
+    },
+    {
+      "source": "\n ",
+      "label": "LF",
+      "value": " ",
+      "cursorCodeUnits": 1,
+      "consumedBytes": 1,
+      "remaining": " "
+    },
+    {
+      "source": "\r",
+      "label": "CR",
+      "value": " ",
+      "cursorCodeUnits": 1,
+      "consumedBytes": 1,
+      "remaining": ""
+    },
+    {
+      "source": "\rx",
+      "label": "CR",
+      "value": " ",
+      "cursorCodeUnits": 1,
+      "consumedBytes": 1,
+      "remaining": "x"
+    },
+    {
+      "source": "\r{x}",
+      "label": "CR",
+      "value": " ",
+      "cursorCodeUnits": 1,
+      "consumedBytes": 1,
+      "remaining": "{x}"
+    },
+    {
+      "source": "\r\n",
+      "label": "CR",
+      "value": " ",
+      "cursorCodeUnits": 1,
+      "consumedBytes": 1,
+      "remaining": "\n"
+    },
+    {
+      "source": "\r ",
+      "label": "CR",
+      "value": " ",
+      "cursorCodeUnits": 1,
+      "consumedBytes": 1,
+      "remaining": " "
+    },
+    {
+      "source": " ",
+      "label": "LS",
+      "value": " ",
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": " x",
+      "label": "LS",
+      "value": " ",
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": "x"
+    },
+    {
+      "source": " {x}",
+      "label": "LS",
+      "value": " ",
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": "{x}"
+    },
+    {
+      "source": " \n",
+      "label": "LS",
+      "value": " ",
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": "\n"
+    },
+    {
+      "source": "  ",
+      "label": "LS",
+      "value": " ",
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": " "
+    },
+    {
+      "source": " ",
+      "label": "PS",
+      "value": " ",
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": " x",
+      "label": "PS",
+      "value": " ",
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": "x"
+    },
+    {
+      "source": " {x}",
+      "label": "PS",
+      "value": " ",
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": "{x}"
+    },
+    {
+      "source": " \n",
+      "label": "PS",
+      "value": " ",
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": "\n"
+    },
+    {
+      "source": "  ",
+      "label": "PS",
+      "value": " ",
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": " "
+    },
+    {
+      "source": "\t",
+      "label": "tab",
+      "value": "\t",
+      "cursorCodeUnits": 1,
+      "consumedBytes": 1,
+      "remaining": ""
+    },
+    {
+      "source": "\tx",
+      "label": "tab",
+      "value": "\t",
+      "cursorCodeUnits": 1,
+      "consumedBytes": 1,
+      "remaining": "x"
+    },
+    {
+      "source": "\t{x}",
+      "label": "tab",
+      "value": "\t",
+      "cursorCodeUnits": 1,
+      "consumedBytes": 1,
+      "remaining": "{x}"
+    },
+    {
+      "source": "\t\n",
+      "label": "tab",
+      "value": "\t",
+      "cursorCodeUnits": 1,
+      "consumedBytes": 1,
+      "remaining": "\n"
+    },
+    {
+      "source": "\t ",
+      "label": "tab",
+      "value": "\t",
+      "cursorCodeUnits": 1,
+      "consumedBytes": 1,
+      "remaining": " "
+    },
+    {
+      "source": "\u000b",
+      "label": "vt",
+      "value": "\u000b",
+      "cursorCodeUnits": 1,
+      "consumedBytes": 1,
+      "remaining": ""
+    },
+    {
+      "source": "\u000bx",
+      "label": "vt",
+      "value": "\u000b",
+      "cursorCodeUnits": 1,
+      "consumedBytes": 1,
+      "remaining": "x"
+    },
+    {
+      "source": "\u000b{x}",
+      "label": "vt",
+      "value": "\u000b",
+      "cursorCodeUnits": 1,
+      "consumedBytes": 1,
+      "remaining": "{x}"
+    },
+    {
+      "source": "\u000b\n",
+      "label": "vt",
+      "value": "\u000b",
+      "cursorCodeUnits": 1,
+      "consumedBytes": 1,
+      "remaining": "\n"
+    },
+    {
+      "source": "\u000b ",
+      "label": "vt",
+      "value": "\u000b",
+      "cursorCodeUnits": 1,
+      "consumedBytes": 1,
+      "remaining": " "
+    },
+    {
+      "source": "\f",
+      "label": "ff",
+      "value": "\f",
+      "cursorCodeUnits": 1,
+      "consumedBytes": 1,
+      "remaining": ""
+    },
+    {
+      "source": "\fx",
+      "label": "ff",
+      "value": "\f",
+      "cursorCodeUnits": 1,
+      "consumedBytes": 1,
+      "remaining": "x"
+    },
+    {
+      "source": "\f{x}",
+      "label": "ff",
+      "value": "\f",
+      "cursorCodeUnits": 1,
+      "consumedBytes": 1,
+      "remaining": "{x}"
+    },
+    {
+      "source": "\f\n",
+      "label": "ff",
+      "value": "\f",
+      "cursorCodeUnits": 1,
+      "consumedBytes": 1,
+      "remaining": "\n"
+    },
+    {
+      "source": "\f ",
+      "label": "ff",
+      "value": "\f",
+      "cursorCodeUnits": 1,
+      "consumedBytes": 1,
+      "remaining": " "
+    },
+    {
+      "source": "",
+      "label": "NEL",
+      "value": "",
+      "cursorCodeUnits": 1,
+      "consumedBytes": 2,
+      "remaining": ""
+    },
+    {
+      "source": "x",
+      "label": "NEL",
+      "value": "",
+      "cursorCodeUnits": 1,
+      "consumedBytes": 2,
+      "remaining": "x"
+    },
+    {
+      "source": "{x}",
+      "label": "NEL",
+      "value": "",
+      "cursorCodeUnits": 1,
+      "consumedBytes": 2,
+      "remaining": "{x}"
+    },
+    {
+      "source": "\n",
+      "label": "NEL",
+      "value": "",
+      "cursorCodeUnits": 1,
+      "consumedBytes": 2,
+      "remaining": "\n"
+    },
+    {
+      "source": " ",
+      "label": "NEL",
+      "value": "",
+      "cursorCodeUnits": 1,
+      "consumedBytes": 2,
+      "remaining": " "
+    },
+    {
+      "source": " ",
+      "label": "NBSP",
+      "value": " ",
+      "cursorCodeUnits": 1,
+      "consumedBytes": 2,
+      "remaining": ""
+    },
+    {
+      "source": " x",
+      "label": "NBSP",
+      "value": " ",
+      "cursorCodeUnits": 1,
+      "consumedBytes": 2,
+      "remaining": "x"
+    },
+    {
+      "source": " {x}",
+      "label": "NBSP",
+      "value": " ",
+      "cursorCodeUnits": 1,
+      "consumedBytes": 2,
+      "remaining": "{x}"
+    },
+    {
+      "source": " \n",
+      "label": "NBSP",
+      "value": " ",
+      "cursorCodeUnits": 1,
+      "consumedBytes": 2,
+      "remaining": "\n"
+    },
+    {
+      "source": "  ",
+      "label": "NBSP",
+      "value": " ",
+      "cursorCodeUnits": 1,
+      "consumedBytes": 2,
+      "remaining": " "
+    },
+    {
+      "source": "﻿",
+      "label": "BOM",
+      "value": "﻿",
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": "﻿x",
+      "label": "BOM",
+      "value": "﻿",
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": "x"
+    },
+    {
+      "source": "﻿{x}",
+      "label": "BOM",
+      "value": "﻿",
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": "{x}"
+    },
+    {
+      "source": "﻿\n",
+      "label": "BOM",
+      "value": "﻿",
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": "\n"
+    },
+    {
+      "source": "﻿ ",
+      "label": "BOM",
+      "value": "﻿",
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": " "
+    },
+    {
+      "source": " ",
+      "label": "space",
+      "value": " ",
+      "cursorCodeUnits": 1,
+      "consumedBytes": 1,
+      "remaining": ""
+    },
+    {
+      "source": " x",
+      "label": "space",
+      "value": " ",
+      "cursorCodeUnits": 1,
+      "consumedBytes": 1,
+      "remaining": "x"
+    },
+    {
+      "source": " {x}",
+      "label": "space",
+      "value": " ",
+      "cursorCodeUnits": 1,
+      "consumedBytes": 1,
+      "remaining": "{x}"
+    },
+    {
+      "source": " \n",
+      "label": "space",
+      "value": " ",
+      "cursorCodeUnits": 1,
+      "consumedBytes": 1,
+      "remaining": "\n"
+    },
+    {
+      "source": "  ",
+      "label": "space",
+      "value": " ",
+      "cursorCodeUnits": 1,
+      "consumedBytes": 1,
+      "remaining": " "
+    },
+    {
+      "source": "🙂",
+      "label": "astral",
+      "value": "🙂",
+      "cursorCodeUnits": 2,
+      "consumedBytes": 4,
+      "remaining": ""
+    },
+    {
+      "source": "🙂x",
+      "label": "astral",
+      "value": "🙂",
+      "cursorCodeUnits": 2,
+      "consumedBytes": 4,
+      "remaining": "x"
+    },
+    {
+      "source": "🙂{x}",
+      "label": "astral",
+      "value": "🙂",
+      "cursorCodeUnits": 2,
+      "consumedBytes": 4,
+      "remaining": "{x}"
+    },
+    {
+      "source": "🙂\n",
+      "label": "astral",
+      "value": "🙂",
+      "cursorCodeUnits": 2,
+      "consumedBytes": 4,
+      "remaining": "\n"
+    },
+    {
+      "source": "🙂 ",
+      "label": "astral",
+      "value": "🙂",
+      "cursorCodeUnits": 2,
+      "consumedBytes": 4,
+      "remaining": " "
+    },
+    {
+      "source": "@",
+      "label": "nonletter",
+      "value": "@",
+      "cursorCodeUnits": 1,
+      "consumedBytes": 1,
+      "remaining": ""
+    },
+    {
+      "source": "@x",
+      "label": "nonletter",
+      "value": "@",
+      "cursorCodeUnits": 1,
+      "consumedBytes": 1,
+      "remaining": "x"
+    },
+    {
+      "source": "@{x}",
+      "label": "nonletter",
+      "value": "@",
+      "cursorCodeUnits": 1,
+      "consumedBytes": 1,
+      "remaining": "{x}"
+    },
+    {
+      "source": "@\n",
+      "label": "nonletter",
+      "value": "@",
+      "cursorCodeUnits": 1,
+      "consumedBytes": 1,
+      "remaining": "\n"
+    },
+    {
+      "source": "@ ",
+      "label": "nonletter",
+      "value": "@",
+      "cursorCodeUnits": 1,
+      "consumedBytes": 1,
+      "remaining": " "
+    },
+    {
+      "source": "",
+      "label": "name-or-EOF",
+      "value": " ",
+      "cursorCodeUnits": 1,
+      "consumedBytes": 0,
+      "remaining": ""
+    },
+    {
+      "source": "alpha x",
+      "label": "name-or-EOF",
+      "value": "alpha",
+      "cursorCodeUnits": 6,
+      "consumedBytes": 6,
+      "remaining": "x"
+    },
+    {
+      "source": "alpha  x",
+      "label": "name-or-EOF",
+      "value": "alpha",
+      "cursorCodeUnits": 6,
+      "consumedBytes": 6,
+      "remaining": " x"
+    },
+    {
+      "source": "alpha\nx",
+      "label": "name-or-EOF",
+      "value": "alpha",
+      "cursorCodeUnits": 5,
+      "consumedBytes": 5,
+      "remaining": "\nx"
+    },
+    {
+      "source": "alpha x",
+      "label": "name-or-EOF",
+      "value": "alpha",
+      "cursorCodeUnits": 5,
+      "consumedBytes": 5,
+      "remaining": " x"
+    },
+    {
+      "source": "Alpha{x}",
+      "label": "name-or-EOF",
+      "value": "Alpha",
+      "cursorCodeUnits": 5,
+      "consumedBytes": 5,
+      "remaining": "{x}"
+    },
+    {
+      "source": "a1",
+      "label": "name-or-EOF",
+      "value": "a",
+      "cursorCodeUnits": 1,
+      "consumedBytes": 1,
+      "remaining": "1"
+    },
+    {
+      "source": "𝛂x",
+      "label": "name-or-EOF",
+      "value": "𝛂",
+      "cursorCodeUnits": 2,
+      "consumedBytes": 4,
+      "remaining": "x"
+    },
+    {
+      "source": "éx",
+      "label": "name-or-EOF",
+      "value": "é",
+      "cursorCodeUnits": 1,
+      "consumedBytes": 2,
+      "remaining": "x"
+    }
+  ]
+}

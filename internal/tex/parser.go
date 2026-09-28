@@ -1207,6 +1207,12 @@ func (p *parser) readControlSequence() string {
 	r, size := utf8.DecodeRuneInString(p.source[p.pos:])
 	if !isASCIILetter(r) {
 		p.pos += size
+		// GetCS uses a non-dotall regexp; these line endings take its
+		// one-character fallback and become control-space.
+		switch r {
+		case '\n', '\r', '\u2028', '\u2029':
+			return " "
+		}
 		return string(r)
 	}
 	start := p.pos
