@@ -497,6 +497,9 @@ func (w *wrapper) computeTextBBox(bbox *layout.BBox) {
 			}
 			bbox.H = math.Max(bbox.H, .75)
 			bbox.D = math.Max(bbox.D, .2)
+			// TextNode assigns the current glyph's corrections even when
+			// it is measured as unknown text. Do not retain a prior glyph's.
+			bbox.IC, bbox.Skew = 0, 0
 			continue
 		}
 		metrics := glyph.Metrics
