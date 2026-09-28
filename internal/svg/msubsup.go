@@ -134,8 +134,13 @@ func (w *wrapper) baseIsChar() bool {
 }
 
 func (w *wrapper) removeBaseIC() bool {
+	// CommonScriptbase retains italic correction for over/underlines, but
+	// removes it for math accents even though mover normally keeps it.
+	if w.lineAccent(w.overChild()) || w.lineAccent(w.underChild()) {
+		return false
+	}
 	return w.node.Kind == "msub" || w.node.Kind == "msubsup" ||
-		w.node.Kind == "munder" || w.node.Kind == "munderover"
+		w.node.Kind == "munder" || w.node.Kind == "munderover" || w.isMathAccent
 }
 
 func (w *wrapper) baseWidth() float64 {
