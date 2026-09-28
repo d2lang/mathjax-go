@@ -173,10 +173,17 @@ func amsFixedFenceWithToken(character string, class mml.TeXClass, size string, m
 
 func (p *parser) amsDeclareMathOperator(name string) error {
 	star := p.readStar()
-	cs, err := p.readCSNameArgument(name)
+	raw, _, err := p.readArgument(name, false)
 	if err != nil {
 		return err
 	}
+	// HandleDeclareOp trims the argument and removes an optional backslash;
+	// unlike GetCsNameArgument, it does not validate the resulting name.
+	cs := strings.TrimFunc(raw, internalTextSpace)
+	if strings.HasSuffix(cs, "\\") && strings.HasSuffix(raw, " ") {
+		cs += " " // ParseUtil.trimSpaces preserves a terminal control-space.
+	}
+	cs = strings.TrimPrefix(cs, "\\")
 	operator, _, err := p.readArgument(name, false)
 	if err != nil {
 		return err
