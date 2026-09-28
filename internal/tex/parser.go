@@ -99,6 +99,8 @@ type parser struct {
 	activeColor          string
 	rowDelimiter         *rowDelimiterItem
 	cdCellEnd            *cdCellEnd
+	cdArrayEntry         bool
+	cdEntryStopped       bool
 	matrixClose          bool
 	identifierPattern    identifierPattern
 	operatorLetters      bool
@@ -145,9 +147,9 @@ func (p *parser) parseRowWithPrefix(terminator byte, stopRight bool, prefix []*m
 	// body enters through parseRowWithInfix, retaining the active owner.
 	owner := p.braketOwner
 	p.braketOwner = nil
-	matrixClose := p.matrixClose
-	p.matrixClose = false
-	defer func() { p.braketOwner, p.matrixClose = owner, matrixClose }()
+	matrixClose, cdArrayEntry := p.matrixClose, p.cdArrayEntry
+	p.matrixClose, p.cdArrayEntry = false, false
+	defer func() { p.braketOwner, p.matrixClose, p.cdArrayEntry = owner, matrixClose, cdArrayEntry }()
 	return p.parseRowContinuation(terminator, stopRight, false, nil, "", prefix)
 }
 
@@ -294,6 +296,9 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 		}
 	}
 	for p.pos < len(p.source) {
+		if p.cdEntryStopped {
+			break // A completed single Braket returns the same closing Entry.
+		}
 		// A single BraketItem closes on its first MML delivery. Any remaining
 		// nodes in that delivery belong to the caller, not to its fenced body.
 		if owner != nil && owner.single && len(nodes) > 0 && len(styles) == 0 && len(positions) == 0 && !pendingFunction {
@@ -557,6 +562,22 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 				appendNodes([]*mml.Node{created}, false)
 			}
 		case '&':
+			if p.cdArrayEntry && terminator == 0 && !stopRight && auto == nil {
+				if closeErr := closeStyles(); closeErr != nil {
+					return nil, "", closeErr
+				}
+				if owner != nil {
+					// A final MML item first completes a single BraketItem;
+					// its caller then delivers this Entry to the array.
+					if owner.single && len(nodes) != 0 {
+						return nodes, "", nil
+					}
+					return nil, "", texError("Misplaced", "Misplaced &")
+				}
+				p.pos++
+				p.cdEntryStopped = true
+				return nodes, "", nil
+			}
 			if len(positions) != 0 {
 				if closeErr := closeStyles(); closeErr != nil {
 					return nil, "", closeErr
@@ -584,7 +605,7 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 	// AmsCdMethods.cell reads the actual stack top. ArrayItem supplies
 	// the grid position; pending items have no table or row properties and
 	// therefore receive a strut even in later cells and arrow rows.
-	if end := p.cdCellEnd; end != nil && terminator == 0 && !stopRight {
+	if end := p.cdCellEnd; end != nil && !p.cdEntryStopped && terminator == 0 && !stopRight {
 		p.cdCellEnd = nil
 		pendingItem := len(styles) != 0 || len(positions) != 0 || infixPending ||
 			pending != nil || bool(negation) || dots.active() || pendingFunction ||
