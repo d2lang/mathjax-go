@@ -204,7 +204,6 @@ func (w *wrapper) getStretchedVariant(dimensions []float64, exact bool) {
 		} else if w.stretch.HasAlias {
 			w.stretchGlyph = w.stretch.Alias
 		}
-		w.invalidateBBox()
 		return
 	}
 	if len(w.stretch.Stretch) != 0 {
@@ -223,7 +222,6 @@ func (w *wrapper) getStretchedVariant(dimensions []float64, exact bool) {
 		if w.stretch.HasAlias {
 			w.stretchGlyph = w.stretch.Alias
 		}
-		w.invalidateBBox()
 	}
 }
 
@@ -272,11 +270,13 @@ func (w *wrapper) stretchBaseline(dimensions []float64, total float64) (float64,
 }
 
 func (w *wrapper) invalidateBBox() {
-	w.bboxComputed = false
-	for _, child := range w.children {
-		child.bboxComputed = false
+	// CommonWrapper invalidates only cached boxes and their ancestors. Text
+	// children retain their measured advance when an operator changes size.
+	if !w.bboxComputed {
+		return
 	}
-	if w.parent != nil && w.parent.bboxComputed {
+	w.bboxComputed = false
+	if w.parent != nil {
 		w.parent.invalidateBBox()
 	}
 }

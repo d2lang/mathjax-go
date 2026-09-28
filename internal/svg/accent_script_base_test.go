@@ -114,7 +114,7 @@ func TestMathAccentScriptConstructorReference(t *testing.T) {
 	}
 }
 
-func TestAccentStretchInvalidatesMeasuredAncestors(t *testing.T) {
+func TestAccentStretchPreservesSourceCachePolicy(t *testing.T) {
 	for _, width := range []float64{0, 4, 6} {
 		t.Run(fmt.Sprintf("width-%g", width), func(t *testing.T) {
 			build := func() (*wrapper, *wrapper, *wrapper, *mml.Node) {
@@ -140,8 +140,10 @@ func TestAccentStretchInvalidatesMeasuredAncestors(t *testing.T) {
 			}
 			core.getStretchedVariant([]float64{width}, true)
 			for p := core.parent; p != nil; p = p.parent {
-				if p.bboxComputed {
-					t.Fatal("stretched core left an ancestor cached")
+				// CommonMo preserves fixed-glyph caches and invalidates only
+				// when it assembles a stretched glyph from multiple parts.
+				if p.bboxComputed != (width == 0) {
+					t.Fatal("ancestor cache disagrees with fixed/assembled stretch policy")
 				}
 			}
 			if width > 0 && (!core.bboxComputed || core.size != -1 || core.bbox.W != width) {
