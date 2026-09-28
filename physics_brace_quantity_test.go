@@ -24,7 +24,7 @@ func TestPhysicsBraceQuantityReferences(t *testing.T) {
 	if err := json.Unmarshal(data, &fixture); err != nil {
 		t.Fatal(err)
 	}
-	if fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || len(fixture.Cases) != 1560 {
+	if fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || len(fixture.Cases) != 1626 {
 		t.Fatal("unbound Physics brace-quantity references")
 	}
 	seenNames, seenInputs := make(map[string]bool), make(map[struct {

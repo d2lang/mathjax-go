@@ -1,8 +1,8 @@
 {
-  "baselineGitCommit": "e3d4006b093073ad46555f92e94df4c85dd46331",
-  "assertedExactInputs": 1560,
+  "baselineGitCommit": "6ae444150070ff7dbe59174bbb1e7a49624bd16b",
+  "assertedExactInputs": 1626,
   "previouslyPublishedInputs": 0,
-  "firstPublicationInputs": 1560,
+  "firstPublicationInputs": 1626,
   "method": "Distinct TeX and display-mode pairs with a complete original SVG anywhere in testdata JSON at the baseline commit. No claim of globally unique cross-PR coverage.",
   "publishedOverlaps": []
 }

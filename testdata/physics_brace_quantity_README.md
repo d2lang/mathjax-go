@@ -47,5 +47,45 @@ receipt counts distinct input/display pairs already published at the tested
 baseline, rather than claiming that per-PR fixture totals are globally unique
 MathJax coverage.
 
-Final baseline counts, residual qualification, and gate receipts are recorded
-after composition with the preceding Eqnarray and MathLap fixes.
+## Current baseline and residuals
+
+Against main151 (`6ae444150070ff7dbe59174bbb1e7a49624bd16b`), the 1,698
+distinct input/display pairs produce 1,626 exact references: 1,418 valid
+expressions and 208 original error renderings. The change fixes 1,534 baseline
+differences and preserves 92 exact controls, with no previously exact
+regressions. None of these 1,626 complete original input references appeared
+in the baseline's published JSON inventories; the overlap receipt records
+the scan. The independent 212-input review and its six explicit controls are
+included, rather than added again to these totals.
+
+All 66 candidate-output changes caused by composing the intervening Eqnarray
+and MathLap fixes become byte-exact originals. Every other output remains
+byte-identical to the reviewed main149 candidate.
+
+All 72 raw references have valid original renderings. Of these, 52 controls
+are byte-unchanged from the current baseline. The 20 newly reachable
+differences are qualified individually in
+`physics_brace_quantity_qualification.json`:
+
+- Sixteen expressions retain existing MathFont leakage into matrix cells.
+  Each original equals its explicit literal expansion byte-for-byte, and
+  each candidate equals the unchanged baseline literal output byte-for-byte.
+- Two escaped line-feed expressions lose an existing nonbreaking space.
+  The final three glyphs have the same 250-unit horizontal error as the
+  unchanged `pqty` control, with identical glyphs and other affine values.
+- Two escaped line-separator expressions retain an existing tokenization
+  error. Their complete candidate error SVG equals the unchanged `pqty`
+  control. They are retained as valid-original residuals, not error controls.
+
+The published-residual replay covers 4,566 inputs and finds no source-output
+changes. Four serialized observations change only the order of authored
+cancel attributes. Both binaries emit both serializations over 48 repetitions
+per input, and all complete parsed XML trees equal the original, including
+every numeric geometry value. These are neither fixes nor source regressions;
+the compact receipt retains the original strings and observations. No golden
+SVG is normalized.
+
+Validation runs the complete suite with the pinned original oracle enabled,
+then `go test -race -p 1 ./...`, `go vet -p 1 ./...`, and
+`GOOS=js GOARCH=wasm go build -p 1 ./...`. The exact and raw original files
+also regenerate byte-identically from the three verified assets.
