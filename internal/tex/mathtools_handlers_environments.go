@@ -153,12 +153,14 @@ func (p *parser) mathtoolsSpreadLines(environment string) ([]*mml.Node, error) {
 	if err != nil {
 		return nil, err
 	}
-	content.Walk(func(current *mml.Node) bool {
+	// SpreadLines applies to the popped item's mtable, or to each immediate
+	// child if toMml() returned an inferred row. It never descends through
+	// authored fences, scripts, or other wrappers.
+	for _, current := range unwrapInferred(content) {
 		if current.Kind == "mtable" {
 			mathtoolsAddRowSpacing(current, spread)
 		}
-		return true
-	})
+	}
 	return unwrapInferred(content), nil
 }
 
