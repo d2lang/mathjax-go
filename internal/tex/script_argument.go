@@ -53,6 +53,9 @@ func (p *parser) parseScriptArgument(attachment *scriptAttachment, font string) 
 			p.pos++
 			return nil, currentFont, nil, texError("ExtraCloseMissingOpen", "Extra close brace or missing open brace")
 		}
+		if p.source[p.pos] == '&' {
+			return nil, currentFont, nil, attachment.missingOpen()
+		}
 		if p.source[p.pos] == '{' {
 			p.pos++
 			children, _, parseErr := p.parseRow('}', false)
@@ -83,6 +86,13 @@ func (p *parser) parseScriptArgument(attachment *scriptAttachment, font string) 
 			p.pos++
 			name := p.readControlSequence()
 			if _, macro := p.state.macros[name]; !macro {
+				switch name {
+				case "matrix", "array", "pmatrix", "eqalign", "eqalignno", "leqalignno":
+					if parseErr := p.startMatrixBody(name); parseErr != nil {
+						return nil, currentFont, nil, parseErr
+					}
+					return nil, currentFont, nil, attachment.missingOpen()
+				}
 				if variant, ok := fontDeclarations[name]; ok {
 					p.activeFont, currentFont = variant, variant
 					continue
