@@ -3168,9 +3168,7 @@
       "cursorCodeUnits": 2,
       "cursorBytes": 1,
       "remaining": ""
-    }
-  ],
-  "rawControls": [
+    },
     {
       "source": "\\ ",
       "noneOK": false,

@@ -24,25 +24,13 @@ func TestGetArgumentWhitespacePrimaryMethod(t *testing.T) {
 			Error             *struct{ ID, Message string }
 			CursorBytes       int
 		}
-		RawControls []struct {
-			Source string
-			NoneOK bool
-			Value  *string
-		}
 	}
 	if err := json.Unmarshal(data, &fixture); err != nil {
 		t.Fatal(err)
 	}
-	if fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || len(fixture.Cases) != 302 || len(fixture.RawControls) != 6 ||
+	if fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || len(fixture.Cases) != 308 ||
 		!strings.Contains(fixture.Methods["nextIsSpace"], `/\s/`) || !strings.Contains(fixture.Methods["GetArgument"], "GetNext") {
 		t.Fatal("unbound original GetArgument method observations")
-	}
-	// These six complete observations retain the inherited GetCS escaped-line
-	// mismatch. They are bound separately, not normalized into passing values.
-	for _, c := range fixture.RawControls {
-		if (c.Source != "\\\n" && c.Source != "\\\r" && c.Source != "\\\u2028") || c.Value == nil || *c.Value != "\\ " {
-			t.Fatal("unbound inherited GetCS observation", c)
-		}
 	}
 	seen := make(map[struct {
 		source string
