@@ -257,7 +257,7 @@ func (p *parser) commandNodes(name string, after **derivativeAutoOpen) ([]*mml.N
 		op.SetProperty("movesupsub", true)
 		return []*mml.Node{op}, nil
 
-	case "kern", "mkern", "hskip", "mskip", "hspace":
+	case "kern", "mkern", "hskip", "mskip", "hspace", "mspace":
 		return p.horizontalSpace(name)
 	case "hspace*":
 		return p.horizontalSpace(name)
