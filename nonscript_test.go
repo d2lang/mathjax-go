@@ -48,6 +48,44 @@ func TestNonscriptOriginalReferences(t *testing.T) {
 	}
 }
 
+func TestNonscriptArrayCompositionOriginalReferences(t *testing.T) {
+	data, err := os.ReadFile("testdata/nonscript_array_mathjax_3_2_2.json")
+	if err != nil {
+		t.Fatal(err)
+	}
+	var fixture struct {
+		MathjaxGitCommit string
+		Cases            []struct {
+			Name, TeX, SVG string
+			Display        bool
+		}
+	}
+	if err := json.Unmarshal(data, &fixture); err != nil {
+		t.Fatal(err)
+	}
+	if fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || len(fixture.Cases) != 476 {
+		t.Fatal("unbound Nonscript array references")
+	}
+	seen := map[string]bool{}
+	for _, c := range fixture.Cases {
+		if c.Name == "" || seen[c.Name] || c.SVG == "" {
+			t.Fatal("invalid Nonscript array reference", c.Name)
+		}
+		seen[c.Name] = true
+		t.Run(c.Name, func(t *testing.T) {
+			options := mathjax.DefaultOptions()
+			options.Display = c.Display
+			got, err := mathjax.RenderWithOptions(c.TeX, options)
+			if err != nil {
+				t.Fatal(err)
+			}
+			if got != c.SVG {
+				t.Fatalf("complete original SVG differs\ngot: %s\nwant: %s", got, c.SVG)
+			}
+		})
+	}
+}
+
 // The original filter can splice a required fraction, root, or accent child
 // and then throw during conversion. The Go API returns an internal conversion
 // error for those inputs rather than panicking or inventing rendered content.

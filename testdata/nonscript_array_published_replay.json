@@ -1,0 +1,82 @@
+{
+  "baselineCommit": "4aeeb29d500693c2b476818d502e205892aaf446",
+  "binarySHA256": {
+    "before": "01dc21d0ffb60b42b94e647ebb655f3d37465d44d325b37c3d9588df450794be",
+    "after": "c5d1b4efd7f108cceb4ba5a4e96ecce4d21904098aa1c75c01d8cba6e4afe791"
+  },
+  "uniquePublishedInputs": 3919,
+  "rawByteChanges": 2,
+  "rawExactRegressions": 2,
+  "renderedOrParsedXMLChanges": 0,
+  "renderedOrParsedXMLRegressions": 0,
+  "repeatsPerBinaryPerInput": 48,
+  "method": "Complete recursive XML tree equality includes every tag, all attribute name/value pairs, text, tail, and ordered children. Each raw output is additionally required to equal one of the two exact data-padding/data-thickness serializations. No numeric or geometry normalization.",
+  "cases": [
+    {
+      "tex": "\\cancelto[data-padding=1em,data-thickness=.2em]{0}{\\text{_}}",
+      "display": true,
+      "sources": [
+        {
+          "fixture": "enclosure_bbox_residuals.json",
+          "name": "enclosure-1283"
+        }
+      ],
+      "initialBeforeEqualsOriginal": true,
+      "initialAfterEqualsOriginal": false,
+      "original": {
+        "svg": "<svg style=\"vertical-align: -2.403ex;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"6.644ex\" height=\"5.273ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -1268.7 2936.6 2330.7\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"msup\"><g data-mml-node=\"menclose\" data-padding=\"1em\" data-thickness=\".2em\"><g transform=\"translate(1000, 0)\"><g data-mml-node=\"mtext\"><path data-c=\"5F\" d=\"M0 -62V-25H499V-62H0Z\"></path></g></g><path d=\"M 2862.4 -31 l -1000 400 l 200 -300 L -362.4 69 l 0 -200 L 2062.4 -131 l -200 -300 Z\" transform=\"rotate(39.173 1250 -31)\"></path></g><g data-mml-node=\"mpadded\" transform=\"translate(2533,727.1) scale(0.707)\"><g transform=\"translate(0,100)\"><g data-mml-node=\"mn\"><path data-c=\"30\" d=\"M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z\"></path></g></g></g></g></g></g></svg>"
+      },
+      "baseline": {
+        "svg": "<svg style=\"vertical-align: -2.403ex;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"6.644ex\" height=\"5.273ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -1268.7 2936.6 2330.7\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"msup\"><g data-mml-node=\"menclose\" data-padding=\"1em\" data-thickness=\".2em\"><g transform=\"translate(1000, 0)\"><g data-mml-node=\"mtext\"><path data-c=\"5F\" d=\"M0 -62V-25H499V-62H0Z\"></path></g></g><path d=\"M 2862.4 -31 l -1000 400 l 200 -300 L -362.4 69 l 0 -200 L 2062.4 -131 l -200 -300 Z\" transform=\"rotate(39.173 1250 -31)\"></path></g><g data-mml-node=\"mpadded\" transform=\"translate(2533,727.1) scale(0.707)\"><g transform=\"translate(0,100)\"><g data-mml-node=\"mn\"><path data-c=\"30\" d=\"M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z\"></path></g></g></g></g></g></g></svg>"
+      },
+      "candidate": {
+        "svg": "<svg style=\"vertical-align: -2.403ex;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"6.644ex\" height=\"5.273ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -1268.7 2936.6 2330.7\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"msup\"><g data-mml-node=\"menclose\" data-thickness=\".2em\" data-padding=\"1em\"><g transform=\"translate(1000, 0)\"><g data-mml-node=\"mtext\"><path data-c=\"5F\" d=\"M0 -62V-25H499V-62H0Z\"></path></g></g><path d=\"M 2862.4 -31 l -1000 400 l 200 -300 L -362.4 69 l 0 -200 L 2062.4 -131 l -200 -300 Z\" transform=\"rotate(39.173 1250 -31)\"></path></g><g data-mml-node=\"mpadded\" transform=\"translate(2533,727.1) scale(0.707)\"><g transform=\"translate(0,100)\"><g data-mml-node=\"mn\"><path data-c=\"30\" d=\"M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z\"></path></g></g></g></g></g></g></svg>"
+      },
+      "completeParsedXMLEqualOriginal": true,
+      "allRepeatedOutputsExactlyOneOfTwoAttributeOrders": true,
+      "repeatCounts": {
+        "before": {
+          "30928ca726284035f9e67a461975f3cb447b253eb170d8411fa60d82b492ea30": 40,
+          "33c103f6573bfea168ae2610146bce0bd8063ebc6a8f491565910c6efe60ec78": 8
+        },
+        "after": {
+          "30928ca726284035f9e67a461975f3cb447b253eb170d8411fa60d82b492ea30": 41,
+          "33c103f6573bfea168ae2610146bce0bd8063ebc6a8f491565910c6efe60ec78": 7
+        }
+      }
+    },
+    {
+      "tex": "\\cancelto[data-padding=1em,data-thickness=.2em]{0}{}",
+      "display": false,
+      "sources": [
+        {
+          "fixture": "enclosure_bbox_residuals.json",
+          "name": "enclosure-1286"
+        }
+      ],
+      "initialBeforeEqualsOriginal": true,
+      "initialAfterEqualsOriginal": false,
+      "original": {
+        "svg": "<svg style=\"vertical-align: 0;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"0.988ex\" height=\"2.047ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -904.6 436.6 904.6\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"msup\"><g data-mml-node=\"menclose\" data-padding=\"1em\" data-thickness=\".2em\"><g></g><path d=\"M 0 0 l -1000 400 l 200 -300 L 0 100 l 0 -200 L -800 -100 l -200 -300 Z\"></path></g><g data-mml-node=\"mpadded\" transform=\"translate(33,363) scale(0.707)\"><g transform=\"translate(0,100)\"><g data-mml-node=\"mn\"><path data-c=\"30\" d=\"M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z\"></path></g></g></g></g></g></g></svg>"
+      },
+      "baseline": {
+        "svg": "<svg style=\"vertical-align: 0;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"0.988ex\" height=\"2.047ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -904.6 436.6 904.6\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"msup\"><g data-mml-node=\"menclose\" data-padding=\"1em\" data-thickness=\".2em\"><g></g><path d=\"M 0 0 l -1000 400 l 200 -300 L 0 100 l 0 -200 L -800 -100 l -200 -300 Z\"></path></g><g data-mml-node=\"mpadded\" transform=\"translate(33,363) scale(0.707)\"><g transform=\"translate(0,100)\"><g data-mml-node=\"mn\"><path data-c=\"30\" d=\"M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z\"></path></g></g></g></g></g></g></svg>"
+      },
+      "candidate": {
+        "svg": "<svg style=\"vertical-align: 0;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"0.988ex\" height=\"2.047ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -904.6 436.6 904.6\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"msup\"><g data-mml-node=\"menclose\" data-thickness=\".2em\" data-padding=\"1em\"><g></g><path d=\"M 0 0 l -1000 400 l 200 -300 L 0 100 l 0 -200 L -800 -100 l -200 -300 Z\"></path></g><g data-mml-node=\"mpadded\" transform=\"translate(33,363) scale(0.707)\"><g transform=\"translate(0,100)\"><g data-mml-node=\"mn\"><path data-c=\"30\" d=\"M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z\"></path></g></g></g></g></g></g></svg>"
+      },
+      "completeParsedXMLEqualOriginal": true,
+      "allRepeatedOutputsExactlyOneOfTwoAttributeOrders": true,
+      "repeatCounts": {
+        "before": {
+          "98424b656a2f72f8443785971e208cc1688b7cefa56e75f5a698754ef0fca4e5": 3,
+          "2895d8af781cda918a8db7639cc912561c6e8772ac7e44a909afb28a52295811": 45
+        },
+        "after": {
+          "2895d8af781cda918a8db7639cc912561c6e8772ac7e44a909afb28a52295811": 43,
+          "98424b656a2f72f8443785971e208cc1688b7cefa56e75f5a698754ef0fca4e5": 5
+        }
+      }
+    }
+  ]
+}

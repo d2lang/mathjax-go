@@ -15,7 +15,8 @@ for (const [file, expected] of Object.entries(hashes)) {
   const hash = crypto.createHash('sha256').update(fs.readFileSync(path.join(assets,file))).digest('hex');
   if (hash !== expected) throw Error(`unverified ${file}`);
 }
-for (const name of ['nonscript_mathjax_3_2_2.json','nonscript_residuals.json']) {
+for (const name of ['nonscript_mathjax_3_2_2.json','nonscript_residuals.json',
+  'nonscript_array_mathjax_3_2_2.json','nonscript_array_residuals.json']) {
   const file = path.join(__dirname,name);
   const fixture = JSON.parse(fs.readFileSync(file,'utf8'));
   const requests = [];

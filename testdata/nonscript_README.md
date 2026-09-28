@@ -25,7 +25,7 @@ row. Numeric comparison uses the existing ECMAScript scalar conversion.
 `\Huge a\nonscript\qquad b+x^{a\nonscript\qquad b}` is the visible witness:
 the ordinary gap remains, while the gap in the exponent disappears.
 
-The current corpus has 2,282 distinct inputs: 2,032 complete exact originals
+The original pre-composition corpus has 2,282 distinct inputs: 2,032 complete exact originals
 (1,660 valid expressions and 372 error renderings), 1,876 fixes and 156 exact
 controls against main144 (`a9fcab295ac962d46f533c5d3e4993a50f1e7bf4`),
 which includes the separately merged Quantity fallback prerequisite. There are no previously exact
@@ -66,7 +66,36 @@ Quantity prerequisite changes only two already documented authored cancel
 attribute orders; the complete parsed SVGs and all geometry are identical.
 Both serialized observations and the attribute-order proof are retained.
 
-Regenerate both original-reference files with:
+## Composition with array entry repair
+
+The Nonscript source is rebased without modification onto merged main146,
+`4aeeb29d500693c2b476818d502e205892aaf446`. All 2,282 preceding candidate
+outcomes remain byte-identical to the independently reviewed main144 candidate.
+A separate 486-input original inventory exercises array entry repair before
+Nonscript's inherited-space filter: plain and fixed-size spaces, leading
+operators, relation atoms, fractions, fonts, grouped spaces, pending functions,
+Not/Dots/Prime/Position/Braket/AutoOpen/infix items, optional vertical alignment,
+left/right gathered layouts, and actual-array-top command guards.
+
+Of these, 476 match complete originals (420 valid and 56 error renderings).
+There are 160 improvements from the previous Nonscript candidate, with no
+formerly exact regressions. The ten residuals preserve two original VDotsWithin
+runtime failures and eight existing shoveleft/shoveright diagnostic-wording
+differences; every residual is byte-unchanged from the reviewed Nonscript source.
+The original runtime outputs remain raw, and Go stays nonpanicking.
+
+Together the two inventories contain **2,768 unique inputs, 2,508 complete
+original SVG assertions, and 260 raw observations**. Against main146 there are
+**2,352 fixes and 156 exact controls**. The 118 dedicated required-child failure
+checks remain unchanged. No original reference was replaced by Go output.
+
+The main146 published-input replay covers 3,919 unique inputs. Its only two
+byte differences are known cancel attribute-order changes. Forty-eight repeat
+runs per input and binary show both exact serializations, with identical full
+parsed XML trees. `nonscript_array_published_replay.json` preserves the actual
+outputs and proof; no rendering or source regression is hidden by a qualifier.
+
+Regenerate all four original-reference files with:
 
 ```sh
 node --jitless testdata/generate_nonscript.cjs /path/to/pinned-assets
@@ -74,7 +103,7 @@ node --jitless testdata/generate_nonscript.cjs /path/to/pinned-assets
 
 The generator verifies all three asset SHA-256 hashes and creates a fresh
 original VM per expression. It never runs Go or substitutes candidate output.
-Both reference files regenerate byte-identically from the frozen bundle.
+The reference files regenerate byte-identically from the frozen bundle.
 On merged main144, the full frozen-oracle suite, race tests, vet, and
 WebAssembly build all pass. The rebased production source is identical to
 the independently reviewed composed main143 candidate; no gate repair or
