@@ -428,6 +428,12 @@ func (p *parser) mathtoolsAlignment(environment string) ([]*mml.Node, error) {
 			continue
 		}
 		if len(cells) != 0 && strings.Contains(cells[len(cells)-1], "\\Aboxed") {
+			if isEquationArray(environment) {
+				if err := p.mathtoolsAboxedEquationRow(cells, rowIndex == len(rows)-1, func(row *mml.Node) error { return appendRows(row) }); err != nil {
+					return nil, err
+				}
+				continue
+			}
 			row, err := p.mathtoolsAboxedRow(cells, tagState != nil)
 			if err != nil {
 				return nil, err

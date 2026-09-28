@@ -46,7 +46,7 @@ func (p *parser) arrowBetweenLines(name string) error {
 		cells = append(cells, node("mtd"), node("mtd"))
 		expansion = "\\quad" + symbol
 	}
-	content, err := p.parseString(expansion)
+	content, err := p.parseChild(expansion)
 	if err != nil {
 		return err
 	}
@@ -131,4 +131,28 @@ func (p *parser) parseEquationTable(body, environment string) (*mml.Node, error)
 		}
 	}
 	return table, nil
+}
+
+// The existing Aboxed expansion must deliver its prefix through the same
+// EqnArray owner: that prefix can end a row (including a generated arrow).
+// Its synthetic ampersand still separates the two phantom alignment cells.
+func (p *parser) mathtoolsAboxedEquationRow(cells []string, final bool, appendRow func(*mml.Node) error) error {
+	before, argument, after, err := mathtoolsCommandParts(cells[len(cells)-1], "Aboxed")
+	if err != nil {
+		return err
+	}
+	parts := splitTopLevel(argument, '&')
+	left, right := parts[0], ""
+	if len(parts) > 1 {
+		right = parts[1]
+	}
+	expanded := append([]string(nil), cells[:len(cells)-1]...)
+	if len(expanded)%2 == 1 {
+		expanded = append(expanded, "")
+	}
+	expanded = append(expanded,
+		before+"\\rlap{\\boxed{"+left+"{}"+right+"}}\\kern.267em\\phantom{"+left+"}",
+		"\\phantom{{}"+right+"}\\kern.267em"+after,
+	)
+	return p.parseEquationRow(expanded, final, appendRow)
 }
