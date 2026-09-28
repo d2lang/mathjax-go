@@ -28,27 +28,29 @@ limits, source-body literal controls, active command replacement in both
 declaration orders, and effective macro-budget boundaries using the supported
 `DeclareMathOperator` command. The original input strings and SVGs are preserved.
 
-The overlap scan inspected all 396 JSON files beneath `testdata` directories
-on merged main159 `c19a00c2202542652ffa46ce0a93d17c0bdd8108`. It found 978
+The overlap scan inspected all 405 JSON files beneath `testdata` directories
+on merged main160 `2f39558e522906da2ab6fac6e4060b90736d3a99`. It found 978
 previously unpublished input/mode pairs, 554 existing complete-original
 references, and four previous raw observations now promoted to strict tests.
 All previous original strings agree. These are per-fix counts, not a globally
 unique or exhaustive MathJax coverage claim.
 
-The broader replay covers 5,270 published raw inputs and 4,326 upstream
+The broader replay covers 5,634 published raw inputs and 4,326 upstream
 TeX/display inputs under the frozen D2 configuration. It finds four genuine
 AMS fixes in the former and eight in the latter, with no genuine regressions
 or changed unresolved renderings. All twelve have been added to the strict
-fixture without changing their original SVGs. Four apparent cancel fixes and
+fixture without changing their original SVGs. Two apparent cancel fixes and
 one enclose observation differ only in attribute serialization order. Both
 binaries emit both orders over 64 repeated renders per affected input, with
 identical complete parsed XML. The frozen bundle does not register enclose;
 its original error remains an inherited configuration difference.
 
-These rendering counts were measured against merged main158
-`f72d955662476fe3daedc3875accdf7315a03168`. The source has since been rebased
-onto main159 with an unchanged production delta; final composed build and
-full checks are pending.
+These rendering counts were measured against merged main160
+`2f39558e522906da2ab6fac6e4060b90736d3a99`. The production delta contains only
+the four macro registrations and removal of the two named-function fallbacks.
+Both D2 comparisons preserve a common scale: one shows the corrected bars and
+limit placement, and the other demonstrates the formerly undefined arrow
+commands. Each fixed D2 SVG is byte-identical to its original-MathJax reference.
 
 ## Regeneration
 

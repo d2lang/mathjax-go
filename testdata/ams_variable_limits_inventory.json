@@ -1,15 +1,14 @@
 {
-  "baseline": "c19a00c2202542652ffa46ce0a93d17c0bdd8108",
+  "baseline": "2f39558e522906da2ab6fac6e4060b90736d3a99",
   "counts": {
     "first-published-input": 978,
     "prior-full-reference": 554,
     "prior-raw-promotion": 4
   },
   "inputs": 1536,
-  "scannedFiles": 396,
+  "scannedFiles": 405,
   "originalMismatches": [],
   "ambiguousOnly": 0,
-  "actualMergedBaseline": "c19a00c2202542652ffa46ce0a93d17c0bdd8108",
-  "renderingBaseline": "f72d955662476fe3daedc3875accdf7315a03168",
-  "renderingContext": "The1536-case comparison was measured with actual158 production plus AMS source; rebase onto159 preserves the AMS source delta but final159 build and gates are pending."
+  "actualMergedBaseline": "2f39558e522906da2ab6fac6e4060b90736d3a99",
+  "renderingBaseline": "2f39558e522906da2ab6fac6e4060b90736d3a99"
 }
