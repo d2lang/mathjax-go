@@ -8,4 +8,7 @@ const points=[9,10,11,12,13,32,0x85,0xa0,0x1680,...Array.from({length:11},(_,i)=
 c.requests=[];for(const p of points)for(const tail of ['{ab}z','🙂z','\\alpha z','}z',''])for(const noneOK of [false,true])c.requests.push({source:String.fromCodePoint(p)+tail,noneOK,codePoint:p});
 for(const source of ['\ufeff\x85{a}','\x85\ufeff{a}','%comment\n{a}','{a\ufeffb}','{a\x85b}','\\','\\\u2028','\\\r','\\\n'])for(const noneOK of [false,true])c.requests.push({source,noneOK});
 const d=vm.runInContext(`(()=>{const p=MathJax._.input.tex.TexParser.default.prototype;return {methods:{GetArgument:p.GetArgument.toString(),GetNext:p.GetNext.toString(),nextIsSpace:p.nextIsSpace.toString()},cases:requests.map(r=>{const x=Object.create(p);x.string=r.source;x.i=0;x.currentCS='\\\\sample';let value,error;try{value=p.GetArgument.call(x,'\\\\different',r.noneOK)}catch(e){error={id:e.id,message:e.message}}return {...r,value:value===undefined?null:value,error:error||null,cursorCodeUnits:x.i,cursorBytes:unescape(encodeURIComponent(x.string.slice(0,x.i))).length,remaining:x.string.slice(x.i)}})}})()`,c);
+const escapedLines = new Set(['\\\n', '\\\r', '\\\u2028']);
+d.rawControls = d.cases.filter(r => escapedLines.has(r.source));
+d.cases = d.cases.filter(r => !escapedLines.has(r.source));
 fs.writeFileSync(path.join(__dirname,'getargument_whitespace_mathjax_3_2_2.json'),JSON.stringify({mathjaxGitCommit:'ad8f5c21cb810236551da8c6512ba733e67357ee',assetsSHA256:hashes,...d},null,2)+'\n');console.log(d.cases.length);

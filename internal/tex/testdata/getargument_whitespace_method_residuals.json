@@ -1,0 +1,134 @@
+{
+  "baselineCommit": "42932ee918ca4db7f3edf9da30e59b0c9cd61f86",
+  "candidateSourceCommit": "e97a995",
+  "bindingKind": "The actual failed method test observes the candidate values below. The baseline readControlSequence source is byte-identical, and these inputs begin with backslash so neither old nor new readArgument leading-whitespace loop consumes a rune. Thus the unchanged call path establishes inherited baseline behavior without simulating an original result.",
+  "readControlSequenceSHA256": "a6ac14d0eac9ca0cdeff00782f46ba10fdfc2a6a10ac4188a734f97a38d532fb",
+  "cases": [
+    {
+      "source": "\\ ",
+      "noneOK": false,
+      "original": {
+        "source": "\\ ",
+        "noneOK": false,
+        "value": "\\ ",
+        "error": null,
+        "cursorCodeUnits": 2,
+        "cursorBytes": 4,
+        "remaining": ""
+      },
+      "observedCandidate": {
+        "value": "\\ ",
+        "cursorBytes": 4,
+        "remaining": "",
+        "error": null
+      },
+      "leadingWhitespaceConsumedByEitherVersion": false,
+      "sourceIdenticalToBaseline": true
+    },
+    {
+      "source": "\\ ",
+      "noneOK": true,
+      "original": {
+        "source": "\\ ",
+        "noneOK": true,
+        "value": "\\ ",
+        "error": null,
+        "cursorCodeUnits": 2,
+        "cursorBytes": 4,
+        "remaining": ""
+      },
+      "observedCandidate": {
+        "value": "\\ ",
+        "cursorBytes": 4,
+        "remaining": "",
+        "error": null
+      },
+      "leadingWhitespaceConsumedByEitherVersion": false,
+      "sourceIdenticalToBaseline": true
+    },
+    {
+      "source": "\\\r",
+      "noneOK": false,
+      "original": {
+        "source": "\\\r",
+        "noneOK": false,
+        "value": "\\ ",
+        "error": null,
+        "cursorCodeUnits": 2,
+        "cursorBytes": 2,
+        "remaining": ""
+      },
+      "observedCandidate": {
+        "value": "\\\r",
+        "cursorBytes": 2,
+        "remaining": "",
+        "error": null
+      },
+      "leadingWhitespaceConsumedByEitherVersion": false,
+      "sourceIdenticalToBaseline": true
+    },
+    {
+      "source": "\\\r",
+      "noneOK": true,
+      "original": {
+        "source": "\\\r",
+        "noneOK": true,
+        "value": "\\ ",
+        "error": null,
+        "cursorCodeUnits": 2,
+        "cursorBytes": 2,
+        "remaining": ""
+      },
+      "observedCandidate": {
+        "value": "\\\r",
+        "cursorBytes": 2,
+        "remaining": "",
+        "error": null
+      },
+      "leadingWhitespaceConsumedByEitherVersion": false,
+      "sourceIdenticalToBaseline": true
+    },
+    {
+      "source": "\\\n",
+      "noneOK": false,
+      "original": {
+        "source": "\\\n",
+        "noneOK": false,
+        "value": "\\ ",
+        "error": null,
+        "cursorCodeUnits": 2,
+        "cursorBytes": 2,
+        "remaining": ""
+      },
+      "observedCandidate": {
+        "value": "\\\n",
+        "cursorBytes": 2,
+        "remaining": "",
+        "error": null
+      },
+      "leadingWhitespaceConsumedByEitherVersion": false,
+      "sourceIdenticalToBaseline": true
+    },
+    {
+      "source": "\\\n",
+      "noneOK": true,
+      "original": {
+        "source": "\\\n",
+        "noneOK": true,
+        "value": "\\ ",
+        "error": null,
+        "cursorCodeUnits": 2,
+        "cursorBytes": 2,
+        "remaining": ""
+      },
+      "observedCandidate": {
+        "value": "\\\n",
+        "cursorBytes": 2,
+        "remaining": "",
+        "error": null
+      },
+      "leadingWhitespaceConsumedByEitherVersion": false,
+      "sourceIdenticalToBaseline": true
+    }
+  ]
+}
