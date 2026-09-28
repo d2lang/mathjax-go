@@ -60,10 +60,10 @@ macro arguments, scripts/primes, pending items, cells/fences and actual supporte
 override/budget behavior. Unknown joined control-word controls remain diagnostic
 controls, not claimed effective macros.
 
-The prior main163 broad replay also checked all 5,758 published residual inputs and 4,326
+The final main164 broad replay also checked all 5,758 published residual inputs and 4,326
 upstream TeX inputs under D2's fixed configuration. The published replay yields
 134 genuine fixes and no other semantic changes; upstream has no semantic
-changes. Six cancel-attribute serialization controls were checked with 384
+changes. Six cancel/enclose attribute-serialization controls were checked with 384
 repeated full XML-tree comparisons (all attributes, text, tails and ordered
 children); their raw variants and originals are preserved in the audit receipt.
 They are not normalized into the strict fixture or counted as fixes.
