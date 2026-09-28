@@ -15,6 +15,9 @@ func TestCasesNumCasesFrozenShape(t *testing.T) {
 		display: true,
 	}
 	p.state.augmentedPackages = true
+	// CasesMethods.NumCases receives the active CasesBeginItem. Supply the
+	// same executing-input owner that beginEnvironment installs at dispatch.
+	p.environmentOwner = &environmentFrame{name: "numcases", stream: true}
 	nodes, handled, err := p.casesEnvironment("numcases")
 	if err != nil {
 		t.Fatal(err)
@@ -35,6 +38,7 @@ func TestCasesNumCasesExtraEntry(t *testing.T) {
 		state:   newParseState(),
 		display: true,
 	}
+	p.environmentOwner = &environmentFrame{name: "numcases", stream: true}
 	_, handled, err := p.casesEnvironment("numcases")
 	if !handled {
 		t.Fatal("numcases was not handled")

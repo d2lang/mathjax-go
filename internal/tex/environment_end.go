@@ -23,7 +23,7 @@ type environmentEndItem struct {
 }
 
 func (item *environmentEndItem) extra() error {
-	return texError("ExtraEndMissingBegin", "Missing \\begin{%s} or extra \\end{%s}", item.name, item.name)
+	return texError("MissingBeginExtraEnd", "Missing \\begin{%s} or extra \\end{%s}", item.name, item.name)
 }
 
 func (frame *environmentFrame) missing() error {
