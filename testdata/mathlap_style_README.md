@@ -24,16 +24,16 @@ giving the child its own macro counter. Missing brackets retain the original
 active-command diagnostic. Existing argument capture, layout, and public
 command-override paths are reused.
 
-The current 1,788 unique captured observations contain 1,726 complete exact
-original SVGs (1,446 valid and 280 error renderings), with 1,434 fixes against
-main149 `e3d4006b093073ad46555f92e94df4c85dd46331`. They cover all six
-commands, default/empty/recognized/unknown
-options, JavaScript whitespace, malformed brackets, terminal backslash,
+The current 1,884 unique captured observations contain 1,822 complete exact
+original SVGs (1,542 valid and 280 error renderings), with 1,506 fixes against
+main150 `46362679b9bdb5990b3db109bd6d5b22cea3ea58`. They cover all six
+commands, default/empty/recognized/unknown options, JavaScript whitespace, malformed brackets, terminal backslash,
 fonts, nested wrappers, roots, scripts, Nonscript, pending items, dynamic
 registrations, arrays/CD, and caller/child macro budgets at and beyond the
 1,000-expansion boundary. All 112 intersections with the first-final-script-item
-repair are exact,
-and the prior 1,676 candidate outputs are unchanged after that composition.
+repair are exact, and the prior 1,676 candidate outputs are unchanged after that composition.
+All 1,788 outputs stay unchanged on main150; 96 additional Eqnarray
+intersections are exact, with 72 fixes and 24 controls.
 
 Four already-published observations from `cramped_style_residuals.json` are
 promoted by a separate test. The historical receipt is unchanged, and those
@@ -67,15 +67,15 @@ unchanged. `mathlap_style_ampersand_proof.json` preserves the raw strings
 and exact substitution proof; these remain outside the exact count.
 
 No valid changed nonexact rendering was found in this fresh inventory.
-Replaying 4,306 published main149 residual inputs fixes the four promoted
-lap observations. Three unrelated cancel serializations change attribute
-order only (one became byte-exact and two ceased to be byte-exact in this run);
+Replaying 4,504 published main150 residual inputs fixes the four promoted
+lap observations. Two unrelated cancel serializations change attribute
+order only (both ceased to be byte-exact in this run);
 the complete parsed XML trees are identical before, after, and
 original. The raw strings and proof remain separate from exact assertions.
 
-The per-fix count is deduplicated by TeX and display mode. A scan of main149
+The per-fix count is deduplicated by TeX and display mode. A scan of main150
 JSON references with explicit `tex`, `display`, and complete `svg` or
-`original.svg` fields found no complete-SVG overlap among these 1,726
+`original.svg` fields found no complete-SVG overlap among these 1,822
 assertions. The report records this scan scope rather than claiming a
 global project coverage total. Four promotions remain separate.
 
@@ -88,4 +88,6 @@ node --jitless testdata/generate_mathlap_style.cjs /path/to/pinned-assets
 The generator checks all three frozen D2 asset hashes, creates a fresh
 original VM for each expression, and never invokes Go. It preserves full
 original SVGs and runtime failures. Both inventories regenerate
-byte-identically. Final base and gate results will be recorded before handoff.
+byte-identically. On the final main150 base, the full frozen-oracle suite,
+race tests, vet, and the JavaScript/WASM build pass serially with `-p 1`.
+No original reference was adjusted to Go output.

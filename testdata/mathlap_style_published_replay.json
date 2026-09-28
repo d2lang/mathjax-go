@@ -13,6 +13,8 @@
     "work/mathjax-go/testdata/cramped_substack_residuals.json",
     "work/mathjax-go/testdata/delimiter_cache_residuals.json",
     "work/mathjax-go/testdata/enclosure_bbox_residuals.json",
+    "work/mathjax-go/testdata/eqnarray_current_residuals.json",
+    "work/mathjax-go/testdata/eqnarray_residuals.json",
     "work/mathjax-go/testdata/fallback_correction_residuals_mathjax_3_2_2.json",
     "work/mathjax-go/testdata/flalign_residuals.json",
     "work/mathjax-go/testdata/fn_script_ownership_residuals.json",
@@ -34,45 +36,45 @@
     "work/mathjax-go/testdata/skew_residuals.json"
   ],
   "binarySHA256": {
-    "before": "b2871f48edcf16fd8ff14a24cfb597b0ff84f66c7683a7d38f70d2bdb536c377",
-    "after": "43d7c79f5741983f89c9750599b70cdc37ab85a47aaf778f0497c85a6982893c"
+    "before": "90187a54b890cbbd3df298035be0f91b84f2189d824d9f395ec35f49a027e624",
+    "after": "716cf21a818748fbc38a7efa7fc48adab0d243da171752e6ecd642909ec5c941"
   },
-  "uniqueInputs": 4306,
-  "changed": 7,
-  "newlyExact": 5,
+  "uniqueInputs": 4504,
+  "changed": 6,
+  "newlyExact": 4,
   "exactRegressions": [
     [
       {
         "fixture": "enclosure_bbox_residuals.json",
-        "name": "enclosure-1278"
+        "name": "enclosure-1287"
       }
     ],
     [
       {
         "fixture": "enclosure_bbox_residuals.json",
-        "name": "enclosure-1284"
+        "name": "enclosure-1290"
       }
     ]
   ],
   "changedNonexactCount": 2,
   "changedNonexact": [
     {
-      "tex": "\\cancelto[data-padding=1em,data-thickness=.2em]{0}{\\text{^}}",
-      "display": false,
+      "tex": "\\cancelto[data-padding=1em,data-thickness=.2em]{0}{}",
+      "display": true,
       "sources": [
         {
           "fixture": "enclosure_bbox_residuals.json",
-          "name": "enclosure-1278"
+          "name": "enclosure-1287"
         }
       ]
     },
     {
-      "tex": "\\cancel[data-padding=1em,data-thickness=.2em]{}",
+      "tex": "\\cancelto[data-padding=1em,data-thickness=.2em]{0}{x}",
       "display": false,
       "sources": [
         {
           "fixture": "enclosure_bbox_residuals.json",
-          "name": "enclosure-1284"
+          "name": "enclosure-1290"
         }
       ]
     }
