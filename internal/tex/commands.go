@@ -373,10 +373,6 @@ func (p *parser) commandNodes(name string, after **derivativeAutoOpen) ([]*mml.N
 		return p.vectorAccent(name)
 	case "vnabla":
 		return []*mml.Node{p.physicsNabla()}, nil
-	case "gradient", "grad", "laplacian":
-		return p.operatorApplication(name, false)
-	case "divergence", "div", "curl":
-		return p.operatorApplication(name, true)
 	case "qqtext", "qq", "qcc", "qif", "qthen", "qelse", "qotherwise", "qunless", "qgiven", "qusing", "qassume", "qsince", "qlet", "qfor", "qall", "qeven", "qodd", "qinteger", "qand", "qor", "qas", "qin":
 		return p.quickQuadText(name)
 	case "mqty", "matrixquantity", "pmqty", "Pmqty", "bmqty", "vmqty", "smqty", "smallmatrixquantity", "spmqty", "sPmqty", "sbmqty", "svmqty":
@@ -1961,58 +1957,6 @@ func (p *parser) vectorAccent(name string) ([]*mml.Node, error) {
 		return nil, texError("MaxMacroSub1", "MathJax maximum macro substitution count exceeded; is here a recursive macro call?")
 	}
 	return nil, nil
-}
-
-func (p *parser) operatorApplication(name string, vector bool) ([]*mml.Node, error) {
-	var operatorNode *mml.Node
-	var prefix []*mml.Node
-	if vector {
-		operatorNode = p.physicsNabla()
-		char := "⋅"
-		attributes := map[string]any{"mathvariant": "bold"}
-		if name == "curl" {
-			char = "×"
-			attributes = nil
-		}
-		// PhysicsMappings maps \vdot to a bold U+22C5, whereas
-		// \crossproduct is an unmodified U+00D7.  The distinction changes the
-		// SVG glyph width (and therefore the fenced operand's x position).
-		prefix = []*mml.Node{operatorNode, p.operator(char, operatorClass(char), attributes)}
-	} else if name == "laplacian" {
-		operatorNode = node("msup", setAttributes(token("mi", "∇"), map[string]any{"mathvariant": "normal"}), token("mn", "2"))
-	} else {
-		operatorNode = p.physicsNabla()
-	}
-	if prefix == nil {
-		prefix = []*mml.Node{operatorNode}
-	}
-	apply := p.operator("\u2061", mml.TeXClassNone, nil)
-	p.skipSpaces()
-	if p.pos >= len(p.source) {
-		return prefix, nil
-	}
-	var raw string
-	var err error
-	if p.source[p.pos] == '(' {
-		p.pos++
-		raw, err = p.readUpToByte(')')
-	} else if p.source[p.pos] == '[' {
-		p.pos++
-		raw, err = p.readUpToByte(']')
-	} else {
-		raw, _, err = p.readArgument(name, false)
-	}
-	if err != nil {
-		return nil, err
-	}
-	arg, err := p.parseContinuationString(raw)
-	if err != nil {
-		return nil, err
-	}
-	if vector {
-		return append(prefix, p.fenced("(", arg, ")", true)), nil
-	}
-	return append(prefix, apply, p.fenced("(", arg, ")", true)), nil
 }
 
 func (p *parser) quickQuadText(name string) ([]*mml.Node, error) {

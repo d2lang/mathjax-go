@@ -98,3 +98,8 @@ An additional 300 independently generated compositions cover explicit CD entries
 arrow labels, single Braket ownership, and matrices on the merged CD-entry parser.
 All 300 differ from main125 and match the original with this change. Their raw
 original SVGs are included in the fixed reference inventory.
+
+The subsequent vector-application repair now makes all 72 historical vector
+controls exact. Its complete fresh references and scope are documented in
+`physics_vector_applications_README.md`; these earlier raw receipts remain
+unchanged.
