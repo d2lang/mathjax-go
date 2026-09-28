@@ -133,7 +133,7 @@ func TestTableFixedAndPercentageColumns(t *testing.T) {
 	}
 	// CommonMtable first caches natural geometry. SVGmath supplies the
 	// container width only after the full root bbox has been computed.
-	if !w.setChildPWidths(80 * layout.TeXParameters.XHeight) {
+	if !w.setChildPWidths(80*layout.TeXParameters.XHeight, false) {
 		t.Fatal("percentage pass did not report the width change")
 	}
 	if bbox.PWidth != "" {
@@ -265,7 +265,7 @@ func TestNestedPercentageTableUsesContainingColumnWidth(t *testing.T) {
 	outerWrapper := tableTestWrapper(outer)
 	innerWrapper := outerWrapper.children[0].children[0].children[0]
 	prepareTableWrapper(outerWrapper)
-	outerWrapper.setChildPWidths(80 * layout.TeXParameters.XHeight)
+	outerWrapper.setChildPWidths(80*layout.TeXParameters.XHeight, false)
 	outerLayout := outerWrapper.tableState()
 	closeTableFloat(t, "outer resolved column", outerLayout.computed[0], 33.36)
 	innerLayout := resolvedTableLayout(innerWrapper)

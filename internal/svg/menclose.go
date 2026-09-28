@@ -248,12 +248,22 @@ func (e *encloseLayout) sqrtTRBL() encloseTRBL {
 // local so wrappers remain immutable and safe for concurrent renders.
 func (w *wrapper) computeEncloseBBox(bbox *layout.BBox) {
 	state := newEncloseLayout(w)
-	bbox.Empty()
+	// CommonMenclose combines into the supplied box: new and temporary
+	// boxes start at zero, while invalidation retains cached dimensions.
+	// Emptying it would lose the baseline for negative child height/depth.
 	bbox.Combine(state.childBBox(), state.trbl[3], 0)
 	bbox.H += state.trbl[0]
 	bbox.D += state.trbl[2]
 	bbox.W += state.trbl[1]
-	bbox.Clean()
+	// CommonMenclose resolves percentages here, while this box is still
+	// uncached. Deferring until SVG emission can invalidate and enlarge the
+	// enclosure a second time when its child resolves to a different width.
+	w.bbox.PWidth = ""
+	for _, child := range w.children {
+		if cbox := child.outerBBox(); cbox.PWidth != "" {
+			child.setChildPWidths(cbox.W, true)
+		}
+	}
 }
 
 // encloseToSVG ports SVGmenclose.toSVG().

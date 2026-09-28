@@ -1,0 +1,11 @@
+{
+  "counts": {
+    "priorVisualExact": 1760,
+    "visualRegressions": 0,
+    "visualFixes": 708,
+    "unchangedVisibleResiduals": 2,
+    "changedVisibleResiduals": 0,
+    "parseErrors": 0
+  },
+  "reports": []
+}

@@ -101,6 +101,9 @@ func (w *wrapper) computePaddedBBox(bbox *layout.BBox) {
 	bbox.W = dimensions.contentW + dimensions.deltaW
 	bbox.H = dimensions.contentH + dimensions.deltaH
 	bbox.D = dimensions.contentD + dimensions.deltaD
+	// CommonMpadded resolves percentage children against its authored width
+	// before an enclosing wrapper can cache their dimensions.
+	w.setChildPWidths(bbox.W, true)
 }
 
 func (w *wrapper) paddedToSVG(parent *Element) {

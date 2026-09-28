@@ -475,7 +475,7 @@ func (w *wrapper) computeChildrenBBox(bbox *layout.BBox) {
 	}
 	bbox.Clean()
 	if w.node.Kind == "math" && w.parent == nil {
-		if w.setChildPWidths(80 * w.renderer.params.XHeight) {
+		if w.setChildPWidths(80*w.renderer.params.XHeight, false) {
 			bbox.Empty()
 			for _, child := range w.children {
 				bbox.Append(child.outerBBox())
@@ -485,10 +485,11 @@ func (w *wrapper) computeChildrenBBox(bbox *layout.BBox) {
 	}
 }
 
-// setChildPWidths is the root SVGmath pass through CommonWrapper. SVGmath
-// supplies the output container width and keeps clear=false through every
-// transparent wrapper; CommonMtable clears its own and its container markers.
-func (w *wrapper) setChildPWidths(width float64) bool {
+// setChildPWidths follows CommonWrapper's recursive percentage-width pass.
+// SVGmath supplies its container width with clear=false. Fixed containers
+// supply each child's width with clear=true; CommonMtable clears its own and
+// its container markers when it resolves the table.
+func (w *wrapper) setChildPWidths(width float64, clear bool) bool {
 	if w.node.Kind == "mtable" {
 		t := w.tableState()
 		if !tableIsPercent(tableString("width", w)) || t.resolved {
@@ -498,9 +499,12 @@ func (w *wrapper) setChildPWidths(width float64) bool {
 		t.resolvePercentageWidth(width)
 		return t.pWidth != before
 	}
+	if clear {
+		w.bbox.PWidth = ""
+	}
 	changed := false
 	for _, child := range w.children {
-		if child.outerBBox().PWidth != "" && child.setChildPWidths(width) {
+		if child.outerBBox().PWidth != "" && child.setChildPWidths(width, clear) {
 			changed = true
 		}
 	}
