@@ -483,5 +483,15 @@
   "comparisonMethods": {
     "parsedXML": "Recursive equality of every tag, all attribute name/value pairs, text, tail, and ordered children. Only XML attribute order is unordered; no numeric, glyph, style, or child normalization.",
     "flattenedGeometry": "Composed SVG transforms, every visible primitive/path/text, inherited paint, and exact root width/height/viewBox/style. Nonrendering data/ARIA annotations excluded."
+  },
+  "prior144CountCorrection": {
+    "previousReportedNewlyExact": 334,
+    "attributeOrderOnlyNewlyExact": 2,
+    "correctedSourceRelatedNewlyExact": 332,
+    "previousReportedExactRegressions": 2,
+    "attributeOrderOnlyExactRegressions": 2,
+    "sourceRelatedChangedInputSetIdenticalTo145": true,
+    "all346SourceRelatedOriginalBaselineCandidateOutputsIdenticalTo145": true,
+    "note": "The earlier 334 count included two nondeterministic cancel attribute-order matches. Current145 raw335 includes three such matches. Both runs have332 source-related newly exact results."
   }
 }
