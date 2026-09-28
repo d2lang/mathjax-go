@@ -99,7 +99,7 @@ func (p *parser) beginEnvironment(name string) ([]*mml.Node, error) {
 		return []*mml.Node{parsed}, nil
 	}
 
-	columnSpec := ""
+	columnSpec := "c"
 	if environment == "array" || environment == "subarray" || environment == "crampedsubarray" {
 		columnSpec, _, err = p.readArgument("begin{"+environment+"}", false)
 		if err != nil {
@@ -609,9 +609,9 @@ func applyColumnSpec(table *mml.Node, specification string) {
 			lines = append(lines, "dashed")
 		}
 	}
-	if len(aligns) != 0 {
-		table.Attributes.Set("columnalign", strings.Join(aligns, " "))
-	}
+	// BaseMethods.Array always materializes its alignment, including the
+	// empty string. Omitting it would inherit an enclosing table's alignment.
+	table.Attributes.Set("columnalign", strings.Join(aligns, " "))
 	if len(lines) != 0 {
 		table.Attributes.Set("columnlines", strings.Join(lines, " "))
 	}

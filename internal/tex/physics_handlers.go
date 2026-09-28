@@ -53,9 +53,10 @@ func (p *parser) physicsEnvironment(name string) (nodes []*mml.Node, handled boo
 	if !physicsMatrixEnvironment(name) || !physicsBodyHasMatrixGenerator(p.source[p.pos:]) {
 		return nil, false, nil
 	}
-	columnSpec := ""
+	columnSpec := "c"
 	if strings.HasSuffix(name, "*") {
-		columnSpec, _, err = p.readBrackets(nil)
+		defaultAlignment := "c"
+		columnSpec, _, err = p.readBrackets(&defaultAlignment)
 		if err != nil {
 			return nil, true, err
 		}
