@@ -1,0 +1,19 @@
+{
+  "baseline": "a708ff363b7ba868322fb966f2b25300d1a83ed1",
+  "baselineStatus": "unmerged reviewed AMS prerequisite",
+  "inputs": 2168,
+  "exact": 2052,
+  "raw": 116,
+  "counts": {
+    "first-publication": 2102,
+    "previous-full-reference": 42,
+    "previous-raw-reference": 24
+  },
+  "exactCounts": {
+    "first-publication": 1998,
+    "previous-full-reference": 42,
+    "previous-raw-reference": 12
+  },
+  "scannedFiles": 412,
+  "originalMismatches": []
+}
