@@ -25,7 +25,7 @@ func fencedCharacters(value string) string {
 }
 
 func fencedToken(text, form string, class mml.TeXClass) *mml.Node {
-	node := mml.NewNode("mo", nil, nil, mml.NewText(text))
+	node := syntheticMMLFactory.Create("mo", mml.NewText(text))
 	node.Flags.Token = true
 	node.Flags.Embellished = true
 	node.TeXClass = class

@@ -33,7 +33,7 @@ func (w *wrapper) initializeRoot() {
 		return
 	}
 	text := mml.NewText("√")
-	mo := mml.NewNode("mo", nil, nil, text)
+	mo := syntheticMMLFactory.Create("mo", text)
 	mo.Flags.Token = true
 	mo.Flags.Embellished = true
 	mo.TeXClass = mml.TeXClassOrd
