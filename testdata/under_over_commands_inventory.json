@@ -1,0 +1,1119 @@
+{
+  "baselineCommit": "a5c6c64d6c3790f4403a89d574d2679d14440d20",
+  "inventoryInputs": 3790,
+  "assertedExactInputs": 3766,
+  "exactErrorRenderings": 32,
+  "fixed": 2174,
+  "previouslyExactRegressions": 0,
+  "rawInputs": 24,
+  "changedRaw": 8,
+  "alreadyPublishedInputCount": 92,
+  "firstPublicationInputCount": 3674,
+  "publishedInputOverlap": [
+    {
+      "name": "under-over-0368",
+      "tex": "\\overleftrightarrow{x}",
+      "display": false,
+      "publishedFiles": [
+        "delimiter_cache_residuals.json"
+      ]
+    },
+    {
+      "name": "under-over-0369",
+      "tex": "\\overleftrightarrow{x}",
+      "display": true,
+      "publishedFiles": [
+        "delimiter_cache_residuals.json"
+      ]
+    },
+    {
+      "name": "under-over-0736",
+      "tex": "\\overline{x}",
+      "display": false,
+      "publishedFiles": [
+        "accent_italic_correction_mathjax_3_2_2.json",
+        "flalign_mathjax_3_2_2.json",
+        "horizontal_rule_mathjax_3_2_2.json"
+      ]
+    },
+    {
+      "name": "under-over-0737",
+      "tex": "\\overline{x}",
+      "display": true,
+      "publishedFiles": [
+        "accent_italic_correction_mathjax_3_2_2.json",
+        "flalign_mathjax_3_2_2.json",
+        "horizontal_rule_mathjax_3_2_2.json"
+      ]
+    },
+    {
+      "name": "under-over-0766",
+      "tex": "\\overline{\\mathcal{T}}",
+      "display": false,
+      "publishedFiles": [
+        "accent_italic_correction_mathjax_3_2_2.json"
+      ]
+    },
+    {
+      "name": "under-over-0767",
+      "tex": "\\overline{\\mathcal{T}}",
+      "display": true,
+      "publishedFiles": [
+        "accent_italic_correction_mathjax_3_2_2.json"
+      ]
+    },
+    {
+      "name": "under-over-0772",
+      "tex": "\\overline{\\begin{matrix}a&b\\\\c&d\\end{matrix}}",
+      "display": false,
+      "publishedFiles": [
+        "flalign_mathjax_3_2_2.json"
+      ]
+    },
+    {
+      "name": "under-over-0773",
+      "tex": "\\overline{\\begin{matrix}a&b\\\\c&d\\end{matrix}}",
+      "display": true,
+      "publishedFiles": [
+        "flalign_mathjax_3_2_2.json"
+      ]
+    },
+    {
+      "name": "under-over-0784",
+      "tex": "\\underline{x}",
+      "display": false,
+      "publishedFiles": [
+        "accent_italic_correction_mathjax_3_2_2.json",
+        "decoration_movable_mathjax_3_2_2.json",
+        "decoration_permission_mathjax_3_2_2.json",
+        "horizontal_rule_mathjax_3_2_2.json"
+      ]
+    },
+    {
+      "name": "under-over-0785",
+      "tex": "\\underline{x}",
+      "display": true,
+      "publishedFiles": [
+        "accent_italic_correction_mathjax_3_2_2.json",
+        "decoration_movable_mathjax_3_2_2.json",
+        "decoration_permission_mathjax_3_2_2.json",
+        "horizontal_rule_mathjax_3_2_2.json"
+      ]
+    },
+    {
+      "name": "under-over-0814",
+      "tex": "\\underline{\\mathcal{T}}",
+      "display": false,
+      "publishedFiles": [
+        "accent_italic_correction_mathjax_3_2_2.json"
+      ]
+    },
+    {
+      "name": "under-over-0815",
+      "tex": "\\underline{\\mathcal{T}}",
+      "display": true,
+      "publishedFiles": [
+        "accent_italic_correction_mathjax_3_2_2.json"
+      ]
+    },
+    {
+      "name": "under-over-0832",
+      "tex": "\\overbrace{x}",
+      "display": false,
+      "publishedFiles": [
+        "brace-labels.json",
+        "delimiter_cache_mathjax_3_2_2.json"
+      ]
+    },
+    {
+      "name": "under-over-0833",
+      "tex": "\\overbrace{x}",
+      "display": true,
+      "publishedFiles": [
+        "brace-labels.json",
+        "delimiter_cache_mathjax_3_2_2.json"
+      ]
+    },
+    {
+      "name": "under-over-0880",
+      "tex": "\\underbrace{x}",
+      "display": false,
+      "publishedFiles": [
+        "brace-labels.json",
+        "delimiter_cache_mathjax_3_2_2.json"
+      ]
+    },
+    {
+      "name": "under-over-0881",
+      "tex": "\\underbrace{x}",
+      "display": true,
+      "publishedFiles": [
+        "brace-labels.json",
+        "delimiter_cache_mathjax_3_2_2.json"
+      ]
+    },
+    {
+      "name": "under-over-0928",
+      "tex": "\\overrightarrow{x}",
+      "display": false,
+      "publishedFiles": [
+        "accent_policy_public_mathjax_3_2_2.json",
+        "arrow_accent_mathjax_3_2_2.json",
+        "delimiter_cache_mathjax_3_2_2.json",
+        "horizontal_rule_mathjax_3_2_2.json"
+      ]
+    },
+    {
+      "name": "under-over-0929",
+      "tex": "\\overrightarrow{x}",
+      "display": true,
+      "publishedFiles": [
+        "accent_policy_public_mathjax_3_2_2.json",
+        "arrow_accent_mathjax_3_2_2.json",
+        "delimiter_cache_mathjax_3_2_2.json",
+        "horizontal_rule_mathjax_3_2_2.json"
+      ]
+    },
+    {
+      "name": "under-over-0976",
+      "tex": "\\underrightarrow{x}",
+      "display": false,
+      "publishedFiles": [
+        "accent_policy_public_mathjax_3_2_2.json",
+        "arrow_accent_mathjax_3_2_2.json",
+        "decoration_movable_mathjax_3_2_2.json",
+        "decoration_permission_mathjax_3_2_2.json",
+        "delimiter_cache_mathjax_3_2_2.json"
+      ]
+    },
+    {
+      "name": "under-over-0977",
+      "tex": "\\underrightarrow{x}",
+      "display": true,
+      "publishedFiles": [
+        "accent_policy_public_mathjax_3_2_2.json",
+        "arrow_accent_mathjax_3_2_2.json",
+        "decoration_movable_mathjax_3_2_2.json",
+        "decoration_permission_mathjax_3_2_2.json",
+        "delimiter_cache_mathjax_3_2_2.json"
+      ]
+    },
+    {
+      "name": "under-over-1024",
+      "tex": "\\overleftarrow{x}",
+      "display": false,
+      "publishedFiles": [
+        "arrow_accent_mathjax_3_2_2.json",
+        "delimiter_cache_mathjax_3_2_2.json"
+      ]
+    },
+    {
+      "name": "under-over-1025",
+      "tex": "\\overleftarrow{x}",
+      "display": true,
+      "publishedFiles": [
+        "arrow_accent_mathjax_3_2_2.json",
+        "delimiter_cache_mathjax_3_2_2.json"
+      ]
+    },
+    {
+      "name": "under-over-1072",
+      "tex": "\\underleftarrow{x}",
+      "display": false,
+      "publishedFiles": [
+        "arrow_accent_mathjax_3_2_2.json",
+        "delimiter_cache_mathjax_3_2_2.json"
+      ]
+    },
+    {
+      "name": "under-over-1073",
+      "tex": "\\underleftarrow{x}",
+      "display": true,
+      "publishedFiles": [
+        "arrow_accent_mathjax_3_2_2.json",
+        "delimiter_cache_mathjax_3_2_2.json"
+      ]
+    },
+    {
+      "name": "under-over-1336",
+      "tex": "\\overline{\\frac{\\sum}{x}}",
+      "display": false,
+      "publishedFiles": [
+        "operator_primes_mathjax_3_2_2.json"
+      ]
+    },
+    {
+      "name": "under-over-1337",
+      "tex": "\\overline{\\frac{\\sum}{x}}",
+      "display": true,
+      "publishedFiles": [
+        "operator_primes_mathjax_3_2_2.json"
+      ]
+    },
+    {
+      "name": "under-over-1368",
+      "tex": "\\underline{\\sum_i^n}",
+      "display": false,
+      "publishedFiles": [
+        "scripted_decoration_mathjax_3_2_2.json"
+      ]
+    },
+    {
+      "name": "under-over-1369",
+      "tex": "\\underline{\\sum_i^n}",
+      "display": true,
+      "publishedFiles": [
+        "scripted_decoration_mathjax_3_2_2.json"
+      ]
+    },
+    {
+      "name": "under-over-1560",
+      "tex": "\\underrightarrow{\\sum_i^n}",
+      "display": false,
+      "publishedFiles": [
+        "scripted_decoration_mathjax_3_2_2.json"
+      ]
+    },
+    {
+      "name": "under-over-1561",
+      "tex": "\\underrightarrow{\\sum_i^n}",
+      "display": true,
+      "publishedFiles": [
+        "scripted_decoration_mathjax_3_2_2.json"
+      ]
+    },
+    {
+      "name": "under-over-1656",
+      "tex": "\\underleftarrow{\\sum_i^n}",
+      "display": false,
+      "publishedFiles": [
+        "scripted_decoration_mathjax_3_2_2.json"
+      ]
+    },
+    {
+      "name": "under-over-1657",
+      "tex": "\\underleftarrow{\\sum_i^n}",
+      "display": true,
+      "publishedFiles": [
+        "scripted_decoration_mathjax_3_2_2.json"
+      ]
+    },
+    {
+      "name": "under-over-1720",
+      "tex": "\\widehat{\\frac{\\sum}{x}}",
+      "display": false,
+      "publishedFiles": [
+        "operator_primes_mathjax_3_2_2.json"
+      ]
+    },
+    {
+      "name": "under-over-1721",
+      "tex": "\\widehat{\\frac{\\sum}{x}}",
+      "display": true,
+      "publishedFiles": [
+        "operator_primes_mathjax_3_2_2.json"
+      ]
+    },
+    {
+      "name": "under-over-3052",
+      "tex": "\\overbrace{abcdefgh}",
+      "display": false,
+      "publishedFiles": [
+        "delimiter_cache_residuals.json"
+      ]
+    },
+    {
+      "name": "under-over-3053",
+      "tex": "\\overbrace{abcdefgh}",
+      "display": true,
+      "publishedFiles": [
+        "delimiter_cache_residuals.json"
+      ]
+    },
+    {
+      "name": "under-over-3054",
+      "tex": "\\underbrace{abcdefgh}",
+      "display": false,
+      "publishedFiles": [
+        "delimiter_cache_residuals.json"
+      ]
+    },
+    {
+      "name": "under-over-3055",
+      "tex": "\\underbrace{abcdefgh}",
+      "display": true,
+      "publishedFiles": [
+        "delimiter_cache_residuals.json"
+      ]
+    },
+    {
+      "name": "under-over-3056",
+      "tex": "\\overline{\\mmlToken{mo}[stretchy=\"true\",minsize=\"1.199em\",maxsize=\"1.199em\"]{→}}",
+      "display": false,
+      "publishedFiles": [
+        "delimiter_cache_residuals.json"
+      ]
+    },
+    {
+      "name": "under-over-3057",
+      "tex": "\\overline{\\mmlToken{mo}[stretchy=\"true\",minsize=\"1.199em\",maxsize=\"1.199em\"]{→}}",
+      "display": true,
+      "publishedFiles": [
+        "delimiter_cache_residuals.json"
+      ]
+    },
+    {
+      "name": "under-over-3058",
+      "tex": "\\overline{\\mmlToken{mo}[stretchy=\"true\",minsize=\"2.399em\",maxsize=\"2.399em\"]{→}}",
+      "display": false,
+      "publishedFiles": [
+        "delimiter_cache_residuals.json"
+      ]
+    },
+    {
+      "name": "under-over-3059",
+      "tex": "\\overline{\\mmlToken{mo}[stretchy=\"true\",minsize=\"2.399em\",maxsize=\"2.399em\"]{→}}",
+      "display": true,
+      "publishedFiles": [
+        "delimiter_cache_residuals.json"
+      ]
+    },
+    {
+      "name": "under-over-3060",
+      "tex": "\\overline{\\mmlToken{mo}[stretchy=\"true\",minsize=\"2.401em\",maxsize=\"2.401em\"]{→}}",
+      "display": false,
+      "publishedFiles": [
+        "delimiter_cache_residuals.json"
+      ]
+    },
+    {
+      "name": "under-over-3061",
+      "tex": "\\overline{\\mmlToken{mo}[stretchy=\"true\",minsize=\"2.401em\",maxsize=\"2.401em\"]{→}}",
+      "display": true,
+      "publishedFiles": [
+        "delimiter_cache_residuals.json"
+      ]
+    },
+    {
+      "name": "under-over-3062",
+      "tex": "\\overleftrightarrow{abc}",
+      "display": false,
+      "publishedFiles": [
+        "delimiter_cache_residuals.json"
+      ]
+    },
+    {
+      "name": "under-over-3063",
+      "tex": "\\overleftrightarrow{abc}",
+      "display": true,
+      "publishedFiles": [
+        "delimiter_cache_residuals.json"
+      ]
+    },
+    {
+      "name": "under-over-3064",
+      "tex": "\\overleftrightarrow{\\kern2em}",
+      "display": false,
+      "publishedFiles": [
+        "delimiter_cache_residuals.json"
+      ]
+    },
+    {
+      "name": "under-over-3065",
+      "tex": "\\overleftrightarrow{\\kern2em}",
+      "display": true,
+      "publishedFiles": [
+        "delimiter_cache_residuals.json"
+      ]
+    },
+    {
+      "name": "under-over-3066",
+      "tex": "\\overleftrightarrow{\\phantom{abcdef}}",
+      "display": false,
+      "publishedFiles": [
+        "delimiter_cache_residuals.json"
+      ]
+    },
+    {
+      "name": "under-over-3067",
+      "tex": "\\overleftrightarrow{\\phantom{abcdef}}",
+      "display": true,
+      "publishedFiles": [
+        "delimiter_cache_residuals.json"
+      ]
+    },
+    {
+      "name": "under-over-3068",
+      "tex": "\\overleftrightarrow{\\left(\\Biggl[\\Biggr]\\right)}",
+      "display": false,
+      "publishedFiles": [
+        "delimiter_cache_residuals.json"
+      ]
+    },
+    {
+      "name": "under-over-3069",
+      "tex": "\\overleftrightarrow{\\left(\\Biggl[\\Biggr]\\right)}",
+      "display": true,
+      "publishedFiles": [
+        "delimiter_cache_residuals.json"
+      ]
+    },
+    {
+      "name": "under-over-3070",
+      "tex": "\\underbrace{a\\nonscript\\kern1emb}",
+      "display": false,
+      "publishedFiles": [
+        "nonscript_residuals.json"
+      ]
+    },
+    {
+      "name": "under-over-3071",
+      "tex": "\\underbrace{a\\nonscript\\kern1emb}",
+      "display": true,
+      "publishedFiles": [
+        "nonscript_residuals.json"
+      ]
+    },
+    {
+      "name": "under-over-3072",
+      "tex": "\\underbrace{a\\nonscript\\mkern18mub}",
+      "display": false,
+      "publishedFiles": [
+        "nonscript_residuals.json"
+      ]
+    },
+    {
+      "name": "under-over-3073",
+      "tex": "\\underbrace{a\\nonscript\\mkern18mub}",
+      "display": true,
+      "publishedFiles": [
+        "nonscript_residuals.json"
+      ]
+    },
+    {
+      "name": "under-over-3074",
+      "tex": "\\underbrace{a\\nonscript\\hskip1emb}",
+      "display": false,
+      "publishedFiles": [
+        "nonscript_residuals.json"
+      ]
+    },
+    {
+      "name": "under-over-3075",
+      "tex": "\\underbrace{a\\nonscript\\hskip1emb}",
+      "display": true,
+      "publishedFiles": [
+        "nonscript_residuals.json"
+      ]
+    },
+    {
+      "name": "under-over-3076",
+      "tex": "\\underbrace{a\\nonscript\\mskip18mub}",
+      "display": false,
+      "publishedFiles": [
+        "nonscript_residuals.json"
+      ]
+    },
+    {
+      "name": "under-over-3077",
+      "tex": "\\underbrace{a\\nonscript\\mskip18mub}",
+      "display": true,
+      "publishedFiles": [
+        "nonscript_residuals.json"
+      ]
+    },
+    {
+      "name": "under-over-3078",
+      "tex": "\\underbrace{a\\nonscript\\hspace{1em}b}",
+      "display": false,
+      "publishedFiles": [
+        "nonscript_residuals.json"
+      ]
+    },
+    {
+      "name": "under-over-3079",
+      "tex": "\\underbrace{a\\nonscript\\hspace{1em}b}",
+      "display": true,
+      "publishedFiles": [
+        "nonscript_residuals.json"
+      ]
+    },
+    {
+      "name": "under-over-3080",
+      "tex": "\\underbrace{a\\nonscript\\mspace{1em}b}",
+      "display": false,
+      "publishedFiles": [
+        "nonscript_residuals.json"
+      ]
+    },
+    {
+      "name": "under-over-3081",
+      "tex": "\\underbrace{a\\nonscript\\mspace{1em}b}",
+      "display": true,
+      "publishedFiles": [
+        "nonscript_residuals.json"
+      ]
+    },
+    {
+      "name": "under-over-3082",
+      "tex": "\\underbrace{a\\nonscript\\Space{1em}{.3em}{.2em}b}",
+      "display": false,
+      "publishedFiles": [
+        "nonscript_residuals.json"
+      ]
+    },
+    {
+      "name": "under-over-3083",
+      "tex": "\\underbrace{a\\nonscript\\Space{1em}{.3em}{.2em}b}",
+      "display": true,
+      "publishedFiles": [
+        "nonscript_residuals.json"
+      ]
+    },
+    {
+      "name": "under-over-3084",
+      "tex": "\\underbrace{a\\nonscript\\Rule{1em}{.3em}{.2em}b}",
+      "display": false,
+      "publishedFiles": [
+        "nonscript_residuals.json"
+      ]
+    },
+    {
+      "name": "under-over-3085",
+      "tex": "\\underbrace{a\\nonscript\\Rule{1em}{.3em}{.2em}b}",
+      "display": true,
+      "publishedFiles": [
+        "nonscript_residuals.json"
+      ]
+    },
+    {
+      "name": "under-over-3086",
+      "tex": "\\underbrace{a\\nonscript\\rule{1em}{.3em}b}",
+      "display": false,
+      "publishedFiles": [
+        "nonscript_residuals.json"
+      ]
+    },
+    {
+      "name": "under-over-3087",
+      "tex": "\\underbrace{a\\nonscript\\rule{1em}{.3em}b}",
+      "display": true,
+      "publishedFiles": [
+        "nonscript_residuals.json"
+      ]
+    },
+    {
+      "name": "under-over-3088",
+      "tex": "\\underbrace{a\\kern1emb}",
+      "display": false,
+      "publishedFiles": [
+        "nonscript_residuals.json"
+      ]
+    },
+    {
+      "name": "under-over-3089",
+      "tex": "\\underbrace{a\\kern1emb}",
+      "display": true,
+      "publishedFiles": [
+        "nonscript_residuals.json"
+      ]
+    },
+    {
+      "name": "under-over-3090",
+      "tex": "\\underbrace{a\\mkern18mub}",
+      "display": false,
+      "publishedFiles": [
+        "nonscript_residuals.json"
+      ]
+    },
+    {
+      "name": "under-over-3091",
+      "tex": "\\underbrace{a\\mkern18mub}",
+      "display": true,
+      "publishedFiles": [
+        "nonscript_residuals.json"
+      ]
+    },
+    {
+      "name": "under-over-3092",
+      "tex": "\\underbrace{a\\hskip1emb}",
+      "display": false,
+      "publishedFiles": [
+        "nonscript_residuals.json"
+      ]
+    },
+    {
+      "name": "under-over-3093",
+      "tex": "\\underbrace{a\\hskip1emb}",
+      "display": true,
+      "publishedFiles": [
+        "nonscript_residuals.json"
+      ]
+    },
+    {
+      "name": "under-over-3094",
+      "tex": "\\underbrace{a\\mskip18mub}",
+      "display": false,
+      "publishedFiles": [
+        "nonscript_residuals.json"
+      ]
+    },
+    {
+      "name": "under-over-3095",
+      "tex": "\\underbrace{a\\mskip18mub}",
+      "display": true,
+      "publishedFiles": [
+        "nonscript_residuals.json"
+      ]
+    },
+    {
+      "name": "under-over-3096",
+      "tex": "\\underbrace{a\\hspace{1em}b}",
+      "display": false,
+      "publishedFiles": [
+        "nonscript_residuals.json"
+      ]
+    },
+    {
+      "name": "under-over-3097",
+      "tex": "\\underbrace{a\\hspace{1em}b}",
+      "display": true,
+      "publishedFiles": [
+        "nonscript_residuals.json"
+      ]
+    },
+    {
+      "name": "under-over-3098",
+      "tex": "\\underbrace{a\\mspace{1em}b}",
+      "display": false,
+      "publishedFiles": [
+        "nonscript_residuals.json"
+      ]
+    },
+    {
+      "name": "under-over-3099",
+      "tex": "\\underbrace{a\\mspace{1em}b}",
+      "display": true,
+      "publishedFiles": [
+        "nonscript_residuals.json"
+      ]
+    },
+    {
+      "name": "under-over-3100",
+      "tex": "\\underbrace{a\\Space{1em}{.3em}{.2em}b}",
+      "display": false,
+      "publishedFiles": [
+        "nonscript_residuals.json"
+      ]
+    },
+    {
+      "name": "under-over-3101",
+      "tex": "\\underbrace{a\\Space{1em}{.3em}{.2em}b}",
+      "display": true,
+      "publishedFiles": [
+        "nonscript_residuals.json"
+      ]
+    },
+    {
+      "name": "under-over-3102",
+      "tex": "\\underbrace{a\\Rule{1em}{.3em}{.2em}b}",
+      "display": false,
+      "publishedFiles": [
+        "nonscript_residuals.json"
+      ]
+    },
+    {
+      "name": "under-over-3103",
+      "tex": "\\underbrace{a\\Rule{1em}{.3em}{.2em}b}",
+      "display": true,
+      "publishedFiles": [
+        "nonscript_residuals.json"
+      ]
+    },
+    {
+      "name": "under-over-3104",
+      "tex": "\\underbrace{a\\rule{1em}{.3em}b}",
+      "display": false,
+      "publishedFiles": [
+        "nonscript_residuals.json"
+      ]
+    },
+    {
+      "name": "under-over-3105",
+      "tex": "\\underbrace{a\\rule{1em}{.3em}b}",
+      "display": true,
+      "publishedFiles": [
+        "nonscript_residuals.json"
+      ]
+    },
+    {
+      "name": "under-over-3106",
+      "tex": "\\underbrace{a\\nonscript\\quad b}",
+      "display": false,
+      "publishedFiles": [
+        "nonscript_residuals.json"
+      ]
+    },
+    {
+      "name": "under-over-3107",
+      "tex": "\\underbrace{a\\nonscript\\quad b}",
+      "display": true,
+      "publishedFiles": [
+        "nonscript_residuals.json"
+      ]
+    },
+    {
+      "name": "under-over-3108",
+      "tex": "\\underbrace{a\\quad b}",
+      "display": false,
+      "publishedFiles": [
+        "nonscript_residuals.json"
+      ]
+    },
+    {
+      "name": "under-over-3109",
+      "tex": "\\underbrace{a\\quad b}",
+      "display": true,
+      "publishedFiles": [
+        "nonscript_residuals.json"
+      ]
+    }
+  ],
+  "ambiguousSchemaMatches": [],
+  "scannedFiles": [
+    "accent_base_height_mathjax_3_2_2.json",
+    "accent_italic_correction_mathjax_3_2_2.json",
+    "accent_policy_public_mathjax_3_2_2.json",
+    "accent_script_base_boundaries.json",
+    "accent_script_base_mathjax_3_2_2.json",
+    "accent_script_xarrow_mathjax_3_2_2.json",
+    "adjacent_relations_mathjax_3_2_2.json",
+    "alignedat_mathjax_3_2_2.json",
+    "alignedat_residuals.json",
+    "annotation_attachment_boundaries.json",
+    "annotation_attachment_mathjax_3_2_2.json",
+    "array_initial_intermediate_observations.json",
+    "array_initial_mathjax_3_2_2.json",
+    "array_initial_published_replay.json",
+    "array_initial_residuals.json",
+    "array_rows_mathjax_3_2_2.json",
+    "array_rows_residuals.json",
+    "arrow_accent_mathjax_3_2_2.json",
+    "arrow_accent_qualifications.json",
+    "arrow_between_lines_mathjax_3_2_2.json",
+    "arrow_between_lines_residuals.json",
+    "authored_font_family_mathjax_3_2_2.json",
+    "base_struts_mathjax_3_2_2.json",
+    "binomial_commands_boundaries.json",
+    "binomial_commands_mathjax_3_2_2.json",
+    "binomial_macros_mathjax_3_2_2.json",
+    "bmod_command_boundaries.json",
+    "bmod_command_mathjax_3_2_2.json",
+    "boxed_macro_mathjax_3_2_2.json",
+    "boxed_macro_residuals.json",
+    "brace-labels.json",
+    "bracket_thickness_mathjax_3_2_2.json",
+    "braket_bar_mathjax_3_2_2.json",
+    "buildrel_mathjax_3_2_2.json",
+    "buildrel_residuals.json",
+    "cd_entries_mathjax_3_2_2.json",
+    "cd_entries_residuals.json",
+    "cd_finalization_mathjax_3_2_2.json",
+    "cd_finalization_residuals.json",
+    "commutator_mathjax_3_2_2.json",
+    "cramped_style_geometry_proof.json",
+    "cramped_style_mathjax_3_2_2.json",
+    "cramped_style_published_replay.json",
+    "cramped_style_residuals.json",
+    "cramped_substack_mathjax_3_2_2.json",
+    "cramped_substack_published_replay.json",
+    "cramped_substack_residuals.json",
+    "cramped_substack_review.json",
+    "decoration_movable_boundaries.json",
+    "decoration_movable_mathjax_3_2_2.json",
+    "decoration_permission_boundaries.json",
+    "decoration_permission_constructor_baseline.json",
+    "decoration_permission_mathjax_3_2_2.json",
+    "delimiter_cache_mathjax_3_2_2.json",
+    "delimiter_cache_residuals.json",
+    "delimiter_color_mathjax_3_2_2.json",
+    "delimiter_svg_mathjax_3_2_2.json",
+    "derivative_autoopen_mathjax_3_2_2.json",
+    "derivative_construction_mathjax_3_2_2.json",
+    "differential_construction_mathjax_3_2_2.json",
+    "dimension_grammar_alias_boundaries.json",
+    "dimension_grammar_boundaries.json",
+    "dimension_grammar_inputs.json",
+    "dimension_grammar_mathjax_3_2_2.json",
+    "dots_mathjax_3_2_2.json",
+    "enclosure_attribute_order_observations.json",
+    "enclosure_bbox_mathjax_3_2_2.json",
+    "enclosure_bbox_residuals.json",
+    "enclosure_geometry_report.json",
+    "enclosure_inherited_font_controls.json",
+    "enclosure_lifecycle_mathjax_3_2_2.json",
+    "enclosure_measurement_counterexamples.json",
+    "enclosure_notations_mathjax_3_2_2.json",
+    "eqnarray_current_mathjax_3_2_2.json",
+    "eqnarray_current_public_overlap.json",
+    "eqnarray_current_qualification.json",
+    "eqnarray_current_residuals.json",
+    "eqnarray_mathjax_3_2_2.json",
+    "eqnarray_residuals.json",
+    "equation_nesting_mathjax_3_2_2.json",
+    "escaped_delimiter_xml_mathjax_3_2_2.json",
+    "executable_source_map_mathjax_3_2_2.json",
+    "explicit_limits_boundaries.json",
+    "explicit_limits_mathjax_3_2_2.json",
+    "fallback_correction_mathjax_3_2_2.json",
+    "fallback_correction_residuals_mathjax_3_2_2.json",
+    "fixed_infix_fences_boundaries.json",
+    "fixed_infix_fences_mathjax_3_2_2.json",
+    "flalign_mathjax_3_2_2.json",
+    "flalign_nested_mathjax_3_2_2.json",
+    "flalign_nested_output_observations.json",
+    "flalign_residuals.json",
+    "fn_script_ownership_mathjax_3_2_2.json",
+    "fn_script_ownership_residuals.json",
+    "font_mappings_mathjax_3_2_2.json",
+    "fraction_spacing_mathjax_3_2_2.json",
+    "framebox_geometry_proof.json",
+    "framebox_mathjax_3_2_2.json",
+    "framebox_residuals.json",
+    "framed_internal_text_mathjax_3_2_2.json",
+    "gather_tags_mathjax_3_2_2.json",
+    "genfrac_palette_mathjax_3_2_2.json",
+    "genfrac_style_mathjax_3_2_2.json",
+    "getbrackets_whitespace_mathjax_3_2_2.json",
+    "group_eof_boundaries.json",
+    "group_eof_inputs.json",
+    "group_eof_mathjax_3_2_2.json",
+    "hash_diagnostic_full_mathjax_3_2_2.json",
+    "hfill_mathjax_3_2_2.json",
+    "hfill_residuals.json",
+    "horizontal_position_mathjax_3_2_2.json",
+    "horizontal_rule_mathjax_3_2_2.json",
+    "identifier_operator_mathjax_3_2_2.json",
+    "infix_delimiters_mathjax_3_2_2.json",
+    "infix_macro_priority_boundaries.json",
+    "infix_macro_priority_cases.json",
+    "infix_macro_priority_mathjax_3_2_2.json",
+    "infix_scope_boundaries.json",
+    "infix_scope_inputs.json",
+    "infix_scope_mathjax_3_2_2.json",
+    "internal_font_css_mathjax_3_2_2.json",
+    "internal_font_css_residuals_mathjax_3_2_2.json",
+    "internal_text_boundaries.json",
+    "internal_text_mathjax_3_2_2.json",
+    "lowercase_rule_mathjax_3_2_2.json",
+    "macro_boundary_inputs.json",
+    "mathit_mathjax_3_2_2.json",
+    "mathlap_style_ampersand_proof.json",
+    "mathlap_style_attribute_order_proof.json",
+    "mathlap_style_mathjax_3_2_2.json",
+    "mathlap_style_overlap_report.json",
+    "mathlap_style_published_replay.json",
+    "mathlap_style_quantity_over_proof.json",
+    "mathlap_style_residuals.json",
+    "mathop_limits_filter_mathjax_3_2_2.json",
+    "matrix_cases_mathjax_3_2_2.json",
+    "matrix_command_mathjax_3_2_2.json",
+    "matrix_numbered_mathjax_3_2_2.json",
+    "matrix_quantity_mathjax_3_2_2.json",
+    "matrix_quantity_residuals.json",
+    "mhchem_equilibrium_mathjax_3_2_2.json",
+    "mhchem_partial_bonds_mathjax_3_2_2.json",
+    "middle_delimiter_mathjax_3_2_2.json",
+    "middle_scope_mathjax_3_2_2.json",
+    "missing_right_full_mathjax_3_2_2.json",
+    "mod_command_boundaries.json",
+    "mod_command_mathjax_3_2_2.json",
+    "mspace_mathjax_3_2_2.json",
+    "mspace_residuals.json",
+    "multi_text_renderer_mathjax_3_2_2.json",
+    "named_limit_spacing_mathjax_3_2_2.json",
+    "named_limit_spacing_residuals.json",
+    "negation_mathjax_3_2_2.json",
+    "nested_movable_limits_mathjax_3_2_2.json",
+    "newline_mathjax_3_2_2.json",
+    "newline_residuals.json",
+    "nonscript_array_mathjax_3_2_2.json",
+    "nonscript_array_published_replay.json",
+    "nonscript_array_residuals.json",
+    "nonscript_attribute_order_proof.json",
+    "nonscript_final_review.json",
+    "nonscript_mathjax_3_2_2.json",
+    "nonscript_published_replay.json",
+    "nonscript_residuals.json",
+    "numeric_script_boundaries.json",
+    "numeric_script_inputs.json",
+    "numeric_script_mathjax_3_2_2.json",
+    "numeric_script_whitespace.json",
+    "operator_level_mathjax_3_2_2.json",
+    "operator_name_child_mathjax_3_2_2.json",
+    "operator_primes_mathjax_3_2_2.json",
+    "operator_primes_residuals.json",
+    "ordinary_number/inputs.json",
+    "ordinary_number_boundaries.json",
+    "ordinary_number_mathjax_3_2_2.json",
+    "overunderset_direct_base_mathjax_3_2_2.json",
+    "paired_delimiters_mathjax_3_2_2.json",
+    "parity/accent-italic-correction/manifest.json",
+    "parity/alignedat-arguments/manifest.json",
+    "parity/alignment-row-commands/manifest.json",
+    "parity/array-entry-alignment/manifest.json",
+    "parity/array-hfill/manifest.json",
+    "parity/array-row-finalization/manifest.json",
+    "parity/base-struts/manifest.json",
+    "parity/boxed-font-context/manifest.json",
+    "parity/bracket-thickness-units/manifest.json",
+    "parity/buildrel-relations/manifest.json",
+    "parity/cases-text-columns/manifest.json",
+    "parity/cd-explicit-entries/manifest.json",
+    "parity/cd-finalization/manifest.json",
+    "parity/cramped-optional-styles/manifest.json",
+    "parity/cramped-stacks/manifest.json",
+    "parity/delimiter-cache/manifest.json",
+    "parity/embellished-row-stretch/manifest.json",
+    "parity/enclosure-baseline/manifest.json",
+    "parity/eqnarray-environments/manifest.json",
+    "parity/eqnarray-environments/tagged-measurement.json",
+    "parity/fallback-token-correction/manifest.json",
+    "parity/flalign-columns/manifest.json",
+    "parity/font-command-mappings/manifest.json",
+    "parity/framebox-width-alignment/manifest.json",
+    "parity/function-script-ownership/manifest.json",
+    "parity/getbrackets-whitespace/manifest.json",
+    "parity/horizontal-positioning/manifest.json",
+    "parity/internal-font-css/manifest.json",
+    "parity/lowercase-rule/manifest.json",
+    "parity/mathlap-optional-styles/manifest.json",
+    "parity/matrix-commands/manifest.json",
+    "parity/mhchem-equilibrium/manifest.json",
+    "parity/middle-delimiter-scope/manifest.json",
+    "parity/mspace-command/manifest.json",
+    "parity/named-limit-spacing/manifest.json",
+    "parity/newline-cell-events/manifest.json",
+    "parity/nonscript-spacing/manifest.json",
+    "parity/numbered-alignments/manifest.json",
+    "parity/operator-prime-glyphs/manifest.json",
+    "parity/partial-chemical-bonds/manifest.json",
+    "parity/physics-brace-quantity/manifest.json",
+    "parity/physics-differential/manifest.json",
+    "parity/physics-matrix-quantity/manifest.json",
+    "parity/physics-named-functions/manifest.json",
+    "parity/physics-operator-applications/manifest.json",
+    "parity/physics-quick-text/manifest.json",
+    "parity/physics-vector-applications/manifest.json",
+    "parity/poor-mans-bold/manifest.json",
+    "parity/quantity-token-fallback/manifest.json",
+    "parity/radical-local-size/manifest.json",
+    "parity/radical-size/manifest.json",
+    "parity/raise-lower-position/manifest.json",
+    "parity/raise-lower-signed/manifest.json",
+    "parity/reversible-chemistry/manifest.json",
+    "parity/root-index-offset/manifest.json",
+    "parity/row-command-priority/manifest.json",
+    "parity/script-final-items/manifest.json",
+    "parity/skewed-accents/manifest.json",
+    "parity/sqrt-fraction/manifest.json",
+    "parity/table-measurement/manifest.json",
+    "parity/tex-latex-logos/manifest.json",
+    "parity/text-lap-internal-math/manifest.json",
+    "physics_brace_quantity_mathjax_3_2_2.json",
+    "physics_brace_quantity_public_overlap.json",
+    "physics_brace_quantity_published_replay.json",
+    "physics_brace_quantity_qualification.json",
+    "physics_brace_quantity_residuals.json",
+    "physics_named_functions_mathjax_3_2_2.json",
+    "physics_named_functions_residuals.json",
+    "physics_operator_applications_mathjax_3_2_2.json",
+    "physics_operator_applications_residuals.json",
+    "physics_vector_applications_mathjax_3_2_2.json",
+    "physics_vector_applications_residuals.json",
+    "pmb_mathjax_3_2_2.json",
+    "pmb_residuals.json",
+    "pod_commands_boundaries.json",
+    "pod_commands_mathjax_3_2_2.json",
+    "pod_macros_mathjax_3_2_2.json",
+    "prime_attachment_boundaries.json",
+    "prime_attachment_mathjax_3_2_2.json",
+    "prime_lifetime_mathjax_3_2_2.json",
+    "prime_whitespace_boundaries.json",
+    "prime_whitespace_inputs.json",
+    "prime_whitespace_mathjax_3_2_2.json",
+    "quantity_fallback_attribute_order_proof.json",
+    "quantity_fallback_mathjax_3_2_2.json",
+    "quantity_fallback_published_replay.json",
+    "quantity_fallback_residuals.json",
+    "quantity_star_mathjax_3_2_2.json",
+    "quick_text_mathjax_3_2_2.json",
+    "quick_text_overlap_report.json",
+    "quick_text_published_replay.json",
+    "quick_text_residuals.json",
+    "radical_bbox_mathjax_3_2_2.json",
+    "radical_size_mathjax_3_2_2.json",
+    "raise_lower_mathjax_3_2_2.json",
+    "reference_text/private-inputs.json",
+    "reference_text/public-inputs.json",
+    "reference_text_mathjax_3_2_2.json",
+    "relax_command_boundaries.json",
+    "relax_command_mathjax_3_2_2.json",
+    "responsive_minwidth_mathjax_3_2_2.json",
+    "reversible_reaction_mathjax_3_2_2.json",
+    "root_index_mathjax_3_2_2.json",
+    "row_command_priority_mathjax_3_2_2.json",
+    "row_command_priority_residuals.json",
+    "row_stretch_mathjax_3_2_2.json",
+    "row_stretch_residuals.json",
+    "script_class_mathjax_3_2_2.json",
+    "script_final_items_attribute_order_proof.json",
+    "script_final_items_geometry_proof.json",
+    "script_final_items_mathjax_3_2_2.json",
+    "script_final_items_published_replay.json",
+    "script_final_items_residuals.json",
+    "script_scaling_mathjax_3_2_2.json",
+    "scripted_decoration_boundaries.json",
+    "scripted_decoration_mathjax_3_2_2.json",
+    "scripted_decoration_registered_mathjax_3_2_2.json",
+    "sideset_mathjax_3_2_2.json",
+    "skew_mathjax_3_2_2.json",
+    "skew_residuals.json",
+    "sqrt_argument_mathjax_3_2_2.json",
+    "stack_placement_mathjax_3_2_2.json",
+    "stackrel_mathjax_3_2_2.json",
+    "star_macro_charge_mathjax_3_2_2.json",
+    "star_macro_suffix_mathjax_3_2_2.json",
+    "style_scope_mathjax_3_2_2.json",
+    "table_measurement_mathjax_3_2_2.json",
+    "tex_logos_mathjax_3_2_2.json",
+    "tex_mu_dimensions_boundaries.json",
+    "tex_mu_dimensions_inputs.json",
+    "tex_mu_dimensions_mathjax_3_2_2.json",
+    "text_lap_mathjax_3_2_2.json",
+    "text_lap_overlap_report.json",
+    "text_lap_published_replay.json",
+    "unbraced_prime_boundaries.json",
+    "unbraced_prime_inputs.json",
+    "unbraced_prime_mathjax_3_2_2.json",
+    "unicode_fallback_mathjax_3_2_2.json",
+    "unicode_prime_boundaries.json",
+    "unicode_prime_mathjax_3_2_2.json",
+    "vector_accent_mathjax_3_2_2.json",
+    "wide_accent_mathjax_3_2_2.json"
+  ],
+  "baselineInternalTree": "74787f5db7d8284daf1b22d310e4863cef104926",
+  "baselineContext": "Published PR154 head, before merge; production and fixture trees are the final reviewed source.",
+  "baselineMergedCommit": "290cf6537cf7e066ff2d5a873a79b6f72db51894",
+  "priorRawPromotions": 60,
+  "priorAssertedInputs": 32,
+  "priorAssertionsWithCompleteSVG": 26,
+  "priorAssertionsWithHashAndTreeOnly": 6,
+  "firstCompleteSVGAmongExistingPairs": 6,
+  "independentRecursiveTestdataScan": {
+    "trackedJSONFiles": 378,
+    "alreadyPublishedInputCount": 92,
+    "ambiguousSchemaMatches": 0,
+    "includesInternalTestdata": true
+  }
+}

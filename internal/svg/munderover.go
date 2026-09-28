@@ -139,7 +139,9 @@ func (w *wrapper) underOverDelta(noSkew bool) float64 {
 	if boolAttributeDefault(w.node, "accent", false) && !noSkew {
 		skew = bbox.Skew
 	}
-	return (skew + .75*bbox.IC) * w.baseScale()
+	// CommonScriptbase.getDelta rounds the italic-correction product before
+	// adding the skew; a fused operation can change the serialized position.
+	return (skew + float64(.75*bbox.IC)) * w.baseScale()
 }
 
 func (w *wrapper) stackOffsets(boxes []*layout.BBox, deltas []float64) []float64 {
