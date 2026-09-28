@@ -37,13 +37,13 @@ control `\left[\mmlToken{mo}[stretchy="true",mathsize="200%"]{[}\right]`.
 
 ## Complete original references
 
-`row_stretch_mathjax_3_2_2.json` contains **988 complete original SVGs**, all
+`row_stretch_mathjax_3_2_2.json` contains **1,020 complete original SVGs**, all
 valid renderings. It records the source commit, the three verified frozen D2
-bundle hashes, and baseline main130
-`ed0afff52f6f50eb2e49daf7eada8cd9369a781a`. Each expression is rendered in a
+bundle hashes, and baseline main131
+`e9b0d9241c3df3562d56146ce04bd03c929fad1f`. Each expression is rendered in a
 fresh VM with font cache none, `em=16`, `ex=8`, and its recorded display mode.
-The baseline fails 512 of these references. The full deduplicated audit of
-1,346 inputs has zero formerly exact regressions.
+The baseline fails 538 of these references. The full deduplicated audit of
+1,378 inputs has zero formerly exact regressions.
 
 Coverage includes six fence pairs, four explicit delimiter sizes, ordinary
 and tall content, display and script styles, mixed sizes, grouped and classed
@@ -52,11 +52,15 @@ fractions, roots, arrays, CD, Physics applications, and explicit `mmlToken`
 stretch/minsize/maxsize/symmetry/scale/style attributes. Independent review
 contributed 284 fresh comparisons: 218 exact, 152 newly exact, no regressions.
 
-After rebasing onto main130, all 988 references still match, all 358 raw
+After rebasing onto main130, all 988 initial references still match, all 358 raw
 observations remain byte-identical, and the baseline failure count remains
 512. A further 36 fresh original comparisons cover the merged Physics vector
 applications and array row-finalization changes with explicit nested fences:
-all 36 match, including 30 newly exact results, with no regressions.
+all 36 match, including 30 newly exact results, with no regressions. Thirty-two
+unique cases are included in the final 1,020-reference fixture; four overlap
+existing cases. The final main131 recheck confirms all 1,020 exact references,
+538 baseline discrepancies, and unchanged original/baseline/candidate outcomes
+for all 358 residual controls.
 
 ## Preserved raw observations
 
