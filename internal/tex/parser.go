@@ -971,13 +971,11 @@ func (p *parser) parseArgument(name string) (*mml.Node, error) {
 }
 
 func (p *parser) parseArgumentString(raw string) (*mml.Node, error) {
-	if p.genfracPalette || p.starMacroChildren || p.derivativeChildren {
-		// TexParser.ParseArg creates a genuine child parser. Genfrac's palette
-		// and Physics' generated expressions retain its independent count.
-		count := p.state.macroCount
-		p.state.macroCount = 0
-		defer func() { p.state.macroCount = count }()
-	}
+	// TexParser.ParseArg always creates a genuine child parser, including
+	// ordinary arguments reached outside a generated Physics expression.
+	count := p.state.macroCount
+	p.state.macroCount = 0
+	defer func() { p.state.macroCount = count }()
 	return p.parseString(raw)
 }
 
@@ -1026,12 +1024,10 @@ func (p *parser) parseStringWithStackArray(source string, global *parserStackGlo
 // letter run into one mi and noAutoOP prevents a multi-letter roman identifier
 // from being reclassified as a named operator.
 func (p *parser) parseMathFontString(source, variant string, ambientOnly bool) (*mml.Node, error) {
-	if p.genfracPalette || p.derivativeChildren {
-		// MathFont creates a genuine child TexParser with its own count.
-		count := p.state.macroCount
-		p.state.macroCount = 0
-		defer func() { p.state.macroCount = count }()
-	}
+	// MathFont always creates a genuine child TexParser with its own count.
+	count := p.state.macroCount
+	p.state.macroCount = 0
+	defer func() { p.state.macroCount = count }()
 	sub := &parser{
 		source:             source,
 		state:              p.state,

@@ -92,15 +92,12 @@ func (p *parser) amsGenfracPalette(fence, side string) (*mml.Node, error) {
 	return result, nil
 }
 
-// Both Sqrt and Root call the source's fresh parseRoot index parser. Keep the
-// counter policy local to generated-expression descendants; parseString
-// continues to carry lexical state without a global counter reset.
+// Both Sqrt and Root create a fresh parseRoot index parser. Its counter is
+// independent even when the surrounding expression is ordinary authored TeX.
 func (p *parser) parseRootIndex(source string) (*mml.Node, error) {
-	if p.genfracPalette || p.derivativeChildren {
-		count := p.state.macroCount
-		p.state.macroCount = 0
-		defer func() { p.state.macroCount = count }()
-	}
+	count := p.state.macroCount
+	p.state.macroCount = 0
+	defer func() { p.state.macroCount = count }()
 	inRoot := p.inRoot
 	p.inRoot = true
 	defer func() { p.inRoot = inRoot }()
