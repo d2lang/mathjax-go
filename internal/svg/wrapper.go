@@ -862,8 +862,10 @@ func (w *wrapper) unknownText(text string, variant font.Variant) *Element {
 		return element
 	}
 	family, italic, bold := "serif", false, false
+	// CommonTeXFontMixin extends FontData's CSS fallbacks for its internal
+	// variants; these are distinct from their glyph inheritance chains.
 	switch variant {
-	case font.Script, font.BoldScript:
+	case font.Script, font.BoldScript, font.TeXCalligraphic, font.TeXBoldCalligraphic:
 		family = "cursive"
 	case font.SansSerif, font.BoldSansSerif, font.SansSerifItalic, font.SansSerifBoldItalic:
 		family = "sans-serif"
@@ -871,11 +873,11 @@ func (w *wrapper) unknownText(text string, variant font.Variant) *Element {
 		family = "monospace"
 	}
 	switch variant {
-	case font.Italic, font.BoldItalic, font.SansSerifItalic, font.SansSerifBoldItalic:
+	case font.Italic, font.BoldItalic, font.SansSerifItalic, font.SansSerifBoldItalic, font.TeXMathItalic, font.TeXCalligraphic, font.TeXBoldCalligraphic:
 		italic = true
 	}
 	switch variant {
-	case font.Bold, font.BoldItalic, font.DoubleStruck, font.BoldFraktur, font.BoldScript, font.BoldSansSerif, font.SansSerifBoldItalic:
+	case font.Bold, font.BoldItalic, font.DoubleStruck, font.BoldFraktur, font.BoldScript, font.BoldSansSerif, font.SansSerifBoldItalic, font.TeXBoldCalligraphic, font.TeXBoldOldStyle:
 		bold = true
 	}
 	element.SetAttr("font-family", family)
