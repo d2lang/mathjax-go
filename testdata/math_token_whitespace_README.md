@@ -34,12 +34,13 @@ TeX/display pairs from 3,480 observations: 2,376 whitespace/caller observations,
 240 token-owner observations, and 864 separately captured fallback-kind controls.
 No original SVG, attribute, exception, or input is normalized.
 
-The source is rebased onto actual main165
-`5fd30978e6a93afce774885b2bf669caf8f4fe99`. The current short probe preserves the
-GetCS change from that base and matches 3,032 complete original outputs. Of
+The source is rebased onto actual main167
+`f6644c882286e15b5cce2ebb4a867a70e795e25e`. The current probe preserves the
+merged source changes and matches 3,032 complete original outputs. Of
 these, **3,016 are well-formed SVGs** asserted strictly: 2,954 non-error renders
 and 62 error renderings. There are 1,558 fixes and no exact regressions against
-the merged165 baseline. The other 16 identical output strings are malformed
+the merged167 baseline. All 3,440 candidate and baseline outcomes are unchanged
+from the preserved main166 comparisons. The other 16 identical output strings are malformed
 original XML and remain raw, never strict SVG assertions.
 
 `math_token_whitespace_residuals.json` retains all 424 other observations:
@@ -50,8 +51,9 @@ are retained byte-for-byte. The 204 actual null-range failures have a separate
 bounded-error test; they are not original-SVG parity successes. The remaining
 22 original runtime failures keep their previous Go outcomes.
 
-The strict provenance audit scans all 430 prior testdata JSON files on actual
-main165. Of the 3,016 strict pairs, 2,978 inputs first appear here, 22 have prior
+The strict provenance audit scans all 439 prior testdata JSON files on actual
+main167; its per-input classifications are unchanged from the earlier main165
+receipt retained in the inventory. Of the 3,016 strict pairs, 2,978 inputs first appear here, 22 have prior
 complete references, 10 promote prior raw references, and six have prior input
 metadata without a complete original SVG. These are per-fix input counts, not
 a claim of globally unique MathJax coverage.
@@ -102,16 +104,19 @@ Twenty own original-valid render observations change but remain nonexact:
 These qualifications are bound to the complete preserved originals and both
 binary outputs. None is used as a normalized passing SVG golden.
 
-The merged165 broad replay covers 5,802 published residual inputs and 4,326
+The merged167 broad replay covers 5,998 published residual inputs and 4,326
 upstream inputs under the frozen D2 configuration. Published inputs have 136
 genuine fixes and no genuine regressions. Two changed dfrac/U+180E observations
 now have complete original primitive geometry, retaining only an inherited
 mstyle closure difference. Other changed raw observations are original runtime
 failures or four enclose controls unavailable in the original frozen bundle.
-Upstream has no genuine changes. Four published and one upstream cancel-family
-serialization controls are excluded from source fix/regression counts: 64
-renders per binary each equal complete original parsed XML, including all
-attributes, text, tails, and ordered children.
+Eight newly published MoveEqLeft/NEL original-runtime controls now produce the
+bounded U+0085 error. Upstream has no genuine changes. Two published and two
+upstream serialization controls are excluded from source fix/regression counts:
+64 renders per binary preserve complete parsed XML, including every attribute,
+text, tail, and ordered child. Three controls match the complete original XML;
+one upstream enclose control has identical baseline/candidate XML but the
+original frozen package cannot render that command.
 
 ## Reproduction
 
@@ -132,6 +137,11 @@ source runtime failures, not replacement renderings.
 The first full166 validation attempt is preserved as a failed receipt: its
 oracle process did not use the established jitless Node wrapper, and the
 historical tests still accepted superseded Go NEL/BOM behavior. Production is
-unchanged by the assertion promotions above. The focused166 tests passed before
-that attempt; corrected focused/full/race/vet/WASM validation remains pending.
-Full oracle validation must set `MATHJAX_GO_NODE` to the task's jitless wrapper.
+unchanged by the assertion promotions above. The corrected focused167 checks passed, including
+both historical test families. On clean source/test head
+`76be33576861b50349fb5a180a1472d87f599a56`, the pinned Go 1.27.0 serial checks
+passed: full frozen oracle (29.18 s), race (161.78 s), vet (0.70 s), and WASM
+build (0.76 s). Full oracle validation explicitly set `MATHJAX_GO_NODE` to the
+task's jitless wrapper. All three original fixture files regenerate
+byte-identically. This final change is documentation only; D2 publication
+validation belongs to the root handoff.
