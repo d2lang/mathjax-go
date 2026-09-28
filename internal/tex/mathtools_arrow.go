@@ -18,6 +18,7 @@ type equationRowState struct {
 }
 
 type equationTableState struct {
+	rules          *arrayRules
 	rows           int
 	flushAbove     int
 	spacing        []string
@@ -26,7 +27,9 @@ type equationTableState struct {
 }
 
 func newEquationTableState(appendRow func(*mml.Node) error) *equationTableState {
-	return &equationTableState{flushAbove: -1, appendRow: appendRow}
+	state := &equationTableState{flushAbove: -1, appendRow: appendRow}
+	state.rules = &arrayRules{rows: func() int { return state.rows }}
+	return state
 }
 
 func (state *equationRowState) endEntry(nodes []*mml.Node) {
@@ -67,6 +70,9 @@ func (state *equationTableState) addSpacing(adjust string) {
 }
 
 func (state *equationTableState) applySpacing(table *mml.Node) {
+	if state != nil {
+		table.SetProperty(arrayRulesProperty, state.rules)
+	}
 	if state != nil && state.spacing != nil {
 		// ArrayItem.checkLines fills trailing rows with the cached original
 		// spacing, so a shortened last explicit value is not repeated.
@@ -208,6 +214,7 @@ func (p *parser) parseEquationRow(cells []string, final bool, appendRow func(*mm
 func (p *parser) parseEquationBody(source string, table *equationTableState) error {
 	state := &equationRowState{table: table}
 	return p.parseArrayBody(source, arrayBodyOwner{
+		rules:      table.rules,
 		configure:  func(sub *parser) { sub.arrayCell.equation = state },
 		hasEntries: func() bool { return len(state.entries) != 0 },
 		endEntry: func(children []*mml.Node, _ *arrayCellState) error {

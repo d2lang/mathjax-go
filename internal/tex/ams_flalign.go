@@ -128,6 +128,7 @@ func (p *parser) amsFlalignEnvironment(name string) ([]*mml.Node, error) {
 	var entries []*mml.Node
 	spacing := &arrayRowSpacing{}
 	err = p.parseArrayBody(body, arrayBodyOwner{
+		rules:      newArrayRules(table),
 		hasEntries: func() bool { return len(entries) != 0 },
 		endEntry: func(children []*mml.Node, _ *arrayCellState) error {
 			if len(entries) != 0 {
@@ -160,5 +161,5 @@ func (p *parser) amsFlalignEnvironment(name string) ([]*mml.Node, error) {
 	layout.endTable(table)
 	spacing.apply(table, "3pt")
 
-	return []*mml.Node{table}, nil
+	return []*mml.Node{finishArrayRules(table)}, nil
 }

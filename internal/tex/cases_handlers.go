@@ -57,6 +57,7 @@ func (p *parser) casesEnvironment(name string) (nodes []*mml.Node, handled bool,
 	row := &equationRowState{table: spacing}
 	err = p.parseArrayBody("", arrayBodyOwner{
 		environment: frame,
+		rules:       spacing.rules,
 		configure: func(sub *parser) {
 			sub.arrayCell.equation, sub.arrayCell.numCases = row, true
 		},
@@ -89,6 +90,8 @@ func (p *parser) casesEnvironment(name string) (nodes []*mml.Node, handled bool,
 	// EqnArray EndTable restores the tag stack before Empheq parses left.
 	tags.end()
 	ended = true
+	// Cases receives the finalized ArrayItem MML before Empheq decorates it.
+	table = finishArrayRules(table)
 	original := p.copyNode(table)
 	if err := p.empheqAddLeft(table, original, left+"\\empheqlbrace\\,", "numcases-left"); err != nil {
 		return nil, true, err

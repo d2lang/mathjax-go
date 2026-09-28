@@ -89,6 +89,7 @@ func (p *parser) amscdEnvironment(name string) (nodes []*mml.Node, handled bool,
 		}
 		return true
 	})
+	nodes[0] = finishArrayRules(table)
 	return nodes, true, nil
 }
 

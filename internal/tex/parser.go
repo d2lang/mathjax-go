@@ -566,6 +566,16 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 				}
 				continue
 			}
+			if isHLine(name) && !registered {
+				if p.arrayCell == nil || p.arrayCell.rules == nil || owner != nil || auto != nil || infixPending ||
+					len(styles) != 0 || len(positions) != 0 || pending != nil ||
+					bool(negation) || dots.active() || pendingFunction || nonscript ||
+					p.arrayCell.offset+len(nodes) != 0 {
+					return nil, "", misplacedHLine(name)
+				}
+				p.arrayCell.rules.add(name)
+				continue
+			}
 			if isHFill(name) && !registered {
 				// HFill requires the actual top item to be ArrayItem. Pending
 				// items and real child scopes reject it before reduction.

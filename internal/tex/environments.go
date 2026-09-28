@@ -216,7 +216,7 @@ func (p *parser) beginEnvironment(name string) ([]*mml.Node, error) {
 		if strings.Contains(environment, "rcases") {
 			open, close = "", "}"
 		}
-		return []*mml.Node{p.leftRightFenced(open, table, close, true)}, nil
+		return []*mml.Node{p.leftRightFenced(open, finishArrayRules(table), close, true)}, nil
 	case "numcases", "subnumcases":
 		left, _, err := p.readArgument("begin{"+environment+"}", true)
 		if err != nil {
@@ -231,9 +231,9 @@ func (p *parser) beginEnvironment(name string) ([]*mml.Node, error) {
 			if err != nil {
 				return nil, err
 			}
-			return []*mml.Node{prefix, p.leftRightFenced("{", table, "", true)}, nil
+			return []*mml.Node{prefix, p.leftRightFenced("{", finishArrayRules(table), "", true)}, nil
 		}
-		return []*mml.Node{p.leftRightFenced("{", table, "", true)}, nil
+		return []*mml.Node{p.leftRightFenced("{", finishArrayRules(table), "", true)}, nil
 	case "align", "align*", "alignat", "alignat*", "xalignat", "xalignat*", "xxalignat", "aligned", "alignedat", "gather", "gather*", "gathered", "multline", "multline*", "multlined", "lgathered", "rgathered", "spreadlines":
 		var table *mml.Node
 		var spacing *equationTableState
@@ -277,7 +277,7 @@ func (p *parser) beginEnvironment(name string) ([]*mml.Node, error) {
 		}
 		setArrayAlign(table, verticalAlign)
 		spacing.applySpacing(table)
-		return []*mml.Node{table}, nil
+		return []*mml.Node{finishArrayRules(table)}, nil
 	case "CD":
 		return p.parseCD(body)
 	default:
@@ -403,6 +403,7 @@ func (p *parser) parseTableWithAlignment(body, style string, alignFills bool, in
 	var entries []*mml.Node
 	spacing := &arrayRowSpacing{}
 	err := p.parseArrayBody(body, arrayBodyOwner{
+		rules:      newArrayRules(table),
 		hasEntries: func() bool { return len(entries) != 0 },
 		endEntry: func(children []*mml.Node, fill *arrayCellState) error {
 			content := fill.finish(matrixCellContent(children), len(children))
@@ -654,7 +655,7 @@ func applyColumnSpec(table *mml.Node, specification string) *mml.Node {
 		positions = append(positions, char)
 	}
 	if !strings.ContainsAny(string(positions), "|:") {
-		return table
+		return finishArrayRules(table)
 	}
 	var frame, lines []string
 	if isRule(positions[0]) {
@@ -674,19 +675,10 @@ func applyColumnSpec(table *mml.Node, specification string) *mml.Node {
 	}
 	columnLines := strings.Join(lines, " ")
 	table.Attributes.Set("columnlines", columnLines)
-	if len(frame) == 0 {
-		return table
-	}
-	// ArrayItem.createMml uses an empty mtable frame to retain its spacing,
-	// then draws partial edge frames through menclose. Dashed edge markers
-	// affect a complete four-sided frame only; partial frames use menclose's
-	// ordinary side notations even when their source marker is a colon.
-	table.Attributes.Set("frame", "")
-	enclosure := setAttributes(node("menclose", table), map[string]any{"notation": strings.Join(frame, " ")})
-	if columnLines != "" && columnLines != "none" {
-		enclosure.Attributes.Set("data-padding", 0)
-	}
-	return enclosure
+	rules := tableArrayRules(table)
+	rules.frame = append(frame, rules.frame...)
+	rules.dashed = positions[0] == ':'
+	return finishArrayRules(table)
 }
 
 func (p *parser) displayLines(name string) ([]*mml.Node, error) {
@@ -703,13 +695,14 @@ func (p *parser) displayLines(name string) ([]*mml.Node, error) {
 		"columnspacing", "1em",
 		"displaystyle", true,
 	)
-	return []*mml.Node{table}, nil
+	return []*mml.Node{finishArrayRules(table)}, nil
 }
 
 func (p *parser) parseCD(body string) ([]*mml.Node, error) {
 	arrayParser := p.matrixCellParser("")
 	arrayParser.matrixClose = false
 	table := node("mtable")
+	arrayParser.arrayCell.rules = newArrayRules(table)
 	spacing := &arrayRowSpacing{}
 	source := body
 	for {
@@ -755,6 +748,7 @@ func (p *parser) parseCDSegment(source string, cells []*mml.Node, objectRow, atA
 		sub := p.matrixCellParser(source)
 		sub.matrixClose = false
 		sub.cdArrayEntry = true
+		sub.arrayCell.rules = p.arrayCell.rules
 		if atArrow {
 			sub.cdCellEnd = &cdCellEnd{firstObjectCell: objectRow && len(cells) == 0}
 		}

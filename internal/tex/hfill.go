@@ -14,6 +14,7 @@ type arrayCellState struct {
 	multline bool
 	numCases bool
 	shove    string
+	rules    *arrayRules
 }
 
 func isHFill(name string) bool {
@@ -55,6 +56,10 @@ func arrayCellNode(content *mml.Node) *mml.Node {
 	return cell
 }
 
-func (p *parser) parseArrayCellString(source string) (*mml.Node, error) {
-	return p.parseStringWithEnvironment(source, p.ensureStackGlobal(), nil, &arrayCellState{}, p.environmentOwner)
+func (p *parser) parseArrayCellString(source string, rules ...*arrayRules) (*mml.Node, error) {
+	cell := &arrayCellState{}
+	if len(rules) != 0 {
+		cell.rules = rules[0]
+	}
+	return p.parseStringWithEnvironment(source, p.ensureStackGlobal(), nil, cell, p.environmentOwner)
 }
