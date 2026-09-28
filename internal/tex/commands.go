@@ -216,7 +216,7 @@ func (p *parser) commandNodes(name string, after **derivativeAutoOpen) ([]*mml.N
 	case "big", "Big", "bigg", "Bigg", "bigl", "Bigl", "biggl", "Biggl", "bigr", "Bigr", "biggr", "Biggr", "bigm", "Bigm", "biggm", "Biggm":
 		return p.bigDelimiter(name)
 
-	case "overline", "underline", "overbrace", "underbrace", "overrightarrow", "overleftarrow", "underrightarrow", "underleftarrow":
+	case "overline", "underline", "overbrace", "underbrace", "overparen", "underparen", "overrightarrow", "overleftarrow", "underrightarrow", "underleftarrow", "overleftrightarrow", "underleftrightarrow":
 		return p.underOver(name)
 	case "bar", "hat", "widehat", "tilde", "widetilde", "vec", "dot", "ddot", "dddot", "ddddot", "acute", "grave", "breve", "check", "mathring":
 		return p.accent(name)
@@ -743,6 +743,12 @@ func (p *parser) underOver(name string) ([]*mml.Node, error) {
 		char = "―"
 	case "overbrace", "underbrace":
 		char = map[bool]string{true: "⏟", false: "⏞"}[under]
+	case "overparen":
+		char = "⏜"
+	case "underparen":
+		char = "⏝"
+	case "overleftrightarrow", "underleftrightarrow":
+		char = "↔"
 	case "overrightarrow", "underrightarrow":
 		char = "→"
 	case "overleftarrow", "underleftarrow":
