@@ -1,0 +1,142 @@
+{
+  "mathjaxGitCommit": "ad8f5c21cb810236551da8c6512ba733e67357ee",
+  "oracleAssetsSHA256": {
+    "polyfills.js": "7fe1d048c78b0e09854c1259f7413868a51cc8f0c822489eb1ac36ae6c85ce01",
+    "mathjax.js": "cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869",
+    "setup.js": "a52cb0bbabfbd7796b9fedd793b9386c474e3123e788ee151cbe47ca1fa6e881"
+  },
+  "baselineCommit": "c19a00c2202542652ffa46ce0a93d17c0bdd8108",
+  "note": "All original/baseline/candidate strings are retained in the SVG and raw fixtures. These strict literal bindings explain changed-valid residuals without normalizing them into assertions.",
+  "cases": [
+    {
+      "target": "argument-space-0064",
+      "control": "argument-space-0048",
+      "tex": "\\dfrac﻿{a}{b}+z",
+      "display": false,
+      "literal": "\\dfrac {a}{b}+z",
+      "inheritedFamily": "dfrac wrapper",
+      "completeOriginalTargetEqualsControl": true,
+      "candidateTargetEqualsUnchangedBaselineControl": true,
+      "originalSVG_SHA256": "4f580d707d98ad1a70b0d3136962474981ef6ff5cd3583c28ce3e8461629da12",
+      "candidateSVG_SHA256": "d20ea734067d41f4e53a9a731fae4a70039ecded8162f6f8e23eec668657339a",
+      "baselineControlSVG_SHA256": "d20ea734067d41f4e53a9a731fae4a70039ecded8162f6f8e23eec668657339a"
+    },
+    {
+      "target": "argument-space-0065",
+      "control": "argument-space-0049",
+      "tex": "\\dfrac﻿{a}{b}+z",
+      "display": true,
+      "literal": "\\dfrac {a}{b}+z",
+      "inheritedFamily": "dfrac wrapper",
+      "completeOriginalTargetEqualsControl": true,
+      "candidateTargetEqualsUnchangedBaselineControl": true,
+      "originalSVG_SHA256": "4f580d707d98ad1a70b0d3136962474981ef6ff5cd3583c28ce3e8461629da12",
+      "candidateSVG_SHA256": "d20ea734067d41f4e53a9a731fae4a70039ecded8162f6f8e23eec668657339a",
+      "baselineControlSVG_SHA256": "d20ea734067d41f4e53a9a731fae4a70039ecded8162f6f8e23eec668657339a"
+    },
+    {
+      "target": "argument-space-0716",
+      "control": "argument-space-0778",
+      "tex": "\\text﻿",
+      "display": false,
+      "literal": "\\text{}﻿",
+      "inheritedFamily": "ordinary BOM font variant",
+      "completeOriginalTargetEqualsControl": true,
+      "candidateTargetEqualsUnchangedBaselineControl": true,
+      "originalSVG_SHA256": "42681ff70e937de6d8f1d80c2ecd8cd5e3dc6d235ea69ae2d726dc56ec9b9a94",
+      "candidateSVG_SHA256": "89f72bb88cf5107dc3a2ca63ac9088e35562ffcd51120570a455ddb7ebc48311",
+      "baselineControlSVG_SHA256": "89f72bb88cf5107dc3a2ca63ac9088e35562ffcd51120570a455ddb7ebc48311"
+    },
+    {
+      "target": "argument-space-0717",
+      "control": "argument-space-0779",
+      "tex": "\\text﻿",
+      "display": true,
+      "literal": "\\text{}﻿",
+      "inheritedFamily": "ordinary BOM font variant",
+      "completeOriginalTargetEqualsControl": true,
+      "candidateTargetEqualsUnchangedBaselineControl": true,
+      "originalSVG_SHA256": "42681ff70e937de6d8f1d80c2ecd8cd5e3dc6d235ea69ae2d726dc56ec9b9a94",
+      "candidateSVG_SHA256": "89f72bb88cf5107dc3a2ca63ac9088e35562ffcd51120570a455ddb7ebc48311",
+      "baselineControlSVG_SHA256": "89f72bb88cf5107dc3a2ca63ac9088e35562ffcd51120570a455ddb7ebc48311"
+    },
+    {
+      "target": "argument-space-0718",
+      "control": "argument-space-0780",
+      "tex": "{\\text﻿}",
+      "display": false,
+      "literal": "{\\text{}﻿}",
+      "inheritedFamily": "ordinary BOM font variant",
+      "completeOriginalTargetEqualsControl": true,
+      "candidateTargetEqualsUnchangedBaselineControl": true,
+      "originalSVG_SHA256": "b8a5252919ff039cab00c3b487a6c7952a75dc5d560c682c6827abaf3f878e47",
+      "candidateSVG_SHA256": "4fc35cdde88368d1e0c4eb6d33444a8a9e09f34d166f63b97884efcde01c7d01",
+      "baselineControlSVG_SHA256": "4fc35cdde88368d1e0c4eb6d33444a8a9e09f34d166f63b97884efcde01c7d01"
+    },
+    {
+      "target": "argument-space-0719",
+      "control": "argument-space-0781",
+      "tex": "{\\text﻿}",
+      "display": true,
+      "literal": "{\\text{}﻿}",
+      "inheritedFamily": "ordinary BOM font variant",
+      "completeOriginalTargetEqualsControl": true,
+      "candidateTargetEqualsUnchangedBaselineControl": true,
+      "originalSVG_SHA256": "b8a5252919ff039cab00c3b487a6c7952a75dc5d560c682c6827abaf3f878e47",
+      "candidateSVG_SHA256": "4fc35cdde88368d1e0c4eb6d33444a8a9e09f34d166f63b97884efcde01c7d01",
+      "baselineControlSVG_SHA256": "4fc35cdde88368d1e0c4eb6d33444a8a9e09f34d166f63b97884efcde01c7d01"
+    },
+    {
+      "target": "argument-space-0834",
+      "control": "argument-space-0782",
+      "tex": "\\qty﻿{x}",
+      "display": false,
+      "literal": "\\qty{x}",
+      "inheritedFamily": "Quantity fence choice",
+      "completeOriginalTargetEqualsControl": true,
+      "candidateTargetEqualsUnchangedBaselineControl": true,
+      "originalSVG_SHA256": "ed5567de56e9dd8d5bca4737dedf81fc316e44fb76ada772b9d02968cfdda4c6",
+      "candidateSVG_SHA256": "774b0cd65cef343ed48fb7fbbaf6b3451e82c8439139ea6be2d3b9d447e2ec89",
+      "baselineControlSVG_SHA256": "774b0cd65cef343ed48fb7fbbaf6b3451e82c8439139ea6be2d3b9d447e2ec89"
+    },
+    {
+      "target": "argument-space-0835",
+      "control": "argument-space-0783",
+      "tex": "\\qty﻿{x}",
+      "display": true,
+      "literal": "\\qty{x}",
+      "inheritedFamily": "Quantity fence choice",
+      "completeOriginalTargetEqualsControl": true,
+      "candidateTargetEqualsUnchangedBaselineControl": true,
+      "originalSVG_SHA256": "ed5567de56e9dd8d5bca4737dedf81fc316e44fb76ada772b9d02968cfdda4c6",
+      "candidateSVG_SHA256": "774b0cd65cef343ed48fb7fbbaf6b3451e82c8439139ea6be2d3b9d447e2ec89",
+      "baselineControlSVG_SHA256": "774b0cd65cef343ed48fb7fbbaf6b3451e82c8439139ea6be2d3b9d447e2ec89"
+    },
+    {
+      "target": "argument-space-0838",
+      "control": "argument-space-0784",
+      "tex": "\\order﻿{x}",
+      "display": false,
+      "literal": "\\order{x}",
+      "inheritedFamily": "Order token font and function application",
+      "completeOriginalTargetEqualsControl": true,
+      "candidateTargetEqualsUnchangedBaselineControl": true,
+      "originalSVG_SHA256": "48bd4668cd1da9c03c41d3c177103710a8b30b1fcc1fcaa9edbf6ef206e0fa36",
+      "candidateSVG_SHA256": "8b3c4478ef781164d1580eb189b4f438ffef46c0837e15567237fc92b3d68d55",
+      "baselineControlSVG_SHA256": "8b3c4478ef781164d1580eb189b4f438ffef46c0837e15567237fc92b3d68d55"
+    },
+    {
+      "target": "argument-space-0839",
+      "control": "argument-space-0785",
+      "tex": "\\order﻿{x}",
+      "display": true,
+      "literal": "\\order{x}",
+      "inheritedFamily": "Order token font and function application",
+      "completeOriginalTargetEqualsControl": true,
+      "candidateTargetEqualsUnchangedBaselineControl": true,
+      "originalSVG_SHA256": "48bd4668cd1da9c03c41d3c177103710a8b30b1fcc1fcaa9edbf6ef206e0fa36",
+      "candidateSVG_SHA256": "8b3c4478ef781164d1580eb189b4f438ffef46c0837e15567237fc92b3d68d55",
+      "baselineControlSVG_SHA256": "8b3c4478ef781164d1580eb189b4f438ffef46c0837e15567237fc92b3d68d55"
+    }
+  ]
+}
