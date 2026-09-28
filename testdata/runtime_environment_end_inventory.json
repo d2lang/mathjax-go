@@ -11698,6 +11698,62 @@
     "sourceCheckpoint": "5e4e67cc03bb469f843f8da04e872fbe3996bea9",
     "internalTree": "31a22e8896afc5842722e48e4d83dffeb093e300",
     "patchUnchangedFrom169": true,
-    "compiledFinalBaseValidation": "pending"
+    "compiledFinalBaseValidation": "all 802 original/baseline/candidate objects unchanged; source and public focused tests passed"
+  },
+  "finalBaseComparison": {
+    "base": "8393014a3f2dd05d0b2881141c85a8153ddd333e",
+    "sourceHead": "37b93bc9294cb6e163040d35970ea543b811ad24",
+    "candidate": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/matched-end-budget-audit/prototype/candidate170",
+      "sha256": "c44ad3f3b207fad282d56e1f0746e703f51ccfeace33ba3cac8cd55052d8a799",
+      "bytes": 8436866
+    },
+    "summary": {
+      "total": 802,
+      "exact": 670,
+      "fixed": 506,
+      "regressions": 0,
+      "changedNonexact": 52,
+      "unchangedNonexact": 80,
+      "candidateProcessFailures": 0
+    },
+    "unchangedOriginalBaselineCandidateSince169": 802,
+    "comparisonSHA256": "68a660c4f1cb2187f823fefe62abd879ed8011ec112d5e514573988cf6d957d3",
+    "broader": {
+      "published-residuals170": {
+        "qualification": {
+          "inputs": 6574,
+          "protocolOnly": 866,
+          "protocolRule": "Only exact baseline keys {error,svg} with svg empty versus candidate {error}, identical error text. All raw objects retained.",
+          "cancelInputs": 4,
+          "cancelRenders": 512,
+          "cancelRule": "Only named single adjacent attribute permutation plus complete XML equality; every raw output retained.",
+          "inheritedEncloseOrderInputs": 0,
+          "inheritedEncloseRenders": 0,
+          "genuineExactFixes": 82,
+          "genuineRegressions": 0,
+          "genuineChangedNonexact": 0
+        },
+        "rawSHA256": "5a33197e2c007227d1242b99fe431d0a4b94af51c2ba4c183ce8cd34e6aab443",
+        "qualificationSHA256": "8cb00bba35ad0fef237e58b1ea4ed23b9534afa1b3b440b64825149ef81a2209"
+      },
+      "upstream170": {
+        "qualification": {
+          "inputs": 4326,
+          "protocolOnly": 0,
+          "protocolRule": "Only exact baseline keys {error,svg} with svg empty versus candidate {error}, identical error text. All raw objects retained.",
+          "cancelInputs": 0,
+          "cancelRenders": 0,
+          "cancelRule": "Only named single adjacent attribute permutation plus complete XML equality; every raw output retained.",
+          "inheritedEncloseOrderInputs": 1,
+          "inheritedEncloseRenders": 128,
+          "genuineExactFixes": 2,
+          "genuineRegressions": 0,
+          "genuineChangedNonexact": 0
+        },
+        "rawSHA256": "e7653f293248018882f01735099a251c8ce8f483b3da114073f9f657f327b1ce",
+        "qualificationSHA256": "9aa8e023e7e39e70f98bb834f8e06b20a1877dc392578664660c16d9573f2147"
+      }
+    }
   }
 }
