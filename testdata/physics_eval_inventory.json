@@ -1,0 +1,79 @@
+{
+  "mathjaxGitCommit": "ad8f5c21cb810236551da8c6512ba733e67357ee",
+  "baseCommit": "79c65b0fde0dc49fae7240e2ea743371db5837b6",
+  "sourceHead": "436b42957bead58b17617c2c1e0ae04ce0057bbb",
+  "sourceInternalTree": "02bc965e33bde8d949b682d0081eb2a14254eee9",
+  "candidateSHA256": "8fbdf2bcf2d3e9015ac37be3d189c6259321ad9735e17a2599a9b1739ea713ec",
+  "uniquePublicOriginals": 1342,
+  "validSVGs": 826,
+  "errorSVGs": 516,
+  "exact": 1342,
+  "fixedAgainstBase": 1008,
+  "unchangedControls": 334,
+  "ownResiduals": 0,
+  "earlyFixtures": {
+    "focus": 78,
+    "star": 212,
+    "mutualOverlap": 0,
+    "fullyContainedInCompleteFixture": true,
+    "additionalUniqueInputs": 0
+  },
+  "totalFullSVGAssertionsIncludingEarlyFixtures": 1632,
+  "directSourceGetStarObservations": 181,
+  "legacyCompatibilityAssertionsNotOriginals": 2,
+  "provenance": {
+    "baseCommit": "79c65b0fde0dc49fae7240e2ea743371db5837b6",
+    "strictPublicInputs": 1342,
+    "scannedFiles": 461,
+    "counts": {
+      "first-input-publication": 1342
+    },
+    "originalMismatches": [],
+    "ambiguousOnly": 0
+  },
+  "broader": {
+    "published": {
+      "uniqueInputs": 6768,
+      "metadataOnlyExcluded": 60,
+      "genuineFixes": 0,
+      "genuineRegressions": 0,
+      "genuineChangedNonexact": 0,
+      "APIResponseShapeOnly": 914
+    },
+    "upstream": {
+      "uniqueInputs": 4326,
+      "genuineFixes": 12,
+      "genuineRegressions": 0,
+      "genuineChangedNonexact": 0
+    },
+    "serialization": {
+      "inputs": 3,
+      "repeatsPerInputPerBinary": 64,
+      "renders": 384,
+      "allCompleteParsedXMLEqualOriginal": true,
+      "onlyExactSingleAdjacentAttributeSwap": true,
+      "publishedApparentFixesExcluded": 2,
+      "upstreamApparentRegressionsExcluded": 1,
+      "genuinePublishedFixes": 0,
+      "genuinePublishedRegressions": 0,
+      "genuineUpstreamFixes": 12,
+      "genuineUpstreamRegressions": 0,
+      "genuineChangedNonexact": 0
+    },
+    "runtime": {
+      "inputs": 802,
+      "allUnchanged": true,
+      "APIResponseShapeOnly": 48
+    },
+    "sharedAutoOpen": {
+      "uniqueInputs": 5621,
+      "allUnchanged": true,
+      "exact": 5514,
+      "newOriginals": 192,
+      "newExact": 158,
+      "newRawUnchanged": 34,
+      "augmentedHelperObservationsExcluded": 14
+    }
+  },
+  "goValidation": "Short direct-method/public78+212 checks and candidate build passed. Full 1342 test and full/race/vet/WASM gates pending."
+}
