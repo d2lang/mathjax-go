@@ -209,8 +209,9 @@ func (p *parser) beginEnvironment(name string) ([]*mml.Node, error) {
 		return []*mml.Node{p.leftRightFenced("{", table, "", true)}, nil
 	case "align", "align*", "alignat", "alignat*", "xalignat", "xalignat*", "xxalignat", "aligned", "alignedat", "gather", "gather*", "gathered", "multline", "multline*", "multlined", "lgathered", "rgathered", "spreadlines":
 		var table *mml.Node
+		var spacing *equationTableState
 		if isEquationArray(environment) {
-			table, err = p.parseEquationTable(body, environment)
+			table, spacing, err = p.parseEquationTable(body, environment)
 		} else {
 			table, err = p.parseTableWithAlignment(body, "D", false)
 		}
@@ -239,6 +240,7 @@ func (p *parser) beginEnvironment(name string) ([]*mml.Node, error) {
 				"rowspacing", "3pt",
 			)
 		}
+		spacing.applySpacing(table)
 		return []*mml.Node{table}, nil
 	case "CD":
 		return p.parseCD(body)

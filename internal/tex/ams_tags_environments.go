@@ -120,8 +120,9 @@ func (p *parser) amsAlignment(environment string) (nodes []*mml.Node, err error)
 		state.clearTag()
 		return nil
 	}
+	spacing := newEquationTableState(appendRow)
 	for rowIndex, cells := range rows {
-		if err := p.parseEquationRow(cells, rowIndex == len(rows)-1, appendRow); err != nil {
+		if err := p.parseEquationRow(cells, rowIndex == len(rows)-1, appendRow, spacing); err != nil {
 			return nil, err
 		}
 	}
@@ -159,6 +160,7 @@ func (p *parser) amsAlignment(environment string) (nodes []*mml.Node, err error)
 		table.Attributes.Set("align", strings.TrimSpace(verticalAlign))
 	}
 
+	spacing.applySpacing(table)
 	state.end()
 	ended = true
 	return []*mml.Node{table}, nil

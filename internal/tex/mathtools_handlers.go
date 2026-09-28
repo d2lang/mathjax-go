@@ -82,7 +82,7 @@ func (p *parser) mathtoolsEnvironment(name string) (nodes []*mml.Node, handled b
 		nodes, err = p.mathtoolsSpreadLines(name)
 	case "cases*", "dcases*", "rcases*", "drcases*":
 		nodes, err = p.mathtoolsCases(name)
-	case "align", "align*", "alignat", "alignat*", "xalignat", "xalignat*", "xxalignat", "aligned", "alignedat", "gather", "gather*", "gathered", "multline", "multline*", "lgathered", "rgathered":
+	case "multline", "multline*":
 		if !mathtoolsEnvironmentHasSpecial(p.source[p.pos:]) {
 			return nil, false, nil
 		}

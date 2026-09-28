@@ -348,17 +348,68 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 			_, registeredMacro := p.state.macros[name]
 			_, registeredDelimiter := p.state.pairedDelimiters[name]
 			registered := registeredMacro || registeredDelimiter
-			if name == "ArrowBetweenLines" && !registered {
-				if p.arrayCell == nil || p.arrayCell.equation == nil || owner != nil || auto != nil || infixPending ||
-					len(styles) != 0 || len(positions) != 0 || pending != nil ||
-					bool(negation) || dots.active() || pendingFunction {
-					return nil, "", notInAlignment(name)
+			if isMathtoolsArrayCommand(name) && !registered {
+				actualArray := p.arrayCell != nil && owner == nil && auto == nil && !infixPending &&
+					len(styles) == 0 && len(positions) == 0 && pending == nil &&
+					!bool(negation) && !dots.active() && !pendingFunction
+				star, guardName := false, name
+				if name == "shortvdotswithin" {
+					star = p.readMathtoolsStar()
+					guardName = "MTFlushSpaceAbove"
 				}
-				if p.arrayCell.offset+len(nodes) != 0 || p.arrayCell.equation.columns != 0 {
-					return nil, "", texError("BetweenLines", "%s must be on a row by itself", "\\"+name)
+				if !actualArray || (name != "vdotswithin" && p.arrayCell.equation == nil) {
+					return nil, "", notInAlignment(guardName)
 				}
-				if err := p.arrowBetweenLines(name); err != nil {
-					return nil, "", err
+				equation := p.arrayCell.equation
+				switch name {
+				case "ArrowBetweenLines":
+					if p.arrayCell.offset+len(nodes) != 0 || len(equation.entries) != 0 {
+						return nil, "", texError("BetweenLines", "%s must be on a row by itself", "\\"+name)
+					}
+					if err := p.arrowBetweenLines(name); err != nil {
+						return nil, "", err
+					}
+				case "Aboxed":
+					if err := p.equationAboxed(name); err != nil {
+						return nil, "", err
+					}
+				case "MTFlushSpaceAbove":
+					equation.table.flushAbove = equation.table.rows
+					equation.table.addSpacing("-" + p.mathtoolsOption("shortvdotsadjustabove"))
+				case "MTFlushSpaceBelow":
+					if len(nodes) != 0 {
+						equation.endEntry(nodes)
+						nodes = nil
+					}
+					if err := equation.endRow(); err != nil {
+						return nil, "", err
+					}
+					equation.table.addSpacing("-" + p.mathtoolsOption("shortvdotsadjustbelow"))
+				case "vdotswithin", "shortvdotswithin":
+					if name == "shortvdotswithin" {
+						equation.table.flushAbove = equation.table.rows
+						equation.table.addSpacing("-" + p.mathtoolsOption("shortvdotsadjustabove"))
+						if !star {
+							equation.endEntry(nodes)
+							nodes = nil
+						}
+					}
+					flush := equation != nil && equation.table.flushAbove == equation.table.rows
+					content, err := p.equationVDots("vdotswithin", flush)
+					if err != nil {
+						return nil, "", err
+					}
+					appendNodes([]*mml.Node{content}, false)
+					if name == "shortvdotswithin" {
+						if len(nodes) != 0 {
+							equation.endEntry(nodes)
+							nodes = nil
+						}
+						if err := equation.endRow(); err != nil {
+							return nil, "", err
+						}
+						equation.table.addSpacing("-" + p.mathtoolsOption("shortvdotsadjustbelow"))
+					}
 				}
 				continue
 			}
@@ -438,7 +489,7 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 			if variant, ok := fontDeclarations[name]; ok && !registered {
 				// SetFont changes the current environment without pushing a
 				// stack item, so pending Prime/Not/Dots items stay in this row.
-				if len(styles) != 0 || pending != nil || bool(negation) || dots.active() || pendingFunction || len(positions) != 0 {
+				if (p.arrayCell != nil && p.arrayCell.equation != nil) || len(styles) != 0 || pending != nil || bool(negation) || dots.active() || pendingFunction || len(positions) != 0 {
 					p.activeFont, pendingFont = variant, variant
 					p.fontExplicitEmpty = variant == ""
 					continue
