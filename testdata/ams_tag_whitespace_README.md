@@ -46,9 +46,13 @@ The enclose package is unavailable in the frozen original configuration, so
 its XML equivalence only establishes unchanged Go behavior, not original
 parity. Those serialization observations are excluded from fix counts.
 
-These are main162 measurements. Source rebasing or a new baseline requires a
-fresh candidate binding and replay before being described as current-base
-validation. Full Go gates have not yet been run for this fixture package.
+The source and fixtures were subsequently rebased onto actual main163
+(`c09d0460db08b943c49003fbe2409402f9c2fca4`). A fresh isolated candidate build
+and the strict 474-reference test passed. Both baseline and candidate outputs
+for all 496 saved inputs are byte-identical to their respective main162
+outputs, retaining 197 fixes and no regressions or changed residuals. The
+broader replay and provenance scan above remain explicitly main162 receipts.
+Full Go gates have not yet been run for this fixture package.
 
 ## Regeneration
 
