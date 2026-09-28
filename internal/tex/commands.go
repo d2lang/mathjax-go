@@ -254,6 +254,13 @@ func (p *parser) commandNodes(name string, after **derivativeAutoOpen) ([]*mml.N
 		return p.horizontalSpace(name)
 	case "hspace*":
 		return p.horizontalSpace(name)
+	case "strut":
+		// BaseMethods.Strut uses an explicit empty row and fixed point sizes.
+		padded := node("mpadded", node("mrow"))
+		padded.Attributes.Set("height", "8.6pt")
+		padded.Attributes.Set("depth", "3pt")
+		padded.Attributes.Set("width", 0)
+		return []*mml.Node{padded}, nil
 	case "phantom", "hphantom", "vphantom":
 		return p.phantom(name)
 	case "smash":
