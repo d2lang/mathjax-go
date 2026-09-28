@@ -3,6 +3,8 @@ package mathjax_test
 
 import (
 	"encoding/json"
+	"encoding/xml"
+	"io"
 	"os"
 	"strings"
 	"testing"
@@ -86,6 +88,16 @@ func TestMatrixDeterminantSafeErrorAttribute(t *testing.T) {
 			got, err := mathjax.RenderWithOptions(c.TeX, options)
 			if err != nil || got != want {
 				t.Fatalf("safe error attribute differs: %v\ngot: %s\nwant: %s", err, got, want)
+			}
+			decoder := xml.NewDecoder(strings.NewReader(got))
+			for {
+				_, err := decoder.Token()
+				if err == io.EOF {
+					break
+				}
+				if err != nil {
+					t.Fatalf("safe error SVG is not well-formed XML: %v", err)
+				}
 			}
 		})
 	}
