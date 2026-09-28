@@ -102,7 +102,7 @@ func (p *parser) amsAlignment(environment string) (nodes []*mml.Node, err error)
 		}
 		mtds := make([]*mml.Node, 0, len(cells))
 		for _, cell := range cells {
-			content, parseErr := p.parseContinuationString(strings.TrimSpace(cell))
+			content, parseErr := p.parseArrayCellString(strings.TrimSpace(cell))
 			if parseErr != nil {
 				return nil, parseErr
 			}

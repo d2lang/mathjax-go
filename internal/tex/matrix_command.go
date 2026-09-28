@@ -54,7 +54,7 @@ func (p *parser) matrixCommand(name string) ([]*mml.Node, error) {
 				// when its source contains font declarations or comments.
 				continue
 			}
-			line.AppendChild(node("mtd", content))
+			line.AppendChild(arrayCellNode(content))
 		}
 		if len(line.Children) == 0 {
 			continue
@@ -300,7 +300,7 @@ func (p *parser) parseMatrixCell(source string, terminator byte) (*mml.Node, err
 	if err != nil {
 		return nil, err
 	}
-	return matrixCellContent(children), nil
+	return sub.arrayCell.finish(matrixCellContent(children), len(children)), nil
 }
 
 func (p *parser) matrixCellParser(source string) *parser {
@@ -309,7 +309,7 @@ func (p *parser) matrixCellParser(source string) *parser {
 	// the surrounding font, root-index, or identifier-pattern state.
 	return &parser{source: source, state: p.state, stackGlobal: p.ensureStackGlobal(), display: p.display,
 		vectorFactory: p.vectorFactory, genfracPalette: p.genfracPalette,
-		starMacroChildren: p.starMacroChildren, derivativeChildren: p.derivativeChildren, matrixClose: true}
+		starMacroChildren: p.starMacroChildren, derivativeChildren: p.derivativeChildren, matrixClose: true, arrayCell: &arrayCellState{}}
 }
 
 func matrixCellContent(children []*mml.Node) *mml.Node {

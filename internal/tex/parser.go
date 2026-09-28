@@ -101,6 +101,7 @@ type parser struct {
 	cdCellEnd            *cdCellEnd
 	cdArrayEntry         bool
 	cdEntryStopped       bool
+	arrayCell            *arrayCellState
 	matrixClose          bool
 	identifierPattern    identifierPattern
 	operatorLetters      bool
@@ -147,9 +148,11 @@ func (p *parser) parseRowWithPrefix(terminator byte, stopRight bool, prefix []*m
 	// body enters through parseRowWithInfix, retaining the active owner.
 	owner := p.braketOwner
 	p.braketOwner = nil
-	matrixClose, cdArrayEntry := p.matrixClose, p.cdArrayEntry
-	p.matrixClose, p.cdArrayEntry = false, false
-	defer func() { p.braketOwner, p.matrixClose, p.cdArrayEntry = owner, matrixClose, cdArrayEntry }()
+	matrixClose, cdArrayEntry, arrayCell := p.matrixClose, p.cdArrayEntry, p.arrayCell
+	p.matrixClose, p.cdArrayEntry, p.arrayCell = false, false, nil
+	defer func() {
+		p.braketOwner, p.matrixClose, p.cdArrayEntry, p.arrayCell = owner, matrixClose, cdArrayEntry, arrayCell
+	}()
 	return p.parseRowContinuation(terminator, stopRight, false, nil, "", prefix)
 }
 
@@ -345,6 +348,17 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 			_, registeredMacro := p.state.macros[name]
 			_, registeredDelimiter := p.state.pairedDelimiters[name]
 			registered := registeredMacro || registeredDelimiter
+			if isHFill(name) && !registered {
+				// HFill requires the actual top item to be ArrayItem. Pending
+				// items and real child scopes reject it before reduction.
+				if p.arrayCell == nil || owner != nil || auto != nil || infixPending ||
+					len(styles) != 0 || len(positions) != 0 || pending != nil ||
+					bool(negation) || dots.active() || pendingFunction {
+					return nil, "", unsupportedHFill(name)
+				}
+				p.arrayCell.fills = append(p.arrayCell.fills, p.arrayCell.offset+len(nodes))
+				continue
+			}
 			if !registered && (name == "right" || name == "middle") {
 				delim, err := p.readDelimiter(name, false)
 				if err != nil {
@@ -419,7 +433,13 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 				oldFontExplicitEmpty := p.fontExplicitEmpty
 				p.activeFont = variant
 				p.fontExplicitEmpty = variant == ""
+				if p.arrayCell != nil {
+					p.arrayCell.offset += len(nodes)
+				}
 				rest, right, err := p.parseRowWithAutoOpen(terminator, stopRight, infixPending, auto)
+				if p.arrayCell != nil {
+					p.arrayCell.offset -= len(nodes)
+				}
 				p.activeFont = oldFont
 				p.fontExplicitEmpty = oldFontExplicitEmpty
 				if err != nil {
@@ -859,7 +879,11 @@ func (p *parser) parseStringWithStack(source string, global *parserStackGlobal) 
 }
 
 func (p *parser) parseStringWithStackCDCell(source string, global *parserStackGlobal, end *cdCellEnd) (*mml.Node, error) {
-	sub := &parser{source: source, state: p.state, stackGlobal: global, display: p.display, inRoot: p.inRoot, cdCellEnd: end,
+	return p.parseStringWithStackArray(source, global, end, nil)
+}
+
+func (p *parser) parseStringWithStackArray(source string, global *parserStackGlobal, end *cdCellEnd, arrayCell *arrayCellState) (*mml.Node, error) {
+	sub := &parser{source: source, state: p.state, stackGlobal: global, display: p.display, inRoot: p.inRoot, cdCellEnd: end, arrayCell: arrayCell,
 		activeFont: p.activeFont, activeColor: p.activeColor, vectorFactory: p.vectorFactory,
 		operatorLetters: p.operatorLetters, noAutoOP: p.noAutoOP, fontExplicitEmpty: p.fontExplicitEmpty,
 		vectorFont: p.vectorFont, vectorStar: p.vectorStar, vectorAlias: p.vectorAlias,
@@ -869,11 +893,17 @@ func (p *parser) parseStringWithStackCDCell(source string, global *parserStackGl
 		sub.multiLetterFont = p.multiLetterFont
 		sub.identifierPattern = p.identifierPattern
 	}
-	children, _, err := sub.parseRow(0, false)
+	var children []*mml.Node
+	var err error
+	if arrayCell == nil {
+		children, _, err = sub.parseRow(0, false)
+	} else {
+		children, _, err = sub.parseRowWithInfix(0, false, false)
+	}
 	if err != nil {
 		return nil, err
 	}
-	return row(children, true), nil
+	return arrayCell.finish(row(children, true), len(children)), nil
 }
 
 // parseMathFontString ports BaseMethods.MathFont's nested TexParser

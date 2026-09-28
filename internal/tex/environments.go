@@ -208,7 +208,7 @@ func (p *parser) beginEnvironment(name string) ([]*mml.Node, error) {
 		}
 		return []*mml.Node{p.leftRightFenced("{", table, "", true)}, nil
 	case "align", "align*", "alignat", "alignat*", "xalignat", "xalignat*", "xxalignat", "aligned", "alignedat", "gather", "gather*", "gathered", "multline", "multline*", "multlined", "lgathered", "rgathered", "spreadlines":
-		table, err := p.parseTable(body, "D")
+		table, err := p.parseTableWithAlignment(body, "D", false)
 		if err != nil {
 			return nil, err
 		}
@@ -432,6 +432,10 @@ func (p *parser) captureEnvironment(environment string) (string, error) {
 }
 
 func (p *parser) parseTable(body, style string) (*mml.Node, error) {
+	return p.parseTableWithAlignment(body, style, true)
+}
+
+func (p *parser) parseTableWithAlignment(body, style string, alignFills bool) (*mml.Node, error) {
 	// ArrayItem.copyEnv is false, including arrays produced by commands.
 	inRoot, color := p.inRoot, p.activeColor
 	p.inRoot, p.activeColor = false, ""
@@ -444,11 +448,15 @@ func (p *parser) parseTable(body, style string) (*mml.Node, error) {
 		}
 		mtdNodes := make([]*mml.Node, 0, len(cells))
 		for _, cell := range cells {
-			contents, err := p.parseContinuationString(strings.TrimSpace(cell))
+			contents, err := p.parseArrayCellString(strings.TrimSpace(cell))
 			if err != nil {
 				return nil, err
 			}
-			mtdNodes = append(mtdNodes, node("mtd", contents))
+			cellNode := node("mtd", contents)
+			if alignFills {
+				cellNode = arrayCellNode(contents)
+			}
+			mtdNodes = append(mtdNodes, cellNode)
 		}
 		mtrNodes = append(mtrNodes, node("mtr", mtdNodes...))
 	}
@@ -687,7 +695,7 @@ type cdCellEnd struct {
 // parseCDSegment delivers explicit Entry items through the ordinary parser.
 // Argument readers may consume an ampersand without emitting an Entry; each
 // actual Entry closes the current cell and clears its lexical environment.
-func (p *parser) parseCDSegment(source string, cells []*mml.Node, objectRow, atArrow bool) ([]*mml.Node, *mml.Node, error) {
+func (p *parser) parseCDSegment(source string, cells []*mml.Node, objectRow, atArrow bool) ([]*mml.Node, *mml.Node, *arrayCellState, error) {
 	for {
 		sub := p.matrixCellParser(source)
 		sub.matrixClose = false
@@ -697,15 +705,15 @@ func (p *parser) parseCDSegment(source string, cells []*mml.Node, objectRow, atA
 		}
 		children, _, err := sub.parseRowWithInfix(0, false, false)
 		if err != nil {
-			return nil, nil, err
+			return nil, nil, nil, err
 		}
-		contents := matrixCellContent(children)
+		contents := sub.arrayCell.finish(matrixCellContent(children), len(children))
 		if !sub.cdEntryStopped {
-			return cells, contents, nil
+			return cells, contents, sub.arrayCell, nil
 		}
 		// EndEntry retains explicit empty cells. No CD strut is inserted:
 		// that behavior belongs only to AmsCdMethods.cell at an @ arrow.
-		cells = append(cells, node("mtd", contents))
+		cells = append(cells, arrayCellNode(contents))
 		source = sub.source[sub.pos:]
 	}
 }
@@ -734,27 +742,43 @@ func (p *parser) parseCDRow(raw string, rowIndex int, final bool) ([]*mml.Node, 
 			break
 		}
 		var contents *mml.Node
+		var fill *arrayCellState
 		var err error
-		cells, contents, err = p.parseCDSegment(raw[position:at], cells, objectRow, true)
+		cells, contents, fill, err = p.parseCDSegment(raw[position:at], cells, objectRow, true)
 		if err != nil {
 			return nil, err
 		}
 		if !emptyCDContents(contents) {
-			cells = append(cells, node("mtd", contents))
+			cells = append(cells, arrayCellNode(contents))
+			fill = nil
 		}
 		// AmsCdMethods.arrow closes enough empty cells to place arrows in
 		// odd columns on object rows and even columns on arrow rows.
 		if (len(cells)%2 == 0) == objectRow {
-			cells = append(cells, node("mtd"))
+			// With no emitted prefix, HFill still belongs to the pending
+			// array cell. Padding closes it before the arrow is inserted.
+			if fill != nil && len(fill.fills) != 0 {
+				cells = append(cells, arrayCellNode(fill.finish(forcedRow(nil, true), 0)))
+			} else {
+				cells = append(cells, node("mtd"))
+			}
+			fill = nil
 		}
 		arrow, next, err := p.parseCDArrow(raw, at)
 		if err != nil {
 			return nil, err
 		}
-		cells = append(cells, node("mtd", arrow))
+		if fill != nil {
+			size := 1
+			if emptyCDContents(arrow) {
+				size = 0
+			}
+			fill.finish(arrow, size)
+		}
+		cells = append(cells, arrayCellNode(arrow))
 		position = next
 	}
-	cells, contents, err := p.parseCDSegment(raw[position:], cells, objectRow, false)
+	cells, contents, _, err := p.parseCDSegment(raw[position:], cells, objectRow, false)
 	if err != nil {
 		return nil, err
 	}
@@ -762,7 +786,7 @@ func (p *parser) parseCDRow(raw string, rowIndex int, final bool) ([]*mml.Node, 
 	// row has nodes or already-closed cells; explicit empty groups and
 	// leaf mspace nodes still count as content.
 	if !final || len(cells) != 0 || !emptyCDContents(contents) {
-		cells = append(cells, node("mtd", contents))
+		cells = append(cells, arrayCellNode(contents))
 	}
 	return cells, nil
 }

@@ -62,6 +62,9 @@ func (p *parser) commandNodes(name string, after **derivativeAutoOpen) ([]*mml.N
 	if nodes, handled, err := p.baseAMSCommand(name); handled {
 		return nodes, err
 	}
+	if isHFill(name) {
+		return nil, unsupportedHFill(name)
+	}
 	// Base's CrLaTeX handler has command-map precedence over the generated
 	// source-symbol fallback.  In particular, \\ is a row break, not the
 	// delimiter-map backslash glyph.

@@ -65,3 +65,8 @@ The checked-in inventory is fixed; the generator never filters cases using
 candidate output. Workers process batches of 24 fresh VMs. Run
 `go test ./... -run 'TestCD(Entry|Finalization)References'` to check these
 references and the earlier 1,813 CD finalization references together.
+
+The subsequent HFill implementation now covers all 36 historical HFill
+observations as exact original references in `hfill_mathjax_3_2_2.json`.
+The historical residual receipt file remains unchanged; the other 20 raw
+CD boundary observations remain separate follow-ups.

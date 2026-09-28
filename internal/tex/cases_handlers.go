@@ -41,7 +41,7 @@ func (p *parser) casesEnvironment(name string) (nodes []*mml.Node, handled bool,
 				mtds = append(mtds, node("mtd", node("mstyle", node("mtext", mml.NewText(strings.TrimLeft(raw, " \t\r\n"))))))
 				continue
 			}
-			content, err := p.parseContinuationString(strings.TrimSpace(raw))
+			content, err := p.parseArrayCellString(strings.TrimSpace(raw))
 			if err != nil {
 				return nil, true, err
 			}
