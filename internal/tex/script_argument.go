@@ -9,7 +9,7 @@ import "github.com/d2lang/mathjax-go/internal/mml"
 // after an immediate ASCII digit, before checking the base's occupied slots.
 // Keep this out of the pending argument loop: font/comment/macro continuation
 // must still use the ordinary number scanner. Prime uses the same GetNext
-// whitespace set; generic row and argument whitespace remain unchanged.
+// whitespace set; later token delivery uses the separate character-map spaces.
 func (p *parser) scriptInitialLookahead() {
 	for p.pos < len(p.source) && isPrimeSpace(p.peekRune()) {
 		p.consumeRune()
