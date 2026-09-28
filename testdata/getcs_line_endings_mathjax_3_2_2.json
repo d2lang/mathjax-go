@@ -1,7 +1,7 @@
 {
   "mathjaxGitCommit": "ad8f5c21cb810236551da8c6512ba733e67357ee",
-  "baseline": "c09d0460db08b943c49003fbe2409402f9c2fca4",
-  "baselineStatus": "actual merged main163",
+  "baseline": "0b179b832657fc7f97acd353d0c1f642ed8df3ae",
+  "baselineStatus": "actual merged main164",
   "cases": [
     {
       "name": "getcs-line-0000",

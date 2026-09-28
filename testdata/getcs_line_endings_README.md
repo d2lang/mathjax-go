@@ -14,8 +14,9 @@ scanning, supplementary Unicode consumption, bounded terminal-backslash cursor,
 and raw braced argument/text/token readers. No general whitespace skip or
 Unicode command-name validation is changed.
 
-The AMS and paired name-reader prerequisites are included in actual merged main163
-`c09d0460db08b943c49003fbe2409402f9c2fca4`. AMS reads a permissive trimmed name;
+The source base is actual merged main164
+`0b179b832657fc7f97acd353d0c1f642ed8df3ae`, which includes the AMS and paired
+name-reader prerequisites from main162 and main163. AMS reads a permissive trimmed name;
 paired declarations validate their raw name without interpreting it through
 GetCS. Before those fixes, changing GetCS alone exposed incorrect active names.
 The new 752 declaration/caller references exercise both readers, all four line
@@ -33,11 +34,11 @@ inputs, 752 new declaration compositions, four witness/literal controls, and
 are retained unchanged.
 
 `getcs_line_endings_mathjax_3_2_2.json` asserts 1,552 complete, unmodified SVGs,
-including 272 original error renderings. Against merged main163, 996 of these
+including 272 original error renderings. Against merged main164, 996 of these
 are fixes; there are no exact regressions. The strict fixture includes 1,382
 first-publication input pairs, 36 earlier complete references, and 134 promoted
 raw references. These are per-fix input counts, not globally unique MathJax
-coverage. The inventory scans all 418 tracked JSON files beneath any testdata
+coverage. The inventory scans all 425 tracked JSON files beneath any testdata
 directory, including private fixtures, and records the prior-source split.
 
 `getcs_line_endings_residuals.json` retains 48 raw observations: 18 valid SVGs
@@ -59,7 +60,7 @@ macro arguments, scripts/primes, pending items, cells/fences and actual supporte
 override/budget behavior. Unknown joined control-word controls remain diagnostic
 controls, not claimed effective macros.
 
-Current broad replay also checked all 5,758 published residual inputs and 4,326
+The prior main163 broad replay also checked all 5,758 published residual inputs and 4,326
 upstream TeX inputs under D2's fixed configuration. The published replay yields
 134 genuine fixes and no other semantic changes; upstream has no semantic
 changes. Six cancel-attribute serialization controls were checked with 384
