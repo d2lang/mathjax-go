@@ -65,7 +65,14 @@ func (c *Compiler) Compile(source string, display bool) (*mml.Node, error) {
 	if display {
 		root.Attributes.Set("display", "block")
 	}
+	// cleanSubSup runs after successful parsing and before inheritance.
+	// A later script can repair a popped view, or an ignored owner discard it.
+	root, err = cleanPoppedScripts(root, state.poppedScripts)
+	if err != nil {
+		return nil, err
+	}
 	root.Walk(func(n *mml.Node) bool {
+		n.RemoveProperty(poppedScriptOrigin)
 		n.RemoveProperty(resolvedFontScope)
 		n.RemoveProperty(ambientFontSource)
 		n.RemoveProperty(vectorFactoryToken)

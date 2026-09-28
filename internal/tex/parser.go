@@ -44,6 +44,7 @@ type environmentDefinition struct {
 type parseState struct {
 	operators         []*mml.Node
 	nonscriptSpaces   []*mml.Node
+	poppedScripts     []*mml.Node
 	macros            map[string]macroDefinition
 	pairedDelimiters  map[string]pairedDelimiter
 	environments      map[string]environmentDefinition

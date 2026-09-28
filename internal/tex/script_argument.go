@@ -130,7 +130,7 @@ func (p *parser) parseScriptArgument(attachment *scriptAttachment, font string) 
 			// SpreadLines pops this actual SubsupItem, whose nodes contain
 			// the unfinished base, rather than feeding it a closing item.
 			p.environmentPopped = true
-			return attachment.pendingBase(), currentFont, nil, nil, nil
+			return p.publishPendingScript(attachment), currentFont, nil, nil, nil
 		}
 		if result.namedFunction || result.notItem || result.nonscriptItem || result.dotsItem != nil || result.positionItem != nil || result.cellItem != nil {
 			return nil, currentFont, nil, nil, attachment.missingOpen()

@@ -31,7 +31,11 @@ func (p *parser) operator(text string, class mml.TeXClass, attributes map[string
 func (p *parser) copyNode(original *mml.Node) *mml.Node {
 	copy := original.Clone()
 	if copy != nil {
-		copy.Walk(func(n *mml.Node) bool { p.noteMO(n); return true })
+		copy.Walk(func(n *mml.Node) bool {
+			p.noteMO(n)
+			p.notePoppedScript(n)
+			return true
+		})
 	}
 	return copy
 }
