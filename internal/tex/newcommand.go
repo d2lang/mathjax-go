@@ -28,6 +28,9 @@ func (p *parser) invokeMacro(name string, definition macroDefinition) ([]*mml.No
 		if definition.optionalDefault != nil {
 			arg, present, err := p.readBrackets(definition.optionalDefault)
 			if err != nil {
+				if failure, ok := err.(*Error); ok && failure.ID == "MissingCloseBracket" {
+					return nil, texError(failure.ID, "Could not find closing ']' for argument to %s", "\\"+name)
+				}
 				return nil, err
 			}
 			if !present {
