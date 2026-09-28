@@ -39,8 +39,8 @@ control `\left[\mmlToken{mo}[stretchy="true",mathsize="200%"]{[}\right]`.
 
 `row_stretch_mathjax_3_2_2.json` contains **988 complete original SVGs**, all
 valid renderings. It records the source commit, the three verified frozen D2
-bundle hashes, and baseline main128
-`3335ca93f6865eca2ce7baa595d29cf17a981cab`. Each expression is rendered in a
+bundle hashes, and baseline main130
+`ed0afff52f6f50eb2e49daf7eada8cd9369a781a`. Each expression is rendered in a
 fresh VM with font cache none, `em=16`, `ex=8`, and its recorded display mode.
 The baseline fails 512 of these references. The full deduplicated audit of
 1,346 inputs has zero formerly exact regressions.
@@ -51,6 +51,12 @@ operators, accents, scripts, positions, color, font and phantom wrappers,
 fractions, roots, arrays, CD, Physics applications, and explicit `mmlToken`
 stretch/minsize/maxsize/symmetry/scale/style attributes. Independent review
 contributed 284 fresh comparisons: 218 exact, 152 newly exact, no regressions.
+
+After rebasing onto main130, all 988 references still match, all 358 raw
+observations remain byte-identical, and the baseline failure count remains
+512. A further 36 fresh original comparisons cover the merged Physics vector
+applications and array row-finalization changes with explicit nested fences:
+all 36 match, including 30 newly exact results, with no regressions.
 
 ## Preserved raw observations
 
