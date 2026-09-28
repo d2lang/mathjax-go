@@ -1,0 +1,9 @@
+{
+  "mainHead": "e3d4006b093073ad46555f92e94df4c85dd46331",
+  "scanScope": "All testdata JSON objects with explicit string tex, boolean display and complete svg or original.svg fields; complete SVG bytes must agree.",
+  "candidateExactCount": 1726,
+  "counts": {
+    "new full-SVG assertion": 1726
+  },
+  "overlaps": []
+}
