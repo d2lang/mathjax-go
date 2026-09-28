@@ -1146,11 +1146,10 @@ func (p *parser) cramped(name string) ([]*mml.Node, error) {
 	if err != nil {
 		return nil, err
 	}
-	attrs := map[string]any{"data-cramped": true}
-	for key, value := range styleAttributes(style) {
-		attrs[key] = value
-	}
-	return []*mml.Node{setAttributes(node("mstyle", arg), attrs)}, nil
+	styled := node("mstyle", arg)
+	styled.Attributes.Set("data-cramped", true)
+	setMathtoolsDisplayLevel(styled, style)
+	return []*mml.Node{styled}, nil
 }
 
 func (p *parser) mathMBox(name string) ([]*mml.Node, error) {

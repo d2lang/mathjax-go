@@ -1,0 +1,1986 @@
+[
+  {
+    "tex": "\\mathsf{\\cramped[\\displaystyle]{\\mmlToken{mo}{`}^2}}",
+    "display": false,
+    "control": "\\mathsf{{\\displaystyle\\cramped{\\mmlToken{mo}{`}^2}}}",
+    "controlByteUnchanged": true,
+    "sameOriginalRoot": true,
+    "sameCandidateRoot": true,
+    "originalGeometryEqual": true,
+    "candidateGeometryEqual": true,
+    "identicalControlTransformDifference": true,
+    "originalTransformDifference": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "candidateTransformDifference": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ]
+  },
+  {
+    "tex": "\\mathsf{\\cramped[\\displaystyle]{\\mmlToken{mo}{`}^2}}",
+    "display": true,
+    "control": "\\mathsf{{\\displaystyle\\cramped{\\mmlToken{mo}{`}^2}}}",
+    "controlByteUnchanged": true,
+    "sameOriginalRoot": true,
+    "sameCandidateRoot": true,
+    "originalGeometryEqual": true,
+    "candidateGeometryEqual": true,
+    "identicalControlTransformDifference": true,
+    "originalTransformDifference": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "candidateTransformDifference": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ]
+  },
+  {
+    "tex": "\\Huge\\cramped[\\displaystyle]{\\mmlToken{mo}{`}^2}",
+    "display": false,
+    "control": "\\Huge{\\displaystyle\\cramped{\\mmlToken{mo}{`}^2}}",
+    "controlByteUnchanged": true,
+    "sameOriginalRoot": true,
+    "sameCandidateRoot": true,
+    "originalGeometryEqual": true,
+    "candidateGeometryEqual": true,
+    "identicalControlTransformDifference": true,
+    "originalTransformDifference": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "candidateTransformDifference": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ]
+  },
+  {
+    "tex": "\\Huge\\cramped[\\displaystyle]{\\mmlToken{mo}{`}^2}",
+    "display": true,
+    "control": "\\Huge{\\displaystyle\\cramped{\\mmlToken{mo}{`}^2}}",
+    "controlByteUnchanged": true,
+    "sameOriginalRoot": true,
+    "sameCandidateRoot": true,
+    "originalGeometryEqual": true,
+    "candidateGeometryEqual": true,
+    "identicalControlTransformDifference": true,
+    "originalTransformDifference": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "candidateTransformDifference": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ]
+  },
+  {
+    "tex": "\\frac{x}{\\cramped[\\displaystyle]{\\mmlToken{mo}{`}^2}}",
+    "display": false,
+    "control": "\\frac{x}{{\\displaystyle\\cramped{\\mmlToken{mo}{`}^2}}}",
+    "controlByteUnchanged": true,
+    "sameOriginalRoot": true,
+    "sameCandidateRoot": true,
+    "originalGeometryEqual": false,
+    "candidateGeometryEqual": false,
+    "identicalControlTransformDifference": true,
+    "originalTransformDifference": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.000302,
+        0.0,
+        0.0,
+        -0.000302,
+        0.0,
+        0.0
+      ],
+      [
+        0.00021351,
+        0.0,
+        0.0,
+        -0.00021351,
+        0.093016,
+        -0.087278
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "candidateTransformDifference": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.000302,
+        0.0,
+        0.0,
+        -0.000302,
+        0.0,
+        0.0
+      ],
+      [
+        0.00021351,
+        0.0,
+        0.0,
+        -0.00021351,
+        0.093016,
+        -0.087278
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ]
+  },
+  {
+    "tex": "\\frac{x}{\\cramped[\\displaystyle]{\\mmlToken{mo}{`}^2}}",
+    "display": true,
+    "control": "\\frac{x}{{\\displaystyle\\cramped{\\mmlToken{mo}{`}^2}}}",
+    "controlByteUnchanged": true,
+    "sameOriginalRoot": true,
+    "sameCandidateRoot": true,
+    "originalGeometryEqual": true,
+    "candidateGeometryEqual": true,
+    "identicalControlTransformDifference": true,
+    "originalTransformDifference": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "candidateTransformDifference": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ]
+  },
+  {
+    "tex": "\\overset{\\cramped[\\displaystyle]{\\mmlToken{mo}{`}^2}}{X}",
+    "display": false,
+    "control": "\\overset{{\\displaystyle\\cramped{\\mmlToken{mo}{`}^2}}}{X}",
+    "controlByteUnchanged": true,
+    "sameOriginalRoot": true,
+    "sameCandidateRoot": true,
+    "originalGeometryEqual": true,
+    "candidateGeometryEqual": true,
+    "identicalControlTransformDifference": true,
+    "originalTransformDifference": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "candidateTransformDifference": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ]
+  },
+  {
+    "tex": "\\overset{\\cramped[\\displaystyle]{\\mmlToken{mo}{`}^2}}{X}",
+    "display": true,
+    "control": "\\overset{{\\displaystyle\\cramped{\\mmlToken{mo}{`}^2}}}{X}",
+    "controlByteUnchanged": true,
+    "sameOriginalRoot": true,
+    "sameCandidateRoot": true,
+    "originalGeometryEqual": true,
+    "candidateGeometryEqual": true,
+    "identicalControlTransformDifference": true,
+    "originalTransformDifference": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "candidateTransformDifference": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ]
+  },
+  {
+    "tex": "\\mathsf{\\cramped[\\textstyle]{\\mmlToken{mo}{`}^2}}",
+    "display": false,
+    "control": "\\mathsf{{\\textstyle\\cramped{\\mmlToken{mo}{`}^2}}}",
+    "controlByteUnchanged": true,
+    "sameOriginalRoot": true,
+    "sameCandidateRoot": true,
+    "originalGeometryEqual": true,
+    "candidateGeometryEqual": true,
+    "identicalControlTransformDifference": true,
+    "originalTransformDifference": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "candidateTransformDifference": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ]
+  },
+  {
+    "tex": "\\mathsf{\\cramped[\\textstyle]{\\mmlToken{mo}{`}^2}}",
+    "display": true,
+    "control": "\\mathsf{{\\textstyle\\cramped{\\mmlToken{mo}{`}^2}}}",
+    "controlByteUnchanged": true,
+    "sameOriginalRoot": true,
+    "sameCandidateRoot": true,
+    "originalGeometryEqual": true,
+    "candidateGeometryEqual": true,
+    "identicalControlTransformDifference": true,
+    "originalTransformDifference": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "candidateTransformDifference": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ]
+  },
+  {
+    "tex": "\\Huge\\cramped[\\textstyle]{\\mmlToken{mo}{`}^2}",
+    "display": false,
+    "control": "\\Huge{\\textstyle\\cramped{\\mmlToken{mo}{`}^2}}",
+    "controlByteUnchanged": true,
+    "sameOriginalRoot": true,
+    "sameCandidateRoot": true,
+    "originalGeometryEqual": true,
+    "candidateGeometryEqual": true,
+    "identicalControlTransformDifference": true,
+    "originalTransformDifference": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "candidateTransformDifference": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ]
+  },
+  {
+    "tex": "\\Huge\\cramped[\\textstyle]{\\mmlToken{mo}{`}^2}",
+    "display": true,
+    "control": "\\Huge{\\textstyle\\cramped{\\mmlToken{mo}{`}^2}}",
+    "controlByteUnchanged": true,
+    "sameOriginalRoot": true,
+    "sameCandidateRoot": true,
+    "originalGeometryEqual": true,
+    "candidateGeometryEqual": true,
+    "identicalControlTransformDifference": true,
+    "originalTransformDifference": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "candidateTransformDifference": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ]
+  },
+  {
+    "tex": "\\frac{x}{\\cramped[\\textstyle]{\\mmlToken{mo}{`}^2}}",
+    "display": false,
+    "control": "\\frac{x}{{\\textstyle\\cramped{\\mmlToken{mo}{`}^2}}}",
+    "controlByteUnchanged": true,
+    "sameOriginalRoot": true,
+    "sameCandidateRoot": true,
+    "originalGeometryEqual": false,
+    "candidateGeometryEqual": false,
+    "identicalControlTransformDifference": true,
+    "originalTransformDifference": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.000302,
+        0.0,
+        0.0,
+        -0.000302,
+        0.0,
+        0.0
+      ],
+      [
+        0.00021351,
+        0.0,
+        0.0,
+        -0.00021351,
+        0.093016,
+        -0.087278
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "candidateTransformDifference": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.000302,
+        0.0,
+        0.0,
+        -0.000302,
+        0.0,
+        0.0
+      ],
+      [
+        0.00021351,
+        0.0,
+        0.0,
+        -0.00021351,
+        0.093016,
+        -0.087278
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ]
+  },
+  {
+    "tex": "\\frac{x}{\\cramped[\\textstyle]{\\mmlToken{mo}{`}^2}}",
+    "display": true,
+    "control": "\\frac{x}{{\\textstyle\\cramped{\\mmlToken{mo}{`}^2}}}",
+    "controlByteUnchanged": true,
+    "sameOriginalRoot": true,
+    "sameCandidateRoot": true,
+    "originalGeometryEqual": true,
+    "candidateGeometryEqual": true,
+    "identicalControlTransformDifference": true,
+    "originalTransformDifference": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "candidateTransformDifference": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ]
+  },
+  {
+    "tex": "\\overset{\\cramped[\\textstyle]{\\mmlToken{mo}{`}^2}}{X}",
+    "display": false,
+    "control": "\\overset{{\\textstyle\\cramped{\\mmlToken{mo}{`}^2}}}{X}",
+    "controlByteUnchanged": true,
+    "sameOriginalRoot": true,
+    "sameCandidateRoot": true,
+    "originalGeometryEqual": true,
+    "candidateGeometryEqual": true,
+    "identicalControlTransformDifference": true,
+    "originalTransformDifference": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "candidateTransformDifference": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ]
+  },
+  {
+    "tex": "\\overset{\\cramped[\\textstyle]{\\mmlToken{mo}{`}^2}}{X}",
+    "display": true,
+    "control": "\\overset{{\\textstyle\\cramped{\\mmlToken{mo}{`}^2}}}{X}",
+    "controlByteUnchanged": true,
+    "sameOriginalRoot": true,
+    "sameCandidateRoot": true,
+    "originalGeometryEqual": true,
+    "candidateGeometryEqual": true,
+    "identicalControlTransformDifference": true,
+    "originalTransformDifference": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "candidateTransformDifference": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ]
+  },
+  {
+    "tex": "\\mathsf{\\cramped[\\scriptstyle]{\\mmlToken{mo}{`}^2}}",
+    "display": false,
+    "control": "\\mathsf{{\\scriptstyle\\cramped{\\mmlToken{mo}{`}^2}}}",
+    "controlByteUnchanged": true,
+    "sameOriginalRoot": true,
+    "sameCandidateRoot": true,
+    "originalGeometryEqual": true,
+    "candidateGeometryEqual": true,
+    "identicalControlTransformDifference": true,
+    "originalTransformDifference": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "candidateTransformDifference": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ]
+  },
+  {
+    "tex": "\\mathsf{\\cramped[\\scriptstyle]{\\mmlToken{mo}{`}^2}}",
+    "display": true,
+    "control": "\\mathsf{{\\scriptstyle\\cramped{\\mmlToken{mo}{`}^2}}}",
+    "controlByteUnchanged": true,
+    "sameOriginalRoot": true,
+    "sameCandidateRoot": true,
+    "originalGeometryEqual": true,
+    "candidateGeometryEqual": true,
+    "identicalControlTransformDifference": true,
+    "originalTransformDifference": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "candidateTransformDifference": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ]
+  },
+  {
+    "tex": "\\Huge\\cramped[\\scriptstyle]{\\mmlToken{mo}{`}^2}",
+    "display": false,
+    "control": "\\Huge{\\scriptstyle\\cramped{\\mmlToken{mo}{`}^2}}",
+    "controlByteUnchanged": true,
+    "sameOriginalRoot": true,
+    "sameCandidateRoot": true,
+    "originalGeometryEqual": true,
+    "candidateGeometryEqual": true,
+    "identicalControlTransformDifference": true,
+    "originalTransformDifference": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "candidateTransformDifference": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ]
+  },
+  {
+    "tex": "\\Huge\\cramped[\\scriptstyle]{\\mmlToken{mo}{`}^2}",
+    "display": true,
+    "control": "\\Huge{\\scriptstyle\\cramped{\\mmlToken{mo}{`}^2}}",
+    "controlByteUnchanged": true,
+    "sameOriginalRoot": true,
+    "sameCandidateRoot": true,
+    "originalGeometryEqual": true,
+    "candidateGeometryEqual": true,
+    "identicalControlTransformDifference": true,
+    "originalTransformDifference": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "candidateTransformDifference": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ]
+  },
+  {
+    "tex": "\\frac{x}{\\cramped[\\scriptstyle]{\\mmlToken{mo}{`}^2}}",
+    "display": false,
+    "control": "\\frac{x}{{\\scriptstyle\\cramped{\\mmlToken{mo}{`}^2}}}",
+    "controlByteUnchanged": true,
+    "sameOriginalRoot": true,
+    "sameCandidateRoot": true,
+    "originalGeometryEqual": true,
+    "candidateGeometryEqual": true,
+    "identicalControlTransformDifference": true,
+    "originalTransformDifference": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "candidateTransformDifference": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ]
+  },
+  {
+    "tex": "\\frac{x}{\\cramped[\\scriptstyle]{\\mmlToken{mo}{`}^2}}",
+    "display": true,
+    "control": "\\frac{x}{{\\scriptstyle\\cramped{\\mmlToken{mo}{`}^2}}}",
+    "controlByteUnchanged": true,
+    "sameOriginalRoot": true,
+    "sameCandidateRoot": true,
+    "originalGeometryEqual": true,
+    "candidateGeometryEqual": true,
+    "identicalControlTransformDifference": true,
+    "originalTransformDifference": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "candidateTransformDifference": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ]
+  },
+  {
+    "tex": "\\overset{\\cramped[\\scriptstyle]{\\mmlToken{mo}{`}^2}}{X}",
+    "display": false,
+    "control": "\\overset{{\\scriptstyle\\cramped{\\mmlToken{mo}{`}^2}}}{X}",
+    "controlByteUnchanged": true,
+    "sameOriginalRoot": true,
+    "sameCandidateRoot": true,
+    "originalGeometryEqual": true,
+    "candidateGeometryEqual": true,
+    "identicalControlTransformDifference": true,
+    "originalTransformDifference": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "candidateTransformDifference": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ]
+  },
+  {
+    "tex": "\\overset{\\cramped[\\scriptstyle]{\\mmlToken{mo}{`}^2}}{X}",
+    "display": true,
+    "control": "\\overset{{\\scriptstyle\\cramped{\\mmlToken{mo}{`}^2}}}{X}",
+    "controlByteUnchanged": true,
+    "sameOriginalRoot": true,
+    "sameCandidateRoot": true,
+    "originalGeometryEqual": true,
+    "candidateGeometryEqual": true,
+    "identicalControlTransformDifference": true,
+    "originalTransformDifference": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "candidateTransformDifference": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ]
+  },
+  {
+    "tex": "\\mathsf{\\cramped[\\scriptscriptstyle]{\\mmlToken{mo}{`}^2}}",
+    "display": false,
+    "control": "\\mathsf{{\\scriptscriptstyle\\cramped{\\mmlToken{mo}{`}^2}}}",
+    "controlByteUnchanged": true,
+    "sameOriginalRoot": true,
+    "sameCandidateRoot": true,
+    "originalGeometryEqual": true,
+    "candidateGeometryEqual": true,
+    "identicalControlTransformDifference": true,
+    "originalTransformDifference": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "candidateTransformDifference": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ]
+  },
+  {
+    "tex": "\\mathsf{\\cramped[\\scriptscriptstyle]{\\mmlToken{mo}{`}^2}}",
+    "display": true,
+    "control": "\\mathsf{{\\scriptscriptstyle\\cramped{\\mmlToken{mo}{`}^2}}}",
+    "controlByteUnchanged": true,
+    "sameOriginalRoot": true,
+    "sameCandidateRoot": true,
+    "originalGeometryEqual": true,
+    "candidateGeometryEqual": true,
+    "identicalControlTransformDifference": true,
+    "originalTransformDifference": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "candidateTransformDifference": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ]
+  },
+  {
+    "tex": "\\Huge\\cramped[\\scriptscriptstyle]{\\mmlToken{mo}{`}^2}",
+    "display": false,
+    "control": "\\Huge{\\scriptscriptstyle\\cramped{\\mmlToken{mo}{`}^2}}",
+    "controlByteUnchanged": true,
+    "sameOriginalRoot": true,
+    "sameCandidateRoot": true,
+    "originalGeometryEqual": true,
+    "candidateGeometryEqual": true,
+    "identicalControlTransformDifference": true,
+    "originalTransformDifference": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "candidateTransformDifference": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ]
+  },
+  {
+    "tex": "\\Huge\\cramped[\\scriptscriptstyle]{\\mmlToken{mo}{`}^2}",
+    "display": true,
+    "control": "\\Huge{\\scriptscriptstyle\\cramped{\\mmlToken{mo}{`}^2}}",
+    "controlByteUnchanged": true,
+    "sameOriginalRoot": true,
+    "sameCandidateRoot": true,
+    "originalGeometryEqual": true,
+    "candidateGeometryEqual": true,
+    "identicalControlTransformDifference": true,
+    "originalTransformDifference": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "candidateTransformDifference": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ]
+  },
+  {
+    "tex": "\\frac{x}{\\cramped[\\scriptscriptstyle]{\\mmlToken{mo}{`}^2}}",
+    "display": false,
+    "control": "\\frac{x}{{\\scriptscriptstyle\\cramped{\\mmlToken{mo}{`}^2}}}",
+    "controlByteUnchanged": true,
+    "sameOriginalRoot": true,
+    "sameCandidateRoot": true,
+    "originalGeometryEqual": false,
+    "candidateGeometryEqual": false,
+    "identicalControlTransformDifference": true,
+    "originalTransformDifference": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.000151,
+        0.0,
+        0.0,
+        -0.000151,
+        0.0,
+        0.0
+      ],
+      [
+        0.000151,
+        0.0,
+        0.0,
+        -0.000151,
+        0.046508,
+        -0.043639
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "candidateTransformDifference": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.000151,
+        0.0,
+        0.0,
+        -0.000151,
+        0.0,
+        0.0
+      ],
+      [
+        0.000151,
+        0.0,
+        0.0,
+        -0.000151,
+        0.046508,
+        -0.043639
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ]
+  },
+  {
+    "tex": "\\frac{x}{\\cramped[\\scriptscriptstyle]{\\mmlToken{mo}{`}^2}}",
+    "display": true,
+    "control": "\\frac{x}{{\\scriptscriptstyle\\cramped{\\mmlToken{mo}{`}^2}}}",
+    "controlByteUnchanged": true,
+    "sameOriginalRoot": true,
+    "sameCandidateRoot": true,
+    "originalGeometryEqual": true,
+    "candidateGeometryEqual": true,
+    "identicalControlTransformDifference": true,
+    "originalTransformDifference": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "candidateTransformDifference": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ]
+  },
+  {
+    "tex": "\\overset{\\cramped[\\scriptscriptstyle]{\\mmlToken{mo}{`}^2}}{X}",
+    "display": false,
+    "control": "\\overset{{\\scriptscriptstyle\\cramped{\\mmlToken{mo}{`}^2}}}{X}",
+    "controlByteUnchanged": true,
+    "sameOriginalRoot": true,
+    "sameCandidateRoot": true,
+    "originalGeometryEqual": true,
+    "candidateGeometryEqual": true,
+    "identicalControlTransformDifference": true,
+    "originalTransformDifference": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "candidateTransformDifference": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ]
+  },
+  {
+    "tex": "\\overset{\\cramped[\\scriptscriptstyle]{\\mmlToken{mo}{`}^2}}{X}",
+    "display": true,
+    "control": "\\overset{{\\scriptscriptstyle\\cramped{\\mmlToken{mo}{`}^2}}}{X}",
+    "controlByteUnchanged": true,
+    "sameOriginalRoot": true,
+    "sameCandidateRoot": true,
+    "originalGeometryEqual": true,
+    "candidateGeometryEqual": true,
+    "identicalControlTransformDifference": true,
+    "originalTransformDifference": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "candidateTransformDifference": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ]
+  },
+  {
+    "tex": "\\mathsf{\\cramped[\\displaystyle]{\\crampedsubstack{x^2\\\\y^3}}}",
+    "display": false,
+    "control": "\\mathsf{{\\displaystyle\\cramped{\\crampedsubstack{x^2\\\\y^3}}}}",
+    "controlByteUnchanged": true,
+    "originalGeometryEqual": true,
+    "candidateGeometryEqual": true
+  },
+  {
+    "tex": "\\mathsf{\\cramped[\\displaystyle]{\\crampedsubstack{x^2\\\\y^3}}}",
+    "display": true,
+    "control": "\\mathsf{{\\displaystyle\\cramped{\\crampedsubstack{x^2\\\\y^3}}}}",
+    "controlByteUnchanged": true,
+    "originalGeometryEqual": true,
+    "candidateGeometryEqual": true
+  },
+  {
+    "tex": "\\mathsf{\\cramped[\\textstyle]{\\crampedsubstack{x^2\\\\y^3}}}",
+    "display": false,
+    "control": "\\mathsf{{\\textstyle\\cramped{\\crampedsubstack{x^2\\\\y^3}}}}",
+    "controlByteUnchanged": true,
+    "originalGeometryEqual": true,
+    "candidateGeometryEqual": true
+  },
+  {
+    "tex": "\\mathsf{\\cramped[\\textstyle]{\\crampedsubstack{x^2\\\\y^3}}}",
+    "display": true,
+    "control": "\\mathsf{{\\textstyle\\cramped{\\crampedsubstack{x^2\\\\y^3}}}}",
+    "controlByteUnchanged": true,
+    "originalGeometryEqual": true,
+    "candidateGeometryEqual": true
+  },
+  {
+    "tex": "\\mathsf{\\cramped[\\scriptstyle]{\\crampedsubstack{x^2\\\\y^3}}}",
+    "display": false,
+    "control": "\\mathsf{{\\scriptstyle\\cramped{\\crampedsubstack{x^2\\\\y^3}}}}",
+    "controlByteUnchanged": true,
+    "originalGeometryEqual": true,
+    "candidateGeometryEqual": true
+  },
+  {
+    "tex": "\\mathsf{\\cramped[\\scriptstyle]{\\crampedsubstack{x^2\\\\y^3}}}",
+    "display": true,
+    "control": "\\mathsf{{\\scriptstyle\\cramped{\\crampedsubstack{x^2\\\\y^3}}}}",
+    "controlByteUnchanged": true,
+    "originalGeometryEqual": true,
+    "candidateGeometryEqual": true
+  },
+  {
+    "tex": "\\mathsf{\\cramped[\\scriptscriptstyle]{\\crampedsubstack{x^2\\\\y^3}}}",
+    "display": false,
+    "control": "\\mathsf{{\\scriptscriptstyle\\cramped{\\crampedsubstack{x^2\\\\y^3}}}}",
+    "controlByteUnchanged": true,
+    "originalGeometryEqual": true,
+    "candidateGeometryEqual": true
+  },
+  {
+    "tex": "\\mathsf{\\cramped[\\scriptscriptstyle]{\\crampedsubstack{x^2\\\\y^3}}}",
+    "display": true,
+    "control": "\\mathsf{{\\scriptscriptstyle\\cramped{\\crampedsubstack{x^2\\\\y^3}}}}",
+    "controlByteUnchanged": true,
+    "originalGeometryEqual": true,
+    "candidateGeometryEqual": true
+  },
+  {
+    "tex": "\\mathsf{\\cramped[2]{\\crampedsubstack{x^2\\\\y^3}}}",
+    "display": false,
+    "control": "\\mathsf{{\\cramped{\\crampedsubstack{x^2\\\\y^3}}}}",
+    "controlByteUnchanged": true,
+    "originalGeometryEqual": true,
+    "candidateGeometryEqual": true
+  },
+  {
+    "tex": "\\mathsf{\\cramped[2]{\\crampedsubstack{x^2\\\\y^3}}}",
+    "display": true,
+    "control": "\\mathsf{{\\cramped{\\crampedsubstack{x^2\\\\y^3}}}}",
+    "controlByteUnchanged": true,
+    "originalGeometryEqual": true,
+    "candidateGeometryEqual": true
+  },
+  {
+    "tex": "\\mathsf{\\cramped[SS]{\\crampedsubstack{x^2\\\\y^3}}}",
+    "display": false,
+    "control": "\\mathsf{{\\cramped{\\crampedsubstack{x^2\\\\y^3}}}}",
+    "controlByteUnchanged": true,
+    "originalGeometryEqual": true,
+    "candidateGeometryEqual": true
+  },
+  {
+    "tex": "\\mathsf{\\cramped[SS]{\\crampedsubstack{x^2\\\\y^3}}}",
+    "display": true,
+    "control": "\\mathsf{{\\cramped{\\crampedsubstack{x^2\\\\y^3}}}}",
+    "controlByteUnchanged": true,
+    "originalGeometryEqual": true,
+    "candidateGeometryEqual": true
+  }
+]
