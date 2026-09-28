@@ -31,7 +31,7 @@ all 40 matched, establishing that no positioning repair was required.
 `tex_logos_mathjax_3_2_2.json` stores 818 complete, unmodified original SVGs
 from D2’s frozen MathJax 3.2.2 bundle, source commit
 `ad8f5c21cb810236551da8c6512ba733e67357ee`. It records all three verified asset
-hashes and baseline main128 commit `3335ca93f6865eca2ce7baa595d29cf17a981cab`.
+hashes and baseline main130 commit `ed0afff52f6f50eb2e49daf7eada8cd9369a781a`.
 Every original uses a fresh VM, font cache none, `em=16`, `ex=8`, and the
 recorded display mode. There are 682 valid renderings and 136 original error
 SVGs. Against this baseline, 288 cases were already exact and 530 are newly
@@ -50,7 +50,8 @@ The final inventory includes a separate 48-case unbraced declaration and name-
 spacing sweep, an independently generated 272-case source review (all exact),
 and 40 fresh compositions with the merged `pmb` macro. Duplicate expressions
 are included only once. All earlier baseline and candidate outputs were
-unchanged after rebasing from main127 onto main128.
+unchanged after rebasing from main127 onto main128. The final main130 baseline
+recheck retains the same 530 failures and 288 exact controls.
 
 Regenerate with
 `node --jitless testdata/generate_tex_logos.cjs PINNED_ASSETS`. The generator
