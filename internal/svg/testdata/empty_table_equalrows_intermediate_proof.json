@@ -23,7 +23,11 @@
       "candidate": {
         "svg": "<svg style=\"vertical-align: -0.16ex;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"2.285ex\" height=\"1.45ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -570.5 1010 641\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"mtable\"><line data-line=\"v\" class=\"mjx-solid\" x1=\"NaN\" y1=\"-70.5\" x2=\"NaN\" y2=\"570.5\"></line><line data-line=\"h\" class=\"mjx-solid\" x1=\"0\" y1=\"NaN\" x2=\"1010\" y2=\"NaN\"></line><rect data-frame=\"true\" class=\"mjx-dashed\" width=\"940\" height=\"571\" x=\"35\" y=\"-35.5\"></rect></g></g></g></svg>"
       },
-      "changed": true
+      "changed": true,
+      "correctedCandidate": {
+        "svg": "<svg style=\"vertical-align: 0;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"2.285ex\" height=\"0.036ex\" role=\"img\" focusable=\"false\" viewBox=\"0 0 1010 16\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"mtable\"><line data-line=\"v\" class=\"mjx-solid\" x1=\"NaN\" y1=\"NaN\" x2=\"NaN\" y2=\"NaN\"></line><line data-line=\"h\" class=\"mjx-solid\" x1=\"0\" y1=\"NaN\" x2=\"1010\" y2=\"NaN\"></line><rect data-frame=\"true\" class=\"mjx-dashed\" width=\"940\" height=\"NaN\" x=\"35\" y=\"NaN\"></rect></g></g></g></svg>"
+      },
+      "correctedExact": true
     },
     {
       "name": "empty-attribute-015",
@@ -46,7 +50,11 @@
       "candidate": {
         "svg": "<svg style=\"vertical-align: -0.16ex;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"2.285ex\" height=\"1.45ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -570.5 1010 641\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"mtable\"><line data-line=\"v\" class=\"mjx-solid\" x1=\"NaN\" y1=\"-70.5\" x2=\"NaN\" y2=\"570.5\"></line><line data-line=\"h\" class=\"mjx-solid\" x1=\"0\" y1=\"NaN\" x2=\"1010\" y2=\"NaN\"></line><rect data-frame=\"true\" class=\"mjx-dashed\" width=\"940\" height=\"571\" x=\"35\" y=\"-35.5\"></rect></g></g></g></svg>"
       },
-      "changed": true
+      "changed": true,
+      "correctedCandidate": {
+        "svg": "<svg style=\"vertical-align: 0;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"2.285ex\" height=\"0.036ex\" role=\"img\" focusable=\"false\" viewBox=\"0 0 1010 16\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"mtable\"><line data-line=\"v\" class=\"mjx-solid\" x1=\"NaN\" y1=\"NaN\" x2=\"NaN\" y2=\"NaN\"></line><line data-line=\"h\" class=\"mjx-solid\" x1=\"0\" y1=\"NaN\" x2=\"1010\" y2=\"NaN\"></line><rect data-frame=\"true\" class=\"mjx-dashed\" width=\"940\" height=\"NaN\" x=\"35\" y=\"NaN\"></rect></g></g></g></svg>"
+      },
+      "correctedExact": true
     },
     {
       "name": "equalrows-no-list-0",
@@ -69,7 +77,11 @@
       "candidate": {
         "svg": "<svg style=\"vertical-align: -0.08ex;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"2.127ex\" height=\"1.292ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -535.5 940 571\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"mtable\"><rect data-frame=\"true\" class=\"mjx-dashed\" width=\"870\" height=\"501\" x=\"35\" y=\"-0.5\"></rect></g></g></g></svg>"
       },
-      "changed": false
+      "changed": false,
+      "correctedCandidate": {
+        "svg": "<svg style=\"vertical-align: 0;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"2.127ex\" height=\"0.036ex\" role=\"img\" focusable=\"false\" viewBox=\"0 0 940 16\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"mtable\"><rect data-frame=\"true\" class=\"mjx-dashed\" width=\"870\" height=\"NaN\" x=\"35\" y=\"NaN\"></rect></g></g></g></svg>"
+      },
+      "correctedExact": true
     },
     {
       "name": "equalrows-no-list-1",
@@ -92,7 +104,12 @@
       "candidate": {
         "svg": "<svg style=\"vertical-align: -0.08ex;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"2.127ex\" height=\"1.292ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -535.5 940 571\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"mtable\"><rect data-frame=\"true\" class=\"mjx-dashed\" width=\"870\" height=\"501\" x=\"35\" y=\"-0.5\"></rect></g></g></g></svg>"
       },
-      "changed": false
+      "changed": false,
+      "correctedCandidate": {
+        "svg": "<svg style=\"vertical-align: 0;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"2.127ex\" height=\"0.036ex\" role=\"img\" focusable=\"false\" viewBox=\"0 0 940 16\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"mtable\"><rect data-frame=\"true\" class=\"mjx-dashed\" width=\"870\" height=\"NaN\" x=\"35\" y=\"NaN\"></rect></g></g></g></svg>"
+      },
+      "correctedExact": true
     }
-  ]
+  ],
+  "status": "Historical intermediate failures retained verbatim; all four original observations are now strict complete-SVG assertions after the source equal-row maximum repair."
 }

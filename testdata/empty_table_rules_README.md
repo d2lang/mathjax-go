@@ -34,7 +34,7 @@ expected results from Go.
 
 ```sh
 node --jitless testdata/generate_empty_table_rules.cjs PINNED_ASSETS
-go test ./... -run 'TestEmptyTable(RuleOriginalReferences|ListOriginalMethods)'
+go test ./... -run TestEmptyTable
 ```
 
 The generator verifies all three pinned asset hashes, uses fresh original
@@ -69,7 +69,16 @@ claim of globally unique additions across later parity changes.
 The additional controlled renderer inventory injects authored table attributes
 at the same pre-output boundary in both implementations. Its full identity
 is sourceTeX plus display and tableAttributes, not just a public TeX pair.
-It has 62 exact SVGs and four separately retained empty-equalrows observations.
-These expose the inherited source Math.max-empty-list difference; two frames
-become wider and taller while the original serializes non-finite frame heights.
-They are not classified as geometry-exact or visually regression-free.
+It has 66 complete original SVGs, including four empty equal-row controls.
+The first list-retention prototype exposed a separate source maximum error:
+CommonMtable.getEqualRowHeight applies Math.max to all row totals, so an empty
+list returns -Infinity, negative totals retain their negative maximum, and
+NaN takes precedence over positive Infinity. The Go maximum now follows that
+contract. Twenty direct original method observations cover empty and nonempty
+lists, negative totals, signed zero, infinities and NaN in both orders.
+
+All 66 controlled SVGs are exact after this coupled helper correction; 16
+differ from main160 and 50 are unchanged. The four prior intermediate outputs
+are preserved in `internal/svg/testdata/empty_table_equalrows_intermediate_proof.json`,
+alongside the unmodified originals and exact corrected outputs. In particular,
+no finite frame is accepted as equivalent to an original non-finite frame.

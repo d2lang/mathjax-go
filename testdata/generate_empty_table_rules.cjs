@@ -56,7 +56,21 @@ for (const request of fixture.methods) {
 }
 fs.writeFileSync(file, JSON.stringify(fixture, null, 2) + '\n');
 
-for (const name of ['empty_table_attributes_mathjax_3_2_2.json', 'empty_table_attribute_residuals.json']) {
+const equalFile = path.join(__dirname, '../internal/svg/testdata/empty_table_equalrows_mathjax_3_2_2.json');
+const equalFixture = JSON.parse(fs.readFileSync(equalFile, 'utf8'));
+for (const request of equalFixture.cases) {
+  const context = createContext({console, request}); context.globalThis = context;
+  for (const script of scripts) script.runInContext(context);
+  request.original = new Script(`(() => {
+    const proto = MathJax._.output.svg.Wrappers.mtable.SVGmtable.prototype;
+    const H = request.h.map(Number), D = request.d.map(Number);
+    const value = proto.getEqualRowHeight.call({getTableData: () => ({H,D})});
+    return Object.is(value, -0) ? '-0' : String(value);
+  })()`).runInContext(context);
+}
+fs.writeFileSync(equalFile, JSON.stringify(equalFixture, null, 2) + '\n');
+
+for (const name of ['empty_table_attributes_mathjax_3_2_2.json', 'empty_table_equalrows_intermediate_proof.json']) {
 const attributesFile = path.join(__dirname, '../internal/svg/testdata', name);
 const attributesFixture = JSON.parse(fs.readFileSync(attributesFile, 'utf8'));
 for (const request of attributesFixture.cases) {

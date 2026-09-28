@@ -30,7 +30,7 @@ func TestEmptyTableAttributeOriginalSVGs(t *testing.T) {
 	if err := json.Unmarshal(data, &fixture); err != nil {
 		t.Fatal(err)
 	}
-	if fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || len(fixture.Cases) != 62 {
+	if fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || len(fixture.Cases) != 66 {
 		t.Fatal("unbound controlled original table attributes")
 	}
 	for _, c := range fixture.Cases {
