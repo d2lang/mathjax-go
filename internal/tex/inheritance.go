@@ -623,15 +623,15 @@ func inheritMultiscripts(n *mml.Node, attributes *inheritedAttributes, display b
 }
 
 func effectiveCoreBool(n *mml.Node, name string) bool {
-	core := n
-	for core != nil && core.Kind != "mo" && len(core.Children) != 0 {
-		core = core.Children[0]
-	}
+	// MmlMunderover uses the node-specific coreMO contract. In particular,
+	// a compound, non-embellished row is its own core; a leading movable
+	// operator does not force the entire decoration into script style.
+	core := limitsCore(n)
 	if core == nil {
 		return false
 	}
 	value, _ := core.Attributes.Get(name)
-	return propertyBool(value)
+	return limitsTruthy(value)
 }
 
 func propertyBool(value any) bool {

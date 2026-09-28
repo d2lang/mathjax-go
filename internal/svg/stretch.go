@@ -145,7 +145,7 @@ func (w *wrapper) addMiddleHorizontal(element *Element, width float64) (float64,
 	}
 	x := (width - metrics.Width) / 2
 	w.addStretchGlyph(element, 3, x, 0)
-	return x, x + metrics.Width
+	return x, (width + metrics.Width) / 2
 }
 
 func (w *wrapper) addExtenderHorizontal(element *Element, width, left, right, x float64) {
@@ -160,7 +160,11 @@ func (w *wrapper) addExtenderHorizontal(element *Element, width, left, right, x 
 		return
 	}
 	height := metrics.Height + metrics.Depth + 2*verticalFuzz
-	scale := 1.5 * extent / metrics.Width
+	// SVGmo.addExtH divides before multiplying. Preserve the source order
+	// because its rounded clipping viewBox exposes the floating-point result.
+	scale := 1.5 * (extent / metrics.Width)
+	// JavaScript rounds the product before subtracting the extender width.
+	clip := (float64(scale*metrics.Width) - extent) / 2
 	bottom := -(metrics.Depth + verticalFuzz)
 	nested := NewElement("svg").
 		SetAttr("width", fixed(extent)).
@@ -168,7 +172,7 @@ func (w *wrapper) addExtenderHorizontal(element *Element, width, left, right, x 
 		SetAttr("x", fixed(x+left)).
 		SetAttr("y", fixed(bottom)).
 		SetAttr("viewBox", strings.Join([]string{
-			fixed((scale*metrics.Width - extent) / 2), fixed(bottom), fixed(extent), fixed(height),
+			fixed(clip), fixed(bottom), fixed(extent), fixed(height),
 		}, " "))
 	w.placeChar(codepoint, 0, 0, nested, variant)
 	if glyph := lastElement(nested); glyph != nil {
