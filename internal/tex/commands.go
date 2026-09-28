@@ -1955,8 +1955,14 @@ func (p *parser) vectorAccent(name string) ([]*mml.Node, error) {
 }
 
 func (p *parser) quickQuadText(name string) ([]*mml.Node, error) {
-	star := p.readStar()
-	_ = star
+	// Qqtext's GetStar/GetArgument use JavaScript GetNext whitespace.
+	for p.pos < len(p.source) && internalTextSpace(p.peekRune()) {
+		p.consumeRune()
+	}
+	star := p.pos < len(p.source) && p.source[p.pos] == '*'
+	if star {
+		p.pos++
+	}
 	defaults := map[string]string{
 		"qcc": "c.c.", "qif": "if", "qthen": "then", "qelse": "else", "qotherwise": "otherwise",
 		"qunless": "unless", "qgiven": "given", "qusing": "using", "qassume": "assume", "qsince": "since",
@@ -1966,12 +1972,24 @@ func (p *parser) quickQuadText(name string) ([]*mml.Node, error) {
 	text := defaults[name]
 	if text == "" {
 		var err error
-		text, _, err = p.readArgument(name, false)
+		for p.pos < len(p.source) && internalTextSpace(p.peekRune()) {
+			p.consumeRune()
+		}
+		text, _, err = p.readArgumentAtCursor(name, false)
 		if err != nil {
 			return nil, err
 		}
 	}
-	return []*mml.Node{spacer("1em"), node("mtext", mml.NewText(text)), spacer("1em")}, nil
+	// PhysicsMethods.Qqtext inserts TeX into the calling parser. Keeping text
+	// and quad as commands preserves their late-bound definitions and the
+	// caller's pending items; unlike Macro, this handler does not charge a
+	// substitution or create a child parser.
+	expansion := "\\text{" + text + "}\\quad "
+	if !star {
+		expansion = "\\quad" + expansion
+	}
+	p.source = p.source[:p.pos] + expansion + p.source[p.pos:]
+	return nil, nil
 }
 
 func (p *parser) prescript(name string) ([]*mml.Node, error) {
