@@ -294,7 +294,9 @@ func splitMatrixBody(body string, cases bool) ([]matrixSourceRow, error) {
 
 func (p *parser) parseMatrixCell(source string, terminator byte) (*mml.Node, error) {
 	sub := p.matrixCellParser(source + string(terminator))
-	children, _, err := sub.parseRow(terminator, false)
+	// Unlike an ordinary OpenItem, Matrix's ArrayItem requires a close brace;
+	// a Right/Middle closing item reaches that boundary through styles/Over.
+	children, _, err := sub.parseRowWithInfix(terminator, false, false)
 	if err != nil {
 		return nil, err
 	}
@@ -307,7 +309,7 @@ func (p *parser) matrixCellParser(source string) *parser {
 	// the surrounding font, root-index, or identifier-pattern state.
 	return &parser{source: source, state: p.state, stackGlobal: p.ensureStackGlobal(), display: p.display,
 		vectorFactory: p.vectorFactory, genfracPalette: p.genfracPalette,
-		starMacroChildren: p.starMacroChildren, derivativeChildren: p.derivativeChildren}
+		starMacroChildren: p.starMacroChildren, derivativeChildren: p.derivativeChildren, matrixClose: true}
 }
 
 func matrixCellContent(children []*mml.Node) *mml.Node {

@@ -191,21 +191,12 @@ func (p *parser) commandNodes(name string, after **derivativeAutoOpen) ([]*mml.N
 	case "left":
 		return p.leftRight(name)
 	case "middle":
-		delim, err := p.readDelimiter(name, false)
-		if err != nil {
+		// Single-token consumers (such as a pending script) cannot own
+		// this closing item. Read the delimiter before reporting the error.
+		if _, err := p.readDelimiter(name, false); err != nil {
 			return nil, err
 		}
-		// MathJax's Middle() brackets the relation delimiter with empty CLOSE
-		// and OPEN atoms. Their classes remain observable to TeX spacing and
-		// delimiter geometry even though both stringify as TeXAtom([]).
-		close := texAtom(forcedRow(nil, true), mml.TeXClassClose)
-		open := texAtom(forcedRow(nil, true), mml.TeXClassOpen)
-		// The middle mo has no explicit texClass upstream.  In infix form the
-		// delimiter dictionary classifies the selected fence (notably '|') as
-		// ORD, so it must not introduce relation spacing.
-		middle := p.token("mo", delim)
-		middle.Attributes.Set("stretchy", true)
-		return []*mml.Node{close, middle, open}, nil
+		return nil, texError("ExtraMiddle", "Extra \\middle")
 	case "big", "Big", "bigg", "Bigg", "bigl", "Bigl", "biggl", "Biggl", "bigr", "Bigr", "biggr", "Biggr", "bigm", "Bigm", "biggm", "Biggm":
 		return p.bigDelimiter(name)
 
@@ -642,18 +633,6 @@ func styleAttributes(style string) map[string]any {
 		return map[string]any{"displaystyle": false, "scriptlevel": 2}
 	}
 	return nil
-}
-
-func (p *parser) leftRight(name string) ([]*mml.Node, error) {
-	open, err := p.readDelimiter(name, false)
-	if err != nil {
-		return nil, err
-	}
-	children, close, err := p.parseRow(0, true)
-	if err != nil {
-		return nil, err
-	}
-	return []*mml.Node{p.leftRightFenced(open, row(children, true), close, true)}, nil
 }
 
 func (p *parser) bigDelimiter(name string) ([]*mml.Node, error) {

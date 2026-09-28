@@ -57,6 +57,21 @@ lexical color, including array and internal-math resets. The 120-case frozen
 SVG corpus and regeneration instructions are documented in
 [testdata/reversible_reaction_README.md](testdata/reversible_reaction_README.md).
 
+### Middle and closing delimiters
+
+`\middle` and `\right` capture their lexical color before closing pending
+styles, fractions, and positioning commands. `\middle` restores the environment
+at `\left` entry, while retaining the preceding nodes for a later fraction.
+For example, `\left(\color{red}x\middle|y\right)` keeps the middle bar red
+and restores the following `y` and closing parenthesis to the surrounding color.
+
+The retained corpus compares 846 complete original SVGs and 423 display
+measurements. It covers delimiter color, repeated middle delimiters, fonts,
+style and size declarations, fractions on either side, pending operators and
+positioning, nested parser scopes, macro overrides, and error precedence.
+Regenerate it with `node testdata/generate_delimiter_color.cjs PINNED_ASSETS`
+and `node testdata/generate_middle_scope.cjs PINNED_ASSETS`.
+
 ## License
 
 Apache License 2.0, with identified MIT-derived portions. See

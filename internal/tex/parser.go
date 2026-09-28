@@ -97,6 +97,8 @@ type parser struct {
 	multiLetterFont      string
 	activeFont           string
 	activeColor          string
+	rowDelimiter         *rowDelimiterItem
+	matrixClose          bool
 	identifierPattern    identifierPattern
 	operatorLetters      bool
 	noAutoOP             bool
@@ -132,12 +134,20 @@ func (p *parser) checkEquationEnvironment() error {
 // non-zero terminator is consumed.  stopRight lets a \left subparse return the
 // delimiter consumed by its matching \right.
 func (p *parser) parseRow(terminator byte, stopRight bool) ([]*mml.Node, string, error) {
+	return p.parseRowWithPrefix(terminator, stopRight, nil)
+}
+
+// A LeftItem retains its nodes when Middle closes the current segment. A later
+// OverItem must see that entire prefix, not just the nodes following Middle.
+func (p *parser) parseRowWithPrefix(terminator byte, stopRight bool, prefix []*mml.Node) ([]*mml.Node, string, error) {
 	// Ordinary groups and LeftItems mask an enclosing BraketItem. Its own
 	// body enters through parseRowWithInfix, retaining the active owner.
 	owner := p.braketOwner
 	p.braketOwner = nil
-	defer func() { p.braketOwner = owner }()
-	return p.parseRowWithInfix(terminator, stopRight, false)
+	matrixClose := p.matrixClose
+	p.matrixClose = false
+	defer func() { p.braketOwner, p.matrixClose = owner, matrixClose }()
+	return p.parseRowContinuation(terminator, stopRight, false, nil, "", prefix)
 }
 
 // parseRowWithInfix retains an OverItem across denominator and declaration
@@ -156,7 +166,7 @@ func (p *parser) parseRowWithAutoOpen(terminator byte, stopRight, infixPending b
 		p.braketOwner = nil
 		defer func() { p.braketOwner = owner }()
 	}
-	return p.parseRowContinuation(terminator, stopRight, infixPending, auto, "")
+	return p.parseRowContinuation(terminator, stopRight, infixPending, auto, "", nil)
 }
 
 type rowStyleFrame struct {
@@ -166,7 +176,7 @@ type rowStyleFrame struct {
 
 // pendingFont continues a SetFont in this logical row across OverItem. Real
 // groups and child parsers still enter through the ordinary row entry points.
-func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending bool, auto *derivativeAutoOpen, pendingFont string) ([]*mml.Node, string, error) {
+func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending bool, auto *derivativeAutoOpen, pendingFont string, prefix []*mml.Node) ([]*mml.Node, string, error) {
 	owner := p.braketOwner
 	defer func() { p.braketOwner = owner }()
 	vectorFont, vectorStar, activeFont := p.vectorFont, p.vectorStar, p.activeFont
@@ -177,7 +187,7 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 		p.fontExplicitEmpty = fontExplicitEmpty
 		p.activeColor = activeColor
 	}()
-	var nodes []*mml.Node
+	nodes := prefix
 	var pending *pendingPrime
 	var negation pendingNot
 	var dots pendingDots
@@ -323,39 +333,27 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 		if c == '\\' {
 			p.pos++
 			name := p.readControlSequence()
-			if name == "right" {
-				if len(positions) != 0 {
-					delim, err := p.readDelimiter(name, false)
-					if err != nil {
-						return nil, "", err
-					}
-					if closeErr := closeStyles(); closeErr != nil {
-						return nil, "", closeErr
-					}
-					if auto != nil {
-						return nil, "", texError("MissingLeftExtraRight", "Missing \\left or extra \\right")
-					}
-					if !stopRight {
-						return nil, "", texError("ExtraRight", "Extra \\right")
-					}
-					return nodes, delim, nil
+			if _, registered := p.state.macros[name]; !registered && (name == "right" || name == "middle") {
+				delim, err := p.readDelimiter(name, false)
+				if err != nil {
+					return nil, "", err
 				}
-				if auto != nil {
-					if _, err := p.readDelimiter(name, false); err != nil {
-						return nil, "", err
+				// LeftRight records the lexical color before the closing item
+				// reduces Style/Over/Position and restores the LeftItem env.
+				p.rowDelimiter = &rowDelimiterItem{middle: name == "middle", delimiter: delim, color: p.activeColor}
+				if closeErr := closeStyles(); closeErr != nil {
+					return nil, "", closeErr
+				}
+				if auto != nil || !stopRight {
+					if auto == nil && p.matrixClose {
+						return nil, "", texError("MissingCloseBrace", "Missing close brace")
+					}
+					if name == "middle" {
+						return nil, "", texError("ExtraMiddle", "Extra \\middle")
 					}
 					return nil, "", texError("MissingLeftExtraRight", "Missing \\left or extra \\right")
 				}
-				if !stopRight {
-					return nil, "", texError("ExtraRight", "Extra \\right")
-				}
-				delim, err := p.readDelimiter(name, false)
-				if err == nil {
-					if closeErr := closeStyles(); closeErr != nil {
-						return nil, "", closeErr
-					}
-				}
-				return nodes, delim, err
+				return nodes, delim, nil
 			}
 			if _, registered := p.state.macros[name]; !registered && (name == "over" || name == "atop" || name == "above" || name == "choose" || name == "brace" || name == "brack" || name == "overwithdelims" || name == "atopwithdelims" || name == "abovewithdelims") {
 				// BaseMethods.Over reads arguments before pushing the closing
@@ -1255,7 +1253,7 @@ func (p *parser) finishInfixFraction(name string, left []*mml.Node, spec infixFr
 	if infixPending {
 		return nil, "", texError("AmbiguousUseOf", "Ambiguous use of \\%s", name)
 	}
-	rightNodes, right, err := p.parseRowContinuation(terminator, stopRight, true, nil, pendingFont)
+	rightNodes, right, err := p.parseRowContinuation(terminator, stopRight, true, nil, pendingFont, nil)
 	if err != nil {
 		return nil, "", err
 	}
