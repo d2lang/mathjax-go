@@ -147,4 +147,6 @@ var simpleMacros = map[string]string{
 	"longLeftrightharpoons": "\\stackrel{\\textstyle\\vphantom{{-}}{\\rightharpoonup}}{\\smash{{\\leftharpoondown}\\!\\!{-}}}",
 	// Mhchem's reversible reaction uses the three-dimensional Rule spacer.
 	"longleftrightarrows": "\\stackrel{\\longrightarrow}{\\smash{\\longleftarrow}\\Rule{0px}{.25em}{0px}}",
+	// Mhchem uses this ordinary macro for every partial-bond (~) form.
+	"tripledash": "\\vphantom{-}\\raise2mu{\\kern2mu\\tiny\\text{-}\\kern1mu\\text{-}\\kern1mu\\text{-}\\kern2mu}",
 }

@@ -515,8 +515,21 @@ A fixed 56-case inline/display corpus compares complete original SVGs and 28
 display measurements across the three arrows, top labels, sequences, scripts,
 fonts, color, declared overrides and unchanged chemistry controls. Regenerate
 it with `node testdata/generate_mhchem_equilibrium.cjs PINNED_ASSETS`.
-The separate reversible double-arrow and partial-bond helpers, and inherited
-raise/lower placement for bottom labels, are outside this correction.
+The reversible double-arrow and partial-bond helpers are covered separately.
+
+### Chemistry partial bonds
+
+Mhchem's `tripledash` helper uses its original TeX macro definition, so all
+five partial-bond forms (`~`, `~-`, `~=`, `~--`, and `-~-`) render through
+`\ce{C\bond{~-}O}` and the same spacing and positioning commands as the
+original. Direct `\tripledash` use and declared macro overrides also work.
+
+A fixed 304-case inline/display corpus compares complete original SVGs and
+152 display measurements. It covers every partial-bond form in scripts,
+fractions, size declarations, fonts, color, matrices, roots, and labeled
+reversible reactions, plus direct macro use, argument boundaries, and
+ordinary chemistry controls. Regenerate it with
+`node testdata/generate_mhchem_partial_bonds.cjs PINNED_ASSETS`.
 
 ### Braket escaped-pipe dispatch
 
