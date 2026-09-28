@@ -128,10 +128,18 @@ func TestTableFixedAndPercentageColumns(t *testing.T) {
 	table.Attributes.Set("columnwidth", "50% auto auto")
 	w = tableTestWrapper(table)
 	bbox = prepareTableWrapper(w)
-	if bbox.PWidth != "" {
-		t.Fatalf("resolved top-level percentage marker = %q, want empty", bbox.PWidth)
+	if bbox.PWidth != "80%" {
+		t.Fatalf("natural percentage marker = %q, want 80%%", bbox.PWidth)
 	}
-	geometry = newTableLayout(w)
+	// CommonMtable first caches natural geometry. SVGmath supplies the
+	// container width only after the full root bbox has been computed.
+	if !w.setChildPWidths(80 * layout.TeXParameters.XHeight) {
+		t.Fatal("percentage pass did not report the width change")
+	}
+	if bbox.PWidth != "" {
+		t.Fatalf("resolved percentage marker = %q, want empty", bbox.PWidth)
+	}
+	geometry = w.tableState()
 	for i, want := range []float64{14.144, 6.572, 7.572} {
 		closeTableFloat(t, "resolved percentage column", geometry.computed[i], want)
 	}
@@ -256,7 +264,9 @@ func TestNestedPercentageTableUsesContainingColumnWidth(t *testing.T) {
 
 	outerWrapper := tableTestWrapper(outer)
 	innerWrapper := outerWrapper.children[0].children[0].children[0]
-	outerLayout := newTableLayout(outerWrapper)
+	prepareTableWrapper(outerWrapper)
+	outerWrapper.setChildPWidths(80 * layout.TeXParameters.XHeight)
+	outerLayout := outerWrapper.tableState()
 	closeTableFloat(t, "outer resolved column", outerLayout.computed[0], 33.36)
 	innerLayout := resolvedTableLayout(innerWrapper)
 	closeTableFloat(t, "inner natural width", innerLayout.width, 2)

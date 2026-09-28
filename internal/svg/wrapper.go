@@ -88,16 +88,6 @@ func (r *renderer) wrap(node *mml.Node, parent *wrapper, level int, display bool
 		}
 		initializeTablePWidth(w)
 	}
-	// CommonMrow has fixesPWidth=false, but its constructor explicitly marks
-	// itself full-width when any child carries a percentage marker.
-	if node.Kind == "mrow" {
-		for _, child := range w.children {
-			if child.bbox.PWidth != "" {
-				w.bbox.PWidth = layout.FullWidth
-				break
-			}
-		}
-	}
 	if node.Kind == "msqrt" || node.Kind == "mroot" {
 		w.initializeRoot()
 	}
@@ -114,6 +104,17 @@ func (r *renderer) wrap(node *mml.Node, parent *wrapper, level int, display bool
 	}
 	if node.Kind == "math" || node.Kind == "mrow" {
 		w.stretchRowChildren()
+	}
+	// CommonMrow has fixesPWidth=false, but its constructor explicitly marks
+	// itself full-width after stretching. The stretch pass can resolve a
+	// table width and clear its marker before the row decides to propagate it.
+	if node.Kind == "mrow" {
+		for _, child := range w.children {
+			if child.bbox.PWidth != "" {
+				w.bbox.PWidth = layout.FullWidth
+				break
+			}
+		}
 	}
 	return w
 }
@@ -473,6 +474,37 @@ func (w *wrapper) computeChildrenBBox(bbox *layout.BBox) {
 		bbox.Append(child.outerBBox())
 	}
 	bbox.Clean()
+	if w.node.Kind == "math" && w.parent == nil {
+		if w.setChildPWidths(80 * w.renderer.params.XHeight) {
+			bbox.Empty()
+			for _, child := range w.children {
+				bbox.Append(child.outerBBox())
+			}
+			bbox.Clean()
+		}
+	}
+}
+
+// setChildPWidths is the root SVGmath pass through CommonWrapper. SVGmath
+// supplies the output container width and keeps clear=false through every
+// transparent wrapper; CommonMtable clears its own and its container markers.
+func (w *wrapper) setChildPWidths(width float64) bool {
+	if w.node.Kind == "mtable" {
+		t := w.tableState()
+		if !tableIsPercent(tableString("width", w)) || t.resolved {
+			return false
+		}
+		before := t.width
+		t.resolvePercentageWidth(width)
+		return t.pWidth != before
+	}
+	changed := false
+	for _, child := range w.children {
+		if child.outerBBox().PWidth != "" && child.setChildPWidths(width) {
+			changed = true
+		}
+	}
+	return changed
 }
 
 func (w *wrapper) computeTextBBox(bbox *layout.BBox) {
