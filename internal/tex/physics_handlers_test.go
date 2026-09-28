@@ -140,7 +140,8 @@ func TestPhysicsHandlerErrors(t *testing.T) {
 	for _, test := range tests {
 		t.Run(test.name, func(t *testing.T) {
 			p := &parser{source: test.source, state: newParseState(), display: true}
-			_, handled, err := p.physicsCommand(test.command)
+			var after *derivativeAutoOpen
+			_, handled, err := p.physicsCommand(test.command, &after)
 			if !handled {
 				t.Fatal("command was not handled")
 			}

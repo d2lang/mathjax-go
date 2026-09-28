@@ -1,6 +1,7 @@
 // Copyright 2017-2022 The MathJax Consortium
 // SPDX-License-Identifier: Apache-2.0
-// Based on PhysicsMethods.Derivative, PhysicsItems.AutoOpen and ParseUtil.fenced.
+// Based on PhysicsMethods.Derivative/OperatorApplication, PhysicsItems.AutoOpen
+// and ParseUtil.fenced.
 package tex
 
 import "github.com/d2lang/mathjax-go/internal/mml"
@@ -50,9 +51,26 @@ func (p *parser) command(name string) ([]*mml.Node, error) {
 }
 
 type derivativeAutoOpen struct {
-	ignore    bool
-	openCount int
-	closed    bool
+	open        byte
+	closer      byte
+	application *physicsApplicationArgument
+	ignore      bool
+	openCount   int
+	closed      bool
+}
+
+func (a *derivativeAutoOpen) openingFence() byte {
+	if a.open == 0 {
+		return '('
+	}
+	return a.open
+}
+
+func (a *derivativeAutoOpen) closingFence() byte {
+	if a.closer == 0 {
+		return ')'
+	}
+	return a.closer
 }
 
 func (a *derivativeAutoOpen) start(p *parser) bool {
@@ -64,7 +82,7 @@ func (a *derivativeAutoOpen) start(p *parser) bool {
 	for p.pos < len(p.source) && isPrimeSpace(p.peekRune()) {
 		p.consumeRune()
 	}
-	if p.pos == len(p.source) || p.source[p.pos] != '(' {
+	if p.pos == len(p.source) || p.source[p.pos] != a.openingFence() {
 		return false
 	}
 	p.pos++
@@ -78,6 +96,12 @@ func (a *derivativeAutoOpen) complete(p *parser) ([]*mml.Node, error) {
 // A real AutoOpen is a non-MML successor. Notify its recipient only if it
 // starts, after the command's initial nodes but before parsing its body.
 func (a *derivativeAutoOpen) completeAfter(p *parser, before func()) ([]*mml.Node, error) {
+	if a != nil && a.application != nil {
+		opened, err := a.application.prepare(p, a)
+		if err != nil || !opened {
+			return nil, err
+		}
+	}
 	if !a.start(p) {
 		return nil, nil
 	}
@@ -93,9 +117,9 @@ func (a *derivativeAutoOpen) completeAfter(p *parser, before func()) ([]*mml.Nod
 	}
 	// AutoOpen.toMml delegates to fenced, then removes the row's open/close/
 	// texClass properties. Fence nodes use the node factory, not token factory.
-	children := []*mml.Node{p.autoOpenFence("(", mml.TeXClassOpen)}
+	children := []*mml.Node{p.autoOpenFence(string(a.openingFence()), mml.TeXClassOpen)}
 	children = append(children, content...)
-	children = append(children, p.autoOpenFence(")", mml.TeXClassClose))
+	children = append(children, p.autoOpenFence(string(a.closingFence()), mml.TeXClassClose))
 	// Removing the texClass property retains the class assigned by fenced.
 	result := forcedRow(children, false)
 	result.TeXClass = mml.TeXClassInner
@@ -113,7 +137,7 @@ func autoOpenFence(text string, class mml.TeXClass) *mml.Node {
 }
 
 func (a *derivativeAutoOpen) observe(nodes []*mml.Node) {
-	if len(nodes) == 1 && nodes[0].Kind == "mo" && textContent(nodes[0]) == "(" {
+	if len(nodes) == 1 && nodes[0].Kind == "mo" && textContent(nodes[0]) == string(a.openingFence()) {
 		a.openCount++
 	}
 }

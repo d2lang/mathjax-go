@@ -145,6 +145,7 @@ var functionNames = func() map[string]string {
 }()
 
 var simpleMacros = map[string]string{
+	"Residue":   "\\mathrm{Res}",
 	"mathstrut": "\\vphantom{(}",
 	"flatfrac":  "\\left.#1\\middle/#2\\right.",
 	"stackrel":  "\\mathrel{\\mathop{#2}\\limits^{#1}}",

@@ -17,7 +17,11 @@ import (
 // physicsCommand is the narrow Physics command hook for the central parser.
 // It must run before built-in function-name handling, since Physics overrides
 // names such as \sin with its optional-exponent and automatic-fence method.
-func (p *parser) physicsCommand(name string) (nodes []*mml.Node, handled bool, err error) {
+func (p *parser) physicsCommand(name string, after **derivativeAutoOpen) (nodes []*mml.Node, handled bool, err error) {
+	if application, ok := physicsExpressionOperators[name]; ok {
+		nodes, err = p.physicsOperatorApplication(name, application, after)
+		return nodes, true, err
+	}
 	switch name {
 	case "sin", "sinh", "arcsin", "asin", "cos", "cosh", "arccos", "acos", "tan", "tanh", "arctan", "atan",
 		"csc", "csch", "arccsc", "acsc", "sec", "sech", "arcsec", "asec", "cot", "coth", "arccot", "acot",
