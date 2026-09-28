@@ -30,9 +30,9 @@ MathFont and OperatorName controls would lose source identifier state through th
 ## Original references
 
 Current source base: actual main165 `5fd30978e6a93afce774885b2bf669caf8f4fe99`.
-All 954 current-base baseline outputs are unchanged from main164. The
-reviewed NumCases source rebases without conflicts or semantic changes; the
-complete candidate inventory will be rechecked on main165 before publication.
+All 954 baseline and candidate outputs are byte-unchanged from the reviewed
+main164 pair. The production patch rebases without conflicts or semantic
+changes, confirmed by its identical stable Git patch ID.
 Pinned original: MathJax `ad8f5c21cb810236551da8c6512ba733e67357ee`, using the
 hash-verified frozen D2 assets and its fixed NoTags configuration. This change
 does not enable Empheq macros or automatic CasesTags numbering globally.
@@ -67,16 +67,17 @@ All eight comparable original SVGs agree. These are per-fix input counts, not
 a claim of globally unique coverage. Full identities are retained in the
 inventory file.
 
-The preserved 5,758-input main164 published-raw replay finds eight genuine diagnostic
+The 5,802-input main165 published-raw replay finds eight genuine diagnostic
 fixes and 38 changed original runtime failures that now return bounded errors.
-Two apparent cancellation changes (one fix, one regression) are attribute-order
-variation: both binaries emit both orders across 64 repeats, and all 256
-complete parsed XML trees match the originals. The 4,326 upstream replay has
-one attribute-order-only change to the already divergent `enclose` output:
-128 repeated complete XML trees match the unchanged baseline, but do not match
-the original's undefined-package error. No original parity is claimed for that
-unrelated helper. These three serialization observations are excluded from
-behavioral fix/regression counts. All other upstream outputs are byte-unchanged.
+One apparent cancellation regression is attribute-order variation: both
+binaries emit both orders across 64 repeats, and all 128 complete parsed XML
+trees match the original. The 4,326 upstream replay has one attribute-order-only
+change to the already divergent `enclose` output: 128 repeated complete XML
+trees match the unchanged baseline, but do not match the original's
+undefined-package error. No original parity is claimed for that unrelated
+helper. Both serialization observations are excluded from behavioral counts.
+All other upstream outputs are byte-unchanged. Previous main164 receipts and
+all raw original results remain preserved.
 
 ## Reproduction
 
@@ -93,4 +94,5 @@ All three original fixture files regenerate byte-identically on the complete
 The actual main164 focused 902 complete-SVG / 46 bounded-runtime assertions,
 full frozen-oracle suite, race checks, vet and WASM build passed serially with
 Go 1.27 and `-p 1` at `9b72fc1cf7983a8955ebf1748bdb1aaa7c2a590a`.
-Final actual main165 composition and gates remain pending.
+Actual main165 probe and focused references pass, and the complete original
+inventory regenerates byte-identically. Final full gates remain pending.
