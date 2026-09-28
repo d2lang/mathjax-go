@@ -15,10 +15,10 @@ func TestEmptyTableListOriginalMethods(t *testing.T) {
 	}
 	var fixture struct {
 		MathjaxGitCommit string
-		Methods []struct {
+		Methods          []struct {
 			Attribute, Method, Fallback, Value string
-			Count int
-			Original struct { Values, Result []string }
+			Count                              int
+			Original                           struct{ Values, Result []string }
 		}
 	}
 	if err := json.Unmarshal(data, &fixture); err != nil {
