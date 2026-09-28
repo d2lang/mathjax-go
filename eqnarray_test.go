@@ -10,7 +10,16 @@ import (
 )
 
 func TestEqnarrayReferences(t *testing.T) {
-	data, err := os.ReadFile("testdata/eqnarray_mathjax_3_2_2.json")
+	testEqnarrayReferences(t, "testdata/eqnarray_mathjax_3_2_2.json", 1374)
+}
+
+func TestEqnarrayCurrentCompositionReferences(t *testing.T) {
+	testEqnarrayReferences(t, "testdata/eqnarray_current_mathjax_3_2_2.json", 432)
+}
+
+func testEqnarrayReferences(t *testing.T, filename string, count int) {
+	t.Helper()
+	data, err := os.ReadFile(filename)
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -24,7 +33,7 @@ func TestEqnarrayReferences(t *testing.T) {
 	if err := json.Unmarshal(data, &fixture); err != nil {
 		t.Fatal(err)
 	}
-	if fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || len(fixture.Cases) != 1374 {
+	if fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || len(fixture.Cases) != count {
 		t.Fatal("unbound eqnarray references")
 	}
 	seen := make(map[string]bool)

@@ -26,38 +26,60 @@ The visible witness is
 `\begin{eqnarray}a&=&b\\c&=&d\end{eqnarray}`. Previously this produced an
 unknown-environment error; it now matches the complete original SVG.
 
-`eqnarray_mathjax_3_2_2.json` contains **1,374 complete original SVGs**:
-1,132 valid representations and 242 original error controls. Baseline
-`33ddd0e` (merged main131 plus the separate initial-operator correction)
-fails 1,180 references; 194 remain exact controls. The 1,488-input exploration
-has no formerly exact regressions or candidate panics. Both display modes
-cover zero through eleven columns, repeating alignment/spacing, binary and
-embellished operators, empty/interior/final rows, HFill-only entries, explicit
-and missing tags/labels, fonts/styles/colors, nested arrays and guarded
-equation environments, registered operator/paired-delimiter overrides, and
-existing AMS/Matrix/CD controls.
+The current inventory has **1,962 distinct inputs** against merged main148
+`6f388b9618a2347151b4120e58c938811104d567`. **1,806 complete original SVGs**
+are exact (1,482 valid representations and 324 original error controls):
+1,456 newly exact inputs and 350 unchanged controls, with no formerly exact
+regression. Both display modes cover zero through eleven columns, repeating
+alignment/spacing, binary and embellished operators, empty/interior/final
+rows, HFill-only entries, explicit and missing tags/labels, fonts/styles/colors,
+nested arrays and guarded equation environments, registered operator/paired
+overrides, and existing AMS/Matrix/CD controls.
 
-`eqnarray_residuals.json` retains the other **114 raw original/baseline/candidate
-results**: 64 original-valid representations and 50 error SVGs. They are not
-passing goldens. The 22 existing-environment controls remain byte-identical
-to baseline. The other 92 newly reachable residuals reproduce existing handler
-differences. The report retains 90 analogous existing `align`, `align*`, or
-plain-command inputs in `inheritedControls`; all already differ from original
-MathJax and remain unchanged by this patch. Those raw controls (58 valid,
-32 errors) are preserved in the same file. Two successful grouped-nesting
-controls are already included in the passing regression inventory. Independent
-review supplied 264 fresh original comparisons (256 exact, 196 fixed, zero
-regressions); its 216 distinct inputs are included in these inventories.
+`eqnarray_mathjax_3_2_2.json` preserves the initial **1,374 original SVGs**
+unchanged. Its historical baseline `33ddd0e` was main131 plus a separate
+initial-operator prototype. That prototype is not part of this change: the
+final implementation builds on the merged array and Nonscript fixes.
+`eqnarray_current_mathjax_3_2_2.json` adds **432 distinct exact references**,
+including formerly raw cases now resolved by merged prerequisites, fresh
+Arrow/Aboxed/Cramped/FrameBox/BuildRel/Pmb/Skew/Nonscript compositions, tag and
+nesting controls, and 20 previously published HFill/Eqnarray residuals.
+Independent historical review supplied 264 fresh comparisons; its 216 distinct
+inputs remain included without altering the originals.
 
-The documented shared follow-ups are parser-owned row/cell boundaries
-(`\cr`, `\newline`, row-spacing options, `\hline`, unbraced text arguments and
-fences), MathFont inheritance into explicit tags, and existing closing/tag
-argument diagnostics. The missing `\mspace` handler and ungrouped nested
-EqnArray capture are also evidenced separately by unchanged existing
-controls. Safe XML escaping remains intact. These source
-handlers are separate from the two missing environment registrations.
+The historical `eqnarray_residuals.json` also remains unchanged, including its
+114 cases and 90 inherited-handler controls. It is a historical receipt, not
+a statement that every case still fails. `eqnarray_current_residuals.json`
+records the remaining **156 raw results** against main148: 68 original-valid
+inputs and 88 original error renderings. None is a passing golden. Of these,
+88 are byte-unchanged existing-handler controls; 68 are newly reachable
+Eqnarray inputs, comprising 32 valid representations and 36 error renderings.
 
-Regenerate both the passing and raw residual inventories using only the
+`eqnarray_current_qualification.json` binds all 68 newly reachable residuals
+to unchanged existing `align`/`align*` inputs. Every valid residual is also
+byte-identical to the held historical Eqnarray candidate. The 20 valid inputs
+that still produce errors have exactly the same error SVG as the existing
+control. The other 12 retain the same glyph shapes and paint, with precisely
+the same per-glyph vertical displacement from original as the existing
+control. These are shared row-spacing options or macro-generated row breaks,
+not a change to the environment's column geometry.
+
+The remaining shared follow-ups are `\hline`, `\cr`/`\newline`, row-spacing
+options, macro-produced row boundaries, environment-close/tag-argument
+diagnostics, and safe XML ampersand escaping. Original bare ampersands in
+error attributes remain untouched in the receipts; Go continues to escape
+them. Earlier missing `\mspace`, nested-array, tag-font and initial-operator
+cases that now match are included in exact assertions rather than waived.
+
+The complete replay of **4,271 published residual inputs** finds **20 genuine
+newly exact cases and no regressions or changed nonexact representations**.
+One apparent cancellation fix and one apparent cancellation regression were
+attribute-order variation only. The qualification records 48 samples per
+binary and input: both binaries emit both orders, and every complete parsed
+XML tree equals the original. Exact golden assertions perform no such
+normalization.
+
+Regenerate the historical and current passing/raw inventories using only the
 frozen original D2 runtime:
 
 ```sh

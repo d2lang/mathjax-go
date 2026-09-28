@@ -32,7 +32,10 @@ if (process.argv[3] === '--batch') {
   fs.writeFileSync(1, JSON.stringify(render(JSON.parse(fs.readFileSync(0, 'utf8')))));
   process.exit(0);
 }
-for (const name of ['eqnarray_mathjax_3_2_2.json', 'eqnarray_residuals.json']) {
+for (const name of [
+  'eqnarray_mathjax_3_2_2.json', 'eqnarray_residuals.json',
+  'eqnarray_current_mathjax_3_2_2.json', 'eqnarray_current_residuals.json',
+]) {
   const file = path.join(__dirname, name);
   const fixture = JSON.parse(fs.readFileSync(file, 'utf8'));
   // Bound VM retention in Node while preserving an independent context for

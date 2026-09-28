@@ -1,0 +1,1488 @@
+{
+  "mathjaxGitCommit": "ad8f5c21cb810236551da8c6512ba733e67357ee",
+  "baselineGitCommit": "6f388b9618a2347151b4120e58c938811104d567",
+  "totalInputs": 1962,
+  "exactInputs": 1806,
+  "newlyReachableResiduals": 68,
+  "cases": [
+    {
+      "tex": "\\begin{eqnarray}\\hline a&=&b\\end{eqnarray}",
+      "display": false,
+      "classification": "shared hline dispatch",
+      "validOriginal": true,
+      "inheritedControl": {
+        "tex": "\\begin{align}\\hline a&=&b\\end{align}",
+        "display": false
+      },
+      "controlByteUnchangedFromMain148": true,
+      "candidateByteUnchangedFromHistorical131": true,
+      "candidateErrorSVGEqualsUnchangedControl": true
+    },
+    {
+      "tex": "\\begin{eqnarray}\\hline a&=&b\\end{eqnarray}",
+      "display": true,
+      "classification": "shared hline dispatch",
+      "validOriginal": true,
+      "inheritedControl": {
+        "tex": "\\begin{align}\\hline a&=&b\\end{align}",
+        "display": true
+      },
+      "controlByteUnchangedFromMain148": true,
+      "candidateByteUnchangedFromHistorical131": true,
+      "candidateErrorSVGEqualsUnchangedControl": true
+    },
+    {
+      "tex": "\\begin{eqnarray}a\\cr b\\end{eqnarray}",
+      "display": false,
+      "classification": "shared CR/newline dispatch",
+      "validOriginal": true,
+      "inheritedControl": {
+        "tex": "\\begin{align}a\\cr b\\end{align}",
+        "display": false
+      },
+      "controlByteUnchangedFromMain148": true,
+      "candidateByteUnchangedFromHistorical131": true,
+      "candidateErrorSVGEqualsUnchangedControl": true
+    },
+    {
+      "tex": "\\begin{eqnarray}a\\cr b\\end{eqnarray}",
+      "display": true,
+      "classification": "shared CR/newline dispatch",
+      "validOriginal": true,
+      "inheritedControl": {
+        "tex": "\\begin{align}a\\cr b\\end{align}",
+        "display": true
+      },
+      "controlByteUnchangedFromMain148": true,
+      "candidateByteUnchangedFromHistorical131": true,
+      "candidateErrorSVGEqualsUnchangedControl": true
+    },
+    {
+      "tex": "\\begin{eqnarray}a\\\\[1em]b\\end{eqnarray}",
+      "display": false,
+      "classification": "shared row-spacing option",
+      "validOriginal": true,
+      "inheritedControl": {
+        "tex": "\\begin{align}a\\\\[1em]b\\end{align}",
+        "display": false
+      },
+      "controlByteUnchangedFromMain148": true,
+      "candidateByteUnchangedFromHistorical131": true,
+      "sameGlyphShapeAndPaint": true,
+      "originalToCandidateVerticalOffsets": [
+        500.0,
+        -500.0
+      ],
+      "controlOriginalToCandidateVerticalOffsets": [
+        500.0,
+        -500.0
+      ]
+    },
+    {
+      "tex": "\\begin{eqnarray}a\\\\[1em]b\\end{eqnarray}",
+      "display": true,
+      "classification": "shared row-spacing option",
+      "validOriginal": true,
+      "inheritedControl": {
+        "tex": "\\begin{align}a\\\\[1em]b\\end{align}",
+        "display": true
+      },
+      "controlByteUnchangedFromMain148": true,
+      "candidateByteUnchangedFromHistorical131": true,
+      "sameGlyphShapeAndPaint": true,
+      "originalToCandidateVerticalOffsets": [
+        500.0,
+        -500.0
+      ],
+      "controlOriginalToCandidateVerticalOffsets": [
+        500.0,
+        -500.0
+      ]
+    },
+    {
+      "tex": "\\begin{eqnarray}a\\newline b\\end{eqnarray}",
+      "display": false,
+      "classification": "shared CR/newline dispatch",
+      "validOriginal": true,
+      "inheritedControl": {
+        "tex": "\\begin{align}a\\newline b\\end{align}",
+        "display": false
+      },
+      "controlByteUnchangedFromMain148": true,
+      "candidateByteUnchangedFromHistorical131": true,
+      "candidateErrorSVGEqualsUnchangedControl": true
+    },
+    {
+      "tex": "\\begin{eqnarray}a\\newline b\\end{eqnarray}",
+      "display": true,
+      "classification": "shared CR/newline dispatch",
+      "validOriginal": true,
+      "inheritedControl": {
+        "tex": "\\begin{align}a\\newline b\\end{align}",
+        "display": true
+      },
+      "controlByteUnchangedFromMain148": true,
+      "candidateByteUnchangedFromHistorical131": true,
+      "candidateErrorSVGEqualsUnchangedControl": true
+    },
+    {
+      "tex": "\\begin{eqnarray}\\left(a&b\\right)\\end{eqnarray}",
+      "display": false,
+      "classification": "safe XML ampersand attribute escaping",
+      "validOriginal": false,
+      "inheritedControl": {
+        "tex": "\\begin{align}\\left(a&b\\right)\\end{align}",
+        "display": false
+      },
+      "controlByteUnchangedFromMain148": true,
+      "candidateByteUnchangedFromHistorical131": false,
+      "originalErrors": [
+        "Misplaced &"
+      ],
+      "candidateErrors": [
+        "Misplaced &amp;"
+      ],
+      "controlOriginalErrors": [
+        "Misplaced &"
+      ],
+      "controlCandidateErrors": [
+        "Misplaced &amp;"
+      ],
+      "sameDiagnosticsAfterEnvironmentNameSubstitution": true
+    },
+    {
+      "tex": "\\begin{eqnarray}\\left(a&b\\right)\\end{eqnarray}",
+      "display": true,
+      "classification": "safe XML ampersand attribute escaping",
+      "validOriginal": false,
+      "inheritedControl": {
+        "tex": "\\begin{align}\\left(a&b\\right)\\end{align}",
+        "display": true
+      },
+      "controlByteUnchangedFromMain148": true,
+      "candidateByteUnchangedFromHistorical131": false,
+      "originalErrors": [
+        "Misplaced &"
+      ],
+      "candidateErrors": [
+        "Misplaced &amp;"
+      ],
+      "controlOriginalErrors": [
+        "Misplaced &"
+      ],
+      "controlCandidateErrors": [
+        "Misplaced &amp;"
+      ],
+      "sameDiagnosticsAfterEnvironmentNameSubstitution": true
+    },
+    {
+      "tex": "\\begin{eqnarray*}\\hline a&=&b\\end{eqnarray*}",
+      "display": false,
+      "classification": "shared hline dispatch",
+      "validOriginal": true,
+      "inheritedControl": {
+        "tex": "\\begin{align*}\\hline a&=&b\\end{align*}",
+        "display": false
+      },
+      "controlByteUnchangedFromMain148": true,
+      "candidateByteUnchangedFromHistorical131": true,
+      "candidateErrorSVGEqualsUnchangedControl": true
+    },
+    {
+      "tex": "\\begin{eqnarray*}\\hline a&=&b\\end{eqnarray*}",
+      "display": true,
+      "classification": "shared hline dispatch",
+      "validOriginal": true,
+      "inheritedControl": {
+        "tex": "\\begin{align*}\\hline a&=&b\\end{align*}",
+        "display": true
+      },
+      "controlByteUnchangedFromMain148": true,
+      "candidateByteUnchangedFromHistorical131": true,
+      "candidateErrorSVGEqualsUnchangedControl": true
+    },
+    {
+      "tex": "\\begin{eqnarray*}a\\cr b\\end{eqnarray*}",
+      "display": false,
+      "classification": "shared CR/newline dispatch",
+      "validOriginal": true,
+      "inheritedControl": {
+        "tex": "\\begin{align*}a\\cr b\\end{align*}",
+        "display": false
+      },
+      "controlByteUnchangedFromMain148": true,
+      "candidateByteUnchangedFromHistorical131": true,
+      "candidateErrorSVGEqualsUnchangedControl": true
+    },
+    {
+      "tex": "\\begin{eqnarray*}a\\cr b\\end{eqnarray*}",
+      "display": true,
+      "classification": "shared CR/newline dispatch",
+      "validOriginal": true,
+      "inheritedControl": {
+        "tex": "\\begin{align*}a\\cr b\\end{align*}",
+        "display": true
+      },
+      "controlByteUnchangedFromMain148": true,
+      "candidateByteUnchangedFromHistorical131": true,
+      "candidateErrorSVGEqualsUnchangedControl": true
+    },
+    {
+      "tex": "\\begin{eqnarray*}a\\\\[1em]b\\end{eqnarray*}",
+      "display": false,
+      "classification": "shared row-spacing option",
+      "validOriginal": true,
+      "inheritedControl": {
+        "tex": "\\begin{align*}a\\\\[1em]b\\end{align*}",
+        "display": false
+      },
+      "controlByteUnchangedFromMain148": true,
+      "candidateByteUnchangedFromHistorical131": true,
+      "sameGlyphShapeAndPaint": true,
+      "originalToCandidateVerticalOffsets": [
+        500.0,
+        -500.0
+      ],
+      "controlOriginalToCandidateVerticalOffsets": [
+        500.0,
+        -500.0
+      ]
+    },
+    {
+      "tex": "\\begin{eqnarray*}a\\\\[1em]b\\end{eqnarray*}",
+      "display": true,
+      "classification": "shared row-spacing option",
+      "validOriginal": true,
+      "inheritedControl": {
+        "tex": "\\begin{align*}a\\\\[1em]b\\end{align*}",
+        "display": true
+      },
+      "controlByteUnchangedFromMain148": true,
+      "candidateByteUnchangedFromHistorical131": true,
+      "sameGlyphShapeAndPaint": true,
+      "originalToCandidateVerticalOffsets": [
+        500.0,
+        -500.0
+      ],
+      "controlOriginalToCandidateVerticalOffsets": [
+        500.0,
+        -500.0
+      ]
+    },
+    {
+      "tex": "\\begin{eqnarray*}a\\newline b\\end{eqnarray*}",
+      "display": false,
+      "classification": "shared CR/newline dispatch",
+      "validOriginal": true,
+      "inheritedControl": {
+        "tex": "\\begin{align*}a\\newline b\\end{align*}",
+        "display": false
+      },
+      "controlByteUnchangedFromMain148": true,
+      "candidateByteUnchangedFromHistorical131": true,
+      "candidateErrorSVGEqualsUnchangedControl": true
+    },
+    {
+      "tex": "\\begin{eqnarray*}a\\newline b\\end{eqnarray*}",
+      "display": true,
+      "classification": "shared CR/newline dispatch",
+      "validOriginal": true,
+      "inheritedControl": {
+        "tex": "\\begin{align*}a\\newline b\\end{align*}",
+        "display": true
+      },
+      "controlByteUnchangedFromMain148": true,
+      "candidateByteUnchangedFromHistorical131": true,
+      "candidateErrorSVGEqualsUnchangedControl": true
+    },
+    {
+      "tex": "\\begin{eqnarray*}\\left(a&b\\right)\\end{eqnarray*}",
+      "display": false,
+      "classification": "safe XML ampersand attribute escaping",
+      "validOriginal": false,
+      "inheritedControl": {
+        "tex": "\\begin{align*}\\left(a&b\\right)\\end{align*}",
+        "display": false
+      },
+      "controlByteUnchangedFromMain148": true,
+      "candidateByteUnchangedFromHistorical131": false,
+      "originalErrors": [
+        "Misplaced &"
+      ],
+      "candidateErrors": [
+        "Misplaced &amp;"
+      ],
+      "controlOriginalErrors": [
+        "Misplaced &"
+      ],
+      "controlCandidateErrors": [
+        "Misplaced &amp;"
+      ],
+      "sameDiagnosticsAfterEnvironmentNameSubstitution": true
+    },
+    {
+      "tex": "\\begin{eqnarray*}\\left(a&b\\right)\\end{eqnarray*}",
+      "display": true,
+      "classification": "safe XML ampersand attribute escaping",
+      "validOriginal": false,
+      "inheritedControl": {
+        "tex": "\\begin{align*}\\left(a&b\\right)\\end{align*}",
+        "display": true
+      },
+      "controlByteUnchangedFromMain148": true,
+      "candidateByteUnchangedFromHistorical131": false,
+      "originalErrors": [
+        "Misplaced &"
+      ],
+      "candidateErrors": [
+        "Misplaced &amp;"
+      ],
+      "controlOriginalErrors": [
+        "Misplaced &"
+      ],
+      "controlCandidateErrors": [
+        "Misplaced &amp;"
+      ],
+      "sameDiagnosticsAfterEnvironmentNameSubstitution": true
+    },
+    {
+      "tex": "\\begin{eqnarray}a&{&}&b\\end{eqnarray}",
+      "display": false,
+      "classification": "safe XML ampersand attribute escaping",
+      "validOriginal": false,
+      "inheritedControl": {
+        "tex": "\\begin{align}a&{&}&b\\end{align}",
+        "display": false
+      },
+      "controlByteUnchangedFromMain148": true,
+      "candidateByteUnchangedFromHistorical131": true,
+      "originalErrors": [
+        "Misplaced &"
+      ],
+      "candidateErrors": [
+        "Misplaced &amp;"
+      ],
+      "controlOriginalErrors": [
+        "Misplaced &"
+      ],
+      "controlCandidateErrors": [
+        "Misplaced &amp;"
+      ],
+      "sameDiagnosticsAfterEnvironmentNameSubstitution": true
+    },
+    {
+      "tex": "\\begin{eqnarray}a&{&}&b\\end{eqnarray}",
+      "display": true,
+      "classification": "safe XML ampersand attribute escaping",
+      "validOriginal": false,
+      "inheritedControl": {
+        "tex": "\\begin{align}a&{&}&b\\end{align}",
+        "display": true
+      },
+      "controlByteUnchangedFromMain148": true,
+      "candidateByteUnchangedFromHistorical131": true,
+      "originalErrors": [
+        "Misplaced &"
+      ],
+      "candidateErrors": [
+        "Misplaced &amp;"
+      ],
+      "controlOriginalErrors": [
+        "Misplaced &"
+      ],
+      "controlCandidateErrors": [
+        "Misplaced &amp;"
+      ],
+      "sameDiagnosticsAfterEnvironmentNameSubstitution": true
+    },
+    {
+      "tex": "\\begin{eqnarray}a&\\left(&\\right)&b\\end{eqnarray}",
+      "display": false,
+      "classification": "safe XML ampersand attribute escaping",
+      "validOriginal": false,
+      "inheritedControl": {
+        "tex": "\\begin{align}a&\\left(&\\right)&b\\end{align}",
+        "display": false
+      },
+      "controlByteUnchangedFromMain148": true,
+      "candidateByteUnchangedFromHistorical131": false,
+      "originalErrors": [
+        "Misplaced &"
+      ],
+      "candidateErrors": [
+        "Misplaced &amp;"
+      ],
+      "controlOriginalErrors": [
+        "Misplaced &"
+      ],
+      "controlCandidateErrors": [
+        "Misplaced &amp;"
+      ],
+      "sameDiagnosticsAfterEnvironmentNameSubstitution": true
+    },
+    {
+      "tex": "\\begin{eqnarray}a&\\left(&\\right)&b\\end{eqnarray}",
+      "display": true,
+      "classification": "safe XML ampersand attribute escaping",
+      "validOriginal": false,
+      "inheritedControl": {
+        "tex": "\\begin{align}a&\\left(&\\right)&b\\end{align}",
+        "display": true
+      },
+      "controlByteUnchangedFromMain148": true,
+      "candidateByteUnchangedFromHistorical131": false,
+      "originalErrors": [
+        "Misplaced &"
+      ],
+      "candidateErrors": [
+        "Misplaced &amp;"
+      ],
+      "controlOriginalErrors": [
+        "Misplaced &"
+      ],
+      "controlCandidateErrors": [
+        "Misplaced &amp;"
+      ],
+      "sameDiagnosticsAfterEnvironmentNameSubstitution": true
+    },
+    {
+      "tex": "\\begin{eqnarray}a\\\\[-.5em]b\\end{eqnarray}",
+      "display": false,
+      "classification": "shared row-spacing option",
+      "validOriginal": true,
+      "inheritedControl": {
+        "tex": "\\begin{align}a\\\\[-.5em]b\\end{align}",
+        "display": false
+      },
+      "controlByteUnchangedFromMain148": true,
+      "candidateByteUnchangedFromHistorical131": true,
+      "sameGlyphShapeAndPaint": true,
+      "originalToCandidateVerticalOffsets": [
+        -150.0,
+        150.0
+      ],
+      "controlOriginalToCandidateVerticalOffsets": [
+        -150.0,
+        150.0
+      ]
+    },
+    {
+      "tex": "\\begin{eqnarray}a\\\\[-.5em]b\\end{eqnarray}",
+      "display": true,
+      "classification": "shared row-spacing option",
+      "validOriginal": true,
+      "inheritedControl": {
+        "tex": "\\begin{align}a\\\\[-.5em]b\\end{align}",
+        "display": true
+      },
+      "controlByteUnchangedFromMain148": true,
+      "candidateByteUnchangedFromHistorical131": true,
+      "sameGlyphShapeAndPaint": true,
+      "originalToCandidateVerticalOffsets": [
+        -150.0,
+        150.0
+      ],
+      "controlOriginalToCandidateVerticalOffsets": [
+        -150.0,
+        150.0
+      ]
+    },
+    {
+      "tex": "\\begin{eqnarray}\\hline a&b\\end{eqnarray}",
+      "display": false,
+      "classification": "shared hline dispatch",
+      "validOriginal": true,
+      "inheritedControl": {
+        "tex": "\\begin{align}\\hline a&b\\end{align}",
+        "display": false
+      },
+      "controlByteUnchangedFromMain148": true,
+      "candidateByteUnchangedFromHistorical131": true,
+      "candidateErrorSVGEqualsUnchangedControl": true
+    },
+    {
+      "tex": "\\begin{eqnarray}\\hline a&b\\end{eqnarray}",
+      "display": true,
+      "classification": "shared hline dispatch",
+      "validOriginal": true,
+      "inheritedControl": {
+        "tex": "\\begin{align}\\hline a&b\\end{align}",
+        "display": true
+      },
+      "controlByteUnchangedFromMain148": true,
+      "candidateByteUnchangedFromHistorical131": true,
+      "candidateErrorSVGEqualsUnchangedControl": true
+    },
+    {
+      "tex": "\\begin{eqnarray}a&b\\hline\\end{eqnarray}",
+      "display": false,
+      "classification": "shared hline dispatch",
+      "validOriginal": false,
+      "inheritedControl": {
+        "tex": "\\begin{align}a&b\\hline\\end{align}",
+        "display": false
+      },
+      "controlByteUnchangedFromMain148": true,
+      "candidateByteUnchangedFromHistorical131": true,
+      "originalErrors": [
+        "Misplaced \\hline"
+      ],
+      "candidateErrors": [
+        "Undefined control sequence \\hline"
+      ],
+      "controlOriginalErrors": [
+        "Misplaced \\hline"
+      ],
+      "controlCandidateErrors": [
+        "Undefined control sequence \\hline"
+      ],
+      "sameDiagnosticsAfterEnvironmentNameSubstitution": true
+    },
+    {
+      "tex": "\\begin{eqnarray}a&b\\hline\\end{eqnarray}",
+      "display": true,
+      "classification": "shared hline dispatch",
+      "validOriginal": false,
+      "inheritedControl": {
+        "tex": "\\begin{align}a&b\\hline\\end{align}",
+        "display": true
+      },
+      "controlByteUnchangedFromMain148": true,
+      "candidateByteUnchangedFromHistorical131": true,
+      "originalErrors": [
+        "Misplaced \\hline"
+      ],
+      "candidateErrors": [
+        "Undefined control sequence \\hline"
+      ],
+      "controlOriginalErrors": [
+        "Misplaced \\hline"
+      ],
+      "controlCandidateErrors": [
+        "Undefined control sequence \\hline"
+      ],
+      "sameDiagnosticsAfterEnvironmentNameSubstitution": true
+    },
+    {
+      "tex": "\\begin{eqnarray}\\hline\\end{eqnarray}",
+      "display": false,
+      "classification": "shared hline dispatch",
+      "validOriginal": true,
+      "inheritedControl": {
+        "tex": "\\begin{align}\\hline\\end{align}",
+        "display": false
+      },
+      "controlByteUnchangedFromMain148": true,
+      "candidateByteUnchangedFromHistorical131": true,
+      "candidateErrorSVGEqualsUnchangedControl": true
+    },
+    {
+      "tex": "\\begin{eqnarray}\\hline\\end{eqnarray}",
+      "display": true,
+      "classification": "shared hline dispatch",
+      "validOriginal": true,
+      "inheritedControl": {
+        "tex": "\\begin{align}\\hline\\end{align}",
+        "display": true
+      },
+      "controlByteUnchangedFromMain148": true,
+      "candidateByteUnchangedFromHistorical131": true,
+      "candidateErrorSVGEqualsUnchangedControl": true
+    },
+    {
+      "tex": "\\begin{eqnarray}a\\end{matrix}\\end{eqnarray}",
+      "display": false,
+      "classification": "shared nested environment boundary",
+      "validOriginal": false,
+      "inheritedControl": {
+        "tex": "\\begin{align}a\\end{matrix}\\end{align}",
+        "display": false
+      },
+      "controlByteUnchangedFromMain148": true,
+      "candidateByteUnchangedFromHistorical131": true,
+      "originalErrors": [
+        "\\begin{eqnarray} ended with \\end{matrix}"
+      ],
+      "candidateErrors": [
+        "Extra \\end{matrix}"
+      ],
+      "controlOriginalErrors": [
+        "\\begin{align} ended with \\end{matrix}"
+      ],
+      "controlCandidateErrors": [
+        "Extra \\end{matrix}"
+      ],
+      "sameDiagnosticsAfterEnvironmentNameSubstitution": true
+    },
+    {
+      "tex": "\\begin{eqnarray}a\\end{matrix}\\end{eqnarray}",
+      "display": true,
+      "classification": "shared nested environment boundary",
+      "validOriginal": false,
+      "inheritedControl": {
+        "tex": "\\begin{align}a\\end{matrix}\\end{align}",
+        "display": true
+      },
+      "controlByteUnchangedFromMain148": true,
+      "candidateByteUnchangedFromHistorical131": true,
+      "originalErrors": [
+        "\\begin{eqnarray} ended with \\end{matrix}"
+      ],
+      "candidateErrors": [
+        "Extra \\end{matrix}"
+      ],
+      "controlOriginalErrors": [
+        "\\begin{align} ended with \\end{matrix}"
+      ],
+      "controlCandidateErrors": [
+        "Extra \\end{matrix}"
+      ],
+      "sameDiagnosticsAfterEnvironmentNameSubstitution": true
+    },
+    {
+      "tex": "\\begin{eqnarray}a\\begin{matrix}b\\end{eqnarray}",
+      "display": false,
+      "classification": "shared nested environment boundary",
+      "validOriginal": false,
+      "inheritedControl": {
+        "tex": "\\begin{align}a\\begin{matrix}b\\end{align}",
+        "display": false
+      },
+      "controlByteUnchangedFromMain148": true,
+      "candidateByteUnchangedFromHistorical131": true,
+      "originalErrors": [
+        "\\begin{matrix} ended with \\end{eqnarray}"
+      ],
+      "candidateErrors": [
+        "Missing \\end{matrix}"
+      ],
+      "controlOriginalErrors": [
+        "\\begin{matrix} ended with \\end{align}"
+      ],
+      "controlCandidateErrors": [
+        "Missing \\end{matrix}"
+      ],
+      "sameDiagnosticsAfterEnvironmentNameSubstitution": true
+    },
+    {
+      "tex": "\\begin{eqnarray}a\\begin{matrix}b\\end{eqnarray}",
+      "display": true,
+      "classification": "shared nested environment boundary",
+      "validOriginal": false,
+      "inheritedControl": {
+        "tex": "\\begin{align}a\\begin{matrix}b\\end{align}",
+        "display": true
+      },
+      "controlByteUnchangedFromMain148": true,
+      "candidateByteUnchangedFromHistorical131": true,
+      "originalErrors": [
+        "\\begin{matrix} ended with \\end{eqnarray}"
+      ],
+      "candidateErrors": [
+        "Missing \\end{matrix}"
+      ],
+      "controlOriginalErrors": [
+        "\\begin{matrix} ended with \\end{align}"
+      ],
+      "controlCandidateErrors": [
+        "Missing \\end{matrix}"
+      ],
+      "sameDiagnosticsAfterEnvironmentNameSubstitution": true
+    },
+    {
+      "tex": "\\begin{eqnarray}\\tag\\end{eqnarray}",
+      "display": false,
+      "classification": "shared tag argument/end boundary",
+      "validOriginal": false,
+      "inheritedControl": {
+        "tex": "\\begin{align}\\tag\\end{align}",
+        "display": false
+      },
+      "controlByteUnchangedFromMain148": true,
+      "candidateByteUnchangedFromHistorical131": true,
+      "originalErrors": [
+        "Missing \\end{eqnarray}"
+      ],
+      "candidateErrors": [
+        "Missing argument for \\tag"
+      ],
+      "controlOriginalErrors": [
+        "Missing \\end{align}"
+      ],
+      "controlCandidateErrors": [
+        "Missing argument for \\tag"
+      ],
+      "sameDiagnosticsAfterEnvironmentNameSubstitution": true
+    },
+    {
+      "tex": "\\begin{eqnarray}\\tag\\end{eqnarray}",
+      "display": true,
+      "classification": "shared tag argument/end boundary",
+      "validOriginal": false,
+      "inheritedControl": {
+        "tex": "\\begin{align}\\tag\\end{align}",
+        "display": true
+      },
+      "controlByteUnchangedFromMain148": true,
+      "candidateByteUnchangedFromHistorical131": true,
+      "originalErrors": [
+        "Missing \\end{eqnarray}"
+      ],
+      "candidateErrors": [
+        "Missing argument for \\tag"
+      ],
+      "controlOriginalErrors": [
+        "Missing \\end{align}"
+      ],
+      "controlCandidateErrors": [
+        "Missing argument for \\tag"
+      ],
+      "sameDiagnosticsAfterEnvironmentNameSubstitution": true
+    },
+    {
+      "tex": "\\begin{eqnarray}\\label\\end{eqnarray}",
+      "display": false,
+      "classification": "shared tag argument/end boundary",
+      "validOriginal": false,
+      "inheritedControl": {
+        "tex": "\\begin{align}\\label\\end{align}",
+        "display": false
+      },
+      "controlByteUnchangedFromMain148": true,
+      "candidateByteUnchangedFromHistorical131": true,
+      "originalErrors": [
+        "Missing \\end{eqnarray}"
+      ],
+      "candidateErrors": [
+        "Missing argument for \\label"
+      ],
+      "controlOriginalErrors": [
+        "Missing \\end{align}"
+      ],
+      "controlCandidateErrors": [
+        "Missing argument for \\label"
+      ],
+      "sameDiagnosticsAfterEnvironmentNameSubstitution": true
+    },
+    {
+      "tex": "\\begin{eqnarray}\\label\\end{eqnarray}",
+      "display": true,
+      "classification": "shared tag argument/end boundary",
+      "validOriginal": false,
+      "inheritedControl": {
+        "tex": "\\begin{align}\\label\\end{align}",
+        "display": true
+      },
+      "controlByteUnchangedFromMain148": true,
+      "candidateByteUnchangedFromHistorical131": true,
+      "originalErrors": [
+        "Missing \\end{eqnarray}"
+      ],
+      "candidateErrors": [
+        "Missing argument for \\label"
+      ],
+      "controlOriginalErrors": [
+        "Missing \\end{align}"
+      ],
+      "controlCandidateErrors": [
+        "Missing argument for \\label"
+      ],
+      "sameDiagnosticsAfterEnvironmentNameSubstitution": true
+    },
+    {
+      "tex": "\\begin{eqnarray*}a&{&}&b\\end{eqnarray*}",
+      "display": false,
+      "classification": "safe XML ampersand attribute escaping",
+      "validOriginal": false,
+      "inheritedControl": {
+        "tex": "\\begin{align*}a&{&}&b\\end{align*}",
+        "display": false
+      },
+      "controlByteUnchangedFromMain148": true,
+      "candidateByteUnchangedFromHistorical131": true,
+      "originalErrors": [
+        "Misplaced &"
+      ],
+      "candidateErrors": [
+        "Misplaced &amp;"
+      ],
+      "controlOriginalErrors": [
+        "Misplaced &"
+      ],
+      "controlCandidateErrors": [
+        "Misplaced &amp;"
+      ],
+      "sameDiagnosticsAfterEnvironmentNameSubstitution": true
+    },
+    {
+      "tex": "\\begin{eqnarray*}a&{&}&b\\end{eqnarray*}",
+      "display": true,
+      "classification": "safe XML ampersand attribute escaping",
+      "validOriginal": false,
+      "inheritedControl": {
+        "tex": "\\begin{align*}a&{&}&b\\end{align*}",
+        "display": true
+      },
+      "controlByteUnchangedFromMain148": true,
+      "candidateByteUnchangedFromHistorical131": true,
+      "originalErrors": [
+        "Misplaced &"
+      ],
+      "candidateErrors": [
+        "Misplaced &amp;"
+      ],
+      "controlOriginalErrors": [
+        "Misplaced &"
+      ],
+      "controlCandidateErrors": [
+        "Misplaced &amp;"
+      ],
+      "sameDiagnosticsAfterEnvironmentNameSubstitution": true
+    },
+    {
+      "tex": "\\begin{eqnarray*}a&\\left(&\\right)&b\\end{eqnarray*}",
+      "display": false,
+      "classification": "safe XML ampersand attribute escaping",
+      "validOriginal": false,
+      "inheritedControl": {
+        "tex": "\\begin{align*}a&\\left(&\\right)&b\\end{align*}",
+        "display": false
+      },
+      "controlByteUnchangedFromMain148": true,
+      "candidateByteUnchangedFromHistorical131": false,
+      "originalErrors": [
+        "Misplaced &"
+      ],
+      "candidateErrors": [
+        "Misplaced &amp;"
+      ],
+      "controlOriginalErrors": [
+        "Misplaced &"
+      ],
+      "controlCandidateErrors": [
+        "Misplaced &amp;"
+      ],
+      "sameDiagnosticsAfterEnvironmentNameSubstitution": true
+    },
+    {
+      "tex": "\\begin{eqnarray*}a&\\left(&\\right)&b\\end{eqnarray*}",
+      "display": true,
+      "classification": "safe XML ampersand attribute escaping",
+      "validOriginal": false,
+      "inheritedControl": {
+        "tex": "\\begin{align*}a&\\left(&\\right)&b\\end{align*}",
+        "display": true
+      },
+      "controlByteUnchangedFromMain148": true,
+      "candidateByteUnchangedFromHistorical131": false,
+      "originalErrors": [
+        "Misplaced &"
+      ],
+      "candidateErrors": [
+        "Misplaced &amp;"
+      ],
+      "controlOriginalErrors": [
+        "Misplaced &"
+      ],
+      "controlCandidateErrors": [
+        "Misplaced &amp;"
+      ],
+      "sameDiagnosticsAfterEnvironmentNameSubstitution": true
+    },
+    {
+      "tex": "\\begin{eqnarray*}a\\\\[-.5em]b\\end{eqnarray*}",
+      "display": false,
+      "classification": "shared row-spacing option",
+      "validOriginal": true,
+      "inheritedControl": {
+        "tex": "\\begin{align*}a\\\\[-.5em]b\\end{align*}",
+        "display": false
+      },
+      "controlByteUnchangedFromMain148": true,
+      "candidateByteUnchangedFromHistorical131": true,
+      "sameGlyphShapeAndPaint": true,
+      "originalToCandidateVerticalOffsets": [
+        -150.0,
+        150.0
+      ],
+      "controlOriginalToCandidateVerticalOffsets": [
+        -150.0,
+        150.0
+      ]
+    },
+    {
+      "tex": "\\begin{eqnarray*}a\\\\[-.5em]b\\end{eqnarray*}",
+      "display": true,
+      "classification": "shared row-spacing option",
+      "validOriginal": true,
+      "inheritedControl": {
+        "tex": "\\begin{align*}a\\\\[-.5em]b\\end{align*}",
+        "display": true
+      },
+      "controlByteUnchangedFromMain148": true,
+      "candidateByteUnchangedFromHistorical131": true,
+      "sameGlyphShapeAndPaint": true,
+      "originalToCandidateVerticalOffsets": [
+        -150.0,
+        150.0
+      ],
+      "controlOriginalToCandidateVerticalOffsets": [
+        -150.0,
+        150.0
+      ]
+    },
+    {
+      "tex": "\\begin{eqnarray*}\\hline a&b\\end{eqnarray*}",
+      "display": false,
+      "classification": "shared hline dispatch",
+      "validOriginal": true,
+      "inheritedControl": {
+        "tex": "\\begin{align*}\\hline a&b\\end{align*}",
+        "display": false
+      },
+      "controlByteUnchangedFromMain148": true,
+      "candidateByteUnchangedFromHistorical131": true,
+      "candidateErrorSVGEqualsUnchangedControl": true
+    },
+    {
+      "tex": "\\begin{eqnarray*}\\hline a&b\\end{eqnarray*}",
+      "display": true,
+      "classification": "shared hline dispatch",
+      "validOriginal": true,
+      "inheritedControl": {
+        "tex": "\\begin{align*}\\hline a&b\\end{align*}",
+        "display": true
+      },
+      "controlByteUnchangedFromMain148": true,
+      "candidateByteUnchangedFromHistorical131": true,
+      "candidateErrorSVGEqualsUnchangedControl": true
+    },
+    {
+      "tex": "\\begin{eqnarray*}a&b\\hline\\end{eqnarray*}",
+      "display": false,
+      "classification": "shared hline dispatch",
+      "validOriginal": false,
+      "inheritedControl": {
+        "tex": "\\begin{align*}a&b\\hline\\end{align*}",
+        "display": false
+      },
+      "controlByteUnchangedFromMain148": true,
+      "candidateByteUnchangedFromHistorical131": true,
+      "originalErrors": [
+        "Misplaced \\hline"
+      ],
+      "candidateErrors": [
+        "Undefined control sequence \\hline"
+      ],
+      "controlOriginalErrors": [
+        "Misplaced \\hline"
+      ],
+      "controlCandidateErrors": [
+        "Undefined control sequence \\hline"
+      ],
+      "sameDiagnosticsAfterEnvironmentNameSubstitution": true
+    },
+    {
+      "tex": "\\begin{eqnarray*}a&b\\hline\\end{eqnarray*}",
+      "display": true,
+      "classification": "shared hline dispatch",
+      "validOriginal": false,
+      "inheritedControl": {
+        "tex": "\\begin{align*}a&b\\hline\\end{align*}",
+        "display": true
+      },
+      "controlByteUnchangedFromMain148": true,
+      "candidateByteUnchangedFromHistorical131": true,
+      "originalErrors": [
+        "Misplaced \\hline"
+      ],
+      "candidateErrors": [
+        "Undefined control sequence \\hline"
+      ],
+      "controlOriginalErrors": [
+        "Misplaced \\hline"
+      ],
+      "controlCandidateErrors": [
+        "Undefined control sequence \\hline"
+      ],
+      "sameDiagnosticsAfterEnvironmentNameSubstitution": true
+    },
+    {
+      "tex": "\\begin{eqnarray*}\\hline\\end{eqnarray*}",
+      "display": false,
+      "classification": "shared hline dispatch",
+      "validOriginal": true,
+      "inheritedControl": {
+        "tex": "\\begin{align*}\\hline\\end{align*}",
+        "display": false
+      },
+      "controlByteUnchangedFromMain148": true,
+      "candidateByteUnchangedFromHistorical131": true,
+      "candidateErrorSVGEqualsUnchangedControl": true
+    },
+    {
+      "tex": "\\begin{eqnarray*}\\hline\\end{eqnarray*}",
+      "display": true,
+      "classification": "shared hline dispatch",
+      "validOriginal": true,
+      "inheritedControl": {
+        "tex": "\\begin{align*}\\hline\\end{align*}",
+        "display": true
+      },
+      "controlByteUnchangedFromMain148": true,
+      "candidateByteUnchangedFromHistorical131": true,
+      "candidateErrorSVGEqualsUnchangedControl": true
+    },
+    {
+      "tex": "\\begin{eqnarray*}a\\end{matrix}\\end{eqnarray*}",
+      "display": false,
+      "classification": "shared nested environment boundary",
+      "validOriginal": false,
+      "inheritedControl": {
+        "tex": "\\begin{align*}a\\end{matrix}\\end{align*}",
+        "display": false
+      },
+      "controlByteUnchangedFromMain148": true,
+      "candidateByteUnchangedFromHistorical131": true,
+      "originalErrors": [
+        "\\begin{eqnarray*} ended with \\end{matrix}"
+      ],
+      "candidateErrors": [
+        "Extra \\end{matrix}"
+      ],
+      "controlOriginalErrors": [
+        "\\begin{align*} ended with \\end{matrix}"
+      ],
+      "controlCandidateErrors": [
+        "Extra \\end{matrix}"
+      ],
+      "sameDiagnosticsAfterEnvironmentNameSubstitution": true
+    },
+    {
+      "tex": "\\begin{eqnarray*}a\\end{matrix}\\end{eqnarray*}",
+      "display": true,
+      "classification": "shared nested environment boundary",
+      "validOriginal": false,
+      "inheritedControl": {
+        "tex": "\\begin{align*}a\\end{matrix}\\end{align*}",
+        "display": true
+      },
+      "controlByteUnchangedFromMain148": true,
+      "candidateByteUnchangedFromHistorical131": true,
+      "originalErrors": [
+        "\\begin{eqnarray*} ended with \\end{matrix}"
+      ],
+      "candidateErrors": [
+        "Extra \\end{matrix}"
+      ],
+      "controlOriginalErrors": [
+        "\\begin{align*} ended with \\end{matrix}"
+      ],
+      "controlCandidateErrors": [
+        "Extra \\end{matrix}"
+      ],
+      "sameDiagnosticsAfterEnvironmentNameSubstitution": true
+    },
+    {
+      "tex": "\\begin{eqnarray*}a\\begin{matrix}b\\end{eqnarray*}",
+      "display": false,
+      "classification": "shared nested environment boundary",
+      "validOriginal": false,
+      "inheritedControl": {
+        "tex": "\\begin{align*}a\\begin{matrix}b\\end{align*}",
+        "display": false
+      },
+      "controlByteUnchangedFromMain148": true,
+      "candidateByteUnchangedFromHistorical131": true,
+      "originalErrors": [
+        "\\begin{matrix} ended with \\end{eqnarray*}"
+      ],
+      "candidateErrors": [
+        "Missing \\end{matrix}"
+      ],
+      "controlOriginalErrors": [
+        "\\begin{matrix} ended with \\end{align*}"
+      ],
+      "controlCandidateErrors": [
+        "Missing \\end{matrix}"
+      ],
+      "sameDiagnosticsAfterEnvironmentNameSubstitution": true
+    },
+    {
+      "tex": "\\begin{eqnarray*}a\\begin{matrix}b\\end{eqnarray*}",
+      "display": true,
+      "classification": "shared nested environment boundary",
+      "validOriginal": false,
+      "inheritedControl": {
+        "tex": "\\begin{align*}a\\begin{matrix}b\\end{align*}",
+        "display": true
+      },
+      "controlByteUnchangedFromMain148": true,
+      "candidateByteUnchangedFromHistorical131": true,
+      "originalErrors": [
+        "\\begin{matrix} ended with \\end{eqnarray*}"
+      ],
+      "candidateErrors": [
+        "Missing \\end{matrix}"
+      ],
+      "controlOriginalErrors": [
+        "\\begin{matrix} ended with \\end{align*}"
+      ],
+      "controlCandidateErrors": [
+        "Missing \\end{matrix}"
+      ],
+      "sameDiagnosticsAfterEnvironmentNameSubstitution": true
+    },
+    {
+      "tex": "\\begin{eqnarray*}\\tag\\end{eqnarray*}",
+      "display": false,
+      "classification": "shared tag argument/end boundary",
+      "validOriginal": false,
+      "inheritedControl": {
+        "tex": "\\begin{align*}\\tag\\end{align*}",
+        "display": false
+      },
+      "controlByteUnchangedFromMain148": true,
+      "candidateByteUnchangedFromHistorical131": true,
+      "originalErrors": [
+        "Missing \\end{eqnarray*}"
+      ],
+      "candidateErrors": [
+        "Missing argument for \\tag"
+      ],
+      "controlOriginalErrors": [
+        "Missing \\end{align*}"
+      ],
+      "controlCandidateErrors": [
+        "Missing argument for \\tag"
+      ],
+      "sameDiagnosticsAfterEnvironmentNameSubstitution": true
+    },
+    {
+      "tex": "\\begin{eqnarray*}\\tag\\end{eqnarray*}",
+      "display": true,
+      "classification": "shared tag argument/end boundary",
+      "validOriginal": false,
+      "inheritedControl": {
+        "tex": "\\begin{align*}\\tag\\end{align*}",
+        "display": true
+      },
+      "controlByteUnchangedFromMain148": true,
+      "candidateByteUnchangedFromHistorical131": true,
+      "originalErrors": [
+        "Missing \\end{eqnarray*}"
+      ],
+      "candidateErrors": [
+        "Missing argument for \\tag"
+      ],
+      "controlOriginalErrors": [
+        "Missing \\end{align*}"
+      ],
+      "controlCandidateErrors": [
+        "Missing argument for \\tag"
+      ],
+      "sameDiagnosticsAfterEnvironmentNameSubstitution": true
+    },
+    {
+      "tex": "\\begin{eqnarray*}\\label\\end{eqnarray*}",
+      "display": false,
+      "classification": "shared tag argument/end boundary",
+      "validOriginal": false,
+      "inheritedControl": {
+        "tex": "\\begin{align*}\\label\\end{align*}",
+        "display": false
+      },
+      "controlByteUnchangedFromMain148": true,
+      "candidateByteUnchangedFromHistorical131": true,
+      "originalErrors": [
+        "Missing \\end{eqnarray*}"
+      ],
+      "candidateErrors": [
+        "Missing argument for \\label"
+      ],
+      "controlOriginalErrors": [
+        "Missing \\end{align*}"
+      ],
+      "controlCandidateErrors": [
+        "Missing argument for \\label"
+      ],
+      "sameDiagnosticsAfterEnvironmentNameSubstitution": true
+    },
+    {
+      "tex": "\\begin{eqnarray*}\\label\\end{eqnarray*}",
+      "display": true,
+      "classification": "shared tag argument/end boundary",
+      "validOriginal": false,
+      "inheritedControl": {
+        "tex": "\\begin{align*}\\label\\end{align*}",
+        "display": true
+      },
+      "controlByteUnchangedFromMain148": true,
+      "candidateByteUnchangedFromHistorical131": true,
+      "originalErrors": [
+        "Missing \\end{eqnarray*}"
+      ],
+      "candidateErrors": [
+        "Missing argument for \\label"
+      ],
+      "controlOriginalErrors": [
+        "Missing \\end{align*}"
+      ],
+      "controlCandidateErrors": [
+        "Missing argument for \\label"
+      ],
+      "sameDiagnosticsAfterEnvironmentNameSubstitution": true
+    },
+    {
+      "tex": "\\begin{eqnarray}\\DeclarePairedDelimiterXPP{\\f}[1]{\\\\}{(}{)}{}{#1}a&\\f{x}&b\\end{eqnarray}",
+      "display": false,
+      "classification": "macro-generated row boundary",
+      "validOriginal": true,
+      "inheritedControl": {
+        "tex": "\\begin{align}\\DeclarePairedDelimiterXPP{\\f}[1]{\\\\}{(}{)}{}{#1}a&\\f{x}&b\\end{align}",
+        "display": false
+      },
+      "controlByteUnchangedFromMain148": true,
+      "candidateByteUnchangedFromHistorical131": true,
+      "sameGlyphShapeAndPaint": true,
+      "originalToCandidateVerticalOffsets": [
+        650.0,
+        -650.0,
+        -650.0,
+        -650.0,
+        -650.0
+      ],
+      "controlOriginalToCandidateVerticalOffsets": [
+        650.0,
+        -650.0,
+        -650.0,
+        -650.0,
+        -650.0
+      ]
+    },
+    {
+      "tex": "\\begin{eqnarray}\\DeclarePairedDelimiterXPP{\\f}[1]{\\\\}{(}{)}{}{#1}a&\\f{x}&b\\end{eqnarray}",
+      "display": true,
+      "classification": "macro-generated row boundary",
+      "validOriginal": true,
+      "inheritedControl": {
+        "tex": "\\begin{align}\\DeclarePairedDelimiterXPP{\\f}[1]{\\\\}{(}{)}{}{#1}a&\\f{x}&b\\end{align}",
+        "display": true
+      },
+      "controlByteUnchangedFromMain148": true,
+      "candidateByteUnchangedFromHistorical131": true,
+      "sameGlyphShapeAndPaint": true,
+      "originalToCandidateVerticalOffsets": [
+        650.0,
+        -650.0,
+        -650.0,
+        -650.0,
+        -650.0
+      ],
+      "controlOriginalToCandidateVerticalOffsets": [
+        650.0,
+        -650.0,
+        -650.0,
+        -650.0,
+        -650.0
+      ]
+    },
+    {
+      "tex": "\\begin{eqnarray}a&\\left(&b\\right)\\end{eqnarray}",
+      "display": false,
+      "classification": "safe XML ampersand attribute escaping",
+      "validOriginal": false,
+      "inheritedControl": {
+        "tex": "\\begin{align}a&\\left(&b\\right)\\end{align}",
+        "display": false
+      },
+      "controlByteUnchangedFromMain148": true,
+      "candidateByteUnchangedFromHistorical131": false,
+      "originalErrors": [
+        "Misplaced &"
+      ],
+      "candidateErrors": [
+        "Misplaced &amp;"
+      ],
+      "controlOriginalErrors": [
+        "Misplaced &"
+      ],
+      "controlCandidateErrors": [
+        "Misplaced &amp;"
+      ],
+      "sameDiagnosticsAfterEnvironmentNameSubstitution": true
+    },
+    {
+      "tex": "\\begin{eqnarray}a&\\left(&b\\right)\\end{eqnarray}",
+      "display": true,
+      "classification": "safe XML ampersand attribute escaping",
+      "validOriginal": false,
+      "inheritedControl": {
+        "tex": "\\begin{align}a&\\left(&b\\right)\\end{align}",
+        "display": true
+      },
+      "controlByteUnchangedFromMain148": true,
+      "candidateByteUnchangedFromHistorical131": false,
+      "originalErrors": [
+        "Misplaced &"
+      ],
+      "candidateErrors": [
+        "Misplaced &amp;"
+      ],
+      "controlOriginalErrors": [
+        "Misplaced &"
+      ],
+      "controlCandidateErrors": [
+        "Misplaced &amp;"
+      ],
+      "sameDiagnosticsAfterEnvironmentNameSubstitution": true
+    },
+    {
+      "tex": "\\begin{eqnarray*}\\DeclarePairedDelimiterXPP{\\f}[1]{\\\\}{(}{)}{}{#1}a&\\f{x}&b\\end{eqnarray*}",
+      "display": false,
+      "classification": "macro-generated row boundary",
+      "validOriginal": true,
+      "inheritedControl": {
+        "tex": "\\begin{align*}\\DeclarePairedDelimiterXPP{\\f}[1]{\\\\}{(}{)}{}{#1}a&\\f{x}&b\\end{align*}",
+        "display": false
+      },
+      "controlByteUnchangedFromMain148": true,
+      "candidateByteUnchangedFromHistorical131": true,
+      "sameGlyphShapeAndPaint": true,
+      "originalToCandidateVerticalOffsets": [
+        650.0,
+        -650.0,
+        -650.0,
+        -650.0,
+        -650.0
+      ],
+      "controlOriginalToCandidateVerticalOffsets": [
+        650.0,
+        -650.0,
+        -650.0,
+        -650.0,
+        -650.0
+      ]
+    },
+    {
+      "tex": "\\begin{eqnarray*}\\DeclarePairedDelimiterXPP{\\f}[1]{\\\\}{(}{)}{}{#1}a&\\f{x}&b\\end{eqnarray*}",
+      "display": true,
+      "classification": "macro-generated row boundary",
+      "validOriginal": true,
+      "inheritedControl": {
+        "tex": "\\begin{align*}\\DeclarePairedDelimiterXPP{\\f}[1]{\\\\}{(}{)}{}{#1}a&\\f{x}&b\\end{align*}",
+        "display": true
+      },
+      "controlByteUnchangedFromMain148": true,
+      "candidateByteUnchangedFromHistorical131": true,
+      "sameGlyphShapeAndPaint": true,
+      "originalToCandidateVerticalOffsets": [
+        650.0,
+        -650.0,
+        -650.0,
+        -650.0,
+        -650.0
+      ],
+      "controlOriginalToCandidateVerticalOffsets": [
+        650.0,
+        -650.0,
+        -650.0,
+        -650.0,
+        -650.0
+      ]
+    },
+    {
+      "tex": "\\begin{eqnarray*}a&\\left(&b\\right)\\end{eqnarray*}",
+      "display": false,
+      "classification": "safe XML ampersand attribute escaping",
+      "validOriginal": false,
+      "inheritedControl": {
+        "tex": "\\begin{align*}a&\\left(&b\\right)\\end{align*}",
+        "display": false
+      },
+      "controlByteUnchangedFromMain148": true,
+      "candidateByteUnchangedFromHistorical131": false,
+      "originalErrors": [
+        "Misplaced &"
+      ],
+      "candidateErrors": [
+        "Misplaced &amp;"
+      ],
+      "controlOriginalErrors": [
+        "Misplaced &"
+      ],
+      "controlCandidateErrors": [
+        "Misplaced &amp;"
+      ],
+      "sameDiagnosticsAfterEnvironmentNameSubstitution": true
+    },
+    {
+      "tex": "\\begin{eqnarray*}a&\\left(&b\\right)\\end{eqnarray*}",
+      "display": true,
+      "classification": "safe XML ampersand attribute escaping",
+      "validOriginal": false,
+      "inheritedControl": {
+        "tex": "\\begin{align*}a&\\left(&b\\right)\\end{align*}",
+        "display": true
+      },
+      "controlByteUnchangedFromMain148": true,
+      "candidateByteUnchangedFromHistorical131": false,
+      "originalErrors": [
+        "Misplaced &"
+      ],
+      "candidateErrors": [
+        "Misplaced &amp;"
+      ],
+      "controlOriginalErrors": [
+        "Misplaced &"
+      ],
+      "controlCandidateErrors": [
+        "Misplaced &amp;"
+      ],
+      "sameDiagnosticsAfterEnvironmentNameSubstitution": true
+    }
+  ],
+  "publishedResidualReplay": {
+    "publicInputs": 4271,
+    "observedRawChanges": 22,
+    "genuineSourceChanges": 20,
+    "genuineNewlyExact": 20,
+    "genuineRegressions": 0,
+    "changedNonexactAfterSerializationControls": 0,
+    "serializationOnly": [
+      {
+        "tex": "\\cancelto[data-padding=1em,data-thickness=.2em]{0}{}",
+        "display": true,
+        "samplesPerBinary": 48,
+        "originalSHA256": "eff29b259112810ffbc6bc4d3f2efe6fc8e0e7002e0f34da4ce918850359e1f2",
+        "baselineVariants": {
+          "eff29b259112810ffbc6bc4d3f2efe6fc8e0e7002e0f34da4ce918850359e1f2": 43,
+          "a9f43cd6eea44528a27560720211232e85b57e981d766bf817f2661e4c0727c4": 5
+        },
+        "baselineAllCompleteParsedXMLIdenticalToOriginal": true,
+        "candidateVariants": {
+          "eff29b259112810ffbc6bc4d3f2efe6fc8e0e7002e0f34da4ce918850359e1f2": 44,
+          "a9f43cd6eea44528a27560720211232e85b57e981d766bf817f2661e4c0727c4": 4
+        },
+        "candidateAllCompleteParsedXMLIdenticalToOriginal": true
+      },
+      {
+        "tex": "\\cancel[data-padding=1em,data-thickness=.2em]{x}",
+        "display": false,
+        "samplesPerBinary": 48,
+        "originalSHA256": "a2479a142736cc91f5ebd1093cd20e1737f7e1a13c2ae6fb1110413c7ae14af3",
+        "baselineVariants": {
+          "a2479a142736cc91f5ebd1093cd20e1737f7e1a13c2ae6fb1110413c7ae14af3": 39,
+          "fb35b0b01b7a1dde26abd110044e2d34f8e759c9dbfff9ab5da1857c856e41cd": 9
+        },
+        "baselineAllCompleteParsedXMLIdenticalToOriginal": true,
+        "candidateVariants": {
+          "a2479a142736cc91f5ebd1093cd20e1737f7e1a13c2ae6fb1110413c7ae14af3": 39,
+          "fb35b0b01b7a1dde26abd110044e2d34f8e759c9dbfff9ab5da1857c856e41cd": 9
+        },
+        "candidateAllCompleteParsedXMLIdenticalToOriginal": true
+      }
+    ],
+    "note": "Only attribute-order variation is disregarded in this audit. Original SVGs and exact golden comparisons remain unchanged."
+  }
+}
