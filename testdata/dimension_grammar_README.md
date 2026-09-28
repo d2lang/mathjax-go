@@ -15,11 +15,10 @@ D070 now rejects repeated valid infix fractions; registered macro priority is
 covered separately.
 The generic argument reader and global whitespace scanner are unchanged.
 
-The 60 public cases have 58 raw-primary SVGs and 56 raw-primary complete
-explicit/own trees. The two `raise-valid-boundary` cases have primary SVGs and
-only the inherited `voffset` spelling `1.5pt` versus primary `+1.5pt`; the test
-binds that exact attribute on the exact primary tree and compares every other
-field. Two unchanged `rule` cases retain complete accepted-parent SVG/tree receipts.
+The 60 public cases now require raw-primary SVGs and complete explicit/own
+trees. The corrected lowercase `rule` handler removes the last two retained
+output qualifications; its historical accepted-parent SVG/tree receipts remain
+unchanged, but no longer define the expected live output.
 The two repeated `above` cases use their unchanged primary references after the
 D070 row-scope correction. The unsupported `vspace` and `raisebox` commands now
 use the same undefined-command errors as pinned MathJax, before their arguments

@@ -85,7 +85,8 @@ func TestDimensionGrammarPinnedReferences(t *testing.T) {
 				if b.Name != c.Name || b.TeX != c.TeX || b.Display != c.Display || b.PrimarySVG != c.SVGSHA256 || b.PrimarySVG == b.BaselineSVG {
 					t.Fatal("invalid retained boundary")
 				}
-				want, hash = b.BaselineTree, b.BaselineSVG
+				// The lowercase rule handler now matches the primary. Keep
+				// the old output as a historical receipt, not an expectation.
 			}
 
 			root, e := tex.NewCompiler().Compile(c.TeX, c.Display)
