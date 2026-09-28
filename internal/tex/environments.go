@@ -442,10 +442,7 @@ func (p *parser) parseTableWithAlignment(body, style string, alignFills bool) (*
 	defer func() { p.inRoot, p.activeColor = inRoot, color }()
 	rows := splitTable(body)
 	mtrNodes := make([]*mml.Node, 0, len(rows))
-	for _, cells := range rows {
-		if len(cells) == 1 && strings.TrimSpace(cells[0]) == "" && len(rows) > 1 {
-			continue
-		}
+	for rowIndex, cells := range rows {
 		mtdNodes := make([]*mml.Node, 0, len(cells))
 		for _, cell := range cells {
 			contents, err := p.parseArrayCellString(strings.TrimSpace(cell))
@@ -457,6 +454,9 @@ func (p *parser) parseTableWithAlignment(body, style string, alignFills bool) (*
 				cellNode = arrayCellNode(contents)
 			}
 			mtdNodes = append(mtdNodes, cellNode)
+		}
+		if omitFinalArrayRow(rowIndex, len(rows), mtdNodes) {
+			continue
 		}
 		mtrNodes = append(mtrNodes, node("mtr", mtdNodes...))
 	}
@@ -486,6 +486,14 @@ func repeatAMSEqnArrayDefinition(definition string, maximum int) string {
 	}
 	for len(values) < maximum {
 		values = append(values, values...)
+	}
+	// JavaScript slice(0, -1) drops the last spacing when an entirely empty
+	// EqnArray has maxrow=0. Preserve that source behavior, not a Go panic.
+	if maximum < 0 {
+		maximum += len(values)
+		if maximum < 0 {
+			maximum = 0
+		}
 	}
 	if maximum < len(values) {
 		values = values[:maximum]

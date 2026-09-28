@@ -96,10 +96,7 @@ func (p *parser) amsAlignment(environment string) (nodes []*mml.Node, err error)
 	mrows := make([]*mml.Node, 0, len(rows))
 	tags := make([]*mml.Node, 0, len(rows))
 	maximumColumns := 0
-	for _, cells := range rows {
-		if len(cells) == 1 && strings.TrimSpace(cells[0]) == "" && len(rows) > 1 {
-			continue
-		}
+	for rowIndex, cells := range rows {
 		mtds := make([]*mml.Node, 0, len(cells))
 		for _, cell := range cells {
 			content, parseErr := p.parseArrayCellString(strings.TrimSpace(cell))
@@ -107,6 +104,9 @@ func (p *parser) amsAlignment(environment string) (nodes []*mml.Node, err error)
 				return nil, parseErr
 			}
 			mtds = append(mtds, node("mtd", content))
+		}
+		if omitFinalArrayRow(rowIndex, len(rows), mtds) {
+			continue
 		}
 		if len(mtds) > maximumColumns {
 			maximumColumns = len(mtds)
