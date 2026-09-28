@@ -274,11 +274,11 @@ func TestDerivativeAutoOpenDelivery(t *testing.T) {
 	t.Run("pending-script-delivery", func(t *testing.T) {
 		p := &parser{source: `\dv{f}{x}(g)+Z`, state: newParseState()}
 		base := token("mi", "x")
-		got, _, after, e := p.attachScriptWithFont([]*mml.Node{base}, '^', "")
+		got, _, trailing, after, e := p.attachScriptWithFont([]*mml.Node{base}, '^', "")
 		if e != nil {
 			t.Fatal(e)
 		}
-		if len(got) != 1 || got[0].Kind != "msup" || got[0].Children[0] != base || got[0].Children[1].Kind != "mfrac" || p.source[p.pos:] != "(g)+Z" {
+		if len(trailing) != 0 || len(got) != 1 || got[0].Kind != "msup" || got[0].Children[0] != base || got[0].Children[1].Kind != "mfrac" || p.source[p.pos:] != "(g)+Z" {
 			t.Fatal("fraction not delivered to pending script before tail")
 		}
 		fraction := got[0].Children[1]

@@ -599,6 +599,7 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 			p.pos++
 			var err error
 			var after *derivativeAutoOpen
+			var trailing []*mml.Node
 			if bool(negation) || dots.active() || nonscript {
 				// Stack.Prev sees an empty NotItem/DotsItem, not the preceding
 				// row node or the fallback emitted when this item is pushed.
@@ -606,10 +607,10 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 				finishDots()
 				nonscript = false
 				var scriptNodes []*mml.Node
-				scriptNodes, pendingFont, after, err = p.attachScriptWithFont(nil, c, pendingFont)
+				scriptNodes, pendingFont, trailing, after, err = p.attachScriptWithFont(nil, c, pendingFont)
 				nodes = append(nodes, scriptNodes...)
 			} else if pending == nil {
-				nodes, pendingFont, after, err = p.attachScriptWithFont(nodes, c, pendingFont)
+				nodes, pendingFont, trailing, after, err = p.attachScriptWithFont(nodes, c, pendingFont)
 			} else {
 				var script *mml.Node
 				p.scriptInitialLookahead()
@@ -617,7 +618,7 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 				var attachment *scriptAttachment
 				attachment, err = prepareScriptAttachment(pending.base, c, limitsTruthy(moves))
 				if err == nil {
-					script, pendingFont, after, err = p.parseScriptArgument(attachment, pendingFont)
+					script, pendingFont, trailing, after, err = p.parseScriptArgument(attachment, pendingFont)
 				}
 				if err == nil {
 					var result *mml.Node
@@ -634,6 +635,9 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 			if !pendingFunction {
 				reducePositions()
 			}
+			// Complete the script (and its pending position) before delivering
+			// subsequent final items, then start any following AutoOpen item.
+			appendNodes(trailing, false)
 			tail, err := after.complete(p)
 			if err != nil {
 				return nil, "", err
@@ -848,15 +852,16 @@ func (p *parser) parseCharacter() *mml.Node {
 }
 
 func (p *parser) attachScript(nodes []*mml.Node, marker byte) ([]*mml.Node, error) {
-	result, _, after, err := p.attachScriptWithFont(nodes, marker, "")
+	result, _, trailing, after, err := p.attachScriptWithFont(nodes, marker, "")
 	if err != nil {
 		return nil, err
 	}
+	result = append(result, trailing...)
 	tail, err := after.complete(p)
 	return append(result, tail...), err
 }
 
-func (p *parser) attachScriptWithFont(nodes []*mml.Node, marker byte, font string) ([]*mml.Node, string, *derivativeAutoOpen, error) {
+func (p *parser) attachScriptWithFont(nodes []*mml.Node, marker byte, font string) ([]*mml.Node, string, []*mml.Node, *derivativeAutoOpen, error) {
 	var base *mml.Node
 	if len(nodes) == 0 {
 		base = token("mi", "")
@@ -872,11 +877,11 @@ func (p *parser) attachScriptWithFont(nodes []*mml.Node, marker byte, font strin
 	p.scriptInitialLookahead()
 	attachment, err := prepareScriptAttachment(base, marker, moveLimits)
 	if err != nil {
-		return nil, font, nil, err
+		return nil, font, nil, nil, err
 	}
-	script, font, after, err := p.parseScriptArgument(attachment, font)
+	script, font, trailing, after, err := p.parseScriptArgument(attachment, font)
 	if err != nil {
-		return nil, font, nil, err
+		return nil, font, nil, nil, err
 	}
 	result := attachment.fill(script)
 	result.Flags.Embellished = base.Flags.Embellished
@@ -885,7 +890,7 @@ func (p *parser) attachScriptWithFont(nodes []*mml.Node, marker byte, font strin
 	if hasMoves {
 		result.SetProperty("movesupsub", moves)
 	}
-	return append(nodes, result), font, after, nil
+	return append(nodes, result), font, trailing, after, nil
 }
 
 func (p *parser) parseOneToken() ([]*mml.Node, error) {
