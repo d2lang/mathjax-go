@@ -1970,10 +1970,17 @@ func (p *parser) quickQuadText(name string) ([]*mml.Node, error) {
 		"qand": "and", "qor": "or", "qas": "as", "qin": "in",
 	}
 	text := defaults[name]
+	cursorOverrun := 0
 	if text == "" {
 		var err error
 		for p.pos < len(p.source) && internalTextSpace(p.peekRune()) {
 			p.consumeRune()
+		}
+		// GetCS advances once past EOF when GetArgument starts at a terminal
+		// backslash. Keep the physical Go cursor safe, but retain that source
+		// cursor advance for resuming Qqtext's inserted program below.
+		if p.pos < len(p.source) && p.pos+1 == len(p.source) && p.source[p.pos] == '\\' {
+			cursorOverrun = 1
 		}
 		text, _, err = p.readArgumentAtCursor(name, false)
 		if err != nil {
@@ -1989,6 +1996,7 @@ func (p *parser) quickQuadText(name string) ([]*mml.Node, error) {
 		expansion = "\\quad" + expansion
 	}
 	p.source = p.source[:p.pos] + expansion + p.source[p.pos:]
+	p.pos += cursorOverrun
 	return nil, nil
 }
 
