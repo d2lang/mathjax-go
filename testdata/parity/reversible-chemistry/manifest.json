@@ -1,20 +1,20 @@
 {
   "d2Commit": "01bc7ecdbdd04c13d6fe5df1967d2d9aa14ae579",
   "beforeMathjaxCommit": "62731e028fc1673ad3302c2bda9c99308352ba42",
-  "afterCodeCommit": "9d3d2eb5c0fe6092f74d9a15ae1eb26bc3cc794e",
-  "tex": "\\ce{N2O4 <--> 2NO2}",
+  "afterCodeCommit": "04ea5aa615925125d92760e4daab90bc3869186d",
+  "tex": "\\Huge{\\ce{N2O4 <--> 2NO2}}",
   "files": {
-    "README.md": "22e33eb47f57c7bc3c955101139c67a98966789a58f25da194eb2963bf67cb40",
-    "after.png": "b23656e3edbb254d29e316366d70a58664889a683305329b07df1005503c1591",
-    "after.svg": "fefdb9c71b862b3843e81fc4d16c9c8d3f731dae44814f32f0c96b2e6df69fa6",
+    "README.md": "9b3d8aeb223560f39b276107f6aaac303dfee79d2dd9d64e51cad2dfe54b7ba7",
+    "after.png": "2dd4d9d6ed47fcda1ece242a1740d06629b06196096439f32d5955f3a4602b97",
+    "after.svg": "1e2a5294dd170bd7e8a611faa6c738524084b820008c1532336e9e0607e2df60",
     "before.png": "3011fd3ceef93ef06f9fe1836540eecf373337fd2c6b3a39e546b91517b430ae",
-    "before.svg": "cbfdd77c17728d73b1fbead23f9bc4b8ba09cc81c039ca9a7b0ba6bbcd7452b6",
-    "comparison.png": "8de7cf87419648cf85e072846b09c1ae65b1ed2dc8a113bed3a7daad08161335",
+    "before.svg": "ef444905f63f26e229d915a1c4f698c59aa9035c541b40f7f903275017fba572",
+    "comparison.png": "13953821a408614f672b7e6cec94df912764960bb82d460504063d385b065816",
     "oracle-adapter/go.mod": "b8a3ff80b4e63b08c12ed3bcbefcdaebec039551cf00b99b08c6ba6dec5abfc5",
     "oracle-adapter/mathjax.go": "1ed1fbe813faf433d307b2b5c8e332fd22854999a22487e11396c6a6df3b38ed",
-    "original.png": "b23656e3edbb254d29e316366d70a58664889a683305329b07df1005503c1591",
-    "original.svg": "fefdb9c71b862b3843e81fc4d16c9c8d3f731dae44814f32f0c96b2e6df69fa6",
-    "witness.d2": "0e61b03bd3c55727ed3287767344443d2d426de0dcd6ae3b1becbd2b153d664c"
+    "original.png": "2dd4d9d6ed47fcda1ece242a1740d06629b06196096439f32d5955f3a4602b97",
+    "original.svg": "1e2a5294dd170bd7e8a611faa6c738524084b820008c1532336e9e0607e2df60",
+    "witness.d2": "35bc9cbf3bd9ccc0234f0b9f96af837da39e926fd429313acbf4eda1f854f7c5"
   },
   "oracleAssets": {
     "mathjax.js": "cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869",

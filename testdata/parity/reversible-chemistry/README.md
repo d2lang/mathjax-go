@@ -6,7 +6,7 @@ included. Panels use one shared scale and preserve differences in the SVG dimens
 
 - D2 renderer: `01bc7ecdbdd04c13d6fe5df1967d2d9aa14ae579`.
 - Before mathjax-go: `62731e028fc1673ad3302c2bda9c99308352ba42`.
-- After mathjax-go code: `9d3d2eb5c0fe6092f74d9a15ae1eb26bc3cc794e` (plus these evidence files).
+- After mathjax-go code: `04ea5aa615925125d92760e4daab90bc3869186d` (plus these evidence files).
 - Original: D2's frozen MathJax 3.2.2 assets, fetched from D2 commit
   `5666d9337c77a4803b9cd60cb1c5a24439d0f949`; SHA-256 values are in `manifest.json`
   and repository `PROVENANCE.md`.
