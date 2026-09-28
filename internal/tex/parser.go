@@ -942,7 +942,12 @@ func (p *parser) readArgument(name string, noneOK bool) (string, bool, error) {
 }
 
 func (p *parser) readBrackets(defaultValue *string) (string, bool, error) {
-	p.skipSpaces()
+	// GetBrackets calls GetNext, whose nextIsSpace uses JavaScript's \s.
+	// It includes BOM and excludes NEL, unlike Go's unicode.IsSpace. Keep
+	// this source-helper boundary separate from ordinary math tokenization.
+	for p.pos < len(p.source) && internalTextSpace(p.peekRune()) {
+		p.consumeRune()
+	}
 	if p.pos >= len(p.source) || p.source[p.pos] != '[' {
 		if defaultValue == nil {
 			return "", false, nil
