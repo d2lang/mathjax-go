@@ -145,3 +145,15 @@ VM per conversion, and captures complete SVGs with font cache none, em=16, ex=8
 and the stored display flag. It also regenerates raw originals and literal
 bindings while preserving historical Go observations. JSONL framing uses only
 LF, retaining literal Unicode line separators inside the saved inputs.
+
+## Composed matrix parsing validation
+
+The final branch also includes the source MatrixQuantity and child/environment
+boundary corrections documented in `matrix_quantity_README.md`. They are
+required together: generated small-matrix row topology and small-matrix
+metrics must both match the original. The original 9,801-input newline
+inventory and all its exact/raw/literal assertions remain unchanged. Current
+merged-156 comparisons reproduce its 9,573 exact outputs and all previously
+qualified residual candidates. The separate matrix inventory adds 2,674
+complete-original assertions with no input overlap; combined publication
+provenance and current historical replay counts are in that companion README.
