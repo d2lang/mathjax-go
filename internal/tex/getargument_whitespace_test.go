@@ -16,13 +16,13 @@ func TestGetArgumentWhitespacePrimaryMethod(t *testing.T) {
 	}
 	var fixture struct {
 		MathjaxGitCommit string
-		Methods map[string]string
-		Cases []struct {
+		Methods          map[string]string
+		Cases            []struct {
 			Source, Remaining string
-			NoneOK bool
-			Value *string
-			Error *struct { ID, Message string }
-			CursorBytes int
+			NoneOK            bool
+			Value             *string
+			Error             *struct{ ID, Message string }
+			CursorBytes       int
 		}
 	}
 	if err := json.Unmarshal(data, &fixture); err != nil {
@@ -32,10 +32,18 @@ func TestGetArgumentWhitespacePrimaryMethod(t *testing.T) {
 		!strings.Contains(fixture.Methods["nextIsSpace"], `/\s/`) || !strings.Contains(fixture.Methods["GetArgument"], "GetNext") {
 		t.Fatal("unbound original GetArgument method observations")
 	}
-	seen := make(map[struct { source string; noneOK bool }]bool)
+	seen := make(map[struct {
+		source string
+		noneOK bool
+	}]bool)
 	for i, c := range fixture.Cases {
-		key := struct { source string; noneOK bool }{c.Source, c.NoneOK}
-		if seen[key] { t.Fatal("duplicate original method observation", key) }
+		key := struct {
+			source string
+			noneOK bool
+		}{c.Source, c.NoneOK}
+		if seen[key] {
+			t.Fatal("duplicate original method observation", key)
+		}
 		seen[key] = true
 		t.Run(fmt.Sprintf("case-%03d", i), func(t *testing.T) {
 			p := &parser{source: c.Source}
@@ -49,7 +57,9 @@ func TestGetArgumentWhitespacePrimaryMethod(t *testing.T) {
 				t.Fatal(err)
 			}
 			want := ""
-			if c.Value != nil { want = *c.Value }
+			if c.Value != nil {
+				want = *c.Value
+			}
 			if got != want || p.pos != c.CursorBytes || p.source[p.pos:] != c.Remaining {
 				t.Fatalf("original argument result differs: value=%q cursor=%d remaining=%q; want value=%q cursor=%d remaining=%q", got, p.pos, p.source[p.pos:], want, c.CursorBytes, c.Remaining)
 			}
