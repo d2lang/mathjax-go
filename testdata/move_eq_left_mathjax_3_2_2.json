@@ -1,7 +1,7 @@
 {
   "mathjaxGitCommit": "ad8f5c21cb810236551da8c6512ba733e67357ee",
-  "baselineCommit": "42932ee918ca4db7f3edf9da30e59b0c9cd61f86",
-  "sourceCommit": "a35b492",
+  "baselineCommit": "0b179b832657fc7f97acd353d0c1f642ed8df3ae",
+  "sourceCommit": "0d2ba1ddaaf9de44f83a644c07cb818130d29903",
   "counts": {
     "total": 1246,
     "originalErrorSVG": 750,
@@ -12834,5 +12834,7 @@
       ],
       "svg": "<svg style=\"vertical-align: -0.566ex;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"2.389ex\" height=\"2.262ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -750 1056 1000\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"mi\"><path data-c=\"51\" d=\"M56 341Q56 499 157 602T388 705Q521 705 621 601T722 341Q722 275 703 218T660 127T603 63T555 25T525 9Q524 8 524 8H523Q524 5 526 -1T537 -21T555 -47T581 -67T615 -76Q653 -76 678 -56T706 -3Q707 10 716 10Q721 10 728 5L727 -13Q727 -88 697 -140T606 -193Q563 -193 538 -166T498 -83Q483 -23 483 -8L471 -11Q459 -14 435 -18T388 -22Q254 -22 155 81T56 341ZM607 339Q607 429 586 496T531 598T461 649T390 665T318 649T248 598T192 496T170 339Q170 143 277 57Q301 39 305 39L304 42Q304 44 304 46Q301 53 301 68Q301 101 325 128T391 155Q454 155 495 70L501 58Q549 91 578 164Q607 234 607 339ZM385 18Q404 18 425 23T459 33T472 40Q471 47 468 57T449 88T412 115Q398 117 386 117Q367 117 353 102T338 67Q338 48 351 33T385 18Z\"></path></g><g data-mml-node=\"mo\" transform=\"translate(778,0)\"><path data-c=\"5B\" d=\"M118 -250V750H255V710H158V-210H255V-250H118Z\"></path></g></g></g></svg>"
     }
-  ]
+  ],
+  "initialBaselineCommit": "42932ee918ca4db7f3edf9da30e59b0c9cd61f86",
+  "initialSourceCommit": "a35b492"
 }

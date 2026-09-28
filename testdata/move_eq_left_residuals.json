@@ -1,7 +1,7 @@
 {
   "mathjaxGitCommit": "ad8f5c21cb810236551da8c6512ba733e67357ee",
-  "baselineCommit": "42932ee918ca4db7f3edf9da30e59b0c9cd61f86",
-  "sourceCommit": "a35b492",
+  "baselineCommit": "0b179b832657fc7f97acd353d0c1f642ed8df3ae",
+  "sourceCommit": "0d2ba1ddaaf9de44f83a644c07cb818130d29903",
   "counts": {
     "total": 1246,
     "originalErrorSVG": 750,
@@ -3840,5 +3840,7 @@
       },
       "qualification": "unchanged inherited paired-delimiter optional-argument diagnostic omits the active command suffix; not a passing SVG assertion"
     }
-  ]
+  ],
+  "initialBaselineCommit": "42932ee918ca4db7f3edf9da30e59b0c9cd61f86",
+  "initialSourceCommit": "a35b492"
 }

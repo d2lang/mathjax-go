@@ -26,7 +26,7 @@ original SVGs, 750 original error SVGs, and eight original runtime exceptions.
 Every observation is retained; the generator does not choose cases based on Go.
 
 The strict fixture contains 1,064 complete original SVGs, including all 488
-valid original renders. Against merged PR157, these are 574 fixes and 490
+valid original renders. Against merged PR164, these are 574 fixes and 490
 unchanged exact controls. The separate residual file also has 168 qualified
 safe-XML controls: 102 newly reachable and 66 unchanged. Original MathJax emits
 one bare ampersand in `data-mjx-error="Misplaced &"`; Go preserves the same
@@ -52,16 +52,17 @@ and override coverage comes from the separate supported `DeclareMathOperator`
 and `DeclarePairedDelimiter` controls. The 22 official-newcommand-augmented
 method observations remain outside the repository's frozen-D2 fixture counts.
 
-The actual merged-158 fixture-tree scan found all 1,064 strict inputs and all
+The actual merged-164 scan of 425 fixture JSON files found all 1,064 strict inputs and all
 168 safe-XML inputs to be first complete-original publications, with no prior
-full or raw overlap. This provenance base is separate from the merged-157
-rendering baseline used for the saved comparison. Final current-base release
-gates are recorded separately after composition.
+full or raw overlap. The 1,246 rendering comparisons also use merged main164. Their complete
+outputs are unchanged from the previously reviewed candidate; final full release
+gates remain separately recorded.
 
-The 4,326 upstream-input replay on the merged-157 baseline has no output
-changes. The 5,086 published-residual replay has no genuine source changes or
-regressions; two apparent cancel fixes are attribute-order variation, bound by
-64 repeated renders per binary and complete parsed XML comparison. Their
+The 4,326 upstream-input replay and 5,758 published-residual replay on
+merged main164 have no genuine source changes or regressions. Six observed
+cancel/enclose serialization controls are attribute-order variation, bound by
+64 repeated renders per binary (768 complete outputs) and complete parsed XML
+comparison. Their
 original strings remain unchanged and they are excluded from source fix counts.
 
 ## Regeneration
