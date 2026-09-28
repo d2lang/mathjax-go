@@ -25,7 +25,7 @@ func TestEmptyTableRuleOriginalReferences(t *testing.T) {
 	if err := json.Unmarshal(data, &fixture); err != nil {
 		t.Fatal(err)
 	}
-	if fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || fixture.Counts.SVG != 284 || fixture.Counts.Methods != 80 || len(fixture.Cases) != 284 {
+	if fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || fixture.Counts.SVG != 376 || fixture.Counts.Methods != 80 || len(fixture.Cases) != 376 {
 		t.Fatal("unbound empty-table rule references")
 	}
 	seenNames := map[string]bool{}

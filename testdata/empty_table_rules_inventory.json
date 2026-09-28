@@ -1,9 +1,9 @@
 {
   "baseCommit": "c19a00c2202542652ffa46ce0a93d17c0bdd8108",
-  "exactInputs": 284,
+  "exactInputs": 376,
   "counts": {
     "prior-complete-reference": 8,
-    "first-input-publication": 276
+    "first-input-publication": 368
   },
   "overlap": [
     {
