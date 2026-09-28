@@ -82,6 +82,14 @@ func (p *parser) empheqTopRowTable(original *mml.Node) *mml.Node {
 // new node, retaining the source map's actual token kind and attributes.
 func (p *parser) lookupMJSourceSymbol(name string) (*mml.Node, bool) {
 	n, ok := lookupMJSourceSymbol(name)
+	if ok && p.fontExplicitEmpty && p.activeFont == "" {
+		// mathchar7 applies the environment's font only when it is truthy.
+		// An explicit empty MathFont keeps the mapped default (e.g. upright
+		// Gamma), and an enclosing font must not later overwrite that choice.
+		if ambient, _ := n.Property(ambientFontSource); ambient == true {
+			n.SetProperty(resolvedFontScope, true)
+		}
+	}
 	return p.noteMO(n), ok
 }
 
