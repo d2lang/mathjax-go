@@ -31,7 +31,11 @@ import (
 )
 
 func (p *parser) commandNodes(name string, after **derivativeAutoOpen) ([]*mml.Node, error) {
-	if definition, ok := p.state.macros[name]; ok {
+	// Mathtools' dynamic paired-delimiter map has priority -5, ahead of
+	// the builtin and user macro maps (including AMS operators at -1).
+	// Registration order does not change that precedence.
+	_, paired := p.state.pairedDelimiters[name]
+	if definition, ok := p.state.macros[name]; ok && !paired {
 		if definition.builtinNot {
 			p.commandNot = true
 			return nil, nil
