@@ -139,13 +139,21 @@ func (p *parser) equationAboxed(name string) error {
 	if err != nil {
 		return err
 	}
-	parts := splitTopLevel(argument, '&')
-	left, right := parts[0], ""
-	if len(parts) > 1 {
-		right = parts[1]
+	rest := p.source[p.pos:]
+	p.source, p.pos = argument+"&&\\endAboxed", 0
+	left, err := p.readUpTo(name, "&")
+	if err != nil {
+		return err
+	}
+	right, err := p.readUpTo(name, "&")
+	if err != nil {
+		return err
+	}
+	if _, err := p.readUpTo(name, "\\endAboxed"); err != nil {
+		return err
 	}
 	expansion := "\\rlap{\\boxed{" + left + "{}" + right + "}}\\kern.267em\\phantom{" + left + "}&\\phantom{{}" + right + "}\\kern.267em"
-	p.source, p.pos = expansion+p.source[p.pos:], 0
+	p.source, p.pos = expansion+rest, 0
 	return nil
 }
 

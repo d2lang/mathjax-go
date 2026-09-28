@@ -86,7 +86,7 @@ func (p *parser) mathtoolsEnvironment(name string) (nodes []*mml.Node, handled b
 		if !mathtoolsEnvironmentHasSpecial(p.source[p.pos:]) {
 			return nil, false, nil
 		}
-		nodes, err = p.mathtoolsAlignment(name)
+		nodes, err = p.mathtoolsMultline(name)
 	default:
 		return nil, false, nil
 	}
