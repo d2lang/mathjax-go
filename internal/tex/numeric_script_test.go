@@ -276,10 +276,10 @@ func TestNumericScriptWhitespaceBoundary(t *testing.T) {
 	}
 	var historical struct {
 		MathjaxGitCommit string
-		Cases []struct {
+		Cases            []struct {
 			Name, TeX string
-			Display bool
-			Original struct { SVG, Error string }
+			Display   bool
+			Original  struct{ SVG, Error string }
 		}
 	}
 	readArgumentJSON(t, "../../testdata/math_token_historical_boundaries.json", &historical)

@@ -60,15 +60,19 @@ func TestPrimeWhitespacePinnedReferences(t *testing.T) {
 	}
 	var historical struct {
 		MathjaxGitCommit string
-		Cases []struct {
+		Cases            []struct {
 			Name, TeX string
-			Display bool
-			Original struct { SVG, Error string }
+			Display   bool
+			Original  struct{ SVG, Error string }
 		}
 	}
 	data, err := os.ReadFile("testdata/math_token_historical_boundaries.json")
-	if err != nil { t.Fatal(err) }
-	if err := json.Unmarshal(data, &historical); err != nil { t.Fatal(err) }
+	if err != nil {
+		t.Fatal(err)
+	}
+	if err := json.Unmarshal(data, &historical); err != nil {
+		t.Fatal(err)
+	}
 	if historical.MathjaxGitCommit != fixture.MathjaxGitCommit || len(historical.Cases) != 12 {
 		t.Fatal("unbound historical whitespace originals")
 	}
@@ -99,9 +103,13 @@ func TestPrimeWhitespacePinnedReferences(t *testing.T) {
 				}
 				return
 			}
-			if err != nil { t.Fatal(err) }
+			if err != nil {
+				t.Fatal(err)
+			}
 			again, err := mathjax.RenderWithOptions(c.TeX, o)
-			if err != nil || svg != again { t.Fatal("unstable repeated render") }
+			if err != nil || svg != again {
+				t.Fatal("unstable repeated render")
+			}
 			wantSVG, wantTree := c.SVGSHA256, c.PropertiesTree
 			if c.Name == "bom-no-prime-inline" || c.Name == "bom-no-prime-display" {
 				bound := false
@@ -110,7 +118,9 @@ func TestPrimeWhitespacePinnedReferences(t *testing.T) {
 						bound = h.TeX == c.TeX && h.Display == c.Display && h.Original.Error == "" && h.Original.SVG == svg
 					}
 				}
-				if !bound { t.Fatal("complete original BOM SVG differs") }
+				if !bound {
+					t.Fatal("complete original BOM SVG differs")
+				}
 			}
 			rawSVG++
 			// Preserve historical metadata receipts while requiring the complete
@@ -118,11 +128,17 @@ func TestPrimeWhitespacePinnedReferences(t *testing.T) {
 			for _, q := range bounds.InheritedPrimeMetadata[c.Name] {
 				n := wantTree
 				for _, i := range q.Path {
-					if n == nil || i < 0 || i >= len(n.Children) { t.Fatal("missing prime path") }
+					if n == nil || i < 0 || i >= len(n.Children) {
+						t.Fatal("missing prime path")
+					}
 					n = n.Children[i]
 				}
-				if n == nil || n.Kind != "mo" || !reflect.DeepEqual(n.Properties, q.Properties) || len(q.Properties) != 2 || q.Properties["variantForm"] != true { t.Fatal("changed inherited prime properties") }
-				if _, ok := q.Properties["pseudoscript"].(bool); !ok { t.Fatal("invalid inherited pseudoscript") }
+				if n == nil || n.Kind != "mo" || !reflect.DeepEqual(n.Properties, q.Properties) || len(q.Properties) != 2 || q.Properties["variantForm"] != true {
+					t.Fatal("changed inherited prime properties")
+				}
+				if _, ok := q.Properties["pseudoscript"].(bool); !ok {
+					t.Fatal("invalid inherited pseudoscript")
+				}
 			}
 			if got := fmt.Sprintf("%x", sha256.Sum256([]byte(svg))); got != wantSVG {
 				t.Errorf("complete SVG %s; want %s", got, wantSVG)
