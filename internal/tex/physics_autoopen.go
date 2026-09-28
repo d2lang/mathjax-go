@@ -81,6 +81,11 @@ type derivativeAutoOpen struct {
 	ignore      bool
 	openCount   int
 	closed      bool
+	openingConsumed bool
+	smash bool
+	right string
+	rightNode *mml.Node
+	rightParsed bool
 }
 
 func (a *derivativeAutoOpen) openingFence() byte {
@@ -101,6 +106,9 @@ func (a *derivativeAutoOpen) start(p *parser) bool {
 	if a == nil {
 		return false
 	}
+	if a.openingConsumed {
+		return true
+	}
 	// TexParser.GetNext uses ECMAScript whitespace; this is not a change to
 	// ordinary character scanning or argument readers.
 	for p.pos < len(p.source) && isPrimeSpace(p.peekRune()) {
@@ -111,6 +119,23 @@ func (a *derivativeAutoOpen) start(p *parser) bool {
 	}
 	p.pos++
 	return true
+}
+
+// The normal matching AutoClose calls toMml before its lexical environment
+// is popped. Parse the right child at that boundary, before SetFont row
+// continuations restore their caller. Their complete content is assembled
+// while unwinding; no parser tokens are executed during that assembly.
+// A direct SpreadLines Pop calls this only after the outer env is restored.
+func (a *derivativeAutoOpen) parseRight(p *parser) error {
+	if a == nil || a.right == "" || a.rightParsed {
+		return nil
+	}
+	right, err := p.parseChild(a.right)
+	if err != nil {
+		return err
+	}
+	a.rightNode, a.rightParsed = right, true
+	return nil
 }
 
 func (a *derivativeAutoOpen) complete(p *parser) ([]*mml.Node, error) {
@@ -142,6 +167,19 @@ func (a *derivativeAutoOpen) completeAfter(p *parser, before func()) ([]*mml.Nod
 	// SpreadLines directly calls the popped item's fenced toMml().
 	if a.ignore && !popped {
 		return nil, nil
+	}
+	if err := a.parseRight(p); err != nil {
+		return nil, err
+	}
+	if a.smash {
+		padded := node("mpadded", row(content, true))
+		padded.Attributes.Set("height", 0)
+		padded.Attributes.Set("depth", 0)
+		content = []*mml.Node{texAtom(padded, mml.TeXClassOrd)}
+	}
+	if a.rightNode != nil {
+		// BaseItem.Push receives the child's one MML result, not PushAll.
+		content = append(content, a.rightNode)
 	}
 	// AutoOpen.toMml delegates to fenced, then removes the row's open/close/
 	// texClass properties. Fence nodes use the node factory, not token factory.

@@ -28,7 +28,7 @@ func (p *parser) physicsCommand(name string, after **derivativeAutoOpen) (nodes 
 		"exp", "log", "ln", "det", "Pr", "tr", "trace", "Tr", "Trace", "erf":
 		nodes, err = p.physicsExpression(name)
 	case "evaluated", "eval":
-		nodes, err = p.physicsEval(name)
+		nodes, err = p.physicsEval(name, after)
 	case "outerproduct", "dyad", "ketbra", "op":
 		nodes, err = p.physicsKetBra(name)
 	case "matrixelement", "matrixel", "mel":
@@ -143,33 +143,40 @@ func (p *parser) physicsExpression(name string) ([]*mml.Node, error) {
 	return []*mml.Node{base, p.operator("\u2061", mml.TeXClassNone, nil), p.fenced("(", content, ")", true)}, nil
 }
 
-func (p *parser) physicsEval(name string) ([]*mml.Node, error) {
+func (p *parser) physicsEval(name string, after **derivativeAutoOpen) ([]*mml.Node, error) {
 	star := p.readStar()
-	p.skipSpaces()
+	// Eval calls GetNext after GetStar. Keep this boundary local; the
+	// shared star reader remains a separate source-parity change.
+	for p.pos < len(p.source) && internalTextSpace(p.peekRune()) {
+		p.consumeRune()
+	}
 	if p.pos >= len(p.source) {
 		return nil, texError("MissingArgFor", "Missing argument for \\%s", name)
 	}
-	var raw string
-	var err error
 	switch p.source[p.pos] {
 	case '{':
-		raw, _, err = p.readArgument(name, false)
-	case '(':
+		raw, _, err := p.readArgument(name, false)
+		if err != nil {
+			return nil, err
+		}
+		if star {
+			raw = "\\smash{" + raw + "}"
+		}
+		// This expansion remains on the caller's input and macro budget.
+		// Its Left item, rather than an eagerly parsed MML node, reaches
+		// any pending script/function/position recipient.
+		expansion := "\\left. " + raw + " \\vphantom{\\int}\\right|"
+		p.source = p.source[:p.pos] + expansion + p.source[p.pos:]
+		return nil, nil
+	case '(', '[':
+		open := p.source[p.pos]
 		p.pos++
-		raw, err = p.readUpToByte(')')
-	case '[':
-		p.pos++
-		raw, err = p.readUpToByte(']')
+		*after = &derivativeAutoOpen{open: open, closer: '|', openingConsumed: true,
+			smash: star, right: "\\vphantom{\\int}"}
+		return nil, nil
 	default:
 		return nil, texError("MissingArgFor", "Missing argument for \\%s", name)
 	}
-	if err != nil {
-		return nil, err
-	}
-	if star {
-		raw = "\\smash{" + raw + "}"
-	}
-	return p.parseContinuationExpansion("\\left. " + raw + " \\vphantom{\\int}\\right|")
 }
 
 func (p *parser) physicsKetBra(name string) ([]*mml.Node, error) {
