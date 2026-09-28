@@ -1,0 +1,23 @@
+{
+  "probeSourceSHA256": "95b13dc7768847fa083417986bfdcd519d90be7ad6c936faa17963f51a2701cf",
+  "readmeSHA256": "e591ebdad0391c97d533495c4e54d112f5c4a71832c0061335d6896aa665b084",
+  "binaries": {
+    "baseline": {
+      "sha256": "3d034e6b4f9cdb49cafeecb704d099239f0d115744adce7f43a5340c8b63297c",
+      "displayAliasAndPrecedenceChecks": true
+    },
+    "candidate": {
+      "sha256": "ab9f55f854d505d3092f6f35330a6d1b25f9c6767b4ee7db0e02c1de7f9045c0",
+      "displayAliasAndPrecedenceChecks": true
+    }
+  },
+  "builds": {
+    "baselineCheckoutCommit": "42932ee918ca4db7f3edf9da30e59b0c9cd61f86",
+    "candidateCheckoutCommit": "e6656bbd1429d8f402ed08c57698ae1f1cb68bd6",
+    "sameAbsoluteProbeSource": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/array-rules-audit/standalone-evidence/probe/main.go",
+    "go": "/Users/aw/.local/share/go/1.27.0/bin/go",
+    "bothExitCodes": 0
+  },
+  "reproductionReceipt": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/array-rules-audit/portable-public-probe-reproduction-157/reproduction-verification.json",
+  "all18ProtectedEvidenceFilesUnchanged": true
+}
