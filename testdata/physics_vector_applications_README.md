@@ -36,15 +36,15 @@ A visible witness, whose entire fixed SVG equals the original, is:
 
 ## Frozen original references
 
-`physics_vector_applications_mathjax_3_2_2.json` contains 2,122 complete,
-unmodified SVGs from D2's frozen MathJax 3.2.2 bundle: 1,476 valid renderings
-and 646 original error SVGs. The fixture records source commit
+`physics_vector_applications_mathjax_3_2_2.json` contains 2,398 complete,
+unmodified SVGs from D2's frozen MathJax 3.2.2 bundle: 1,644 valid renderings
+and 754 original error SVGs. The fixture records source commit
 `ad8f5c21cb810236551da8c6512ba733e67357ee` and all three verified bundle hashes.
 Each reference uses a fresh VM, font cache none, `em=16`, `ex=8`, and the
 recorded display mode.
 
-Against main126 (`3f16eb233d573625bc180b2807fb9e31370e2fd9`), 1,562 of these
-references failed and now match exactly. The 2,188-case audit has no formerly
+Against main127 (`cdb9a591483e6ed813956a3ac6312b732559ab47`), 1,750 of these
+references failed and now match exactly. The 2,464-case audit has no formerly
 exact regressions. All 72 vector controls preserved with the preceding
 OperatorApplication change now match, including its 52 mismatches. Their
 historical receipts remain unchanged in the earlier residual file.
@@ -79,3 +79,11 @@ The generator checks the hashes and updates only fresh original responses,
 preserving the raw historical baseline/candidate receipts. It runs bounded
 batches of 24 fresh VMs. Run `go test ./... -run TestPhysicsVectorApplicationReferences`
 for the complete exact-reference check.
+
+Independent review added 576 fresh original comparisons: all 576 exact, 464
+fixed, and zero regressions. After the HFill merge, 276 additional complete
+original references check vector/function item delivery into array and CD
+cells, empty and nonempty alignment positions, font continuation, positions,
+and EqnArray/Multline subclasses; all 276 match, including 188 baseline
+failures. Rechecking the preceding 2,122 references and all 66 raw receipts
+on main127 changed no results.
