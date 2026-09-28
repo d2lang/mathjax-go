@@ -41,7 +41,7 @@ func (p *parser) parseScriptArgument(attachment *scriptAttachment, font string) 
 		}
 	}()
 	for {
-		p.skipSpaces()
+		p.skipMathTokenSpaces()
 		if p.pos >= len(p.source) {
 			return nil, currentFont, nil, nil, texError("MissingScript", "Missing superscript or subscript argument")
 		}

@@ -381,7 +381,7 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 			p.skipComment()
 			continue
 		}
-		if unicode.IsSpace(p.peekRune()) {
+		if isMathTokenSpace(p.peekRune()) {
 			p.consumeRune()
 			continue
 		}
@@ -953,7 +953,7 @@ func (p *parser) parseOneTokenEvent() (result commandResult, err error) {
 			}
 		}
 	}()
-	p.skipSpaces()
+	p.skipMathTokenSpaces()
 	if p.pos >= len(p.source) {
 		return result, texError("MissingArgFor", "Missing argument")
 	}
