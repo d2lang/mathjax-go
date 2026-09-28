@@ -13,7 +13,7 @@ func (p *parser) parseChild(source string) (*mml.Node, error) {
 	count := p.state.macroCount
 	p.state.macroCount = 0
 	defer func() { p.state.macroCount = count }()
-	sub := &parser{source: source, state: p.state, display: p.display,
+	sub := &parser{source: source, state: p.state, display: p.display, inRoot: p.inRoot,
 		multiLetterFont: p.multiLetterFont, activeFont: p.activeFont,
 		identifierPattern: p.identifierPattern, operatorLetters: p.operatorLetters,
 		noAutoOP: p.noAutoOP, fontExplicitEmpty: p.fontExplicitEmpty,
