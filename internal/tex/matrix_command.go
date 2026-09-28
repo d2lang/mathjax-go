@@ -14,6 +14,8 @@ import (
 )
 
 func (p *parser) matrixCommand(name string) ([]*mml.Node, error) {
+	numbered := name == "eqalignno" || name == "leqalignno"
+	aligned := name == "eqalign" || numbered
 	body, err := p.readMatrixBody(name)
 	if err != nil {
 		return nil, err
@@ -29,29 +31,45 @@ func (p *parser) matrixCommand(name string) ([]*mml.Node, error) {
 			continue
 		}
 		line := node("mtr")
-		for _, raw := range cells {
-			content, err := p.parseMatrixCell(raw)
+		for column, raw := range cells {
+			terminator := byte('}')
+			if column < len(cells)-1 || i < len(rows)-1 {
+				terminator = '&'
+			}
+			content, err := p.parseMatrixCell(raw, terminator)
 			if err != nil {
 				return nil, err
 			}
 			line.AppendChild(node("mtd", content))
 		}
+		// ArrayItem.EndRow treats exactly three entries as an equation and
+		// its label. Other row lengths remain ordinary, unnumbered rows.
+		if numbered && len(line.Children) == 3 {
+			line = node("mlabeledtr", line.Children[2], line.Children[0], line.Children[1])
+		}
 		table.AppendChild(line)
 	}
 	table.Attributes.Set("rowspacing", "4pt")
 	table.Attributes.Set("columnspacing", "1em")
-	if name == "eqalign" {
+	if aligned {
 		table.Attributes.Set("rowspacing", ".5em")
 		table.Attributes.Set("columnspacing", "0.278em")
 		table.Attributes.Set("displaystyle", true)
 		table.Attributes.Set("columnalign", "right left")
+	}
+	if numbered {
+		side := "right"
+		if name == "leqalignno" {
+			side = "left"
+		}
+		table.Attributes.Set("side", side)
 	}
 	for _, r := range rows {
 		if r.spacing == "" {
 			continue
 		}
 		base := .4
-		if name == "eqalign" {
+		if aligned {
 			base = .5
 		}
 		spacing := make([]string, len(table.Children))
@@ -106,16 +124,8 @@ func matrixDimensionEm(dimension string) float64 {
 // synthetic close brace. It does not read an unbraced control sequence as a
 // complete TeX argument.
 func (p *parser) readMatrixBody(name string) (string, error) {
-	p.skipSpaces()
-	if p.pos == len(p.source) {
-		return "", texError("MissingArgFor", "Missing argument for \\%s", name)
-	}
-	if p.source[p.pos] == '{' {
-		p.pos++
-	} else {
-		c := p.consumeRune()
-		p.source = string(c) + "}" + p.source[p.pos:]
-		p.pos = 0
+	if err := p.startMatrixBody(name); err != nil {
+		return "", err
 	}
 	start, depth := p.pos, 0
 	for p.pos < len(p.source) {
@@ -134,6 +144,23 @@ func (p *parser) readMatrixBody(name string) (string, error) {
 		}
 	}
 	return "", texError("MissingCloseBrace", "Missing close brace")
+}
+
+// Matrix reads its opening argument before pushing the open ArrayItem. Script
+// parsing uses the same boundary to reject an unbraced ArrayItem immediately.
+func (p *parser) startMatrixBody(name string) error {
+	p.skipSpaces()
+	if p.pos == len(p.source) {
+		return texError("MissingArgFor", "Missing argument for \\%s", name)
+	}
+	if p.source[p.pos] == '{' {
+		p.pos++
+	} else {
+		c := p.consumeRune()
+		p.source = string(c) + "}" + p.source[p.pos:]
+		p.pos = 0
+	}
+	return nil
 }
 
 type matrixSourceRow struct {
@@ -207,14 +234,14 @@ func splitMatrixBody(body string) ([]matrixSourceRow, error) {
 	return rows, nil
 }
 
-func (p *parser) parseMatrixCell(source string) (*mml.Node, error) {
+func (p *parser) parseMatrixCell(source string, terminator byte) (*mml.Node, error) {
 	// ArrayItem resets its lexical environment at entry and after every cell.
 	// Keep the configuration and logical Stack.global while starting without
 	// the surrounding font, root-index, or identifier-pattern state.
-	sub := &parser{source: source + "}", state: p.state, stackGlobal: p.ensureStackGlobal(), display: p.display,
+	sub := &parser{source: source + string(terminator), state: p.state, stackGlobal: p.ensureStackGlobal(), display: p.display,
 		vectorFactory: p.vectorFactory, genfracPalette: p.genfracPalette,
 		starMacroChildren: p.starMacroChildren, derivativeChildren: p.derivativeChildren}
-	children, _, err := sub.parseRow('}', false)
+	children, _, err := sub.parseRow(terminator, false)
 	if err != nil {
 		return nil, err
 	}
