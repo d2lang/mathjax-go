@@ -93,6 +93,9 @@ func TestFencedWrapperRowOwnershipAndRepeat(t *testing.T) {
 	if row == nil || len(row.node.Children) != 0 || row.node.Parent != nil {
 		t.Fatal("temporary wrapper row acquired semantic children or a parent")
 	}
+	if !row.node.Flags.Spacelike || row.node.Flags.Embellished || row.node.Core() != row.node {
+		t.Fatal("empty temporary row lost its registered dynamic state")
+	}
 	first := *w.getBBox()
 	for i := 0; i < 2; i++ {
 		w.bboxComputed = false
