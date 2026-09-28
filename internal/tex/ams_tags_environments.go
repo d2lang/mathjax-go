@@ -19,7 +19,7 @@ func (p *parser) amsTagEnvironment(environment string) (nodes []*mml.Node, handl
 	switch environment {
 	case "equation", "equation*":
 		nodes, err = p.amsEquation(environment)
-	case "split", "align", "align*", "aligned", "gather", "gather*":
+	case "split", "align", "align*", "aligned", "alignedat", "gather", "gather*":
 		nodes, err = p.amsAlignment(environment)
 	default:
 		return nil, false, nil
@@ -66,6 +66,17 @@ func (p *parser) amsAlignment(environment string) (nodes []*mml.Node, err error)
 	verticalAlign := ""
 	if environment == "aligned" {
 		verticalAlign, _, err = p.readBrackets(nil)
+		if err != nil {
+			return nil, err
+		}
+	}
+	pairCount := ""
+	if environment == "alignedat" {
+		verticalAlign, err = p.readAlignedatAlignment()
+		if err != nil {
+			return nil, err
+		}
+		pairCount, err = p.readEquationPairCount(environment)
 		if err != nil {
 			return nil, err
 		}
@@ -137,6 +148,10 @@ func (p *parser) amsAlignment(environment string) (nodes []*mml.Node, err error)
 		table.Children[i].Parent = table
 	}
 	finishAMSEqnArrayTable(table, environment, maximumColumns)
+	if environment == "alignedat" {
+		finishAlignedatTable(table, pairCount, verticalAlign, maximumColumns)
+		verticalAlign = ""
+	}
 	switch strings.TrimSpace(verticalAlign) {
 	case "t":
 		table.Attributes.Set("align", "baseline 1")

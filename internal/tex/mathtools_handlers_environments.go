@@ -251,8 +251,20 @@ func (p *parser) mathtoolsCases(environment string) ([]*mml.Node, error) {
 }
 
 func (p *parser) mathtoolsAlignment(environment string) ([]*mml.Node, error) {
+	verticalAlign, pairCount := "", ""
+	if environment == "alignedat" {
+		var err error
+		verticalAlign, err = p.readAlignedatAlignment()
+		if err != nil {
+			return nil, err
+		}
+		pairCount, err = p.readEquationPairCount(environment)
+		if err != nil {
+			return nil, err
+		}
+	}
 	if strings.Contains(environment, "alignat") {
-		if err := p.readEquationPairCount(environment); err != nil {
+		if _, err := p.readEquationPairCount(environment); err != nil {
 			return nil, err
 		}
 	}
@@ -268,12 +280,13 @@ func (p *parser) mathtoolsAlignment(environment string) ([]*mml.Node, error) {
 	if strings.Contains(environment, "multline") {
 		return p.mathtoolsMultlineBody(body)
 	}
-	// Mathtools intercepts gather before the ordinary AMS environment handler.
-	// Keep its special rows, but retain the same row-local tag lifetime.
+	// Mathtools intercepts these arrays before the ordinary AMS handler.
+	// Keep their special rows and the same row-local tag lifetime; alignedat
+	// remains untaggable even when a Mathtools command triggers this route.
 	var tagState *amsTagState
-	if environment == "gather" || environment == "gather*" {
+	if environment == "gather" || environment == "gather*" || environment == "alignedat" {
 		tagState = p.amsTags()
-		tagState.start(environment, true, environment == "gather")
+		tagState.start(environment, environment != "alignedat", environment == "gather")
 		defer tagState.end()
 	}
 	rows := splitTable(body)
@@ -480,6 +493,9 @@ func (p *parser) mathtoolsAlignment(environment string) ([]*mml.Node, error) {
 				}
 			}
 			finishAMSEqnArrayTable(table, environment, maximumColumns)
+			if environment == "alignedat" {
+				finishAlignedatTable(table, pairCount, verticalAlign, maximumColumns)
+			}
 		}
 	}
 	if len(adjustedRowSpacing) != 0 {

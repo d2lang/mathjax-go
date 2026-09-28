@@ -113,7 +113,7 @@ func (p *parser) beginEnvironment(name string) ([]*mml.Node, error) {
 	if strings.Contains(environment, "alignat") {
 		// AMS consumes the maximum pair count before the environment body; it
 		// does not appear in the resulting MathML table.
-		if err := p.readEquationPairCount(environment); err != nil {
+		if _, err := p.readEquationPairCount(environment); err != nil {
 			return nil, err
 		}
 	}
@@ -258,21 +258,26 @@ func isGuardedEquationEnvironment(environment string) bool {
 	return false
 }
 
-func (p *parser) readEquationPairCount(environment string) error {
-	count, _, err := p.readArgument("begin{"+environment+"}", false)
-	if err != nil {
-		return err
+func (p *parser) readEquationPairCount(environment string) (string, error) {
+	// AlignAt's GetArgument calls GetNext (JavaScript whitespace), and its
+	// diagnostics name the active control sequence, \\begin.
+	for p.pos < len(p.source) && internalTextSpace(p.peekRune()) {
+		p.consumeRune()
 	}
-	if environment == "alignat" || environment == "alignat*" || isAMSXAlignAt(environment) {
+	count, _, err := p.readArgumentAtCursor("begin", false)
+	if err != nil {
+		return "", err
+	}
+	if environment == "alignat" || environment == "alignat*" || environment == "alignedat" || isAMSXAlignAt(environment) {
 		// AlignAt/XalignAt reject /[^0-9]/ before checking equation nesting.
 		// In particular, their source regexp accepts empty and zero counts.
 		for _, c := range count {
 			if c < '0' || c > '9' {
-				return texError("PositiveIntegerArg", "Argument to \\begin{%s} must me a positive integer", environment)
+				return "", texError("PositiveIntegerArg", "Argument to \\begin{%s} must me a positive integer", environment)
 			}
 		}
 	}
-	return nil
+	return count, nil
 }
 
 func isAMSXAlignAt(environment string) bool {

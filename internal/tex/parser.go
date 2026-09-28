@@ -984,6 +984,10 @@ func suppressesFunctionApplication(next *mml.Node) bool {
 
 func (p *parser) readArgument(name string, noneOK bool) (string, bool, error) {
 	p.skipSpaces()
+	return p.readArgumentAtCursor(name, noneOK)
+}
+
+func (p *parser) readArgumentAtCursor(name string, noneOK bool) (string, bool, error) {
 	if p.pos >= len(p.source) {
 		if noneOK {
 			return "", false, nil
