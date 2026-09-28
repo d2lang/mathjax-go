@@ -42,7 +42,9 @@ The complete exploratory inventory is 1,140 inputs. The other **156** raw
 references are retained in `alignedat_residuals.json` with original, baseline
 and candidate outputs: 140 original-valid formulas and 16 original errors.
 They are not passing expectations. There are no formerly exact regressions
-against the baseline or against the intermediate argument-only candidate.
+against the baseline or against the intermediate argument-only candidate. A separate
+replay of all 1,684 unique inputs in earlier published residual inventories
+finds 94 additional exact matches and no other changed outputs.
 
 Fifty-eight residual outputs change. Eleven representative changed visual
 families were rendered and inspected. The residual initial-operator spacing,
