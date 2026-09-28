@@ -16,8 +16,8 @@ func TestArrayHorizontalRuleOriginalReferences(t *testing.T) {
 	}
 	var fixture struct {
 		MathjaxGitCommit string
-		Counts          struct{ Total, Exact, Raw, ExactErrors, ExactValid int }
-		Cases           []struct {
+		Counts           struct{ Total, Exact, Raw, ExactErrors, ExactValid int }
+		Cases            []struct {
 			Name, TeX, SVG string
 			Display        bool
 		}
