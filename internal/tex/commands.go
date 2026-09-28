@@ -1206,21 +1206,36 @@ func negateDimension(value string) string {
 func (p *parser) rule(name string) ([]*mml.Node, error) {
 	voffset, _, err := p.readBrackets(nil)
 	if err != nil {
+		var failure *Error
+		if errors.As(err, &failure) && failure.ID == "MissingCloseBracket" {
+			return nil, texError(failure.ID, "Could not find closing ']' for argument to %s", "\\"+name)
+		}
 		return nil, err
 	}
-	widthRaw, _, err := p.readArgument(name, false)
+	width, err := p.readDimension(name)
 	if err != nil {
 		return nil, err
 	}
-	heightRaw, _, err := p.readArgument(name, false)
+	height, err := p.readDimension(name)
 	if err != nil {
 		return nil, err
 	}
-	attrs := map[string]any{"width": strings.TrimSpace(widthRaw), "height": strings.TrimSpace(heightRaw), "mathbackground": "currentColor"}
+	color := p.activeColor
+	if color == "" {
+		color = "black"
+	}
+	space := setAttributes(node("mspace"), map[string]any{"width": width, "height": height, "mathbackground": color})
 	if voffset != "" {
-		attrs["voffset"] = voffset
+		padded := setAttributes(node("mpadded", space), map[string]any{"voffset": voffset})
+		if strings.HasPrefix(voffset, "-") {
+			padded.Attributes.Set("height", voffset)
+			padded.Attributes.Set("depth", "+"+voffset[1:])
+		} else {
+			padded.Attributes.Set("height", "+"+voffset)
+		}
+		return []*mml.Node{padded}, nil
 	}
-	return []*mml.Node{setAttributes(node("mspace"), attrs)}, nil
+	return []*mml.Node{space}, nil
 }
 
 func (p *parser) readStar() bool {
