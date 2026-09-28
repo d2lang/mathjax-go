@@ -1,0 +1,3173 @@
+{
+  "sourceReviews": {
+    "parser": "# Independent cramped-substack review\n\nThe six source lines match the pinned Mathtools maps and BaseMethods.Array primed-style handling. The macro is exactly the source one-argument expansion; data-cramped is set before inheritance while S scriptlevel and useHeight=false retain their existing source behavior. Dynamic macro/paired/environment overrides and the normal child-argument path remain intact.\n\n318 independent original inputs produce 284 complete SVG matches, 224 newly exact results and zero formerly exact regressions. All 34 other receipts are preserved in results.json. No source blocker was found.\n\nChanged nonexact classification:\n\n* Fourteen outer Huge+bf cases expose the existing array font leakage after the previously unknown macro expands. Their explicit macro expansion is identical in both original and candidate, and the glyph identities/styles are unchanged between baseline and candidate expansions; only the intended cramped layout is newly applied.\n* Twelve framed/dashed direct arrays retain the existing column-spec/frame defect, independently reproduced by unchanged ordinary subarray controls. Every full msup subtree in the candidate matches the corresponding original, so the cramped script placement is corrected; the missing exterior frame, horizontal spacing and resulting viewport gap predate this change. Aggregate viewport error is not claimed to improve while that frame is missing.\n* Four unbraced script/frac errors, two text-argument ampersand cases and two ungrouped nested aligned cases reproduce through the exact literal macro expansion. Six expansion controls are unchanged on the baseline. The two script cases retain the existing unbraced Array/Begin ownership error, separately reproduced with unchanged ordinary substack controls; cramped metadata changes their incorrectly accepted Go rendering. These are original-error inputs, and do not establish a valid-rendering regression.\n\nAll 22 macro-expansion controls match their corresponding original and candidate outputs. All 12 ordinary-subarray controls are byte-unchanged across baseline and candidate. Browser screenshots residuals-0.png through residuals-2.png were inspected, including every changed valid family. Raw original SVGs are untouched and these comparisons are not passing fixture normalizations.\n\nRoot corpus cross-check: all 34 nonexact macro-context cases have stored literal expansions with identical original and candidate outputs. The additional ordinary substack controls in the root inventory already reproduce outer-bold font leakage and boxed-empty-table geometry. The latter is being composed with the independently audited enclosure repair before publication. Direct framed array gaps are the existing Array column/frame builder behavior, not a missing macro expansion.\n",
+    "svg": "# Independent cramped-substack review\n\nReviewed root patch751bcf6 (same production after rebase onto merged143) against pinned MathtoolsMappings.crampedsubstack/crampedsubarray and BaseMethods.Array. The one-argument macro string is exact. Array's S' branch sets data-cramped=true before MathML inheritance, then applies S's scriptlevel1/displaystylefalse and ragged useHeight=false behavior. The Go flag is set after parsing the cells but before inheritance; the prime flag changes MathML inheritance, not TeX lexical font or argument parsing. No source issue found.\n\n354 inputs were distinct from the prior root and parser review corpora. On composed candidate143,244 match complete originals,218 are fixes, and none regress an exact baseline. Candidate outputs are byte-identical to the reviewed141 candidate for all354. Affine glyph/paint/root comparison reports211 visual fixes and zero visual regressions among33 previously visual-exact inputs. It does not claim that inherited nonexact layouts are all visually repaired.\n\nAll140 macro/literal pairs are equal in both the original and candidate. The110 raw inputs remain unmodified:\n\n-86 macro/literal counterparts expose existing font context and row-rounding differences. All43 direct literal cases have exactly the same glyph identities/styles as their unchanged ordinary-subarray controls, in both original and Go. The candidate also preserves baseline glyph identities. Thirteen direct cases retain identical complete before/after visible geometry; the remaining30 apply cramped placement while retaining the existing outer MathFont array leak. No raw case is promoted by stripping fonts or rounding output.\n-16 cases concern optional `\\cramped[\\scriptscriptstyle]`: eight unchanged ordinary-substack controls and eight newly available macro expressions. Fresh literal expansions match originals and candidate outputs exactly. The complete inner cramped mstyle subtree is identical to the corresponding ordinary-substack control, proving the existing optional-style scale discrepancy belongs to that handler and is not newly introduced by the stack macro.\n-Eight helper `\\begin`/`\\end` override cases are original errors. Both original and candidate equal their literal expansions, including their inherited diagnostic/closing-scope differences. These are not presented as valid rendering fixes.\n\n`results143.json` holds354cases with untouched original/baseline/candidate outputs. `controls143.json` holds110control receipts, including duplicates used for explicit equivalence and eight extra optional-style literal expansions. `residual-proof.json`, `optional-style-proof.json`, and `geometry143.json` record the assertions above. `merge-originals143.json` is the deduplicated413-input merge form with standard original/baseline/candidate fields.\n\nNo source edits or Go builds were performed. No scoped finding remains; the inherited MathFont array leak, optional cramped-style scale discrepancy, rounding, and error diagnostics remain followups.\n"
+  },
+  "independentLiteralAndFontChecks": [
+    {
+      "tex": "\\crampedsubstack{{\\displaystyle x^{y^z}}\\\\{\\textstyle z^{w^v}}}",
+      "display": false,
+      "family": "macro-font-prime",
+      "literalOriginalEqual": true,
+      "literalCandidateEqual": true
+    },
+    {
+      "tex": "\\crampedsubstack{{\\displaystyle x^{y^z}}\\\\{\\textstyle z^{w^v}}}",
+      "display": true,
+      "family": "macro-font-prime",
+      "literalOriginalEqual": true,
+      "literalCandidateEqual": true
+    },
+    {
+      "tex": "\\begin{crampedsubarray}{c}{\\displaystyle x^{y^z}}\\\\{\\textstyle z^{w^v}}\\end{crampedsubarray}",
+      "display": false,
+      "family": "literal-font-prime",
+      "ordinaryControl": "\\begin{subarray}{c}{\\displaystyle x^{y^z}}\\\\{\\textstyle z^{w^v}}\\end{subarray}",
+      "ordinaryByteUnchanged": true,
+      "originalGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsBaseline": true,
+      "geometryUnchanged": true
+    },
+    {
+      "tex": "\\begin{crampedsubarray}{c}{\\displaystyle x^{y^z}}\\\\{\\textstyle z^{w^v}}\\end{crampedsubarray}",
+      "display": true,
+      "family": "literal-font-prime",
+      "ordinaryControl": "\\begin{subarray}{c}{\\displaystyle x^{y^z}}\\\\{\\textstyle z^{w^v}}\\end{subarray}",
+      "ordinaryByteUnchanged": true,
+      "originalGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsBaseline": true,
+      "geometryUnchanged": true
+    },
+    {
+      "tex": "\\mathbf{\\crampedsubstack{{\\displaystyle x^{y^z}}\\\\{\\textstyle z^{w^v}}}}",
+      "display": false,
+      "family": "macro-font-prime",
+      "literalOriginalEqual": true,
+      "literalCandidateEqual": true
+    },
+    {
+      "tex": "\\mathbf{\\crampedsubstack{{\\displaystyle x^{y^z}}\\\\{\\textstyle z^{w^v}}}}",
+      "display": true,
+      "family": "macro-font-prime",
+      "literalOriginalEqual": true,
+      "literalCandidateEqual": true
+    },
+    {
+      "tex": "\\mathbf{\\begin{crampedsubarray}{c}{\\displaystyle x^{y^z}}\\\\{\\textstyle z^{w^v}}\\end{crampedsubarray}}",
+      "display": false,
+      "family": "literal-font-prime",
+      "ordinaryControl": "\\mathbf{\\begin{subarray}{c}{\\displaystyle x^{y^z}}\\\\{\\textstyle z^{w^v}}\\end{subarray}}",
+      "ordinaryByteUnchanged": true,
+      "originalGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsBaseline": true,
+      "geometryUnchanged": true
+    },
+    {
+      "tex": "\\mathbf{\\begin{crampedsubarray}{c}{\\displaystyle x^{y^z}}\\\\{\\textstyle z^{w^v}}\\end{crampedsubarray}}",
+      "display": true,
+      "family": "literal-font-prime",
+      "ordinaryControl": "\\mathbf{\\begin{subarray}{c}{\\displaystyle x^{y^z}}\\\\{\\textstyle z^{w^v}}\\end{subarray}}",
+      "ordinaryByteUnchanged": true,
+      "originalGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsBaseline": true,
+      "geometryUnchanged": true
+    },
+    {
+      "tex": "\\mathsf{\\crampedsubstack{{\\displaystyle x^{y^z}}\\\\{\\textstyle z^{w^v}}}}",
+      "display": false,
+      "family": "macro-font-prime",
+      "literalOriginalEqual": true,
+      "literalCandidateEqual": true
+    },
+    {
+      "tex": "\\mathsf{\\crampedsubstack{{\\displaystyle x^{y^z}}\\\\{\\textstyle z^{w^v}}}}",
+      "display": true,
+      "family": "macro-font-prime",
+      "literalOriginalEqual": true,
+      "literalCandidateEqual": true
+    },
+    {
+      "tex": "\\mathsf{\\begin{crampedsubarray}{c}{\\displaystyle x^{y^z}}\\\\{\\textstyle z^{w^v}}\\end{crampedsubarray}}",
+      "display": false,
+      "family": "literal-font-prime",
+      "ordinaryControl": "\\mathsf{\\begin{subarray}{c}{\\displaystyle x^{y^z}}\\\\{\\textstyle z^{w^v}}\\end{subarray}}",
+      "ordinaryByteUnchanged": true,
+      "originalGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsBaseline": true,
+      "geometryUnchanged": true
+    },
+    {
+      "tex": "\\mathsf{\\begin{crampedsubarray}{c}{\\displaystyle x^{y^z}}\\\\{\\textstyle z^{w^v}}\\end{crampedsubarray}}",
+      "display": true,
+      "family": "literal-font-prime",
+      "ordinaryControl": "\\mathsf{\\begin{subarray}{c}{\\displaystyle x^{y^z}}\\\\{\\textstyle z^{w^v}}\\end{subarray}}",
+      "ordinaryByteUnchanged": true,
+      "originalGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsBaseline": true,
+      "geometryUnchanged": true
+    },
+    {
+      "tex": "\\mathcal{\\crampedsubstack{{\\displaystyle x^{y^z}}\\\\{\\textstyle z^{w^v}}}}",
+      "display": false,
+      "family": "macro-font-prime",
+      "literalOriginalEqual": true,
+      "literalCandidateEqual": true
+    },
+    {
+      "tex": "\\mathcal{\\crampedsubstack{{\\displaystyle x^{y^z}}\\\\{\\textstyle z^{w^v}}}}",
+      "display": true,
+      "family": "macro-font-prime",
+      "literalOriginalEqual": true,
+      "literalCandidateEqual": true
+    },
+    {
+      "tex": "\\mathcal{\\begin{crampedsubarray}{c}{\\displaystyle x^{y^z}}\\\\{\\textstyle z^{w^v}}\\end{crampedsubarray}}",
+      "display": false,
+      "family": "literal-font-prime",
+      "ordinaryControl": "\\mathcal{\\begin{subarray}{c}{\\displaystyle x^{y^z}}\\\\{\\textstyle z^{w^v}}\\end{subarray}}",
+      "ordinaryByteUnchanged": true,
+      "originalGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsBaseline": true,
+      "geometryUnchanged": true
+    },
+    {
+      "tex": "\\mathcal{\\begin{crampedsubarray}{c}{\\displaystyle x^{y^z}}\\\\{\\textstyle z^{w^v}}\\end{crampedsubarray}}",
+      "display": true,
+      "family": "literal-font-prime",
+      "ordinaryControl": "\\mathcal{\\begin{subarray}{c}{\\displaystyle x^{y^z}}\\\\{\\textstyle z^{w^v}}\\end{subarray}}",
+      "ordinaryByteUnchanged": true,
+      "originalGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsBaseline": true,
+      "geometryUnchanged": true
+    },
+    {
+      "tex": "\\bf\\mathnormal{\\crampedsubstack{{\\displaystyle x^{y^z}}\\\\{\\textstyle z^{w^v}}}}",
+      "display": false,
+      "family": "macro-font-prime",
+      "literalOriginalEqual": true,
+      "literalCandidateEqual": true
+    },
+    {
+      "tex": "\\bf\\mathnormal{\\crampedsubstack{{\\displaystyle x^{y^z}}\\\\{\\textstyle z^{w^v}}}}",
+      "display": true,
+      "family": "macro-font-prime",
+      "literalOriginalEqual": true,
+      "literalCandidateEqual": true
+    },
+    {
+      "tex": "\\bf\\mathnormal{\\begin{crampedsubarray}{c}{\\displaystyle x^{y^z}}\\\\{\\textstyle z^{w^v}}\\end{crampedsubarray}}",
+      "display": false,
+      "family": "literal-font-prime",
+      "ordinaryControl": "\\bf\\mathnormal{\\begin{subarray}{c}{\\displaystyle x^{y^z}}\\\\{\\textstyle z^{w^v}}\\end{subarray}}",
+      "ordinaryByteUnchanged": true,
+      "originalGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsBaseline": true,
+      "geometryUnchanged": true
+    },
+    {
+      "tex": "\\bf\\mathnormal{\\begin{crampedsubarray}{c}{\\displaystyle x^{y^z}}\\\\{\\textstyle z^{w^v}}\\end{crampedsubarray}}",
+      "display": true,
+      "family": "literal-font-prime",
+      "ordinaryControl": "\\bf\\mathnormal{\\begin{subarray}{c}{\\displaystyle x^{y^z}}\\\\{\\textstyle z^{w^v}}\\end{subarray}}",
+      "ordinaryByteUnchanged": true,
+      "originalGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsBaseline": true,
+      "geometryUnchanged": true
+    },
+    {
+      "tex": "\\cramped[\\textstyle]{\\crampedsubstack{{\\displaystyle x^{y^z}}\\\\{\\textstyle z^{w^v}}}}",
+      "display": false,
+      "family": "macro-font-prime",
+      "literalOriginalEqual": true,
+      "literalCandidateEqual": true
+    },
+    {
+      "tex": "\\cramped[\\textstyle]{\\crampedsubstack{{\\displaystyle x^{y^z}}\\\\{\\textstyle z^{w^v}}}}",
+      "display": true,
+      "family": "macro-font-prime",
+      "literalOriginalEqual": true,
+      "literalCandidateEqual": true
+    },
+    {
+      "tex": "\\cramped[\\textstyle]{\\begin{crampedsubarray}{c}{\\displaystyle x^{y^z}}\\\\{\\textstyle z^{w^v}}\\end{crampedsubarray}}",
+      "display": false,
+      "family": "literal-font-prime",
+      "ordinaryControl": "\\cramped[\\textstyle]{\\begin{subarray}{c}{\\displaystyle x^{y^z}}\\\\{\\textstyle z^{w^v}}\\end{subarray}}",
+      "ordinaryByteUnchanged": true,
+      "originalGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsBaseline": true,
+      "geometryUnchanged": true
+    },
+    {
+      "tex": "\\cramped[\\textstyle]{\\begin{crampedsubarray}{c}{\\displaystyle x^{y^z}}\\\\{\\textstyle z^{w^v}}\\end{crampedsubarray}}",
+      "display": true,
+      "family": "literal-font-prime",
+      "ordinaryControl": "\\cramped[\\textstyle]{\\begin{subarray}{c}{\\displaystyle x^{y^z}}\\\\{\\textstyle z^{w^v}}\\end{subarray}}",
+      "ordinaryByteUnchanged": true,
+      "originalGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsBaseline": true,
+      "geometryUnchanged": true
+    },
+    {
+      "tex": "\\frac{x}{\\crampedsubstack{{\\displaystyle x^{y^z}}\\\\{\\textstyle z^{w^v}}}}",
+      "display": true,
+      "family": "macro-font-prime",
+      "literalOriginalEqual": true,
+      "literalCandidateEqual": true
+    },
+    {
+      "tex": "\\frac{x}{\\begin{crampedsubarray}{c}{\\displaystyle x^{y^z}}\\\\{\\textstyle z^{w^v}}\\end{crampedsubarray}}",
+      "display": true,
+      "family": "literal-font-prime",
+      "ordinaryControl": "\\frac{x}{\\begin{subarray}{c}{\\displaystyle x^{y^z}}\\\\{\\textstyle z^{w^v}}\\end{subarray}}",
+      "ordinaryByteUnchanged": true,
+      "originalGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsBaseline": true,
+      "geometryUnchanged": true
+    },
+    {
+      "tex": "\\mathbf{\\crampedsubstack{\\mathchoice{x^2}{y^3}{z^4}{w^5}}}",
+      "display": false,
+      "family": "macro-font-prime",
+      "literalOriginalEqual": true,
+      "literalCandidateEqual": true
+    },
+    {
+      "tex": "\\mathbf{\\crampedsubstack{\\mathchoice{x^2}{y^3}{z^4}{w^5}}}",
+      "display": true,
+      "family": "macro-font-prime",
+      "literalOriginalEqual": true,
+      "literalCandidateEqual": true
+    },
+    {
+      "tex": "\\mathbf{\\begin{crampedsubarray}{c}\\mathchoice{x^2}{y^3}{z^4}{w^5}\\end{crampedsubarray}}",
+      "display": false,
+      "family": "literal-font-prime",
+      "ordinaryControl": "\\mathbf{\\begin{subarray}{c}\\mathchoice{x^2}{y^3}{z^4}{w^5}\\end{subarray}}",
+      "ordinaryByteUnchanged": true,
+      "originalGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsBaseline": true,
+      "geometryUnchanged": false
+    },
+    {
+      "tex": "\\mathbf{\\begin{crampedsubarray}{c}\\mathchoice{x^2}{y^3}{z^4}{w^5}\\end{crampedsubarray}}",
+      "display": true,
+      "family": "literal-font-prime",
+      "ordinaryControl": "\\mathbf{\\begin{subarray}{c}\\mathchoice{x^2}{y^3}{z^4}{w^5}\\end{subarray}}",
+      "ordinaryByteUnchanged": true,
+      "originalGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsBaseline": true,
+      "geometryUnchanged": false
+    },
+    {
+      "tex": "\\mathsf{\\crampedsubstack{\\mathchoice{x^2}{y^3}{z^4}{w^5}}}",
+      "display": false,
+      "family": "macro-font-prime",
+      "literalOriginalEqual": true,
+      "literalCandidateEqual": true
+    },
+    {
+      "tex": "\\mathsf{\\crampedsubstack{\\mathchoice{x^2}{y^3}{z^4}{w^5}}}",
+      "display": true,
+      "family": "macro-font-prime",
+      "literalOriginalEqual": true,
+      "literalCandidateEqual": true
+    },
+    {
+      "tex": "\\mathsf{\\begin{crampedsubarray}{c}\\mathchoice{x^2}{y^3}{z^4}{w^5}\\end{crampedsubarray}}",
+      "display": false,
+      "family": "literal-font-prime",
+      "ordinaryControl": "\\mathsf{\\begin{subarray}{c}\\mathchoice{x^2}{y^3}{z^4}{w^5}\\end{subarray}}",
+      "ordinaryByteUnchanged": true,
+      "originalGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsBaseline": true,
+      "geometryUnchanged": false
+    },
+    {
+      "tex": "\\mathsf{\\begin{crampedsubarray}{c}\\mathchoice{x^2}{y^3}{z^4}{w^5}\\end{crampedsubarray}}",
+      "display": true,
+      "family": "literal-font-prime",
+      "ordinaryControl": "\\mathsf{\\begin{subarray}{c}\\mathchoice{x^2}{y^3}{z^4}{w^5}\\end{subarray}}",
+      "ordinaryByteUnchanged": true,
+      "originalGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsBaseline": true,
+      "geometryUnchanged": false
+    },
+    {
+      "tex": "\\mathcal{\\crampedsubstack{\\mathchoice{x^2}{y^3}{z^4}{w^5}}}",
+      "display": false,
+      "family": "macro-font-prime",
+      "literalOriginalEqual": true,
+      "literalCandidateEqual": true
+    },
+    {
+      "tex": "\\mathcal{\\crampedsubstack{\\mathchoice{x^2}{y^3}{z^4}{w^5}}}",
+      "display": true,
+      "family": "macro-font-prime",
+      "literalOriginalEqual": true,
+      "literalCandidateEqual": true
+    },
+    {
+      "tex": "\\mathcal{\\begin{crampedsubarray}{c}\\mathchoice{x^2}{y^3}{z^4}{w^5}\\end{crampedsubarray}}",
+      "display": false,
+      "family": "literal-font-prime",
+      "ordinaryControl": "\\mathcal{\\begin{subarray}{c}\\mathchoice{x^2}{y^3}{z^4}{w^5}\\end{subarray}}",
+      "ordinaryByteUnchanged": true,
+      "originalGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsBaseline": true,
+      "geometryUnchanged": false
+    },
+    {
+      "tex": "\\mathcal{\\begin{crampedsubarray}{c}\\mathchoice{x^2}{y^3}{z^4}{w^5}\\end{crampedsubarray}}",
+      "display": true,
+      "family": "literal-font-prime",
+      "ordinaryControl": "\\mathcal{\\begin{subarray}{c}\\mathchoice{x^2}{y^3}{z^4}{w^5}\\end{subarray}}",
+      "ordinaryByteUnchanged": true,
+      "originalGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsBaseline": true,
+      "geometryUnchanged": false
+    },
+    {
+      "tex": "\\mathbf{\\crampedsubstack{\\prescript{a^2}{b^3}{x}}}",
+      "display": false,
+      "family": "macro-font-prime",
+      "literalOriginalEqual": true,
+      "literalCandidateEqual": true
+    },
+    {
+      "tex": "\\mathbf{\\crampedsubstack{\\prescript{a^2}{b^3}{x}}}",
+      "display": true,
+      "family": "macro-font-prime",
+      "literalOriginalEqual": true,
+      "literalCandidateEqual": true
+    },
+    {
+      "tex": "\\mathbf{\\begin{crampedsubarray}{c}\\prescript{a^2}{b^3}{x}\\end{crampedsubarray}}",
+      "display": false,
+      "family": "literal-font-prime",
+      "ordinaryControl": "\\mathbf{\\begin{subarray}{c}\\prescript{a^2}{b^3}{x}\\end{subarray}}",
+      "ordinaryByteUnchanged": true,
+      "originalGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsBaseline": true,
+      "geometryUnchanged": false
+    },
+    {
+      "tex": "\\mathbf{\\begin{crampedsubarray}{c}\\prescript{a^2}{b^3}{x}\\end{crampedsubarray}}",
+      "display": true,
+      "family": "literal-font-prime",
+      "ordinaryControl": "\\mathbf{\\begin{subarray}{c}\\prescript{a^2}{b^3}{x}\\end{subarray}}",
+      "ordinaryByteUnchanged": true,
+      "originalGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsBaseline": true,
+      "geometryUnchanged": false
+    },
+    {
+      "tex": "\\mathsf{\\crampedsubstack{\\prescript{a^2}{b^3}{x}}}",
+      "display": false,
+      "family": "macro-font-prime",
+      "literalOriginalEqual": true,
+      "literalCandidateEqual": true
+    },
+    {
+      "tex": "\\mathsf{\\crampedsubstack{\\prescript{a^2}{b^3}{x}}}",
+      "display": true,
+      "family": "macro-font-prime",
+      "literalOriginalEqual": true,
+      "literalCandidateEqual": true
+    },
+    {
+      "tex": "\\mathsf{\\begin{crampedsubarray}{c}\\prescript{a^2}{b^3}{x}\\end{crampedsubarray}}",
+      "display": false,
+      "family": "literal-font-prime",
+      "ordinaryControl": "\\mathsf{\\begin{subarray}{c}\\prescript{a^2}{b^3}{x}\\end{subarray}}",
+      "ordinaryByteUnchanged": true,
+      "originalGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsBaseline": true,
+      "geometryUnchanged": false
+    },
+    {
+      "tex": "\\mathsf{\\begin{crampedsubarray}{c}\\prescript{a^2}{b^3}{x}\\end{crampedsubarray}}",
+      "display": true,
+      "family": "literal-font-prime",
+      "ordinaryControl": "\\mathsf{\\begin{subarray}{c}\\prescript{a^2}{b^3}{x}\\end{subarray}}",
+      "ordinaryByteUnchanged": true,
+      "originalGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsBaseline": true,
+      "geometryUnchanged": false
+    },
+    {
+      "tex": "\\mathcal{\\crampedsubstack{\\prescript{a^2}{b^3}{x}}}",
+      "display": false,
+      "family": "macro-font-prime",
+      "literalOriginalEqual": true,
+      "literalCandidateEqual": true
+    },
+    {
+      "tex": "\\mathcal{\\crampedsubstack{\\prescript{a^2}{b^3}{x}}}",
+      "display": true,
+      "family": "macro-font-prime",
+      "literalOriginalEqual": true,
+      "literalCandidateEqual": true
+    },
+    {
+      "tex": "\\mathcal{\\begin{crampedsubarray}{c}\\prescript{a^2}{b^3}{x}\\end{crampedsubarray}}",
+      "display": false,
+      "family": "literal-font-prime",
+      "ordinaryControl": "\\mathcal{\\begin{subarray}{c}\\prescript{a^2}{b^3}{x}\\end{subarray}}",
+      "ordinaryByteUnchanged": true,
+      "originalGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsBaseline": true,
+      "geometryUnchanged": false
+    },
+    {
+      "tex": "\\mathcal{\\begin{crampedsubarray}{c}\\prescript{a^2}{b^3}{x}\\end{crampedsubarray}}",
+      "display": true,
+      "family": "literal-font-prime",
+      "ordinaryControl": "\\mathcal{\\begin{subarray}{c}\\prescript{a^2}{b^3}{x}\\end{subarray}}",
+      "ordinaryByteUnchanged": true,
+      "originalGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsBaseline": true,
+      "geometryUnchanged": false
+    },
+    {
+      "tex": "\\mathbf{\\crampedsubstack{\\mmlToken{mo}{`}^2\\\\x^{²}}}",
+      "display": false,
+      "family": "macro-font-prime",
+      "literalOriginalEqual": true,
+      "literalCandidateEqual": true
+    },
+    {
+      "tex": "\\mathbf{\\crampedsubstack{\\mmlToken{mo}{`}^2\\\\x^{²}}}",
+      "display": true,
+      "family": "macro-font-prime",
+      "literalOriginalEqual": true,
+      "literalCandidateEqual": true
+    },
+    {
+      "tex": "\\mathbf{\\begin{crampedsubarray}{c}\\mmlToken{mo}{`}^2\\\\x^{²}\\end{crampedsubarray}}",
+      "display": false,
+      "family": "literal-font-prime",
+      "ordinaryControl": "\\mathbf{\\begin{subarray}{c}\\mmlToken{mo}{`}^2\\\\x^{²}\\end{subarray}}",
+      "ordinaryByteUnchanged": true,
+      "originalGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsBaseline": true,
+      "geometryUnchanged": false
+    },
+    {
+      "tex": "\\mathbf{\\begin{crampedsubarray}{c}\\mmlToken{mo}{`}^2\\\\x^{²}\\end{crampedsubarray}}",
+      "display": true,
+      "family": "literal-font-prime",
+      "ordinaryControl": "\\mathbf{\\begin{subarray}{c}\\mmlToken{mo}{`}^2\\\\x^{²}\\end{subarray}}",
+      "ordinaryByteUnchanged": true,
+      "originalGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsBaseline": true,
+      "geometryUnchanged": false
+    },
+    {
+      "tex": "\\mathsf{\\crampedsubstack{\\mmlToken{mo}{`}^2\\\\x^{²}}}",
+      "display": false,
+      "family": "macro-font-prime",
+      "literalOriginalEqual": true,
+      "literalCandidateEqual": true
+    },
+    {
+      "tex": "\\mathsf{\\crampedsubstack{\\mmlToken{mo}{`}^2\\\\x^{²}}}",
+      "display": true,
+      "family": "macro-font-prime",
+      "literalOriginalEqual": true,
+      "literalCandidateEqual": true
+    },
+    {
+      "tex": "\\mathsf{\\begin{crampedsubarray}{c}\\mmlToken{mo}{`}^2\\\\x^{²}\\end{crampedsubarray}}",
+      "display": false,
+      "family": "literal-font-prime",
+      "ordinaryControl": "\\mathsf{\\begin{subarray}{c}\\mmlToken{mo}{`}^2\\\\x^{²}\\end{subarray}}",
+      "ordinaryByteUnchanged": true,
+      "originalGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsBaseline": true,
+      "geometryUnchanged": false
+    },
+    {
+      "tex": "\\mathsf{\\begin{crampedsubarray}{c}\\mmlToken{mo}{`}^2\\\\x^{²}\\end{crampedsubarray}}",
+      "display": true,
+      "family": "literal-font-prime",
+      "ordinaryControl": "\\mathsf{\\begin{subarray}{c}\\mmlToken{mo}{`}^2\\\\x^{²}\\end{subarray}}",
+      "ordinaryByteUnchanged": true,
+      "originalGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsBaseline": true,
+      "geometryUnchanged": false
+    },
+    {
+      "tex": "\\mathcal{\\crampedsubstack{\\mmlToken{mo}{`}^2\\\\x^{²}}}",
+      "display": false,
+      "family": "macro-font-prime",
+      "literalOriginalEqual": true,
+      "literalCandidateEqual": true
+    },
+    {
+      "tex": "\\mathcal{\\crampedsubstack{\\mmlToken{mo}{`}^2\\\\x^{²}}}",
+      "display": true,
+      "family": "macro-font-prime",
+      "literalOriginalEqual": true,
+      "literalCandidateEqual": true
+    },
+    {
+      "tex": "\\mathcal{\\begin{crampedsubarray}{c}\\mmlToken{mo}{`}^2\\\\x^{²}\\end{crampedsubarray}}",
+      "display": false,
+      "family": "literal-font-prime",
+      "ordinaryControl": "\\mathcal{\\begin{subarray}{c}\\mmlToken{mo}{`}^2\\\\x^{²}\\end{subarray}}",
+      "ordinaryByteUnchanged": true,
+      "originalGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsBaseline": true,
+      "geometryUnchanged": false
+    },
+    {
+      "tex": "\\mathcal{\\begin{crampedsubarray}{c}\\mmlToken{mo}{`}^2\\\\x^{²}\\end{crampedsubarray}}",
+      "display": true,
+      "family": "literal-font-prime",
+      "ordinaryControl": "\\mathcal{\\begin{subarray}{c}\\mmlToken{mo}{`}^2\\\\x^{²}\\end{subarray}}",
+      "ordinaryByteUnchanged": true,
+      "originalGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsBaseline": true,
+      "geometryUnchanged": false
+    },
+    {
+      "tex": "\\mathbf{\\crampedsubstack{\\sum\\limits_{a^2}^{b^3}x}}",
+      "display": false,
+      "family": "macro-font-prime",
+      "literalOriginalEqual": true,
+      "literalCandidateEqual": true
+    },
+    {
+      "tex": "\\mathbf{\\crampedsubstack{\\sum\\limits_{a^2}^{b^3}x}}",
+      "display": true,
+      "family": "macro-font-prime",
+      "literalOriginalEqual": true,
+      "literalCandidateEqual": true
+    },
+    {
+      "tex": "\\mathbf{\\begin{crampedsubarray}{c}\\sum\\limits_{a^2}^{b^3}x\\end{crampedsubarray}}",
+      "display": false,
+      "family": "literal-font-prime",
+      "ordinaryControl": "\\mathbf{\\begin{subarray}{c}\\sum\\limits_{a^2}^{b^3}x\\end{subarray}}",
+      "ordinaryByteUnchanged": true,
+      "originalGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsBaseline": true,
+      "geometryUnchanged": false
+    },
+    {
+      "tex": "\\mathbf{\\begin{crampedsubarray}{c}\\sum\\limits_{a^2}^{b^3}x\\end{crampedsubarray}}",
+      "display": true,
+      "family": "literal-font-prime",
+      "ordinaryControl": "\\mathbf{\\begin{subarray}{c}\\sum\\limits_{a^2}^{b^3}x\\end{subarray}}",
+      "ordinaryByteUnchanged": true,
+      "originalGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsBaseline": true,
+      "geometryUnchanged": false
+    },
+    {
+      "tex": "\\mathsf{\\crampedsubstack{\\sum\\limits_{a^2}^{b^3}x}}",
+      "display": false,
+      "family": "macro-font-prime",
+      "literalOriginalEqual": true,
+      "literalCandidateEqual": true
+    },
+    {
+      "tex": "\\mathsf{\\crampedsubstack{\\sum\\limits_{a^2}^{b^3}x}}",
+      "display": true,
+      "family": "macro-font-prime",
+      "literalOriginalEqual": true,
+      "literalCandidateEqual": true
+    },
+    {
+      "tex": "\\mathsf{\\begin{crampedsubarray}{c}\\sum\\limits_{a^2}^{b^3}x\\end{crampedsubarray}}",
+      "display": false,
+      "family": "literal-font-prime",
+      "ordinaryControl": "\\mathsf{\\begin{subarray}{c}\\sum\\limits_{a^2}^{b^3}x\\end{subarray}}",
+      "ordinaryByteUnchanged": true,
+      "originalGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsBaseline": true,
+      "geometryUnchanged": false
+    },
+    {
+      "tex": "\\mathsf{\\begin{crampedsubarray}{c}\\sum\\limits_{a^2}^{b^3}x\\end{crampedsubarray}}",
+      "display": true,
+      "family": "literal-font-prime",
+      "ordinaryControl": "\\mathsf{\\begin{subarray}{c}\\sum\\limits_{a^2}^{b^3}x\\end{subarray}}",
+      "ordinaryByteUnchanged": true,
+      "originalGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsBaseline": true,
+      "geometryUnchanged": false
+    },
+    {
+      "tex": "\\mathcal{\\crampedsubstack{\\sum\\limits_{a^2}^{b^3}x}}",
+      "display": false,
+      "family": "macro-font-prime",
+      "literalOriginalEqual": true,
+      "literalCandidateEqual": true
+    },
+    {
+      "tex": "\\mathcal{\\crampedsubstack{\\sum\\limits_{a^2}^{b^3}x}}",
+      "display": true,
+      "family": "macro-font-prime",
+      "literalOriginalEqual": true,
+      "literalCandidateEqual": true
+    },
+    {
+      "tex": "\\mathcal{\\begin{crampedsubarray}{c}\\sum\\limits_{a^2}^{b^3}x\\end{crampedsubarray}}",
+      "display": false,
+      "family": "literal-font-prime",
+      "ordinaryControl": "\\mathcal{\\begin{subarray}{c}\\sum\\limits_{a^2}^{b^3}x\\end{subarray}}",
+      "ordinaryByteUnchanged": true,
+      "originalGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsBaseline": true,
+      "geometryUnchanged": false
+    },
+    {
+      "tex": "\\mathcal{\\begin{crampedsubarray}{c}\\sum\\limits_{a^2}^{b^3}x\\end{crampedsubarray}}",
+      "display": true,
+      "family": "literal-font-prime",
+      "ordinaryControl": "\\mathcal{\\begin{subarray}{c}\\sum\\limits_{a^2}^{b^3}x\\end{subarray}}",
+      "ordinaryByteUnchanged": true,
+      "originalGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsBaseline": true,
+      "geometryUnchanged": false
+    },
+    {
+      "tex": "\\mathbf{\\crampedsubstack{\\bf x^2\\\\\\mathcal F^2&\\sf y^3}}",
+      "display": false,
+      "family": "macro-font-prime",
+      "literalOriginalEqual": true,
+      "literalCandidateEqual": true
+    },
+    {
+      "tex": "\\mathbf{\\crampedsubstack{\\bf x^2\\\\\\mathcal F^2&\\sf y^3}}",
+      "display": true,
+      "family": "macro-font-prime",
+      "literalOriginalEqual": true,
+      "literalCandidateEqual": true
+    },
+    {
+      "tex": "\\mathbf{\\begin{crampedsubarray}{c}\\bf x^2\\\\\\mathcal F^2&\\sf y^3\\end{crampedsubarray}}",
+      "display": false,
+      "family": "literal-font-prime",
+      "ordinaryControl": "\\mathbf{\\begin{subarray}{c}\\bf x^2\\\\\\mathcal F^2&\\sf y^3\\end{subarray}}",
+      "ordinaryByteUnchanged": true,
+      "originalGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsBaseline": true,
+      "geometryUnchanged": false
+    },
+    {
+      "tex": "\\mathbf{\\begin{crampedsubarray}{c}\\bf x^2\\\\\\mathcal F^2&\\sf y^3\\end{crampedsubarray}}",
+      "display": true,
+      "family": "literal-font-prime",
+      "ordinaryControl": "\\mathbf{\\begin{subarray}{c}\\bf x^2\\\\\\mathcal F^2&\\sf y^3\\end{subarray}}",
+      "ordinaryByteUnchanged": true,
+      "originalGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsBaseline": true,
+      "geometryUnchanged": false
+    },
+    {
+      "tex": "\\mathsf{\\crampedsubstack{\\bf x^2\\\\\\mathcal F^2&\\sf y^3}}",
+      "display": false,
+      "family": "macro-font-prime",
+      "literalOriginalEqual": true,
+      "literalCandidateEqual": true
+    },
+    {
+      "tex": "\\mathsf{\\crampedsubstack{\\bf x^2\\\\\\mathcal F^2&\\sf y^3}}",
+      "display": true,
+      "family": "macro-font-prime",
+      "literalOriginalEqual": true,
+      "literalCandidateEqual": true
+    },
+    {
+      "tex": "\\mathsf{\\begin{crampedsubarray}{c}\\bf x^2\\\\\\mathcal F^2&\\sf y^3\\end{crampedsubarray}}",
+      "display": false,
+      "family": "literal-font-prime",
+      "ordinaryControl": "\\mathsf{\\begin{subarray}{c}\\bf x^2\\\\\\mathcal F^2&\\sf y^3\\end{subarray}}",
+      "ordinaryByteUnchanged": true,
+      "originalGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsBaseline": true,
+      "geometryUnchanged": false
+    },
+    {
+      "tex": "\\mathsf{\\begin{crampedsubarray}{c}\\bf x^2\\\\\\mathcal F^2&\\sf y^3\\end{crampedsubarray}}",
+      "display": true,
+      "family": "literal-font-prime",
+      "ordinaryControl": "\\mathsf{\\begin{subarray}{c}\\bf x^2\\\\\\mathcal F^2&\\sf y^3\\end{subarray}}",
+      "ordinaryByteUnchanged": true,
+      "originalGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsBaseline": true,
+      "geometryUnchanged": false
+    },
+    {
+      "tex": "\\mathcal{\\crampedsubstack{\\bf x^2\\\\\\mathcal F^2&\\sf y^3}}",
+      "display": false,
+      "family": "macro-font-prime",
+      "literalOriginalEqual": true,
+      "literalCandidateEqual": true
+    },
+    {
+      "tex": "\\mathcal{\\crampedsubstack{\\bf x^2\\\\\\mathcal F^2&\\sf y^3}}",
+      "display": true,
+      "family": "macro-font-prime",
+      "literalOriginalEqual": true,
+      "literalCandidateEqual": true
+    },
+    {
+      "tex": "\\mathcal{\\begin{crampedsubarray}{c}\\bf x^2\\\\\\mathcal F^2&\\sf y^3\\end{crampedsubarray}}",
+      "display": false,
+      "family": "literal-font-prime",
+      "ordinaryControl": "\\mathcal{\\begin{subarray}{c}\\bf x^2\\\\\\mathcal F^2&\\sf y^3\\end{subarray}}",
+      "ordinaryByteUnchanged": true,
+      "originalGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsBaseline": true,
+      "geometryUnchanged": false
+    },
+    {
+      "tex": "\\mathcal{\\begin{crampedsubarray}{c}\\bf x^2\\\\\\mathcal F^2&\\sf y^3\\end{crampedsubarray}}",
+      "display": true,
+      "family": "literal-font-prime",
+      "ordinaryControl": "\\mathcal{\\begin{subarray}{c}\\bf x^2\\\\\\mathcal F^2&\\sf y^3\\end{subarray}}",
+      "ordinaryByteUnchanged": true,
+      "originalGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsOrdinary": true,
+      "candidateGlyphsSameAsBaseline": true,
+      "geometryUnchanged": false
+    },
+    {
+      "tex": "\\mspace{1em}\\substack{\\cramped[\\scriptscriptstyle]{x^2}\\\\\\scriptstyle y^3}",
+      "display": false,
+      "family": "ordinary-and-script-controls"
+    },
+    {
+      "tex": "\\mspace{1em}\\substack{\\cramped[\\scriptscriptstyle]{x^2}\\\\\\scriptstyle y^3}",
+      "display": true,
+      "family": "ordinary-and-script-controls"
+    },
+    {
+      "tex": "\\sum\\nolimits^{\\substack{\\cramped[\\scriptscriptstyle]{x^2}\\\\\\scriptstyle y^3}}",
+      "display": false,
+      "family": "ordinary-and-script-controls"
+    },
+    {
+      "tex": "\\sum\\nolimits^{\\substack{\\cramped[\\scriptscriptstyle]{x^2}\\\\\\scriptstyle y^3}}",
+      "display": true,
+      "family": "ordinary-and-script-controls"
+    },
+    {
+      "tex": "\\overset{A}{\\substack{\\cramped[\\scriptscriptstyle]{x^2}\\\\\\scriptstyle y^3}}",
+      "display": false,
+      "family": "ordinary-and-script-controls"
+    },
+    {
+      "tex": "\\overset{A}{\\substack{\\cramped[\\scriptscriptstyle]{x^2}\\\\\\scriptstyle y^3}}",
+      "display": true,
+      "family": "ordinary-and-script-controls"
+    },
+    {
+      "tex": "\\underset{A}{\\substack{\\cramped[\\scriptscriptstyle]{x^2}\\\\\\scriptstyle y^3}}",
+      "display": false,
+      "family": "ordinary-and-script-controls"
+    },
+    {
+      "tex": "\\underset{A}{\\substack{\\cramped[\\scriptscriptstyle]{x^2}\\\\\\scriptstyle y^3}}",
+      "display": true,
+      "family": "ordinary-and-script-controls"
+    },
+    {
+      "tex": "\\mspace{1em}\\crampedsubstack{\\cramped[\\scriptscriptstyle]{x^2}\\\\\\scriptstyle y^3}",
+      "display": false,
+      "family": "ordinary-and-script-controls"
+    },
+    {
+      "tex": "\\mspace{1em}\\crampedsubstack{\\cramped[\\scriptscriptstyle]{x^2}\\\\\\scriptstyle y^3}",
+      "display": true,
+      "family": "ordinary-and-script-controls"
+    },
+    {
+      "tex": "\\sum\\nolimits^{\\crampedsubstack{\\cramped[\\scriptscriptstyle]{x^2}\\\\\\scriptstyle y^3}}",
+      "display": false,
+      "family": "ordinary-and-script-controls"
+    },
+    {
+      "tex": "\\sum\\nolimits^{\\crampedsubstack{\\cramped[\\scriptscriptstyle]{x^2}\\\\\\scriptstyle y^3}}",
+      "display": true,
+      "family": "ordinary-and-script-controls"
+    },
+    {
+      "tex": "\\overset{A}{\\crampedsubstack{\\cramped[\\scriptscriptstyle]{x^2}\\\\\\scriptstyle y^3}}",
+      "display": false,
+      "family": "ordinary-and-script-controls"
+    },
+    {
+      "tex": "\\overset{A}{\\crampedsubstack{\\cramped[\\scriptscriptstyle]{x^2}\\\\\\scriptstyle y^3}}",
+      "display": true,
+      "family": "ordinary-and-script-controls"
+    },
+    {
+      "tex": "\\underset{A}{\\crampedsubstack{\\cramped[\\scriptscriptstyle]{x^2}\\\\\\scriptstyle y^3}}",
+      "display": false,
+      "family": "ordinary-and-script-controls"
+    },
+    {
+      "tex": "\\underset{A}{\\crampedsubstack{\\cramped[\\scriptscriptstyle]{x^2}\\\\\\scriptstyle y^3}}",
+      "display": true,
+      "family": "ordinary-and-script-controls"
+    },
+    {
+      "tex": "\\DeclarePairedDelimiter{\\begin}{[}{]}\\crampedsubstack{x^2}",
+      "display": false,
+      "family": "helper-priority",
+      "literalOriginalEqual": true,
+      "literalCandidateEqual": true,
+      "originalIsError": true
+    },
+    {
+      "tex": "\\DeclarePairedDelimiter{\\begin}{[}{]}\\crampedsubstack{x^2}",
+      "display": true,
+      "family": "helper-priority",
+      "literalOriginalEqual": true,
+      "literalCandidateEqual": true,
+      "originalIsError": true
+    },
+    {
+      "tex": "\\DeclarePairedDelimiter{\\end}{[}{]}\\crampedsubstack{x^2}",
+      "display": false,
+      "family": "helper-priority",
+      "literalOriginalEqual": true,
+      "literalCandidateEqual": true,
+      "originalIsError": true
+    },
+    {
+      "tex": "\\DeclarePairedDelimiter{\\end}{[}{]}\\crampedsubstack{x^2}",
+      "display": true,
+      "family": "helper-priority",
+      "literalOriginalEqual": true,
+      "literalCandidateEqual": true,
+      "originalIsError": true
+    },
+    {
+      "tex": "\\DeclareMathOperator{\\begin}{B}\\crampedsubstack{x^2}",
+      "display": false,
+      "family": "helper-priority",
+      "literalOriginalEqual": true,
+      "literalCandidateEqual": true,
+      "originalIsError": true
+    },
+    {
+      "tex": "\\DeclareMathOperator{\\begin}{B}\\crampedsubstack{x^2}",
+      "display": true,
+      "family": "helper-priority",
+      "literalOriginalEqual": true,
+      "literalCandidateEqual": true,
+      "originalIsError": true
+    },
+    {
+      "tex": "\\DeclareMathOperator{\\end}{E}\\crampedsubstack{x^2}",
+      "display": false,
+      "family": "helper-priority",
+      "literalOriginalEqual": true,
+      "literalCandidateEqual": true,
+      "originalIsError": true
+    },
+    {
+      "tex": "\\DeclareMathOperator{\\end}{E}\\crampedsubstack{x^2}",
+      "display": true,
+      "family": "helper-priority",
+      "literalOriginalEqual": true,
+      "literalCandidateEqual": true,
+      "originalIsError": true
+    }
+  ],
+  "optionalStyleChecks": [
+    {
+      "tex": "\\mspace{1em}\\crampedsubstack{\\cramped[\\scriptscriptstyle]{x^2}\\\\\\scriptstyle y^3}",
+      "display": false,
+      "ordinaryControl": "\\mspace{1em}\\substack{\\cramped[\\scriptscriptstyle]{x^2}\\\\\\scriptstyle y^3}",
+      "literalControl": "\\mspace{1em}\\begin{crampedsubarray}{c}\\cramped[\\scriptscriptstyle]{x^2}\\\\\\scriptstyle y^3\\end{crampedsubarray}",
+      "ordinaryByteUnchanged": true,
+      "literalOriginalEqual": true,
+      "literalCandidateEqual": true,
+      "originalCrampedSubtreeEqual": true,
+      "candidateCrampedSubtreeEqual": true
+    },
+    {
+      "tex": "\\mspace{1em}\\crampedsubstack{\\cramped[\\scriptscriptstyle]{x^2}\\\\\\scriptstyle y^3}",
+      "display": true,
+      "ordinaryControl": "\\mspace{1em}\\substack{\\cramped[\\scriptscriptstyle]{x^2}\\\\\\scriptstyle y^3}",
+      "literalControl": "\\mspace{1em}\\begin{crampedsubarray}{c}\\cramped[\\scriptscriptstyle]{x^2}\\\\\\scriptstyle y^3\\end{crampedsubarray}",
+      "ordinaryByteUnchanged": true,
+      "literalOriginalEqual": true,
+      "literalCandidateEqual": true,
+      "originalCrampedSubtreeEqual": true,
+      "candidateCrampedSubtreeEqual": true
+    },
+    {
+      "tex": "\\sum\\nolimits^{\\crampedsubstack{\\cramped[\\scriptscriptstyle]{x^2}\\\\\\scriptstyle y^3}}",
+      "display": false,
+      "ordinaryControl": "\\sum\\nolimits^{\\substack{\\cramped[\\scriptscriptstyle]{x^2}\\\\\\scriptstyle y^3}}",
+      "literalControl": "\\sum\\nolimits^{\\begin{crampedsubarray}{c}\\cramped[\\scriptscriptstyle]{x^2}\\\\\\scriptstyle y^3\\end{crampedsubarray}}",
+      "ordinaryByteUnchanged": true,
+      "literalOriginalEqual": true,
+      "literalCandidateEqual": true,
+      "originalCrampedSubtreeEqual": true,
+      "candidateCrampedSubtreeEqual": true
+    },
+    {
+      "tex": "\\sum\\nolimits^{\\crampedsubstack{\\cramped[\\scriptscriptstyle]{x^2}\\\\\\scriptstyle y^3}}",
+      "display": true,
+      "ordinaryControl": "\\sum\\nolimits^{\\substack{\\cramped[\\scriptscriptstyle]{x^2}\\\\\\scriptstyle y^3}}",
+      "literalControl": "\\sum\\nolimits^{\\begin{crampedsubarray}{c}\\cramped[\\scriptscriptstyle]{x^2}\\\\\\scriptstyle y^3\\end{crampedsubarray}}",
+      "ordinaryByteUnchanged": true,
+      "literalOriginalEqual": true,
+      "literalCandidateEqual": true,
+      "originalCrampedSubtreeEqual": true,
+      "candidateCrampedSubtreeEqual": true
+    },
+    {
+      "tex": "\\overset{A}{\\crampedsubstack{\\cramped[\\scriptscriptstyle]{x^2}\\\\\\scriptstyle y^3}}",
+      "display": false,
+      "ordinaryControl": "\\overset{A}{\\substack{\\cramped[\\scriptscriptstyle]{x^2}\\\\\\scriptstyle y^3}}",
+      "literalControl": "\\overset{A}{\\begin{crampedsubarray}{c}\\cramped[\\scriptscriptstyle]{x^2}\\\\\\scriptstyle y^3\\end{crampedsubarray}}",
+      "ordinaryByteUnchanged": true,
+      "literalOriginalEqual": true,
+      "literalCandidateEqual": true,
+      "originalCrampedSubtreeEqual": true,
+      "candidateCrampedSubtreeEqual": true
+    },
+    {
+      "tex": "\\overset{A}{\\crampedsubstack{\\cramped[\\scriptscriptstyle]{x^2}\\\\\\scriptstyle y^3}}",
+      "display": true,
+      "ordinaryControl": "\\overset{A}{\\substack{\\cramped[\\scriptscriptstyle]{x^2}\\\\\\scriptstyle y^3}}",
+      "literalControl": "\\overset{A}{\\begin{crampedsubarray}{c}\\cramped[\\scriptscriptstyle]{x^2}\\\\\\scriptstyle y^3\\end{crampedsubarray}}",
+      "ordinaryByteUnchanged": true,
+      "literalOriginalEqual": true,
+      "literalCandidateEqual": true,
+      "originalCrampedSubtreeEqual": true,
+      "candidateCrampedSubtreeEqual": true
+    },
+    {
+      "tex": "\\underset{A}{\\crampedsubstack{\\cramped[\\scriptscriptstyle]{x^2}\\\\\\scriptstyle y^3}}",
+      "display": false,
+      "ordinaryControl": "\\underset{A}{\\substack{\\cramped[\\scriptscriptstyle]{x^2}\\\\\\scriptstyle y^3}}",
+      "literalControl": "\\underset{A}{\\begin{crampedsubarray}{c}\\cramped[\\scriptscriptstyle]{x^2}\\\\\\scriptstyle y^3\\end{crampedsubarray}}",
+      "ordinaryByteUnchanged": true,
+      "literalOriginalEqual": true,
+      "literalCandidateEqual": true,
+      "originalCrampedSubtreeEqual": true,
+      "candidateCrampedSubtreeEqual": true
+    },
+    {
+      "tex": "\\underset{A}{\\crampedsubstack{\\cramped[\\scriptscriptstyle]{x^2}\\\\\\scriptstyle y^3}}",
+      "display": true,
+      "ordinaryControl": "\\underset{A}{\\substack{\\cramped[\\scriptscriptstyle]{x^2}\\\\\\scriptstyle y^3}}",
+      "literalControl": "\\underset{A}{\\begin{crampedsubarray}{c}\\cramped[\\scriptscriptstyle]{x^2}\\\\\\scriptstyle y^3\\end{crampedsubarray}}",
+      "ordinaryByteUnchanged": true,
+      "literalOriginalEqual": true,
+      "literalCandidateEqual": true,
+      "originalCrampedSubtreeEqual": true,
+      "candidateCrampedSubtreeEqual": true
+    }
+  ],
+  "independentGeometry": {
+    "counts": {
+      "priorVisualExact": 33,
+      "visualRegressions": 0,
+      "visualFixes": 211,
+      "unchangedVisibleResiduals": 21,
+      "changedVisibleResiduals": 89,
+      "parseErrors": 0
+    },
+    "reports": [
+      {
+        "name": "cramped-000",
+        "tex": "\\crampedsubstack{{\\displaystyle x^{y^z}}\\\\{\\textstyle z^{w^v}}}",
+        "display": false,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "58.371ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 25800 950",
+          "style": "vertical-align: -0.452ex;"
+        },
+        "candidateRoot": {
+          "width": "3.067ex",
+          "height": "4.194ex",
+          "viewBox": "0 -1176.9 1355.5 1853.9",
+          "style": "vertical-align: -1.532ex;"
+        },
+        "originalRoot": {
+          "width": "3.067ex",
+          "height": "4.194ex",
+          "viewBox": "0 -1176.9 1355.5 1853.9",
+          "style": "vertical-align: -1.532ex;"
+        }
+      },
+      {
+        "name": "cramped-001",
+        "tex": "\\crampedsubstack{{\\displaystyle x^{y^z}}\\\\{\\textstyle z^{w^v}}}",
+        "display": true,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "58.371ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 25800 950",
+          "style": "vertical-align: -0.452ex;"
+        },
+        "candidateRoot": {
+          "width": "3.067ex",
+          "height": "4.194ex",
+          "viewBox": "0 -1176.9 1355.5 1853.9",
+          "style": "vertical-align: -1.532ex;"
+        },
+        "originalRoot": {
+          "width": "3.067ex",
+          "height": "4.194ex",
+          "viewBox": "0 -1176.9 1355.5 1853.9",
+          "style": "vertical-align: -1.532ex;"
+        }
+      },
+      {
+        "name": "cramped-004",
+        "tex": "\\mathbf{\\crampedsubstack{{\\displaystyle x^{y^z}}\\\\{\\textstyle z^{w^v}}}}",
+        "display": false,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "58.371ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 25800 950",
+          "style": "vertical-align: -0.452ex;"
+        },
+        "candidateRoot": {
+          "width": "3.493ex",
+          "height": "4.148ex",
+          "viewBox": "0 -1166.7 1543.8 1833.4",
+          "style": "vertical-align: -1.508ex;"
+        },
+        "originalRoot": {
+          "width": "3.067ex",
+          "height": "4.194ex",
+          "viewBox": "0 -1176.9 1355.5 1853.9",
+          "style": "vertical-align: -1.532ex;"
+        }
+      },
+      {
+        "name": "cramped-005",
+        "tex": "\\mathbf{\\crampedsubstack{{\\displaystyle x^{y^z}}\\\\{\\textstyle z^{w^v}}}}",
+        "display": true,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "58.371ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 25800 950",
+          "style": "vertical-align: -0.452ex;"
+        },
+        "candidateRoot": {
+          "width": "3.493ex",
+          "height": "4.148ex",
+          "viewBox": "0 -1166.7 1543.8 1833.4",
+          "style": "vertical-align: -1.508ex;"
+        },
+        "originalRoot": {
+          "width": "3.067ex",
+          "height": "4.194ex",
+          "viewBox": "0 -1176.9 1355.5 1853.9",
+          "style": "vertical-align: -1.532ex;"
+        }
+      },
+      {
+        "name": "cramped-008",
+        "tex": "\\mathsf{\\crampedsubstack{{\\displaystyle x^{y^z}}\\\\{\\textstyle z^{w^v}}}}",
+        "display": false,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "58.371ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 25800 950",
+          "style": "vertical-align: -0.452ex;"
+        },
+        "candidateRoot": {
+          "width": "2.919ex",
+          "height": "4.148ex",
+          "viewBox": "0 -1166.7 1290.1 1833.4",
+          "style": "vertical-align: -1.508ex;"
+        },
+        "originalRoot": {
+          "width": "3.067ex",
+          "height": "4.194ex",
+          "viewBox": "0 -1176.9 1355.5 1853.9",
+          "style": "vertical-align: -1.532ex;"
+        }
+      },
+      {
+        "name": "cramped-009",
+        "tex": "\\mathsf{\\crampedsubstack{{\\displaystyle x^{y^z}}\\\\{\\textstyle z^{w^v}}}}",
+        "display": true,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "58.371ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 25800 950",
+          "style": "vertical-align: -0.452ex;"
+        },
+        "candidateRoot": {
+          "width": "2.919ex",
+          "height": "4.148ex",
+          "viewBox": "0 -1166.7 1290.1 1833.4",
+          "style": "vertical-align: -1.508ex;"
+        },
+        "originalRoot": {
+          "width": "3.067ex",
+          "height": "4.194ex",
+          "viewBox": "0 -1176.9 1355.5 1853.9",
+          "style": "vertical-align: -1.532ex;"
+        }
+      },
+      {
+        "name": "cramped-012",
+        "tex": "\\mathcal{\\crampedsubstack{{\\displaystyle x^{y^z}}\\\\{\\textstyle z^{w^v}}}}",
+        "display": false,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "58.371ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 25800 950",
+          "style": "vertical-align: -0.452ex;"
+        },
+        "candidateRoot": {
+          "width": "3.067ex",
+          "height": "4.194ex",
+          "viewBox": "0 -1176.9 1355.5 1853.9",
+          "style": "vertical-align: -1.532ex;"
+        },
+        "originalRoot": {
+          "width": "3.067ex",
+          "height": "4.194ex",
+          "viewBox": "0 -1176.9 1355.5 1853.9",
+          "style": "vertical-align: -1.532ex;"
+        }
+      },
+      {
+        "name": "cramped-013",
+        "tex": "\\mathcal{\\crampedsubstack{{\\displaystyle x^{y^z}}\\\\{\\textstyle z^{w^v}}}}",
+        "display": true,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "58.371ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 25800 950",
+          "style": "vertical-align: -0.452ex;"
+        },
+        "candidateRoot": {
+          "width": "3.067ex",
+          "height": "4.194ex",
+          "viewBox": "0 -1176.9 1355.5 1853.9",
+          "style": "vertical-align: -1.532ex;"
+        },
+        "originalRoot": {
+          "width": "3.067ex",
+          "height": "4.194ex",
+          "viewBox": "0 -1176.9 1355.5 1853.9",
+          "style": "vertical-align: -1.532ex;"
+        }
+      },
+      {
+        "name": "cramped-016",
+        "tex": "\\bf\\mathnormal{\\crampedsubstack{{\\displaystyle x^{y^z}}\\\\{\\textstyle z^{w^v}}}}",
+        "display": false,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "58.371ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 25800 950",
+          "style": "vertical-align: -0.452ex;"
+        },
+        "candidateRoot": {
+          "width": "3.067ex",
+          "height": "4.194ex",
+          "viewBox": "0 -1176.9 1355.5 1853.9",
+          "style": "vertical-align: -1.532ex;"
+        },
+        "originalRoot": {
+          "width": "3.067ex",
+          "height": "4.194ex",
+          "viewBox": "0 -1176.9 1355.5 1853.9",
+          "style": "vertical-align: -1.532ex;"
+        }
+      },
+      {
+        "name": "cramped-017",
+        "tex": "\\bf\\mathnormal{\\crampedsubstack{{\\displaystyle x^{y^z}}\\\\{\\textstyle z^{w^v}}}}",
+        "display": true,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "58.371ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 25800 950",
+          "style": "vertical-align: -0.452ex;"
+        },
+        "candidateRoot": {
+          "width": "3.067ex",
+          "height": "4.194ex",
+          "viewBox": "0 -1176.9 1355.5 1853.9",
+          "style": "vertical-align: -1.532ex;"
+        },
+        "originalRoot": {
+          "width": "3.067ex",
+          "height": "4.194ex",
+          "viewBox": "0 -1176.9 1355.5 1853.9",
+          "style": "vertical-align: -1.532ex;"
+        }
+      },
+      {
+        "name": "cramped-020",
+        "tex": "\\cramped[\\textstyle]{\\crampedsubstack{{\\displaystyle x^{y^z}}\\\\{\\textstyle z^{w^v}}}}",
+        "display": false,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "58.371ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 25800 950",
+          "style": "vertical-align: -0.452ex;"
+        },
+        "candidateRoot": {
+          "width": "3.067ex",
+          "height": "4.194ex",
+          "viewBox": "0 -1176.9 1355.5 1853.9",
+          "style": "vertical-align: -1.532ex;"
+        },
+        "originalRoot": {
+          "width": "3.067ex",
+          "height": "4.194ex",
+          "viewBox": "0 -1176.9 1355.5 1853.9",
+          "style": "vertical-align: -1.532ex;"
+        }
+      },
+      {
+        "name": "cramped-021",
+        "tex": "\\cramped[\\textstyle]{\\crampedsubstack{{\\displaystyle x^{y^z}}\\\\{\\textstyle z^{w^v}}}}",
+        "display": true,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "58.371ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 25800 950",
+          "style": "vertical-align: -0.452ex;"
+        },
+        "candidateRoot": {
+          "width": "3.067ex",
+          "height": "4.194ex",
+          "viewBox": "0 -1176.9 1355.5 1853.9",
+          "style": "vertical-align: -1.532ex;"
+        },
+        "originalRoot": {
+          "width": "3.067ex",
+          "height": "4.194ex",
+          "viewBox": "0 -1176.9 1355.5 1853.9",
+          "style": "vertical-align: -1.532ex;"
+        }
+      },
+      {
+        "name": "cramped-025",
+        "tex": "\\frac{x}{\\crampedsubstack{{\\displaystyle x^{y^z}}\\\\{\\textstyle z^{w^v}}}}",
+        "display": true,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "58.371ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 25800 950",
+          "style": "vertical-align: -0.452ex;"
+        },
+        "candidateRoot": {
+          "width": "4.062ex",
+          "height": "6.633ex",
+          "viewBox": "0 -1118 1795.5 2931.9",
+          "style": "vertical-align: -4.104ex;"
+        },
+        "originalRoot": {
+          "width": "4.062ex",
+          "height": "6.633ex",
+          "viewBox": "0 -1118 1795.5 2931.9",
+          "style": "vertical-align: -4.104ex;"
+        }
+      },
+      {
+        "name": "cramped-044",
+        "tex": "\\mathbf{\\crampedsubstack{\\mathchoice{x^2}{y^3}{z^4}{w^5}}}",
+        "display": false,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "58.371ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 25800 950",
+          "style": "vertical-align: -0.452ex;"
+        },
+        "candidateRoot": {
+          "width": "1.601ex",
+          "height": "1.204ex",
+          "viewBox": "0 -516.2 707.5 532.4",
+          "style": "vertical-align: -0.037ex;"
+        },
+        "originalRoot": {
+          "width": "1.442ex",
+          "height": "1.246ex",
+          "viewBox": "0 -525.3 637.5 550.6",
+          "style": "vertical-align: -0.057ex;"
+        }
+      },
+      {
+        "name": "cramped-045",
+        "tex": "\\mathbf{\\crampedsubstack{\\mathchoice{x^2}{y^3}{z^4}{w^5}}}",
+        "display": true,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "58.371ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 25800 950",
+          "style": "vertical-align: -0.452ex;"
+        },
+        "candidateRoot": {
+          "width": "1.601ex",
+          "height": "1.204ex",
+          "viewBox": "0 -516.2 707.5 532.4",
+          "style": "vertical-align: -0.037ex;"
+        },
+        "originalRoot": {
+          "width": "1.442ex",
+          "height": "1.246ex",
+          "viewBox": "0 -525.3 637.5 550.6",
+          "style": "vertical-align: -0.057ex;"
+        }
+      },
+      {
+        "name": "cramped-046",
+        "tex": "\\mathbf{\\begin{crampedsubarray}{c}\\mathchoice{x^2}{y^3}{z^4}{w^5}\\end{crampedsubarray}}",
+        "display": false,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "1.601ex",
+          "height": "1.323ex",
+          "viewBox": "0 -542.3 707.5 584.7",
+          "style": "vertical-align: -0.096ex;"
+        },
+        "candidateRoot": {
+          "width": "1.601ex",
+          "height": "1.204ex",
+          "viewBox": "0 -516.2 707.5 532.4",
+          "style": "vertical-align: -0.037ex;"
+        },
+        "originalRoot": {
+          "width": "1.442ex",
+          "height": "1.246ex",
+          "viewBox": "0 -525.3 637.5 550.6",
+          "style": "vertical-align: -0.057ex;"
+        }
+      },
+      {
+        "name": "cramped-047",
+        "tex": "\\mathbf{\\begin{crampedsubarray}{c}\\mathchoice{x^2}{y^3}{z^4}{w^5}\\end{crampedsubarray}}",
+        "display": true,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "1.601ex",
+          "height": "1.323ex",
+          "viewBox": "0 -542.3 707.5 584.7",
+          "style": "vertical-align: -0.096ex;"
+        },
+        "candidateRoot": {
+          "width": "1.601ex",
+          "height": "1.204ex",
+          "viewBox": "0 -516.2 707.5 532.4",
+          "style": "vertical-align: -0.037ex;"
+        },
+        "originalRoot": {
+          "width": "1.442ex",
+          "height": "1.246ex",
+          "viewBox": "0 -525.3 637.5 550.6",
+          "style": "vertical-align: -0.057ex;"
+        }
+      },
+      {
+        "name": "cramped-048",
+        "tex": "\\mathsf{\\crampedsubstack{\\mathchoice{x^2}{y^3}{z^4}{w^5}}}",
+        "display": false,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "58.371ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 25800 950",
+          "style": "vertical-align: -0.452ex;"
+        },
+        "candidateRoot": {
+          "width": "1.394ex",
+          "height": "1.204ex",
+          "viewBox": "0 -516.2 616.3 532.4",
+          "style": "vertical-align: -0.037ex;"
+        },
+        "originalRoot": {
+          "width": "1.442ex",
+          "height": "1.246ex",
+          "viewBox": "0 -525.3 637.5 550.6",
+          "style": "vertical-align: -0.057ex;"
+        }
+      },
+      {
+        "name": "cramped-049",
+        "tex": "\\mathsf{\\crampedsubstack{\\mathchoice{x^2}{y^3}{z^4}{w^5}}}",
+        "display": true,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "58.371ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 25800 950",
+          "style": "vertical-align: -0.452ex;"
+        },
+        "candidateRoot": {
+          "width": "1.394ex",
+          "height": "1.204ex",
+          "viewBox": "0 -516.2 616.3 532.4",
+          "style": "vertical-align: -0.037ex;"
+        },
+        "originalRoot": {
+          "width": "1.442ex",
+          "height": "1.246ex",
+          "viewBox": "0 -525.3 637.5 550.6",
+          "style": "vertical-align: -0.057ex;"
+        }
+      },
+      {
+        "name": "cramped-050",
+        "tex": "\\mathsf{\\begin{crampedsubarray}{c}\\mathchoice{x^2}{y^3}{z^4}{w^5}\\end{crampedsubarray}}",
+        "display": false,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "1.394ex",
+          "height": "1.323ex",
+          "viewBox": "0 -542.3 616.3 584.7",
+          "style": "vertical-align: -0.096ex;"
+        },
+        "candidateRoot": {
+          "width": "1.394ex",
+          "height": "1.204ex",
+          "viewBox": "0 -516.2 616.3 532.4",
+          "style": "vertical-align: -0.037ex;"
+        },
+        "originalRoot": {
+          "width": "1.442ex",
+          "height": "1.246ex",
+          "viewBox": "0 -525.3 637.5 550.6",
+          "style": "vertical-align: -0.057ex;"
+        }
+      },
+      {
+        "name": "cramped-051",
+        "tex": "\\mathsf{\\begin{crampedsubarray}{c}\\mathchoice{x^2}{y^3}{z^4}{w^5}\\end{crampedsubarray}}",
+        "display": true,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "1.394ex",
+          "height": "1.323ex",
+          "viewBox": "0 -542.3 616.3 584.7",
+          "style": "vertical-align: -0.096ex;"
+        },
+        "candidateRoot": {
+          "width": "1.394ex",
+          "height": "1.204ex",
+          "viewBox": "0 -516.2 616.3 532.4",
+          "style": "vertical-align: -0.037ex;"
+        },
+        "originalRoot": {
+          "width": "1.442ex",
+          "height": "1.246ex",
+          "viewBox": "0 -525.3 637.5 550.6",
+          "style": "vertical-align: -0.057ex;"
+        }
+      },
+      {
+        "name": "cramped-052",
+        "tex": "\\mathcal{\\crampedsubstack{\\mathchoice{x^2}{y^3}{z^4}{w^5}}}",
+        "display": false,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "58.371ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 25800 950",
+          "style": "vertical-align: -0.452ex;"
+        },
+        "candidateRoot": {
+          "width": "1.455ex",
+          "height": "1.233ex",
+          "viewBox": "0 -522.6 643 545.1",
+          "style": "vertical-align: -0.051ex;"
+        },
+        "originalRoot": {
+          "width": "1.442ex",
+          "height": "1.246ex",
+          "viewBox": "0 -525.3 637.5 550.6",
+          "style": "vertical-align: -0.057ex;"
+        }
+      },
+      {
+        "name": "cramped-053",
+        "tex": "\\mathcal{\\crampedsubstack{\\mathchoice{x^2}{y^3}{z^4}{w^5}}}",
+        "display": true,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "58.371ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 25800 950",
+          "style": "vertical-align: -0.452ex;"
+        },
+        "candidateRoot": {
+          "width": "1.455ex",
+          "height": "1.233ex",
+          "viewBox": "0 -522.6 643 545.1",
+          "style": "vertical-align: -0.051ex;"
+        },
+        "originalRoot": {
+          "width": "1.442ex",
+          "height": "1.246ex",
+          "viewBox": "0 -525.3 637.5 550.6",
+          "style": "vertical-align: -0.057ex;"
+        }
+      },
+      {
+        "name": "cramped-054",
+        "tex": "\\mathcal{\\begin{crampedsubarray}{c}\\mathchoice{x^2}{y^3}{z^4}{w^5}\\end{crampedsubarray}}",
+        "display": false,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "1.455ex",
+          "height": "1.352ex",
+          "viewBox": "0 -548.7 643 597.5",
+          "style": "vertical-align: -0.11ex;"
+        },
+        "candidateRoot": {
+          "width": "1.455ex",
+          "height": "1.233ex",
+          "viewBox": "0 -522.6 643 545.1",
+          "style": "vertical-align: -0.051ex;"
+        },
+        "originalRoot": {
+          "width": "1.442ex",
+          "height": "1.246ex",
+          "viewBox": "0 -525.3 637.5 550.6",
+          "style": "vertical-align: -0.057ex;"
+        }
+      },
+      {
+        "name": "cramped-055",
+        "tex": "\\mathcal{\\begin{crampedsubarray}{c}\\mathchoice{x^2}{y^3}{z^4}{w^5}\\end{crampedsubarray}}",
+        "display": true,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "1.455ex",
+          "height": "1.352ex",
+          "viewBox": "0 -548.7 643 597.5",
+          "style": "vertical-align: -0.11ex;"
+        },
+        "candidateRoot": {
+          "width": "1.455ex",
+          "height": "1.233ex",
+          "viewBox": "0 -522.6 643 545.1",
+          "style": "vertical-align: -0.051ex;"
+        },
+        "originalRoot": {
+          "width": "1.442ex",
+          "height": "1.246ex",
+          "viewBox": "0 -525.3 637.5 550.6",
+          "style": "vertical-align: -0.057ex;"
+        }
+      },
+      {
+        "name": "cramped-084",
+        "tex": "\\mathbf{\\crampedsubstack{\\prescript{a^2}{b^3}{x}}}",
+        "display": false,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "58.371ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 25800 950",
+          "style": "vertical-align: -0.452ex;"
+        },
+        "candidateRoot": {
+          "width": "2.518ex",
+          "height": "2.436ex",
+          "viewBox": "0 -788.4 1113.1 1076.8",
+          "style": "vertical-align: -0.652ex;"
+        },
+        "originalRoot": {
+          "width": "2.253ex",
+          "height": "2.471ex",
+          "viewBox": "0 -796.1 995.8 1092.3",
+          "style": "vertical-align: -0.67ex;"
+        }
+      },
+      {
+        "name": "cramped-085",
+        "tex": "\\mathbf{\\crampedsubstack{\\prescript{a^2}{b^3}{x}}}",
+        "display": true,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "58.371ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 25800 950",
+          "style": "vertical-align: -0.452ex;"
+        },
+        "candidateRoot": {
+          "width": "2.518ex",
+          "height": "2.436ex",
+          "viewBox": "0 -788.4 1113.1 1076.8",
+          "style": "vertical-align: -0.652ex;"
+        },
+        "originalRoot": {
+          "width": "2.253ex",
+          "height": "2.471ex",
+          "viewBox": "0 -796.1 995.8 1092.3",
+          "style": "vertical-align: -0.67ex;"
+        }
+      },
+      {
+        "name": "cramped-086",
+        "tex": "\\mathbf{\\begin{crampedsubarray}{c}\\prescript{a^2}{b^3}{x}\\end{crampedsubarray}}",
+        "display": false,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "2.518ex",
+          "height": "2.52ex",
+          "viewBox": "0 -806.9 1113.1 1113.8",
+          "style": "vertical-align: -0.694ex;"
+        },
+        "candidateRoot": {
+          "width": "2.518ex",
+          "height": "2.436ex",
+          "viewBox": "0 -788.4 1113.1 1076.8",
+          "style": "vertical-align: -0.652ex;"
+        },
+        "originalRoot": {
+          "width": "2.253ex",
+          "height": "2.471ex",
+          "viewBox": "0 -796.1 995.8 1092.3",
+          "style": "vertical-align: -0.67ex;"
+        }
+      },
+      {
+        "name": "cramped-087",
+        "tex": "\\mathbf{\\begin{crampedsubarray}{c}\\prescript{a^2}{b^3}{x}\\end{crampedsubarray}}",
+        "display": true,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "2.518ex",
+          "height": "2.52ex",
+          "viewBox": "0 -806.9 1113.1 1113.8",
+          "style": "vertical-align: -0.694ex;"
+        },
+        "candidateRoot": {
+          "width": "2.518ex",
+          "height": "2.436ex",
+          "viewBox": "0 -788.4 1113.1 1076.8",
+          "style": "vertical-align: -0.652ex;"
+        },
+        "originalRoot": {
+          "width": "2.253ex",
+          "height": "2.471ex",
+          "viewBox": "0 -796.1 995.8 1092.3",
+          "style": "vertical-align: -0.67ex;"
+        }
+      },
+      {
+        "name": "cramped-088",
+        "tex": "\\mathsf{\\crampedsubstack{\\prescript{a^2}{b^3}{x}}}",
+        "display": false,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "58.371ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 25800 950",
+          "style": "vertical-align: -0.452ex;"
+        },
+        "candidateRoot": {
+          "width": "2.062ex",
+          "height": "2.498ex",
+          "viewBox": "0 -802.1 911.3 1104.3",
+          "style": "vertical-align: -0.684ex;"
+        },
+        "originalRoot": {
+          "width": "2.253ex",
+          "height": "2.471ex",
+          "viewBox": "0 -796.1 995.8 1092.3",
+          "style": "vertical-align: -0.67ex;"
+        }
+      },
+      {
+        "name": "cramped-089",
+        "tex": "\\mathsf{\\crampedsubstack{\\prescript{a^2}{b^3}{x}}}",
+        "display": true,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "58.371ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 25800 950",
+          "style": "vertical-align: -0.452ex;"
+        },
+        "candidateRoot": {
+          "width": "2.062ex",
+          "height": "2.498ex",
+          "viewBox": "0 -802.1 911.3 1104.3",
+          "style": "vertical-align: -0.684ex;"
+        },
+        "originalRoot": {
+          "width": "2.253ex",
+          "height": "2.471ex",
+          "viewBox": "0 -796.1 995.8 1092.3",
+          "style": "vertical-align: -0.67ex;"
+        }
+      },
+      {
+        "name": "cramped-090",
+        "tex": "\\mathsf{\\begin{crampedsubarray}{c}\\prescript{a^2}{b^3}{x}\\end{crampedsubarray}}",
+        "display": false,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "2.062ex",
+          "height": "2.582ex",
+          "viewBox": "0 -820.6 911.3 1141.3",
+          "style": "vertical-align: -0.725ex;"
+        },
+        "candidateRoot": {
+          "width": "2.062ex",
+          "height": "2.498ex",
+          "viewBox": "0 -802.1 911.3 1104.3",
+          "style": "vertical-align: -0.684ex;"
+        },
+        "originalRoot": {
+          "width": "2.253ex",
+          "height": "2.471ex",
+          "viewBox": "0 -796.1 995.8 1092.3",
+          "style": "vertical-align: -0.67ex;"
+        }
+      },
+      {
+        "name": "cramped-091",
+        "tex": "\\mathsf{\\begin{crampedsubarray}{c}\\prescript{a^2}{b^3}{x}\\end{crampedsubarray}}",
+        "display": true,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "2.062ex",
+          "height": "2.582ex",
+          "viewBox": "0 -820.6 911.3 1141.3",
+          "style": "vertical-align: -0.725ex;"
+        },
+        "candidateRoot": {
+          "width": "2.062ex",
+          "height": "2.498ex",
+          "viewBox": "0 -802.1 911.3 1104.3",
+          "style": "vertical-align: -0.684ex;"
+        },
+        "originalRoot": {
+          "width": "2.253ex",
+          "height": "2.471ex",
+          "viewBox": "0 -796.1 995.8 1092.3",
+          "style": "vertical-align: -0.67ex;"
+        }
+      },
+      {
+        "name": "cramped-092",
+        "tex": "\\mathcal{\\crampedsubstack{\\prescript{a^2}{b^3}{x}}}",
+        "display": false,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "58.371ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 25800 950",
+          "style": "vertical-align: -0.452ex;"
+        },
+        "candidateRoot": {
+          "width": "2.265ex",
+          "height": "2.472ex",
+          "viewBox": "0 -796.4 1001.3 1092.8",
+          "style": "vertical-align: -0.671ex;"
+        },
+        "originalRoot": {
+          "width": "2.253ex",
+          "height": "2.471ex",
+          "viewBox": "0 -796.1 995.8 1092.3",
+          "style": "vertical-align: -0.67ex;"
+        }
+      },
+      {
+        "name": "cramped-093",
+        "tex": "\\mathcal{\\crampedsubstack{\\prescript{a^2}{b^3}{x}}}",
+        "display": true,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "58.371ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 25800 950",
+          "style": "vertical-align: -0.452ex;"
+        },
+        "candidateRoot": {
+          "width": "2.265ex",
+          "height": "2.472ex",
+          "viewBox": "0 -796.4 1001.3 1092.8",
+          "style": "vertical-align: -0.671ex;"
+        },
+        "originalRoot": {
+          "width": "2.253ex",
+          "height": "2.471ex",
+          "viewBox": "0 -796.1 995.8 1092.3",
+          "style": "vertical-align: -0.67ex;"
+        }
+      },
+      {
+        "name": "cramped-094",
+        "tex": "\\mathcal{\\begin{crampedsubarray}{c}\\prescript{a^2}{b^3}{x}\\end{crampedsubarray}}",
+        "display": false,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "2.265ex",
+          "height": "2.556ex",
+          "viewBox": "0 -814.9 1001.3 1129.8",
+          "style": "vertical-align: -0.712ex;"
+        },
+        "candidateRoot": {
+          "width": "2.265ex",
+          "height": "2.472ex",
+          "viewBox": "0 -796.4 1001.3 1092.8",
+          "style": "vertical-align: -0.671ex;"
+        },
+        "originalRoot": {
+          "width": "2.253ex",
+          "height": "2.471ex",
+          "viewBox": "0 -796.1 995.8 1092.3",
+          "style": "vertical-align: -0.67ex;"
+        }
+      },
+      {
+        "name": "cramped-095",
+        "tex": "\\mathcal{\\begin{crampedsubarray}{c}\\prescript{a^2}{b^3}{x}\\end{crampedsubarray}}",
+        "display": true,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "2.265ex",
+          "height": "2.556ex",
+          "viewBox": "0 -814.9 1001.3 1129.8",
+          "style": "vertical-align: -0.712ex;"
+        },
+        "candidateRoot": {
+          "width": "2.265ex",
+          "height": "2.472ex",
+          "viewBox": "0 -796.4 1001.3 1092.8",
+          "style": "vertical-align: -0.671ex;"
+        },
+        "originalRoot": {
+          "width": "2.253ex",
+          "height": "2.471ex",
+          "viewBox": "0 -796.1 995.8 1092.3",
+          "style": "vertical-align: -0.67ex;"
+        }
+      },
+      {
+        "name": "cramped-124",
+        "tex": "\\mathbf{\\crampedsubstack{\\mmlToken{mo}{`}^2\\\\x^{²}}}",
+        "display": false,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "58.371ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 25800 950",
+          "style": "vertical-align: -0.452ex;"
+        },
+        "candidateRoot": {
+          "width": "1.783ex",
+          "height": "2.739ex",
+          "viewBox": "0 -855.4 787.9 1210.7",
+          "style": "vertical-align: -0.804ex;"
+        },
+        "originalRoot": {
+          "width": "1.727ex",
+          "height": "2.77ex",
+          "viewBox": "0 -862.2 763.2 1224.5",
+          "style": "vertical-align: -0.82ex;"
+        }
+      },
+      {
+        "name": "cramped-125",
+        "tex": "\\mathbf{\\crampedsubstack{\\mmlToken{mo}{`}^2\\\\x^{²}}}",
+        "display": true,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "58.371ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 25800 950",
+          "style": "vertical-align: -0.452ex;"
+        },
+        "candidateRoot": {
+          "width": "1.783ex",
+          "height": "2.739ex",
+          "viewBox": "0 -855.4 787.9 1210.7",
+          "style": "vertical-align: -0.804ex;"
+        },
+        "originalRoot": {
+          "width": "1.727ex",
+          "height": "2.77ex",
+          "viewBox": "0 -862.2 763.2 1224.5",
+          "style": "vertical-align: -0.82ex;"
+        }
+      },
+      {
+        "name": "cramped-126",
+        "tex": "\\mathbf{\\begin{crampedsubarray}{c}\\mmlToken{mo}{`}^2\\\\x^{²}\\end{crampedsubarray}}",
+        "display": false,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "1.783ex",
+          "height": "2.976ex",
+          "viewBox": "0 -907.7 787.9 1315.4",
+          "style": "vertical-align: -0.922ex;"
+        },
+        "candidateRoot": {
+          "width": "1.783ex",
+          "height": "2.739ex",
+          "viewBox": "0 -855.4 787.9 1210.7",
+          "style": "vertical-align: -0.804ex;"
+        },
+        "originalRoot": {
+          "width": "1.727ex",
+          "height": "2.77ex",
+          "viewBox": "0 -862.2 763.2 1224.5",
+          "style": "vertical-align: -0.82ex;"
+        }
+      },
+      {
+        "name": "cramped-127",
+        "tex": "\\mathbf{\\begin{crampedsubarray}{c}\\mmlToken{mo}{`}^2\\\\x^{²}\\end{crampedsubarray}}",
+        "display": true,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "1.783ex",
+          "height": "2.976ex",
+          "viewBox": "0 -907.7 787.9 1315.4",
+          "style": "vertical-align: -0.922ex;"
+        },
+        "candidateRoot": {
+          "width": "1.783ex",
+          "height": "2.739ex",
+          "viewBox": "0 -855.4 787.9 1210.7",
+          "style": "vertical-align: -0.804ex;"
+        },
+        "originalRoot": {
+          "width": "1.727ex",
+          "height": "2.77ex",
+          "viewBox": "0 -862.2 763.2 1224.5",
+          "style": "vertical-align: -0.82ex;"
+        }
+      },
+      {
+        "name": "cramped-128",
+        "tex": "\\mathsf{\\crampedsubstack{\\mmlToken{mo}{`}^2\\\\x^{²}}}",
+        "display": false,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "58.371ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 25800 950",
+          "style": "vertical-align: -0.452ex;"
+        },
+        "candidateRoot": {
+          "width": "1.549ex",
+          "height": "2.765ex",
+          "viewBox": "0 -861.1 684.7 1222.2",
+          "style": "vertical-align: -0.817ex;"
+        },
+        "originalRoot": {
+          "width": "1.727ex",
+          "height": "2.77ex",
+          "viewBox": "0 -862.2 763.2 1224.5",
+          "style": "vertical-align: -0.82ex;"
+        }
+      },
+      {
+        "name": "cramped-129",
+        "tex": "\\mathsf{\\crampedsubstack{\\mmlToken{mo}{`}^2\\\\x^{²}}}",
+        "display": true,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "58.371ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 25800 950",
+          "style": "vertical-align: -0.452ex;"
+        },
+        "candidateRoot": {
+          "width": "1.549ex",
+          "height": "2.765ex",
+          "viewBox": "0 -861.1 684.7 1222.2",
+          "style": "vertical-align: -0.817ex;"
+        },
+        "originalRoot": {
+          "width": "1.727ex",
+          "height": "2.77ex",
+          "viewBox": "0 -862.2 763.2 1224.5",
+          "style": "vertical-align: -0.82ex;"
+        }
+      },
+      {
+        "name": "cramped-130",
+        "tex": "\\mathsf{\\begin{crampedsubarray}{c}\\mmlToken{mo}{`}^2\\\\x^{²}\\end{crampedsubarray}}",
+        "display": false,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "1.549ex",
+          "height": "3.002ex",
+          "viewBox": "0 -913.4 684.7 1326.9",
+          "style": "vertical-align: -0.935ex;"
+        },
+        "candidateRoot": {
+          "width": "1.549ex",
+          "height": "2.765ex",
+          "viewBox": "0 -861.1 684.7 1222.2",
+          "style": "vertical-align: -0.817ex;"
+        },
+        "originalRoot": {
+          "width": "1.727ex",
+          "height": "2.77ex",
+          "viewBox": "0 -862.2 763.2 1224.5",
+          "style": "vertical-align: -0.82ex;"
+        }
+      },
+      {
+        "name": "cramped-131",
+        "tex": "\\mathsf{\\begin{crampedsubarray}{c}\\mmlToken{mo}{`}^2\\\\x^{²}\\end{crampedsubarray}}",
+        "display": true,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "1.549ex",
+          "height": "3.002ex",
+          "viewBox": "0 -913.4 684.7 1326.9",
+          "style": "vertical-align: -0.935ex;"
+        },
+        "candidateRoot": {
+          "width": "1.549ex",
+          "height": "2.765ex",
+          "viewBox": "0 -861.1 684.7 1222.2",
+          "style": "vertical-align: -0.817ex;"
+        },
+        "originalRoot": {
+          "width": "1.727ex",
+          "height": "2.77ex",
+          "viewBox": "0 -862.2 763.2 1224.5",
+          "style": "vertical-align: -0.82ex;"
+        }
+      },
+      {
+        "name": "cramped-132",
+        "tex": "\\mathcal{\\crampedsubstack{\\mmlToken{mo}{`}^2\\\\x^{²}}}",
+        "display": false,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "58.371ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 25800 950",
+          "style": "vertical-align: -0.452ex;"
+        },
+        "candidateRoot": {
+          "width": "1.727ex",
+          "height": "2.77ex",
+          "viewBox": "0 -862.2 763.2 1224.5",
+          "style": "vertical-align: -0.82ex;"
+        },
+        "originalRoot": {
+          "width": "1.727ex",
+          "height": "2.77ex",
+          "viewBox": "0 -862.2 763.2 1224.5",
+          "style": "vertical-align: -0.82ex;"
+        }
+      },
+      {
+        "name": "cramped-133",
+        "tex": "\\mathcal{\\crampedsubstack{\\mmlToken{mo}{`}^2\\\\x^{²}}}",
+        "display": true,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "58.371ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 25800 950",
+          "style": "vertical-align: -0.452ex;"
+        },
+        "candidateRoot": {
+          "width": "1.727ex",
+          "height": "2.77ex",
+          "viewBox": "0 -862.2 763.2 1224.5",
+          "style": "vertical-align: -0.82ex;"
+        },
+        "originalRoot": {
+          "width": "1.727ex",
+          "height": "2.77ex",
+          "viewBox": "0 -862.2 763.2 1224.5",
+          "style": "vertical-align: -0.82ex;"
+        }
+      },
+      {
+        "name": "cramped-134",
+        "tex": "\\mathcal{\\begin{crampedsubarray}{c}\\mmlToken{mo}{`}^2\\\\x^{²}\\end{crampedsubarray}}",
+        "display": false,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "1.727ex",
+          "height": "3.007ex",
+          "viewBox": "0 -914.6 763.2 1329.1",
+          "style": "vertical-align: -0.938ex;"
+        },
+        "candidateRoot": {
+          "width": "1.727ex",
+          "height": "2.77ex",
+          "viewBox": "0 -862.2 763.2 1224.5",
+          "style": "vertical-align: -0.82ex;"
+        },
+        "originalRoot": {
+          "width": "1.727ex",
+          "height": "2.77ex",
+          "viewBox": "0 -862.2 763.2 1224.5",
+          "style": "vertical-align: -0.82ex;"
+        }
+      },
+      {
+        "name": "cramped-135",
+        "tex": "\\mathcal{\\begin{crampedsubarray}{c}\\mmlToken{mo}{`}^2\\\\x^{²}\\end{crampedsubarray}}",
+        "display": true,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "1.727ex",
+          "height": "3.007ex",
+          "viewBox": "0 -914.6 763.2 1329.1",
+          "style": "vertical-align: -0.938ex;"
+        },
+        "candidateRoot": {
+          "width": "1.727ex",
+          "height": "2.77ex",
+          "viewBox": "0 -862.2 763.2 1224.5",
+          "style": "vertical-align: -0.82ex;"
+        },
+        "originalRoot": {
+          "width": "1.727ex",
+          "height": "2.77ex",
+          "viewBox": "0 -862.2 763.2 1224.5",
+          "style": "vertical-align: -0.82ex;"
+        }
+      },
+      {
+        "name": "cramped-164",
+        "tex": "\\mathbf{\\crampedsubstack{\\sum\\limits_{a^2}^{b^3}x}}",
+        "display": false,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "58.371ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 25800 950",
+          "style": "vertical-align: -0.452ex;"
+        },
+        "candidateRoot": {
+          "width": "2.927ex",
+          "height": "4.648ex",
+          "viewBox": "0 -1277.3 1293.8 2054.5",
+          "style": "vertical-align: -1.759ex;"
+        },
+        "originalRoot": {
+          "width": "2.871ex",
+          "height": "4.678ex",
+          "viewBox": "0 -1283.8 1269 2067.5",
+          "style": "vertical-align: -1.773ex;"
+        }
+      },
+      {
+        "name": "cramped-165",
+        "tex": "\\mathbf{\\crampedsubstack{\\sum\\limits_{a^2}^{b^3}x}}",
+        "display": true,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "58.371ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 25800 950",
+          "style": "vertical-align: -0.452ex;"
+        },
+        "candidateRoot": {
+          "width": "2.927ex",
+          "height": "4.648ex",
+          "viewBox": "0 -1277.3 1293.8 2054.5",
+          "style": "vertical-align: -1.759ex;"
+        },
+        "originalRoot": {
+          "width": "2.871ex",
+          "height": "4.678ex",
+          "viewBox": "0 -1283.8 1269 2067.5",
+          "style": "vertical-align: -1.773ex;"
+        }
+      },
+      {
+        "name": "cramped-166",
+        "tex": "\\mathbf{\\begin{crampedsubarray}{c}\\sum\\limits_{a^2}^{b^3}x\\end{crampedsubarray}}",
+        "display": false,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "2.927ex",
+          "height": "4.732ex",
+          "viewBox": "0 -1295.8 1293.8 2091.5",
+          "style": "vertical-align: -1.8ex;"
+        },
+        "candidateRoot": {
+          "width": "2.927ex",
+          "height": "4.648ex",
+          "viewBox": "0 -1277.3 1293.8 2054.5",
+          "style": "vertical-align: -1.759ex;"
+        },
+        "originalRoot": {
+          "width": "2.871ex",
+          "height": "4.678ex",
+          "viewBox": "0 -1283.8 1269 2067.5",
+          "style": "vertical-align: -1.773ex;"
+        }
+      },
+      {
+        "name": "cramped-167",
+        "tex": "\\mathbf{\\begin{crampedsubarray}{c}\\sum\\limits_{a^2}^{b^3}x\\end{crampedsubarray}}",
+        "display": true,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "2.927ex",
+          "height": "4.732ex",
+          "viewBox": "0 -1295.8 1293.8 2091.5",
+          "style": "vertical-align: -1.8ex;"
+        },
+        "candidateRoot": {
+          "width": "2.927ex",
+          "height": "4.648ex",
+          "viewBox": "0 -1277.3 1293.8 2054.5",
+          "style": "vertical-align: -1.759ex;"
+        },
+        "originalRoot": {
+          "width": "2.871ex",
+          "height": "4.678ex",
+          "viewBox": "0 -1283.8 1269 2067.5",
+          "style": "vertical-align: -1.773ex;"
+        }
+      },
+      {
+        "name": "cramped-168",
+        "tex": "\\mathsf{\\crampedsubstack{\\sum\\limits_{a^2}^{b^3}x}}",
+        "display": false,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "58.371ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 25800 950",
+          "style": "vertical-align: -0.452ex;"
+        },
+        "candidateRoot": {
+          "width": "2.694ex",
+          "height": "4.705ex",
+          "viewBox": "0 -1289.8 1190.5 2079.5",
+          "style": "vertical-align: -1.787ex;"
+        },
+        "originalRoot": {
+          "width": "2.871ex",
+          "height": "4.678ex",
+          "viewBox": "0 -1283.8 1269 2067.5",
+          "style": "vertical-align: -1.773ex;"
+        }
+      },
+      {
+        "name": "cramped-169",
+        "tex": "\\mathsf{\\crampedsubstack{\\sum\\limits_{a^2}^{b^3}x}}",
+        "display": true,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "58.371ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 25800 950",
+          "style": "vertical-align: -0.452ex;"
+        },
+        "candidateRoot": {
+          "width": "2.694ex",
+          "height": "4.705ex",
+          "viewBox": "0 -1289.8 1190.5 2079.5",
+          "style": "vertical-align: -1.787ex;"
+        },
+        "originalRoot": {
+          "width": "2.871ex",
+          "height": "4.678ex",
+          "viewBox": "0 -1283.8 1269 2067.5",
+          "style": "vertical-align: -1.773ex;"
+        }
+      },
+      {
+        "name": "cramped-170",
+        "tex": "\\mathsf{\\begin{crampedsubarray}{c}\\sum\\limits_{a^2}^{b^3}x\\end{crampedsubarray}}",
+        "display": false,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "2.694ex",
+          "height": "4.789ex",
+          "viewBox": "0 -1308.3 1190.5 2116.5",
+          "style": "vertical-align: -1.829ex;"
+        },
+        "candidateRoot": {
+          "width": "2.694ex",
+          "height": "4.705ex",
+          "viewBox": "0 -1289.8 1190.5 2079.5",
+          "style": "vertical-align: -1.787ex;"
+        },
+        "originalRoot": {
+          "width": "2.871ex",
+          "height": "4.678ex",
+          "viewBox": "0 -1283.8 1269 2067.5",
+          "style": "vertical-align: -1.773ex;"
+        }
+      },
+      {
+        "name": "cramped-171",
+        "tex": "\\mathsf{\\begin{crampedsubarray}{c}\\sum\\limits_{a^2}^{b^3}x\\end{crampedsubarray}}",
+        "display": true,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "2.694ex",
+          "height": "4.789ex",
+          "viewBox": "0 -1308.3 1190.5 2116.5",
+          "style": "vertical-align: -1.829ex;"
+        },
+        "candidateRoot": {
+          "width": "2.694ex",
+          "height": "4.705ex",
+          "viewBox": "0 -1289.8 1190.5 2079.5",
+          "style": "vertical-align: -1.787ex;"
+        },
+        "originalRoot": {
+          "width": "2.871ex",
+          "height": "4.678ex",
+          "viewBox": "0 -1283.8 1269 2067.5",
+          "style": "vertical-align: -1.773ex;"
+        }
+      },
+      {
+        "name": "cramped-172",
+        "tex": "\\mathcal{\\crampedsubstack{\\sum\\limits_{a^2}^{b^3}x}}",
+        "display": false,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "58.371ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 25800 950",
+          "style": "vertical-align: -0.452ex;"
+        },
+        "candidateRoot": {
+          "width": "2.871ex",
+          "height": "4.679ex",
+          "viewBox": "0 -1284 1269 2068",
+          "style": "vertical-align: -1.774ex;"
+        },
+        "originalRoot": {
+          "width": "2.871ex",
+          "height": "4.678ex",
+          "viewBox": "0 -1283.8 1269 2067.5",
+          "style": "vertical-align: -1.773ex;"
+        }
+      },
+      {
+        "name": "cramped-173",
+        "tex": "\\mathcal{\\crampedsubstack{\\sum\\limits_{a^2}^{b^3}x}}",
+        "display": true,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "58.371ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 25800 950",
+          "style": "vertical-align: -0.452ex;"
+        },
+        "candidateRoot": {
+          "width": "2.871ex",
+          "height": "4.679ex",
+          "viewBox": "0 -1284 1269 2068",
+          "style": "vertical-align: -1.774ex;"
+        },
+        "originalRoot": {
+          "width": "2.871ex",
+          "height": "4.678ex",
+          "viewBox": "0 -1283.8 1269 2067.5",
+          "style": "vertical-align: -1.773ex;"
+        }
+      },
+      {
+        "name": "cramped-174",
+        "tex": "\\mathcal{\\begin{crampedsubarray}{c}\\sum\\limits_{a^2}^{b^3}x\\end{crampedsubarray}}",
+        "display": false,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "2.871ex",
+          "height": "4.763ex",
+          "viewBox": "0 -1302.5 1269 2105",
+          "style": "vertical-align: -1.816ex;"
+        },
+        "candidateRoot": {
+          "width": "2.871ex",
+          "height": "4.679ex",
+          "viewBox": "0 -1284 1269 2068",
+          "style": "vertical-align: -1.774ex;"
+        },
+        "originalRoot": {
+          "width": "2.871ex",
+          "height": "4.678ex",
+          "viewBox": "0 -1283.8 1269 2067.5",
+          "style": "vertical-align: -1.773ex;"
+        }
+      },
+      {
+        "name": "cramped-175",
+        "tex": "\\mathcal{\\begin{crampedsubarray}{c}\\sum\\limits_{a^2}^{b^3}x\\end{crampedsubarray}}",
+        "display": true,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "2.871ex",
+          "height": "4.763ex",
+          "viewBox": "0 -1302.5 1269 2105",
+          "style": "vertical-align: -1.816ex;"
+        },
+        "candidateRoot": {
+          "width": "2.871ex",
+          "height": "4.679ex",
+          "viewBox": "0 -1284 1269 2068",
+          "style": "vertical-align: -1.774ex;"
+        },
+        "originalRoot": {
+          "width": "2.871ex",
+          "height": "4.678ex",
+          "viewBox": "0 -1283.8 1269 2067.5",
+          "style": "vertical-align: -1.773ex;"
+        }
+      },
+      {
+        "name": "cramped-244",
+        "tex": "\\mathbf{\\crampedsubstack{\\bf x^2\\\\\\mathcal F^2&\\sf y^3}}",
+        "display": false,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "58.371ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 25800 950",
+          "style": "vertical-align: -0.452ex;"
+        },
+        "candidateRoot": {
+          "width": "3.634ex",
+          "height": "2.984ex",
+          "viewBox": "0 -909.5 1606.3 1319",
+          "style": "vertical-align: -0.926ex;"
+        },
+        "originalRoot": {
+          "width": "3.549ex",
+          "height": "2.984ex",
+          "viewBox": "0 -909.5 1568.8 1319",
+          "style": "vertical-align: -0.926ex;"
+        }
+      },
+      {
+        "name": "cramped-245",
+        "tex": "\\mathbf{\\crampedsubstack{\\bf x^2\\\\\\mathcal F^2&\\sf y^3}}",
+        "display": true,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "58.371ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 25800 950",
+          "style": "vertical-align: -0.452ex;"
+        },
+        "candidateRoot": {
+          "width": "3.634ex",
+          "height": "2.984ex",
+          "viewBox": "0 -909.5 1606.3 1319",
+          "style": "vertical-align: -0.926ex;"
+        },
+        "originalRoot": {
+          "width": "3.549ex",
+          "height": "2.984ex",
+          "viewBox": "0 -909.5 1568.8 1319",
+          "style": "vertical-align: -0.926ex;"
+        }
+      },
+      {
+        "name": "cramped-246",
+        "tex": "\\mathbf{\\begin{crampedsubarray}{c}\\bf x^2\\\\\\mathcal F^2&\\sf y^3\\end{crampedsubarray}}",
+        "display": false,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "3.634ex",
+          "height": "3.221ex",
+          "viewBox": "0 -961.8 1606.3 1423.6",
+          "style": "vertical-align: -1.045ex;"
+        },
+        "candidateRoot": {
+          "width": "3.634ex",
+          "height": "2.984ex",
+          "viewBox": "0 -909.5 1606.3 1319",
+          "style": "vertical-align: -0.926ex;"
+        },
+        "originalRoot": {
+          "width": "3.549ex",
+          "height": "2.984ex",
+          "viewBox": "0 -909.5 1568.8 1319",
+          "style": "vertical-align: -0.926ex;"
+        }
+      },
+      {
+        "name": "cramped-247",
+        "tex": "\\mathbf{\\begin{crampedsubarray}{c}\\bf x^2\\\\\\mathcal F^2&\\sf y^3\\end{crampedsubarray}}",
+        "display": true,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "3.634ex",
+          "height": "3.221ex",
+          "viewBox": "0 -961.8 1606.3 1423.6",
+          "style": "vertical-align: -1.045ex;"
+        },
+        "candidateRoot": {
+          "width": "3.634ex",
+          "height": "2.984ex",
+          "viewBox": "0 -909.5 1606.3 1319",
+          "style": "vertical-align: -0.926ex;"
+        },
+        "originalRoot": {
+          "width": "3.549ex",
+          "height": "2.984ex",
+          "viewBox": "0 -909.5 1568.8 1319",
+          "style": "vertical-align: -0.926ex;"
+        }
+      },
+      {
+        "name": "cramped-248",
+        "tex": "\\mathsf{\\crampedsubstack{\\bf x^2\\\\\\mathcal F^2&\\sf y^3}}",
+        "display": false,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "58.371ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 25800 950",
+          "style": "vertical-align: -0.452ex;"
+        },
+        "candidateRoot": {
+          "width": "3.549ex",
+          "height": "2.984ex",
+          "viewBox": "0 -909.5 1568.8 1319",
+          "style": "vertical-align: -0.926ex;"
+        },
+        "originalRoot": {
+          "width": "3.549ex",
+          "height": "2.984ex",
+          "viewBox": "0 -909.5 1568.8 1319",
+          "style": "vertical-align: -0.926ex;"
+        }
+      },
+      {
+        "name": "cramped-249",
+        "tex": "\\mathsf{\\crampedsubstack{\\bf x^2\\\\\\mathcal F^2&\\sf y^3}}",
+        "display": true,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "58.371ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 25800 950",
+          "style": "vertical-align: -0.452ex;"
+        },
+        "candidateRoot": {
+          "width": "3.549ex",
+          "height": "2.984ex",
+          "viewBox": "0 -909.5 1568.8 1319",
+          "style": "vertical-align: -0.926ex;"
+        },
+        "originalRoot": {
+          "width": "3.549ex",
+          "height": "2.984ex",
+          "viewBox": "0 -909.5 1568.8 1319",
+          "style": "vertical-align: -0.926ex;"
+        }
+      },
+      {
+        "name": "cramped-250",
+        "tex": "\\mathsf{\\begin{crampedsubarray}{c}\\bf x^2\\\\\\mathcal F^2&\\sf y^3\\end{crampedsubarray}}",
+        "display": false,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "3.549ex",
+          "height": "3.221ex",
+          "viewBox": "0 -961.8 1568.8 1423.6",
+          "style": "vertical-align: -1.045ex;"
+        },
+        "candidateRoot": {
+          "width": "3.549ex",
+          "height": "2.984ex",
+          "viewBox": "0 -909.5 1568.8 1319",
+          "style": "vertical-align: -0.926ex;"
+        },
+        "originalRoot": {
+          "width": "3.549ex",
+          "height": "2.984ex",
+          "viewBox": "0 -909.5 1568.8 1319",
+          "style": "vertical-align: -0.926ex;"
+        }
+      },
+      {
+        "name": "cramped-251",
+        "tex": "\\mathsf{\\begin{crampedsubarray}{c}\\bf x^2\\\\\\mathcal F^2&\\sf y^3\\end{crampedsubarray}}",
+        "display": true,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "3.549ex",
+          "height": "3.221ex",
+          "viewBox": "0 -961.8 1568.8 1423.6",
+          "style": "vertical-align: -1.045ex;"
+        },
+        "candidateRoot": {
+          "width": "3.549ex",
+          "height": "2.984ex",
+          "viewBox": "0 -909.5 1568.8 1319",
+          "style": "vertical-align: -0.926ex;"
+        },
+        "originalRoot": {
+          "width": "3.549ex",
+          "height": "2.984ex",
+          "viewBox": "0 -909.5 1568.8 1319",
+          "style": "vertical-align: -0.926ex;"
+        }
+      },
+      {
+        "name": "cramped-252",
+        "tex": "\\mathcal{\\crampedsubstack{\\bf x^2\\\\\\mathcal F^2&\\sf y^3}}",
+        "display": false,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "58.371ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 25800 950",
+          "style": "vertical-align: -0.452ex;"
+        },
+        "candidateRoot": {
+          "width": "3.562ex",
+          "height": "2.984ex",
+          "viewBox": "0 -909.5 1574.3 1319",
+          "style": "vertical-align: -0.926ex;"
+        },
+        "originalRoot": {
+          "width": "3.549ex",
+          "height": "2.984ex",
+          "viewBox": "0 -909.5 1568.8 1319",
+          "style": "vertical-align: -0.926ex;"
+        }
+      },
+      {
+        "name": "cramped-253",
+        "tex": "\\mathcal{\\crampedsubstack{\\bf x^2\\\\\\mathcal F^2&\\sf y^3}}",
+        "display": true,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "58.371ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 25800 950",
+          "style": "vertical-align: -0.452ex;"
+        },
+        "candidateRoot": {
+          "width": "3.562ex",
+          "height": "2.984ex",
+          "viewBox": "0 -909.5 1574.3 1319",
+          "style": "vertical-align: -0.926ex;"
+        },
+        "originalRoot": {
+          "width": "3.549ex",
+          "height": "2.984ex",
+          "viewBox": "0 -909.5 1568.8 1319",
+          "style": "vertical-align: -0.926ex;"
+        }
+      },
+      {
+        "name": "cramped-254",
+        "tex": "\\mathcal{\\begin{crampedsubarray}{c}\\bf x^2\\\\\\mathcal F^2&\\sf y^3\\end{crampedsubarray}}",
+        "display": false,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "3.562ex",
+          "height": "3.221ex",
+          "viewBox": "0 -961.8 1574.3 1423.6",
+          "style": "vertical-align: -1.045ex;"
+        },
+        "candidateRoot": {
+          "width": "3.562ex",
+          "height": "2.984ex",
+          "viewBox": "0 -909.5 1574.3 1319",
+          "style": "vertical-align: -0.926ex;"
+        },
+        "originalRoot": {
+          "width": "3.549ex",
+          "height": "2.984ex",
+          "viewBox": "0 -909.5 1568.8 1319",
+          "style": "vertical-align: -0.926ex;"
+        }
+      },
+      {
+        "name": "cramped-255",
+        "tex": "\\mathcal{\\begin{crampedsubarray}{c}\\bf x^2\\\\\\mathcal F^2&\\sf y^3\\end{crampedsubarray}}",
+        "display": true,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "3.562ex",
+          "height": "3.221ex",
+          "viewBox": "0 -961.8 1574.3 1423.6",
+          "style": "vertical-align: -1.045ex;"
+        },
+        "candidateRoot": {
+          "width": "3.562ex",
+          "height": "2.984ex",
+          "viewBox": "0 -909.5 1574.3 1319",
+          "style": "vertical-align: -0.926ex;"
+        },
+        "originalRoot": {
+          "width": "3.549ex",
+          "height": "2.984ex",
+          "viewBox": "0 -909.5 1568.8 1319",
+          "style": "vertical-align: -0.926ex;"
+        }
+      },
+      {
+        "name": "cramped-304",
+        "tex": "\\mspace{1em}\\crampedsubstack{\\cramped[\\scriptscriptstyle]{x^2}\\\\\\scriptstyle y^3}",
+        "display": false,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "58.371ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 25800 950",
+          "style": "vertical-align: -0.452ex;"
+        },
+        "candidateRoot": {
+          "width": "3.876ex",
+          "height": "3.121ex",
+          "viewBox": "0 -939.6 1713.2 1379.3",
+          "style": "vertical-align: -0.995ex;"
+        },
+        "originalRoot": {
+          "width": "3.745ex",
+          "height": "2.98ex",
+          "viewBox": "0 -908.6 1655.2 1317.1",
+          "style": "vertical-align: -0.924ex;"
+        }
+      },
+      {
+        "name": "cramped-305",
+        "tex": "\\mspace{1em}\\crampedsubstack{\\cramped[\\scriptscriptstyle]{x^2}\\\\\\scriptstyle y^3}",
+        "display": true,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "58.371ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 25800 950",
+          "style": "vertical-align: -0.452ex;"
+        },
+        "candidateRoot": {
+          "width": "3.876ex",
+          "height": "3.121ex",
+          "viewBox": "0 -939.6 1713.2 1379.3",
+          "style": "vertical-align: -0.995ex;"
+        },
+        "originalRoot": {
+          "width": "3.745ex",
+          "height": "2.98ex",
+          "viewBox": "0 -908.6 1655.2 1317.1",
+          "style": "vertical-align: -0.924ex;"
+        }
+      },
+      {
+        "name": "cramped-306",
+        "tex": "\\sum\\nolimits^{\\crampedsubstack{\\cramped[\\scriptscriptstyle]{x^2}\\\\\\scriptstyle y^3}}",
+        "display": false,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "58.371ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 25800 950",
+          "style": "vertical-align: -0.452ex;"
+        },
+        "candidateRoot": {
+          "width": "4.19ex",
+          "height": "3.87ex",
+          "viewBox": "0 -1460.5 1852.2 1710.5",
+          "style": "vertical-align: -0.566ex;"
+        },
+        "originalRoot": {
+          "width": "4.059ex",
+          "height": "3.729ex",
+          "viewBox": "0 -1398.3 1794.2 1648.3",
+          "style": "vertical-align: -0.566ex;"
+        }
+      },
+      {
+        "name": "cramped-307",
+        "tex": "\\sum\\nolimits^{\\crampedsubstack{\\cramped[\\scriptscriptstyle]{x^2}\\\\\\scriptstyle y^3}}",
+        "display": true,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "58.371ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 25800 950",
+          "style": "vertical-align: -0.452ex;"
+        },
+        "candidateRoot": {
+          "width": "5.068ex",
+          "height": "4.477ex",
+          "viewBox": "0 -1528.8 2240.2 1978.8",
+          "style": "vertical-align: -1.018ex;"
+        },
+        "originalRoot": {
+          "width": "4.937ex",
+          "height": "4.407ex",
+          "viewBox": "0 -1497.8 2182.2 1947.8",
+          "style": "vertical-align: -1.018ex;"
+        }
+      },
+      {
+        "name": "cramped-308",
+        "tex": "\\overset{A}{\\crampedsubstack{\\cramped[\\scriptscriptstyle]{x^2}\\\\\\scriptstyle y^3}}",
+        "display": false,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "58.371ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 25800 950",
+          "style": "vertical-align: -0.452ex;"
+        },
+        "candidateRoot": {
+          "width": "1.613ex",
+          "height": "4.945ex",
+          "viewBox": "0 -1745.9 713.2 2185.6",
+          "style": "vertical-align: -0.995ex;"
+        },
+        "originalRoot": {
+          "width": "1.482ex",
+          "height": "4.804ex",
+          "viewBox": "0 -1714.9 655.2 2123.4",
+          "style": "vertical-align: -0.924ex;"
+        }
+      },
+      {
+        "name": "cramped-309",
+        "tex": "\\overset{A}{\\crampedsubstack{\\cramped[\\scriptscriptstyle]{x^2}\\\\\\scriptstyle y^3}}",
+        "display": true,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "58.371ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 25800 950",
+          "style": "vertical-align: -0.452ex;"
+        },
+        "candidateRoot": {
+          "width": "1.613ex",
+          "height": "4.945ex",
+          "viewBox": "0 -1745.9 713.2 2185.6",
+          "style": "vertical-align: -0.995ex;"
+        },
+        "originalRoot": {
+          "width": "1.482ex",
+          "height": "4.804ex",
+          "viewBox": "0 -1714.9 655.2 2123.4",
+          "style": "vertical-align: -0.924ex;"
+        }
+      },
+      {
+        "name": "cramped-310",
+        "tex": "\\underset{A}{\\crampedsubstack{\\cramped[\\scriptscriptstyle]{x^2}\\\\\\scriptstyle y^3}}",
+        "display": false,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "58.371ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 25800 950",
+          "style": "vertical-align: -0.452ex;"
+        },
+        "candidateRoot": {
+          "width": "1.613ex",
+          "height": "4.87ex",
+          "viewBox": "0 -939.6 713.2 2152.6",
+          "style": "vertical-align: -2.744ex;"
+        },
+        "originalRoot": {
+          "width": "1.482ex",
+          "height": "4.729ex",
+          "viewBox": "0 -908.6 655.2 2090.4",
+          "style": "vertical-align: -2.674ex;"
+        }
+      },
+      {
+        "name": "cramped-311",
+        "tex": "\\underset{A}{\\crampedsubstack{\\cramped[\\scriptscriptstyle]{x^2}\\\\\\scriptstyle y^3}}",
+        "display": true,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "58.371ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 25800 950",
+          "style": "vertical-align: -0.452ex;"
+        },
+        "candidateRoot": {
+          "width": "1.613ex",
+          "height": "4.87ex",
+          "viewBox": "0 -939.6 713.2 2152.6",
+          "style": "vertical-align: -2.744ex;"
+        },
+        "originalRoot": {
+          "width": "1.482ex",
+          "height": "4.729ex",
+          "viewBox": "0 -908.6 655.2 2090.4",
+          "style": "vertical-align: -2.674ex;"
+        }
+      },
+      {
+        "name": "cramped-346",
+        "tex": "\\DeclarePairedDelimiter{\\begin}{[}{]}\\crampedsubstack{x^2}",
+        "display": false,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "58.371ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 25800 950",
+          "style": "vertical-align: -0.452ex;"
+        },
+        "candidateRoot": {
+          "width": "36.652ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 16200 950",
+          "style": "vertical-align: -0.452ex;"
+        },
+        "originalRoot": {
+          "width": "84.163ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 37200 950",
+          "style": "vertical-align: -0.452ex;"
+        }
+      },
+      {
+        "name": "cramped-347",
+        "tex": "\\DeclarePairedDelimiter{\\begin}{[}{]}\\crampedsubstack{x^2}",
+        "display": true,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "58.371ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 25800 950",
+          "style": "vertical-align: -0.452ex;"
+        },
+        "candidateRoot": {
+          "width": "36.652ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 16200 950",
+          "style": "vertical-align: -0.452ex;"
+        },
+        "originalRoot": {
+          "width": "84.163ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 37200 950",
+          "style": "vertical-align: -0.452ex;"
+        }
+      },
+      {
+        "name": "cramped-348",
+        "tex": "\\DeclarePairedDelimiter{\\end}{[}{]}\\crampedsubstack{x^2}",
+        "display": false,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "58.371ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 25800 950",
+          "style": "vertical-align: -0.452ex;"
+        },
+        "candidateRoot": {
+          "width": "1.613ex",
+          "height": "1.233ex",
+          "viewBox": "0 -522.6 713.2 545.1",
+          "style": "vertical-align: -0.051ex;"
+        },
+        "originalRoot": {
+          "width": "39.367ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 17400 950",
+          "style": "vertical-align: -0.452ex;"
+        }
+      },
+      {
+        "name": "cramped-349",
+        "tex": "\\DeclarePairedDelimiter{\\end}{[}{]}\\crampedsubstack{x^2}",
+        "display": true,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "58.371ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 25800 950",
+          "style": "vertical-align: -0.452ex;"
+        },
+        "candidateRoot": {
+          "width": "1.613ex",
+          "height": "1.233ex",
+          "viewBox": "0 -522.6 713.2 545.1",
+          "style": "vertical-align: -0.051ex;"
+        },
+        "originalRoot": {
+          "width": "39.367ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 17400 950",
+          "style": "vertical-align: -0.452ex;"
+        }
+      },
+      {
+        "name": "cramped-350",
+        "tex": "\\DeclareMathOperator{\\begin}{B}\\crampedsubstack{x^2}",
+        "display": false,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "58.371ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 25800 950",
+          "style": "vertical-align: -0.452ex;"
+        },
+        "candidateRoot": {
+          "width": "36.652ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 16200 950",
+          "style": "vertical-align: -0.452ex;"
+        },
+        "originalRoot": {
+          "width": "84.163ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 37200 950",
+          "style": "vertical-align: -0.452ex;"
+        }
+      },
+      {
+        "name": "cramped-351",
+        "tex": "\\DeclareMathOperator{\\begin}{B}\\crampedsubstack{x^2}",
+        "display": true,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "58.371ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 25800 950",
+          "style": "vertical-align: -0.452ex;"
+        },
+        "candidateRoot": {
+          "width": "36.652ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 16200 950",
+          "style": "vertical-align: -0.452ex;"
+        },
+        "originalRoot": {
+          "width": "84.163ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 37200 950",
+          "style": "vertical-align: -0.452ex;"
+        }
+      },
+      {
+        "name": "cramped-352",
+        "tex": "\\DeclareMathOperator{\\end}{E}\\crampedsubstack{x^2}",
+        "display": false,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "58.371ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 25800 950",
+          "style": "vertical-align: -0.452ex;"
+        },
+        "candidateRoot": {
+          "width": "1.613ex",
+          "height": "1.233ex",
+          "viewBox": "0 -522.6 713.2 545.1",
+          "style": "vertical-align: -0.051ex;"
+        },
+        "originalRoot": {
+          "width": "39.367ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 17400 950",
+          "style": "vertical-align: -0.452ex;"
+        }
+      },
+      {
+        "name": "cramped-353",
+        "tex": "\\DeclareMathOperator{\\end}{E}\\crampedsubstack{x^2}",
+        "display": true,
+        "visualRegression": false,
+        "baselineRoot": {
+          "width": "58.371ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 25800 950",
+          "style": "vertical-align: -0.452ex;"
+        },
+        "candidateRoot": {
+          "width": "1.613ex",
+          "height": "1.233ex",
+          "viewBox": "0 -522.6 713.2 545.1",
+          "style": "vertical-align: -0.051ex;"
+        },
+        "originalRoot": {
+          "width": "39.367ex",
+          "height": "2.149ex",
+          "viewBox": "0 -750 17400 950",
+          "style": "vertical-align: -0.452ex;"
+        }
+      }
+    ]
+  },
+  "currentCounts": {
+    "exact": 1226,
+    "fixed": 1006,
+    "validReferences": 1108,
+    "raw": 341,
+    "changedRaw": 236,
+    "unchangedRaw": 105,
+    "errorReferences": 118
+  }
+}

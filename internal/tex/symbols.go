@@ -3,8 +3,9 @@
 //
 // This file is a Go translation and modification of MathJax 3.2.2.
 // Sources: ts/input/tex/base/BaseMappings.ts,
-// ts/input/tex/ams/AmsMappings.ts, and
-// ts/input/tex/braket/BraketMappings.ts.
+// ts/input/tex/ams/AmsMappings.ts,
+// ts/input/tex/braket/BraketMappings.ts, and
+// ts/input/tex/mathtools/MathtoolsMappings.ts.
 
 package tex
 
@@ -166,6 +167,8 @@ var simpleMacros = map[string]string{
 	"substack":  "\\begin{subarray}{c}#1\\end{subarray}",
 	"Bra":       "{\\left\\langle {#1} \\right\\vert}",
 	"Ket":       "{\\left\\vert {#1} \\right\\rangle}",
+	// Mathtools' cramped stack uses the primed script-style array.
+	"crampedsubstack": "\\begin{crampedsubarray}{c}#1\\end{crampedsubarray}",
 	// Mhchem's equilibrium arrows are ordinary TeX macros, including when
 	// emitted by the chemistry state machine.
 	"longrightleftharpoons": "\\stackrel{\\textstyle{-}\\!\\!{\\rightharpoonup}}{\\smash{{\\leftharpoondown}\\!\\!{-}}}",

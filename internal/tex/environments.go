@@ -161,6 +161,10 @@ func (p *parser) beginEnvironment(name string) ([]*mml.Node, error) {
 			// mtable default, leaving no materialized displaystyle layer.
 			table.Attributes.Set("displaystyle", false)
 		}
+		if environment == "crampedsubarray" {
+			// BaseMethods.Array marks the primed S' style before inheritance.
+			table.Attributes.Set("data-cramped", true)
+		}
 		applyColumnSpec(table, columnSpec)
 		open, close := matrixDelimiters(environment)
 		if open != "" || close != "" {
