@@ -1570,7 +1570,7 @@
     },
     {
       "name": "delimiter-cache-1374",
-      "tex": "\\overline{\\mmlToken{mo}[stretchy=\"true\",minsize=\"1.199em\",maxsize=\"1.199em\"]{→}}",
+      "tex": "\\overline{\\mmlToken{mo}[stretchy=\"true\",minsize=\"1.199em\",maxsize=\"1.199em\"]{\u2192}}",
       "display": false,
       "category": "authored-fixed-size",
       "original": {
@@ -1585,7 +1585,7 @@
     },
     {
       "name": "delimiter-cache-1375",
-      "tex": "\\overline{\\mmlToken{mo}[stretchy=\"true\",minsize=\"1.199em\",maxsize=\"1.199em\"]{→}}",
+      "tex": "\\overline{\\mmlToken{mo}[stretchy=\"true\",minsize=\"1.199em\",maxsize=\"1.199em\"]{\u2192}}",
       "display": true,
       "category": "authored-fixed-size",
       "original": {
@@ -1600,7 +1600,7 @@
     },
     {
       "name": "delimiter-cache-1386",
-      "tex": "\\overline{\\mmlToken{mo}[stretchy=\"true\",minsize=\"2.399em\",maxsize=\"2.399em\"]{→}}",
+      "tex": "\\overline{\\mmlToken{mo}[stretchy=\"true\",minsize=\"2.399em\",maxsize=\"2.399em\"]{\u2192}}",
       "display": false,
       "category": "authored-fixed-size",
       "original": {
@@ -1615,7 +1615,7 @@
     },
     {
       "name": "delimiter-cache-1387",
-      "tex": "\\overline{\\mmlToken{mo}[stretchy=\"true\",minsize=\"2.399em\",maxsize=\"2.399em\"]{→}}",
+      "tex": "\\overline{\\mmlToken{mo}[stretchy=\"true\",minsize=\"2.399em\",maxsize=\"2.399em\"]{\u2192}}",
       "display": true,
       "category": "authored-fixed-size",
       "original": {
@@ -1630,7 +1630,7 @@
     },
     {
       "name": "delimiter-cache-1392",
-      "tex": "\\overline{\\mmlToken{mo}[stretchy=\"true\",minsize=\"2.401em\",maxsize=\"2.401em\"]{→}}",
+      "tex": "\\overline{\\mmlToken{mo}[stretchy=\"true\",minsize=\"2.401em\",maxsize=\"2.401em\"]{\u2192}}",
       "display": false,
       "category": "authored-fixed-size",
       "original": {
@@ -1645,7 +1645,7 @@
     },
     {
       "name": "delimiter-cache-1393",
-      "tex": "\\overline{\\mmlToken{mo}[stretchy=\"true\",minsize=\"2.401em\",maxsize=\"2.401em\"]{→}}",
+      "tex": "\\overline{\\mmlToken{mo}[stretchy=\"true\",minsize=\"2.401em\",maxsize=\"2.401em\"]{\u2192}}",
       "display": true,
       "category": "authored-fixed-size",
       "original": {
