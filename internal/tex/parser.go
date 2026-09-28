@@ -202,7 +202,7 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 				break
 			}
 			positions = positions[:len(positions)-1]
-			nodes[0] = frame.item.wrap(nodes[0])
+			nodes = append(frame.item.apply(nodes[0]), nodes[1:]...)
 			nodes = append(frame.prefix, nodes...)
 		}
 	}

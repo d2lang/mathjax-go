@@ -266,6 +266,8 @@ func (p *parser) commandNodes(name string, after **derivativeAutoOpen) ([]*mml.N
 		return p.mathMakeBox(name)
 	case "raise", "lower":
 		return p.raiseLower(name)
+	case "moveleft", "moveright":
+		return p.moveLeftRight(name)
 	case "rule":
 		return p.rule(name)
 	case "Rule", "Space":
@@ -1193,6 +1195,26 @@ func (p *parser) raiseLower(name string) ([]*mml.Node, error) {
 		dh, dd = dd, dh
 	}
 	p.commandPosition = &positionItem{name: name, height: dh, depth: dd}
+	return nil, nil
+}
+
+func (p *parser) moveLeftRight(name string) ([]*mml.Node, error) {
+	amount, err := p.readDimension(name)
+	if err != nil {
+		return nil, err
+	}
+	opposite := "-" + amount
+	if strings.HasPrefix(amount, "-") {
+		opposite = amount[1:]
+	}
+	if name == "moveleft" {
+		amount, opposite = opposite, amount
+	}
+	p.commandPosition = &positionItem{
+		name:  name,
+		left:  setAttributes(node("mspace"), map[string]any{"width": amount}),
+		right: setAttributes(node("mspace"), map[string]any{"width": opposite}),
+	}
 	return nil, nil
 }
 

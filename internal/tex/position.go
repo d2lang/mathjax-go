@@ -1,20 +1,26 @@
 // Copyright (c) 2009-2022 The MathJax Consortium
 // SPDX-License-Identifier: Apache-2.0
-// Based on BaseMethods.RaiseLower and BaseItems.PositionItem (MathJax 3.2.2).
+// Based on BaseMethods.RaiseLower/MoveLeftRight and BaseItems.PositionItem.
 package tex
 
 import "github.com/d2lang/mathjax-go/internal/mml"
 
 type positionItem struct {
 	name, height, depth string
+	left, right         *mml.Node
 }
 
-func (item *positionItem) wrap(child *mml.Node) *mml.Node {
+func (item *positionItem) apply(child *mml.Node) []*mml.Node {
+	if item.left != nil {
+		// PositionItem returns three separate final items. An enclosing
+		// position consumes only the first spacer, not this entire sequence.
+		return []*mml.Node{item.left, child, item.right}
+	}
 	padded := node("mpadded", child)
 	padded.Attributes.Set("height", item.height)
 	padded.Attributes.Set("depth", item.depth)
 	padded.Attributes.Set("voffset", item.height)
-	return padded
+	return []*mml.Node{padded}
 }
 
 func (item *positionItem) missingBox() error {
