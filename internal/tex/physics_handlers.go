@@ -18,7 +18,7 @@ import (
 // It must run before built-in function-name handling, since Physics overrides
 // names such as \sin with its optional-exponent and automatic-fence method.
 func (p *parser) physicsCommand(name string, after **derivativeAutoOpen) (nodes []*mml.Node, handled bool, err error) {
-	if application, ok := physicsExpressionOperators[name]; ok {
+	if application, ok := physicsApplicationOperators[name]; ok {
 		nodes, err = p.physicsOperatorApplication(name, application, after)
 		return nodes, true, err
 	}
