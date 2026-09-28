@@ -146,6 +146,9 @@ var functionNames = func() map[string]string {
 }()
 
 var simpleMacros = map[string]string{
+	" ":         "\\text{ }",
+	"qc":        "\\qqtext*{,}",
+	"qcomma":    "\\qqtext*{,}",
 	"boxed":     "\\fbox{$\\displaystyle{#1}$}",
 	"Residue":   "\\mathrm{Res}",
 	"mathstrut": "\\vphantom{(}",
