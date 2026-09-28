@@ -308,6 +308,8 @@ func (p *parser) commandNodes(name string, after **derivativeAutoOpen) ([]*mml.N
 		return nil, texError("ExtraEnd", "Extra \\end{%s}", env)
 	case "displaylines":
 		return p.displayLines(name)
+	case "matrix", "array", "pmatrix", "eqalign":
+		return p.matrixCommand(name)
 
 	case "DeclarePairedDelimiter", "DeclarePairedDelimiters", "DeclarePairedDelimiterX", "DeclarePairedDelimitersX", "DeclarePairedDelimiterXPP", "DeclarePairedDelimitersXPP":
 		return nil, p.declarePairedDelimiter(name)

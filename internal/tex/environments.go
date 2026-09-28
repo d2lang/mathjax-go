@@ -145,6 +145,10 @@ func (p *parser) beginEnvironment(name string) ([]*mml.Node, error) {
 		if err != nil {
 			return nil, err
 		}
+		if strings.Contains(environment, "matrix") {
+			// Array's literal "c" alignment must override an enclosing table.
+			table.Attributes.Set("columnalign", "center")
+		}
 		if environment == "subarray" || environment == "crampedsubarray" {
 			resetTableAttributes(table,
 				"columnspacing", "0em",
