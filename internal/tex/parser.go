@@ -879,13 +879,27 @@ func (p *parser) parseCharacter() *mml.Node {
 	} else if r == '`' {
 		text = "‘"
 	}
-	mo := ambientLiteralToken(p.token("mo", text), r)
-	// BaseConfiguration.Other records raw operators for the fixStretchy
-	// postfilter.  addNode() leaves the observable in-lists marker even after
-	// the temporary fixStretchy property is removed.
-	mo.SetProperty("fixStretchy", true)
-	mo.SetProperty("in-lists", "fixStretchy")
-	return mo
+	// BaseConfiguration.Other selects the token kind from the same pinned
+	// range that supplies its variant. Earlier explicit character maps and
+	// letter/digit scanners keep their distinct construction paths.
+	kind := "mo"
+	for _, interval := range mjOperatorRanges {
+		if int(r) < interval.First {
+			break
+		}
+		if int(r) <= interval.Last {
+			kind = interval.Kind
+			break
+		}
+	}
+	other := ambientLiteralToken(p.token(kind, text), r)
+	if kind == "mo" {
+		// Other records only operators for the fixStretchy postfilter.
+		// addNode() leaves in-lists after the temporary property is removed.
+		other.SetProperty("fixStretchy", true)
+		other.SetProperty("in-lists", "fixStretchy")
+	}
+	return other
 }
 
 func (p *parser) attachScript(nodes []*mml.Node, marker byte) ([]*mml.Node, error) {
