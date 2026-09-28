@@ -94,5 +94,8 @@ All three original fixture files regenerate byte-identically on the complete
 The actual main164 focused 902 complete-SVG / 46 bounded-runtime assertions,
 full frozen-oracle suite, race checks, vet and WASM build passed serially with
 Go 1.27 and `-p 1` at `9b72fc1cf7983a8955ebf1748bdb1aaa7c2a590a`.
-Actual main165 probe and focused references pass, and the complete original
-inventory regenerates byte-identically. Final full gates remain pending.
+On actual main165, the fresh probe, focused references, full frozen-oracle
+suite, race checks, vet and WASM build all pass serially with `-p 1`. The
+complete original inventory regenerates byte-identically. Final gates ran at
+`e566ff4be3f2c4c6c184d8174d3ceb6e40ee9fe1`; the subsequent change only records
+this verification in this README.
