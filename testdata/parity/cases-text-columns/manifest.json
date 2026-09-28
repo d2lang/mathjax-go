@@ -1,0 +1,24 @@
+{
+  "d2Commit": "01bc7ecdbdd04c13d6fe5df1967d2d9aa14ae579",
+  "beforeMathjaxCommit": "e6465aef2217b3d07d66ecae60b622a66ea99b5d",
+  "afterCodeCommit": "734c21b4399a28228ae70124b2888d85aa151ab8",
+  "tex": "\\Huge{f(x) = \\cases{x^2 & if $x\\ge0$ \\\\ -x & otherwise}}",
+  "files": {
+    "README.md": "be397d751c5ce549daf9c76193e4fb77b33c8c857985d33692534f3e258aac81",
+    "after.png": "296a8b43c5f946dbb84b963210db6b954e157be3229c2f7e25c07413baac0dfb",
+    "after.svg": "2adc9db5658907ee36f2b5b5a308fc0955811e2ba3ffd32a5d2e3289977892f5",
+    "before.png": "354838aeb9350766e802ccf32aeeb65c8fcb264c5b35bcccac1b366c80d6029e",
+    "before.svg": "1b7234eb44ffafe45b51ea6113007b80afa884a9932350c8ed4f889c4738fbfc",
+    "comparison.png": "abf6b0255b2f79a0cd738ad59b5abea27b69cfba9f8cb083d6d6ec4abeb3bbad",
+    "oracle-adapter/go.mod": "b8a3ff80b4e63b08c12ed3bcbefcdaebec039551cf00b99b08c6ba6dec5abfc5",
+    "oracle-adapter/mathjax.go": "1ed1fbe813faf433d307b2b5c8e332fd22854999a22487e11396c6a6df3b38ed",
+    "original.png": "296a8b43c5f946dbb84b963210db6b954e157be3229c2f7e25c07413baac0dfb",
+    "original.svg": "2adc9db5658907ee36f2b5b5a308fc0955811e2ba3ffd32a5d2e3289977892f5",
+    "witness.d2": "51b0104b670309ca7ac9bc1686365abdf404bfd13289a74eb46a71bc1a207763"
+  },
+  "oracleAssets": {
+    "mathjax.js": "cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869",
+    "polyfills.js": "7fe1d048c78b0e09854c1259f7413868a51cc8f0c822489eb1ac36ae6c85ce01",
+    "setup.js": "a52cb0bbabfbd7796b9fedd793b9386c474e3123e788ee151cbe47ca1fa6e881"
+  }
+}
