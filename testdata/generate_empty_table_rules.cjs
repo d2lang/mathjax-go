@@ -55,3 +55,21 @@ for (const request of fixture.methods) {
   })()`).runInContext(context);
 }
 fs.writeFileSync(file, JSON.stringify(fixture, null, 2) + '\n');
+
+for (const name of ['empty_table_attributes_mathjax_3_2_2.json', 'empty_table_attribute_residuals.json']) {
+const attributesFile = path.join(__dirname, '../internal/svg/testdata', name);
+const attributesFixture = JSON.parse(fs.readFileSync(attributesFile, 'utf8'));
+for (const request of attributesFixture.cases) {
+  const context = createContext({console, request}); context.globalThis = context;
+  for (const script of scripts) script.runInContext(context);
+  request.original = new Script(`(() => {
+    html.inputJax[0].postFilters.add(({data}) => {
+      data.root.walkTree(node => {
+        if (node.kind === 'mtable') for (const [key,value] of Object.entries(request.tableAttributes)) node.attributes.set(key,value);
+      });
+    });
+    return {svg:adaptor.innerHTML(html.convert(request.sourceTeX,{display:request.display,em:16,ex:8}))};
+  })()`).runInContext(context);
+}
+fs.writeFileSync(attributesFile, JSON.stringify(attributesFixture, null, 2) + '\n');
+}

@@ -65,3 +65,11 @@ complete references among these 376 input pairs; all eight originals agree.
 The other 368 are first input publications. Full overlap identities are in
 `empty_table_rules_inventory.json`. Counts are per-change coverage, not a
 claim of globally unique additions across later parity changes.
+
+The additional controlled renderer inventory injects authored table attributes
+at the same pre-output boundary in both implementations. Its full identity
+is sourceTeX plus display and tableAttributes, not just a public TeX pair.
+It has 62 exact SVGs and four separately retained empty-equalrows observations.
+These expose the inherited source Math.max-empty-list difference; two frames
+become wider and taller while the original serializes non-finite frame heights.
+They are not classified as geometry-exact or visually regression-free.
