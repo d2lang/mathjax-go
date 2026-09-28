@@ -48,6 +48,15 @@ go test ./...
 The directory must contain `mathjax.js`, `polyfills.js`, and `setup.js` with
 the exact SHA-256 values recorded in [PROVENANCE.md](PROVENANCE.md).
 
+### Reversible chemistry reactions
+
+`\ce{A <--> B}` uses the original Mhchem reversible-arrow macro and its
+three-dimensional `\Rule` spacer. `\Rule` and `\Space` read width, height and
+depth with the existing TeX dimension parser; rules preserve the original
+lexical color, including array and internal-math resets. The 120-case frozen
+SVG corpus and regeneration instructions are documented in
+[testdata/reversible_reaction_README.md](testdata/reversible_reaction_README.md).
+
 ## License
 
 Apache License 2.0, with identified MIT-derived portions. See
