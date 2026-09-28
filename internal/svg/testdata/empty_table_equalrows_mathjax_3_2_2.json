@@ -1,0 +1,205 @@
+{
+  "mathjaxGitCommit": "ad8f5c21cb810236551da8c6512ba733e67357ee",
+  "method": "CommonMtable.getEqualRowHeight",
+  "encoding": "Numeric strings preserve NaN, infinities and signed zero in arguments/results. H and D have equal length, matching source table data.",
+  "cases": [
+    {
+      "h": [],
+      "d": [],
+      "original": "-Infinity"
+    },
+    {
+      "h": [
+        "0"
+      ],
+      "d": [
+        "0"
+      ],
+      "original": "0"
+    },
+    {
+      "h": [
+        "-0"
+      ],
+      "d": [
+        "-0"
+      ],
+      "original": "-0"
+    },
+    {
+      "h": [
+        "-0"
+      ],
+      "d": [
+        "0"
+      ],
+      "original": "0"
+    },
+    {
+      "h": [
+        "0"
+      ],
+      "d": [
+        "-0"
+      ],
+      "original": "0"
+    },
+    {
+      "h": [
+        "-2"
+      ],
+      "d": [
+        "-3"
+      ],
+      "original": "-5"
+    },
+    {
+      "h": [
+        "-2",
+        "-1"
+      ],
+      "d": [
+        "-3",
+        "-.5"
+      ],
+      "original": "-1.5"
+    },
+    {
+      "h": [
+        "-2",
+        "4"
+      ],
+      "d": [
+        "-3",
+        "1"
+      ],
+      "original": "5"
+    },
+    {
+      "h": [
+        "1",
+        "2",
+        "3"
+      ],
+      "d": [
+        ".5",
+        "0",
+        "-.5"
+      ],
+      "original": "2.5"
+    },
+    {
+      "h": [
+        "NaN"
+      ],
+      "d": [
+        "0"
+      ],
+      "original": "NaN"
+    },
+    {
+      "h": [
+        "1",
+        "NaN"
+      ],
+      "d": [
+        "0",
+        "0"
+      ],
+      "original": "NaN"
+    },
+    {
+      "h": [
+        "NaN",
+        "1"
+      ],
+      "d": [
+        "0",
+        "0"
+      ],
+      "original": "NaN"
+    },
+    {
+      "h": [
+        "NaN",
+        "Infinity"
+      ],
+      "d": [
+        "0",
+        "0"
+      ],
+      "original": "NaN"
+    },
+    {
+      "h": [
+        "Infinity",
+        "NaN"
+      ],
+      "d": [
+        "0",
+        "0"
+      ],
+      "original": "NaN"
+    },
+    {
+      "h": [
+        "Infinity"
+      ],
+      "d": [
+        "-Infinity"
+      ],
+      "original": "NaN"
+    },
+    {
+      "h": [
+        "-Infinity"
+      ],
+      "d": [
+        "0"
+      ],
+      "original": "-Infinity"
+    },
+    {
+      "h": [
+        "Infinity"
+      ],
+      "d": [
+        "0"
+      ],
+      "original": "Infinity"
+    },
+    {
+      "h": [
+        "-Infinity",
+        "-1"
+      ],
+      "d": [
+        "0",
+        "0"
+      ],
+      "original": "-1"
+    },
+    {
+      "h": [
+        "-0",
+        "-0"
+      ],
+      "d": [
+        "-0",
+        "-0"
+      ],
+      "original": "-0"
+    },
+    {
+      "h": [
+        "-0",
+        "0"
+      ],
+      "d": [
+        "-0",
+        "0"
+      ],
+      "original": "0"
+    }
+  ]
+}

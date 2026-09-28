@@ -752,9 +752,11 @@ func (t *tableLayout) computedWidths() []float64 {
 
 func (t *tableLayout) equalRowHeight() float64 {
 	t.tableData()
-	maximum := 0.0
+	// CommonMtable takes Math.max over the row totals, including an empty
+	// list's -Infinity and NaN precedence over positive Infinity.
+	maximum := math.Inf(-1)
 	for i := range t.data.H {
-		maximum = math.Max(maximum, t.data.H[i]+t.data.D[i])
+		maximum = max(maximum, t.data.H[i]+t.data.D[i])
 	}
 	return maximum
 }
