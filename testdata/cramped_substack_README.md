@@ -49,8 +49,9 @@ closing-scope differences as raw observations.
 The second independent review's 354 distinct inputs include 244 exact matches,
 218 fixes, and no byte or previously visual-exact regressions. All 140 stored
 macro/literal pairs agree in both original and candidate. A replay of 3,040
-published historical residual inputs adds one exact match, with no exact
-regressions or changed nonexact results.
+published historical residual inputs changes one authored cancel-attribute
+serialization order. Its complete parsed SVG is identical to both the baseline
+and original; it is not a cramped-stack fix.
 
 ## Reproduction
 
@@ -59,3 +60,10 @@ The generator verifies the three recorded SHA-256 asset hashes and invokes
 only the unmodified original oracle, with a fresh runtime for every input and
 at most 24 runtimes per subprocess. It regenerates original strings while
 preserving historical baseline/candidate observations. It never invokes Go.
+
+Composition on merged PR144 (`a9fcab295ac962d46f533c5d3e4993a50f1e7bf4`)
+preserves every baseline and candidate output for all 1,567 audited inputs.
+The expanded replay of 3,138 historical residual inputs has five serialized
+changes, all restricted to the previously documented authored cancel-attribute
+order. All three complete parsed SVGs remain equal for each input. Their raw strings and attribute-order proof are
+retained in `cramped_substack_published_replay.json`.
