@@ -16,6 +16,7 @@ type commandResult struct {
 	nonscriptItem bool
 	dotsItem      *pendingDots
 	positionItem  *positionItem
+	cellItem      *cellItem
 	afterNode     *derivativeAutoOpen
 }
 
@@ -23,18 +24,22 @@ func (p *parser) commandEvent(name string) (result commandResult, err error) {
 	namedFunction, notItem := p.commandNamedFunction, p.commandNot
 	nonscript := p.commandNonscript
 	dotsItem, position := p.commandDots, p.commandPosition
+	cell := p.commandCell
 	p.commandNamedFunction, p.commandNot = false, false
 	p.commandNonscript = false
 	p.commandDots, p.commandPosition = nil, nil
+	p.commandCell = nil
 	defer func() {
 		p.commandNamedFunction, p.commandNot = namedFunction, notItem
 		p.commandNonscript = nonscript
 		p.commandDots, p.commandPosition = dotsItem, position
+		p.commandCell = cell
 	}()
 	result.nodes, err = p.commandNodes(name, &result.afterNode)
 	result.namedFunction, result.notItem = p.commandNamedFunction, p.commandNot
 	result.nonscriptItem = p.commandNonscript
 	result.dotsItem, result.positionItem = p.commandDots, p.commandPosition
+	result.cellItem = p.commandCell
 	return result, err
 }
 
@@ -44,6 +49,12 @@ func (p *parser) command(name string) ([]*mml.Node, error) {
 	result, err := p.commandEvent(name)
 	if err != nil {
 		return nil, err
+	}
+	if result.cellItem != nil {
+		if !result.cellItem.linebreak {
+			return nil, result.cellItem.misplaced()
+		}
+		result.nodes = append(result.nodes, result.cellItem.spaces()...)
 	}
 	if result.notItem {
 		result.nodes = append(result.nodes, notFallback())

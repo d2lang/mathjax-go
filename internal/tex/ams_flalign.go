@@ -6,7 +6,6 @@ package tex
 
 import (
 	"strconv"
-	"strings"
 
 	"github.com/d2lang/mathjax-go/internal/mml"
 )
@@ -125,60 +124,41 @@ func (p *parser) amsFlalignEnvironment(name string) ([]*mml.Node, error) {
 	if err != nil {
 		return nil, err
 	}
-	rows := splitTable(body)
 	table := node("mtable")
-	for rowIndex, cells := range rows {
-		entries, err := p.parseFlalignEntries(cells, rowIndex == len(rows)-1, layout)
-		if err != nil {
-			return nil, err
-		}
-		if entries == nil {
-			continue
-		}
-		row := node("mtr", entries...)
-		layout.endRow(row)
-		tag, err := tags.getTag(p)
-		if err != nil {
-			return nil, err
-		}
-		if tag != nil {
-			row = node("mlabeledtr", append([]*mml.Node{layout.label(tag)}, row.Children...)...)
-		}
-		tags.clearTag()
-		table.AppendChild(row)
+	var entries []*mml.Node
+	spacing := &arrayRowSpacing{}
+	err = p.parseArrayBody(body, arrayBodyOwner{
+		hasEntries: func() bool { return len(entries) != 0 },
+		endEntry: func(children []*mml.Node, _ *arrayCellState) error {
+			if len(entries) != 0 {
+				children = fixInitialMO(children)
+			}
+			entries = append(entries, node("mtd", matrixCellContent(children)))
+			return layout.endEntry(len(entries))
+		},
+		endRow: func() error {
+			row := node("mtr", entries...)
+			layout.endRow(row)
+			tag, err := tags.getTag(p)
+			if err != nil {
+				return err
+			}
+			if tag != nil {
+				row = node("mlabeledtr", append([]*mml.Node{layout.label(tag)}, row.Children...)...)
+			}
+			tags.clearTag()
+			table.AppendChild(row)
+			entries = nil
+			spacing.rows++
+			return nil
+		},
+		addSpacing: spacing.add,
+	})
+	if err != nil {
+		return nil, err
 	}
 	layout.endTable(table)
-	return []*mml.Node{table}, nil
-}
+	spacing.apply(table, "3pt")
 
-// FlalignItem owns Entry tokens after the TeX parser has had the opportunity
-// to consume an ampersand as a command argument. It has no EqnArray kind, so
-// the Mathtools commands guarded by checkAlignment remain unavailable here.
-func (p *parser) parseFlalignEntries(cells []string, final bool, layout *amsFlalignLayout) ([]*mml.Node, error) {
-	source := strings.Join(cells, "&")
-	var entries []*mml.Node
-	for {
-		sub := p.matrixCellParser(source)
-		sub.matrixClose = false
-		sub.cdArrayEntry = true
-		children, _, err := sub.parseRowWithInfix(0, false, false)
-		if err != nil {
-			return nil, err
-		}
-		if !sub.cdEntryStopped && final && len(children) == 0 && len(entries) == 0 {
-			return nil, nil
-		}
-		if len(entries) != 0 {
-			children = fixInitialMO(children)
-		}
-		entries = append(entries, node("mtd", matrixCellContent(children)))
-		// The declared-count check precedes parsing the following cell.
-		if err := layout.endEntry(len(entries)); err != nil {
-			return nil, err
-		}
-		if !sub.cdEntryStopped {
-			return entries, nil
-		}
-		source = sub.source[sub.pos:]
-	}
+	return []*mml.Node{table}, nil
 }
