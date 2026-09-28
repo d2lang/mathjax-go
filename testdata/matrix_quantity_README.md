@@ -42,7 +42,7 @@ independent budgets. ParseArg, MathFont, root indices, arrow labels, separate
 under/overbracket copies, Physics exponent/Quantity/Expectation children,
 Physics braket expansions, and CD labels now save, reset, and restore their
 macro count at those specific boundaries. Generated Physics operands share
-one child budget. Groups, fonts, styles, continuations, Eval and paired-delimiter
+one child budget. Groups, font declarations, styles, continuations, Eval and paired-delimiter
 reinsertion keep the caller's budget. The generic `parseString` and shared
 expansion helpers are deliberately unchanged. Counter controls at 998–1,001
 calls distinguish these cases, including the previously exact child examples
