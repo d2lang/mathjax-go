@@ -13,21 +13,22 @@ type commandResult struct {
 	namedFunction bool
 	notItem       bool
 	dotsItem      *pendingDots
+	positionItem  *positionItem
 	afterNode     *derivativeAutoOpen
 }
 
 func (p *parser) commandEvent(name string) (result commandResult, err error) {
 	namedFunction, notItem := p.commandNamedFunction, p.commandNot
-	dotsItem := p.commandDots
+	dotsItem, position := p.commandDots, p.commandPosition
 	p.commandNamedFunction, p.commandNot = false, false
-	p.commandDots = nil
+	p.commandDots, p.commandPosition = nil, nil
 	defer func() {
 		p.commandNamedFunction, p.commandNot = namedFunction, notItem
-		p.commandDots = dotsItem
+		p.commandDots, p.commandPosition = dotsItem, position
 	}()
 	result.nodes, err = p.commandNodes(name, &result.afterNode)
 	result.namedFunction, result.notItem = p.commandNamedFunction, p.commandNot
-	result.dotsItem = p.commandDots
+	result.dotsItem, result.positionItem = p.commandDots, p.commandPosition
 	return result, err
 }
 

@@ -93,6 +93,7 @@ type parser struct {
 	commandNamedFunction bool
 	commandNot           bool
 	commandDots          *pendingDots
+	commandPosition      *positionItem
 	multiLetterFont      string
 	activeFont           string
 	identifierPattern    identifierPattern
@@ -178,6 +179,20 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 	var negation pendingNot
 	var dots pendingDots
 	var styles []rowStyleFrame
+	var positions []rowPositionFrame
+	// PositionItem waits for the next final MML item on this same parser.
+	// A style opened after it must finish before it can supply that item.
+	reducePositions := func() {
+		for len(positions) != 0 && len(nodes) != 0 {
+			frame := positions[len(positions)-1]
+			if frame.styleDepth != len(styles) {
+				break
+			}
+			positions = positions[:len(positions)-1]
+			nodes[0] = frame.item.wrap(nodes[0])
+			nodes = append(frame.prefix, nodes...)
+		}
+	}
 	finishNot := func() { nodes = append(nodes, negation.finish()...) }
 	finishDots := func() { nodes = append(nodes, dots.finish()...) }
 	finishPrime := func() {
@@ -197,6 +212,7 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 		finishNot()
 		finishDots()
 		pendingFunction = false
+		reducePositions()
 	}
 	pushStyle := func(attributes mjSourceObject) {
 		// StyleItem is a non-MML successor, so an earlier FnItem finishes
@@ -206,19 +222,27 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 		p.braketOwner = nil // StyleItem is now the actual stack top.
 		nodes = nil
 	}
-	closeStyles := func() {
+	closeStyles := func() error {
 		finishPending()
-		// StyleItem.checkItem reduces on every isClose item, including
-		// OverItem. Each resulting mstyle is delivered to its actual parent.
+		// Closing items reduce styles from the top. Each resulting final
+		// mstyle is then delivered to a waiting position at that stack depth.
 		for i := len(styles) - 1; i >= 0; i-- {
+			if len(positions) != 0 && positions[len(positions)-1].styleDepth == len(styles) {
+				return positions[len(positions)-1].item.missingBox()
+			}
 			frame := styles[i]
 			styled := node("mstyle", row(nodes, true))
 			for _, attribute := range frame.attributes {
 				styled.Attributes.Set(attribute.Name, attribute.Value)
 			}
 			nodes = append(frame.prefix, styled)
+			styles = styles[:i]
+			reducePositions()
 		}
-		styles = nil
+		if len(positions) != 0 {
+			return positions[len(positions)-1].item.missingBox()
+		}
+		return nil
 	}
 	appendNodes := func(created []*mml.Node, namedFunction bool) {
 		if len(created) == 0 {
@@ -251,26 +275,37 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 		nodes = append(nodes, created...)
 		if namedFunction {
 			pendingFunction = true
+		} else {
+			reducePositions()
 		}
 	}
 	for p.pos < len(p.source) {
 		// A single BraketItem closes on its first MML delivery. Any remaining
 		// nodes in that delivery belong to the caller, not to its fenced body.
-		if owner != nil && owner.single && len(nodes) > 0 && len(styles) == 0 && !pendingFunction {
-			closeStyles()
+		if owner != nil && owner.single && len(nodes) > 0 && len(styles) == 0 && len(positions) == 0 && !pendingFunction {
+			if closeErr := closeStyles(); closeErr != nil {
+				return nil, "", closeErr
+			}
 			return nodes, "", nil
 		}
 		p.braketOwner = owner
-		if len(styles) != 0 || pending != nil || bool(negation) || dots.active() || pendingFunction || auto != nil {
+		if len(styles) != 0 || pending != nil || bool(negation) || dots.active() || pendingFunction || auto != nil || len(positions) != 0 {
 			p.braketOwner = nil // An intervening stack item owns this token.
 		}
 		c := p.source[p.pos]
 		if terminator != 0 && c == terminator {
-			closeStyles()
+			if closeErr := closeStyles(); closeErr != nil {
+				return nil, "", closeErr
+			}
 			p.pos++
 			return nodes, "", nil
 		}
 		if c == '}' {
+			if len(positions) != 0 {
+				if closeErr := closeStyles(); closeErr != nil {
+					return nil, "", closeErr
+				}
+			}
 			return nil, "", texError("ExtraCloseMissingOpen", "Extra close brace or missing open brace")
 		}
 		if c == '%' {
@@ -286,6 +321,22 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 			p.pos++
 			name := p.readControlSequence()
 			if name == "right" {
+				if len(positions) != 0 {
+					delim, err := p.readDelimiter(name, false)
+					if err != nil {
+						return nil, "", err
+					}
+					if closeErr := closeStyles(); closeErr != nil {
+						return nil, "", closeErr
+					}
+					if auto != nil {
+						return nil, "", texError("MissingLeftExtraRight", "Missing \\left or extra \\right")
+					}
+					if !stopRight {
+						return nil, "", texError("ExtraRight", "Extra \\right")
+					}
+					return nodes, delim, nil
+				}
 				if auto != nil {
 					if _, err := p.readDelimiter(name, false); err != nil {
 						return nil, "", err
@@ -297,7 +348,9 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 				}
 				delim, err := p.readDelimiter(name, false)
 				if err == nil {
-					closeStyles()
+					if closeErr := closeStyles(); closeErr != nil {
+						return nil, "", closeErr
+					}
 				}
 				return nodes, delim, err
 			}
@@ -308,7 +361,9 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 				if err != nil {
 					return nil, "", err
 				}
-				closeStyles()
+				if closeErr := closeStyles(); closeErr != nil {
+					return nil, "", closeErr
+				}
 				p.braketOwner = nil // OverItem owns the denominator.
 				fraction, right, err := p.finishInfixFraction(name, nodes, spec, terminator, stopRight, infixPending, pendingFont)
 				if err != nil {
@@ -342,7 +397,7 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 			if variant, ok := fontDeclarations[name]; ok {
 				// SetFont changes the current environment without pushing a
 				// stack item, so pending Prime/Not/Dots items stay in this row.
-				if len(styles) != 0 || pending != nil || bool(negation) || dots.active() {
+				if len(styles) != 0 || pending != nil || bool(negation) || dots.active() || len(positions) != 0 {
 					p.activeFont, pendingFont = variant, variant
 					p.fontExplicitEmpty = variant == ""
 					continue
@@ -372,6 +427,14 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 				}
 				continue
 			}
+			if _, macro := p.state.macros[name]; !macro && len(positions) != 0 && (name == "\\" || name == "\n" || name == "cr" || name == "newline") {
+				if err := p.positionLinebreak(name); err != nil {
+					return nil, "", err
+				}
+				if closeErr := closeStyles(); closeErr != nil {
+					return nil, "", closeErr
+				}
+			}
 			result, err := p.commandEvent(name)
 			if err != nil {
 				return nil, "", err
@@ -391,6 +454,11 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 				// ApplyFunction and cannot be negated as an eventual token.
 				pendingFunction = false
 				dots = *result.dotsItem
+			}
+			if result.positionItem != nil {
+				finishPending()
+				positions = append(positions, rowPositionFrame{item: result.positionItem, prefix: nodes, styleDepth: len(styles)})
+				nodes = nil
 			}
 			appendNodes(result.nodes, result.namedFunction)
 			tail, err := result.afterNode.completeAfter(p, finishDots)
@@ -445,6 +513,9 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 			if err != nil {
 				return nil, "", err
 			}
+			if !pendingFunction {
+				reducePositions()
+			}
 			tail, err := after.complete(p)
 			if err != nil {
 				return nil, "", err
@@ -478,6 +549,11 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 				appendNodes([]*mml.Node{created}, false)
 			}
 		case '&':
+			if len(positions) != 0 {
+				if closeErr := closeStyles(); closeErr != nil {
+					return nil, "", closeErr
+				}
+			}
 			return nil, "", texError("Misplaced", "Misplaced alignment tab character &")
 		case '#':
 			return nil, "", texError("CantUseHash1", "You can't use 'macro parameter character #' in math mode")
@@ -489,13 +565,17 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 			// The registered raw ')' handler creates an AutoClose item. A
 			// command that merely returns the same mo has no such marker.
 			if auto != nil && len(styles) == 0 && c == ')' && auto.close() {
-				closeStyles()
+				if closeErr := closeStyles(); closeErr != nil {
+					return nil, "", closeErr
+				}
 				return nodes, "", nil
 			}
 			appendNodes([]*mml.Node{created}, false)
 		}
 	}
-	closeStyles()
+	if closeErr := closeStyles(); closeErr != nil {
+		return nil, "", closeErr
+	}
 	if auto != nil {
 		return nil, "", auto.stopError()
 	}

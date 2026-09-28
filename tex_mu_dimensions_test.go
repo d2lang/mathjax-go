@@ -71,6 +71,13 @@ func TestTeXMuDimensionsPinnedReferences(t *testing.T) {
 			delete(boundaries.Cases, name)
 		}
 	}
+	// PositionItem now matches the original raise/lower shape and signs.
+	// Retain the historical receipts, but compare these cases to the raw oracle.
+	for _, stem := range []string{"raise", "lower"} {
+		for _, mode := range []string{"inline", "display"} {
+			delete(boundaries.Cases, stem+"-"+mode)
+		}
+	}
 	for _, c := range fixture.Cases {
 		t.Run(c.Name, func(t *testing.T) {
 			root, err := tex.NewCompiler().Compile(c.TeX, c.Display)
@@ -91,29 +98,10 @@ func TestTeXMuDimensionsPinnedReferences(t *testing.T) {
 					t.Fatal("boundary/source mismatch")
 				}
 				wantSVG = b.ExpectedSVG
-				if b.Mode == "unchanged" || b.Mode == "mu-consumer" {
+				if b.Mode == "unchanged" {
 					wantTree = b.BaselineTree
 				}
-				if b.Mode == "mu-consumer" {
-					// Keep inherited raise/lower shape and sign construction. Only
-					// the three existing dimension strings receive primary mu values.
-					wantAttrs := map[string]any{"voffset": "0.444em", "height": "+0.444em", "depth": "-0.444em"}
-					if strings.HasPrefix(c.Name, "lower-") {
-						wantAttrs = map[string]any{"voffset": "-0.333em", "height": "+-0.333em", "depth": "--0.333em"}
-					}
-					if !reflect.DeepEqual(b.AttributesAtRootFirstChild, wantAttrs) {
-						t.Fatal("consumer value contract changed")
-					}
-					encoded, _ := json.Marshal(wantTree)
-					var copyTree *limitsTree
-					if err = json.Unmarshal(encoded, &copyTree); err != nil {
-						t.Fatal(err)
-					}
-					wantTree = copyTree
-					for k, v := range wantAttrs {
-						wantTree.Children[0].Children[0].Attributes[k] = v
-					}
-				}
+
 			}
 			ownJSON, err := json.Marshal(limitsProjection(root))
 			if err != nil {
