@@ -14,7 +14,7 @@ func TestEqnarrayReferences(t *testing.T) {
 }
 
 func TestEqnarrayCurrentCompositionReferences(t *testing.T) {
-	testEqnarrayReferences(t, "testdata/eqnarray_current_mathjax_3_2_2.json", 432)
+	testEqnarrayReferences(t, "testdata/eqnarray_current_mathjax_3_2_2.json", 616)
 }
 
 func testEqnarrayReferences(t *testing.T, filename string, count int) {
