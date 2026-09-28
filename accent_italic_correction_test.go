@@ -25,7 +25,7 @@ func TestAccentItalicCorrectionPublicReferences(t *testing.T) {
 	if err := json.Unmarshal(data, &fixture); err != nil {
 		t.Fatal(err)
 	}
-	if fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || len(fixture.Cases) != 96 {
+	if fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || len(fixture.Cases) != 110 {
 		t.Fatal("unbound accent italic-correction references")
 	}
 	seen := map[string]bool{}

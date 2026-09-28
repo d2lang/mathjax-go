@@ -6,11 +6,13 @@ all three oracle assets, which match `internal/oracle/runner.go`. Each input
 uses a fresh runtime, font cache `none`, em 16, ex 8, and the listed display mode.
 The references were generated with `testdata/differential/oracle.mjs`.
 
-The 96 cases cover 12 accents or annotations on calligraphic T, calligraphic F,
+The first 96 cases cover 12 accents or annotations on calligraphic T, calligraphic F,
 and ordinary x in display and inline modes. Additional cases cover hat,
 widehat, underline, and overline on calligraphic T in large text, scripts, and
 nested accents. Overline, ordinary characters, and non-accent annotations
-provide unchanged controls.
+provide unchanged controls. Another 14 cases check that a line accent is a
+core token, including empty-token siblings that make a row non-embellished,
+spacelike siblings, mtext, fractions, and phantom wrappers.
 
 The source of the correction policy is `CommonScriptbaseMixin`'s constructor
 in `ts/output/common/Wrappers/scriptbase.ts`, at MathJax commit
