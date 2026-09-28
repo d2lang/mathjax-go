@@ -18,6 +18,7 @@ type arrayBodyOwner struct {
 	requireClose bool
 	configure    func(*parser)
 	prepare      func(*parser) ([]*mml.Node, error)
+	prepareEntry func(*parser, *cellItem) ([]*mml.Node, error)
 	hasEntries   func() bool
 	endEntry     func([]*mml.Node, *arrayCellState) error
 	endRow       func() error
@@ -30,6 +31,7 @@ func (p *parser) parseArrayBody(source string, owner arrayBodyOwner) error {
 		terminator = '}'
 		source += "}"
 	}
+	var previous *cellItem
 	for {
 		sub := p.matrixCellParser(source)
 		sub.matrixClose, sub.cdArrayEntry = owner.requireClose, true
@@ -43,6 +45,13 @@ func (p *parser) parseArrayBody(source string, owner arrayBodyOwner) error {
 			if err != nil {
 				return err
 			}
+		}
+		if owner.prepareEntry != nil {
+			entryPrefix, err := owner.prepareEntry(sub, previous)
+			if err != nil {
+				return err
+			}
+			prefix = append(prefix, entryPrefix...)
 		}
 		children, _, err := sub.parseRowContinuation(terminator, false, false, nil, "", prefix)
 		if err != nil {
@@ -71,6 +80,7 @@ func (p *parser) parseArrayBody(source string, owner arrayBodyOwner) error {
 		// Macro expansion may replace the current source. Do not resume a
 		// substring of the original captured program or a pre-split row.
 		source = sub.source[sub.pos:]
+		previous = item
 	}
 }
 
