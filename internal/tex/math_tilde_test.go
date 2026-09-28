@@ -188,49 +188,6 @@ func mathTildeNodeAt(n *mathTildeTree, path []int) *mathTildeTree {
 	}
 	return n
 }
-func mathTildePrimeName(c mathTildeStored) bool {
-	return c.Input.TeX == "x'~_iy" && c.Input.Registration == nil && ((c.Scope == "public" && ((c.Name == "prime-inline" && !c.Input.Display) || (c.Name == "prime-display" && c.Input.Display))) || (c.Scope == "private" && c.Name == "real-prime-recipient" && !c.Input.Display))
-}
-func mathTildeCompare(c mathTildeStored, primary, actual *mathTildeTree) error {
-	if !mathTildePrimeName(c) {
-		if !reflect.DeepEqual(primary, actual) {
-			return fmt.Errorf("complete primary tree differs")
-		}
-		return nil
-	}
-	path := []int{0, 0, 1}
-	p, a := mathTildeNodeAt(primary, path), mathTildeNodeAt(actual, path)
-	wantP := []mathTildeField{{"variantForm", true}, {"pseudoscript", false}}
-	wantA := []mathTildeField{{"variantForm", true}}
-	if p == nil || a == nil || p.Kind != "mo" || a.Kind != "mo" || len(p.Children) != 1 || len(a.Children) != 1 || p.Children[0].Text == nil || *p.Children[0].Text != "′" || a.Children[0].Text == nil || *a.Children[0].Text != "′" || !reflect.DeepEqual(p.Properties, wantP) || !reflect.DeepEqual(a.Properties, wantA) {
-		return fmt.Errorf("named prime property pair changed")
-	}
-	visited := 0
-	var compare func(*mathTildeTree, *mathTildeTree, []int) bool
-	compare = func(p, a *mathTildeTree, at []int) bool {
-		if p == nil || a == nil {
-			return p == a
-		}
-		if p.Kind != a.Kind || !reflect.DeepEqual(p.Text, a.Text) || !reflect.DeepEqual(p.Attributes, a.Attributes) || len(p.Children) != len(a.Children) {
-			return false
-		}
-		if reflect.DeepEqual(at, path) {
-			visited++
-		} else if !reflect.DeepEqual(p.Properties, a.Properties) {
-			return false
-		}
-		for i := range p.Children {
-			if !compare(p.Children[i], a.Children[i], append(append([]int{}, at...), i)) {
-				return false
-			}
-		}
-		return true
-	}
-	if !compare(primary, actual, []int{}) || visited != 1 {
-		return fmt.Errorf("difference outside the one named prime property array")
-	}
-	return nil
-}
 func mathTildeParserState(p *parser) mathTildeState {
 	return mathTildeState{Source: p.source, Remaining: p.source[p.pos:], Font: p.activeFont, MultiLetterFont: p.multiLetterFont, VectorFont: p.vectorFont, ByteCursor: p.pos, CursorUTF16: len(utf16.Encode([]rune(p.source[:p.pos]))), MacroCount: p.state.macroCount, VectorFactory: p.vectorFactory, VectorStar: p.vectorStar}
 }
@@ -302,8 +259,8 @@ func TestMathTildePinnedOutputs(t *testing.T) {
 				if !reflect.DeepEqual(pe, primary.FormattedError) {
 					t.Fatal("structured error differs")
 				}
-				if err = mathTildeCompare(c, want, got); err != nil {
-					t.Fatal(err)
+				if !reflect.DeepEqual(want, got) {
+					t.Fatal("complete original tree differs")
 				}
 			}
 			opts := pipeline.DefaultOptions()
@@ -412,56 +369,6 @@ func TestMathTildeRealRecipients(t *testing.T) {
 			}
 			if c.Name == "real-prime-recipient" && (spaces[0].Parent.Kind != "msub" || spaces[0].Parent.Children[0] != spaces[0]) {
 				t.Fatal("prime-following subscript base")
-			}
-		})
-	}
-}
-
-func TestMathTildePrimeBoundaryRejectsDrift(t *testing.T) {
-	f, _ := mathTildeFixtures(t)
-	var c mathTildeStored
-	for _, r := range f.Records {
-		if r.Name == "prime-inline" {
-			c = r
-		}
-	}
-	primary := mathTildePrimaryTree(mathTildeDecode(t, c).Tree)
-	actual := mathTildeCanonical(primary)
-	prime := mathTildeNodeAt(actual, []int{0, 0, 1})
-	prime.Properties = []mathTildeField{{"variantForm", true}}
-	if err := mathTildeCompare(c, primary, actual); err != nil {
-		t.Fatal("source-bound exact pair", err)
-	}
-	for _, name := range []string{"wrong-name", "wrong-tex", "wrong-mode", "extra-property", "missing-property", "reordered-primary", "unrelated-node", "wrong-path", "prime-text", "primary-false-changed"} {
-		t.Run(name, func(t *testing.T) {
-			cc := c
-			pp, aa := mathTildeCanonical(primary), mathTildeCanonical(actual)
-			p, a := mathTildeNodeAt(pp, []int{0, 0, 1}), mathTildeNodeAt(aa, []int{0, 0, 1})
-			switch name {
-			case "wrong-name":
-				cc.Name = "another-prime-inline"
-			case "wrong-tex":
-				cc.Input.TeX = "x'~_iz"
-			case "wrong-mode":
-				cc.Input.Display = true
-			case "extra-property":
-				a.Properties = append(a.Properties, mathTildeField{"other", false})
-			case "missing-property":
-				a.Properties = []mathTildeField{}
-			case "reordered-primary":
-				p.Properties[0], p.Properties[1] = p.Properties[1], p.Properties[0]
-			case "unrelated-node":
-				aa.Attributes = append(aa.Attributes, mathTildeField{"mathcolor", "red"})
-			case "wrong-path":
-				aa.Children[0].Children[0].Children[0], aa.Children[0].Children[0].Children[1] = aa.Children[0].Children[0].Children[1], aa.Children[0].Children[0].Children[0]
-			case "prime-text":
-				v := "″"
-				a.Children[0].Text = &v
-			case "primary-false-changed":
-				p.Properties[1].Value = true
-			}
-			if mathTildeCompare(cc, pp, aa) == nil {
-				t.Fatal("invalid qualification accepted")
 			}
 		})
 	}

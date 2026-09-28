@@ -105,6 +105,11 @@ func remapAccentText(parent *wrapper, text string) string {
 }
 
 func (w *wrapper) canStretch(direction font.Direction) bool {
+	// CommonMfrac keeps its numerator's embellished identity for MathML
+	// semantics, but its wrapper explicitly refuses both stretch directions.
+	if w.node.Kind == "mfrac" {
+		return false
+	}
 	if w.node.Kind != "mo" {
 		// CommonWrapper.canStretch resets its own wrapper-level stretch state,
 		// then delegates through the core child of an embellished wrapper.  The

@@ -185,29 +185,14 @@ func (w *wrapper) stackOffsets(boxes []*layout.BBox, deltas []float64) []float64
 	return offsets
 }
 
-type underOverStretchChild struct {
-	child *wrapper
-	core  *wrapper
-}
-
-// stretchUnderOverChildren ports CommonScriptbase.stretchChildren().  The
-// child wrapper participates in width selection, while its embellished core
-// mo owns the delimiter variant.  Wide accents and x-arrows therefore select
-// the same MathJax size glyph before the stack is measured.
+// stretchUnderOverChildren ports CommonScriptbase.stretchChildren(). The outer
+// child decides whether it stretches (a fraction can be embellished but refuse
+// stretching); only the final resize is delivered to its core mo.
 func (w *wrapper) stretchUnderOverChildren() {
-	stretchable := make([]underOverStretchChild, 0, len(w.children))
+	stretchable := make([]*wrapper, 0, len(w.children))
 	for _, child := range w.children {
-		core := child
-		for core != nil && core.node.Kind != "mo" && core.node.Flags.Embellished {
-			index := core.node.Flags.CoreIndex
-			if index < 0 || index >= len(core.children) {
-				core = nil
-				break
-			}
-			core = core.children[index]
-		}
-		if core != nil && core.canStretch(font.DirectionHorizontal) {
-			stretchable = append(stretchable, underOverStretchChild{child: child, core: core})
+		if child.canStretch(font.DirectionHorizontal) {
+			stretchable = append(stretchable, child)
 		}
 	}
 	if len(stretchable) == 0 || len(w.children) <= 1 {
@@ -217,25 +202,16 @@ func (w *wrapper) stretchUnderOverChildren() {
 	all := len(stretchable) > 1 && len(stretchable) == len(w.children)
 	width := 0.0
 	for _, child := range w.children {
-		isStretchable := false
-		for _, candidate := range stretchable {
-			if candidate.child == child {
-				isStretchable = true
-				break
-			}
-		}
-		if !all && isStretchable {
+		if !all && child.hasStretch {
 			continue
 		}
-		bbox := child.outerBBox()
+		bbox := child.styledOuterBBoxWithSave(!child.hasStretch)
 		width = math.Max(width, bbox.W*bbox.RScale)
 	}
 	for _, child := range stretchable {
-		scale := child.child.bbox.RScale
-		if scale == 0 {
-			scale = 1
+		if core := tableCoreMO(child); core != nil {
+			core.getStretchedVariant([]float64{width / child.bbox.RScale}, false)
 		}
-		child.core.getStretchedVariant([]float64{width / scale}, false)
 	}
 }
 

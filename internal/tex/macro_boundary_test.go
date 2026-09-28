@@ -156,7 +156,7 @@ func TestMacroBoundaryPublicReferences(t *testing.T) {
 				if c.Primary.Error == nil || c.Primary.Error.ID != "CantUseHash1" || c.Primary.Error.Message != "You can't use 'macro parameter character #' in math mode" {
 					t.Fatal("unbound hash promotion")
 				}
-			} else if c.Boundary != nil {
+			} else if c.Boundary != nil && c.Name != "prime-macro-inline" && c.Name != "prime-macro-display" && c.Name != "direct-prime-inline" && c.Name != "direct-prime-display" {
 				want = *c.Boundary
 			}
 			macroReferenceError(t, err, want.Error)

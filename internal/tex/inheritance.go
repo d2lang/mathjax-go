@@ -33,6 +33,17 @@ type inheritedAttributes = ordered.Map[inheritedAttribute]
 // the negated class preserves JavaScript dot's four line-terminator exclusions.
 var miSingleCharacter = regexp.MustCompile("^[^\n\r\u2028\u2029][\u0300-\u036F\u1AB0-\u1ABE\u1DC0-\u1DFF\u20D0-\u20EF]*$")
 
+// MmlMo.pseudoScripts and MmlMo.primes require the entire token to belong to
+// the corresponding character family. Quote remapping is a separate property:
+// it must not replace the text kept by the parser or an explicit-font renderer.
+var moPseudoScripts = regexp.MustCompile("^[\"'*`\u00AA\u00B0\u00B2-\u00B4\u00B9\u00BA\u2018-\u201F\u2032-\u2037\u2057\u2070\u2071\u2074-\u207F\u2080-\u208E]+$")
+var moPrimes = regexp.MustCompile("^[\"'`\u2018-\u201F]+$")
+var moPrimeRemap = strings.NewReplacer(
+	"\"", "\u2033", "'", "\u2032", "`", "\u2035",
+	"\u2018", "\u2035", "\u2019", "\u2032", "\u201A", "\u2032", "\u201B", "\u2035",
+	"\u201C", "\u2036", "\u201D", "\u2033", "\u201E", "\u2033", "\u201F", "\u2036",
+)
+
 // setMathMLInheritance ports AbstractMmlNode.setInheritedAttributes() and the
 // kind-specific overrides used by the complete MML registry.  MathJax runs
 // this as the setInherited post-filter after TeX parsing; default layers are
@@ -340,7 +351,8 @@ func setChildInheritedAttributes(n *mml.Node, attributes *inheritedAttributes, d
 
 	case "mo":
 		applyOperatorInheritance(n)
-		checkBacktickPseudoScript(n)
+		checkOperatorPseudoScript(n)
+		checkOperatorPrimes(n)
 		checkMathAccent(n)
 		return
 
@@ -353,13 +365,11 @@ func setChildInheritedAttributes(n *mml.Node, attributes *inheritedAttributes, d
 	}
 }
 
-// checkBacktickPseudoScript ports MmlMo's pseudo-script and prime checks for
-// U+2018, the token produced by both a literal backtick and a direct left quote.
-// Keep the raw token intact: the renderer consumes the separate primes value.
-// Other quote/prime families retain their separately qualified behavior.
-func checkBacktickPseudoScript(n *mml.Node) {
+// checkOperatorPseudoScript ports MmlMo.checkPseudoScripts. An embellished
+// wrapper and a not-parent node do not change the operator's logical parent.
+func checkOperatorPseudoScript(n *mml.Node) {
 	text := textContent(n)
-	if text == "" || strings.Trim(text, "‘") != "" {
+	if !moPseudoScripts.MatchString(text) {
 		return
 	}
 	core := n
@@ -384,7 +394,14 @@ func checkBacktickPseudoScript(n *mml.Node) {
 		n.Attributes.SetInherited("lspace", 0)
 		n.Attributes.SetInherited("rspace", 0)
 	}
-	n.SetProperty("primes", strings.ReplaceAll(text, "‘", "‵"))
+}
+
+// checkOperatorPrimes ports MmlMo.checkPrimes independently of script position.
+func checkOperatorPrimes(n *mml.Node) {
+	text := textContent(n)
+	if moPrimes.MatchString(text) {
+		n.SetProperty("primes", moPrimeRemap.Replace(text))
+	}
 }
 
 // applyOperatorInheritance ports MmlMo.checkOperatorTable.  The form lookup is

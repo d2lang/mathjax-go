@@ -73,8 +73,10 @@ func (c *Compiler) Compile(source string, display bool) (*mml.Node, error) {
 		n.RemoveProperty(limitsScriptOrigin)
 		return true
 	})
+	stretchy := stretchyCleanupOperators(state.operators)
 	setMathMLInheritance(root, display)
 	root = moveMathLimits(root)
+	cleanStretchy(root, stretchy)
 	cleanMathMLAttributes(root)
 	state.operators = combineRelations(root, state.operators)
 	return root, nil

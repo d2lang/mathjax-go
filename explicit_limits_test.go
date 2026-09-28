@@ -168,7 +168,6 @@ func TestExplicitLimitsPinnedReferences(t *testing.T) {
 				if n == nil || n.Kind != "mo" || n.Properties["pseudoscript"] != b.PrimaryValue || len(n.Children) != 1 || n.Children[0].Text == nil || *n.Children[0].Text != b.PrimaryText {
 					t.Fatal("changed inherited prime metadata receipt")
 				}
-				delete(n.Properties, "pseudoscript")
 			}
 			root, err := tex.NewCompiler().Compile(c.TeX, c.Display)
 			if err != nil {

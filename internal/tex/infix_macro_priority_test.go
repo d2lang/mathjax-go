@@ -103,8 +103,12 @@ func TestInfixMacroPriorityPinnedReferences(t *testing.T) {
 				if expectedBoundaries[c.Name] != b.Reason || b.TeX != c.TeX || b.Display != c.Display || b.PrimarySVG != c.SVGSHA256 {
 					t.Fatal("unbound complete boundary")
 				}
-				wantSVG, wantTree = b.ExpectedSVG, b.Tree
-				qualified++
+				if b.Reason == "unchanged ordinary-prime metadata" {
+					raw++
+				} else {
+					wantSVG, wantTree = b.ExpectedSVG, b.Tree
+					qualified++
+				}
 			} else {
 				raw++
 			}
@@ -191,7 +195,7 @@ func TestInfixMacroPriorityPinnedReferences(t *testing.T) {
 			}
 		})
 	}
-	if raw != 74 || qualified != 8 {
+	if raw != 78 || qualified != 4 {
 		t.Fatal("reference classification changed", raw, qualified)
 	}
 }

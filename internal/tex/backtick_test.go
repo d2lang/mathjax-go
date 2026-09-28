@@ -8,7 +8,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"os"
-	"strings"
 	"testing"
 
 	"github.com/d2lang/mathjax-go/internal/mml"
@@ -102,27 +101,7 @@ func TestBacktickOriginalSVGAndMetadata(t *testing.T) {
 			if err != nil {
 				t.Fatal(err)
 			}
-			if c.Name == "d125-text-and-direct-inline" || c.Name == "d125-text-and-direct-display" {
-				// The preexisting direct-U+2035 parser route lacks the original
-				// final TeXAtom wrapper. Assert exactly that residual, including
-				// its unchanged geometry and glyph; this is not whole-SVG parity.
-				if c.TeX != "\\text{`}+x‘+x‵" || c.Display != (c.Name == "d125-text-and-direct-display") {
-					t.Fatal("changed qualified direct-prime input")
-				}
-				const originalWrapper = `<g data-mml-node="TeXAtom" data-mjx-texclass="ORD" transform="translate(3919.4,0)"><g data-mml-node="mo">`
-				const originalEnd = `</path></g></g></g></g></svg>`
-				if strings.Count(c.SVG, originalWrapper) != 1 || !strings.HasSuffix(c.SVG, originalEnd) {
-					t.Fatal("changed exact original direct-prime wrapper boundary")
-				}
-				prefix, finalPrime, _ := strings.Cut(c.SVG, originalWrapper)
-				if !strings.HasPrefix(finalPrime, `<path data-c="2035"`) {
-					t.Fatal("qualified wrapper is not the final reversed prime")
-				}
-				expectedResidual := prefix + `<g data-mml-node="mo" transform="translate(3919.4,0)">` + strings.TrimSuffix(finalPrime, originalEnd) + `</path></g></g></g></svg>`
-				if got == c.SVG || got != expectedResidual {
-					t.Error("direct-prime difference is no longer exactly the recorded final wrapper residual")
-				}
-			} else if got != c.SVG {
+			if got != c.SVG {
 				t.Errorf("whole original SVG differs: got %x want %s", sha256.Sum256([]byte(got)), c.SVGSHA256)
 			}
 		})
@@ -150,7 +129,7 @@ func TestBacktickLogicalParentAndEligibility(t *testing.T) {
 			}
 		})
 	}
-	for _, text := range []string{"", "‘x", "′", "’", "‵"} {
+	for _, text := range []string{"", "‘x", "′x", "’x", "‵x"} {
 		n := token("mo", text)
 		setMathMLInheritance(node("math", n), false)
 		if _, ok := n.Property("primes"); ok {
