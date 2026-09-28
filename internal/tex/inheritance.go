@@ -190,6 +190,15 @@ func addInheritedValues(current *inheritedAttributes, source string, values ...a
 
 func setChildInheritedAttributes(n *mml.Node, attributes *inheritedAttributes, display bool, level int, prime bool) {
 	switch n.Kind {
+	case "mfenced":
+		// MmlMfenced's fake operators receive the incoming context before the
+		// authored children do. Their parent's explicit level/font/size can
+		// differ from this context and must not replace it.
+		texMMLFactory.CreateFencedNodes(n)
+		for _, fake := range append([]*mml.Node{n.Fenced.Open, n.Fenced.Close}, n.Fenced.Separators...) {
+			setInheritedAttributes(fake, attributes, display, level, prime)
+		}
+
 	case "annotation", "annotation-xml":
 		// MmlAnnotationXML stops child inheritance; MmlAnnotation inherits
 		// that no-op. The annotation itself still receives its attributes.

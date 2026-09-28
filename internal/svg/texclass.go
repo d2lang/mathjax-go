@@ -34,6 +34,25 @@ func setTeXClass(node, previous *mml.Node) *mml.Node {
 	case "mrow":
 		return setRowTeXClass(node, previous)
 
+	case "mfenced":
+		setPreviousClass(node, previous)
+		if node.Fenced != nil && node.Fenced.Open != nil {
+			previous = setTeXClass(node.Fenced.Open, previous)
+		}
+		for i, child := range node.Children {
+			if i > 0 && node.Fenced != nil && i-1 < len(node.Fenced.Separators) {
+				previous = setTeXClass(node.Fenced.Separators[i-1], previous)
+			}
+			previous = setTeXClass(child, previous)
+		}
+		if node.Fenced != nil {
+			if node.Fenced.Close != nil {
+				previous = setTeXClass(node.Fenced.Close, previous)
+			}
+			updateTeXClass(node, node.Fenced.Open)
+		}
+		return previous
+
 	case "mfrac", "msqrt", "mroot", "mtable", "mtr", "mlabeledtr", "mtd":
 		setPreviousClass(node, previous)
 		for _, child := range node.Children {
