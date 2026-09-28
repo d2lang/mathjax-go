@@ -1,0 +1,82 @@
+{
+  "checkout": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/mathjax-go",
+  "sourceFiles": [
+    "work/mathjax-go/testdata/alignedat_residuals.json",
+    "work/mathjax-go/testdata/array_initial_residuals.json",
+    "work/mathjax-go/testdata/array_rows_residuals.json",
+    "work/mathjax-go/testdata/arrow_between_lines_residuals.json",
+    "work/mathjax-go/testdata/boxed_macro_residuals.json",
+    "work/mathjax-go/testdata/buildrel_residuals.json",
+    "work/mathjax-go/testdata/cd_entries_residuals.json",
+    "work/mathjax-go/testdata/cd_finalization_residuals.json",
+    "work/mathjax-go/testdata/cramped_style_residuals.json",
+    "work/mathjax-go/testdata/cramped_substack_residuals.json",
+    "work/mathjax-go/testdata/delimiter_cache_residuals.json",
+    "work/mathjax-go/testdata/enclosure_bbox_residuals.json",
+    "work/mathjax-go/testdata/eqnarray_current_residuals.json",
+    "work/mathjax-go/testdata/eqnarray_residuals.json",
+    "work/mathjax-go/testdata/fallback_correction_residuals_mathjax_3_2_2.json",
+    "work/mathjax-go/testdata/flalign_residuals.json",
+    "work/mathjax-go/testdata/fn_script_ownership_residuals.json",
+    "work/mathjax-go/testdata/framebox_residuals.json",
+    "work/mathjax-go/testdata/hfill_residuals.json",
+    "work/mathjax-go/testdata/internal_font_css_residuals_mathjax_3_2_2.json",
+    "work/mathjax-go/testdata/mspace_residuals.json",
+    "work/mathjax-go/testdata/nonscript_array_residuals.json",
+    "work/mathjax-go/testdata/nonscript_residuals.json",
+    "work/mathjax-go/testdata/operator_primes_residuals.json",
+    "work/mathjax-go/testdata/physics_named_functions_residuals.json",
+    "work/mathjax-go/testdata/physics_operator_applications_residuals.json",
+    "work/mathjax-go/testdata/physics_vector_applications_residuals.json",
+    "work/mathjax-go/testdata/pmb_residuals.json",
+    "work/mathjax-go/testdata/quantity_fallback_residuals.json",
+    "work/mathjax-go/testdata/row_command_priority_residuals.json",
+    "work/mathjax-go/testdata/row_stretch_residuals.json",
+    "work/mathjax-go/testdata/script_final_items_residuals.json",
+    "work/mathjax-go/testdata/skew_residuals.json"
+  ],
+  "binarySHA256": {
+    "before": "90187a54b890cbbd3df298035be0f91b84f2189d824d9f395ec35f49a027e624",
+    "after": "716cf21a818748fbc38a7efa7fc48adab0d243da171752e6ecd642909ec5c941"
+  },
+  "uniqueInputs": 4504,
+  "changed": 6,
+  "newlyExact": 4,
+  "exactRegressions": [
+    [
+      {
+        "fixture": "enclosure_bbox_residuals.json",
+        "name": "enclosure-1287"
+      }
+    ],
+    [
+      {
+        "fixture": "enclosure_bbox_residuals.json",
+        "name": "enclosure-1290"
+      }
+    ]
+  ],
+  "changedNonexactCount": 2,
+  "changedNonexact": [
+    {
+      "tex": "\\cancelto[data-padding=1em,data-thickness=.2em]{0}{}",
+      "display": true,
+      "sources": [
+        {
+          "fixture": "enclosure_bbox_residuals.json",
+          "name": "enclosure-1287"
+        }
+      ]
+    },
+    {
+      "tex": "\\cancelto[data-padding=1em,data-thickness=.2em]{0}{x}",
+      "display": false,
+      "sources": [
+        {
+          "fixture": "enclosure_bbox_residuals.json",
+          "name": "enclosure-1290"
+        }
+      ]
+    }
+  ]
+}
