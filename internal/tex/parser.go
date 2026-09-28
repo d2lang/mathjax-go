@@ -901,7 +901,14 @@ func (p *parser) parseCharacter() *mml.Node {
 	if kind == "" {
 		return nil // The checked token boundary reports the source failure.
 	}
-	other := ambientLiteralToken(p.token(kind, text), r)
+	other := p.token(kind, text)
+	if p.activeFont != "" {
+		other.Attributes.Set("mathvariant", p.activeFont)
+	}
+	// Other's creation font applies to every kind, including mtext; its
+	// range override follows the creating token factory.
+	p.applyVectorFactory(other)
+	other = ambientLiteralToken(other, r)
 	if kind == "mo" {
 		// Other records only operators for the fixStretchy postfilter.
 		// addNode() leaves in-lists after the temporary property is removed.
