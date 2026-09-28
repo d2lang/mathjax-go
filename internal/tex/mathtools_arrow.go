@@ -190,26 +190,25 @@ func (p *parser) parseEquationRow(cells []string, final bool, appendRow func(*mm
 	if len(tableState) != 0 {
 		table = tableState[0]
 	}
-	state := &equationRowState{table: table}
 	source := strings.Join(cells, "&")
-	for {
-		sub := p.matrixCellParser(source)
-		sub.matrixClose = false
-		sub.cdArrayEntry = true
-		sub.arrayCell.equation = state
-		children, _, err := sub.parseRowWithInfix(0, false, false)
-		if err != nil {
-			return err
-		}
-		if !sub.cdEntryStopped && final && len(children) == 0 && len(state.entries) == 0 {
-			return nil
-		}
-		state.endEntry(children)
-		if !sub.cdEntryStopped {
-			return state.endRow()
-		}
-		source = sub.source[sub.pos:]
+	if !final {
+		source += "\\cr"
 	}
+	return p.parseEquationBody(source, table)
+}
+
+func (p *parser) parseEquationBody(source string, table *equationTableState) error {
+	state := &equationRowState{table: table}
+	return p.parseArrayBody(source, arrayBodyOwner{
+		configure:  func(sub *parser) { sub.arrayCell.equation = state },
+		hasEntries: func() bool { return len(state.entries) != 0 },
+		endEntry: func(children []*mml.Node, _ *arrayCellState) error {
+			state.endEntry(children)
+			return nil
+		},
+		endRow:     state.endRow,
+		addSpacing: table.addSpacing,
+	})
 }
 
 func isEquationArray(environment string) bool {
@@ -225,7 +224,6 @@ func (p *parser) parseEquationTable(body, environment string) (*mml.Node, *equat
 	taggable := environment == "alignat" || environment == "alignat*"
 	state.start(environment, taggable, environment == "alignat")
 	defer state.end()
-	rows := splitTable(body)
 	var mrows, tags []*mml.Node
 	appendRow := func(row *mml.Node) error {
 		mrows = append(mrows, row)
@@ -238,10 +236,8 @@ func (p *parser) parseEquationTable(body, environment string) (*mml.Node, *equat
 		return nil
 	}
 	spacing := newEquationTableState(appendRow)
-	for i, cells := range rows {
-		if err := p.parseEquationRow(cells, i == len(rows)-1, appendRow, spacing); err != nil {
-			return nil, nil, err
-		}
+	if err := p.parseEquationBody(body, spacing); err != nil {
+		return nil, nil, err
 	}
 	table := node("mtable", mrows...)
 	for i, tag := range tags {

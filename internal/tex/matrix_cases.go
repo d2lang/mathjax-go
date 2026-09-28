@@ -71,3 +71,30 @@ func (p *parser) parseMatrixCasesCell(source string, terminator byte) (*mml.Node
 	}
 	return matrixCellContent(children), nil
 }
+
+// BaseMethods.Entry reads a cases text column before returning to Parse. The
+// raw scanner intentionally recognizes only the source's literal CR spellings.
+func (p *parser) prepareMatrixCasesText() ([]*mml.Node, error) {
+	// The captured environment has an implicit end token. The scanner's
+	// trailing non-letter keeps a final literal \cr recognizable as in the
+	// original uncut program, without placing that sentinel in math input.
+	end, close, err := matrixCasesTextEnd(p.source+"}", p.pos)
+	if err != nil {
+		return nil, err
+	}
+	if end > len(p.source) {
+		end = len(p.source)
+	}
+	raw := p.source[p.pos:end]
+	leading := strings.TrimLeftFunc(raw, internalTextSpace)
+	if strings.HasPrefix(leading, `\text`) && len(leading) > 5 && !isASCIILetter(rune(leading[5])) &&
+		close == len(strings.TrimRightFunc(raw, internalTextSpace))-1 {
+		return nil, nil
+	}
+	p.pos = end
+	text := strings.TrimFunc(raw, internalTextSpace)
+	if strings.HasSuffix(text, `\`) && strings.HasSuffix(raw, " ") {
+		text += " "
+	}
+	return p.internalMath(text, "", true)
+}

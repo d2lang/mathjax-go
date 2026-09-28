@@ -102,9 +102,7 @@ func (p *parser) amsAlignment(environment string) (nodes []*mml.Node, err error)
 		}
 	}()
 
-	rows := splitTable(body)
-	mrows := make([]*mml.Node, 0, len(rows))
-	tags := make([]*mml.Node, 0, len(rows))
+	var mrows, tags []*mml.Node
 	maximumColumns := 0
 	appendRow := func(row *mml.Node) error {
 		if len(row.Children) > maximumColumns {
@@ -120,10 +118,8 @@ func (p *parser) amsAlignment(environment string) (nodes []*mml.Node, err error)
 		return nil
 	}
 	spacing := newEquationTableState(appendRow)
-	for rowIndex, cells := range rows {
-		if err := p.parseEquationRow(cells, rowIndex == len(rows)-1, appendRow, spacing); err != nil {
-			return nil, err
-		}
+	if err := p.parseEquationBody(body, spacing); err != nil {
+		return nil, err
 	}
 
 	table := node("mtable", mrows...)

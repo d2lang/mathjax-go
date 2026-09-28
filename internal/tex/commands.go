@@ -65,10 +65,7 @@ func (p *parser) commandNodes(name string, after **derivativeAutoOpen) ([]*mml.N
 	if isHFill(name) {
 		return nil, unsupportedHFill(name)
 	}
-	// Base's CrLaTeX handler has command-map precedence over the generated
-	// source-symbol fallback.  In particular, \\ is a row break, not the
-	// delimiter-map backslash glyph.
-	if name == "\n" || name == "\\" {
+	if name == "\n" {
 		return []*mml.Node{setAttributes(node("mspace"), map[string]any{"linebreak": "newline"})}, nil
 	}
 	if p.state.augmentedPackages {
@@ -85,6 +82,11 @@ func (p *parser) commandNodes(name string, after **derivativeAutoOpen) ([]*mml.N
 	}
 	if definition, ok := p.state.pairedDelimiters[name]; ok {
 		return p.invokePairedDelimiter(name, definition)
+	}
+	// Dynamic maps precede Base's closing CellItem handlers, which in turn
+	// precede the symbol fallback (notably the backslash delimiter glyph).
+	if name == "\\" || name == "newline" || name == "cr" {
+		return nil, p.crCommand(name)
 	}
 	// Braket's command map precedes the delimiter symbol fallback.
 	if name == "|" {

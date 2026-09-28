@@ -11,6 +11,8 @@ type arrayCellState struct {
 	fills    []int
 	offset   int
 	equation *equationRowState
+	multline bool
+	shove    string
 }
 
 func isHFill(name string) bool {

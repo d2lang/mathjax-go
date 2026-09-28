@@ -43,14 +43,14 @@ func (p *parser) mathtoolsSmallMatrix(environment string) ([]*mml.Node, error) {
 	if err != nil {
 		return nil, err
 	}
-	table, err := p.parseTable(body, "S")
+	table, err := p.parseTable(body, "S", ".2em")
 	if err != nil {
 		return nil, err
 	}
 	resetTableAttributes(table,
 		"columnalign", "center",
 		"columnspacing", ".333em",
-		"rowspacing", ".2em",
+		"rowspacing", tableRowSpacing(table),
 		"displaystyle", false,
 	)
 	applyColumnSpec(table, alignment)
@@ -83,41 +83,11 @@ func (p *parser) mathtoolsMultlined(environment string) ([]*mml.Node, error) {
 	if err != nil {
 		return nil, err
 	}
-	rows := splitTable(body)
-	mrows := make([]*mml.Node, 0, len(rows))
-	for i, cells := range rows {
-		raw := strings.TrimSpace(strings.Join(cells, "&"))
-		align := "center"
-		if strings.HasPrefix(raw, "\\shoveleft") {
-			align = "left"
-			raw, err = mathtoolsOnlyCommandArgument(raw, "shoveleft")
-			if err != nil {
-				return nil, err
-			}
-		} else if strings.HasPrefix(raw, "\\shoveright") {
-			align = "right"
-			raw, err = mathtoolsOnlyCommandArgument(raw, "shoveright")
-			if err != nil {
-				return nil, err
-			}
-		}
-		content, err := p.parseArrayCellString(raw)
-		if err != nil {
-			return nil, err
-		}
-		children := unwrapInferred(content)
-		if i != 0 {
-			children = fixInitialMO(children)
-		}
-		cell := node("mtd", children...)
-		if align != "center" {
-			cell.Attributes.Set("columnalign", align)
-		}
-		if omitFinalArrayRow(i, len(rows), []*mml.Node{cell}) {
-			continue
-		}
-		mrows = append(mrows, node("mtr", cell))
+	table, spacing, err := p.parseMultlineBody(body)
+	if err != nil {
+		return nil, err
 	}
+	mrows := table.Children
 	if len(mrows) > 1 {
 		firstCell := mrows[0].Children[0]
 		if value, _ := firstCell.Attributes.Get("columnalign"); value != "right" {
@@ -136,10 +106,9 @@ func (p *parser) mathtoolsMultlined(environment string) ([]*mml.Node, error) {
 			mathtoolsAppendCell(lastCell, mathtoolsSpace(lastSkip), true)
 		}
 	}
-	table := node("mtable", mrows...)
 	alignAMSMultlineCells(table)
 	table.Attributes.Set("displaystyle", true)
-	table.Attributes.Set("rowspacing", ".5em")
+	spacing.apply(table, ".5em")
 	if width == "" {
 		width = "auto"
 	}
@@ -218,29 +187,33 @@ func (p *parser) mathtoolsCases(environment string) ([]*mml.Node, error) {
 	if err != nil {
 		return nil, err
 	}
-	rows := splitTable(body)
-	mrows := make([]*mml.Node, 0, len(rows))
-	for rowIndex, cells := range rows {
-		mtds := make([]*mml.Node, 0, len(cells))
-		for i, raw := range cells {
-			if i == 1 {
-				text := node("mstyle", node("mtext", mml.NewText(strings.TrimSpace(raw))))
-				mtds = append(mtds, node("mtd", text))
-				continue
+	table := node("mtable")
+	var entries []*mml.Node
+	spacing := &arrayRowSpacing{}
+	err = p.parseArrayBody(body, arrayBodyOwner{
+		prepare: func(sub *parser) ([]*mml.Node, error) {
+			if len(entries) != 1 {
+				return nil, nil
 			}
-			content, err := p.parseArrayCellString(strings.TrimSpace(raw))
-			if err != nil {
-				return nil, err
-			}
-			mtds = append(mtds, arrayCellNode(content))
-		}
-		if omitFinalArrayRow(rowIndex, len(rows), mtds) {
-			continue
-		}
-		mrows = append(mrows, node("mtr", mtds...))
+			return sub.prepareMatrixCasesText()
+		},
+		hasEntries: func() bool { return len(entries) != 0 },
+		endEntry: func(children []*mml.Node, fill *arrayCellState) error {
+			entries = append(entries, arrayCellNode(fill.finish(matrixCellContent(children), len(children))))
+			return nil
+		},
+		endRow: func() error {
+			table.AppendChild(node("mtr", entries...))
+			entries = nil
+			spacing.rows++
+			return nil
+		},
+		addSpacing: spacing.add,
+	})
+	if err != nil {
+		return nil, err
 	}
-	table := node("mtable", mrows...)
-	table.Attributes.Set("rowspacing", ".2em")
+	spacing.apply(table, ".2em")
 	table.Attributes.Set("columnspacing", "1em")
 	table.Attributes.Set("columnalign", "left")
 	if strings.HasPrefix(environment, "d") {
@@ -265,36 +238,13 @@ func (p *parser) mathtoolsMultline(environment string) ([]*mml.Node, error) {
 }
 
 func (p *parser) mathtoolsMultlineBody(body string) ([]*mml.Node, error) {
-	rows := splitTable(body)
-	mrows := make([]*mml.Node, 0, len(rows))
-	for rowIndex, cells := range rows {
-		raw := strings.TrimSpace(strings.Join(cells, "&"))
-		shove := ""
-		if strings.HasPrefix(raw, "\\shoveleft") {
-			shove = "left"
-			raw, _ = mathtoolsOnlyCommandArgument(raw, "shoveleft")
-		} else if strings.HasPrefix(raw, "\\shoveright") {
-			shove = "right"
-			raw, _ = mathtoolsOnlyCommandArgument(raw, "shoveright")
-		}
-		content, err := p.parseArrayCellString(raw)
-		if err != nil {
-			return nil, err
-		}
-		if shove != "" {
-			content = texAtom(content, mml.TeXClassOrd)
-		}
-		cell := node("mtd", content)
-		if shove != "" {
-			cell.Attributes.Set("columnalign", shove)
-		}
-		if omitFinalArrayRow(rowIndex, len(rows), []*mml.Node{cell}) {
-			continue
-		}
-		mrows = append(mrows, node("mtr", cell))
+	table, spacing, err := p.parseMultlineBody(body)
+	if err != nil {
+		return nil, err
 	}
-	table := node("mtable", mrows...)
 	finishAMSMultlineTable(table)
+	spacing.apply(table, ".5em")
+
 	return []*mml.Node{table}, nil
 }
 

@@ -96,6 +96,9 @@ type parser struct {
 	commandNonscript     bool
 	commandDots          *pendingDots
 	commandPosition      *positionItem
+	commandCell          *cellItem
+	pendingCell          *cellItem
+	stoppedCell          *cellItem
 	multiLetterFont      string
 	activeFont           string
 	activeColor          string
@@ -310,9 +313,34 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 			reducePositions()
 		}
 	}
-	for p.pos < len(p.source) {
+	for p.pos < len(p.source) || p.pendingCell != nil {
 		if p.cdEntryStopped {
 			break // A completed single Braket returns the same closing Entry.
+		}
+		if item := p.pendingCell; item != nil {
+			item.saveEnvironment(p)
+			if closeErr := closeStyles(); closeErr != nil {
+				return nil, "", closeErr
+			}
+			if infixPending || owner != nil && owner.single && len(nodes) != 0 {
+				// The final fraction/Braket must be pushed before replaying
+				// this same closing item to its enclosing recipient.
+				return nodes, "", nil
+			}
+			p.pendingCell = nil
+			if p.cdArrayEntry && !stopRight && auto == nil && owner == nil {
+				p.stoppedCell, p.cdEntryStopped = item, true
+				return nodes, "", nil
+			}
+			if !item.linebreak {
+				return nil, "", item.misplaced()
+			}
+			// The open owner swallowed the CellItem. Its lexical env is
+			// retained, including declarations in a denominator continuation.
+			p.activeFont, p.fontExplicitEmpty, p.activeColor = item.font, item.emptyFont, item.color
+			pendingFont = item.font
+			appendNodes(item.spaces(), false)
+			continue
 		}
 		// A single BraketItem closes on its first MML delivery. Any remaining
 		// nodes in that delivery belong to the caller, not to its fenced body.
@@ -360,6 +388,38 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 			_, registeredMacro := p.state.macros[name]
 			_, registeredDelimiter := p.state.pairedDelimiters[name]
 			registered := registeredMacro || registeredDelimiter
+			if (name == "shoveleft" || name == "shoveright") && !registered {
+				if p.arrayCell == nil || !p.arrayCell.multline || owner != nil || auto != nil || infixPending ||
+					len(styles) != 0 || len(positions) != 0 || pending != nil || bool(negation) || dots.active() || pendingFunction || nonscript {
+					return nil, "", texError("CommandInMultlined", "\\%s can only appear within the multline or multlined environments", name)
+				}
+				if p.arrayCell.offset+len(nodes) != 0 {
+					return nil, "", texError("CommandAtTheBeginingOfLine", "\\%s must come at the beginning of the line", name)
+				}
+				p.arrayCell.shove = strings.TrimPrefix(name, "shove")
+				shift, _, err := p.readBrackets(nil)
+				if err != nil {
+					return nil, "", err
+				}
+				argument, err := p.readMathtoolsArgument(name)
+				if err != nil {
+					return nil, "", err
+				}
+				content, err := p.parseChild(argument)
+				if err != nil {
+					return nil, "", err
+				}
+				if shift != "" {
+					space := setAttributes(node("mspace"), map[string]any{"width": shift})
+					if p.arrayCell.shove == "left" {
+						content = forcedRow([]*mml.Node{space, content}, false)
+					} else {
+						content = forcedRow([]*mml.Node{content, space}, false)
+					}
+				}
+				appendNodes(unwrapInferred(content), false)
+				continue
+			}
 			if isMathtoolsArrayCommand(name) && !registered {
 				actualArray := p.arrayCell != nil && owner == nil && auto == nil && !infixPending &&
 					len(styles) == 0 && len(positions) == 0 && pending == nil &&
@@ -474,7 +534,13 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 					return nil, "", err
 				}
 				if auto != nil {
-					return nil, "", auto.stopError()
+					if p.pendingCell == nil {
+						return nil, "", auto.stopError()
+					}
+				}
+				if p.pendingCell != nil {
+					nodes = []*mml.Node{fraction}
+					continue
 				}
 				return []*mml.Node{fraction}, right, nil
 			}
@@ -537,17 +603,13 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 				}
 				continue
 			}
-			if !registered && len(positions) != 0 && (name == "\\" || name == "\n" || name == "cr" || name == "newline") {
-				if err := p.positionLinebreak(name); err != nil {
-					return nil, "", err
-				}
-				if closeErr := closeStyles(); closeErr != nil {
-					return nil, "", closeErr
-				}
-			}
 			result, err := p.commandEvent(name)
 			if err != nil {
 				return nil, "", err
+			}
+			if result.cellItem != nil {
+				p.pendingCell = result.cellItem
+				continue
 			}
 			if result.notItem {
 				nonscript = false
@@ -672,28 +734,8 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 				appendNodes([]*mml.Node{created}, false)
 			}
 		case '&':
-			if p.cdArrayEntry && terminator == 0 && !stopRight && auto == nil {
-				if closeErr := closeStyles(); closeErr != nil {
-					return nil, "", closeErr
-				}
-				if owner != nil {
-					// A final MML item first completes a single BraketItem;
-					// its caller then delivers this Entry to the array.
-					if owner.single && len(nodes) != 0 {
-						return nodes, "", nil
-					}
-					return nil, "", texError("Misplaced", "Misplaced &")
-				}
-				p.pos++
-				p.cdEntryStopped = true
-				return nodes, "", nil
-			}
-			if len(positions) != 0 {
-				if closeErr := closeStyles(); closeErr != nil {
-					return nil, "", closeErr
-				}
-			}
-			return nil, "", texError("Misplaced", "Misplaced &")
+			p.pos++
+			p.pendingCell = &cellItem{name: "&"}
 		case '#':
 			return nil, "", texError("CantUseHash1", "You can't use 'macro parameter character #' in math mode")
 		default:

@@ -62,7 +62,7 @@ func (p *parser) amscdEnvironment(name string) (nodes []*mml.Node, handled bool,
 	resetTableAttributes(table,
 		"columnalign", "center",
 		"columnspacing", "5pt",
-		"rowspacing", "5pt",
+		"rowspacing", tableRowSpacing(table),
 		"displaystyle", true,
 	)
 	minWidth := p.amscdState(amscdMinWidthState, "2.75em")
