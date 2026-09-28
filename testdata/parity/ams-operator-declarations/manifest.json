@@ -1,0 +1,24 @@
+{
+  "d2Commit": "01bc7ecdbdd04c13d6fe5df1967d2d9aa14ae579",
+  "beforeMathjaxCommit": "c2c3f8d2dd510269e8d2827f288e965dd09ded3f",
+  "afterCodeCommit": "a708ff363b7ba868322fb966f2b25300d1a83ed1",
+  "tex": "\\Huge\\DeclareMathOperator*{argmin}{arg\\,min}\\argmin_{x\\in X}f(x)",
+  "files": {
+    "README.md": "c1780c6b9b27cff4bb92b8d904d7fcde8742f078ed8c4692e9b2135be4a2f3e4",
+    "after.png": "075b0732563ce57d76fd3d36c3c37a19d97411a5e4f409ba586beab8fc749dcf",
+    "after.svg": "db038b723983f4df0eb1464027c9eac08dd394070959852f88a82e75ec197b60",
+    "before.png": "173e8d2b66183d5244b9721bf21e3502d72769ae41b8dcb757a2ca22d763e475",
+    "before.svg": "e85c198e0c403d43574ff7aa1b7927a53bb0e17fccde08000a48122edb8a0ae6",
+    "comparison.png": "9b9ceb6f55747817906056ebf6d51da43cf74e76e1b4c2f5e39f90b30e3f09a6",
+    "oracle-adapter/go.mod": "b8a3ff80b4e63b08c12ed3bcbefcdaebec039551cf00b99b08c6ba6dec5abfc5",
+    "oracle-adapter/mathjax.go": "1ed1fbe813faf433d307b2b5c8e332fd22854999a22487e11396c6a6df3b38ed",
+    "original.png": "075b0732563ce57d76fd3d36c3c37a19d97411a5e4f409ba586beab8fc749dcf",
+    "original.svg": "db038b723983f4df0eb1464027c9eac08dd394070959852f88a82e75ec197b60",
+    "witness.d2": "6512793dc5ac095f5961aa93e142b98dce652b5e7afb3dd0bf1cadfbab4267ef"
+  },
+  "oracleAssets": {
+    "mathjax.js": "cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869",
+    "polyfills.js": "7fe1d048c78b0e09854c1259f7413868a51cc8f0c822489eb1ac36ae6c85ce01",
+    "setup.js": "a52cb0bbabfbd7796b9fedd793b9386c474e3123e788ee151cbe47ca1fa6e881"
+  }
+}
