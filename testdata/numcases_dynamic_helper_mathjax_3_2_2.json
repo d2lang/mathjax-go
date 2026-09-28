@@ -1,7 +1,7 @@
 {
   "mathjaxGitCommit": "ad8f5c21cb810236551da8c6512ba733e67357ee",
-  "baselineCommit": "0b179b832657fc7f97acd353d0c1f642ed8df3ae",
-  "sourceCommit": "1d4f6342745c4e897775bac763de0b3a7f957f76",
+  "baselineCommit": "5fd30978e6a93afce774885b2bf669caf8f4fe99",
+  "sourceCommit": "da58a0cbfa76ccd9dc89a389d2dbffc7369e6085",
   "sourceFiles": [
     "ts/input/tex/cases/CasesConfiguration.ts",
     "ts/input/tex/empheq/EmpheqUtil.ts",

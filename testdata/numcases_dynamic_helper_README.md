@@ -29,9 +29,10 @@ MathFont and OperatorName controls would lose source identifier state through th
 
 ## Original references
 
-Current source base: actual main164 `0b179b832657fc7f97acd353d0c1f642ed8df3ae`.
-All 954 outputs are unchanged from the reviewed source candidate on main162.
-The same complete inventory is rebound to current main164 below.
+Current source base: actual main165 `5fd30978e6a93afce774885b2bf669caf8f4fe99`.
+All 954 current-base baseline outputs are unchanged from main164. The
+reviewed NumCases source rebases without conflicts or semantic changes; the
+complete candidate inventory will be rechecked on main165 before publication.
 Pinned original: MathJax `ad8f5c21cb810236551da8c6512ba733e67357ee`, using the
 hash-verified frozen D2 assets and its fixed NoTags configuration. This change
 does not enable Empheq macros or automatic CasesTags numbering globally.
@@ -56,7 +57,7 @@ audit but expressly excluded; its corrected 112 originals are all exact.
 No SVG geometry, diagnostics or attributes are normalized. No Go output is
 used as an expected original result.
 
-The actual main164 overlap scan reads all 425 tracked testdata JSON files.
+The actual main165 overlap scan reads all 430 tracked testdata JSON files.
 Among the 902 strict input pairs, 893 are first input publications, eight
 promote previously raw complete originals, and one was previously recorded
 only as an augmented-package MML input. That last fixture declares display
@@ -66,7 +67,7 @@ All eight comparable original SVGs agree. These are per-fix input counts, not
 a claim of globally unique coverage. Full identities are retained in the
 inventory file.
 
-The 5,758-input main164 published-raw replay finds eight genuine diagnostic
+The preserved 5,758-input main164 published-raw replay finds eight genuine diagnostic
 fixes and 38 changed original runtime failures that now return bounded errors.
 Two apparent cancellation changes (one fix, one regression) are attribute-order
 variation: both binaries emit both orders across 64 repeats, and all 256
@@ -89,8 +90,7 @@ It regenerates only original outputs; baseline/candidate receipts and the
 passing/raw classification are not selected or rewritten by the generator.
 All three original fixture files regenerate byte-identically on the complete
 954-input inventory, including the 96 unmodified environment observations.
-On actual main164, the committed focused 902 complete-SVG / 46 bounded-runtime
-assertions, full frozen-oracle suite, race checks, vet and WASM build all pass
-serially with Go 1.27 and `-p 1`. The gated head is
-`9b72fc1cf7983a8955ebf1748bdb1aaa7c2a590a`; this final status update changes
-only this README.
+The actual main164 focused 902 complete-SVG / 46 bounded-runtime assertions,
+full frozen-oracle suite, race checks, vet and WASM build passed serially with
+Go 1.27 and `-p 1` at `9b72fc1cf7983a8955ebf1748bdb1aaa7c2a590a`.
+Final actual main165 composition and gates remain pending.

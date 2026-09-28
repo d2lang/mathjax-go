@@ -1,5 +1,5 @@
 {
-  "baseCommit": "0b179b832657fc7f97acd353d0c1f642ed8df3ae",
+  "baseCommit": "5fd30978e6a93afce774885b2bf669caf8f4fe99",
   "exactInputs": 902,
   "counts": {
     "first-input-publication": 893,
@@ -141,6 +141,7 @@
     "internal/tex/testdata/getargument_whitespace_mathjax_3_2_2.json",
     "internal/tex/testdata/getargument_whitespace_method_residuals.json",
     "internal/tex/testdata/getbrackets_whitespace_mathjax_3_2_2.json",
+    "internal/tex/testdata/getcs_line_endings_mathjax_3_2_2.json",
     "internal/tex/testdata/handler_oracle_mathjax_3_2_2.json",
     "internal/tex/testdata/id_anchor_render_mathjax_3_2_2.json",
     "internal/tex/testdata/inferred_row_mathjax_3_2_2.json",
@@ -294,6 +295,9 @@
     "testdata/getargument_whitespace_residuals.json",
     "testdata/getargument_whitespace_serialization_controls.json",
     "testdata/getbrackets_whitespace_mathjax_3_2_2.json",
+    "testdata/getcs_line_endings_inventory.json",
+    "testdata/getcs_line_endings_mathjax_3_2_2.json",
+    "testdata/getcs_line_endings_residuals.json",
     "testdata/group_eof_boundaries.json",
     "testdata/group_eof_inputs.json",
     "testdata/group_eof_mathjax_3_2_2.json",
@@ -402,6 +406,7 @@
     "testdata/parity/enclosure-baseline/manifest.json",
     "testdata/parity/eqnarray-environments/manifest.json",
     "testdata/parity/eqnarray-environments/tagged-measurement.json",
+    "testdata/parity/escaped-line-endings/manifest.json",
     "testdata/parity/fallback-token-correction/manifest.json",
     "testdata/parity/flalign-columns/manifest.json",
     "testdata/parity/font-command-mappings/manifest.json",
