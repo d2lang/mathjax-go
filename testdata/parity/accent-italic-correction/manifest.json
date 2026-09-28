@@ -4,7 +4,7 @@
   "afterCodeCommit": "51376ba19d163056c7bbb8047f4c8ef95a6ef82c",
   "tex": "\\Huge{\\hat{\\mathcal{T}}\\quad\\underline{\\mathcal{T}}}",
   "files": {
-    "README.md": "1e0a7830883e43f4264e056ed997f1ee1d6e65e1cfa67c5a9022f2f03be4330d",
+    "README.md": "cbd577ea05fd2c263e1f670cf61c0061156c0a1a9893f3f977104cb913767740",
     "after.png": "a1fb3343c24b65e7fcf542fd5109b906ce8d80964c521b726a6022bc765d8e28",
     "after.svg": "d1b6442ca1ad17589a1f4ca6a4b19f1a3637702c392facc100579afdfe29e76e",
     "before.png": "f10d60a1f9e06a1103d8da4c25e75a26fcc537f922c56a76eb939b99d43a2b2a",
@@ -14,7 +14,9 @@
     "oracle-adapter/mathjax.go": "1ed1fbe813faf433d307b2b5c8e332fd22854999a22487e11396c6a6df3b38ed",
     "original.png": "a1fb3343c24b65e7fcf542fd5109b906ce8d80964c521b726a6022bc765d8e28",
     "original.svg": "d1b6442ca1ad17589a1f4ca6a4b19f1a3637702c392facc100579afdfe29e76e",
-    "witness.d2": "55290d214ab026cd6839e7c4e7c1ffc55122125a2842026cb28b373d7da05fed"
+    "witness.d2": "55290d214ab026cd6839e7c4e7c1ffc55122125a2842026cb28b373d7da05fed",
+    "aligned-comparison.svg": "f9b0b04f17870cd290d7c3a06fce57b61360263a78f48fb3c77f41286705ffa9",
+    "aligned-comparison.png": "6446e1d696fe3e4e780fb917ceb88a16b67eb1422b1d7eeb101a9ae42fda3e8a"
   },
   "oracleAssets": {
     "mathjax.js": "cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869",
