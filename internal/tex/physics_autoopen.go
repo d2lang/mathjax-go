@@ -75,17 +75,17 @@ func (p *parser) command(name string) ([]*mml.Node, error) {
 }
 
 type derivativeAutoOpen struct {
-	open        byte
-	closer      byte
-	application *physicsApplicationArgument
-	ignore      bool
-	openCount   int
-	closed      bool
+	open            byte
+	closer          byte
+	application     *physicsApplicationArgument
+	ignore          bool
+	openCount       int
+	closed          bool
 	openingConsumed bool
-	smash bool
-	right string
-	rightNode *mml.Node
-	rightParsed bool
+	smash           bool
+	right           string
+	rightNode       *mml.Node
+	rightParsed     bool
 }
 
 func (a *derivativeAutoOpen) openingFence() byte {
