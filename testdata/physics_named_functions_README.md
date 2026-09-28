@@ -40,6 +40,11 @@ in the exact set. All 1,000 match. Against baseline
 
 ## Recorded inherited script-argument issue
 
+This historical issue is resolved by the shared function/script ownership
+repair. All previously recorded residuals and controls are now compared
+verbatim in `fn_script_ownership_mathjax_3_2_2.json`; the historical receipt
+below remains unchanged. See `fn_script_ownership_README.md`.
+
 The full 1,012-input audit also includes 12 cases such as `x^\sine y`.
 The original `SubsupItem.checkItem` rejects an unbraced `FnItem` with
 “Missing open brace for superscript”; the existing Go script consumer

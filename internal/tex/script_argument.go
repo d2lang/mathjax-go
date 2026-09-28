@@ -116,7 +116,7 @@ func (p *parser) parseScriptArgument(attachment *scriptAttachment, font string) 
 		if parseErr != nil {
 			return nil, currentFont, nil, parseErr
 		}
-		if result.notItem || result.dotsItem != nil || result.positionItem != nil {
+		if result.namedFunction || result.notItem || result.dotsItem != nil || result.positionItem != nil {
 			return nil, currentFont, nil, attachment.missingOpen()
 		}
 		if len(result.nodes) == 0 {
@@ -127,7 +127,7 @@ func (p *parser) parseScriptArgument(attachment *scriptAttachment, font string) 
 			}
 			continue
 		}
-		// A SubsupItem accepts the completed function node at this boundary.
+		// SubsupItem accepts a final MML item, not a pending FnItem.
 		return row(result.nodes, true), currentFont, result.afterNode, nil
 	}
 }

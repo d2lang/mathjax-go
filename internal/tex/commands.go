@@ -116,7 +116,7 @@ func (p *parser) commandNodes(name string, after **derivativeAutoOpen) ([]*mml.N
 			text := map[string]string{"injlim": "inj\u2006lim", "projlim": "proj\u2006lim"}[name]
 			return []*mml.Node{p.namedOperator(text)}, nil
 		}
-		if name == "lim" || name == "liminf" || name == "limsup" || name == "max" || name == "min" || name == "sup" || name == "inf" {
+		if name == "gcd" || name == "lim" || name == "liminf" || name == "limsup" || name == "max" || name == "min" || name == "sup" || name == "inf" {
 			return []*mml.Node{p.namedOperator(function)}, nil
 		}
 		fn := token("mi", function)
@@ -1060,6 +1060,7 @@ func (p *parser) mathClass(name string) ([]*mml.Node, error) {
 	if name == "mathop" {
 		n.SetProperty("movablelimits", true)
 		n.SetProperty("movesupsub", true)
+		p.commandNamedFunction = true
 	}
 	return []*mml.Node{n}, nil
 }
