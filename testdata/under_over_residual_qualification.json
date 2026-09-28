@@ -1,0 +1,293 @@
+{
+  "note": "All original/baseline/candidate SVGs remain unmodified in under_over_commands_residuals.json. These raw cases are excluded from exact assertions. The affine comparison includes complete outlined path geometry and text; it does not alter SVGs or waive an exact assertion.",
+  "cases": [
+    {
+      "tex": "\\mathsf{\\overparen{AB}}",
+      "display": false,
+      "family": "inherited MathFont child identifier grouping",
+      "changedFromBaseline": true,
+      "completeOutlinedGeometryEqualOriginal": true,
+      "svgSHA256": {
+        "original": "0990cf8d2ddc8b9d703ff89dbf93cca16399af358f9ba85046b1b8c6b1d5a48c",
+        "baseline": "54b45c481e1ed5d144ad39bd63fceb4fc5bc9f91a3e13635aa368c84321af487",
+        "candidate": "7420713382bf2a60569a9589b2d2b2344934ed500e81a50f2171b80a0de611dc"
+      }
+    },
+    {
+      "tex": "\\mathsf{\\overparen{AB}}",
+      "display": true,
+      "family": "inherited MathFont child identifier grouping",
+      "changedFromBaseline": true,
+      "completeOutlinedGeometryEqualOriginal": true,
+      "svgSHA256": {
+        "original": "0990cf8d2ddc8b9d703ff89dbf93cca16399af358f9ba85046b1b8c6b1d5a48c",
+        "baseline": "54b45c481e1ed5d144ad39bd63fceb4fc5bc9f91a3e13635aa368c84321af487",
+        "candidate": "7420713382bf2a60569a9589b2d2b2344934ed500e81a50f2171b80a0de611dc"
+      }
+    },
+    {
+      "tex": "\\mathsf{\\underparen{AB}}",
+      "display": false,
+      "family": "inherited MathFont child identifier grouping",
+      "changedFromBaseline": true,
+      "completeOutlinedGeometryEqualOriginal": true,
+      "svgSHA256": {
+        "original": "742c5d1620539383cb255df3e950ff13adb64c79b06c1c6b80b2a94f233b632b",
+        "baseline": "187615e4a9ddfb81a5f45f689bf025c6182a8fade3570227579c1d3fbfe63f48",
+        "candidate": "e23b1baf9f486a2d2660e1d6838eed486ddd105ef683f517bf3271f36765143a"
+      }
+    },
+    {
+      "tex": "\\mathsf{\\underparen{AB}}",
+      "display": true,
+      "family": "inherited MathFont child identifier grouping",
+      "changedFromBaseline": true,
+      "completeOutlinedGeometryEqualOriginal": true,
+      "svgSHA256": {
+        "original": "742c5d1620539383cb255df3e950ff13adb64c79b06c1c6b80b2a94f233b632b",
+        "baseline": "187615e4a9ddfb81a5f45f689bf025c6182a8fade3570227579c1d3fbfe63f48",
+        "candidate": "e23b1baf9f486a2d2660e1d6838eed486ddd105ef683f517bf3271f36765143a"
+      }
+    },
+    {
+      "tex": "\\mathsf{\\overleftrightarrow{AB}}",
+      "display": false,
+      "family": "inherited MathFont child identifier grouping",
+      "changedFromBaseline": true,
+      "completeOutlinedGeometryEqualOriginal": true,
+      "svgSHA256": {
+        "original": "a4481687449dc7d562f885b81dcfb1384ba27673f4e6e4245e9f98aeaf6ea33c",
+        "baseline": "dd6018aca384f28fdfeaaca1ce97f7f4dece4dd04927840c902da02a0a6f39b0",
+        "candidate": "425e00ae45a030f08f49058eb8ffb33712c9b6fe9c18336a92bc253b7c6e859a"
+      }
+    },
+    {
+      "tex": "\\mathsf{\\overleftrightarrow{AB}}",
+      "display": true,
+      "family": "inherited MathFont child identifier grouping",
+      "changedFromBaseline": true,
+      "completeOutlinedGeometryEqualOriginal": true,
+      "svgSHA256": {
+        "original": "a4481687449dc7d562f885b81dcfb1384ba27673f4e6e4245e9f98aeaf6ea33c",
+        "baseline": "dd6018aca384f28fdfeaaca1ce97f7f4dece4dd04927840c902da02a0a6f39b0",
+        "candidate": "425e00ae45a030f08f49058eb8ffb33712c9b6fe9c18336a92bc253b7c6e859a"
+      }
+    },
+    {
+      "tex": "\\mathsf{\\underleftrightarrow{AB}}",
+      "display": false,
+      "family": "inherited MathFont child identifier grouping",
+      "changedFromBaseline": true,
+      "completeOutlinedGeometryEqualOriginal": true,
+      "svgSHA256": {
+        "original": "a0749fb6dd313c523089f243352e6f670116a0dbf5cd1c6deecb3a24dae14eb2",
+        "baseline": "9c86590e58790fed64f43113a1a518cffa37cc0e3558052455479be1cc92b6fd",
+        "candidate": "5aa30df33a68a9a2d3082eceb816221b2e9d27d6e37d036aa080bb2d02eef0bc"
+      }
+    },
+    {
+      "tex": "\\mathsf{\\underleftrightarrow{AB}}",
+      "display": true,
+      "family": "inherited MathFont child identifier grouping",
+      "changedFromBaseline": true,
+      "completeOutlinedGeometryEqualOriginal": true,
+      "svgSHA256": {
+        "original": "a0749fb6dd313c523089f243352e6f670116a0dbf5cd1c6deecb3a24dae14eb2",
+        "baseline": "9c86590e58790fed64f43113a1a518cffa37cc0e3558052455479be1cc92b6fd",
+        "candidate": "5aa30df33a68a9a2d3082eceb816221b2e9d27d6e37d036aa080bb2d02eef0bc"
+      }
+    },
+    {
+      "tex": "\\mathsf{\\overline{AB}}",
+      "display": false,
+      "family": "inherited MathFont child identifier grouping",
+      "changedFromBaseline": false,
+      "completeOutlinedGeometryEqualOriginal": true,
+      "svgSHA256": {
+        "original": "f6486dde839ccb01f59444c1b4d891f403d71000e75156271ef56682c75f405b",
+        "baseline": "ee1efe8cc1e8fcb1de776ca08a7565acea8f47dc9d6bd7be3076498fc062043b",
+        "candidate": "ee1efe8cc1e8fcb1de776ca08a7565acea8f47dc9d6bd7be3076498fc062043b"
+      }
+    },
+    {
+      "tex": "\\mathsf{\\overline{AB}}",
+      "display": true,
+      "family": "inherited MathFont child identifier grouping",
+      "changedFromBaseline": false,
+      "completeOutlinedGeometryEqualOriginal": true,
+      "svgSHA256": {
+        "original": "f6486dde839ccb01f59444c1b4d891f403d71000e75156271ef56682c75f405b",
+        "baseline": "ee1efe8cc1e8fcb1de776ca08a7565acea8f47dc9d6bd7be3076498fc062043b",
+        "candidate": "ee1efe8cc1e8fcb1de776ca08a7565acea8f47dc9d6bd7be3076498fc062043b"
+      }
+    },
+    {
+      "tex": "\\mathsf{\\underline{AB}}",
+      "display": false,
+      "family": "inherited MathFont child identifier grouping",
+      "changedFromBaseline": false,
+      "completeOutlinedGeometryEqualOriginal": true,
+      "svgSHA256": {
+        "original": "777f7d9fe24ae26f6852f291ecacfff49a2b381e1f260b657c8df0d79f1f19a1",
+        "baseline": "f1294987405dfdd1e7b3ab5d61322a6826dd20a778d014f31cf53cbf391b485f",
+        "candidate": "f1294987405dfdd1e7b3ab5d61322a6826dd20a778d014f31cf53cbf391b485f"
+      }
+    },
+    {
+      "tex": "\\mathsf{\\underline{AB}}",
+      "display": true,
+      "family": "inherited MathFont child identifier grouping",
+      "changedFromBaseline": false,
+      "completeOutlinedGeometryEqualOriginal": true,
+      "svgSHA256": {
+        "original": "777f7d9fe24ae26f6852f291ecacfff49a2b381e1f260b657c8df0d79f1f19a1",
+        "baseline": "f1294987405dfdd1e7b3ab5d61322a6826dd20a778d014f31cf53cbf391b485f",
+        "candidate": "f1294987405dfdd1e7b3ab5d61322a6826dd20a778d014f31cf53cbf391b485f"
+      }
+    },
+    {
+      "tex": "\\mathsf{\\overbrace{AB}}",
+      "display": false,
+      "family": "inherited MathFont child identifier grouping",
+      "changedFromBaseline": false,
+      "completeOutlinedGeometryEqualOriginal": true,
+      "svgSHA256": {
+        "original": "a8992a987570fc4285173a46e6cf35798743f1cbbcf6339e3cc8cfdba4d1748d",
+        "baseline": "4f955498357d525920a692f69db15370e9877bdfb73087fce0c8aaedc875946e",
+        "candidate": "4f955498357d525920a692f69db15370e9877bdfb73087fce0c8aaedc875946e"
+      }
+    },
+    {
+      "tex": "\\mathsf{\\overbrace{AB}}",
+      "display": true,
+      "family": "inherited MathFont child identifier grouping",
+      "changedFromBaseline": false,
+      "completeOutlinedGeometryEqualOriginal": true,
+      "svgSHA256": {
+        "original": "a8992a987570fc4285173a46e6cf35798743f1cbbcf6339e3cc8cfdba4d1748d",
+        "baseline": "4f955498357d525920a692f69db15370e9877bdfb73087fce0c8aaedc875946e",
+        "candidate": "4f955498357d525920a692f69db15370e9877bdfb73087fce0c8aaedc875946e"
+      }
+    },
+    {
+      "tex": "\\mathsf{\\underbrace{AB}}",
+      "display": false,
+      "family": "inherited MathFont child identifier grouping",
+      "changedFromBaseline": false,
+      "completeOutlinedGeometryEqualOriginal": true,
+      "svgSHA256": {
+        "original": "ae27e77db6ccc724f1ef39278883905e815c8daa1fdaad4311297791eb57a384",
+        "baseline": "36f810b6956afffd93d8dadd36a4466f0d38afea9e6d3874eeb98a0028366973",
+        "candidate": "36f810b6956afffd93d8dadd36a4466f0d38afea9e6d3874eeb98a0028366973"
+      }
+    },
+    {
+      "tex": "\\mathsf{\\underbrace{AB}}",
+      "display": true,
+      "family": "inherited MathFont child identifier grouping",
+      "changedFromBaseline": false,
+      "completeOutlinedGeometryEqualOriginal": true,
+      "svgSHA256": {
+        "original": "ae27e77db6ccc724f1ef39278883905e815c8daa1fdaad4311297791eb57a384",
+        "baseline": "36f810b6956afffd93d8dadd36a4466f0d38afea9e6d3874eeb98a0028366973",
+        "candidate": "36f810b6956afffd93d8dadd36a4466f0d38afea9e6d3874eeb98a0028366973"
+      }
+    },
+    {
+      "tex": "\\mathsf{\\overrightarrow{AB}}",
+      "display": false,
+      "family": "inherited MathFont child identifier grouping",
+      "changedFromBaseline": false,
+      "completeOutlinedGeometryEqualOriginal": true,
+      "svgSHA256": {
+        "original": "604511f35eb4bc1d995e8627b78a7d915ae5069abeae8effc4a9c81a94cb1072",
+        "baseline": "3a37792c9a2b806f32006a3a73d50cbfc03e23b5f0abcc4e73a2c964a15a9b76",
+        "candidate": "3a37792c9a2b806f32006a3a73d50cbfc03e23b5f0abcc4e73a2c964a15a9b76"
+      }
+    },
+    {
+      "tex": "\\mathsf{\\overrightarrow{AB}}",
+      "display": true,
+      "family": "inherited MathFont child identifier grouping",
+      "changedFromBaseline": false,
+      "completeOutlinedGeometryEqualOriginal": true,
+      "svgSHA256": {
+        "original": "604511f35eb4bc1d995e8627b78a7d915ae5069abeae8effc4a9c81a94cb1072",
+        "baseline": "3a37792c9a2b806f32006a3a73d50cbfc03e23b5f0abcc4e73a2c964a15a9b76",
+        "candidate": "3a37792c9a2b806f32006a3a73d50cbfc03e23b5f0abcc4e73a2c964a15a9b76"
+      }
+    },
+    {
+      "tex": "\\mathsf{\\underrightarrow{AB}}",
+      "display": false,
+      "family": "inherited MathFont child identifier grouping",
+      "changedFromBaseline": false,
+      "completeOutlinedGeometryEqualOriginal": true,
+      "svgSHA256": {
+        "original": "2cc1109782f4971bdd84635adeb4790ff22507323a9b453edfb478a87cd7bb47",
+        "baseline": "35d612b8f721945f50486b5b40d741e31ff25773cc490beae9fcb56fcb977fe2",
+        "candidate": "35d612b8f721945f50486b5b40d741e31ff25773cc490beae9fcb56fcb977fe2"
+      }
+    },
+    {
+      "tex": "\\mathsf{\\underrightarrow{AB}}",
+      "display": true,
+      "family": "inherited MathFont child identifier grouping",
+      "changedFromBaseline": false,
+      "completeOutlinedGeometryEqualOriginal": true,
+      "svgSHA256": {
+        "original": "2cc1109782f4971bdd84635adeb4790ff22507323a9b453edfb478a87cd7bb47",
+        "baseline": "35d612b8f721945f50486b5b40d741e31ff25773cc490beae9fcb56fcb977fe2",
+        "candidate": "35d612b8f721945f50486b5b40d741e31ff25773cc490beae9fcb56fcb977fe2"
+      }
+    },
+    {
+      "tex": "\\mathsf{\\overleftarrow{AB}}",
+      "display": false,
+      "family": "inherited MathFont child identifier grouping",
+      "changedFromBaseline": false,
+      "completeOutlinedGeometryEqualOriginal": true,
+      "svgSHA256": {
+        "original": "78694c982139e542575c5ac690ac0799c4de0c15852072856f9deee0cbee9716",
+        "baseline": "c316f288b5e691dc9b06357dcbe6926429debd8684f9627ff35a9e8a70a9496b",
+        "candidate": "c316f288b5e691dc9b06357dcbe6926429debd8684f9627ff35a9e8a70a9496b"
+      }
+    },
+    {
+      "tex": "\\mathsf{\\overleftarrow{AB}}",
+      "display": true,
+      "family": "inherited MathFont child identifier grouping",
+      "changedFromBaseline": false,
+      "completeOutlinedGeometryEqualOriginal": true,
+      "svgSHA256": {
+        "original": "78694c982139e542575c5ac690ac0799c4de0c15852072856f9deee0cbee9716",
+        "baseline": "c316f288b5e691dc9b06357dcbe6926429debd8684f9627ff35a9e8a70a9496b",
+        "candidate": "c316f288b5e691dc9b06357dcbe6926429debd8684f9627ff35a9e8a70a9496b"
+      }
+    },
+    {
+      "tex": "\\mathsf{\\underleftarrow{AB}}",
+      "display": false,
+      "family": "inherited MathFont child identifier grouping",
+      "changedFromBaseline": false,
+      "completeOutlinedGeometryEqualOriginal": true,
+      "svgSHA256": {
+        "original": "2861519ad97b012dacabff205876e7739bf53cb4feb2a33fc42d1a077b0d4c25",
+        "baseline": "3b9682573e350eaaaa8bf2bfa2c4f1fcf76dc1a8d81a9b86da9735b206d27211",
+        "candidate": "3b9682573e350eaaaa8bf2bfa2c4f1fcf76dc1a8d81a9b86da9735b206d27211"
+      }
+    },
+    {
+      "tex": "\\mathsf{\\underleftarrow{AB}}",
+      "display": true,
+      "family": "inherited MathFont child identifier grouping",
+      "changedFromBaseline": false,
+      "completeOutlinedGeometryEqualOriginal": true,
+      "svgSHA256": {
+        "original": "2861519ad97b012dacabff205876e7739bf53cb4feb2a33fc42d1a077b0d4c25",
+        "baseline": "3b9682573e350eaaaa8bf2bfa2c4f1fcf76dc1a8d81a9b86da9735b206d27211",
+        "candidate": "3b9682573e350eaaaa8bf2bfa2c4f1fcf76dc1a8d81a9b86da9735b206d27211"
+      }
+    }
+  ]
+}
