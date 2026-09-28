@@ -1,0 +1,1797 @@
+{
+  "mathjaxGitCommit": "ad8f5c21cb810236551da8c6512ba733e67357ee",
+  "assetsSHA256": {
+    "polyfills.js": "7fe1d048c78b0e09854c1259f7413868a51cc8f0c822489eb1ac36ae6c85ce01",
+    "mathjax.js": "cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869",
+    "setup.js": "a52cb0bbabfbd7796b9fedd793b9386c474e3123e788ee151cbe47ca1fa6e881"
+  },
+  "methods": {
+    "GetBrackets": "function(t,e){if(\"[\"!==this.GetNext())return e;for(var Q=++this.i,r=0;this.i<this.string.length;)switch(this.string.charAt(this.i++)){case\"{\":r++;break;case\"\\\\\":this.i++;break;case\"}\":if(r--<=0)throw new s.default(\"ExtraCloseLooking\",\"Extra close brace while looking for %1\",\"']'\");break;case\"]\":if(0===r)return this.string.slice(Q,this.i-1)}throw new s.default(\"MissingCloseBracket\",\"Could not find closing ']' for argument to %1\",this.currentCS)}",
+    "GetNext": "function(){for(;this.nextIsSpace();)this.i++;return this.getCodePoint()}",
+    "nextIsSpace": "function(){return!!this.string.charAt(this.i).match(/\\s/)}"
+  },
+  "cases": [
+    {
+      "name": "9-[n]x",
+      "source": "\t[n]x",
+      "defaultValue": null,
+      "value": "n",
+      "present": true,
+      "cursorBytes": 4,
+      "remaining": "x"
+    },
+    {
+      "name": "9-[n]x",
+      "source": "\t[n]x",
+      "defaultValue": "fallback",
+      "value": "n",
+      "present": true,
+      "cursorBytes": 4,
+      "remaining": "x"
+    },
+    {
+      "name": "9-{x}",
+      "source": "\t{x}",
+      "defaultValue": null,
+      "value": null,
+      "present": false,
+      "cursorBytes": 1,
+      "remaining": "{x}"
+    },
+    {
+      "name": "9-{x}",
+      "source": "\t{x}",
+      "defaultValue": "fallback",
+      "value": "fallback",
+      "present": false,
+      "cursorBytes": 1,
+      "remaining": "{x}"
+    },
+    {
+      "name": "9-",
+      "source": "\t",
+      "defaultValue": null,
+      "value": null,
+      "present": false,
+      "cursorBytes": 1,
+      "remaining": ""
+    },
+    {
+      "name": "9-",
+      "source": "\t",
+      "defaultValue": "fallback",
+      "value": "fallback",
+      "present": false,
+      "cursorBytes": 1,
+      "remaining": ""
+    },
+    {
+      "name": "a-[n]x",
+      "source": "\n[n]x",
+      "defaultValue": null,
+      "value": "n",
+      "present": true,
+      "cursorBytes": 4,
+      "remaining": "x"
+    },
+    {
+      "name": "a-[n]x",
+      "source": "\n[n]x",
+      "defaultValue": "fallback",
+      "value": "n",
+      "present": true,
+      "cursorBytes": 4,
+      "remaining": "x"
+    },
+    {
+      "name": "a-{x}",
+      "source": "\n{x}",
+      "defaultValue": null,
+      "value": null,
+      "present": false,
+      "cursorBytes": 1,
+      "remaining": "{x}"
+    },
+    {
+      "name": "a-{x}",
+      "source": "\n{x}",
+      "defaultValue": "fallback",
+      "value": "fallback",
+      "present": false,
+      "cursorBytes": 1,
+      "remaining": "{x}"
+    },
+    {
+      "name": "a-",
+      "source": "\n",
+      "defaultValue": null,
+      "value": null,
+      "present": false,
+      "cursorBytes": 1,
+      "remaining": ""
+    },
+    {
+      "name": "a-",
+      "source": "\n",
+      "defaultValue": "fallback",
+      "value": "fallback",
+      "present": false,
+      "cursorBytes": 1,
+      "remaining": ""
+    },
+    {
+      "name": "b-[n]x",
+      "source": "\u000b[n]x",
+      "defaultValue": null,
+      "value": "n",
+      "present": true,
+      "cursorBytes": 4,
+      "remaining": "x"
+    },
+    {
+      "name": "b-[n]x",
+      "source": "\u000b[n]x",
+      "defaultValue": "fallback",
+      "value": "n",
+      "present": true,
+      "cursorBytes": 4,
+      "remaining": "x"
+    },
+    {
+      "name": "b-{x}",
+      "source": "\u000b{x}",
+      "defaultValue": null,
+      "value": null,
+      "present": false,
+      "cursorBytes": 1,
+      "remaining": "{x}"
+    },
+    {
+      "name": "b-{x}",
+      "source": "\u000b{x}",
+      "defaultValue": "fallback",
+      "value": "fallback",
+      "present": false,
+      "cursorBytes": 1,
+      "remaining": "{x}"
+    },
+    {
+      "name": "b-",
+      "source": "\u000b",
+      "defaultValue": null,
+      "value": null,
+      "present": false,
+      "cursorBytes": 1,
+      "remaining": ""
+    },
+    {
+      "name": "b-",
+      "source": "\u000b",
+      "defaultValue": "fallback",
+      "value": "fallback",
+      "present": false,
+      "cursorBytes": 1,
+      "remaining": ""
+    },
+    {
+      "name": "c-[n]x",
+      "source": "\f[n]x",
+      "defaultValue": null,
+      "value": "n",
+      "present": true,
+      "cursorBytes": 4,
+      "remaining": "x"
+    },
+    {
+      "name": "c-[n]x",
+      "source": "\f[n]x",
+      "defaultValue": "fallback",
+      "value": "n",
+      "present": true,
+      "cursorBytes": 4,
+      "remaining": "x"
+    },
+    {
+      "name": "c-{x}",
+      "source": "\f{x}",
+      "defaultValue": null,
+      "value": null,
+      "present": false,
+      "cursorBytes": 1,
+      "remaining": "{x}"
+    },
+    {
+      "name": "c-{x}",
+      "source": "\f{x}",
+      "defaultValue": "fallback",
+      "value": "fallback",
+      "present": false,
+      "cursorBytes": 1,
+      "remaining": "{x}"
+    },
+    {
+      "name": "c-",
+      "source": "\f",
+      "defaultValue": null,
+      "value": null,
+      "present": false,
+      "cursorBytes": 1,
+      "remaining": ""
+    },
+    {
+      "name": "c-",
+      "source": "\f",
+      "defaultValue": "fallback",
+      "value": "fallback",
+      "present": false,
+      "cursorBytes": 1,
+      "remaining": ""
+    },
+    {
+      "name": "d-[n]x",
+      "source": "\r[n]x",
+      "defaultValue": null,
+      "value": "n",
+      "present": true,
+      "cursorBytes": 4,
+      "remaining": "x"
+    },
+    {
+      "name": "d-[n]x",
+      "source": "\r[n]x",
+      "defaultValue": "fallback",
+      "value": "n",
+      "present": true,
+      "cursorBytes": 4,
+      "remaining": "x"
+    },
+    {
+      "name": "d-{x}",
+      "source": "\r{x}",
+      "defaultValue": null,
+      "value": null,
+      "present": false,
+      "cursorBytes": 1,
+      "remaining": "{x}"
+    },
+    {
+      "name": "d-{x}",
+      "source": "\r{x}",
+      "defaultValue": "fallback",
+      "value": "fallback",
+      "present": false,
+      "cursorBytes": 1,
+      "remaining": "{x}"
+    },
+    {
+      "name": "d-",
+      "source": "\r",
+      "defaultValue": null,
+      "value": null,
+      "present": false,
+      "cursorBytes": 1,
+      "remaining": ""
+    },
+    {
+      "name": "d-",
+      "source": "\r",
+      "defaultValue": "fallback",
+      "value": "fallback",
+      "present": false,
+      "cursorBytes": 1,
+      "remaining": ""
+    },
+    {
+      "name": "20-[n]x",
+      "source": " [n]x",
+      "defaultValue": null,
+      "value": "n",
+      "present": true,
+      "cursorBytes": 4,
+      "remaining": "x"
+    },
+    {
+      "name": "20-[n]x",
+      "source": " [n]x",
+      "defaultValue": "fallback",
+      "value": "n",
+      "present": true,
+      "cursorBytes": 4,
+      "remaining": "x"
+    },
+    {
+      "name": "20-{x}",
+      "source": " {x}",
+      "defaultValue": null,
+      "value": null,
+      "present": false,
+      "cursorBytes": 1,
+      "remaining": "{x}"
+    },
+    {
+      "name": "20-{x}",
+      "source": " {x}",
+      "defaultValue": "fallback",
+      "value": "fallback",
+      "present": false,
+      "cursorBytes": 1,
+      "remaining": "{x}"
+    },
+    {
+      "name": "20-",
+      "source": " ",
+      "defaultValue": null,
+      "value": null,
+      "present": false,
+      "cursorBytes": 1,
+      "remaining": ""
+    },
+    {
+      "name": "20-",
+      "source": " ",
+      "defaultValue": "fallback",
+      "value": "fallback",
+      "present": false,
+      "cursorBytes": 1,
+      "remaining": ""
+    },
+    {
+      "name": "85-[n]x",
+      "source": "[n]x",
+      "defaultValue": null,
+      "value": null,
+      "present": false,
+      "cursorBytes": 0,
+      "remaining": "[n]x"
+    },
+    {
+      "name": "85-[n]x",
+      "source": "[n]x",
+      "defaultValue": "fallback",
+      "value": "fallback",
+      "present": false,
+      "cursorBytes": 0,
+      "remaining": "[n]x"
+    },
+    {
+      "name": "85-{x}",
+      "source": "{x}",
+      "defaultValue": null,
+      "value": null,
+      "present": false,
+      "cursorBytes": 0,
+      "remaining": "{x}"
+    },
+    {
+      "name": "85-{x}",
+      "source": "{x}",
+      "defaultValue": "fallback",
+      "value": "fallback",
+      "present": false,
+      "cursorBytes": 0,
+      "remaining": "{x}"
+    },
+    {
+      "name": "85-",
+      "source": "",
+      "defaultValue": null,
+      "value": null,
+      "present": false,
+      "cursorBytes": 0,
+      "remaining": ""
+    },
+    {
+      "name": "85-",
+      "source": "",
+      "defaultValue": "fallback",
+      "value": "fallback",
+      "present": false,
+      "cursorBytes": 0,
+      "remaining": ""
+    },
+    {
+      "name": "a0-[n]x",
+      "source": " [n]x",
+      "defaultValue": null,
+      "value": "n",
+      "present": true,
+      "cursorBytes": 5,
+      "remaining": "x"
+    },
+    {
+      "name": "a0-[n]x",
+      "source": " [n]x",
+      "defaultValue": "fallback",
+      "value": "n",
+      "present": true,
+      "cursorBytes": 5,
+      "remaining": "x"
+    },
+    {
+      "name": "a0-{x}",
+      "source": " {x}",
+      "defaultValue": null,
+      "value": null,
+      "present": false,
+      "cursorBytes": 2,
+      "remaining": "{x}"
+    },
+    {
+      "name": "a0-{x}",
+      "source": " {x}",
+      "defaultValue": "fallback",
+      "value": "fallback",
+      "present": false,
+      "cursorBytes": 2,
+      "remaining": "{x}"
+    },
+    {
+      "name": "a0-",
+      "source": " ",
+      "defaultValue": null,
+      "value": null,
+      "present": false,
+      "cursorBytes": 2,
+      "remaining": ""
+    },
+    {
+      "name": "a0-",
+      "source": " ",
+      "defaultValue": "fallback",
+      "value": "fallback",
+      "present": false,
+      "cursorBytes": 2,
+      "remaining": ""
+    },
+    {
+      "name": "1680-[n]x",
+      "source": " [n]x",
+      "defaultValue": null,
+      "value": "n",
+      "present": true,
+      "cursorBytes": 6,
+      "remaining": "x"
+    },
+    {
+      "name": "1680-[n]x",
+      "source": " [n]x",
+      "defaultValue": "fallback",
+      "value": "n",
+      "present": true,
+      "cursorBytes": 6,
+      "remaining": "x"
+    },
+    {
+      "name": "1680-{x}",
+      "source": " {x}",
+      "defaultValue": null,
+      "value": null,
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": "{x}"
+    },
+    {
+      "name": "1680-{x}",
+      "source": " {x}",
+      "defaultValue": "fallback",
+      "value": "fallback",
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": "{x}"
+    },
+    {
+      "name": "1680-",
+      "source": " ",
+      "defaultValue": null,
+      "value": null,
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "name": "1680-",
+      "source": " ",
+      "defaultValue": "fallback",
+      "value": "fallback",
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "name": "2000-[n]x",
+      "source": " [n]x",
+      "defaultValue": null,
+      "value": "n",
+      "present": true,
+      "cursorBytes": 6,
+      "remaining": "x"
+    },
+    {
+      "name": "2000-[n]x",
+      "source": " [n]x",
+      "defaultValue": "fallback",
+      "value": "n",
+      "present": true,
+      "cursorBytes": 6,
+      "remaining": "x"
+    },
+    {
+      "name": "2000-{x}",
+      "source": " {x}",
+      "defaultValue": null,
+      "value": null,
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": "{x}"
+    },
+    {
+      "name": "2000-{x}",
+      "source": " {x}",
+      "defaultValue": "fallback",
+      "value": "fallback",
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": "{x}"
+    },
+    {
+      "name": "2000-",
+      "source": " ",
+      "defaultValue": null,
+      "value": null,
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "name": "2000-",
+      "source": " ",
+      "defaultValue": "fallback",
+      "value": "fallback",
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "name": "2001-[n]x",
+      "source": " [n]x",
+      "defaultValue": null,
+      "value": "n",
+      "present": true,
+      "cursorBytes": 6,
+      "remaining": "x"
+    },
+    {
+      "name": "2001-[n]x",
+      "source": " [n]x",
+      "defaultValue": "fallback",
+      "value": "n",
+      "present": true,
+      "cursorBytes": 6,
+      "remaining": "x"
+    },
+    {
+      "name": "2001-{x}",
+      "source": " {x}",
+      "defaultValue": null,
+      "value": null,
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": "{x}"
+    },
+    {
+      "name": "2001-{x}",
+      "source": " {x}",
+      "defaultValue": "fallback",
+      "value": "fallback",
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": "{x}"
+    },
+    {
+      "name": "2001-",
+      "source": " ",
+      "defaultValue": null,
+      "value": null,
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "name": "2001-",
+      "source": " ",
+      "defaultValue": "fallback",
+      "value": "fallback",
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "name": "2002-[n]x",
+      "source": " [n]x",
+      "defaultValue": null,
+      "value": "n",
+      "present": true,
+      "cursorBytes": 6,
+      "remaining": "x"
+    },
+    {
+      "name": "2002-[n]x",
+      "source": " [n]x",
+      "defaultValue": "fallback",
+      "value": "n",
+      "present": true,
+      "cursorBytes": 6,
+      "remaining": "x"
+    },
+    {
+      "name": "2002-{x}",
+      "source": " {x}",
+      "defaultValue": null,
+      "value": null,
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": "{x}"
+    },
+    {
+      "name": "2002-{x}",
+      "source": " {x}",
+      "defaultValue": "fallback",
+      "value": "fallback",
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": "{x}"
+    },
+    {
+      "name": "2002-",
+      "source": " ",
+      "defaultValue": null,
+      "value": null,
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "name": "2002-",
+      "source": " ",
+      "defaultValue": "fallback",
+      "value": "fallback",
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "name": "2003-[n]x",
+      "source": " [n]x",
+      "defaultValue": null,
+      "value": "n",
+      "present": true,
+      "cursorBytes": 6,
+      "remaining": "x"
+    },
+    {
+      "name": "2003-[n]x",
+      "source": " [n]x",
+      "defaultValue": "fallback",
+      "value": "n",
+      "present": true,
+      "cursorBytes": 6,
+      "remaining": "x"
+    },
+    {
+      "name": "2003-{x}",
+      "source": " {x}",
+      "defaultValue": null,
+      "value": null,
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": "{x}"
+    },
+    {
+      "name": "2003-{x}",
+      "source": " {x}",
+      "defaultValue": "fallback",
+      "value": "fallback",
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": "{x}"
+    },
+    {
+      "name": "2003-",
+      "source": " ",
+      "defaultValue": null,
+      "value": null,
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "name": "2003-",
+      "source": " ",
+      "defaultValue": "fallback",
+      "value": "fallback",
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "name": "2004-[n]x",
+      "source": " [n]x",
+      "defaultValue": null,
+      "value": "n",
+      "present": true,
+      "cursorBytes": 6,
+      "remaining": "x"
+    },
+    {
+      "name": "2004-[n]x",
+      "source": " [n]x",
+      "defaultValue": "fallback",
+      "value": "n",
+      "present": true,
+      "cursorBytes": 6,
+      "remaining": "x"
+    },
+    {
+      "name": "2004-{x}",
+      "source": " {x}",
+      "defaultValue": null,
+      "value": null,
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": "{x}"
+    },
+    {
+      "name": "2004-{x}",
+      "source": " {x}",
+      "defaultValue": "fallback",
+      "value": "fallback",
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": "{x}"
+    },
+    {
+      "name": "2004-",
+      "source": " ",
+      "defaultValue": null,
+      "value": null,
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "name": "2004-",
+      "source": " ",
+      "defaultValue": "fallback",
+      "value": "fallback",
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "name": "2005-[n]x",
+      "source": " [n]x",
+      "defaultValue": null,
+      "value": "n",
+      "present": true,
+      "cursorBytes": 6,
+      "remaining": "x"
+    },
+    {
+      "name": "2005-[n]x",
+      "source": " [n]x",
+      "defaultValue": "fallback",
+      "value": "n",
+      "present": true,
+      "cursorBytes": 6,
+      "remaining": "x"
+    },
+    {
+      "name": "2005-{x}",
+      "source": " {x}",
+      "defaultValue": null,
+      "value": null,
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": "{x}"
+    },
+    {
+      "name": "2005-{x}",
+      "source": " {x}",
+      "defaultValue": "fallback",
+      "value": "fallback",
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": "{x}"
+    },
+    {
+      "name": "2005-",
+      "source": " ",
+      "defaultValue": null,
+      "value": null,
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "name": "2005-",
+      "source": " ",
+      "defaultValue": "fallback",
+      "value": "fallback",
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "name": "2006-[n]x",
+      "source": " [n]x",
+      "defaultValue": null,
+      "value": "n",
+      "present": true,
+      "cursorBytes": 6,
+      "remaining": "x"
+    },
+    {
+      "name": "2006-[n]x",
+      "source": " [n]x",
+      "defaultValue": "fallback",
+      "value": "n",
+      "present": true,
+      "cursorBytes": 6,
+      "remaining": "x"
+    },
+    {
+      "name": "2006-{x}",
+      "source": " {x}",
+      "defaultValue": null,
+      "value": null,
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": "{x}"
+    },
+    {
+      "name": "2006-{x}",
+      "source": " {x}",
+      "defaultValue": "fallback",
+      "value": "fallback",
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": "{x}"
+    },
+    {
+      "name": "2006-",
+      "source": " ",
+      "defaultValue": null,
+      "value": null,
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "name": "2006-",
+      "source": " ",
+      "defaultValue": "fallback",
+      "value": "fallback",
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "name": "2007-[n]x",
+      "source": " [n]x",
+      "defaultValue": null,
+      "value": "n",
+      "present": true,
+      "cursorBytes": 6,
+      "remaining": "x"
+    },
+    {
+      "name": "2007-[n]x",
+      "source": " [n]x",
+      "defaultValue": "fallback",
+      "value": "n",
+      "present": true,
+      "cursorBytes": 6,
+      "remaining": "x"
+    },
+    {
+      "name": "2007-{x}",
+      "source": " {x}",
+      "defaultValue": null,
+      "value": null,
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": "{x}"
+    },
+    {
+      "name": "2007-{x}",
+      "source": " {x}",
+      "defaultValue": "fallback",
+      "value": "fallback",
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": "{x}"
+    },
+    {
+      "name": "2007-",
+      "source": " ",
+      "defaultValue": null,
+      "value": null,
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "name": "2007-",
+      "source": " ",
+      "defaultValue": "fallback",
+      "value": "fallback",
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "name": "2008-[n]x",
+      "source": " [n]x",
+      "defaultValue": null,
+      "value": "n",
+      "present": true,
+      "cursorBytes": 6,
+      "remaining": "x"
+    },
+    {
+      "name": "2008-[n]x",
+      "source": " [n]x",
+      "defaultValue": "fallback",
+      "value": "n",
+      "present": true,
+      "cursorBytes": 6,
+      "remaining": "x"
+    },
+    {
+      "name": "2008-{x}",
+      "source": " {x}",
+      "defaultValue": null,
+      "value": null,
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": "{x}"
+    },
+    {
+      "name": "2008-{x}",
+      "source": " {x}",
+      "defaultValue": "fallback",
+      "value": "fallback",
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": "{x}"
+    },
+    {
+      "name": "2008-",
+      "source": " ",
+      "defaultValue": null,
+      "value": null,
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "name": "2008-",
+      "source": " ",
+      "defaultValue": "fallback",
+      "value": "fallback",
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "name": "2009-[n]x",
+      "source": " [n]x",
+      "defaultValue": null,
+      "value": "n",
+      "present": true,
+      "cursorBytes": 6,
+      "remaining": "x"
+    },
+    {
+      "name": "2009-[n]x",
+      "source": " [n]x",
+      "defaultValue": "fallback",
+      "value": "n",
+      "present": true,
+      "cursorBytes": 6,
+      "remaining": "x"
+    },
+    {
+      "name": "2009-{x}",
+      "source": " {x}",
+      "defaultValue": null,
+      "value": null,
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": "{x}"
+    },
+    {
+      "name": "2009-{x}",
+      "source": " {x}",
+      "defaultValue": "fallback",
+      "value": "fallback",
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": "{x}"
+    },
+    {
+      "name": "2009-",
+      "source": " ",
+      "defaultValue": null,
+      "value": null,
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "name": "2009-",
+      "source": " ",
+      "defaultValue": "fallback",
+      "value": "fallback",
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "name": "200a-[n]x",
+      "source": " [n]x",
+      "defaultValue": null,
+      "value": "n",
+      "present": true,
+      "cursorBytes": 6,
+      "remaining": "x"
+    },
+    {
+      "name": "200a-[n]x",
+      "source": " [n]x",
+      "defaultValue": "fallback",
+      "value": "n",
+      "present": true,
+      "cursorBytes": 6,
+      "remaining": "x"
+    },
+    {
+      "name": "200a-{x}",
+      "source": " {x}",
+      "defaultValue": null,
+      "value": null,
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": "{x}"
+    },
+    {
+      "name": "200a-{x}",
+      "source": " {x}",
+      "defaultValue": "fallback",
+      "value": "fallback",
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": "{x}"
+    },
+    {
+      "name": "200a-",
+      "source": " ",
+      "defaultValue": null,
+      "value": null,
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "name": "200a-",
+      "source": " ",
+      "defaultValue": "fallback",
+      "value": "fallback",
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "name": "2028-[n]x",
+      "source": " [n]x",
+      "defaultValue": null,
+      "value": "n",
+      "present": true,
+      "cursorBytes": 6,
+      "remaining": "x"
+    },
+    {
+      "name": "2028-[n]x",
+      "source": " [n]x",
+      "defaultValue": "fallback",
+      "value": "n",
+      "present": true,
+      "cursorBytes": 6,
+      "remaining": "x"
+    },
+    {
+      "name": "2028-{x}",
+      "source": " {x}",
+      "defaultValue": null,
+      "value": null,
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": "{x}"
+    },
+    {
+      "name": "2028-{x}",
+      "source": " {x}",
+      "defaultValue": "fallback",
+      "value": "fallback",
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": "{x}"
+    },
+    {
+      "name": "2028-",
+      "source": " ",
+      "defaultValue": null,
+      "value": null,
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "name": "2028-",
+      "source": " ",
+      "defaultValue": "fallback",
+      "value": "fallback",
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "name": "2029-[n]x",
+      "source": " [n]x",
+      "defaultValue": null,
+      "value": "n",
+      "present": true,
+      "cursorBytes": 6,
+      "remaining": "x"
+    },
+    {
+      "name": "2029-[n]x",
+      "source": " [n]x",
+      "defaultValue": "fallback",
+      "value": "n",
+      "present": true,
+      "cursorBytes": 6,
+      "remaining": "x"
+    },
+    {
+      "name": "2029-{x}",
+      "source": " {x}",
+      "defaultValue": null,
+      "value": null,
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": "{x}"
+    },
+    {
+      "name": "2029-{x}",
+      "source": " {x}",
+      "defaultValue": "fallback",
+      "value": "fallback",
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": "{x}"
+    },
+    {
+      "name": "2029-",
+      "source": " ",
+      "defaultValue": null,
+      "value": null,
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "name": "2029-",
+      "source": " ",
+      "defaultValue": "fallback",
+      "value": "fallback",
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "name": "202f-[n]x",
+      "source": " [n]x",
+      "defaultValue": null,
+      "value": "n",
+      "present": true,
+      "cursorBytes": 6,
+      "remaining": "x"
+    },
+    {
+      "name": "202f-[n]x",
+      "source": " [n]x",
+      "defaultValue": "fallback",
+      "value": "n",
+      "present": true,
+      "cursorBytes": 6,
+      "remaining": "x"
+    },
+    {
+      "name": "202f-{x}",
+      "source": " {x}",
+      "defaultValue": null,
+      "value": null,
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": "{x}"
+    },
+    {
+      "name": "202f-{x}",
+      "source": " {x}",
+      "defaultValue": "fallback",
+      "value": "fallback",
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": "{x}"
+    },
+    {
+      "name": "202f-",
+      "source": " ",
+      "defaultValue": null,
+      "value": null,
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "name": "202f-",
+      "source": " ",
+      "defaultValue": "fallback",
+      "value": "fallback",
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "name": "205f-[n]x",
+      "source": " [n]x",
+      "defaultValue": null,
+      "value": "n",
+      "present": true,
+      "cursorBytes": 6,
+      "remaining": "x"
+    },
+    {
+      "name": "205f-[n]x",
+      "source": " [n]x",
+      "defaultValue": "fallback",
+      "value": "n",
+      "present": true,
+      "cursorBytes": 6,
+      "remaining": "x"
+    },
+    {
+      "name": "205f-{x}",
+      "source": " {x}",
+      "defaultValue": null,
+      "value": null,
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": "{x}"
+    },
+    {
+      "name": "205f-{x}",
+      "source": " {x}",
+      "defaultValue": "fallback",
+      "value": "fallback",
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": "{x}"
+    },
+    {
+      "name": "205f-",
+      "source": " ",
+      "defaultValue": null,
+      "value": null,
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "name": "205f-",
+      "source": " ",
+      "defaultValue": "fallback",
+      "value": "fallback",
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "name": "3000-[n]x",
+      "source": "　[n]x",
+      "defaultValue": null,
+      "value": "n",
+      "present": true,
+      "cursorBytes": 6,
+      "remaining": "x"
+    },
+    {
+      "name": "3000-[n]x",
+      "source": "　[n]x",
+      "defaultValue": "fallback",
+      "value": "n",
+      "present": true,
+      "cursorBytes": 6,
+      "remaining": "x"
+    },
+    {
+      "name": "3000-{x}",
+      "source": "　{x}",
+      "defaultValue": null,
+      "value": null,
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": "{x}"
+    },
+    {
+      "name": "3000-{x}",
+      "source": "　{x}",
+      "defaultValue": "fallback",
+      "value": "fallback",
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": "{x}"
+    },
+    {
+      "name": "3000-",
+      "source": "　",
+      "defaultValue": null,
+      "value": null,
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "name": "3000-",
+      "source": "　",
+      "defaultValue": "fallback",
+      "value": "fallback",
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "name": "feff-[n]x",
+      "source": "﻿[n]x",
+      "defaultValue": null,
+      "value": "n",
+      "present": true,
+      "cursorBytes": 6,
+      "remaining": "x"
+    },
+    {
+      "name": "feff-[n]x",
+      "source": "﻿[n]x",
+      "defaultValue": "fallback",
+      "value": "n",
+      "present": true,
+      "cursorBytes": 6,
+      "remaining": "x"
+    },
+    {
+      "name": "feff-{x}",
+      "source": "﻿{x}",
+      "defaultValue": null,
+      "value": null,
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": "{x}"
+    },
+    {
+      "name": "feff-{x}",
+      "source": "﻿{x}",
+      "defaultValue": "fallback",
+      "value": "fallback",
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": "{x}"
+    },
+    {
+      "name": "feff-",
+      "source": "﻿",
+      "defaultValue": null,
+      "value": null,
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "name": "feff-",
+      "source": "﻿",
+      "defaultValue": "fallback",
+      "value": "fallback",
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "name": "200b-[n]x",
+      "source": "​[n]x",
+      "defaultValue": null,
+      "value": null,
+      "present": false,
+      "cursorBytes": 0,
+      "remaining": "​[n]x"
+    },
+    {
+      "name": "200b-[n]x",
+      "source": "​[n]x",
+      "defaultValue": "fallback",
+      "value": "fallback",
+      "present": false,
+      "cursorBytes": 0,
+      "remaining": "​[n]x"
+    },
+    {
+      "name": "200b-{x}",
+      "source": "​{x}",
+      "defaultValue": null,
+      "value": null,
+      "present": false,
+      "cursorBytes": 0,
+      "remaining": "​{x}"
+    },
+    {
+      "name": "200b-{x}",
+      "source": "​{x}",
+      "defaultValue": "fallback",
+      "value": "fallback",
+      "present": false,
+      "cursorBytes": 0,
+      "remaining": "​{x}"
+    },
+    {
+      "name": "200b-",
+      "source": "​",
+      "defaultValue": null,
+      "value": null,
+      "present": false,
+      "cursorBytes": 0,
+      "remaining": "​"
+    },
+    {
+      "name": "200b-",
+      "source": "​",
+      "defaultValue": "fallback",
+      "value": "fallback",
+      "present": false,
+      "cursorBytes": 0,
+      "remaining": "​"
+    },
+    {
+      "name": "180e-[n]x",
+      "source": "᠎[n]x",
+      "defaultValue": null,
+      "value": null,
+      "present": false,
+      "cursorBytes": 0,
+      "remaining": "᠎[n]x"
+    },
+    {
+      "name": "180e-[n]x",
+      "source": "᠎[n]x",
+      "defaultValue": "fallback",
+      "value": "fallback",
+      "present": false,
+      "cursorBytes": 0,
+      "remaining": "᠎[n]x"
+    },
+    {
+      "name": "180e-{x}",
+      "source": "᠎{x}",
+      "defaultValue": null,
+      "value": null,
+      "present": false,
+      "cursorBytes": 0,
+      "remaining": "᠎{x}"
+    },
+    {
+      "name": "180e-{x}",
+      "source": "᠎{x}",
+      "defaultValue": "fallback",
+      "value": "fallback",
+      "present": false,
+      "cursorBytes": 0,
+      "remaining": "᠎{x}"
+    },
+    {
+      "name": "180e-",
+      "source": "᠎",
+      "defaultValue": null,
+      "value": null,
+      "present": false,
+      "cursorBytes": 0,
+      "remaining": "᠎"
+    },
+    {
+      "name": "180e-",
+      "source": "᠎",
+      "defaultValue": "fallback",
+      "value": "fallback",
+      "present": false,
+      "cursorBytes": 0,
+      "remaining": "᠎"
+    },
+    {
+      "name": "2060-[n]x",
+      "source": "⁠[n]x",
+      "defaultValue": null,
+      "value": null,
+      "present": false,
+      "cursorBytes": 0,
+      "remaining": "⁠[n]x"
+    },
+    {
+      "name": "2060-[n]x",
+      "source": "⁠[n]x",
+      "defaultValue": "fallback",
+      "value": "fallback",
+      "present": false,
+      "cursorBytes": 0,
+      "remaining": "⁠[n]x"
+    },
+    {
+      "name": "2060-{x}",
+      "source": "⁠{x}",
+      "defaultValue": null,
+      "value": null,
+      "present": false,
+      "cursorBytes": 0,
+      "remaining": "⁠{x}"
+    },
+    {
+      "name": "2060-{x}",
+      "source": "⁠{x}",
+      "defaultValue": "fallback",
+      "value": "fallback",
+      "present": false,
+      "cursorBytes": 0,
+      "remaining": "⁠{x}"
+    },
+    {
+      "name": "2060-",
+      "source": "⁠",
+      "defaultValue": null,
+      "value": null,
+      "present": false,
+      "cursorBytes": 0,
+      "remaining": "⁠"
+    },
+    {
+      "name": "2060-",
+      "source": "⁠",
+      "defaultValue": "fallback",
+      "value": "fallback",
+      "present": false,
+      "cursorBytes": 0,
+      "remaining": "⁠"
+    },
+    {
+      "name": "content-87",
+      "source": "[n]x",
+      "defaultValue": null,
+      "value": "n",
+      "present": true,
+      "cursorBytes": 3,
+      "remaining": "x"
+    },
+    {
+      "name": "content-87",
+      "source": "[n]x",
+      "defaultValue": "fallback",
+      "value": "n",
+      "present": true,
+      "cursorBytes": 3,
+      "remaining": "x"
+    },
+    {
+      "name": "content-88",
+      "source": "[]x",
+      "defaultValue": null,
+      "value": "",
+      "present": true,
+      "cursorBytes": 2,
+      "remaining": "x"
+    },
+    {
+      "name": "content-88",
+      "source": "[]x",
+      "defaultValue": "fallback",
+      "value": "",
+      "present": true,
+      "cursorBytes": 2,
+      "remaining": "x"
+    },
+    {
+      "name": "content-89",
+      "source": "[a{]}b]x",
+      "defaultValue": null,
+      "value": "a{]}b",
+      "present": true,
+      "cursorBytes": 7,
+      "remaining": "x"
+    },
+    {
+      "name": "content-89",
+      "source": "[a{]}b]x",
+      "defaultValue": "fallback",
+      "value": "a{]}b",
+      "present": true,
+      "cursorBytes": 7,
+      "remaining": "x"
+    },
+    {
+      "name": "content-90",
+      "source": "[\\]]x",
+      "defaultValue": null,
+      "value": "\\]",
+      "present": true,
+      "cursorBytes": 4,
+      "remaining": "x"
+    },
+    {
+      "name": "content-90",
+      "source": "[\\]]x",
+      "defaultValue": "fallback",
+      "value": "\\]",
+      "present": true,
+      "cursorBytes": 4,
+      "remaining": "x"
+    },
+    {
+      "name": "content-91",
+      "source": "[\\{]x",
+      "defaultValue": null,
+      "value": "\\{",
+      "present": true,
+      "cursorBytes": 4,
+      "remaining": "x"
+    },
+    {
+      "name": "content-91",
+      "source": "[\\{]x",
+      "defaultValue": "fallback",
+      "value": "\\{",
+      "present": true,
+      "cursorBytes": 4,
+      "remaining": "x"
+    },
+    {
+      "name": "content-92",
+      "source": "[🙂]x",
+      "defaultValue": null,
+      "value": "🙂",
+      "present": true,
+      "cursorBytes": 6,
+      "remaining": "x"
+    },
+    {
+      "name": "content-92",
+      "source": "[🙂]x",
+      "defaultValue": "fallback",
+      "value": "🙂",
+      "present": true,
+      "cursorBytes": 6,
+      "remaining": "x"
+    },
+    {
+      "name": "content-93",
+      "source": "[﻿]x",
+      "defaultValue": null,
+      "value": "﻿",
+      "present": true,
+      "cursorBytes": 7,
+      "remaining": "x"
+    },
+    {
+      "name": "content-93",
+      "source": "[﻿]x",
+      "defaultValue": "fallback",
+      "value": "﻿",
+      "present": true,
+      "cursorBytes": 7,
+      "remaining": "x"
+    },
+    {
+      "name": "content-94",
+      "source": "﻿ \t [n]x",
+      "defaultValue": null,
+      "value": "n",
+      "present": true,
+      "cursorBytes": 11,
+      "remaining": "x"
+    },
+    {
+      "name": "content-94",
+      "source": "﻿ \t [n]x",
+      "defaultValue": "fallback",
+      "value": "n",
+      "present": true,
+      "cursorBytes": 11,
+      "remaining": "x"
+    },
+    {
+      "name": "content-95",
+      "source": "﻿[n]x",
+      "defaultValue": null,
+      "value": null,
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": "[n]x"
+    },
+    {
+      "name": "content-95",
+      "source": "﻿[n]x",
+      "defaultValue": "fallback",
+      "value": "fallback",
+      "present": false,
+      "cursorBytes": 3,
+      "remaining": "[n]x"
+    },
+    {
+      "name": "content-96",
+      "source": "﻿[n]x",
+      "defaultValue": null,
+      "value": null,
+      "present": false,
+      "cursorBytes": 0,
+      "remaining": "﻿[n]x"
+    },
+    {
+      "name": "content-96",
+      "source": "﻿[n]x",
+      "defaultValue": "fallback",
+      "value": "fallback",
+      "present": false,
+      "cursorBytes": 0,
+      "remaining": "﻿[n]x"
+    },
+    {
+      "name": "content-97",
+      "source": "%comment\n[n]x",
+      "defaultValue": null,
+      "value": null,
+      "present": false,
+      "cursorBytes": 0,
+      "remaining": "%comment\n[n]x"
+    },
+    {
+      "name": "content-97",
+      "source": "%comment\n[n]x",
+      "defaultValue": "fallback",
+      "value": "fallback",
+      "present": false,
+      "cursorBytes": 0,
+      "remaining": "%comment\n[n]x"
+    },
+    {
+      "name": "content-98",
+      "source": "\\relax[n]x",
+      "defaultValue": null,
+      "value": null,
+      "present": false,
+      "cursorBytes": 0,
+      "remaining": "\\relax[n]x"
+    },
+    {
+      "name": "content-98",
+      "source": "\\relax[n]x",
+      "defaultValue": "fallback",
+      "value": "fallback",
+      "present": false,
+      "cursorBytes": 0,
+      "remaining": "\\relax[n]x"
+    }
+  ]
+}
