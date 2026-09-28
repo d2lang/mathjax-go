@@ -1094,7 +1094,11 @@ func suppressesFunctionApplication(next *mml.Node) bool {
 }
 
 func (p *parser) readArgument(name string, noneOK bool) (string, bool, error) {
-	p.skipSpaces()
+	// GetArgument calls GetNext, whose JavaScript whitespace includes BOM
+	// and excludes NEL. Keep this boundary distinct from math tokenization.
+	for p.pos < len(p.source) && internalTextSpace(p.peekRune()) {
+		p.consumeRune()
+	}
 	return p.readArgumentAtCursor(name, noneOK)
 }
 

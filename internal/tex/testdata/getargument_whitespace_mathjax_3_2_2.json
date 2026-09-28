@@ -1,0 +1,3227 @@
+{
+  "mathjaxGitCommit": "ad8f5c21cb810236551da8c6512ba733e67357ee",
+  "assetsSHA256": {
+    "polyfills.js": "7fe1d048c78b0e09854c1259f7413868a51cc8f0c822489eb1ac36ae6c85ce01",
+    "mathjax.js": "cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869",
+    "setup.js": "a52cb0bbabfbd7796b9fedd793b9386c474e3123e788ee151cbe47ca1fa6e881"
+  },
+  "methods": {
+    "GetArgument": "function(t,e){switch(this.GetNext()){case\"\":if(!e)throw new s.default(\"MissingArgFor\",\"Missing argument for %1\",this.currentCS);return null;case\"}\":if(!e)throw new s.default(\"ExtraCloseMissingOpen\",\"Extra close brace or missing open brace\");return null;case\"\\\\\":return this.i++,\"\\\\\"+this.GetCS();case\"{\":for(var Q=++this.i,r=1;this.i<this.string.length;)switch(this.string.charAt(this.i++)){case\"\\\\\":this.i++;break;case\"{\":r++;break;case\"}\":if(0==--r)return this.string.slice(Q,this.i-1)}throw new s.default(\"MissingCloseBrace\",\"Missing close brace\")}var T=this.getCodePoint();return this.i+=T.length,T}",
+    "GetNext": "function(){for(;this.nextIsSpace();)this.i++;return this.getCodePoint()}",
+    "nextIsSpace": "function(){return!!this.string.charAt(this.i).match(/\\s/)}"
+  },
+  "cases": [
+    {
+      "source": "\t{ab}z",
+      "noneOK": false,
+      "codePoint": 9,
+      "value": "ab",
+      "error": null,
+      "cursorCodeUnits": 5,
+      "cursorBytes": 5,
+      "remaining": "z"
+    },
+    {
+      "source": "\t{ab}z",
+      "noneOK": true,
+      "codePoint": 9,
+      "value": "ab",
+      "error": null,
+      "cursorCodeUnits": 5,
+      "cursorBytes": 5,
+      "remaining": "z"
+    },
+    {
+      "source": "\t🙂z",
+      "noneOK": false,
+      "codePoint": 9,
+      "value": "🙂",
+      "error": null,
+      "cursorCodeUnits": 3,
+      "cursorBytes": 5,
+      "remaining": "z"
+    },
+    {
+      "source": "\t🙂z",
+      "noneOK": true,
+      "codePoint": 9,
+      "value": "🙂",
+      "error": null,
+      "cursorCodeUnits": 3,
+      "cursorBytes": 5,
+      "remaining": "z"
+    },
+    {
+      "source": "\t\\alpha z",
+      "noneOK": false,
+      "codePoint": 9,
+      "value": "\\alpha",
+      "error": null,
+      "cursorCodeUnits": 8,
+      "cursorBytes": 8,
+      "remaining": "z"
+    },
+    {
+      "source": "\t\\alpha z",
+      "noneOK": true,
+      "codePoint": 9,
+      "value": "\\alpha",
+      "error": null,
+      "cursorCodeUnits": 8,
+      "cursorBytes": 8,
+      "remaining": "z"
+    },
+    {
+      "source": "\t}z",
+      "noneOK": false,
+      "codePoint": 9,
+      "value": null,
+      "error": {
+        "id": "ExtraCloseMissingOpen",
+        "message": "Extra close brace or missing open brace"
+      },
+      "cursorCodeUnits": 1,
+      "cursorBytes": 1,
+      "remaining": "}z"
+    },
+    {
+      "source": "\t}z",
+      "noneOK": true,
+      "codePoint": 9,
+      "value": null,
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 1,
+      "remaining": "}z"
+    },
+    {
+      "source": "\t",
+      "noneOK": false,
+      "codePoint": 9,
+      "value": null,
+      "error": {
+        "id": "MissingArgFor",
+        "message": "Missing argument for \\sample"
+      },
+      "cursorCodeUnits": 1,
+      "cursorBytes": 1,
+      "remaining": ""
+    },
+    {
+      "source": "\t",
+      "noneOK": true,
+      "codePoint": 9,
+      "value": null,
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 1,
+      "remaining": ""
+    },
+    {
+      "source": "\n{ab}z",
+      "noneOK": false,
+      "codePoint": 10,
+      "value": "ab",
+      "error": null,
+      "cursorCodeUnits": 5,
+      "cursorBytes": 5,
+      "remaining": "z"
+    },
+    {
+      "source": "\n{ab}z",
+      "noneOK": true,
+      "codePoint": 10,
+      "value": "ab",
+      "error": null,
+      "cursorCodeUnits": 5,
+      "cursorBytes": 5,
+      "remaining": "z"
+    },
+    {
+      "source": "\n🙂z",
+      "noneOK": false,
+      "codePoint": 10,
+      "value": "🙂",
+      "error": null,
+      "cursorCodeUnits": 3,
+      "cursorBytes": 5,
+      "remaining": "z"
+    },
+    {
+      "source": "\n🙂z",
+      "noneOK": true,
+      "codePoint": 10,
+      "value": "🙂",
+      "error": null,
+      "cursorCodeUnits": 3,
+      "cursorBytes": 5,
+      "remaining": "z"
+    },
+    {
+      "source": "\n\\alpha z",
+      "noneOK": false,
+      "codePoint": 10,
+      "value": "\\alpha",
+      "error": null,
+      "cursorCodeUnits": 8,
+      "cursorBytes": 8,
+      "remaining": "z"
+    },
+    {
+      "source": "\n\\alpha z",
+      "noneOK": true,
+      "codePoint": 10,
+      "value": "\\alpha",
+      "error": null,
+      "cursorCodeUnits": 8,
+      "cursorBytes": 8,
+      "remaining": "z"
+    },
+    {
+      "source": "\n}z",
+      "noneOK": false,
+      "codePoint": 10,
+      "value": null,
+      "error": {
+        "id": "ExtraCloseMissingOpen",
+        "message": "Extra close brace or missing open brace"
+      },
+      "cursorCodeUnits": 1,
+      "cursorBytes": 1,
+      "remaining": "}z"
+    },
+    {
+      "source": "\n}z",
+      "noneOK": true,
+      "codePoint": 10,
+      "value": null,
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 1,
+      "remaining": "}z"
+    },
+    {
+      "source": "\n",
+      "noneOK": false,
+      "codePoint": 10,
+      "value": null,
+      "error": {
+        "id": "MissingArgFor",
+        "message": "Missing argument for \\sample"
+      },
+      "cursorCodeUnits": 1,
+      "cursorBytes": 1,
+      "remaining": ""
+    },
+    {
+      "source": "\n",
+      "noneOK": true,
+      "codePoint": 10,
+      "value": null,
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 1,
+      "remaining": ""
+    },
+    {
+      "source": "\u000b{ab}z",
+      "noneOK": false,
+      "codePoint": 11,
+      "value": "ab",
+      "error": null,
+      "cursorCodeUnits": 5,
+      "cursorBytes": 5,
+      "remaining": "z"
+    },
+    {
+      "source": "\u000b{ab}z",
+      "noneOK": true,
+      "codePoint": 11,
+      "value": "ab",
+      "error": null,
+      "cursorCodeUnits": 5,
+      "cursorBytes": 5,
+      "remaining": "z"
+    },
+    {
+      "source": "\u000b🙂z",
+      "noneOK": false,
+      "codePoint": 11,
+      "value": "🙂",
+      "error": null,
+      "cursorCodeUnits": 3,
+      "cursorBytes": 5,
+      "remaining": "z"
+    },
+    {
+      "source": "\u000b🙂z",
+      "noneOK": true,
+      "codePoint": 11,
+      "value": "🙂",
+      "error": null,
+      "cursorCodeUnits": 3,
+      "cursorBytes": 5,
+      "remaining": "z"
+    },
+    {
+      "source": "\u000b\\alpha z",
+      "noneOK": false,
+      "codePoint": 11,
+      "value": "\\alpha",
+      "error": null,
+      "cursorCodeUnits": 8,
+      "cursorBytes": 8,
+      "remaining": "z"
+    },
+    {
+      "source": "\u000b\\alpha z",
+      "noneOK": true,
+      "codePoint": 11,
+      "value": "\\alpha",
+      "error": null,
+      "cursorCodeUnits": 8,
+      "cursorBytes": 8,
+      "remaining": "z"
+    },
+    {
+      "source": "\u000b}z",
+      "noneOK": false,
+      "codePoint": 11,
+      "value": null,
+      "error": {
+        "id": "ExtraCloseMissingOpen",
+        "message": "Extra close brace or missing open brace"
+      },
+      "cursorCodeUnits": 1,
+      "cursorBytes": 1,
+      "remaining": "}z"
+    },
+    {
+      "source": "\u000b}z",
+      "noneOK": true,
+      "codePoint": 11,
+      "value": null,
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 1,
+      "remaining": "}z"
+    },
+    {
+      "source": "\u000b",
+      "noneOK": false,
+      "codePoint": 11,
+      "value": null,
+      "error": {
+        "id": "MissingArgFor",
+        "message": "Missing argument for \\sample"
+      },
+      "cursorCodeUnits": 1,
+      "cursorBytes": 1,
+      "remaining": ""
+    },
+    {
+      "source": "\u000b",
+      "noneOK": true,
+      "codePoint": 11,
+      "value": null,
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 1,
+      "remaining": ""
+    },
+    {
+      "source": "\f{ab}z",
+      "noneOK": false,
+      "codePoint": 12,
+      "value": "ab",
+      "error": null,
+      "cursorCodeUnits": 5,
+      "cursorBytes": 5,
+      "remaining": "z"
+    },
+    {
+      "source": "\f{ab}z",
+      "noneOK": true,
+      "codePoint": 12,
+      "value": "ab",
+      "error": null,
+      "cursorCodeUnits": 5,
+      "cursorBytes": 5,
+      "remaining": "z"
+    },
+    {
+      "source": "\f🙂z",
+      "noneOK": false,
+      "codePoint": 12,
+      "value": "🙂",
+      "error": null,
+      "cursorCodeUnits": 3,
+      "cursorBytes": 5,
+      "remaining": "z"
+    },
+    {
+      "source": "\f🙂z",
+      "noneOK": true,
+      "codePoint": 12,
+      "value": "🙂",
+      "error": null,
+      "cursorCodeUnits": 3,
+      "cursorBytes": 5,
+      "remaining": "z"
+    },
+    {
+      "source": "\f\\alpha z",
+      "noneOK": false,
+      "codePoint": 12,
+      "value": "\\alpha",
+      "error": null,
+      "cursorCodeUnits": 8,
+      "cursorBytes": 8,
+      "remaining": "z"
+    },
+    {
+      "source": "\f\\alpha z",
+      "noneOK": true,
+      "codePoint": 12,
+      "value": "\\alpha",
+      "error": null,
+      "cursorCodeUnits": 8,
+      "cursorBytes": 8,
+      "remaining": "z"
+    },
+    {
+      "source": "\f}z",
+      "noneOK": false,
+      "codePoint": 12,
+      "value": null,
+      "error": {
+        "id": "ExtraCloseMissingOpen",
+        "message": "Extra close brace or missing open brace"
+      },
+      "cursorCodeUnits": 1,
+      "cursorBytes": 1,
+      "remaining": "}z"
+    },
+    {
+      "source": "\f}z",
+      "noneOK": true,
+      "codePoint": 12,
+      "value": null,
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 1,
+      "remaining": "}z"
+    },
+    {
+      "source": "\f",
+      "noneOK": false,
+      "codePoint": 12,
+      "value": null,
+      "error": {
+        "id": "MissingArgFor",
+        "message": "Missing argument for \\sample"
+      },
+      "cursorCodeUnits": 1,
+      "cursorBytes": 1,
+      "remaining": ""
+    },
+    {
+      "source": "\f",
+      "noneOK": true,
+      "codePoint": 12,
+      "value": null,
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 1,
+      "remaining": ""
+    },
+    {
+      "source": "\r{ab}z",
+      "noneOK": false,
+      "codePoint": 13,
+      "value": "ab",
+      "error": null,
+      "cursorCodeUnits": 5,
+      "cursorBytes": 5,
+      "remaining": "z"
+    },
+    {
+      "source": "\r{ab}z",
+      "noneOK": true,
+      "codePoint": 13,
+      "value": "ab",
+      "error": null,
+      "cursorCodeUnits": 5,
+      "cursorBytes": 5,
+      "remaining": "z"
+    },
+    {
+      "source": "\r🙂z",
+      "noneOK": false,
+      "codePoint": 13,
+      "value": "🙂",
+      "error": null,
+      "cursorCodeUnits": 3,
+      "cursorBytes": 5,
+      "remaining": "z"
+    },
+    {
+      "source": "\r🙂z",
+      "noneOK": true,
+      "codePoint": 13,
+      "value": "🙂",
+      "error": null,
+      "cursorCodeUnits": 3,
+      "cursorBytes": 5,
+      "remaining": "z"
+    },
+    {
+      "source": "\r\\alpha z",
+      "noneOK": false,
+      "codePoint": 13,
+      "value": "\\alpha",
+      "error": null,
+      "cursorCodeUnits": 8,
+      "cursorBytes": 8,
+      "remaining": "z"
+    },
+    {
+      "source": "\r\\alpha z",
+      "noneOK": true,
+      "codePoint": 13,
+      "value": "\\alpha",
+      "error": null,
+      "cursorCodeUnits": 8,
+      "cursorBytes": 8,
+      "remaining": "z"
+    },
+    {
+      "source": "\r}z",
+      "noneOK": false,
+      "codePoint": 13,
+      "value": null,
+      "error": {
+        "id": "ExtraCloseMissingOpen",
+        "message": "Extra close brace or missing open brace"
+      },
+      "cursorCodeUnits": 1,
+      "cursorBytes": 1,
+      "remaining": "}z"
+    },
+    {
+      "source": "\r}z",
+      "noneOK": true,
+      "codePoint": 13,
+      "value": null,
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 1,
+      "remaining": "}z"
+    },
+    {
+      "source": "\r",
+      "noneOK": false,
+      "codePoint": 13,
+      "value": null,
+      "error": {
+        "id": "MissingArgFor",
+        "message": "Missing argument for \\sample"
+      },
+      "cursorCodeUnits": 1,
+      "cursorBytes": 1,
+      "remaining": ""
+    },
+    {
+      "source": "\r",
+      "noneOK": true,
+      "codePoint": 13,
+      "value": null,
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 1,
+      "remaining": ""
+    },
+    {
+      "source": " {ab}z",
+      "noneOK": false,
+      "codePoint": 32,
+      "value": "ab",
+      "error": null,
+      "cursorCodeUnits": 5,
+      "cursorBytes": 5,
+      "remaining": "z"
+    },
+    {
+      "source": " {ab}z",
+      "noneOK": true,
+      "codePoint": 32,
+      "value": "ab",
+      "error": null,
+      "cursorCodeUnits": 5,
+      "cursorBytes": 5,
+      "remaining": "z"
+    },
+    {
+      "source": " 🙂z",
+      "noneOK": false,
+      "codePoint": 32,
+      "value": "🙂",
+      "error": null,
+      "cursorCodeUnits": 3,
+      "cursorBytes": 5,
+      "remaining": "z"
+    },
+    {
+      "source": " 🙂z",
+      "noneOK": true,
+      "codePoint": 32,
+      "value": "🙂",
+      "error": null,
+      "cursorCodeUnits": 3,
+      "cursorBytes": 5,
+      "remaining": "z"
+    },
+    {
+      "source": " \\alpha z",
+      "noneOK": false,
+      "codePoint": 32,
+      "value": "\\alpha",
+      "error": null,
+      "cursorCodeUnits": 8,
+      "cursorBytes": 8,
+      "remaining": "z"
+    },
+    {
+      "source": " \\alpha z",
+      "noneOK": true,
+      "codePoint": 32,
+      "value": "\\alpha",
+      "error": null,
+      "cursorCodeUnits": 8,
+      "cursorBytes": 8,
+      "remaining": "z"
+    },
+    {
+      "source": " }z",
+      "noneOK": false,
+      "codePoint": 32,
+      "value": null,
+      "error": {
+        "id": "ExtraCloseMissingOpen",
+        "message": "Extra close brace or missing open brace"
+      },
+      "cursorCodeUnits": 1,
+      "cursorBytes": 1,
+      "remaining": "}z"
+    },
+    {
+      "source": " }z",
+      "noneOK": true,
+      "codePoint": 32,
+      "value": null,
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 1,
+      "remaining": "}z"
+    },
+    {
+      "source": " ",
+      "noneOK": false,
+      "codePoint": 32,
+      "value": null,
+      "error": {
+        "id": "MissingArgFor",
+        "message": "Missing argument for \\sample"
+      },
+      "cursorCodeUnits": 1,
+      "cursorBytes": 1,
+      "remaining": ""
+    },
+    {
+      "source": " ",
+      "noneOK": true,
+      "codePoint": 32,
+      "value": null,
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 1,
+      "remaining": ""
+    },
+    {
+      "source": "{ab}z",
+      "noneOK": false,
+      "codePoint": 133,
+      "value": "",
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 2,
+      "remaining": "{ab}z"
+    },
+    {
+      "source": "{ab}z",
+      "noneOK": true,
+      "codePoint": 133,
+      "value": "",
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 2,
+      "remaining": "{ab}z"
+    },
+    {
+      "source": "🙂z",
+      "noneOK": false,
+      "codePoint": 133,
+      "value": "",
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 2,
+      "remaining": "🙂z"
+    },
+    {
+      "source": "🙂z",
+      "noneOK": true,
+      "codePoint": 133,
+      "value": "",
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 2,
+      "remaining": "🙂z"
+    },
+    {
+      "source": "\\alpha z",
+      "noneOK": false,
+      "codePoint": 133,
+      "value": "",
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 2,
+      "remaining": "\\alpha z"
+    },
+    {
+      "source": "\\alpha z",
+      "noneOK": true,
+      "codePoint": 133,
+      "value": "",
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 2,
+      "remaining": "\\alpha z"
+    },
+    {
+      "source": "}z",
+      "noneOK": false,
+      "codePoint": 133,
+      "value": "",
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 2,
+      "remaining": "}z"
+    },
+    {
+      "source": "}z",
+      "noneOK": true,
+      "codePoint": 133,
+      "value": "",
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 2,
+      "remaining": "}z"
+    },
+    {
+      "source": "",
+      "noneOK": false,
+      "codePoint": 133,
+      "value": "",
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 2,
+      "remaining": ""
+    },
+    {
+      "source": "",
+      "noneOK": true,
+      "codePoint": 133,
+      "value": "",
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 2,
+      "remaining": ""
+    },
+    {
+      "source": " {ab}z",
+      "noneOK": false,
+      "codePoint": 160,
+      "value": "ab",
+      "error": null,
+      "cursorCodeUnits": 5,
+      "cursorBytes": 6,
+      "remaining": "z"
+    },
+    {
+      "source": " {ab}z",
+      "noneOK": true,
+      "codePoint": 160,
+      "value": "ab",
+      "error": null,
+      "cursorCodeUnits": 5,
+      "cursorBytes": 6,
+      "remaining": "z"
+    },
+    {
+      "source": " 🙂z",
+      "noneOK": false,
+      "codePoint": 160,
+      "value": "🙂",
+      "error": null,
+      "cursorCodeUnits": 3,
+      "cursorBytes": 6,
+      "remaining": "z"
+    },
+    {
+      "source": " 🙂z",
+      "noneOK": true,
+      "codePoint": 160,
+      "value": "🙂",
+      "error": null,
+      "cursorCodeUnits": 3,
+      "cursorBytes": 6,
+      "remaining": "z"
+    },
+    {
+      "source": " \\alpha z",
+      "noneOK": false,
+      "codePoint": 160,
+      "value": "\\alpha",
+      "error": null,
+      "cursorCodeUnits": 8,
+      "cursorBytes": 9,
+      "remaining": "z"
+    },
+    {
+      "source": " \\alpha z",
+      "noneOK": true,
+      "codePoint": 160,
+      "value": "\\alpha",
+      "error": null,
+      "cursorCodeUnits": 8,
+      "cursorBytes": 9,
+      "remaining": "z"
+    },
+    {
+      "source": " }z",
+      "noneOK": false,
+      "codePoint": 160,
+      "value": null,
+      "error": {
+        "id": "ExtraCloseMissingOpen",
+        "message": "Extra close brace or missing open brace"
+      },
+      "cursorCodeUnits": 1,
+      "cursorBytes": 2,
+      "remaining": "}z"
+    },
+    {
+      "source": " }z",
+      "noneOK": true,
+      "codePoint": 160,
+      "value": null,
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 2,
+      "remaining": "}z"
+    },
+    {
+      "source": " ",
+      "noneOK": false,
+      "codePoint": 160,
+      "value": null,
+      "error": {
+        "id": "MissingArgFor",
+        "message": "Missing argument for \\sample"
+      },
+      "cursorCodeUnits": 1,
+      "cursorBytes": 2,
+      "remaining": ""
+    },
+    {
+      "source": " ",
+      "noneOK": true,
+      "codePoint": 160,
+      "value": null,
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 2,
+      "remaining": ""
+    },
+    {
+      "source": " {ab}z",
+      "noneOK": false,
+      "codePoint": 5760,
+      "value": "ab",
+      "error": null,
+      "cursorCodeUnits": 5,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": " {ab}z",
+      "noneOK": true,
+      "codePoint": 5760,
+      "value": "ab",
+      "error": null,
+      "cursorCodeUnits": 5,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": " 🙂z",
+      "noneOK": false,
+      "codePoint": 5760,
+      "value": "🙂",
+      "error": null,
+      "cursorCodeUnits": 3,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": " 🙂z",
+      "noneOK": true,
+      "codePoint": 5760,
+      "value": "🙂",
+      "error": null,
+      "cursorCodeUnits": 3,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": " \\alpha z",
+      "noneOK": false,
+      "codePoint": 5760,
+      "value": "\\alpha",
+      "error": null,
+      "cursorCodeUnits": 8,
+      "cursorBytes": 10,
+      "remaining": "z"
+    },
+    {
+      "source": " \\alpha z",
+      "noneOK": true,
+      "codePoint": 5760,
+      "value": "\\alpha",
+      "error": null,
+      "cursorCodeUnits": 8,
+      "cursorBytes": 10,
+      "remaining": "z"
+    },
+    {
+      "source": " }z",
+      "noneOK": false,
+      "codePoint": 5760,
+      "value": null,
+      "error": {
+        "id": "ExtraCloseMissingOpen",
+        "message": "Extra close brace or missing open brace"
+      },
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": "}z"
+    },
+    {
+      "source": " }z",
+      "noneOK": true,
+      "codePoint": 5760,
+      "value": null,
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": "}z"
+    },
+    {
+      "source": " ",
+      "noneOK": false,
+      "codePoint": 5760,
+      "value": null,
+      "error": {
+        "id": "MissingArgFor",
+        "message": "Missing argument for \\sample"
+      },
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": " ",
+      "noneOK": true,
+      "codePoint": 5760,
+      "value": null,
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": " {ab}z",
+      "noneOK": false,
+      "codePoint": 8192,
+      "value": "ab",
+      "error": null,
+      "cursorCodeUnits": 5,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": " {ab}z",
+      "noneOK": true,
+      "codePoint": 8192,
+      "value": "ab",
+      "error": null,
+      "cursorCodeUnits": 5,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": " 🙂z",
+      "noneOK": false,
+      "codePoint": 8192,
+      "value": "🙂",
+      "error": null,
+      "cursorCodeUnits": 3,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": " 🙂z",
+      "noneOK": true,
+      "codePoint": 8192,
+      "value": "🙂",
+      "error": null,
+      "cursorCodeUnits": 3,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": " \\alpha z",
+      "noneOK": false,
+      "codePoint": 8192,
+      "value": "\\alpha",
+      "error": null,
+      "cursorCodeUnits": 8,
+      "cursorBytes": 10,
+      "remaining": "z"
+    },
+    {
+      "source": " \\alpha z",
+      "noneOK": true,
+      "codePoint": 8192,
+      "value": "\\alpha",
+      "error": null,
+      "cursorCodeUnits": 8,
+      "cursorBytes": 10,
+      "remaining": "z"
+    },
+    {
+      "source": " }z",
+      "noneOK": false,
+      "codePoint": 8192,
+      "value": null,
+      "error": {
+        "id": "ExtraCloseMissingOpen",
+        "message": "Extra close brace or missing open brace"
+      },
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": "}z"
+    },
+    {
+      "source": " }z",
+      "noneOK": true,
+      "codePoint": 8192,
+      "value": null,
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": "}z"
+    },
+    {
+      "source": " ",
+      "noneOK": false,
+      "codePoint": 8192,
+      "value": null,
+      "error": {
+        "id": "MissingArgFor",
+        "message": "Missing argument for \\sample"
+      },
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": " ",
+      "noneOK": true,
+      "codePoint": 8192,
+      "value": null,
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": " {ab}z",
+      "noneOK": false,
+      "codePoint": 8193,
+      "value": "ab",
+      "error": null,
+      "cursorCodeUnits": 5,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": " {ab}z",
+      "noneOK": true,
+      "codePoint": 8193,
+      "value": "ab",
+      "error": null,
+      "cursorCodeUnits": 5,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": " 🙂z",
+      "noneOK": false,
+      "codePoint": 8193,
+      "value": "🙂",
+      "error": null,
+      "cursorCodeUnits": 3,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": " 🙂z",
+      "noneOK": true,
+      "codePoint": 8193,
+      "value": "🙂",
+      "error": null,
+      "cursorCodeUnits": 3,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": " \\alpha z",
+      "noneOK": false,
+      "codePoint": 8193,
+      "value": "\\alpha",
+      "error": null,
+      "cursorCodeUnits": 8,
+      "cursorBytes": 10,
+      "remaining": "z"
+    },
+    {
+      "source": " \\alpha z",
+      "noneOK": true,
+      "codePoint": 8193,
+      "value": "\\alpha",
+      "error": null,
+      "cursorCodeUnits": 8,
+      "cursorBytes": 10,
+      "remaining": "z"
+    },
+    {
+      "source": " }z",
+      "noneOK": false,
+      "codePoint": 8193,
+      "value": null,
+      "error": {
+        "id": "ExtraCloseMissingOpen",
+        "message": "Extra close brace or missing open brace"
+      },
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": "}z"
+    },
+    {
+      "source": " }z",
+      "noneOK": true,
+      "codePoint": 8193,
+      "value": null,
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": "}z"
+    },
+    {
+      "source": " ",
+      "noneOK": false,
+      "codePoint": 8193,
+      "value": null,
+      "error": {
+        "id": "MissingArgFor",
+        "message": "Missing argument for \\sample"
+      },
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": " ",
+      "noneOK": true,
+      "codePoint": 8193,
+      "value": null,
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": " {ab}z",
+      "noneOK": false,
+      "codePoint": 8194,
+      "value": "ab",
+      "error": null,
+      "cursorCodeUnits": 5,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": " {ab}z",
+      "noneOK": true,
+      "codePoint": 8194,
+      "value": "ab",
+      "error": null,
+      "cursorCodeUnits": 5,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": " 🙂z",
+      "noneOK": false,
+      "codePoint": 8194,
+      "value": "🙂",
+      "error": null,
+      "cursorCodeUnits": 3,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": " 🙂z",
+      "noneOK": true,
+      "codePoint": 8194,
+      "value": "🙂",
+      "error": null,
+      "cursorCodeUnits": 3,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": " \\alpha z",
+      "noneOK": false,
+      "codePoint": 8194,
+      "value": "\\alpha",
+      "error": null,
+      "cursorCodeUnits": 8,
+      "cursorBytes": 10,
+      "remaining": "z"
+    },
+    {
+      "source": " \\alpha z",
+      "noneOK": true,
+      "codePoint": 8194,
+      "value": "\\alpha",
+      "error": null,
+      "cursorCodeUnits": 8,
+      "cursorBytes": 10,
+      "remaining": "z"
+    },
+    {
+      "source": " }z",
+      "noneOK": false,
+      "codePoint": 8194,
+      "value": null,
+      "error": {
+        "id": "ExtraCloseMissingOpen",
+        "message": "Extra close brace or missing open brace"
+      },
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": "}z"
+    },
+    {
+      "source": " }z",
+      "noneOK": true,
+      "codePoint": 8194,
+      "value": null,
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": "}z"
+    },
+    {
+      "source": " ",
+      "noneOK": false,
+      "codePoint": 8194,
+      "value": null,
+      "error": {
+        "id": "MissingArgFor",
+        "message": "Missing argument for \\sample"
+      },
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": " ",
+      "noneOK": true,
+      "codePoint": 8194,
+      "value": null,
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": " {ab}z",
+      "noneOK": false,
+      "codePoint": 8195,
+      "value": "ab",
+      "error": null,
+      "cursorCodeUnits": 5,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": " {ab}z",
+      "noneOK": true,
+      "codePoint": 8195,
+      "value": "ab",
+      "error": null,
+      "cursorCodeUnits": 5,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": " 🙂z",
+      "noneOK": false,
+      "codePoint": 8195,
+      "value": "🙂",
+      "error": null,
+      "cursorCodeUnits": 3,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": " 🙂z",
+      "noneOK": true,
+      "codePoint": 8195,
+      "value": "🙂",
+      "error": null,
+      "cursorCodeUnits": 3,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": " \\alpha z",
+      "noneOK": false,
+      "codePoint": 8195,
+      "value": "\\alpha",
+      "error": null,
+      "cursorCodeUnits": 8,
+      "cursorBytes": 10,
+      "remaining": "z"
+    },
+    {
+      "source": " \\alpha z",
+      "noneOK": true,
+      "codePoint": 8195,
+      "value": "\\alpha",
+      "error": null,
+      "cursorCodeUnits": 8,
+      "cursorBytes": 10,
+      "remaining": "z"
+    },
+    {
+      "source": " }z",
+      "noneOK": false,
+      "codePoint": 8195,
+      "value": null,
+      "error": {
+        "id": "ExtraCloseMissingOpen",
+        "message": "Extra close brace or missing open brace"
+      },
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": "}z"
+    },
+    {
+      "source": " }z",
+      "noneOK": true,
+      "codePoint": 8195,
+      "value": null,
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": "}z"
+    },
+    {
+      "source": " ",
+      "noneOK": false,
+      "codePoint": 8195,
+      "value": null,
+      "error": {
+        "id": "MissingArgFor",
+        "message": "Missing argument for \\sample"
+      },
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": " ",
+      "noneOK": true,
+      "codePoint": 8195,
+      "value": null,
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": " {ab}z",
+      "noneOK": false,
+      "codePoint": 8196,
+      "value": "ab",
+      "error": null,
+      "cursorCodeUnits": 5,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": " {ab}z",
+      "noneOK": true,
+      "codePoint": 8196,
+      "value": "ab",
+      "error": null,
+      "cursorCodeUnits": 5,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": " 🙂z",
+      "noneOK": false,
+      "codePoint": 8196,
+      "value": "🙂",
+      "error": null,
+      "cursorCodeUnits": 3,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": " 🙂z",
+      "noneOK": true,
+      "codePoint": 8196,
+      "value": "🙂",
+      "error": null,
+      "cursorCodeUnits": 3,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": " \\alpha z",
+      "noneOK": false,
+      "codePoint": 8196,
+      "value": "\\alpha",
+      "error": null,
+      "cursorCodeUnits": 8,
+      "cursorBytes": 10,
+      "remaining": "z"
+    },
+    {
+      "source": " \\alpha z",
+      "noneOK": true,
+      "codePoint": 8196,
+      "value": "\\alpha",
+      "error": null,
+      "cursorCodeUnits": 8,
+      "cursorBytes": 10,
+      "remaining": "z"
+    },
+    {
+      "source": " }z",
+      "noneOK": false,
+      "codePoint": 8196,
+      "value": null,
+      "error": {
+        "id": "ExtraCloseMissingOpen",
+        "message": "Extra close brace or missing open brace"
+      },
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": "}z"
+    },
+    {
+      "source": " }z",
+      "noneOK": true,
+      "codePoint": 8196,
+      "value": null,
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": "}z"
+    },
+    {
+      "source": " ",
+      "noneOK": false,
+      "codePoint": 8196,
+      "value": null,
+      "error": {
+        "id": "MissingArgFor",
+        "message": "Missing argument for \\sample"
+      },
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": " ",
+      "noneOK": true,
+      "codePoint": 8196,
+      "value": null,
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": " {ab}z",
+      "noneOK": false,
+      "codePoint": 8197,
+      "value": "ab",
+      "error": null,
+      "cursorCodeUnits": 5,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": " {ab}z",
+      "noneOK": true,
+      "codePoint": 8197,
+      "value": "ab",
+      "error": null,
+      "cursorCodeUnits": 5,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": " 🙂z",
+      "noneOK": false,
+      "codePoint": 8197,
+      "value": "🙂",
+      "error": null,
+      "cursorCodeUnits": 3,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": " 🙂z",
+      "noneOK": true,
+      "codePoint": 8197,
+      "value": "🙂",
+      "error": null,
+      "cursorCodeUnits": 3,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": " \\alpha z",
+      "noneOK": false,
+      "codePoint": 8197,
+      "value": "\\alpha",
+      "error": null,
+      "cursorCodeUnits": 8,
+      "cursorBytes": 10,
+      "remaining": "z"
+    },
+    {
+      "source": " \\alpha z",
+      "noneOK": true,
+      "codePoint": 8197,
+      "value": "\\alpha",
+      "error": null,
+      "cursorCodeUnits": 8,
+      "cursorBytes": 10,
+      "remaining": "z"
+    },
+    {
+      "source": " }z",
+      "noneOK": false,
+      "codePoint": 8197,
+      "value": null,
+      "error": {
+        "id": "ExtraCloseMissingOpen",
+        "message": "Extra close brace or missing open brace"
+      },
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": "}z"
+    },
+    {
+      "source": " }z",
+      "noneOK": true,
+      "codePoint": 8197,
+      "value": null,
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": "}z"
+    },
+    {
+      "source": " ",
+      "noneOK": false,
+      "codePoint": 8197,
+      "value": null,
+      "error": {
+        "id": "MissingArgFor",
+        "message": "Missing argument for \\sample"
+      },
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": " ",
+      "noneOK": true,
+      "codePoint": 8197,
+      "value": null,
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": " {ab}z",
+      "noneOK": false,
+      "codePoint": 8198,
+      "value": "ab",
+      "error": null,
+      "cursorCodeUnits": 5,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": " {ab}z",
+      "noneOK": true,
+      "codePoint": 8198,
+      "value": "ab",
+      "error": null,
+      "cursorCodeUnits": 5,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": " 🙂z",
+      "noneOK": false,
+      "codePoint": 8198,
+      "value": "🙂",
+      "error": null,
+      "cursorCodeUnits": 3,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": " 🙂z",
+      "noneOK": true,
+      "codePoint": 8198,
+      "value": "🙂",
+      "error": null,
+      "cursorCodeUnits": 3,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": " \\alpha z",
+      "noneOK": false,
+      "codePoint": 8198,
+      "value": "\\alpha",
+      "error": null,
+      "cursorCodeUnits": 8,
+      "cursorBytes": 10,
+      "remaining": "z"
+    },
+    {
+      "source": " \\alpha z",
+      "noneOK": true,
+      "codePoint": 8198,
+      "value": "\\alpha",
+      "error": null,
+      "cursorCodeUnits": 8,
+      "cursorBytes": 10,
+      "remaining": "z"
+    },
+    {
+      "source": " }z",
+      "noneOK": false,
+      "codePoint": 8198,
+      "value": null,
+      "error": {
+        "id": "ExtraCloseMissingOpen",
+        "message": "Extra close brace or missing open brace"
+      },
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": "}z"
+    },
+    {
+      "source": " }z",
+      "noneOK": true,
+      "codePoint": 8198,
+      "value": null,
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": "}z"
+    },
+    {
+      "source": " ",
+      "noneOK": false,
+      "codePoint": 8198,
+      "value": null,
+      "error": {
+        "id": "MissingArgFor",
+        "message": "Missing argument for \\sample"
+      },
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": " ",
+      "noneOK": true,
+      "codePoint": 8198,
+      "value": null,
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": " {ab}z",
+      "noneOK": false,
+      "codePoint": 8199,
+      "value": "ab",
+      "error": null,
+      "cursorCodeUnits": 5,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": " {ab}z",
+      "noneOK": true,
+      "codePoint": 8199,
+      "value": "ab",
+      "error": null,
+      "cursorCodeUnits": 5,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": " 🙂z",
+      "noneOK": false,
+      "codePoint": 8199,
+      "value": "🙂",
+      "error": null,
+      "cursorCodeUnits": 3,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": " 🙂z",
+      "noneOK": true,
+      "codePoint": 8199,
+      "value": "🙂",
+      "error": null,
+      "cursorCodeUnits": 3,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": " \\alpha z",
+      "noneOK": false,
+      "codePoint": 8199,
+      "value": "\\alpha",
+      "error": null,
+      "cursorCodeUnits": 8,
+      "cursorBytes": 10,
+      "remaining": "z"
+    },
+    {
+      "source": " \\alpha z",
+      "noneOK": true,
+      "codePoint": 8199,
+      "value": "\\alpha",
+      "error": null,
+      "cursorCodeUnits": 8,
+      "cursorBytes": 10,
+      "remaining": "z"
+    },
+    {
+      "source": " }z",
+      "noneOK": false,
+      "codePoint": 8199,
+      "value": null,
+      "error": {
+        "id": "ExtraCloseMissingOpen",
+        "message": "Extra close brace or missing open brace"
+      },
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": "}z"
+    },
+    {
+      "source": " }z",
+      "noneOK": true,
+      "codePoint": 8199,
+      "value": null,
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": "}z"
+    },
+    {
+      "source": " ",
+      "noneOK": false,
+      "codePoint": 8199,
+      "value": null,
+      "error": {
+        "id": "MissingArgFor",
+        "message": "Missing argument for \\sample"
+      },
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": " ",
+      "noneOK": true,
+      "codePoint": 8199,
+      "value": null,
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": " {ab}z",
+      "noneOK": false,
+      "codePoint": 8200,
+      "value": "ab",
+      "error": null,
+      "cursorCodeUnits": 5,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": " {ab}z",
+      "noneOK": true,
+      "codePoint": 8200,
+      "value": "ab",
+      "error": null,
+      "cursorCodeUnits": 5,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": " 🙂z",
+      "noneOK": false,
+      "codePoint": 8200,
+      "value": "🙂",
+      "error": null,
+      "cursorCodeUnits": 3,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": " 🙂z",
+      "noneOK": true,
+      "codePoint": 8200,
+      "value": "🙂",
+      "error": null,
+      "cursorCodeUnits": 3,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": " \\alpha z",
+      "noneOK": false,
+      "codePoint": 8200,
+      "value": "\\alpha",
+      "error": null,
+      "cursorCodeUnits": 8,
+      "cursorBytes": 10,
+      "remaining": "z"
+    },
+    {
+      "source": " \\alpha z",
+      "noneOK": true,
+      "codePoint": 8200,
+      "value": "\\alpha",
+      "error": null,
+      "cursorCodeUnits": 8,
+      "cursorBytes": 10,
+      "remaining": "z"
+    },
+    {
+      "source": " }z",
+      "noneOK": false,
+      "codePoint": 8200,
+      "value": null,
+      "error": {
+        "id": "ExtraCloseMissingOpen",
+        "message": "Extra close brace or missing open brace"
+      },
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": "}z"
+    },
+    {
+      "source": " }z",
+      "noneOK": true,
+      "codePoint": 8200,
+      "value": null,
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": "}z"
+    },
+    {
+      "source": " ",
+      "noneOK": false,
+      "codePoint": 8200,
+      "value": null,
+      "error": {
+        "id": "MissingArgFor",
+        "message": "Missing argument for \\sample"
+      },
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": " ",
+      "noneOK": true,
+      "codePoint": 8200,
+      "value": null,
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": " {ab}z",
+      "noneOK": false,
+      "codePoint": 8201,
+      "value": "ab",
+      "error": null,
+      "cursorCodeUnits": 5,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": " {ab}z",
+      "noneOK": true,
+      "codePoint": 8201,
+      "value": "ab",
+      "error": null,
+      "cursorCodeUnits": 5,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": " 🙂z",
+      "noneOK": false,
+      "codePoint": 8201,
+      "value": "🙂",
+      "error": null,
+      "cursorCodeUnits": 3,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": " 🙂z",
+      "noneOK": true,
+      "codePoint": 8201,
+      "value": "🙂",
+      "error": null,
+      "cursorCodeUnits": 3,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": " \\alpha z",
+      "noneOK": false,
+      "codePoint": 8201,
+      "value": "\\alpha",
+      "error": null,
+      "cursorCodeUnits": 8,
+      "cursorBytes": 10,
+      "remaining": "z"
+    },
+    {
+      "source": " \\alpha z",
+      "noneOK": true,
+      "codePoint": 8201,
+      "value": "\\alpha",
+      "error": null,
+      "cursorCodeUnits": 8,
+      "cursorBytes": 10,
+      "remaining": "z"
+    },
+    {
+      "source": " }z",
+      "noneOK": false,
+      "codePoint": 8201,
+      "value": null,
+      "error": {
+        "id": "ExtraCloseMissingOpen",
+        "message": "Extra close brace or missing open brace"
+      },
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": "}z"
+    },
+    {
+      "source": " }z",
+      "noneOK": true,
+      "codePoint": 8201,
+      "value": null,
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": "}z"
+    },
+    {
+      "source": " ",
+      "noneOK": false,
+      "codePoint": 8201,
+      "value": null,
+      "error": {
+        "id": "MissingArgFor",
+        "message": "Missing argument for \\sample"
+      },
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": " ",
+      "noneOK": true,
+      "codePoint": 8201,
+      "value": null,
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": " {ab}z",
+      "noneOK": false,
+      "codePoint": 8202,
+      "value": "ab",
+      "error": null,
+      "cursorCodeUnits": 5,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": " {ab}z",
+      "noneOK": true,
+      "codePoint": 8202,
+      "value": "ab",
+      "error": null,
+      "cursorCodeUnits": 5,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": " 🙂z",
+      "noneOK": false,
+      "codePoint": 8202,
+      "value": "🙂",
+      "error": null,
+      "cursorCodeUnits": 3,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": " 🙂z",
+      "noneOK": true,
+      "codePoint": 8202,
+      "value": "🙂",
+      "error": null,
+      "cursorCodeUnits": 3,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": " \\alpha z",
+      "noneOK": false,
+      "codePoint": 8202,
+      "value": "\\alpha",
+      "error": null,
+      "cursorCodeUnits": 8,
+      "cursorBytes": 10,
+      "remaining": "z"
+    },
+    {
+      "source": " \\alpha z",
+      "noneOK": true,
+      "codePoint": 8202,
+      "value": "\\alpha",
+      "error": null,
+      "cursorCodeUnits": 8,
+      "cursorBytes": 10,
+      "remaining": "z"
+    },
+    {
+      "source": " }z",
+      "noneOK": false,
+      "codePoint": 8202,
+      "value": null,
+      "error": {
+        "id": "ExtraCloseMissingOpen",
+        "message": "Extra close brace or missing open brace"
+      },
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": "}z"
+    },
+    {
+      "source": " }z",
+      "noneOK": true,
+      "codePoint": 8202,
+      "value": null,
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": "}z"
+    },
+    {
+      "source": " ",
+      "noneOK": false,
+      "codePoint": 8202,
+      "value": null,
+      "error": {
+        "id": "MissingArgFor",
+        "message": "Missing argument for \\sample"
+      },
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": " ",
+      "noneOK": true,
+      "codePoint": 8202,
+      "value": null,
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": " {ab}z",
+      "noneOK": false,
+      "codePoint": 8232,
+      "value": "ab",
+      "error": null,
+      "cursorCodeUnits": 5,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": " {ab}z",
+      "noneOK": true,
+      "codePoint": 8232,
+      "value": "ab",
+      "error": null,
+      "cursorCodeUnits": 5,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": " 🙂z",
+      "noneOK": false,
+      "codePoint": 8232,
+      "value": "🙂",
+      "error": null,
+      "cursorCodeUnits": 3,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": " 🙂z",
+      "noneOK": true,
+      "codePoint": 8232,
+      "value": "🙂",
+      "error": null,
+      "cursorCodeUnits": 3,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": " \\alpha z",
+      "noneOK": false,
+      "codePoint": 8232,
+      "value": "\\alpha",
+      "error": null,
+      "cursorCodeUnits": 8,
+      "cursorBytes": 10,
+      "remaining": "z"
+    },
+    {
+      "source": " \\alpha z",
+      "noneOK": true,
+      "codePoint": 8232,
+      "value": "\\alpha",
+      "error": null,
+      "cursorCodeUnits": 8,
+      "cursorBytes": 10,
+      "remaining": "z"
+    },
+    {
+      "source": " }z",
+      "noneOK": false,
+      "codePoint": 8232,
+      "value": null,
+      "error": {
+        "id": "ExtraCloseMissingOpen",
+        "message": "Extra close brace or missing open brace"
+      },
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": "}z"
+    },
+    {
+      "source": " }z",
+      "noneOK": true,
+      "codePoint": 8232,
+      "value": null,
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": "}z"
+    },
+    {
+      "source": " ",
+      "noneOK": false,
+      "codePoint": 8232,
+      "value": null,
+      "error": {
+        "id": "MissingArgFor",
+        "message": "Missing argument for \\sample"
+      },
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": " ",
+      "noneOK": true,
+      "codePoint": 8232,
+      "value": null,
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": " {ab}z",
+      "noneOK": false,
+      "codePoint": 8233,
+      "value": "ab",
+      "error": null,
+      "cursorCodeUnits": 5,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": " {ab}z",
+      "noneOK": true,
+      "codePoint": 8233,
+      "value": "ab",
+      "error": null,
+      "cursorCodeUnits": 5,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": " 🙂z",
+      "noneOK": false,
+      "codePoint": 8233,
+      "value": "🙂",
+      "error": null,
+      "cursorCodeUnits": 3,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": " 🙂z",
+      "noneOK": true,
+      "codePoint": 8233,
+      "value": "🙂",
+      "error": null,
+      "cursorCodeUnits": 3,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": " \\alpha z",
+      "noneOK": false,
+      "codePoint": 8233,
+      "value": "\\alpha",
+      "error": null,
+      "cursorCodeUnits": 8,
+      "cursorBytes": 10,
+      "remaining": "z"
+    },
+    {
+      "source": " \\alpha z",
+      "noneOK": true,
+      "codePoint": 8233,
+      "value": "\\alpha",
+      "error": null,
+      "cursorCodeUnits": 8,
+      "cursorBytes": 10,
+      "remaining": "z"
+    },
+    {
+      "source": " }z",
+      "noneOK": false,
+      "codePoint": 8233,
+      "value": null,
+      "error": {
+        "id": "ExtraCloseMissingOpen",
+        "message": "Extra close brace or missing open brace"
+      },
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": "}z"
+    },
+    {
+      "source": " }z",
+      "noneOK": true,
+      "codePoint": 8233,
+      "value": null,
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": "}z"
+    },
+    {
+      "source": " ",
+      "noneOK": false,
+      "codePoint": 8233,
+      "value": null,
+      "error": {
+        "id": "MissingArgFor",
+        "message": "Missing argument for \\sample"
+      },
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": " ",
+      "noneOK": true,
+      "codePoint": 8233,
+      "value": null,
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": " {ab}z",
+      "noneOK": false,
+      "codePoint": 8239,
+      "value": "ab",
+      "error": null,
+      "cursorCodeUnits": 5,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": " {ab}z",
+      "noneOK": true,
+      "codePoint": 8239,
+      "value": "ab",
+      "error": null,
+      "cursorCodeUnits": 5,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": " 🙂z",
+      "noneOK": false,
+      "codePoint": 8239,
+      "value": "🙂",
+      "error": null,
+      "cursorCodeUnits": 3,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": " 🙂z",
+      "noneOK": true,
+      "codePoint": 8239,
+      "value": "🙂",
+      "error": null,
+      "cursorCodeUnits": 3,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": " \\alpha z",
+      "noneOK": false,
+      "codePoint": 8239,
+      "value": "\\alpha",
+      "error": null,
+      "cursorCodeUnits": 8,
+      "cursorBytes": 10,
+      "remaining": "z"
+    },
+    {
+      "source": " \\alpha z",
+      "noneOK": true,
+      "codePoint": 8239,
+      "value": "\\alpha",
+      "error": null,
+      "cursorCodeUnits": 8,
+      "cursorBytes": 10,
+      "remaining": "z"
+    },
+    {
+      "source": " }z",
+      "noneOK": false,
+      "codePoint": 8239,
+      "value": null,
+      "error": {
+        "id": "ExtraCloseMissingOpen",
+        "message": "Extra close brace or missing open brace"
+      },
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": "}z"
+    },
+    {
+      "source": " }z",
+      "noneOK": true,
+      "codePoint": 8239,
+      "value": null,
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": "}z"
+    },
+    {
+      "source": " ",
+      "noneOK": false,
+      "codePoint": 8239,
+      "value": null,
+      "error": {
+        "id": "MissingArgFor",
+        "message": "Missing argument for \\sample"
+      },
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": " ",
+      "noneOK": true,
+      "codePoint": 8239,
+      "value": null,
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": " {ab}z",
+      "noneOK": false,
+      "codePoint": 8287,
+      "value": "ab",
+      "error": null,
+      "cursorCodeUnits": 5,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": " {ab}z",
+      "noneOK": true,
+      "codePoint": 8287,
+      "value": "ab",
+      "error": null,
+      "cursorCodeUnits": 5,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": " 🙂z",
+      "noneOK": false,
+      "codePoint": 8287,
+      "value": "🙂",
+      "error": null,
+      "cursorCodeUnits": 3,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": " 🙂z",
+      "noneOK": true,
+      "codePoint": 8287,
+      "value": "🙂",
+      "error": null,
+      "cursorCodeUnits": 3,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": " \\alpha z",
+      "noneOK": false,
+      "codePoint": 8287,
+      "value": "\\alpha",
+      "error": null,
+      "cursorCodeUnits": 8,
+      "cursorBytes": 10,
+      "remaining": "z"
+    },
+    {
+      "source": " \\alpha z",
+      "noneOK": true,
+      "codePoint": 8287,
+      "value": "\\alpha",
+      "error": null,
+      "cursorCodeUnits": 8,
+      "cursorBytes": 10,
+      "remaining": "z"
+    },
+    {
+      "source": " }z",
+      "noneOK": false,
+      "codePoint": 8287,
+      "value": null,
+      "error": {
+        "id": "ExtraCloseMissingOpen",
+        "message": "Extra close brace or missing open brace"
+      },
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": "}z"
+    },
+    {
+      "source": " }z",
+      "noneOK": true,
+      "codePoint": 8287,
+      "value": null,
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": "}z"
+    },
+    {
+      "source": " ",
+      "noneOK": false,
+      "codePoint": 8287,
+      "value": null,
+      "error": {
+        "id": "MissingArgFor",
+        "message": "Missing argument for \\sample"
+      },
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": " ",
+      "noneOK": true,
+      "codePoint": 8287,
+      "value": null,
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": "　{ab}z",
+      "noneOK": false,
+      "codePoint": 12288,
+      "value": "ab",
+      "error": null,
+      "cursorCodeUnits": 5,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": "　{ab}z",
+      "noneOK": true,
+      "codePoint": 12288,
+      "value": "ab",
+      "error": null,
+      "cursorCodeUnits": 5,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": "　🙂z",
+      "noneOK": false,
+      "codePoint": 12288,
+      "value": "🙂",
+      "error": null,
+      "cursorCodeUnits": 3,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": "　🙂z",
+      "noneOK": true,
+      "codePoint": 12288,
+      "value": "🙂",
+      "error": null,
+      "cursorCodeUnits": 3,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": "　\\alpha z",
+      "noneOK": false,
+      "codePoint": 12288,
+      "value": "\\alpha",
+      "error": null,
+      "cursorCodeUnits": 8,
+      "cursorBytes": 10,
+      "remaining": "z"
+    },
+    {
+      "source": "　\\alpha z",
+      "noneOK": true,
+      "codePoint": 12288,
+      "value": "\\alpha",
+      "error": null,
+      "cursorCodeUnits": 8,
+      "cursorBytes": 10,
+      "remaining": "z"
+    },
+    {
+      "source": "　}z",
+      "noneOK": false,
+      "codePoint": 12288,
+      "value": null,
+      "error": {
+        "id": "ExtraCloseMissingOpen",
+        "message": "Extra close brace or missing open brace"
+      },
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": "}z"
+    },
+    {
+      "source": "　}z",
+      "noneOK": true,
+      "codePoint": 12288,
+      "value": null,
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": "}z"
+    },
+    {
+      "source": "　",
+      "noneOK": false,
+      "codePoint": 12288,
+      "value": null,
+      "error": {
+        "id": "MissingArgFor",
+        "message": "Missing argument for \\sample"
+      },
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": "　",
+      "noneOK": true,
+      "codePoint": 12288,
+      "value": null,
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": "﻿{ab}z",
+      "noneOK": false,
+      "codePoint": 65279,
+      "value": "ab",
+      "error": null,
+      "cursorCodeUnits": 5,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": "﻿{ab}z",
+      "noneOK": true,
+      "codePoint": 65279,
+      "value": "ab",
+      "error": null,
+      "cursorCodeUnits": 5,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": "﻿🙂z",
+      "noneOK": false,
+      "codePoint": 65279,
+      "value": "🙂",
+      "error": null,
+      "cursorCodeUnits": 3,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": "﻿🙂z",
+      "noneOK": true,
+      "codePoint": 65279,
+      "value": "🙂",
+      "error": null,
+      "cursorCodeUnits": 3,
+      "cursorBytes": 7,
+      "remaining": "z"
+    },
+    {
+      "source": "﻿\\alpha z",
+      "noneOK": false,
+      "codePoint": 65279,
+      "value": "\\alpha",
+      "error": null,
+      "cursorCodeUnits": 8,
+      "cursorBytes": 10,
+      "remaining": "z"
+    },
+    {
+      "source": "﻿\\alpha z",
+      "noneOK": true,
+      "codePoint": 65279,
+      "value": "\\alpha",
+      "error": null,
+      "cursorCodeUnits": 8,
+      "cursorBytes": 10,
+      "remaining": "z"
+    },
+    {
+      "source": "﻿}z",
+      "noneOK": false,
+      "codePoint": 65279,
+      "value": null,
+      "error": {
+        "id": "ExtraCloseMissingOpen",
+        "message": "Extra close brace or missing open brace"
+      },
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": "}z"
+    },
+    {
+      "source": "﻿}z",
+      "noneOK": true,
+      "codePoint": 65279,
+      "value": null,
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": "}z"
+    },
+    {
+      "source": "﻿",
+      "noneOK": false,
+      "codePoint": 65279,
+      "value": null,
+      "error": {
+        "id": "MissingArgFor",
+        "message": "Missing argument for \\sample"
+      },
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": "﻿",
+      "noneOK": true,
+      "codePoint": 65279,
+      "value": null,
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": "​{ab}z",
+      "noneOK": false,
+      "codePoint": 8203,
+      "value": "​",
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": "{ab}z"
+    },
+    {
+      "source": "​{ab}z",
+      "noneOK": true,
+      "codePoint": 8203,
+      "value": "​",
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": "{ab}z"
+    },
+    {
+      "source": "​🙂z",
+      "noneOK": false,
+      "codePoint": 8203,
+      "value": "​",
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": "🙂z"
+    },
+    {
+      "source": "​🙂z",
+      "noneOK": true,
+      "codePoint": 8203,
+      "value": "​",
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": "🙂z"
+    },
+    {
+      "source": "​\\alpha z",
+      "noneOK": false,
+      "codePoint": 8203,
+      "value": "​",
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": "\\alpha z"
+    },
+    {
+      "source": "​\\alpha z",
+      "noneOK": true,
+      "codePoint": 8203,
+      "value": "​",
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": "\\alpha z"
+    },
+    {
+      "source": "​}z",
+      "noneOK": false,
+      "codePoint": 8203,
+      "value": "​",
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": "}z"
+    },
+    {
+      "source": "​}z",
+      "noneOK": true,
+      "codePoint": 8203,
+      "value": "​",
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": "}z"
+    },
+    {
+      "source": "​",
+      "noneOK": false,
+      "codePoint": 8203,
+      "value": "​",
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": "​",
+      "noneOK": true,
+      "codePoint": 8203,
+      "value": "​",
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": "᠎{ab}z",
+      "noneOK": false,
+      "codePoint": 6158,
+      "value": "᠎",
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": "{ab}z"
+    },
+    {
+      "source": "᠎{ab}z",
+      "noneOK": true,
+      "codePoint": 6158,
+      "value": "᠎",
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": "{ab}z"
+    },
+    {
+      "source": "᠎🙂z",
+      "noneOK": false,
+      "codePoint": 6158,
+      "value": "᠎",
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": "🙂z"
+    },
+    {
+      "source": "᠎🙂z",
+      "noneOK": true,
+      "codePoint": 6158,
+      "value": "᠎",
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": "🙂z"
+    },
+    {
+      "source": "᠎\\alpha z",
+      "noneOK": false,
+      "codePoint": 6158,
+      "value": "᠎",
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": "\\alpha z"
+    },
+    {
+      "source": "᠎\\alpha z",
+      "noneOK": true,
+      "codePoint": 6158,
+      "value": "᠎",
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": "\\alpha z"
+    },
+    {
+      "source": "᠎}z",
+      "noneOK": false,
+      "codePoint": 6158,
+      "value": "᠎",
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": "}z"
+    },
+    {
+      "source": "᠎}z",
+      "noneOK": true,
+      "codePoint": 6158,
+      "value": "᠎",
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": "}z"
+    },
+    {
+      "source": "᠎",
+      "noneOK": false,
+      "codePoint": 6158,
+      "value": "᠎",
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": "᠎",
+      "noneOK": true,
+      "codePoint": 6158,
+      "value": "᠎",
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": "⁠{ab}z",
+      "noneOK": false,
+      "codePoint": 8288,
+      "value": "⁠",
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": "{ab}z"
+    },
+    {
+      "source": "⁠{ab}z",
+      "noneOK": true,
+      "codePoint": 8288,
+      "value": "⁠",
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": "{ab}z"
+    },
+    {
+      "source": "⁠🙂z",
+      "noneOK": false,
+      "codePoint": 8288,
+      "value": "⁠",
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": "🙂z"
+    },
+    {
+      "source": "⁠🙂z",
+      "noneOK": true,
+      "codePoint": 8288,
+      "value": "⁠",
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": "🙂z"
+    },
+    {
+      "source": "⁠\\alpha z",
+      "noneOK": false,
+      "codePoint": 8288,
+      "value": "⁠",
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": "\\alpha z"
+    },
+    {
+      "source": "⁠\\alpha z",
+      "noneOK": true,
+      "codePoint": 8288,
+      "value": "⁠",
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": "\\alpha z"
+    },
+    {
+      "source": "⁠}z",
+      "noneOK": false,
+      "codePoint": 8288,
+      "value": "⁠",
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": "}z"
+    },
+    {
+      "source": "⁠}z",
+      "noneOK": true,
+      "codePoint": 8288,
+      "value": "⁠",
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": "}z"
+    },
+    {
+      "source": "⁠",
+      "noneOK": false,
+      "codePoint": 8288,
+      "value": "⁠",
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": "⁠",
+      "noneOK": true,
+      "codePoint": 8288,
+      "value": "⁠",
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": "﻿{a}",
+      "noneOK": false,
+      "value": "",
+      "error": null,
+      "cursorCodeUnits": 2,
+      "cursorBytes": 5,
+      "remaining": "{a}"
+    },
+    {
+      "source": "﻿{a}",
+      "noneOK": true,
+      "value": "",
+      "error": null,
+      "cursorCodeUnits": 2,
+      "cursorBytes": 5,
+      "remaining": "{a}"
+    },
+    {
+      "source": "﻿{a}",
+      "noneOK": false,
+      "value": "",
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 2,
+      "remaining": "﻿{a}"
+    },
+    {
+      "source": "﻿{a}",
+      "noneOK": true,
+      "value": "",
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 2,
+      "remaining": "﻿{a}"
+    },
+    {
+      "source": "%comment\n{a}",
+      "noneOK": false,
+      "value": "%",
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 1,
+      "remaining": "comment\n{a}"
+    },
+    {
+      "source": "%comment\n{a}",
+      "noneOK": true,
+      "value": "%",
+      "error": null,
+      "cursorCodeUnits": 1,
+      "cursorBytes": 1,
+      "remaining": "comment\n{a}"
+    },
+    {
+      "source": "{a﻿b}",
+      "noneOK": false,
+      "value": "a﻿b",
+      "error": null,
+      "cursorCodeUnits": 5,
+      "cursorBytes": 7,
+      "remaining": ""
+    },
+    {
+      "source": "{a﻿b}",
+      "noneOK": true,
+      "value": "a﻿b",
+      "error": null,
+      "cursorCodeUnits": 5,
+      "cursorBytes": 7,
+      "remaining": ""
+    },
+    {
+      "source": "{ab}",
+      "noneOK": false,
+      "value": "ab",
+      "error": null,
+      "cursorCodeUnits": 5,
+      "cursorBytes": 6,
+      "remaining": ""
+    },
+    {
+      "source": "{ab}",
+      "noneOK": true,
+      "value": "ab",
+      "error": null,
+      "cursorCodeUnits": 5,
+      "cursorBytes": 6,
+      "remaining": ""
+    },
+    {
+      "source": "\\",
+      "noneOK": false,
+      "value": "\\ ",
+      "error": null,
+      "cursorCodeUnits": 2,
+      "cursorBytes": 1,
+      "remaining": ""
+    },
+    {
+      "source": "\\",
+      "noneOK": true,
+      "value": "\\ ",
+      "error": null,
+      "cursorCodeUnits": 2,
+      "cursorBytes": 1,
+      "remaining": ""
+    },
+    {
+      "source": "\\ ",
+      "noneOK": false,
+      "value": "\\ ",
+      "error": null,
+      "cursorCodeUnits": 2,
+      "cursorBytes": 4,
+      "remaining": ""
+    },
+    {
+      "source": "\\ ",
+      "noneOK": true,
+      "value": "\\ ",
+      "error": null,
+      "cursorCodeUnits": 2,
+      "cursorBytes": 4,
+      "remaining": ""
+    },
+    {
+      "source": "\\\r",
+      "noneOK": false,
+      "value": "\\ ",
+      "error": null,
+      "cursorCodeUnits": 2,
+      "cursorBytes": 2,
+      "remaining": ""
+    },
+    {
+      "source": "\\\r",
+      "noneOK": true,
+      "value": "\\ ",
+      "error": null,
+      "cursorCodeUnits": 2,
+      "cursorBytes": 2,
+      "remaining": ""
+    },
+    {
+      "source": "\\\n",
+      "noneOK": false,
+      "value": "\\ ",
+      "error": null,
+      "cursorCodeUnits": 2,
+      "cursorBytes": 2,
+      "remaining": ""
+    },
+    {
+      "source": "\\\n",
+      "noneOK": true,
+      "value": "\\ ",
+      "error": null,
+      "cursorCodeUnits": 2,
+      "cursorBytes": 2,
+      "remaining": ""
+    }
+  ]
+}
