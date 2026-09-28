@@ -114,16 +114,35 @@ var operatorSymbols = map[string]symbolDef{
 	"colon": op(":", mml.TeXClassPunct),
 }
 
-var functionNames = map[string]string{
-	"arccos": "arccos", "arcsin": "arcsin", "arctan": "arctan", "arg": "arg",
-	"cos": "cos", "cosh": "cosh", "cot": "cot", "coth": "coth", "csc": "csc",
-	"deg": "deg", "det": "det", "dim": "dim", "exp": "exp", "gcd": "gcd",
-	"hom": "hom", "inf": "inf", "ker": "ker", "lg": "lg", "lim": "lim",
-	"liminf": "lim inf", "limsup": "lim sup", "ln": "ln", "log": "log",
-	"max": "max", "min": "min", "Pr": "Pr", "sec": "sec", "sin": "sin",
-	"sinh": "sinh", "sup": "sup", "tan": "tan", "tanh": "tanh",
-	"injlim": "inj lim", "projlim": "proj lim", "varliminf": "lim inf", "varlimsup": "lim sup",
-}
+var functionNames = func() map[string]string {
+	names := map[string]string{
+		"arccos": "arccos", "arcsin": "arcsin", "arctan": "arctan", "arg": "arg",
+		"cos": "cos", "cosh": "cosh", "cot": "cot", "coth": "coth", "csc": "csc",
+		"deg": "deg", "det": "det", "dim": "dim", "exp": "exp", "gcd": "gcd",
+		"hom": "hom", "inf": "inf", "ker": "ker", "lg": "lg", "lim": "lim",
+		"liminf": "lim inf", "limsup": "lim sup", "ln": "ln", "log": "log",
+		"max": "max", "min": "min", "Pr": "Pr", "sec": "sec", "sin": "sin",
+		"sinh": "sinh", "sup": "sup", "tan": "tan", "tanh": "tanh",
+		"injlim": "inj lim", "projlim": "proj lim", "varliminf": "lim inf", "varlimsup": "lim sup",
+	}
+	// Physics' long spellings use BaseMethods.NamedFn with an explicit id.
+	// They do not use Expression's optional exponent or automatic fences.
+	for _, sourceMap := range mjSourcePhysicsMaps {
+		if sourceMap.Kind != mjSourceCommandMap || sourceMap.Name != "Physics-expressions-macros" {
+			continue
+		}
+		for _, entry := range sourceMap.Entries {
+			handler, args, ok := sourceHandler(entry.Value)
+			if !ok || handler != "NamedFn" || len(args) != 1 {
+				continue
+			}
+			if id, ok := args[0].(string); ok {
+				names[entry.Name] = id
+			}
+		}
+	}
+	return names
+}()
 
 var simpleMacros = map[string]string{
 	"mathstrut": "\\vphantom{(}",
