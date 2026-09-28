@@ -1,6 +1,6 @@
 {
   "mathjaxGitCommit": "ad8f5c21cb810236551da8c6512ba733e67357ee",
-  "baselineGitCommit": "cdb9a591483e6ed813956a3ac6312b732559ab47",
+  "baselineGitCommit": "d8ce2ffc052369e564bdd26b41987bb0ad4ac229",
   "cases": [
     {
       "name": "expanded_flalign_1_inline",

@@ -23,8 +23,8 @@ Primary source is MathJax 3.2.2 commit
 - [MultlinedItem inheritance and finalization](https://github.com/mathjax/MathJax-src/blob/ad8f5c21cb810236551da8c6512ba733e67357ee/ts/input/tex/mathtools/MathtoolsItems.ts)
 
 `array_rows_mathjax_3_2_2.json` contains **2,197 complete original SVGs**:
-1,981 valid representations and 216 original error SVGs. The main127 baseline
-`cdb9a591483e6ed813956a3ac6312b732559ab47` fails 687 of these references,
+1,981 valid representations and 216 original error SVGs. The main129 baseline
+`d8ce2ffc052369e564bdd26b41987bb0ad4ac229` fails 687 of these references,
 including eight valid inputs that panic. The other 1,510 are unchanged controls.
 `TestEmptyAlignedRowsDoNotPanic` directly exercises all eight formerly
 crashing Render calls and display-mode Measure calls, and checks the authored
