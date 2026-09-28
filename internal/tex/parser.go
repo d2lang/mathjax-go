@@ -381,7 +381,7 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 			p.skipComment()
 			continue
 		}
-		if unicode.IsSpace(p.peekRune()) {
+		if isMathTokenSpace(p.peekRune()) {
 			p.consumeRune()
 			continue
 		}
@@ -791,7 +791,13 @@ func (p *parser) parseCharacterChecked() (*mml.Node, error) {
 		p.consumeRune()
 		return nil, fmt.Errorf("identifier pattern does not match %q", string(r))
 	}
-	return p.parseCharacter(), nil
+	n := p.parseCharacter()
+	if n == nil {
+		// Other dereferences its Unicode range in the original. Preserve
+		// that conversion failure without a panic or forbidden XML text.
+		return nil, fmt.Errorf("no Unicode range for character U+%04X", r)
+	}
+	return n, nil
 }
 
 func (p *parser) parseCharacter() *mml.Node {
@@ -879,13 +885,37 @@ func (p *parser) parseCharacter() *mml.Node {
 	} else if r == '`' {
 		text = "‘"
 	}
-	mo := ambientLiteralToken(p.token("mo", text), r)
-	// BaseConfiguration.Other records raw operators for the fixStretchy
-	// postfilter.  addNode() leaves the observable in-lists marker even after
-	// the temporary fixStretchy property is removed.
-	mo.SetProperty("fixStretchy", true)
-	mo.SetProperty("in-lists", "fixStretchy")
-	return mo
+	// BaseConfiguration.Other selects the token kind from the same pinned
+	// range that supplies its variant. Earlier explicit character maps and
+	// letter/digit scanners keep their distinct construction paths.
+	kind := ""
+	for _, interval := range mjOperatorRanges {
+		if int(r) < interval.First {
+			break
+		}
+		if int(r) <= interval.Last {
+			kind = interval.Kind
+			break
+		}
+	}
+	if kind == "" {
+		return nil // The checked token boundary reports the source failure.
+	}
+	other := p.token(kind, text)
+	if p.activeFont != "" {
+		other.Attributes.Set("mathvariant", p.activeFont)
+	}
+	// Other's creation font applies to every kind, including mtext; its
+	// range override follows the creating token factory.
+	p.applyVectorFactory(other)
+	other = ambientLiteralToken(other, r)
+	if kind == "mo" {
+		// Other records only operators for the fixStretchy postfilter.
+		// addNode() leaves in-lists after the temporary property is removed.
+		other.SetProperty("fixStretchy", true)
+		other.SetProperty("in-lists", "fixStretchy")
+	}
+	return other
 }
 
 func (p *parser) attachScript(nodes []*mml.Node, marker byte) ([]*mml.Node, error) {
@@ -953,7 +983,7 @@ func (p *parser) parseOneTokenEvent() (result commandResult, err error) {
 			}
 		}
 	}()
-	p.skipSpaces()
+	p.skipMathTokenSpaces()
 	if p.pos >= len(p.source) {
 		return result, texError("MissingArgFor", "Missing argument")
 	}

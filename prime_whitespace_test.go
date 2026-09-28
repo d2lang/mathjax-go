@@ -58,12 +58,51 @@ func TestPrimeWhitespacePinnedReferences(t *testing.T) {
 	if fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || len(fixture.Cases) != 136 || bounds.Baseline != "c499d398cdfa3a34b0dae88dd0dd9c205c261ee2" || len(bounds.InheritedPrimeMetadata) != 124 || len(bounds.UnchangedNonPrime) != 4 {
 		t.Fatal("unbound whitespace references")
 	}
+	var historical struct {
+		MathjaxGitCommit string
+		Cases            []struct {
+			Name, TeX string
+			Display   bool
+			Original  struct{ SVG, Error string }
+		}
+	}
+	data, err := os.ReadFile("testdata/math_token_historical_boundaries.json")
+	if err != nil {
+		t.Fatal(err)
+	}
+	if err := json.Unmarshal(data, &historical); err != nil {
+		t.Fatal(err)
+	}
+	if historical.MathjaxGitCommit != fixture.MathjaxGitCommit || len(historical.Cases) != 12 {
+		t.Fatal("unbound historical whitespace originals")
+	}
+
 	rawSVG, runtimeErrors := 0, 0
 	for _, c := range fixture.Cases {
 		t.Run(c.Name, func(t *testing.T) {
 			o := mathjax.DefaultOptions()
 			o.Display = c.Display
 			svg, err := mathjax.RenderWithOptions(c.TeX, o)
+			if c.RuntimeError != "" {
+				runtimeErrors++
+				if c.RuntimeError != "TypeError: Cannot read properties of null (reading '4')" || c.SVGSHA256 != "" || c.PropertiesTree != nil {
+					t.Fatal("changed primary crash boundary")
+				}
+				bound := false
+				for _, h := range historical.Cases {
+					if h.Name == "prime-"+c.Name {
+						bound = h.TeX == c.TeX && h.Display == c.Display && h.Original.SVG == "" && strings.Split(h.Original.Error, "\n")[0] == c.RuntimeError
+					}
+				}
+				if !bound || err == nil || svg != "" || err.Error() != "no Unicode range for character U+0085" {
+					t.Fatalf("original NEL runtime failure must remain a bounded error: %q, %v", svg, err)
+				}
+				again, repeated := mathjax.RenderWithOptions(c.TeX, o)
+				if repeated == nil || again != "" || repeated.Error() != err.Error() {
+					t.Fatal("unstable bounded runtime failure")
+				}
+				return
+			}
 			if err != nil {
 				t.Fatal(err)
 			}
@@ -72,61 +111,33 @@ func TestPrimeWhitespacePinnedReferences(t *testing.T) {
 				t.Fatal("unstable repeated render")
 			}
 			wantSVG, wantTree := c.SVGSHA256, c.PropertiesTree
-			boundary, unchanged := bounds.UnchangedNonPrime[c.Name]
-			if c.RuntimeError != "" {
-				runtimeErrors++
-				if c.RuntimeError != "TypeError: Cannot read properties of null (reading '4')" || c.SVGSHA256 != "" || c.PropertiesTree != nil {
-					t.Fatal("changed primary crash boundary")
+			if c.Name == "bom-no-prime-inline" || c.Name == "bom-no-prime-display" {
+				bound := false
+				for _, h := range historical.Cases {
+					if h.Name == "prime-"+c.Name {
+						bound = h.TeX == c.TeX && h.Display == c.Display && h.Original.Error == "" && h.Original.SVG == svg
+					}
 				}
-				// The primary supplies no output oracle for NEL. Its method-level
-				// cursor policy is tested separately; do not reproduce its crash.
-				if !unchanged {
-					return
+				if !bound {
+					t.Fatal("complete original BOM SVG differs")
 				}
 			}
-			if unchanged {
-				wantSVG, wantTree = boundary.SVGSHA256, boundary.Tree
-				if c.Name == "bom-no-prime-inline" || c.Name == "bom-no-prime-display" {
-					// The old lexical mismatch remains: original treats BOM as mi,
-					// while Go constructs a fallback mo. cleanStretchy now adds the
-					// required ORD wrapper to that mo. Permit only this wrapper;
-					// all old glyphs, positions and dimensions remain byte-bound.
-					if c.TeX != "x\ufeff y" {
-						t.Fatal("changed BOM boundary input")
+			rawSVG++
+			// Preserve historical metadata receipts while requiring the complete
+			// original inherited properties, including the promoted BOM mi.
+			for _, q := range bounds.InheritedPrimeMetadata[c.Name] {
+				n := wantTree
+				for _, i := range q.Path {
+					if n == nil || i < 0 || i >= len(n.Children) {
+						t.Fatal("missing prime path")
 					}
-					old := wantTree.Children[0].Children[1]
-					if old.Kind != "mo" || len(old.Children) != 1 || old.Children[0].Text == nil || *old.Children[0].Text != "\ufeff" {
-						t.Fatal("changed BOM boundary token")
-					}
-					wantTree.Children[0].Children[1] = &primeWhitespaceTree{
-						Kind: "TeXAtom", Attributes: map[string]any{}, Properties: map[string]any{"texClass": float64(0)},
-						Children: []*primeWhitespaceTree{{Kind: "inferredMrow", Attributes: map[string]any{}, Properties: map[string]any{}, Children: []*primeWhitespaceTree{old}}},
-					}
-					const wrapper = `<g data-mml-node="TeXAtom" data-mjx-texclass="ORD" transform="translate(572,0)"><g data-mml-node="mo"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">` + "\ufeff" + `</text></g></g>`
-					const token = `<g data-mml-node="mo" transform="translate(572,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">` + "\ufeff" + `</text></g>`
-					if strings.Count(svg, wrapper) != 1 {
-						t.Fatal("BOM difference extends beyond its ORD wrapper")
-					}
-					svg = strings.Replace(svg, wrapper, token, 1)
+					n = n.Children[i]
 				}
-			} else {
-				rawSVG++
-				// Preserve the historical receipts while requiring the complete
-				// original inherited properties at those same paths.
-				for _, q := range bounds.InheritedPrimeMetadata[c.Name] {
-					n := wantTree
-					for _, i := range q.Path {
-						if n == nil || i < 0 || i >= len(n.Children) {
-							t.Fatal("missing prime path")
-						}
-						n = n.Children[i]
-					}
-					if n == nil || n.Kind != "mo" || !reflect.DeepEqual(n.Properties, q.Properties) || len(q.Properties) != 2 || q.Properties["variantForm"] != true {
-						t.Fatal("changed inherited prime properties")
-					}
-					if _, ok := q.Properties["pseudoscript"].(bool); !ok {
-						t.Fatal("invalid inherited pseudoscript")
-					}
+				if n == nil || n.Kind != "mo" || !reflect.DeepEqual(n.Properties, q.Properties) || len(q.Properties) != 2 || q.Properties["variantForm"] != true {
+					t.Fatal("changed inherited prime properties")
+				}
+				if _, ok := q.Properties["pseudoscript"].(bool); !ok {
+					t.Fatal("invalid inherited pseudoscript")
 				}
 			}
 			if got := fmt.Sprintf("%x", sha256.Sum256([]byte(svg))); got != wantSVG {
@@ -147,7 +158,7 @@ func TestPrimeWhitespacePinnedReferences(t *testing.T) {
 			if !reflect.DeepEqual(got, wantTree) {
 				t.Error("complete explicit and own-property tree differs")
 			}
-			if c.Display && !unchanged {
+			if c.Display {
 				w, h, err := mathjax.Measure(c.TeX)
 				if err != nil || w != c.Width || h != c.Height {
 					t.Errorf("measurement %dx%d %v; want %dx%d", w, h, err, c.Width, c.Height)
@@ -155,7 +166,7 @@ func TestPrimeWhitespacePinnedReferences(t *testing.T) {
 			}
 		})
 	}
-	if rawSVG != 128 || runtimeErrors != 6 {
+	if rawSVG != 130 || runtimeErrors != 6 {
 		t.Fatal("changed output/error coverage")
 	}
 }
