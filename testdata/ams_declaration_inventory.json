@@ -1,0 +1,13 @@
+{
+  "baseline": "c2c3f8d2dd510269e8d2827f288e965dd09ded3f",
+  "counts": {
+    "first-published-input": 1124
+  },
+  "inputs": 1124,
+  "scannedFiles": 409,
+  "originalMismatches": [],
+  "ambiguousOnly": 0,
+  "strictFirstPublication": 1104,
+  "safeXMLFirstPublication": 4,
+  "rawUnassertedFirstPublication": 16
+}
