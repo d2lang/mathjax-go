@@ -27,8 +27,8 @@ func TestDerivativeConstructionPublicReferences(t *testing.T) {
 	if fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || len(fixture.Cases) != 88 {
 		t.Fatal("unbound derivative construction references")
 	}
-	// Preserve these original outputs as explicit boundaries. They are not
-	// passing reference assertions and have no alternative Go goldens.
+	// These historical diagnostics now assert the untouched original SVGs.
+	// Keep their original labels to preserve the provenance of the corpus.
 	diagnostics := map[string]string{
 		"differential-inline":  "unchanged Differential caller",
 		"differential-display": "unchanged Differential caller",
@@ -44,7 +44,6 @@ func TestDerivativeConstructionPublicReferences(t *testing.T) {
 		seen[c.Name] = true
 		if c.Diagnostic != "" {
 			retained++
-			continue
 		}
 		asserted++
 		t.Run(c.Name, func(t *testing.T) {
@@ -59,7 +58,7 @@ func TestDerivativeConstructionPublicReferences(t *testing.T) {
 			}
 		})
 	}
-	if asserted != 84 || retained != len(diagnostics) {
+	if asserted != 88 || retained != len(diagnostics) {
 		t.Fatal("derivative reference scope changed", asserted, retained)
 	}
 }

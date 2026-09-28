@@ -95,7 +95,10 @@ func (a *derivativeAutoOpen) completeAfter(p *parser, before func()) ([]*mml.Nod
 	children := []*mml.Node{p.autoOpenFence("(", mml.TeXClassOpen)}
 	children = append(children, content...)
 	children = append(children, p.autoOpenFence(")", mml.TeXClassClose))
-	return []*mml.Node{forcedRow(children, false)}, nil
+	// Removing the texClass property retains the class assigned by fenced.
+	result := forcedRow(children, false)
+	result.TeXClass = mml.TeXClassInner
+	return []*mml.Node{result}, nil
 }
 
 func autoOpenFence(text string, class mml.TeXClass) *mml.Node {
