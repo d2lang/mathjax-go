@@ -361,6 +361,8 @@ func (p *parser) commandNodes(name string, after **derivativeAutoOpen) ([]*mml.N
 		return p.braket(name)
 	case "qty", "quantity", "pqty", "bqty", "vqty", "absolutevalue", "abs", "norm", "evaluated", "eval", "order":
 		return p.quantity(name)
+	case "Bqty":
+		return p.braceQuantity(name)
 	case "dd", "differential", "variation", "var", "dv", "derivative", "pdv", "pderivative", "partialderivative", "fdv", "fderivative", "functionalderivative":
 		return p.derivative(name, after)
 	case "diffd":
