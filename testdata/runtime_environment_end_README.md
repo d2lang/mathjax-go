@@ -50,3 +50,12 @@ The strict, raw, old-panic, cleanup, and direct-method original files regenerate
 The source-focused cleanup and spread-selection tests, all 670 complete SVG tests, and all 54 bounded runtime checks passed on main170. All 802 complete original/baseline/candidate objects are unchanged from the earlier main169 comparison. The independent 124-input phase/output repeats also passed. The initial complete source/fixture patch rebased onto main170 without conflict or content change. The first full gate then exposed three direct NumCases test callers missing the active Begin owner and a transposed source diagnostic identifier. The tests now supply the original owner context while preserving all prior body, exact-shape, cursor, and copy-registration assertions. Production now uses the exact `MissingBeginExtraEnd` identifier. Independent original captures verify zero counter increment for the built-in extra end at counts 0 and 1000 and the Cases opening/closing ownership. The original full failure and those primary observations remain preserved.
 
 The final source checkpoint `621a31b10748f5161cfbdac50249e23f3fe41d22` passed the complete frozen-oracle suite, race, vet, and WASM build sequentially. Oracle execution used the pinned assets, full mode, and an absolute Node runtime with `--jitless`. All 802 public outcomes are unchanged after the diagnostic correction; all five original/proof fixture files retain their byte-identical regeneration hashes. `runtime_environment_end_inventory.json` binds the exact source, binary, comparison, serialized-output qualifications, initial failure, and final gate receipts.
+
+## D2 visual checks
+
+The two shared-scale comparisons in `parity/runtime-environment-ends` and
+`parity/runtime-braket-pop` show corrected nested matrix spacing and a formerly
+rejected environment-end/Braket expression. Each includes before, fixed, and
+original MathJax SVGs and Chromium screenshots. Both fixed D2 SVGs equal their
+original references byte-for-byte, and the same candidate D2 binary reproduces
+all 79 committed D2 witnesses exactly. Both screenshots were visually inspected.
