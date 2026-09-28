@@ -52,7 +52,9 @@ func (w *wrapper) renderTableRow(parent *Element, table *tableLayout, index int,
 	columnLines = append(columnLines, table.columnLines...)
 	columnLines = append(columnLines, table.frameLine)
 
-	x := columnLines[0] * scale
+	// SVGmtr.placeCells scales each cell's dimensions and line arguments,
+	// but its initial frame offset is the unscaled parent fLine.
+	x := columnLines[0]
 	for column, cell := range tableRowCells(w) {
 		if column >= len(table.computed) {
 			break
