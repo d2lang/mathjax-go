@@ -718,6 +718,11 @@ func (w *wrapper) handleAttributes(element *Element) {
 		case "fontfamily", "fontsize", "fontweight", "fontstyle", "color", "background",
 			"class", "href", "style", "xmlns":
 			continue
+		// The source defaults and skip map also inherit Object.prototype.
+		case "constructor", "__defineGetter__", "__defineSetter__", "hasOwnProperty",
+			"__lookupGetter__", "__lookupSetter__", "isPrototypeOf", "propertyIsEnumerable",
+			"toString", "valueOf", "__proto__", "toLocaleString":
+			continue
 		}
 		if hasElementAttribute(element, name) {
 			continue
