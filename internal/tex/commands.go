@@ -2015,58 +2015,7 @@ func unwrapInferred(n *mml.Node) []*mml.Node {
 
 func (p *parser) derivative(name string, after **derivativeAutoOpen) ([]*mml.Node, error) {
 	if name == "dd" || name == "differential" || name == "variation" || name == "var" {
-		power, hasPower, err := p.readBrackets(nil)
-		if err != nil {
-			return nil, err
-		}
-		diffText := map[bool]string{true: "δ", false: "d"}[name == "variation" || name == "var"]
-		diff := physicsDifferential(diffText)
-		if hasPower {
-			exponent, err := p.parseString(power)
-			if err != nil {
-				return nil, err
-			}
-			diff = node("msup", diff, exponent)
-		}
-		p.skipSpaces()
-		if p.pos < len(p.source) && p.source[p.pos] == '(' {
-			p.pos++
-			raw, err := p.readUpToByte(')')
-			if err != nil {
-				return nil, err
-			}
-			arg, err := p.parseContinuationString(raw)
-			if err != nil {
-				return nil, err
-			}
-			parens := p.fenced("(", arg, ")", true)
-			// Physics' AutoOpen item reduces to an INNER row through TeX-class
-			// processing, without materializing a texClass node property.
-			parens.TeXClass = mml.TeXClassInner
-			return []*mml.Node{diff, parens}, nil
-		}
-		raw, braced, err := p.readArgument(name, true)
-		if err != nil {
-			return nil, err
-		}
-		if raw == "" {
-			return []*mml.Node{diff}, nil
-		}
-		arg, err := p.parseString(raw)
-		if err != nil {
-			return nil, err
-		}
-		// Differential builds one temporary TeX parser over op+argument.  Its
-		// top-level inferred row therefore contains the argument's children
-		// directly; keeping the nested inferred row adds an extra atom/spacing
-		// layer (most visibly for \var{...}).
-		combinedNodes := []*mml.Node{diff}
-		combinedNodes = append(combinedNodes, unwrapInferred(arg)...)
-		combined := row(combinedNodes, true)
-		if braced {
-			return []*mml.Node{texAtom(combined, mml.TeXClassOp)}, nil
-		}
-		return []*mml.Node{combined}, nil
+		return p.differential(name, after)
 	}
 	star := p.readStar()
 	order, hasOrder, err := p.readBrackets(nil)

@@ -179,9 +179,9 @@ func TestDerivativeAutoOpenPinnedOutputs(t *testing.T) {
 			if c.PrimaryError != nil {
 				wantErr = &Error{ID: c.PrimaryError.ID, Message: c.PrimaryError.Message}
 			}
-			if c.Classification == "unchanged-excluded-caller" {
-				wantSVG, wantTree, wantErr = c.AcceptedSVG, c.AcceptedTree, c.AcceptedError
-			} else if c.Classification != "whole-primary-target-or-control" {
+			// The two historical Differential exclusions now assert their
+			// untouched primary results after the construction correction.
+			if c.Classification != "unchanged-excluded-caller" && c.Classification != "whole-primary-target-or-control" {
 				t.Fatal("unknown scope")
 			}
 			root, _, actualErr, e := autoOpenCompile(c)

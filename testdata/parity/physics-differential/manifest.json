@@ -1,0 +1,24 @@
+{
+  "d2Commit": "01bc7ecdbdd04c13d6fe5df1967d2d9aa14ae579",
+  "beforeMathjaxCommit": "bfc9bc01fe498fda63402dc8633ee6f8e999b7e8",
+  "afterCodeCommit": "687c138e279f5aaa2624899cb9f10da4d29fced5",
+  "tex": "\\DeclareMathOperator{\\diffd}{D}\\dd{x}\\qquad\\dd[2]{_x}f(x)",
+  "files": {
+    "README.md": "294836a9c6249a707a0610df7a015b34023e029d99d6c7d2148db98d30d95073",
+    "after.png": "ae79a25a9ecae027f040713a5587c6807651c708c4d72e976da0baf4e476ba11",
+    "after.svg": "66a9eaafe14c0c517e9d3c49acbb33dbe2fe3c90c0417a7413cfe3409cf98581",
+    "before.png": "663088d9550d7fbbe5244a367875f69c27da35b0e6cb0a83d9c8afc7a41649fd",
+    "before.svg": "716f04e7b0dfb560bf807713e8efbde3a883cd40142e2e5a02b107a92adfb1a5",
+    "comparison.png": "d49c982be69b0602a5a494c4bd4193d1ee504a5c0d1971ae96701e13206884ae",
+    "oracle-adapter/go.mod": "b8a3ff80b4e63b08c12ed3bcbefcdaebec039551cf00b99b08c6ba6dec5abfc5",
+    "oracle-adapter/mathjax.go": "1ed1fbe813faf433d307b2b5c8e332fd22854999a22487e11396c6a6df3b38ed",
+    "original.png": "ae79a25a9ecae027f040713a5587c6807651c708c4d72e976da0baf4e476ba11",
+    "original.svg": "66a9eaafe14c0c517e9d3c49acbb33dbe2fe3c90c0417a7413cfe3409cf98581",
+    "witness.d2": "385937cc6b20e997a1ace311d1ba9cb81b029a55dd6e9e495f2be1ebc8a1d0a0"
+  },
+  "oracleAssets": {
+    "mathjax.js": "cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869",
+    "polyfills.js": "7fe1d048c78b0e09854c1259f7413868a51cc8f0c822489eb1ac36ae6c85ce01",
+    "setup.js": "a52cb0bbabfbd7796b9fedd793b9386c474e3123e788ee151cbe47ca1fa6e881"
+  }
+}

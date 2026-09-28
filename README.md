@@ -453,7 +453,7 @@ Four public `\qty` references compare whole primary SVGs in both modes, and two 
 
 The eight derivative aliases reparse the primary Physics fraction expansion. Optional orders attach after the raw denominator variable; mixed partials count their variables and ignore the optional order. Starred forms use the registered `\flatfrac` command. Generated children share configuration but copy the font environment and keep independent expansion counters at genuine parser boundaries. Registered fraction results are delivered before trailing AutoOpen processing, including empty and multiple-node results.
 
-The finite public corpus preserves 88 original references: 84 complete SVG assertions cover ordinary and starred derivatives, aliases, variable grouping, orders, fonts, errors and following parentheses. Four Differential/variation examples remain unchanged caller diagnostics; none is counted as a passing primary match. The existing AutoOpen fixture now checks 101 primary SVG/ordered-tree cases and two historical Differential controls, while its three prime-property diagnostics remain separate. Seven registered-result cases, empty-result pending-prime rejection, and two independent/shared macro-budget cases guard the observed child and delivery contracts. This does not assert universal internal-tree equality or general pending-script delivery for multiple-node overrides.
+The finite public corpus preserves 88 original references: all 88 complete SVG assertions cover ordinary and starred derivatives, aliases, variable grouping, orders, fonts, errors and following parentheses, including the four former Differential/variation diagnostics. The existing AutoOpen fixture now checks 103 primary SVG/ordered-tree cases, including its two historical Differential controls, while its three prime-property diagnostics remain separate. Seven registered-result cases, empty-result pending-prime rejection, and two independent/shared macro-budget cases guard the observed child and delivery contracts. This does not assert universal internal-tree equality or general pending-script delivery for multiple-node overrides.
 
 ### Adjacent relations
 
@@ -501,3 +501,18 @@ Physics StarMacro aliases preserve their caller source and suffix, install the j
 The ordinary `\|` command follows Braket's U+2225 handler before delimiter-symbol lookup, while explicit delimiter readers retain their own U+2016 aliases. Braket and Set retain caller-local separator ownership, group, script and left/right barriers, Set's one-stretchy-separator limit, and single-item completion. Fixed `\set` separators do not advance the limit. The capital Bra/Ket commands retain the original registered macro expansions, and user-defined macros retain precedence. The SVG output preserves the original `braketbar` attribute.
 
 A finite 18-case inline/display corpus checks complete SVGs against D2's pinned MathJax 3.2.2: two retained ordinary-pipe outputs and sixteen newly captured Braket, Set, nesting, macro/Physics, literal-bar, explicit-delimiter and single-item controls. Twenty-one additional source-derived guards check caller argument consumption, owner masking/restoration, macro precedence, the retained ordinary token's compiled attributes, and single-item operator construction order. These tests do not claim general Braket or private-model conformance.
+
+### Physics differential construction
+
+`dd`, `differential`, `var` and `variation` parse their operator, optional power
+and raw operand together in the original child-parser scope. Registered
+`diffd`/`delta` operators are honored, leading operand scripts attach to that
+operator, and parenthesized operands use the existing deferred AutoOpen path.
+Empty braced operands retain the original operator wrapper.
+
+A fixed 72-case inline/display corpus compares complete original SVGs and 36
+display measurements across aliases, orders, scripts, declared operators, fonts,
+empty and unbraced operands, parentheses, and rendered errors. Six retained
+Differential references now assert their untouched primary results. Regenerate
+the new corpus with `node testdata/generate_differential_construction.cjs
+PINNED_ASSETS`.
