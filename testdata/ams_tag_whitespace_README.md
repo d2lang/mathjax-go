@@ -51,8 +51,13 @@ The source and fixtures were subsequently rebased onto actual main163
 and the strict 474-reference test passed. Both baseline and candidate outputs
 for all 496 saved inputs are byte-identical to their respective main162
 outputs, retaining 197 fixes and no regressions or changed residuals. The
-broader replay and provenance scan above remain explicitly main162 receipts.
-Full Go gates have not yet been run for this fixture package.
+provenance scan above remains explicitly a main162 receipt. The fresh main163
+broader replay checked 5,758 published inputs and 4,326 upstream inputs, again
+finding only the two already-exported tag fixes. Four cancel/cancelto
+serialization observations (including apparent fixes and regressions) were
+excluded after 512 repeated complete-XML comparisons established unchanged
+trees, also equal to the original. All raw strings remain preserved. Full Go
+gates have not yet been run for this fixture package.
 
 ## Regeneration
 
