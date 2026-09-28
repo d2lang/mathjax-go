@@ -57,9 +57,9 @@ func (p *parser) mathtoolsSmallMatrix(environment string) ([]*mml.Node, error) {
 		"rowspacing", tableRowSpacing(table),
 		"displaystyle", false,
 	)
-	applyColumnSpec(table, alignment)
 	table.SetProperty("useHeight", false)
 	table.SetProperty("scriptlevel", 1)
+	table = applyColumnSpec(table, alignment)
 	open, close := matrixDelimiters(environment)
 	if open != "" || close != "" {
 		table = p.leftRightFenced(open, table, close, true)

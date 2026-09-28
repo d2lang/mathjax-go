@@ -184,7 +184,7 @@ func (p *parser) beginEnvironment(name string) ([]*mml.Node, error) {
 			// BaseMethods.Array marks the primed S' style before inheritance.
 			table.Attributes.Set("data-cramped", true)
 		}
-		applyColumnSpec(table, columnSpec)
+		table = applyColumnSpec(table, columnSpec)
 		open, close := matrixDelimiters(environment)
 		if open != "" || close != "" {
 			table = p.leftRightFenced(open, table, close, true)
@@ -611,29 +611,78 @@ func (p *parser) completeArrayAlignment(alignment string) (string, error) {
 	return alignment, err
 }
 
-func applyColumnSpec(table *mml.Node, specification string) {
+func applyColumnSpec(table *mml.Node, specification string) *mml.Node {
 	var aligns []string
-	var lines []string
+	// BaseMethods.Array first filters the specification, with a leading c
+	// representing the left edge. Each letter followed by a run of rules is
+	// replaced by the last rule in that run; remaining letters are no-rule
+	// positions. Keeping these positions prevents MathML's final line style
+	// from repeating over later columns that have no authored separator.
+	syntax := []byte{'c'}
 	for _, char := range specification {
 		switch char {
 		case 'l':
 			aligns = append(aligns, "left")
+			syntax = append(syntax, 'l')
 		case 'c':
 			aligns = append(aligns, "center")
+			syntax = append(syntax, 'c')
 		case 'r':
 			aligns = append(aligns, "right")
-		case '|':
-			lines = append(lines, "solid")
-		case ':':
-			lines = append(lines, "dashed")
+			syntax = append(syntax, 'r')
+		case '|', ':':
+			syntax = append(syntax, byte(char))
 		}
 	}
 	// BaseMethods.Array always materializes its alignment, including the
 	// empty string. Omitting it would inherit an enclosing table's alignment.
 	table.Attributes.Set("columnalign", strings.Join(aligns, " "))
-	if len(lines) != 0 {
-		table.Attributes.Set("columnlines", strings.Join(lines, " "))
+	var positions []byte
+	isRule := func(char byte) bool { return char == '|' || char == ':' }
+	for i := 0; i < len(syntax); i++ {
+		char := syntax[i]
+		if !isRule(char) {
+			for i+1 < len(syntax) && isRule(syntax[i+1]) {
+				i++
+				char = syntax[i]
+			}
+		}
+		positions = append(positions, char)
 	}
+	if !strings.ContainsAny(string(positions), "|:") {
+		return table
+	}
+	var frame, lines []string
+	if isRule(positions[0]) {
+		frame = append(frame, "left")
+	}
+	if isRule(positions[len(positions)-1]) {
+		frame = append(frame, "right")
+	}
+	for i := 1; i < len(positions)-1; i++ {
+		line := "none"
+		if positions[i] == '|' {
+			line = "solid"
+		} else if positions[i] == ':' {
+			line = "dashed"
+		}
+		lines = append(lines, line)
+	}
+	columnLines := strings.Join(lines, " ")
+	table.Attributes.Set("columnlines", columnLines)
+	if len(frame) == 0 {
+		return table
+	}
+	// ArrayItem.createMml uses an empty mtable frame to retain its spacing,
+	// then draws partial edge frames through menclose. Dashed edge markers
+	// affect a complete four-sided frame only; partial frames use menclose's
+	// ordinary side notations even when their source marker is a colon.
+	table.Attributes.Set("frame", "")
+	enclosure := setAttributes(node("menclose", table), map[string]any{"notation": strings.Join(frame, " ")})
+	if columnLines != "" && columnLines != "none" {
+		enclosure.Attributes.Set("data-padding", 0)
+	}
+	return enclosure
 }
 
 func (p *parser) displayLines(name string) ([]*mml.Node, error) {
