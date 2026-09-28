@@ -557,7 +557,7 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 					return nil, "", closeErr
 				}
 			}
-			return nil, "", texError("Misplaced", "Misplaced alignment tab character &")
+			return nil, "", texError("Misplaced", "Misplaced &")
 		case '#':
 			return nil, "", texError("CantUseHash1", "You can't use 'macro parameter character #' in math mode")
 		default:
