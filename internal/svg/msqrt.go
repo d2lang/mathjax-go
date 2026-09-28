@@ -107,7 +107,11 @@ func (w *wrapper) computeRootBBox(bbox *layout.BBox) {
 		return
 	}
 	surd := w.children[surdIndex].getBBox()
-	base := w.children[baseIndex].outerBBox().Clone()
+	baseBox := w.children[baseIndex].outerBBox()
+	// CommonMsqrt constructs a new BBox from the radicand's dimensions.
+	// Unlike Clone, that constructor resets scale and spacing metadata before
+	// combining the base, so a local mathsize is not applied a second time.
+	base := layout.NewBBox(baseBox.W, baseBox.H, baseBox.D)
 	_, q := w.rootPQ(surd)
 	t := w.renderer.params.Rule
 	height := base.H + q + t
