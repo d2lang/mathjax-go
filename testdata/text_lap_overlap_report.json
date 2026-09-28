@@ -1,0 +1,27 @@
+{
+  "baselineGitCommit": "cbfa500ef050c7240493dfe2624798219c959143",
+  "assertions": 1386,
+  "publishedInputOverlaps": 2,
+  "completeOriginalOverlaps": 2,
+  "method": "Recursively inspected TeX/input + display + complete SVG/original.SVG records, allowing historical key casing; per-fix counts are not globally unique coverage.",
+  "overlaps": [
+    {
+      "name": "text_lap_0036",
+      "tex": "A\\clap{\\alpha}B",
+      "display": false,
+      "completeOriginalMatches": 1,
+      "sources": [
+        "testdata/mathlap_style_mathjax_3_2_2.json"
+      ]
+    },
+    {
+      "name": "text_lap_0037",
+      "tex": "A\\clap{\\alpha}B",
+      "display": true,
+      "completeOriginalMatches": 1,
+      "sources": [
+        "testdata/mathlap_style_mathjax_3_2_2.json"
+      ]
+    }
+  ]
+}

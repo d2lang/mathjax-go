@@ -8,7 +8,6 @@ import (
 	"fmt"
 	"os"
 	"reflect"
-	"strings"
 	"testing"
 
 	mathjax "github.com/d2lang/mathjax-go"
@@ -34,9 +33,8 @@ func TestPhysicsVectorFontPinnedReferences(t *testing.T) {
 	if len(fixture.Cases) != 96 {
 		t.Fatal("incomplete token font policy matrix")
 	}
-	// Preserve the exact primary fixtures. Only the separately observed MtLap
-	// omission of two explicit mstyle defaults remains qualified. Accent
-	// parent attributes now match the complete primary tree directly.
+	// Preserve the exact primary fixtures, including MtLap's explicit
+	// displaystyle and scriptlevel attributes. No tree qualification remains.
 	for _, c := range fixture.Cases {
 		t.Run(c.Name, func(t *testing.T) {
 			root, err := tex.NewCompiler().Compile(c.Tex, c.Display)
@@ -59,21 +57,7 @@ func TestPhysicsVectorFontPinnedReferences(t *testing.T) {
 			if !reflect.DeepEqual(tokenFonts(actual), tokenFonts(c.Tree)) {
 				t.Errorf("token font policy got %#v, want %#v", tokenFonts(actual), tokenFonts(c.Tree))
 			}
-			label := strings.TrimSuffix(strings.TrimSuffix(c.Name, "-display"), "-inline")
 			wantTree := c.Tree
-			if label == "clap-text" {
-				wantBytes, _ := json.Marshal(c.Tree)
-				var qualified *nestedFontTree
-				if err := json.Unmarshal(wantBytes, &qualified); err != nil {
-					t.Fatal(err)
-				}
-				wantTree = qualified
-				qualifyVectorTree(wantTree)
-				originalAfter, _ := json.Marshal(c.Tree)
-				if string(originalAfter) != string(wantBytes) {
-					t.Fatal("qualification mutated the primary fixture tree")
-				}
-			}
 			if !reflect.DeepEqual(actual, wantTree) {
 				want, _ := json.Marshal(wantTree)
 				t.Errorf("complete AST got %s, want %s", encoded, want)
@@ -88,17 +72,5 @@ func TestPhysicsVectorFontPinnedReferences(t *testing.T) {
 				t.Errorf("complete SVG %s, want %s", h, c.SVGSHA256)
 			}
 		})
-	}
-}
-
-// Apply only the named, observed legacy attribute differences to a copy of the
-// primary tree. No text, node, font choice, position or SVG is normalized.
-func qualifyVectorTree(n *nestedFontTree) {
-	if n.Kind == "mstyle" && n.Attributes["displaystyle"] == false && n.Attributes["scriptlevel"] == float64(0) {
-		delete(n.Attributes, "displaystyle")
-		delete(n.Attributes, "scriptlevel")
-	}
-	for _, child := range n.Children {
-		qualifyVectorTree(child)
 	}
 }

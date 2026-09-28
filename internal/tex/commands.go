@@ -1112,13 +1112,8 @@ func (p *parser) lap(name string) ([]*mml.Node, error) {
 	if strings.HasPrefix(name, "math") || strings.HasPrefix(name, "cramped") {
 		return p.mathLap(name)
 	}
-	if name == "clap" {
-		raw, _, err := p.readArgument(name, false)
-		if err != nil {
-			return nil, err
-		}
-		content := node("mstyle", node("mtext", mml.NewText(raw)))
-		return []*mml.Node{setAttributes(node("mpadded", content), map[string]any{"width": 0, "lspace": "-.5width"})}, nil
+	if name == "clap" || name == "textclap" || name == "textllap" || name == "textrlap" {
+		return p.textLap(name)
 	}
 	arg, err := p.parseArgument(name)
 	if err != nil {
