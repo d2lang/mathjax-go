@@ -137,6 +137,9 @@ func (p *parser) commandNodes(name string, after **derivativeAutoOpen) ([]*mml.N
 	case "not":
 		p.commandNot = true
 		return nil, nil
+	case "nonscript":
+		p.commandNonscript = true
+		return nil, nil
 	case "dots":
 		p.commandDots = p.startDots()
 		return nil, nil

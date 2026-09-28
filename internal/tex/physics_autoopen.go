@@ -13,6 +13,7 @@ type commandResult struct {
 	nodes         []*mml.Node
 	namedFunction bool
 	notItem       bool
+	nonscriptItem bool
 	dotsItem      *pendingDots
 	positionItem  *positionItem
 	afterNode     *derivativeAutoOpen
@@ -20,15 +21,19 @@ type commandResult struct {
 
 func (p *parser) commandEvent(name string) (result commandResult, err error) {
 	namedFunction, notItem := p.commandNamedFunction, p.commandNot
+	nonscript := p.commandNonscript
 	dotsItem, position := p.commandDots, p.commandPosition
 	p.commandNamedFunction, p.commandNot = false, false
+	p.commandNonscript = false
 	p.commandDots, p.commandPosition = nil, nil
 	defer func() {
 		p.commandNamedFunction, p.commandNot = namedFunction, notItem
+		p.commandNonscript = nonscript
 		p.commandDots, p.commandPosition = dotsItem, position
 	}()
 	result.nodes, err = p.commandNodes(name, &result.afterNode)
 	result.namedFunction, result.notItem = p.commandNamedFunction, p.commandNot
+	result.nonscriptItem = p.commandNonscript
 	result.dotsItem, result.positionItem = p.commandDots, p.commandPosition
 	return result, err
 }

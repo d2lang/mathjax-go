@@ -43,6 +43,7 @@ type environmentDefinition struct {
 
 type parseState struct {
 	operators         []*mml.Node
+	nonscriptSpaces   []*mml.Node
 	macros            map[string]macroDefinition
 	pairedDelimiters  map[string]pairedDelimiter
 	environments      map[string]environmentDefinition
@@ -92,6 +93,7 @@ type parser struct {
 	display              bool
 	commandNamedFunction bool
 	commandNot           bool
+	commandNonscript     bool
 	commandDots          *pendingDots
 	commandPosition      *positionItem
 	multiLetterFont      string
@@ -197,6 +199,7 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 	var pending *pendingPrime
 	var negation pendingNot
 	var dots pendingDots
+	nonscript := false
 	var styles []rowStyleFrame
 	var positions []rowPositionFrame
 	// PositionItem waits for the next final MML item on this same parser.
@@ -227,6 +230,7 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 	// without letting it act on the first item outside that group.
 	pendingFunction := false
 	finishPending := func() {
+		nonscript = false
 		finishPrime()
 		finishNot()
 		finishDots()
@@ -267,6 +271,14 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 		if len(created) == 0 {
 			return
 		}
+		// NonscriptItem sees the incoming item before lower stack items
+		// (notably PositionItem) transform its completed MML node.
+		if nonscript {
+			nonscript = false
+			if !namedFunction {
+				created[0] = p.nonscriptSpace(created[0])
+			}
+		}
 		finishPrime()
 		for _, n := range created {
 			if pendingFont != "" {
@@ -304,14 +316,14 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 		}
 		// A single BraketItem closes on its first MML delivery. Any remaining
 		// nodes in that delivery belong to the caller, not to its fenced body.
-		if owner != nil && owner.single && len(nodes) > 0 && len(styles) == 0 && len(positions) == 0 && !pendingFunction {
+		if owner != nil && owner.single && len(nodes) > 0 && len(styles) == 0 && len(positions) == 0 && !pendingFunction && !nonscript {
 			if closeErr := closeStyles(); closeErr != nil {
 				return nil, "", closeErr
 			}
 			return nodes, "", nil
 		}
 		p.braketOwner = owner
-		if len(styles) != 0 || pending != nil || bool(negation) || dots.active() || pendingFunction || auto != nil || len(positions) != 0 {
+		if len(styles) != 0 || pending != nil || bool(negation) || dots.active() || pendingFunction || nonscript || auto != nil || len(positions) != 0 {
 			p.braketOwner = nil // An intervening stack item owns this token.
 		}
 		c := p.source[p.pos]
@@ -351,7 +363,7 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 			if isMathtoolsArrayCommand(name) && !registered {
 				actualArray := p.arrayCell != nil && owner == nil && auto == nil && !infixPending &&
 					len(styles) == 0 && len(positions) == 0 && pending == nil &&
-					!bool(negation) && !dots.active() && !pendingFunction
+					!bool(negation) && !dots.active() && !pendingFunction && !nonscript
 				star, guardName := false, name
 				if name == "shortvdotswithin" {
 					star = p.readMathtoolsStar()
@@ -418,7 +430,7 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 				// items and real child scopes reject it before reduction.
 				if p.arrayCell == nil || owner != nil || auto != nil || infixPending ||
 					len(styles) != 0 || len(positions) != 0 || pending != nil ||
-					bool(negation) || dots.active() || pendingFunction {
+					bool(negation) || dots.active() || pendingFunction || nonscript {
 					return nil, "", unsupportedHFill(name)
 				}
 				p.arrayCell.fills = append(p.arrayCell.fills, p.arrayCell.offset+len(nodes))
@@ -489,7 +501,7 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 			if variant, ok := fontDeclarations[name]; ok && !registered {
 				// SetFont changes the current environment without pushing a
 				// stack item, so pending Prime/Not/Dots items stay in this row.
-				if (p.arrayCell != nil && p.arrayCell.equation != nil) || len(styles) != 0 || pending != nil || bool(negation) || dots.active() || pendingFunction || len(positions) != 0 {
+				if (p.arrayCell != nil && p.arrayCell.equation != nil) || len(styles) != 0 || pending != nil || bool(negation) || dots.active() || pendingFunction || nonscript || len(positions) != 0 {
 					p.activeFont, pendingFont = variant, variant
 					p.fontExplicitEmpty = variant == ""
 					continue
@@ -515,7 +527,7 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 				return nodes, right, nil
 			}
 			if !registered && (name == "limits" || name == "nolimits") {
-				if pending != nil || bool(negation) || dots.active() {
+				if pending != nil || bool(negation) || dots.active() || nonscript {
 					return nil, "", texError("MisplacedLimits", "%s is allowed only on operators", "\\"+name)
 				}
 				var err error
@@ -538,6 +550,7 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 				return nil, "", err
 			}
 			if result.notItem {
+				nonscript = false
 				finishPrime()
 				finishDots()
 				// An incoming NotItem finalizes a prior FnItem without U2061.
@@ -545,6 +558,7 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 				nodes = append(nodes, negation.start()...)
 			}
 			if result.dotsItem != nil {
+				nonscript = false
 				finishPrime()
 				finishNot()
 				finishDots()
@@ -558,6 +572,10 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 				positions = append(positions, rowPositionFrame{item: result.positionItem, prefix: nodes, styleDepth: len(styles)})
 				nodes = nil
 			}
+			if result.nonscriptItem {
+				finishPending()
+				nonscript = true
+			}
 			appendNodes(result.nodes, result.namedFunction)
 			tail, err := result.afterNode.completeAfter(p, finishDots)
 			if err != nil {
@@ -569,6 +587,7 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 
 		switch c {
 		case '{':
+			nonscript = false // OpenItem consumes the pending NonscriptItem.
 			finishPrime()
 			p.pos++
 			contents, _, err := p.parseRow('}', false)
@@ -580,11 +599,12 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 			p.pos++
 			var err error
 			var after *derivativeAutoOpen
-			if bool(negation) || dots.active() {
+			if bool(negation) || dots.active() || nonscript {
 				// Stack.Prev sees an empty NotItem/DotsItem, not the preceding
 				// row node or the fallback emitted when this item is pushed.
 				finishNot()
 				finishDots()
+				nonscript = false
 				var scriptNodes []*mml.Node
 				scriptNodes, pendingFont, after, err = p.attachScriptWithFont(nil, c, pendingFont)
 				nodes = append(nodes, scriptNodes...)
@@ -625,9 +645,10 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 				var err error
 				finishPrime()
 				var base *mml.Node
-				if bool(negation) || dots.active() {
+				if bool(negation) || dots.active() || nonscript {
 					finishNot()
 					finishDots()
+					nonscript = false
 					base = node("mi")
 				} else if len(nodes) == 0 {
 					base = node("mi")
@@ -693,7 +714,7 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 	if end := p.cdCellEnd; end != nil && !p.cdEntryStopped && terminator == 0 && !stopRight {
 		p.cdCellEnd = nil
 		pendingItem := len(styles) != 0 || len(positions) != 0 || infixPending ||
-			pending != nil || bool(negation) || dots.active() || pendingFunction ||
+			pending != nil || bool(negation) || dots.active() || pendingFunction || nonscript ||
 			(owner != nil && owner.single && len(nodes) == 0)
 		if end.firstObjectCell || pendingItem {
 			appendNodes([]*mml.Node{cdStrut()}, false)

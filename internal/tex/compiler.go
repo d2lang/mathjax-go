@@ -75,6 +75,7 @@ func (c *Compiler) Compile(source string, display bool) (*mml.Node, error) {
 	})
 	stretchy := stretchyCleanupOperators(state.operators)
 	setMathMLInheritance(root, display)
+	filterNonscript(state.nonscriptSpaces)
 	root = moveMathLimits(root)
 	cleanStretchy(root, stretchy)
 	cleanMathMLAttributes(root)
