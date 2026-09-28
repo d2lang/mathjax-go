@@ -1,0 +1,13 @@
+{
+  "baseline": "538d879f57839c1bfa2cd4f3c81c56d685c43109",
+  "counts": {
+    "first-published-input": 970,
+    "prior-full-reference": 554
+  },
+  "inputs": 1524,
+  "scannedFiles": 385,
+  "originalMismatches": [],
+  "ambiguousOnly": 0,
+  "actualMergedBaseline": "42932ee918ca4db7f3edf9da30e59b0c9cd61f86",
+  "publishedBaselineContext": "The inspected published PR157 fixture tree is identical to its merged tree."
+}
