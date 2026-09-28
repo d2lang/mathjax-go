@@ -975,7 +975,7 @@ func (p *parser) xArrow(name string) ([]*mml.Node, error) {
 	}
 	arrow := p.operator(arrowCharacters[name], mml.TeXClassRel, map[string]any{"stretchy": true})
 	if hasBelow {
-		below, err := p.parseString(belowRaw)
+		below, err := p.parseArgumentString(belowRaw)
 		if err != nil {
 			return nil, err
 		}
@@ -1664,7 +1664,7 @@ func (p *parser) physicsBraket(name string) ([]*mml.Node, error) {
 		if err != nil {
 			return nil, err
 		}
-		arg, err := p.parseString(raw)
+		arg, err := p.parseArgumentString(raw)
 		if err != nil {
 			return nil, err
 		}
@@ -1691,7 +1691,13 @@ func (p *parser) physicsBraket(name string) ([]*mml.Node, error) {
 	return nil, nil
 }
 
+// The Physics Bra/Ket/BraKet/KetBra/MatrixElement callers create one child
+// TexParser for their complete generated expression. Their arguments share
+// that child's budget; continuing Eval and other shared expansions do not.
 func (p *parser) parseExpansion(source string) ([]*mml.Node, error) {
+	count := p.state.macroCount
+	p.state.macroCount = 0
+	defer func() { p.state.macroCount = count }()
 	return p.parseExpansionWithStack(source, nil)
 }
 
@@ -1762,7 +1768,7 @@ func (p *parser) quantityWithDelimiters(name, open, close string) ([]*mml.Node, 
 	if continuation {
 		content, err = p.parseContinuationString(raw)
 	} else {
-		content, err = p.parseString(raw)
+		content, err = p.parseArgumentString(raw)
 	}
 	if err != nil {
 		return nil, err

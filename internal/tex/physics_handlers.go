@@ -110,7 +110,7 @@ func (p *parser) physicsExpression(name string) ([]*mml.Node, error) {
 	function.SetProperty("texClass", mml.TeXClassOp)
 	var base *mml.Node = function
 	if exponent != "" {
-		sup, err := p.parseString(exponent)
+		sup, err := p.parseArgumentString(exponent)
 		if err != nil {
 			return nil, err
 		}

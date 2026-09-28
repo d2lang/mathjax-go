@@ -827,7 +827,7 @@ func (p *parser) parseCDArrow(raw string, at int) (*mml.Node, int, error) {
 		if first == "" {
 			first = "\\kern " + p.amscdState(amscdMinWidthState, "2.75em")
 		}
-		over, err := p.parseString(first)
+		over, err := p.parseArgumentString(first)
 		if err != nil {
 			return nil, at, err
 		}
@@ -835,7 +835,7 @@ func (p *parser) parseCDArrow(raw string, at int) (*mml.Node, int, error) {
 		if second == "" {
 			return node("mover", arrow, over), next, nil
 		}
-		under, err := p.parseString(second)
+		under, err := p.parseArgumentString(second)
 		if err != nil {
 			return nil, at, err
 		}
@@ -848,7 +848,7 @@ func (p *parser) parseCDArrow(raw string, at int) (*mml.Node, int, error) {
 	}
 	var children []*mml.Node
 	if first != "" {
-		label, err := p.parseString("\\scriptstyle\\llap{" + first + "}")
+		label, err := p.parseArgumentString("\\scriptstyle\\llap{" + first + "}")
 		if err != nil {
 			return nil, at, err
 		}
@@ -856,7 +856,7 @@ func (p *parser) parseCDArrow(raw string, at int) (*mml.Node, int, error) {
 	}
 	children = append(children, arrow)
 	if second != "" {
-		label, err := p.parseString("\\scriptstyle\\rlap{" + second + "}")
+		label, err := p.parseArgumentString("\\scriptstyle\\rlap{" + second + "}")
 		if err != nil {
 			return nil, at, err
 		}

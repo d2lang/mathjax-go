@@ -408,7 +408,7 @@ func (p *parser) amsXArrow(name string) ([]*mml.Node, error) {
 		result.SetProperty("subsupOK", true)
 		return []*mml.Node{result}, nil
 	}
-	below, err := p.parseString(belowRaw)
+	below, err := p.parseArgumentString(belowRaw)
 	if err != nil {
 		return nil, err
 	}
