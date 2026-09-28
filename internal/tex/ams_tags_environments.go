@@ -8,8 +8,6 @@
 package tex
 
 import (
-	"strings"
-
 	"github.com/d2lang/mathjax-go/internal/mml"
 )
 
@@ -65,14 +63,14 @@ func (p *parser) amsEquation(environment string) (nodes []*mml.Node, err error) 
 func (p *parser) amsAlignment(environment string) (nodes []*mml.Node, err error) {
 	verticalAlign := ""
 	if environment == "aligned" {
-		verticalAlign, _, err = p.readBrackets(nil)
+		verticalAlign, err = p.readArrayAlignment()
 		if err != nil {
 			return nil, err
 		}
 	}
 	pairCount := ""
 	if environment == "alignedat" {
-		verticalAlign, err = p.readAlignedatAlignment()
+		verticalAlign, err = p.readArrayAlignment()
 		if err != nil {
 			return nil, err
 		}
@@ -128,13 +126,6 @@ func (p *parser) amsAlignment(environment string) (nodes []*mml.Node, err error)
 	}
 
 	table := node("mtable", mrows...)
-	if environment == "gather" || environment == "gather*" {
-		// EqnArrayItem.EndEntry repairs an initial relation in every entry
-		// after the first, including additional authored gather columns.
-		prefixEquationRelationColumns(table, 1)
-	} else {
-		prefixRelationColumns(table)
-	}
 	for i, tag := range tags {
 		if tag == nil {
 			continue
@@ -148,17 +139,7 @@ func (p *parser) amsAlignment(environment string) (nodes []*mml.Node, err error)
 		finishAlignedatTable(table, pairCount, verticalAlign, maximumColumns)
 		verticalAlign = ""
 	}
-	switch strings.TrimSpace(verticalAlign) {
-	case "t":
-		table.Attributes.Set("align", "baseline 1")
-	case "b":
-		table.Attributes.Set("align", "baseline -1")
-	case "c":
-		table.Attributes.Set("align", "axis")
-	case "":
-	default:
-		table.Attributes.Set("align", strings.TrimSpace(verticalAlign))
-	}
+	setArrayAlign(table, verticalAlign)
 
 	spacing.applySpacing(table)
 	state.end()

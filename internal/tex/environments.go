@@ -117,6 +117,14 @@ func (p *parser) beginEnvironment(name string) ([]*mml.Node, error) {
 			return nil, err
 		}
 	}
+	verticalAlign := ""
+	if environment == "gathered" || environment == "lgathered" || environment == "rgathered" {
+		// AmsEqnArray consumes its optional position before parsing the body.
+		verticalAlign, err = p.readArrayAlignment()
+		if err != nil {
+			return nil, err
+		}
+	}
 	if isGuardedEquationEnvironment(environment) {
 		if err := p.checkEquationEnvironment(); err != nil {
 			return nil, err
@@ -223,9 +231,17 @@ func (p *parser) beginEnvironment(name string) ([]*mml.Node, error) {
 			return nil, err
 		}
 		if strings.Contains(environment, "gather") {
+			// Mathtools supplies l/r to AmsEqnArray for these two owners.
+			alignment := "center"
+			switch environment {
+			case "lgathered":
+				alignment = "left"
+			case "rgathered":
+				alignment = "right"
+			}
 			resetTableAttributes(table,
 				"displaystyle", true,
-				"columnalign", "center",
+				"columnalign", alignment,
 				"columnspacing", "1em",
 				"rowspacing", "3pt",
 				"side", "right",
@@ -235,7 +251,7 @@ func (p *parser) beginEnvironment(name string) ([]*mml.Node, error) {
 			finishAMSMultlineTable(table)
 		} else {
 			if !isEquationArray(environment) {
-				prefixRelationColumns(table)
+				fixInitialArrayOperators(table, 0, 1)
 			}
 			resetTableAttributes(table,
 				"displaystyle", true,
@@ -244,6 +260,7 @@ func (p *parser) beginEnvironment(name string) ([]*mml.Node, error) {
 				"rowspacing", "3pt",
 			)
 		}
+		setArrayAlign(table, verticalAlign)
 		spacing.applySpacing(table)
 		return []*mml.Node{table}, nil
 	case "CD":
@@ -294,6 +311,7 @@ func isAMSXAlignAt(environment string) bool {
 // finishAMSMultlineTable ports AmsMethods.Multline's arraydef and
 // MultlineItem.EndTable's default first/last row alignment.
 func finishAMSMultlineTable(table *mml.Node) {
+	fixInitialArrayOperators(table, 1, 0)
 	alignAMSMultlineCells(table)
 	resetTableAttributes(table,
 		"displaystyle", true,
@@ -318,31 +336,6 @@ func alignAMSMultlineCells(table *mml.Node) {
 		lastCell := lastRow.Children[len(lastRow.Children)-1]
 		if _, explicit := lastCell.Attributes.GetExplicit("columnalign"); !explicit {
 			lastCell.Attributes.Set("columnalign", "right")
-		}
-	}
-}
-
-func prefixRelationColumns(table *mml.Node) {
-	prefixEquationRelationColumns(table, 2)
-}
-
-func prefixEquationRelationColumns(table *mml.Node, step int) {
-	for _, tableRow := range table.Children {
-		for column := 1; column < len(tableRow.Children); column += step {
-			cell := tableRow.Children[column]
-			if len(cell.Children) == 0 {
-				continue
-			}
-			contents := cell.Children[0]
-			if contents.Kind != "mrow" || !contents.Flags.Inferred || len(contents.Children) == 0 {
-				continue
-			}
-			first := contents.Children[0]
-			if first.Kind != "mo" || first.TeXClass != mml.TeXClassRel {
-				continue
-			}
-			empty := node("mi")
-			contents.SetChildren(append([]*mml.Node{empty}, contents.Children...))
 		}
 	}
 }

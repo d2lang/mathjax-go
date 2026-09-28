@@ -1,0 +1,497 @@
+{
+  "review": "Array candidate on main145; complete saved original receipts unchanged. No Go builds or checkout changes.",
+  "inputReceipts": {
+    "current": {
+      "path": "array-initial-audit/published-residuals145.json.gz",
+      "sha256": "5ecf5fafc0e69843abc412b2c44173e1f225b74e2a263a9279a38f09cdd57e4e"
+    },
+    "prior": {
+      "path": "array-initial-audit/published-only-residuals144.json.gz",
+      "sha256": "e76868a1a139033eeea618238a3cddb894602a3285f832f8d732e75ed17078f6"
+    }
+  },
+  "binarySHA256": {
+    "before": "2cab8b9a9003a0d91d63b153d3c88599a7e52b61df3b7470c60e3e29bced1f5b",
+    "after": "01dc21d0ffb60b42b94e647ebb655f3d37465d44d325b37c3d9588df450794be"
+  },
+  "counts": {
+    "savedInputs": 3479,
+    "rawByteChanges": 350,
+    "rawNewlyExact": 335,
+    "rawExactRegressions": 1,
+    "attributeOrderOnlyChanges": 4,
+    "attributeOrderOnlyNewlyExact": 3,
+    "attributeOrderOnlyExactRegressions": 1,
+    "sourceRelatedChanges": 346,
+    "sourceRelatedNewlyExact": 332,
+    "sourceRelatedExactRegressions": 0,
+    "sourceRelatedChangedNonexact": 14,
+    "sourceRelatedVisualCounts": {
+      "priorVisualExact": 106,
+      "visualRegressions": 0,
+      "visualFixes": 226,
+      "visuallyUnchanged": 120
+    }
+  },
+  "macroGeneratedRowBreaks": [
+    {
+      "tex": "\\DeclarePairedDelimiterXPP{\\f}[1]{\\\\}{(}{)}{}{#1}\\begin{xalignat}{2}a&\\f{x}\\end{xalignat}",
+      "display": false,
+      "sources": [
+        {
+          "fixture": "arrow_between_lines_residuals.json",
+          "name": "arrow_3858"
+        }
+      ],
+      "sameOriginalAsReviewed144": true,
+      "sameBaselineAsReviewed144": true,
+      "sameCandidateAsReviewed144": true,
+      "flattenedGeometryPaintAndRootUnchanged": true,
+      "originalSHA256": "5ec1b73c1d2a04ffbf5c5b990bfd890bb28a4f60ea054b09b2f9a07aafdaabbb",
+      "baselineSHA256": "9af6ad77d93d3ad0e1607430b7c9d2aaea626a3ebf27d661c3da29833f038364",
+      "candidateSHA256": "2a71d5e5dc7ec6619c53b90099fc832e05b7ad4b9b4ab671305e9c9d98944746",
+      "baselineGeometrySHA256": "a5c393b31dc13db8833a46bcd93c2c7e2a23a730b29236bf8d31ab02de794f8e",
+      "candidateGeometrySHA256": "a5c393b31dc13db8833a46bcd93c2c7e2a23a730b29236bf8d31ab02de794f8e"
+    },
+    {
+      "tex": "\\DeclarePairedDelimiterXPP{\\f}[1]{\\\\}{(}{)}{}{#1}\\begin{xalignat}{2}a&\\f{x}\\end{xalignat}",
+      "display": true,
+      "sources": [
+        {
+          "fixture": "arrow_between_lines_residuals.json",
+          "name": "arrow_3859"
+        }
+      ],
+      "sameOriginalAsReviewed144": true,
+      "sameBaselineAsReviewed144": true,
+      "sameCandidateAsReviewed144": true,
+      "flattenedGeometryPaintAndRootUnchanged": true,
+      "originalSHA256": "5ec1b73c1d2a04ffbf5c5b990bfd890bb28a4f60ea054b09b2f9a07aafdaabbb",
+      "baselineSHA256": "9af6ad77d93d3ad0e1607430b7c9d2aaea626a3ebf27d661c3da29833f038364",
+      "candidateSHA256": "2a71d5e5dc7ec6619c53b90099fc832e05b7ad4b9b4ab671305e9c9d98944746",
+      "baselineGeometrySHA256": "a5c393b31dc13db8833a46bcd93c2c7e2a23a730b29236bf8d31ab02de794f8e",
+      "candidateGeometrySHA256": "a5c393b31dc13db8833a46bcd93c2c7e2a23a730b29236bf8d31ab02de794f8e"
+    },
+    {
+      "tex": "\\DeclarePairedDelimiterXPP{\\f}[1]{\\\\}{(}{)}{}{#1}\\begin{xalignat*}{2}a&\\f{x}\\end{xalignat*}",
+      "display": false,
+      "sources": [
+        {
+          "fixture": "arrow_between_lines_residuals.json",
+          "name": "arrow_3996"
+        }
+      ],
+      "sameOriginalAsReviewed144": true,
+      "sameBaselineAsReviewed144": true,
+      "sameCandidateAsReviewed144": true,
+      "flattenedGeometryPaintAndRootUnchanged": true,
+      "originalSHA256": "5ec1b73c1d2a04ffbf5c5b990bfd890bb28a4f60ea054b09b2f9a07aafdaabbb",
+      "baselineSHA256": "9af6ad77d93d3ad0e1607430b7c9d2aaea626a3ebf27d661c3da29833f038364",
+      "candidateSHA256": "2a71d5e5dc7ec6619c53b90099fc832e05b7ad4b9b4ab671305e9c9d98944746",
+      "baselineGeometrySHA256": "a5c393b31dc13db8833a46bcd93c2c7e2a23a730b29236bf8d31ab02de794f8e",
+      "candidateGeometrySHA256": "a5c393b31dc13db8833a46bcd93c2c7e2a23a730b29236bf8d31ab02de794f8e"
+    },
+    {
+      "tex": "\\DeclarePairedDelimiterXPP{\\f}[1]{\\\\}{(}{)}{}{#1}\\begin{xalignat*}{2}a&\\f{x}\\end{xalignat*}",
+      "display": true,
+      "sources": [
+        {
+          "fixture": "arrow_between_lines_residuals.json",
+          "name": "arrow_3997"
+        }
+      ],
+      "sameOriginalAsReviewed144": true,
+      "sameBaselineAsReviewed144": true,
+      "sameCandidateAsReviewed144": true,
+      "flattenedGeometryPaintAndRootUnchanged": true,
+      "originalSHA256": "5ec1b73c1d2a04ffbf5c5b990bfd890bb28a4f60ea054b09b2f9a07aafdaabbb",
+      "baselineSHA256": "9af6ad77d93d3ad0e1607430b7c9d2aaea626a3ebf27d661c3da29833f038364",
+      "candidateSHA256": "2a71d5e5dc7ec6619c53b90099fc832e05b7ad4b9b4ab671305e9c9d98944746",
+      "baselineGeometrySHA256": "a5c393b31dc13db8833a46bcd93c2c7e2a23a730b29236bf8d31ab02de794f8e",
+      "candidateGeometrySHA256": "a5c393b31dc13db8833a46bcd93c2c7e2a23a730b29236bf8d31ab02de794f8e"
+    },
+    {
+      "tex": "\\DeclarePairedDelimiterXPP{\\f}[1]{\\\\}{(}{)}{}{#1}\\begin{xxalignat}{2}a&\\f{x}\\end{xxalignat}",
+      "display": false,
+      "sources": [
+        {
+          "fixture": "arrow_between_lines_residuals.json",
+          "name": "arrow_4132"
+        }
+      ],
+      "sameOriginalAsReviewed144": true,
+      "sameBaselineAsReviewed144": true,
+      "sameCandidateAsReviewed144": true,
+      "flattenedGeometryPaintAndRootUnchanged": true,
+      "originalSHA256": "4a8d01da888f909132bca8a643e87fdb41655fe65ee440c5b54a3432a2837ce1",
+      "baselineSHA256": "142c0c26556c2f78738eed83de9e4faa7d1bb38afe26230f4afdc54e9df1b55f",
+      "candidateSHA256": "64ad5b61e2b29d9c8c1c853cf4e7ddcc506a81b972de4781d9e149b4851dbe4e",
+      "baselineGeometrySHA256": "7a8b09b5ed4e8971eb7fab957390c2fd41e1e973c8ab9e4e254749aaf8c5d03c",
+      "candidateGeometrySHA256": "7a8b09b5ed4e8971eb7fab957390c2fd41e1e973c8ab9e4e254749aaf8c5d03c"
+    },
+    {
+      "tex": "\\DeclarePairedDelimiterXPP{\\f}[1]{\\\\}{(}{)}{}{#1}\\begin{xxalignat}{2}a&\\f{x}\\end{xxalignat}",
+      "display": true,
+      "sources": [
+        {
+          "fixture": "arrow_between_lines_residuals.json",
+          "name": "arrow_4133"
+        }
+      ],
+      "sameOriginalAsReviewed144": true,
+      "sameBaselineAsReviewed144": true,
+      "sameCandidateAsReviewed144": true,
+      "flattenedGeometryPaintAndRootUnchanged": true,
+      "originalSHA256": "4a8d01da888f909132bca8a643e87fdb41655fe65ee440c5b54a3432a2837ce1",
+      "baselineSHA256": "142c0c26556c2f78738eed83de9e4faa7d1bb38afe26230f4afdc54e9df1b55f",
+      "candidateSHA256": "64ad5b61e2b29d9c8c1c853cf4e7ddcc506a81b972de4781d9e149b4851dbe4e",
+      "baselineGeometrySHA256": "7a8b09b5ed4e8971eb7fab957390c2fd41e1e973c8ab9e4e254749aaf8c5d03c",
+      "candidateGeometrySHA256": "7a8b09b5ed4e8971eb7fab957390c2fd41e1e973c8ab9e4e254749aaf8c5d03c"
+    },
+    {
+      "tex": "\\DeclarePairedDelimiterXPP{\\f}[1]{\\\\}{(}{)}{}{#1}\\begin{flalign}a&\\f{x}\\end{flalign}",
+      "display": false,
+      "sources": [
+        {
+          "fixture": "arrow_between_lines_residuals.json",
+          "name": "arrow_4240"
+        }
+      ],
+      "sameOriginalAsReviewed144": true,
+      "sameBaselineAsReviewed144": true,
+      "sameCandidateAsReviewed144": true,
+      "flattenedGeometryPaintAndRootUnchanged": true,
+      "originalSHA256": "5b8d6bd07467fce7f3db08b84ec8d439eaf60d0a9d1b739d8df881c753048e65",
+      "baselineSHA256": "c78fdf0ff1f662f3f360341e6ac837b8012779471de442a9b977b618d65669c9",
+      "candidateSHA256": "c4d23ebab7b278d4ad77c1ed14be494495efddcf32dad5c9a4cbfef861ebdece",
+      "baselineGeometrySHA256": "8bacd361890651726fd2822bbc51e90f508c996f93f72fa422b008ebe4d46ba5",
+      "candidateGeometrySHA256": "8bacd361890651726fd2822bbc51e90f508c996f93f72fa422b008ebe4d46ba5"
+    },
+    {
+      "tex": "\\DeclarePairedDelimiterXPP{\\f}[1]{\\\\}{(}{)}{}{#1}\\begin{flalign}a&\\f{x}\\end{flalign}",
+      "display": true,
+      "sources": [
+        {
+          "fixture": "arrow_between_lines_residuals.json",
+          "name": "arrow_4241"
+        }
+      ],
+      "sameOriginalAsReviewed144": true,
+      "sameBaselineAsReviewed144": true,
+      "sameCandidateAsReviewed144": true,
+      "flattenedGeometryPaintAndRootUnchanged": true,
+      "originalSHA256": "5b8d6bd07467fce7f3db08b84ec8d439eaf60d0a9d1b739d8df881c753048e65",
+      "baselineSHA256": "c78fdf0ff1f662f3f360341e6ac837b8012779471de442a9b977b618d65669c9",
+      "candidateSHA256": "c4d23ebab7b278d4ad77c1ed14be494495efddcf32dad5c9a4cbfef861ebdece",
+      "baselineGeometrySHA256": "8bacd361890651726fd2822bbc51e90f508c996f93f72fa422b008ebe4d46ba5",
+      "candidateGeometrySHA256": "8bacd361890651726fd2822bbc51e90f508c996f93f72fa422b008ebe4d46ba5"
+    },
+    {
+      "tex": "\\DeclarePairedDelimiterXPP{\\f}[1]{\\\\}{(}{)}{}{#1}\\begin{flalign}a&b&c&d&\\f{x}\\end{flalign}",
+      "display": false,
+      "sources": [
+        {
+          "fixture": "arrow_between_lines_residuals.json",
+          "name": "arrow_4242"
+        }
+      ],
+      "sameOriginalAsReviewed144": true,
+      "sameBaselineAsReviewed144": true,
+      "sameCandidateAsReviewed144": true,
+      "flattenedGeometryPaintAndRootUnchanged": true,
+      "originalSHA256": "dc5f06c83404365a572158a1e13a1503a53cd1cd7d0dd3264d998da5f43858d8",
+      "baselineSHA256": "6d0a55e92a0676e788888fbd8ae8f3e0a0a420e81fbe6b51a9ac06a62a4e084e",
+      "candidateSHA256": "46edd6ff74e29e1a7f12ed2d264b0c6fb7ca82f7335453590017c848fd86675d",
+      "baselineGeometrySHA256": "fd24416378bcc036cd18e652f937cec381f96f8f7d5ffb545ca02b481923074c",
+      "candidateGeometrySHA256": "fd24416378bcc036cd18e652f937cec381f96f8f7d5ffb545ca02b481923074c"
+    },
+    {
+      "tex": "\\DeclarePairedDelimiterXPP{\\f}[1]{\\\\}{(}{)}{}{#1}\\begin{flalign}a&b&c&d&\\f{x}\\end{flalign}",
+      "display": true,
+      "sources": [
+        {
+          "fixture": "arrow_between_lines_residuals.json",
+          "name": "arrow_4243"
+        }
+      ],
+      "sameOriginalAsReviewed144": true,
+      "sameBaselineAsReviewed144": true,
+      "sameCandidateAsReviewed144": true,
+      "flattenedGeometryPaintAndRootUnchanged": true,
+      "originalSHA256": "dc5f06c83404365a572158a1e13a1503a53cd1cd7d0dd3264d998da5f43858d8",
+      "baselineSHA256": "6d0a55e92a0676e788888fbd8ae8f3e0a0a420e81fbe6b51a9ac06a62a4e084e",
+      "candidateSHA256": "46edd6ff74e29e1a7f12ed2d264b0c6fb7ca82f7335453590017c848fd86675d",
+      "baselineGeometrySHA256": "fd24416378bcc036cd18e652f937cec381f96f8f7d5ffb545ca02b481923074c",
+      "candidateGeometrySHA256": "fd24416378bcc036cd18e652f937cec381f96f8f7d5ffb545ca02b481923074c"
+    },
+    {
+      "tex": "\\DeclarePairedDelimiterXPP{\\f}[1]{\\\\}{(}{)}{}{#1}\\begin{flalign*}a&\\f{x}\\end{flalign*}",
+      "display": false,
+      "sources": [
+        {
+          "fixture": "arrow_between_lines_residuals.json",
+          "name": "arrow_4354"
+        }
+      ],
+      "sameOriginalAsReviewed144": true,
+      "sameBaselineAsReviewed144": true,
+      "sameCandidateAsReviewed144": true,
+      "flattenedGeometryPaintAndRootUnchanged": true,
+      "originalSHA256": "5b8d6bd07467fce7f3db08b84ec8d439eaf60d0a9d1b739d8df881c753048e65",
+      "baselineSHA256": "c78fdf0ff1f662f3f360341e6ac837b8012779471de442a9b977b618d65669c9",
+      "candidateSHA256": "c4d23ebab7b278d4ad77c1ed14be494495efddcf32dad5c9a4cbfef861ebdece",
+      "baselineGeometrySHA256": "8bacd361890651726fd2822bbc51e90f508c996f93f72fa422b008ebe4d46ba5",
+      "candidateGeometrySHA256": "8bacd361890651726fd2822bbc51e90f508c996f93f72fa422b008ebe4d46ba5"
+    },
+    {
+      "tex": "\\DeclarePairedDelimiterXPP{\\f}[1]{\\\\}{(}{)}{}{#1}\\begin{flalign*}a&\\f{x}\\end{flalign*}",
+      "display": true,
+      "sources": [
+        {
+          "fixture": "arrow_between_lines_residuals.json",
+          "name": "arrow_4355"
+        }
+      ],
+      "sameOriginalAsReviewed144": true,
+      "sameBaselineAsReviewed144": true,
+      "sameCandidateAsReviewed144": true,
+      "flattenedGeometryPaintAndRootUnchanged": true,
+      "originalSHA256": "5b8d6bd07467fce7f3db08b84ec8d439eaf60d0a9d1b739d8df881c753048e65",
+      "baselineSHA256": "c78fdf0ff1f662f3f360341e6ac837b8012779471de442a9b977b618d65669c9",
+      "candidateSHA256": "c4d23ebab7b278d4ad77c1ed14be494495efddcf32dad5c9a4cbfef861ebdece",
+      "baselineGeometrySHA256": "8bacd361890651726fd2822bbc51e90f508c996f93f72fa422b008ebe4d46ba5",
+      "candidateGeometrySHA256": "8bacd361890651726fd2822bbc51e90f508c996f93f72fa422b008ebe4d46ba5"
+    },
+    {
+      "tex": "\\DeclarePairedDelimiterXPP{\\f}[1]{\\\\}{(}{)}{}{#1}\\begin{flalign*}a&b&c&d&\\f{x}\\end{flalign*}",
+      "display": false,
+      "sources": [
+        {
+          "fixture": "arrow_between_lines_residuals.json",
+          "name": "arrow_4356"
+        }
+      ],
+      "sameOriginalAsReviewed144": true,
+      "sameBaselineAsReviewed144": true,
+      "sameCandidateAsReviewed144": true,
+      "flattenedGeometryPaintAndRootUnchanged": true,
+      "originalSHA256": "dc5f06c83404365a572158a1e13a1503a53cd1cd7d0dd3264d998da5f43858d8",
+      "baselineSHA256": "6d0a55e92a0676e788888fbd8ae8f3e0a0a420e81fbe6b51a9ac06a62a4e084e",
+      "candidateSHA256": "46edd6ff74e29e1a7f12ed2d264b0c6fb7ca82f7335453590017c848fd86675d",
+      "baselineGeometrySHA256": "fd24416378bcc036cd18e652f937cec381f96f8f7d5ffb545ca02b481923074c",
+      "candidateGeometrySHA256": "fd24416378bcc036cd18e652f937cec381f96f8f7d5ffb545ca02b481923074c"
+    },
+    {
+      "tex": "\\DeclarePairedDelimiterXPP{\\f}[1]{\\\\}{(}{)}{}{#1}\\begin{flalign*}a&b&c&d&\\f{x}\\end{flalign*}",
+      "display": true,
+      "sources": [
+        {
+          "fixture": "arrow_between_lines_residuals.json",
+          "name": "arrow_4357"
+        }
+      ],
+      "sameOriginalAsReviewed144": true,
+      "sameBaselineAsReviewed144": true,
+      "sameCandidateAsReviewed144": true,
+      "flattenedGeometryPaintAndRootUnchanged": true,
+      "originalSHA256": "dc5f06c83404365a572158a1e13a1503a53cd1cd7d0dd3264d998da5f43858d8",
+      "baselineSHA256": "6d0a55e92a0676e788888fbd8ae8f3e0a0a420e81fbe6b51a9ac06a62a4e084e",
+      "candidateSHA256": "46edd6ff74e29e1a7f12ed2d264b0c6fb7ca82f7335453590017c848fd86675d",
+      "baselineGeometrySHA256": "fd24416378bcc036cd18e652f937cec381f96f8f7d5ffb545ca02b481923074c",
+      "candidateGeometrySHA256": "fd24416378bcc036cd18e652f937cec381f96f8f7d5ffb545ca02b481923074c"
+    }
+  ],
+  "attributeOrderControls": [
+    {
+      "tex": "\\cancel[data-padding=1em,data-thickness=.2em]{\\text{^}}",
+      "display": true,
+      "sources": [
+        {
+          "fixture": "enclosure_bbox_residuals.json",
+          "name": "enclosure-1277"
+        }
+      ],
+      "initialByteExactBefore": true,
+      "initialByteExactAfter": false,
+      "initialFullParsedXMLBeforeEqualsOriginal": true,
+      "initialFullParsedXMLAfterEqualsOriginal": true,
+      "allRepeatedFullParsedXMLEqualOriginal": true,
+      "allRepeatedStringsAreExactlyTheTwoAttributeOrders": true,
+      "parsedXMLSHA256": "7594157a2d094fa215dbc305f91e2fa97088aabbf7d0feea0a32e0b0aed7d261",
+      "originalSVG": "<svg style=\"vertical-align: -2.715ex;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"6.561ex\" height=\"7ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -1894 2900 3094\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"menclose\" data-padding=\"1em\" data-thickness=\".2em\"><g transform=\"translate(1200, 0)\"><g data-mml-node=\"mtext\"><path data-c=\"5E\" d=\"M112 560L249 694L257 686Q387 562 387 560L361 531Q359 532 303 581L250 627L195 580Q182 569 169 557T148 538L140 532Q138 530 125 546L112 560Z\"></path></g></g><line x1=\"100\" y1=\"-1100\" x2=\"2800\" y2=\"1794\" stroke-width=\"200\"></line></g></g></g></svg>",
+      "attributeOrders": [
+        "<svg style=\"vertical-align: -2.715ex;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"6.561ex\" height=\"7ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -1894 2900 3094\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"menclose\" data-padding=\"1em\" data-thickness=\".2em\"><g transform=\"translate(1200, 0)\"><g data-mml-node=\"mtext\"><path data-c=\"5E\" d=\"M112 560L249 694L257 686Q387 562 387 560L361 531Q359 532 303 581L250 627L195 580Q182 569 169 557T148 538L140 532Q138 530 125 546L112 560Z\"></path></g></g><line x1=\"100\" y1=\"-1100\" x2=\"2800\" y2=\"1794\" stroke-width=\"200\"></line></g></g></g></svg>",
+        "<svg style=\"vertical-align: -2.715ex;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"6.561ex\" height=\"7ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -1894 2900 3094\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"menclose\" data-thickness=\".2em\" data-padding=\"1em\"><g transform=\"translate(1200, 0)\"><g data-mml-node=\"mtext\"><path data-c=\"5E\" d=\"M112 560L249 694L257 686Q387 562 387 560L361 531Q359 532 303 581L250 627L195 580Q182 569 169 557T148 538L140 532Q138 530 125 546L112 560Z\"></path></g></g><line x1=\"100\" y1=\"-1100\" x2=\"2800\" y2=\"1794\" stroke-width=\"200\"></line></g></g></g></svg>"
+      ],
+      "repeatCounts": {
+        "before": [
+          {
+            "svgSHA256": "da40aa3c6de6b24b83df2fb4971254222cfec651539a8566b28e8f153001a948",
+            "count": 45
+          },
+          {
+            "svgSHA256": "2fa8262d4f4e5e7de705787d8da99c7e6760810cf8017963fdaf2571480ccbfd",
+            "count": 3
+          }
+        ],
+        "after": [
+          {
+            "svgSHA256": "da40aa3c6de6b24b83df2fb4971254222cfec651539a8566b28e8f153001a948",
+            "count": 41
+          },
+          {
+            "svgSHA256": "2fa8262d4f4e5e7de705787d8da99c7e6760810cf8017963fdaf2571480ccbfd",
+            "count": 7
+          }
+        ]
+      }
+    },
+    {
+      "tex": "\\cancelto[data-padding=1em,data-thickness=.2em]{0}{\\text{_}}",
+      "display": false,
+      "sources": [
+        {
+          "fixture": "enclosure_bbox_residuals.json",
+          "name": "enclosure-1282"
+        }
+      ],
+      "initialByteExactBefore": false,
+      "initialByteExactAfter": true,
+      "initialFullParsedXMLBeforeEqualsOriginal": true,
+      "initialFullParsedXMLAfterEqualsOriginal": true,
+      "allRepeatedFullParsedXMLEqualOriginal": true,
+      "allRepeatedStringsAreExactlyTheTwoAttributeOrders": true,
+      "parsedXMLSHA256": "7eccef3b009ae9368e475c4015c942bcb464a88c0faab9852eb178d0442f6e4b",
+      "originalSVG": "<svg style=\"vertical-align: -2.403ex;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"6.644ex\" height=\"5.273ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -1268.7 2936.6 2330.7\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"msup\"><g data-mml-node=\"menclose\" data-padding=\"1em\" data-thickness=\".2em\"><g transform=\"translate(1000, 0)\"><g data-mml-node=\"mtext\"><path data-c=\"5F\" d=\"M0 -62V-25H499V-62H0Z\"></path></g></g><path d=\"M 2862.4 -31 l -1000 400 l 200 -300 L -362.4 69 l 0 -200 L 2062.4 -131 l -200 -300 Z\" transform=\"rotate(39.173 1250 -31)\"></path></g><g data-mml-node=\"mpadded\" transform=\"translate(2533,727.1) scale(0.707)\"><g transform=\"translate(0,100)\"><g data-mml-node=\"mn\"><path data-c=\"30\" d=\"M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z\"></path></g></g></g></g></g></g></svg>",
+      "attributeOrders": [
+        "<svg style=\"vertical-align: -2.403ex;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"6.644ex\" height=\"5.273ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -1268.7 2936.6 2330.7\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"msup\"><g data-mml-node=\"menclose\" data-padding=\"1em\" data-thickness=\".2em\"><g transform=\"translate(1000, 0)\"><g data-mml-node=\"mtext\"><path data-c=\"5F\" d=\"M0 -62V-25H499V-62H0Z\"></path></g></g><path d=\"M 2862.4 -31 l -1000 400 l 200 -300 L -362.4 69 l 0 -200 L 2062.4 -131 l -200 -300 Z\" transform=\"rotate(39.173 1250 -31)\"></path></g><g data-mml-node=\"mpadded\" transform=\"translate(2533,727.1) scale(0.707)\"><g transform=\"translate(0,100)\"><g data-mml-node=\"mn\"><path data-c=\"30\" d=\"M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z\"></path></g></g></g></g></g></g></svg>",
+        "<svg style=\"vertical-align: -2.403ex;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"6.644ex\" height=\"5.273ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -1268.7 2936.6 2330.7\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"msup\"><g data-mml-node=\"menclose\" data-thickness=\".2em\" data-padding=\"1em\"><g transform=\"translate(1000, 0)\"><g data-mml-node=\"mtext\"><path data-c=\"5F\" d=\"M0 -62V-25H499V-62H0Z\"></path></g></g><path d=\"M 2862.4 -31 l -1000 400 l 200 -300 L -362.4 69 l 0 -200 L 2062.4 -131 l -200 -300 Z\" transform=\"rotate(39.173 1250 -31)\"></path></g><g data-mml-node=\"mpadded\" transform=\"translate(2533,727.1) scale(0.707)\"><g transform=\"translate(0,100)\"><g data-mml-node=\"mn\"><path data-c=\"30\" d=\"M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z\"></path></g></g></g></g></g></g></svg>"
+      ],
+      "repeatCounts": {
+        "before": [
+          {
+            "svgSHA256": "30928ca726284035f9e67a461975f3cb447b253eb170d8411fa60d82b492ea30",
+            "count": 44
+          },
+          {
+            "svgSHA256": "33c103f6573bfea168ae2610146bce0bd8063ebc6a8f491565910c6efe60ec78",
+            "count": 4
+          }
+        ],
+        "after": [
+          {
+            "svgSHA256": "30928ca726284035f9e67a461975f3cb447b253eb170d8411fa60d82b492ea30",
+            "count": 41
+          },
+          {
+            "svgSHA256": "33c103f6573bfea168ae2610146bce0bd8063ebc6a8f491565910c6efe60ec78",
+            "count": 7
+          }
+        ]
+      }
+    },
+    {
+      "tex": "\\cancelto[data-padding=1em,data-thickness=.2em]{0}{x}",
+      "display": false,
+      "sources": [
+        {
+          "fixture": "enclosure_bbox_residuals.json",
+          "name": "enclosure-1290"
+        }
+      ],
+      "initialByteExactBefore": false,
+      "initialByteExactAfter": true,
+      "initialFullParsedXMLBeforeEqualsOriginal": true,
+      "initialFullParsedXMLAfterEqualsOriginal": true,
+      "allRepeatedFullParsedXMLEqualOriginal": true,
+      "allRepeatedStringsAreExactlyTheTwoAttributeOrders": true,
+      "parsedXMLSHA256": "6c47893609448405c8debc4b4abd2ae50e9f1ac1c0d9eacf7f530efcb8703803",
+      "originalSVG": "<svg style=\"vertical-align: -2.287ex;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"6.807ex\" height=\"6.158ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -1710.7 3008.6 2721.7\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"msup\"><g data-mml-node=\"menclose\" data-padding=\"1em\" data-thickness=\".2em\"><g transform=\"translate(1000, 0)\"><g data-mml-node=\"mi\"><path data-c=\"1D465\" d=\"M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z\"></path></g></g><path d=\"M 3063.1 215.5 l -1000 400 l 200 -300 L -491.1 315.5 l 0 -200 L 2263.1 115.5 l -200 -300 Z\" transform=\"rotate(43.643 1286 215.5)\"></path></g><g data-mml-node=\"mpadded\" transform=\"translate(2605,1169.1) scale(0.707)\"><g transform=\"translate(0,100)\"><g data-mml-node=\"mn\"><path data-c=\"30\" d=\"M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z\"></path></g></g></g></g></g></g></svg>",
+      "attributeOrders": [
+        "<svg style=\"vertical-align: -2.287ex;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"6.807ex\" height=\"6.158ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -1710.7 3008.6 2721.7\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"msup\"><g data-mml-node=\"menclose\" data-padding=\"1em\" data-thickness=\".2em\"><g transform=\"translate(1000, 0)\"><g data-mml-node=\"mi\"><path data-c=\"1D465\" d=\"M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z\"></path></g></g><path d=\"M 3063.1 215.5 l -1000 400 l 200 -300 L -491.1 315.5 l 0 -200 L 2263.1 115.5 l -200 -300 Z\" transform=\"rotate(43.643 1286 215.5)\"></path></g><g data-mml-node=\"mpadded\" transform=\"translate(2605,1169.1) scale(0.707)\"><g transform=\"translate(0,100)\"><g data-mml-node=\"mn\"><path data-c=\"30\" d=\"M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z\"></path></g></g></g></g></g></g></svg>",
+        "<svg style=\"vertical-align: -2.287ex;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"6.807ex\" height=\"6.158ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -1710.7 3008.6 2721.7\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"msup\"><g data-mml-node=\"menclose\" data-thickness=\".2em\" data-padding=\"1em\"><g transform=\"translate(1000, 0)\"><g data-mml-node=\"mi\"><path data-c=\"1D465\" d=\"M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z\"></path></g></g><path d=\"M 3063.1 215.5 l -1000 400 l 200 -300 L -491.1 315.5 l 0 -200 L 2263.1 115.5 l -200 -300 Z\" transform=\"rotate(43.643 1286 215.5)\"></path></g><g data-mml-node=\"mpadded\" transform=\"translate(2605,1169.1) scale(0.707)\"><g transform=\"translate(0,100)\"><g data-mml-node=\"mn\"><path data-c=\"30\" d=\"M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z\"></path></g></g></g></g></g></g></svg>"
+      ],
+      "repeatCounts": {
+        "before": [
+          {
+            "svgSHA256": "c492d8b87d1e419c654c517acffe36002f032d474bb9e5518315e28c1b4a8c5d",
+            "count": 46
+          },
+          {
+            "svgSHA256": "c6f8940fbb84d9b4f89c4ffb07a6eb4b23fd42b962c74d565310c17a31e59a4b",
+            "count": 2
+          }
+        ],
+        "after": [
+          {
+            "svgSHA256": "c492d8b87d1e419c654c517acffe36002f032d474bb9e5518315e28c1b4a8c5d",
+            "count": 41
+          },
+          {
+            "svgSHA256": "c6f8940fbb84d9b4f89c4ffb07a6eb4b23fd42b962c74d565310c17a31e59a4b",
+            "count": 7
+          }
+        ]
+      }
+    },
+    {
+      "tex": "\\cancelto[data-padding=1em,data-thickness=.2em]{0}{x}",
+      "display": true,
+      "sources": [
+        {
+          "fixture": "enclosure_bbox_residuals.json",
+          "name": "enclosure-1291"
+        }
+      ],
+      "initialByteExactBefore": false,
+      "initialByteExactAfter": true,
+      "initialFullParsedXMLBeforeEqualsOriginal": true,
+      "initialFullParsedXMLAfterEqualsOriginal": true,
+      "allRepeatedFullParsedXMLEqualOriginal": true,
+      "allRepeatedStringsAreExactlyTheTwoAttributeOrders": true,
+      "parsedXMLSHA256": "6c47893609448405c8debc4b4abd2ae50e9f1ac1c0d9eacf7f530efcb8703803",
+      "originalSVG": "<svg style=\"vertical-align: -2.287ex;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"6.807ex\" height=\"6.158ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -1710.7 3008.6 2721.7\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"msup\"><g data-mml-node=\"menclose\" data-padding=\"1em\" data-thickness=\".2em\"><g transform=\"translate(1000, 0)\"><g data-mml-node=\"mi\"><path data-c=\"1D465\" d=\"M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z\"></path></g></g><path d=\"M 3063.1 215.5 l -1000 400 l 200 -300 L -491.1 315.5 l 0 -200 L 2263.1 115.5 l -200 -300 Z\" transform=\"rotate(43.643 1286 215.5)\"></path></g><g data-mml-node=\"mpadded\" transform=\"translate(2605,1169.1) scale(0.707)\"><g transform=\"translate(0,100)\"><g data-mml-node=\"mn\"><path data-c=\"30\" d=\"M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z\"></path></g></g></g></g></g></g></svg>",
+      "attributeOrders": [
+        "<svg style=\"vertical-align: -2.287ex;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"6.807ex\" height=\"6.158ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -1710.7 3008.6 2721.7\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"msup\"><g data-mml-node=\"menclose\" data-padding=\"1em\" data-thickness=\".2em\"><g transform=\"translate(1000, 0)\"><g data-mml-node=\"mi\"><path data-c=\"1D465\" d=\"M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z\"></path></g></g><path d=\"M 3063.1 215.5 l -1000 400 l 200 -300 L -491.1 315.5 l 0 -200 L 2263.1 115.5 l -200 -300 Z\" transform=\"rotate(43.643 1286 215.5)\"></path></g><g data-mml-node=\"mpadded\" transform=\"translate(2605,1169.1) scale(0.707)\"><g transform=\"translate(0,100)\"><g data-mml-node=\"mn\"><path data-c=\"30\" d=\"M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z\"></path></g></g></g></g></g></g></svg>",
+        "<svg style=\"vertical-align: -2.287ex;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"6.807ex\" height=\"6.158ex\" role=\"img\" focusable=\"false\" viewBox=\"0 -1710.7 3008.6 2721.7\"><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"scale(1,-1)\"><g data-mml-node=\"math\"><g data-mml-node=\"msup\"><g data-mml-node=\"menclose\" data-thickness=\".2em\" data-padding=\"1em\"><g transform=\"translate(1000, 0)\"><g data-mml-node=\"mi\"><path data-c=\"1D465\" d=\"M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z\"></path></g></g><path d=\"M 3063.1 215.5 l -1000 400 l 200 -300 L -491.1 315.5 l 0 -200 L 2263.1 115.5 l -200 -300 Z\" transform=\"rotate(43.643 1286 215.5)\"></path></g><g data-mml-node=\"mpadded\" transform=\"translate(2605,1169.1) scale(0.707)\"><g transform=\"translate(0,100)\"><g data-mml-node=\"mn\"><path data-c=\"30\" d=\"M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z\"></path></g></g></g></g></g></g></svg>"
+      ],
+      "repeatCounts": {
+        "before": [
+          {
+            "svgSHA256": "c492d8b87d1e419c654c517acffe36002f032d474bb9e5518315e28c1b4a8c5d",
+            "count": 43
+          },
+          {
+            "svgSHA256": "c6f8940fbb84d9b4f89c4ffb07a6eb4b23fd42b962c74d565310c17a31e59a4b",
+            "count": 5
+          }
+        ],
+        "after": [
+          {
+            "svgSHA256": "c492d8b87d1e419c654c517acffe36002f032d474bb9e5518315e28c1b4a8c5d",
+            "count": 38
+          },
+          {
+            "svgSHA256": "c6f8940fbb84d9b4f89c4ffb07a6eb4b23fd42b962c74d565310c17a31e59a4b",
+            "count": 10
+          }
+        ]
+      }
+    }
+  ],
+  "repetitionsPerBinaryPerInput": 48,
+  "comparisonMethods": {
+    "parsedXML": "Recursive equality of every tag, all attribute name/value pairs, text, tail, and ordered children. Only XML attribute order is unordered; no numeric, glyph, style, or child normalization.",
+    "flattenedGeometry": "Composed SVG transforms, every visible primitive/path/text, inherited paint, and exact root width/height/viewBox/style. Nonrendering data/ARIA annotations excluded."
+  },
+  "prior144CountCorrection": {
+    "previousReportedNewlyExact": 334,
+    "attributeOrderOnlyNewlyExact": 2,
+    "correctedSourceRelatedNewlyExact": 332,
+    "previousReportedExactRegressions": 2,
+    "attributeOrderOnlyExactRegressions": 2,
+    "sourceRelatedChangedInputSetIdenticalTo145": true,
+    "all346SourceRelatedOriginalBaselineCandidateOutputsIdenticalTo145": true,
+    "note": "The earlier 334 count included two nondeterministic cancel attribute-order matches. Current145 raw335 includes three such matches. Both runs have332 source-related newly exact results."
+  }
+}

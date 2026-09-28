@@ -106,6 +106,9 @@ func (p *parser) mathtoolsMultlined(environment string) ([]*mml.Node, error) {
 			return nil, err
 		}
 		children := unwrapInferred(content)
+		if i != 0 {
+			children = fixInitialMO(children)
+		}
 		cell := node("mtd", children...)
 		if align != "center" {
 			cell.Attributes.Set("columnalign", align)
