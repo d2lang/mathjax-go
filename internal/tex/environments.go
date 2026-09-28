@@ -208,7 +208,13 @@ func (p *parser) beginEnvironment(name string) ([]*mml.Node, error) {
 		}
 		return []*mml.Node{p.leftRightFenced("{", table, "", true)}, nil
 	case "align", "align*", "alignat", "alignat*", "xalignat", "xalignat*", "xxalignat", "aligned", "alignedat", "gather", "gather*", "gathered", "multline", "multline*", "multlined", "lgathered", "rgathered", "spreadlines":
-		table, err := p.parseTableWithAlignment(body, "D", false)
+		var table *mml.Node
+		var spacing *equationTableState
+		if isEquationArray(environment) {
+			table, spacing, err = p.parseEquationTable(body, environment)
+		} else {
+			table, err = p.parseTableWithAlignment(body, "D", false)
+		}
 		if err != nil {
 			return nil, err
 		}
@@ -224,7 +230,9 @@ func (p *parser) beginEnvironment(name string) ([]*mml.Node, error) {
 		} else if strings.Contains(environment, "multline") {
 			finishAMSMultlineTable(table)
 		} else {
-			prefixRelationColumns(table)
+			if !isEquationArray(environment) {
+				prefixRelationColumns(table)
+			}
 			resetTableAttributes(table,
 				"displaystyle", true,
 				"columnalign", "right left",
@@ -232,6 +240,7 @@ func (p *parser) beginEnvironment(name string) ([]*mml.Node, error) {
 				"rowspacing", "3pt",
 			)
 		}
+		spacing.applySpacing(table)
 		return []*mml.Node{table}, nil
 	case "CD":
 		return p.parseCD(body)

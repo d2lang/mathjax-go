@@ -28,7 +28,7 @@ func TestMathtoolsGatherRestoresEnclosingTagState(t *testing.T) {
 				outer := tags.current
 				outer.tag = stringPointer("outer")
 				outer.tagFormat = "outer"
-				_, err := p.mathtoolsAlignment(environment)
+				_, err := p.amsAlignment(environment)
 				if test.errorText == "" {
 					if err != nil {
 						t.Fatal(err)
