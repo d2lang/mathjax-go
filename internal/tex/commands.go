@@ -1589,7 +1589,7 @@ func (p *parser) physicsBraket(name string) ([]*mml.Node, error) {
 		}
 		macro := "\\left\\langle{" + bra + "}\\right\\vert{}"
 		if starBra {
-			macro = "\\langle{" + bra + "}\\vert{}"
+			macro = "\\langle{" + bra + "}\\vert"
 		}
 		return p.parseExpansion(macro)
 	case "ket":
