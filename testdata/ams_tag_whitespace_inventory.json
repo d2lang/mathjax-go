@@ -1,0 +1,19 @@
+{
+  "baseline": "bba94fc9e5a95e80ca2cb71cd845f82f3350fc6f",
+  "counts": {
+    "first-published-input": 490,
+    "prior-input-without-full-original": 4,
+    "prior-raw-promotion": 2
+  },
+  "inputs": 496,
+  "scannedFiles": 413,
+  "originalMismatches": [],
+  "ambiguousOnly": 0,
+  "partition": {
+    "strict-first-published-input": 468,
+    "strict-prior-input-without-full-original": 4,
+    "raw-first-published-input": 22,
+    "strict-prior-raw-promotion": 2
+  },
+  "priorHashOnlyInputsMatchCompleteOriginals": 4
+}

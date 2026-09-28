@@ -8,7 +8,6 @@ package tex
 
 import (
 	"strings"
-	"unicode"
 
 	"github.com/d2lang/mathjax-go/internal/mml"
 )
@@ -133,7 +132,13 @@ func (p *parser) amsHandleTag(name string) error {
 	if err != nil {
 		return err
 	}
-	state.setTag(p, strings.TrimSpace(raw), star)
+	// HandleTag uses ParseUtil.trimSpaces, including its terminal
+	// control-space exception, before Tags stores the tag and formats its ID.
+	tag := strings.TrimFunc(raw, internalTextSpace)
+	if strings.HasSuffix(tag, "\\") && strings.HasSuffix(raw, " ") {
+		tag += " "
+	}
+	state.setTag(p, tag, star)
 	return nil
 }
 
@@ -253,7 +258,7 @@ func amsEnTag(content, tag *mml.Node) *mml.Node {
 
 func replaceTagWhitespace(value string) string {
 	return strings.Map(func(r rune) rune {
-		if unicode.IsSpace(r) || r == '\uFEFF' {
+		if internalTextSpace(r) {
 			return '_'
 		}
 		return r
