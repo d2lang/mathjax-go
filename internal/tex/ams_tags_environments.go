@@ -17,7 +17,7 @@ func (p *parser) amsTagEnvironment(environment string) (nodes []*mml.Node, handl
 	switch environment {
 	case "equation", "equation*":
 		nodes, err = p.amsEquation(environment)
-	case "split", "align", "align*", "aligned", "alignedat", "gather", "gather*":
+	case "split", "align", "align*", "aligned", "alignedat", "gather", "gather*", "eqnarray", "eqnarray*":
 		nodes, err = p.amsAlignment(environment)
 	default:
 		return nil, false, nil
@@ -79,7 +79,8 @@ func (p *parser) amsAlignment(environment string) (nodes []*mml.Node, err error)
 			return nil, err
 		}
 	}
-	taggable := environment == "align" || environment == "align*" ||
+	taggable := environment == "eqnarray" || environment == "eqnarray*" ||
+		environment == "align" || environment == "align*" ||
 		environment == "gather" || environment == "gather*"
 	if taggable {
 		if err := p.checkEquationEnvironment(); err != nil {
@@ -91,7 +92,7 @@ func (p *parser) amsAlignment(environment string) (nodes []*mml.Node, err error)
 		return nil, err
 	}
 
-	defaultTags := environment == "align" || environment == "gather"
+	defaultTags := environment == "align" || environment == "gather" || environment == "eqnarray"
 	state := p.amsTags()
 	state.start(environment, taggable, defaultTags)
 	ended := false

@@ -274,7 +274,7 @@ func (p *parser) beginEnvironment(name string) ([]*mml.Node, error) {
 // Untaggable arrays such as split, aligned and gathered do not set the flag.
 func isGuardedEquationEnvironment(environment string) bool {
 	switch environment {
-	case "equation", "equation*", "align", "align*", "gather", "gather*",
+	case "equation", "equation*", "align", "align*", "gather", "gather*", "eqnarray", "eqnarray*",
 		"multline", "multline*", "alignat", "alignat*", "xalignat", "xalignat*",
 		"xxalignat", "flalign", "flalign*":
 		return true
@@ -452,6 +452,20 @@ func repeatAMSEqnArrayDefinition(definition string, maximum int) string {
 // finishAMSEqnArrayTable applies the source map's initial EqnArray column
 // definitions followed by EqnArrayItem.EndTable's repetition pass.
 func finishAMSEqnArrayTable(table *mml.Node, environment string, maximum int) {
+	if environment == "eqnarray" || environment == "eqnarray*" {
+		// BaseMethods.EqnArray uses 3pt row spacing even though the source
+		// registrations contain an unused extra .5em argument.
+		resetTableAttributes(table,
+			"displaystyle", true,
+			"columnalign", repeatAMSEqnArrayDefinition("right center left", maximum),
+			"columnspacing", repeatAMSEqnArrayDefinition("0em 0.278em", maximum-1),
+			"rowspacing", "3pt",
+			"side", "right",
+			"minlabelspacing", "0.8em",
+		)
+		return
+	}
+
 	if environment == "gather" || environment == "gather*" {
 		resetTableAttributes(table,
 			"displaystyle", true,
