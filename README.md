@@ -72,6 +72,20 @@ positioning, nested parser scopes, macro overrides, and error precedence.
 Regenerate it with `node testdata/generate_delimiter_color.cjs PINNED_ASSETS`
 and `node testdata/generate_middle_scope.cjs PINNED_ASSETS`.
 
+### Horizontal positioning
+
+`\moveleft` and `\moveright` read a TeX dimension and position the next
+completed math item without changing its total advance. They use the original
+PositionItem behavior: emit a leading space, the item, and a compensating
+space. An enclosing positioning command consumes the first of these final
+items, so mixed horizontal and vertical nesting follows the original stack.
+
+The fixed corpus compares 748 complete original SVGs and 374 display
+measurements, including signed and comma dimensions, all pairs and triples of
+positioning commands, pending functions/operators, styles, scripts, scopes,
+macro overrides, missing boxes, and delimiter/error precedence. Regenerate
+it with `node testdata/generate_horizontal_position.cjs PINNED_ASSETS`.
+
 ## License
 
 Apache License 2.0, with identified MIT-derived portions. See
