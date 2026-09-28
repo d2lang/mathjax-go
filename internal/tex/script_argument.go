@@ -106,7 +106,7 @@ func (p *parser) parseScriptArgument(attachment *scriptAttachment, font string) 
 		if parseErr != nil {
 			return nil, currentFont, nil, parseErr
 		}
-		if result.notItem || result.dotsItem != nil {
+		if result.notItem || result.dotsItem != nil || result.positionItem != nil {
 			return nil, currentFont, nil, attachment.missingOpen()
 		}
 		if len(result.nodes) == 0 {

@@ -87,21 +87,7 @@ func TestDimensionGrammarPinnedReferences(t *testing.T) {
 				}
 				want, hash = b.BaselineTree, b.BaselineSVG
 			}
-			if strings.HasPrefix(c.Name, "raise-valid-boundary-") {
-				// The reader fixes the comma. Existing RaiseLower omits only the leading
-				// plus on voffset; the entire remaining primary tree and SVG stay strict.
-				b, _ := json.Marshal(want)
-				var copyTree *dimensionGrammarTree
-				if e := json.Unmarshal(b, &copyTree); e != nil {
-					t.Fatal(e)
-				}
-				want = copyTree
-				attrs := want.Children[0].Children[0].Attributes
-				if !reflect.DeepEqual(attrs, map[string]any{"voffset": "+1.5pt", "height": "+1.5pt", "depth": "-1.5pt"}) {
-					t.Fatal("primary raise shape changed")
-				}
-				attrs["voffset"] = "1.5pt"
-			}
+
 			root, e := tex.NewCompiler().Compile(c.TeX, c.Display)
 			if e != nil {
 				t.Fatal(e)

@@ -1200,14 +1200,17 @@ func (p *parser) raiseLower(name string) ([]*mml.Node, error) {
 	if err != nil {
 		return nil, err
 	}
-	arg, err := p.parseArgument(name)
-	if err != nil {
-		return nil, err
+	lower := name == "lower"
+	if strings.HasPrefix(amount, "-") {
+		amount = amount[1:]
+		lower = !lower
 	}
-	if name == "lower" {
-		amount = negateDimension(amount)
+	dh, dd := "+"+amount, "-"+amount
+	if lower {
+		dh, dd = dd, dh
 	}
-	return []*mml.Node{setAttributes(node("mpadded", arg), map[string]any{"voffset": amount, "height": "+" + amount, "depth": "-" + amount})}, nil
+	p.commandPosition = &positionItem{name: name, height: dh, depth: dd}
+	return nil, nil
 }
 
 func negateDimension(value string) string {
