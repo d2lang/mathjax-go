@@ -23,8 +23,6 @@ func (p *parser) baseAMSCommand(name string) (nodes []*mml.Node, handled bool, e
 		err = p.amsDeclareMathOperator(name)
 	case "operatorname":
 		nodes, err = p.amsOperatorName(name)
-	case "boxed":
-		nodes, err = p.amsBoxed(name)
 	case "idotsint":
 		nodes, err = p.amsMultiIntegral(name)
 	case "sideset":
@@ -243,24 +241,6 @@ func (p *parser) amsOperatorName(name string) ([]*mml.Node, error) {
 		}
 	}
 	return []*mml.Node{result}, nil
-}
-
-func (p *parser) amsBoxed(name string) ([]*mml.Node, error) {
-	// AMS boxed internal math starts with an empty lexical environment.
-	inRoot, color := p.inRoot, p.activeColor
-	p.inRoot, p.activeColor = false, ""
-	defer func() { p.inRoot, p.activeColor = inRoot, color }()
-	argument, err := p.parseArgument(name)
-	if err != nil {
-		return nil, err
-	}
-	inner := texAtom(argument, mml.TeXClassOrd)
-	style := node("mstyle", inner)
-	style.Attributes.Set("displaystyle", true)
-	style.Attributes.Set("scriptlevel", 0)
-	boxed := node("menclose", texAtom(style, mml.TeXClassOrd))
-	boxed.Attributes.Set("notation", "box")
-	return []*mml.Node{boxed}, nil
 }
 
 func (p *parser) amsMultiIntegral(_ string) ([]*mml.Node, error) {

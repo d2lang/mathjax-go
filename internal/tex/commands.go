@@ -296,13 +296,6 @@ func (p *parser) commandNodes(name string, after **derivativeAutoOpen) ([]*mml.N
 			return nil, err
 		}
 		return []*mml.Node{texAtom(arg, mml.TeXClassVCenter)}, nil
-	case "boxed":
-		arg, err := p.parseArgument(name)
-		if err != nil {
-			return nil, err
-		}
-		styled := texAtom(setAttributes(node("mstyle", arg), map[string]any{"displaystyle": true, "scriptlevel": 0}), mml.TeXClassOrd)
-		return []*mml.Node{setAttributes(node("menclose", styled), map[string]any{"notation": "box"})}, nil
 	case "fbox":
 		raw, _, err := p.readArgument(name, false)
 		if err != nil {
