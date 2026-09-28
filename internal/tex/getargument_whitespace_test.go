@@ -27,7 +27,7 @@ func TestGetArgumentWhitespacePrimaryMethod(t *testing.T) {
 		RawControls []struct {
 			Source string
 			NoneOK bool
-			Value *string
+			Value  *string
 		}
 	}
 	if err := json.Unmarshal(data, &fixture); err != nil {
