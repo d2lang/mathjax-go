@@ -291,6 +291,11 @@ func (p *parser) amsOperatorName(name string) ([]*mml.Node, error) {
 }
 
 func (p *parser) amsBoxed(name string) ([]*mml.Node, error) {
+	// AMS expands boxed through fbox's internal math parser, which starts
+	// with an empty lexical environment even inside a surrounding root index.
+	inRoot := p.inRoot
+	p.inRoot = false
+	defer func() { p.inRoot = inRoot }()
 	argument, err := p.parseArgument(name)
 	if err != nil {
 		return nil, err
