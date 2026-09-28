@@ -70,9 +70,13 @@ unmodified original, baseline, and candidate SVG hashes.
 
 `under_over_commands_inventory.json` records the public-input overlap using
 both TeX and display mode. This per-fix inventory is not a globally unique
-MathJax coverage count. The 92 already-published input pairs are explicitly listed; the other 3,674
-asserted input pairs are first published in this change. The overlap scan
-uses the complete published PR154 fixture tree before its merge. The previous
+MathJax coverage count. The 92 already-published input pairs comprise 60 raw promotions and 32
+existing assertions. Of those 32, 26 already contain full original SVGs; six
+previously stored a hash and tree and now receive their first complete SVGs.
+The other 3,674 asserted input pairs are first published in this change.
+An independent recursive scan of all 378 tracked JSON files under root and
+internal testdata directories confirmed the same overlap. The published
+PR154 head and merged `290cf653` have the same source tree. The previous
 original observations are unchanged; only the classification of now-exact
 inputs differs after the source prerequisites compose.
 

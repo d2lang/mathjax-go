@@ -1103,5 +1103,17 @@
     "wide_accent_mathjax_3_2_2.json"
   ],
   "baselineInternalTree": "74787f5db7d8284daf1b22d310e4863cef104926",
-  "baselineContext": "Published PR154 head, before merge; production and fixture trees are the final reviewed source."
+  "baselineContext": "Published PR154 head, before merge; production and fixture trees are the final reviewed source.",
+  "baselineMergedCommit": "290cf6537cf7e066ff2d5a873a79b6f72db51894",
+  "priorRawPromotions": 60,
+  "priorAssertedInputs": 32,
+  "priorAssertionsWithCompleteSVG": 26,
+  "priorAssertionsWithHashAndTreeOnly": 6,
+  "firstCompleteSVGAmongExistingPairs": 6,
+  "independentRecursiveTestdataScan": {
+    "trackedJSONFiles": 378,
+    "alreadyPublishedInputCount": 92,
+    "ambiguousSchemaMatches": 0,
+    "includesInternalTestdata": true
+  }
 }
