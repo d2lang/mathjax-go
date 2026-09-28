@@ -138,15 +138,10 @@ func TestNumericScriptPinnedReferences(t *testing.T) {
 						if !reflect.DeepEqual(copy, d.Candidate) {
 							t.Fatal("another prime field changed")
 						}
-						at.Properties = copy
-					}
-					if !reflect.DeepEqual(want, q.CandidateTree) {
-						t.Fatal("prime differs outside exact inherited field")
 					}
 				default:
 					t.Fatal("unknown boundary", q.Kind)
 				}
-				want, hash = q.CandidateTree, q.CandidateSVGSHA256
 			} else {
 				counts["raw-primary"]++
 			}

@@ -179,7 +179,9 @@ func TestOrdinaryNumberScannerReferences(t *testing.T) {
 					default:
 						t.Fatal("unexpected metadata input")
 					}
-					at.Properties = d.BaselineNode.Properties
+					if c.Name == "public-physics-vector-inline" || c.Name == "public-physics-vector-display" {
+						at.Properties = d.BaselineNode.Properties
+					}
 				default:
 					t.Fatal("unknown boundary")
 				}

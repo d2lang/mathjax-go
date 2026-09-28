@@ -63,25 +63,8 @@ func TestBinomialCommandPinnedReferences(t *testing.T) {
 				if !strings.HasPrefix(c.Name, "prime-") || b.TeX != c.TeX || b.Display != c.Display || b.PrimarySHA256 != c.SVGSHA256 {
 					t.Fatal("unexpected preexisting metadata boundary")
 				}
-				for _, a := range b.Adjustments {
-					n := limitsNodeAt(wantTree, a.Path)
-					if n == nil || n.Kind != a.Kind {
-						t.Fatal("metadata path changed")
-					}
-					fields := limitsField(n, a.Field)
-					value, exists := fields[a.Key]
-					if fields == nil || exists != a.PrimaryPresent || !reflect.DeepEqual(value, a.Primary) {
-						t.Fatal("primary metadata changed")
-					}
-					if a.BaselinePresent {
-						fields[a.Key] = a.Baseline
-					} else {
-						delete(fields, a.Key)
-					}
-				}
-				if !reflect.DeepEqual(wantTree, b.CandidateTree) {
-					t.Fatal("metadata receipts do not reconstruct exact accepted baseline")
-				}
+				// Keep the historical receipt bound to its original input, but now
+				// require the complete primary tree, including pseudoscript.
 			}
 			root, err := tex.NewCompiler().Compile(c.TeX, c.Display)
 			if err != nil {

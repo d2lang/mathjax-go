@@ -61,8 +61,7 @@ func TestPendingPrimePinnedReferences(t *testing.T) {
 				if n == nil || n.Kind != "mo" || n.Properties["pseudoscript"] != b.PrimaryValue || len(n.Children) != 1 || n.Children[0].Text == nil || *n.Children[0].Text != b.PrimaryText {
 					t.Fatal("changed exact inherited metadata path")
 				}
-				// The existing operator-inheritance omission is bound by exact node path.
-				delete(n.Properties, "pseudoscript")
+				// The preserved receipt now requires the original inherited metadata.
 			}
 			root, err := tex.NewCompiler().Compile(c.TeX, c.Display)
 			if err != nil {

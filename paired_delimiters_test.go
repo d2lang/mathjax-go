@@ -82,12 +82,10 @@ func TestPairedDelimitersPublicReferences(t *testing.T) {
 }
 
 // The original cleanStretchy postfilter adds an ORD wrapper to this raw slash.
-// That separate, unchanged structural difference is not paired-delimiter parity.
-// Keep the original references and assert complete baseline output without
-// normalizing either SVG. Promote these cases when that postfilter is fixed.
-func TestPairedDelimiterSlashUnchangedBoundary(t *testing.T) {
+// With that postfilter restored, the preserved references now require the
+// complete original SVG without the former structural qualification.
+func TestPairedDelimiterSlashOriginalReference(t *testing.T) {
 	const primarySHA = "9a8e7d4941d0a1eab9ceeca7c4583067a0287acc7c5595645420f3a223b24e99"
-	const baselineSHA = "9b71cb34b07f52b520b14d5b1341d5213b5917693893109c028461f58f14fbf9"
 	hash := func(value string) string { sum := sha256.Sum256([]byte(value)); return hex.EncodeToString(sum[:]) }
 	boundaries := 0
 	for _, c := range pairedDelimiterReferences(t) {
@@ -102,8 +100,8 @@ func TestPairedDelimiterSlashUnchangedBoundary(t *testing.T) {
 			options := mathjax.DefaultOptions()
 			options.Display = c.Display
 			got, err := mathjax.RenderWithOptions(c.TeX, options)
-			if err != nil || hash(got) != baselineSHA {
-				t.Fatalf("unchanged slash boundary changed: error=%v SVG=%s", err, got)
+			if err != nil || hash(got) != primarySHA {
+				t.Fatalf("complete original slash SVG differs: error=%v SVG=%s", err, got)
 			}
 			checkPairedDelimiterMeasurement(t, c)
 		})

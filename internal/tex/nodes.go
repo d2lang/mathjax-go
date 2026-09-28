@@ -210,7 +210,7 @@ func refreshDynamicFlags(n *mml.Node) {
 		}
 		n.Flags.NotParent = hasSingleInferredChild(n)
 
-	case "msub", "msup", "msubsup", "munder", "mover", "munderover", "mmultiscripts", "mtd":
+	case "mfrac", "msub", "msup", "msubsup", "munder", "mover", "munderover", "mmultiscripts", "mtd":
 		if len(n.Children) != 0 && n.Children[0] != nil {
 			n.Flags.Embellished = n.Children[0].Flags.Embellished
 			n.Flags.CoreIndex = 0

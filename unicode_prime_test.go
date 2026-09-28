@@ -56,7 +56,7 @@ func TestUnicodePrimePinnedReferences(t *testing.T) {
 		t.Fatal("unbound Unicode prime matrix")
 	}
 	primaryErrors := 0
-	promotedOperatorNames, promotedLeftQuotes, unchangedNonPrime := 0, 0, 0
+	promotedOperatorNames, promotedLeftQuotes, promotedLiteralSymbols := 0, 0, 0
 	for _, c := range fixture.Cases {
 		if c.Tree.Children[0].Children[0].Kind == "merror" {
 			primaryErrors++
@@ -68,49 +68,22 @@ func TestUnicodePrimePinnedReferences(t *testing.T) {
 				if boundary.TeX != c.TeX || boundary.Display != c.Display || len(boundary.BaselineTreeSHA256) != 64 || boundary.SVGSHA256 == c.SVGSHA256 {
 					t.Fatal("changed preexisting literal/non-prime boundary")
 				}
-				if c.Name == "operator-literal-inline" || c.Name == "operator-literal-display" {
+				// The original raw-symbol cleanup and operator inheritance now
+				// resolve every former literal/non-prime boundary in this corpus.
+				if strings.HasPrefix(c.Name, "operator-literal-") {
 					promotedOperatorNames++
-					if c.TeX != `\operatorname{x’}` || c.Display != (c.Name == "operator-literal-display") {
-						t.Fatal("changed exact operator-name input")
-					}
-					// Full child parsing restores the original SVG and explicit tree.
-					// The existing inheritance-phase omission remains: original
-					// checkPseudoScripts stores false on this exact prime. Remove
-					// only that property from a comparison copy, never the fixture.
-					encoded, err := json.Marshal(c.PropertiesTree)
-					if err != nil {
-						t.Fatal(err)
-					}
-					var comparison limitsTree
-					if err = json.Unmarshal(encoded, &comparison); err != nil {
-						t.Fatal(err)
-					}
-					prime := limitsNodeAt(&comparison, []int{0, 0, 0, 0, 1})
-					if prime == nil || prime.Kind != "mo" || prime.Properties["pseudoscript"] != false || len(prime.Children) != 1 || prime.Children[0].Text == nil || *prime.Children[0].Text != "′" {
-						t.Fatal("changed exact inherited prime metadata boundary")
-					}
-					delete(prime.Properties, "pseudoscript")
-					wantTree = &comparison
-					unchanged = false
-				} else if c.Name == "left-quote-inline" || c.Name == "left-quote-display" {
-					if c.TeX != "x‘" || c.Display != (c.Name == "left-quote-display") {
-						t.Fatal("changed exact left-quote input")
-					}
-					// D125 restores both original metadata and the rendered prime
-					// without changing the original retained fixture.
+				} else if strings.HasPrefix(c.Name, "left-quote-") {
 					promotedLeftQuotes++
-					unchanged = false
 				} else {
-					wantSVG, wantTree = boundary.SVGSHA256, boundary.Tree
-					unchangedNonPrime++
+					promotedLiteralSymbols++
 				}
+				unchanged = false
 			} else {
 				for _, b := range boundaries.InheritedPrimeMetadata[c.Name] {
 					n := limitsNodeAt(wantTree, b.Path)
 					if n == nil || n.Kind != "mo" || n.Properties["pseudoscript"] != b.PrimaryValue || len(n.Children) != 1 || n.Children[0].Text == nil || *n.Children[0].Text != b.PrimaryText {
 						t.Fatal("changed exact inherited metadata path")
 					}
-					delete(n.Properties, "pseudoscript")
 				}
 			}
 			root, err := tex.NewCompiler().Compile(c.TeX, c.Display)
@@ -161,8 +134,8 @@ func TestUnicodePrimePinnedReferences(t *testing.T) {
 			}
 		})
 	}
-	if promotedOperatorNames != 2 || promotedLeftQuotes != 2 || unchangedNonPrime != 6 {
-		t.Fatal("promoted operator-name/left-quote/unchanged diagnostic inventory changed", promotedOperatorNames, promotedLeftQuotes, unchangedNonPrime)
+	if promotedOperatorNames != 2 || promotedLeftQuotes != 2 || promotedLiteralSymbols != 6 {
+		t.Fatal("promoted operator-name/left-quote/literal-symbol inventory changed", promotedOperatorNames, promotedLeftQuotes, promotedLiteralSymbols)
 	}
 	if primaryErrors != 16 {
 		t.Fatal("required primary errors changed")
