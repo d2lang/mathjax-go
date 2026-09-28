@@ -24,16 +24,16 @@ supply the argument. Source-produced Fn/Not/Dots/Position items retain their
 existing rejection rules. The separate Bqty registration is not part of
 this prerequisite.
 
-The 678-input inventory contains 646 complete exact original references:
-622 valid renderings and 24 error renderings. Against main145
-`aa6200c004e8498321d821ac7edceb4040b441cb`, there are 166 fixes and 480 exact
+The 878-input deduplicated inventory contains 844 complete exact original references:
+816 valid renderings and 28 error renderings. Against main145
+`aa6200c004e8498321d821ac7edceb4040b441cb`, there are 226 fixes and 618 exact
 controls. Coverage includes starred and sized commutators, vector fonts,
 empty arguments, primes, later scripts, parent functions, positions,
 negation, dots, Braket, AutoOpen, font declarations, authored groups,
 matrices, CD, and command overrides. No formerly exact input in this fresh
 inventory regresses.
 
-All 32 nonexact observations remain raw in `script_final_items_residuals.json`:
+All 34 nonexact observations remain raw in `script_final_items_residuals.json`:
 
 - 22 starred Bra cases retain the existing extra empty TeXAtom produced by
   Go's extra `{}` in the starred expansion. Ten script cases change; for
@@ -43,6 +43,8 @@ All 32 nonexact observations remain raw in `script_final_items_residuals.json`:
   pinned PhysicsMethods.Bra starred expansion has no such extra group.
 - Two empty PushAll cases inside matrix cells retain an existing difference
   between MissingScript and MissingOpenForSup diagnostics.
+- Two nested-MathFont observations from the independent review remain
+  byte-unchanged.
 - Eight Physics function-plus-AutoOpen cases remain wrongly accepted as MML
   instead of producing the original missing-open-brace diagnostic. Both
   baseline and candidate are wrong; this change moves their trailing MML to
@@ -67,7 +69,8 @@ node --jitless testdata/generate_script_final_items.cjs /path/to/pinned-assets
 An independent source review and 200 additional fresh original comparisons
 found no scoped issue: 198 were exact, 60 were fixes, and two inherited
 nested-MathFont observations were byte-unchanged. No exact regression or
-changed nonexact output occurred in that review. Its controls additionally
+changed nonexact output occurred in that review. Its 200 distinct new inputs
+are included in the deduplicated inventory above. Its controls additionally
 exercise Eval, pmb, logos, and both ordinary and prime script consumers.
 
 The generator checks all three frozen D2 asset hashes and creates a fresh
