@@ -63,6 +63,24 @@ positions, Braket/Quantity, Nonscript, and literal text/token readers. Whitespac
 characters in text, comments, or arguments are retained as ownership controls;
 they are not all claimed to dispatch as ordinary math tokens.
 
+## Historical assertion promotions
+
+The separate `math_token_historical_boundaries.json` preserves 12 further
+historical inputs, outside the 3,440-pair inventory above. Two BOM cases now
+assert complete original SVGs and the unchanged original property trees instead
+of accepting the former `mo`/ORD-wrapper substitution. Their full SVG hashes
+match the original historical fixture. The other ten inputs are original
+null-range runtime failures: six prime-whitespace cases and four numeric-script
+cases now require a bounded `U+0085` conversion error. The old original records,
+Go hashes, and trees remain intact as historical receipts; a former Go rendering
+is not treated as an original oracle for a runtime failure.
+
+The original-only prime generator was rerun for all 136 historical records:
+130 complete SVG/tree references and six original exceptions were identical.
+The shared generator also rechecks the 12 supplemental observations without
+rewriting their captured runtime stacks. These are two promotions to complete
+original-SVG assertions and ten bounded-error checks, not 12 new SVG successes.
+
 ## Retained changed-render qualifications
 
 Twenty own original-valid render observations change but remain nonexact:
@@ -99,7 +117,7 @@ attributes, text, tails, and ordered children.
 
 ```sh
 node --jitless testdata/generate_math_token_whitespace.cjs /path/to/pinned-assets
-go test -run 'TestMathToken(WhitespaceReferences|NullRangeReturnsBoundedError)' ./...
+go test -run 'TestMathToken(WhitespaceReferences|NullRangeReturnsBoundedError)|TestPrimeWhitespacePinnedReferences|TestNumericScriptWhitespaceBoundary' ./...
 ```
 
 The generator verifies all three asset hashes, creates a fresh original VM per
@@ -111,6 +129,9 @@ parses the entire original XML through EOF, and compares complete output strings
 The guard test checks bounded errors and safe codepoint diagnostics for the 204
 source runtime failures, not replacement renderings.
 
-At fixture preparation, original regeneration is byte-identical and the current
-short probe/replays pass. The focused/full/race/vet/WASM gates and final D2 visual
-evidence remain pending; this document does not claim those checks have run.
+The first full166 validation attempt is preserved as a failed receipt: its
+oracle process did not use the established jitless Node wrapper, and the
+historical tests still accepted superseded Go NEL/BOM behavior. Production is
+unchanged by the assertion promotions above. The focused166 tests passed before
+that attempt; corrected focused/full/race/vet/WASM validation remains pending.
+Full oracle validation must set `MATHJAX_GO_NODE` to the task's jitless wrapper.

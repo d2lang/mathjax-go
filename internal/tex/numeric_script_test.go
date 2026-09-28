@@ -8,6 +8,7 @@ import (
 	"errors"
 	"fmt"
 	"reflect"
+	"strings"
 	"testing"
 	"unicode/utf16"
 
@@ -273,6 +274,18 @@ func TestNumericScriptWhitespaceBoundary(t *testing.T) {
 	if len(f.Cases) != 8 {
 		t.Fatal("whitespace inventory changed")
 	}
+	var historical struct {
+		MathjaxGitCommit string
+		Cases []struct {
+			Name, TeX string
+			Display bool
+			Original struct { SVG, Error string }
+		}
+	}
+	readArgumentJSON(t, "../../testdata/math_token_historical_boundaries.json", &historical)
+	if historical.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || len(historical.Cases) != 12 {
+		t.Fatal("unbound historical whitespace originals")
+	}
 	statuses := map[string]int{}
 	for _, c := range f.Cases {
 		t.Run(c.Name, func(t *testing.T) {
@@ -281,6 +294,20 @@ func TestNumericScriptWhitespaceBoundary(t *testing.T) {
 			}
 			statuses[c.Status]++
 			root, e := NewCompiler().Compile(c.TeX, c.Display)
+			// The old status and Go hash/tree are preserved as historical data.
+			// This input's original outcome is a null-range runtime failure.
+			if c.Status == "uncomparable-primary-exception-unchanged-Go" {
+				bound := false
+				for _, h := range historical.Cases {
+					if h.Name == "numeric-"+c.Name {
+						bound = h.TeX == c.TeX && h.Display == c.Display && h.Original.SVG == "" && strings.Split(h.Original.Error, "\n")[0] == "TypeError: Cannot read properties of null (reading '4')"
+					}
+				}
+				if !bound || e == nil || root != nil || e.Error() != "no Unicode range for character U+0085" {
+					t.Fatal("original NEL runtime failure must return a bounded error", e)
+				}
+				return
+			}
 			if e != nil {
 				t.Fatal(e)
 			}

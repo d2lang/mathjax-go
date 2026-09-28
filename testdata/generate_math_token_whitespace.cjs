@@ -15,10 +15,10 @@ for (const [name, expected] of Object.entries(hashes)) {
   const actual = crypto.createHash('sha256').update(fs.readFileSync(path.join(assets, name))).digest('hex');
   if (actual !== expected) throw Error(`unverified ${name}`);
 }
-for (const name of ['math_token_whitespace_mathjax_3_2_2.json', 'math_token_whitespace_residuals.json']) {
+for (const name of ['math_token_whitespace_mathjax_3_2_2.json', 'math_token_whitespace_residuals.json', 'math_token_historical_boundaries.json']) {
   const file = path.join(__dirname, name);
   const fixture = JSON.parse(fs.readFileSync(file, 'utf8'));
-  const strict = !name.includes('residuals');
+  const strict = name === 'math_token_whitespace_mathjax_3_2_2.json';
   for (let start = 0; start < fixture.cases.length; start += 24) {
     const batch = fixture.cases.slice(start, start + 24);
     const input = batch.map(c => JSON.stringify({tex:c.tex, options:{Display:c.display}})
