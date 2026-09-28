@@ -31,7 +31,11 @@ import (
 )
 
 func (p *parser) commandNodes(name string, after **derivativeAutoOpen) ([]*mml.Node, error) {
-	if definition, ok := p.state.macros[name]; ok {
+	// Mathtools' dynamic paired-delimiter map has priority -5, ahead of
+	// the builtin and user macro maps (including AMS operators at -1).
+	// Registration order does not change that precedence.
+	_, paired := p.state.pairedDelimiters[name]
+	if definition, ok := p.state.macros[name]; ok && !paired {
 		if definition.builtinNot {
 			p.commandNot = true
 			return nil, nil
@@ -254,6 +258,13 @@ func (p *parser) commandNodes(name string, after **derivativeAutoOpen) ([]*mml.N
 		return p.horizontalSpace(name)
 	case "hspace*":
 		return p.horizontalSpace(name)
+	case "strut":
+		// BaseMethods.Strut uses an explicit empty row and fixed point sizes.
+		padded := node("mpadded", node("mrow"))
+		padded.Attributes.Set("height", "8.6pt")
+		padded.Attributes.Set("depth", "3pt")
+		padded.Attributes.Set("width", 0)
+		return []*mml.Node{padded}, nil
 	case "phantom", "hphantom", "vphantom":
 		return p.phantom(name)
 	case "smash":

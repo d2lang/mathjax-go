@@ -10,9 +10,9 @@ package tex
 import "github.com/d2lang/mathjax-go/internal/mml"
 
 // mathtoolsCommand is the single command-dispatch hook for the central parser.
-// It must run after user macros and before the generic source-symbol and legacy
-// paired-delimiter paths, since Mathtools' dynamic delimiter map has priority
-// -5 and several entries have source-visible handler behavior.
+// commandNodes resolves macro-map priorities before calling this hook: an
+// existing dynamic delimiter registration has priority -5 over user macros.
+// This hook precedes the generic source-symbol and legacy delimiter paths.
 func (p *parser) mathtoolsCommand(name string) (nodes []*mml.Node, handled bool, err error) {
 	if definition, ok := p.state.pairedDelimiters[name]; ok {
 		nodes, err = p.mathtoolsPairedDelimiter(name, definition)
