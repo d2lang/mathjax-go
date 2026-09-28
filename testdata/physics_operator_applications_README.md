@@ -1,16 +1,16 @@
 # Physics residue and operator applications
 
-`physics_operator_applications_mathjax_3_2_2.json` contains 2,658 complete
+`physics_operator_applications_mathjax_3_2_2.json` contains 2,958 complete
 SVG responses from D2's frozen MathJax 3.2.2 component at source commit
-`ad8f5c21cb810236551da8c6512ba733e67357ee`: 1,878 valid expressions and
-780 original error SVGs. Each expression runs in a fresh VM with `em=16`,
+`ad8f5c21cb810236551da8c6512ba733e67357ee`: 2,148 valid expressions and
+810 original error SVGs. Each expression runs in a fresh VM with `em=16`,
 `ex=8`, no font cache, and its recorded display mode. All original SVGs
 are compared verbatim, without normalization or Go-generated goldens.
 The three asset hashes are recorded and checked by the generator.
 
-All 2,658 references match. Against baseline
+All 2,958 references match. Against baseline
 `6a7adcd1c6cce9df99b3363d40f22c2f68857fd5`, which includes the preceding
-shared function/script ownership repair, 2,308 fail and 350 already match.
+shared function/script ownership repair, 2,608 fail and 350 already match.
 
 ## Source registrations and behavior
 
@@ -58,7 +58,7 @@ primes, infix fractions, and error precedence across child parsers.
 
 ## Preserved inherited controls
 
-The full audit contains 2,836 comparisons before duplicate inputs are
+The initial application audit contains 2,836 comparisons before duplicate inputs are
 removed. `physics_operator_applications_residuals.json` separately retains
 142 complete original/baseline/candidate receipts: 72 existing vector-helper
 controls, 12 calligraphic-P script rounding cases, eight original JavaScript
@@ -92,4 +92,9 @@ its item kind, omitting the original ApplyFunction node. The six raw
 responses are retained above for the separate typed-Fn-successor repair.
 After rebasing onto PR125, all 424 review outputs and all 136 earlier
 raw control outputs remain byte-identical. A fresh PR125 baseline still
-fails exactly 2,308 of the 2,658 exact original references.
+fails exactly 2,608 of the 2,958 exact original references.
+
+An additional 300 independently generated compositions cover explicit CD entries,
+arrow labels, single Braket ownership, and matrices on the merged CD-entry parser.
+All 300 differ from main125 and match the original with this change. Their raw
+original SVGs are included in the fixed reference inventory.
