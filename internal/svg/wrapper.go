@@ -304,7 +304,20 @@ func (w *wrapper) getScale() {
 			scale = minimum
 		}
 	}
-	if mathsize := stringAttribute(w.node, "mathsize", "normal"); mathsize != "1" {
+	// CommonWrapper uses an authored mathsize only on tokens and mstyle.
+	// Containers use the inherited layer, including its default prototypes.
+	value, present := w.node.Attributes.Get("mathsize")
+	if !w.node.Flags.Token && w.node.Kind != "mstyle" {
+		value, present = w.node.Attributes.GetInherited("mathsize")
+	}
+	mathsize := "normal"
+	if present {
+		mathsize = fmt.Sprint(value)
+		if mml.IsInherit(value) {
+			mathsize = "_inherit_"
+		}
+	}
+	if mathsize != "1" {
 		scale *= layout.Length2Em(mathsize, 1, 1, w.renderer.pxPerEm)
 	}
 	parentScale := 1.0

@@ -57,7 +57,8 @@ if (process.argv[3] === '--batch') {
   });
   process.stdout.write(JSON.stringify(output));
 } else {
-  const file = path.join(__dirname,'synthetic_operator_factory_mathjax_3_2_2.json');
+  for (const name of (process.argv[3] ? [process.argv[3]] : ['synthetic_operator_factory_mathjax_3_2_2.json','synthetic_operator_scale_mathjax_3_2_2.json'])) {
+  const file = path.join(__dirname,name);
   const fixture = JSON.parse(fs.readFileSync(file,'utf8'));
   if (fixture.mathjaxGitCommit !== 'ad8f5c21cb810236551da8c6512ba733e67357ee') throw Error('unbound primary revision');
   for (let start=0;start<fixture.cases.length;start+=24) {
@@ -78,4 +79,5 @@ if (process.argv[3] === '--batch') {
     });
   }
   fs.writeFileSync(file,JSON.stringify(fixture,null,2)+'\n');
+  }
 }

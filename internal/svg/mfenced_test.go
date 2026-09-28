@@ -11,7 +11,7 @@ import (
 )
 
 func fencedFixture() *mml.Node {
-	node := mml.NewNode("mfenced", nil, nil,
+	node := syntheticMMLFactory.Create("mfenced",
 		wrapperTrancheToken("mi", "x", mml.TeXClassOrd),
 		wrapperTrancheToken("mi", "y", mml.TeXClassOrd),
 		wrapperTrancheToken("mi", "z", mml.TeXClassOrd),
@@ -61,7 +61,7 @@ func TestFencedFrozenSourceShapedSVG(t *testing.T) {
 }
 
 func TestFencedDefaultsWhitespaceAndRepeatedSeparator(t *testing.T) {
-	node := mml.NewNode("mfenced", nil, nil,
+	node := syntheticMMLFactory.Create("mfenced",
 		wrapperTrancheToken("mi", "a", mml.TeXClassOrd),
 		wrapperTrancheToken("mi", "b", mml.TeXClassOrd),
 		wrapperTrancheToken("mi", "c", mml.TeXClassOrd),
