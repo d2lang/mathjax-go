@@ -59,7 +59,7 @@ func (p *parser) mathtoolsCommand(name string) (nodes []*mml.Node, handled bool,
 	case "Aboxed", "ArrowBetweenLines", "MTFlushSpaceAbove", "MTFlushSpaceBelow", "vdotswithin", "shortvdotswithin":
 		err = texError("NotInAlignment", "\\%s can only be used in aligment environments", name)
 	case "shoveleft", "shoveright":
-		err = texError("CommandInMultlined", "\\%s can only appear within the multline or multlined environments", name)
+		err = texError("CommandOnlyAllowedInEnv", "\\%s only allowed in %s environment", name, "multline")
 	default:
 		return nil, false, nil
 	}

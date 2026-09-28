@@ -83,7 +83,7 @@ func (p *parser) mathtoolsMultlined(environment string) ([]*mml.Node, error) {
 	if err != nil {
 		return nil, err
 	}
-	table, spacing, err := p.parseMultlineBody(body)
+	table, spacing, err := p.parseMultlineBody(body, false)
 	if err != nil {
 		return nil, err
 	}
@@ -238,7 +238,7 @@ func (p *parser) mathtoolsMultline(environment string) ([]*mml.Node, error) {
 }
 
 func (p *parser) mathtoolsMultlineBody(body string) ([]*mml.Node, error) {
-	table, spacing, err := p.parseMultlineBody(body)
+	table, spacing, err := p.parseMultlineBody(body, true)
 	if err != nil {
 		return nil, err
 	}

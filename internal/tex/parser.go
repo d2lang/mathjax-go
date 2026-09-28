@@ -391,33 +391,15 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 			if (name == "shoveleft" || name == "shoveright") && !registered {
 				if p.arrayCell == nil || !p.arrayCell.multline || owner != nil || auto != nil || infixPending ||
 					len(styles) != 0 || len(positions) != 0 || pending != nil || bool(negation) || dots.active() || pendingFunction || nonscript {
-					return nil, "", texError("CommandInMultlined", "\\%s can only appear within the multline or multlined environments", name)
+					return nil, "", texError("CommandOnlyAllowedInEnv", "\\%s only allowed in %s environment", name, "multline")
 				}
 				if p.arrayCell.offset+len(nodes) != 0 {
 					return nil, "", texError("CommandAtTheBeginingOfLine", "\\%s must come at the beginning of the line", name)
 				}
+				// D2 loads AMS after Mathtools, so its HandleShove wins.
+				// It changes the row property without consuming any argument;
+				// a following group or bracket remains on this same parser.
 				p.arrayCell.shove = strings.TrimPrefix(name, "shove")
-				shift, _, err := p.readBrackets(nil)
-				if err != nil {
-					return nil, "", err
-				}
-				argument, err := p.readMathtoolsArgument(name)
-				if err != nil {
-					return nil, "", err
-				}
-				content, err := p.parseChild(argument)
-				if err != nil {
-					return nil, "", err
-				}
-				if shift != "" {
-					space := setAttributes(node("mspace"), map[string]any{"width": shift})
-					if p.arrayCell.shove == "left" {
-						content = forcedRow([]*mml.Node{space, content}, false)
-					} else {
-						content = forcedRow([]*mml.Node{content, space}, false)
-					}
-				}
-				appendNodes(unwrapInferred(content), false)
 				continue
 			}
 			if isMathtoolsArrayCommand(name) && !registered {

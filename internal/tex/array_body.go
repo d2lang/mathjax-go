@@ -104,12 +104,12 @@ func tableRowSpacing(table *mml.Node) any {
 	return spacing
 }
 
-func (p *parser) parseMultlineBody(source string) (*mml.Node, *arrayRowSpacing, error) {
+func (p *parser) parseMultlineBody(source string, ams bool) (*mml.Node, *arrayRowSpacing, error) {
 	table := node("mtable")
 	spacing := &arrayRowSpacing{}
 	var entries []*mml.Node
 	err := p.parseArrayBody(source, arrayBodyOwner{
-		configure:  func(sub *parser) { sub.arrayCell.multline = true },
+		configure:  func(sub *parser) { sub.arrayCell.multline = ams },
 		hasEntries: func() bool { return len(entries) != 0 },
 		endEntry: func(children []*mml.Node, state *arrayCellState) error {
 			if len(table.Children) != 0 {
