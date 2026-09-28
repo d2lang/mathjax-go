@@ -92,6 +92,9 @@ func TestOperatorCreationCopyRoutes(t *testing.T) {
 			var handled bool
 			var err error
 			if c.method == "numcases" {
+				// The direct method receives the active CasesBeginItem in the
+				// original; retain that same-input owner for its physical end.
+				p.environmentOwner = &environmentFrame{name: c.method, stream: true}
 				children, handled, err = p.casesEnvironment(c.method)
 			} else {
 				children, handled, err = p.empheqEnvironment(c.method)

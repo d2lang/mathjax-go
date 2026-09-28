@@ -62,6 +62,13 @@ func (p *parser) parseScriptArgument(attachment *scriptAttachment, font string) 
 			if parseErr != nil {
 				return nil, currentFont, nil, nil, parseErr
 			}
+			if p.environmentPopped {
+				p.environmentPopped = false
+				if len(children) == 0 {
+					continue
+				}
+				return children[0], currentFont, children[1:], nil, nil
+			}
 			return texAtom(row(children, true), mml.TeXClassOrd), currentFont, nil, nil, nil
 		}
 		if isPrimeRune(p.peekRune()) {
@@ -115,6 +122,15 @@ func (p *parser) parseScriptArgument(attachment *scriptAttachment, font string) 
 		result, parseErr := p.parseOneTokenEvent()
 		if parseErr != nil {
 			return nil, currentFont, nil, nil, parseErr
+		}
+		if result.environmentEnd != nil {
+			if !result.environmentEnd.spread {
+				return nil, currentFont, nil, nil, result.environmentEnd.extra()
+			}
+			// SpreadLines pops this actual SubsupItem, whose nodes contain
+			// the unfinished base, rather than feeding it a closing item.
+			p.environmentPopped = true
+			return p.publishPendingScript(attachment), currentFont, nil, nil, nil
 		}
 		if result.namedFunction || result.notItem || result.nonscriptItem || result.dotsItem != nil || result.positionItem != nil || result.cellItem != nil {
 			return nil, currentFont, nil, nil, attachment.missingOpen()

@@ -25,10 +25,7 @@ func (p *parser) casesEnvironment(name string) (nodes []*mml.Node, handled bool,
 	if err := p.checkEquationEnvironment(); err != nil {
 		return nil, true, err
 	}
-	body, err := p.captureEnvironment(name)
-	if err != nil {
-		return nil, true, err
-	}
+	frame := p.environmentOwner
 
 	tags := p.amsTags()
 	tags.start(name, true, true)
@@ -58,7 +55,8 @@ func (p *parser) casesEnvironment(name string) (nodes []*mml.Node, handled bool,
 	spacing := newEquationTableState(appendRow)
 	spacing.initialSpacing = ".2em"
 	row := &equationRowState{table: spacing}
-	err = p.parseArrayBody(body, arrayBodyOwner{
+	err = p.parseArrayBody("", arrayBodyOwner{
+		environment: frame,
 		configure: func(sub *parser) {
 			sub.arrayCell.equation, sub.arrayCell.numCases = row, true
 		},
@@ -159,9 +157,9 @@ func numCasesTextEnd(source string, start int) (int, error) {
 }
 
 func (p *parser) prepareNumCasesText(environment string) ([]*mml.Node, error) {
-	// The captured program is followed by this actual closing environment in
-	// the original parser. It is visible to the raw scanner, not body math.
-	end, err := numCasesTextEnd(p.source+"\\end{"+environment+"}", p.pos)
+	// The actual end remains visible in this same-input program. The text
+	// scanner stops before it; ordinary command dispatch owns the token.
+	end, err := numCasesTextEnd(p.source, p.pos)
 	if err != nil {
 		return nil, err
 	}

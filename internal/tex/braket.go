@@ -32,15 +32,22 @@ func (p *parser) braket(name string) ([]*mml.Node, error) {
 		item.single = false
 		terminator = '}'
 	}
-	previous, cdArrayEntry := p.braketOwner, p.cdArrayEntry
+	previous, cdArrayEntry, environmentRow := p.braketOwner, p.cdArrayEntry, p.environmentRow
+	p.environmentRow = nil
 	p.braketOwner = item
 	if !item.single {
 		p.cdArrayEntry = false
 	}
-	defer func() { p.braketOwner, p.cdArrayEntry = previous, cdArrayEntry }()
+	defer func() { p.braketOwner, p.cdArrayEntry, p.environmentRow = previous, cdArrayEntry, environmentRow }()
 	children, _, err := p.parseRowWithInfix(terminator, false, false)
 	if err != nil {
 		return nil, err
+	}
+	popped := p.environmentPopped
+	if popped {
+		// SpreadLines calls the popped BraketItem's toMml(), which still
+		// constructs its fences even without a matching close item.
+		p.environmentPopped = false
 	}
 	if item.single && p.pendingCell != nil {
 		// A final MML closed this Braket before the CellItem was replayed.
@@ -58,6 +65,11 @@ func (p *parser) braket(name string) ([]*mml.Node, error) {
 	result := item.singleFence
 	if result == nil {
 		result = p.leftRightFenced(open, row(children, true), close, item.stretchy)
+	}
+	if popped {
+		if err := mathtoolsSpreadPop(result, nil); err != nil {
+			return nil, err
+		}
 	}
 	return append([]*mml.Node{result}, tail...), nil
 }

@@ -27,6 +27,10 @@ func (p *parser) leftRight(name string) ([]*mml.Node, error) {
 		if err != nil {
 			return nil, err
 		}
+		if p.environmentPopped {
+			p.environmentPopped = false
+			return children, nil
+		}
 		item := p.rowDelimiter
 		if !item.middle {
 			fenced := p.leftRightFenced(open, row(children, true), item.delimiter, true)

@@ -29,8 +29,13 @@ func (p *parser) countEnvironment() error {
 // empheq) and user-defined ends take the charged environment-dispatch path.
 // Retained maps keep this independent of Go's supported environment handlers.
 func (p *parser) sourceEndReturnsItem(name string) bool {
+	_, item := p.sourceEndDefinition(name)
+	return item
+}
+
+func (p *parser) sourceEndDefinition(name string) (bool, bool) {
 	if _, defined := p.state.environments[name]; defined {
-		return false
+		return true, false
 	}
 	for _, table := range mjSourceMaps {
 		if table.Kind != mjSourceEnvironmentMap || (!p.state.augmentedPackages && strings.Contains(table.Source, "/empheq/")) {
@@ -40,12 +45,12 @@ func (p *parser) sourceEndReturnsItem(name string) bool {
 			if entry.Name == name {
 				args, _ := entry.Value.(mjSourceList)
 				if len(args) < 2 {
-					return true
+					return true, true
 				}
 				_, undefined := args[1].(mjSourceUndefined)
-				return undefined || !limitsTruthy(args[1])
+				return true, undefined || !limitsTruthy(args[1])
 			}
 		}
 	}
-	return false
+	return false, false
 }

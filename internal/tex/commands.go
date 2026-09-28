@@ -317,16 +317,7 @@ func (p *parser) commandNodes(name string, after **derivativeAutoOpen) ([]*mml.N
 	case "begin":
 		return p.beginEnvironment(name)
 	case "end":
-		env, err := p.readEnvironmentName(name)
-		if err != nil {
-			return nil, err
-		}
-		if !p.sourceEndReturnsItem(env) {
-			if err := p.countEnvironment(); err != nil {
-				return nil, err
-			}
-		}
-		return nil, texError("ExtraEnd", "Extra \\end{%s}", env)
+		return p.endEnvironment(name)
 	case "displaylines":
 		return p.displayLines(name)
 	case "matrix", "array", "pmatrix", "cases", "eqalign", "eqalignno", "leqalignno":
@@ -1708,7 +1699,11 @@ func (p *parser) parseExpansion(source string) ([]*mml.Node, error) {
 }
 
 func (p *parser) parseContinuationExpansion(source string) ([]*mml.Node, error) {
-	return p.parseExpansionWithStack(source, p.ensureStackGlobal())
+	parsed, err := p.parseStringWithEnvironment(source, p.ensureStackGlobal(), nil, nil, p.environmentOwner)
+	if err != nil {
+		return nil, err
+	}
+	return unwrapInferred(parsed), nil
 }
 
 func (p *parser) parseExpansionWithStack(source string, global *parserStackGlobal) ([]*mml.Node, error) {

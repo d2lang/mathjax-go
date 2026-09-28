@@ -16,7 +16,7 @@ func TestEnvironmentCounterBoundaries(t *testing.T) {
 		{"unknown-opening-at-limit", `\begin{unknown}`, maxMacros, maxMacros + 1, "MaxMacroSub2"},
 		{"invalid-before-charge", `\begin{a\b}`, maxMacros, maxMacros, "InvalidEnv"},
 		{"missing-before-charge", `\begin`, maxMacros, maxMacros, "MissingArgFor"},
-		{"built-in-extra-end-free", `\end{array}`, maxMacros, maxMacros, "ExtraEnd"},
+		{"built-in-extra-end-free", `\end{array}`, maxMacros, maxMacros, "MissingBeginExtraEnd"},
 		{"unknown-extra-end-charged", `\end{unknown}`, maxMacros, maxMacros + 1, "MaxMacroSub2"},
 		{"truthy-extra-end-charged", `\end{spreadlines}`, maxMacros, maxMacros + 1, "MaxMacroSub2"},
 		{"cases-extra-end-charged", `\end{numcases}`, maxMacros, maxMacros + 1, "MaxMacroSub2"},

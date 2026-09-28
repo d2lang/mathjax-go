@@ -56,5 +56,5 @@ func arrayCellNode(content *mml.Node) *mml.Node {
 }
 
 func (p *parser) parseArrayCellString(source string) (*mml.Node, error) {
-	return p.parseStringWithStackArray(source, p.ensureStackGlobal(), nil, &arrayCellState{})
+	return p.parseStringWithEnvironment(source, p.ensureStackGlobal(), nil, &arrayCellState{}, p.environmentOwner)
 }

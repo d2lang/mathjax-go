@@ -280,6 +280,7 @@ func (p *parser) matrixCellParser(source string) *parser {
 	// Keep the configuration and logical Stack.global while starting without
 	// the surrounding font, root-index, or identifier-pattern state.
 	return &parser{source: source, state: p.state, stackGlobal: p.ensureStackGlobal(), display: p.display,
+		environmentOwner: p.environmentOwner, environmentRow: p.environmentOwner,
 		vectorFactory: p.vectorFactory, genfracPalette: p.genfracPalette,
 		starMacroChildren: p.starMacroChildren, derivativeChildren: p.derivativeChildren, matrixClose: true, arrayCell: &arrayCellState{}}
 }

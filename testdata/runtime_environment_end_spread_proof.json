@@ -1,0 +1,601 @@
+{
+  "hashes": {
+    "polyfills.js": "7fe1d048c78b0e09854c1259f7413868a51cc8f0c822489eb1ac36ae6c85ce01",
+    "mathjax.js": "cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869",
+    "setup.js": "a52cb0bbabfbd7796b9fedd793b9386c474e3123e788ee151cbe47ca1fa6e881"
+  },
+  "source": "function(t,e){if(t.isKind(\"mtable\")){var Q=t.attributes.get(\"rowspacing\");if(Q){var r=o.default.dimen2em(e);Q=Q.split(/ /).map((function(t){return o.default.Em(Math.max(0,o.default.dimen2em(t)+r))})).join(\" \")}else Q=e;t.attributes.set(\"rowspacing\",Q)}}",
+  "rows": [
+    {
+      "kind": "mtable",
+      "label": "default",
+      "spreadLabel": "undefined",
+      "before": {
+        "type": "string",
+        "value": "1ex"
+      },
+      "after": {
+        "type": "string",
+        "value": "1ex"
+      },
+      "explicitKeys": [],
+      "error": "TypeError: Cannot read properties of undefined (reading 'match')\n    at h (mathjax.js:4:261130)\n    at t.dimen2em (mathjax.js:4:262508)\n    at Object.spreadLines (mathjax.js:4:433013)\n    at evalmachine.<anonymous>:6:77\n    at evalmachine.<anonymous>:9:49\n    at Script.runInContext (node:vm:149:12)\n    at Object.<anonymous> (/Users/aw/Documents/Codex/2026-09-27/we-x20/work/matched-end-budget-audit/prototype/capture_spread_value_methods.cjs:12:54)\n    at Module._compile (node:internal/modules/cjs/loader:1872:14)\n    at Object..js (node:internal/modules/cjs/loader:2003:10)\n    at Module.load (node:internal/modules/cjs/loader:1594:32)"
+    },
+    {
+      "kind": "mtable",
+      "label": "default",
+      "spreadLabel": "one-pt",
+      "before": {
+        "type": "string",
+        "value": "1ex"
+      },
+      "after": {
+        "type": "string",
+        "value": "0.53em"
+      },
+      "explicitKeys": [
+        "rowspacing"
+      ],
+      "error": null
+    },
+    {
+      "kind": "mtable",
+      "label": "undefined",
+      "spreadLabel": "undefined",
+      "before": {
+        "type": "undefined"
+      },
+      "after": {
+        "type": "undefined"
+      },
+      "explicitKeys": [
+        "rowspacing"
+      ],
+      "error": null
+    },
+    {
+      "kind": "mtable",
+      "label": "undefined",
+      "spreadLabel": "one-pt",
+      "before": {
+        "type": "undefined"
+      },
+      "after": {
+        "type": "string",
+        "value": "1pt"
+      },
+      "explicitKeys": [
+        "rowspacing"
+      ],
+      "error": null
+    },
+    {
+      "kind": "mtable",
+      "label": "null",
+      "spreadLabel": "undefined",
+      "before": {
+        "type": "object",
+        "value": null
+      },
+      "after": {
+        "type": "undefined"
+      },
+      "explicitKeys": [
+        "rowspacing"
+      ],
+      "error": null
+    },
+    {
+      "kind": "mtable",
+      "label": "null",
+      "spreadLabel": "one-pt",
+      "before": {
+        "type": "object",
+        "value": null
+      },
+      "after": {
+        "type": "string",
+        "value": "1pt"
+      },
+      "explicitKeys": [
+        "rowspacing"
+      ],
+      "error": null
+    },
+    {
+      "kind": "mtable",
+      "label": "empty",
+      "spreadLabel": "undefined",
+      "before": {
+        "type": "string",
+        "value": ""
+      },
+      "after": {
+        "type": "undefined"
+      },
+      "explicitKeys": [
+        "rowspacing"
+      ],
+      "error": null
+    },
+    {
+      "kind": "mtable",
+      "label": "empty",
+      "spreadLabel": "one-pt",
+      "before": {
+        "type": "string",
+        "value": ""
+      },
+      "after": {
+        "type": "string",
+        "value": "1pt"
+      },
+      "explicitKeys": [
+        "rowspacing"
+      ],
+      "error": null
+    },
+    {
+      "kind": "mtable",
+      "label": "false",
+      "spreadLabel": "undefined",
+      "before": {
+        "type": "boolean",
+        "value": false
+      },
+      "after": {
+        "type": "undefined"
+      },
+      "explicitKeys": [
+        "rowspacing"
+      ],
+      "error": null
+    },
+    {
+      "kind": "mtable",
+      "label": "false",
+      "spreadLabel": "one-pt",
+      "before": {
+        "type": "boolean",
+        "value": false
+      },
+      "after": {
+        "type": "string",
+        "value": "1pt"
+      },
+      "explicitKeys": [
+        "rowspacing"
+      ],
+      "error": null
+    },
+    {
+      "kind": "mtable",
+      "label": "zero",
+      "spreadLabel": "undefined",
+      "before": {
+        "type": "number",
+        "value": 0
+      },
+      "after": {
+        "type": "undefined"
+      },
+      "explicitKeys": [
+        "rowspacing"
+      ],
+      "error": null
+    },
+    {
+      "kind": "mtable",
+      "label": "zero",
+      "spreadLabel": "one-pt",
+      "before": {
+        "type": "number",
+        "value": 0
+      },
+      "after": {
+        "type": "string",
+        "value": "1pt"
+      },
+      "explicitKeys": [
+        "rowspacing"
+      ],
+      "error": null
+    },
+    {
+      "kind": "mtable",
+      "label": "text-zero",
+      "spreadLabel": "undefined",
+      "before": {
+        "type": "string",
+        "value": "0"
+      },
+      "after": {
+        "type": "string",
+        "value": "0"
+      },
+      "explicitKeys": [
+        "rowspacing"
+      ],
+      "error": "TypeError: Cannot read properties of undefined (reading 'match')\n    at h (mathjax.js:4:261130)\n    at t.dimen2em (mathjax.js:4:262508)\n    at Object.spreadLines (mathjax.js:4:433013)\n    at evalmachine.<anonymous>:6:77\n    at evalmachine.<anonymous>:9:49\n    at Script.runInContext (node:vm:149:12)\n    at Object.<anonymous> (/Users/aw/Documents/Codex/2026-09-27/we-x20/work/matched-end-budget-audit/prototype/capture_spread_value_methods.cjs:12:54)\n    at Module._compile (node:internal/modules/cjs/loader:1872:14)\n    at Object..js (node:internal/modules/cjs/loader:2003:10)\n    at Module.load (node:internal/modules/cjs/loader:1594:32)"
+    },
+    {
+      "kind": "mtable",
+      "label": "text-zero",
+      "spreadLabel": "one-pt",
+      "before": {
+        "type": "string",
+        "value": "0"
+      },
+      "after": {
+        "type": "string",
+        "value": "0.1em"
+      },
+      "explicitKeys": [
+        "rowspacing"
+      ],
+      "error": null
+    },
+    {
+      "kind": "mtable",
+      "label": "spacing",
+      "spreadLabel": "undefined",
+      "before": {
+        "type": "string",
+        "value": "1ex"
+      },
+      "after": {
+        "type": "string",
+        "value": "1ex"
+      },
+      "explicitKeys": [
+        "rowspacing"
+      ],
+      "error": "TypeError: Cannot read properties of undefined (reading 'match')\n    at h (mathjax.js:4:261130)\n    at t.dimen2em (mathjax.js:4:262508)\n    at Object.spreadLines (mathjax.js:4:433013)\n    at evalmachine.<anonymous>:6:77\n    at evalmachine.<anonymous>:9:49\n    at Script.runInContext (node:vm:149:12)\n    at Object.<anonymous> (/Users/aw/Documents/Codex/2026-09-27/we-x20/work/matched-end-budget-audit/prototype/capture_spread_value_methods.cjs:12:54)\n    at Module._compile (node:internal/modules/cjs/loader:1872:14)\n    at Object..js (node:internal/modules/cjs/loader:2003:10)\n    at Module.load (node:internal/modules/cjs/loader:1594:32)"
+    },
+    {
+      "kind": "mtable",
+      "label": "spacing",
+      "spreadLabel": "one-pt",
+      "before": {
+        "type": "string",
+        "value": "1ex"
+      },
+      "after": {
+        "type": "string",
+        "value": "0.53em"
+      },
+      "explicitKeys": [
+        "rowspacing"
+      ],
+      "error": null
+    },
+    {
+      "kind": "mtable",
+      "label": "whitespace",
+      "spreadLabel": "undefined",
+      "before": {
+        "type": "string",
+        "value": " "
+      },
+      "after": {
+        "type": "string",
+        "value": " "
+      },
+      "explicitKeys": [
+        "rowspacing"
+      ],
+      "error": "TypeError: Cannot read properties of undefined (reading 'match')\n    at h (mathjax.js:4:261130)\n    at t.dimen2em (mathjax.js:4:262508)\n    at Object.spreadLines (mathjax.js:4:433013)\n    at evalmachine.<anonymous>:6:77\n    at evalmachine.<anonymous>:9:49\n    at Script.runInContext (node:vm:149:12)\n    at Object.<anonymous> (/Users/aw/Documents/Codex/2026-09-27/we-x20/work/matched-end-budget-audit/prototype/capture_spread_value_methods.cjs:12:54)\n    at Module._compile (node:internal/modules/cjs/loader:1872:14)\n    at Object..js (node:internal/modules/cjs/loader:2003:10)\n    at Module.load (node:internal/modules/cjs/loader:1594:32)"
+    },
+    {
+      "kind": "mtable",
+      "label": "whitespace",
+      "spreadLabel": "one-pt",
+      "before": {
+        "type": "string",
+        "value": " "
+      },
+      "after": {
+        "type": "string",
+        "value": "0.1em 0.1em"
+      },
+      "explicitKeys": [
+        "rowspacing"
+      ],
+      "error": null
+    },
+    {
+      "kind": "mrow",
+      "label": "default",
+      "spreadLabel": "undefined",
+      "before": {
+        "type": "undefined"
+      },
+      "after": {
+        "type": "undefined"
+      },
+      "explicitKeys": [],
+      "error": null
+    },
+    {
+      "kind": "mrow",
+      "label": "default",
+      "spreadLabel": "one-pt",
+      "before": {
+        "type": "undefined"
+      },
+      "after": {
+        "type": "undefined"
+      },
+      "explicitKeys": [],
+      "error": null
+    },
+    {
+      "kind": "mrow",
+      "label": "undefined",
+      "spreadLabel": "undefined",
+      "before": {
+        "type": "undefined"
+      },
+      "after": {
+        "type": "undefined"
+      },
+      "explicitKeys": [
+        "rowspacing"
+      ],
+      "error": null
+    },
+    {
+      "kind": "mrow",
+      "label": "undefined",
+      "spreadLabel": "one-pt",
+      "before": {
+        "type": "undefined"
+      },
+      "after": {
+        "type": "undefined"
+      },
+      "explicitKeys": [
+        "rowspacing"
+      ],
+      "error": null
+    },
+    {
+      "kind": "mrow",
+      "label": "null",
+      "spreadLabel": "undefined",
+      "before": {
+        "type": "object",
+        "value": null
+      },
+      "after": {
+        "type": "object",
+        "value": null
+      },
+      "explicitKeys": [
+        "rowspacing"
+      ],
+      "error": null
+    },
+    {
+      "kind": "mrow",
+      "label": "null",
+      "spreadLabel": "one-pt",
+      "before": {
+        "type": "object",
+        "value": null
+      },
+      "after": {
+        "type": "object",
+        "value": null
+      },
+      "explicitKeys": [
+        "rowspacing"
+      ],
+      "error": null
+    },
+    {
+      "kind": "mrow",
+      "label": "empty",
+      "spreadLabel": "undefined",
+      "before": {
+        "type": "string",
+        "value": ""
+      },
+      "after": {
+        "type": "string",
+        "value": ""
+      },
+      "explicitKeys": [
+        "rowspacing"
+      ],
+      "error": null
+    },
+    {
+      "kind": "mrow",
+      "label": "empty",
+      "spreadLabel": "one-pt",
+      "before": {
+        "type": "string",
+        "value": ""
+      },
+      "after": {
+        "type": "string",
+        "value": ""
+      },
+      "explicitKeys": [
+        "rowspacing"
+      ],
+      "error": null
+    },
+    {
+      "kind": "mrow",
+      "label": "false",
+      "spreadLabel": "undefined",
+      "before": {
+        "type": "boolean",
+        "value": false
+      },
+      "after": {
+        "type": "boolean",
+        "value": false
+      },
+      "explicitKeys": [
+        "rowspacing"
+      ],
+      "error": null
+    },
+    {
+      "kind": "mrow",
+      "label": "false",
+      "spreadLabel": "one-pt",
+      "before": {
+        "type": "boolean",
+        "value": false
+      },
+      "after": {
+        "type": "boolean",
+        "value": false
+      },
+      "explicitKeys": [
+        "rowspacing"
+      ],
+      "error": null
+    },
+    {
+      "kind": "mrow",
+      "label": "zero",
+      "spreadLabel": "undefined",
+      "before": {
+        "type": "number",
+        "value": 0
+      },
+      "after": {
+        "type": "number",
+        "value": 0
+      },
+      "explicitKeys": [
+        "rowspacing"
+      ],
+      "error": null
+    },
+    {
+      "kind": "mrow",
+      "label": "zero",
+      "spreadLabel": "one-pt",
+      "before": {
+        "type": "number",
+        "value": 0
+      },
+      "after": {
+        "type": "number",
+        "value": 0
+      },
+      "explicitKeys": [
+        "rowspacing"
+      ],
+      "error": null
+    },
+    {
+      "kind": "mrow",
+      "label": "text-zero",
+      "spreadLabel": "undefined",
+      "before": {
+        "type": "string",
+        "value": "0"
+      },
+      "after": {
+        "type": "string",
+        "value": "0"
+      },
+      "explicitKeys": [
+        "rowspacing"
+      ],
+      "error": null
+    },
+    {
+      "kind": "mrow",
+      "label": "text-zero",
+      "spreadLabel": "one-pt",
+      "before": {
+        "type": "string",
+        "value": "0"
+      },
+      "after": {
+        "type": "string",
+        "value": "0"
+      },
+      "explicitKeys": [
+        "rowspacing"
+      ],
+      "error": null
+    },
+    {
+      "kind": "mrow",
+      "label": "spacing",
+      "spreadLabel": "undefined",
+      "before": {
+        "type": "string",
+        "value": "1ex"
+      },
+      "after": {
+        "type": "string",
+        "value": "1ex"
+      },
+      "explicitKeys": [
+        "rowspacing"
+      ],
+      "error": null
+    },
+    {
+      "kind": "mrow",
+      "label": "spacing",
+      "spreadLabel": "one-pt",
+      "before": {
+        "type": "string",
+        "value": "1ex"
+      },
+      "after": {
+        "type": "string",
+        "value": "1ex"
+      },
+      "explicitKeys": [
+        "rowspacing"
+      ],
+      "error": null
+    },
+    {
+      "kind": "mrow",
+      "label": "whitespace",
+      "spreadLabel": "undefined",
+      "before": {
+        "type": "string",
+        "value": " "
+      },
+      "after": {
+        "type": "string",
+        "value": " "
+      },
+      "explicitKeys": [
+        "rowspacing"
+      ],
+      "error": null
+    },
+    {
+      "kind": "mrow",
+      "label": "whitespace",
+      "spreadLabel": "one-pt",
+      "before": {
+        "type": "string",
+        "value": " "
+      },
+      "after": {
+        "type": "string",
+        "value": " "
+      },
+      "explicitKeys": [
+        "rowspacing"
+      ],
+      "error": null
+    }
+  ]
+}

@@ -32,6 +32,10 @@ func (p *parser) beginEnvironment(name string) ([]*mml.Node, error) {
 	if environment == "" {
 		return nil, texError("UnknownEnv", "Unknown environment '%s'", environment)
 	}
+	outerEnvironment := p.environmentOwner
+	frame := &environmentFrame{name: environment, parent: outerEnvironment, stream: environment == "spreadlines" || environment == "numcases" || environment == "subnumcases"}
+	p.environmentOwner = frame
+	defer func() { p.environmentOwner = outerEnvironment }()
 	if nodes, handled, err := p.casesEnvironment(environment); handled {
 		return nodes, err
 	}

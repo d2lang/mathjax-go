@@ -44,6 +44,7 @@ type environmentDefinition struct {
 type parseState struct {
 	operators         []*mml.Node
 	nonscriptSpaces   []*mml.Node
+	poppedScripts     []*mml.Node
 	macros            map[string]macroDefinition
 	pairedDelimiters  map[string]pairedDelimiter
 	environments      map[string]environmentDefinition
@@ -93,41 +94,46 @@ func (pattern identifierPattern) matches(r rune) bool {
 }
 
 type parser struct {
-	source               string
-	pos                  int
-	state                *parseState
-	stackGlobal          *parserStackGlobal
-	display              bool
-	commandNamedFunction bool
-	commandNot           bool
-	commandNonscript     bool
-	commandDots          *pendingDots
-	commandPosition      *positionItem
-	commandCell          *cellItem
-	pendingCell          *cellItem
-	stoppedCell          *cellItem
-	multiLetterFont      string
-	activeFont           string
-	activeColor          string
-	rowDelimiter         *rowDelimiterItem
-	cdCellEnd            *cdCellEnd
-	cdArrayEntry         bool
-	cdEntryStopped       bool
-	arrayCell            *arrayCellState
-	matrixClose          bool
-	identifierPattern    identifierPattern
-	operatorLetters      bool
-	noAutoOP             bool
-	fontExplicitEmpty    bool
-	vectorFactory        bool
-	vectorFont           string
-	vectorStar           bool
-	vectorAlias          bool
-	genfracPalette       bool
-	starMacroChildren    bool
-	derivativeChildren   bool
-	braketOwner          *braketItem
-	inRoot               bool
+	source                string
+	pos                   int
+	state                 *parseState
+	stackGlobal           *parserStackGlobal
+	display               bool
+	commandNamedFunction  bool
+	commandNot            bool
+	commandNonscript      bool
+	commandDots           *pendingDots
+	commandPosition       *positionItem
+	commandCell           *cellItem
+	commandEnvironmentEnd *environmentEndItem
+	pendingEnvironmentEnd *environmentEndItem
+	environmentOwner      *environmentFrame
+	environmentRow        *environmentFrame
+	environmentPopped     bool
+	pendingCell           *cellItem
+	stoppedCell           *cellItem
+	multiLetterFont       string
+	activeFont            string
+	activeColor           string
+	rowDelimiter          *rowDelimiterItem
+	cdCellEnd             *cdCellEnd
+	cdArrayEntry          bool
+	cdEntryStopped        bool
+	arrayCell             *arrayCellState
+	matrixClose           bool
+	identifierPattern     identifierPattern
+	operatorLetters       bool
+	noAutoOP              bool
+	fontExplicitEmpty     bool
+	vectorFactory         bool
+	vectorFont            string
+	vectorStar            bool
+	vectorAlias           bool
+	genfracPalette        bool
+	starMacroChildren     bool
+	derivativeChildren    bool
+	braketOwner           *braketItem
+	inRoot                bool
 }
 
 func (p *parser) ensureStackGlobal() *parserStackGlobal {
@@ -161,9 +167,12 @@ func (p *parser) parseRowWithPrefix(terminator byte, stopRight bool, prefix []*m
 	owner := p.braketOwner
 	p.braketOwner = nil
 	matrixClose, cdArrayEntry, arrayCell := p.matrixClose, p.cdArrayEntry, p.arrayCell
+	environmentRow := p.environmentRow
+	p.environmentRow = nil
 	p.matrixClose, p.cdArrayEntry, p.arrayCell = false, false, nil
 	defer func() {
 		p.braketOwner, p.matrixClose, p.cdArrayEntry, p.arrayCell = owner, matrixClose, cdArrayEntry, arrayCell
+		p.environmentRow = environmentRow
 	}()
 	return p.parseRowContinuation(terminator, stopRight, false, nil, "", prefix)
 }
@@ -180,9 +189,9 @@ func (p *parser) parseRowWithInfix(terminator byte, stopRight, infixPending bool
 // SetFont changes the environment without adding a stack item.
 func (p *parser) parseRowWithAutoOpen(terminator byte, stopRight, infixPending bool, auto *derivativeAutoOpen) ([]*mml.Node, string, error) {
 	if auto != nil {
-		owner := p.braketOwner
-		p.braketOwner = nil
-		defer func() { p.braketOwner = owner }()
+		owner, environmentRow := p.braketOwner, p.environmentRow
+		p.braketOwner, p.environmentRow = nil, nil
+		defer func() { p.braketOwner, p.environmentRow = owner, environmentRow }()
 	}
 	return p.parseRowContinuation(terminator, stopRight, infixPending, auto, "", nil)
 }
@@ -320,9 +329,92 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 			reducePositions()
 		}
 	}
-	for p.pos < len(p.source) || p.pendingCell != nil {
+	for p.pos < len(p.source) || p.pendingCell != nil || p.pendingEnvironmentEnd != nil {
 		if p.cdEntryStopped {
 			break // A completed single Braket returns the same closing Entry.
+		}
+		if item := p.pendingEnvironmentEnd; item != nil {
+			if item.spread {
+				// SpreadLines calls Pop().toMml() on the actual top. It does
+				// not push an EndItem through Style/Over/pending recipients.
+				p.pendingEnvironmentEnd = nil
+				switch {
+				case pending != nil:
+					parts := []*mml.Node{pending.base, pending.prime}
+					if err := mathtoolsSpreadPending(parts); err != nil {
+						return nil, "", err
+					}
+					pending = nil
+					appendNodes(parts, false)
+				case bool(negation):
+					negation = false
+				case dots.active():
+					dots = pendingDots{}
+				case nonscript:
+					nonscript = false
+				case pendingFunction:
+					if err := mathtoolsSpreadPending(nodes[len(nodes)-1:]); err != nil {
+						return nil, "", err
+					}
+					pendingFunction = false
+					reducePositions()
+				case len(positions) != 0 && positions[len(positions)-1].styleDepth == len(styles):
+					if err := mathtoolsSpreadPending(nodes); err != nil {
+						return nil, "", err
+					}
+					frame := positions[len(positions)-1]
+					positions = positions[:len(positions)-1]
+					nodes = append(frame.prefix, nodes...)
+					reducePositions()
+				case len(styles) != 0:
+					if err := mathtoolsSpreadPending(nodes); err != nil {
+						return nil, "", err
+					}
+					frame := styles[len(styles)-1]
+					styles = styles[:len(styles)-1]
+					nodes = append(frame.prefix, nodes...)
+					reducePositions()
+				case infixPending || terminator != 0 || stopRight || auto != nil || owner != nil:
+					// Braket and AutoOpen override toMml with an explicit
+					// fenced row. Their caller checks that completed result;
+					// an Over above either still owns these raw nodes.
+					if infixPending || auto == nil && owner == nil {
+						if err := mathtoolsSpreadPending(nodes); err != nil {
+							return nil, "", err
+						}
+					}
+					p.environmentPopped = true
+					return nodes, "", nil
+				case p.environmentRow != nil:
+					if p.environmentRow.name != item.name {
+						// A legacy captured nested Begin still owns its stop.
+						return nil, "", p.environmentRow.missing()
+					}
+					p.environmentRow.closed = true
+					return nodes, "", nil
+				default:
+					return nil, "", item.extra()
+				}
+				continue
+			}
+			if closeErr := closeStyles(); closeErr != nil {
+				return nil, "", closeErr
+			}
+			if infixPending || owner != nil && owner.single && len(nodes) != 0 {
+				// Reduce the final MML, then replay this same EndItem to the
+				// enclosing stack recipient without charging it a second time.
+				return nodes, "", nil
+			}
+			if p.matrixClose && terminator != 0 {
+				return nil, "", texError("MissingCloseBrace", "Missing close brace")
+			}
+			if terminator != 0 || stopRight || auto != nil || owner != nil {
+				return nil, "", item.extra()
+			}
+			if err := p.closeEnvironment(p.environmentRow, item); err != nil {
+				return nil, "", err
+			}
+			return nodes, "", nil
 		}
 		if item := p.pendingCell; item != nil {
 			item.saveEnvironment(p)
@@ -523,11 +615,16 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 					return nil, "", err
 				}
 				if auto != nil {
-					if p.pendingCell == nil {
+					if p.pendingCell == nil && p.pendingEnvironmentEnd == nil {
 						return nil, "", auto.stopError()
 					}
 				}
-				if p.pendingCell != nil {
+				if p.environmentPopped {
+					p.environmentPopped = false
+					nodes = unwrapInferred(fraction)
+					continue
+				}
+				if p.pendingCell != nil || p.pendingEnvironmentEnd != nil {
 					nodes = []*mml.Node{fraction}
 					continue
 				}
@@ -596,6 +693,10 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 			if err != nil {
 				return nil, "", err
 			}
+			if result.environmentEnd != nil {
+				p.pendingEnvironmentEnd = result.environmentEnd
+				continue
+			}
 			if result.cellItem != nil {
 				p.pendingCell = result.cellItem
 				continue
@@ -645,6 +746,11 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 			if err != nil {
 				return nil, "", err
 			}
+			if p.environmentPopped {
+				p.environmentPopped = false
+				appendNodes(contents, false)
+				continue
+			}
 			appendNodes([]*mml.Node{texAtom(row(contents, true), mml.TeXClassOrd)}, false)
 		case '^', '_':
 			p.pos++
@@ -673,7 +779,12 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 				}
 				if err == nil {
 					var result *mml.Node
-					result, err = pending.attach(script, c)
+					if p.environmentPopped {
+						p.environmentPopped = false
+						result = script
+					} else {
+						result, err = pending.attach(script, c)
+					}
 					if err == nil {
 						nodes = append(nodes, result)
 						pending = nil
@@ -764,6 +875,9 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 
 	if closeErr := closeStyles(); closeErr != nil {
 		return nil, "", closeErr
+	}
+	if p.environmentRow != nil && p.environmentRow.stream && !p.environmentRow.closed {
+		return nil, "", p.environmentRow.missing()
 	}
 	if auto != nil {
 		return nil, "", auto.stopError()
@@ -950,6 +1064,10 @@ func (p *parser) attachScriptWithFont(nodes []*mml.Node, marker byte, font strin
 	if err != nil {
 		return nil, font, nil, nil, err
 	}
+	if p.environmentPopped {
+		p.environmentPopped = false
+		return append(nodes, script), font, trailing, after, nil
+	}
 	result := attachment.fill(script)
 	result.Flags.Embellished = base.Flags.Embellished
 	result.Flags.CoreIndex = 0
@@ -964,6 +1082,9 @@ func (p *parser) parseOneToken() ([]*mml.Node, error) {
 	result, err := p.parseOneTokenEvent()
 	if err != nil {
 		return nil, err
+	}
+	if result.environmentEnd != nil {
+		return nil, result.environmentEnd.extra()
 	}
 	if result.notItem {
 		result.nodes = append(result.nodes, notFallback())
@@ -1027,7 +1148,7 @@ func (p *parser) parseString(source string) (*mml.Node, error) {
 }
 
 func (p *parser) parseContinuationString(source string) (*mml.Node, error) {
-	return p.parseStringWithStack(source, p.ensureStackGlobal())
+	return p.parseStringWithEnvironment(source, p.ensureStackGlobal(), nil, nil, p.environmentOwner)
 }
 
 func (p *parser) parseStringWithStack(source string, global *parserStackGlobal) (*mml.Node, error) {
@@ -1039,7 +1160,13 @@ func (p *parser) parseStringWithStackCDCell(source string, global *parserStackGl
 }
 
 func (p *parser) parseStringWithStackArray(source string, global *parserStackGlobal, end *cdCellEnd, arrayCell *arrayCellState) (*mml.Node, error) {
-	sub := &parser{source: source, state: p.state, stackGlobal: global, display: p.display, inRoot: p.inRoot, cdCellEnd: end, arrayCell: arrayCell,
+	return p.parseStringWithEnvironment(source, global, end, arrayCell, nil)
+}
+
+// The caller chooses physical-input ownership explicitly. Shared configuration
+// or a nonnil Stack.global does not make a genuine child a continuation.
+func (p *parser) parseStringWithEnvironment(source string, global *parserStackGlobal, end *cdCellEnd, arrayCell *arrayCellState, environment *environmentFrame) (*mml.Node, error) {
+	sub := &parser{environmentOwner: environment, source: source, state: p.state, stackGlobal: global, display: p.display, inRoot: p.inRoot, cdCellEnd: end, arrayCell: arrayCell,
 		activeFont: p.activeFont, activeColor: p.activeColor, vectorFactory: p.vectorFactory,
 		operatorLetters: p.operatorLetters, noAutoOP: p.noAutoOP, fontExplicitEmpty: p.fontExplicitEmpty,
 		vectorFont: p.vectorFont, vectorStar: p.vectorStar, vectorAlias: p.vectorAlias,
@@ -1502,6 +1629,9 @@ func (p *parser) finishInfixFraction(name string, left []*mml.Node, spec infixFr
 	rightNodes, right, err := p.parseRowContinuation(terminator, stopRight, true, nil, pendingFont, nil)
 	if err != nil {
 		return nil, "", err
+	}
+	if p.environmentPopped {
+		return row(rightNodes, true), right, nil
 	}
 	frac := setAttributes(node("mfrac", row(left, true), row(rightNodes, true)), spec.attributes)
 	if name == "choose" || name == "brace" || name == "brack" {
