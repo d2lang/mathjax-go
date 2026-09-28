@@ -31,7 +31,7 @@ func (p *parser) casesEnvironment(name string) (nodes []*mml.Node, handled bool,
 	}
 	rows := splitTable(body)
 	mrows := make([]*mml.Node, 0, len(rows))
-	for _, cells := range rows {
+	for rowIndex, cells := range rows {
 		if len(cells) > 2 {
 			return nil, true, texError("ExtraCasesAlignTab", "Extra alignment tab in text for numcase environment")
 		}
@@ -46,6 +46,9 @@ func (p *parser) casesEnvironment(name string) (nodes []*mml.Node, handled bool,
 				return nil, true, err
 			}
 			mtds = append(mtds, node("mtd", content))
+		}
+		if omitFinalArrayRow(rowIndex, len(rows), mtds) {
+			continue
 		}
 		mrows = append(mrows, node("mtr", mtds...))
 	}

@@ -110,8 +110,10 @@ func (p *parser) mathtoolsMultlined(environment string) ([]*mml.Node, error) {
 		if align != "center" {
 			cell.Attributes.Set("columnalign", align)
 		}
+		if omitFinalArrayRow(i, len(rows), []*mml.Node{cell}) {
+			continue
+		}
 		mrows = append(mrows, node("mtr", cell))
-		_ = i
 	}
 	if len(mrows) > 1 {
 		firstCell := mrows[0].Children[0]
@@ -215,7 +217,7 @@ func (p *parser) mathtoolsCases(environment string) ([]*mml.Node, error) {
 	}
 	rows := splitTable(body)
 	mrows := make([]*mml.Node, 0, len(rows))
-	for _, cells := range rows {
+	for rowIndex, cells := range rows {
 		mtds := make([]*mml.Node, 0, len(cells))
 		for i, raw := range cells {
 			if i == 1 {
@@ -228,6 +230,9 @@ func (p *parser) mathtoolsCases(environment string) ([]*mml.Node, error) {
 				return nil, err
 			}
 			mtds = append(mtds, arrayCellNode(content))
+		}
+		if omitFinalArrayRow(rowIndex, len(rows), mtds) {
+			continue
 		}
 		mrows = append(mrows, node("mtr", mtds...))
 	}
@@ -303,9 +308,6 @@ func (p *parser) mathtoolsAlignment(environment string) ([]*mml.Node, error) {
 	adjustedRowSpacing := map[int]bool{}
 	for rowIndex, cells := range rows {
 		joined := strings.TrimSpace(strings.Join(cells, "&"))
-		if tagState != nil && joined == "" && rowIndex == len(rows)-1 && len(rows) > 1 {
-			continue
-		}
 		arrowIndex := strings.Index(joined, "\\ArrowBetweenLines")
 		if arrowIndex == 0 || (tagState != nil && arrowIndex > 0) {
 			if tagState != nil {
@@ -438,6 +440,9 @@ func (p *parser) mathtoolsAlignment(environment string) ([]*mml.Node, error) {
 			}
 			mtds = append(mtds, node("mtd", content))
 		}
+		if omitFinalArrayRow(rowIndex, len(rows), mtds) {
+			continue
+		}
 		if err := appendRows(node("mtr", mtds...)); err != nil {
 			return nil, err
 		}
@@ -496,7 +501,7 @@ func (p *parser) mathtoolsAlignment(environment string) ([]*mml.Node, error) {
 func (p *parser) mathtoolsMultlineBody(body string) ([]*mml.Node, error) {
 	rows := splitTable(body)
 	mrows := make([]*mml.Node, 0, len(rows))
-	for _, cells := range rows {
+	for rowIndex, cells := range rows {
 		raw := strings.TrimSpace(strings.Join(cells, "&"))
 		shove := ""
 		if strings.HasPrefix(raw, "\\shoveleft") {
@@ -516,6 +521,9 @@ func (p *parser) mathtoolsMultlineBody(body string) ([]*mml.Node, error) {
 		cell := node("mtd", content)
 		if shove != "" {
 			cell.Attributes.Set("columnalign", shove)
+		}
+		if omitFinalArrayRow(rowIndex, len(rows), []*mml.Node{cell}) {
+			continue
 		}
 		mrows = append(mrows, node("mtr", cell))
 	}
@@ -653,14 +661,7 @@ func (p *parser) mathtoolsContinuationNodes(source string) ([]*mml.Node, error) 
 }
 
 func mathtoolsRowHasContent(row *mml.Node) bool {
-	for _, cell := range row.Children {
-		for _, child := range cell.Children {
-			if len(unwrapInferred(child)) != 0 {
-				return true
-			}
-		}
-	}
-	return false
+	return !emptyArrayCells(row.Children)
 }
 
 func mathtoolsOnlyCommandArgument(source, command string) (string, error) {

@@ -54,7 +54,7 @@ func (p *parser) baseAMSEnvironment(name string) (nodes []*mml.Node, handled boo
 	}
 	rows := splitTable(body)
 	mrows := make([]*mml.Node, 0, len(rows))
-	for _, cells := range rows {
+	for rowIndex, cells := range rows {
 		parsed := make([]*mml.Node, 0, len(cells)+1)
 		for _, raw := range cells {
 			content, err := p.parseArrayCellString(strings.TrimSpace(raw))
@@ -62,6 +62,9 @@ func (p *parser) baseAMSEnvironment(name string) (nodes []*mml.Node, handled boo
 				return nil, true, err
 			}
 			parsed = append(parsed, node("mtd", content))
+		}
+		if omitFinalArrayRow(rowIndex, len(rows), parsed) {
+			continue
 		}
 		padded := make([]*mml.Node, 0, len(parsed)+len(parsed)/2)
 		for len(parsed) != 0 {
