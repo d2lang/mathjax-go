@@ -89,5 +89,8 @@ It regenerates only original outputs; baseline/candidate receipts and the
 passing/raw classification are not selected or rewritten by the generator.
 All three original fixture files regenerate byte-identically on the complete
 954-input inventory, including the 96 unmodified environment observations.
-The current-base probe and focused 902 complete-SVG / 46 bounded-runtime
-assertions pass. Final full gates remain pending.
+On actual main164, the committed focused 902 complete-SVG / 46 bounded-runtime
+assertions, full frozen-oracle suite, race checks, vet and WASM build all pass
+serially with Go 1.27 and `-p 1`. The gated head is
+`9b72fc1cf7983a8955ebf1748bdb1aaa7c2a590a`; this final status update changes
+only this README.
