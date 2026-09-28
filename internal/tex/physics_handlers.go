@@ -81,7 +81,7 @@ func (p *parser) physicsEnvironment(name string) (nodes []*mml.Node, handled boo
 	if err != nil {
 		return nil, true, err
 	}
-	applyColumnSpec(table, columnSpec)
+	table = applyColumnSpec(table, columnSpec)
 	open, close := matrixDelimiters(name)
 	if open != "" || close != "" {
 		table = p.leftRightFenced(open, table, close, true)

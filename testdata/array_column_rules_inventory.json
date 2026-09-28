@@ -1,0 +1,3951 @@
+{
+  "baseCommit": "538d879f57839c1bfa2cd4f3c81c56d685c43109",
+  "exactInputs": 1068,
+  "counts": {
+    "first-input-publication": 756,
+    "prior-complete-reference": 212,
+    "promoted-raw-original": 100
+  },
+  "overlap": [
+    {
+      "tex": "\\begin{array}{}a&\\frac12\\\\long&b\\end{array}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{}a&\\frac12\\\\long&b\\end{array}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{r}\\begin{array}{}a&\\frac12\\\\long&b\\end{array}\\\\z\\end{array}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{r}\\begin{array}{}a&\\frac12\\\\long&b\\end{array}\\\\z\\end{array}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{}a\\\\\\frac{a+b}{c}\\end{array}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{}a\\\\\\frac{a+b}{c}\\end{array}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{r}\\begin{array}{}a\\\\\\frac{a+b}{c}\\end{array}\\\\z\\end{array}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{r}\\begin{array}{}a\\\\\\frac{a+b}{c}\\end{array}\\\\z\\end{array}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{}&a\\\\b&\\end{array}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{}&a\\\\b&\\end{array}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{r}\\begin{array}{}&a\\\\b&\\end{array}\\\\z\\end{array}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{r}\\begin{array}{}&a\\\\b&\\end{array}\\\\z\\end{array}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{x}a&\\frac12\\\\long&b\\end{array}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{x}a&\\frac12\\\\long&b\\end{array}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{r}\\begin{array}{x}a&\\frac12\\\\long&b\\end{array}\\\\z\\end{array}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{r}\\begin{array}{x}a&\\frac12\\\\long&b\\end{array}\\\\z\\end{array}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{x}a\\\\\\frac{a+b}{c}\\end{array}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{x}a\\\\\\frac{a+b}{c}\\end{array}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{r}\\begin{array}{x}a\\\\\\frac{a+b}{c}\\end{array}\\\\z\\end{array}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{r}\\begin{array}{x}a\\\\\\frac{a+b}{c}\\end{array}\\\\z\\end{array}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{x}&a\\\\b&\\end{array}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{x}&a\\\\b&\\end{array}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{r}\\begin{array}{x}&a\\\\b&\\end{array}\\\\z\\end{array}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{r}\\begin{array}{x}&a\\\\b&\\end{array}\\\\z\\end{array}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{!!!}a&\\frac12\\\\long&b\\end{array}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{!!!}a&\\frac12\\\\long&b\\end{array}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{r}\\begin{array}{!!!}a&\\frac12\\\\long&b\\end{array}\\\\z\\end{array}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{r}\\begin{array}{!!!}a&\\frac12\\\\long&b\\end{array}\\\\z\\end{array}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{!!!}a\\\\\\frac{a+b}{c}\\end{array}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{!!!}a\\\\\\frac{a+b}{c}\\end{array}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{r}\\begin{array}{!!!}a\\\\\\frac{a+b}{c}\\end{array}\\\\z\\end{array}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{r}\\begin{array}{!!!}a\\\\\\frac{a+b}{c}\\end{array}\\\\z\\end{array}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{!!!}&a\\\\b&\\end{array}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{!!!}&a\\\\b&\\end{array}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{r}\\begin{array}{!!!}&a\\\\b&\\end{array}\\\\z\\end{array}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{r}\\begin{array}{!!!}&a\\\\b&\\end{array}\\\\z\\end{array}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{|}a&\\frac12\\\\long&b\\end{array}",
+      "display": false,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        },
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{|}a&\\frac12\\\\long&b\\end{array}",
+      "display": true,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        },
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{r}\\begin{array}{|}a&\\frac12\\\\long&b\\end{array}\\\\z\\end{array}",
+      "display": false,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{r}\\begin{array}{|}a&\\frac12\\\\long&b\\end{array}\\\\z\\end{array}",
+      "display": true,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{|}a\\\\\\frac{a+b}{c}\\end{array}",
+      "display": false,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        },
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{|}a\\\\\\frac{a+b}{c}\\end{array}",
+      "display": true,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        },
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{r}\\begin{array}{|}a\\\\\\frac{a+b}{c}\\end{array}\\\\z\\end{array}",
+      "display": false,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{r}\\begin{array}{|}a\\\\\\frac{a+b}{c}\\end{array}\\\\z\\end{array}",
+      "display": true,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{|}&a\\\\b&\\end{array}",
+      "display": false,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        },
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{|}&a\\\\b&\\end{array}",
+      "display": true,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        },
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{r}\\begin{array}{|}&a\\\\b&\\end{array}\\\\z\\end{array}",
+      "display": false,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{r}\\begin{array}{|}&a\\\\b&\\end{array}\\\\z\\end{array}",
+      "display": true,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{::}a&\\frac12\\\\long&b\\end{array}",
+      "display": false,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        },
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{::}a&\\frac12\\\\long&b\\end{array}",
+      "display": true,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        },
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{r}\\begin{array}{::}a&\\frac12\\\\long&b\\end{array}\\\\z\\end{array}",
+      "display": false,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{r}\\begin{array}{::}a&\\frac12\\\\long&b\\end{array}\\\\z\\end{array}",
+      "display": true,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{::}a\\\\\\frac{a+b}{c}\\end{array}",
+      "display": false,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        },
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{::}a\\\\\\frac{a+b}{c}\\end{array}",
+      "display": true,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        },
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{r}\\begin{array}{::}a\\\\\\frac{a+b}{c}\\end{array}\\\\z\\end{array}",
+      "display": false,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{r}\\begin{array}{::}a\\\\\\frac{a+b}{c}\\end{array}\\\\z\\end{array}",
+      "display": true,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{::}&a\\\\b&\\end{array}",
+      "display": false,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        },
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{::}&a\\\\b&\\end{array}",
+      "display": true,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        },
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{r}\\begin{array}{::}&a\\\\b&\\end{array}\\\\z\\end{array}",
+      "display": false,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{r}\\begin{array}{::}&a\\\\b&\\end{array}\\\\z\\end{array}",
+      "display": true,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{|x|}a&\\frac12\\\\long&b\\end{array}",
+      "display": false,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        },
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{|x|}a&\\frac12\\\\long&b\\end{array}",
+      "display": true,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        },
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{r}\\begin{array}{|x|}a&\\frac12\\\\long&b\\end{array}\\\\z\\end{array}",
+      "display": false,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{r}\\begin{array}{|x|}a&\\frac12\\\\long&b\\end{array}\\\\z\\end{array}",
+      "display": true,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{|x|}a\\\\\\frac{a+b}{c}\\end{array}",
+      "display": false,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        },
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{|x|}a\\\\\\frac{a+b}{c}\\end{array}",
+      "display": true,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        },
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{r}\\begin{array}{|x|}a\\\\\\frac{a+b}{c}\\end{array}\\\\z\\end{array}",
+      "display": false,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{r}\\begin{array}{|x|}a\\\\\\frac{a+b}{c}\\end{array}\\\\z\\end{array}",
+      "display": true,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{|x|}&a\\\\b&\\end{array}",
+      "display": false,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        },
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{|x|}&a\\\\b&\\end{array}",
+      "display": true,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        },
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{r}\\begin{array}{|x|}&a\\\\b&\\end{array}\\\\z\\end{array}",
+      "display": false,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{r}\\begin{array}{|x|}&a\\\\b&\\end{array}\\\\z\\end{array}",
+      "display": true,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{:x:}a&\\frac12\\\\long&b\\end{array}",
+      "display": false,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        },
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{:x:}a&\\frac12\\\\long&b\\end{array}",
+      "display": true,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        },
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{r}\\begin{array}{:x:}a&\\frac12\\\\long&b\\end{array}\\\\z\\end{array}",
+      "display": false,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{r}\\begin{array}{:x:}a&\\frac12\\\\long&b\\end{array}\\\\z\\end{array}",
+      "display": true,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{:x:}a\\\\\\frac{a+b}{c}\\end{array}",
+      "display": false,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        },
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{:x:}a\\\\\\frac{a+b}{c}\\end{array}",
+      "display": true,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        },
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{r}\\begin{array}{:x:}a\\\\\\frac{a+b}{c}\\end{array}\\\\z\\end{array}",
+      "display": false,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{r}\\begin{array}{:x:}a\\\\\\frac{a+b}{c}\\end{array}\\\\z\\end{array}",
+      "display": true,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{:x:}&a\\\\b&\\end{array}",
+      "display": false,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        },
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{:x:}&a\\\\b&\\end{array}",
+      "display": true,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        },
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{r}\\begin{array}{:x:}&a\\\\b&\\end{array}\\\\z\\end{array}",
+      "display": false,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{r}\\begin{array}{:x:}&a\\\\b&\\end{array}\\\\z\\end{array}",
+      "display": true,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{|@{}|}a&\\frac12\\\\long&b\\end{array}",
+      "display": false,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        },
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{|@{}|}a&\\frac12\\\\long&b\\end{array}",
+      "display": true,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        },
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{r}\\begin{array}{|@{}|}a&\\frac12\\\\long&b\\end{array}\\\\z\\end{array}",
+      "display": false,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{r}\\begin{array}{|@{}|}a&\\frac12\\\\long&b\\end{array}\\\\z\\end{array}",
+      "display": true,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{|@{}|}a\\\\\\frac{a+b}{c}\\end{array}",
+      "display": false,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        },
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{|@{}|}a\\\\\\frac{a+b}{c}\\end{array}",
+      "display": true,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        },
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{r}\\begin{array}{|@{}|}a\\\\\\frac{a+b}{c}\\end{array}\\\\z\\end{array}",
+      "display": false,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{r}\\begin{array}{|@{}|}a\\\\\\frac{a+b}{c}\\end{array}\\\\z\\end{array}",
+      "display": true,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{|@{}|}&a\\\\b&\\end{array}",
+      "display": false,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        },
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{|@{}|}&a\\\\b&\\end{array}",
+      "display": true,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        },
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{r}\\begin{array}{|@{}|}&a\\\\b&\\end{array}\\\\z\\end{array}",
+      "display": false,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{array}{r}\\begin{array}{|@{}|}&a\\\\b&\\end{array}\\\\z\\end{array}",
+      "display": true,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{matrix}a&\\frac12\\\\b&c\\end{matrix}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{matrix}a&\\frac12\\\\b&c\\end{matrix}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{matrix}a&\\frac12\\\\b&c\\end{matrix}\\\\b&=c\\end{aligned}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{matrix}a&\\frac12\\\\b&c\\end{matrix}\\\\b&=c\\end{aligned}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{matrix}\\imat{2}\\end{matrix}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{matrix}\\imat{2}\\end{matrix}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{matrix}\\imat{2}\\end{matrix}\\\\b&=c\\end{aligned}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{matrix}\\imat{2}\\end{matrix}\\\\b&=c\\end{aligned}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{matrix}[]a&\\frac12\\\\b&c\\end{matrix}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{matrix}[]a&\\frac12\\\\b&c\\end{matrix}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{matrix}[]a&\\frac12\\\\b&c\\end{matrix}\\\\b&=c\\end{aligned}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{matrix}[]a&\\frac12\\\\b&c\\end{matrix}\\\\b&=c\\end{aligned}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{matrix}[]\\imat{2}\\end{matrix}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{matrix}[]\\imat{2}\\end{matrix}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{matrix}[]\\imat{2}\\end{matrix}\\\\b&=c\\end{aligned}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{matrix}[]\\imat{2}\\end{matrix}\\\\b&=c\\end{aligned}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{matrix}[x]a&\\frac12\\\\b&c\\end{matrix}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{matrix}[x]a&\\frac12\\\\b&c\\end{matrix}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{matrix}[x]a&\\frac12\\\\b&c\\end{matrix}\\\\b&=c\\end{aligned}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{matrix}[x]a&\\frac12\\\\b&c\\end{matrix}\\\\b&=c\\end{aligned}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{matrix}[x]\\imat{2}\\end{matrix}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{matrix}[x]\\imat{2}\\end{matrix}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{matrix}[x]\\imat{2}\\end{matrix}\\\\b&=c\\end{aligned}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{matrix}[x]\\imat{2}\\end{matrix}\\\\b&=c\\end{aligned}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{matrix}[c]a&\\frac12\\\\b&c\\end{matrix}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{matrix}[c]a&\\frac12\\\\b&c\\end{matrix}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{matrix}[c]a&\\frac12\\\\b&c\\end{matrix}\\\\b&=c\\end{aligned}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{matrix}[c]a&\\frac12\\\\b&c\\end{matrix}\\\\b&=c\\end{aligned}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{matrix}[c]\\imat{2}\\end{matrix}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{matrix}[c]\\imat{2}\\end{matrix}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{matrix}[c]\\imat{2}\\end{matrix}\\\\b&=c\\end{aligned}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{matrix}[c]\\imat{2}\\end{matrix}\\\\b&=c\\end{aligned}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{matrix*}a&\\frac12\\\\b&c\\end{matrix*}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{matrix*}a&\\frac12\\\\b&c\\end{matrix*}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{matrix*}a&\\frac12\\\\b&c\\end{matrix*}\\\\b&=c\\end{aligned}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{matrix*}a&\\frac12\\\\b&c\\end{matrix*}\\\\b&=c\\end{aligned}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{matrix*}\\imat{2}\\end{matrix*}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{matrix*}\\imat{2}\\end{matrix*}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{matrix*}\\imat{2}\\end{matrix*}\\\\b&=c\\end{aligned}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{matrix*}\\imat{2}\\end{matrix*}\\\\b&=c\\end{aligned}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{matrix*}[]a&\\frac12\\\\b&c\\end{matrix*}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{matrix*}[]a&\\frac12\\\\b&c\\end{matrix*}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{matrix*}[]a&\\frac12\\\\b&c\\end{matrix*}\\\\b&=c\\end{aligned}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{matrix*}[]a&\\frac12\\\\b&c\\end{matrix*}\\\\b&=c\\end{aligned}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{matrix*}[]\\imat{2}\\end{matrix*}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{matrix*}[]\\imat{2}\\end{matrix*}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{matrix*}[]\\imat{2}\\end{matrix*}\\\\b&=c\\end{aligned}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{matrix*}[]\\imat{2}\\end{matrix*}\\\\b&=c\\end{aligned}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{matrix*}[x]a&\\frac12\\\\b&c\\end{matrix*}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{matrix*}[x]a&\\frac12\\\\b&c\\end{matrix*}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{matrix*}[x]a&\\frac12\\\\b&c\\end{matrix*}\\\\b&=c\\end{aligned}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{matrix*}[x]a&\\frac12\\\\b&c\\end{matrix*}\\\\b&=c\\end{aligned}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{matrix*}[x]\\imat{2}\\end{matrix*}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{matrix*}[x]\\imat{2}\\end{matrix*}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{matrix*}[x]\\imat{2}\\end{matrix*}\\\\b&=c\\end{aligned}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{matrix*}[x]\\imat{2}\\end{matrix*}\\\\b&=c\\end{aligned}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{matrix*}[c]a&\\frac12\\\\b&c\\end{matrix*}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{matrix*}[c]a&\\frac12\\\\b&c\\end{matrix*}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{matrix*}[c]a&\\frac12\\\\b&c\\end{matrix*}\\\\b&=c\\end{aligned}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{matrix*}[c]a&\\frac12\\\\b&c\\end{matrix*}\\\\b&=c\\end{aligned}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{matrix*}[c]\\imat{2}\\end{matrix*}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{matrix*}[c]\\imat{2}\\end{matrix*}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{matrix*}[c]\\imat{2}\\end{matrix*}\\\\b&=c\\end{aligned}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{matrix*}[c]\\imat{2}\\end{matrix*}\\\\b&=c\\end{aligned}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{pmatrix*}a&\\frac12\\\\b&c\\end{pmatrix*}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{pmatrix*}a&\\frac12\\\\b&c\\end{pmatrix*}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{pmatrix*}a&\\frac12\\\\b&c\\end{pmatrix*}\\\\b&=c\\end{aligned}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{pmatrix*}a&\\frac12\\\\b&c\\end{pmatrix*}\\\\b&=c\\end{aligned}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{pmatrix*}\\imat{2}\\end{pmatrix*}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{pmatrix*}\\imat{2}\\end{pmatrix*}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{pmatrix*}\\imat{2}\\end{pmatrix*}\\\\b&=c\\end{aligned}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{pmatrix*}\\imat{2}\\end{pmatrix*}\\\\b&=c\\end{aligned}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{pmatrix*}[]a&\\frac12\\\\b&c\\end{pmatrix*}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{pmatrix*}[]a&\\frac12\\\\b&c\\end{pmatrix*}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{pmatrix*}[]a&\\frac12\\\\b&c\\end{pmatrix*}\\\\b&=c\\end{aligned}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{pmatrix*}[]a&\\frac12\\\\b&c\\end{pmatrix*}\\\\b&=c\\end{aligned}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{pmatrix*}[]\\imat{2}\\end{pmatrix*}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{pmatrix*}[]\\imat{2}\\end{pmatrix*}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{pmatrix*}[]\\imat{2}\\end{pmatrix*}\\\\b&=c\\end{aligned}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{pmatrix*}[]\\imat{2}\\end{pmatrix*}\\\\b&=c\\end{aligned}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{pmatrix*}[x]a&\\frac12\\\\b&c\\end{pmatrix*}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{pmatrix*}[x]a&\\frac12\\\\b&c\\end{pmatrix*}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{pmatrix*}[x]a&\\frac12\\\\b&c\\end{pmatrix*}\\\\b&=c\\end{aligned}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{pmatrix*}[x]a&\\frac12\\\\b&c\\end{pmatrix*}\\\\b&=c\\end{aligned}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{pmatrix*}[x]\\imat{2}\\end{pmatrix*}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{pmatrix*}[x]\\imat{2}\\end{pmatrix*}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{pmatrix*}[x]\\imat{2}\\end{pmatrix*}\\\\b&=c\\end{aligned}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{pmatrix*}[x]\\imat{2}\\end{pmatrix*}\\\\b&=c\\end{aligned}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{pmatrix*}[c]a&\\frac12\\\\b&c\\end{pmatrix*}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{pmatrix*}[c]a&\\frac12\\\\b&c\\end{pmatrix*}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{pmatrix*}[c]a&\\frac12\\\\b&c\\end{pmatrix*}\\\\b&=c\\end{aligned}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{pmatrix*}[c]a&\\frac12\\\\b&c\\end{pmatrix*}\\\\b&=c\\end{aligned}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{pmatrix*}[c]\\imat{2}\\end{pmatrix*}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{pmatrix*}[c]\\imat{2}\\end{pmatrix*}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{pmatrix*}[c]\\imat{2}\\end{pmatrix*}\\\\b&=c\\end{aligned}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{pmatrix*}[c]\\imat{2}\\end{pmatrix*}\\\\b&=c\\end{aligned}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{smallmatrix*}a&\\frac12\\\\b&c\\end{smallmatrix*}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{smallmatrix*}a&\\frac12\\\\b&c\\end{smallmatrix*}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{smallmatrix*}a&\\frac12\\\\b&c\\end{smallmatrix*}\\\\b&=c\\end{aligned}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{smallmatrix*}a&\\frac12\\\\b&c\\end{smallmatrix*}\\\\b&=c\\end{aligned}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{smallmatrix*}\\imat{2}\\end{smallmatrix*}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{smallmatrix*}\\imat{2}\\end{smallmatrix*}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{smallmatrix*}\\imat{2}\\end{smallmatrix*}\\\\b&=c\\end{aligned}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{smallmatrix*}\\imat{2}\\end{smallmatrix*}\\\\b&=c\\end{aligned}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{smallmatrix*}[]a&\\frac12\\\\b&c\\end{smallmatrix*}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{smallmatrix*}[]a&\\frac12\\\\b&c\\end{smallmatrix*}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{smallmatrix*}[]a&\\frac12\\\\b&c\\end{smallmatrix*}\\\\b&=c\\end{aligned}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{smallmatrix*}[]a&\\frac12\\\\b&c\\end{smallmatrix*}\\\\b&=c\\end{aligned}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{smallmatrix*}[]\\imat{2}\\end{smallmatrix*}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{smallmatrix*}[]\\imat{2}\\end{smallmatrix*}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{smallmatrix*}[]\\imat{2}\\end{smallmatrix*}\\\\b&=c\\end{aligned}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{smallmatrix*}[]\\imat{2}\\end{smallmatrix*}\\\\b&=c\\end{aligned}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{smallmatrix*}[x]a&\\frac12\\\\b&c\\end{smallmatrix*}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{smallmatrix*}[x]a&\\frac12\\\\b&c\\end{smallmatrix*}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{smallmatrix*}[x]a&\\frac12\\\\b&c\\end{smallmatrix*}\\\\b&=c\\end{aligned}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{smallmatrix*}[x]a&\\frac12\\\\b&c\\end{smallmatrix*}\\\\b&=c\\end{aligned}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{smallmatrix*}[x]\\imat{2}\\end{smallmatrix*}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{smallmatrix*}[x]\\imat{2}\\end{smallmatrix*}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{smallmatrix*}[x]\\imat{2}\\end{smallmatrix*}\\\\b&=c\\end{aligned}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{smallmatrix*}[x]\\imat{2}\\end{smallmatrix*}\\\\b&=c\\end{aligned}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{smallmatrix*}[c]a&\\frac12\\\\b&c\\end{smallmatrix*}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{smallmatrix*}[c]a&\\frac12\\\\b&c\\end{smallmatrix*}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{smallmatrix*}[c]a&\\frac12\\\\b&c\\end{smallmatrix*}\\\\b&=c\\end{aligned}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{smallmatrix*}[c]a&\\frac12\\\\b&c\\end{smallmatrix*}\\\\b&=c\\end{aligned}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{smallmatrix*}[c]\\imat{2}\\end{smallmatrix*}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{smallmatrix*}[c]\\imat{2}\\end{smallmatrix*}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{smallmatrix*}[c]\\imat{2}\\end{smallmatrix*}\\\\b&=c\\end{aligned}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{smallmatrix*}[c]\\imat{2}\\end{smallmatrix*}\\\\b&=c\\end{aligned}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{psmallmatrix*}a&\\frac12\\\\b&c\\end{psmallmatrix*}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{psmallmatrix*}a&\\frac12\\\\b&c\\end{psmallmatrix*}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{psmallmatrix*}a&\\frac12\\\\b&c\\end{psmallmatrix*}\\\\b&=c\\end{aligned}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{psmallmatrix*}a&\\frac12\\\\b&c\\end{psmallmatrix*}\\\\b&=c\\end{aligned}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{psmallmatrix*}\\imat{2}\\end{psmallmatrix*}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{psmallmatrix*}\\imat{2}\\end{psmallmatrix*}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{psmallmatrix*}\\imat{2}\\end{psmallmatrix*}\\\\b&=c\\end{aligned}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{psmallmatrix*}\\imat{2}\\end{psmallmatrix*}\\\\b&=c\\end{aligned}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{psmallmatrix*}[]a&\\frac12\\\\b&c\\end{psmallmatrix*}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{psmallmatrix*}[]a&\\frac12\\\\b&c\\end{psmallmatrix*}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{psmallmatrix*}[]a&\\frac12\\\\b&c\\end{psmallmatrix*}\\\\b&=c\\end{aligned}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{psmallmatrix*}[]a&\\frac12\\\\b&c\\end{psmallmatrix*}\\\\b&=c\\end{aligned}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{psmallmatrix*}[]\\imat{2}\\end{psmallmatrix*}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{psmallmatrix*}[]\\imat{2}\\end{psmallmatrix*}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{psmallmatrix*}[]\\imat{2}\\end{psmallmatrix*}\\\\b&=c\\end{aligned}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{psmallmatrix*}[]\\imat{2}\\end{psmallmatrix*}\\\\b&=c\\end{aligned}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{psmallmatrix*}[x]a&\\frac12\\\\b&c\\end{psmallmatrix*}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{psmallmatrix*}[x]a&\\frac12\\\\b&c\\end{psmallmatrix*}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{psmallmatrix*}[x]a&\\frac12\\\\b&c\\end{psmallmatrix*}\\\\b&=c\\end{aligned}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{psmallmatrix*}[x]a&\\frac12\\\\b&c\\end{psmallmatrix*}\\\\b&=c\\end{aligned}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{psmallmatrix*}[x]\\imat{2}\\end{psmallmatrix*}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{psmallmatrix*}[x]\\imat{2}\\end{psmallmatrix*}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{psmallmatrix*}[x]\\imat{2}\\end{psmallmatrix*}\\\\b&=c\\end{aligned}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{psmallmatrix*}[x]\\imat{2}\\end{psmallmatrix*}\\\\b&=c\\end{aligned}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{psmallmatrix*}[c]a&\\frac12\\\\b&c\\end{psmallmatrix*}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{psmallmatrix*}[c]a&\\frac12\\\\b&c\\end{psmallmatrix*}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{psmallmatrix*}[c]a&\\frac12\\\\b&c\\end{psmallmatrix*}\\\\b&=c\\end{aligned}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{psmallmatrix*}[c]a&\\frac12\\\\b&c\\end{psmallmatrix*}\\\\b&=c\\end{aligned}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{psmallmatrix*}[c]\\imat{2}\\end{psmallmatrix*}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{psmallmatrix*}[c]\\imat{2}\\end{psmallmatrix*}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{psmallmatrix*}[c]\\imat{2}\\end{psmallmatrix*}\\\\b&=c\\end{aligned}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{aligned}a&=\\begin{psmallmatrix*}[c]\\imat{2}\\end{psmallmatrix*}\\\\b&=c\\end{aligned}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/matrix_quantity_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\overbrace{\\hspace{3.478em}}^{n}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/under_over_commands_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\overbrace{\\hspace{3.478em}}^{n}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/under_over_commands_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\overbrace{\\kern3.478em}^{n}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/under_over_commands_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\overbrace{\\kern3.478em}^{n}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/under_over_commands_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\overbrace{\\Rule{3.478em}{1.6655em}{1.1655em}}^{n}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/under_over_commands_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\overbrace{\\Rule{3.478em}{1.6655em}{1.1655em}}^{n}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/under_over_commands_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\overbrace{\\Rule{3.4779999999999998em}{1.6655em}{1.1655em}}^{n}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/under_over_commands_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\overbrace{\\Rule{3.4779999999999998em}{1.6655em}{1.1655em}}^{n}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/under_over_commands_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\underbrace{\\hspace{3.478em}}_{n}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/under_over_commands_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\underbrace{\\hspace{3.478em}}_{n}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/under_over_commands_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\underbrace{\\kern3.478em}_{n}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/under_over_commands_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\underbrace{\\kern3.478em}_{n}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/under_over_commands_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\underbrace{\\Rule{3.478em}{1.6655em}{1.1655em}}_{n}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/under_over_commands_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\underbrace{\\Rule{3.478em}{1.6655em}{1.1655em}}_{n}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/under_over_commands_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\underbrace{\\Rule{3.4779999999999998em}{1.6655em}{1.1655em}}_{n}",
+      "display": false,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/under_over_commands_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\underbrace{\\Rule{3.4779999999999998em}{1.6655em}{1.1655em}}_{n}",
+      "display": true,
+      "classification": "prior-complete-reference",
+      "records": [
+        {
+          "file": "testdata/under_over_commands_mathjax_3_2_2.json",
+          "kind": "complete-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{crampedsubarray}{|c|}x^2\\\\y^3\\end{crampedsubarray}",
+      "display": false,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/cramped_substack_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{crampedsubarray}{|c|}x^2\\\\y^3\\end{crampedsubarray}",
+      "display": true,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/cramped_substack_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{subarray}{|c|}x^2\\\\y^3\\end{subarray}",
+      "display": false,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/cramped_substack_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{subarray}{|c|}x^2\\\\y^3\\end{subarray}",
+      "display": true,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/cramped_substack_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{crampedsubarray}{|c|}x^2&y^3\\end{crampedsubarray}",
+      "display": false,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/cramped_substack_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{crampedsubarray}{|c|}x^2&y^3\\end{crampedsubarray}",
+      "display": true,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/cramped_substack_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{subarray}{|c|}x^2&y^3\\end{subarray}",
+      "display": false,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/cramped_substack_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{subarray}{|c|}x^2&y^3\\end{subarray}",
+      "display": true,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/cramped_substack_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{crampedsubarray}{|c|}\\text{A}\\\\\\frac12\\end{crampedsubarray}",
+      "display": false,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/cramped_substack_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{crampedsubarray}{|c|}\\text{A}\\\\\\frac12\\end{crampedsubarray}",
+      "display": true,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/cramped_substack_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{subarray}{|c|}\\text{A}\\\\\\frac12\\end{subarray}",
+      "display": false,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/cramped_substack_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{subarray}{|c|}\\text{A}\\\\\\frac12\\end{subarray}",
+      "display": true,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/cramped_substack_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{crampedsubarray}{|c|}\\end{crampedsubarray}",
+      "display": false,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/cramped_substack_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{crampedsubarray}{|c|}\\end{crampedsubarray}",
+      "display": true,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/cramped_substack_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{subarray}{|c|}\\end{subarray}",
+      "display": false,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/cramped_substack_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{subarray}{|c|}\\end{subarray}",
+      "display": true,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/cramped_substack_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{crampedsubarray}{|r|}x^2&y^2\\\\z^2&w^2\\end{crampedsubarray}",
+      "display": false,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/cramped_substack_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{crampedsubarray}{|r|}x^2&y^2\\\\z^2&w^2\\end{crampedsubarray}",
+      "display": true,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/cramped_substack_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{crampedsubarray}{|r|}\\bf x^2&\\rm y^2\\end{crampedsubarray}",
+      "display": false,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/cramped_substack_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{crampedsubarray}{|r|}\\bf x^2&\\rm y^2\\end{crampedsubarray}",
+      "display": true,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/cramped_substack_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{crampedsubarray}{|r|}\\hfill x^2&y^2\\hfill\\end{crampedsubarray}",
+      "display": false,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/cramped_substack_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{crampedsubarray}{|r|}\\hfill x^2&y^2\\hfill\\end{crampedsubarray}",
+      "display": true,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/cramped_substack_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{crampedsubarray}{:c:}x^2&y^2\\\\z^2&w^2\\end{crampedsubarray}",
+      "display": false,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/cramped_substack_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{crampedsubarray}{:c:}x^2&y^2\\\\z^2&w^2\\end{crampedsubarray}",
+      "display": true,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/cramped_substack_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{crampedsubarray}{:c:}\\bf x^2&\\rm y^2\\end{crampedsubarray}",
+      "display": false,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/cramped_substack_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{crampedsubarray}{:c:}\\bf x^2&\\rm y^2\\end{crampedsubarray}",
+      "display": true,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/cramped_substack_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{crampedsubarray}{:c:}\\hfill x^2&y^2\\hfill\\end{crampedsubarray}",
+      "display": false,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/cramped_substack_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{crampedsubarray}{:c:}\\hfill x^2&y^2\\hfill\\end{crampedsubarray}",
+      "display": true,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/cramped_substack_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{subarray}{|r|}x^2&y^2\\\\z^2&w^2\\end{subarray}",
+      "display": false,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/cramped_substack_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{subarray}{|r|}x^2&y^2\\\\z^2&w^2\\end{subarray}",
+      "display": true,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/cramped_substack_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{subarray}{|r|}\\bf x^2&\\rm y^2\\end{subarray}",
+      "display": false,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/cramped_substack_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{subarray}{|r|}\\bf x^2&\\rm y^2\\end{subarray}",
+      "display": true,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/cramped_substack_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{subarray}{|r|}\\hfill x^2&y^2\\hfill\\end{subarray}",
+      "display": false,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/cramped_substack_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{subarray}{|r|}\\hfill x^2&y^2\\hfill\\end{subarray}",
+      "display": true,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/cramped_substack_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{subarray}{:c:}x^2&y^2\\\\z^2&w^2\\end{subarray}",
+      "display": false,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/cramped_substack_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{subarray}{:c:}x^2&y^2\\\\z^2&w^2\\end{subarray}",
+      "display": true,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/cramped_substack_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{subarray}{:c:}\\bf x^2&\\rm y^2\\end{subarray}",
+      "display": false,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/cramped_substack_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{subarray}{:c:}\\bf x^2&\\rm y^2\\end{subarray}",
+      "display": true,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/cramped_substack_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{subarray}{:c:}\\hfill x^2&y^2\\hfill\\end{subarray}",
+      "display": false,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/cramped_substack_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    },
+    {
+      "tex": "\\begin{subarray}{:c:}\\hfill x^2&y^2\\hfill\\end{subarray}",
+      "display": true,
+      "classification": "promoted-raw-original",
+      "records": [
+        {
+          "file": "testdata/cramped_substack_residuals.json",
+          "kind": "raw-original"
+        }
+      ]
+    }
+  ],
+  "ambiguousInputs": [],
+  "scannedFiles": [
+    "internal/svg/testdata/accent_policy_mathjax_3_2_2.json",
+    "internal/svg/testdata/accent_policy_unchanged_internal.json",
+    "internal/svg/testdata/accent_script_constructor_mathjax_3_2_2.json",
+    "internal/svg/testdata/explicit_spacing_mathjax_3_2_2.json",
+    "internal/svg/testdata/id_anchor_private_mathjax_3_2_2.json",
+    "internal/svg/testdata/identifier_operator_mathjax_3_2_2.json",
+    "internal/svg/testdata/movable_limit_core_mathjax_3_2_2.json",
+    "internal/svg/testdata/ms_quotes_mathjax_3_2_2.json",
+    "internal/svg/testdata/operator_level_state_mathjax_3_2_2.json",
+    "internal/svg/testdata/position_rounding_mathjax_3_2_2.json",
+    "internal/svg/testdata/responsive_minwidth_contract.json",
+    "internal/svg/testdata/script_class_transfer_mathjax_3_2_2.json",
+    "internal/tex/testdata/ams_tag_method_mathjax_3_2_2.json",
+    "internal/tex/testdata/ams_tag_text_mathjax_3_2_2.json",
+    "internal/tex/testdata/annotation_inheritance_mathjax_3_2_2.json",
+    "internal/tex/testdata/backtick_mathjax_3_2_2.json",
+    "internal/tex/testdata/bevelled_fraction_mathjax_3_2_2.json",
+    "internal/tex/testdata/combine_relations_mathjax_3_2_2.json",
+    "internal/tex/testdata/d2_rich_mml_mathjax_3_2_2.json",
+    "internal/tex/testdata/delimiter_readers_mathjax_3_2_2.json",
+    "internal/tex/testdata/dimension_grammar_mathjax_3_2_2.json",
+    "internal/tex/testdata/flatfrac_registration_mathjax_3_2_2.json",
+    "internal/tex/testdata/font_token_policy_extensions.json",
+    "internal/tex/testdata/font_token_policy_mathjax_3_2_2.json",
+    "internal/tex/testdata/framed_text_method_mathjax_3_2_2.json",
+    "internal/tex/testdata/getbrackets_whitespace_mathjax_3_2_2.json",
+    "internal/tex/testdata/handler_oracle_mathjax_3_2_2.json",
+    "internal/tex/testdata/id_anchor_render_mathjax_3_2_2.json",
+    "internal/tex/testdata/inferred_row_mathjax_3_2_2.json",
+    "internal/tex/testdata/internal_text_method_mathjax_3_2_2.json",
+    "internal/tex/testdata/limits_core_mathjax_3_2_2.json",
+    "internal/tex/testdata/limits_filter_mathjax_3_2_2.json",
+    "internal/tex/testdata/limits_handler_mathjax_3_2_2.json",
+    "internal/tex/testdata/macro_boundary_mathjax_3_2_2.json",
+    "internal/tex/testdata/macro_operatorname_mathjax_3_2_2.json",
+    "internal/tex/testdata/math_tilde_boundaries.json",
+    "internal/tex/testdata/math_tilde_mathjax_3_2_2.json",
+    "internal/tex/testdata/mml_token_mathjax_3_2_2.json",
+    "internal/tex/testdata/mu_dimension_accepted.json",
+    "internal/tex/testdata/mu_dimension_mathjax_3_2_2.json",
+    "internal/tex/testdata/nested_fonts_mathjax_3_2_2.json",
+    "internal/tex/testdata/numeric_script_cursors.json",
+    "internal/tex/testdata/numeric_script_handler_mathjax_3_2_2.json",
+    "internal/tex/testdata/operator_creation_requests.json",
+    "internal/tex/testdata/operator_dictionary_mathjax_3_2_2.json",
+    "internal/tex/testdata/operatorname_class_mathjax_3_2_2.json",
+    "internal/tex/testdata/ordinary_number_methods_mathjax_3_2_2.json",
+    "internal/tex/testdata/pending_prime_mathjax_3_2_2.json",
+    "internal/tex/testdata/prime_whitespace_collector_mathjax_3_2_2.json",
+    "internal/tex/testdata/reference_text_method_boundaries.json",
+    "internal/tex/testdata/reference_text_method_mathjax_3_2_2.json",
+    "internal/tex/testdata/script_argument_error_cursors.json",
+    "internal/tex/testdata/script_argument_items_mathjax_3_2_2.json",
+    "internal/tex/testdata/script_attachment_mathjax_3_2_2.json",
+    "internal/tex/testdata/source_tables_mathjax_3_2_2.json",
+    "internal/tex/testdata/texatom_property_mathjax_3_2_2.json",
+    "internal/tex/testdata/unicode_prime_collector_mathjax_3_2_2.json",
+    "internal/tex/testdata/vector_font_mathjax_3_2_2.json",
+    "testdata/accent_base_height_mathjax_3_2_2.json",
+    "testdata/accent_italic_correction_mathjax_3_2_2.json",
+    "testdata/accent_policy_public_mathjax_3_2_2.json",
+    "testdata/accent_script_base_boundaries.json",
+    "testdata/accent_script_base_mathjax_3_2_2.json",
+    "testdata/accent_script_xarrow_mathjax_3_2_2.json",
+    "testdata/adjacent_relations_mathjax_3_2_2.json",
+    "testdata/alignedat_mathjax_3_2_2.json",
+    "testdata/alignedat_residuals.json",
+    "testdata/annotation_attachment_boundaries.json",
+    "testdata/annotation_attachment_mathjax_3_2_2.json",
+    "testdata/array_initial_intermediate_observations.json",
+    "testdata/array_initial_mathjax_3_2_2.json",
+    "testdata/array_initial_published_replay.json",
+    "testdata/array_initial_residuals.json",
+    "testdata/array_rows_mathjax_3_2_2.json",
+    "testdata/array_rows_residuals.json",
+    "testdata/arrow_accent_mathjax_3_2_2.json",
+    "testdata/arrow_accent_qualifications.json",
+    "testdata/arrow_between_lines_mathjax_3_2_2.json",
+    "testdata/arrow_between_lines_residuals.json",
+    "testdata/authored_font_family_mathjax_3_2_2.json",
+    "testdata/base_struts_mathjax_3_2_2.json",
+    "testdata/binomial_commands_boundaries.json",
+    "testdata/binomial_commands_mathjax_3_2_2.json",
+    "testdata/binomial_macros_mathjax_3_2_2.json",
+    "testdata/bmod_command_boundaries.json",
+    "testdata/bmod_command_mathjax_3_2_2.json",
+    "testdata/boxed_macro_mathjax_3_2_2.json",
+    "testdata/boxed_macro_residuals.json",
+    "testdata/brace-labels.json",
+    "testdata/bracket_thickness_mathjax_3_2_2.json",
+    "testdata/braket_bar_mathjax_3_2_2.json",
+    "testdata/buildrel_mathjax_3_2_2.json",
+    "testdata/buildrel_residuals.json",
+    "testdata/cd_entries_mathjax_3_2_2.json",
+    "testdata/cd_entries_residuals.json",
+    "testdata/cd_finalization_mathjax_3_2_2.json",
+    "testdata/cd_finalization_residuals.json",
+    "testdata/commutator_mathjax_3_2_2.json",
+    "testdata/cramped_style_geometry_proof.json",
+    "testdata/cramped_style_mathjax_3_2_2.json",
+    "testdata/cramped_style_published_replay.json",
+    "testdata/cramped_style_residuals.json",
+    "testdata/cramped_substack_mathjax_3_2_2.json",
+    "testdata/cramped_substack_published_replay.json",
+    "testdata/cramped_substack_residuals.json",
+    "testdata/cramped_substack_review.json",
+    "testdata/decoration_movable_boundaries.json",
+    "testdata/decoration_movable_mathjax_3_2_2.json",
+    "testdata/decoration_permission_boundaries.json",
+    "testdata/decoration_permission_constructor_baseline.json",
+    "testdata/decoration_permission_mathjax_3_2_2.json",
+    "testdata/delimiter_cache_mathjax_3_2_2.json",
+    "testdata/delimiter_cache_residuals.json",
+    "testdata/delimiter_color_mathjax_3_2_2.json",
+    "testdata/delimiter_svg_mathjax_3_2_2.json",
+    "testdata/derivative_autoopen_mathjax_3_2_2.json",
+    "testdata/derivative_construction_mathjax_3_2_2.json",
+    "testdata/differential_construction_mathjax_3_2_2.json",
+    "testdata/dimension_grammar_alias_boundaries.json",
+    "testdata/dimension_grammar_boundaries.json",
+    "testdata/dimension_grammar_inputs.json",
+    "testdata/dimension_grammar_mathjax_3_2_2.json",
+    "testdata/dots_mathjax_3_2_2.json",
+    "testdata/enclosure_attribute_order_observations.json",
+    "testdata/enclosure_bbox_mathjax_3_2_2.json",
+    "testdata/enclosure_bbox_residuals.json",
+    "testdata/enclosure_geometry_report.json",
+    "testdata/enclosure_inherited_font_controls.json",
+    "testdata/enclosure_lifecycle_mathjax_3_2_2.json",
+    "testdata/enclosure_measurement_counterexamples.json",
+    "testdata/enclosure_notations_mathjax_3_2_2.json",
+    "testdata/eqnarray_current_mathjax_3_2_2.json",
+    "testdata/eqnarray_current_public_overlap.json",
+    "testdata/eqnarray_current_qualification.json",
+    "testdata/eqnarray_current_residuals.json",
+    "testdata/eqnarray_mathjax_3_2_2.json",
+    "testdata/eqnarray_residuals.json",
+    "testdata/equation_nesting_mathjax_3_2_2.json",
+    "testdata/escaped_delimiter_xml_mathjax_3_2_2.json",
+    "testdata/executable_source_map_mathjax_3_2_2.json",
+    "testdata/explicit_limits_boundaries.json",
+    "testdata/explicit_limits_mathjax_3_2_2.json",
+    "testdata/fallback_correction_mathjax_3_2_2.json",
+    "testdata/fallback_correction_residuals_mathjax_3_2_2.json",
+    "testdata/fixed_infix_fences_boundaries.json",
+    "testdata/fixed_infix_fences_mathjax_3_2_2.json",
+    "testdata/flalign_mathjax_3_2_2.json",
+    "testdata/flalign_nested_mathjax_3_2_2.json",
+    "testdata/flalign_nested_output_observations.json",
+    "testdata/flalign_residuals.json",
+    "testdata/fn_script_ownership_mathjax_3_2_2.json",
+    "testdata/fn_script_ownership_residuals.json",
+    "testdata/font_mappings_mathjax_3_2_2.json",
+    "testdata/fraction_spacing_mathjax_3_2_2.json",
+    "testdata/framebox_geometry_proof.json",
+    "testdata/framebox_mathjax_3_2_2.json",
+    "testdata/framebox_residuals.json",
+    "testdata/framed_internal_text_mathjax_3_2_2.json",
+    "testdata/gather_tags_mathjax_3_2_2.json",
+    "testdata/genfrac_palette_mathjax_3_2_2.json",
+    "testdata/genfrac_style_mathjax_3_2_2.json",
+    "testdata/getbrackets_whitespace_mathjax_3_2_2.json",
+    "testdata/group_eof_boundaries.json",
+    "testdata/group_eof_inputs.json",
+    "testdata/group_eof_mathjax_3_2_2.json",
+    "testdata/hash_diagnostic_full_mathjax_3_2_2.json",
+    "testdata/hfill_mathjax_3_2_2.json",
+    "testdata/hfill_residuals.json",
+    "testdata/horizontal_position_mathjax_3_2_2.json",
+    "testdata/horizontal_rule_mathjax_3_2_2.json",
+    "testdata/identifier_operator_mathjax_3_2_2.json",
+    "testdata/infix_delimiters_mathjax_3_2_2.json",
+    "testdata/infix_macro_priority_boundaries.json",
+    "testdata/infix_macro_priority_cases.json",
+    "testdata/infix_macro_priority_mathjax_3_2_2.json",
+    "testdata/infix_scope_boundaries.json",
+    "testdata/infix_scope_inputs.json",
+    "testdata/infix_scope_mathjax_3_2_2.json",
+    "testdata/internal_font_css_mathjax_3_2_2.json",
+    "testdata/internal_font_css_residuals_mathjax_3_2_2.json",
+    "testdata/internal_text_boundaries.json",
+    "testdata/internal_text_mathjax_3_2_2.json",
+    "testdata/lowercase_rule_mathjax_3_2_2.json",
+    "testdata/macro_boundary_inputs.json",
+    "testdata/mathit_mathjax_3_2_2.json",
+    "testdata/mathlap_style_ampersand_proof.json",
+    "testdata/mathlap_style_attribute_order_proof.json",
+    "testdata/mathlap_style_mathjax_3_2_2.json",
+    "testdata/mathlap_style_overlap_report.json",
+    "testdata/mathlap_style_published_replay.json",
+    "testdata/mathlap_style_quantity_over_proof.json",
+    "testdata/mathlap_style_residuals.json",
+    "testdata/mathop_limits_filter_mathjax_3_2_2.json",
+    "testdata/matrix_cases_mathjax_3_2_2.json",
+    "testdata/matrix_command_mathjax_3_2_2.json",
+    "testdata/matrix_numbered_mathjax_3_2_2.json",
+    "testdata/matrix_quantity_mathjax_3_2_2.json",
+    "testdata/matrix_quantity_residuals.json",
+    "testdata/mhchem_equilibrium_mathjax_3_2_2.json",
+    "testdata/mhchem_partial_bonds_mathjax_3_2_2.json",
+    "testdata/middle_delimiter_mathjax_3_2_2.json",
+    "testdata/middle_scope_mathjax_3_2_2.json",
+    "testdata/missing_right_full_mathjax_3_2_2.json",
+    "testdata/mod_command_boundaries.json",
+    "testdata/mod_command_mathjax_3_2_2.json",
+    "testdata/mspace_mathjax_3_2_2.json",
+    "testdata/mspace_residuals.json",
+    "testdata/multi_text_renderer_mathjax_3_2_2.json",
+    "testdata/named_limit_spacing_mathjax_3_2_2.json",
+    "testdata/named_limit_spacing_residuals.json",
+    "testdata/negation_mathjax_3_2_2.json",
+    "testdata/nested_movable_limits_mathjax_3_2_2.json",
+    "testdata/newline_mathjax_3_2_2.json",
+    "testdata/newline_residuals.json",
+    "testdata/nonscript_array_mathjax_3_2_2.json",
+    "testdata/nonscript_array_published_replay.json",
+    "testdata/nonscript_array_residuals.json",
+    "testdata/nonscript_attribute_order_proof.json",
+    "testdata/nonscript_final_review.json",
+    "testdata/nonscript_mathjax_3_2_2.json",
+    "testdata/nonscript_published_replay.json",
+    "testdata/nonscript_residuals.json",
+    "testdata/numeric_script_boundaries.json",
+    "testdata/numeric_script_inputs.json",
+    "testdata/numeric_script_mathjax_3_2_2.json",
+    "testdata/numeric_script_whitespace.json",
+    "testdata/operator_level_mathjax_3_2_2.json",
+    "testdata/operator_name_child_mathjax_3_2_2.json",
+    "testdata/operator_primes_mathjax_3_2_2.json",
+    "testdata/operator_primes_residuals.json",
+    "testdata/ordinary_number/inputs.json",
+    "testdata/ordinary_number_boundaries.json",
+    "testdata/ordinary_number_mathjax_3_2_2.json",
+    "testdata/overunderset_direct_base_mathjax_3_2_2.json",
+    "testdata/paired_delimiters_mathjax_3_2_2.json",
+    "testdata/parity/accent-italic-correction/manifest.json",
+    "testdata/parity/alignedat-arguments/manifest.json",
+    "testdata/parity/alignment-row-commands/manifest.json",
+    "testdata/parity/array-entry-alignment/manifest.json",
+    "testdata/parity/array-hfill/manifest.json",
+    "testdata/parity/array-row-finalization/manifest.json",
+    "testdata/parity/base-struts/manifest.json",
+    "testdata/parity/boxed-font-context/manifest.json",
+    "testdata/parity/bracket-thickness-units/manifest.json",
+    "testdata/parity/buildrel-relations/manifest.json",
+    "testdata/parity/cases-text-columns/manifest.json",
+    "testdata/parity/cd-explicit-entries/manifest.json",
+    "testdata/parity/cd-finalization/manifest.json",
+    "testdata/parity/compound-decoration-scripts/manifest.json",
+    "testdata/parity/cramped-optional-styles/manifest.json",
+    "testdata/parity/cramped-stacks/manifest.json",
+    "testdata/parity/delimiter-cache/manifest.json",
+    "testdata/parity/embellished-row-stretch/manifest.json",
+    "testdata/parity/enclosure-baseline/manifest.json",
+    "testdata/parity/eqnarray-environments/manifest.json",
+    "testdata/parity/eqnarray-environments/tagged-measurement.json",
+    "testdata/parity/fallback-token-correction/manifest.json",
+    "testdata/parity/flalign-columns/manifest.json",
+    "testdata/parity/font-command-mappings/manifest.json",
+    "testdata/parity/framebox-width-alignment/manifest.json",
+    "testdata/parity/function-script-ownership/manifest.json",
+    "testdata/parity/getbrackets-whitespace/manifest.json",
+    "testdata/parity/horizontal-positioning/manifest.json",
+    "testdata/parity/internal-font-css/manifest.json",
+    "testdata/parity/lowercase-rule/manifest.json",
+    "testdata/parity/mathlap-optional-styles/manifest.json",
+    "testdata/parity/matrix-commands/manifest.json",
+    "testdata/parity/mhchem-equilibrium/manifest.json",
+    "testdata/parity/middle-delimiter-scope/manifest.json",
+    "testdata/parity/mspace-command/manifest.json",
+    "testdata/parity/named-limit-spacing/manifest.json",
+    "testdata/parity/newline-cell-events/manifest.json",
+    "testdata/parity/nonscript-spacing/manifest.json",
+    "testdata/parity/numbered-alignments/manifest.json",
+    "testdata/parity/operator-prime-glyphs/manifest.json",
+    "testdata/parity/partial-chemical-bonds/manifest.json",
+    "testdata/parity/physics-brace-quantity/manifest.json",
+    "testdata/parity/physics-differential/manifest.json",
+    "testdata/parity/physics-matrix-quantity/manifest.json",
+    "testdata/parity/physics-named-functions/manifest.json",
+    "testdata/parity/physics-operator-applications/manifest.json",
+    "testdata/parity/physics-quick-text/manifest.json",
+    "testdata/parity/physics-vector-applications/manifest.json",
+    "testdata/parity/poor-mans-bold/manifest.json",
+    "testdata/parity/quantity-token-fallback/manifest.json",
+    "testdata/parity/radical-local-size/manifest.json",
+    "testdata/parity/radical-size/manifest.json",
+    "testdata/parity/raise-lower-position/manifest.json",
+    "testdata/parity/raise-lower-signed/manifest.json",
+    "testdata/parity/reversible-chemistry/manifest.json",
+    "testdata/parity/root-index-offset/manifest.json",
+    "testdata/parity/row-command-priority/manifest.json",
+    "testdata/parity/script-final-items/manifest.json",
+    "testdata/parity/skewed-accents/manifest.json",
+    "testdata/parity/sqrt-fraction/manifest.json",
+    "testdata/parity/table-measurement/manifest.json",
+    "testdata/parity/tex-latex-logos/manifest.json",
+    "testdata/parity/text-lap-internal-math/manifest.json",
+    "testdata/parity/under-over-commands/manifest.json",
+    "testdata/physics_brace_quantity_mathjax_3_2_2.json",
+    "testdata/physics_brace_quantity_public_overlap.json",
+    "testdata/physics_brace_quantity_published_replay.json",
+    "testdata/physics_brace_quantity_qualification.json",
+    "testdata/physics_brace_quantity_residuals.json",
+    "testdata/physics_named_functions_mathjax_3_2_2.json",
+    "testdata/physics_named_functions_residuals.json",
+    "testdata/physics_operator_applications_mathjax_3_2_2.json",
+    "testdata/physics_operator_applications_residuals.json",
+    "testdata/physics_vector_applications_mathjax_3_2_2.json",
+    "testdata/physics_vector_applications_residuals.json",
+    "testdata/pmb_mathjax_3_2_2.json",
+    "testdata/pmb_residuals.json",
+    "testdata/pod_commands_boundaries.json",
+    "testdata/pod_commands_mathjax_3_2_2.json",
+    "testdata/pod_macros_mathjax_3_2_2.json",
+    "testdata/prime_attachment_boundaries.json",
+    "testdata/prime_attachment_mathjax_3_2_2.json",
+    "testdata/prime_lifetime_mathjax_3_2_2.json",
+    "testdata/prime_whitespace_boundaries.json",
+    "testdata/prime_whitespace_inputs.json",
+    "testdata/prime_whitespace_mathjax_3_2_2.json",
+    "testdata/quantity_fallback_attribute_order_proof.json",
+    "testdata/quantity_fallback_mathjax_3_2_2.json",
+    "testdata/quantity_fallback_published_replay.json",
+    "testdata/quantity_fallback_residuals.json",
+    "testdata/quantity_star_mathjax_3_2_2.json",
+    "testdata/quick_text_mathjax_3_2_2.json",
+    "testdata/quick_text_overlap_report.json",
+    "testdata/quick_text_published_replay.json",
+    "testdata/quick_text_residuals.json",
+    "testdata/radical_bbox_mathjax_3_2_2.json",
+    "testdata/radical_size_mathjax_3_2_2.json",
+    "testdata/raise_lower_mathjax_3_2_2.json",
+    "testdata/reference_text/private-inputs.json",
+    "testdata/reference_text/public-inputs.json",
+    "testdata/reference_text_mathjax_3_2_2.json",
+    "testdata/relax_command_boundaries.json",
+    "testdata/relax_command_mathjax_3_2_2.json",
+    "testdata/responsive_minwidth_mathjax_3_2_2.json",
+    "testdata/reversible_reaction_mathjax_3_2_2.json",
+    "testdata/root_index_mathjax_3_2_2.json",
+    "testdata/row_command_priority_mathjax_3_2_2.json",
+    "testdata/row_command_priority_residuals.json",
+    "testdata/row_stretch_mathjax_3_2_2.json",
+    "testdata/row_stretch_residuals.json",
+    "testdata/script_class_mathjax_3_2_2.json",
+    "testdata/script_final_items_attribute_order_proof.json",
+    "testdata/script_final_items_geometry_proof.json",
+    "testdata/script_final_items_mathjax_3_2_2.json",
+    "testdata/script_final_items_published_replay.json",
+    "testdata/script_final_items_residuals.json",
+    "testdata/script_scaling_mathjax_3_2_2.json",
+    "testdata/scripted_decoration_boundaries.json",
+    "testdata/scripted_decoration_mathjax_3_2_2.json",
+    "testdata/scripted_decoration_registered_mathjax_3_2_2.json",
+    "testdata/sideset_mathjax_3_2_2.json",
+    "testdata/skew_mathjax_3_2_2.json",
+    "testdata/skew_residuals.json",
+    "testdata/sqrt_argument_mathjax_3_2_2.json",
+    "testdata/stack_placement_mathjax_3_2_2.json",
+    "testdata/stackrel_mathjax_3_2_2.json",
+    "testdata/star_macro_charge_mathjax_3_2_2.json",
+    "testdata/star_macro_suffix_mathjax_3_2_2.json",
+    "testdata/style_scope_mathjax_3_2_2.json",
+    "testdata/table_measurement_mathjax_3_2_2.json",
+    "testdata/tex_logos_mathjax_3_2_2.json",
+    "testdata/tex_mu_dimensions_boundaries.json",
+    "testdata/tex_mu_dimensions_inputs.json",
+    "testdata/tex_mu_dimensions_mathjax_3_2_2.json",
+    "testdata/text_lap_mathjax_3_2_2.json",
+    "testdata/text_lap_overlap_report.json",
+    "testdata/text_lap_published_replay.json",
+    "testdata/unbraced_prime_boundaries.json",
+    "testdata/unbraced_prime_inputs.json",
+    "testdata/unbraced_prime_mathjax_3_2_2.json",
+    "testdata/under_over_arithmetic_receipts.json",
+    "testdata/under_over_commands_inventory.json",
+    "testdata/under_over_commands_mathjax_3_2_2.json",
+    "testdata/under_over_commands_residuals.json",
+    "testdata/under_over_residual_qualification.json",
+    "testdata/unicode_fallback_mathjax_3_2_2.json",
+    "testdata/unicode_prime_boundaries.json",
+    "testdata/unicode_prime_mathjax_3_2_2.json",
+    "testdata/vector_accent_mathjax_3_2_2.json",
+    "testdata/wide_accent_mathjax_3_2_2.json"
+  ]
+}

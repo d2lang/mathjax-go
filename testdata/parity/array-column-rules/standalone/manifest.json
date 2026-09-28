@@ -1,0 +1,96 @@
+{
+  "baselinePublishedCommit": "538d879f57839c1bfa2cd4f3c81c56d685c43109",
+  "baselineMergedCommit": "42932ee918ca4db7f3edf9da30e59b0c9cd61f86",
+  "candidateGatedCommit": "d1adc48ea8e0132cf2531aa0044f08d2923dd7f3",
+  "candidateFinalCommit": "e6656bbd1429d8f402ed08c57698ae1f1cb68bd6",
+  "binaries": {
+    "before": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/under-over-mapping-audit/candidate156-final-newline",
+      "sha256": "13d06e2f533e30c5d4bf7b73dcb3373275a4b47a484c467a942bd8b59b39aa4c"
+    },
+    "after": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/array-rules-audit/candidate154-prerequisites",
+      "sha256": "201dd1ab8e1cd93b6092b05bf1c2e9c86427f355d28b46f8b5fd330ef69469cd"
+    }
+  },
+  "CSSExtractionReceipt": "original-css-extraction.json",
+  "layoutCSS_SHA256": "deac316aa3b126aa3b48f422a712faa76c9770ecb0719dbe444c3a7e542378f2",
+  "sameScale": {
+    "fontFamily": "Arial, Helvetica, sans-serif",
+    "fontSizeCSSPixels": 52,
+    "noPerPanelFitOrTransform": true
+  },
+  "rawSVGsUnmodified": true,
+  "afterMatchesOriginalBytes": true,
+  "preservedOriginalsMatched": true,
+  "cases": [
+    {
+      "id": "outer-and-dashed",
+      "tex": "\\begin{array}{|c:c|}a&c\\\\b&d\\end{array}",
+      "originalSVG_SHA256": "4731aa637ecb33da767f9c1b23a66fc09c37f351b13113a6beb61f7a5ea20b15",
+      "originalContainerAttributes": [
+        {
+          "name": "class",
+          "value": "MathJax"
+        },
+        {
+          "name": "jax",
+          "value": "SVG"
+        },
+        {
+          "name": "display",
+          "value": "true"
+        }
+      ],
+      "beforeSVG_SHA256": "b955faab7c30dc8316547909553711d043ec0d87638ec64a8003bc390f31c423",
+      "afterSVG_SHA256": "4731aa637ecb33da767f9c1b23a66fc09c37f351b13113a6beb61f7a5ea20b15"
+    },
+    {
+      "id": "unmarked-gap",
+      "tex": "\\begin{array}{c|cc}a&b&c\\\\d&e&f\\end{array}",
+      "originalSVG_SHA256": "745969945f3875115565f467388a46ca3b2c03303d881b2a537b586900a5e532",
+      "originalContainerAttributes": [
+        {
+          "name": "class",
+          "value": "MathJax"
+        },
+        {
+          "name": "jax",
+          "value": "SVG"
+        },
+        {
+          "name": "display",
+          "value": "true"
+        }
+      ],
+      "beforeSVG_SHA256": "9b70fa73046c0776aae6cabf2eab5feafd90df3a5f342bc56af48ea7621866d5",
+      "afterSVG_SHA256": "745969945f3875115565f467388a46ca3b2c03303d881b2a537b586900a5e532"
+    }
+  ],
+  "screenshots": {
+    "standalone-comparison.jpg": {
+      "sha256": "3b68b99bd9c61ac6762ebe9b98253e91ccc5e7b9d911b7629a71f4e31ad62b9d",
+      "width": 2560,
+      "height": 1323,
+      "mimeType": "image/jpeg"
+    },
+    "standalone-comparison-focused.jpg": {
+      "sha256": "32377be40ec48d21f5ca42d79ee58647d6ff39d030845a3ef938a6346d09217c",
+      "width": 1312,
+      "height": 980,
+      "mimeType": "image/jpeg"
+    }
+  },
+  "browserVerification": {
+    "path": "browser-verification.json",
+    "sha256": "b5519802bebadb0edf659d26f3952c4444a0f1418b00a15c9b48c1d4b36d42e8",
+    "browser": "Chrome",
+    "focusedScreenshotClipCSSPixels": {
+      "x": 624,
+      "y": 0,
+      "width": 1312,
+      "height": 980
+    }
+  },
+  "htmlSHA256": "eb39fad06e46e31817f5a910a055567dc4fdea40b8405688f0254a32cd7a9a62"
+}
