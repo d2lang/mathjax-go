@@ -100,8 +100,8 @@ func TestMathTokenNullRangeReturnsBoundedError(t *testing.T) {
 		Cases            []struct {
 			Name, TeX, OriginalOutcome string
 			Display, GuardedNullRange  bool
-			Codepoint                 int
-			Original                  struct{ SVG, Error string }
+			Codepoint                  int
+			Original                   struct{ SVG, Error string }
 		}
 	}
 	if err := json.Unmarshal(data, &fixture); err != nil {
