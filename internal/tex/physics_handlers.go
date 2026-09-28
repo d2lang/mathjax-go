@@ -53,9 +53,14 @@ func (p *parser) physicsEnvironment(name string) (nodes []*mml.Node, handled boo
 	if !physicsMatrixEnvironment(name) || !physicsBodyHasMatrixGenerator(p.source[p.pos:]) {
 		return nil, false, nil
 	}
-	columnSpec := ""
+	columnSpec := "c"
 	if strings.HasSuffix(name, "*") {
-		columnSpec, _, err = p.readBrackets(nil)
+		defaultAlignment := "c"
+		columnSpec, _, err = p.readBrackets(&defaultAlignment)
+		if err != nil {
+			return nil, true, err
+		}
+		columnSpec, err = p.completeArrayAlignment(columnSpec)
 		if err != nil {
 			return nil, true, err
 		}
@@ -109,7 +114,7 @@ func (p *parser) physicsExpression(name string) ([]*mml.Node, error) {
 	function.SetProperty("texClass", mml.TeXClassOp)
 	var base *mml.Node = function
 	if exponent != "" {
-		sup, err := p.parseString(exponent)
+		sup, err := p.parseArgumentString(exponent)
 		if err != nil {
 			return nil, err
 		}

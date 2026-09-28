@@ -146,9 +146,20 @@ var functionNames = func() map[string]string {
 }()
 
 var simpleMacros = map[string]string{
-	" ":         "\\text{ }",
-	"qc":        "\\qqtext*{,}",
-	"qcomma":    "\\qqtext*{,}",
+	" ":      "\\text{ }",
+	"qc":     "\\qqtext*{,}",
+	"qcomma": "\\qqtext*{,}",
+	// Physics convenience names are macros, so their core and fence commands
+	// are resolved through the active command maps during expansion.
+	"pmqty":  "\\mqty(#1)",
+	"Pmqty":  "\\mqty*(#1)",
+	"bmqty":  "\\mqty[#1]",
+	"vmqty":  "\\mqty|#1|",
+	"spmqty": "\\smqty(#1)",
+	"sPmqty": "\\smqty*(#1)",
+	"sbmqty": "\\smqty[#1]",
+	"svmqty": "\\smqty|#1|",
+
 	"boxed":     "\\fbox{$\\displaystyle{#1}$}",
 	"Residue":   "\\mathrm{Res}",
 	"mathstrut": "\\vphantom{(}",

@@ -65,10 +65,7 @@ func (p *parser) commandNodes(name string, after **derivativeAutoOpen) ([]*mml.N
 	if isHFill(name) {
 		return nil, unsupportedHFill(name)
 	}
-	// Base's CrLaTeX handler has command-map precedence over the generated
-	// source-symbol fallback.  In particular, \\ is a row break, not the
-	// delimiter-map backslash glyph.
-	if name == "\n" || name == "\\" {
+	if name == "\n" {
 		return []*mml.Node{setAttributes(node("mspace"), map[string]any{"linebreak": "newline"})}, nil
 	}
 	if p.state.augmentedPackages {
@@ -85,6 +82,11 @@ func (p *parser) commandNodes(name string, after **derivativeAutoOpen) ([]*mml.N
 	}
 	if definition, ok := p.state.pairedDelimiters[name]; ok {
 		return p.invokePairedDelimiter(name, definition)
+	}
+	// Dynamic maps precede Base's closing CellItem handlers, which in turn
+	// precede the symbol fallback (notably the backslash delimiter glyph).
+	if name == "\\" || name == "newline" || name == "cr" {
+		return nil, p.crCommand(name)
 	}
 	// Braket's command map precedes the delimiter symbol fallback.
 	if name == "|" {
@@ -315,7 +317,15 @@ func (p *parser) commandNodes(name string, after **derivativeAutoOpen) ([]*mml.N
 	case "begin":
 		return p.beginEnvironment(name)
 	case "end":
-		env, _, _ := p.readArgument(name, true)
+		env, err := p.readEnvironmentName(name)
+		if err != nil {
+			return nil, err
+		}
+		if !p.sourceEndReturnsItem(env) {
+			if err := p.countEnvironment(); err != nil {
+				return nil, err
+			}
+		}
 		return nil, texError("ExtraEnd", "Extra \\end{%s}", env)
 	case "displaylines":
 		return p.displayLines(name)
@@ -377,7 +387,7 @@ func (p *parser) commandNodes(name string, after **derivativeAutoOpen) ([]*mml.N
 		return []*mml.Node{p.physicsNabla()}, nil
 	case "qqtext", "qq", "qcc", "qif", "qthen", "qelse", "qotherwise", "qunless", "qgiven", "qusing", "qassume", "qsince", "qlet", "qfor", "qall", "qeven", "qodd", "qinteger", "qand", "qor", "qas", "qin":
 		return p.quickQuadText(name)
-	case "mqty", "matrixquantity", "pmqty", "Pmqty", "bmqty", "vmqty", "smqty", "smallmatrixquantity", "spmqty", "sPmqty", "sbmqty", "svmqty":
+	case "mqty", "matrixquantity", "smqty", "smallmatrixquantity":
 		return p.matrixQuantity(name)
 	case "prescript":
 		return p.prescript(name)
@@ -965,7 +975,7 @@ func (p *parser) xArrow(name string) ([]*mml.Node, error) {
 	}
 	arrow := p.operator(arrowCharacters[name], mml.TeXClassRel, map[string]any{"stretchy": true})
 	if hasBelow {
-		below, err := p.parseString(belowRaw)
+		below, err := p.parseArgumentString(belowRaw)
 		if err != nil {
 			return nil, err
 		}
@@ -1654,7 +1664,7 @@ func (p *parser) physicsBraket(name string) ([]*mml.Node, error) {
 		if err != nil {
 			return nil, err
 		}
-		arg, err := p.parseString(raw)
+		arg, err := p.parseArgumentString(raw)
 		if err != nil {
 			return nil, err
 		}
@@ -1681,7 +1691,13 @@ func (p *parser) physicsBraket(name string) ([]*mml.Node, error) {
 	return nil, nil
 }
 
+// The Physics Bra/Ket/BraKet/KetBra/MatrixElement callers create one child
+// TexParser for their complete generated expression. Their arguments share
+// that child's budget; continuing Eval and other shared expansions do not.
 func (p *parser) parseExpansion(source string) ([]*mml.Node, error) {
+	count := p.state.macroCount
+	p.state.macroCount = 0
+	defer func() { p.state.macroCount = count }()
 	return p.parseExpansionWithStack(source, nil)
 }
 
@@ -1752,7 +1768,7 @@ func (p *parser) quantityWithDelimiters(name, open, close string) ([]*mml.Node, 
 	if continuation {
 		content, err = p.parseContinuationString(raw)
 	} else {
-		content, err = p.parseString(raw)
+		content, err = p.parseArgumentString(raw)
 	}
 	if err != nil {
 		return nil, err
@@ -2099,43 +2115,6 @@ func (p *parser) derivative(name string, after **derivativeAutoOpen) ([]*mml.Nod
 	// recipient activate AutoOpen on the original parser.
 	*after = &derivativeAutoOpen{ignore: ignore}
 	return unwrapInferred(parsed), nil
-}
-
-func (p *parser) matrixQuantity(name string) ([]*mml.Node, error) {
-	star := p.readStar()
-	p.skipSpaces()
-	var raw string
-	var err error
-	autoOpen, autoClose := "", ""
-	if p.pos < len(p.source) && p.source[p.pos] == '(' {
-		p.pos++
-		raw, err = p.readUpToByte(')')
-		autoOpen, autoClose = "(", ")"
-	} else {
-		raw, _, err = p.readArgument(name, false)
-	}
-	if err != nil {
-		return nil, err
-	}
-	small := strings.HasPrefix(name, "s") || strings.Contains(name, "small")
-	table, err := p.parseTable(raw, map[bool]string{true: "S", false: "T"}[small])
-	if err != nil {
-		return nil, err
-	}
-	open, close := autoOpen, autoClose
-	if strings.Contains(name, "pmqty") || name == "Pmqty" || name == "spmqty" || name == "sPmqty" {
-		open, close = "(", ")"
-	} else if strings.Contains(name, "bmqty") {
-		open, close = "[", "]"
-	} else if strings.Contains(name, "vmqty") {
-		open, close = "|", "|"
-	} else if star {
-		open, close = "‖", "‖"
-	}
-	if open != "" {
-		table = p.fenced(open, table, close, true)
-	}
-	return []*mml.Node{table}, nil
 }
 
 func keyvalString(raw string) map[string]string {

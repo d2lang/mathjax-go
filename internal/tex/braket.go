@@ -42,6 +42,12 @@ func (p *parser) braket(name string) ([]*mml.Node, error) {
 	if err != nil {
 		return nil, err
 	}
+	if item.single && p.pendingCell != nil {
+		// A final MML closed this Braket before the CellItem was replayed.
+		// Its copied lexical environment is now gone; the enclosing open
+		// owner must save its own environment when it receives the cell.
+		p.pendingCell.envSaved = false
+	}
 	var tail []*mml.Node
 	if item.single && len(children) > 1 {
 		tail = children[1:]

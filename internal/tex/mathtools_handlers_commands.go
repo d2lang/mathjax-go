@@ -69,11 +69,11 @@ func (p *parser) mathtoolsUnderOverBracket(name string) ([]*mml.Node, error) {
 	if err != nil {
 		return nil, err
 	}
-	base, err := p.parseString(raw)
+	base, err := p.parseArgumentString(raw)
 	if err != nil {
 		return nil, err
 	}
-	copy, err := p.parseString(raw)
+	copy, err := p.parseArgumentString(raw)
 	if err != nil {
 		return nil, err
 	}

@@ -5,9 +5,7 @@
 package tex
 
 import (
-	"math"
 	"strconv"
-	"strings"
 
 	"github.com/d2lang/mathjax-go/internal/jscompat"
 	"github.com/d2lang/mathjax-go/internal/mml"
@@ -20,51 +18,39 @@ func (p *parser) matrixCommand(name string) ([]*mml.Node, error) {
 	if err != nil {
 		return nil, err
 	}
-	rows, err := splitMatrixBody(body, name == "cases")
-	if err != nil {
-		return nil, err
-	}
 	table := node("mtable")
-	for i, sourceRow := range rows {
-		cells := sourceRow.cells
-		if i == len(rows)-1 && len(cells) == 1 && strings.TrimSpace(cells[0]) == "" {
-			continue
+	var entries []*mml.Node
+	spacing := &arrayRowSpacing{}
+	owner := arrayBodyOwner{
+		requireClose: true,
+		hasEntries:   func() bool { return len(entries) != 0 },
+		endEntry: func(children []*mml.Node, fill *arrayCellState) error {
+			content := fill.finish(matrixCellContent(children), len(children))
+			entries = append(entries, arrayCellNode(content))
+			return nil
+		},
+		endRow: func() error {
+			line := node("mtr", entries...)
+			if numbered && len(entries) == 3 {
+				line = node("mlabeledtr", entries[2], entries[0], entries[1])
+			}
+			table.AppendChild(line)
+			entries = nil
+			spacing.rows++
+			return nil
+		},
+		addSpacing: spacing.add,
+	}
+	if name == "cases" {
+		owner.prepare = func(sub *parser) ([]*mml.Node, error) {
+			if len(entries) != 1 {
+				return nil, nil
+			}
+			return sub.prepareMatrixCasesText()
 		}
-		line := node("mtr")
-		for column, raw := range cells {
-			if column == 1 && sourceRow.casesError != nil {
-				return nil, sourceRow.casesError
-			}
-			terminator := byte('}')
-			if column < len(cells)-1 || i < len(rows)-1 {
-				terminator = '&'
-			}
-			var content *mml.Node
-			var err error
-			if name == "cases" && column == 1 {
-				content, err = p.parseMatrixCasesCell(raw, terminator)
-			} else {
-				content, err = p.parseMatrixCell(raw, terminator)
-			}
-			if err != nil {
-				return nil, err
-			}
-			if i == len(rows)-1 && len(cells) == 1 && content.Kind == "mrow" && content.Flags.Inferred && len(content.Children) == 0 {
-				// EndTable omits a final entry that emitted no nodes, even
-				// when its source contains font declarations or comments.
-				continue
-			}
-			line.AppendChild(arrayCellNode(content))
-		}
-		if len(line.Children) == 0 {
-			continue
-		}
-		// ArrayItem.EndRow treats exactly three entries as an equation and
-		// its label. Other row lengths remain ordinary, unnumbered rows.
-		if numbered && len(line.Children) == 3 {
-			line = node("mlabeledtr", line.Children[2], line.Children[0], line.Children[1])
-		}
-		table.AppendChild(line)
+	}
+	if err := p.parseArrayBody(body, owner); err != nil {
+		return nil, err
 	}
 	table.Attributes.Set("rowspacing", "4pt")
 	table.Attributes.Set("columnspacing", "1em")
@@ -85,28 +71,14 @@ func (p *parser) matrixCommand(name string) ([]*mml.Node, error) {
 		table.Attributes.Set("rowspacing", ".1em")
 		table.Attributes.Set("columnalign", "left left")
 	}
-	for _, r := range rows {
-		if r.spacing == "" {
-			continue
-		}
-		base := .4
-		if aligned {
-			base = .5
-		}
-		if name == "cases" {
-			base = .1
-		}
-		spacing := make([]string, len(table.Children))
-		for i := range spacing {
-			value := math.Max(0, base+matrixDimensionEm(rows[i].spacing))
-			spacing[i] = "0em"
-			if math.Abs(value) >= .0006 {
-				spacing[i] = strings.TrimSuffix(strings.TrimRight(jscompat.ToFixed(value, 3), "0"), ".") + "em"
-			}
-		}
-		table.Attributes.Set("rowspacing", strings.Join(spacing, " "))
-		break
+	initial := "4pt"
+	if aligned {
+		initial = ".5em"
 	}
+	if name == "cases" {
+		initial = ".1em"
+	}
+	spacing.apply(table, initial)
 	if name == "pmatrix" {
 		return []*mml.Node{p.fenced("(", table, ")", true)}, nil
 	}
