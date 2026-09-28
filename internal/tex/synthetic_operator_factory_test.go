@@ -67,17 +67,19 @@ func syntheticOperatorOriginals(t *testing.T) []syntheticOriginal {
 // None is rendered from a projection of the original's prepared tree.
 func TestSyntheticOperatorFactoryOriginalSVG(t *testing.T) {
 	for _, c := range syntheticOperatorOriginals(t) {
+		// The eight inherited CSS discrepancies retain complete original and
+		// historical outputs for independent replay, never a Go-output golden.
+		if c.InheritedCSSControl { continue }
 		t.Run(c.Name, func(t *testing.T) {
 			root := idAnchorBuild(c.Spec, c.Display)
 			options := pipeline.DefaultOptions()
 			options.Display = c.Display
 			want := c.Original.SVG
-			if c.InheritedCSSControl { want = c.Baseline167.SVG }
 			for run := 0; run < 2; run++ {
 				got, err := svg.NewTypesetter().Typeset(root, options)
 				if err != nil { t.Fatal(err) }
 				if got != want {
-					t.Fatalf("complete SVG mismatch (run %d; inherited CSS control %v)\ngot: %s\nwant: %s", run, c.InheritedCSSControl, got, want)
+					t.Fatalf("complete original SVG mismatch (run %d)\ngot: %s\nwant: %s", run, got, want)
 				}
 			}
 		})
