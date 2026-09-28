@@ -107,7 +107,12 @@ func tableFields(w *wrapper, name string) []string {
 }
 
 func repeatTableField(values []string, n int, fallback string) []string {
-	if n <= 0 {
+	// CommonMtable.getColumnAttributes/getRowAttributes trims with splice(n).
+	// Empty tables request -1, which retains all but the last authored value.
+	if n < 0 {
+		return append([]string{}, values[:max(0, len(values)+n)]...)
+	}
+	if n == 0 {
 		return []string{}
 	}
 	if len(values) == 0 {
@@ -239,10 +244,10 @@ func newTableLayout(w *wrapper) *tableLayout {
 		copy(t.frameSpace[:], converted)
 	}
 
-	t.columnSpace = tableLengths(w, repeatTableField(tableFields(w, "columnspacing"), max(0, t.numCols-1), ".8em"))
-	t.rowSpace = tableLengths(w, repeatTableField(tableFields(w, "rowspacing"), max(0, t.numRows-1), "1ex"))
-	t.columnStyle = repeatTableField(tableFields(w, "columnlines"), max(0, t.numCols-1), "none")
-	t.rowStyle = repeatTableField(tableFields(w, "rowlines"), max(0, t.numRows-1), "none")
+	t.columnSpace = tableLengths(w, repeatTableField(tableFields(w, "columnspacing"), t.numCols-1, ".8em"))
+	t.rowSpace = tableLengths(w, repeatTableField(tableFields(w, "rowspacing"), t.numRows-1, "1ex"))
+	t.columnStyle = repeatTableField(tableFields(w, "columnlines"), t.numCols-1, "none")
+	t.rowStyle = repeatTableField(tableFields(w, "rowlines"), t.numRows-1, "none")
 	t.columnLines = tableLineWidths(t.columnStyle)
 	t.rowLines = tableLineWidths(t.rowStyle)
 
@@ -747,9 +752,11 @@ func (t *tableLayout) computedWidths() []float64 {
 
 func (t *tableLayout) equalRowHeight() float64 {
 	t.tableData()
-	maximum := 0.0
+	// CommonMtable takes Math.max over the row totals, including an empty
+	// list's -Infinity and NaN precedence over positive Infinity.
+	maximum := math.Inf(-1)
 	for i := range t.data.H {
-		maximum = math.Max(maximum, t.data.H[i]+t.data.D[i])
+		maximum = max(maximum, t.data.H[i]+t.data.D[i])
 	}
 	return maximum
 }
@@ -1060,11 +1067,20 @@ func (t *tableLayout) makeHLine(y float64, style string, thickness float64) *Ele
 		SetAttr("y2", fixed(y)), thickness, style)
 }
 
+// tableRuleValue preserves the source undefined-to-NaN arithmetic when an
+// empty table retains authored line entries after a negative splice.
+func tableRuleValue(values []float64, index int) float64 {
+	if index >= len(values) {
+		return math.NaN()
+	}
+	return values[index]
+}
+
 func (t *tableLayout) addColumnLines(element *Element) {
 	space := t.columnHalfSpacing()
 	x := t.frameLine
 	for i, style := range t.columnStyle {
-		x += space[i] + t.computed[i] + space[i+1]
+		x += tableRuleValue(space, i) + tableRuleValue(t.computed, i) + tableRuleValue(space, i+1)
 		if style != "none" {
 			element.Append(t.makeVLine(x, style, t.columnLines[i]))
 		}
@@ -1076,8 +1092,11 @@ func (t *tableLayout) addRowLines(element *Element) {
 	space := t.rowHalfSpacing()
 	y := t.h - t.frameLine
 	for i, style := range t.rowStyle {
-		h, d := t.rowHD(i)
-		y -= space[i] + h + d + space[i+1]
+		h, d := math.NaN(), math.NaN()
+		if i < t.numRows {
+			h, d = t.rowHD(i)
+		}
+		y -= tableRuleValue(space, i) + h + d + tableRuleValue(space, i+1)
 		if style != "none" {
 			element.Append(t.makeHLine(y, style, t.rowLines[i]))
 		}

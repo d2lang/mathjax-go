@@ -1,0 +1,1269 @@
+{
+  "mathjaxGitCommit": "ad8f5c21cb810236551da8c6512ba733e67357ee",
+  "methods": [
+    {
+      "attribute": "columnspacing",
+      "method": "getColumnAttributes",
+      "fallback": ".8em",
+      "count": 0,
+      "value": "",
+      "original": {
+        "values": [
+          ".8em"
+        ],
+        "result": []
+      }
+    },
+    {
+      "attribute": "columnspacing",
+      "method": "getColumnAttributes",
+      "fallback": ".8em",
+      "count": 0,
+      "value": ".2em",
+      "original": {
+        "values": [
+          ".2em"
+        ],
+        "result": []
+      }
+    },
+    {
+      "attribute": "columnspacing",
+      "method": "getColumnAttributes",
+      "fallback": ".8em",
+      "count": 0,
+      "value": ".2em .4em",
+      "original": {
+        "values": [
+          ".2em",
+          ".4em"
+        ],
+        "result": [
+          ".2em"
+        ]
+      }
+    },
+    {
+      "attribute": "columnspacing",
+      "method": "getColumnAttributes",
+      "fallback": ".8em",
+      "count": 0,
+      "value": ".2em .4em .6em",
+      "original": {
+        "values": [
+          ".2em",
+          ".4em",
+          ".6em"
+        ],
+        "result": [
+          ".2em",
+          ".4em"
+        ]
+      }
+    },
+    {
+      "attribute": "columnspacing",
+      "method": "getColumnAttributes",
+      "fallback": ".8em",
+      "count": 1,
+      "value": "",
+      "original": {
+        "values": [
+          ".8em"
+        ],
+        "result": []
+      }
+    },
+    {
+      "attribute": "columnspacing",
+      "method": "getColumnAttributes",
+      "fallback": ".8em",
+      "count": 1,
+      "value": ".2em",
+      "original": {
+        "values": [
+          ".2em"
+        ],
+        "result": []
+      }
+    },
+    {
+      "attribute": "columnspacing",
+      "method": "getColumnAttributes",
+      "fallback": ".8em",
+      "count": 1,
+      "value": ".2em .4em",
+      "original": {
+        "values": [
+          ".2em",
+          ".4em"
+        ],
+        "result": []
+      }
+    },
+    {
+      "attribute": "columnspacing",
+      "method": "getColumnAttributes",
+      "fallback": ".8em",
+      "count": 1,
+      "value": ".2em .4em .6em",
+      "original": {
+        "values": [
+          ".2em",
+          ".4em",
+          ".6em"
+        ],
+        "result": []
+      }
+    },
+    {
+      "attribute": "columnspacing",
+      "method": "getColumnAttributes",
+      "fallback": ".8em",
+      "count": 2,
+      "value": "",
+      "original": {
+        "values": [
+          ".8em"
+        ],
+        "result": [
+          ".8em"
+        ]
+      }
+    },
+    {
+      "attribute": "columnspacing",
+      "method": "getColumnAttributes",
+      "fallback": ".8em",
+      "count": 2,
+      "value": ".2em",
+      "original": {
+        "values": [
+          ".2em"
+        ],
+        "result": [
+          ".2em"
+        ]
+      }
+    },
+    {
+      "attribute": "columnspacing",
+      "method": "getColumnAttributes",
+      "fallback": ".8em",
+      "count": 2,
+      "value": ".2em .4em",
+      "original": {
+        "values": [
+          ".2em",
+          ".4em"
+        ],
+        "result": [
+          ".2em"
+        ]
+      }
+    },
+    {
+      "attribute": "columnspacing",
+      "method": "getColumnAttributes",
+      "fallback": ".8em",
+      "count": 2,
+      "value": ".2em .4em .6em",
+      "original": {
+        "values": [
+          ".2em",
+          ".4em",
+          ".6em"
+        ],
+        "result": [
+          ".2em"
+        ]
+      }
+    },
+    {
+      "attribute": "columnspacing",
+      "method": "getColumnAttributes",
+      "fallback": ".8em",
+      "count": 3,
+      "value": "",
+      "original": {
+        "values": [
+          ".8em"
+        ],
+        "result": [
+          ".8em",
+          ".8em"
+        ]
+      }
+    },
+    {
+      "attribute": "columnspacing",
+      "method": "getColumnAttributes",
+      "fallback": ".8em",
+      "count": 3,
+      "value": ".2em",
+      "original": {
+        "values": [
+          ".2em"
+        ],
+        "result": [
+          ".2em",
+          ".2em"
+        ]
+      }
+    },
+    {
+      "attribute": "columnspacing",
+      "method": "getColumnAttributes",
+      "fallback": ".8em",
+      "count": 3,
+      "value": ".2em .4em",
+      "original": {
+        "values": [
+          ".2em",
+          ".4em"
+        ],
+        "result": [
+          ".2em",
+          ".4em"
+        ]
+      }
+    },
+    {
+      "attribute": "columnspacing",
+      "method": "getColumnAttributes",
+      "fallback": ".8em",
+      "count": 3,
+      "value": ".2em .4em .6em",
+      "original": {
+        "values": [
+          ".2em",
+          ".4em",
+          ".6em"
+        ],
+        "result": [
+          ".2em",
+          ".4em"
+        ]
+      }
+    },
+    {
+      "attribute": "columnspacing",
+      "method": "getColumnAttributes",
+      "fallback": ".8em",
+      "count": 4,
+      "value": "",
+      "original": {
+        "values": [
+          ".8em"
+        ],
+        "result": [
+          ".8em",
+          ".8em",
+          ".8em"
+        ]
+      }
+    },
+    {
+      "attribute": "columnspacing",
+      "method": "getColumnAttributes",
+      "fallback": ".8em",
+      "count": 4,
+      "value": ".2em",
+      "original": {
+        "values": [
+          ".2em"
+        ],
+        "result": [
+          ".2em",
+          ".2em",
+          ".2em"
+        ]
+      }
+    },
+    {
+      "attribute": "columnspacing",
+      "method": "getColumnAttributes",
+      "fallback": ".8em",
+      "count": 4,
+      "value": ".2em .4em",
+      "original": {
+        "values": [
+          ".2em",
+          ".4em"
+        ],
+        "result": [
+          ".2em",
+          ".4em",
+          ".4em"
+        ]
+      }
+    },
+    {
+      "attribute": "columnspacing",
+      "method": "getColumnAttributes",
+      "fallback": ".8em",
+      "count": 4,
+      "value": ".2em .4em .6em",
+      "original": {
+        "values": [
+          ".2em",
+          ".4em",
+          ".6em"
+        ],
+        "result": [
+          ".2em",
+          ".4em",
+          ".6em"
+        ]
+      }
+    },
+    {
+      "attribute": "rowspacing",
+      "method": "getRowAttributes",
+      "fallback": "1ex",
+      "count": 0,
+      "value": "",
+      "original": {
+        "values": [
+          "1ex"
+        ],
+        "result": []
+      }
+    },
+    {
+      "attribute": "rowspacing",
+      "method": "getRowAttributes",
+      "fallback": "1ex",
+      "count": 0,
+      "value": "1em",
+      "original": {
+        "values": [
+          "1em"
+        ],
+        "result": []
+      }
+    },
+    {
+      "attribute": "rowspacing",
+      "method": "getRowAttributes",
+      "fallback": "1ex",
+      "count": 0,
+      "value": "1em 2em",
+      "original": {
+        "values": [
+          "1em",
+          "2em"
+        ],
+        "result": [
+          "1em"
+        ]
+      }
+    },
+    {
+      "attribute": "rowspacing",
+      "method": "getRowAttributes",
+      "fallback": "1ex",
+      "count": 0,
+      "value": "1em 2em 3em",
+      "original": {
+        "values": [
+          "1em",
+          "2em",
+          "3em"
+        ],
+        "result": [
+          "1em",
+          "2em"
+        ]
+      }
+    },
+    {
+      "attribute": "rowspacing",
+      "method": "getRowAttributes",
+      "fallback": "1ex",
+      "count": 1,
+      "value": "",
+      "original": {
+        "values": [
+          "1ex"
+        ],
+        "result": []
+      }
+    },
+    {
+      "attribute": "rowspacing",
+      "method": "getRowAttributes",
+      "fallback": "1ex",
+      "count": 1,
+      "value": "1em",
+      "original": {
+        "values": [
+          "1em"
+        ],
+        "result": []
+      }
+    },
+    {
+      "attribute": "rowspacing",
+      "method": "getRowAttributes",
+      "fallback": "1ex",
+      "count": 1,
+      "value": "1em 2em",
+      "original": {
+        "values": [
+          "1em",
+          "2em"
+        ],
+        "result": []
+      }
+    },
+    {
+      "attribute": "rowspacing",
+      "method": "getRowAttributes",
+      "fallback": "1ex",
+      "count": 1,
+      "value": "1em 2em 3em",
+      "original": {
+        "values": [
+          "1em",
+          "2em",
+          "3em"
+        ],
+        "result": []
+      }
+    },
+    {
+      "attribute": "rowspacing",
+      "method": "getRowAttributes",
+      "fallback": "1ex",
+      "count": 2,
+      "value": "",
+      "original": {
+        "values": [
+          "1ex"
+        ],
+        "result": [
+          "1ex"
+        ]
+      }
+    },
+    {
+      "attribute": "rowspacing",
+      "method": "getRowAttributes",
+      "fallback": "1ex",
+      "count": 2,
+      "value": "1em",
+      "original": {
+        "values": [
+          "1em"
+        ],
+        "result": [
+          "1em"
+        ]
+      }
+    },
+    {
+      "attribute": "rowspacing",
+      "method": "getRowAttributes",
+      "fallback": "1ex",
+      "count": 2,
+      "value": "1em 2em",
+      "original": {
+        "values": [
+          "1em",
+          "2em"
+        ],
+        "result": [
+          "1em"
+        ]
+      }
+    },
+    {
+      "attribute": "rowspacing",
+      "method": "getRowAttributes",
+      "fallback": "1ex",
+      "count": 2,
+      "value": "1em 2em 3em",
+      "original": {
+        "values": [
+          "1em",
+          "2em",
+          "3em"
+        ],
+        "result": [
+          "1em"
+        ]
+      }
+    },
+    {
+      "attribute": "rowspacing",
+      "method": "getRowAttributes",
+      "fallback": "1ex",
+      "count": 3,
+      "value": "",
+      "original": {
+        "values": [
+          "1ex"
+        ],
+        "result": [
+          "1ex",
+          "1ex"
+        ]
+      }
+    },
+    {
+      "attribute": "rowspacing",
+      "method": "getRowAttributes",
+      "fallback": "1ex",
+      "count": 3,
+      "value": "1em",
+      "original": {
+        "values": [
+          "1em"
+        ],
+        "result": [
+          "1em",
+          "1em"
+        ]
+      }
+    },
+    {
+      "attribute": "rowspacing",
+      "method": "getRowAttributes",
+      "fallback": "1ex",
+      "count": 3,
+      "value": "1em 2em",
+      "original": {
+        "values": [
+          "1em",
+          "2em"
+        ],
+        "result": [
+          "1em",
+          "2em"
+        ]
+      }
+    },
+    {
+      "attribute": "rowspacing",
+      "method": "getRowAttributes",
+      "fallback": "1ex",
+      "count": 3,
+      "value": "1em 2em 3em",
+      "original": {
+        "values": [
+          "1em",
+          "2em",
+          "3em"
+        ],
+        "result": [
+          "1em",
+          "2em"
+        ]
+      }
+    },
+    {
+      "attribute": "rowspacing",
+      "method": "getRowAttributes",
+      "fallback": "1ex",
+      "count": 4,
+      "value": "",
+      "original": {
+        "values": [
+          "1ex"
+        ],
+        "result": [
+          "1ex",
+          "1ex",
+          "1ex"
+        ]
+      }
+    },
+    {
+      "attribute": "rowspacing",
+      "method": "getRowAttributes",
+      "fallback": "1ex",
+      "count": 4,
+      "value": "1em",
+      "original": {
+        "values": [
+          "1em"
+        ],
+        "result": [
+          "1em",
+          "1em",
+          "1em"
+        ]
+      }
+    },
+    {
+      "attribute": "rowspacing",
+      "method": "getRowAttributes",
+      "fallback": "1ex",
+      "count": 4,
+      "value": "1em 2em",
+      "original": {
+        "values": [
+          "1em",
+          "2em"
+        ],
+        "result": [
+          "1em",
+          "2em",
+          "2em"
+        ]
+      }
+    },
+    {
+      "attribute": "rowspacing",
+      "method": "getRowAttributes",
+      "fallback": "1ex",
+      "count": 4,
+      "value": "1em 2em 3em",
+      "original": {
+        "values": [
+          "1em",
+          "2em",
+          "3em"
+        ],
+        "result": [
+          "1em",
+          "2em",
+          "3em"
+        ]
+      }
+    },
+    {
+      "attribute": "columnlines",
+      "method": "getColumnAttributes",
+      "fallback": "none",
+      "count": 0,
+      "value": "",
+      "original": {
+        "values": [
+          "none"
+        ],
+        "result": []
+      }
+    },
+    {
+      "attribute": "columnlines",
+      "method": "getColumnAttributes",
+      "fallback": "none",
+      "count": 0,
+      "value": "solid",
+      "original": {
+        "values": [
+          "solid"
+        ],
+        "result": []
+      }
+    },
+    {
+      "attribute": "columnlines",
+      "method": "getColumnAttributes",
+      "fallback": "none",
+      "count": 0,
+      "value": "solid none",
+      "original": {
+        "values": [
+          "solid",
+          "none"
+        ],
+        "result": [
+          "solid"
+        ]
+      }
+    },
+    {
+      "attribute": "columnlines",
+      "method": "getColumnAttributes",
+      "fallback": "none",
+      "count": 0,
+      "value": "solid none dashed",
+      "original": {
+        "values": [
+          "solid",
+          "none",
+          "dashed"
+        ],
+        "result": [
+          "solid",
+          "none"
+        ]
+      }
+    },
+    {
+      "attribute": "columnlines",
+      "method": "getColumnAttributes",
+      "fallback": "none",
+      "count": 1,
+      "value": "",
+      "original": {
+        "values": [
+          "none"
+        ],
+        "result": []
+      }
+    },
+    {
+      "attribute": "columnlines",
+      "method": "getColumnAttributes",
+      "fallback": "none",
+      "count": 1,
+      "value": "solid",
+      "original": {
+        "values": [
+          "solid"
+        ],
+        "result": []
+      }
+    },
+    {
+      "attribute": "columnlines",
+      "method": "getColumnAttributes",
+      "fallback": "none",
+      "count": 1,
+      "value": "solid none",
+      "original": {
+        "values": [
+          "solid",
+          "none"
+        ],
+        "result": []
+      }
+    },
+    {
+      "attribute": "columnlines",
+      "method": "getColumnAttributes",
+      "fallback": "none",
+      "count": 1,
+      "value": "solid none dashed",
+      "original": {
+        "values": [
+          "solid",
+          "none",
+          "dashed"
+        ],
+        "result": []
+      }
+    },
+    {
+      "attribute": "columnlines",
+      "method": "getColumnAttributes",
+      "fallback": "none",
+      "count": 2,
+      "value": "",
+      "original": {
+        "values": [
+          "none"
+        ],
+        "result": [
+          "none"
+        ]
+      }
+    },
+    {
+      "attribute": "columnlines",
+      "method": "getColumnAttributes",
+      "fallback": "none",
+      "count": 2,
+      "value": "solid",
+      "original": {
+        "values": [
+          "solid"
+        ],
+        "result": [
+          "solid"
+        ]
+      }
+    },
+    {
+      "attribute": "columnlines",
+      "method": "getColumnAttributes",
+      "fallback": "none",
+      "count": 2,
+      "value": "solid none",
+      "original": {
+        "values": [
+          "solid",
+          "none"
+        ],
+        "result": [
+          "solid"
+        ]
+      }
+    },
+    {
+      "attribute": "columnlines",
+      "method": "getColumnAttributes",
+      "fallback": "none",
+      "count": 2,
+      "value": "solid none dashed",
+      "original": {
+        "values": [
+          "solid",
+          "none",
+          "dashed"
+        ],
+        "result": [
+          "solid"
+        ]
+      }
+    },
+    {
+      "attribute": "columnlines",
+      "method": "getColumnAttributes",
+      "fallback": "none",
+      "count": 3,
+      "value": "",
+      "original": {
+        "values": [
+          "none"
+        ],
+        "result": [
+          "none",
+          "none"
+        ]
+      }
+    },
+    {
+      "attribute": "columnlines",
+      "method": "getColumnAttributes",
+      "fallback": "none",
+      "count": 3,
+      "value": "solid",
+      "original": {
+        "values": [
+          "solid"
+        ],
+        "result": [
+          "solid",
+          "solid"
+        ]
+      }
+    },
+    {
+      "attribute": "columnlines",
+      "method": "getColumnAttributes",
+      "fallback": "none",
+      "count": 3,
+      "value": "solid none",
+      "original": {
+        "values": [
+          "solid",
+          "none"
+        ],
+        "result": [
+          "solid",
+          "none"
+        ]
+      }
+    },
+    {
+      "attribute": "columnlines",
+      "method": "getColumnAttributes",
+      "fallback": "none",
+      "count": 3,
+      "value": "solid none dashed",
+      "original": {
+        "values": [
+          "solid",
+          "none",
+          "dashed"
+        ],
+        "result": [
+          "solid",
+          "none"
+        ]
+      }
+    },
+    {
+      "attribute": "columnlines",
+      "method": "getColumnAttributes",
+      "fallback": "none",
+      "count": 4,
+      "value": "",
+      "original": {
+        "values": [
+          "none"
+        ],
+        "result": [
+          "none",
+          "none",
+          "none"
+        ]
+      }
+    },
+    {
+      "attribute": "columnlines",
+      "method": "getColumnAttributes",
+      "fallback": "none",
+      "count": 4,
+      "value": "solid",
+      "original": {
+        "values": [
+          "solid"
+        ],
+        "result": [
+          "solid",
+          "solid",
+          "solid"
+        ]
+      }
+    },
+    {
+      "attribute": "columnlines",
+      "method": "getColumnAttributes",
+      "fallback": "none",
+      "count": 4,
+      "value": "solid none",
+      "original": {
+        "values": [
+          "solid",
+          "none"
+        ],
+        "result": [
+          "solid",
+          "none",
+          "none"
+        ]
+      }
+    },
+    {
+      "attribute": "columnlines",
+      "method": "getColumnAttributes",
+      "fallback": "none",
+      "count": 4,
+      "value": "solid none dashed",
+      "original": {
+        "values": [
+          "solid",
+          "none",
+          "dashed"
+        ],
+        "result": [
+          "solid",
+          "none",
+          "dashed"
+        ]
+      }
+    },
+    {
+      "attribute": "rowlines",
+      "method": "getRowAttributes",
+      "fallback": "none",
+      "count": 0,
+      "value": "",
+      "original": {
+        "values": [
+          "none"
+        ],
+        "result": []
+      }
+    },
+    {
+      "attribute": "rowlines",
+      "method": "getRowAttributes",
+      "fallback": "none",
+      "count": 0,
+      "value": "dashed",
+      "original": {
+        "values": [
+          "dashed"
+        ],
+        "result": []
+      }
+    },
+    {
+      "attribute": "rowlines",
+      "method": "getRowAttributes",
+      "fallback": "none",
+      "count": 0,
+      "value": "dashed none",
+      "original": {
+        "values": [
+          "dashed",
+          "none"
+        ],
+        "result": [
+          "dashed"
+        ]
+      }
+    },
+    {
+      "attribute": "rowlines",
+      "method": "getRowAttributes",
+      "fallback": "none",
+      "count": 0,
+      "value": "dashed none solid",
+      "original": {
+        "values": [
+          "dashed",
+          "none",
+          "solid"
+        ],
+        "result": [
+          "dashed",
+          "none"
+        ]
+      }
+    },
+    {
+      "attribute": "rowlines",
+      "method": "getRowAttributes",
+      "fallback": "none",
+      "count": 1,
+      "value": "",
+      "original": {
+        "values": [
+          "none"
+        ],
+        "result": []
+      }
+    },
+    {
+      "attribute": "rowlines",
+      "method": "getRowAttributes",
+      "fallback": "none",
+      "count": 1,
+      "value": "dashed",
+      "original": {
+        "values": [
+          "dashed"
+        ],
+        "result": []
+      }
+    },
+    {
+      "attribute": "rowlines",
+      "method": "getRowAttributes",
+      "fallback": "none",
+      "count": 1,
+      "value": "dashed none",
+      "original": {
+        "values": [
+          "dashed",
+          "none"
+        ],
+        "result": []
+      }
+    },
+    {
+      "attribute": "rowlines",
+      "method": "getRowAttributes",
+      "fallback": "none",
+      "count": 1,
+      "value": "dashed none solid",
+      "original": {
+        "values": [
+          "dashed",
+          "none",
+          "solid"
+        ],
+        "result": []
+      }
+    },
+    {
+      "attribute": "rowlines",
+      "method": "getRowAttributes",
+      "fallback": "none",
+      "count": 2,
+      "value": "",
+      "original": {
+        "values": [
+          "none"
+        ],
+        "result": [
+          "none"
+        ]
+      }
+    },
+    {
+      "attribute": "rowlines",
+      "method": "getRowAttributes",
+      "fallback": "none",
+      "count": 2,
+      "value": "dashed",
+      "original": {
+        "values": [
+          "dashed"
+        ],
+        "result": [
+          "dashed"
+        ]
+      }
+    },
+    {
+      "attribute": "rowlines",
+      "method": "getRowAttributes",
+      "fallback": "none",
+      "count": 2,
+      "value": "dashed none",
+      "original": {
+        "values": [
+          "dashed",
+          "none"
+        ],
+        "result": [
+          "dashed"
+        ]
+      }
+    },
+    {
+      "attribute": "rowlines",
+      "method": "getRowAttributes",
+      "fallback": "none",
+      "count": 2,
+      "value": "dashed none solid",
+      "original": {
+        "values": [
+          "dashed",
+          "none",
+          "solid"
+        ],
+        "result": [
+          "dashed"
+        ]
+      }
+    },
+    {
+      "attribute": "rowlines",
+      "method": "getRowAttributes",
+      "fallback": "none",
+      "count": 3,
+      "value": "",
+      "original": {
+        "values": [
+          "none"
+        ],
+        "result": [
+          "none",
+          "none"
+        ]
+      }
+    },
+    {
+      "attribute": "rowlines",
+      "method": "getRowAttributes",
+      "fallback": "none",
+      "count": 3,
+      "value": "dashed",
+      "original": {
+        "values": [
+          "dashed"
+        ],
+        "result": [
+          "dashed",
+          "dashed"
+        ]
+      }
+    },
+    {
+      "attribute": "rowlines",
+      "method": "getRowAttributes",
+      "fallback": "none",
+      "count": 3,
+      "value": "dashed none",
+      "original": {
+        "values": [
+          "dashed",
+          "none"
+        ],
+        "result": [
+          "dashed",
+          "none"
+        ]
+      }
+    },
+    {
+      "attribute": "rowlines",
+      "method": "getRowAttributes",
+      "fallback": "none",
+      "count": 3,
+      "value": "dashed none solid",
+      "original": {
+        "values": [
+          "dashed",
+          "none",
+          "solid"
+        ],
+        "result": [
+          "dashed",
+          "none"
+        ]
+      }
+    },
+    {
+      "attribute": "rowlines",
+      "method": "getRowAttributes",
+      "fallback": "none",
+      "count": 4,
+      "value": "",
+      "original": {
+        "values": [
+          "none"
+        ],
+        "result": [
+          "none",
+          "none",
+          "none"
+        ]
+      }
+    },
+    {
+      "attribute": "rowlines",
+      "method": "getRowAttributes",
+      "fallback": "none",
+      "count": 4,
+      "value": "dashed",
+      "original": {
+        "values": [
+          "dashed"
+        ],
+        "result": [
+          "dashed",
+          "dashed",
+          "dashed"
+        ]
+      }
+    },
+    {
+      "attribute": "rowlines",
+      "method": "getRowAttributes",
+      "fallback": "none",
+      "count": 4,
+      "value": "dashed none",
+      "original": {
+        "values": [
+          "dashed",
+          "none"
+        ],
+        "result": [
+          "dashed",
+          "none",
+          "none"
+        ]
+      }
+    },
+    {
+      "attribute": "rowlines",
+      "method": "getRowAttributes",
+      "fallback": "none",
+      "count": 4,
+      "value": "dashed none solid",
+      "original": {
+        "values": [
+          "dashed",
+          "none",
+          "solid"
+        ],
+        "result": [
+          "dashed",
+          "none",
+          "solid"
+        ]
+      }
+    }
+  ]
+}
