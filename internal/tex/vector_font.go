@@ -51,7 +51,7 @@ func (p *parser) parseVectorString(source string, star bool) (*mml.Node, error) 
 	if star {
 		variant = "bold-italic"
 	}
-	sub := &parser{source: source, state: p.state, display: p.display, inRoot: p.inRoot,
+	sub := &parser{source: source, state: p.state, display: p.display, inRoot: p.inRoot, activeColor: p.activeColor,
 		multiLetterFont: p.multiLetterFont, vectorFactory: true, vectorFont: variant, vectorStar: star,
 		identifierPattern: p.identifierPattern, operatorLetters: p.operatorLetters, noAutoOP: p.noAutoOP,
 		// VectorBold deletes font; an absent font still permits identifier grouping.

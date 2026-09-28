@@ -95,6 +95,7 @@ type parser struct {
 	commandDots          *pendingDots
 	multiLetterFont      string
 	activeFont           string
+	activeColor          string
 	identifierPattern    identifierPattern
 	operatorLetters      bool
 	noAutoOP             bool
@@ -169,9 +170,11 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 	defer func() { p.braketOwner = owner }()
 	vectorFont, vectorStar, activeFont := p.vectorFont, p.vectorStar, p.activeFont
 	fontExplicitEmpty := p.fontExplicitEmpty
+	activeColor := p.activeColor
 	defer func() {
 		p.vectorFont, p.vectorStar, p.activeFont = vectorFont, vectorStar, activeFont
 		p.fontExplicitEmpty = fontExplicitEmpty
+		p.activeColor = activeColor
 	}()
 	var nodes []*mml.Node
 	var pending *pendingPrime
@@ -734,7 +737,7 @@ func (p *parser) parseContinuationString(source string) (*mml.Node, error) {
 
 func (p *parser) parseStringWithStack(source string, global *parserStackGlobal) (*mml.Node, error) {
 	sub := &parser{source: source, state: p.state, stackGlobal: global, display: p.display, inRoot: p.inRoot,
-		activeFont: p.activeFont, vectorFactory: p.vectorFactory,
+		activeFont: p.activeFont, activeColor: p.activeColor, vectorFactory: p.vectorFactory,
 		operatorLetters: p.operatorLetters, noAutoOP: p.noAutoOP, fontExplicitEmpty: p.fontExplicitEmpty,
 		vectorFont: p.vectorFont, vectorStar: p.vectorStar, vectorAlias: p.vectorAlias,
 		genfracPalette: p.genfracPalette, starMacroChildren: p.starMacroChildren,
@@ -768,6 +771,7 @@ func (p *parser) parseMathFontString(source, variant string, ambientOnly bool) (
 		inRoot:             p.inRoot,
 		multiLetterFont:    variant,
 		activeFont:         variant,
+		activeColor:        p.activeColor,
 		identifierPattern:  identifierPatternLetters,
 		operatorLetters:    p.operatorLetters,
 		noAutoOP:           true,

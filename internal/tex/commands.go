@@ -277,6 +277,8 @@ func (p *parser) commandNodes(name string, after **derivativeAutoOpen) ([]*mml.N
 		return p.raiseLower(name)
 	case "rule":
 		return p.rule(name)
+	case "Rule", "Space":
+		return p.rule3D(name)
 	case "vcenter":
 		arg, err := p.parseArgument(name)
 		if err != nil {
@@ -1359,6 +1361,9 @@ func (p *parser) textColor(name string) ([]*mml.Node, error) {
 	if err != nil {
 		return nil, err
 	}
+	oldColor := p.activeColor
+	p.activeColor = color
+	defer func() { p.activeColor = oldColor }()
 	math, err := p.parseArgument(name)
 	if err != nil {
 		return nil, err
@@ -1517,6 +1522,7 @@ func (p *parser) colorDeclaration() (mjSourceObject, error) {
 		return nil, err
 	}
 	// Color reads and validates its arguments before pushing a StyleItem.
+	p.activeColor = color
 	return mjSourceObject{{Name: "mathcolor", Value: color}}, nil
 }
 

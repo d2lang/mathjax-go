@@ -30,9 +30,9 @@ func (p *parser) beginEnvironment(name string) ([]*mml.Node, error) {
 		return nil, texError("UnknownEnv", "Unknown environment '%s'", environment)
 	}
 	if rootIndexArrayEnvironment(environment) {
-		inRoot := p.inRoot
-		p.inRoot = false
-		defer func() { p.inRoot = inRoot }()
+		inRoot, color := p.inRoot, p.activeColor
+		p.inRoot, p.activeColor = false, ""
+		defer func() { p.inRoot, p.activeColor = inRoot, color }()
 	}
 	if nodes, handled, err := p.mathtoolsEnvironment(environment); handled {
 		return nodes, err
@@ -429,9 +429,9 @@ func (p *parser) captureEnvironment(environment string) (string, error) {
 
 func (p *parser) parseTable(body, style string) (*mml.Node, error) {
 	// ArrayItem.copyEnv is false, including arrays produced by commands.
-	inRoot := p.inRoot
-	p.inRoot = false
-	defer func() { p.inRoot = inRoot }()
+	inRoot, color := p.inRoot, p.activeColor
+	p.inRoot, p.activeColor = false, ""
+	defer func() { p.inRoot, p.activeColor = inRoot, color }()
 	rows := splitTable(body)
 	mtrNodes := make([]*mml.Node, 0, len(rows))
 	for _, cells := range rows {
