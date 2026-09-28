@@ -9,7 +9,7 @@ are compared verbatim, without normalization or Go-generated goldens.
 The three asset hashes are recorded and checked by the generator.
 
 All 2,658 references match. Against baseline
-`3f802e1cd86b638ac11221a2b7ed3ed0fa5fca45`, which includes the preceding
+`6a7adcd1c6cce9df99b3363d40f22c2f68857fd5`, which includes the preceding
 shared function/script ownership repair, 2,308 fail and 350 already match.
 
 ## Source registrations and behavior
@@ -60,10 +60,11 @@ primes, infix fractions, and error precedence across child parsers.
 
 The full audit contains 2,836 comparisons before duplicate inputs are
 removed. `physics_operator_applications_residuals.json` separately retains
-136 complete original/baseline/candidate receipts: 72 existing vector-helper
+142 complete original/baseline/candidate receipts: 72 existing vector-helper
 controls, 12 calligraphic-P script rounding cases, eight original JavaScript
 exceptions on NEL, 14 existing misplaced-`cr` diagnostics, 14 original error
-SVGs with an unescaped ampersand attribute, and 16 existing primitive controls.
+SVGs with an unescaped ampersand attribute, 16 existing primitive controls,
+and six pending-function successor controls from independent review.
 The vector controls include 20 already exact cases. The other vector cases
 still expose the old eager argument/parenthesis helper. This change does not
 rewrite gradient, divergence, curl, or laplacian.
@@ -81,3 +82,14 @@ Run `go test ./... -run TestPhysicsOperatorApplicationReferences`.
 Compact visual examples are `\Res[\frac{1}{z-a}]`,
 `\Re{1+i}+\Im{1+i}`, and
 `\pv\int_{-\infty}^{\infty}\frac{f(x)}{x-a}\,dx`.
+
+Independent review added 424 fresh original comparisons: 418 exact, 378
+fixed versus the pre-application baseline, and no regressions. The six
+remaining cases are `\PV{\mathop{+}}x`, `\pv{\mathop{+}}x`, and
+`\principalvalue{\mathop{+}}x` in both modes. They expose the existing
+row consumer inspecting a following FnItem's operator form instead of
+its item kind, omitting the original ApplyFunction node. The six raw
+responses are retained above for the separate typed-Fn-successor repair.
+After rebasing onto PR125, all 424 review outputs and all 136 earlier
+raw control outputs remain byte-identical. A fresh PR125 baseline still
+fails exactly 2,308 of the 2,658 exact original references.
