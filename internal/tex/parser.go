@@ -708,6 +708,10 @@ func (p *parser) parseArgument(name string) (*mml.Node, error) {
 	if err != nil {
 		return nil, err
 	}
+	return p.parseArgumentString(raw)
+}
+
+func (p *parser) parseArgumentString(raw string) (*mml.Node, error) {
 	if p.genfracPalette || p.starMacroChildren || p.derivativeChildren {
 		// TexParser.ParseArg creates a genuine child parser. Genfrac's palette
 		// and Physics' generated expressions retain its independent count.
