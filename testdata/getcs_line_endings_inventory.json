@@ -1,0 +1,31 @@
+{
+  "mathjaxGitCommit": "ad8f5c21cb810236551da8c6512ba733e67357ee",
+  "baseline": "c09d0460db08b943c49003fbe2409402f9c2fca4",
+  "baselineStatus": "actual merged main163",
+  "inputs": 1600,
+  "exact": 1552,
+  "exactErrors": 272,
+  "fixes": 996,
+  "raw": 48,
+  "rawKinds": {
+    "validSVG": 18,
+    "runtime": 30
+  },
+  "counts": {
+    "first-publication": 1426,
+    "previous-full-reference": 36,
+    "previous-raw-reference": 138
+  },
+  "exactCounts": {
+    "first-publication": 1382,
+    "previous-full-reference": 36,
+    "previous-raw-reference": 134
+  },
+  "scannedFiles": 418,
+  "originalMismatches": [],
+  "privateMethods": {
+    "getCS": 74,
+    "getArgument": 308,
+    "promotedGetArgument": 6
+  }
+}
