@@ -1484,5 +1484,13 @@
       }
     ],
     "note": "Only attribute-order variation is disregarded in this audit. Original SVGs and exact golden comparisons remain unchanged."
-  }
+  },
+  "supplementalExactReferences": {
+    "newlyCapturedOriginalSVGs": 348,
+    "promotedHistoricalEqnarrayResiduals": 34,
+    "promotedHistoricalInheritedControls": 30,
+    "promotedPublishedHFillResiduals": 20
+  },
+  "firstPublicationExactOriginalReferences": 1786,
+  "promotedPreviouslyPublishedReferences": 20
 }

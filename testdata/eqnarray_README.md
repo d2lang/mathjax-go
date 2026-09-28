@@ -30,7 +30,10 @@ The current inventory has **1,962 distinct inputs** against merged main148
 `6f388b9618a2347151b4120e58c938811104d567`. **1,806 complete original SVGs**
 are exact (1,482 valid representations and 324 original error controls):
 1,456 newly exact inputs and 350 unchanged controls, with no formerly exact
-regression. Both display modes cover zero through eleven columns, repeating
+regression. Of the 1,806 exact references, **1,786 are being published for the
+first time**; the other 20 promote existing published HFill residuals. The
+historical Eqnarray inventories below were held locally and never published.
+Both display modes cover zero through eleven columns, repeating
 alignment/spacing, binary and embellished operators, empty/interior/final
 rows, HFill-only entries, explicit and missing tags/labels, fonts/styles/colors,
 nested arrays and guarded equation environments, registered operator/paired
@@ -40,10 +43,13 @@ overrides, and existing AMS/Matrix/CD controls.
 unchanged. Its historical baseline `33ddd0e` was main131 plus a separate
 initial-operator prototype. That prototype is not part of this change: the
 final implementation builds on the merged array and Nonscript fixes.
-`eqnarray_current_mathjax_3_2_2.json` adds **432 distinct exact references**,
-including formerly raw cases now resolved by merged prerequisites, fresh
+`eqnarray_current_mathjax_3_2_2.json` adds **432 distinct exact assertions**:
+348 newly captured original SVGs and 84 promoted existing references (34
+historical Eqnarray residuals, 30 historical inherited controls, and 20
+published HFill/Eqnarray residuals). These include fresh
 Arrow/Aboxed/Cramped/FrameBox/BuildRel/Pmb/Skew/Nonscript compositions, tag and
-nesting controls, and 20 previously published HFill/Eqnarray residuals.
+nesting controls. The fresh capture has 364 distinct inputs in total: those
+348 exact originals and 16 raw residual/analogue controls.
 Independent historical review supplied 264 fresh comparisons; its 216 distinct
 inputs remain included without altering the originals.
 
