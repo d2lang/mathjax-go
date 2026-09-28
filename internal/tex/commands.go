@@ -377,7 +377,7 @@ func (p *parser) commandNodes(name string, after **derivativeAutoOpen) ([]*mml.N
 		return []*mml.Node{p.physicsNabla()}, nil
 	case "qqtext", "qq", "qcc", "qif", "qthen", "qelse", "qotherwise", "qunless", "qgiven", "qusing", "qassume", "qsince", "qlet", "qfor", "qall", "qeven", "qodd", "qinteger", "qand", "qor", "qas", "qin":
 		return p.quickQuadText(name)
-	case "mqty", "matrixquantity", "pmqty", "Pmqty", "bmqty", "vmqty", "smqty", "smallmatrixquantity", "spmqty", "sPmqty", "sbmqty", "svmqty":
+	case "mqty", "matrixquantity", "smqty", "smallmatrixquantity":
 		return p.matrixQuantity(name)
 	case "prescript":
 		return p.prescript(name)
@@ -2099,43 +2099,6 @@ func (p *parser) derivative(name string, after **derivativeAutoOpen) ([]*mml.Nod
 	// recipient activate AutoOpen on the original parser.
 	*after = &derivativeAutoOpen{ignore: ignore}
 	return unwrapInferred(parsed), nil
-}
-
-func (p *parser) matrixQuantity(name string) ([]*mml.Node, error) {
-	star := p.readStar()
-	p.skipSpaces()
-	var raw string
-	var err error
-	autoOpen, autoClose := "", ""
-	if p.pos < len(p.source) && p.source[p.pos] == '(' {
-		p.pos++
-		raw, err = p.readUpToByte(')')
-		autoOpen, autoClose = "(", ")"
-	} else {
-		raw, _, err = p.readArgument(name, false)
-	}
-	if err != nil {
-		return nil, err
-	}
-	small := strings.HasPrefix(name, "s") || strings.Contains(name, "small")
-	table, err := p.parseTable(raw, map[bool]string{true: "S", false: "T"}[small])
-	if err != nil {
-		return nil, err
-	}
-	open, close := autoOpen, autoClose
-	if strings.Contains(name, "pmqty") || name == "Pmqty" || name == "spmqty" || name == "sPmqty" {
-		open, close = "(", ")"
-	} else if strings.Contains(name, "bmqty") {
-		open, close = "[", "]"
-	} else if strings.Contains(name, "vmqty") {
-		open, close = "|", "|"
-	} else if star {
-		open, close = "‖", "‖"
-	}
-	if open != "" {
-		table = p.fenced(open, table, close, true)
-	}
-	return []*mml.Node{table}, nil
 }
 
 func keyvalString(raw string) map[string]string {
