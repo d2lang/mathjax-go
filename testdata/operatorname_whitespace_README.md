@@ -35,6 +35,12 @@ fractions, scripts and arrays, active overrides, declarations and real
 candidate comparison; the six historical observations already existed in
 published original fixtures.
 
+The old handler-classification tests pinned Go cursor positions that retained
+leading whitespace. Their eight original inputs now bind to 32 freshly captured
+original cursor observations, including following-command and Unicode controls.
+The observer preserves the complete uninstrumented original output and records
+both UTF-16 and UTF-8 positions; all existing class/property assertions remain.
+
 ## Broader replay and regeneration
 
 Current replay covers 6,438 saved published inputs and 4,326 upstream
