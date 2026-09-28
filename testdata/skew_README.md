@@ -38,13 +38,13 @@ is needed to implement the missing macro.
 `skew_mathjax_3_2_2.json` contains 646 complete, unmodified original SVGs from
 D2’s frozen MathJax 3.2.2 bundle, source commit
 `ad8f5c21cb810236551da8c6512ba733e67357ee`. It records all three verified asset
-hashes and baseline main130 commit `ed0afff52f6f50eb2e49daf7eada8cd9369a781a`.
+hashes and baseline main132 commit `0e6318fe3b8754346a07577f98dbe5632c81161a`.
 Every original uses a fresh VM, font cache none, `em=16`, `ex=8`, and the
 recorded display mode. There are 562 valid original renderings and 84 original
 error SVGs. Against the baseline, 54 were already exact and 592 are newly
 exact, with zero formerly exact regressions. The original main128 baseline and
 candidate receipts were retained; all 698 outputs from each side are unchanged
-after rebasing the candidate and rechecking the merged main130 baseline.
+after rebasing the candidate and rechecking the merged main132 baseline.
 
 The complete 698-input inventory covers 15 accent/decorator names, ordinary
 and composite bases, shift forms, grouped and unbraced arguments, empty and

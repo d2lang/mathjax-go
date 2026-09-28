@@ -5,7 +5,7 @@
     "polyfills.js": "7fe1d048c78b0e09854c1259f7413868a51cc8f0c822489eb1ac36ae6c85ce01",
     "setup.js": "a52cb0bbabfbd7796b9fedd793b9386c474e3123e788ee151cbe47ca1fa6e881"
   },
-  "baselineGitCommit": "ed0afff52f6f50eb2e49daf7eada8cd9369a781a",
+  "baselineGitCommit": "0e6318fe3b8754346a07577f98dbe5632c81161a",
   "baselineExact": 54,
   "cases": [
     {

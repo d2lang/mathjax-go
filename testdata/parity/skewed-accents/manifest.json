@@ -1,0 +1,24 @@
+{
+  "d2Commit": "01bc7ecdbdd04c13d6fe5df1967d2d9aa14ae579",
+  "beforeMathjaxCommit": "0e6318fe3b8754346a07577f98dbe5632c81161a",
+  "afterCodeCommit": "765bba85afcf5a52953cd13e5f0678172d1a559d",
+  "tex": "\\Huge\\boxed{\\hat{x}\\qquad\\skew{9}\\hat{x}\\qquad\\skew{18}\\hat{x}\\qquad}",
+  "files": {
+    "README.md": "9c89cb07369ff9edee499f720a79732b1d19fb1c171668beed76bbbaef8c70fc",
+    "after.png": "9f9e95707034a20712ca998d5ccb2890286dec01dbc3e8b88a5f63a0e7cea736",
+    "after.svg": "7fb4ca28d40476e9fb7b3c37b27795d7d524b3c555034c39d5bc8b42a3e0939d",
+    "before.png": "aeefeff8e9de5141eb9dbfdd6d3f1a1c9d7d55a29791cf94ae90b7e2e70a17a9",
+    "before.svg": "3e7be77e5b980a8693db10512c083a24d4545cc0dc37a62443c1000e76e8fe4e",
+    "comparison.png": "89e92c625763cc2fb2c04ded5fb1d9cfbccb526d9b16472f7c377ec73637f5bf",
+    "oracle-adapter/go.mod": "b8a3ff80b4e63b08c12ed3bcbefcdaebec039551cf00b99b08c6ba6dec5abfc5",
+    "oracle-adapter/mathjax.go": "1ed1fbe813faf433d307b2b5c8e332fd22854999a22487e11396c6a6df3b38ed",
+    "original.png": "9f9e95707034a20712ca998d5ccb2890286dec01dbc3e8b88a5f63a0e7cea736",
+    "original.svg": "7fb4ca28d40476e9fb7b3c37b27795d7d524b3c555034c39d5bc8b42a3e0939d",
+    "witness.d2": "5776d63cd8eac9342ef845572f0389470fc6d6127101d6122a9e09c173135e6f"
+  },
+  "oracleAssets": {
+    "mathjax.js": "cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869",
+    "polyfills.js": "7fe1d048c78b0e09854c1259f7413868a51cc8f0c822489eb1ac36ae6c85ce01",
+    "setup.js": "a52cb0bbabfbd7796b9fedd793b9386c474e3123e788ee151cbe47ca1fa6e881"
+  }
+}
