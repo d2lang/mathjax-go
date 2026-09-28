@@ -5,27 +5,27 @@
     "mathjax.js": "cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869",
     "setup.js": "a52cb0bbabfbd7796b9fedd793b9386c474e3123e788ee151cbe47ca1fa6e881"
   },
-  "baselineCommit": "42932ee918ca4db7f3edf9da30e59b0c9cd61f86",
-  "inventoryInputs": 840,
-  "completeSVGAssertions": 578,
+  "baselineCommit": "c19a00c2202542652ffa46ce0a93d17c0bdd8108",
+  "inventoryInputs": 1024,
+  "completeSVGAssertions": 706,
   "exactErrorRenderings": 30,
-  "genuineNewlyExact": 100,
+  "genuineNewlyExact": 156,
   "exactRegressions": 0,
-  "unassertedInputs": 262,
+  "unassertedInputs": 318,
   "serializationOnlyControls": 2,
-  "unresolvedInputs": 260,
+  "unresolvedInputs": 316,
   "rawOriginalKinds": {
-    "runtime": 130,
+    "runtime": 186,
     "validSVG": 92,
     "errorSVG": 40
   },
   "changedRawOriginalKinds": {
-    "runtime": 94,
-    "validSVG": 12,
+    "runtime": 150,
+    "validSVG": 10,
     "errorSVG": 4
   },
-  "alreadyPublishedInputCount": 30,
-  "firstPublicationInputCount": 548,
+  "alreadyPublishedInputCount": 50,
+  "firstPublicationInputCount": 656,
   "publicInputOverlap": [
     {
       "name": "argument-space-0608",
@@ -626,6 +626,602 @@
           ]
         }
       ]
+    },
+    {
+      "name": "argument-space-0840",
+      "tex": "\\matrixdeterminant﻿{a}",
+      "display": false,
+      "matches": [
+        {
+          "file": "testdata/matrix_determinant_residuals.json",
+          "path": "/cases/2",
+          "keys": [
+            "name",
+            "tex",
+            "display",
+            "origins",
+            "original",
+            "baseline",
+            "candidate",
+            "validOriginal",
+            "qualification",
+            "literalControl",
+            "literalBinding"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "argument-space-0841",
+      "tex": "\\matrixdeterminant﻿{a}",
+      "display": true,
+      "matches": [
+        {
+          "file": "testdata/matrix_determinant_residuals.json",
+          "path": "/cases/3",
+          "keys": [
+            "name",
+            "tex",
+            "display",
+            "origins",
+            "original",
+            "baseline",
+            "candidate",
+            "validOriginal",
+            "qualification",
+            "literalControl",
+            "literalBinding"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "argument-space-0844",
+      "tex": "\\mdet﻿{a}",
+      "display": false,
+      "matches": [
+        {
+          "file": "testdata/matrix_determinant_residuals.json",
+          "path": "/cases/8",
+          "keys": [
+            "name",
+            "tex",
+            "display",
+            "origins",
+            "original",
+            "baseline",
+            "candidate",
+            "validOriginal",
+            "qualification",
+            "literalControl",
+            "literalBinding"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "argument-space-0845",
+      "tex": "\\mdet﻿{a}",
+      "display": true,
+      "matches": [
+        {
+          "file": "testdata/matrix_determinant_residuals.json",
+          "path": "/cases/9",
+          "keys": [
+            "name",
+            "tex",
+            "display",
+            "origins",
+            "original",
+            "baseline",
+            "candidate",
+            "validOriginal",
+            "qualification",
+            "literalControl",
+            "literalBinding"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "argument-space-0848",
+      "tex": "\\smdet﻿{a}",
+      "display": false,
+      "matches": [
+        {
+          "file": "testdata/matrix_determinant_residuals.json",
+          "path": "/cases/14",
+          "keys": [
+            "name",
+            "tex",
+            "display",
+            "origins",
+            "original",
+            "baseline",
+            "candidate",
+            "validOriginal",
+            "qualification",
+            "literalControl",
+            "literalBinding"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "argument-space-0849",
+      "tex": "\\smdet﻿{a}",
+      "display": true,
+      "matches": [
+        {
+          "file": "testdata/matrix_determinant_residuals.json",
+          "path": "/cases/15",
+          "keys": [
+            "name",
+            "tex",
+            "display",
+            "origins",
+            "original",
+            "baseline",
+            "candidate",
+            "validOriginal",
+            "qualification",
+            "literalControl",
+            "literalBinding"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "argument-space-0852",
+      "tex": "\\vmqty﻿{a}",
+      "display": false,
+      "matches": [
+        {
+          "file": "testdata/matrix_determinant_residuals.json",
+          "path": "/cases/2/literalControl",
+          "keys": [
+            "tex",
+            "display",
+            "original",
+            "baseline154",
+            "candidate154"
+          ]
+        },
+        {
+          "file": "testdata/matrix_determinant_residuals.json",
+          "path": "/cases/8/literalControl",
+          "keys": [
+            "tex",
+            "display",
+            "original",
+            "baseline154",
+            "candidate154"
+          ]
+        },
+        {
+          "file": "testdata/matrix_determinant_residuals.json",
+          "path": "/cases/36",
+          "keys": [
+            "name",
+            "tex",
+            "display",
+            "origins",
+            "original",
+            "baseline",
+            "candidate",
+            "validOriginal",
+            "qualification"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "argument-space-0853",
+      "tex": "\\vmqty﻿{a}",
+      "display": true,
+      "matches": [
+        {
+          "file": "testdata/matrix_determinant_residuals.json",
+          "path": "/cases/3/literalControl",
+          "keys": [
+            "tex",
+            "display",
+            "original",
+            "baseline154",
+            "candidate154"
+          ]
+        },
+        {
+          "file": "testdata/matrix_determinant_residuals.json",
+          "path": "/cases/9/literalControl",
+          "keys": [
+            "tex",
+            "display",
+            "original",
+            "baseline154",
+            "candidate154"
+          ]
+        },
+        {
+          "file": "testdata/matrix_determinant_residuals.json",
+          "path": "/cases/37",
+          "keys": [
+            "name",
+            "tex",
+            "display",
+            "origins",
+            "original",
+            "baseline",
+            "candidate",
+            "validOriginal",
+            "qualification"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "argument-space-0854",
+      "tex": "\\matrixdeterminant﻿\\alpha+x",
+      "display": false,
+      "matches": [
+        {
+          "file": "testdata/matrix_determinant_residuals.json",
+          "path": "/cases/38",
+          "keys": [
+            "name",
+            "tex",
+            "display",
+            "origins",
+            "original",
+            "baseline",
+            "candidate",
+            "validOriginal",
+            "qualification",
+            "literalControl",
+            "literalBinding"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "argument-space-0855",
+      "tex": "\\matrixdeterminant﻿\\alpha+x",
+      "display": true,
+      "matches": [
+        {
+          "file": "testdata/matrix_determinant_residuals.json",
+          "path": "/cases/39",
+          "keys": [
+            "name",
+            "tex",
+            "display",
+            "origins",
+            "original",
+            "baseline",
+            "candidate",
+            "validOriginal",
+            "qualification",
+            "literalControl",
+            "literalBinding"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "argument-space-0856",
+      "tex": "\\vmqty﻿\\alpha+x",
+      "display": false,
+      "matches": [
+        {
+          "file": "testdata/matrix_determinant_residuals.json",
+          "path": "/cases/38/literalControl",
+          "keys": [
+            "tex",
+            "display",
+            "original",
+            "baseline154",
+            "candidate154"
+          ]
+        },
+        {
+          "file": "testdata/matrix_determinant_residuals.json",
+          "path": "/cases/40",
+          "keys": [
+            "name",
+            "tex",
+            "display",
+            "origins",
+            "original",
+            "baseline",
+            "candidate",
+            "validOriginal",
+            "qualification"
+          ]
+        },
+        {
+          "file": "testdata/matrix_determinant_residuals.json",
+          "path": "/cases/48/literalControl",
+          "keys": [
+            "tex",
+            "display",
+            "original",
+            "baseline154",
+            "candidate154"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "argument-space-0857",
+      "tex": "\\vmqty﻿\\alpha+x",
+      "display": true,
+      "matches": [
+        {
+          "file": "testdata/matrix_determinant_residuals.json",
+          "path": "/cases/39/literalControl",
+          "keys": [
+            "tex",
+            "display",
+            "original",
+            "baseline154",
+            "candidate154"
+          ]
+        },
+        {
+          "file": "testdata/matrix_determinant_residuals.json",
+          "path": "/cases/41",
+          "keys": [
+            "name",
+            "tex",
+            "display",
+            "origins",
+            "original",
+            "baseline",
+            "candidate",
+            "validOriginal",
+            "qualification"
+          ]
+        },
+        {
+          "file": "testdata/matrix_determinant_residuals.json",
+          "path": "/cases/49/literalControl",
+          "keys": [
+            "tex",
+            "display",
+            "original",
+            "baseline154",
+            "candidate154"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "argument-space-0864",
+      "tex": "\\mdet﻿\\alpha+x",
+      "display": false,
+      "matches": [
+        {
+          "file": "testdata/matrix_determinant_residuals.json",
+          "path": "/cases/48",
+          "keys": [
+            "name",
+            "tex",
+            "display",
+            "origins",
+            "original",
+            "baseline",
+            "candidate",
+            "validOriginal",
+            "qualification",
+            "literalControl",
+            "literalBinding"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "argument-space-0865",
+      "tex": "\\mdet﻿\\alpha+x",
+      "display": true,
+      "matches": [
+        {
+          "file": "testdata/matrix_determinant_residuals.json",
+          "path": "/cases/49",
+          "keys": [
+            "name",
+            "tex",
+            "display",
+            "origins",
+            "original",
+            "baseline",
+            "candidate",
+            "validOriginal",
+            "qualification",
+            "literalControl",
+            "literalBinding"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "argument-space-0868",
+      "tex": "\\svmqty﻿{a}",
+      "display": false,
+      "matches": [
+        {
+          "file": "testdata/matrix_determinant_residuals.json",
+          "path": "/cases/14/literalControl",
+          "keys": [
+            "tex",
+            "display",
+            "original",
+            "baseline154",
+            "candidate154"
+          ]
+        },
+        {
+          "file": "testdata/matrix_determinant_residuals.json",
+          "path": "/cases/52",
+          "keys": [
+            "name",
+            "tex",
+            "display",
+            "origins",
+            "original",
+            "baseline",
+            "candidate",
+            "validOriginal",
+            "qualification"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "argument-space-0869",
+      "tex": "\\svmqty﻿{a}",
+      "display": true,
+      "matches": [
+        {
+          "file": "testdata/matrix_determinant_residuals.json",
+          "path": "/cases/15/literalControl",
+          "keys": [
+            "tex",
+            "display",
+            "original",
+            "baseline154",
+            "candidate154"
+          ]
+        },
+        {
+          "file": "testdata/matrix_determinant_residuals.json",
+          "path": "/cases/53",
+          "keys": [
+            "name",
+            "tex",
+            "display",
+            "origins",
+            "original",
+            "baseline",
+            "candidate",
+            "validOriginal",
+            "qualification"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "argument-space-0870",
+      "tex": "\\smdet﻿\\alpha+x",
+      "display": false,
+      "matches": [
+        {
+          "file": "testdata/matrix_determinant_residuals.json",
+          "path": "/cases/54",
+          "keys": [
+            "name",
+            "tex",
+            "display",
+            "origins",
+            "original",
+            "baseline",
+            "candidate",
+            "validOriginal",
+            "qualification",
+            "literalControl",
+            "literalBinding"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "argument-space-0871",
+      "tex": "\\smdet﻿\\alpha+x",
+      "display": true,
+      "matches": [
+        {
+          "file": "testdata/matrix_determinant_residuals.json",
+          "path": "/cases/55",
+          "keys": [
+            "name",
+            "tex",
+            "display",
+            "origins",
+            "original",
+            "baseline",
+            "candidate",
+            "validOriginal",
+            "qualification",
+            "literalControl",
+            "literalBinding"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "argument-space-0872",
+      "tex": "\\svmqty﻿\\alpha+x",
+      "display": false,
+      "matches": [
+        {
+          "file": "testdata/matrix_determinant_residuals.json",
+          "path": "/cases/54/literalControl",
+          "keys": [
+            "tex",
+            "display",
+            "original",
+            "baseline154",
+            "candidate154"
+          ]
+        },
+        {
+          "file": "testdata/matrix_determinant_residuals.json",
+          "path": "/cases/56",
+          "keys": [
+            "name",
+            "tex",
+            "display",
+            "origins",
+            "original",
+            "baseline",
+            "candidate",
+            "validOriginal",
+            "qualification"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "argument-space-0873",
+      "tex": "\\svmqty﻿\\alpha+x",
+      "display": true,
+      "matches": [
+        {
+          "file": "testdata/matrix_determinant_residuals.json",
+          "path": "/cases/55/literalControl",
+          "keys": [
+            "tex",
+            "display",
+            "original",
+            "baseline154",
+            "candidate154"
+          ]
+        },
+        {
+          "file": "testdata/matrix_determinant_residuals.json",
+          "path": "/cases/57",
+          "keys": [
+            "name",
+            "tex",
+            "display",
+            "origins",
+            "original",
+            "baseline",
+            "candidate",
+            "validOriginal",
+            "qualification"
+          ]
+        }
+      ]
     }
   ],
   "unresolvedSchemaMatches": [],
@@ -699,6 +1295,9 @@
     "testdata/alignedat_residuals.json",
     "testdata/annotation_attachment_boundaries.json",
     "testdata/annotation_attachment_mathjax_3_2_2.json",
+    "testdata/array_column_rules_inventory.json",
+    "testdata/array_column_rules_mathjax_3_2_2.json",
+    "testdata/array_column_rules_residuals.json",
     "testdata/array_initial_intermediate_observations.json",
     "testdata/array_initial_mathjax_3_2_2.json",
     "testdata/array_initial_published_replay.json",
@@ -825,6 +1424,8 @@
     "testdata/mathop_limits_filter_mathjax_3_2_2.json",
     "testdata/matrix_cases_mathjax_3_2_2.json",
     "testdata/matrix_command_mathjax_3_2_2.json",
+    "testdata/matrix_determinant_mathjax_3_2_2.json",
+    "testdata/matrix_determinant_residuals.json",
     "testdata/matrix_numbered_mathjax_3_2_2.json",
     "testdata/matrix_quantity_mathjax_3_2_2.json",
     "testdata/matrix_quantity_residuals.json",
@@ -868,6 +1469,11 @@
     "testdata/parity/accent-italic-correction/manifest.json",
     "testdata/parity/alignedat-arguments/manifest.json",
     "testdata/parity/alignment-row-commands/manifest.json",
+    "testdata/parity/array-column-rules/manifest.json",
+    "testdata/parity/array-column-rules/standalone/browser-verification.json",
+    "testdata/parity/array-column-rules/standalone/manifest.json",
+    "testdata/parity/array-column-rules/standalone/original-css-extraction.json",
+    "testdata/parity/array-column-rules/standalone/reproduction-check.json",
     "testdata/parity/array-entry-alignment/manifest.json",
     "testdata/parity/array-hfill/manifest.json",
     "testdata/parity/array-row-finalization/manifest.json",
@@ -907,6 +1513,7 @@
     "testdata/parity/operator-prime-glyphs/manifest.json",
     "testdata/parity/partial-chemical-bonds/manifest.json",
     "testdata/parity/physics-brace-quantity/manifest.json",
+    "testdata/parity/physics-determinants/manifest.json",
     "testdata/parity/physics-differential/manifest.json",
     "testdata/parity/physics-matrix-quantity/manifest.json",
     "testdata/parity/physics-named-functions/manifest.json",
@@ -1016,27 +1623,82 @@
     "testdata/vector_accent_mathjax_3_2_2.json",
     "testdata/wide_accent_mathjax_3_2_2.json"
   ],
-  "priorRawPromotions": 28,
-  "priorFullSVGAssertions": 2,
-  "methodObservations": {
-    "total": 308,
-    "exactAssertions": 302,
-    "inheritedGetCSRaw": 6
+  "alreadyPublishedBreakdown": {
+    "rawPromotions": 48,
+    "existingAssertionControls": 2,
+    "rawPromotionNames": [
+      "argument-space-0786",
+      "argument-space-0787",
+      "argument-space-0790",
+      "argument-space-0791",
+      "argument-space-0794",
+      "argument-space-0795",
+      "argument-space-0796",
+      "argument-space-0797",
+      "argument-space-0798",
+      "argument-space-0799",
+      "argument-space-0802",
+      "argument-space-0803",
+      "argument-space-0806",
+      "argument-space-0807",
+      "argument-space-0810",
+      "argument-space-0811",
+      "argument-space-0812",
+      "argument-space-0813",
+      "argument-space-0816",
+      "argument-space-0817",
+      "argument-space-0818",
+      "argument-space-0819",
+      "argument-space-0828",
+      "argument-space-0829",
+      "argument-space-0830",
+      "argument-space-0831",
+      "argument-space-0836",
+      "argument-space-0837",
+      "argument-space-0840",
+      "argument-space-0841",
+      "argument-space-0844",
+      "argument-space-0845",
+      "argument-space-0848",
+      "argument-space-0849",
+      "argument-space-0852",
+      "argument-space-0853",
+      "argument-space-0854",
+      "argument-space-0855",
+      "argument-space-0856",
+      "argument-space-0857",
+      "argument-space-0864",
+      "argument-space-0865",
+      "argument-space-0868",
+      "argument-space-0869",
+      "argument-space-0870",
+      "argument-space-0871",
+      "argument-space-0872",
+      "argument-space-0873"
+    ],
+    "existingControls": [
+      {
+        "name": "argument-space-0608",
+        "files": [
+          "testdata/quick_text_mathjax_3_2_2.json"
+        ]
+      },
+      {
+        "name": "argument-space-0609",
+        "files": [
+          "testdata/quick_text_mathjax_3_2_2.json"
+        ]
+      }
+    ]
   },
-  "publishedResidualReplay": {
-    "inputs": 5086,
-    "genuineNewlyExact": 28,
-    "exactRegressions": 0,
-    "changedNonexact": 24,
-    "changedOriginalRuntime": 20,
-    "changedValidLiteralBound": 4,
-    "attributeOrderOnlyControls": 2
-  },
-  "upstreamReplay": {
-    "inputs": 4326,
-    "genuineNewlyExact": 0,
-    "exactRegressions": 0,
-    "genuineChangedNonexact": 0,
-    "attributeOrderOnlyControls": 1
+  "currentReplaySummary": {
+    "publishedInputs": 5364,
+    "publishedGenuineFixes": 48,
+    "publishedChangedNonexact": 44,
+    "publishedGenuineRegressions": 0,
+    "upstreamInputs": 4326,
+    "upstreamGenuineChanges": 0,
+    "serializationProof": "replay-serialization159.json",
+    "literalProof": "changed-valid-qualification159.json"
   }
 }
