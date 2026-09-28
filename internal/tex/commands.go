@@ -217,6 +217,8 @@ func (p *parser) commandNodes(name string, after **derivativeAutoOpen) ([]*mml.N
 		return p.accent(name)
 	case "overset", "stackrel":
 		return p.overSet(name)
+	case "buildrel":
+		return p.buildRelation(name)
 	case "underset":
 		return p.underSet(name)
 	case "overunderset":
