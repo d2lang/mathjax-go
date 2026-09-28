@@ -136,11 +136,11 @@ func (a *derivativeAutoOpen) completeAfter(p *parser, before func()) ([]*mml.Nod
 	if err != nil {
 		return nil, err
 	}
-	if p.environmentPopped {
-		p.environmentPopped = false
-		return content, nil
-	}
-	if a.ignore {
+	popped := p.environmentPopped
+	p.environmentPopped = false
+	// Only an autoclose matching checkItem discards an ignored AutoOpen.
+	// SpreadLines directly calls the popped item's fenced toMml().
+	if a.ignore && !popped {
 		return nil, nil
 	}
 	// AutoOpen.toMml delegates to fenced, then removes the row's open/close/

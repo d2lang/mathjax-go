@@ -45,7 +45,9 @@ func (p *parser) endEnvironment(name string) ([]*mml.Node, error) {
 	if !registered {
 		return nil, texError("UnknownEnv", "Unknown environment '%s'", environment)
 	}
-	if p.environmentOwner == nil {
+	if p.environmentOwner == nil && environment == "spreadlines" {
+		// An orphan SpreadLines executes Pop rather than emitting EndItem.
+		// Its source runtime failure remains a separate bounded diagnostic.
 		return nil, texError("ExtraEnd", "Extra \\end{%s}", environment)
 	}
 	p.commandEnvironmentEnd = &environmentEndItem{name: environment, spread: environment == "spreadlines"}

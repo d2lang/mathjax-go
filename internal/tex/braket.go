@@ -44,8 +44,9 @@ func (p *parser) braket(name string) ([]*mml.Node, error) {
 		return nil, err
 	}
 	if p.environmentPopped {
+		// SpreadLines calls the popped BraketItem's toMml(), which still
+		// constructs its fences even without a matching close item.
 		p.environmentPopped = false
-		return children, nil
 	}
 	if item.single && p.pendingCell != nil {
 		// A final MML closed this Braket before the CellItem was replayed.
