@@ -89,31 +89,34 @@ func TestOperatorNameClassReferences(t *testing.T) {
 }
 
 // These are the eight actual registered-handler inputs retained in the frozen
-// primary observation. Cursor values deliberately retain the Go nonstar-space
-// boundary; they do not claim primary whitespace consumption. Runtime texClass
-// and own properties are checked separately on the same retained nodes.
+// primary observation. Cursor assertions now use the original handler's saved
+// positions, including its consumed GetNext whitespace.
 func TestOperatorNameActualHandlerClassification(t *testing.T) {
+	originalCursors := operatorNameOriginalCursors(t)
 	cases := []struct {
 		name, source, kind string
-		cursor             int
 		star               bool
 		texts              []string
 	}{
-		{"single-letter", "{a} tail", "mi", 3, false, []string{"a"}},
-		{"single-multi-letter", "{arg} tail", "mi", 5, false, []string{"arg"}},
-		{"split-single", "{a b} tail", "TeXAtom", 5, false, []string{"a", "b"}},
-		{"split-multi", "{arg max} tail", "TeXAtom", 9, false, []string{"arg", "max"}},
-		{"explicit-space", `{arg\,max} tail`, "TeXAtom", 10, false, []string{"arg", "max"}},
-		{"empty", "{} tail", "TeXAtom", 2, false, []string{}},
-		{"starred", "*{a b}_i^n", "TeXAtom", 6, true, []string{"a", "b"}},
-		{"missing-argument", "", "", 0, false, nil},
+		{"single-letter", "{a} tail", "mi", false, []string{"a"}},
+		{"single-multi-letter", "{arg} tail", "mi", false, []string{"arg"}},
+		{"split-single", "{a b} tail", "TeXAtom", false, []string{"a", "b"}},
+		{"split-multi", "{arg max} tail", "TeXAtom", false, []string{"arg", "max"}},
+		{"explicit-space", `{arg\,max} tail`, "TeXAtom", false, []string{"arg", "max"}},
+		{"empty", "{} tail", "TeXAtom", false, []string{}},
+		{"starred", "*{a b}_i^n", "TeXAtom", true, []string{"a", "b"}},
+		{"missing-argument", "", "", false, nil},
 	}
 	for _, c := range cases {
 		t.Run(c.name, func(t *testing.T) {
 			state := newParseState()
 			p := &parser{source: c.source, state: state}
+			original := originalCursors[c.name]
+			if original.Source != c.source {
+				t.Fatal("original handler source changed")
+			}
 			nodes, handled, err := p.baseAMSCommand("operatorname")
-			if !handled || p.state != state || p.source != c.source || p.pos != c.cursor || state.macroCount != 0 {
+			if !handled || p.state != state || p.source != c.source || p.pos != original.ConsumedBytes || state.macroCount != 0 {
 				t.Fatal("handler caller ownership/cursor changed")
 			}
 			if c.kind == "" {

@@ -1,0 +1,1467 @@
+{
+  "mathjaxGitCommit": "ad8f5c21cb810236551da8c6512ba733e67357ee",
+  "sourceMethods": [
+    "AmsMethods.HandleOperatorName",
+    "ParseUtil.trimSpaces",
+    "TexParser.GetNext"
+  ],
+  "base": "dcdb525519b6a36b83b0eb2af303174e7bae6021",
+  "cases": [
+    {
+      "name": "following-lookahead-0174",
+      "tex": "\\operatorname*{lim}\u000b\\limits_i x",
+      "display": false,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 11
+    },
+    {
+      "name": "following-lookahead-0175",
+      "tex": "\\operatorname*{lim}\u000b\\limits_i x",
+      "display": true,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 11
+    },
+    {
+      "name": "following-lookahead-0178",
+      "tex": "\\operatorname*{lim}\u000b\\nolimits_i x",
+      "display": false,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 11
+    },
+    {
+      "name": "following-lookahead-0179",
+      "tex": "\\operatorname*{lim}\u000b\\nolimits_i x",
+      "display": true,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 11
+    },
+    {
+      "name": "following-lookahead-0182",
+      "tex": "\\operatorname*{lim}\u000b\\alpha",
+      "display": false,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 11
+    },
+    {
+      "name": "following-lookahead-0183",
+      "tex": "\\operatorname*{lim}\u000b\\alpha",
+      "display": true,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 11
+    },
+    {
+      "name": "following-lookahead-0186",
+      "tex": "\\operatorname*{lim}\u000bx",
+      "display": false,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 11
+    },
+    {
+      "name": "following-lookahead-0187",
+      "tex": "\\operatorname*{lim}\u000bx",
+      "display": true,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 11
+    },
+    {
+      "name": "following-lookahead-0190",
+      "tex": "\\operatorname*{lim}\u000b\\limits\\alpha",
+      "display": false,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 11
+    },
+    {
+      "name": "following-lookahead-0191",
+      "tex": "\\operatorname*{lim}\u000b\\limits\\alpha",
+      "display": true,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 11
+    },
+    {
+      "name": "following-lookahead-0206",
+      "tex": "\\operatorname*{lim}\f\\limits_i x",
+      "display": false,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 12
+    },
+    {
+      "name": "following-lookahead-0207",
+      "tex": "\\operatorname*{lim}\f\\limits_i x",
+      "display": true,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 12
+    },
+    {
+      "name": "following-lookahead-0210",
+      "tex": "\\operatorname*{lim}\f\\nolimits_i x",
+      "display": false,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 12
+    },
+    {
+      "name": "following-lookahead-0211",
+      "tex": "\\operatorname*{lim}\f\\nolimits_i x",
+      "display": true,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 12
+    },
+    {
+      "name": "following-lookahead-0214",
+      "tex": "\\operatorname*{lim}\f\\alpha",
+      "display": false,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 12
+    },
+    {
+      "name": "following-lookahead-0215",
+      "tex": "\\operatorname*{lim}\f\\alpha",
+      "display": true,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 12
+    },
+    {
+      "name": "following-lookahead-0218",
+      "tex": "\\operatorname*{lim}\fx",
+      "display": false,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 12
+    },
+    {
+      "name": "following-lookahead-0219",
+      "tex": "\\operatorname*{lim}\fx",
+      "display": true,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 12
+    },
+    {
+      "name": "following-lookahead-0222",
+      "tex": "\\operatorname*{lim}\f\\limits\\alpha",
+      "display": false,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 12
+    },
+    {
+      "name": "following-lookahead-0223",
+      "tex": "\\operatorname*{lim}\f\\limits\\alpha",
+      "display": true,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 12
+    },
+    {
+      "name": "body-trim-0864",
+      "tex": "\\operatorname{lim}_{x\\to0} f(x)",
+      "display": false,
+      "family": "body-trim",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.AmsMethods.HandleOperatorName (mathjax.js:4:317568)\n    at e.parse (mathjax.js:4:282052)\n    at t.parse (mathjax.js:4:247603)\n    at t.parse (mathjax.js:4:293498)\n    at t.controlSequence (mathjax.js:4:256172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "body-trim-0865",
+      "tex": "\\operatorname{lim}_{x\\to0} f(x)",
+      "display": true,
+      "family": "body-trim",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.AmsMethods.HandleOperatorName (mathjax.js:4:317568)\n    at e.parse (mathjax.js:4:282052)\n    at t.parse (mathjax.js:4:247603)\n    at t.parse (mathjax.js:4:293498)\n    at t.controlSequence (mathjax.js:4:256172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "body-trim-0866",
+      "tex": "\\operatorname*{lim}_{x\\to0} f(x)",
+      "display": false,
+      "family": "body-trim",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.AmsMethods.HandleOperatorName (mathjax.js:4:317568)\n    at e.parse (mathjax.js:4:282052)\n    at t.parse (mathjax.js:4:247603)\n    at t.parse (mathjax.js:4:293498)\n    at t.controlSequence (mathjax.js:4:256172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "body-trim-0867",
+      "tex": "\\operatorname*{lim}_{x\\to0} f(x)",
+      "display": true,
+      "family": "body-trim",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.AmsMethods.HandleOperatorName (mathjax.js:4:317568)\n    at e.parse (mathjax.js:4:282052)\n    at t.parse (mathjax.js:4:247603)\n    at t.parse (mathjax.js:4:293498)\n    at t.controlSequence (mathjax.js:4:256172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "body-trim-0868",
+      "tex": "\\operatorname{a\\ }_{x\\to0} f(x)",
+      "display": false,
+      "family": "body-trim",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.AmsMethods.HandleOperatorName (mathjax.js:4:317568)\n    at e.parse (mathjax.js:4:282052)\n    at t.parse (mathjax.js:4:247603)\n    at t.parse (mathjax.js:4:293498)\n    at t.controlSequence (mathjax.js:4:256172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "body-trim-0869",
+      "tex": "\\operatorname{a\\ }_{x\\to0} f(x)",
+      "display": true,
+      "family": "body-trim",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.AmsMethods.HandleOperatorName (mathjax.js:4:317568)\n    at e.parse (mathjax.js:4:282052)\n    at t.parse (mathjax.js:4:247603)\n    at t.parse (mathjax.js:4:293498)\n    at t.controlSequence (mathjax.js:4:256172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "body-trim-0870",
+      "tex": "\\operatorname*{a\\ }_{x\\to0} f(x)",
+      "display": false,
+      "family": "body-trim",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.AmsMethods.HandleOperatorName (mathjax.js:4:317568)\n    at e.parse (mathjax.js:4:282052)\n    at t.parse (mathjax.js:4:247603)\n    at t.parse (mathjax.js:4:293498)\n    at t.controlSequence (mathjax.js:4:256172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "body-trim-0871",
+      "tex": "\\operatorname*{a\\ }_{x\\to0} f(x)",
+      "display": true,
+      "family": "body-trim",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.AmsMethods.HandleOperatorName (mathjax.js:4:317568)\n    at e.parse (mathjax.js:4:282052)\n    at t.parse (mathjax.js:4:247603)\n    at t.parse (mathjax.js:4:293498)\n    at t.controlSequence (mathjax.js:4:256172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "body-trim-0872",
+      "tex": "\\operatorname{\\ }_{x\\to0} f(x)",
+      "display": false,
+      "family": "body-trim",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.AmsMethods.HandleOperatorName (mathjax.js:4:317568)\n    at e.parse (mathjax.js:4:282052)\n    at t.parse (mathjax.js:4:247603)\n    at t.parse (mathjax.js:4:293498)\n    at t.controlSequence (mathjax.js:4:256172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "body-trim-0873",
+      "tex": "\\operatorname{\\ }_{x\\to0} f(x)",
+      "display": true,
+      "family": "body-trim",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.AmsMethods.HandleOperatorName (mathjax.js:4:317568)\n    at e.parse (mathjax.js:4:282052)\n    at t.parse (mathjax.js:4:247603)\n    at t.parse (mathjax.js:4:293498)\n    at t.controlSequence (mathjax.js:4:256172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "body-trim-0874",
+      "tex": "\\operatorname*{\\ }_{x\\to0} f(x)",
+      "display": false,
+      "family": "body-trim",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.AmsMethods.HandleOperatorName (mathjax.js:4:317568)\n    at e.parse (mathjax.js:4:282052)\n    at t.parse (mathjax.js:4:247603)\n    at t.parse (mathjax.js:4:293498)\n    at t.controlSequence (mathjax.js:4:256172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "body-trim-0875",
+      "tex": "\\operatorname*{\\ }_{x\\to0} f(x)",
+      "display": true,
+      "family": "body-trim",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.AmsMethods.HandleOperatorName (mathjax.js:4:317568)\n    at e.parse (mathjax.js:4:282052)\n    at t.parse (mathjax.js:4:247603)\n    at t.parse (mathjax.js:4:293498)\n    at t.controlSequence (mathjax.js:4:256172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "following-lookahead-0876",
+      "tex": "\\operatorname{lim}\\limits_i x",
+      "display": false,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "following-lookahead-0877",
+      "tex": "\\operatorname{lim}\\limits_i x",
+      "display": true,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "following-lookahead-0878",
+      "tex": "\\operatorname*{lim}\\limits_i x",
+      "display": false,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "following-lookahead-0879",
+      "tex": "\\operatorname*{lim}\\limits_i x",
+      "display": true,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "following-lookahead-0880",
+      "tex": "\\operatorname{lim}\\nolimits_i x",
+      "display": false,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "following-lookahead-0881",
+      "tex": "\\operatorname{lim}\\nolimits_i x",
+      "display": true,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "following-lookahead-0882",
+      "tex": "\\operatorname*{lim}\\nolimits_i x",
+      "display": false,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "following-lookahead-0883",
+      "tex": "\\operatorname*{lim}\\nolimits_i x",
+      "display": true,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "following-lookahead-0884",
+      "tex": "\\operatorname{lim}\\alpha",
+      "display": false,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "following-lookahead-0885",
+      "tex": "\\operatorname{lim}\\alpha",
+      "display": true,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "following-lookahead-0886",
+      "tex": "\\operatorname*{lim}\\alpha",
+      "display": false,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "following-lookahead-0887",
+      "tex": "\\operatorname*{lim}\\alpha",
+      "display": true,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "following-lookahead-0888",
+      "tex": "\\operatorname{lim}x",
+      "display": false,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "following-lookahead-0889",
+      "tex": "\\operatorname{lim}x",
+      "display": true,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "following-lookahead-0890",
+      "tex": "\\operatorname*{lim}x",
+      "display": false,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "following-lookahead-0891",
+      "tex": "\\operatorname*{lim}x",
+      "display": true,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "following-lookahead-0892",
+      "tex": "\\operatorname{lim}\\limits\\alpha",
+      "display": false,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "following-lookahead-0893",
+      "tex": "\\operatorname{lim}\\limits\\alpha",
+      "display": true,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "following-lookahead-0894",
+      "tex": "\\operatorname*{lim}\\limits\\alpha",
+      "display": false,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "following-lookahead-0895",
+      "tex": "\\operatorname*{lim}\\limits\\alpha",
+      "display": true,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "body-trim-0896",
+      "tex": "\\operatorname{﻿lim﻿}_{x\\to0} f(x)",
+      "display": false,
+      "family": "body-trim",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.AmsMethods.HandleOperatorName (mathjax.js:4:317568)\n    at e.parse (mathjax.js:4:282052)\n    at t.parse (mathjax.js:4:247603)\n    at t.parse (mathjax.js:4:293498)\n    at t.controlSequence (mathjax.js:4:256172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "body-trim-0897",
+      "tex": "\\operatorname{﻿lim﻿}_{x\\to0} f(x)",
+      "display": true,
+      "family": "body-trim",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.AmsMethods.HandleOperatorName (mathjax.js:4:317568)\n    at e.parse (mathjax.js:4:282052)\n    at t.parse (mathjax.js:4:247603)\n    at t.parse (mathjax.js:4:293498)\n    at t.controlSequence (mathjax.js:4:256172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "body-trim-0898",
+      "tex": "\\operatorname*{﻿lim﻿}_{x\\to0} f(x)",
+      "display": false,
+      "family": "body-trim",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.AmsMethods.HandleOperatorName (mathjax.js:4:317568)\n    at e.parse (mathjax.js:4:282052)\n    at t.parse (mathjax.js:4:247603)\n    at t.parse (mathjax.js:4:293498)\n    at t.controlSequence (mathjax.js:4:256172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "body-trim-0899",
+      "tex": "\\operatorname*{﻿lim﻿}_{x\\to0} f(x)",
+      "display": true,
+      "family": "body-trim",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.AmsMethods.HandleOperatorName (mathjax.js:4:317568)\n    at e.parse (mathjax.js:4:282052)\n    at t.parse (mathjax.js:4:247603)\n    at t.parse (mathjax.js:4:293498)\n    at t.controlSequence (mathjax.js:4:256172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "body-trim-0900",
+      "tex": "\\operatorname{﻿a\\ ﻿}_{x\\to0} f(x)",
+      "display": false,
+      "family": "body-trim",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.AmsMethods.HandleOperatorName (mathjax.js:4:317568)\n    at e.parse (mathjax.js:4:282052)\n    at t.parse (mathjax.js:4:247603)\n    at t.parse (mathjax.js:4:293498)\n    at t.controlSequence (mathjax.js:4:256172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "body-trim-0901",
+      "tex": "\\operatorname{﻿a\\ ﻿}_{x\\to0} f(x)",
+      "display": true,
+      "family": "body-trim",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.AmsMethods.HandleOperatorName (mathjax.js:4:317568)\n    at e.parse (mathjax.js:4:282052)\n    at t.parse (mathjax.js:4:247603)\n    at t.parse (mathjax.js:4:293498)\n    at t.controlSequence (mathjax.js:4:256172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "body-trim-0902",
+      "tex": "\\operatorname*{﻿a\\ ﻿}_{x\\to0} f(x)",
+      "display": false,
+      "family": "body-trim",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.AmsMethods.HandleOperatorName (mathjax.js:4:317568)\n    at e.parse (mathjax.js:4:282052)\n    at t.parse (mathjax.js:4:247603)\n    at t.parse (mathjax.js:4:293498)\n    at t.controlSequence (mathjax.js:4:256172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "body-trim-0903",
+      "tex": "\\operatorname*{﻿a\\ ﻿}_{x\\to0} f(x)",
+      "display": true,
+      "family": "body-trim",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.AmsMethods.HandleOperatorName (mathjax.js:4:317568)\n    at e.parse (mathjax.js:4:282052)\n    at t.parse (mathjax.js:4:247603)\n    at t.parse (mathjax.js:4:293498)\n    at t.controlSequence (mathjax.js:4:256172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "body-trim-0904",
+      "tex": "\\operatorname{﻿\\ ﻿}_{x\\to0} f(x)",
+      "display": false,
+      "family": "body-trim",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.AmsMethods.HandleOperatorName (mathjax.js:4:317568)\n    at e.parse (mathjax.js:4:282052)\n    at t.parse (mathjax.js:4:247603)\n    at t.parse (mathjax.js:4:293498)\n    at t.controlSequence (mathjax.js:4:256172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "body-trim-0905",
+      "tex": "\\operatorname{﻿\\ ﻿}_{x\\to0} f(x)",
+      "display": true,
+      "family": "body-trim",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.AmsMethods.HandleOperatorName (mathjax.js:4:317568)\n    at e.parse (mathjax.js:4:282052)\n    at t.parse (mathjax.js:4:247603)\n    at t.parse (mathjax.js:4:293498)\n    at t.controlSequence (mathjax.js:4:256172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "body-trim-0906",
+      "tex": "\\operatorname*{﻿\\ ﻿}_{x\\to0} f(x)",
+      "display": false,
+      "family": "body-trim",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.AmsMethods.HandleOperatorName (mathjax.js:4:317568)\n    at e.parse (mathjax.js:4:282052)\n    at t.parse (mathjax.js:4:247603)\n    at t.parse (mathjax.js:4:293498)\n    at t.controlSequence (mathjax.js:4:256172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "body-trim-0907",
+      "tex": "\\operatorname*{﻿\\ ﻿}_{x\\to0} f(x)",
+      "display": true,
+      "family": "body-trim",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.AmsMethods.HandleOperatorName (mathjax.js:4:317568)\n    at e.parse (mathjax.js:4:282052)\n    at t.parse (mathjax.js:4:247603)\n    at t.parse (mathjax.js:4:293498)\n    at t.controlSequence (mathjax.js:4:256172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "following-lookahead-0908",
+      "tex": "\\operatorname{lim}﻿\\limits_i x",
+      "display": false,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "following-lookahead-0909",
+      "tex": "\\operatorname{lim}﻿\\limits_i x",
+      "display": true,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "following-lookahead-0910",
+      "tex": "\\operatorname*{lim}﻿\\limits_i x",
+      "display": false,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "following-lookahead-0911",
+      "tex": "\\operatorname*{lim}﻿\\limits_i x",
+      "display": true,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "following-lookahead-0912",
+      "tex": "\\operatorname{lim}﻿\\nolimits_i x",
+      "display": false,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "following-lookahead-0913",
+      "tex": "\\operatorname{lim}﻿\\nolimits_i x",
+      "display": true,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "following-lookahead-0914",
+      "tex": "\\operatorname*{lim}﻿\\nolimits_i x",
+      "display": false,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "following-lookahead-0915",
+      "tex": "\\operatorname*{lim}﻿\\nolimits_i x",
+      "display": true,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "following-lookahead-0916",
+      "tex": "\\operatorname{lim}﻿\\alpha",
+      "display": false,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "following-lookahead-0917",
+      "tex": "\\operatorname{lim}﻿\\alpha",
+      "display": true,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "following-lookahead-0918",
+      "tex": "\\operatorname*{lim}﻿\\alpha",
+      "display": false,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "following-lookahead-0919",
+      "tex": "\\operatorname*{lim}﻿\\alpha",
+      "display": true,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "following-lookahead-0920",
+      "tex": "\\operatorname{lim}﻿x",
+      "display": false,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "following-lookahead-0921",
+      "tex": "\\operatorname{lim}﻿x",
+      "display": true,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "following-lookahead-0922",
+      "tex": "\\operatorname*{lim}﻿x",
+      "display": false,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "following-lookahead-0923",
+      "tex": "\\operatorname*{lim}﻿x",
+      "display": true,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "following-lookahead-0924",
+      "tex": "\\operatorname{lim}﻿\\limits\\alpha",
+      "display": false,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "following-lookahead-0925",
+      "tex": "\\operatorname{lim}﻿\\limits\\alpha",
+      "display": true,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "following-lookahead-0926",
+      "tex": "\\operatorname*{lim}﻿\\limits\\alpha",
+      "display": false,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "following-lookahead-0927",
+      "tex": "\\operatorname*{lim}﻿\\limits\\alpha",
+      "display": true,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "body-trim-0928",
+      "tex": "\\operatorname{﻿lim﻿}_{x\\to0} f(x)",
+      "display": false,
+      "family": "body-trim",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.AmsMethods.HandleOperatorName (mathjax.js:4:317568)\n    at e.parse (mathjax.js:4:282052)\n    at t.parse (mathjax.js:4:247603)\n    at t.parse (mathjax.js:4:293498)\n    at t.controlSequence (mathjax.js:4:256172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "body-trim-0929",
+      "tex": "\\operatorname{﻿lim﻿}_{x\\to0} f(x)",
+      "display": true,
+      "family": "body-trim",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.AmsMethods.HandleOperatorName (mathjax.js:4:317568)\n    at e.parse (mathjax.js:4:282052)\n    at t.parse (mathjax.js:4:247603)\n    at t.parse (mathjax.js:4:293498)\n    at t.controlSequence (mathjax.js:4:256172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "body-trim-0930",
+      "tex": "\\operatorname*{﻿lim﻿}_{x\\to0} f(x)",
+      "display": false,
+      "family": "body-trim",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.AmsMethods.HandleOperatorName (mathjax.js:4:317568)\n    at e.parse (mathjax.js:4:282052)\n    at t.parse (mathjax.js:4:247603)\n    at t.parse (mathjax.js:4:293498)\n    at t.controlSequence (mathjax.js:4:256172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "body-trim-0931",
+      "tex": "\\operatorname*{﻿lim﻿}_{x\\to0} f(x)",
+      "display": true,
+      "family": "body-trim",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.AmsMethods.HandleOperatorName (mathjax.js:4:317568)\n    at e.parse (mathjax.js:4:282052)\n    at t.parse (mathjax.js:4:247603)\n    at t.parse (mathjax.js:4:293498)\n    at t.controlSequence (mathjax.js:4:256172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "body-trim-0932",
+      "tex": "\\operatorname{﻿a\\ ﻿}_{x\\to0} f(x)",
+      "display": false,
+      "family": "body-trim",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.AmsMethods.HandleOperatorName (mathjax.js:4:317568)\n    at e.parse (mathjax.js:4:282052)\n    at t.parse (mathjax.js:4:247603)\n    at t.parse (mathjax.js:4:293498)\n    at t.controlSequence (mathjax.js:4:256172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "body-trim-0933",
+      "tex": "\\operatorname{﻿a\\ ﻿}_{x\\to0} f(x)",
+      "display": true,
+      "family": "body-trim",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.AmsMethods.HandleOperatorName (mathjax.js:4:317568)\n    at e.parse (mathjax.js:4:282052)\n    at t.parse (mathjax.js:4:247603)\n    at t.parse (mathjax.js:4:293498)\n    at t.controlSequence (mathjax.js:4:256172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "body-trim-0934",
+      "tex": "\\operatorname*{﻿a\\ ﻿}_{x\\to0} f(x)",
+      "display": false,
+      "family": "body-trim",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.AmsMethods.HandleOperatorName (mathjax.js:4:317568)\n    at e.parse (mathjax.js:4:282052)\n    at t.parse (mathjax.js:4:247603)\n    at t.parse (mathjax.js:4:293498)\n    at t.controlSequence (mathjax.js:4:256172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "body-trim-0935",
+      "tex": "\\operatorname*{﻿a\\ ﻿}_{x\\to0} f(x)",
+      "display": true,
+      "family": "body-trim",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.AmsMethods.HandleOperatorName (mathjax.js:4:317568)\n    at e.parse (mathjax.js:4:282052)\n    at t.parse (mathjax.js:4:247603)\n    at t.parse (mathjax.js:4:293498)\n    at t.controlSequence (mathjax.js:4:256172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "body-trim-0936",
+      "tex": "\\operatorname{﻿\\ ﻿}_{x\\to0} f(x)",
+      "display": false,
+      "family": "body-trim",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.AmsMethods.HandleOperatorName (mathjax.js:4:317568)\n    at e.parse (mathjax.js:4:282052)\n    at t.parse (mathjax.js:4:247603)\n    at t.parse (mathjax.js:4:293498)\n    at t.controlSequence (mathjax.js:4:256172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "body-trim-0937",
+      "tex": "\\operatorname{﻿\\ ﻿}_{x\\to0} f(x)",
+      "display": true,
+      "family": "body-trim",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.AmsMethods.HandleOperatorName (mathjax.js:4:317568)\n    at e.parse (mathjax.js:4:282052)\n    at t.parse (mathjax.js:4:247603)\n    at t.parse (mathjax.js:4:293498)\n    at t.controlSequence (mathjax.js:4:256172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "body-trim-0938",
+      "tex": "\\operatorname*{﻿\\ ﻿}_{x\\to0} f(x)",
+      "display": false,
+      "family": "body-trim",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.AmsMethods.HandleOperatorName (mathjax.js:4:317568)\n    at e.parse (mathjax.js:4:282052)\n    at t.parse (mathjax.js:4:247603)\n    at t.parse (mathjax.js:4:293498)\n    at t.controlSequence (mathjax.js:4:256172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "body-trim-0939",
+      "tex": "\\operatorname*{﻿\\ ﻿}_{x\\to0} f(x)",
+      "display": true,
+      "family": "body-trim",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.AmsMethods.HandleOperatorName (mathjax.js:4:317568)\n    at e.parse (mathjax.js:4:282052)\n    at t.parse (mathjax.js:4:247603)\n    at t.parse (mathjax.js:4:293498)\n    at t.controlSequence (mathjax.js:4:256172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "following-lookahead-0940",
+      "tex": "\\operatorname{lim}﻿\\limits_i x",
+      "display": false,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "following-lookahead-0941",
+      "tex": "\\operatorname{lim}﻿\\limits_i x",
+      "display": true,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "following-lookahead-0942",
+      "tex": "\\operatorname*{lim}﻿\\limits_i x",
+      "display": false,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "following-lookahead-0943",
+      "tex": "\\operatorname*{lim}﻿\\limits_i x",
+      "display": true,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "following-lookahead-0944",
+      "tex": "\\operatorname{lim}﻿\\nolimits_i x",
+      "display": false,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "following-lookahead-0945",
+      "tex": "\\operatorname{lim}﻿\\nolimits_i x",
+      "display": true,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "following-lookahead-0946",
+      "tex": "\\operatorname*{lim}﻿\\nolimits_i x",
+      "display": false,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "following-lookahead-0947",
+      "tex": "\\operatorname*{lim}﻿\\nolimits_i x",
+      "display": true,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "following-lookahead-0948",
+      "tex": "\\operatorname{lim}﻿\\alpha",
+      "display": false,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "following-lookahead-0949",
+      "tex": "\\operatorname{lim}﻿\\alpha",
+      "display": true,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "following-lookahead-0950",
+      "tex": "\\operatorname*{lim}﻿\\alpha",
+      "display": false,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "following-lookahead-0951",
+      "tex": "\\operatorname*{lim}﻿\\alpha",
+      "display": true,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "following-lookahead-0952",
+      "tex": "\\operatorname{lim}﻿x",
+      "display": false,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "following-lookahead-0953",
+      "tex": "\\operatorname{lim}﻿x",
+      "display": true,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "following-lookahead-0954",
+      "tex": "\\operatorname*{lim}﻿x",
+      "display": false,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "following-lookahead-0955",
+      "tex": "\\operatorname*{lim}﻿x",
+      "display": true,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "following-lookahead-0956",
+      "tex": "\\operatorname{lim}﻿\\limits\\alpha",
+      "display": false,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "following-lookahead-0957",
+      "tex": "\\operatorname{lim}﻿\\limits\\alpha",
+      "display": true,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "following-lookahead-0958",
+      "tex": "\\operatorname*{lim}﻿\\limits\\alpha",
+      "display": false,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "following-lookahead-0959",
+      "tex": "\\operatorname*{lim}﻿\\limits\\alpha",
+      "display": true,
+      "family": "following-lookahead",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.compile (mathjax.js:4:231821)\n    at t.compile (mathjax.js:4:77285)\n    at Object.renderMath (mathjax.js:4:67268)\n    at e.renderConvert (mathjax.js:4:68081)\n    at t.convert (mathjax.js:4:77172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "owner-context-0972",
+      "tex": "\\operatorname{lim} x",
+      "display": false,
+      "family": "owner-context",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.AmsMethods.HandleOperatorName (mathjax.js:4:317568)\n    at e.parse (mathjax.js:4:282052)\n    at t.parse (mathjax.js:4:247603)\n    at t.parse (mathjax.js:4:293498)\n    at t.controlSequence (mathjax.js:4:256172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "owner-context-0973",
+      "tex": "\\operatorname{lim} x",
+      "display": true,
+      "family": "owner-context",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.AmsMethods.HandleOperatorName (mathjax.js:4:317568)\n    at e.parse (mathjax.js:4:282052)\n    at t.parse (mathjax.js:4:247603)\n    at t.parse (mathjax.js:4:293498)\n    at t.controlSequence (mathjax.js:4:256172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "owner-context-0974",
+      "tex": "\\mathbf{\\operatorname{lim} x}",
+      "display": false,
+      "family": "owner-context",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.AmsMethods.HandleOperatorName (mathjax.js:4:317568)\n    at e.parse (mathjax.js:4:282052)\n    at t.parse (mathjax.js:4:247603)\n    at t.parse (mathjax.js:4:293498)\n    at t.controlSequence (mathjax.js:4:256172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "owner-context-0975",
+      "tex": "\\mathbf{\\operatorname{lim} x}",
+      "display": true,
+      "family": "owner-context",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.AmsMethods.HandleOperatorName (mathjax.js:4:317568)\n    at e.parse (mathjax.js:4:282052)\n    at t.parse (mathjax.js:4:247603)\n    at t.parse (mathjax.js:4:293498)\n    at t.controlSequence (mathjax.js:4:256172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "owner-context-0976",
+      "tex": "\\frac{\\operatorname{lim} x}{y}",
+      "display": false,
+      "family": "owner-context",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.AmsMethods.HandleOperatorName (mathjax.js:4:317568)\n    at e.parse (mathjax.js:4:282052)\n    at t.parse (mathjax.js:4:247603)\n    at t.parse (mathjax.js:4:293498)\n    at t.controlSequence (mathjax.js:4:256172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "owner-context-0977",
+      "tex": "\\frac{\\operatorname{lim} x}{y}",
+      "display": true,
+      "family": "owner-context",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.AmsMethods.HandleOperatorName (mathjax.js:4:317568)\n    at e.parse (mathjax.js:4:282052)\n    at t.parse (mathjax.js:4:247603)\n    at t.parse (mathjax.js:4:293498)\n    at t.controlSequence (mathjax.js:4:256172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "owner-context-0978",
+      "tex": "x^{\\operatorname{lim} x}",
+      "display": false,
+      "family": "owner-context",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.AmsMethods.HandleOperatorName (mathjax.js:4:317568)\n    at e.parse (mathjax.js:4:282052)\n    at t.parse (mathjax.js:4:247603)\n    at t.parse (mathjax.js:4:293498)\n    at t.controlSequence (mathjax.js:4:256172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "owner-context-0979",
+      "tex": "x^{\\operatorname{lim} x}",
+      "display": true,
+      "family": "owner-context",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.AmsMethods.HandleOperatorName (mathjax.js:4:317568)\n    at e.parse (mathjax.js:4:282052)\n    at t.parse (mathjax.js:4:247603)\n    at t.parse (mathjax.js:4:293498)\n    at t.controlSequence (mathjax.js:4:256172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "owner-context-0980",
+      "tex": "\\begin{matrix}\\operatorname{lim} x&y\\end{matrix}",
+      "display": false,
+      "family": "owner-context",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.AmsMethods.HandleOperatorName (mathjax.js:4:317568)\n    at e.parse (mathjax.js:4:282052)\n    at t.parse (mathjax.js:4:247603)\n    at t.parse (mathjax.js:4:293498)\n    at t.controlSequence (mathjax.js:4:256172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "owner-context-0981",
+      "tex": "\\begin{matrix}\\operatorname{lim} x&y\\end{matrix}",
+      "display": true,
+      "family": "owner-context",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.AmsMethods.HandleOperatorName (mathjax.js:4:317568)\n    at e.parse (mathjax.js:4:282052)\n    at t.parse (mathjax.js:4:247603)\n    at t.parse (mathjax.js:4:293498)\n    at t.controlSequence (mathjax.js:4:256172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "owner-context-0982",
+      "tex": "\\sin \\operatorname{lim} x",
+      "display": false,
+      "family": "owner-context",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.AmsMethods.HandleOperatorName (mathjax.js:4:317568)\n    at e.parse (mathjax.js:4:282052)\n    at t.parse (mathjax.js:4:247603)\n    at t.parse (mathjax.js:4:293498)\n    at t.controlSequence (mathjax.js:4:256172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "owner-context-0983",
+      "tex": "\\sin \\operatorname{lim} x",
+      "display": true,
+      "family": "owner-context",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.AmsMethods.HandleOperatorName (mathjax.js:4:317568)\n    at e.parse (mathjax.js:4:282052)\n    at t.parse (mathjax.js:4:247603)\n    at t.parse (mathjax.js:4:293498)\n    at t.controlSequence (mathjax.js:4:256172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "declared-operator-1048",
+      "tex": "\\DeclareMathOperator{\\A}{lim}\\A_i x",
+      "display": false,
+      "family": "declared-operator",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.AmsMethods.HandleOperatorName (mathjax.js:4:317568)\n    at e.parse (mathjax.js:4:282052)\n    at t.parse (mathjax.js:4:247603)\n    at t.parse (mathjax.js:4:293498)\n    at t.controlSequence (mathjax.js:4:256172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "declared-operator-1049",
+      "tex": "\\DeclareMathOperator{\\A}{lim}\\A_i x",
+      "display": true,
+      "family": "declared-operator",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.AmsMethods.HandleOperatorName (mathjax.js:4:317568)\n    at e.parse (mathjax.js:4:282052)\n    at t.parse (mathjax.js:4:247603)\n    at t.parse (mathjax.js:4:293498)\n    at t.controlSequence (mathjax.js:4:256172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "declared-operator-1050",
+      "tex": "\\DeclareMathOperator*{\\A}{lim}\\A_i x",
+      "display": false,
+      "family": "declared-operator",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.AmsMethods.HandleOperatorName (mathjax.js:4:317568)\n    at e.parse (mathjax.js:4:282052)\n    at t.parse (mathjax.js:4:247603)\n    at t.parse (mathjax.js:4:293498)\n    at t.controlSequence (mathjax.js:4:256172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "declared-operator-1051",
+      "tex": "\\DeclareMathOperator*{\\A}{lim}\\A_i x",
+      "display": true,
+      "family": "declared-operator",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.AmsMethods.HandleOperatorName (mathjax.js:4:317568)\n    at e.parse (mathjax.js:4:282052)\n    at t.parse (mathjax.js:4:247603)\n    at t.parse (mathjax.js:4:293498)\n    at t.controlSequence (mathjax.js:4:256172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "end-control-space-1072",
+      "tex": "\\operatorname{\\ }",
+      "display": false,
+      "family": "end-control-space",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.AmsMethods.HandleOperatorName (mathjax.js:4:317568)\n    at e.parse (mathjax.js:4:282052)\n    at t.parse (mathjax.js:4:247603)\n    at t.parse (mathjax.js:4:293498)\n    at t.controlSequence (mathjax.js:4:256172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "end-control-space-1073",
+      "tex": "\\operatorname{\\ }",
+      "display": true,
+      "family": "end-control-space",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.AmsMethods.HandleOperatorName (mathjax.js:4:317568)\n    at e.parse (mathjax.js:4:282052)\n    at t.parse (mathjax.js:4:247603)\n    at t.parse (mathjax.js:4:293498)\n    at t.controlSequence (mathjax.js:4:256172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "end-control-space-1074",
+      "tex": "\\operatorname{}",
+      "display": false,
+      "family": "end-control-space",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.AmsMethods.HandleOperatorName (mathjax.js:4:317568)\n    at e.parse (mathjax.js:4:282052)\n    at t.parse (mathjax.js:4:247603)\n    at t.parse (mathjax.js:4:293498)\n    at t.controlSequence (mathjax.js:4:256172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "end-control-space-1075",
+      "tex": "\\operatorname{}",
+      "display": true,
+      "family": "end-control-space",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.AmsMethods.HandleOperatorName (mathjax.js:4:317568)\n    at e.parse (mathjax.js:4:282052)\n    at t.parse (mathjax.js:4:247603)\n    at t.parse (mathjax.js:4:293498)\n    at t.controlSequence (mathjax.js:4:256172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "historical-declaration-null-range-1098",
+      "tex": "\\DeclareMathOperator{foo}{Q}\\foo x",
+      "display": false,
+      "family": "historical-declaration-null-range",
+      "historicalSources": [
+        {
+          "fixture": "ams_declaration_residuals.json",
+          "name": "ams-declare-op-0864"
+        }
+      ],
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.AmsMethods.HandleOperatorName (mathjax.js:4:317568)\n    at e.parse (mathjax.js:4:282052)\n    at t.parse (mathjax.js:4:247603)\n    at t.parse (mathjax.js:4:293498)\n    at t.controlSequence (mathjax.js:4:256172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "historical-declaration-null-range-1099",
+      "tex": "\\DeclareMathOperator{foo}{Q}\\foo x",
+      "display": true,
+      "family": "historical-declaration-null-range",
+      "historicalSources": [
+        {
+          "fixture": "ams_declaration_residuals.json",
+          "name": "ams-declare-op-0865"
+        }
+      ],
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.AmsMethods.HandleOperatorName (mathjax.js:4:317568)\n    at e.parse (mathjax.js:4:282052)\n    at t.parse (mathjax.js:4:247603)\n    at t.parse (mathjax.js:4:293498)\n    at t.controlSequence (mathjax.js:4:256172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "historical-declaration-null-range-1100",
+      "tex": "\\DeclareMathOperator{\\foo}{Q}\\foo x",
+      "display": false,
+      "family": "historical-declaration-null-range",
+      "historicalSources": [
+        {
+          "fixture": "ams_declaration_residuals.json",
+          "name": "ams-declare-op-1120"
+        }
+      ],
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.AmsMethods.HandleOperatorName (mathjax.js:4:317568)\n    at e.parse (mathjax.js:4:282052)\n    at t.parse (mathjax.js:4:247603)\n    at t.parse (mathjax.js:4:293498)\n    at t.controlSequence (mathjax.js:4:256172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "historical-declaration-null-range-1101",
+      "tex": "\\DeclareMathOperator{\\foo}{Q}\\foo x",
+      "display": true,
+      "family": "historical-declaration-null-range",
+      "historicalSources": [
+        {
+          "fixture": "ams_declaration_residuals.json",
+          "name": "ams-declare-op-1121"
+        }
+      ],
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.AmsMethods.HandleOperatorName (mathjax.js:4:317568)\n    at e.parse (mathjax.js:4:282052)\n    at t.parse (mathjax.js:4:247603)\n    at t.parse (mathjax.js:4:293498)\n    at t.controlSequence (mathjax.js:4:256172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "historical-declaration-null-range-1102",
+      "tex": "\\DeclareMathOperator{\\P}{xy}\\P+z",
+      "display": false,
+      "family": "historical-declaration-null-range",
+      "historicalSources": [
+        {
+          "fixture": "getargument_whitespace_residuals.json",
+          "name": "argument-space-0546"
+        }
+      ],
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.AmsMethods.HandleOperatorName (mathjax.js:4:317568)\n    at e.parse (mathjax.js:4:282052)\n    at t.parse (mathjax.js:4:247603)\n    at t.parse (mathjax.js:4:293498)\n    at t.controlSequence (mathjax.js:4:256172)"
+      },
+      "nullRangeCodepoint": 133
+    },
+    {
+      "name": "historical-declaration-null-range-1103",
+      "tex": "\\DeclareMathOperator{\\P}{xy}\\P+z",
+      "display": true,
+      "family": "historical-declaration-null-range",
+      "historicalSources": [
+        {
+          "fixture": "getargument_whitespace_residuals.json",
+          "name": "argument-space-0547"
+        }
+      ],
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading '4')\n    at Object.y [as item] (mathjax.js:4:328295)\n    at t.parse (mathjax.js:4:247781)\n    at t.parse (mathjax.js:4:293498)\n    at t.Parse (mathjax.js:4:294106)\n    at new t (mathjax.js:4:292839)\n    at e.AmsMethods.HandleOperatorName (mathjax.js:4:317568)\n    at e.parse (mathjax.js:4:282052)\n    at t.parse (mathjax.js:4:247603)\n    at t.parse (mathjax.js:4:293498)\n    at t.controlSequence (mathjax.js:4:256172)"
+      },
+      "nullRangeCodepoint": 133
+    }
+  ]
+}
