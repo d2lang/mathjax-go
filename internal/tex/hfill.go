@@ -12,6 +12,7 @@ type arrayCellState struct {
 	offset   int
 	equation *equationRowState
 	multline bool
+	numCases bool
 	shove    string
 }
 

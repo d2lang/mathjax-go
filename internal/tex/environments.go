@@ -32,6 +32,9 @@ func (p *parser) beginEnvironment(name string) ([]*mml.Node, error) {
 	if environment == "" {
 		return nil, texError("UnknownEnv", "Unknown environment '%s'", environment)
 	}
+	if nodes, handled, err := p.casesEnvironment(environment); handled {
+		return nodes, err
+	}
 	if rootIndexArrayEnvironment(environment) {
 		inRoot, color := p.inRoot, p.activeColor
 		p.inRoot, p.activeColor = false, ""
@@ -46,9 +49,6 @@ func (p *parser) beginEnvironment(name string) ([]*mml.Node, error) {
 		}
 	}
 	if nodes, handled, err := p.physicsEnvironment(environment); handled {
-		return nodes, err
-	}
-	if nodes, handled, err := p.casesEnvironment(environment); handled {
 		return nodes, err
 	}
 	if nodes, handled, err := p.amscdEnvironment(environment); handled {

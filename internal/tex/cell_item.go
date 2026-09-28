@@ -17,6 +17,8 @@ type cellItem struct {
 	emptyFont bool
 	color     string
 	envSaved  bool
+	// Cases.Entry observes this before pushing the closing CellItem.
+	numCasesText bool
 }
 
 func (p *parser) crCommand(name string) error {

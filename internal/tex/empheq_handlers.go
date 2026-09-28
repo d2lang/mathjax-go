@@ -7,6 +7,7 @@
 package tex
 
 import (
+	"fmt"
 	"strings"
 
 	"github.com/d2lang/mathjax-go/internal/mml"
@@ -295,14 +296,24 @@ func empheqColumnCount(table *mml.Node) int {
 	return count
 }
 
-func (p *parser) empheqCellBlock(tex string, table *mml.Node) (*mml.Node, error) {
+func (p *parser) empheqCellBlock(tex string, table *mml.Node, environment ...string) (*mml.Node, error) {
 	block := node("mpadded")
 	block.Attributes.Set("height", 0)
 	block.Attributes.Set("depth", 0)
 	block.Attributes.Set("voffset", "-1height")
-	contents, err := p.parseString(tex)
+	contents, err := p.parseChild(tex)
 	if err != nil {
 		return nil, err
+	}
+	if len(environment) != 0 && environment[0] != "" {
+		tags := p.amsTags()
+		if tags.current.labelID != "" {
+			tags.current.environment = environment[0]
+			// D2 uses NoTags, whose getTag override ignores the force flag.
+			if _, err := tags.getTag(p); err != nil {
+				return nil, err
+			}
+		}
 	}
 	children := []*mml.Node{contents}
 	if contents.Kind == "mrow" && contents.Flags.Inferred {
@@ -333,8 +344,8 @@ func empheqCopiedTopRowTable(table *mml.Node) *mml.Node {
 	return node("mphantom", padded)
 }
 
-func (p *parser) empheqRowspanCell(cell *mml.Node, tex string, table *mml.Node) error {
-	block, err := p.empheqCellBlock(tex, p.copyNode(table))
+func (p *parser) empheqRowspanCell(cell *mml.Node, tex string, table *mml.Node, environment ...string) error {
+	block, err := p.empheqCellBlock(tex, p.copyNode(table), environment...)
 	if err != nil {
 		return err
 	}
@@ -348,7 +359,7 @@ func (p *parser) empheqRowspanCell(cell *mml.Node, tex string, table *mml.Node) 
 	return nil
 }
 
-func (p *parser) empheqAddLeft(table, original *mml.Node, left string) error {
+func (p *parser) empheqAddLeft(table, original *mml.Node, left string, environment ...string) error {
 	columnAlign, _ := table.Attributes.Get("columnalign")
 	columnSpacing, _ := table.Attributes.Get("columnspacing")
 	table.Attributes.Set("columnalign", "right "+sourceValueString(columnAlign))
@@ -365,9 +376,11 @@ func (p *parser) empheqAddLeft(table, original *mml.Node, left string) error {
 		topCell = cell
 	}
 	if topCell == nil {
-		return nil
+		// Original EmpheqUtil dereferences an absent mtd here. Preserve
+		// that unusable conversion as an error rather than a Go panic.
+		return fmt.Errorf("Empheq left block requires a table row")
 	}
-	return p.empheqRowspanCell(topCell, left, original)
+	return p.empheqRowspanCell(topCell, left, original, environment...)
 }
 
 func (p *parser) empheqAddRight(table, original *mml.Node, right string) error {

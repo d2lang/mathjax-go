@@ -717,7 +717,13 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 			}
 		case '&':
 			p.pos++
-			p.pendingCell = &cellItem{name: "&"}
+			// Cases.Entry tests its actual ArrayItem before reducing pending
+			// items. Base cases performs a different, post-Push test.
+			numCasesText := p.arrayCell != nil && p.arrayCell.numCases &&
+				owner == nil && auto == nil && !infixPending &&
+				len(styles) == 0 && len(positions) == 0 && pending == nil &&
+				!bool(negation) && !dots.active() && !pendingFunction && !nonscript
+			p.pendingCell = &cellItem{name: "&", numCasesText: numCasesText}
 		case '#':
 			return nil, "", texError("CantUseHash1", "You can't use 'macro parameter character #' in math mode")
 		default:

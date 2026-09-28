@@ -18,10 +18,11 @@ type equationRowState struct {
 }
 
 type equationTableState struct {
-	rows       int
-	flushAbove int
-	spacing    []string
-	appendRow  func(*mml.Node) error
+	rows           int
+	flushAbove     int
+	spacing        []string
+	appendRow      func(*mml.Node) error
+	initialSpacing string
 }
 
 func newEquationTableState(appendRow func(*mml.Node) error) *equationTableState {
@@ -45,15 +46,19 @@ func (state *equationRowState) endRow() error {
 }
 
 func (state *equationTableState) addSpacing(adjust string) {
+	initial, base := "3pt", .3
+	if state.initialSpacing != "" {
+		initial, base = state.initialSpacing, matrixDimensionEm(state.initialSpacing)
+	}
 	if state.spacing == nil {
-		state.spacing = []string{"3pt"}
+		state.spacing = []string{initial}
 	}
 	// The source caches the original spacing, not a previous adjustment.
 	for len(state.spacing) < state.rows {
-		state.spacing = append(state.spacing, "0.3em")
+		state.spacing = append(state.spacing, arraySpacingEm(base))
 	}
 	if state.rows != 0 {
-		spacing := 0.3 + matrixDimensionEm(adjust)
+		spacing := base + matrixDimensionEm(adjust)
 		if spacing < 0 {
 			spacing = 0
 		}
@@ -65,8 +70,12 @@ func (state *equationTableState) applySpacing(table *mml.Node) {
 	if state != nil && state.spacing != nil {
 		// ArrayItem.checkLines fills trailing rows with the cached original
 		// spacing, so a shortened last explicit value is not repeated.
+		initial := "0.3em"
+		if state.initialSpacing != "" {
+			initial = arraySpacingEm(matrixDimensionEm(state.initialSpacing))
+		}
 		for len(state.spacing) < state.rows {
-			state.spacing = append(state.spacing, "0.3em")
+			state.spacing = append(state.spacing, initial)
 		}
 		table.Attributes.Set("rowspacing", strings.Join(state.spacing, " "))
 	}
