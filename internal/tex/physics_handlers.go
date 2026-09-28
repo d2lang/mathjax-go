@@ -60,6 +60,10 @@ func (p *parser) physicsEnvironment(name string) (nodes []*mml.Node, handled boo
 		if err != nil {
 			return nil, true, err
 		}
+		columnSpec, err = p.completeArrayAlignment(columnSpec)
+		if err != nil {
+			return nil, true, err
+		}
 	}
 	body, err := p.captureEnvironment(name)
 	if err != nil {

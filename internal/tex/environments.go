@@ -107,10 +107,14 @@ func (p *parser) beginEnvironment(name string) ([]*mml.Node, error) {
 		}
 	}
 	if strings.HasSuffix(environment, "*") && strings.Contains(environment, "matrix") {
-		if alignment, _, bracketErr := p.readBrackets(nil); bracketErr != nil {
-			return nil, bracketErr
-		} else if alignment != "" {
-			columnSpec = alignment
+		defaultAlignment := "c"
+		alignment, _, err := p.readBrackets(&defaultAlignment)
+		if err != nil {
+			return nil, err
+		}
+		columnSpec, err = p.completeArrayAlignment(alignment)
+		if err != nil {
+			return nil, err
 		}
 	}
 	if strings.Contains(environment, "alignat") {
@@ -590,6 +594,21 @@ func matrixDelimiters(environment string) (string, string) {
 		return "‖", "‖"
 	}
 	return "", ""
+}
+
+// MtMatrix and MtSmallMatrix pass their optional alignment to Array. An
+// exactly empty value makes Array consume one GetArgument; nonempty strings
+// stay arguments even when filtering later removes every alignment letter.
+func (p *parser) completeArrayAlignment(alignment string) (string, error) {
+	if alignment != "" {
+		return alignment, nil
+	}
+	for p.pos < len(p.source) && internalTextSpace(p.peekRune()) {
+		p.consumeRune()
+	}
+	// The frozen runtime names the active control sequence in diagnostics.
+	alignment, _, err := p.readArgumentAtCursor("begin", false)
+	return alignment, err
 }
 
 func applyColumnSpec(table *mml.Node, specification string) {

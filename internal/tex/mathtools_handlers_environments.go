@@ -39,6 +39,10 @@ func (p *parser) mathtoolsSmallMatrix(environment string) ([]*mml.Node, error) {
 			return nil, err
 		}
 	}
+	alignment, err := p.completeArrayAlignment(alignment)
+	if err != nil {
+		return nil, err
+	}
 	body, err := p.captureEnvironment(environment)
 	if err != nil {
 		return nil, err
