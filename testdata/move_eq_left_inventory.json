@@ -1,0 +1,51 @@
+{
+  "actualMergedBaseline": "3ecb9d57007a608d5b53dd13a228d64be6d6c367",
+  "renderingBaseline": "3ecb9d57007a608d5b53dd13a228d64be6d6c367",
+  "strict": {
+    "baseline": "3ecb9d57007a608d5b53dd13a228d64be6d6c367",
+    "counts": {
+      "first-published-input": 1064
+    },
+    "inputs": 1064,
+    "scannedFiles": 435,
+    "originalMismatches": [],
+    "ambiguousOnly": 0
+  },
+  "safeXML": {
+    "baseline": "3ecb9d57007a608d5b53dd13a228d64be6d6c367",
+    "counts": {
+      "first-published-input": 168
+    },
+    "inputs": 168,
+    "scannedFiles": 435,
+    "originalMismatches": [],
+    "ambiguousOnly": 0,
+    "note": "The separate raw scan contains182 first-publication inputs; only168 have the explicit safe-XML qualification."
+  },
+  "countsKeptSeparate": true,
+  "previousPublicationScan": {
+    "actualMergedBaseline": "f72d955662476fe3daedc3875accdf7315a03168",
+    "renderingBaseline": "42932ee918ca4db7f3edf9da30e59b0c9cd61f86",
+    "strict": {
+      "baseline": "f72d955662476fe3daedc3875accdf7315a03168",
+      "counts": {
+        "first-published-input": 1064
+      },
+      "inputs": 1064,
+      "scannedFiles": 393,
+      "originalMismatches": [],
+      "ambiguousOnly": 0
+    },
+    "safeXML": {
+      "baseline": "f72d955662476fe3daedc3875accdf7315a03168",
+      "counts": {
+        "first-published-input": 168
+      },
+      "inputs": 168,
+      "scannedFiles": 393,
+      "originalMismatches": [],
+      "ambiguousOnly": 0
+    },
+    "countsKeptSeparate": true
+  }
+}

@@ -70,6 +70,13 @@ func newParseState() *parseState {
 	for name, body := range simpleMacros {
 		s.macros[name] = macroDefinition{body: body, arguments: macroArguments(body)}
 	}
+	// Mathtools registers MoveEqLeft as a Macro with one optional argument.
+	// Keep the inserted alignment token and hspace commands in the caller.
+	moveEqLeftDefault := "2"
+	s.macros["MoveEqLeft"] = macroDefinition{
+		body: "\\hspace{#1em}&\\hspace{-#1em}", arguments: 1,
+		optionalDefault: &moveEqLeftDefault,
+	}
 	return s
 }
 

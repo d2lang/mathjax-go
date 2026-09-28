@@ -1,0 +1,24 @@
+{
+  "d2Commit": "01bc7ecdbdd04c13d6fe5df1967d2d9aa14ae579",
+  "beforeMathjaxCommit": "3ecb9d57007a608d5b53dd13a228d64be6d6c367",
+  "afterCodeCommit": "330a017400f24afbd5f6667399f760cfd9d7eb00",
+  "tex": "\\Huge\\begin{aligned}\\MoveEqLeft (x+y)^2\\\\ &=x^2+2xy+y^2\\end{aligned}\n",
+  "files": {
+    "README.md": "124cf36852b9a86e66b18607c95662ef9e59fe53b2574585d95bcc259c8bdec1",
+    "after.png": "284730ff1621ebe7397f0c047f2c5c0431dbf137d0a0ef24f2cb8c2aa1356e5a",
+    "after.svg": "297c843fc058ef46cefaa1bd86dfd0c179a0697daac808b8281c77655c4774e5",
+    "before.png": "2b004954d89042b7792db19f075acf6d4111ebcea40c586e28c56125c5d0abce",
+    "before.svg": "d820532ebc39f4ccbdbb613d5a7f7734e4d1a02af476140cad11d9201e099102",
+    "comparison.png": "a076956086a7888715aaed0ae8508906e951ad4f9428ef4ab1920588a9673b26",
+    "oracle-adapter/go.mod": "b8a3ff80b4e63b08c12ed3bcbefcdaebec039551cf00b99b08c6ba6dec5abfc5",
+    "oracle-adapter/mathjax.go": "1ed1fbe813faf433d307b2b5c8e332fd22854999a22487e11396c6a6df3b38ed",
+    "original.png": "284730ff1621ebe7397f0c047f2c5c0431dbf137d0a0ef24f2cb8c2aa1356e5a",
+    "original.svg": "297c843fc058ef46cefaa1bd86dfd0c179a0697daac808b8281c77655c4774e5",
+    "witness.d2": "86882619fb60ea3a9069b761543e32d7b2efa9b4f1597166781a33b85e56ccbe"
+  },
+  "oracleAssets": {
+    "mathjax.js": "cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869",
+    "polyfills.js": "7fe1d048c78b0e09854c1259f7413868a51cc8f0c822489eb1ac36ae6c85ce01",
+    "setup.js": "a52cb0bbabfbd7796b9fedd793b9386c474e3123e788ee151cbe47ca1fa6e881"
+  }
+}
