@@ -1107,6 +1107,9 @@ func (p *parser) smash(name string) ([]*mml.Node, error) {
 }
 
 func (p *parser) lap(name string) ([]*mml.Node, error) {
+	if strings.HasPrefix(name, "math") || strings.HasPrefix(name, "cramped") {
+		return p.mathLap(name)
+	}
 	if name == "clap" {
 		raw, _, err := p.readArgument(name, false)
 		if err != nil {
@@ -1131,11 +1134,6 @@ func (p *parser) lap(name string) ([]*mml.Node, error) {
 		padded.Attributes.Set("lspace", "-1width")
 	} else if align == "center" {
 		padded.Attributes.Set("lspace", "-.5width")
-	}
-	if strings.HasPrefix(name, "math") || strings.HasPrefix(name, "cramped") {
-		return []*mml.Node{texAtom(setAttributes(node("mstyle", padded), map[string]any{
-			"data-cramped": strings.HasPrefix(name, "cramped"),
-		}), mml.TeXClassOrd)}, nil
 	}
 	return []*mml.Node{texAtom(padded, mml.TeXClassOrd)}, nil
 }
