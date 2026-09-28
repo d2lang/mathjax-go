@@ -1,13 +1,15 @@
 {
-  "baseline": "538d879f57839c1bfa2cd4f3c81c56d685c43109",
+  "baseline": "c19a00c2202542652ffa46ce0a93d17c0bdd8108",
   "counts": {
-    "first-published-input": 970,
-    "prior-full-reference": 554
+    "first-published-input": 978,
+    "prior-full-reference": 554,
+    "prior-raw-promotion": 4
   },
-  "inputs": 1524,
-  "scannedFiles": 385,
+  "inputs": 1536,
+  "scannedFiles": 396,
   "originalMismatches": [],
   "ambiguousOnly": 0,
-  "actualMergedBaseline": "42932ee918ca4db7f3edf9da30e59b0c9cd61f86",
-  "publishedBaselineContext": "The inspected published PR157 fixture tree is identical to its merged tree."
+  "actualMergedBaseline": "c19a00c2202542652ffa46ce0a93d17c0bdd8108",
+  "renderingBaseline": "f72d955662476fe3daedc3875accdf7315a03168",
+  "renderingContext": "The1536-case comparison was measured with actual158 production plus AMS source; rebase onto159 preserves the AMS source delta but final159 build and gates are pending."
 }

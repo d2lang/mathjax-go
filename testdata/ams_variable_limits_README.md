@@ -18,8 +18,8 @@ incorrect named-function fallbacks.
 The shared UnderOver prerequisite supplies the source script-style lookup and
 stretch arithmetic. Before that correction, the arrow variants retained
 inherited decoration differences. The final composed candidate compares all
-1,524 preserved inputs directly with their complete original SVGs: 1,420 valid
-formulas and 104 original error renderings. There are 752 fixes, 772 unchanged
+1,536 preserved inputs directly with their complete original SVGs: 1,432 valid
+formulas and 104 original error renderings. There are 764 fixes, 772 unchanged
 exact controls, and no unresolved outputs in this inventory.
 
 Coverage includes all four commands, scripts and explicit limits, display and
@@ -28,21 +28,27 @@ limits, source-body literal controls, active command replacement in both
 declaration orders, and effective macro-budget boundaries using the supported
 `DeclareMathOperator` command. The original input strings and SVGs are preserved.
 
-The overlap scan inspected all 385 JSON files beneath `testdata` directories
-in published PR157, whose fixture tree is unchanged on merged main
-`42932ee918ca4db7f3edf9da30e59b0c9cd61f86`. It found 970 previously unpublished
-input/mode pairs (752 fixes and 218 controls) and 554 existing complete-original
-references. All previous original strings agree. These are per-fix counts,
-not a globally unique or exhaustive MathJax coverage claim.
+The overlap scan inspected all 396 JSON files beneath `testdata` directories
+on merged main159 `c19a00c2202542652ffa46ce0a93d17c0bdd8108`. It found 978
+previously unpublished input/mode pairs, 554 existing complete-original
+references, and four previous raw observations now promoted to strict tests.
+All previous original strings agree. These are per-fix counts, not a globally
+unique or exhaustive MathJax coverage claim.
 
-The broader replay covers 5,086 published raw inputs and 4,326 upstream
+The broader replay covers 5,270 published raw inputs and 4,326 upstream
 TeX/display inputs under the frozen D2 configuration. It finds four genuine
 AMS fixes in the former and eight in the latter, with no genuine regressions
-or changed unresolved renderings. One apparent cancel fix and two changed
-enclose observations differ only in attribute serialization order. Both
+or changed unresolved renderings. All twelve have been added to the strict
+fixture without changing their original SVGs. Four apparent cancel fixes and
+one enclose observation differ only in attribute serialization order. Both
 binaries emit both orders over 64 repeated renders per affected input, with
 identical complete parsed XML. The frozen bundle does not register enclose;
 its original error remains an inherited configuration difference.
+
+These rendering counts were measured against merged main158
+`f72d955662476fe3daedc3875accdf7315a03168`. The source has since been rebased
+onto main159 with an unchanged production delta; final composed build and
+full checks are pending.
 
 ## Regeneration
 
