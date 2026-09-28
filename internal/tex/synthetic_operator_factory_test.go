@@ -216,26 +216,38 @@ func TestFencedUninitializedAndEmptyClone(t *testing.T) {
 func TestSyntheticOperatorScaleOriginalSVG(t *testing.T) {
 	var fixture struct {
 		MathJaxGitCommit string
-		Cases []syntheticOriginal
+		Cases            []syntheticOriginal
 	}
 	data, err := os.ReadFile("testdata/synthetic_operator_scale_mathjax_3_2_2.json")
-	if err != nil { t.Fatal(err) }
-	if err := json.Unmarshal(data, &fixture); err != nil { t.Fatal(err) }
+	if err != nil {
+		t.Fatal(err)
+	}
+	if err := json.Unmarshal(data, &fixture); err != nil {
+		t.Fatal(err)
+	}
 	if fixture.MathJaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || len(fixture.Cases) != 128 {
 		t.Fatal("unbound original scale controls")
 	}
 	seen := map[string]bool{}
 	for _, c := range fixture.Cases {
-		if seen[c.Name] { t.Fatal("duplicate original scale control", c.Name) }
+		if seen[c.Name] {
+			t.Fatal("duplicate original scale control", c.Name)
+		}
 		seen[c.Name] = true
-		if fmt.Sprintf("%x", sha256.Sum256([]byte(c.Original.SVG))) != c.OriginalSHA256 { t.Fatal("original SVG binding", c.Name) }
+		if fmt.Sprintf("%x", sha256.Sum256([]byte(c.Original.SVG))) != c.OriginalSHA256 {
+			t.Fatal("original SVG binding", c.Name)
+		}
 		t.Run(c.Name, func(t *testing.T) {
 			root := idAnchorBuild(c.Spec, c.Display)
 			options := pipeline.DefaultOptions()
 			options.Display = c.Display
 			got, err := svg.NewTypesetter().Typeset(root, options)
-			if err != nil { t.Fatal(err) }
-			if got != c.Original.SVG { t.Fatalf("complete original scale SVG mismatch\ngot: %s\nwant: %s", got, c.Original.SVG) }
+			if err != nil {
+				t.Fatal(err)
+			}
+			if got != c.Original.SVG {
+				t.Fatalf("complete original scale SVG mismatch\ngot: %s\nwant: %s", got, c.Original.SVG)
+			}
 		})
 	}
 }
