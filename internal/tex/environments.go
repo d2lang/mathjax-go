@@ -650,9 +650,13 @@ func (p *parser) parseCD(body string) ([]*mml.Node, error) {
 	// Preserve the source's two-row cadence and expose @-arrow recipes as
 	// stretchy relation operators; labels remain parsed TeX children.
 	rows := splitCDRows(body)
+	// CD uses ArrayItem.copyEnv=false and clears its environment after each
+	// entry. Reuse the same lexical boundary as the other array commands.
+	arrayParser := p.matrixCellParser("")
+	arrayParser.matrixClose = false
 	var mrows []*mml.Node
 	for rowIndex, raw := range rows {
-		cells, err := p.parseCDRow(raw, rowIndex, rowIndex == len(rows)-1)
+		cells, err := arrayParser.parseCDRow(raw, rowIndex, rowIndex == len(rows)-1)
 		if err != nil {
 			return nil, err
 		}
@@ -664,7 +668,7 @@ func (p *parser) parseCD(body string) ([]*mml.Node, error) {
 	table.Attributes.Set("columnspacing", "5pt")
 	table.Attributes.Set("rowspacing", "5pt")
 	table.Attributes.Set("displaystyle", true)
-	return []*mml.Node{table}, nil
+	return []*mml.Node{matrixCellContent([]*mml.Node{table})}, nil
 }
 
 func splitCDRows(body string) []string {
@@ -678,6 +682,32 @@ func splitCDRows(body string) []string {
 
 type cdCellEnd struct {
 	firstObjectCell bool
+}
+
+// parseCDSegment delivers explicit Entry items through the ordinary parser.
+// Argument readers may consume an ampersand without emitting an Entry; each
+// actual Entry closes the current cell and clears its lexical environment.
+func (p *parser) parseCDSegment(source string, cells []*mml.Node, objectRow, atArrow bool) ([]*mml.Node, *mml.Node, error) {
+	for {
+		sub := p.matrixCellParser(source)
+		sub.matrixClose = false
+		sub.cdArrayEntry = true
+		if atArrow {
+			sub.cdCellEnd = &cdCellEnd{firstObjectCell: objectRow && len(cells) == 0}
+		}
+		children, _, err := sub.parseRowWithInfix(0, false, false)
+		if err != nil {
+			return nil, nil, err
+		}
+		contents := matrixCellContent(children)
+		if !sub.cdEntryStopped {
+			return cells, contents, nil
+		}
+		// EndEntry retains explicit empty cells. No CD strut is inserted:
+		// that behavior belongs only to AmsCdMethods.cell at an @ arrow.
+		cells = append(cells, node("mtd", contents))
+		source = sub.source[sub.pos:]
+	}
 }
 
 func (p *parser) parseCDRow(raw string, rowIndex int, final bool) ([]*mml.Node, error) {
@@ -703,12 +733,9 @@ func (p *parser) parseCDRow(raw string, rowIndex int, final bool) ([]*mml.Node, 
 		if at < 0 {
 			break
 		}
-		prefix := strings.TrimSpace(raw[position:at])
-		// Parse the pending cell before delivering the Cell item. The
-		// continuation can tell whether a style or another stack item owns
-		// the closing boundary, rather than the underlying ArrayItem.
-		end := &cdCellEnd{firstObjectCell: objectRow && len(cells) == 0}
-		contents, err := p.parseStringWithStackCDCell(prefix, p.ensureStackGlobal(), end)
+		var contents *mml.Node
+		var err error
+		cells, contents, err = p.parseCDSegment(raw[position:at], cells, objectRow, true)
 		if err != nil {
 			return nil, err
 		}
@@ -727,14 +754,9 @@ func (p *parser) parseCDRow(raw string, rowIndex int, final bool) ([]*mml.Node, 
 		cells = append(cells, node("mtd", arrow))
 		position = next
 	}
-	contents := forcedRow(nil, true)
-	tail := strings.TrimSpace(raw[position:])
-	if tail != "" {
-		var err error
-		contents, err = p.parseContinuationString(tail)
-		if err != nil {
-			return nil, err
-		}
+	cells, contents, err := p.parseCDSegment(raw[position:], cells, objectRow, false)
+	if err != nil {
+		return nil, err
 	}
 	// EndRow always closes the pending cell. EndTable does so only if the
 	// row has nodes or already-closed cells; explicit empty groups and
