@@ -334,7 +334,13 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 		if c == '\\' {
 			p.pos++
 			name := p.readControlSequence()
-			if _, registered := p.state.macros[name]; !registered && (name == "right" || name == "middle") {
+			// Dynamic command maps precede the builtin handlers represented
+			// by these row shortcuts. Paired delimiters have their own map,
+			// so a registration need not also appear in the macro map.
+			_, registeredMacro := p.state.macros[name]
+			_, registeredDelimiter := p.state.pairedDelimiters[name]
+			registered := registeredMacro || registeredDelimiter
+			if !registered && (name == "right" || name == "middle") {
 				delim, err := p.readDelimiter(name, false)
 				if err != nil {
 					return nil, "", err
@@ -356,7 +362,7 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 				}
 				return nodes, delim, nil
 			}
-			if _, registered := p.state.macros[name]; !registered && (name == "over" || name == "atop" || name == "above" || name == "choose" || name == "brace" || name == "brack" || name == "overwithdelims" || name == "atopwithdelims" || name == "abovewithdelims") {
+			if !registered && (name == "over" || name == "atop" || name == "above" || name == "choose" || name == "brace" || name == "brack" || name == "overwithdelims" || name == "atopwithdelims" || name == "abovewithdelims") {
 				// BaseMethods.Over reads arguments before pushing the closing
 				// item that reduces styles and checks an earlier OverItem.
 				spec, err := p.readInfixSpec(name)
@@ -376,7 +382,7 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 				}
 				return []*mml.Node{fraction}, right, nil
 			}
-			if name == "color" {
+			if !registered && name == "color" {
 				attributes, err := p.colorDeclaration()
 				if err != nil {
 					return nil, "", err
@@ -384,7 +390,7 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 				pushStyle(attributes)
 				continue
 			}
-			if style, ok := styleDeclarations[name]; ok {
+			if style, ok := styleDeclarations[name]; ok && !registered {
 				// BaseMethods.SetStyle writes displaystyle before scriptlevel.
 				pushStyle(mjSourceObject{
 					{Name: "displaystyle", Value: style["displaystyle"]},
@@ -392,15 +398,11 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 				})
 				continue
 			}
-			if size, ok := sizeDeclarations[name]; ok {
+			if size, ok := sizeDeclarations[name]; ok && !registered {
 				pushStyle(mjSourceObject{{Name: "mathsize", Value: emLength(size)}})
 				continue
 			}
-			// User registrations have command-map precedence over SetFont.
-			// Let commandNodes invoke an overriding macro or paired delimiter.
-			_, fontMacro := p.state.macros[name]
-			_, fontDelimiter := p.state.pairedDelimiters[name]
-			if variant, ok := fontDeclarations[name]; ok && !fontMacro && !fontDelimiter {
+			if variant, ok := fontDeclarations[name]; ok && !registered {
 				// SetFont changes the current environment without pushing a
 				// stack item, so pending Prime/Not/Dots items stay in this row.
 				if len(styles) != 0 || pending != nil || bool(negation) || dots.active() || pendingFunction || len(positions) != 0 {
@@ -422,7 +424,7 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 				appendNodes(rest, false)
 				return nodes, right, nil
 			}
-			if name == "limits" || name == "nolimits" {
+			if !registered && (name == "limits" || name == "nolimits") {
 				if pending != nil || bool(negation) || dots.active() {
 					return nil, "", texError("MisplacedLimits", "%s is allowed only on operators", "\\"+name)
 				}
@@ -433,7 +435,7 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 				}
 				continue
 			}
-			if _, macro := p.state.macros[name]; !macro && len(positions) != 0 && (name == "\\" || name == "\n" || name == "cr" || name == "newline") {
+			if !registered && len(positions) != 0 && (name == "\\" || name == "\n" || name == "cr" || name == "newline") {
 				if err := p.positionLinebreak(name); err != nil {
 					return nil, "", err
 				}
