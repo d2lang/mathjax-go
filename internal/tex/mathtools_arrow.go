@@ -7,7 +7,6 @@ package tex
 import (
 	"strings"
 
-	"github.com/d2lang/mathjax-go/internal/layout"
 	"github.com/d2lang/mathjax-go/internal/mml"
 )
 
@@ -58,7 +57,7 @@ func (state *equationTableState) addSpacing(adjust string) {
 		if spacing < 0 {
 			spacing = 0
 		}
-		state.spacing[state.rows-1] = layout.Em(spacing)
+		state.spacing[state.rows-1] = arraySpacingEm(spacing)
 	}
 }
 

@@ -7,7 +7,7 @@ import (
 	"math"
 	"strings"
 
-	"github.com/d2lang/mathjax-go/internal/layout"
+	"github.com/d2lang/mathjax-go/internal/jscompat"
 	"github.com/d2lang/mathjax-go/internal/mml"
 )
 
@@ -94,9 +94,18 @@ func (spacing *arrayRowSpacing) apply(table *mml.Node, initial string) {
 	base := matrixDimensionEm(initial)
 	values := make([]string, spacing.rows)
 	for i := range values {
-		values[i] = layout.Em(math.Max(0, base+matrixDimensionEm(spacing.adjustments[i])))
+		values[i] = arraySpacingEm(math.Max(0, base+matrixDimensionEm(spacing.adjustments[i])))
 	}
 	table.Attributes.Set("rowspacing", strings.Join(values, " "))
+}
+
+// ArrayItem.addRowSpacing uses ParseUtil.Em, whose zero cutoff and zero
+// spelling differ from the output renderer's length formatter.
+func arraySpacingEm(value float64) string {
+	if math.Abs(value) < .0006 {
+		return "0em"
+	}
+	return strings.TrimSuffix(strings.TrimRight(jscompat.ToFixed(value, 3), "0"), ".") + "em"
 }
 
 func tableRowSpacing(table *mml.Node) any {
