@@ -21,7 +21,7 @@ The 70 earlier malformed UTF-16 transport controls and all 60 earlier mixed AMS/
 
 The inventory scans all 413 tracked testdata JSON files, including internal directories, at actual merged main162. Among the 2,052 strict input pairs, 42 already had full references, 12 promote previously raw original inputs, and 1,998 are first-publication pairs. Across strict and raw rows, 2,102 of 2,168 are first-publication pairs. No stored original mismatch or ambiguous-only prior reference was found. These per-fix counts are not globally unique MathJax coverage.
 
-The 5,634-input published-residual replay finds 12 genuine fixes and no changed nonexact output or regression. Four apparent cancellation serialization fixes are only attribute order: 32 renders per binary per input preserve complete parsed XML, with all raw variants retained. The 4,326 upstream TeX input replay is unchanged. Exact SVG assertions do not normalize attributes, geometry, diagnostics, or output strings.
+The 5,654-input published-residual replay finds 12 genuine fixes and no changed nonexact output or regression. Four cancellation serialization controls differ only in attribute order: 32 renders per binary per input preserve complete parsed XML, with all raw variants retained. The 4,326 upstream TeX input replay has no genuine change after the same complete-XML qualification. Exact SVG assertions do not normalize attributes, geometry, diagnostics, or output strings.
 
 ## Reproduction
 
@@ -34,4 +34,4 @@ go test -run 'TestPairedDeclarationNameReferences' .
 go test -run 'TestPairedDeclarationNamesPrimaryMethod' ./internal/tex
 ```
 
-The exact/raw partition and publication-base metadata are rebound to actual merged main162 without changing original outputs. The 149-method short test and preview probe passed. Final current-base gates are recorded in the handoff receipt.
+The exact/raw partition and publication-base metadata are rebound to actual merged main162 without changing original outputs. The 149-method short test and preview probe passed. Final current-base focused, full frozen-oracle, race, vet and WASM checks passed; terminal receipts bind the unchanged production and reference trees.
