@@ -57,14 +57,18 @@ input remains in either `newline_mathjax_3_2_2.json` or
 `newline_residuals.json`; the generator does not filter based on Go output.
 The recorded fixture metadata reports its exact baseline, counts and partition.
 
-The current inventory has 9,299 inputs: 9,071 complete-original references and
-228 preserved residuals. Against merged PR 153, 5,461 references change from an
+The current inventory has 9,801 inputs: 9,573 complete-original references and
+228 preserved residuals. Against merged PR 153, 5,749 references change from an
 incorrect baseline to the exact original SVG. All 7,859 previously reviewed
 candidate outputs remain byte-identical after composing Bqty and text MtLap.
 The added Bqty, MathLap/MtLap, equation-array and independent array/font
 controls match the original SVGs exactly. MtLap cases distinguish literal
 text, embedded math and outer-array ownership; each input retains its
-provenance and ownership annotations.
+provenance and ownership annotations. A further 502 original-valid spacing
+controls exercise zero/rounding cutoffs, units, cached defaults and explicit
+zero across 13 array owners. ArrayItem and EqnArray row spacing use the TeX
+ParseUtil.Em formatter, whose .0006 zero cutoff differs from the renderer
+formatter. This preserves the existing -0.3993em matrix boundary reference.
 
 A subsequent token-boundary audit identified 1,512 earlier inputs containing
 joined control words such as `\newlinec` or `\crb`, including occurrences in
@@ -79,6 +83,15 @@ counterparts, and each has a complete-original-exact literal control. The
 existing `\\` forms and genuinely terminated keyword forms are unaffected.
 Keyword occurrences inside text, command arguments or comments remain ownership
 controls; a separated spelling alone does not establish direct row dispatch.
+
+Against all checked-in complete-original fixtures on the PR 153 baseline,
+98 exact inputs were already full references and 914 were previously raw
+observations. The remaining 8,561 are first complete-original publications:
+4,839 new fixes and 3,722 baseline-exact controls. Of the 914 promotions, 910
+are fixed here and four were already fixed by earlier merges. Six of the
+98 existing full references also occur in older raw files. All original
+strings agree. The 72 safe-XML controls contain 70 first-publication inputs
+and two previously raw inputs; they are separate from the exact references.
 
 The public audit includes starred and ordinary options, all supported array
 families, generated and overridden commands, text/argument ownership, comments,
@@ -112,11 +125,11 @@ lifetime, selected AMS shove handling and array callback ownership. The saved
 independent public corpus is included in the fixture union. Historical raw
 inputs were replayed without changing the originals. Among 4,638 published raw
 inputs, 984 become complete-original exact and 26 changed residual outputs
-remain identical to previously qualified candidates. Three observed changes
-in cancel SVGs are only nondeterministic data-attribute order: two apparent
-fixes and one apparent regression. Both binaries reproduce both orders over
+remain identical to previously qualified candidates. The earlier three apparent cancel changes (two fixes and one regression)
+were only nondeterministic data-attribute order. The final replay observes
+two such apparent fixes and no apparent regression. Both binaries reproduce both orders over
 64 repeated renders of each of the 16 cancel controls, with full XML trees
-and geometry equal to the original. Those three artifacts are excluded from
+and geometry equal to the original. Attribute-order artifacts are excluded from
 the source-fix and regression counts. Final gates must be checked at handoff;
 the source checkpoints and discovery comparisons remain separate audit receipts.
 

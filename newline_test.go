@@ -26,7 +26,7 @@ func TestNewlineOriginalReferences(t *testing.T) {
 	if err := json.Unmarshal(data, &fixture); err != nil {
 		t.Fatal(err)
 	}
-	if fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || fixture.Counts.Total != 9299 || len(fixture.Cases) != fixture.Counts.Exact {
+	if fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || fixture.Counts.Total != 9801 || len(fixture.Cases) != fixture.Counts.Exact {
 		t.Fatal("unbound newline references")
 	}
 	seen := map[string]bool{}
