@@ -22,7 +22,7 @@ new geometry implementation is introduced.
 `pmb_mathjax_3_2_2.json` stores 1,038 complete, unmodified original SVG strings
 from D2’s frozen MathJax bundle at source commit
 `ad8f5c21cb810236551da8c6512ba733e67357ee`. It records all three verified asset
-hashes and baseline main125 commit `6a7adcd1c6cce9df99b3363d40f22c2f68857fd5`.
+hashes and baseline main127 commit `cdb9a591483e6ed813956a3ac6312b732559ab47`.
 Every original render uses a fresh VM, font cache none, `em=16`, `ex=8`, and
 the recorded display mode. There are 990 valid original renderings and 48
 original error SVGs. Against that baseline, 62 were already exact and 976
@@ -62,3 +62,6 @@ Regenerate both files with
 the asset hashes and uses batches of 24 fresh VMs. It updates original SVGs
 only, preserving the input inventory and baseline/candidate residual receipts.
 Run `go test ./... -run TestPmbReferences` for the complete reference check.
+
+The baseline and candidate outputs for all ten historical residuals remain
+byte-identical when composed with main127. Their original receipts are preserved.
