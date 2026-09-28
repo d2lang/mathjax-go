@@ -73,7 +73,7 @@ CSS declaration order and 0.1 SVG-unit border-corner rounding. No new visible
 regression was found. The unchanged and changed residuals remain raw.
 
 A further composition check renders all 1,656 distinct inputs in the 15
-published residual inventories against merged main133 and this candidate.
+residual inventories against merged main133 and this candidate.
 Of 288 changed results, 266 become exact and the other 22 are precisely the
 changed residuals inspected above. No formerly exact case regresses.
 
