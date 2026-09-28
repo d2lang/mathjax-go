@@ -501,3 +501,16 @@ Physics StarMacro aliases preserve their caller source and suffix, install the j
 The ordinary `\|` command follows Braket's U+2225 handler before delimiter-symbol lookup, while explicit delimiter readers retain their own U+2016 aliases. Braket and Set retain caller-local separator ownership, group, script and left/right barriers, Set's one-stretchy-separator limit, and single-item completion. Fixed `\set` separators do not advance the limit. The capital Bra/Ket commands retain the original registered macro expansions, and user-defined macros retain precedence. The SVG output preserves the original `braketbar` attribute.
 
 A finite 18-case inline/display corpus checks complete SVGs against D2's pinned MathJax 3.2.2: two retained ordinary-pipe outputs and sixteen newly captured Braket, Set, nesting, macro/Physics, literal-bar, explicit-delimiter and single-item controls. Twenty-one additional source-derived guards check caller argument consumption, owner masking/restoration, macro precedence, the retained ordinary token's compiled attributes, and single-item operator construction order. These tests do not claim general Braket or private-model conformance.
+
+### Chemistry equilibrium arrows
+
+The three Mhchem equilibrium helpers are registered with their original TeX
+macro definitions. `\ce{A <=> B}`, `\ce{A <=>> B}` and `\ce{A <<=> B}`
+therefore render equilibrium arrows instead of undefined-command errors.
+
+A fixed 56-case inline/display corpus compares complete original SVGs and 28
+display measurements across the three arrows, top labels, sequences, scripts,
+fonts, color, declared overrides and unchanged chemistry controls. Regenerate
+it with `node testdata/generate_mhchem_equilibrium.cjs PINNED_ASSETS`.
+The separate reversible double-arrow and partial-bond helpers, and inherited
+raise/lower placement for bottom labels, are outside this correction.
