@@ -121,7 +121,7 @@ var functionNames = func() map[string]string {
 		"cos": "cos", "cosh": "cosh", "cot": "cot", "coth": "coth", "csc": "csc",
 		"deg": "deg", "det": "det", "dim": "dim", "exp": "exp", "gcd": "gcd",
 		"hom": "hom", "inf": "inf", "ker": "ker", "lg": "lg", "lim": "lim",
-		"liminf": "lim inf", "limsup": "lim sup", "ln": "ln", "log": "log",
+		"liminf": "lim\u2006inf", "limsup": "lim\u2006sup", "ln": "ln", "log": "log",
 		"max": "max", "min": "min", "Pr": "Pr", "sec": "sec", "sin": "sin",
 		"sinh": "sinh", "sup": "sup", "tan": "tan", "tanh": "tanh",
 		"injlim": "inj lim", "projlim": "proj lim", "varliminf": "lim inf", "varlimsup": "lim sup",
