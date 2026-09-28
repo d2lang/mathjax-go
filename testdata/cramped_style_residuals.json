@@ -1,15 +1,15 @@
 {
   "mathjaxVersion": "3.2.2",
   "mathjaxGitCommit": "ad8f5c21cb810236551da8c6512ba733e67357ee",
-  "baselineCommit": "aa6200c004e8498321d821ac7edceb4040b441cb",
+  "baselineCommit": "4aeeb29d500693c2b476818d502e205892aaf446",
   "historicalBaselineCommit": "d74de82316658af59f3d0e8a409b4bbeb005fb5d",
   "historicalInputCount": 1222,
   "counts": {
-    "inputs": 1328,
-    "exact": 1236,
-    "validExact": 1184,
-    "fixed": 601,
-    "baselineExact": 635,
+    "inputs": 1424,
+    "exact": 1332,
+    "validExact": 1280,
+    "fixed": 661,
+    "baselineExact": 671,
     "regressions": 0,
     "residuals": 92,
     "unchangedResiduals": 67

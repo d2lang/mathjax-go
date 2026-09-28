@@ -28,10 +28,10 @@ with view box `0 -3890.7 15612.8 6859.2`.
 
 ## Original references
 
-Against merged main145, `aa6200c004e8498321d821ac7edceb4040b441cb`, the inventory
-contains **1,328 unique TeX/display inputs**: **1,236 exact complete original SVGs**
-(1,184 valid expressions and 52 original error renderings), including **601 fixes
-and 635 unchanged exact controls**. No formerly exact input regresses.
+Against merged main146, `4aeeb29d500693c2b476818d502e205892aaf446`, the inventory
+contains **1,424 unique TeX/display inputs**: **1,332 exact complete original SVGs**
+(1,280 valid expressions and 52 original error renderings), including **661 fixes
+and 671 unchanged exact controls**. No formerly exact input regresses.
 
 Coverage includes all four styles and default/empty options; unknown numeric,
 letter, prototype-property and literal macro names; nested scripts, fractions,
@@ -48,18 +48,30 @@ and ten distinct explicit-style controls. The preceding 1,222 inputs have
 identical baseline and candidate outputs on main143 and main145.
 
 The affine SVG check composes every transform and compares outlined glyphs,
-paint and root metrics. The complete 1,328-input inventory has **591 visible fixes**
-and **zero visual regressions among 645 previously visually exact inputs**.
+paint and root metrics. The complete 1,424-input inventory has **651 visible fixes**
+and **zero visual regressions among 681 previously visually exact inputs**.
 The ten additional byte-exact fixes affect structure only and are not counted
 as visible fixes.
 
-A replay of 3,479 published residual inputs finds 24 newly exact optional-style
-cases in `cramped_substack_residuals.json`. A separate test now asserts their
-complete original SVGs, bringing the assertion count for this change to 1,260.
-That historical file is unchanged. The only other observed replay difference
-was the already recorded nondeterministic ordering of two cancel attributes;
-five repeat runs of both binaries bind all 16 affected cancel inputs to the
-same two exact serializations. No rendering change is waived or normalized.
+All 1,328 earlier baseline and candidate outputs remain byte-identical after
+composition with the merged array-entry/alignment fix. Another 96 independently
+rendered inputs combine all four styles with aligned, gathered, left/right
+gathered, multlined and flalign arrays, both alone and in scripts. All 96 are
+complete-original exact, including 60 new visible fixes and 36 exact controls.
+
+A replay of 3,919 published residual inputs finds 24 newly exact optional-style
+cases in `cramped_substack_residuals.json`. A separate test asserts their
+complete original SVGs, bringing the assertion count for this change to 1,356.
+That historical file is unchanged. There are no source-related exact regressions
+or changed nonexact outputs in this replay.
+
+Four other observed differences are the pre-existing nondeterministic ordering
+of two cancel attributes: one apparent extra match and three apparent regressions.
+For every input, 48 fresh repetitions of each current binary produce both exact
+serializations, with identical complete parsed XML trees. The raw primary SVGs
+and bounded proof are in `cramped_style_published_replay.json`; these unrelated
+byte-order fluctuations are excluded from fix counts and exact tests do not
+normalize their SVGs.
 
 ## Raw residuals and control proof
 
@@ -103,3 +115,11 @@ VM for each conversion in bounded batches of 24. It regenerates complete SVGs
 with font cache disabled, em=16, ex=8 and the recorded display mode. Unicode
 separators are escaped only on the JSONL wire. Historical Go observations and
 the derived geometry proof are retained unchanged.
+
+## Combined validation
+
+On merged main146, the full frozen-oracle suite, race tests, vet and WebAssembly
+build pass. Both expanded fixture files regenerate byte-identically from the
+verified original assets. All 51 committed D2 witnesses match their original
+SVGs. `parity/cramped-optional-styles` includes the shared-scale screenshots,
+unmodified before/fixed/original SVGs, D2 source and reproduction details.
