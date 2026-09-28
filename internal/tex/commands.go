@@ -364,10 +364,6 @@ func (p *parser) commandNodes(name string, after **derivativeAutoOpen) ([]*mml.N
 		return p.physicsBraket(name)
 	case "Braket", "Set", "set":
 		return p.braket(name)
-	case "qty", "quantity", "pqty", "bqty", "vqty", "absolutevalue", "abs", "norm", "evaluated", "eval", "order":
-		return p.quantity(name)
-	case "Bqty":
-		return p.braceQuantity(name)
 	case "dd", "differential", "variation", "var", "dv", "derivative", "pdv", "pderivative", "partialderivative", "fdv", "fderivative", "functionalderivative":
 		return p.derivative(name, after)
 	case "diffd":
@@ -1727,66 +1723,6 @@ func (p *parser) parseExpansionWithStack(source string, global *parserStackGloba
 		return parsed.Children, nil
 	}
 	return []*mml.Node{parsed}, nil
-}
-
-func (p *parser) quantity(name string) ([]*mml.Node, error) {
-	delimiters := map[string][2]string{
-		"qty": {"(", ")"}, "quantity": {"(", ")"}, "pqty": {"(", ")"},
-		"bqty": {"[", "]"}, "vqty": {"|", "|"}, "absolutevalue": {"|", "|"},
-		"abs": {"|", "|"}, "norm": {"‖", "‖"}, "evaluated": {".", "|"},
-		"eval": {".", "|"}, "order": {"O(", ")"},
-	}
-	pair := delimiters[name]
-	if name != "evaluated" && name != "eval" {
-		open := pair[0]
-		if open == "O(" {
-			open = "("
-		}
-		if result, handled, err := p.quantityFallback(name, open, pair[1]); handled {
-			return result, err
-		}
-	}
-	if pair[0] == "O(" {
-		arg, err := p.parseArgument(name)
-		if err != nil {
-			return nil, err
-		}
-		return []*mml.Node{token("mi", "O"), p.physicsFenced("(", arg, ")", true)}, nil
-	}
-	return p.quantityWithDelimiters(name, pair[0], pair[1])
-}
-
-func (p *parser) quantityWithDelimiters(name, open, close string) ([]*mml.Node, error) {
-	star := p.readStar()
-	p.skipSpaces()
-	if p.pos >= len(p.source) {
-		return []*mml.Node{p.physicsFenced(open, forcedRow(nil, true), close, !star)}, nil
-	}
-	var raw string
-	var err error
-	continuation := false
-	if closing, ok := map[byte]byte{'(': ')', '[': ']', '|': '|'}[p.source[p.pos]]; ok {
-		continuation = true
-		p.pos++
-		raw, err = p.readUpToByte(closing)
-	} else {
-		raw, _, err = p.readArgument(name, false)
-	}
-	if err != nil {
-		return nil, err
-	}
-	// Quantity's raw fences use AutoOpen on the caller; its braced argument
-	// is parsed by a genuine child TexParser.
-	var content *mml.Node
-	if continuation {
-		content, err = p.parseContinuationString(raw)
-	} else {
-		content, err = p.parseArgumentString(raw)
-	}
-	if err != nil {
-		return nil, err
-	}
-	return []*mml.Node{p.physicsFenced(open, content, close, !star)}, nil
 }
 
 func physicsFenced(open string, content *mml.Node, close string, stretchy bool) *mml.Node {
