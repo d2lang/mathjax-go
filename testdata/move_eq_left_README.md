@@ -77,3 +77,25 @@ the original component in a fresh runtime for each conversion. Exact SVGs and
 raw original SVG/error records regenerate independently of Go, preserving LF
 JSONL framing and Unicode line separators. Neither raw originals nor qualified
 error strings are replaced with Go output.
+
+## Final composition on merged NumCases
+
+The final source composes with actual merged PR166,
+`3ecb9d57007a608d5b53dd13a228d64be6d6c367`. The ten production lines
+are unchanged from the reviewed patch. All 1,246 baseline and candidate outputs
+remain byte-identical to the recorded main165 comparisons; the original fixture
+files retain the hashes from their successful independent regeneration.
+A new scan of all 435 current fixture JSON files confirms that the 1,064 strict
+and 168 safe-XML inputs are first complete-original publications.
+
+The current 5,816-input published-residual replay and 4,326-input upstream replay
+have no genuine changes or regressions. Seven observed cancellation/enclosure
+serialization controls are independently bound by 896 repeated complete XML
+outputs, preserving all tags, attributes, text, tails and ordered children.
+The unavailable original enclosure-package control remains nonexact in both
+baseline and candidate; it is not counted as a fix.
+
+At `775f78e2f82d3dfa4969c8433ec9d0e1777434e4`, the focused tests, complete
+frozen-oracle suite, race checks, vet and WebAssembly build pass serially with
+Go 1.27 and `-p=1`. Subsequent changes only document verification and add the
+inspected D2 visual evidence.
