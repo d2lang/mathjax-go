@@ -43,7 +43,10 @@ counts are not a claim of globally unique coverage.
 
 `text_lap_promotions_test.go` also promotes two previously published raw
 `clap` observations directly from the unchanged MathLap residual file. They
-are not counted among the 1,386 newly captured references.
+are not counted among the 1,386 newly captured references. The existing
+96-case vector-font test now compares every original AST directly: its two
+`\vb{\clap{x}}` cases no longer remove the original style attributes. The
+historical fixture and complete SVG hashes remain unchanged.
 
 Regenerate with:
 
@@ -67,3 +70,7 @@ normalized.
 
 Final validation runs the full frozen-original suite, race
 suite, vet, and WebAssembly build, run sequentially.
+
+The first full gate detected that obsolete vector-font qualification. Removing
+only the qualification restores comparison against the unmodified primary
+tree; no production change or replacement golden was needed.
