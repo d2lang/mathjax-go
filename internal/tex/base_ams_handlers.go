@@ -57,7 +57,7 @@ func (p *parser) baseAMSEnvironment(name string) (nodes []*mml.Node, handled boo
 	for _, cells := range rows {
 		parsed := make([]*mml.Node, 0, len(cells)+1)
 		for _, raw := range cells {
-			content, err := p.parseContinuationString(strings.TrimSpace(raw))
+			content, err := p.parseArrayCellString(strings.TrimSpace(raw))
 			if err != nil {
 				return nil, true, err
 			}
