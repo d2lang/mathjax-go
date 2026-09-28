@@ -1,0 +1,26 @@
+{
+  "mathjaxGitCommit": "ad8f5c21cb810236551da8c6512ba733e67357ee",
+  "sourceMethods": [
+    "AmsMethods.HandleOperatorName",
+    "ParseUtil.trimSpaces",
+    "TexParser.GetNext"
+  ],
+  "base": "dcdb525519b6a36b83b0eb2af303174e7bae6021",
+  "inputs": 1104,
+  "families": {
+    "body-trim": 360,
+    "following-lookahead": 600,
+    "owner-context": 84,
+    "declared-operator": 16,
+    "dynamic-override": 4,
+    "end-control-space": 16,
+    "real-budget": 12,
+    "d2-witness": 6,
+    "historical-declaration-null-range": 6
+  },
+  "originalCounts": {
+    "validSVG": 838,
+    "errorSVG": 124,
+    "runtime": 142
+  }
+}
