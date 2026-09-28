@@ -225,18 +225,12 @@ func (p *parser) beginEnvironment(name string) ([]*mml.Node, error) {
 			finishAMSMultlineTable(table)
 		} else {
 			prefixRelationColumns(table)
-			if isAMSXAlignAt(environment) {
-				padded := environment != "xxalignat"
-				padAMSXAlignAtRows(table, padded)
-				finishAMSXAlignAtTable(table, padded)
-			} else {
-				resetTableAttributes(table,
-					"displaystyle", true,
-					"columnalign", "right left",
-					"columnspacing", "0em",
-					"rowspacing", "3pt",
-				)
-			}
+			resetTableAttributes(table,
+				"displaystyle", true,
+				"columnalign", "right left",
+				"columnspacing", "0em",
+				"rowspacing", "3pt",
+			)
 		}
 		return []*mml.Node{table}, nil
 	case "CD":
@@ -282,63 +276,6 @@ func (p *parser) readEquationPairCount(environment string) (string, error) {
 
 func isAMSXAlignAt(environment string) bool {
 	return environment == "xalignat" || environment == "xalignat*" || environment == "xxalignat"
-}
-
-// padAMSXAlignAtRows ports FlalignItem.EndRow's padding pass. Xalignat uses
-// fit columns before, between, and after equation pairs; xxalignat does not.
-func padAMSXAlignAtRows(table *mml.Node, padded bool) {
-	if !padded {
-		return
-	}
-	for _, tableRow := range table.Children {
-		cells := make([]*mml.Node, 0, len(tableRow.Children)+3)
-		cells = append(cells, node("mtd", forcedRow(nil, true)))
-		for i, cell := range tableRow.Children {
-			cells = append(cells, cell)
-			if i%2 == 1 {
-				cells = append(cells, node("mtd", forcedRow(nil, true)))
-			}
-		}
-		tableRow.SetChildren(cells)
-	}
-}
-
-// finishAMSXAlignAtTable is AmsMethods.XalignAt followed by FlalignArray's
-// exact arraydef insertion order. D2 uses right-side tags; zero-width labels
-// set minlabelspacing to zero.
-func finishAMSXAlignAtTable(table *mml.Node, padded bool) {
-	columnAlignPattern, columnWidthPattern := []string{"right", "left", "center"}, []string{"auto", "auto", "fit"}
-	if padded {
-		columnAlignPattern, columnWidthPattern = []string{"center", "right", "left"}, []string{"fit", "auto", "auto"}
-	}
-	maxColumns := 0
-	for _, row := range table.Children {
-		if len(row.Children) > maxColumns {
-			maxColumns = len(row.Children)
-		}
-	}
-	resetTableAttributes(table,
-		"width", "100%",
-		"displaystyle", true,
-		"columnalign", repeatAMSColumnPattern(columnAlignPattern, maxColumns),
-		"columnspacing", "0em",
-		"columnwidth", repeatAMSColumnPattern(columnWidthPattern, maxColumns),
-		"rowspacing", "3pt",
-		"side", "right",
-		"minlabelspacing", "0",
-		"data-width-includes-label", true,
-	)
-}
-
-func repeatAMSColumnPattern(pattern []string, count int) string {
-	if count == 0 {
-		return strings.Join(pattern, " ")
-	}
-	columns := make([]string, count)
-	for i := range columns {
-		columns[i] = pattern[i%len(pattern)]
-	}
-	return strings.Join(columns, " ")
 }
 
 // finishAMSMultlineTable ports AmsMethods.Multline's arraydef and

@@ -39,61 +39,13 @@ func (p *parser) baseAMSCommand(name string) (nodes []*mml.Node, handled bool, e
 	return nodes, true, err
 }
 
-// baseAMSEnvironment owns flalign/flalign*, whose row padding is performed by
-// FlalignItem after ordinary alignment cells are complete.
+// baseAMSEnvironment owns the common FlalignItem row and table policy.
 func (p *parser) baseAMSEnvironment(name string) (nodes []*mml.Node, handled bool, err error) {
-	if name != "flalign" && name != "flalign*" {
+	if name != "flalign" && name != "flalign*" && !isAMSXAlignAt(name) {
 		return nil, false, nil
 	}
-	if err := p.checkEquationEnvironment(); err != nil {
-		return nil, true, err
-	}
-	body, err := p.captureEnvironment(name)
-	if err != nil {
-		return nil, true, err
-	}
-	rows := splitTable(body)
-	mrows := make([]*mml.Node, 0, len(rows))
-	for rowIndex, cells := range rows {
-		parsed := make([]*mml.Node, 0, len(cells)+1)
-		for _, raw := range cells {
-			content, err := p.parseArrayCellString(strings.TrimSpace(raw))
-			if err != nil {
-				return nil, true, err
-			}
-			parsed = append(parsed, node("mtd", content))
-		}
-		if omitFinalArrayRow(rowIndex, len(rows), parsed) {
-			continue
-		}
-		padded := make([]*mml.Node, 0, len(parsed)+len(parsed)/2)
-		for len(parsed) != 0 {
-			padded = append(padded, parsed[0])
-			parsed = parsed[1:]
-			if len(parsed) != 0 {
-				padded = append(padded, parsed[0])
-				parsed = parsed[1:]
-			}
-			if len(parsed) != 0 {
-				padded = append(padded, node("mtd"))
-			}
-		}
-		mrows = append(mrows, node("mtr", padded...))
-	}
-	table := node("mtable", mrows...)
-	prefixRelationColumns(table)
-	resetTableAttributes(table,
-		"width", "100%",
-		"displaystyle", true,
-		"columnalign", "right left center right left",
-		"columnspacing", "0em",
-		"columnwidth", "auto auto fit auto auto",
-		"rowspacing", "3pt",
-		"side", "right",
-		"minlabelspacing", "0.8em",
-		"data-width-includes-label", true,
-	)
-	return []*mml.Node{table}, true, nil
+	nodes, err = p.amsFlalignEnvironment(name)
+	return nodes, true, err
 }
 
 func (p *parser) amsGenfrac(name string) ([]*mml.Node, error) {
