@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  preserveAspectRatio="xMinYMin meet" viewBox="0 0 201 96" width="201" height="96"><svg class="d2-2256437147 d2-svg" width="201" height="96" viewBox="-25 -25 201 96"><rect x="-25" y="-25" width="201" height="96" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><style type="text/css"><![CDATA[]]></style><style type="text/css"><![CDATA[.shape {
+  shape-rendering: geometricPrecision;
+  stroke-linejoin: round;
+}
+.connection {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.blend {
+  mix-blend-mode: multiply;
+  opacity: 0.5;
+}
+
+		.d2-2256437147 .fill-N7{fill:#FFFFFF;}
+		.d2-2256437147 .stroke-B2{stroke:#0D32B2;}
+		.d2-2256437147 .color-N1{color:#0A0F25;}.appendix text.text{fill:#0A0F25}.md{--color-fg-default:#0A0F25;--color-fg-muted:#676C7E;--color-fg-subtle:#9499AB;--color-canvas-default:#FFFFFF;--color-canvas-subtle:#EEF1F8;--color-border-default:#0D32B2;--color-border-muted:#0D32B2;--color-neutral-muted:#EEF1F8;--color-accent-fg:#0D32B2;--color-accent-emphasis:#0D32B2;--color-attention-subtle:#676C7E;--color-danger-fg:red;}.light-code{display: block}.dark-code{display: none}]]></style><g class="Zm9ybXVsYQ=="><g class="shape" ></g><g transform="translate(0 0)" color="#0A0F25" class=" color-N1"><svg style="vertical-align: -1.408ex;" xmlns="http://www.w3.org/2000/svg" width="18.762ex" height="5.633ex" role="img" focusable="false" viewBox="0 -1867.5 8292.8 2490"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mstyle" transform="scale(2.49)"><g data-mml-node="mrow"><g data-mml-node="mo"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="mrow" transform="translate(389,0)"></g><g data-mml-node="mo" transform="translate(389,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g></g><g data-mml-node="mi" transform="translate(778,0)"><path data-c="1D431" d="M227 0Q212 3 121 3Q40 3 28 0H21V62H117L245 213L109 382H26V444H34Q49 441 143 441Q247 441 265 444H274V382H246L281 339Q315 297 316 297Q320 297 354 341L389 382H352V444H360Q375 441 466 441Q547 441 559 444H566V382H471L355 246L504 63L545 62H586V0H578Q563 3 469 3Q365 3 347 0H338V62H366Q366 63 326 112T285 163L198 63L217 62H235V0H227Z"></path></g><g data-mml-node="mo" transform="translate(1607.2,0)"><path data-c="2B" d="M64 232T64 250T87 281H416V444Q416 608 418 612Q426 633 446 633T475 613Q477 608 477 444V281H807Q808 280 811 278T817 274T823 269T827 262T829 251Q829 230 807 221L642 220H477V57Q477 -107 475 -112Q468 -131 446 -131Q425 -131 418 -112Q416 -107 416 57V220H251L87 221Q64 232 64 250Z"></path></g><g data-mml-node="mi" transform="translate(2723.4,0)"><path data-c="1D432" d="M84 -102Q84 -110 87 -119T102 -138T133 -149Q148 -148 162 -143T186 -131T206 -114T222 -95T234 -76T243 -59T249 -45T252 -37L269 0L96 382H26V444H34Q49 441 146 441Q252 441 270 444H279V382H255Q232 382 232 380L337 151L442 382H394V444H401Q413 441 495 441Q568 441 574 444H580V382H510L406 152Q298 -84 297 -87Q269 -139 225 -169T131 -200Q85 -200 54 -172T23 -100Q23 -64 44 -50T87 -35Q111 -35 130 -50T152 -92V-100H84V-102Z"></path></g></g></g></g></svg></g></g><mask id="d2-2256437147" maskUnits="userSpaceOnUse" x="-25" y="-25" width="201" height="96">
+<rect x="-25" y="-25" width="201" height="96" fill="white"></rect>
+
+</mask></svg></svg>
