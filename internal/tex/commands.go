@@ -549,15 +549,30 @@ func (p *parser) continuedFraction(name string) ([]*mml.Node, error) {
 }
 
 func (p *parser) sqrt(name string) ([]*mml.Node, error) {
-	index, present, err := p.readBrackets(nil)
+	index, _, err := p.readBrackets(nil)
 	if err != nil {
 		return nil, err
 	}
-	radical, err := p.parseArgument(name)
+	raw, _, err := p.readArgument(name, false)
 	if err != nil {
 		return nil, err
 	}
-	if !present {
+	// BaseMethods.Sqrt collects an immediately following \\frac's two
+	// arguments before creating the child parser for the radicand.
+	if raw == `\frac` {
+		for i := 0; i < 2; i++ {
+			argument, _, err := p.readArgument(name, false)
+			if err != nil {
+				return nil, err
+			}
+			raw += "{" + argument + "}"
+		}
+	}
+	radical, err := p.parseArgumentString(raw)
+	if err != nil {
+		return nil, err
+	}
+	if index == "" {
 		return []*mml.Node{node("msqrt", radical)}, nil
 	}
 	root, err := p.parseRootIndex(index)
