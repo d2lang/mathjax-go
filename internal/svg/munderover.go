@@ -73,7 +73,10 @@ func (w *wrapper) hasMovableLimits() bool {
 }
 
 func (w *wrapper) lineAccent(script *wrapper) bool {
-	return script != nil && nodeText(script.node) == "―"
+	// CommonScriptbase.isLineAccent examines the core token, not all text
+	// descendants of a non-embellished script row.
+	core := movableLimitCore(script)
+	return core != nil && core.node.Flags.Token && nodeText(core.node) == "―"
 }
 
 // CommonScriptbase records the first under/over accent below transparent

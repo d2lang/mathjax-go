@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  preserveAspectRatio="xMinYMin meet" viewBox="0 0 171 134" width="171" height="134"><svg class="d2-215299191 d2-svg" width="171" height="134" viewBox="-25 -25 171 134"><rect x="-25" y="-25" width="171" height="134" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><style type="text/css"><![CDATA[]]></style><style type="text/css"><![CDATA[.shape {
+  shape-rendering: geometricPrecision;
+  stroke-linejoin: round;
+}
+.connection {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.blend {
+  mix-blend-mode: multiply;
+  opacity: 0.5;
+}
+
+		.d2-215299191 .fill-N7{fill:#FFFFFF;}
+		.d2-215299191 .stroke-B2{stroke:#0D32B2;}
+		.d2-215299191 .color-N1{color:#0A0F25;}.appendix text.text{fill:#0A0F25}.md{--color-fg-default:#0A0F25;--color-fg-muted:#676C7E;--color-fg-subtle:#9499AB;--color-canvas-default:#FFFFFF;--color-canvas-subtle:#EEF1F8;--color-border-default:#0D32B2;--color-border-muted:#0D32B2;--color-neutral-muted:#EEF1F8;--color-accent-fg:#0D32B2;--color-accent-emphasis:#0D32B2;--color-attention-subtle:#676C7E;--color-danger-fg:red;}.light-code{display: block}.dark-code{display: none}]]></style><g class="Zm9ybXVsYQ=="><g class="shape" ></g><g transform="translate(0 0)" color="#0A0F25" class=" color-N1"><svg style="vertical-align: -2.169ex;" xmlns="http://www.w3.org/2000/svg" width="15.019ex" height="10.442ex" role="img" focusable="false" viewBox="0 -3656.8 6638.3 4615.4"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mstyle" transform="scale(2.49)"><g data-mml-node="TeXAtom" data-mjx-texclass="ORD"><g data-mml-node="TeXAtom" data-mjx-texclass="ORD"><g data-mml-node="mover"><g data-mml-node="TeXAtom" data-mjx-texclass="ORD"><g data-mml-node="mi"><path data-c="54" d="M49 475Q34 475 34 490Q34 552 106 611T261 681Q272 683 507 683H742Q790 717 816 717Q833 717 833 708Q833 682 795 653T714 615Q691 610 588 609Q490 609 490 607L483 580Q476 554 462 496T435 392Q410 289 395 231T363 116T335 34T309 -15T279 -47T242 -64Q231 -68 218 -68Q203 -68 203 -57Q203 -52 211 -38Q224 -7 234 20T251 66T268 123T283 179T304 261T328 360Q342 415 360 488Q380 567 384 582T397 605Q400 607 401 609H302H244Q200 609 188 607T167 596Q145 572 145 541Q145 520 109 498T49 475Z"></path></g></g><g data-mml-node="mo" transform="translate(516.3,674.6) translate(-250 0)"><path data-c="5E" d="M112 560L249 694L257 686Q387 562 387 560L361 531Q359 532 303 581L250 627L195 580Q182 569 169 557T148 538L140 532Q138 530 125 546L112 560Z"></path></g></g></g><g data-mml-node="mstyle" transform="translate(833,0)"><g data-mml-node="mspace"></g></g><g data-mml-node="munder" transform="translate(1833,0)"><g data-mml-node="TeXAtom" data-mjx-texclass="ORD"><g data-mml-node="mi"><path data-c="54" d="M49 475Q34 475 34 490Q34 552 106 611T261 681Q272 683 507 683H742Q790 717 816 717Q833 717 833 708Q833 682 795 653T714 615Q691 610 588 609Q490 609 490 607L483 580Q476 554 462 496T435 392Q410 289 395 231T363 116T335 34T309 -15T279 -47T242 -64Q231 -68 218 -68Q203 -68 203 -57Q203 -52 211 -38Q224 -7 234 20T251 66T268 123T283 179T304 261T328 360Q342 415 360 488Q380 567 384 582T397 605Q400 607 401 609H302H244Q200 609 188 607T167 596Q145 572 145 541Q145 520 109 498T49 475Z"></path></g></g><g data-mml-node="mo" transform="translate(0,-533)"><svg width="833" height="237" x="0" y="148" viewBox="208.2 148 833 237"><path data-c="2013" d="M0 248V285H499V248H0Z" transform="scale(2.499,1)"></path></svg></g></g></g></g></g></g></svg></g></g><mask id="d2-215299191" maskUnits="userSpaceOnUse" x="-25" y="-25" width="171" height="134">
+<rect x="-25" y="-25" width="171" height="134" fill="white"></rect>
+
+</mask></svg></svg>
