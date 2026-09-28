@@ -128,13 +128,6 @@ func (p *parser) amsAlignment(environment string) (nodes []*mml.Node, err error)
 	}
 
 	table := node("mtable", mrows...)
-	if environment == "gather" || environment == "gather*" {
-		// EqnArrayItem.EndEntry repairs an initial relation in every entry
-		// after the first, including additional authored gather columns.
-		prefixEquationRelationColumns(table, 1)
-	} else {
-		prefixRelationColumns(table)
-	}
 	for i, tag := range tags {
 		if tag == nil {
 			continue

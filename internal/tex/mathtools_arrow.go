@@ -30,6 +30,9 @@ func newEquationTableState(appendRow func(*mml.Node) error) *equationTableState 
 }
 
 func (state *equationRowState) endEntry(nodes []*mml.Node) {
+	if len(state.entries) != 0 {
+		nodes = fixInitialMO(nodes)
+	}
 	state.entries = append(state.entries, node("mtd", matrixCellContent(nodes)))
 }
 
@@ -241,9 +244,6 @@ func (p *parser) parseEquationTable(body, environment string) (*mml.Node, *equat
 		}
 	}
 	table := node("mtable", mrows...)
-	if !strings.Contains(environment, "gather") {
-		prefixRelationColumns(table)
-	}
 	for i, tag := range tags {
 		if tag != nil {
 			table.Children[i] = node("mlabeledtr", append([]*mml.Node{tag}, table.Children[i].Children...)...)

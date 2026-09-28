@@ -243,7 +243,7 @@ func (p *parser) beginEnvironment(name string) ([]*mml.Node, error) {
 			finishAMSMultlineTable(table)
 		} else {
 			if !isEquationArray(environment) {
-				prefixRelationColumns(table)
+				fixInitialArrayOperators(table, 0, 1)
 			}
 			resetTableAttributes(table,
 				"displaystyle", true,
@@ -302,6 +302,7 @@ func isAMSXAlignAt(environment string) bool {
 // finishAMSMultlineTable ports AmsMethods.Multline's arraydef and
 // MultlineItem.EndTable's default first/last row alignment.
 func finishAMSMultlineTable(table *mml.Node) {
+	fixInitialArrayOperators(table, 1, 0)
 	alignAMSMultlineCells(table)
 	resetTableAttributes(table,
 		"displaystyle", true,
@@ -326,31 +327,6 @@ func alignAMSMultlineCells(table *mml.Node) {
 		lastCell := lastRow.Children[len(lastRow.Children)-1]
 		if _, explicit := lastCell.Attributes.GetExplicit("columnalign"); !explicit {
 			lastCell.Attributes.Set("columnalign", "right")
-		}
-	}
-}
-
-func prefixRelationColumns(table *mml.Node) {
-	prefixEquationRelationColumns(table, 2)
-}
-
-func prefixEquationRelationColumns(table *mml.Node, step int) {
-	for _, tableRow := range table.Children {
-		for column := 1; column < len(tableRow.Children); column += step {
-			cell := tableRow.Children[column]
-			if len(cell.Children) == 0 {
-				continue
-			}
-			contents := cell.Children[0]
-			if contents.Kind != "mrow" || !contents.Flags.Inferred || len(contents.Children) == 0 {
-				continue
-			}
-			first := contents.Children[0]
-			if first.Kind != "mo" || first.TeXClass != mml.TeXClassRel {
-				continue
-			}
-			empty := node("mi")
-			contents.SetChildren(append([]*mml.Node{empty}, contents.Children...))
 		}
 	}
 }

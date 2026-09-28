@@ -136,9 +136,6 @@ func (p *parser) amsFlalignEnvironment(name string) ([]*mml.Node, error) {
 			continue
 		}
 		row := node("mtr", entries...)
-		// Preserve the existing initial-relation policy on authored columns;
-		// fit cells are inserted only after ordinary entry processing.
-		prefixRelationColumns(node("mtable", row))
 		layout.endRow(row)
 		tag, err := tags.getTag(p)
 		if err != nil {
@@ -170,6 +167,9 @@ func (p *parser) parseFlalignEntries(cells []string, final bool, layout *amsFlal
 		}
 		if !sub.cdEntryStopped && final && len(children) == 0 && len(entries) == 0 {
 			return nil, nil
+		}
+		if len(entries) != 0 {
+			children = fixInitialMO(children)
 		}
 		entries = append(entries, node("mtd", matrixCellContent(children)))
 		// The declared-count check precedes parsing the following cell.
