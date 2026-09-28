@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 //
 // This file is a Go translation and modification of MathJax 3.2.2.
-// Sources: ts/input/tex/ams/AmsMethods.ts (AlignAt),
+// Sources: ts/input/tex/ams/AmsMethods.ts (AlignAt, AmsEqnArray),
 // base/BaseMethods.ts (EqnArray), and ParseUtil.ts (setArrayAlign).
 
 package tex
@@ -14,7 +14,7 @@ import (
 	"github.com/d2lang/mathjax-go/internal/mml"
 )
 
-func (p *parser) readAlignedatAlignment() (string, error) {
+func (p *parser) readArrayAlignment() (string, error) {
 	align, _, err := p.readBrackets(nil)
 	var failure *Error
 	if errors.As(err, &failure) && failure.ID == "MissingCloseBracket" {
@@ -35,9 +35,13 @@ func finishAlignedatTable(table *mml.Node, count, verticalAlign string, maximum 
 	table.Attributes.Set("columnalign", repeatAMSEqnArrayDefinition(align, maximum))
 	table.Attributes.Set("columnspacing", repeatAMSEqnArrayDefinition(spacing, maximum-1))
 
+	setArrayAlign(table, verticalAlign)
+}
+
+func setArrayAlign(table *mml.Node, verticalAlign string) {
 	// ParseUtil.trimSpaces uses JavaScript whitespace and preserves the last
 	// control-space before setArrayAlign interprets t/b/c.
-	align = strings.TrimFunc(verticalAlign, internalTextSpace)
+	align := strings.TrimFunc(verticalAlign, internalTextSpace)
 	if strings.HasSuffix(align, `\`) && strings.HasSuffix(verticalAlign, " ") {
 		align += " "
 	}

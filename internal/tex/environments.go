@@ -117,6 +117,14 @@ func (p *parser) beginEnvironment(name string) ([]*mml.Node, error) {
 			return nil, err
 		}
 	}
+	verticalAlign := ""
+	if environment == "gathered" || environment == "lgathered" || environment == "rgathered" {
+		// AmsEqnArray consumes its optional position before parsing the body.
+		verticalAlign, err = p.readArrayAlignment()
+		if err != nil {
+			return nil, err
+		}
+	}
 	if isGuardedEquationEnvironment(environment) {
 		if err := p.checkEquationEnvironment(); err != nil {
 			return nil, err
@@ -252,6 +260,7 @@ func (p *parser) beginEnvironment(name string) ([]*mml.Node, error) {
 				"rowspacing", "3pt",
 			)
 		}
+		setArrayAlign(table, verticalAlign)
 		spacing.applySpacing(table)
 		return []*mml.Node{table}, nil
 	case "CD":
