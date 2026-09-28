@@ -54,7 +54,8 @@ var MathSpace = map[string]float64{
 	"infinity":                       BigDimen,
 }
 
-var lengthPattern = regexp.MustCompile(`^\s*([-+]?(?:\.\d+|\d+(?:\.\d*)?))?(pt|em|ex|mu|px|pc|in|mm|cm|%)?`)
+// JavaScript's \s includes Unicode space separators and BOM, but not NEL.
+var lengthPattern = regexp.MustCompile(`^[\t-\r \x{00a0}\x{1680}\x{2000}-\x{200a}\x{2028}\x{2029}\x{202f}\x{205f}\x{3000}\x{feff}]*([-+]?(?:\.\d+|\d+(?:\.\d*)?))?(pt|em|ex|mu|px|pc|in|mm|cm|%)?`)
 
 // Length2Em converts a MathML dimension into ems with MathJax 3.2.2's
 // permissive prefix parsing.

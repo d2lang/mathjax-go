@@ -8,9 +8,9 @@ package tex
 
 import (
 	"regexp"
-	"strconv"
 	"strings"
 
+	"github.com/d2lang/mathjax-go/internal/layout"
 	"github.com/d2lang/mathjax-go/internal/mml"
 )
 
@@ -77,7 +77,7 @@ func (p *parser) mathtoolsUnderOverBracket(name string) ([]*mml.Node, error) {
 	if err != nil {
 		return nil, err
 	}
-	t := mathtoolsEm(thickness, .1)
+	t := layout.Em(layout.Length2Em(thickness, .1, 1, 16))
 	script := node("mpadded", node("mphantom", copy))
 	border := "bottom"
 	kind, accent := "mover", "accent"
@@ -96,19 +96,6 @@ func (p *parser) mathtoolsUnderOverBracket(name string) ([]*mml.Node, error) {
 	stack.SetProperty("movesupsub", true)
 	stack.SetProperty("subsupOK", true)
 	return []*mml.Node{stack}, nil
-}
-
-func mathtoolsEm(value string, fallback float64) string {
-	value = strings.TrimSpace(value)
-	if strings.HasSuffix(value, "em") {
-		if number, err := strconv.ParseFloat(strings.TrimSpace(strings.TrimSuffix(value, "em")), 64); err == nil {
-			return emLength(number)
-		}
-	}
-	if number, err := strconv.ParseFloat(value, 64); err == nil {
-		return emLength(number)
-	}
-	return emLength(fallback)
 }
 
 func (p *parser) mathtoolsDeclarePairedDelimiter(name string) error {

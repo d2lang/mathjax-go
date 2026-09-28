@@ -529,3 +529,9 @@ empty and unbraced operands, parentheses, and rendered errors. Six retained
 Differential references now assert their untouched primary results. Regenerate
 the new corpus with `node testdata/generate_differential_construction.cjs
 PINNED_ASSETS`.
+
+### Mathtools bracket thickness
+
+Mathtools over/underbracket thickness uses the original length conversion for
+physical, font-relative and percentage units. Complete original SVG cases and
+reproduction instructions are in `testdata/bracket_thickness_README.md`.
