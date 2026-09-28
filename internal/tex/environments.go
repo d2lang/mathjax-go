@@ -652,11 +652,13 @@ func (p *parser) parseCD(body string) ([]*mml.Node, error) {
 	rows := splitCDRows(body)
 	var mrows []*mml.Node
 	for rowIndex, raw := range rows {
-		cells, err := p.parseCDRow(raw, rowIndex)
+		cells, err := p.parseCDRow(raw, rowIndex, rowIndex == len(rows)-1)
 		if err != nil {
 			return nil, err
 		}
-		mrows = append(mrows, node("mtr", cells...))
+		if len(cells) != 0 {
+			mrows = append(mrows, node("mtr", cells...))
+		}
 	}
 	table := node("mtable", mrows...)
 	table.Attributes.Set("columnspacing", "5pt")
@@ -674,70 +676,77 @@ func splitCDRows(body string) []string {
 	return result
 }
 
-func (p *parser) parseCDRow(raw string, rowIndex int) ([]*mml.Node, error) {
+type cdCellEnd struct {
+	firstObjectCell bool
+}
+
+func (p *parser) parseCDRow(raw string, rowIndex int, final bool) ([]*mml.Node, error) {
 	var cells []*mml.Node
 	position := 0
 	objectRow := rowIndex%2 == 0
 	for position < len(raw) {
-		at := strings.IndexByte(raw[position:], '@')
+		at := position
+		for {
+			next := strings.IndexByte(raw[at:], '@')
+			if next < 0 {
+				at = -1
+				break
+			}
+			at += next
+			if at+1 < len(raw) && strings.ContainsRune("><VA.|=", rune(raw[at+1])) {
+				break
+			}
+			// AmsCdMethods.arrow delegates an ordinary @ to Other;
+			// it does not close a cell or add alignment padding.
+			at++
+		}
 		if at < 0 {
 			break
 		}
-		at += position
 		prefix := strings.TrimSpace(raw[position:at])
-		if prefix != "" {
-			contents, err := p.parseContinuationString(prefix)
-			if err != nil {
-				return nil, err
-			}
-			if objectRow && len(cells) == 0 {
-				contents = appendToRow(contents, cdStrut())
-			}
-			cells = appendCDCellContents(cells, contents, objectRow)
+		// Parse the pending cell before delivering the Cell item. The
+		// continuation can tell whether a style or another stack item owns
+		// the closing boundary, rather than the underlying ArrayItem.
+		end := &cdCellEnd{firstObjectCell: objectRow && len(cells) == 0}
+		contents, err := p.parseStringWithStackCDCell(prefix, p.ensureStackGlobal(), end)
+		if err != nil {
+			return nil, err
+		}
+		if !emptyCDContents(contents) {
+			cells = append(cells, node("mtd", contents))
+		}
+		// AmsCdMethods.arrow closes enough empty cells to place arrows in
+		// odd columns on object rows and even columns on arrow rows.
+		if (len(cells)%2 == 0) == objectRow {
+			cells = append(cells, node("mtd"))
 		}
 		arrow, next, err := p.parseCDArrow(raw, at)
 		if err != nil {
 			return nil, err
 		}
 		cells = append(cells, node("mtd", arrow))
-		if !objectRow {
-			cells = append(cells, node("mtd"))
-		}
 		position = next
 	}
+	contents := forcedRow(nil, true)
 	tail := strings.TrimSpace(raw[position:])
 	if tail != "" {
-		contents, err := p.parseContinuationString(tail)
+		var err error
+		contents, err = p.parseContinuationString(tail)
 		if err != nil {
 			return nil, err
 		}
-		if objectRow && len(cells) == 0 {
-			contents = appendToRow(contents, cdStrut())
-		}
-		cells = appendCDCellContents(cells, contents, objectRow)
 	}
-	if len(cells) == 0 {
-		cells = append(cells, node("mtd"))
+	// EndRow always closes the pending cell. EndTable does so only if the
+	// row has nodes or already-closed cells; explicit empty groups and
+	// leaf mspace nodes still count as content.
+	if !final || len(cells) != 0 || !emptyCDContents(contents) {
+		cells = append(cells, node("mtd", contents))
 	}
 	return cells, nil
 }
 
-// AmsCdMethods.arrow ends every arrow with a Cell item.  On an arrow row that
-// leaves an active empty cell between alternating vertical-arrow columns.  TeX
-// following the arrow fills that cell; only another immediate @ command (or
-// the row end) commits it empty.  Preserve that stack behavior instead of
-// appending the following object after the placeholder.
-func appendCDCellContents(cells []*mml.Node, contents *mml.Node, objectRow bool) []*mml.Node {
-	if !objectRow && len(cells) != 0 {
-		last := cells[len(cells)-1]
-		if last.Kind == "mtd" && len(last.Children) == 1 &&
-			last.Children[0].Kind == "mrow" && last.Children[0].Flags.Inferred &&
-			len(last.Children[0].Children) == 0 {
-			cells[len(cells)-1] = node("mtd", contents)
-			return cells
-		}
-	}
-	return append(cells, node("mtd", contents))
+func emptyCDContents(contents *mml.Node) bool {
+	return contents.Kind == "mrow" && contents.Flags.Inferred && len(contents.Children) == 0
 }
 
 func cdStrut() *mml.Node {
@@ -745,14 +754,6 @@ func cdStrut() *mml.Node {
 	strut.Attributes.Set("height", "8.5pt")
 	strut.Attributes.Set("depth", "2pt")
 	return strut
-}
-
-func appendToRow(contents, child *mml.Node) *mml.Node {
-	if contents.Kind == "mrow" && contents.Flags.Inferred {
-		contents.AppendChild(child)
-		return contents
-	}
-	return forcedRow([]*mml.Node{contents, child}, true)
 }
 
 func (p *parser) parseCDArrow(raw string, at int) (*mml.Node, int, error) {
