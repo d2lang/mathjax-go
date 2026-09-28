@@ -124,7 +124,7 @@ var functionNames = func() map[string]string {
 		"liminf": "lim\u2006inf", "limsup": "lim\u2006sup", "ln": "ln", "log": "log",
 		"max": "max", "min": "min", "Pr": "Pr", "sec": "sec", "sin": "sin",
 		"sinh": "sinh", "sup": "sup", "tan": "tan", "tanh": "tanh",
-		"injlim": "inj lim", "projlim": "proj lim", "varliminf": "lim inf", "varlimsup": "lim sup",
+		"injlim": "inj lim", "projlim": "proj lim",
 	}
 	// Physics' long spellings use BaseMethods.NamedFn with an explicit id.
 	// They do not use Expression's optional exponent or automatic fences.
@@ -159,6 +159,12 @@ var simpleMacros = map[string]string{
 	"sPmqty": "\\smqty*(#1)",
 	"sbmqty": "\\smqty[#1]",
 	"svmqty": "\\smqty|#1|",
+
+	// AMS variable limits expand through the active decoration and token maps.
+	"varliminf":  "\\mathop{\\underline{\\mmlToken{mi}{lim}}}",
+	"varlimsup":  "\\mathop{\\overline{\\mmlToken{mi}{lim}}}",
+	"varinjlim":  "\\mathop{\\underrightarrow{\\mmlToken{mi}{lim}}}",
+	"varprojlim": "\\mathop{\\underleftarrow{\\mmlToken{mi}{lim}}}",
 
 	"boxed":     "\\fbox{$\\displaystyle{#1}$}",
 	"Residue":   "\\mathrm{Res}",
