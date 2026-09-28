@@ -75,5 +75,8 @@ node --jitless testdata/generate_nonscript.cjs /path/to/pinned-assets
 The generator verifies all three asset SHA-256 hashes and creates a fresh
 original VM per expression. It never runs Go or substitutes candidate output.
 Both reference files regenerate byte-identically from the frozen bundle.
-Full repository gates are recorded after the prerequisite is merged and the
-final base is known.
+On merged main144, the full frozen-oracle suite, race tests, vet, and
+WebAssembly build all pass. The rebased production source is identical to
+the independently reviewed composed main143 candidate; no gate repair or
+reference substitution was needed. Both reference files were regenerated
+again after recording the merged baseline and remained byte-identical.
