@@ -1,9 +1,9 @@
 # Array HFill alignment
 
-`hfill_mathjax_3_2_2.json` contains 2,112 complete, unmodified SVG responses
+`hfill_mathjax_3_2_2.json` contains 2,328 complete, unmodified SVG responses
 from D2's frozen MathJax 3.2.2 bundle, upstream commit
-`ad8f5c21cb810236551da8c6512ba733e67357ee`. There are 1,682 valid expressions
-and 430 original error SVGs. Each expression uses a fresh VM with the
+`ad8f5c21cb810236551da8c6512ba733e67357ee`. There are 1,886 valid expressions
+and 442 original error SVGs. Each expression uses a fresh VM with the
 original D2 setup, `em=16`, `ex=8`, no font cache, and its recorded display
 mode. The generator verifies the three asset hashes stored in the fixture.
 No reference is synthesized by Go or normalized before comparison.
@@ -38,8 +38,8 @@ strut also counts as a real node. Explicit `&` entries clear both lexical
 state and fill positions. These rules preserve leading, trailing, repeated,
 and empty fills around every arrow form and both row types.
 
-All 2,112 SVG references match exactly. Compared with baseline main
-`6a7adcd1c6cce9df99b3363d40f22c2f68857fd5`, 2,036 fail and 76 already match.
+All 2,328 SVG references match exactly. Compared with baseline main
+`3f16eb233d573625bc180b2807fb9e31370e2fd9`, 2,252 fail and 76 already match.
 The corpus covers all three spellings; leading, trailing, interior and
 repeated fills; multiple cells and rows; explicit and generated matrices;
 AMS/Mathtools arrays; fonts; empty entries; nested scopes; command arguments;
@@ -51,7 +51,7 @@ additional unique inputs beyond the new sweep. Their historical receipts
 remain unchanged.
 
 `hfill_residuals.json` preserves 106 other valid-original observations from
-the complete 2,218-input inventory, including raw original, baseline, and
+the complete 2,434-input inventory, including raw original, baseline, and
 candidate outputs. None was previously exact. Matching no-HFill controls
 identify the independent gaps: 36 no-node final environment rows, 20
 alignedat/flalign layout cases, 20 unsupported eqnarray environment cases,
@@ -68,3 +68,9 @@ Regenerate both inventories with
 The checked-in input inventory is fixed; the generator does not consult or
 filter on candidate results. Workers use batches of 24 fresh VMs. Run
 `go test ./... -run TestHFillReferences`.
+
+An independent review matched all 188 fresh original comparisons, including
+180 previously failing cases. Another 216 fresh compositions with the merged
+Physics operator applications match exactly and are included in the primary
+fixture; all 216 differ from main126. The original 106 residual receipts are
+retained unchanged and remain unchanged on the main126 baseline.
