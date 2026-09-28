@@ -1010,10 +1010,11 @@ func (p *parser) readArgumentAtCursor(name string, noneOK bool) (string, bool, e
 		return p.source[start:end], true, nil
 	}
 	if p.source[p.pos] == '\\' {
-		start := p.pos
 		p.pos++
-		p.readControlSequence()
-		return p.source[start:p.pos], false, nil
+		// GetArgument returns the control-sequence value, not the consumed
+		// source bytes. GetCS discards its delimiter space and returns a
+		// control space for a backslash at EOF.
+		return "\\" + p.readControlSequence(), false, nil
 	}
 	start := p.pos
 	p.consumeRune()
