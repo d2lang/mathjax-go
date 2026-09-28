@@ -341,6 +341,9 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 				switch {
 				case pending != nil:
 					parts := []*mml.Node{pending.base, pending.prime}
+					if err := mathtoolsSpreadPending(parts); err != nil {
+						return nil, "", err
+					}
 					pending = nil
 					appendNodes(parts, false)
 				case bool(negation):
@@ -350,19 +353,36 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 				case nonscript:
 					nonscript = false
 				case pendingFunction:
+					if err := mathtoolsSpreadPending(nodes[len(nodes)-1:]); err != nil {
+						return nil, "", err
+					}
 					pendingFunction = false
 					reducePositions()
 				case len(positions) != 0 && positions[len(positions)-1].styleDepth == len(styles):
+					if err := mathtoolsSpreadPending(nodes); err != nil {
+						return nil, "", err
+					}
 					frame := positions[len(positions)-1]
 					positions = positions[:len(positions)-1]
 					nodes = append(frame.prefix, nodes...)
 					reducePositions()
 				case len(styles) != 0:
+					if err := mathtoolsSpreadPending(nodes); err != nil {
+						return nil, "", err
+					}
 					frame := styles[len(styles)-1]
 					styles = styles[:len(styles)-1]
 					nodes = append(frame.prefix, nodes...)
 					reducePositions()
 				case infixPending || terminator != 0 || stopRight || auto != nil || owner != nil:
+					// Braket and AutoOpen override toMml with an explicit
+					// fenced row. Their caller checks that completed result;
+					// an Over above either still owns these raw nodes.
+					if infixPending || auto == nil && owner == nil {
+						if err := mathtoolsSpreadPending(nodes); err != nil {
+							return nil, "", err
+						}
+					}
 					p.environmentPopped = true
 					return nodes, "", nil
 				case p.environmentRow != nil:

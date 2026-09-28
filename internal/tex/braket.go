@@ -43,7 +43,8 @@ func (p *parser) braket(name string) ([]*mml.Node, error) {
 	if err != nil {
 		return nil, err
 	}
-	if p.environmentPopped {
+	popped := p.environmentPopped
+	if popped {
 		// SpreadLines calls the popped BraketItem's toMml(), which still
 		// constructs its fences even without a matching close item.
 		p.environmentPopped = false
@@ -64,6 +65,11 @@ func (p *parser) braket(name string) ([]*mml.Node, error) {
 	result := item.singleFence
 	if result == nil {
 		result = p.leftRightFenced(open, row(children, true), close, item.stretchy)
+	}
+	if popped {
+		if err := mathtoolsSpreadPop(result, nil); err != nil {
+			return nil, err
+		}
 	}
 	return append([]*mml.Node{result}, tail...), nil
 }

@@ -151,6 +151,11 @@ func (a *derivativeAutoOpen) completeAfter(p *parser, before func()) ([]*mml.Nod
 	// Removing the texClass property retains the class assigned by fenced.
 	result := forcedRow(children, false)
 	result.TeXClass = mml.TeXClassInner
+	if popped {
+		if err := mathtoolsSpreadPop(result, nil); err != nil {
+			return nil, err
+		}
+	}
 	return []*mml.Node{result}, nil
 }
 
