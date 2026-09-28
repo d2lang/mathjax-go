@@ -1,0 +1,14 @@
+{
+  "baseline": "2f39558e522906da2ab6fac6e4060b90736d3a99",
+  "counts": {
+    "first-published-input": 978,
+    "prior-full-reference": 554,
+    "prior-raw-promotion": 4
+  },
+  "inputs": 1536,
+  "scannedFiles": 405,
+  "originalMismatches": [],
+  "ambiguousOnly": 0,
+  "actualMergedBaseline": "2f39558e522906da2ab6fac6e4060b90736d3a99",
+  "renderingBaseline": "2f39558e522906da2ab6fac6e4060b90736d3a99"
+}
