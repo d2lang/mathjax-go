@@ -1,0 +1,11 @@
+{
+  "candidateEqualsOriginalSVG": true,
+  "rootWidth": "100%",
+  "candidateD2Error": "mathjax-go: SVG dimensions not found",
+  "originalAdapterD2Error": "no SVG dimensions",
+  "historicalD2Source": "https://github.com/d2lang/d2/blob/5666d9337c77a4803b9cd60cb1c5a24439d0f949/d2renderers/d2latex/latex_common.go",
+  "historicalD2SourceSHA256": "5ab2634a808975061224e384029042e1a9d94688b1cc0e421868fffdee01385e",
+  "historicalD2DimensionRegex": "<svg[^>]+width=\"([0-9\\.]+)ex\" height=\"([0-9\\.]+)ex\"[^>]+>",
+  "historicalRegexMatches": 0,
+  "scope": "Direct MathJax SVGs match exactly. Both the historical D2 measurement contract and current Go Measure require fixed ex dimensions and reject this percentage-width tagged result."
+}
