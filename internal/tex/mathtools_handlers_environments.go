@@ -264,7 +264,9 @@ func (p *parser) mathtoolsAlignment(environment string) ([]*mml.Node, error) {
 		}
 	}
 	if strings.Contains(environment, "alignat") {
-		if _, err := p.readEquationPairCount(environment); err != nil {
+		var err error
+		pairCount, err = p.readEquationPairCount(environment)
+		if err != nil {
 			return nil, err
 		}
 	}
@@ -284,7 +286,14 @@ func (p *parser) mathtoolsAlignment(environment string) ([]*mml.Node, error) {
 	// Keep their special rows and the same row-local tag lifetime; alignedat
 	// remains untaggable even when a Mathtools command triggers this route.
 	var tagState *amsTagState
-	if environment == "gather" || environment == "gather*" || environment == "alignedat" {
+	var flalign *amsFlalignLayout
+	if isAMSXAlignAt(environment) || environment == "flalign" || environment == "flalign*" {
+		flalign = newAMSFlalignLayout(environment, pairCount)
+		tagState = p.amsTags()
+		numbered := environment == "xalignat" || environment == "flalign"
+		tagState.start(environment, numbered, numbered)
+		defer tagState.end()
+	} else if environment == "gather" || environment == "gather*" || environment == "alignedat" {
 		tagState = p.amsTags()
 		tagState.start(environment, environment != "alignedat", environment == "gather")
 		defer tagState.end()
@@ -293,12 +302,24 @@ func (p *parser) mathtoolsAlignment(environment string) ([]*mml.Node, error) {
 	mrows := make([]*mml.Node, 0, len(rows)+1)
 	rowTags := make(map[*mml.Node]*mml.Node)
 	appendRows := func(rows ...*mml.Node) error {
+		if flalign != nil {
+			for _, row := range rows {
+				if err := flalign.endEntry(len(row.Children)); err != nil {
+					return err
+				}
+				prefixRelationColumns(node("mtable", row))
+				flalign.endRow(row)
+			}
+		}
 		if tagState != nil {
 			tag, err := tagState.getTag(p)
 			if err != nil {
 				return err
 			}
 			if tag != nil {
+				if flalign != nil {
+					tag = flalign.label(tag)
+				}
 				rowTags[rows[0]] = tag
 			}
 			tagState.clearTag()
@@ -452,6 +473,11 @@ func (p *parser) mathtoolsAlignment(environment string) ([]*mml.Node, error) {
 				return nil, err
 			}
 			mtds = append(mtds, node("mtd", content))
+			if flalign != nil {
+				if err := flalign.endEntry(len(mtds)); err != nil {
+					return nil, err
+				}
+			}
 		}
 		if omitFinalArrayRow(rowIndex, len(rows), mtds) {
 			continue
@@ -462,7 +488,9 @@ func (p *parser) mathtoolsAlignment(environment string) ([]*mml.Node, error) {
 	}
 	table := node("mtable", mrows...)
 	if tagState != nil {
-		prefixEquationRelationColumns(table, 1)
+		if flalign == nil {
+			prefixEquationRelationColumns(table, 1)
+		}
 		for i, row := range table.Children {
 			if tag := rowTags[row]; tag != nil {
 				table.Children[i] = node("mlabeledtr", append([]*mml.Node{tag}, row.Children...)...)
@@ -470,7 +498,9 @@ func (p *parser) mathtoolsAlignment(environment string) ([]*mml.Node, error) {
 			}
 		}
 	}
-	if strings.Contains(environment, "gather") {
+	if flalign != nil {
+		flalign.endTable(table)
+	} else if strings.Contains(environment, "gather") {
 		resetTableAttributes(table,
 			"displaystyle", true,
 			"columnalign", "center",
@@ -481,21 +511,15 @@ func (p *parser) mathtoolsAlignment(environment string) ([]*mml.Node, error) {
 		)
 	} else {
 		prefixRelationColumns(table)
-		if isAMSXAlignAt(environment) {
-			padded := environment != "xxalignat"
-			padAMSXAlignAtRows(table, padded)
-			finishAMSXAlignAtTable(table, padded)
-		} else {
-			maximumColumns := 0
-			for _, row := range table.Children {
-				if len(row.Children) > maximumColumns {
-					maximumColumns = len(row.Children)
-				}
+		maximumColumns := 0
+		for _, row := range table.Children {
+			if len(row.Children) > maximumColumns {
+				maximumColumns = len(row.Children)
 			}
-			finishAMSEqnArrayTable(table, environment, maximumColumns)
-			if environment == "alignedat" {
-				finishAlignedatTable(table, pairCount, verticalAlign, maximumColumns)
-			}
+		}
+		finishAMSEqnArrayTable(table, environment, maximumColumns)
+		if environment == "alignedat" {
+			finishAlignedatTable(table, pairCount, verticalAlign, maximumColumns)
 		}
 	}
 	if len(adjustedRowSpacing) != 0 {

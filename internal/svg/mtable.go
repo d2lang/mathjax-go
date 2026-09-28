@@ -254,7 +254,6 @@ func newTableLayout(w *wrapper) *tableLayout {
 	t.stretchColumns()
 	t.computed = t.computedWidths()
 	t.measureTable()
-	t.resolveTopPercentageWidth()
 	return t
 }
 
@@ -276,19 +275,6 @@ func findTableContainer(w *wrapper) (*wrapper, int) {
 		}
 	}
 	return parent, 0
-}
-
-// resolveTopPercentageWidth ports the top-level setChildPWidths pass made by
-// SVGmath.  html.convert() supplies a default containerWidth of 80ex; after
-// division by the output jax's pxPerEm that is 80*x_height in MathJax layout
-// ems.  The initial natural-width stretch pass above intentionally happens
-// before percentage columns are finalized, matching CommonMtable's lifecycle.
-func (t *tableLayout) resolveTopPercentageWidth() {
-	width := tableString("width", t.table)
-	if !t.isTop || !tableIsPercent(width) {
-		return
-	}
-	t.resolvePercentageWidth(80 * t.table.renderer.params.XHeight)
 }
 
 // resolvePercentageWidth is CommonMtable.setChildPWidths().  A nested table's
@@ -322,6 +308,8 @@ func (t *tableLayout) resolvePercentageWidth(containerWidth float64) {
 	t.pWidth = t.width
 	if !t.isTop {
 		t.width = naturalWidth
+	} else {
+		t.table.bbox.W = t.pWidth
 	}
 	t.resolved = true
 	if !t.hasLabels {
@@ -329,6 +317,9 @@ func (t *tableLayout) resolvePercentageWidth(containerWidth float64) {
 		if t.container != nil {
 			t.container.bbox.PWidth = ""
 		}
+	}
+	if t.pWidth != naturalWidth && t.table.parent != nil {
+		t.table.parent.invalidateBBox()
 	}
 }
 
@@ -985,9 +976,8 @@ func (t *tableLayout) measureTable() {
 	t.left, t.right = t.labelLR()
 }
 
-// computeTableBBox ports CommonMtable.computeBBox. Top-level percentage widths
-// have already been resolved against html.convert()'s 80ex container; nested
-// percentage widths remain marked for a future parent-width pass.
+// computeTableBBox ports CommonMtable.computeBBox. Percentage widths retain
+// their markers until a parent-width pass resolves their natural geometry.
 func (w *wrapper) computeTableBBox(bbox *layout.BBox) {
 	t := w.tableState()
 	bbox.Empty()
