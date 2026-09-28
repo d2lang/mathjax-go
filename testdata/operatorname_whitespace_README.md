@@ -59,3 +59,16 @@ complete original SVGs and exceptions. Both fixtures regenerate byte-for-byte.
 The D2 witness contains a literal BOM between `\operatorname{lim}` and
 `\limits`. Its before/after/original SVGs, shared-scale screenshots, hashes and
 reproduction instructions accompany the completed validation record.
+
+## Validation
+
+Focused tests, the full original-oracle suite, race checks, `go vet`, and the
+WebAssembly build passed. The first full run exposed six historical cursor
+assertions that expected Go's old whitespace retention; the 32 original cursor
+observations above replace those assumptions. Production code was unchanged
+for that test correction and the subsequent successful full run.
+
+The D2 screenshot shows the original failure (an error and a black bar) becoming
+the boxed limit expression. Its fixed SVG is byte-identical to the original
+MathJax reference. The same fixed D2 binary also reproduces all 77 committed D2
+witnesses byte-for-byte against their original references.
