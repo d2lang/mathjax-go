@@ -68,8 +68,8 @@ all complete parsed XML trees, including numeric geometry, equal the original.
 Raw strings and this proof are retained in the replay receipt; no golden is
 normalized.
 
-Final validation runs the full frozen-original suite, race
-suite, vet, and WebAssembly build, run sequentially.
+The full frozen-original suite, race suite, vet, and WebAssembly build all
+pass, run sequentially against the final main152 composition.
 
 The first full gate detected that obsolete vector-font qualification. Removing
 only the qualification restores comparison against the unmodified primary
