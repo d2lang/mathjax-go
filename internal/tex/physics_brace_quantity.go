@@ -48,5 +48,7 @@ func (p *parser) braceQuantity(name string) ([]*mml.Node, error) {
 	if err != nil {
 		return nil, err
 	}
-	return []*mml.Node{result}, nil
+	// TexParser.Push delivers an inferred row's children as separate items.
+	// In particular, a following script belongs to the final fixed delimiter.
+	return unwrapInferred(result), nil
 }
