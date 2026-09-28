@@ -85,6 +85,14 @@ VM for each input, and updates only primary SVG results. It never reads Go
 output to generate expectations. All four fixture files regenerated
 byte-identically. The historical primary fixtures are unchanged.
 
+The final candidate is rebased onto merged main138,
+`aaa365ec3a653db84b9f625013a2e2350f76cd4d`. All 3,204 public audit outputs
+are unchanged across that rebase on both the baseline and candidate. Full
+frozen-oracle tests (including the new BuildRel and 432 nested-width references),
+race tests, vet and the WebAssembly build pass on that combined source.
+Replaying all 2,142 published residual inputs gives the same 142 new exact
+outputs and 16 already-reviewed changed residuals.
+
 The two existing isolated table geometry tests now explicitly invoke the parent
 percentage pass before asserting the same final numeric dimensions. Their old
 assumption that table construction itself resolved percentages was precisely the
