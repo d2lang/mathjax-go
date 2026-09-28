@@ -4,7 +4,7 @@ The three Mathtools declaration forms now accept source-valid bare names and rej
 
 The implementation follows `NewcommandUtil.GetCsNameArgument` in MathJax commit `ad8f5c21cb810236551da8c6512ba733e67357ee`: GetArgument, ParseUtil.trimSpaces, removal of one optional leading backslash, then the non-Unicode JavaScript `/^(.|[a-z]+)$/i` validator. The validator accepts one BMP code unit other than LF/CR/U+2028/U+2029, or an ASCII-letter word. Source trimming includes BOM, excludes NEL, and preserves one terminal ASCII control-space. This reader validates the complete name; it does not tokenize it with GetCS.
 
-The AMS declaration prerequisite must precede this change: HandleDeclareOp has a different, permissive name contract and now uses its own reader. This checkpoint is based on the reviewed but not-yet-merged AMS head `a708ff363b7ba868322fb966f2b25300d1a83ed1`. The isolated GetCS escaped-line fix is not included. The shared strict helper also serves augmented newcommand definitions; frozen D2 does not enable newcommand, so those callers are not claimed as public oracle coverage.
+The AMS declaration prerequisite must precede this change: HandleDeclareOp has a different, permissive name contract and now uses its own reader. The final publication base is actual merged main162, `bba94fc9e5a95e80ca2cb71cd845f82f3350fc6f`; its production tree is identical to the reviewed AMS preview. The isolated GetCS escaped-line fix is not included. The shared strict helper also serves augmented newcommand definitions; frozen D2 does not enable newcommand, so those callers are not claimed as public oracle coverage.
 
 ## Complete original references
 
@@ -19,7 +19,7 @@ The 70 earlier malformed UTF-16 transport controls and all 60 earlier mixed AMS/
 
 ## Prior coverage and replays
 
-The inventory scans all 412 tracked testdata JSON files, including internal directories, at the AMS prerequisite head. Among the 2,052 strict input pairs, 42 already had full references, 12 promote previously raw original inputs, and 1,998 are first-publication pairs. Across strict and raw rows, 2,102 of 2,168 are first-publication pairs. No stored original mismatch or ambiguous-only prior reference was found. These per-fix counts are not globally unique MathJax coverage.
+The inventory scans all 413 tracked testdata JSON files, including internal directories, at actual merged main162. Among the 2,052 strict input pairs, 42 already had full references, 12 promote previously raw original inputs, and 1,998 are first-publication pairs. Across strict and raw rows, 2,102 of 2,168 are first-publication pairs. No stored original mismatch or ambiguous-only prior reference was found. These per-fix counts are not globally unique MathJax coverage.
 
 The 5,634-input published-residual replay finds 12 genuine fixes and no changed nonexact output or regression. Four apparent cancellation serialization fixes are only attribute order: 32 renders per binary per input preserve complete parsed XML, with all raw variants retained. The 4,326 upstream TeX input replay is unchanged. Exact SVG assertions do not normalize attributes, geometry, diagnostics, or output strings.
 
@@ -34,4 +34,4 @@ go test -run 'TestPairedDeclarationNameReferences' .
 go test -run 'TestPairedDeclarationNamesPrimaryMethod' ./internal/tex
 ```
 
-The exact/raw partition and publication-base metadata must be rechecked on the actual merged AMS predecessor before final publication. At this checkpoint, the 149-method short test and preview probe have passed; the full final gate chain has not yet run.
+The exact/raw partition and publication-base metadata are rebound to actual merged main162 without changing original outputs. The 149-method short test and preview probe passed. Final current-base gates are recorded in the handoff receipt.

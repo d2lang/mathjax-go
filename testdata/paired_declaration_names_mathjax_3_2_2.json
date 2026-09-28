@@ -1,7 +1,7 @@
 {
   "mathjaxGitCommit": "ad8f5c21cb810236551da8c6512ba733e67357ee",
-  "baseline": "a708ff363b7ba868322fb966f2b25300d1a83ed1",
-  "baselineStatus": "Reviewed AMS prerequisite preview; not yet merged at capture.",
+  "baseline": "bba94fc9e5a95e80ca2cb71cd845f82f3350fc6f",
+  "baselineStatus": "Actual merged main162; production identical to reviewed AMS prerequisite.",
   "cases": [
     {
       "name": "paired-name-0000",
