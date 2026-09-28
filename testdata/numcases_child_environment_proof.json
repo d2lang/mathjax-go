@@ -1,0 +1,1703 @@
+{
+  "mathjaxGitCommit": "ad8f5c21cb810236551da8c6512ba733e67357ee",
+  "method": "EmpheqUtil.cellBlock creates a new TexParser with the restored CasesBegin environment",
+  "observedSVGsByteIdenticalToUninstrumentedOriginal": true,
+  "cases": [
+    {
+      "name": "left-scope-000",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\begin{numcases}{AB=}AB&$CD$\\end{numcases}",
+      "display": false,
+      "observed": [
+        {
+          "source": "AB=\\empheqlbrace\\,",
+          "env": {
+            "display": false
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "fa7370266296bd8daf300d89a1442c8504ac677808dd63642be28c69a32b4bd5"
+    },
+    {
+      "name": "left-scope-001",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\begin{numcases}{AB=}AB&$CD$\\end{numcases}",
+      "display": true,
+      "observed": [
+        {
+          "source": "AB=\\empheqlbrace\\,",
+          "env": {
+            "display": true
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "fa7370266296bd8daf300d89a1442c8504ac677808dd63642be28c69a32b4bd5"
+    },
+    {
+      "name": "left-scope-002",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\bf \\begin{numcases}{AB=}AB&$CD$\\end{numcases}",
+      "display": false,
+      "observed": [
+        {
+          "source": "AB=\\empheqlbrace\\,",
+          "env": {
+            "display": false,
+            "font": "bold"
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "173a5b98557b63609ab751b62dcfd2f80780c44f296075b6b1f039b032e041cf"
+    },
+    {
+      "name": "left-scope-003",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\bf \\begin{numcases}{AB=}AB&$CD$\\end{numcases}",
+      "display": true,
+      "observed": [
+        {
+          "source": "AB=\\empheqlbrace\\,",
+          "env": {
+            "display": true,
+            "font": "bold"
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "173a5b98557b63609ab751b62dcfd2f80780c44f296075b6b1f039b032e041cf"
+    },
+    {
+      "name": "left-scope-004",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\it \\begin{numcases}{AB=}AB&$CD$\\end{numcases}",
+      "display": false,
+      "observed": [
+        {
+          "source": "AB=\\empheqlbrace\\,",
+          "env": {
+            "display": false,
+            "font": "-tex-mathit"
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "5114b2d5383b3250861caf0caf8f152425301ffd49a3345f1c2e69e642d58aff"
+    },
+    {
+      "name": "left-scope-005",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\it \\begin{numcases}{AB=}AB&$CD$\\end{numcases}",
+      "display": true,
+      "observed": [
+        {
+          "source": "AB=\\empheqlbrace\\,",
+          "env": {
+            "display": true,
+            "font": "-tex-mathit"
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "5114b2d5383b3250861caf0caf8f152425301ffd49a3345f1c2e69e642d58aff"
+    },
+    {
+      "name": "left-scope-006",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\mathsf{\\begin{numcases}{AB=}AB&$CD$\\end{numcases}}",
+      "display": false,
+      "observed": [
+        {
+          "source": "AB=\\empheqlbrace\\,",
+          "env": {
+            "display": false,
+            "font": "sans-serif",
+            "multiLetterIdentifiers": "/^[a-zA-Z]+/",
+            "noAutoOP": true
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "4a4faea817d83ef8af24f6ad4dbb19f160426f1c989e2a2a4a02b34948276ed9"
+    },
+    {
+      "name": "left-scope-007",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\mathsf{\\begin{numcases}{AB=}AB&$CD$\\end{numcases}}",
+      "display": true,
+      "observed": [
+        {
+          "source": "AB=\\empheqlbrace\\,",
+          "env": {
+            "display": true,
+            "font": "sans-serif",
+            "multiLetterIdentifiers": "/^[a-zA-Z]+/",
+            "noAutoOP": true
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "4a4faea817d83ef8af24f6ad4dbb19f160426f1c989e2a2a4a02b34948276ed9"
+    },
+    {
+      "name": "left-scope-008",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\mathrm{\\begin{numcases}{AB=}AB&$CD$\\end{numcases}}",
+      "display": false,
+      "observed": [
+        {
+          "source": "AB=\\empheqlbrace\\,",
+          "env": {
+            "display": false,
+            "font": "normal",
+            "multiLetterIdentifiers": "/^[a-zA-Z]+/",
+            "noAutoOP": true
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "d3707d1ad7e2bcf78dee3f32b447ed849adc88f3de69d227c3a35b48827f0247"
+    },
+    {
+      "name": "left-scope-009",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\mathrm{\\begin{numcases}{AB=}AB&$CD$\\end{numcases}}",
+      "display": true,
+      "observed": [
+        {
+          "source": "AB=\\empheqlbrace\\,",
+          "env": {
+            "display": true,
+            "font": "normal",
+            "multiLetterIdentifiers": "/^[a-zA-Z]+/",
+            "noAutoOP": true
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "d3707d1ad7e2bcf78dee3f32b447ed849adc88f3de69d227c3a35b48827f0247"
+    },
+    {
+      "name": "left-scope-010",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\mathnormal{\\begin{numcases}{AB=}AB&$CD$\\end{numcases}}",
+      "display": false,
+      "observed": [
+        {
+          "source": "AB=\\empheqlbrace\\,",
+          "env": {
+            "display": false,
+            "font": "",
+            "multiLetterIdentifiers": "/^[a-zA-Z]+/",
+            "noAutoOP": true
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "2981d4dbdab20e7de77260200f60c02839b188725e51b9cd642979120d0a5e18"
+    },
+    {
+      "name": "left-scope-011",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\mathnormal{\\begin{numcases}{AB=}AB&$CD$\\end{numcases}}",
+      "display": true,
+      "observed": [
+        {
+          "source": "AB=\\empheqlbrace\\,",
+          "env": {
+            "display": true,
+            "font": "",
+            "multiLetterIdentifiers": "/^[a-zA-Z]+/",
+            "noAutoOP": true
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "2981d4dbdab20e7de77260200f60c02839b188725e51b9cd642979120d0a5e18"
+    },
+    {
+      "name": "left-scope-012",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\operatorname{\\begin{numcases}{AB=}AB&$CD$\\end{numcases}}",
+      "display": false,
+      "observed": [
+        {
+          "source": "AB=\\empheqlbrace\\,",
+          "env": {
+            "display": false,
+            "font": "normal",
+            "multiLetterIdentifiers": "/^[-*a-z]+/i",
+            "operatorLetters": true
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "37862f0360449698ddecddcd3fd302f8900616a7c30e116b5e0343902fcddab2"
+    },
+    {
+      "name": "left-scope-013",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\operatorname{\\begin{numcases}{AB=}AB&$CD$\\end{numcases}}",
+      "display": true,
+      "observed": [
+        {
+          "source": "AB=\\empheqlbrace\\,",
+          "env": {
+            "display": true,
+            "font": "normal",
+            "multiLetterIdentifiers": "/^[-*a-z]+/i",
+            "operatorLetters": true
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "37862f0360449698ddecddcd3fd302f8900616a7c30e116b5e0343902fcddab2"
+    },
+    {
+      "name": "left-scope-014",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\color{red}\\begin{numcases}{AB=}AB&$CD$\\end{numcases}",
+      "display": false,
+      "observed": [
+        {
+          "source": "AB=\\empheqlbrace\\,",
+          "env": {
+            "display": false,
+            "color": "red"
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "5c54b892778d1eee7be237e8a9f8a96a1973b2cccc603dae0b4f0cc9b08af51d"
+    },
+    {
+      "name": "left-scope-015",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\color{red}\\begin{numcases}{AB=}AB&$CD$\\end{numcases}",
+      "display": true,
+      "observed": [
+        {
+          "source": "AB=\\empheqlbrace\\,",
+          "env": {
+            "display": true,
+            "color": "red"
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "5c54b892778d1eee7be237e8a9f8a96a1973b2cccc603dae0b4f0cc9b08af51d"
+    },
+    {
+      "name": "left-scope-016",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\scriptstyle \\begin{numcases}{AB=}AB&$CD$\\end{numcases}",
+      "display": false,
+      "observed": [
+        {
+          "source": "AB=\\empheqlbrace\\,",
+          "env": {
+            "display": false,
+            "style": "S",
+            "level": 1
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "437624f4b2de31c8f6901879d374cb640c13c292b894668116ab454ce4dd7fe9"
+    },
+    {
+      "name": "left-scope-017",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\scriptstyle \\begin{numcases}{AB=}AB&$CD$\\end{numcases}",
+      "display": true,
+      "observed": [
+        {
+          "source": "AB=\\empheqlbrace\\,",
+          "env": {
+            "display": true,
+            "style": "S",
+            "level": 1
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "437624f4b2de31c8f6901879d374cb640c13c292b894668116ab454ce4dd7fe9"
+    },
+    {
+      "name": "left-scope-018",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\vb{\\begin{numcases}{AB=}AB&$CD$\\end{numcases}}",
+      "display": false,
+      "observed": [
+        {
+          "source": "AB=\\empheqlbrace\\,",
+          "env": {
+            "display": false,
+            "vectorFont": "bold",
+            "vectorStar": false
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "41da7fc113e8c29780122683432a2b65bfc73dd75583d793057c6bee2ae9f741"
+    },
+    {
+      "name": "left-scope-019",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\vb{\\begin{numcases}{AB=}AB&$CD$\\end{numcases}}",
+      "display": true,
+      "observed": [
+        {
+          "source": "AB=\\empheqlbrace\\,",
+          "env": {
+            "display": true,
+            "vectorFont": "bold",
+            "vectorStar": false
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "41da7fc113e8c29780122683432a2b65bfc73dd75583d793057c6bee2ae9f741"
+    },
+    {
+      "name": "left-scope-020",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\grad{\\begin{numcases}{AB=}AB&$CD$\\end{numcases}}",
+      "display": false,
+      "observed": [
+        {
+          "source": "AB=\\empheqlbrace\\,",
+          "env": {
+            "display": false
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "da1fe8bf6bb55c4a2d8c39fe086dd491667b4d8c5682286ffd2535c5e5119ec4"
+    },
+    {
+      "name": "left-scope-021",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\grad{\\begin{numcases}{AB=}AB&$CD$\\end{numcases}}",
+      "display": true,
+      "observed": [
+        {
+          "source": "AB=\\empheqlbrace\\,",
+          "env": {
+            "display": true
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "da1fe8bf6bb55c4a2d8c39fe086dd491667b4d8c5682286ffd2535c5e5119ec4"
+    },
+    {
+      "name": "left-scope-022",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\sqrt[\\begin{numcases}{AB=}AB&$CD$\\end{numcases}]{x}",
+      "display": false,
+      "observed": [
+        {
+          "source": "AB=\\empheqlbrace\\,",
+          "env": {
+            "display": false,
+            "inRoot": true
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "cfaac597a5f7be800402a44a0865107aef5e868e9213f4ab18a873389b4002e2"
+    },
+    {
+      "name": "left-scope-023",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\sqrt[\\begin{numcases}{AB=}AB&$CD$\\end{numcases}]{x}",
+      "display": true,
+      "observed": [
+        {
+          "source": "AB=\\empheqlbrace\\,",
+          "env": {
+            "display": true,
+            "inRoot": true
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "25409b277b758d3244f78648a90f0f2cef6c15ea10cb60e2241b6f49a41bcb02"
+    },
+    {
+      "name": "left-scope-024",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\begin{numcases}{\\mathrm{AB}=}AB&$CD$\\end{numcases}",
+      "display": false,
+      "observed": [
+        {
+          "source": "\\mathrm{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": false
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "62068419098efab7cb973ec439eeae2126700834e9c53103dd563fc954d13291"
+    },
+    {
+      "name": "left-scope-025",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\begin{numcases}{\\mathrm{AB}=}AB&$CD$\\end{numcases}",
+      "display": true,
+      "observed": [
+        {
+          "source": "\\mathrm{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": true
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "62068419098efab7cb973ec439eeae2126700834e9c53103dd563fc954d13291"
+    },
+    {
+      "name": "left-scope-026",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\bf \\begin{numcases}{\\mathrm{AB}=}AB&$CD$\\end{numcases}",
+      "display": false,
+      "observed": [
+        {
+          "source": "\\mathrm{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": false,
+            "font": "bold"
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "ea0216aac1cf8a0a2d9be928e09dcfdb8f74435f6c575d0143ca575770564c3a"
+    },
+    {
+      "name": "left-scope-027",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\bf \\begin{numcases}{\\mathrm{AB}=}AB&$CD$\\end{numcases}",
+      "display": true,
+      "observed": [
+        {
+          "source": "\\mathrm{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": true,
+            "font": "bold"
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "ea0216aac1cf8a0a2d9be928e09dcfdb8f74435f6c575d0143ca575770564c3a"
+    },
+    {
+      "name": "left-scope-028",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\it \\begin{numcases}{\\mathrm{AB}=}AB&$CD$\\end{numcases}",
+      "display": false,
+      "observed": [
+        {
+          "source": "\\mathrm{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": false,
+            "font": "-tex-mathit"
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "87802e6d102a3522d444f5740c2eeda9aeecf52f6b1c994eb558e764d42fe52b"
+    },
+    {
+      "name": "left-scope-029",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\it \\begin{numcases}{\\mathrm{AB}=}AB&$CD$\\end{numcases}",
+      "display": true,
+      "observed": [
+        {
+          "source": "\\mathrm{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": true,
+            "font": "-tex-mathit"
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "87802e6d102a3522d444f5740c2eeda9aeecf52f6b1c994eb558e764d42fe52b"
+    },
+    {
+      "name": "left-scope-030",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\mathsf{\\begin{numcases}{\\mathrm{AB}=}AB&$CD$\\end{numcases}}",
+      "display": false,
+      "observed": [
+        {
+          "source": "\\mathrm{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": false,
+            "font": "sans-serif",
+            "multiLetterIdentifiers": "/^[a-zA-Z]+/",
+            "noAutoOP": true
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "2a2fa16b93c4e0c911bc9d63316fb2274eb33c0a7fc0a23d79f7e7a0af894121"
+    },
+    {
+      "name": "left-scope-031",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\mathsf{\\begin{numcases}{\\mathrm{AB}=}AB&$CD$\\end{numcases}}",
+      "display": true,
+      "observed": [
+        {
+          "source": "\\mathrm{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": true,
+            "font": "sans-serif",
+            "multiLetterIdentifiers": "/^[a-zA-Z]+/",
+            "noAutoOP": true
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "2a2fa16b93c4e0c911bc9d63316fb2274eb33c0a7fc0a23d79f7e7a0af894121"
+    },
+    {
+      "name": "left-scope-032",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\mathrm{\\begin{numcases}{\\mathrm{AB}=}AB&$CD$\\end{numcases}}",
+      "display": false,
+      "observed": [
+        {
+          "source": "\\mathrm{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": false,
+            "font": "normal",
+            "multiLetterIdentifiers": "/^[a-zA-Z]+/",
+            "noAutoOP": true
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "a9491b8c24cd084115a7104ae67c70320ca526249b296b1fc66f2038a5bb7722"
+    },
+    {
+      "name": "left-scope-033",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\mathrm{\\begin{numcases}{\\mathrm{AB}=}AB&$CD$\\end{numcases}}",
+      "display": true,
+      "observed": [
+        {
+          "source": "\\mathrm{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": true,
+            "font": "normal",
+            "multiLetterIdentifiers": "/^[a-zA-Z]+/",
+            "noAutoOP": true
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "a9491b8c24cd084115a7104ae67c70320ca526249b296b1fc66f2038a5bb7722"
+    },
+    {
+      "name": "left-scope-034",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\mathnormal{\\begin{numcases}{\\mathrm{AB}=}AB&$CD$\\end{numcases}}",
+      "display": false,
+      "observed": [
+        {
+          "source": "\\mathrm{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": false,
+            "font": "",
+            "multiLetterIdentifiers": "/^[a-zA-Z]+/",
+            "noAutoOP": true
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "a9491b8c24cd084115a7104ae67c70320ca526249b296b1fc66f2038a5bb7722"
+    },
+    {
+      "name": "left-scope-035",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\mathnormal{\\begin{numcases}{\\mathrm{AB}=}AB&$CD$\\end{numcases}}",
+      "display": true,
+      "observed": [
+        {
+          "source": "\\mathrm{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": true,
+            "font": "",
+            "multiLetterIdentifiers": "/^[a-zA-Z]+/",
+            "noAutoOP": true
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "a9491b8c24cd084115a7104ae67c70320ca526249b296b1fc66f2038a5bb7722"
+    },
+    {
+      "name": "left-scope-036",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\operatorname{\\begin{numcases}{\\mathrm{AB}=}AB&$CD$\\end{numcases}}",
+      "display": false,
+      "observed": [
+        {
+          "source": "\\mathrm{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": false,
+            "font": "normal",
+            "multiLetterIdentifiers": "/^[-*a-z]+/i",
+            "operatorLetters": true
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "051b799177513df6668a4bee1c22a2b0d6d13c98347c19e2852838965dfad6d9"
+    },
+    {
+      "name": "left-scope-037",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\operatorname{\\begin{numcases}{\\mathrm{AB}=}AB&$CD$\\end{numcases}}",
+      "display": true,
+      "observed": [
+        {
+          "source": "\\mathrm{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": true,
+            "font": "normal",
+            "multiLetterIdentifiers": "/^[-*a-z]+/i",
+            "operatorLetters": true
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "051b799177513df6668a4bee1c22a2b0d6d13c98347c19e2852838965dfad6d9"
+    },
+    {
+      "name": "left-scope-038",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\color{red}\\begin{numcases}{\\mathrm{AB}=}AB&$CD$\\end{numcases}",
+      "display": false,
+      "observed": [
+        {
+          "source": "\\mathrm{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": false,
+            "color": "red"
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "e74f66b855b68c36a0ee97afd0e3f1fd0a79fdf664889b0e9500545bf0c9dc7b"
+    },
+    {
+      "name": "left-scope-039",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\color{red}\\begin{numcases}{\\mathrm{AB}=}AB&$CD$\\end{numcases}",
+      "display": true,
+      "observed": [
+        {
+          "source": "\\mathrm{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": true,
+            "color": "red"
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "e74f66b855b68c36a0ee97afd0e3f1fd0a79fdf664889b0e9500545bf0c9dc7b"
+    },
+    {
+      "name": "left-scope-040",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\scriptstyle \\begin{numcases}{\\mathrm{AB}=}AB&$CD$\\end{numcases}",
+      "display": false,
+      "observed": [
+        {
+          "source": "\\mathrm{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": false,
+            "style": "S",
+            "level": 1
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "ef82fdbd64da8ebd0c33e5974a4a7f86db085fda597537a0c845c05a7939c17a"
+    },
+    {
+      "name": "left-scope-041",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\scriptstyle \\begin{numcases}{\\mathrm{AB}=}AB&$CD$\\end{numcases}",
+      "display": true,
+      "observed": [
+        {
+          "source": "\\mathrm{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": true,
+            "style": "S",
+            "level": 1
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "ef82fdbd64da8ebd0c33e5974a4a7f86db085fda597537a0c845c05a7939c17a"
+    },
+    {
+      "name": "left-scope-042",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\vb{\\begin{numcases}{\\mathrm{AB}=}AB&$CD$\\end{numcases}}",
+      "display": false,
+      "observed": [
+        {
+          "source": "\\mathrm{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": false,
+            "vectorFont": "bold",
+            "vectorStar": false
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "62068419098efab7cb973ec439eeae2126700834e9c53103dd563fc954d13291"
+    },
+    {
+      "name": "left-scope-043",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\vb{\\begin{numcases}{\\mathrm{AB}=}AB&$CD$\\end{numcases}}",
+      "display": true,
+      "observed": [
+        {
+          "source": "\\mathrm{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": true,
+            "vectorFont": "bold",
+            "vectorStar": false
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "62068419098efab7cb973ec439eeae2126700834e9c53103dd563fc954d13291"
+    },
+    {
+      "name": "left-scope-044",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\grad{\\begin{numcases}{\\mathrm{AB}=}AB&$CD$\\end{numcases}}",
+      "display": false,
+      "observed": [
+        {
+          "source": "\\mathrm{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": false
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "cd68214fb612216f095f26ccf8da427b0878e47bec9cfac6bbf53da55996ff3d"
+    },
+    {
+      "name": "left-scope-045",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\grad{\\begin{numcases}{\\mathrm{AB}=}AB&$CD$\\end{numcases}}",
+      "display": true,
+      "observed": [
+        {
+          "source": "\\mathrm{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": true
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "cd68214fb612216f095f26ccf8da427b0878e47bec9cfac6bbf53da55996ff3d"
+    },
+    {
+      "name": "left-scope-046",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\sqrt[\\begin{numcases}{\\mathrm{AB}=}AB&$CD$\\end{numcases}]{x}",
+      "display": false,
+      "observed": [
+        {
+          "source": "\\mathrm{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": false,
+            "inRoot": true
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "aac14634480ae21d5faa974c6b6a4284a0bf8aaf0f7f4785e4ec6e2a75abdf47"
+    },
+    {
+      "name": "left-scope-047",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\sqrt[\\begin{numcases}{\\mathrm{AB}=}AB&$CD$\\end{numcases}]{x}",
+      "display": true,
+      "observed": [
+        {
+          "source": "\\mathrm{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": true,
+            "inRoot": true
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "1d4cb54bb28159f6fab4c92208f2fdf2e0d5c37827647a4150bda145ccb70396"
+    },
+    {
+      "name": "left-scope-048",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\begin{numcases}{\\mathbf{AB}=}AB&$CD$\\end{numcases}",
+      "display": false,
+      "observed": [
+        {
+          "source": "\\mathbf{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": false
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "784283947997be97caea677bbf8181fd7e92b6fe4b3b7254650dcbbd5a04ac37"
+    },
+    {
+      "name": "left-scope-049",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\begin{numcases}{\\mathbf{AB}=}AB&$CD$\\end{numcases}",
+      "display": true,
+      "observed": [
+        {
+          "source": "\\mathbf{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": true
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "784283947997be97caea677bbf8181fd7e92b6fe4b3b7254650dcbbd5a04ac37"
+    },
+    {
+      "name": "left-scope-050",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\bf \\begin{numcases}{\\mathbf{AB}=}AB&$CD$\\end{numcases}",
+      "display": false,
+      "observed": [
+        {
+          "source": "\\mathbf{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": false,
+            "font": "bold"
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "2c32cad0294e646293b2dec20e4433faa91ba1462be32f36330597f05d844e5e"
+    },
+    {
+      "name": "left-scope-051",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\bf \\begin{numcases}{\\mathbf{AB}=}AB&$CD$\\end{numcases}",
+      "display": true,
+      "observed": [
+        {
+          "source": "\\mathbf{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": true,
+            "font": "bold"
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "2c32cad0294e646293b2dec20e4433faa91ba1462be32f36330597f05d844e5e"
+    },
+    {
+      "name": "left-scope-052",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\it \\begin{numcases}{\\mathbf{AB}=}AB&$CD$\\end{numcases}",
+      "display": false,
+      "observed": [
+        {
+          "source": "\\mathbf{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": false,
+            "font": "-tex-mathit"
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "e004bc3b5be89f58229ded965e49f1da6f27efbf9d666bd1dd3fc40e21c00959"
+    },
+    {
+      "name": "left-scope-053",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\it \\begin{numcases}{\\mathbf{AB}=}AB&$CD$\\end{numcases}",
+      "display": true,
+      "observed": [
+        {
+          "source": "\\mathbf{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": true,
+            "font": "-tex-mathit"
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "e004bc3b5be89f58229ded965e49f1da6f27efbf9d666bd1dd3fc40e21c00959"
+    },
+    {
+      "name": "left-scope-054",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\mathsf{\\begin{numcases}{\\mathbf{AB}=}AB&$CD$\\end{numcases}}",
+      "display": false,
+      "observed": [
+        {
+          "source": "\\mathbf{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": false,
+            "font": "sans-serif",
+            "multiLetterIdentifiers": "/^[a-zA-Z]+/",
+            "noAutoOP": true
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "fadc2000891994631459bd97aff843102bab66d4c5f14824b1a0c7143b2d442e"
+    },
+    {
+      "name": "left-scope-055",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\mathsf{\\begin{numcases}{\\mathbf{AB}=}AB&$CD$\\end{numcases}}",
+      "display": true,
+      "observed": [
+        {
+          "source": "\\mathbf{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": true,
+            "font": "sans-serif",
+            "multiLetterIdentifiers": "/^[a-zA-Z]+/",
+            "noAutoOP": true
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "fadc2000891994631459bd97aff843102bab66d4c5f14824b1a0c7143b2d442e"
+    },
+    {
+      "name": "left-scope-056",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\mathrm{\\begin{numcases}{\\mathbf{AB}=}AB&$CD$\\end{numcases}}",
+      "display": false,
+      "observed": [
+        {
+          "source": "\\mathbf{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": false,
+            "font": "normal",
+            "multiLetterIdentifiers": "/^[a-zA-Z]+/",
+            "noAutoOP": true
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "e69ac1c34db5f16a213af84fd291b1fba0edcbf1e54487c862a6bcf10881c8a0"
+    },
+    {
+      "name": "left-scope-057",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\mathrm{\\begin{numcases}{\\mathbf{AB}=}AB&$CD$\\end{numcases}}",
+      "display": true,
+      "observed": [
+        {
+          "source": "\\mathbf{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": true,
+            "font": "normal",
+            "multiLetterIdentifiers": "/^[a-zA-Z]+/",
+            "noAutoOP": true
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "e69ac1c34db5f16a213af84fd291b1fba0edcbf1e54487c862a6bcf10881c8a0"
+    },
+    {
+      "name": "left-scope-058",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\mathnormal{\\begin{numcases}{\\mathbf{AB}=}AB&$CD$\\end{numcases}}",
+      "display": false,
+      "observed": [
+        {
+          "source": "\\mathbf{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": false,
+            "font": "",
+            "multiLetterIdentifiers": "/^[a-zA-Z]+/",
+            "noAutoOP": true
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "e69ac1c34db5f16a213af84fd291b1fba0edcbf1e54487c862a6bcf10881c8a0"
+    },
+    {
+      "name": "left-scope-059",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\mathnormal{\\begin{numcases}{\\mathbf{AB}=}AB&$CD$\\end{numcases}}",
+      "display": true,
+      "observed": [
+        {
+          "source": "\\mathbf{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": true,
+            "font": "",
+            "multiLetterIdentifiers": "/^[a-zA-Z]+/",
+            "noAutoOP": true
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "e69ac1c34db5f16a213af84fd291b1fba0edcbf1e54487c862a6bcf10881c8a0"
+    },
+    {
+      "name": "left-scope-060",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\operatorname{\\begin{numcases}{\\mathbf{AB}=}AB&$CD$\\end{numcases}}",
+      "display": false,
+      "observed": [
+        {
+          "source": "\\mathbf{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": false,
+            "font": "normal",
+            "multiLetterIdentifiers": "/^[-*a-z]+/i",
+            "operatorLetters": true
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "a529b67247db4674d9283609215734df1e5be56e97a5a9f6aea03c9bdf9919a1"
+    },
+    {
+      "name": "left-scope-061",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\operatorname{\\begin{numcases}{\\mathbf{AB}=}AB&$CD$\\end{numcases}}",
+      "display": true,
+      "observed": [
+        {
+          "source": "\\mathbf{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": true,
+            "font": "normal",
+            "multiLetterIdentifiers": "/^[-*a-z]+/i",
+            "operatorLetters": true
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "a529b67247db4674d9283609215734df1e5be56e97a5a9f6aea03c9bdf9919a1"
+    },
+    {
+      "name": "left-scope-062",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\color{red}\\begin{numcases}{\\mathbf{AB}=}AB&$CD$\\end{numcases}",
+      "display": false,
+      "observed": [
+        {
+          "source": "\\mathbf{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": false,
+            "color": "red"
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "fb753d1dc3f80643924c0430341efd3eef846a13059004cdabf9bfeb1073d2fb"
+    },
+    {
+      "name": "left-scope-063",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\color{red}\\begin{numcases}{\\mathbf{AB}=}AB&$CD$\\end{numcases}",
+      "display": true,
+      "observed": [
+        {
+          "source": "\\mathbf{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": true,
+            "color": "red"
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "fb753d1dc3f80643924c0430341efd3eef846a13059004cdabf9bfeb1073d2fb"
+    },
+    {
+      "name": "left-scope-064",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\scriptstyle \\begin{numcases}{\\mathbf{AB}=}AB&$CD$\\end{numcases}",
+      "display": false,
+      "observed": [
+        {
+          "source": "\\mathbf{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": false,
+            "style": "S",
+            "level": 1
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "31333e63836a30247e35ae4d5336b78123e9faee4c815392952b0236cd2ea699"
+    },
+    {
+      "name": "left-scope-065",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\scriptstyle \\begin{numcases}{\\mathbf{AB}=}AB&$CD$\\end{numcases}",
+      "display": true,
+      "observed": [
+        {
+          "source": "\\mathbf{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": true,
+            "style": "S",
+            "level": 1
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "31333e63836a30247e35ae4d5336b78123e9faee4c815392952b0236cd2ea699"
+    },
+    {
+      "name": "left-scope-066",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\vb{\\begin{numcases}{\\mathbf{AB}=}AB&$CD$\\end{numcases}}",
+      "display": false,
+      "observed": [
+        {
+          "source": "\\mathbf{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": false,
+            "vectorFont": "bold",
+            "vectorStar": false
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "784283947997be97caea677bbf8181fd7e92b6fe4b3b7254650dcbbd5a04ac37"
+    },
+    {
+      "name": "left-scope-067",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\vb{\\begin{numcases}{\\mathbf{AB}=}AB&$CD$\\end{numcases}}",
+      "display": true,
+      "observed": [
+        {
+          "source": "\\mathbf{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": true,
+            "vectorFont": "bold",
+            "vectorStar": false
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "784283947997be97caea677bbf8181fd7e92b6fe4b3b7254650dcbbd5a04ac37"
+    },
+    {
+      "name": "left-scope-068",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\grad{\\begin{numcases}{\\mathbf{AB}=}AB&$CD$\\end{numcases}}",
+      "display": false,
+      "observed": [
+        {
+          "source": "\\mathbf{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": false
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "038c1c7aa7189b22df5885944ec261d18906efebd52331e7e533193664e886f7"
+    },
+    {
+      "name": "left-scope-069",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\grad{\\begin{numcases}{\\mathbf{AB}=}AB&$CD$\\end{numcases}}",
+      "display": true,
+      "observed": [
+        {
+          "source": "\\mathbf{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": true
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "038c1c7aa7189b22df5885944ec261d18906efebd52331e7e533193664e886f7"
+    },
+    {
+      "name": "left-scope-070",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\sqrt[\\begin{numcases}{\\mathbf{AB}=}AB&$CD$\\end{numcases}]{x}",
+      "display": false,
+      "observed": [
+        {
+          "source": "\\mathbf{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": false,
+            "inRoot": true
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "9c616a8ac543bff2da1a715f3b9e5a40c95f2ab79378ccc48064b5a41f9c13d4"
+    },
+    {
+      "name": "left-scope-071",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\sqrt[\\begin{numcases}{\\mathbf{AB}=}AB&$CD$\\end{numcases}]{x}",
+      "display": true,
+      "observed": [
+        {
+          "source": "\\mathbf{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": true,
+            "inRoot": true
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "71e4bb6d7d485f009c2676d3e672ea8b26213e55a218d559b7de6772a928da47"
+    },
+    {
+      "name": "left-scope-072",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\begin{numcases}{\\color{blue}{AB}=}AB&$CD$\\end{numcases}",
+      "display": false,
+      "observed": [
+        {
+          "source": "\\color{blue}{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": false
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "b30acf1c1b8082c46b9fd159f7741818ab99dc05e6e190a1969bd6f29d95c62e"
+    },
+    {
+      "name": "left-scope-073",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\begin{numcases}{\\color{blue}{AB}=}AB&$CD$\\end{numcases}",
+      "display": true,
+      "observed": [
+        {
+          "source": "\\color{blue}{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": true
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "b30acf1c1b8082c46b9fd159f7741818ab99dc05e6e190a1969bd6f29d95c62e"
+    },
+    {
+      "name": "left-scope-074",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\bf \\begin{numcases}{\\color{blue}{AB}=}AB&$CD$\\end{numcases}",
+      "display": false,
+      "observed": [
+        {
+          "source": "\\color{blue}{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": false,
+            "font": "bold"
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "a1c76887460515aab7cba1071242e8eece5a2885479171bdfc34f06fe4e75e28"
+    },
+    {
+      "name": "left-scope-075",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\bf \\begin{numcases}{\\color{blue}{AB}=}AB&$CD$\\end{numcases}",
+      "display": true,
+      "observed": [
+        {
+          "source": "\\color{blue}{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": true,
+            "font": "bold"
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "a1c76887460515aab7cba1071242e8eece5a2885479171bdfc34f06fe4e75e28"
+    },
+    {
+      "name": "left-scope-076",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\it \\begin{numcases}{\\color{blue}{AB}=}AB&$CD$\\end{numcases}",
+      "display": false,
+      "observed": [
+        {
+          "source": "\\color{blue}{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": false,
+            "font": "-tex-mathit"
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "d400919a3fdd410f9026447acdafa099bc6d576ea247dc4f22479dce0875ccd3"
+    },
+    {
+      "name": "left-scope-077",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\it \\begin{numcases}{\\color{blue}{AB}=}AB&$CD$\\end{numcases}",
+      "display": true,
+      "observed": [
+        {
+          "source": "\\color{blue}{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": true,
+            "font": "-tex-mathit"
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "d400919a3fdd410f9026447acdafa099bc6d576ea247dc4f22479dce0875ccd3"
+    },
+    {
+      "name": "left-scope-078",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\mathsf{\\begin{numcases}{\\color{blue}{AB}=}AB&$CD$\\end{numcases}}",
+      "display": false,
+      "observed": [
+        {
+          "source": "\\color{blue}{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": false,
+            "font": "sans-serif",
+            "multiLetterIdentifiers": "/^[a-zA-Z]+/",
+            "noAutoOP": true
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "c23f2214b7c146a4fa3529e314fc1d9a690b8469b9ff1a28d7d7385c4fb94555"
+    },
+    {
+      "name": "left-scope-079",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\mathsf{\\begin{numcases}{\\color{blue}{AB}=}AB&$CD$\\end{numcases}}",
+      "display": true,
+      "observed": [
+        {
+          "source": "\\color{blue}{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": true,
+            "font": "sans-serif",
+            "multiLetterIdentifiers": "/^[a-zA-Z]+/",
+            "noAutoOP": true
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "c23f2214b7c146a4fa3529e314fc1d9a690b8469b9ff1a28d7d7385c4fb94555"
+    },
+    {
+      "name": "left-scope-080",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\mathrm{\\begin{numcases}{\\color{blue}{AB}=}AB&$CD$\\end{numcases}}",
+      "display": false,
+      "observed": [
+        {
+          "source": "\\color{blue}{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": false,
+            "font": "normal",
+            "multiLetterIdentifiers": "/^[a-zA-Z]+/",
+            "noAutoOP": true
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "7c237a86d04fb31e98223f8f98eb1b98a1fe732a099bcb2cde3187404526b624"
+    },
+    {
+      "name": "left-scope-081",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\mathrm{\\begin{numcases}{\\color{blue}{AB}=}AB&$CD$\\end{numcases}}",
+      "display": true,
+      "observed": [
+        {
+          "source": "\\color{blue}{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": true,
+            "font": "normal",
+            "multiLetterIdentifiers": "/^[a-zA-Z]+/",
+            "noAutoOP": true
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "7c237a86d04fb31e98223f8f98eb1b98a1fe732a099bcb2cde3187404526b624"
+    },
+    {
+      "name": "left-scope-082",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\mathnormal{\\begin{numcases}{\\color{blue}{AB}=}AB&$CD$\\end{numcases}}",
+      "display": false,
+      "observed": [
+        {
+          "source": "\\color{blue}{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": false,
+            "font": "",
+            "multiLetterIdentifiers": "/^[a-zA-Z]+/",
+            "noAutoOP": true
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "69747e1c4bfc31c2ce5583f0b1fab950f3aa5df6ab74da517432b2d7fc0856e6"
+    },
+    {
+      "name": "left-scope-083",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\mathnormal{\\begin{numcases}{\\color{blue}{AB}=}AB&$CD$\\end{numcases}}",
+      "display": true,
+      "observed": [
+        {
+          "source": "\\color{blue}{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": true,
+            "font": "",
+            "multiLetterIdentifiers": "/^[a-zA-Z]+/",
+            "noAutoOP": true
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "69747e1c4bfc31c2ce5583f0b1fab950f3aa5df6ab74da517432b2d7fc0856e6"
+    },
+    {
+      "name": "left-scope-084",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\operatorname{\\begin{numcases}{\\color{blue}{AB}=}AB&$CD$\\end{numcases}}",
+      "display": false,
+      "observed": [
+        {
+          "source": "\\color{blue}{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": false,
+            "font": "normal",
+            "multiLetterIdentifiers": "/^[-*a-z]+/i",
+            "operatorLetters": true
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "4dd60c9c4a4dd077edf810ac159ca0a9643beb086be145f45ee6976104648058"
+    },
+    {
+      "name": "left-scope-085",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\operatorname{\\begin{numcases}{\\color{blue}{AB}=}AB&$CD$\\end{numcases}}",
+      "display": true,
+      "observed": [
+        {
+          "source": "\\color{blue}{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": true,
+            "font": "normal",
+            "multiLetterIdentifiers": "/^[-*a-z]+/i",
+            "operatorLetters": true
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "4dd60c9c4a4dd077edf810ac159ca0a9643beb086be145f45ee6976104648058"
+    },
+    {
+      "name": "left-scope-086",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\color{red}\\begin{numcases}{\\color{blue}{AB}=}AB&$CD$\\end{numcases}",
+      "display": false,
+      "observed": [
+        {
+          "source": "\\color{blue}{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": false,
+            "color": "red"
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "2ffb4ae27afeb27be27a66ccd9c3d18c4ebaa9ea1cae67634705afa38bd0eac2"
+    },
+    {
+      "name": "left-scope-087",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\color{red}\\begin{numcases}{\\color{blue}{AB}=}AB&$CD$\\end{numcases}",
+      "display": true,
+      "observed": [
+        {
+          "source": "\\color{blue}{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": true,
+            "color": "red"
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "2ffb4ae27afeb27be27a66ccd9c3d18c4ebaa9ea1cae67634705afa38bd0eac2"
+    },
+    {
+      "name": "left-scope-088",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\scriptstyle \\begin{numcases}{\\color{blue}{AB}=}AB&$CD$\\end{numcases}",
+      "display": false,
+      "observed": [
+        {
+          "source": "\\color{blue}{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": false,
+            "style": "S",
+            "level": 1
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "ef17f22369de15aa7a0568a7d7ba5362fa10cb1268ef9fc343e63a806e7a27e4"
+    },
+    {
+      "name": "left-scope-089",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\scriptstyle \\begin{numcases}{\\color{blue}{AB}=}AB&$CD$\\end{numcases}",
+      "display": true,
+      "observed": [
+        {
+          "source": "\\color{blue}{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": true,
+            "style": "S",
+            "level": 1
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "ef17f22369de15aa7a0568a7d7ba5362fa10cb1268ef9fc343e63a806e7a27e4"
+    },
+    {
+      "name": "left-scope-090",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\vb{\\begin{numcases}{\\color{blue}{AB}=}AB&$CD$\\end{numcases}}",
+      "display": false,
+      "observed": [
+        {
+          "source": "\\color{blue}{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": false,
+            "vectorFont": "bold",
+            "vectorStar": false
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "8021dbb685d04516f5c53c2d0eb7717250bdb2df4eac6bc92f097f41af5bd359"
+    },
+    {
+      "name": "left-scope-091",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\vb{\\begin{numcases}{\\color{blue}{AB}=}AB&$CD$\\end{numcases}}",
+      "display": true,
+      "observed": [
+        {
+          "source": "\\color{blue}{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": true,
+            "vectorFont": "bold",
+            "vectorStar": false
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "8021dbb685d04516f5c53c2d0eb7717250bdb2df4eac6bc92f097f41af5bd359"
+    },
+    {
+      "name": "left-scope-092",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\grad{\\begin{numcases}{\\color{blue}{AB}=}AB&$CD$\\end{numcases}}",
+      "display": false,
+      "observed": [
+        {
+          "source": "\\color{blue}{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": false
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "e23291a9110d361a4f8c36a3899393230832d5f626d3a2ceb340b79135aa4904"
+    },
+    {
+      "name": "left-scope-093",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\grad{\\begin{numcases}{\\color{blue}{AB}=}AB&$CD$\\end{numcases}}",
+      "display": true,
+      "observed": [
+        {
+          "source": "\\color{blue}{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": true
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "e23291a9110d361a4f8c36a3899393230832d5f626d3a2ceb340b79135aa4904"
+    },
+    {
+      "name": "left-scope-094",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\sqrt[\\begin{numcases}{\\color{blue}{AB}=}AB&$CD$\\end{numcases}]{x}",
+      "display": false,
+      "observed": [
+        {
+          "source": "\\color{blue}{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": false,
+            "inRoot": true
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "19d8c062ae365461b41ba2835550e7433e16008a9bb7d284ccb198d916009777"
+    },
+    {
+      "name": "left-scope-095",
+      "tex": "\\DeclareMathOperator{\\empheqlbrace}{L}\\sqrt[\\begin{numcases}{\\color{blue}{AB}=}AB&$CD$\\end{numcases}]{x}",
+      "display": true,
+      "observed": [
+        {
+          "source": "\\color{blue}{AB}=\\empheqlbrace\\,",
+          "env": {
+            "display": true,
+            "inRoot": true
+          },
+          "macroCount": 0,
+          "top": "start"
+        }
+      ],
+      "originalSVG_SHA256": "93001a81045dc27faebfa1c636fa065f83c529d0a6acb85f93ce11166eebe6c8"
+    }
+  ]
+}
