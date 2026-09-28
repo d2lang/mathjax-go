@@ -55,7 +55,8 @@ type parseState struct {
 // Stack.global belongs to one logical TexParser, not its shared configuration.
 // Synthetic body and cell parsers share it; genuine child parsers start fresh.
 type parserStackGlobal struct {
-	eqnEnv bool
+	eqnEnv           bool
+	leftRoot, upRoot string
 }
 
 func newParseState() *parseState {
@@ -106,6 +107,7 @@ type parser struct {
 	starMacroChildren    bool
 	derivativeChildren   bool
 	braketOwner          *braketItem
+	inRoot               bool
 }
 
 func (p *parser) ensureStackGlobal() *parserStackGlobal {
@@ -731,7 +733,7 @@ func (p *parser) parseContinuationString(source string) (*mml.Node, error) {
 }
 
 func (p *parser) parseStringWithStack(source string, global *parserStackGlobal) (*mml.Node, error) {
-	sub := &parser{source: source, state: p.state, stackGlobal: global, display: p.display,
+	sub := &parser{source: source, state: p.state, stackGlobal: global, display: p.display, inRoot: p.inRoot,
 		activeFont: p.activeFont, vectorFactory: p.vectorFactory,
 		operatorLetters: p.operatorLetters, noAutoOP: p.noAutoOP, fontExplicitEmpty: p.fontExplicitEmpty,
 		vectorFont: p.vectorFont, vectorStar: p.vectorStar, vectorAlias: p.vectorAlias,
@@ -763,6 +765,7 @@ func (p *parser) parseMathFontString(source, variant string, ambientOnly bool) (
 		source:             source,
 		state:              p.state,
 		display:            p.display,
+		inRoot:             p.inRoot,
 		multiLetterFont:    variant,
 		activeFont:         variant,
 		identifierPattern:  identifierPatternLetters,

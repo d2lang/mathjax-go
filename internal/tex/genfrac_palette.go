@@ -101,5 +101,24 @@ func (p *parser) parseRootIndex(source string) (*mml.Node, error) {
 		p.state.macroCount = 0
 		defer func() { p.state.macroCount = count }()
 	}
-	return p.parseString(source)
+	inRoot := p.inRoot
+	p.inRoot = true
+	defer func() { p.inRoot = inRoot }()
+	global := &parserStackGlobal{}
+	index, err := p.parseStringWithStack(source, global)
+	if err != nil {
+		return nil, err
+	}
+	if global.leftRoot == "" && global.upRoot == "" {
+		return index, nil
+	}
+	padded := node("mpadded", index)
+	if global.leftRoot != "" {
+		padded.Attributes.Set("width", global.leftRoot)
+	}
+	if global.upRoot != "" {
+		padded.Attributes.Set("voffset", global.upRoot)
+		padded.Attributes.Set("height", global.upRoot)
+	}
+	return padded, nil
 }

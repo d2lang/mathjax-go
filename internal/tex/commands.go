@@ -183,6 +183,8 @@ func (p *parser) commandNodes(name string, after **derivativeAutoOpen) ([]*mml.N
 		return p.sqrt(name)
 	case "root":
 		return p.root(name)
+	case "uproot", "leftroot":
+		return nil, p.moveRoot(name)
 	case "mathchoice":
 		return p.mathChoice(name)
 
