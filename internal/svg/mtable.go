@@ -246,18 +246,12 @@ func newTableLayout(w *wrapper) *tableLayout {
 	t.columnLines = tableLineWidths(t.columnStyle)
 	t.rowLines = tableLineWidths(t.rowStyle)
 
-	// CommonMtable computes the column specifications from the natural cell
-	// boxes, then stretches rows and columns, and only then measures the final
-	// table.  In particular, AMS-CD relies on stretchColumn() to initialize the
-	// horizontal arrows hidden under mover/munderover wrappers.
-	t.data = t.measureCells()
+	// CommonMtable requests cell measurements lazily. Column specifications
+	// and equal rows can cache them before stretching; otherwise, auto tables
+	// first measure the stretched cells when computing their final widths.
 	t.columns = t.columnMeasures()
 	t.stretchRows()
 	t.stretchColumns()
-	// CommonMtable caches getTableData() before stretching and deliberately
-	// keeps those natural row and column measurements afterward.  The stretched
-	// child boxes drive their own SVG, but must not retroactively shrink the
-	// table's cached column widths (observable for long AMS-CD arrows).
 	t.computed = t.computedWidths()
 	t.measureTable()
 	t.resolveTopPercentageWidth()
@@ -618,6 +612,15 @@ func (t *tableLayout) measureCells() tableDimensions {
 	return data
 }
 
+// tableData follows CommonMtable.getTableData: the first request fixes the
+// table's measurements. Later stretching must not invalidate this snapshot.
+func (t *tableLayout) tableData() *tableDimensions {
+	if t.data.W == nil {
+		t.data = t.measureCells()
+	}
+	return &t.data
+}
+
 func (t *tableLayout) columnMeasures() []tableColumnMeasure {
 	width := tableString("width", t.table)
 	if tableBool(t.table, "equalcolumns", false) {
@@ -639,7 +642,7 @@ func (t *tableLayout) equalColumnMeasures(width string) []tableColumnMeasure {
 	measure := tableColumnMeasure{}
 	switch {
 	case width == "auto":
-		measure = tableColumnMeasure{fixed: true, value: tableMax(t.data.W)}
+		measure = tableColumnMeasure{fixed: true, value: tableMax(t.tableData().W)}
 	case tableIsPercent(width):
 		// MathJax leaves percentage columns unresolved until the parent-width pass.
 		measure = tableColumnMeasure{}
@@ -670,6 +673,9 @@ func (t *tableLayout) percentColumnMeasures(values []string) []tableColumnMeasur
 	for _, value := range values {
 		hasFit = hasFit || value == "fit"
 	}
+	if hasFit {
+		t.tableData()
+	}
 	result := make([]tableColumnMeasure, len(values))
 	for i, value := range values {
 		switch {
@@ -696,6 +702,9 @@ func (t *tableLayout) fixedColumnMeasures(values []string, width float64) []tabl
 	n := len(fit)
 	if n == 0 {
 		n = len(auto)
+	}
+	if n != 0 {
+		t.tableData()
 	}
 	cwidth := width - tableSum(t.columnLines, t.columnSpace) - 2*t.frameSpace[0]
 	remaining := cwidth
@@ -730,7 +739,7 @@ func (t *tableLayout) fixedColumnMeasures(values []string, width float64) []tabl
 }
 
 func (t *tableLayout) computedWidths() []float64 {
-	widths := append([]float64(nil), t.data.W...)
+	widths := append([]float64(nil), t.tableData().W...)
 	for i, column := range t.columns {
 		if column.fixed {
 			widths[i] = column.value
@@ -746,6 +755,7 @@ func (t *tableLayout) computedWidths() []float64 {
 }
 
 func (t *tableLayout) equalRowHeight() float64 {
+	t.tableData()
 	maximum := 0.0
 	for i := range t.data.H {
 		maximum = math.Max(maximum, t.data.H[i]+t.data.D[i])

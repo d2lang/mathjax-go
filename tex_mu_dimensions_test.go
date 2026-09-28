@@ -78,6 +78,11 @@ func TestTeXMuDimensionsPinnedReferences(t *testing.T) {
 			delete(boundaries.Cases, stem+"-"+mode)
 		}
 	}
+	// Lazy table measurements now include the stretched CD arrow. Keep the
+	// historical receipts on disk, but require the complete original SVG.
+	for _, mode := range []string{"inline", "display"} {
+		delete(boundaries.Cases, "cd-height-"+mode)
+	}
 	for _, c := range fixture.Cases {
 		t.Run(c.Name, func(t *testing.T) {
 			root, err := tex.NewCompiler().Compile(c.TeX, c.Display)
