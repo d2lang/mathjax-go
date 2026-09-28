@@ -38,6 +38,17 @@ func (w *wrapper) initializeRoot() {
 	mo.Flags.Embellished = true
 	mo.TeXClass = mml.TeXClassOrd
 	mo.Attributes.Set("stretchy", true)
+	// CommonWrapper.createMo inherits the root's effective layout attributes
+	// before wrapping the generated surd. In particular, its mathsize must
+	// match the root so the radical is not scaled back to the default size.
+	mo.Attributes.SetInherited("displaystyle", attribute(w.node, "displaystyle", w.displayStyle))
+	mo.Attributes.SetInherited("scriptlevel", attribute(w.node, "scriptlevel", w.scriptLevel))
+	if w.node.Attributes.IsSet("mathsize") {
+		mo.Attributes.SetInherited("mathsize", attribute(w.node, "mathsize", "normal"))
+	}
+	if prime, ok := w.node.Property("texprimestyle"); ok && truthy(prime) {
+		mo.SetProperty("texprimestyle", true)
+	}
 	surd := w.renderer.wrap(mo, w, w.scriptLevel, w.displayStyle)
 	w.children = append(w.children, surd)
 	surd.canStretch(font.DirectionVertical)
