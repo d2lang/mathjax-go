@@ -19,9 +19,9 @@ func TestAMSOperatorDeclarationReferences(t *testing.T) {
 	}
 	var fixture struct {
 		MathjaxGitCommit string
-		Cases []struct {
+		Cases            []struct {
 			Name, TeX, SVG string
-			Display bool
+			Display        bool
 		}
 	}
 	if err := json.Unmarshal(data, &fixture); err != nil {
@@ -30,9 +30,15 @@ func TestAMSOperatorDeclarationReferences(t *testing.T) {
 	if fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || len(fixture.Cases) != 1104 {
 		t.Fatal("unbound AMS declaration references")
 	}
-	seenNames, seenInputs := make(map[string]bool), make(map[struct{ tex string; display bool }]bool)
+	seenNames, seenInputs := make(map[string]bool), make(map[struct {
+		tex     string
+		display bool
+	}]bool)
 	for _, c := range fixture.Cases {
-		key := struct{ tex string; display bool }{c.TeX, c.Display}
+		key := struct {
+			tex     string
+			display bool
+		}{c.TeX, c.Display}
 		if c.Name == "" || c.SVG == "" || seenNames[c.Name] || seenInputs[key] {
 			t.Fatal("invalid or duplicate AMS declaration reference", c.Name)
 		}
@@ -58,10 +64,10 @@ func TestAMSOperatorDeclarationSafeXMLErrors(t *testing.T) {
 	}
 	var fixture struct {
 		MathjaxGitCommit string
-		Cases []struct {
+		Cases            []struct {
 			Name, TeX, Qualification string
-			Display bool
-			Original struct{ SVG string }
+			Display                  bool
+			Original                 struct{ SVG string }
 		}
 	}
 	if err := json.Unmarshal(data, &fixture); err != nil {
@@ -70,9 +76,15 @@ func TestAMSOperatorDeclarationSafeXMLErrors(t *testing.T) {
 	if fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || len(fixture.Cases) != 20 {
 		t.Fatal("unbound AMS declaration residuals")
 	}
-	seen, checked := make(map[struct{ tex string; display bool }]bool), 0
+	seen, checked := make(map[struct {
+		tex     string
+		display bool
+	}]bool), 0
 	for _, c := range fixture.Cases {
-		key := struct{ tex string; display bool }{c.TeX, c.Display}
+		key := struct {
+			tex     string
+			display bool
+		}{c.TeX, c.Display}
 		if seen[key] {
 			t.Fatal("duplicate AMS declaration residual", c.Name)
 		}

@@ -19,7 +19,7 @@ The explicit inventory contains 1,124 distinct input/display pairs: 884 author
 controls, 224 nonoverlapping independent controls, 20 canonical-name controls
 with six duplicates, and two upstream AMS controls. All original observations
 are retained. There are 1,104 complete original SVG assertions: 682 fixes and
-422 unchanged controls against merged main160. Four additional error controls
+422 unchanged controls against merged main161. Four additional error controls
 match after escaping only the original invalid `data-mjx-error="Misplaced &"`
 attribute. Their test checks the exact single replacement and parses the entire
 result as XML. The original attribute strings are preserved unchanged.
@@ -41,15 +41,15 @@ missing/unbraced argument diagnostics. Effective budgets use supported
 DeclareMathOperator definitions with explicit lexical separators. No unavailable
 `def` or `newcommand` input is counted as macro-budget evidence.
 
-An overlap scan of 405 published JSON files on merged main160
-`2f39558e522906da2ab6fac6e4060b90736d3a99` found no prior input/display pairs
+An overlap scan of 409 published JSON files on merged main161
+`c2c3f8d2dd510269e8d2827f288e965dd09ded3f` found no prior input/display pairs
 among these 1,124 observations. Passing first-publication counts are therefore
 1,104 strict SVG references and four separately qualified safe-XML controls;
 the 16 raw observations are not included in those passing counts.
 
 The wider replay covers 5,634 published raw inputs and 4,326 upstream inputs.
 It finds no genuine published changes or regressions and two exact upstream
-fixes, both included in the strict fixture. Two apparent cancel changes are
+fixes, both included in the strict fixture. Seven apparent cancel changes are
 only attribute serialization order: 64 renders from each binary per input
 retain identical complete parsed XML and are excluded from fix/regression
 counts. A later GetCS line-ending fix must additionally compose the separate

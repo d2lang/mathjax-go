@@ -1,7 +1,7 @@
 {
   "mathjaxGitCommit": "ad8f5c21cb810236551da8c6512ba733e67357ee",
-  "baselineCommit": "2f39558e522906da2ab6fac6e4060b90736d3a99",
-  "sourceCommit": "d2a96feae727f7adff2e30f9aa528b685dda3246",
+  "baselineCommit": "c2c3f8d2dd510269e8d2827f288e965dd09ded3f",
+  "sourceCommit": "d78aa85df15aacdc09066c75b9fe6254d5376657",
   "counts": {
     "inputs": 1124,
     "strict": 1104,
