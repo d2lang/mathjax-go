@@ -140,4 +140,9 @@ var simpleMacros = map[string]string{
 	"substack":  "\\begin{subarray}{c}#1\\end{subarray}",
 	"Bra":       "{\\left\\langle {#1} \\right\\vert}",
 	"Ket":       "{\\left\\vert {#1} \\right\\rangle}",
+	// Mhchem's equilibrium arrows are ordinary TeX macros, including when
+	// emitted by the chemistry state machine.
+	"longrightleftharpoons": "\\stackrel{\\textstyle{-}\\!\\!{\\rightharpoonup}}{\\smash{{\\leftharpoondown}\\!\\!{-}}}",
+	"longRightleftharpoons": "\\stackrel{\\textstyle{-}\\!\\!{\\rightharpoonup}}{\\smash{\\leftharpoondown}}",
+	"longLeftrightharpoons": "\\stackrel{\\textstyle\\vphantom{{-}}{\\rightharpoonup}}{\\smash{{\\leftharpoondown}\\!\\!{-}}}",
 }
