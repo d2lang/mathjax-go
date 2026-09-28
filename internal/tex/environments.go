@@ -223,9 +223,17 @@ func (p *parser) beginEnvironment(name string) ([]*mml.Node, error) {
 			return nil, err
 		}
 		if strings.Contains(environment, "gather") {
+			// Mathtools supplies l/r to AmsEqnArray for these two owners.
+			alignment := "center"
+			switch environment {
+			case "lgathered":
+				alignment = "left"
+			case "rgathered":
+				alignment = "right"
+			}
 			resetTableAttributes(table,
 				"displaystyle", true,
-				"columnalign", "center",
+				"columnalign", alignment,
 				"columnspacing", "1em",
 				"rowspacing", "3pt",
 				"side", "right",
