@@ -1,0 +1,73 @@
+{
+  "checkout": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/mathjax-go",
+  "sourceFiles": [
+    "work/mathjax-go/testdata/alignedat_residuals.json",
+    "work/mathjax-go/testdata/array_rows_residuals.json",
+    "work/mathjax-go/testdata/arrow_between_lines_residuals.json",
+    "work/mathjax-go/testdata/boxed_macro_residuals.json",
+    "work/mathjax-go/testdata/buildrel_residuals.json",
+    "work/mathjax-go/testdata/cd_entries_residuals.json",
+    "work/mathjax-go/testdata/cd_finalization_residuals.json",
+    "work/mathjax-go/testdata/delimiter_cache_residuals.json",
+    "work/mathjax-go/testdata/enclosure_bbox_residuals.json",
+    "work/mathjax-go/testdata/fallback_correction_residuals_mathjax_3_2_2.json",
+    "work/mathjax-go/testdata/flalign_residuals.json",
+    "work/mathjax-go/testdata/fn_script_ownership_residuals.json",
+    "work/mathjax-go/testdata/framebox_residuals.json",
+    "work/mathjax-go/testdata/hfill_residuals.json",
+    "work/mathjax-go/testdata/internal_font_css_residuals_mathjax_3_2_2.json",
+    "work/mathjax-go/testdata/mspace_residuals.json",
+    "work/mathjax-go/testdata/operator_primes_residuals.json",
+    "work/mathjax-go/testdata/physics_named_functions_residuals.json",
+    "work/mathjax-go/testdata/physics_operator_applications_residuals.json",
+    "work/mathjax-go/testdata/physics_vector_applications_residuals.json",
+    "work/mathjax-go/testdata/pmb_residuals.json",
+    "work/mathjax-go/testdata/row_command_priority_residuals.json",
+    "work/mathjax-go/testdata/row_stretch_residuals.json",
+    "work/mathjax-go/testdata/skew_residuals.json"
+  ],
+  "binarySHA256": {
+    "before": "e72ce3874f113fe2c6c6fc84c386764ab2d9754782456e25a53bdcfb80e313cb",
+    "after": "216b0aaee3a09687b827f4a5d95f2bd2510330c145d0d87ed6603f8487fe1c48"
+  },
+  "uniqueInputs": 3040,
+  "changed": 4,
+  "newlyExact": 2,
+  "exactRegressions": [
+    [
+      {
+        "fixture": "enclosure_bbox_residuals.json",
+        "name": "enclosure-1281"
+      }
+    ],
+    [
+      {
+        "fixture": "enclosure_bbox_residuals.json",
+        "name": "enclosure-1285"
+      }
+    ]
+  ],
+  "changedNonexactCount": 2,
+  "changedNonexact": [
+    {
+      "tex": "\\cancel[data-padding=1em,data-thickness=.2em]{\\text{_}}",
+      "display": true,
+      "sources": [
+        {
+          "fixture": "enclosure_bbox_residuals.json",
+          "name": "enclosure-1281"
+        }
+      ]
+    },
+    {
+      "tex": "\\cancel[data-padding=1em,data-thickness=.2em]{}",
+      "display": true,
+      "sources": [
+        {
+          "fixture": "enclosure_bbox_residuals.json",
+          "name": "enclosure-1285"
+        }
+      ]
+    }
+  ]
+}
