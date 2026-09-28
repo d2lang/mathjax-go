@@ -315,7 +315,15 @@ func (p *parser) commandNodes(name string, after **derivativeAutoOpen) ([]*mml.N
 	case "begin":
 		return p.beginEnvironment(name)
 	case "end":
-		env, _, _ := p.readArgument(name, true)
+		env, err := p.readEnvironmentName(name)
+		if err != nil {
+			return nil, err
+		}
+		if !p.sourceEndReturnsItem(env) {
+			if err := p.countEnvironment(); err != nil {
+				return nil, err
+			}
+		}
 		return nil, texError("ExtraEnd", "Extra \\end{%s}", env)
 	case "displaylines":
 		return p.displayLines(name)

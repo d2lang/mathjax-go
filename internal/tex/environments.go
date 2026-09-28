@@ -21,8 +21,11 @@ import (
 )
 
 func (p *parser) beginEnvironment(name string) ([]*mml.Node, error) {
-	environment, _, err := p.readArgument(name, false)
+	environment, err := p.readEnvironmentName(name)
 	if err != nil {
+		return nil, err
+	}
+	if err := p.countEnvironment(); err != nil {
 		return nil, err
 	}
 	environment = strings.TrimSpace(environment)
