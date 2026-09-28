@@ -15,6 +15,7 @@ import (
 // parser, after command argument readers and dynamic maps have had ownership.
 // Fresh cell parsers implement ArrayItem.clearEnv without clearing Stack.global.
 type arrayBodyOwner struct {
+	environment  *environmentFrame
 	requireClose bool
 	configure    func(*parser)
 	prepare      func(*parser) ([]*mml.Node, error)
@@ -31,9 +32,24 @@ func (p *parser) parseArrayBody(source string, owner arrayBodyOwner) error {
 		terminator = '}'
 		source += "}"
 	}
+	position := 0
+	if owner.environment != nil {
+		source, position = p.source, p.pos
+	}
+	var current *parser
+	defer func() {
+		if owner.environment != nil && current != nil {
+			p.source, p.pos = current.source, current.pos
+		}
+	}()
 	var previous *cellItem
 	for {
 		sub := p.matrixCellParser(source)
+		current = sub
+		sub.pos = position
+		if owner.environment != nil {
+			sub.environmentRow = owner.environment
+		}
 		sub.matrixClose, sub.cdArrayEntry = owner.requireClose, true
 		if owner.configure != nil {
 			owner.configure(sub)
@@ -79,7 +95,11 @@ func (p *parser) parseArrayBody(source string, owner arrayBodyOwner) error {
 		}
 		// Macro expansion may replace the current source. Do not resume a
 		// substring of the original captured program or a pre-split row.
-		source = sub.source[sub.pos:]
+		if owner.environment != nil {
+			source, position = sub.source, sub.pos
+		} else {
+			source, position = sub.source[sub.pos:], 0
+		}
 		previous = item
 	}
 }

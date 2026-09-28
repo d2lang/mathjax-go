@@ -32,15 +32,20 @@ func (p *parser) braket(name string) ([]*mml.Node, error) {
 		item.single = false
 		terminator = '}'
 	}
-	previous, cdArrayEntry := p.braketOwner, p.cdArrayEntry
+	previous, cdArrayEntry, environmentRow := p.braketOwner, p.cdArrayEntry, p.environmentRow
+	p.environmentRow = nil
 	p.braketOwner = item
 	if !item.single {
 		p.cdArrayEntry = false
 	}
-	defer func() { p.braketOwner, p.cdArrayEntry = previous, cdArrayEntry }()
+	defer func() { p.braketOwner, p.cdArrayEntry, p.environmentRow = previous, cdArrayEntry, environmentRow }()
 	children, _, err := p.parseRowWithInfix(terminator, false, false)
 	if err != nil {
 		return nil, err
+	}
+	if p.environmentPopped {
+		p.environmentPopped = false
+		return children, nil
 	}
 	if item.single && p.pendingCell != nil {
 		// A final MML closed this Braket before the CellItem was replayed.

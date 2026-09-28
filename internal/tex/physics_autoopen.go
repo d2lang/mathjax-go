@@ -10,14 +10,15 @@ import "github.com/d2lang/mathjax-go/internal/mml"
 // Neither lives in shared parseState or escapes a genuine child parser.
 // Recipients deliver nodes before activating afterNode.
 type commandResult struct {
-	nodes         []*mml.Node
-	namedFunction bool
-	notItem       bool
-	nonscriptItem bool
-	dotsItem      *pendingDots
-	positionItem  *positionItem
-	cellItem      *cellItem
-	afterNode     *derivativeAutoOpen
+	nodes          []*mml.Node
+	namedFunction  bool
+	notItem        bool
+	nonscriptItem  bool
+	dotsItem       *pendingDots
+	positionItem   *positionItem
+	cellItem       *cellItem
+	environmentEnd *environmentEndItem
+	afterNode      *derivativeAutoOpen
 }
 
 func (p *parser) commandEvent(name string) (result commandResult, err error) {
@@ -25,21 +26,25 @@ func (p *parser) commandEvent(name string) (result commandResult, err error) {
 	nonscript := p.commandNonscript
 	dotsItem, position := p.commandDots, p.commandPosition
 	cell := p.commandCell
+	environmentEnd := p.commandEnvironmentEnd
 	p.commandNamedFunction, p.commandNot = false, false
 	p.commandNonscript = false
 	p.commandDots, p.commandPosition = nil, nil
 	p.commandCell = nil
+	p.commandEnvironmentEnd = nil
 	defer func() {
 		p.commandNamedFunction, p.commandNot = namedFunction, notItem
 		p.commandNonscript = nonscript
 		p.commandDots, p.commandPosition = dotsItem, position
 		p.commandCell = cell
+		p.commandEnvironmentEnd = environmentEnd
 	}()
 	result.nodes, err = p.commandNodes(name, &result.afterNode)
 	result.namedFunction, result.notItem = p.commandNamedFunction, p.commandNot
 	result.nonscriptItem = p.commandNonscript
 	result.dotsItem, result.positionItem = p.commandDots, p.commandPosition
 	result.cellItem = p.commandCell
+	result.environmentEnd = p.commandEnvironmentEnd
 	return result, err
 }
 
@@ -49,6 +54,9 @@ func (p *parser) command(name string) ([]*mml.Node, error) {
 	result, err := p.commandEvent(name)
 	if err != nil {
 		return nil, err
+	}
+	if result.environmentEnd != nil {
+		return nil, result.environmentEnd.extra()
 	}
 	if result.cellItem != nil {
 		if !result.cellItem.linebreak {
@@ -127,6 +135,10 @@ func (a *derivativeAutoOpen) completeAfter(p *parser, before func()) ([]*mml.Nod
 	content, _, err := p.parseRowWithAutoOpen(0, false, false, a)
 	if err != nil {
 		return nil, err
+	}
+	if p.environmentPopped {
+		p.environmentPopped = false
+		return content, nil
 	}
 	if a.ignore {
 		return nil, nil

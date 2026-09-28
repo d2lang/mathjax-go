@@ -149,11 +149,7 @@ func (p *parser) mathtoolsSpreadLines(environment string) ([]*mml.Node, error) {
 	if err != nil {
 		return nil, err
 	}
-	body, err := p.captureEnvironment(environment)
-	if err != nil {
-		return nil, err
-	}
-	content, err := p.parseContinuationString(body)
+	content, err := p.parseEnvironmentContinuation(p.environmentOwner)
 	if err != nil {
 		return nil, err
 	}
