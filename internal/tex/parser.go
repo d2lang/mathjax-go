@@ -591,9 +591,9 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 			if err != nil {
 				return nil, "", err
 			}
-			// The registered raw ')' handler creates an AutoClose item. A
+			// The registered raw ')' and ']' handlers create AutoClose items. A
 			// command that merely returns the same mo has no such marker.
-			if auto != nil && len(styles) == 0 && c == ')' && auto.close() {
+			if auto != nil && len(styles) == 0 && c == auto.closingFence() && auto.close() {
 				if closeErr := closeStyles(); closeErr != nil {
 					return nil, "", closeErr
 				}

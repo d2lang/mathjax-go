@@ -53,7 +53,7 @@ func (p *parser) commandNodes(name string, after **derivativeAutoOpen) ([]*mml.N
 			return nodes, err
 		}
 	}
-	if nodes, handled, err := p.physicsCommand(name); handled {
+	if nodes, handled, err := p.physicsCommand(name, after); handled {
 		return nodes, err
 	}
 	if nodes, handled, err := p.amscdCommand(name); handled {
