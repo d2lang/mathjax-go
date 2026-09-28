@@ -313,6 +313,8 @@ func (p *parser) commandNodes(name string, after **derivativeAutoOpen) ([]*mml.N
 			return nil, err
 		}
 		return []*mml.Node{setAttributes(node("menclose", content...), map[string]any{"notation": "box"})}, nil
+	case "framebox":
+		return p.frameBox(name)
 
 	case "begin":
 		return p.beginEnvironment(name)
