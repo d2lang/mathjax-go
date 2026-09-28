@@ -1,7 +1,7 @@
 {
   "mathjaxVersion": "3.2.2",
   "mathjaxGitCommit": "ad8f5c21cb810236551da8c6512ba733e67357ee",
-  "baselineCommit": "41eef3f1e2c5afc7db16f8f9c32d75e2780871cf",
+  "baselineCommit": "a9fcab295ac962d46f533c5d3e4993a50f1e7bf4",
   "counts": {
     "inputs": 2282,
     "exact": 2032,
@@ -3883,5 +3883,5 @@
       }
     }
   ],
-  "baselineDescription": "Main142 plus the separate Quantity token fallback prerequisite"
+  "baselineDescription": "Main144, including the separately merged Quantity token fallback prerequisite"
 }

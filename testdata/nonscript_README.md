@@ -27,8 +27,8 @@ the ordinary gap remains, while the gap in the exponent disappears.
 
 The current corpus has 2,282 distinct inputs: 2,032 complete exact originals
 (1,660 valid expressions and 372 error renderings), 1,876 fixes and 156 exact
-controls against main142 plus the separate Quantity fallback prerequisite
-`41eef3f1e2c5afc7db16f8f9c32d75e2780871cf`. There are no previously exact
+controls against main144 (`a9fcab295ac962d46f533c5d3e4993a50f1e7bf4`),
+which includes the separately merged Quantity fallback prerequisite. There are no previously exact
 regressions. Both modes are covered, including ordinary and fixed spaces,
 Rule/Space, nesting, roots/fractions, scripts/primes, pending items, positions,
 fonts, overrides, arrays/CD, Mathtools row commands, and sequences of 1,001
@@ -59,8 +59,9 @@ Independent source reviews cover item eligibility, temporary rows, filter
 ordering, dynamic priority, and the bounded arity failure. Independent public
 sets contribute 330 and 178 inputs; the combined branch removes the eight
 Quantity fallback differences from the first set and avoids all six process
-panics found in its initial candidate. All original observations are retained. The main143 rebase leaves every
-corpus output unchanged. A 3,040-input published-residual replay against the
+panics found in its initial candidate. All original observations are retained. The main143 rebase left every
+corpus output unchanged; the main144 branch drops the now-merged Quantity
+dependency without changing the composed production source. A 3,040-input published-residual replay against the
 Quantity prerequisite changes only two already documented authored cancel
 attribute orders; the complete parsed SVGs and all geometry are identical.
 Both serialized observations and the attribute-order proof are retained.
