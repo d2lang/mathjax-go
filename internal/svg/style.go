@@ -277,8 +277,10 @@ func (w *wrapper) styleLength(value string, scale float64) float64 {
 	return math.Max(0, layout.Length2Em(value, 0, scale, w.renderer.pxPerEm))
 }
 
-func (w *wrapper) styledOuterBBox() *layout.BBox {
-	bbox := w.getBBox()
+func (w *wrapper) styledOuterBBox() *layout.BBox { return w.styledOuterBBoxWithSave(true) }
+
+func (w *wrapper) styledOuterBBoxWithSave(save bool) *layout.BBox {
+	bbox := w.getBBoxWithSave(save)
 	if w.styles == nil {
 		return bbox
 	}

@@ -339,19 +339,15 @@ func (w *wrapper) stretchToSVG(element *Element) {
 	}
 }
 
+// CommonMrow asks the outer row child whether it stretches. Embellished
+// wrappers propagate their core's stretch state and must be excluded from the
+// non-stretchy height sample just like a direct mo. Only the final resize is
+// delivered to the core mo.
 func (w *wrapper) stretchRowChildren() {
 	var stretchable []*wrapper
 	for _, child := range w.children {
-		core := child
-		for core != nil && core.node.Flags.Embellished && core.node.Kind != "mo" && len(core.children) != 0 {
-			index := core.node.Flags.CoreIndex
-			if index < 0 || index >= len(core.children) {
-				index = 0
-			}
-			core = core.children[index]
-		}
-		if core != nil && core.canStretch(font.DirectionVertical) {
-			stretchable = append(stretchable, core)
+		if child.canStretch(font.DirectionVertical) {
+			stretchable = append(stretchable, child)
 		}
 	}
 	if len(stretchable) == 0 || len(w.children) <= 1 {
@@ -360,21 +356,16 @@ func (w *wrapper) stretchRowChildren() {
 	height, depth := 0.0, 0.0
 	all := len(stretchable) > 1 && len(stretchable) == len(w.children)
 	for _, child := range w.children {
-		isStretch := false
-		for _, candidate := range stretchable {
-			if candidate == child {
-				isStretch = true
-				break
-			}
-		}
-		if !all && isStretch {
+		if !all && child.hasStretch {
 			continue
 		}
-		bbox := child.outerBBox()
+		bbox := child.styledOuterBBoxWithSave(!child.hasStretch)
 		height = math.Max(height, bbox.H*bbox.RScale)
 		depth = math.Max(depth, bbox.D*bbox.RScale)
 	}
 	for _, child := range stretchable {
-		child.getStretchedVariant([]float64{height, depth}, false)
+		if core := tableCoreMO(child); core != nil {
+			core.getStretchedVariant([]float64{height, depth}, false)
+		}
 	}
 }
