@@ -24,7 +24,7 @@ func TestNamedLimitSpacingOriginalReferences(t *testing.T) {
 	if err := json.Unmarshal(data, &fixture); err != nil {
 		t.Fatal(err)
 	}
-	if fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || len(fixture.Cases) != 714 {
+	if fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || len(fixture.Cases) != 812 {
 		t.Fatal("unbound NamedOp references")
 	}
 	for _, c := range fixture.Cases {
