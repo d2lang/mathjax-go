@@ -1,0 +1,24 @@
+{
+  "d2Commit": "01bc7ecdbdd04c13d6fe5df1967d2d9aa14ae579",
+  "beforeMathjaxCommit": "bfc9bc01fe498fda63402dc8633ee6f8e999b7e8",
+  "afterCodeCommit": "dfbd14c300609266d14a2bb7301bb423917c46be",
+  "tex": "\\sqrt\\frac{a+b}{c+d}",
+  "files": {
+    "README.md": "b299200cbc6fd4af884fb068e23e0eb17c21d22cbd01b9ce1fc3c537fa765b9a",
+    "after.png": "631fbdaf41554617787101dd7fd4222ef6895f2f85342fa66e37483b008273f9",
+    "after.svg": "4d9b07bdc903259d8d06c925ff8d9e583ea5ddb0198ae88d55554682c0a158b5",
+    "before.png": "10f8c9b8b038ecb1b6e841fae2e55d160ec5f096ce692255db9ad751a9ba7d48",
+    "before.svg": "c7a9c8ee8606dd9abf0e29826ccb60741a9022698f09e657db0606547ad010f9",
+    "comparison.png": "b5b55deb985bf68e8e3fdd0e8e465274aa57e6b2a41570e249305bf53bd83220",
+    "oracle-adapter/go.mod": "b8a3ff80b4e63b08c12ed3bcbefcdaebec039551cf00b99b08c6ba6dec5abfc5",
+    "oracle-adapter/mathjax.go": "1ed1fbe813faf433d307b2b5c8e332fd22854999a22487e11396c6a6df3b38ed",
+    "original.png": "631fbdaf41554617787101dd7fd4222ef6895f2f85342fa66e37483b008273f9",
+    "original.svg": "4d9b07bdc903259d8d06c925ff8d9e583ea5ddb0198ae88d55554682c0a158b5",
+    "witness.d2": "5a2f682e7d075358613f4b515f67fb038f09ec8d76fa082d3a08c972f217d701"
+  },
+  "oracleAssets": {
+    "mathjax.js": "cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869",
+    "polyfills.js": "7fe1d048c78b0e09854c1259f7413868a51cc8f0c822489eb1ac36ae6c85ce01",
+    "setup.js": "a52cb0bbabfbd7796b9fedd793b9386c474e3123e788ee151cbe47ca1fa6e881"
+  }
+}
