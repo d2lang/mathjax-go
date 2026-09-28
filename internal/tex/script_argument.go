@@ -87,7 +87,7 @@ func (p *parser) parseScriptArgument(attachment *scriptAttachment, font string) 
 			name := p.readControlSequence()
 			if _, macro := p.state.macros[name]; !macro {
 				switch name {
-				case "matrix", "array", "pmatrix", "eqalign", "eqalignno", "leqalignno":
+				case "matrix", "array", "pmatrix", "cases", "eqalign", "eqalignno", "leqalignno":
 					if parseErr := p.startMatrixBody(name); parseErr != nil {
 						return nil, currentFont, nil, parseErr
 					}

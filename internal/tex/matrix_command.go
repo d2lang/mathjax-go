@@ -20,7 +20,7 @@ func (p *parser) matrixCommand(name string) ([]*mml.Node, error) {
 	if err != nil {
 		return nil, err
 	}
-	rows, err := splitMatrixBody(body)
+	rows, err := splitMatrixBody(body, name == "cases")
 	if err != nil {
 		return nil, err
 	}
@@ -32,15 +32,32 @@ func (p *parser) matrixCommand(name string) ([]*mml.Node, error) {
 		}
 		line := node("mtr")
 		for column, raw := range cells {
+			if column == 1 && sourceRow.casesError != nil {
+				return nil, sourceRow.casesError
+			}
 			terminator := byte('}')
 			if column < len(cells)-1 || i < len(rows)-1 {
 				terminator = '&'
 			}
-			content, err := p.parseMatrixCell(raw, terminator)
+			var content *mml.Node
+			var err error
+			if name == "cases" && column == 1 {
+				content, err = p.parseMatrixCasesCell(raw, terminator)
+			} else {
+				content, err = p.parseMatrixCell(raw, terminator)
+			}
 			if err != nil {
 				return nil, err
 			}
+			if i == len(rows)-1 && len(cells) == 1 && content.Kind == "mrow" && content.Flags.Inferred && len(content.Children) == 0 {
+				// EndTable omits a final entry that emitted no nodes, even
+				// when its source contains font declarations or comments.
+				continue
+			}
 			line.AppendChild(node("mtd", content))
+		}
+		if len(line.Children) == 0 {
+			continue
 		}
 		// ArrayItem.EndRow treats exactly three entries as an equation and
 		// its label. Other row lengths remain ordinary, unnumbered rows.
@@ -64,6 +81,10 @@ func (p *parser) matrixCommand(name string) ([]*mml.Node, error) {
 		}
 		table.Attributes.Set("side", side)
 	}
+	if name == "cases" {
+		table.Attributes.Set("rowspacing", ".1em")
+		table.Attributes.Set("columnalign", "left left")
+	}
 	for _, r := range rows {
 		if r.spacing == "" {
 			continue
@@ -71,6 +92,9 @@ func (p *parser) matrixCommand(name string) ([]*mml.Node, error) {
 		base := .4
 		if aligned {
 			base = .5
+		}
+		if name == "cases" {
+			base = .1
 		}
 		spacing := make([]string, len(table.Children))
 		for i := range spacing {
@@ -85,6 +109,9 @@ func (p *parser) matrixCommand(name string) ([]*mml.Node, error) {
 	}
 	if name == "pmatrix" {
 		return []*mml.Node{p.fenced("(", table, ")", true)}, nil
+	}
+	if name == "cases" {
+		return []*mml.Node{p.fenced("{", table, "", true)}, nil
 	}
 	return []*mml.Node{table}, nil
 }
@@ -127,13 +154,30 @@ func (p *parser) readMatrixBody(name string) (string, error) {
 	if err := p.startMatrixBody(name); err != nil {
 		return "", err
 	}
-	start, depth := p.pos, 0
+	start, depth, environments := p.pos, 0, 0
 	for p.pos < len(p.source) {
 		switch p.consumeRune() {
 		case '%':
 			p.skipComment()
 		case '\\':
-			p.readControlSequence()
+			command := p.readControlSequence()
+			if name == "cases" && depth == 0 && (command == "begin" || command == "end") {
+				if _, _, err := p.readArgument(command, false); err != nil {
+					return "", err
+				}
+				if command == "begin" {
+					environments++
+				} else {
+					environments--
+				}
+			}
+		case '&':
+			if name == "cases" && depth == 0 && environments == 0 {
+				// Delay text errors until its first cell has been parsed.
+				// Entry runs only after the preceding math reaches its &.
+				end, _, _ := matrixCasesTextEnd(p.source, p.pos)
+				p.pos = end
+			}
 		case '{':
 			depth++
 		case '}':
@@ -164,13 +208,20 @@ func (p *parser) startMatrixBody(name string) error {
 }
 
 type matrixSourceRow struct {
-	cells   []string
-	spacing string
+	cells      []string
+	spacing    string
+	casesError error
 }
 
-func splitMatrixBody(body string) ([]matrixSourceRow, error) {
+func splitMatrixBody(body string, cases bool) ([]matrixSourceRow, error) {
 	rows := []matrixSourceRow{{}}
 	scanner := &parser{source: body}
+	textSource := body
+	if cases {
+		// Entry sees the matrix's closing brace, including the non-letter
+		// after a final \cr. Keep it available to the text scanner.
+		textSource += "}"
+	}
 	start, depth, environments := 0, 0, 0
 	for scanner.pos < len(body) {
 		at := scanner.pos
@@ -186,6 +237,13 @@ func splitMatrixBody(body string) ([]matrixSourceRow, error) {
 				last := &rows[len(rows)-1]
 				last.cells = append(last.cells, body[start:at])
 				start = scanner.pos
+				if cases {
+					end, _, err := matrixCasesTextEnd(textSource, scanner.pos)
+					if err != nil {
+						last.casesError = err
+					}
+					scanner.pos = end
+				}
 			}
 		case '\\':
 			command := scanner.readControlSequence()
@@ -235,16 +293,24 @@ func splitMatrixBody(body string) ([]matrixSourceRow, error) {
 }
 
 func (p *parser) parseMatrixCell(source string, terminator byte) (*mml.Node, error) {
-	// ArrayItem resets its lexical environment at entry and after every cell.
-	// Keep the configuration and logical Stack.global while starting without
-	// the surrounding font, root-index, or identifier-pattern state.
-	sub := &parser{source: source + string(terminator), state: p.state, stackGlobal: p.ensureStackGlobal(), display: p.display,
-		vectorFactory: p.vectorFactory, genfracPalette: p.genfracPalette,
-		starMacroChildren: p.starMacroChildren, derivativeChildren: p.derivativeChildren}
+	sub := p.matrixCellParser(source + string(terminator))
 	children, _, err := sub.parseRow(terminator, false)
 	if err != nil {
 		return nil, err
 	}
+	return matrixCellContent(children), nil
+}
+
+func (p *parser) matrixCellParser(source string) *parser {
+	// ArrayItem resets its lexical environment at entry and after every cell.
+	// Keep the configuration and logical Stack.global while starting without
+	// the surrounding font, root-index, or identifier-pattern state.
+	return &parser{source: source, state: p.state, stackGlobal: p.ensureStackGlobal(), display: p.display,
+		vectorFactory: p.vectorFactory, genfracPalette: p.genfracPalette,
+		starMacroChildren: p.starMacroChildren, derivativeChildren: p.derivativeChildren}
+}
+
+func matrixCellContent(children []*mml.Node) *mml.Node {
 	content := row(children, true)
 	content.Walk(func(n *mml.Node) bool {
 		if n.Flags.Token {
@@ -252,5 +318,5 @@ func (p *parser) parseMatrixCell(source string, terminator byte) (*mml.Node, err
 		}
 		return true
 	})
-	return content, nil
+	return content
 }
