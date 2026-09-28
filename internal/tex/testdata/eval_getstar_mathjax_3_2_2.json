@@ -1,0 +1,1456 @@
+{
+  "mathjaxGitCommit": "ad8f5c21cb810236551da8c6512ba733e67357ee",
+  "assetsSHA256": {
+    "polyfills.js": "7fe1d048c78b0e09854c1259f7413868a51cc8f0c822489eb1ac36ae6c85ce01",
+    "mathjax.js": "cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869",
+    "setup.js": "a52cb0bbabfbd7796b9fedd793b9386c474e3123e788ee151cbe47ca1fa6e881"
+  },
+  "methods": {
+    "GetStar": "function(){var t=\"*\"===this.GetNext();return t&&this.i++,t}",
+    "GetNext": "function(){for(;this.nextIsSpace();)this.i++;return this.getCodePoint()}",
+    "nextIsSpace": "function(){return!!this.string.charAt(this.i).match(/\\s/)}"
+  },
+  "cases": [
+    {
+      "source": "\t",
+      "point": 9,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 1,
+      "remaining": ""
+    },
+    {
+      "source": "\t*x",
+      "point": 9,
+      "value": true,
+      "cursorCodeUnits": 2,
+      "consumedBytes": 2,
+      "remaining": "x"
+    },
+    {
+      "source": "\t**x",
+      "point": 9,
+      "value": true,
+      "cursorCodeUnits": 2,
+      "consumedBytes": 2,
+      "remaining": "*x"
+    },
+    {
+      "source": "\tx",
+      "point": 9,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 1,
+      "remaining": "x"
+    },
+    {
+      "source": "\t\\foo",
+      "point": 9,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 1,
+      "remaining": "\\foo"
+    },
+    {
+      "source": "\t\n*",
+      "point": 9,
+      "value": true,
+      "cursorCodeUnits": 3,
+      "consumedBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": "\n",
+      "point": 10,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 1,
+      "remaining": ""
+    },
+    {
+      "source": "\n*x",
+      "point": 10,
+      "value": true,
+      "cursorCodeUnits": 2,
+      "consumedBytes": 2,
+      "remaining": "x"
+    },
+    {
+      "source": "\n**x",
+      "point": 10,
+      "value": true,
+      "cursorCodeUnits": 2,
+      "consumedBytes": 2,
+      "remaining": "*x"
+    },
+    {
+      "source": "\nx",
+      "point": 10,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 1,
+      "remaining": "x"
+    },
+    {
+      "source": "\n\\foo",
+      "point": 10,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 1,
+      "remaining": "\\foo"
+    },
+    {
+      "source": "\n\n*",
+      "point": 10,
+      "value": true,
+      "cursorCodeUnits": 3,
+      "consumedBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": "\u000b",
+      "point": 11,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 1,
+      "remaining": ""
+    },
+    {
+      "source": "\u000b*x",
+      "point": 11,
+      "value": true,
+      "cursorCodeUnits": 2,
+      "consumedBytes": 2,
+      "remaining": "x"
+    },
+    {
+      "source": "\u000b**x",
+      "point": 11,
+      "value": true,
+      "cursorCodeUnits": 2,
+      "consumedBytes": 2,
+      "remaining": "*x"
+    },
+    {
+      "source": "\u000bx",
+      "point": 11,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 1,
+      "remaining": "x"
+    },
+    {
+      "source": "\u000b\\foo",
+      "point": 11,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 1,
+      "remaining": "\\foo"
+    },
+    {
+      "source": "\u000b\n*",
+      "point": 11,
+      "value": true,
+      "cursorCodeUnits": 3,
+      "consumedBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": "\f",
+      "point": 12,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 1,
+      "remaining": ""
+    },
+    {
+      "source": "\f*x",
+      "point": 12,
+      "value": true,
+      "cursorCodeUnits": 2,
+      "consumedBytes": 2,
+      "remaining": "x"
+    },
+    {
+      "source": "\f**x",
+      "point": 12,
+      "value": true,
+      "cursorCodeUnits": 2,
+      "consumedBytes": 2,
+      "remaining": "*x"
+    },
+    {
+      "source": "\fx",
+      "point": 12,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 1,
+      "remaining": "x"
+    },
+    {
+      "source": "\f\\foo",
+      "point": 12,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 1,
+      "remaining": "\\foo"
+    },
+    {
+      "source": "\f\n*",
+      "point": 12,
+      "value": true,
+      "cursorCodeUnits": 3,
+      "consumedBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": "\r",
+      "point": 13,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 1,
+      "remaining": ""
+    },
+    {
+      "source": "\r*x",
+      "point": 13,
+      "value": true,
+      "cursorCodeUnits": 2,
+      "consumedBytes": 2,
+      "remaining": "x"
+    },
+    {
+      "source": "\r**x",
+      "point": 13,
+      "value": true,
+      "cursorCodeUnits": 2,
+      "consumedBytes": 2,
+      "remaining": "*x"
+    },
+    {
+      "source": "\rx",
+      "point": 13,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 1,
+      "remaining": "x"
+    },
+    {
+      "source": "\r\\foo",
+      "point": 13,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 1,
+      "remaining": "\\foo"
+    },
+    {
+      "source": "\r\n*",
+      "point": 13,
+      "value": true,
+      "cursorCodeUnits": 3,
+      "consumedBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": " ",
+      "point": 32,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 1,
+      "remaining": ""
+    },
+    {
+      "source": " *x",
+      "point": 32,
+      "value": true,
+      "cursorCodeUnits": 2,
+      "consumedBytes": 2,
+      "remaining": "x"
+    },
+    {
+      "source": " **x",
+      "point": 32,
+      "value": true,
+      "cursorCodeUnits": 2,
+      "consumedBytes": 2,
+      "remaining": "*x"
+    },
+    {
+      "source": " x",
+      "point": 32,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 1,
+      "remaining": "x"
+    },
+    {
+      "source": " \\foo",
+      "point": 32,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 1,
+      "remaining": "\\foo"
+    },
+    {
+      "source": " \n*",
+      "point": 32,
+      "value": true,
+      "cursorCodeUnits": 3,
+      "consumedBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": "",
+      "point": 133,
+      "value": false,
+      "cursorCodeUnits": 0,
+      "consumedBytes": 0,
+      "remaining": ""
+    },
+    {
+      "source": "*x",
+      "point": 133,
+      "value": false,
+      "cursorCodeUnits": 0,
+      "consumedBytes": 0,
+      "remaining": "*x"
+    },
+    {
+      "source": "**x",
+      "point": 133,
+      "value": false,
+      "cursorCodeUnits": 0,
+      "consumedBytes": 0,
+      "remaining": "**x"
+    },
+    {
+      "source": "x",
+      "point": 133,
+      "value": false,
+      "cursorCodeUnits": 0,
+      "consumedBytes": 0,
+      "remaining": "x"
+    },
+    {
+      "source": "\\foo",
+      "point": 133,
+      "value": false,
+      "cursorCodeUnits": 0,
+      "consumedBytes": 0,
+      "remaining": "\\foo"
+    },
+    {
+      "source": "\n*",
+      "point": 133,
+      "value": false,
+      "cursorCodeUnits": 0,
+      "consumedBytes": 0,
+      "remaining": "\n*"
+    },
+    {
+      "source": " ",
+      "point": 160,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 2,
+      "remaining": ""
+    },
+    {
+      "source": " *x",
+      "point": 160,
+      "value": true,
+      "cursorCodeUnits": 2,
+      "consumedBytes": 3,
+      "remaining": "x"
+    },
+    {
+      "source": " **x",
+      "point": 160,
+      "value": true,
+      "cursorCodeUnits": 2,
+      "consumedBytes": 3,
+      "remaining": "*x"
+    },
+    {
+      "source": " x",
+      "point": 160,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 2,
+      "remaining": "x"
+    },
+    {
+      "source": " \\foo",
+      "point": 160,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 2,
+      "remaining": "\\foo"
+    },
+    {
+      "source": " \n*",
+      "point": 160,
+      "value": true,
+      "cursorCodeUnits": 3,
+      "consumedBytes": 4,
+      "remaining": ""
+    },
+    {
+      "source": " ",
+      "point": 5760,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": " *x",
+      "point": 5760,
+      "value": true,
+      "cursorCodeUnits": 2,
+      "consumedBytes": 4,
+      "remaining": "x"
+    },
+    {
+      "source": " **x",
+      "point": 5760,
+      "value": true,
+      "cursorCodeUnits": 2,
+      "consumedBytes": 4,
+      "remaining": "*x"
+    },
+    {
+      "source": " x",
+      "point": 5760,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": "x"
+    },
+    {
+      "source": " \\foo",
+      "point": 5760,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": "\\foo"
+    },
+    {
+      "source": " \n*",
+      "point": 5760,
+      "value": true,
+      "cursorCodeUnits": 3,
+      "consumedBytes": 5,
+      "remaining": ""
+    },
+    {
+      "source": " ",
+      "point": 8192,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": " *x",
+      "point": 8192,
+      "value": true,
+      "cursorCodeUnits": 2,
+      "consumedBytes": 4,
+      "remaining": "x"
+    },
+    {
+      "source": " **x",
+      "point": 8192,
+      "value": true,
+      "cursorCodeUnits": 2,
+      "consumedBytes": 4,
+      "remaining": "*x"
+    },
+    {
+      "source": " x",
+      "point": 8192,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": "x"
+    },
+    {
+      "source": " \\foo",
+      "point": 8192,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": "\\foo"
+    },
+    {
+      "source": " \n*",
+      "point": 8192,
+      "value": true,
+      "cursorCodeUnits": 3,
+      "consumedBytes": 5,
+      "remaining": ""
+    },
+    {
+      "source": " ",
+      "point": 8193,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": " *x",
+      "point": 8193,
+      "value": true,
+      "cursorCodeUnits": 2,
+      "consumedBytes": 4,
+      "remaining": "x"
+    },
+    {
+      "source": " **x",
+      "point": 8193,
+      "value": true,
+      "cursorCodeUnits": 2,
+      "consumedBytes": 4,
+      "remaining": "*x"
+    },
+    {
+      "source": " x",
+      "point": 8193,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": "x"
+    },
+    {
+      "source": " \\foo",
+      "point": 8193,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": "\\foo"
+    },
+    {
+      "source": " \n*",
+      "point": 8193,
+      "value": true,
+      "cursorCodeUnits": 3,
+      "consumedBytes": 5,
+      "remaining": ""
+    },
+    {
+      "source": " ",
+      "point": 8194,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": " *x",
+      "point": 8194,
+      "value": true,
+      "cursorCodeUnits": 2,
+      "consumedBytes": 4,
+      "remaining": "x"
+    },
+    {
+      "source": " **x",
+      "point": 8194,
+      "value": true,
+      "cursorCodeUnits": 2,
+      "consumedBytes": 4,
+      "remaining": "*x"
+    },
+    {
+      "source": " x",
+      "point": 8194,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": "x"
+    },
+    {
+      "source": " \\foo",
+      "point": 8194,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": "\\foo"
+    },
+    {
+      "source": " \n*",
+      "point": 8194,
+      "value": true,
+      "cursorCodeUnits": 3,
+      "consumedBytes": 5,
+      "remaining": ""
+    },
+    {
+      "source": " ",
+      "point": 8195,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": " *x",
+      "point": 8195,
+      "value": true,
+      "cursorCodeUnits": 2,
+      "consumedBytes": 4,
+      "remaining": "x"
+    },
+    {
+      "source": " **x",
+      "point": 8195,
+      "value": true,
+      "cursorCodeUnits": 2,
+      "consumedBytes": 4,
+      "remaining": "*x"
+    },
+    {
+      "source": " x",
+      "point": 8195,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": "x"
+    },
+    {
+      "source": " \\foo",
+      "point": 8195,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": "\\foo"
+    },
+    {
+      "source": " \n*",
+      "point": 8195,
+      "value": true,
+      "cursorCodeUnits": 3,
+      "consumedBytes": 5,
+      "remaining": ""
+    },
+    {
+      "source": " ",
+      "point": 8196,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": " *x",
+      "point": 8196,
+      "value": true,
+      "cursorCodeUnits": 2,
+      "consumedBytes": 4,
+      "remaining": "x"
+    },
+    {
+      "source": " **x",
+      "point": 8196,
+      "value": true,
+      "cursorCodeUnits": 2,
+      "consumedBytes": 4,
+      "remaining": "*x"
+    },
+    {
+      "source": " x",
+      "point": 8196,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": "x"
+    },
+    {
+      "source": " \\foo",
+      "point": 8196,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": "\\foo"
+    },
+    {
+      "source": " \n*",
+      "point": 8196,
+      "value": true,
+      "cursorCodeUnits": 3,
+      "consumedBytes": 5,
+      "remaining": ""
+    },
+    {
+      "source": " ",
+      "point": 8197,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": " *x",
+      "point": 8197,
+      "value": true,
+      "cursorCodeUnits": 2,
+      "consumedBytes": 4,
+      "remaining": "x"
+    },
+    {
+      "source": " **x",
+      "point": 8197,
+      "value": true,
+      "cursorCodeUnits": 2,
+      "consumedBytes": 4,
+      "remaining": "*x"
+    },
+    {
+      "source": " x",
+      "point": 8197,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": "x"
+    },
+    {
+      "source": " \\foo",
+      "point": 8197,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": "\\foo"
+    },
+    {
+      "source": " \n*",
+      "point": 8197,
+      "value": true,
+      "cursorCodeUnits": 3,
+      "consumedBytes": 5,
+      "remaining": ""
+    },
+    {
+      "source": " ",
+      "point": 8198,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": " *x",
+      "point": 8198,
+      "value": true,
+      "cursorCodeUnits": 2,
+      "consumedBytes": 4,
+      "remaining": "x"
+    },
+    {
+      "source": " **x",
+      "point": 8198,
+      "value": true,
+      "cursorCodeUnits": 2,
+      "consumedBytes": 4,
+      "remaining": "*x"
+    },
+    {
+      "source": " x",
+      "point": 8198,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": "x"
+    },
+    {
+      "source": " \\foo",
+      "point": 8198,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": "\\foo"
+    },
+    {
+      "source": " \n*",
+      "point": 8198,
+      "value": true,
+      "cursorCodeUnits": 3,
+      "consumedBytes": 5,
+      "remaining": ""
+    },
+    {
+      "source": " ",
+      "point": 8199,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": " *x",
+      "point": 8199,
+      "value": true,
+      "cursorCodeUnits": 2,
+      "consumedBytes": 4,
+      "remaining": "x"
+    },
+    {
+      "source": " **x",
+      "point": 8199,
+      "value": true,
+      "cursorCodeUnits": 2,
+      "consumedBytes": 4,
+      "remaining": "*x"
+    },
+    {
+      "source": " x",
+      "point": 8199,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": "x"
+    },
+    {
+      "source": " \\foo",
+      "point": 8199,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": "\\foo"
+    },
+    {
+      "source": " \n*",
+      "point": 8199,
+      "value": true,
+      "cursorCodeUnits": 3,
+      "consumedBytes": 5,
+      "remaining": ""
+    },
+    {
+      "source": " ",
+      "point": 8200,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": " *x",
+      "point": 8200,
+      "value": true,
+      "cursorCodeUnits": 2,
+      "consumedBytes": 4,
+      "remaining": "x"
+    },
+    {
+      "source": " **x",
+      "point": 8200,
+      "value": true,
+      "cursorCodeUnits": 2,
+      "consumedBytes": 4,
+      "remaining": "*x"
+    },
+    {
+      "source": " x",
+      "point": 8200,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": "x"
+    },
+    {
+      "source": " \\foo",
+      "point": 8200,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": "\\foo"
+    },
+    {
+      "source": " \n*",
+      "point": 8200,
+      "value": true,
+      "cursorCodeUnits": 3,
+      "consumedBytes": 5,
+      "remaining": ""
+    },
+    {
+      "source": " ",
+      "point": 8201,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": " *x",
+      "point": 8201,
+      "value": true,
+      "cursorCodeUnits": 2,
+      "consumedBytes": 4,
+      "remaining": "x"
+    },
+    {
+      "source": " **x",
+      "point": 8201,
+      "value": true,
+      "cursorCodeUnits": 2,
+      "consumedBytes": 4,
+      "remaining": "*x"
+    },
+    {
+      "source": " x",
+      "point": 8201,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": "x"
+    },
+    {
+      "source": " \\foo",
+      "point": 8201,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": "\\foo"
+    },
+    {
+      "source": " \n*",
+      "point": 8201,
+      "value": true,
+      "cursorCodeUnits": 3,
+      "consumedBytes": 5,
+      "remaining": ""
+    },
+    {
+      "source": " ",
+      "point": 8202,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": " *x",
+      "point": 8202,
+      "value": true,
+      "cursorCodeUnits": 2,
+      "consumedBytes": 4,
+      "remaining": "x"
+    },
+    {
+      "source": " **x",
+      "point": 8202,
+      "value": true,
+      "cursorCodeUnits": 2,
+      "consumedBytes": 4,
+      "remaining": "*x"
+    },
+    {
+      "source": " x",
+      "point": 8202,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": "x"
+    },
+    {
+      "source": " \\foo",
+      "point": 8202,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": "\\foo"
+    },
+    {
+      "source": " \n*",
+      "point": 8202,
+      "value": true,
+      "cursorCodeUnits": 3,
+      "consumedBytes": 5,
+      "remaining": ""
+    },
+    {
+      "source": " ",
+      "point": 8232,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": " *x",
+      "point": 8232,
+      "value": true,
+      "cursorCodeUnits": 2,
+      "consumedBytes": 4,
+      "remaining": "x"
+    },
+    {
+      "source": " **x",
+      "point": 8232,
+      "value": true,
+      "cursorCodeUnits": 2,
+      "consumedBytes": 4,
+      "remaining": "*x"
+    },
+    {
+      "source": " x",
+      "point": 8232,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": "x"
+    },
+    {
+      "source": " \\foo",
+      "point": 8232,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": "\\foo"
+    },
+    {
+      "source": " \n*",
+      "point": 8232,
+      "value": true,
+      "cursorCodeUnits": 3,
+      "consumedBytes": 5,
+      "remaining": ""
+    },
+    {
+      "source": " ",
+      "point": 8233,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": " *x",
+      "point": 8233,
+      "value": true,
+      "cursorCodeUnits": 2,
+      "consumedBytes": 4,
+      "remaining": "x"
+    },
+    {
+      "source": " **x",
+      "point": 8233,
+      "value": true,
+      "cursorCodeUnits": 2,
+      "consumedBytes": 4,
+      "remaining": "*x"
+    },
+    {
+      "source": " x",
+      "point": 8233,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": "x"
+    },
+    {
+      "source": " \\foo",
+      "point": 8233,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": "\\foo"
+    },
+    {
+      "source": " \n*",
+      "point": 8233,
+      "value": true,
+      "cursorCodeUnits": 3,
+      "consumedBytes": 5,
+      "remaining": ""
+    },
+    {
+      "source": " ",
+      "point": 8239,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": " *x",
+      "point": 8239,
+      "value": true,
+      "cursorCodeUnits": 2,
+      "consumedBytes": 4,
+      "remaining": "x"
+    },
+    {
+      "source": " **x",
+      "point": 8239,
+      "value": true,
+      "cursorCodeUnits": 2,
+      "consumedBytes": 4,
+      "remaining": "*x"
+    },
+    {
+      "source": " x",
+      "point": 8239,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": "x"
+    },
+    {
+      "source": " \\foo",
+      "point": 8239,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": "\\foo"
+    },
+    {
+      "source": " \n*",
+      "point": 8239,
+      "value": true,
+      "cursorCodeUnits": 3,
+      "consumedBytes": 5,
+      "remaining": ""
+    },
+    {
+      "source": " ",
+      "point": 8287,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": " *x",
+      "point": 8287,
+      "value": true,
+      "cursorCodeUnits": 2,
+      "consumedBytes": 4,
+      "remaining": "x"
+    },
+    {
+      "source": " **x",
+      "point": 8287,
+      "value": true,
+      "cursorCodeUnits": 2,
+      "consumedBytes": 4,
+      "remaining": "*x"
+    },
+    {
+      "source": " x",
+      "point": 8287,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": "x"
+    },
+    {
+      "source": " \\foo",
+      "point": 8287,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": "\\foo"
+    },
+    {
+      "source": " \n*",
+      "point": 8287,
+      "value": true,
+      "cursorCodeUnits": 3,
+      "consumedBytes": 5,
+      "remaining": ""
+    },
+    {
+      "source": "　",
+      "point": 12288,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": "　*x",
+      "point": 12288,
+      "value": true,
+      "cursorCodeUnits": 2,
+      "consumedBytes": 4,
+      "remaining": "x"
+    },
+    {
+      "source": "　**x",
+      "point": 12288,
+      "value": true,
+      "cursorCodeUnits": 2,
+      "consumedBytes": 4,
+      "remaining": "*x"
+    },
+    {
+      "source": "　x",
+      "point": 12288,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": "x"
+    },
+    {
+      "source": "　\\foo",
+      "point": 12288,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": "\\foo"
+    },
+    {
+      "source": "　\n*",
+      "point": 12288,
+      "value": true,
+      "cursorCodeUnits": 3,
+      "consumedBytes": 5,
+      "remaining": ""
+    },
+    {
+      "source": "﻿",
+      "point": 65279,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": ""
+    },
+    {
+      "source": "﻿*x",
+      "point": 65279,
+      "value": true,
+      "cursorCodeUnits": 2,
+      "consumedBytes": 4,
+      "remaining": "x"
+    },
+    {
+      "source": "﻿**x",
+      "point": 65279,
+      "value": true,
+      "cursorCodeUnits": 2,
+      "consumedBytes": 4,
+      "remaining": "*x"
+    },
+    {
+      "source": "﻿x",
+      "point": 65279,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": "x"
+    },
+    {
+      "source": "﻿\\foo",
+      "point": 65279,
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": "\\foo"
+    },
+    {
+      "source": "﻿\n*",
+      "point": 65279,
+      "value": true,
+      "cursorCodeUnits": 3,
+      "consumedBytes": 5,
+      "remaining": ""
+    },
+    {
+      "source": "​",
+      "point": 8203,
+      "value": false,
+      "cursorCodeUnits": 0,
+      "consumedBytes": 0,
+      "remaining": "​"
+    },
+    {
+      "source": "​*x",
+      "point": 8203,
+      "value": false,
+      "cursorCodeUnits": 0,
+      "consumedBytes": 0,
+      "remaining": "​*x"
+    },
+    {
+      "source": "​**x",
+      "point": 8203,
+      "value": false,
+      "cursorCodeUnits": 0,
+      "consumedBytes": 0,
+      "remaining": "​**x"
+    },
+    {
+      "source": "​x",
+      "point": 8203,
+      "value": false,
+      "cursorCodeUnits": 0,
+      "consumedBytes": 0,
+      "remaining": "​x"
+    },
+    {
+      "source": "​\\foo",
+      "point": 8203,
+      "value": false,
+      "cursorCodeUnits": 0,
+      "consumedBytes": 0,
+      "remaining": "​\\foo"
+    },
+    {
+      "source": "​\n*",
+      "point": 8203,
+      "value": false,
+      "cursorCodeUnits": 0,
+      "consumedBytes": 0,
+      "remaining": "​\n*"
+    },
+    {
+      "source": "᠎",
+      "point": 6158,
+      "value": false,
+      "cursorCodeUnits": 0,
+      "consumedBytes": 0,
+      "remaining": "᠎"
+    },
+    {
+      "source": "᠎*x",
+      "point": 6158,
+      "value": false,
+      "cursorCodeUnits": 0,
+      "consumedBytes": 0,
+      "remaining": "᠎*x"
+    },
+    {
+      "source": "᠎**x",
+      "point": 6158,
+      "value": false,
+      "cursorCodeUnits": 0,
+      "consumedBytes": 0,
+      "remaining": "᠎**x"
+    },
+    {
+      "source": "᠎x",
+      "point": 6158,
+      "value": false,
+      "cursorCodeUnits": 0,
+      "consumedBytes": 0,
+      "remaining": "᠎x"
+    },
+    {
+      "source": "᠎\\foo",
+      "point": 6158,
+      "value": false,
+      "cursorCodeUnits": 0,
+      "consumedBytes": 0,
+      "remaining": "᠎\\foo"
+    },
+    {
+      "source": "᠎\n*",
+      "point": 6158,
+      "value": false,
+      "cursorCodeUnits": 0,
+      "consumedBytes": 0,
+      "remaining": "᠎\n*"
+    },
+    {
+      "source": "⁠",
+      "point": 8288,
+      "value": false,
+      "cursorCodeUnits": 0,
+      "consumedBytes": 0,
+      "remaining": "⁠"
+    },
+    {
+      "source": "⁠*x",
+      "point": 8288,
+      "value": false,
+      "cursorCodeUnits": 0,
+      "consumedBytes": 0,
+      "remaining": "⁠*x"
+    },
+    {
+      "source": "⁠**x",
+      "point": 8288,
+      "value": false,
+      "cursorCodeUnits": 0,
+      "consumedBytes": 0,
+      "remaining": "⁠**x"
+    },
+    {
+      "source": "⁠x",
+      "point": 8288,
+      "value": false,
+      "cursorCodeUnits": 0,
+      "consumedBytes": 0,
+      "remaining": "⁠x"
+    },
+    {
+      "source": "⁠\\foo",
+      "point": 8288,
+      "value": false,
+      "cursorCodeUnits": 0,
+      "consumedBytes": 0,
+      "remaining": "⁠\\foo"
+    },
+    {
+      "source": "⁠\n*",
+      "point": 8288,
+      "value": false,
+      "cursorCodeUnits": 0,
+      "consumedBytes": 0,
+      "remaining": "⁠\n*"
+    },
+    {
+      "source": "",
+      "value": false,
+      "cursorCodeUnits": 0,
+      "consumedBytes": 0,
+      "remaining": ""
+    },
+    {
+      "source": "*x",
+      "value": true,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 1,
+      "remaining": "x"
+    },
+    {
+      "source": "**x",
+      "value": true,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 1,
+      "remaining": "*x"
+    },
+    {
+      "source": "﻿*x",
+      "value": false,
+      "cursorCodeUnits": 1,
+      "consumedBytes": 3,
+      "remaining": "*x"
+    },
+    {
+      "source": "﻿*x",
+      "value": false,
+      "cursorCodeUnits": 0,
+      "consumedBytes": 0,
+      "remaining": "﻿*x"
+    },
+    {
+      "source": "﻿ *x",
+      "value": true,
+      "cursorCodeUnits": 3,
+      "consumedBytes": 7,
+      "remaining": "x"
+    },
+    {
+      "source": "\\*",
+      "value": false,
+      "cursorCodeUnits": 0,
+      "consumedBytes": 0,
+      "remaining": "\\*"
+    }
+  ]
+}
