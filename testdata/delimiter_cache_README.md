@@ -77,3 +77,10 @@ Regenerate both files with
 verifies every asset hash, uses batches of 24 fresh VMs, and updates only
 original responses, preserving historical Go receipts. Run
 `go test ./... -run TestDelimiterCacheReferences` for the full exact-SVG check.
+
+The full frozen-oracle suite, race detector, `go vet`, and WebAssembly build
+pass on the merged main132 base. The first full run exposed an older internal
+assertion requiring invalidation for fixed-width zero. That assertion now
+requires source cache retention for the fixed case while keeping assembled
+widths four and six, warm/cold geometry, sibling and input-identity checks.
+No original reference was changed to address the assertion.
