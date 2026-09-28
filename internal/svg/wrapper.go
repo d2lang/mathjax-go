@@ -394,13 +394,21 @@ func coreMONode(node *mml.Node) *mml.Node {
 	return nil
 }
 
-func (w *wrapper) getBBox() *layout.BBox {
+func (w *wrapper) getBBox() *layout.BBox { return w.getBBoxWithSave(true) }
+
+// CommonWrapper.getBBox(false) computes a temporary box for a stretchy
+// child that will be resized after the row measures its siblings.
+func (w *wrapper) getBBoxWithSave(save bool) *layout.BBox {
 	if w.bboxComputed {
 		return w.bbox
 	}
-	w.computeBBox(w.bbox)
-	w.bboxComputed = true
-	return w.bbox
+	bbox := w.bbox
+	if !save {
+		bbox = layout.ZeroBBox()
+	}
+	w.computeBBox(bbox)
+	w.bboxComputed = save
+	return bbox
 }
 
 func (w *wrapper) outerBBox() *layout.BBox { return w.styledOuterBBox() }
