@@ -22,6 +22,7 @@ type cssDeclaration struct {
 }
 
 type borderStyle struct {
+	raw   string
 	width string
 	style string
 	color string
@@ -69,6 +70,7 @@ func parseWrapperStyles(source string) *wrapperStyles {
 			values := splitTRBL(value)
 			for i := range styles.border {
 				styles.border[i].set = true
+				styles.border[i].raw = ""
 				switch strings.TrimPrefix(name, "border-") {
 				case "width":
 					styles.border[i].width = values[i]
@@ -113,7 +115,9 @@ func splitCSSDeclarations(source string) []string {
 }
 
 func splitBorder(value string) borderStyle {
-	border := borderStyle{set: true}
+	// Styles.splitWSC retains the authored shorthand until an individual
+	// width/style/color component is changed and combineWSC rebuilds it.
+	border := borderStyle{set: true, raw: value}
 	for _, part := range strings.Fields(value) {
 		switch {
 		case isBorderWidth(part) && border.width == "":
@@ -254,6 +258,9 @@ func (s *wrapperStyles) allPaddingEqual() bool {
 }
 
 func (b borderStyle) cssValue() string {
+	if b.raw != "" {
+		return b.raw
+	}
 	parts := make([]string, 0, 3)
 	for _, value := range []string{b.width, b.style, b.color} {
 		if value != "" {
