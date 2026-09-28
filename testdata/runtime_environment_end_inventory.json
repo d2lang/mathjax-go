@@ -11197,7 +11197,7 @@
     }
   ],
   "publicationOverlap": {
-    "baseCommit": "dcdb525519b6a36b83b0eb2af303174e7bae6021",
+    "baseCommit": "8393014a3f2dd05d0b2881141c85a8153ddd333e",
     "exactInputs": 670,
     "counts": {
       "first-input-publication": 670
@@ -11258,6 +11258,7 @@
       "internal/tex/testdata/operator_creation_requests.json",
       "internal/tex/testdata/operator_dictionary_mathjax_3_2_2.json",
       "internal/tex/testdata/operatorname_class_mathjax_3_2_2.json",
+      "internal/tex/testdata/operatorname_whitespace_cursors.json",
       "internal/tex/testdata/ordinary_number_methods_mathjax_3_2_2.json",
       "internal/tex/testdata/paired_declaration_names_mathjax_3_2_2.json",
       "internal/tex/testdata/pending_prime_mathjax_3_2_2.json",
@@ -11478,6 +11479,9 @@
       "testdata/operator_name_child_mathjax_3_2_2.json",
       "testdata/operator_primes_mathjax_3_2_2.json",
       "testdata/operator_primes_residuals.json",
+      "testdata/operatorname_whitespace_inventory.json",
+      "testdata/operatorname_whitespace_mathjax_3_2_2.json",
+      "testdata/operatorname_whitespace_residuals.json",
       "testdata/ordinary_number/inputs.json",
       "testdata/ordinary_number_boundaries.json",
       "testdata/ordinary_number_mathjax_3_2_2.json",
@@ -11541,6 +11545,7 @@
       "testdata/parity/numbered-alignments/manifest.json",
       "testdata/parity/numcases-dynamic-helper/manifest.json",
       "testdata/parity/operator-prime-glyphs/manifest.json",
+      "testdata/parity/operatorname-whitespace/manifest.json",
       "testdata/parity/paired-delimiter-declarations/manifest.json",
       "testdata/parity/partial-chemical-bonds/manifest.json",
       "testdata/parity/physics-brace-quantity/manifest.json",
@@ -11677,5 +11682,22 @@
     "phaseObservations": 90,
     "spreadMethodObservations": 36,
     "priorPanicProof": 12
+  },
+  "currentBaseline": {
+    "baselineCommit": "8393014a3f2dd05d0b2881141c85a8153ddd333e",
+    "binarySHA256": "1b33e05f1755f0c9f0b6b62aaf83c1c5453dec0f9dc230443aad123b846a112e",
+    "inputs": 802,
+    "changedSince169": 0,
+    "exact": 164,
+    "processFailures": 0,
+    "seconds": 6.0530642079999994,
+    "comparisonSHA256": "ddcd7f03bf2bf8dc813f3cd77250b1bc540b08b7dfef6a865d910b6664b97f47"
+  },
+  "sourceComposition": {
+    "base": "8393014a3f2dd05d0b2881141c85a8153ddd333e",
+    "sourceCheckpoint": "5e4e67cc03bb469f843f8da04e872fbe3996bea9",
+    "internalTree": "31a22e8896afc5842722e48e4d83dffeb093e300",
+    "patchUnchangedFrom169": true,
+    "compiledFinalBaseValidation": "pending"
   }
 }
