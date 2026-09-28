@@ -59,7 +59,11 @@ Independent source reviews cover item eligibility, temporary rows, filter
 ordering, dynamic priority, and the bounded arity failure. Independent public
 sets contribute 330 and 178 inputs; the combined branch removes the eight
 Quantity fallback differences from the first set and avoids all six process
-panics found in its initial candidate. All original observations are retained.
+panics found in its initial candidate. All original observations are retained. The main143 rebase leaves every
+corpus output unchanged. A 3,040-input published-residual replay against the
+Quantity prerequisite changes only two already documented authored cancel
+attribute orders; the complete parsed SVGs and all geometry are identical.
+Both serialized observations and the attribute-order proof are retained.
 
 Regenerate both original-reference files with:
 
@@ -69,5 +73,6 @@ node --jitless testdata/generate_nonscript.cjs /path/to/pinned-assets
 
 The generator verifies all three asset SHA-256 hashes and creates a fresh
 original VM per expression. It never runs Go or substitutes candidate output.
-Final fixture regeneration and full repository gates are recorded after the
-prerequisite is merged and the final base is known.
+Both reference files regenerate byte-identically from the frozen bundle.
+Full repository gates are recorded after the prerequisite is merged and the
+final base is known.
