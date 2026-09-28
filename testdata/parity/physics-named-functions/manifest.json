@@ -1,0 +1,24 @@
+{
+  "d2Commit": "01bc7ecdbdd04c13d6fe5df1967d2d9aa14ae579",
+  "beforeMathjaxCommit": "c0a304b7ff0fc538d9ca824ca74d421961322d96",
+  "afterCodeCommit": "c23f34de9a9259f9c5f72eae846bcf809b717d64",
+  "tex": "\\Huge{\\sine^2(x)+\\cosine^2(x)=1}",
+  "files": {
+    "README.md": "80677f47822bc40c4d7ac5a05bcab55c2ffcca4d49b93506bc0509d0c1278817",
+    "after.png": "c38be2d2a8d157231b19adcae8f1666d664d1d1e52166fc52415bde3e40f001b",
+    "after.svg": "b0989ae6158b58564064472f9dbf696f86dec435646dabc8753737d7dddc36c7",
+    "before.png": "aeefeff8e9de5141eb9dbfdd6d3f1a1c9d7d55a29791cf94ae90b7e2e70a17a9",
+    "before.svg": "cc662426dc5147af4eb1bc947d6f0ccd42674af265ebe8e631ee214d62ad9b1d",
+    "comparison.png": "8894650ec904d7bf20df5117985ff5948248e2747284f0c1690973c312fecd59",
+    "oracle-adapter/go.mod": "b8a3ff80b4e63b08c12ed3bcbefcdaebec039551cf00b99b08c6ba6dec5abfc5",
+    "oracle-adapter/mathjax.go": "1ed1fbe813faf433d307b2b5c8e332fd22854999a22487e11396c6a6df3b38ed",
+    "original.png": "c38be2d2a8d157231b19adcae8f1666d664d1d1e52166fc52415bde3e40f001b",
+    "original.svg": "b0989ae6158b58564064472f9dbf696f86dec435646dabc8753737d7dddc36c7",
+    "witness.d2": "e7031f11e765e05528e519465858e20b79c38759a7674b7c31fe5cb05a851a2b"
+  },
+  "oracleAssets": {
+    "mathjax.js": "cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869",
+    "polyfills.js": "7fe1d048c78b0e09854c1259f7413868a51cc8f0c822489eb1ac36ae6c85ce01",
+    "setup.js": "a52cb0bbabfbd7796b9fedd793b9386c474e3123e788ee151cbe47ca1fa6e881"
+  }
+}
