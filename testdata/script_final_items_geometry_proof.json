@@ -1,0 +1,112 @@
+[
+  {
+    "tex": "x^\\bra*{x}+y",
+    "display": false,
+    "removedEmptyAtoms": 1,
+    "exactOriginalAfterRemovingEmptyAtoms": true,
+    "viewBoxes": {
+      "baseline": "0 -893.3 3243.5 1098.3",
+      "candidate": "0 -893.3 3492.5 1142.8",
+      "original": "0 -893.3 3492.5 1142.8"
+    }
+  },
+  {
+    "tex": "x^\\bra*{x}+y",
+    "display": true,
+    "removedEmptyAtoms": 1,
+    "exactOriginalAfterRemovingEmptyAtoms": true,
+    "viewBoxes": {
+      "baseline": "0 -943.3 3243.5 1148.3",
+      "candidate": "0 -943.3 3492.5 1192.8",
+      "original": "0 -943.3 3492.5 1192.8"
+    }
+  },
+  {
+    "tex": "x_\\bra*{x}+y",
+    "display": false,
+    "removedEmptyAtoms": 1,
+    "exactOriginalAfterRemovingEmptyAtoms": true,
+    "viewBoxes": {
+      "baseline": "0 -583 3243.5 936.5",
+      "candidate": "0 -749.5 3492.5 1103",
+      "original": "0 -749.5 3492.5 1103"
+    }
+  },
+  {
+    "tex": "x_\\bra*{x}+y",
+    "display": true,
+    "removedEmptyAtoms": 1,
+    "exactOriginalAfterRemovingEmptyAtoms": true,
+    "viewBoxes": {
+      "baseline": "0 -583 3243.5 936.5",
+      "candidate": "0 -749.5 3492.5 1103",
+      "original": "0 -749.5 3492.5 1103"
+    }
+  },
+  {
+    "tex": "x'^\\bra*{x}+y",
+    "display": false,
+    "removedEmptyAtoms": 1,
+    "exactOriginalAfterRemovingEmptyAtoms": true,
+    "viewBoxes": {
+      "baseline": "0 -893.3 3438 1098.3",
+      "candidate": "0 -893.3 3687 1142.8",
+      "original": "0 -893.3 3687 1142.8"
+    }
+  },
+  {
+    "tex": "x'^\\bra*{x}+y",
+    "display": true,
+    "removedEmptyAtoms": 1,
+    "exactOriginalAfterRemovingEmptyAtoms": true,
+    "viewBoxes": {
+      "baseline": "0 -943.3 3438 1148.3",
+      "candidate": "0 -943.3 3687 1192.8",
+      "original": "0 -943.3 3687 1192.8"
+    }
+  },
+  {
+    "tex": "\\raise1em x^\\bra*{x}+y",
+    "display": false,
+    "removedEmptyAtoms": 1,
+    "exactOriginalAfterRemovingEmptyAtoms": true,
+    "viewBoxes": {
+      "baseline": "0 -1442 3243.5 1647",
+      "candidate": "0 -1442 3492.5 1691.5",
+      "original": "0 -1442 3492.5 1691.5"
+    }
+  },
+  {
+    "tex": "\\raise1em x^\\bra*{x}+y",
+    "display": true,
+    "removedEmptyAtoms": 1,
+    "exactOriginalAfterRemovingEmptyAtoms": true,
+    "viewBoxes": {
+      "baseline": "0 -1442 3243.5 1647",
+      "candidate": "0 -1442 3492.5 1691.5",
+      "original": "0 -1442 3492.5 1691.5"
+    }
+  },
+  {
+    "tex": "\\bf x^\\bra*{x}+y",
+    "display": false,
+    "removedEmptyAtoms": 1,
+    "exactOriginalAfterRemovingEmptyAtoms": true,
+    "viewBoxes": {
+      "baseline": "0 -893.3 3536.3 1093.3",
+      "candidate": "0 -893.3 3795.5 1142.8",
+      "original": "0 -893.3 3795.5 1142.8"
+    }
+  },
+  {
+    "tex": "\\bf x^\\bra*{x}+y",
+    "display": true,
+    "removedEmptyAtoms": 1,
+    "exactOriginalAfterRemovingEmptyAtoms": true,
+    "viewBoxes": {
+      "baseline": "0 -943.3 3536.3 1143.3",
+      "candidate": "0 -943.3 3795.5 1192.8",
+      "original": "0 -943.3 3795.5 1192.8"
+    }
+  }
+]

@@ -29,7 +29,7 @@ func (a *scriptAttachment) missingOpen() error {
 // A SubsupItem stays pending across commands that emit no stack item. In
 // particular, a macro expansion and SetFont do not supply an empty argument.
 // Keep this event boundary local to scripts; GetArgument callers are separate.
-func (p *parser) parseScriptArgument(attachment *scriptAttachment, font string) (script *mml.Node, currentFont string, after *derivativeAutoOpen, err error) {
+func (p *parser) parseScriptArgument(attachment *scriptAttachment, font string) (script *mml.Node, currentFont string, trailing []*mml.Node, after *derivativeAutoOpen, err error) {
 	// SubsupItem is the recipient, so an outer Braket cannot own this token.
 	owner := p.braketOwner
 	p.braketOwner = nil
@@ -43,7 +43,7 @@ func (p *parser) parseScriptArgument(attachment *scriptAttachment, font string) 
 	for {
 		p.skipSpaces()
 		if p.pos >= len(p.source) {
-			return nil, currentFont, nil, texError("MissingScript", "Missing superscript or subscript argument")
+			return nil, currentFont, nil, nil, texError("MissingScript", "Missing superscript or subscript argument")
 		}
 		if p.source[p.pos] == '%' {
 			p.skipComment()
@@ -51,25 +51,25 @@ func (p *parser) parseScriptArgument(attachment *scriptAttachment, font string) 
 		}
 		if p.source[p.pos] == '}' {
 			p.pos++
-			return nil, currentFont, nil, texError("ExtraCloseMissingOpen", "Extra close brace or missing open brace")
+			return nil, currentFont, nil, nil, texError("ExtraCloseMissingOpen", "Extra close brace or missing open brace")
 		}
 		if p.source[p.pos] == '&' {
-			return nil, currentFont, nil, attachment.missingOpen()
+			return nil, currentFont, nil, nil, attachment.missingOpen()
 		}
 		if p.source[p.pos] == '{' {
 			p.pos++
 			children, _, parseErr := p.parseRow('}', false)
 			if parseErr != nil {
-				return nil, currentFont, nil, parseErr
+				return nil, currentFont, nil, nil, parseErr
 			}
-			return texAtom(row(children, true), mml.TeXClassOrd), currentFont, nil, nil
+			return texAtom(row(children, true), mml.TeXClassOrd), currentFont, nil, nil, nil
 		}
 		if isPrimeRune(p.peekRune()) {
 			p.consumeRune()
 			if _, primeErr := p.startPrime(attachment.pendingBase()); primeErr != nil {
-				return nil, currentFont, nil, primeErr
+				return nil, currentFont, nil, nil, primeErr
 			}
-			return nil, currentFont, nil, attachment.missingOpen()
+			return nil, currentFont, nil, nil, attachment.missingOpen()
 		}
 		if c := p.source[p.pos]; c == '^' || c == '_' {
 			p.pos++
@@ -77,9 +77,9 @@ func (p *parser) parseScriptArgument(attachment *scriptAttachment, font string) 
 			base := attachment.pendingBase()
 			moves, _ := base.Property("movesupsub")
 			if _, prepareErr := prepareScriptAttachment(base, c, limitsTruthy(moves)); prepareErr != nil {
-				return nil, currentFont, nil, prepareErr
+				return nil, currentFont, nil, nil, prepareErr
 			}
-			return nil, currentFont, nil, attachment.missingOpen()
+			return nil, currentFont, nil, nil, attachment.missingOpen()
 		}
 		if p.source[p.pos] == '\\' {
 			start := p.pos
@@ -89,45 +89,46 @@ func (p *parser) parseScriptArgument(attachment *scriptAttachment, font string) 
 				switch name {
 				case "matrix", "array", "pmatrix", "cases", "eqalign", "eqalignno", "leqalignno":
 					if parseErr := p.startMatrixBody(name); parseErr != nil {
-						return nil, currentFont, nil, parseErr
+						return nil, currentFont, nil, nil, parseErr
 					}
-					return nil, currentFont, nil, attachment.missingOpen()
+					return nil, currentFont, nil, nil, attachment.missingOpen()
 				}
 				if variant, ok := fontDeclarations[name]; ok {
 					p.activeFont, currentFont = variant, variant
 					continue
 				}
 				if _, ok := styleDeclarations[name]; ok {
-					return nil, currentFont, nil, attachment.missingOpen()
+					return nil, currentFont, nil, nil, attachment.missingOpen()
 				}
 				if _, ok := sizeDeclarations[name]; ok {
-					return nil, currentFont, nil, attachment.missingOpen()
+					return nil, currentFont, nil, nil, attachment.missingOpen()
 				}
 				if name == "right" {
 					if _, parseErr := p.readDelimiter(name, false); parseErr != nil {
-						return nil, currentFont, nil, parseErr
+						return nil, currentFont, nil, nil, parseErr
 					}
-					return nil, currentFont, nil, texError("MissingLeftExtraRight", "Missing \\left or extra \\right")
+					return nil, currentFont, nil, nil, texError("MissingLeftExtraRight", "Missing \\left or extra \\right")
 				}
 			}
 			p.pos = start
 		}
 		result, parseErr := p.parseOneTokenEvent()
 		if parseErr != nil {
-			return nil, currentFont, nil, parseErr
+			return nil, currentFont, nil, nil, parseErr
 		}
 		if result.namedFunction || result.notItem || result.nonscriptItem || result.dotsItem != nil || result.positionItem != nil {
-			return nil, currentFont, nil, attachment.missingOpen()
+			return nil, currentFont, nil, nil, attachment.missingOpen()
 		}
 		if len(result.nodes) == 0 {
 			// Empty PushAll leaves the SubsupItem pending. A following auto
 			// open item is rejected here, before its tail can be parsed.
 			if result.afterNode.start(p) {
-				return nil, currentFont, nil, attachment.missingOpen()
+				return nil, currentFont, nil, nil, attachment.missingOpen()
 			}
 			continue
 		}
-		// SubsupItem accepts a final MML item, not a pending FnItem.
-		return row(result.nodes, true), currentFont, result.afterNode, nil
+		// SubsupItem accepts the first final MML item. TexParser.PushAll
+		// delivers any remaining items after that script has completed.
+		return result.nodes[0], currentFont, result.nodes[1:], result.afterNode, nil
 	}
 }
