@@ -12,7 +12,7 @@ import (
 )
 
 func mglyphNode(attributes map[string]any) *mml.Node {
-	node := mml.NewNode("mglyph", nil, nil)
+	node := syntheticMMLFactory.Create("mglyph")
 	node.Flags.Token = true
 	node.TeXClass = mml.TeXClassOrd
 	for name, value := range attributes {

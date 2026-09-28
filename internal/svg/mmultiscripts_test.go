@@ -27,7 +27,10 @@ func wrapperTrancheToken(kind, text string, class mml.TeXClass) *mml.Node {
 }
 
 func wrapperTrancheRoot(child *mml.Node) *mml.Node {
-	return mml.NewNode("math", nil, nil, child)
+	root := syntheticMMLFactory.Create("math", child)
+	root.Attributes.SetInherited("displaystyle", true)
+	root.Attributes.SetInherited("scriptlevel", 0)
+	return root
 }
 
 func wrapperTrancheWrapper(node *mml.Node) *wrapper {
@@ -94,6 +97,10 @@ func typesetTrancheWrapper(t *testing.T, root *mml.Node) string {
 		params:  layout.TeXParameters,
 		pxPerEm: options.Ex / layout.TeXParameters.XHeight,
 	}
+	// These source-shaped fixtures already carry nested script state. Supply
+	// the original top-level inherited context before the direct wrapper path.
+	root.Children[0].Attributes.SetInherited("displaystyle", options.Display)
+	root.Children[0].Attributes.SetInherited("scriptlevel", 0)
 	prepareTeXClasses(root)
 	rootWrapper := r.wrap(root, nil, 0, options.Display)
 	if len(rootWrapper.children) != 1 {

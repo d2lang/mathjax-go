@@ -35,7 +35,8 @@ func simpleFormula() *mml.Node {
 		token("mi", "c", mml.TeXClassOrd),
 	)
 	row.Flags.Inferred = true
-	root := mml.NewNode("math", nil, nil, row)
+	root := mml.NewMathJaxFactory().Create("math", row)
+	root.Attributes.SetInherited("displaystyle", true)
 	root.Attributes.Set("display", "block")
 	return root
 }
@@ -47,7 +48,8 @@ func fractionFormula() *mml.Node {
 	fraction.TeXClass = mml.TeXClassInner
 	row := mml.NewNode("mrow", nil, nil, fraction)
 	row.Flags.Inferred = true
-	root := mml.NewNode("math", nil, nil, row)
+	root := mml.NewMathJaxFactory().Create("math", row)
+	root.Attributes.SetInherited("displaystyle", true)
 	root.Attributes.Set("display", "block")
 	return root
 }
@@ -70,7 +72,8 @@ func scriptFormula(kind string) *mml.Node {
 	script.TeXClass = mml.TeXClassOrd
 	row := mml.NewNode("mrow", nil, nil, script)
 	row.Flags.Inferred = true
-	root := mml.NewNode("math", nil, nil, row)
+	root := mml.NewMathJaxFactory().Create("math", row)
+	root.Attributes.SetInherited("displaystyle", true)
 	root.Attributes.Set("display", "block")
 	return root
 }
@@ -88,7 +91,8 @@ func rootFormula(kind string) *mml.Node {
 	radical.TeXClass = mml.TeXClassOrd
 	row := mml.NewNode("mrow", nil, nil, radical)
 	row.Flags.Inferred = true
-	root := mml.NewNode("math", nil, nil, row)
+	root := mml.NewMathJaxFactory().Create("math", row)
+	root.Attributes.SetInherited("displaystyle", true)
 	root.Attributes.Set("display", "block")
 	return root
 }

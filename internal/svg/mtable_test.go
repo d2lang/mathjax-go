@@ -213,7 +213,7 @@ func TestLabeledRowGeometryAndPlacement(t *testing.T) {
 	label := tableTestCell(".5em", ".5em", ".2em")
 	cell := tableTestCell("1em", ".5em", ".2em")
 	row := mml.NewNode("mlabeledtr", nil, nil, label, cell)
-	table := mml.NewNode("mtable", nil, nil, row)
+	table := syntheticMMLFactory.Create("mtable", row)
 	table.SetProperty("useHeight", false)
 	table.Attributes.Set("side", "left")
 	table.Attributes.Set("minlabelspacing", ".8em")

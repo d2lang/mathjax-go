@@ -23,7 +23,7 @@ import (
 func encloseFixture(notation string) *mml.Node {
 	row := mml.NewNode("mrow", nil, nil, wrapperTrancheToken("mi", "x", mml.TeXClassOrd))
 	row.Flags.Inferred = true
-	node := mml.NewNode("menclose", nil, nil, row)
+	node := syntheticMMLFactory.Create("menclose", row)
 	node.TeXClass = mml.TeXClassOrd
 	node.Attributes.Set("notation", notation)
 	return node
@@ -42,6 +42,9 @@ func typesetEncloseFixture(t *testing.T, node *mml.Node) string {
 	}
 	root := wrapperTrancheRoot(node)
 	root.Attributes.Set("display", "block")
+	// The original fixture inherits top-level display state before wrapping.
+	node.Attributes.SetInherited("displaystyle", options.Display)
+	node.Attributes.SetInherited("scriptlevel", 0)
 	prepareTeXClasses(root)
 	rootWrapper := r.wrap(root, nil, 0, options.Display)
 	target := rootWrapper.children[0]
@@ -104,7 +107,7 @@ func TestEncloseCancelFamilyFrozenSVG(t *testing.T) {
 func TestEncloseFrozenColorBackgroundAndPadding(t *testing.T) {
 	node := encloseFixture("updiagonalstrike")
 	// Preserve the keyval parser's source order; notation is appended last.
-	node.Attributes = mml.NewAttributes(nil, nil)
+	node.Attributes = syntheticMMLFactory.Create("menclose").Attributes
 	node.Attributes.Set("mathcolor", "red")
 	node.Attributes.Set("mathbackground", "yellow")
 	node.Attributes.Set("data-padding", ".3em")
@@ -135,7 +138,7 @@ func TestEncloseCancelToFrozenMencloseSubtree(t *testing.T) {
 	}
 
 	parameterized := encloseFixture("updiagonalstrike updiagonalarrow northeastarrow")
-	parameterized.Attributes = mml.NewAttributes(nil, nil)
+	parameterized.Attributes = syntheticMMLFactory.Create("menclose").Attributes
 	parameterized.Attributes.Set("data-padding", ".3em")
 	parameterized.Attributes.Set("data-thickness", ".08em")
 	parameterized.Attributes.Set("data-arrowhead", "5 3 2")

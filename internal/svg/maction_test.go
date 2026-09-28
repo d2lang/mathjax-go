@@ -11,7 +11,7 @@ import (
 )
 
 func actionFixture(action string, selection any, children ...*mml.Node) *mml.Node {
-	node := mml.NewNode("maction", nil, nil, children...)
+	node := syntheticMMLFactory.Create("maction", children...)
 	node.TeXClass = mml.TeXClassOrd
 	node.Attributes.Set("actiontype", action)
 	if selection != nil {
