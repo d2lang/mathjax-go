@@ -128,18 +128,11 @@ func (p *parser) amsFlalignEnvironment(name string) ([]*mml.Node, error) {
 	rows := splitTable(body)
 	table := node("mtable")
 	for rowIndex, cells := range rows {
-		entries := make([]*mml.Node, 0, len(cells))
-		for _, raw := range cells {
-			content, err := p.parseArrayCellString(strings.TrimSpace(raw))
-			if err != nil {
-				return nil, err
-			}
-			entries = append(entries, node("mtd", content))
-			if err := layout.endEntry(len(entries)); err != nil {
-				return nil, err
-			}
+		entries, err := p.parseFlalignEntries(cells, rowIndex == len(rows)-1, layout)
+		if err != nil {
+			return nil, err
 		}
-		if omitFinalArrayRow(rowIndex, len(rows), entries) {
+		if entries == nil {
 			continue
 		}
 		row := node("mtr", entries...)
@@ -159,4 +152,33 @@ func (p *parser) amsFlalignEnvironment(name string) ([]*mml.Node, error) {
 	}
 	layout.endTable(table)
 	return []*mml.Node{table}, nil
+}
+
+// FlalignItem owns Entry tokens after the TeX parser has had the opportunity
+// to consume an ampersand as a command argument. It has no EqnArray kind, so
+// the Mathtools commands guarded by checkAlignment remain unavailable here.
+func (p *parser) parseFlalignEntries(cells []string, final bool, layout *amsFlalignLayout) ([]*mml.Node, error) {
+	source := strings.Join(cells, "&")
+	var entries []*mml.Node
+	for {
+		sub := p.matrixCellParser(source)
+		sub.matrixClose = false
+		sub.cdArrayEntry = true
+		children, _, err := sub.parseRowWithInfix(0, false, false)
+		if err != nil {
+			return nil, err
+		}
+		if !sub.cdEntryStopped && final && len(children) == 0 && len(entries) == 0 {
+			return nil, nil
+		}
+		entries = append(entries, node("mtd", matrixCellContent(children)))
+		// The declared-count check precedes parsing the following cell.
+		if err := layout.endEntry(len(entries)); err != nil {
+			return nil, err
+		}
+		if !sub.cdEntryStopped {
+			return entries, nil
+		}
+		source = sub.source[sub.pos:]
+	}
 }
