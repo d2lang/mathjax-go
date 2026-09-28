@@ -24,7 +24,7 @@ func TestTextLapOriginalReferences(t *testing.T) {
 	if err := json.Unmarshal(data, &fixture); err != nil {
 		t.Fatal(err)
 	}
-	if fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || len(fixture.Cases) != 1258 {
+	if fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || len(fixture.Cases) != 1386 {
 		t.Fatal("unbound text lap references")
 	}
 	seenNames, seenInputs := make(map[string]bool), make(map[struct {

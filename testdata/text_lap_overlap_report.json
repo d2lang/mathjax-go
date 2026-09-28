@@ -1,6 +1,6 @@
 {
-  "baselineGitCommit": "6ae444150070ff7dbe59174bbb1e7a49624bd16b",
-  "assertions": 1258,
+  "baselineGitCommit": "cbfa500ef050c7240493dfe2624798219c959143",
+  "assertions": 1386,
   "publishedInputOverlaps": 2,
   "completeOriginalOverlaps": 2,
   "method": "Recursively inspected TeX/input + display + complete SVG/original.SVG records, allowing historical key casing; per-fix counts are not globally unique coverage.",

@@ -23,26 +23,27 @@ precede the built-in dispatch.
 
 ## Original references
 
-`text_lap_mathjax_3_2_2.json` contains 1,258 distinct TeX/display-mode pairs
+`text_lap_mathjax_3_2_2.json` contains 1,386 distinct TeX/display-mode pairs
 captured from D2's frozen original MathJax 3.2.2, source commit
 `ad8f5c21cb810236551da8c6512ba733e67357ee`. All complete SVGs are compared
-without normalization: 1,066 valid expressions and 192 original error
+without normalization: 1,194 valid expressions and 192 original error
 renderings. No original runtime exceptions or unresolved output differences
 occur in this inventory.
 
-Against main151 (`6ae444150070ff7dbe59174bbb1e7a49624bd16b`), 1,074 references
+Against main152 (`cbfa500ef050c7240493dfe2624798219c959143`), 1,202 references
 are newly exact and 184 were already exact. The inventory includes 192
 independently captured controls and 32 macro-budget boundaries. It covers
 literal text and escapes, dollar/parenthesis math, whitespace and malformed
 arguments, fonts, colors, roots, scripts, pending parser items, shared
 registrations and declaration priority. Separate controls retain the other
-lap handlers. Two assertions already appeared in a published complete-original
+lap handlers. All 128 Bqty intersections are exact after composition with main152.
+Two assertions already appeared in a published complete-original
 fixture; `text_lap_overlap_report.json` binds these to their source. Per-fix
 counts are not a claim of globally unique coverage.
 
 `text_lap_promotions_test.go` also promotes two previously published raw
 `clap` observations directly from the unchanged MathLap residual file. They
-are not counted among the 1,258 newly captured references.
+are not counted among the 1,386 newly captured references.
 
 Regenerate with:
 
@@ -56,14 +57,13 @@ assertions based on candidate output.
 
 ## Published controls and validation
 
-Replaying all 4,566 published residual inputs at main151 yields two source
+Replaying all 4,638 published residual inputs at main152 yields two source
 fixes (the promoted `clap` observations) and no rendered or source regressions.
-Two further serialized differences only reorder authored cancel attributes.
+Six further serialized differences only reorder authored cancel attributes.
 Forty-eight repeated observations from each binary produce both orders, and
 all complete parsed XML trees, including numeric geometry, equal the original.
 Raw strings and this proof are retained in the replay receipt; no golden is
 normalized.
 
-Final validation is pending composition with the separately published Bqty
-registration. The intended gates are the full frozen-original suite, race
+Final validation runs the full frozen-original suite, race
 suite, vet, and WebAssembly build, run sequentially.
