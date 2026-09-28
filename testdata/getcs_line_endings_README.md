@@ -4,8 +4,8 @@ The frozen MathJax 3.2.2 `TexParser.GetCS` uses a non-dotall regular expression.
 After a backslash, LF (U+000A), CR (U+000D), line separator (U+2028), and paragraph
 separator (U+2029) fail its ordinary-character arm. Its fallback consumes one
 UTF-16 character and returns control-space. Go consumed the same character but
-returned that line-ending character as a command name, producing undefined
-commands or incorrect declaration calls.
+returned that line-ending character as a command name, producing missing
+control-space, undefined commands or incorrect declaration calls.
 
 The source change maps only those four consumed characters to control-space.
 It preserves the ordinary command-map dispatch (including late supported
@@ -84,7 +84,11 @@ while regeneration verifies their first-line exception. Run the public test
 `TestGetCSLineEndingReferences` and the two private method tests to check the
 complete original results.
 
-The D2 witness contains a **literal LF after a single backslash** between two
-fractions. The before output is an undefined-command error, while the candidate
-is byte-identical to the complete original SVG. A backslash followed by the
-letter `n` is a different TeX command and must not replace that literal LF.
+The clear D2 witness defines `F` as the control-space command, then places a
+**literal LF after a single backslash** between `x` and `y`. Before the fix,
+the authored `F` is absent; afterward it appears and the complete candidate SVG
+is byte-identical to the original. This is an existing strict fixture input.
+A second, ordinary two-fraction witness demonstrates the missing 0.25em space;
+its baseline is a valid rendering, not an undefined-command error. A backslash
+followed by the letter `n` is a different TeX command and must not replace the
+literal LF in either witness.
