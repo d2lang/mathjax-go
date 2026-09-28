@@ -10,22 +10,28 @@ import (
 
 func TestEvalGetStarOriginalMethod(t *testing.T) {
 	data, err := os.ReadFile("testdata/eval_getstar_mathjax_3_2_2.json")
-	if err != nil { t.Fatal(err) }
+	if err != nil {
+		t.Fatal(err)
+	}
 	var fixture struct {
 		MathjaxGitCommit string
-		Cases []struct {
+		Cases            []struct {
 			Source, Remaining string
-			Value bool
-			ConsumedBytes int
+			Value             bool
+			ConsumedBytes     int
 		}
 	}
-	if err := json.Unmarshal(data, &fixture); err != nil { t.Fatal(err) }
+	if err := json.Unmarshal(data, &fixture); err != nil {
+		t.Fatal(err)
+	}
 	if fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || len(fixture.Cases) != 181 {
 		t.Fatal("unbound original GetStar observations")
 	}
 	seen := map[string]bool{}
 	for i, c := range fixture.Cases {
-		if seen[c.Source] { t.Fatal("duplicate GetStar observation", c.Source) }
+		if seen[c.Source] {
+			t.Fatal("duplicate GetStar observation", c.Source)
+		}
 		seen[c.Source] = true
 		t.Run(fmt.Sprintf("source-%03d", i), func(t *testing.T) {
 			p := &parser{source: c.Source}
@@ -41,7 +47,11 @@ func TestEvalGetStarKeepsLegacyCallers(t *testing.T) {
 	// These are compatibility assertions for the deliberately unchanged Go
 	// wrapper, not original MathJax references. Remove them when the held
 	// shared GetStar fix replaces that wrapper's whitespace policy.
-	for _, c := range []struct { source string; value bool; pos int }{
+	for _, c := range []struct {
+		source string
+		value  bool
+		pos    int
+	}{
 		{"\u0085*x", true, 3},
 		{"\ufeff*x", false, 0},
 	} {
