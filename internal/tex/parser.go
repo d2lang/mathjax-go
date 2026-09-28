@@ -98,6 +98,7 @@ type parser struct {
 	activeFont           string
 	activeColor          string
 	rowDelimiter         *rowDelimiterItem
+	cdCellEnd            *cdCellEnd
 	matrixClose          bool
 	identifierPattern    identifierPattern
 	operatorLetters      bool
@@ -402,7 +403,7 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 			if variant, ok := fontDeclarations[name]; ok && !fontMacro && !fontDelimiter {
 				// SetFont changes the current environment without pushing a
 				// stack item, so pending Prime/Not/Dots items stay in this row.
-				if len(styles) != 0 || pending != nil || bool(negation) || dots.active() || len(positions) != 0 {
+				if len(styles) != 0 || pending != nil || bool(negation) || dots.active() || pendingFunction || len(positions) != 0 {
 					p.activeFont, pendingFont = variant, variant
 					p.fontExplicitEmpty = variant == ""
 					continue
@@ -578,6 +579,19 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 			appendNodes([]*mml.Node{created}, false)
 		}
 	}
+	// AmsCdMethods.cell reads the actual stack top. ArrayItem supplies
+	// the grid position; pending items have no table or row properties and
+	// therefore receive a strut even in later cells and arrow rows.
+	if end := p.cdCellEnd; end != nil && terminator == 0 && !stopRight {
+		p.cdCellEnd = nil
+		pendingItem := len(styles) != 0 || len(positions) != 0 || infixPending ||
+			pending != nil || bool(negation) || dots.active() || pendingFunction ||
+			(owner != nil && owner.single && len(nodes) == 0)
+		if end.firstObjectCell || pendingItem {
+			appendNodes([]*mml.Node{cdStrut()}, false)
+		}
+	}
+
 	if closeErr := closeStyles(); closeErr != nil {
 		return nil, "", closeErr
 	}
@@ -818,7 +832,11 @@ func (p *parser) parseContinuationString(source string) (*mml.Node, error) {
 }
 
 func (p *parser) parseStringWithStack(source string, global *parserStackGlobal) (*mml.Node, error) {
-	sub := &parser{source: source, state: p.state, stackGlobal: global, display: p.display, inRoot: p.inRoot,
+	return p.parseStringWithStackCDCell(source, global, nil)
+}
+
+func (p *parser) parseStringWithStackCDCell(source string, global *parserStackGlobal, end *cdCellEnd) (*mml.Node, error) {
+	sub := &parser{source: source, state: p.state, stackGlobal: global, display: p.display, inRoot: p.inRoot, cdCellEnd: end,
 		activeFont: p.activeFont, activeColor: p.activeColor, vectorFactory: p.vectorFactory,
 		operatorLetters: p.operatorLetters, noAutoOP: p.noAutoOP, fontExplicitEmpty: p.fontExplicitEmpty,
 		vectorFont: p.vectorFont, vectorStar: p.vectorStar, vectorAlias: p.vectorAlias,
