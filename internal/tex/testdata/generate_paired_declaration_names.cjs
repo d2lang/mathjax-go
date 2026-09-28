@@ -1,0 +1,10 @@
+// SPDX-License-Identifier: Apache-2.0
+// Observe the frozen original paired-name handler without running Go.
+const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),crypto=require('node:crypto');
+const assets=process.argv[2];
+const hashes={'polyfills.js':'7fe1d048c78b0e09854c1259f7413868a51cc8f0c822489eb1ac36ae6c85ce01','mathjax.js':'cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869','setup.js':'a52cb0bbabfbd7796b9fedd793b9386c474e3123e788ee151cbe47ca1fa6e881'};
+const c=vm.createContext({console});for(const[n,h]of Object.entries(hashes)){const b=fs.readFileSync(path.join(assets,n));if(crypto.createHash('sha256').update(b).digest('hex')!==h)throw Error(n);new vm.Script(b.toString(),{filename:n}).runInContext(c);}
+
+c.names=JSON.parse(fs.readFileSync(path.join(__dirname,'paired_declaration_names_mathjax_3_2_2.json'),'utf8')).cases.map(r=>r.raw);
+const data=vm.runInContext(`(()=>{const tex=MathJax._.input.tex;const ams=tex.ams.AmsMethods.AmsMethods.HandleDeclareOp;const paired=tex.mathtools.MathtoolsMethods.MathtoolsMethods.DeclarePairedDelimiter;const cases=[];for(const raw of names)for(const method of ['paired']){const args=method==='AMS'?[raw,'Q']:[raw,'(',')'];const got=[];const added=[];const p={GetStar(){return false},GetArgument(n){got.push(n);return args.shift()},configuration:{handlers:{retrieve(n){return{add(key,macro){added.push({map:n,key,macroName:macro.symbol,args:macro.args})}}}}}};let error=null;try{(method==='AMS'?ams:paired)(p,String.fromCharCode(92)+(method==='AMS'?'DeclareMathOperator':'DeclarePairedDelimiter'))}catch(e){error={id:e.id,message:e.message}}cases.push({raw,method,argumentsRead:got,added,error})}return{methods:{HandleDeclareOp:ams.toString(),DeclarePairedDelimiter:paired.toString(),GetCS:tex.TexParser.default.prototype.GetCS.toString(),trimSpaces:tex.ParseUtil.default.trimSpaces.toString()},cases}})()`,c);
+fs.writeFileSync(path.join(__dirname,'paired_declaration_names_mathjax_3_2_2.json'),JSON.stringify({mathjaxGitCommit:'ad8f5c21cb810236551da8c6512ba733e67357ee',assetsSHA256:hashes,...data},null,2)+'\n');console.log(data.cases.length);

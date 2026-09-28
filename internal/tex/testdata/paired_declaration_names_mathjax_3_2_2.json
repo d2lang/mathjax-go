@@ -1,0 +1,2560 @@
+{
+  "mathjaxGitCommit": "ad8f5c21cb810236551da8c6512ba733e67357ee",
+  "assetsSHA256": {
+    "polyfills.js": "7fe1d048c78b0e09854c1259f7413868a51cc8f0c822489eb1ac36ae6c85ce01",
+    "mathjax.js": "cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869",
+    "setup.js": "a52cb0bbabfbd7796b9fedd793b9386c474e3123e788ee151cbe47ca1fa6e881"
+  },
+  "methods": {
+    "HandleDeclareOp": "function(t,Q){var r=t.GetStar()?\"*\":\"\",T=o.default.trimSpaces(t.GetArgument(Q));\"\\\\\"===T.charAt(0)&&(T=T.substr(1));var n=t.GetArgument(Q);t.configuration.handlers.retrieve(e.NEW_OPS).add(T,new u.Macro(T,e.AmsMethods.Macro,[\"\\\\operatorname\".concat(r,\"{\").concat(n,\"}\")]))}",
+    "DeclarePairedDelimiter": "function(t,e){var Q=d.default.GetCsNameArgument(t,e),r=t.GetArgument(e),T=t.GetArgument(e);H.MathtoolsUtil.addPairedDelims(t.configuration,Q,[r,T])}",
+    "GetCS": "function(){var t=this.string.slice(this.i).match(/^(([a-z]+) ?|[\\uD800-\\uDBFF].|.)/i);return t?(this.i+=t[0].length,t[2]||t[1]):(this.i++,\" \")}",
+    "trimSpaces": "function(t){if(\"string\"!=typeof t)return t;var e=t.trim();return e.match(/\\\\$/)&&t.match(/ $/)&&(e+=\" \"),e}"
+  },
+  "cases": [
+    {
+      "raw": "foo",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "foo",
+          "macroName": "foo",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "\\foo",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "foo",
+          "macroName": "foo",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "é",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "é",
+          "macroName": "é",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "\\é",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "é",
+          "macroName": "é",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "α",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "α",
+          "macroName": "α",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "\\α",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "α",
+          "macroName": "α",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "🙂",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [],
+      "error": {
+        "id": "IllegalControlSequenceName",
+        "message": "Illegal control sequence name for \\DeclarePairedDelimiter"
+      }
+    },
+    {
+      "raw": "\\🙂",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [],
+      "error": {
+        "id": "IllegalControlSequenceName",
+        "message": "Illegal control sequence name for \\DeclarePairedDelimiter"
+      }
+    },
+    {
+      "raw": "𝛂",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [],
+      "error": {
+        "id": "IllegalControlSequenceName",
+        "message": "Illegal control sequence name for \\DeclarePairedDelimiter"
+      }
+    },
+    {
+      "raw": "\\𝛂",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [],
+      "error": {
+        "id": "IllegalControlSequenceName",
+        "message": "Illegal control sequence name for \\DeclarePairedDelimiter"
+      }
+    },
+    {
+      "raw": "é",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [],
+      "error": {
+        "id": "IllegalControlSequenceName",
+        "message": "Illegal control sequence name for \\DeclarePairedDelimiter"
+      }
+    },
+    {
+      "raw": "\\é",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [],
+      "error": {
+        "id": "IllegalControlSequenceName",
+        "message": "Illegal control sequence name for \\DeclarePairedDelimiter"
+      }
+    },
+    {
+      "raw": "👩‍💻",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [],
+      "error": {
+        "id": "IllegalControlSequenceName",
+        "message": "Illegal control sequence name for \\DeclarePairedDelimiter"
+      }
+    },
+    {
+      "raw": "\\👩‍💻",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [],
+      "error": {
+        "id": "IllegalControlSequenceName",
+        "message": "Illegal control sequence name for \\DeclarePairedDelimiter"
+      }
+    },
+    {
+      "raw": "",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [],
+      "error": {
+        "id": "IllegalControlSequenceName",
+        "message": "Illegal control sequence name for \\DeclarePairedDelimiter"
+      }
+    },
+    {
+      "raw": "\\",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [],
+      "error": {
+        "id": "IllegalControlSequenceName",
+        "message": "Illegal control sequence name for \\DeclarePairedDelimiter"
+      }
+    },
+    {
+      "raw": " ",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [],
+      "error": {
+        "id": "IllegalControlSequenceName",
+        "message": "Illegal control sequence name for \\DeclarePairedDelimiter"
+      }
+    },
+    {
+      "raw": "\\ ",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": " ",
+          "macroName": " ",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "\tfoo\t",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "foo",
+          "macroName": "foo",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "﻿foo﻿",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "foo",
+          "macroName": "foo",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "foo",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [],
+      "error": {
+        "id": "IllegalControlSequenceName",
+        "message": "Illegal control sequence name for \\DeclarePairedDelimiter"
+      }
+    },
+    {
+      "raw": "foo bar",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [],
+      "error": {
+        "id": "IllegalControlSequenceName",
+        "message": "Illegal control sequence name for \\DeclarePairedDelimiter"
+      }
+    },
+    {
+      "raw": "foo1",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [],
+      "error": {
+        "id": "IllegalControlSequenceName",
+        "message": "Illegal control sequence name for \\DeclarePairedDelimiter"
+      }
+    },
+    {
+      "raw": "@",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "@",
+          "macroName": "@",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "\\@",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "@",
+          "macroName": "@",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "\n",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [],
+      "error": {
+        "id": "IllegalControlSequenceName",
+        "message": "Illegal control sequence name for \\DeclarePairedDelimiter"
+      }
+    },
+    {
+      "raw": " ",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [],
+      "error": {
+        "id": "IllegalControlSequenceName",
+        "message": "Illegal control sequence name for \\DeclarePairedDelimiter"
+      }
+    },
+    {
+      "raw": " ",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [],
+      "error": {
+        "id": "IllegalControlSequenceName",
+        "message": "Illegal control sequence name for \\DeclarePairedDelimiter"
+      }
+    },
+    {
+      "raw": "FOO",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "FOO",
+          "macroName": "FOO",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "\\FOO",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "FOO",
+          "macroName": "FOO",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "﻿FOO﻿",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "FOO",
+          "macroName": "FOO",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "Foo",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "Foo",
+          "macroName": "Foo",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "\\Foo",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "Foo",
+          "macroName": "Foo",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "﻿Foo﻿",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "Foo",
+          "macroName": "Foo",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "fOo",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "fOo",
+          "macroName": "fOo",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "\\fOo",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "fOo",
+          "macroName": "fOo",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "﻿fOo﻿",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "fOo",
+          "macroName": "fOo",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "K",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "K",
+          "macroName": "K",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "\\K",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "K",
+          "macroName": "K",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "﻿K﻿",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "K",
+          "macroName": "K",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "ſ",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "ſ",
+          "macroName": "ſ",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "\\ſ",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "ſ",
+          "macroName": "ſ",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "﻿ſ﻿",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "ſ",
+          "macroName": "ſ",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "İ",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "İ",
+          "macroName": "İ",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "\\İ",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "İ",
+          "macroName": "İ",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "﻿İ﻿",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "İ",
+          "macroName": "İ",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "ß",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "ß",
+          "macroName": "ß",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "\\ß",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "ß",
+          "macroName": "ß",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "﻿ß﻿",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "ß",
+          "macroName": "ß",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "ſs",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [],
+      "error": {
+        "id": "IllegalControlSequenceName",
+        "message": "Illegal control sequence name for \\DeclarePairedDelimiter"
+      }
+    },
+    {
+      "raw": "\\ſs",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [],
+      "error": {
+        "id": "IllegalControlSequenceName",
+        "message": "Illegal control sequence name for \\DeclarePairedDelimiter"
+      }
+    },
+    {
+      "raw": "﻿ſs﻿",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [],
+      "error": {
+        "id": "IllegalControlSequenceName",
+        "message": "Illegal control sequence name for \\DeclarePairedDelimiter"
+      }
+    },
+    {
+      "raw": "Kk",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [],
+      "error": {
+        "id": "IllegalControlSequenceName",
+        "message": "Illegal control sequence name for \\DeclarePairedDelimiter"
+      }
+    },
+    {
+      "raw": "\\Kk",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [],
+      "error": {
+        "id": "IllegalControlSequenceName",
+        "message": "Illegal control sequence name for \\DeclarePairedDelimiter"
+      }
+    },
+    {
+      "raw": "﻿Kk﻿",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [],
+      "error": {
+        "id": "IllegalControlSequenceName",
+        "message": "Illegal control sequence name for \\DeclarePairedDelimiter"
+      }
+    },
+    {
+      "raw": "ss",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "ss",
+          "macroName": "ss",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "\\ss",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "ss",
+          "macroName": "ss",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "﻿ss﻿",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "ss",
+          "macroName": "ss",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "1",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "1",
+          "macroName": "1",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "\\1",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "1",
+          "macroName": "1",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "﻿1﻿",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "1",
+          "macroName": "1",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "_",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "_",
+          "macroName": "_",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "\\_",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "_",
+          "macroName": "_",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "﻿_﻿",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "_",
+          "macroName": "_",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "*",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "*",
+          "macroName": "*",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "\\*",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "*",
+          "macroName": "*",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "﻿*﻿",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "*",
+          "macroName": "*",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "~",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "~",
+          "macroName": "~",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "\\~",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "~",
+          "macroName": "~",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "﻿~﻿",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "~",
+          "macroName": "~",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "|",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "|",
+          "macroName": "|",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "\\|",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "|",
+          "macroName": "|",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "﻿|﻿",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "|",
+          "macroName": "|",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": ":",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": ":",
+          "macroName": ":",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "\\:",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": ":",
+          "macroName": ":",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "﻿:﻿",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": ":",
+          "macroName": ":",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "__proto__",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [],
+      "error": {
+        "id": "IllegalControlSequenceName",
+        "message": "Illegal control sequence name for \\DeclarePairedDelimiter"
+      }
+    },
+    {
+      "raw": "\\__proto__",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [],
+      "error": {
+        "id": "IllegalControlSequenceName",
+        "message": "Illegal control sequence name for \\DeclarePairedDelimiter"
+      }
+    },
+    {
+      "raw": "﻿__proto__﻿",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [],
+      "error": {
+        "id": "IllegalControlSequenceName",
+        "message": "Illegal control sequence name for \\DeclarePairedDelimiter"
+      }
+    },
+    {
+      "raw": "constructor",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "constructor",
+          "macroName": "constructor",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "\\constructor",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "constructor",
+          "macroName": "constructor",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "﻿constructor﻿",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "constructor",
+          "macroName": "constructor",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "toString",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "toString",
+          "macroName": "toString",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "\\toString",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "toString",
+          "macroName": "toString",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "﻿toString﻿",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "toString",
+          "macroName": "toString",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "foo\nbar",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [],
+      "error": {
+        "id": "IllegalControlSequenceName",
+        "message": "Illegal control sequence name for \\DeclarePairedDelimiter"
+      }
+    },
+    {
+      "raw": "\\foo\nbar",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [],
+      "error": {
+        "id": "IllegalControlSequenceName",
+        "message": "Illegal control sequence name for \\DeclarePairedDelimiter"
+      }
+    },
+    {
+      "raw": "﻿foo\nbar﻿",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [],
+      "error": {
+        "id": "IllegalControlSequenceName",
+        "message": "Illegal control sequence name for \\DeclarePairedDelimiter"
+      }
+    },
+    {
+      "raw": "\r",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [],
+      "error": {
+        "id": "IllegalControlSequenceName",
+        "message": "Illegal control sequence name for \\DeclarePairedDelimiter"
+      }
+    },
+    {
+      "raw": "\\\r",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [],
+      "error": {
+        "id": "IllegalControlSequenceName",
+        "message": "Illegal control sequence name for \\DeclarePairedDelimiter"
+      }
+    },
+    {
+      "raw": "﻿\r﻿",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [],
+      "error": {
+        "id": "IllegalControlSequenceName",
+        "message": "Illegal control sequence name for \\DeclarePairedDelimiter"
+      }
+    },
+    {
+      "raw": "\\\n",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [],
+      "error": {
+        "id": "IllegalControlSequenceName",
+        "message": "Illegal control sequence name for \\DeclarePairedDelimiter"
+      }
+    },
+    {
+      "raw": "\\\\\n",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "\\",
+          "macroName": "\\",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "﻿\\\n﻿",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [],
+      "error": {
+        "id": "IllegalControlSequenceName",
+        "message": "Illegal control sequence name for \\DeclarePairedDelimiter"
+      }
+    },
+    {
+      "raw": "\\\\\r",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "\\",
+          "macroName": "\\",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "﻿\\\r﻿",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [],
+      "error": {
+        "id": "IllegalControlSequenceName",
+        "message": "Illegal control sequence name for \\DeclarePairedDelimiter"
+      }
+    },
+    {
+      "raw": "\\ ",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [],
+      "error": {
+        "id": "IllegalControlSequenceName",
+        "message": "Illegal control sequence name for \\DeclarePairedDelimiter"
+      }
+    },
+    {
+      "raw": "\\\\ ",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "\\",
+          "macroName": "\\",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "﻿\\ ﻿",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [],
+      "error": {
+        "id": "IllegalControlSequenceName",
+        "message": "Illegal control sequence name for \\DeclarePairedDelimiter"
+      }
+    },
+    {
+      "raw": "\\ ",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [],
+      "error": {
+        "id": "IllegalControlSequenceName",
+        "message": "Illegal control sequence name for \\DeclarePairedDelimiter"
+      }
+    },
+    {
+      "raw": "\\\\ ",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "\\",
+          "macroName": "\\",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "﻿\\ ﻿",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [],
+      "error": {
+        "id": "IllegalControlSequenceName",
+        "message": "Illegal control sequence name for \\DeclarePairedDelimiter"
+      }
+    },
+    {
+      "raw": "\\\t",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [],
+      "error": {
+        "id": "IllegalControlSequenceName",
+        "message": "Illegal control sequence name for \\DeclarePairedDelimiter"
+      }
+    },
+    {
+      "raw": "\\\\\t",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "\\",
+          "macroName": "\\",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "﻿\\\t﻿",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [],
+      "error": {
+        "id": "IllegalControlSequenceName",
+        "message": "Illegal control sequence name for \\DeclarePairedDelimiter"
+      }
+    },
+    {
+      "raw": "\\",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "",
+          "macroName": "",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "\\\\",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [],
+      "error": {
+        "id": "IllegalControlSequenceName",
+        "message": "Illegal control sequence name for \\DeclarePairedDelimiter"
+      }
+    },
+    {
+      "raw": "﻿\\﻿",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "",
+          "macroName": "",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "\\﻿",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [],
+      "error": {
+        "id": "IllegalControlSequenceName",
+        "message": "Illegal control sequence name for \\DeclarePairedDelimiter"
+      }
+    },
+    {
+      "raw": "\\\\﻿",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "\\",
+          "macroName": "\\",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "﻿\\﻿﻿",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [],
+      "error": {
+        "id": "IllegalControlSequenceName",
+        "message": "Illegal control sequence name for \\DeclarePairedDelimiter"
+      }
+    },
+    {
+      "raw": "\\  ",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": " ",
+          "macroName": " ",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "\\\\  ",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [],
+      "error": {
+        "id": "IllegalControlSequenceName",
+        "message": "Illegal control sequence name for \\DeclarePairedDelimiter"
+      }
+    },
+    {
+      "raw": "﻿\\  ﻿",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [],
+      "error": {
+        "id": "IllegalControlSequenceName",
+        "message": "Illegal control sequence name for \\DeclarePairedDelimiter"
+      }
+    },
+    {
+      "raw": "\\ \t",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [],
+      "error": {
+        "id": "IllegalControlSequenceName",
+        "message": "Illegal control sequence name for \\DeclarePairedDelimiter"
+      }
+    },
+    {
+      "raw": "\\\\ \t",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "\\",
+          "macroName": "\\",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "﻿\\ \t﻿",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [],
+      "error": {
+        "id": "IllegalControlSequenceName",
+        "message": "Illegal control sequence name for \\DeclarePairedDelimiter"
+      }
+    },
+    {
+      "raw": "\\\t ",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": " ",
+          "macroName": " ",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "\\\\\t ",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [],
+      "error": {
+        "id": "IllegalControlSequenceName",
+        "message": "Illegal control sequence name for \\DeclarePairedDelimiter"
+      }
+    },
+    {
+      "raw": "﻿\\\t ﻿",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [],
+      "error": {
+        "id": "IllegalControlSequenceName",
+        "message": "Illegal control sequence name for \\DeclarePairedDelimiter"
+      }
+    },
+    {
+      "raw": "\\﻿ ",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": " ",
+          "macroName": " ",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "\\\\﻿ ",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [],
+      "error": {
+        "id": "IllegalControlSequenceName",
+        "message": "Illegal control sequence name for \\DeclarePairedDelimiter"
+      }
+    },
+    {
+      "raw": "﻿\\﻿ ﻿",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [],
+      "error": {
+        "id": "IllegalControlSequenceName",
+        "message": "Illegal control sequence name for \\DeclarePairedDelimiter"
+      }
+    },
+    {
+      "raw": "\\ ",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "",
+          "macroName": "",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "\\\\ ",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [],
+      "error": {
+        "id": "IllegalControlSequenceName",
+        "message": "Illegal control sequence name for \\DeclarePairedDelimiter"
+      }
+    },
+    {
+      "raw": "﻿\\ ﻿",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "",
+          "macroName": "",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "\\  ",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": " ",
+          "macroName": " ",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "\\\\  ",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [],
+      "error": {
+        "id": "IllegalControlSequenceName",
+        "message": "Illegal control sequence name for \\DeclarePairedDelimiter"
+      }
+    },
+    {
+      "raw": "﻿\\  ﻿",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [],
+      "error": {
+        "id": "IllegalControlSequenceName",
+        "message": "Illegal control sequence name for \\DeclarePairedDelimiter"
+      }
+    },
+    {
+      "raw": "\\\\",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "\\",
+          "macroName": "\\",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "\\\\\\",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [],
+      "error": {
+        "id": "IllegalControlSequenceName",
+        "message": "Illegal control sequence name for \\DeclarePairedDelimiter"
+      }
+    },
+    {
+      "raw": "﻿\\\\﻿",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "\\",
+          "macroName": "\\",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "",
+          "macroName": "",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "﻿﻿",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "",
+          "macroName": "",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": " ",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [],
+      "error": {
+        "id": "IllegalControlSequenceName",
+        "message": "Illegal control sequence name for \\DeclarePairedDelimiter"
+      }
+    },
+    {
+      "raw": "\\ ",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [],
+      "error": {
+        "id": "IllegalControlSequenceName",
+        "message": "Illegal control sequence name for \\DeclarePairedDelimiter"
+      }
+    },
+    {
+      "raw": "﻿ ﻿",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [],
+      "error": {
+        "id": "IllegalControlSequenceName",
+        "message": "Illegal control sequence name for \\DeclarePairedDelimiter"
+      }
+    },
+    {
+      "raw": "\u0000",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "\u0000",
+          "macroName": "\u0000",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "\\\u0000",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "\u0000",
+          "macroName": "\u0000",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "﻿\u0000﻿",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "\u0000",
+          "macroName": "\u0000",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "￿",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "￿",
+          "macroName": "￿",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "\\￿",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "￿",
+          "macroName": "￿",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "﻿￿﻿",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter",
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [
+        {
+          "map": "mathtools-paired-delims",
+          "key": "￿",
+          "macroName": "￿",
+          "args": [
+            "(",
+            ")"
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "raw": "𐀀",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [],
+      "error": {
+        "id": "IllegalControlSequenceName",
+        "message": "Illegal control sequence name for \\DeclarePairedDelimiter"
+      }
+    },
+    {
+      "raw": "\\𐀀",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [],
+      "error": {
+        "id": "IllegalControlSequenceName",
+        "message": "Illegal control sequence name for \\DeclarePairedDelimiter"
+      }
+    },
+    {
+      "raw": "﻿𐀀﻿",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [],
+      "error": {
+        "id": "IllegalControlSequenceName",
+        "message": "Illegal control sequence name for \\DeclarePairedDelimiter"
+      }
+    },
+    {
+      "raw": "􏿿",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [],
+      "error": {
+        "id": "IllegalControlSequenceName",
+        "message": "Illegal control sequence name for \\DeclarePairedDelimiter"
+      }
+    },
+    {
+      "raw": "\\􏿿",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [],
+      "error": {
+        "id": "IllegalControlSequenceName",
+        "message": "Illegal control sequence name for \\DeclarePairedDelimiter"
+      }
+    },
+    {
+      "raw": "﻿􏿿﻿",
+      "method": "paired",
+      "argumentsRead": [
+        "\\DeclarePairedDelimiter"
+      ],
+      "added": [],
+      "error": {
+        "id": "IllegalControlSequenceName",
+        "message": "Illegal control sequence name for \\DeclarePairedDelimiter"
+      }
+    }
+  ]
+}

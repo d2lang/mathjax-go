@@ -283,14 +283,31 @@ func (p *parser) readCSNameArgument(name string) (string, error) {
 	if err != nil {
 		return "", err
 	}
-	raw = strings.TrimSpace(raw)
-	if !strings.HasPrefix(raw, "\\") {
-		return "", texError("MissingCS", "%s must be followed by a control sequence", "\\"+name)
+	return validatedCSNameArgument(raw, name)
+}
+
+// validatedCSNameArgument follows NewcommandUtil.GetCsNameArgument, whose
+// non-Unicode regexp accepts a single BMP code unit or an ASCII-letter word.
+func validatedCSNameArgument(raw, name string) (string, error) {
+	cs := strings.TrimFunc(raw, internalTextSpace)
+	if strings.HasSuffix(cs, "\\") && strings.HasSuffix(raw, " ") {
+		cs += " " // ParseUtil.trimSpaces preserves a terminal control-space.
 	}
-	sub := &parser{source: raw[1:]}
-	cs := sub.readControlSequence()
-	if sub.pos != len(sub.source) {
-		return "", texError("MissingCS", "%s must be followed by a control sequence", "\\"+name)
+	cs = strings.TrimPrefix(cs, "\\")
+	r, size := utf8.DecodeRuneInString(cs)
+	valid := cs != "" && size == len(cs) && r <= 0xffff &&
+		r != '\n' && r != '\r' && r != '\u2028' && r != '\u2029'
+	if !valid && cs != "" {
+		valid = true
+		for _, r := range cs {
+			if !isASCIILetter(r) {
+				valid = false
+				break
+			}
+		}
+	}
+	if !valid {
+		return "", texError("IllegalControlSequenceName", "Illegal control sequence name for %s", "\\"+name)
 	}
 	return cs, nil
 }

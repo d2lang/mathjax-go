@@ -1,0 +1,19 @@
+{
+  "baseline": "bba94fc9e5a95e80ca2cb71cd845f82f3350fc6f",
+  "baselineStatus": "actual merged main162",
+  "inputs": 2168,
+  "exact": 2052,
+  "raw": 116,
+  "counts": {
+    "first-publication": 2102,
+    "previous-full-reference": 42,
+    "previous-raw-reference": 24
+  },
+  "exactCounts": {
+    "first-publication": 1998,
+    "previous-full-reference": 42,
+    "previous-raw-reference": 12
+  },
+  "scannedFiles": 413,
+  "originalMismatches": []
+}
