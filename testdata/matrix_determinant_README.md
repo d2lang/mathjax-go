@@ -24,14 +24,14 @@ reuse that behavior.
 
 The source is MathJax 3.2.2 commit
 `ad8f5c21cb810236551da8c6512ba733e67357ee`, rendered using the frozen D2 runtime.
-The explicit inventory has 796 distinct TeX/display inputs: 414 original alias
-controls, 300 additional parser/budget controls, and 100 whitespace/helper
-controls with 18 overlaps. It contains 642 valid original SVGs, 134 original error
-SVGs, and 20 original runtime exceptions. Every input is retained in the exact
+The explicit inventory has 898 distinct TeX/display inputs: 414 original alias
+controls, 300 additional parser/budget controls, 100 whitespace/helper controls,
+and 102 independent controls, with 18 overlaps. It contains 696 valid original
+SVGs, 182 original error SVGs, and 20 original runtime exceptions. Every input is retained in the exact
 fixture or the raw observation file; the generator never filters based on Go.
 
-Against merged PR 154, 732 complete-original SVG references are exact: 554 fixes
-and 178 unchanged controls, with no formerly exact regression. Coverage includes
+Against merged PR 154, 804 complete-original SVG references are exact: 608 fixes
+and 196 unchanged controls, with no formerly exact regression. Coverage includes
 all three names, grouped and real unbraced operands, scripts and pending items,
 font/style/text-lap callers, generated matrices, helper and alias overrides in
 both declaration orders, and effective caller/child macro-budget boundaries.
@@ -46,15 +46,24 @@ from MatrixQuantity's independent child parser and its array-opening charge.
 The raw literal helpers are not treated as budget-equivalent near a limit:
 removing the determinant alias removes one caller charge.
 
-Compared with the final PR 157 complete-original fixture tree, 708 strict
-inputs are first complete-original publications and 24 already have full
-references. No prior raw input is promoted; all overlapping original SVGs
-agree. This publication-overlap comparison is separate from the merged-154
-rendering baseline and will be rebound to the merged publication base.
+Compared with merged PR 157 (`42932ee918ca4db7f3edf9da30e59b0c9cd61f86`),
+780 strict inputs are first complete-original publications and 24 already have
+full references. No prior raw input is promoted; all overlapping originals agree.
+The 30 qualified safe-XML controls are also first complete-original publications
+and are counted separately from strict SVG assertions. These provenance counts
+are separate from the merged-154 rendering baseline; the rebased source still
+requires current-base validation before publication.
 
 ## Retained boundaries
 
-The 64 raw observations are separate from the strict references. All 48 changed
+The residual file retains 64 raw observations and 30 separately qualified
+safe-XML controls. The safe-XML controls differ only in the mandatory escaping
+of the single bare ampersand in `data-mjx-error="Misplaced &"`: 12 are newly
+reachable and 18 are unchanged. Their tests retain the entire original SVG and
+assert exactly that one attribute substitution. They are not strict byte-exact
+references.
+
+The 64 other raw observations are separate from passing assertions. All 48 changed
 raw targets have complete-original-equivalent direct helper controls, and the
 candidate output equals the helper's unchanged merged-154 output. These
 bindings are retained with their original, baseline, and candidate SVGs.

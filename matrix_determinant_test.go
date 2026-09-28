@@ -4,6 +4,7 @@ package mathjax_test
 import (
 	"encoding/json"
 	"os"
+	"strings"
 	"testing"
 
 	mathjax "github.com/d2lang/mathjax-go"
@@ -25,7 +26,7 @@ func TestMatrixDeterminantOriginalReferences(t *testing.T) {
 	if err := json.Unmarshal(data, &fixture); err != nil {
 		t.Fatal(err)
 	}
-	if fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || fixture.Counts.Total != 796 || fixture.Counts.Exact != 732 || len(fixture.Cases) != 732 {
+	if fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || fixture.Counts.Total != 898 || fixture.Counts.Exact != 804 || len(fixture.Cases) != 804 {
 		t.Fatal("unbound MatrixDeterminant references")
 	}
 	seen := map[string]bool{}
@@ -45,5 +46,50 @@ func TestMatrixDeterminantOriginalReferences(t *testing.T) {
 				t.Fatalf("complete original SVG differs\ngot: %s\nwant: %s", got, c.SVG)
 			}
 		})
+	}
+}
+
+func TestMatrixDeterminantSafeErrorAttribute(t *testing.T) {
+	data, err := os.ReadFile("testdata/matrix_determinant_residuals.json")
+	if err != nil {
+		t.Fatal(err)
+	}
+	var fixture struct {
+		MathjaxGitCommit string
+		Cases            []struct {
+			Name, TeX, Qualification string
+			Display                  bool
+			Original                 struct{ SVG string }
+		}
+	}
+	if err := json.Unmarshal(data, &fixture); err != nil {
+		t.Fatal(err)
+	}
+	if fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" {
+		t.Fatal("unbound original error controls")
+	}
+	count := 0
+	for _, c := range fixture.Cases {
+		if c.Qualification != "safe-XML error attribute" {
+			continue
+		}
+		count++
+		t.Run(c.Name, func(t *testing.T) {
+			// Preserve the complete original while requiring safe XML serialization.
+			const bare = `data-mjx-error="Misplaced &"`
+			if strings.Count(c.Original.SVG, bare) != 1 {
+				t.Fatal("missing unique original error attribute")
+			}
+			want := strings.Replace(c.Original.SVG, bare, `data-mjx-error="Misplaced &amp;"`, 1)
+			options := mathjax.DefaultOptions()
+			options.Display = c.Display
+			got, err := mathjax.RenderWithOptions(c.TeX, options)
+			if err != nil || got != want {
+				t.Fatalf("safe error attribute differs: %v\ngot: %s\nwant: %s", err, got, want)
+			}
+		})
+	}
+	if count != 30 {
+		t.Fatalf("safe XML controls: got %d, want 30", count)
 	}
 }
