@@ -24,16 +24,16 @@ supply the argument. Source-produced Fn/Not/Dots/Position items retain their
 existing rejection rules. The separate Bqty registration is not part of
 this prerequisite.
 
-The 878-input deduplicated inventory contains 844 complete exact original references:
-816 valid renderings and 28 error renderings. Against main145
-`aa6200c004e8498321d821ac7edceb4040b441cb`, there are 226 fixes and 618 exact
+The 952-input deduplicated inventory contains 916 complete exact original references:
+852 valid renderings and 64 error renderings. Against main148
+`6f388b9618a2347151b4120e58c938811104d567`, there are 252 fixes and 664 exact
 controls. Coverage includes starred and sized commutators, vector fonts,
 empty arguments, primes, later scripts, parent functions, positions,
 negation, dots, Braket, AutoOpen, font declarations, authored groups,
 matrices, CD, and command overrides. No formerly exact input in this fresh
 inventory regresses.
 
-All 34 nonexact observations remain raw in `script_final_items_residuals.json`:
+All 36 nonexact observations remain raw in `script_final_items_residuals.json`:
 
 - 22 starred Bra cases retain the existing extra empty TeXAtom produced by
   Go's extra `{}` in the starred expansion. Ten script cases change; for
@@ -41,7 +41,7 @@ All 34 nonexact observations remain raw in `script_final_items_residuals.json`:
   candidate string yields the complete original string, including every
   glyph transform and viewport. The other 12 outputs are unchanged. The
   pinned PhysicsMethods.Bra starred expansion has no such extra group.
-- Two empty PushAll cases inside matrix cells retain an existing difference
+- Four empty PushAll cases inside matrix or CD cells retain an existing difference
   between MissingScript and MissingOpenForSup diagnostics.
 - Two nested-MathFont observations from the independent review remain
   byte-unchanged.
@@ -54,11 +54,11 @@ The complete original, baseline, and candidate outputs are retained; none
 of these cases is counted as exact or substituted into a golden. The empty
 Bra group proof is in `script_final_items_geometry_proof.json`.
 
-A replay of all 3,479 published main145 residual inputs changed one existing
-Physics Fn case and two existing authored cancel attribute orders. The
-latter are complete parsed-XML matches, with no geometry change. One
-serialization ceased to be byte-exact in that run; it is preserved with
-its attribute-order proof, rather than counted as a source regression.
+A replay of all 4,271 published main148 residual inputs changed one existing
+Physics Fn case and six existing authored cancel attribute orders. The
+latter are complete parsed-XML matches, with no geometry change. Three
+serializations ceased to be byte-exact in that run; they are preserved with
+their attribute-order proof, rather than counted as a source regression.
 
 Regenerate both original inventories with:
 
@@ -73,6 +73,13 @@ changed nonexact output occurred in that review. Its 200 distinct new inputs
 are included in the deduplicated inventory above. Its controls additionally
 exercise Eval, pmb, logos, and both ordinary and prime script consumers.
 
+The main148 rebase explicitly preserves Nonscript rejection and pending-item
+barriers. All 878 earlier corpus outputs remain unchanged. Eighty fresh
+Nonscript intersections have 78 exact results, 32 fixes, and two unchanged
+empty-PushAll CD diagnostics; the distinct cases are included above.
+
 The generator checks all three frozen D2 asset hashes and creates a fresh
 original VM for each expression. It never runs Go. Both complete original
-inventories regenerate byte-identically. Final base and gate results will be recorded before handoff.
+inventories regenerate byte-identically. On the final main148 base, the full
+frozen-oracle suite, race tests, vet, and the JavaScript/WASM build all pass
+serially with `-p 1`. No original references were adjusted to Go output.

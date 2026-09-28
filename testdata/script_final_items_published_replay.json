@@ -1,57 +1,93 @@
 {
-  "checkout": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/mathjax-accent-layout",
+  "checkout": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/mathjax-go",
   "sourceFiles": [
-    "work/mathjax-accent-layout/testdata/alignedat_residuals.json",
-    "work/mathjax-accent-layout/testdata/array_rows_residuals.json",
-    "work/mathjax-accent-layout/testdata/arrow_between_lines_residuals.json",
-    "work/mathjax-accent-layout/testdata/boxed_macro_residuals.json",
-    "work/mathjax-accent-layout/testdata/buildrel_residuals.json",
-    "work/mathjax-accent-layout/testdata/cd_entries_residuals.json",
-    "work/mathjax-accent-layout/testdata/cd_finalization_residuals.json",
-    "work/mathjax-accent-layout/testdata/cramped_substack_residuals.json",
-    "work/mathjax-accent-layout/testdata/delimiter_cache_residuals.json",
-    "work/mathjax-accent-layout/testdata/enclosure_bbox_residuals.json",
-    "work/mathjax-accent-layout/testdata/fallback_correction_residuals_mathjax_3_2_2.json",
-    "work/mathjax-accent-layout/testdata/flalign_residuals.json",
-    "work/mathjax-accent-layout/testdata/fn_script_ownership_residuals.json",
-    "work/mathjax-accent-layout/testdata/framebox_residuals.json",
-    "work/mathjax-accent-layout/testdata/hfill_residuals.json",
-    "work/mathjax-accent-layout/testdata/internal_font_css_residuals_mathjax_3_2_2.json",
-    "work/mathjax-accent-layout/testdata/mspace_residuals.json",
-    "work/mathjax-accent-layout/testdata/operator_primes_residuals.json",
-    "work/mathjax-accent-layout/testdata/physics_named_functions_residuals.json",
-    "work/mathjax-accent-layout/testdata/physics_operator_applications_residuals.json",
-    "work/mathjax-accent-layout/testdata/physics_vector_applications_residuals.json",
-    "work/mathjax-accent-layout/testdata/pmb_residuals.json",
-    "work/mathjax-accent-layout/testdata/quantity_fallback_residuals.json",
-    "work/mathjax-accent-layout/testdata/row_command_priority_residuals.json",
-    "work/mathjax-accent-layout/testdata/row_stretch_residuals.json",
-    "work/mathjax-accent-layout/testdata/skew_residuals.json"
+    "work/mathjax-go/testdata/alignedat_residuals.json",
+    "work/mathjax-go/testdata/array_initial_residuals.json",
+    "work/mathjax-go/testdata/array_rows_residuals.json",
+    "work/mathjax-go/testdata/arrow_between_lines_residuals.json",
+    "work/mathjax-go/testdata/boxed_macro_residuals.json",
+    "work/mathjax-go/testdata/buildrel_residuals.json",
+    "work/mathjax-go/testdata/cd_entries_residuals.json",
+    "work/mathjax-go/testdata/cd_finalization_residuals.json",
+    "work/mathjax-go/testdata/cramped_style_residuals.json",
+    "work/mathjax-go/testdata/cramped_substack_residuals.json",
+    "work/mathjax-go/testdata/delimiter_cache_residuals.json",
+    "work/mathjax-go/testdata/enclosure_bbox_residuals.json",
+    "work/mathjax-go/testdata/fallback_correction_residuals_mathjax_3_2_2.json",
+    "work/mathjax-go/testdata/flalign_residuals.json",
+    "work/mathjax-go/testdata/fn_script_ownership_residuals.json",
+    "work/mathjax-go/testdata/framebox_residuals.json",
+    "work/mathjax-go/testdata/hfill_residuals.json",
+    "work/mathjax-go/testdata/internal_font_css_residuals_mathjax_3_2_2.json",
+    "work/mathjax-go/testdata/mspace_residuals.json",
+    "work/mathjax-go/testdata/nonscript_array_residuals.json",
+    "work/mathjax-go/testdata/nonscript_residuals.json",
+    "work/mathjax-go/testdata/operator_primes_residuals.json",
+    "work/mathjax-go/testdata/physics_named_functions_residuals.json",
+    "work/mathjax-go/testdata/physics_operator_applications_residuals.json",
+    "work/mathjax-go/testdata/physics_vector_applications_residuals.json",
+    "work/mathjax-go/testdata/pmb_residuals.json",
+    "work/mathjax-go/testdata/quantity_fallback_residuals.json",
+    "work/mathjax-go/testdata/row_command_priority_residuals.json",
+    "work/mathjax-go/testdata/row_stretch_residuals.json",
+    "work/mathjax-go/testdata/skew_residuals.json"
   ],
   "binarySHA256": {
-    "before": "2cab8b9a9003a0d91d63b153d3c88599a7e52b61df3b7470c60e3e29bced1f5b",
-    "after": "fa9d71a1ff2b63adb8a1ee7d47fb45cc983570132e8118e3c5a30ed1d642eb00"
+    "before": "44fe04c617e2d520b4bb99e348dcb9bbfdb6cfd7c5b03a1558b9b0546321f8aa",
+    "after": "b2871f48edcf16fd8ff14a24cfb597b0ff84f66c7683a7d38f70d2bdb536c377"
   },
-  "uniqueInputs": 3479,
-  "changed": 3,
-  "newlyExact": 1,
+  "uniqueInputs": 4271,
+  "changed": 7,
+  "newlyExact": 3,
   "exactRegressions": [
     [
       {
         "fixture": "enclosure_bbox_residuals.json",
-        "name": "enclosure-1290"
+        "name": "enclosure-1278"
+      }
+    ],
+    [
+      {
+        "fixture": "enclosure_bbox_residuals.json",
+        "name": "enclosure-1283"
+      }
+    ],
+    [
+      {
+        "fixture": "enclosure_bbox_residuals.json",
+        "name": "enclosure-1286"
       }
     ]
   ],
-  "changedNonexactCount": 2,
+  "changedNonexactCount": 4,
   "changedNonexact": [
     {
-      "tex": "\\cancelto[data-padding=1em,data-thickness=.2em]{0}{x}",
+      "tex": "\\cancelto[data-padding=1em,data-thickness=.2em]{0}{\\text{^}}",
       "display": false,
       "sources": [
         {
           "fixture": "enclosure_bbox_residuals.json",
-          "name": "enclosure-1290"
+          "name": "enclosure-1278"
+        }
+      ]
+    },
+    {
+      "tex": "\\cancelto[data-padding=1em,data-thickness=.2em]{0}{\\text{_}}",
+      "display": true,
+      "sources": [
+        {
+          "fixture": "enclosure_bbox_residuals.json",
+          "name": "enclosure-1283"
+        }
+      ]
+    },
+    {
+      "tex": "\\cancelto[data-padding=1em,data-thickness=.2em]{0}{}",
+      "display": false,
+      "sources": [
+        {
+          "fixture": "enclosure_bbox_residuals.json",
+          "name": "enclosure-1286"
         }
       ]
     },
