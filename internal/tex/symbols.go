@@ -148,6 +148,8 @@ var simpleMacros = map[string]string{
 	"Residue":   "\\mathrm{Res}",
 	"mathstrut": "\\vphantom{(}",
 	"pmb":       "\\rlap{#1}\\kern1px{#1}",
+	"TeX":       "T\\kern-.14em\\lower.5ex{E}\\kern-.115em X",
+	"LaTeX":     "L\\kern-.325em\\raise.21em{\\scriptstyle{A}}\\kern-.17em\\TeX",
 	"flatfrac":  "\\left.#1\\middle/#2\\right.",
 	"stackrel":  "\\mathrel{\\mathop{#2}\\limits^{#1}}",
 	"dfrac":     "\\displaystyle\\frac{#1}{#2}",
