@@ -64,7 +64,12 @@ Regenerate both original inventories with:
 node --jitless testdata/generate_script_final_items.cjs /path/to/pinned-assets
 ```
 
+An independent source review and 200 additional fresh original comparisons
+found no scoped issue: 198 were exact, 60 were fixes, and two inherited
+nested-MathFont observations were byte-unchanged. No exact regression or
+changed nonexact output occurred in that review. Its controls additionally
+exercise Eval, pmb, logos, and both ordinary and prime script consumers.
+
 The generator checks all three frozen D2 asset hashes and creates a fresh
 original VM for each expression. It never runs Go. Both complete original
-inventories regenerate byte-identically. Final base/gate and independent
-review results will be recorded before handoff.
+inventories regenerate byte-identically. Final base and gate results will be recorded before handoff.
