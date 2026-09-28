@@ -202,7 +202,12 @@ func (p *parser) amsOperatorName(name string) ([]*mml.Node, error) {
 	if err != nil {
 		return nil, err
 	}
-	raw = strings.TrimSpace(raw)
+	// HandleOperatorName uses ParseUtil.trimSpaces, including its final
+	// control-space exception, before creating the child parser.
+	op := strings.TrimFunc(raw, internalTextSpace)
+	if strings.HasSuffix(op, "\\") && strings.HasSuffix(raw, " ") {
+		op += " "
+	}
 	// HandleOperatorName creates one child parser with a copied environment.
 	// Its regex and font replace the caller's choices; noAutoOP is inherited.
 	operatorParser := *p
@@ -210,7 +215,7 @@ func (p *parser) amsOperatorName(name string) ([]*mml.Node, error) {
 	operatorParser.fontExplicitEmpty = false
 	operatorParser.identifierPattern = identifierPatternOperator
 	operatorParser.operatorLetters = true
-	result, err := operatorParser.parseChild(raw)
+	result, err := operatorParser.parseChild(op)
 	if err != nil {
 		return nil, err
 	}
@@ -236,15 +241,16 @@ func (p *parser) amsOperatorName(name string) ([]*mml.Node, error) {
 	result.SetProperty("movablelimits", true)
 	result.SetProperty("texClass", mml.TeXClassOp)
 	if !star {
+		// GetNext consumes JavaScript whitespace even when no limits follows.
+		for p.pos < len(p.source) && internalTextSpace(p.peekRune()) {
+			p.consumeRune()
+		}
 		start := p.pos
-		p.skipSpaces()
 		if p.pos < len(p.source) && p.source[p.pos] == '\\' {
 			p.pos++
 			if p.readControlSequence() != "limits" {
 				p.pos = start
 			}
-		} else {
-			p.pos = start
 		}
 	}
 	return []*mml.Node{result}, nil
