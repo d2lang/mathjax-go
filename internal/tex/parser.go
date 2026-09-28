@@ -791,7 +791,13 @@ func (p *parser) parseCharacterChecked() (*mml.Node, error) {
 		p.consumeRune()
 		return nil, fmt.Errorf("identifier pattern does not match %q", string(r))
 	}
-	return p.parseCharacter(), nil
+	n := p.parseCharacter()
+	if n == nil {
+		// Other dereferences its Unicode range in the original. Preserve
+		// that conversion failure without a panic or forbidden XML text.
+		return nil, fmt.Errorf("no Unicode range for character U+%04X", r)
+	}
+	return n, nil
 }
 
 func (p *parser) parseCharacter() *mml.Node {
@@ -882,7 +888,7 @@ func (p *parser) parseCharacter() *mml.Node {
 	// BaseConfiguration.Other selects the token kind from the same pinned
 	// range that supplies its variant. Earlier explicit character maps and
 	// letter/digit scanners keep their distinct construction paths.
-	kind := "mo"
+	kind := ""
 	for _, interval := range mjOperatorRanges {
 		if int(r) < interval.First {
 			break
@@ -891,6 +897,9 @@ func (p *parser) parseCharacter() *mml.Node {
 			kind = interval.Kind
 			break
 		}
+	}
+	if kind == "" {
+		return nil // The checked token boundary reports the source failure.
 	}
 	other := ambientLiteralToken(p.token(kind, text), r)
 	if kind == "mo" {
