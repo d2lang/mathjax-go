@@ -183,6 +183,10 @@ var simpleMacros = map[string]string{
 	"Ket":       "{\\left\\vert {#1} \\right\\rangle}",
 	// Mathtools' cramped stack uses the primed script-style array.
 	"crampedsubstack": "\\begin{crampedsubarray}{c}#1\\end{crampedsubarray}",
+	// Physics determinant aliases preserve ordinary macro expansion and lookup.
+	"matrixdeterminant": "\\vmqty{#1}",
+	"mdet":              "\\vmqty{#1}",
+	"smdet":             "\\svmqty{#1}",
 	// Mhchem's equilibrium arrows are ordinary TeX macros, including when
 	// emitted by the chemistry state machine.
 	"longrightleftharpoons": "\\stackrel{\\textstyle{-}\\!\\!{\\rightharpoonup}}{\\smash{{\\leftharpoondown}\\!\\!{-}}}",
