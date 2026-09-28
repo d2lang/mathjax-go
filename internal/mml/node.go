@@ -80,7 +80,7 @@ type Flags struct {
 // inheritance pass has not run. These nodes do not participate in Walk/Find.
 type FencedNodes struct {
 	Open, Close *Node
-	Separators []*Node
+	Separators  []*Node
 }
 
 // Node is one node in MathJax's internal MathML tree. Kind-specific state that
