@@ -30,7 +30,7 @@ and 102 independent controls, with 18 overlaps. It contains 696 valid original
 SVGs, 182 original error SVGs, and 20 original runtime exceptions. Every input is retained in the exact
 fixture or the raw observation file; the generator never filters based on Go.
 
-Against merged PR 154, 804 complete-original SVG references are exact: 608 fixes
+Against merged PR 157, 804 complete-original SVG references are exact: 608 fixes
 and 196 unchanged controls, with no formerly exact regression. Coverage includes
 all three names, grouped and real unbraced operands, scripts and pending items,
 font/style/text-lap callers, generated matrices, helper and alias overrides in
@@ -51,8 +51,10 @@ Compared with merged PR 157 (`42932ee918ca4db7f3edf9da30e59b0c9cd61f86`),
 full references. No prior raw input is promoted; all overlapping originals agree.
 The 30 qualified safe-XML controls are also first complete-original publications
 and are counted separately from strict SVG assertions. These provenance counts
-are separate from the merged-154 rendering baseline; the rebased source still
-requires current-base validation before publication.
+are separate from the original merged-154 capture. The complete 898-input
+inventory and all literal bindings produce unchanged outputs when replayed
+against the actual merged-157 baseline and rebased candidate. The historical
+raw baseline/candidate strings remain preserved, rather than rewritten.
 
 ## Retained boundaries
 
@@ -65,7 +67,7 @@ references.
 
 The 64 other raw observations are separate from passing assertions. All 48 changed
 raw targets have complete-original-equivalent direct helper controls, and the
-candidate output equals the helper's unchanged merged-154 output. These
+candidate output equals the helper's unchanged merged-154 and merged-157 outputs. These
 bindings are retained with their original, baseline, and candidate SVGs.
 
 - Twelve changed valid BOM inputs and eight unchanged helper inputs expose the
@@ -94,3 +96,13 @@ The generator verifies the three frozen asset SHA256 hashes, starts a fresh
 original VM per conversion, and regenerates exact SVGs, raw originals, and
 literal-control originals. JSONL uses LF framing and preserves literal Unicode
 line separators. Public counts exclude any augmented-package configuration.
+
+## Current-base replay
+
+The focused strict and safe-XML tests pass on merged PR 157. Replaying 5,086
+published raw inputs yields no source change or regression; the upstream
+4,326-input inventory yields 18 determinant fixes and no source regression.
+Cancel/enclose attribute-order differences are excluded from those counts,
+including apparent successes. Repeated renders from both binaries preserve the
+entire XML tree; the two inherited enclose configuration differences remain raw.
+Full release gates are recorded separately after final base composition.
