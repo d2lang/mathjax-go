@@ -77,7 +77,76 @@
     "freshFullRuntimeObjectsRetained": 32,
     "freshFirstLineAndLiteralNELVerified": 32
   },
-  "fullGates": "pending",
+  "fullGates": {
+    "head": "33add2a28b08e59b188ef6974ad09131bb7e9592",
+    "internalTree": "e9766f495c05f0c75c38296e1c03c6deb0fbd740",
+    "base": "6ad44b5bbbf6ec5cad3241c010f44981b1216657",
+    "status": "terminal-pass",
+    "gates": [
+      {
+        "name": "full",
+        "command": [
+          "/Users/aw/.local/share/go/1.27.0/bin/go",
+          "test",
+          "-p",
+          "1",
+          "./..."
+        ],
+        "status": "terminal",
+        "environmentOverrides": {},
+        "exitCode": 0,
+        "seconds": 40.654
+      },
+      {
+        "name": "race",
+        "command": [
+          "/Users/aw/.local/share/go/1.27.0/bin/go",
+          "test",
+          "-race",
+          "-p",
+          "1",
+          "./..."
+        ],
+        "status": "terminal",
+        "environmentOverrides": {},
+        "exitCode": 0,
+        "seconds": 272.005
+      },
+      {
+        "name": "vet",
+        "command": [
+          "/Users/aw/.local/share/go/1.27.0/bin/go",
+          "vet",
+          "-p",
+          "1",
+          "./..."
+        ],
+        "status": "terminal",
+        "environmentOverrides": {},
+        "exitCode": 0,
+        "seconds": 0.743
+      },
+      {
+        "name": "wasm",
+        "command": [
+          "/Users/aw/.local/share/go/1.27.0/bin/go",
+          "build",
+          "-p",
+          "1",
+          "./..."
+        ],
+        "status": "terminal",
+        "environmentOverrides": {
+          "GOOS": "js",
+          "GOARCH": "wasm"
+        },
+        "exitCode": 0,
+        "seconds": 0.622
+      }
+    ],
+    "finalHead": "33add2a28b08e59b188ef6974ad09131bb7e9592",
+    "finalStatus": ""
+  },
   "overlapTreeHash": "6264a1092fc80de3984d46b29440d4a88161120d",
   "publicationOverlap": {
     "base": "6ad44b5bbbf6ec5cad3241c010f44981b1216657",
@@ -126,7 +195,76 @@
         "testdata/physics_ketbra_mathjax_3_2_2.json.gz": "4ef18b0bddeee11819a1e019329244556a23096f5aadad57d6e11bdc8de481bb"
       }
     },
-    "fullGates": "pending on actual main176 rebase",
+    "fullGates": {
+      "head": "33add2a28b08e59b188ef6974ad09131bb7e9592",
+      "internalTree": "e9766f495c05f0c75c38296e1c03c6deb0fbd740",
+      "base": "6ad44b5bbbf6ec5cad3241c010f44981b1216657",
+      "status": "terminal-pass",
+      "gates": [
+        {
+          "name": "full",
+          "command": [
+            "/Users/aw/.local/share/go/1.27.0/bin/go",
+            "test",
+            "-p",
+            "1",
+            "./..."
+          ],
+          "status": "terminal",
+          "environmentOverrides": {},
+          "exitCode": 0,
+          "seconds": 40.654
+        },
+        {
+          "name": "race",
+          "command": [
+            "/Users/aw/.local/share/go/1.27.0/bin/go",
+            "test",
+            "-race",
+            "-p",
+            "1",
+            "./..."
+          ],
+          "status": "terminal",
+          "environmentOverrides": {},
+          "exitCode": 0,
+          "seconds": 272.005
+        },
+        {
+          "name": "vet",
+          "command": [
+            "/Users/aw/.local/share/go/1.27.0/bin/go",
+            "vet",
+            "-p",
+            "1",
+            "./..."
+          ],
+          "status": "terminal",
+          "environmentOverrides": {},
+          "exitCode": 0,
+          "seconds": 0.743
+        },
+        {
+          "name": "wasm",
+          "command": [
+            "/Users/aw/.local/share/go/1.27.0/bin/go",
+            "build",
+            "-p",
+            "1",
+            "./..."
+          ],
+          "status": "terminal",
+          "environmentOverrides": {
+            "GOOS": "js",
+            "GOARCH": "wasm"
+          },
+          "exitCode": 0,
+          "seconds": 0.622
+        }
+      ],
+      "finalHead": "33add2a28b08e59b188ef6974ad09131bb7e9592",
+      "finalStatus": ""
+    },
     "broad": {
       "status": "terminal-pass",
       "head": "dae46e4c0a8f3834a272a2e56a5e295c458f2975",
