@@ -1,0 +1,128 @@
+{
+  "mathjaxGitCommit": "ad8f5c21cb810236551da8c6512ba733e67357ee",
+  "baseCommit": "e866b51f45b67f8a21823871c32aecaf0e299474",
+  "sourceHead": "7659d26a7e1b4757b730afbcf8165c18e91114d3",
+  "sourceInternalTree": "979e5acdd2caf4f85eb7562af0c84ef911927385",
+  "candidateSHA256": "4db90c0436e0e06200586eec82524a1df3747a4681ca85d5560ddfd838bffac8",
+  "uniquePublicOriginals": 1342,
+  "validSVGs": 826,
+  "errorSVGs": 516,
+  "exact": 1342,
+  "fixedAgainstBase": 1008,
+  "unchangedControls": 334,
+  "ownResiduals": 0,
+  "earlyFixtures": {
+    "focus": 78,
+    "star": 212,
+    "mutualOverlap": 0,
+    "fullyContainedInCompleteFixture": true,
+    "additionalUniqueInputs": 0
+  },
+  "totalFullSVGAssertionsIncludingEarlyFixtures": 1632,
+  "directSourceGetStarObservations": 181,
+  "legacyCompatibilityAssertionsNotOriginals": 2,
+  "provenance": {
+    "baseCommit": "e866b51f45b67f8a21823871c32aecaf0e299474",
+    "strictPublicInputs": 1342,
+    "scannedFiles": 468,
+    "counts": {
+      "first-input-publication": 1342
+    },
+    "originalMismatches": [],
+    "ambiguousOnly": 0
+  },
+  "broader": {
+    "published": {
+      "uniqueInputs": 6800,
+      "metadataOnlyExcluded": 60,
+      "genuineFixes": 0,
+      "genuineRegressions": 0,
+      "genuineChangedNonexact": 0,
+      "APIResponseShapeOnly": 914,
+      "additionalHLineResidualInputs": 32
+    },
+    "upstream": {
+      "uniqueInputs": 4326,
+      "genuineFixes": 12,
+      "genuineRegressions": 0,
+      "genuineChangedNonexact": 0
+    },
+    "serialization": {
+      "inputs": 2,
+      "repeatsPerInputPerBinary": 64,
+      "renders": 256,
+      "allCompleteParsedXMLEqualOriginal": true,
+      "publishedApparentFixesExcluded": 2,
+      "upstreamApparentRegressionsExcluded": 0,
+      "normalizationForAssertions": false,
+      "genuinePublishedFixes": 0,
+      "genuinePublishedRegressions": 0,
+      "genuineUpstreamFixes": 12,
+      "genuineUpstreamRegressions": 0,
+      "genuineChangedNonexact": 0
+    },
+    "runtime": {
+      "inputs": 802,
+      "allUnchanged": true,
+      "APIResponseShapeOnly": 48
+    },
+    "sharedAutoOpen": {
+      "uniqueInputs": 5621,
+      "allUnchanged": true,
+      "exact": 5514,
+      "newOriginals": 192,
+      "newExact": 158,
+      "newRawUnchanged": 34,
+      "augmentedHelperObservationsExcluded": 14
+    },
+    "hline": {
+      "inputs": 2444,
+      "exact": 2412,
+      "raw": 32,
+      "allUnchanged": true
+    }
+  },
+  "goValidation": {
+    "status": "terminal-pass",
+    "gatedHead": "24214572ea5f6f232ac466be0d8d0ec003572df7",
+    "rebasedHead": "7659d26a7e1b4757b730afbcf8165c18e91114d3",
+    "sourceAndFixtureWholeTreeUnchanged": true,
+    "fullOriginalOracle": true,
+    "full": true,
+    "race": true,
+    "vet": true,
+    "wasm": true,
+    "seconds": {
+      "full": 36.068,
+      "race": 211.616,
+      "vet": 0.565,
+      "wasm": 0.866
+    },
+    "go": "1.27.0",
+    "parallelPackages": 1,
+    "node": "absolute pinned Node with --jitless",
+    "fullReceiptSHA256": "cad3c4425f0f983f5170e6c0691adef959a29411e7dddebadce5311ed718c46d"
+  },
+  "gatedHead": "24214572ea5f6f232ac466be0d8d0ec003572df7",
+  "gatedWholeTree": "1294b022dbed3fda063a15ca5f06d79ccc426c17",
+  "rebaseWholeTreeUnchanged": true,
+  "comparisonBinding": {
+    "gatedPreviewHead": "24214572ea5f6f232ac466be0d8d0ec003572df7",
+    "publishedPreviewBase": "7eadf1df8425d4a1a4432d0dba0f75ca20b9a944",
+    "actualMergedBase": "e866b51f45b67f8a21823871c32aecaf0e299474",
+    "wholeTreeEqualityVerified": true,
+    "baselineBinarySHA256": "ba67d0393d400ce0d549071e800525076641ff33bce8ebd9adeaad478988e68b",
+    "baselineBinarySource": "9f6a26ab53bab38504a1af007437aac6006a64c9",
+    "correction": "The initial per-group compressed replay receipts retain stale baselineSource 621a31b metadata. A separate binding identifies the actual HLine baseline binary and source; primary original/baseline/candidate response objects remain untouched.",
+    "bindingReceiptSHA256": "a9f525d6e4104f94e66bf93b97d9c7273526be111f18d762f4a07ad6beb4132a",
+    "baselineProductionMatchesMergedBase": true
+  },
+  "d2Validation": {
+    "codeHead": "7659d26a7e1b4757b730afbcf8165c18e91114d3",
+    "witnesses": 81,
+    "allFullSVGsEqualOriginal": true,
+    "newWitness": "\\Huge\\boxed{\\eval(\\frac{x^2}{2}|_0^1}",
+    "newWitnessSHA256": "ff0e14de109b48dc44eb5e8bb4ff5060f2c0c412e523fda6a3746df7edec76f8",
+    "integrationReceiptSHA256": "e1816c726378565c92c4681bc58fbad9f0dec8abffe030a17facc5db2a1449f9"
+  }
+}

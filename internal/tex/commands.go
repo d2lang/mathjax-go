@@ -21,6 +21,7 @@ import (
 	"fmt"
 	"strconv"
 	"strings"
+	"unicode"
 
 	"github.com/d2lang/mathjax-go/internal/mhchem"
 	"github.com/d2lang/mathjax-go/internal/mml"
@@ -1279,7 +1280,15 @@ func (p *parser) rule(name string) ([]*mml.Node, error) {
 }
 
 func (p *parser) readStar() bool {
-	p.skipSpaces()
+	// Preserve the existing callers until the shared GetStar whitespace audit
+	// is complete. Eval selects the source GetNext predicate explicitly.
+	return p.readStarSkipping(unicode.IsSpace)
+}
+
+func (p *parser) readStarSkipping(isSpace func(rune) bool) bool {
+	for p.pos < len(p.source) && isSpace(p.peekRune()) {
+		p.consumeRune()
+	}
 	if p.pos < len(p.source) && p.source[p.pos] == '*' {
 		p.pos++
 		return true

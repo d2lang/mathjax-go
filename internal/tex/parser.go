@@ -739,7 +739,19 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 				nonscript = true
 			}
 			appendNodes(result.nodes, result.namedFunction)
-			tail, err := result.afterNode.completeAfter(p, finishDots)
+			tail, err := result.afterNode.completeAfter(p, func() {
+				// An actual AutoOpen is a non-MML open successor. It settles
+				// Prime/Not/Dots and consumes Nonscript, but a waiting Fn or
+				// Position remains until a final MML item is delivered.
+				final := pending != nil || bool(negation) || dots.active()
+				nonscript = false
+				finishPrime()
+				finishNot()
+				finishDots()
+				if final {
+					reducePositions()
+				}
+			})
 			if err != nil {
 				return nil, "", err
 			}
@@ -864,6 +876,9 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 			if auto != nil && len(styles) == 0 && c == auto.closingFence() && auto.close() {
 				if closeErr := closeStyles(); closeErr != nil {
 					return nil, "", closeErr
+				}
+				if err := auto.parseRight(p); err != nil {
+					return nil, "", err
 				}
 				return nodes, "", nil
 			}
