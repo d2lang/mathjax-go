@@ -424,7 +424,13 @@
       "verificationRound": 62,
       "additionalOriginalInputs": 0,
       "verificationAuthority": "root complete-original-SVG replay and shared-scale visual review; integration-evidence-round62-physics-ketbra/manifest.json",
-      "finalActual176RebaseAndD2Regeneration": "pending",
+      "finalActual176RebaseAndD2Regeneration": {
+        "status": "terminal-pass",
+        "actualBase": "6ad44b5bbbf6ec5cad3241c010f44981b1216657",
+        "D2BuiltOn": "c58678e4675593ff27138fe328e4573a0fea5445",
+        "allCompleteOriginalSVGsExact": 89,
+        "screenshotsAndSVGsByteIdenticalToVisuallyInspectedPreview": true
+      },
       "buildActual176": {
         "head": "c58678e4675593ff27138fe328e4573a0fea5445",
         "internalTree": "e9766f495c05f0c75c38296e1c03c6deb0fbd740",
