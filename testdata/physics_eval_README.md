@@ -2,7 +2,7 @@
 
 The complete fixture preserves **1,342 unique original SVGs**: 826 valid renders and 516 error SVGs. The current candidate matches every string exactly, fixing 1,008 cases against merged main172 and preserving 334 controls. Both `eval` and `evaluated`, stars, actual bar termination, caller recipients, fonts, direct Pop, overrides, error precedence and effective caller/child macro budgets are represented.
 
-The earlier 78 focus references and 212 star references are retained unchanged. They are disjoint from each other and entirely contained in the 1,342-input complete fixture, so their repeated assertions do not add unique coverage. There are 1,632 full-SVG assertions across these three tests. The separate 181 original GetStar method observations check value, cursor and remaining input; two explicitly labeled legacy compatibility assertions are not source references.
+The earlier 78 focus references and 212 star references are retained unchanged. They are disjoint from each other and entirely contained in the 1,342-input complete fixture, so their repeated assertions do not add unique coverage. There are 1,632 full-SVG assertions across these three tests. The separate 181 original GetStar method observations check value, cursor and remaining input through the shared source reader. Their fixture is unchanged; the two temporary legacy Go compatibility assertions were removed when the shared reader was corrected.
 
 A recursive scan of the 468 tracked JSON/gzip testdata files at exact merged main172 (`e866b51f45b67f8a21823871c32aecaf0e299474`) found all 1,342 inputs to be first-publication references, with no conflicting originals or ambiguous-only identities. The inventory records the measurement base and compiled source binding.
 
@@ -12,7 +12,7 @@ The frozen source is MathJax `ad8f5c21cb810236551da8c6512ba733e67357ee`: `Physic
 
 Braced Eval reinserts the exact expansion in the caller's input and macro budget. Raw parentheses/brackets consume their opening and deliver an AutoOpen item that closes at a bar. Pending recipients see the source non-MML event. Normal closing parses the one right-child MML in the closing environment before lexical restoration; direct SpreadLines Pop does so after restoration. Font continuations can contribute earlier content while unwinding, so only that right-child result is cached at the actual close. Direct smash-node construction after child parsing is an observed equivalence, not a claim that constructor call order is identical: passive observations found no child-time list queries, and complete source outputs bind the affected paths.
 
-Eval uses the exact JavaScript whitespace predicate for GetStar and the following GetNext. Other existing star callers retain their current behavior through the staged generic wrapper. The one shared consumption helper owns cursor advancement. The held shared GetStar correction must consolidate the wrapper and Eval call and remove the two temporary compatibility assertions.
+Eval uses the exact JavaScript whitespace predicate for shared GetStar and its following GetNext. The shared reader now owns the same source cursor behavior for its other callers; Eval no longer needs a separate predicate-selection wrapper. This consolidation preserves the existing 181 method observations and all Eval reference bytes.
 
 ## Broader checks and retained limits
 

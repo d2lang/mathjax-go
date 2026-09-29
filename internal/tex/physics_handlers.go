@@ -148,9 +148,8 @@ func (p *parser) physicsExpression(name string) ([]*mml.Node, error) {
 }
 
 func (p *parser) physicsEval(name string, after **derivativeAutoOpen) ([]*mml.Node, error) {
-	star := p.readStarSkipping(internalTextSpace)
-	// Eval calls GetNext after GetStar. Both use the source JS whitespace;
-	// other callers retain the staged readStar wrapper's existing behavior.
+	star := p.readStar()
+	// Eval calls GetNext after GetStar; both skip source JavaScript whitespace.
 	for p.pos < len(p.source) && internalTextSpace(p.peekRune()) {
 		p.consumeRune()
 	}

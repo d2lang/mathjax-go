@@ -20,7 +20,7 @@
   },
   "totalFullSVGAssertionsIncludingEarlyFixtures": 1632,
   "directSourceGetStarObservations": 181,
-  "legacyCompatibilityAssertionsNotOriginals": 2,
+  "legacyCompatibilityAssertionsNotOriginals": 0,
   "provenance": {
     "baseCommit": "e866b51f45b67f8a21823871c32aecaf0e299474",
     "strictPublicInputs": 1342,
@@ -124,5 +124,11 @@
     "newWitness": "\\Huge\\boxed{\\eval(\\frac{x^2}{2}|_0^1}",
     "newWitnessSHA256": "ff0e14de109b48dc44eb5e8bb4ff5060f2c0c412e523fda6a3746df7edec76f8",
     "integrationReceiptSHA256": "e1816c726378565c92c4681bc58fbad9f0dec8abffe030a17facc5db2a1449f9"
+  },
+  "sharedGetStarConsolidation": {
+    "originalMethodObservationsReused": 181,
+    "originalFixtureSHA256": "6410ff6ac30bb5708ecafea10ed516b2902785ac9613eeb2f178dbf15c81ad05",
+    "removedTemporaryGoCompatibilityAssertions": 2,
+    "historicalEvalSourceAndGateReceiptsUnchanged": true
   }
 }

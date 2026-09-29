@@ -21,7 +21,6 @@ import (
 	"fmt"
 	"strconv"
 	"strings"
-	"unicode"
 
 	"github.com/d2lang/mathjax-go/internal/mhchem"
 	"github.com/d2lang/mathjax-go/internal/mml"
@@ -1276,13 +1275,8 @@ func (p *parser) rule(name string) ([]*mml.Node, error) {
 }
 
 func (p *parser) readStar() bool {
-	// Preserve the existing callers until the shared GetStar whitespace audit
-	// is complete. Eval selects the source GetNext predicate explicitly.
-	return p.readStarSkipping(unicode.IsSpace)
-}
-
-func (p *parser) readStarSkipping(isSpace func(rune) bool) bool {
-	for p.pos < len(p.source) && isSpace(p.peekRune()) {
+	// TexParser.GetStar calls GetNext, which skips JavaScript whitespace.
+	for p.pos < len(p.source) && internalTextSpace(p.peekRune()) {
 		p.consumeRune()
 	}
 	if p.pos < len(p.source) && p.source[p.pos] == '*' {
@@ -1582,7 +1576,10 @@ func (p *parser) physicsBraket(name string) ([]*mml.Node, error) {
 		// single bra-ket expression.  Besides being the intended shorthand,
 		// this shares the middle bar; parsing the commands independently adds a
 		// duplicate bar and inter-atom space (observable in D2 label widths).
-		ket, starKet, hasKet := p.physicsFollowingKet()
+		ket, starKet, hasKet, err := p.physicsFollowingKet(name)
+		if err != nil {
+			return nil, err
+		}
 		if hasKet {
 			macro := "\\left\\langle{" + bra + "}\\middle\\vert{" + ket + "}\\right\\rangle"
 			if starBra || starKet {
@@ -1592,7 +1589,7 @@ func (p *parser) physicsBraket(name string) ([]*mml.Node, error) {
 		}
 		macro := "\\left\\langle{" + bra + "}\\right\\vert{}"
 		if starBra {
-			macro = "\\langle{" + bra + "}\\vert{}"
+			macro = "\\langle{" + bra + "}\\vert"
 		}
 		return p.parseExpansion(macro)
 	case "ket":
@@ -1774,33 +1771,33 @@ func (p *parser) readUpToByte(close byte) (string, error) {
 	return "", texError("TokenNotFoundForCommand", "Could not find closing delimiter")
 }
 
-// physicsFollowingKet ports the lookahead in PhysicsMethods.Bra.  The source
-// only commits the lookahead when the ket has a braced argument; otherwise the
-// parser position is restored so the ordinary \ket handler sees it.
-func (p *parser) physicsFollowingKet() (ket string, star bool, ok bool) {
-	start := p.pos
-	p.skipSpaces()
-	if p.pos >= len(p.source) || p.source[p.pos] != '\\' {
-		p.pos = start
-		return "", false, false
+// physicsFollowingKet ports the lookahead in PhysicsMethods.Bra. Recognizing
+// the ket commits its command even when the next argument is not braced; only
+// the star/argument lookahead after that command is then restored.
+func (p *parser) physicsFollowingKet(name string) (ket string, star bool, ok bool, err error) {
+	for p.pos < len(p.source) && internalTextSpace(p.peekRune()) {
+		p.consumeRune()
 	}
+	if p.pos >= len(p.source) || p.source[p.pos] != '\\' {
+		return "", false, false, nil
+	}
+	start := p.pos
 	p.pos++
 	if p.readControlSequence() != "ket" {
 		p.pos = start
-		return "", false, false
+		return "", false, false, nil
 	}
+	afterName := p.pos
 	star = p.readStar()
-	p.skipSpaces()
+	for p.pos < len(p.source) && internalTextSpace(p.peekRune()) {
+		p.consumeRune()
+	}
 	if p.pos >= len(p.source) || p.source[p.pos] != '{' {
-		p.pos = start
-		return "", false, false
+		p.pos = afterName
+		return "", false, true, nil
 	}
-	ket, _, err := p.readArgument("ket", true)
-	if err != nil {
-		p.pos = start
-		return "", false, false
-	}
-	return ket, star, true
+	ket, _, err = p.readArgument(name, true)
+	return ket, star, true, err
 }
 
 func physicsDifferential(character string) *mml.Node {
@@ -1827,7 +1824,10 @@ func physicsNablaWithOperator(makeOperator func(string, mml.TeXClass, map[string
 
 func (p *parser) commutator(name string) ([]*mml.Node, error) {
 	star := p.readStar()
-	p.skipSpaces()
+	// Both lookaheads in PhysicsMethods.Commutator call GetNext.
+	for p.pos < len(p.source) && internalTextSpace(p.peekRune()) {
+		p.consumeRune()
+	}
 	big := ""
 	if p.pos < len(p.source) && p.source[p.pos] == '\\' {
 		p.pos++
@@ -1837,7 +1837,9 @@ func (p *parser) commutator(name string) ([]*mml.Node, error) {
 		default:
 			return nil, texError("MissingArgFor", "Missing argument for %s", "\\"+name)
 		}
-		p.skipSpaces()
+		for p.pos < len(p.source) && internalTextSpace(p.peekRune()) {
+			p.consumeRune()
+		}
 	}
 	if p.pos >= len(p.source) || p.source[p.pos] != '{' {
 		return nil, texError("MissingArgFor", "Missing argument for %s", "\\"+name)
