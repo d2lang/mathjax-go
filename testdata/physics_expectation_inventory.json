@@ -91,9 +91,78 @@
     "freshRuntimeFirstLineVerified": 48,
     "freshCompleteRuntimeObjectsInReceipt": 48
   },
-  "fullGates": "pending",
+  "fullGates": {
+    "head": "52421919b8b3141af2765dddfbba3a31a2b94e09",
+    "internalTree": "9d29ef93f3dd70e4f38ab620c515c533e1b8eb25",
+    "base": "7e1dcaa182ca1d9756293f032b91f0ff5bad112a",
+    "status": "terminal-pass",
+    "gates": [
+      {
+        "name": "full",
+        "command": [
+          "/Users/aw/.local/share/go/1.27.0/bin/go",
+          "test",
+          "-p",
+          "1",
+          "./..."
+        ],
+        "status": "terminal",
+        "environmentOverrides": {},
+        "exitCode": 0,
+        "seconds": 39.595
+      },
+      {
+        "name": "race",
+        "command": [
+          "/Users/aw/.local/share/go/1.27.0/bin/go",
+          "test",
+          "-race",
+          "-p",
+          "1",
+          "./..."
+        ],
+        "status": "terminal",
+        "environmentOverrides": {},
+        "exitCode": 0,
+        "seconds": 256.34
+      },
+      {
+        "name": "vet",
+        "command": [
+          "/Users/aw/.local/share/go/1.27.0/bin/go",
+          "vet",
+          "-p",
+          "1",
+          "./..."
+        ],
+        "status": "terminal",
+        "environmentOverrides": {},
+        "exitCode": 0,
+        "seconds": 0.757
+      },
+      {
+        "name": "wasm",
+        "command": [
+          "/Users/aw/.local/share/go/1.27.0/bin/go",
+          "build",
+          "-p",
+          "1",
+          "./..."
+        ],
+        "status": "terminal",
+        "environmentOverrides": {
+          "GOOS": "js",
+          "GOARCH": "wasm"
+        },
+        "exitCode": 0,
+        "seconds": 0.634
+      }
+    ],
+    "finalHead": "52421919b8b3141af2765dddfbba3a31a2b94e09",
+    "finalStatus": ""
+  },
   "publicationBaseTree": "4fddde4d5a9846b6ec1a6a76c4633e5cfc5fc98b",
-  "compiledPreviewStatus": "Preserved preview source and public fixture patches are unchanged after rebasing onto actual main175; final full gates pending.",
+  "compiledPreviewStatus": "Source and fixture patches preserved exactly on actual merged main175; full oracle, race, vet and WebAssembly gates passed on the rebased checkout.",
   "publicationOverlap": {
     "base": "7e1dcaa182ca1d9756293f032b91f0ff5bad112a",
     "scannedFiles": 486,
@@ -131,7 +200,76 @@
       "session": 33913,
       "Go": "/Users/aw/.local/share/go/1.27.0/bin/go"
     },
-    "fullGates": "pending on actual main175 rebase",
+    "fullGates": {
+      "head": "52421919b8b3141af2765dddfbba3a31a2b94e09",
+      "internalTree": "9d29ef93f3dd70e4f38ab620c515c533e1b8eb25",
+      "base": "7e1dcaa182ca1d9756293f032b91f0ff5bad112a",
+      "status": "terminal-pass",
+      "gates": [
+        {
+          "name": "full",
+          "command": [
+            "/Users/aw/.local/share/go/1.27.0/bin/go",
+            "test",
+            "-p",
+            "1",
+            "./..."
+          ],
+          "status": "terminal",
+          "environmentOverrides": {},
+          "exitCode": 0,
+          "seconds": 39.595
+        },
+        {
+          "name": "race",
+          "command": [
+            "/Users/aw/.local/share/go/1.27.0/bin/go",
+            "test",
+            "-race",
+            "-p",
+            "1",
+            "./..."
+          ],
+          "status": "terminal",
+          "environmentOverrides": {},
+          "exitCode": 0,
+          "seconds": 256.34
+        },
+        {
+          "name": "vet",
+          "command": [
+            "/Users/aw/.local/share/go/1.27.0/bin/go",
+            "vet",
+            "-p",
+            "1",
+            "./..."
+          ],
+          "status": "terminal",
+          "environmentOverrides": {},
+          "exitCode": 0,
+          "seconds": 0.757
+        },
+        {
+          "name": "wasm",
+          "command": [
+            "/Users/aw/.local/share/go/1.27.0/bin/go",
+            "build",
+            "-p",
+            "1",
+            "./..."
+          ],
+          "status": "terminal",
+          "environmentOverrides": {
+            "GOOS": "js",
+            "GOARCH": "wasm"
+          },
+          "exitCode": 0,
+          "seconds": 0.634
+        }
+      ],
+      "finalHead": "52421919b8b3141af2765dddfbba3a31a2b94e09",
+      "finalStatus": ""
+    },
     "broad": {
       "status": "terminal-pass",
       "seconds": 6.108,
