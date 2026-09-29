@@ -1,0 +1,110 @@
+{
+  "phase": "pre172 preview on Eval436b429; not final release composition",
+  "sourceHead": "e97c9b50a688023b10dd0fed1438eabe0012aeec",
+  "internalTree": "45b5a56abd6eb0d85c872338832ef74f79fa7c32",
+  "fixtures": {
+    "physics_quantity_mathjax_3_2_2.json.gz": {
+      "inputs": 2776,
+      "partition": {
+        "validSVG": 1810,
+        "errorSVG": 950,
+        "runtime": 16
+      },
+      "decompressedSHA256": "bed74d2c1ded7dcf1eaf8f33324095c53415df0f72a31d8c6fb66a7adfa3e51f"
+    },
+    "physics_final_item_delivery_mathjax_3_2_2.json.gz": {
+      "inputs": 272,
+      "partition": {
+        "validSVG": 172,
+        "errorSVG": 98,
+        "runtime": 2
+      },
+      "decompressedSHA256": "a5f6cd5080faf8aa5a0adee8a3bf3ff2609965ffa96289c67da1e73b967cb7ad"
+    },
+    "physics_final_item_siblings_mathjax_3_2_2.json.gz": {
+      "inputs": 312,
+      "partition": {
+        "validSVG": 294,
+        "errorSVG": 18
+      },
+      "decompressedSHA256": "5c792196605bee88f8804bb4658334600c54f31f4322c913aa7c8684cbfc4c51"
+    }
+  },
+  "uniqueInputs": 3350,
+  "uniquePartition": {
+    "validSVG": 2268,
+    "errorSVG": 1064,
+    "runtime": 18
+  },
+  "duplicatePairs": [
+    {
+      "tex": "\\order{x}",
+      "display": false,
+      "file": "physics_final_item_delivery_mathjax_3_2_2.json.gz"
+    },
+    {
+      "tex": "\\order{x}",
+      "display": true,
+      "file": "physics_final_item_delivery_mathjax_3_2_2.json.gz"
+    },
+    {
+      "tex": "\\qty\\sin x",
+      "display": false,
+      "file": "physics_final_item_delivery_mathjax_3_2_2.json.gz"
+    },
+    {
+      "tex": "\\qty\\sin x",
+      "display": true,
+      "file": "physics_final_item_delivery_mathjax_3_2_2.json.gz"
+    },
+    {
+      "tex": "\\norm*{x}",
+      "display": false,
+      "file": "physics_final_item_delivery_mathjax_3_2_2.json.gz"
+    },
+    {
+      "tex": "\\norm*{x}",
+      "display": true,
+      "file": "physics_final_item_delivery_mathjax_3_2_2.json.gz"
+    },
+    {
+      "tex": "\\Bqty*{x}",
+      "display": false,
+      "file": "physics_final_item_delivery_mathjax_3_2_2.json.gz"
+    },
+    {
+      "tex": "\\Bqty*{x}",
+      "display": true,
+      "file": "physics_final_item_delivery_mathjax_3_2_2.json.gz"
+    },
+    {
+      "tex": "\\qty|x|",
+      "display": false,
+      "file": "physics_final_item_delivery_mathjax_3_2_2.json.gz"
+    },
+    {
+      "tex": "\\qty|x|",
+      "display": true,
+      "file": "physics_final_item_delivery_mathjax_3_2_2.json.gz"
+    }
+  ],
+  "strictSVGAssertions": 3342,
+  "uniqueStrictSVGs": 3332,
+  "firstPublicationOverlap": "Pending final actual173 or explicit exact preview Git scan",
+  "validation": {
+    "own2776": "2760 exact/1116 fixes;16 unchanged original runtime API outcomes",
+    "delivery272": "270 exact/230 fixes;all10 initial regressions repaired;2 unchanged original runtimes",
+    "siblings264": "264 exact unchanged",
+    "nestedTrailing48": "48 exact/42 fixes;zero overlap with prior3302",
+    "shared5621": "unchanged",
+    "runtime802": "12 fixes;2 changed error diagnostics bound to inherited Eval literal controls",
+    "published6800": "284 genuine fixes/0 genuine regressions/2 changed error diagnostics;serialization controls excluded",
+    "upstream4326": "54 genuine fixes/0 genuine regressions;serialization controls excluded"
+  },
+  "pending": [
+    "Final actual173 composition",
+    "Current-base probe/replays",
+    "Final first-publication inventory",
+    "Full frozen oracle/race/vet/WASM"
+  ]
+}

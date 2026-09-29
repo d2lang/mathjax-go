@@ -6,6 +6,7 @@ import (
 	"crypto/sha256"
 	"encoding/json"
 	"os"
+	"strings"
 	"testing"
 
 	mathjax "github.com/d2lang/mathjax-go"
@@ -58,8 +59,16 @@ func TestPhysicsFinalItemDeliveryOriginals(t *testing.T) {
 				t.Fatal("ambiguous original outcome", c.Name)
 			}
 			// Keep complete source-runtime observations outside strict SVG
-			// assertions. Their candidate outcomes remain a replay obligation.
+			// assertions, but require a bounded failure rather than success.
 			runtime++
+			t.Run(c.Name, func(t *testing.T) {
+				options := mathjax.DefaultOptions()
+				options.Display = c.Display
+				got, err := mathjax.RenderWithOptions(c.TeX, options)
+				if err == nil && !strings.Contains(got, `data-mjx-error=`) {
+					t.Fatal("original runtime failure became a successful render")
+				}
+			})
 			continue
 		}
 		if c.Original.SVG == "" {
