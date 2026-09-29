@@ -165,3 +165,13 @@ D2 omits MathJax's table-line CSS. Partial menclose frame sides have explicit
 SVG strokes and provide direct D2 witnesses. Internal table lines and complete
 table frames need a separately labeled render with the original MathJax CSS;
 that supplemental image must not be described as a D2 rendering fix.
+
+## Inspected D2 comparison
+
+`parity/array-horizontal-rules` contains the identical D2 input rendered with
+merged main171, this fix, and the frozen original MathJax. Before reports an
+undefined `hline` command. The fixed and original render the same two-row
+array with explicit solid top and bottom strokes, at one shared screenshot
+scale. The complete fixed SVG equals the original byte-for-byte. The screenshot
+was visually inspected, and the same candidate binary reproduces all 80
+committed D2 witnesses exactly.
