@@ -188,18 +188,29 @@ func (p *parser) physicsKetBra(name string) ([]*mml.Node, error) {
 	if err != nil {
 		return nil, err
 	}
-	bra, present, err := p.readArgument(name, true)
-	if err != nil {
-		return nil, err
+	// Source GetNext commits whitespace but reads a second argument only
+	// after a literal opening brace. An explicitly empty bra stays empty.
+	for p.pos < len(p.source) && internalTextSpace(p.peekRune()) {
+		p.consumeRune()
 	}
-	if !present {
-		bra = ket
+	bra := ket
+	if p.pos < len(p.source) && p.source[p.pos] == '{' {
+		bra, _, err = p.readArgument(name, true)
+		if err != nil {
+			return nil, err
+		}
 	}
 	macro := "\\left\\vert{" + ket + "}\\middle\\rangle\\!\\middle\\langle{" + bra + "}\\right\\vert"
 	if star {
 		macro = "\\vert{" + ket + "}\\rangle\\!\\langle{" + bra + "}\\vert"
 	}
-	return p.parseExpansion(macro)
+	// One fresh source TexParser copies the full lexical environment and
+	// shares its own macro budget across both generated operands.
+	parsed, err := p.parseChild(macro)
+	if err != nil {
+		return nil, err
+	}
+	return unwrapInferred(parsed), nil
 }
 
 func (p *parser) physicsMatrixElement(name string) ([]*mml.Node, error) {
