@@ -13,9 +13,9 @@
     "rawChanged169": 0
   },
   "overlap": {
-    "baseCommit": "8393014a3f2dd05d0b2881141c85a8153ddd333e",
+    "baseCommit": "79c65b0fde0dc49fae7240e2ea743371db5837b6",
     "strictPublicInputs": 2412,
-    "scannedFiles": 453,
+    "scannedFiles": 461,
     "counts": {
       "first-input-publication": 1910,
       "promoted-raw-original": 196,
@@ -1465,6 +1465,14 @@
         "sha256": "a5ec7b33c4fc49238f4f76006567ab3131e85f0dfe545805c77b5fcee45a4294"
       },
       {
+        "file": "testdata/parity/runtime-braket-pop/manifest.json",
+        "sha256": "75935f5b62fedec4a2672a6d957665b4b5d5f04f82140211e4633e7fa78dce25"
+      },
+      {
+        "file": "testdata/parity/runtime-environment-ends/manifest.json",
+        "sha256": "2d03a0d567b16aa25868347a2997e16afe368bc946dd77d91bfbc4c3f1f3b015"
+      },
+      {
         "file": "testdata/parity/script-final-items/manifest.json",
         "sha256": "9474dcf665eaddb356142ce57807a1238c397d43de2c81ba81dbaa6258deb179"
       },
@@ -1675,6 +1683,30 @@
       {
         "file": "testdata/row_stretch_residuals.json",
         "sha256": "042f645d1c5398a4a1b5b2af457cf8cc73ad15952206b69fa878f45a12371f16"
+      },
+      {
+        "file": "testdata/runtime_environment_end_cleanup_proof.json",
+        "sha256": "02499c1b98c42723ef9ea8aad4dec90ed4193ff078688d84b360a65ccb4c5b6b"
+      },
+      {
+        "file": "testdata/runtime_environment_end_inventory.json",
+        "sha256": "d6589b70801333e5ed249b98451917a47d6823a383b39e3b8db1fdc0d3f02c70"
+      },
+      {
+        "file": "testdata/runtime_environment_end_mathjax_3_2_2.json",
+        "sha256": "d75b7daa9c50d08e23b13b87d06f858fa19aba6892bd125d7d15221bdd267ba0"
+      },
+      {
+        "file": "testdata/runtime_environment_end_repair_proof.json",
+        "sha256": "aea2b14e1c661a739f39ec744a69bfde401931a07837d19afa301d24ba37d316"
+      },
+      {
+        "file": "testdata/runtime_environment_end_residuals.json",
+        "sha256": "ad6c436568464b14699481b4dcdd8d9896a09fc8ea596ec7b3a32eb4d6696e5e"
+      },
+      {
+        "file": "testdata/runtime_environment_end_spread_proof.json",
+        "sha256": "4ab488b5f74a497725f4c07962ccdfc3fd3aea4319cc7ea0904a13004177be12"
       },
       {
         "file": "testdata/script_class_mathjax_3_2_2.json",
@@ -29289,7 +29321,7 @@
       "normalizationForSVGAssertions": false
     }
   },
-  "focusedGate": "passed; full gates and final-base composition still pending",
+  "focusedGate": "passed on final actual171 test setup; full gates passed",
   "originalRegeneration": {
     "exitCode": 0,
     "seconds": 36.19283628463745,
@@ -29309,7 +29341,150 @@
     "independent-scale-selection-review169.json": "7954517db105e5f4945786bcef2499f98b1e57123304fe4f9912d414b3fd3dc0",
     "registry-independent-source-review167.json": "adeeb33858f74e9e5aa3202e5e9cbf6a315534c1d00cdc5983b182386d0ea29b",
     "frame-seams-independent-source-review166.json": "bf151217d3a12cac99ead3236db926c289ce0dd38d3b25a0d537de02079014f9",
-    "independent-public-fixture-review170.json": "a06d697b116c85bc50c2177ef23e057b9a5cdcf231eaa14f5bdae7bfb4ca5d8c"
+    "independent-public-fixture-review170.json": "a06d697b116c85bc50c2177ef23e057b9a5cdcf231eaa14f5bdae7bfb4ca5d8c",
+    "independent-runtime-composition-review170.json": "05a00f96f6141111fdf81e82e9f08470875b0dc10096223db733c530d891b292",
+    "packages-fixture-setup-diff-review171.json": "cdb8578d1d3e49edcc9131b00d77f48d96831771dd903ce834d15b2a5a067787"
   },
-  "normalizationForSVGAssertions": false
+  "normalizationForSVGAssertions": false,
+  "currentComposition": {
+    "baseCommit": "79c65b0fde0dc49fae7240e2ea743371db5837b6",
+    "sourceHead": "824eb1d5895428fc64acb34d118b2614738c5b78",
+    "sourceInternalTree": "64c0efb46b0e09ff8f52ed96c1f9c6004c5fbc0e",
+    "previewHead": "9f6a26ab53bab38504a1af007437aac6006a64c9",
+    "previewBase": "621a31b10748f5161cfbdac50249e23f3fe41d22",
+    "historyOnlyRebase": true,
+    "candidateSHA256": "ba67d0393d400ce0d549071e800525076641ff33bce8ebd9adeaad478988e68b",
+    "public": {
+      "total": 2444,
+      "exact": 2412,
+      "fixes": 1398,
+      "rawUnchanged": 32,
+      "regressions": 0
+    },
+    "constructed": {
+      "strict": 216,
+      "exact": 216,
+      "rawCSSUnchanged": 8
+    },
+    "runtime": {
+      "total": 802,
+      "allOutputsUnchanged": true
+    },
+    "published": {
+      "total": 6574,
+      "metadataOnlyExcluded": 24,
+      "genuineFixes": 196,
+      "genuineRegressions": 0,
+      "genuineChangedNonexact": 0
+    },
+    "upstream": {
+      "total": 4326,
+      "genuineFixes": 30,
+      "genuineRegressions": 0,
+      "genuineChangedNonexact": 0
+    },
+    "serializationProof": {
+      "controls": 14,
+      "repeatsPerBinary": 64,
+      "total": 1792,
+      "allOriginalValidCancelOrCancelTo": true,
+      "allCompleteXMLEqualOriginal": true,
+      "normalizationForAssertions": false
+    },
+    "shortRepairHead": "2abd4056dbfebb1e76cd3deea007967695452016",
+    "fullGates": "passed full frozen oracle, race, vet, WASM on actual171"
+  },
+  "fixtureSetupRepair": {
+    "contextCommit": "39834883ca234264b2b4e1147126c6a7469e2a47",
+    "formatCommit": "2abd4056dbfebb1e76cd3deea007967695452016",
+    "originalHashesChanged": false,
+    "fixtureJSONsChanged": false,
+    "productionChanged": false,
+    "shortFocusedPass": true,
+    "primaryProofs": {
+      "fixture-defaults-original171.json": "a4ad2713b39640081737fc797cedad038d25ac062712edb25926cd9167e5b996",
+      "oracle-fixture-attribute-diagnosis171.json": "9cc8031c6319e15c248dd13807de55e9f479bd7df8f036cc727681e5e519b55c",
+      "packages-fixture-defaults171.json": "ee9d86ac332268689c45f96cb7f160b8f7d86718f04cd574105497c121843511"
+    },
+    "sourceBindingSHA256": "317114bb5bbaff168377b740ed84d6becee80e0e33b4fdf95307d5c3a8cfaef8"
+  },
+  "finalGates": {
+    "head": "2abd4056dbfebb1e76cd3deea007967695452016",
+    "internalTree": "82a88b94a3014a2bbb492c737fcda4c7457aa9f2",
+    "baseCommit": "79c65b0fde0dc49fae7240e2ea743371db5837b6",
+    "baseStatus": "Actual merged main171; source identical reviewed preview; only frozen fixture constructor repair and formatting since failed first full",
+    "environment": {
+      "GOFLAGS": "-p=1",
+      "GOTOOLCHAIN": "local",
+      "MATHJAX_GO_ORACLE_DIR": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/oracle-assets",
+      "MATHJAX_GO_ORACLE_FULL": "1",
+      "MATHJAX_GO_NODE": "/Users/aw/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+      "NODE_OPTIONS": "--jitless"
+    },
+    "status": "terminal-pass",
+    "gates": [
+      {
+        "name": "full",
+        "command": [
+          "/Users/aw/.local/share/go/1.27.0/bin/go",
+          "test",
+          "-p",
+          "1",
+          "./..."
+        ],
+        "environmentOverrides": {},
+        "status": "terminal",
+        "exitCode": 0,
+        "seconds": 38.096
+      },
+      {
+        "name": "race",
+        "command": [
+          "/Users/aw/.local/share/go/1.27.0/bin/go",
+          "test",
+          "-race",
+          "-p",
+          "1",
+          "./..."
+        ],
+        "environmentOverrides": {},
+        "status": "terminal",
+        "exitCode": 0,
+        "seconds": 203.843
+      },
+      {
+        "name": "vet",
+        "command": [
+          "/Users/aw/.local/share/go/1.27.0/bin/go",
+          "vet",
+          "-p",
+          "1",
+          "./..."
+        ],
+        "environmentOverrides": {},
+        "status": "terminal",
+        "exitCode": 0,
+        "seconds": 0.569
+      },
+      {
+        "name": "wasm",
+        "command": [
+          "/Users/aw/.local/share/go/1.27.0/bin/go",
+          "build",
+          "-p",
+          "1",
+          "./..."
+        ],
+        "environmentOverrides": {
+          "GOOS": "js",
+          "GOARCH": "wasm"
+        },
+        "status": "terminal",
+        "exitCode": 0,
+        "seconds": 1.181
+      }
+    ],
+    "finalHead": "2abd4056dbfebb1e76cd3deea007967695452016",
+    "finalStatus": "?? work/"
+  }
 }

@@ -92,13 +92,12 @@ baseline and candidate objects remain separate; no test requires reproducing a
 wrong baseline SVG. None is a newly changed valid residual.
 
 Overlap was scanned against every tracked JSON or JSON.gz below any testdata
-directory at actual main170 `8393014a3f2dd05d0b2881141c85a8153ddd333e`: 453 files.
+directory at actual main171 `79c65b0fde0dc49fae7240e2ea743371db5837b6`: 461 files.
 Of the 2,412 strict inputs, **1,910 are first input publications, 196 promote
 prior raw originals, and 306 already have full original references**. All prior
 original strings agree; there are no ambiguous-only matches. These are
-per-change input counts, not globally unique MathJax coverage. This overlap
-base is newer than the measured main169 replay base; it is not a claim of a
-compiled main170 candidate.
+per-change input counts, not globally unique MathJax coverage. The original main169 measurements remain retained; current-base
+composition is recorded separately below.
 
 ## Constructed MathML controls and replay boundaries
 
@@ -112,24 +111,37 @@ unavailable; those full original runtime observations remain compressed and
 separate. They are not SVG assertions. The 216 strict constructed inputs are
 distinct within these two files and are not counted as new public TeX inputs.
 
-On the measured main169 comparison, all 2,190 owner/frame/attribute inputs have
-2,158 exact outputs and the same 32 residuals; all 84 public root controls pass.
-All 88 strict fence/factory and 128 scale controls pass, including the six
-earlier registry-only fence regressions. The 4,326 upstream inputs have 30
-genuine fixes, no regressions, and no changed nonexact results. The 6,438 complete
-published residual inputs have 196 genuine fixes, no regressions, and no changed
-nonexact results; 24 metadata-only records are excluded from this SVG count.
+On actual main171, the source patch is byte-identical to the independently
+reviewed preview on runtime source `621a31b`; the main merge preserves that
+runtime tree. The 2,444 public, 96 factory/fence, and 128 scale outcomes retain
+the same strict/raw partition and 1,398 public fixes. All 802 runtime-owner
+controls are byte-unchanged. The 4,326 upstream inputs have 30 genuine fixes,
+no regressions, and no changed nonexact results. The 6,574 complete published
+residual inputs have 196 genuine fixes, no regressions, and no changed nonexact
+results; 24 metadata-only records are excluded from this SVG count.
 
-Cancel/enclose attribute insertion order produces apparent byte differences.
-Nine retained controls were repeated 64 times in each binary: all 1,152 results
-match the complete parsed original XML, including every attribute, text node
-and child order. One apparent fix and three apparent regressions are therefore
-excluded from the behavioral counts. This qualification is separate from all
-strict SVG assertions, which perform no XML normalization.
+Cancel/cancelto attribute insertion order produces apparent byte differences.
+Fourteen original-valid controls were repeated 64 times in each binary: all
+1,792 results match the complete parsed original XML, including every attribute,
+text node and child order. The published and upstream apparent fix counts each
+include one serialization-only match, excluded from the behavioral counts.
+These 14 controls contain no unsupported `enclose` command; unchanged unsupported
+command outcomes are not recategorized as original matches. This qualification
+is separate from strict SVG assertions, which perform no XML normalization.
 
-The current receipts establish focused and prebuilt replay results. Final
-current-base composition and full frozen-oracle/race/vet/WASM gates remain
-required before publication.
+The initial full gate passed the public frozen oracle and failed on low-level
+SVG test fixtures built without the original registered defaults. Fresh original
+factory runs reproduce all nine affected tooltip/glyph/enclosure hashes; the
+seven simple formula/oracle comparisons differ only by the leaked root display
+attribute. Two empty-operator overlays and the labeled table retain their
+original spacing and geometry. Test-only setup corrections provide registered
+node defaults and the original top-level inherited context, preserving every
+expected SVG/hash, authored attribute order and assertion. All formerly failing
+groups, neighboring wrapper controls and the full new public/private inventory
+pass the focused retry. No renderer change or original-golden update was made
+for these fixture failures. Full frozen-oracle, race, vet and WASM gates all pass on actual main171
+(candidate `2abd4056dbfebb1e76cd3deea007967695452016`). The final README and
+provenance refresh changes no production or original fixture bytes.
 
 ## Regeneration and visual evidence
 
