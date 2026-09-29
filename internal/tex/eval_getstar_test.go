@@ -35,29 +35,10 @@ func TestEvalGetStarOriginalMethod(t *testing.T) {
 		seen[c.Source] = true
 		t.Run(fmt.Sprintf("source-%03d", i), func(t *testing.T) {
 			p := &parser{source: c.Source}
-			value := p.readStarSkipping(internalTextSpace)
+			value := p.readStar()
 			if value != c.Value || p.pos != c.ConsumedBytes || p.source[p.pos:] != c.Remaining {
 				t.Fatalf("GetStar value=%v bytes=%d remaining=%q; want %v bytes=%d remaining=%q", value, p.pos, p.source[p.pos:], c.Value, c.ConsumedBytes, c.Remaining)
 			}
 		})
-	}
-}
-
-func TestEvalGetStarKeepsLegacyCallers(t *testing.T) {
-	// These are compatibility assertions for the deliberately unchanged Go
-	// wrapper, not original MathJax references. Remove them when the held
-	// shared GetStar fix replaces that wrapper's whitespace policy.
-	for _, c := range []struct {
-		source string
-		value  bool
-		pos    int
-	}{
-		{"\u0085*x", true, 3},
-		{"\ufeff*x", false, 0},
-	} {
-		p := &parser{source: c.source}
-		if value := p.readStar(); value != c.value || p.pos != c.pos {
-			t.Fatalf("unrelated legacy reader changed: source=%q value=%v pos=%d", c.source, value, p.pos)
-		}
 	}
 }

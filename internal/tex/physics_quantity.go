@@ -65,7 +65,7 @@ func (a *physicsQuantityArgument) parse(p *parser) ([]*mml.Node, error) {
 }
 
 func (p *parser) physicsQuantity(name string, q physicsQuantitySpec, after **derivativeAutoOpen) ([]*mml.Node, error) {
-	star := q.argument && p.readStarSkipping(internalTextSpace)
+	star := q.argument && p.readStar()
 	getNext := func() rune {
 		for p.pos < len(p.source) && internalTextSpace(p.peekRune()) {
 			p.consumeRune()
