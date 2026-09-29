@@ -1662,15 +1662,7 @@ func (p *parser) physicsBraket(name string) ([]*mml.Node, error) {
 		}
 		return []*mml.Node{p.fenced("|", left, "⟩", true), p.fenced("⟨", right, "|", true)}, nil
 	case "expectationvalue", "expval", "ev":
-		raw, _, err := p.readArgument(name, false)
-		if err != nil {
-			return nil, err
-		}
-		arg, err := p.parseArgumentString(raw)
-		if err != nil {
-			return nil, err
-		}
-		return []*mml.Node{p.fenced("⟨", texAtom(arg, mml.TeXClassOrd), "⟩", true)}, nil
+		return p.physicsExpectation(name)
 	case "matrixelement", "matrixel", "mel":
 		bra, _, err := p.readArgument(name, false)
 		if err != nil {
