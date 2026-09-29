@@ -50,7 +50,7 @@
     "receiptSHA256": "d904956af71f2bbe48d8b67b159dfa472b90f4f707896d6bbd85f8b8e778392e",
     "generatorSHA256": "359bff8f7a28f3da977278bda966838b6724d52f7a47b26f0d1de40c3c4ed5c5"
   },
-  "fullGates": "pending root rebase and final full frozen/race/vet/WASM gates",
+  "fullGates": "pending on rebased actual main177",
   "publicationBaseTree": "350f537f0eaf94da74d98d0005687b3a8bfe45d2",
   "publishedBaseHead": "1994824901e61b4b933d86dc3264ef0177034d72",
   "publicationOverlap": {
@@ -223,6 +223,59 @@
         }
       ]
     },
-    "finalRebasedPublicAncestorEvidence": "pending"
-  }
+    "finalRebasedPublicAncestorEvidence": {
+      "status": "terminal-pass",
+      "build": {
+        "head": "f297e06be377952b480fac10a3a423232f72e23c",
+        "internalTree": "be28906e9b072dac5cf0a69b7873a12e0327ad89",
+        "actualBase": "19657cbd098093fcedef0d4b8ceda9e667ea7b83",
+        "exit": 0,
+        "seconds": 16.13099217414856,
+        "binary": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/d2-after-physics-braket-env-actual177",
+        "binarySHA256": "14aa89f2425791e21afb6194b8f6837910867025bb347b29b933f07ea5076c43"
+      },
+      "visualReview": {
+        "head": "f297e06be377952b480fac10a3a423232f72e23c",
+        "before": "19657cbd098093fcedef0d4b8ceda9e667ea7b83",
+        "visuallyInspected": true,
+        "sharedScale": true,
+        "PNGHashesChangedFromPreview": true,
+        "originalWitnessSVGTripletsUnchanged": true,
+        "cases": [
+          {
+            "slug": "physics-braket-font",
+            "comparisonSHA256": "20e34f5b60047e1a60b49d816b3bbe40ddbe7e169f33d9706ce306e0114259bf",
+            "afterEqualsOriginalSVG": true,
+            "beforeDifferent": true
+          },
+          {
+            "slug": "physics-braket-lookahead",
+            "comparisonSHA256": "e5fffdfccf9e6550d7b5d72a909742e3909260f82ed8f69c237b4114987dc878",
+            "afterEqualsOriginalSVG": true,
+            "beforeDifferent": true
+          }
+        ]
+      },
+      "allCompleteOriginalSVGsExact": 91,
+      "manifestSHA256": "ecc5876afdcdaaca298a30e8835b155b26f0aa48dcb044e56f80470cec2de66b"
+    }
+  },
+  "actual177Rebase": {
+    "status": "pass",
+    "oldHead": "9f93752cdf2c23ab5d34b2a361da1dfcdcd6690f",
+    "newHead": "f297e06be377952b480fac10a3a423232f72e23c",
+    "oldBase": "33add2a28b08e59b188ef6974ad09131bb7e9592",
+    "newBase": "19657cbd098093fcedef0d4b8ceda9e667ea7b83",
+    "internalTree": "be28906e9b072dac5cf0a69b7873a12e0327ad89",
+    "rangeDiff": "1:  3eb7a1b = 1:  e6db02d Preserve Physics braket child environments and optional lookahead\n2:  9f93752 = 2:  f297e06 Bind Physics braket environments to original references",
+    "baseDeltaPaths": [
+      "testdata/physics_ketbra_README.md",
+      "testdata/physics_ketbra_inventory.json"
+    ],
+    "allRebasedTreeDeltaPaths": [
+      "testdata/physics_ketbra_README.md",
+      "testdata/physics_ketbra_inventory.json"
+    ]
+  },
+  "rebasedSourceHead": "e6db02d9df926f556508d1cf37265a597684195d"
 }
