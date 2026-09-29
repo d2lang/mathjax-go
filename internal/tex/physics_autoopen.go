@@ -80,7 +80,7 @@ type derivativeAutoOpen struct {
 	application       *physicsApplicationArgument
 	quantity          *physicsQuantityArgument
 	big               string
-	bigOpen, bigClose  *mml.Node
+	bigOpen, bigClose *mml.Node
 	fencesParsed      bool
 	ignore            bool
 	openCount         int
