@@ -1,0 +1,190 @@
+{
+  "mathjaxGitCommit": "ad8f5c21cb810236551da8c6512ba733e67357ee",
+  "baseCommit": "24acaf75285fc5bd894316642fd4cf6becc923c7",
+  "sourceHead": "8d981db6ffdebfb083bec2a6e817d7a18a50ec04",
+  "sourceInternalTree": "a5a7d0ead6f1d144630234df12d0a86f885fa37d",
+  "candidateSHA256": "4ee48008769ed1fdbed98429ed7818e765d9bdceb83ef2068ed2cdf50f8ae874",
+  "baselineSHA256": "f2af3146982cab273d9bd087d1e6b4112563a1cb69a1d7e8c2adce66a75d616e",
+  "inputObservations": 5226,
+  "uniquePublicInputs": 5170,
+  "duplicatesWithIdenticalOriginal": 56,
+  "priorInventories": {
+    "held3336": 3336,
+    "bra1884": 1884,
+    "overlap": 56,
+    "additionalD2Originals": 6,
+    "D2Overlap": 0
+  },
+  "partition": {
+    "strict-svg": 4394,
+    "runtime-bounded-nel": 682,
+    "inherited-valid-raw": 64,
+    "safe-xml-misplaced-ampersand": 30
+  },
+  "strictValidSVG": 3388,
+  "strictErrorSVG": 1006,
+  "fullSVGFixesAgainstBase": 766,
+  "strictUnchangedControls": 3628,
+  "safeXMLFixes": 0,
+  "safeXMLControls": 30,
+  "originalRuntime": {
+    "inputs": 682,
+    "allOriginalFirstLines": "TypeError: Cannot read properties of null (reading '4')",
+    "allInputsContainLiteralNEL": true,
+    "candidateExactObject": {
+      "error": "no Unicode range for character U+0085",
+      "svg": ""
+    },
+    "newBoundedErrors": 346,
+    "previousValidSVG": 306,
+    "previousErrorSVG": 40,
+    "sameBoundedErrorProtocolOnly": 336,
+    "sourceExplanation": "Original GetStar/GetNext preserves NEL and actual Other dereferences null range[4]. The existing Go Other guard reports U+0085 without runtime panic or rendered success. API error wording is bounded behavior, not claimed original message parity."
+  },
+  "unassertedValidRawFamilies": {
+    "Expectation ev handler": 34,
+    "Paired tag/ref/eqref command priority": 6,
+    "KetBra aliases optional second argument and scripts": 24
+  },
+  "methodObservationsReused": 181,
+  "methodFixtureSHA256": "6410ff6ac30bb5708ecafea10ed516b2902785ac9613eeb2f178dbf15c81ad05",
+  "newMethodObservations": 0,
+  "passiveBraObservations": {
+    "observations": 28,
+    "childEvents": 58,
+    "allObservedOutputsEqualOriginal": true,
+    "includedInPublicCount": false,
+    "path": "physics-braket-child-audit/child-observations170.json.gz",
+    "sha256": "3a09fa27ef2dc92340db2d40c8340c89332b075662fbe3111d4006372fde92ac"
+  },
+  "sourceReceipts": {
+    "getstar-dependencies-audit/comparison-preview170.json.gz": "e6fc22adff5a1dbe26620c9228e7b145a3d33bcbe9b29b1fce03cbedb113d0a5",
+    "physics-braket-child-audit/originals170.json.gz": "8431fb6c6013d90c0509c082c03208ea3ab4ccb713d202e5eaa1ad4674632dd2",
+    "getstar-dependencies-audit/source-preview174/union-composed174.json.gz": "f5bbf8f06fba09850e6b9fd363464836874cbc32f6594ca3bea7fa536e6794b6",
+    "getstar-dependencies-audit/source-preview174/d2-witness-candidates174.json.gz": "ae69bc34a5bfca84bb6a1ca1c5bcd45c782910d6bee22271c1fcac78e4e62826",
+    "getstar-dependencies-audit/source-preview174/composed-runtime-and-raw-contract174.json": "2e72289176e24ab9a3648f91cfc21df8d3888ea48b24136ef379828bceadd100"
+  },
+  "originalRegeneration": {
+    "status": "terminal-pass",
+    "uniqueInputs": 5170,
+    "fullOriginalSVGsByteIdentical": 4488,
+    "historicalRuntimeObjectsPreserved": 682,
+    "freshRuntimeContractsVerified": 682,
+    "compressedFixturesByteIdentical": true,
+    "generatorSHA256": "130b6ea6e24f9ba5f304773018b51e525c3b8569062e6f0a5794ed02aef889c6",
+    "receiptSHA256": "f3497c10bc0d502913e7ece61cf59fddd49d7200d1c0958a205c125c48fcdd29",
+    "fixtureFiles": [
+      {
+        "file": "getstar_bra_mathjax_3_2_2.json.gz",
+        "cases": 4394,
+        "svg": 4394,
+        "runtime": 0,
+        "inputSHA256": "34f85f94645883e265605e93ef37dc11e232556bc5a92f78934cd2ba281dcf82",
+        "regeneratedSHA256": "34f85f94645883e265605e93ef37dc11e232556bc5a92f78934cd2ba281dcf82",
+        "byteIdentical": true
+      },
+      {
+        "file": "getstar_bra_residuals.json.gz",
+        "cases": 776,
+        "svg": 94,
+        "runtime": 682,
+        "inputSHA256": "92aeb6165e6b534a1ff6ed6af837c98aa1d602bba645e4b80aee0bfa0d25e242",
+        "regeneratedSHA256": "92aeb6165e6b534a1ff6ed6af837c98aa1d602bba645e4b80aee0bfa0d25e242",
+        "byteIdentical": true
+      }
+    ]
+  },
+  "fullGoGates": "pending; fixture installation used no Go",
+  "fixtureSHA256": {
+    "getstar_bra_mathjax_3_2_2.json.gz": "34f85f94645883e265605e93ef37dc11e232556bc5a92f78934cd2ba281dcf82",
+    "getstar_bra_residuals.json.gz": "92aeb6165e6b534a1ff6ed6af837c98aa1d602bba645e4b80aee0bfa0d25e242"
+  },
+  "provenance": {
+    "baseCommit": "24acaf75285fc5bd894316642fd4cf6becc923c7",
+    "scannedFiles": 481,
+    "strictPublicInputs": 4394,
+    "counts": {
+      "first-input-publication": 3801,
+      "prior-full-reference": 536,
+      "promoted-raw-original": 46,
+      "prior-input-without-full-original": 11
+    },
+    "originalMismatches": [],
+    "ambiguousOnly": 0
+  },
+  "broader": {
+    "status": "terminal-pass",
+    "sourceHead": "8d981db6ffdebfb083bec2a6e817d7a18a50ec04",
+    "internalTree": "a5a7d0ead6f1d144630234df12d0a86f885fa37d",
+    "actualBase": "24acaf75285fc5bd894316642fd4cf6becc923c7",
+    "binaries": {
+      "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/physics-quantity-source-audit/candidate173": "f2af3146982cab273d9bd087d1e6b4112563a1cb69a1d7e8c2adce66a75d616e",
+      "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/getstar-dependencies-audit/source-preview174/candidate-composed174": "4ee48008769ed1fdbed98429ed7818e765d9bdceb83ef2068ed2cdf50f8ae874"
+    },
+    "inputSHA256": "61aeac812a5d10d6e04acd72c8014b76fed768385392a94f20f29e99c09f5f5e",
+    "published": {
+      "inputs": 6800,
+      "strictFixesBeforeSerializationQualification": 223,
+      "genuineCompleteSVGFixes": 222,
+      "apparentExactRegressions": 3,
+      "genuineExactRegressions": 0,
+      "attributeOrderControls": 4,
+      "attributeOrderApparentFixes": 1,
+      "attributeOrderApparentRegressions": 3,
+      "changedOriginalRuntimeBoundedErrors": 66,
+      "runtimeBefore": {
+        "validSVG": 52,
+        "errorSVG": 14
+      },
+      "runtimeErrors": {
+        "no Unicode range for character U+0085": 54,
+        "no Unicode range for character U+000B": 6,
+        "no Unicode range for character U+000C": 6
+      },
+      "changedNonexactOriginalValidAfterOrderingQualification": 0,
+      "changedNonexactOriginalErrorSVG": 0,
+      "protocolOnly": 914
+    },
+    "upstream": {
+      "inputs": 4326,
+      "genuineCompleteSVGFixes": 10,
+      "regressions": 0,
+      "changedNonexact": 0
+    },
+    "shared": {
+      "inputs": 5621,
+      "unchanged": 5621
+    },
+    "runtime": {
+      "inputs": 802,
+      "unchanged": 802,
+      "protocolOnly": 48
+    },
+    "serializationRepeatedRenders": 512,
+    "allSerializationFullXMLMatchesOriginal": true,
+    "originalPolicy": "No original response mutation or SVG normalization. Parsed XML equality checks complete tag/attributes/text/tail/ordered children; raw repeated outputs retained. Runtime observations are not strict SVG passes.",
+    "noGoOrCheckoutWrites": true
+  },
+  "protectedQuantity": {
+    "inputs": 3350,
+    "fullOriginalSVGsUnchanged": 3332,
+    "runtimeInputs": 18,
+    "responseShapeOnly": 16,
+    "unchangedResponseObjects": 3334,
+    "genuineChanges": 0,
+    "genuineRegressions": 0,
+    "qualification": "Sixteen originals throw at NEL; both binaries return identical U+0085 error, with candidate additionally emitting svg empty. Remaining two runtime controls unchanged. Raw response objects retained."
+  },
+  "safeXMLProvenance": {
+    "baseCommit": "24acaf75285fc5bd894316642fd4cf6becc923c7",
+    "scannedFiles": 481,
+    "safeXMLInputs": 30,
+    "firstInputPublication": 28,
+    "priorFullRawOriginal": 2,
+    "categories": {
+      "first-input-publication": 28,
+      "prior-safe-xml-assertion": 2
+    },
+    "consumerBinding": "TestAMSOperatorDeclarationSafeXMLErrors selects qualification safe-xml-single-attribute including cases10/11; canonicalControl rows duplicate their provenance."
+  }
+}
