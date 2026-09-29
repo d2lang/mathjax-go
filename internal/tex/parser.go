@@ -234,26 +234,112 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 			nodes = append(frame.prefix, nodes...)
 		}
 	}
-	finishNot := func() { nodes = append(nodes, negation.finish()...) }
-	finishDots := func() { nodes = append(nodes, dots.finish()...) }
-	finishPrime := func() {
-		if pending != nil {
-			nodes = append(nodes, pending.finish())
-			pending = nil
+	// FnItem keeps its payload in nodes so Stack.Prev can remove it for a
+	// script or Prime. functionOffset distinguishes that empty FnItem from
+	// the already-delivered row prefix while its script is being completed.
+	pendingFunction := false
+	functionOffset := 0
+	var deliveryErr error
+	var deliverFinal func([]finalItem)
+	var finishFunction func(bool)
+	deliverFinal = func(items []finalItem) {
+		for len(items) != 0 {
+			if deliveryErr != nil {
+				return
+			}
+			if auto != nil && auto.closed {
+				auto.trailing = append(auto.trailing, items...)
+				return
+			}
+			incoming := items[0]
+			items = items[1:]
+			if nonscript {
+				nonscript = false
+				incoming.node = p.nonscriptSpace(incoming.node)
+			}
+			if pending != nil {
+				completed := pending.finish()
+				pending = nil
+				items = append([]finalItem{{node: completed}, incoming}, items...)
+				continue
+			}
+			if bool(negation) {
+				negation = false
+				if !applyNotToken(incoming.node) {
+					items = append([]finalItem{{node: notFallback()}, incoming}, items...)
+					continue
+				}
+				// Not mutates and replays this same MmlItem, including autoclose.
+			}
+			if dots.active() {
+				selected := dots.apply([]*mml.Node{incoming.node})[0]
+				items = append([]finalItem{{node: selected}, incoming}, items...)
+				continue
+			}
+			if pendingFunction {
+				if len(nodes) == functionOffset {
+					// BaseItem stores the first final item of an empty FnItem;
+					// its item properties do not survive that storage.
+					nodes = append(nodes, incoming.node)
+					continue
+				}
+				function := nodes[functionOffset:]
+				nodes = nodes[:functionOffset]
+				pendingFunction = false
+				outputs := finalItems(function)
+				if !suppressesFunctionApplication(incoming.node) {
+					outputs = append(outputs, finalItem{node: p.operator("\u2061", mml.TeXClassNone, nil)})
+				}
+				outputs = append(outputs, incoming)
+				items = append(outputs, items...)
+				continue
+			}
+			if len(positions) != 0 && positions[len(positions)-1].styleDepth == len(styles) {
+				frame := positions[len(positions)-1]
+				positions = positions[:len(positions)-1]
+				nodes = append(frame.prefix, nodes...)
+				items = append(frame.item.applyFinal(incoming), items...)
+				continue
+			}
+			if auto != nil && len(styles) == 0 && auto.accept(incoming) {
+				// Complete the close-time child while this owner's lexical
+				// environment is still current. Remaining replacement items
+				// are delivered outside, after the completed fenced result.
+				deliveryErr = auto.parseRight(p)
+				auto.trailing = append(auto.trailing, items...)
+				return
+			}
+			nodes = append(nodes, incoming.node)
 		}
 	}
-	// BaseMethods.NamedFn and PhysicsMethods.Expression push an FnItem.  It
-	// retains the function until the next stack item determines whether an
-	// ApplyFunction operator belongs between them.  Keeping this state local to
-	// one parseRow call is important: closing a group finalizes the function
-	// without letting it act on the first item outside that group.
-	pendingFunction := false
+	finishFunction = func(apply bool) {
+		if !pendingFunction {
+			return
+		}
+		function := nodes[functionOffset:]
+		nodes = nodes[:functionOffset]
+		pendingFunction = false
+		outputs := finalItems(function)
+		if apply && len(function) != 0 {
+			outputs = append(outputs, finalItem{node: p.operator("\u2061", mml.TeXClassNone, nil)})
+		}
+		deliverFinal(outputs)
+	}
+	finishNot := func() { deliverFinal(finalItems(negation.finish())) }
+	finishDots := func() { deliverFinal(finalItems(dots.finish())) }
+	finishPrime := func() {
+		if pending != nil {
+			completed := pending.finish()
+			pending = nil
+			deliverFinal([]finalItem{{node: completed}})
+		}
+	}
 	finishPending := func() {
 		nonscript = false
 		finishPrime()
 		finishNot()
 		finishDots()
-		pendingFunction = false
+		finishFunction(false)
 		reducePositions()
 	}
 	pushStyle := func(attributes mjSourceObject) {
@@ -286,50 +372,42 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 		}
 		return nil
 	}
+	prepareFinal := func(items []finalItem) {
+		for _, item := range items {
+			if pendingFont != "" {
+				applyScopedMathVariant(item.node, pendingFont)
+			}
+			p.applyVectorFactory(item.node)
+		}
+	}
 	appendNodes := func(created []*mml.Node, namedFunction bool) {
 		if len(created) == 0 {
 			return
 		}
-		// NonscriptItem sees the incoming item before lower stack items
-		// (notably PositionItem) transform its completed MML node.
-		if nonscript {
-			nonscript = false
-			if !namedFunction {
-				created[0] = p.nonscriptSpace(created[0])
-			}
-		}
-		finishPrime()
-		for _, n := range created {
-			if pendingFont != "" {
-				applyScopedMathVariant(n, pendingFont)
-			}
-			p.applyVectorFactory(n)
-		}
-		// FnItem is a distinct successor; it cannot be negated as a token.
+		items := finalItems(created)
+		prepareFinal(items)
 		if namedFunction {
+			// An FnItem is not final MML. Earlier pending items reduce
+			// before it, but a lower Position waits for its final payload.
+			nonscript = false
+			finishPrime()
 			finishNot()
 			finishDots()
-		} else {
-			created = negation.apply(created)
-		}
-		if auto != nil && len(styles) == 0 {
-			auto.observe(created)
-		}
-		created = dots.apply(created)
-		if pendingFunction {
-			if !suppressesFunctionApplication(created[0]) {
-				nodes = append(nodes, p.operator("\u2061", mml.TeXClassNone, nil))
-			}
-			pendingFunction = false
-		}
-		nodes = append(nodes, created...)
-		if namedFunction {
+			finishFunction(true)
+			functionOffset = len(nodes)
+			nodes = append(nodes, created...)
 			pendingFunction = true
-		} else {
-			reducePositions()
+			return
 		}
+		deliverFinal(items)
 	}
-	for p.pos < len(p.source) || p.pendingCell != nil || p.pendingEnvironmentEnd != nil {
+	for p.pos < len(p.source) || p.pendingCell != nil || p.pendingEnvironmentEnd != nil || deliveryErr != nil || auto != nil && auto.closed {
+		if deliveryErr != nil {
+			return nil, "", deliveryErr
+		}
+		if auto != nil && auto.closed {
+			return nodes, "", nil
+		}
 		if p.cdEntryStopped {
 			break // A completed single Braket returns the same closing Entry.
 		}
@@ -685,7 +763,9 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 					return nil, "", err
 				}
 				applyScopedMathVariant(row(rest, true), variant)
-				appendNodes(rest, false)
+				// This continuation used the same AutoOpen recipient. Its
+				// final items have already been observed; only assemble them.
+				nodes = append(nodes, rest...)
 				return nodes, right, nil
 			}
 			if !registered && (name == "limits" || name == "nolimits") {
@@ -716,8 +796,9 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 				finishPrime()
 				finishDots()
 				// An incoming NotItem finalizes a prior FnItem without U2061.
-				pendingFunction = false
-				nodes = append(nodes, negation.start()...)
+				finishFunction(false)
+				finishNot()
+				negation = true
 			}
 			if result.dotsItem != nil {
 				nonscript = false
@@ -726,7 +807,7 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 				finishDots()
 				// DotsItem is not MML: it settles a prior FnItem without
 				// ApplyFunction and cannot be negated as an eventual token.
-				pendingFunction = false
+				finishFunction(false)
 				dots = *result.dotsItem
 			}
 			if result.positionItem != nil {
@@ -756,6 +837,7 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 				return nil, "", err
 			}
 			appendNodes(tail, false)
+			deliverFinal(result.afterNode.takeTrailing())
 			continue
 		}
 
@@ -822,11 +904,12 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 			// Complete the script (and its pending position) before delivering
 			// subsequent final items, then start any following AutoOpen item.
 			appendNodes(trailing, false)
-			tail, err := after.complete(p)
+			tail, err := after.completeAfter(p, nil)
 			if err != nil {
 				return nil, "", err
 			}
 			appendNodes(tail, false)
+			deliverFinal(after.takeTrailing())
 		case '\'', 0xE2: // Only ASCII apostrophe and U+2019 enter Prime.
 			if isPrimeRune(p.peekRune()) {
 				p.consumeRune()
@@ -871,18 +954,14 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 			if err != nil {
 				return nil, "", err
 			}
-			// The registered raw ')' and ']' handlers create AutoClose items. A
-			// command that merely returns the same mo has no such marker.
-			if auto != nil && len(styles) == 0 && c == auto.closingFence() && auto.close() {
-				if closeErr := closeStyles(); closeErr != nil {
-					return nil, "", closeErr
-				}
-				if err := auto.parseRight(p); err != nil {
-					return nil, "", err
-				}
-				return nodes, "", nil
+			item := finalItem{node: created}
+			// Only Physics' registered raw-character handlers create a
+			// marked MmlItem. Command-produced identical mo stays unmarked.
+			if c == ')' || c == ']' || c == '|' {
+				item.autoclose = c
 			}
-			appendNodes([]*mml.Node{created}, false)
+			prepareFinal([]finalItem{item})
+			deliverFinal([]finalItem{item})
 		}
 	}
 	// AmsCdMethods.cell reads the actual stack top. ArrayItem supplies

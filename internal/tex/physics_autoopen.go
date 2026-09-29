@@ -80,7 +80,7 @@ type derivativeAutoOpen struct {
 	application       *physicsApplicationArgument
 	quantity          *physicsQuantityArgument
 	big               string
-	bigOpen, bigClose *mml.Node
+	bigOpen, bigClose  *mml.Node
 	fencesParsed      bool
 	ignore            bool
 	openCount         int
@@ -90,6 +90,7 @@ type derivativeAutoOpen struct {
 	right             string
 	rightNode         *mml.Node
 	rightParsed       bool
+	trailing          []finalItem
 }
 
 func (a *derivativeAutoOpen) openingFence() byte {
@@ -156,7 +157,23 @@ func (a *derivativeAutoOpen) parseRight(p *parser) error {
 }
 
 func (a *derivativeAutoOpen) complete(p *parser) ([]*mml.Node, error) {
-	return a.completeAfter(p, nil)
+	nodes, err := a.completeAfter(p, nil)
+	if err != nil {
+		return nil, err
+	}
+	for _, item := range a.takeTrailing() {
+		nodes = append(nodes, item.node)
+	}
+	return nodes, nil
+}
+
+func (a *derivativeAutoOpen) takeTrailing() []finalItem {
+	if a == nil {
+		return nil
+	}
+	items := a.trailing
+	a.trailing = nil
+	return items
 }
 
 // A real AutoOpen is a non-MML successor. Notify its recipient only if it
@@ -231,10 +248,13 @@ func autoOpenFence(text string, class mml.TeXClass) *mml.Node {
 	return n
 }
 
-func (a *derivativeAutoOpen) observe(nodes []*mml.Node) {
-	if len(nodes) == 1 && nodes[0].Kind == "mo" && textContent(nodes[0]) == string(a.openingFence()) {
+func (a *derivativeAutoOpen) accept(item finalItem) bool {
+	// AutoOpen.checkItem first observes the delivered MML, then tests the
+	// same item's marker. A raw bar therefore increments before decrementing.
+	if item.node.Kind == "mo" && textContent(item.node) == string(a.openingFence()) {
 		a.openCount++
 	}
+	return item.autoclose != 0 && item.autoclose == a.closingFence() && a.close()
 }
 
 func (a *derivativeAutoOpen) close() bool {
