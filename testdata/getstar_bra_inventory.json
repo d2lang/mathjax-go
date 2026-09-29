@@ -94,7 +94,73 @@
       }
     ]
   },
-  "fullGoGates": "pending; fixture installation used no Go",
+  "fullGoGates": {
+    "head": "fdf3c6524f045fc310f5bf1d203b490192394bec",
+    "internalTree": "a5a7d0ead6f1d144630234df12d0a86f885fa37d",
+    "status": "terminal-pass",
+    "gates": [
+      {
+        "name": "full",
+        "command": [
+          "/Users/aw/.local/share/go/1.27.0/bin/go",
+          "test",
+          "-p",
+          "1",
+          "./..."
+        ],
+        "status": "terminal",
+        "environmentOverrides": {},
+        "exitCode": 0,
+        "seconds": 41.376
+      },
+      {
+        "name": "race",
+        "command": [
+          "/Users/aw/.local/share/go/1.27.0/bin/go",
+          "test",
+          "-race",
+          "-p",
+          "1",
+          "./..."
+        ],
+        "status": "terminal",
+        "environmentOverrides": {},
+        "exitCode": 0,
+        "seconds": 250.044
+      },
+      {
+        "name": "vet",
+        "command": [
+          "/Users/aw/.local/share/go/1.27.0/bin/go",
+          "vet",
+          "-p",
+          "1",
+          "./..."
+        ],
+        "status": "terminal",
+        "environmentOverrides": {},
+        "exitCode": 0,
+        "seconds": 0.745
+      },
+      {
+        "name": "wasm",
+        "command": [
+          "/Users/aw/.local/share/go/1.27.0/bin/go",
+          "build",
+          "-p",
+          "1",
+          "./..."
+        ],
+        "status": "terminal",
+        "environmentOverrides": {
+          "GOOS": "js",
+          "GOARCH": "wasm"
+        },
+        "exitCode": 0,
+        "seconds": 0.619
+      }
+    ]
+  },
   "fixtureSHA256": {
     "getstar_bra_mathjax_3_2_2.json.gz": "34f85f94645883e265605e93ef37dc11e232556bc5a92f78934cd2ba281dcf82",
     "getstar_bra_residuals.json.gz": "92aeb6165e6b534a1ff6ed6af837c98aa1d602bba645e4b80aee0bfa0d25e242"
@@ -186,5 +252,14 @@
       "prior-safe-xml-assertion": 2
     },
     "consumerBinding": "TestAMSOperatorDeclarationSafeXMLErrors selects qualification safe-xml-single-attribute including cases10/11; canonicalControl rows duplicate their provenance."
+  },
+  "D2Evidence": {
+    "sourceHead": "8d981db6ffdebfb083bec2a6e817d7a18a50ec04",
+    "binarySHA256": "e6ce41ee3656c7614be160ec3386459347018e3c548673e7c6af68554beecd07",
+    "allOriginalExact": 85,
+    "visuallyInspected": [
+      "getstar-whitespace",
+      "physics-starred-bra"
+    ]
   }
 }
