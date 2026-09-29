@@ -42,8 +42,10 @@ func (p *parser) commandNodes(name string, after **derivativeAutoOpen) ([]*mml.N
 		}
 		return p.invokeMacro(name, definition)
 	}
-	if nodes, handled, err := p.amsTagCommand(name); handled {
-		return nodes, err
+	if !paired {
+		if nodes, handled, err := p.amsTagCommand(name); handled {
+			return nodes, err
+		}
 	}
 	if nodes, handled, err := p.mathtoolsCommand(name); handled {
 		return nodes, err
