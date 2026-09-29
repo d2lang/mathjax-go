@@ -1,0 +1,472 @@
+{
+  "mathjaxGitCommit": "ad8f5c21cb810236551da8c6512ba733e67357ee",
+  "sourceHead": "305d257f3043f313d4ec039aca37ac12f5f57ead",
+  "sourceInternalTree": "9d29ef93f3dd70e4f38ab620c515c533e1b8eb25",
+  "compiledPreviewBase": "fdf3c6524f045fc310f5bf1d203b490192394bec",
+  "publicationBase": "7e1dcaa182ca1d9756293f032b91f0ff5bad112a",
+  "overlapTree": "7e1dcaa182ca1d9756293f032b91f0ff5bad112a",
+  "overlapTreeStatus": "actual merged main175; entire tree equals published GetStar head3778159",
+  "candidateSHA256": "76d9e7cf0e909bb949124126fb4e1c268fc367a92b119d0daf794bd0f92beeef",
+  "baselineSHA256": "4ee48008769ed1fdbed98429ed7818e765d9bdceb83ef2068ed2cdf50f8ae874",
+  "uniquePublicInputs": 1796,
+  "fullSVGAssertions": 1748,
+  "strictValidSVG": 1656,
+  "strictErrorSVG": 92,
+  "fullSVGFixes": 1614,
+  "unchangedSVGControls": 134,
+  "sourceRuntimeBoundedAssertions": 48,
+  "regressions": 0,
+  "changedRaw": 0,
+  "capturedByAudit": 1730,
+  "retainedFromEarlierAudits": 66,
+  "fontObservations": {
+    "inputs": 36,
+    "allAlreadyInPublicFixture": true,
+    "additionalPublicInputs": 0,
+    "childFontIdentifierEnvironmentAndFreshBudgetVerified": true
+  },
+  "budgetObservations": {
+    "inputs": 54,
+    "allAlreadyInPublicFixture": true,
+    "additionalPublicInputs": 0,
+    "sourceBudgetOutcomes": {
+      "inputs": 54,
+      "outer999And1000": {
+        "pairs": 36,
+        "allValidOriginalSVG": true
+      },
+      "repeatedSecondArgument": {
+        "pairs": 18,
+        "499Repetitions": {
+          "validSVG": 6
+        },
+        "500Repetitions": {
+          "maxMacroErrorSVG": 6
+        },
+        "501Repetitions": {
+          "maxMacroErrorSVG": 6
+        }
+      },
+      "sourceInterpretation": "The complete expansion is one fresh child. Its two raw copies of argument2 share the child counter with the one argument1 macro:2*n+1. These are observed original outcomes, not passive counter instrumentation.",
+      "originalsSHA256": "5488fb819ebb81de2d1f7b474137bf77326aeec885860d119c47d3723efb8bcb"
+    }
+  },
+  "fixtureSHA256": {
+    "physics_expectation_mathjax_3_2_2.json.gz": "0de03774da38053a0e49ab1a16c86bcbb20dd3b478f70e049bbd2adb539bddb0",
+    "physics_expectation_font_observations.json.gz": "4d511f12768d452ceb5a0a41aafade0db8099c7dff7b7b544c438e347cca5c5c",
+    "physics_expectation_budget_observations.json.gz": "275c84449ea35dc0b45aa64d59528a3e557b7546d20f78260e241b14c3e08608"
+  },
+  "originalRegeneration": {
+    "status": "terminal-pass",
+    "source": "pinned original only; no Go",
+    "fixtureFiles": [
+      {
+        "file": "physics_expectation_mathjax_3_2_2.json.gz",
+        "inputs": 1796,
+        "fullOriginalSVGs": 1748,
+        "runtimeObjectsPreserved": 48,
+        "inputSHA256": "0de03774da38053a0e49ab1a16c86bcbb20dd3b478f70e049bbd2adb539bddb0",
+        "regeneratedSHA256": "0de03774da38053a0e49ab1a16c86bcbb20dd3b478f70e049bbd2adb539bddb0",
+        "byteIdentical": true
+      },
+      {
+        "file": "physics_expectation_font_observations.json.gz",
+        "observations": 36,
+        "additionalPublicInputs": 0,
+        "inputSHA256": "4d511f12768d452ceb5a0a41aafade0db8099c7dff7b7b544c438e347cca5c5c",
+        "regeneratedSHA256": "4d511f12768d452ceb5a0a41aafade0db8099c7dff7b7b544c438e347cca5c5c",
+        "byteIdentical": true
+      },
+      {
+        "file": "physics_expectation_budget_observations.json.gz",
+        "observations": 54,
+        "additionalPublicInputs": 0,
+        "inputSHA256": "275c84449ea35dc0b45aa64d59528a3e557b7546d20f78260e241b14c3e08608",
+        "regeneratedSHA256": "275c84449ea35dc0b45aa64d59528a3e557b7546d20f78260e241b14c3e08608",
+        "byteIdentical": true
+      }
+    ],
+    "receiptSHA256": "fa043e87dfabed995192578f6269921af5a2e3b048e234ba783d5375be146710",
+    "historicalRuntimeObjectsPreserved": 48,
+    "freshRuntimeFirstLineVerified": 48,
+    "freshCompleteRuntimeObjectsInReceipt": 48
+  },
+  "fullGates": {
+    "head": "52421919b8b3141af2765dddfbba3a31a2b94e09",
+    "internalTree": "9d29ef93f3dd70e4f38ab620c515c533e1b8eb25",
+    "base": "7e1dcaa182ca1d9756293f032b91f0ff5bad112a",
+    "status": "terminal-pass",
+    "gates": [
+      {
+        "name": "full",
+        "command": [
+          "/Users/aw/.local/share/go/1.27.0/bin/go",
+          "test",
+          "-p",
+          "1",
+          "./..."
+        ],
+        "status": "terminal",
+        "environmentOverrides": {},
+        "exitCode": 0,
+        "seconds": 39.595
+      },
+      {
+        "name": "race",
+        "command": [
+          "/Users/aw/.local/share/go/1.27.0/bin/go",
+          "test",
+          "-race",
+          "-p",
+          "1",
+          "./..."
+        ],
+        "status": "terminal",
+        "environmentOverrides": {},
+        "exitCode": 0,
+        "seconds": 256.34
+      },
+      {
+        "name": "vet",
+        "command": [
+          "/Users/aw/.local/share/go/1.27.0/bin/go",
+          "vet",
+          "-p",
+          "1",
+          "./..."
+        ],
+        "status": "terminal",
+        "environmentOverrides": {},
+        "exitCode": 0,
+        "seconds": 0.757
+      },
+      {
+        "name": "wasm",
+        "command": [
+          "/Users/aw/.local/share/go/1.27.0/bin/go",
+          "build",
+          "-p",
+          "1",
+          "./..."
+        ],
+        "status": "terminal",
+        "environmentOverrides": {
+          "GOOS": "js",
+          "GOARCH": "wasm"
+        },
+        "exitCode": 0,
+        "seconds": 0.634
+      }
+    ],
+    "finalHead": "52421919b8b3141af2765dddfbba3a31a2b94e09",
+    "finalStatus": ""
+  },
+  "publicationBaseTree": "4fddde4d5a9846b6ec1a6a76c4633e5cfc5fc98b",
+  "compiledPreviewStatus": "Source and fixture patches preserved exactly on actual merged main175; full oracle, race, vet and WebAssembly gates passed on the rebased checkout.",
+  "publicationOverlap": {
+    "base": "7e1dcaa182ca1d9756293f032b91f0ff5bad112a",
+    "scannedFiles": 486,
+    "strict": {
+      "firstInputPublication": 1682,
+      "priorCompleteSVGAssertions": 32,
+      "priorRawPromotions": 34,
+      "hashOrASTOnly": 0
+    },
+    "boundedRuntime": {
+      "firstInputPublication": 42,
+      "priorBoundedAssertions": 6
+    },
+    "conflicts": 0,
+    "ambiguousInputModes": 0,
+    "consumer": "getstar_bra_test.go: strict-svg compared completely, inherited-valid-raw explicitly retained without SVG assertion, runtime-bounded-nel asserts exact API error and empty SVG",
+    "consumerBlobSHA256": "c790cde5ae1f91add147067e2d3c1be29a59fc1ba9e2c9c904f6399f1cf47ec5"
+  },
+  "sourceReferences": {
+    "work/bqty-audit/source/PhysicsMethods.ts": "6bab0a0adc130c7a470a3d449687127ee91374769c58912988853b5b191455dd",
+    "work/bqty-audit/source/PhysicsMappings.ts": "634d143aa1c09b2c048613d87768a7722184e28e95528524356bafbd069ae81a",
+    "work/buildrel-audit/TexParser.ts": "b2306654ecd919960615a083bbed7d0d6a351e155c795fc8aed4c52ef459d927"
+  },
+  "validation": {
+    "focused": {
+      "sourceHead": "305d257f3043f313d4ec039aca37ac12f5f57ead",
+      "internal": "9d29ef93f3dd70e4f38ab620c515c533e1b8eb25",
+      "uncommittedFiles": {
+        "physics_expectation_test.go": "3d9be3ec17d7074ef2bf7705554036e73638973d99118aab1ff52cf54c5ee7ff",
+        "testdata/physics_expectation_mathjax_3_2_2.json.gz": "0de03774da38053a0e49ab1a16c86bcbb20dd3b478f70e049bbd2adb539bddb0"
+      },
+      "status": "terminal-pass",
+      "command": "go test -p 1 . -run ^TestPhysicsExpectationOriginalReferences$ -count=1",
+      "reportedPackageSeconds": 1.188,
+      "session": 33913,
+      "Go": "/Users/aw/.local/share/go/1.27.0/bin/go"
+    },
+    "fullGates": {
+      "head": "52421919b8b3141af2765dddfbba3a31a2b94e09",
+      "internalTree": "9d29ef93f3dd70e4f38ab620c515c533e1b8eb25",
+      "base": "7e1dcaa182ca1d9756293f032b91f0ff5bad112a",
+      "status": "terminal-pass",
+      "gates": [
+        {
+          "name": "full",
+          "command": [
+            "/Users/aw/.local/share/go/1.27.0/bin/go",
+            "test",
+            "-p",
+            "1",
+            "./..."
+          ],
+          "status": "terminal",
+          "environmentOverrides": {},
+          "exitCode": 0,
+          "seconds": 39.595
+        },
+        {
+          "name": "race",
+          "command": [
+            "/Users/aw/.local/share/go/1.27.0/bin/go",
+            "test",
+            "-race",
+            "-p",
+            "1",
+            "./..."
+          ],
+          "status": "terminal",
+          "environmentOverrides": {},
+          "exitCode": 0,
+          "seconds": 256.34
+        },
+        {
+          "name": "vet",
+          "command": [
+            "/Users/aw/.local/share/go/1.27.0/bin/go",
+            "vet",
+            "-p",
+            "1",
+            "./..."
+          ],
+          "status": "terminal",
+          "environmentOverrides": {},
+          "exitCode": 0,
+          "seconds": 0.757
+        },
+        {
+          "name": "wasm",
+          "command": [
+            "/Users/aw/.local/share/go/1.27.0/bin/go",
+            "build",
+            "-p",
+            "1",
+            "./..."
+          ],
+          "status": "terminal",
+          "environmentOverrides": {
+            "GOOS": "js",
+            "GOARCH": "wasm"
+          },
+          "exitCode": 0,
+          "seconds": 0.634
+        }
+      ],
+      "finalHead": "52421919b8b3141af2765dddfbba3a31a2b94e09",
+      "finalStatus": ""
+    },
+    "broad": {
+      "status": "terminal-pass",
+      "seconds": 6.108,
+      "sourceHead": "305d257f3043f313d4ec039aca37ac12f5f57ead",
+      "internalTree": "9d29ef93f3dd70e4f38ab620c515c533e1b8eb25",
+      "previewBase": "fdf3c6524f045fc310f5bf1d203b490192394bec",
+      "previewBaseStatus": "pending GetStar PR175 when captured; not an actual merged-base claim",
+      "actualMergedBaseAtCapture": "24acaf75285fc5bd894316642fd4cf6becc923c7",
+      "binaries": {
+        "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/getstar-dependencies-audit/source-preview174/candidate-composed174": "4ee48008769ed1fdbed98429ed7818e765d9bdceb83ef2068ed2cdf50f8ae874",
+        "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/physics-expectation-audit/candidate-preview175": "76d9e7cf0e909bb949124126fb4e1c268fc367a92b119d0daf794bd0f92beeef"
+      },
+      "inputs": {
+        "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/physics-expectation-audit/svg-independent-broad175/published6800-expectation175.json.gz": "09d726be219e0e8db6df958a0c0bee70910537f030e7274f033db613afbb5bda",
+        "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/physics-expectation-audit/svg-independent-broad175/upstream4326-expectation175.json.gz": "4b8b4c9d46d1d475e9b40ffe5d43f8221f29d411c4797359bbf53db658218965"
+      },
+      "published": {
+        "inputs": 6800,
+        "genuineCompleteSVGFixes": 4,
+        "genuineRegressions": 0,
+        "changedNonexactAfterOrderingQualification": 0,
+        "serializationControls": 8,
+        "serializationApparentFixes": 2,
+        "serializationApparentRegressions": 6
+      },
+      "upstream": {
+        "inputs": 4326,
+        "genuineCompleteSVGFixes": 26,
+        "genuineRegressions": 0,
+        "changedNonexactAfterOrderingQualification": 0,
+        "serializationControls": 1,
+        "serializationRemainsInheritedNonexactToOriginal": 1
+      },
+      "shared": {
+        "inputs": 5621,
+        "unchanged": 5621
+      },
+      "runtime": {
+        "inputs": 802,
+        "unchanged": 802
+      },
+      "originalRuntimeOutcomeChanges": 0,
+      "serializationRepeatedRenders": 1152,
+      "serializationRepeatedRendersEqualOriginalXML": 1024,
+      "serializationRepeatedRendersEqualBothGoBinariesButNotOriginal": 128,
+      "originalPolicy": "All complete original objects remain unmodified; raw byte outcomes and repeats retained. XML proof compares complete element name/attributes/text/tail/ordered children. Eight cancel controls equal original XML. The enclose control is only baseline/candidate XML-equal and remains nonexact to the unsupported-command original. No normalized test golden or error/runtime parity promotion.",
+      "noGoOrCheckoutWrites": true
+    },
+    "protected": {
+      "getstar-strict": {
+        "summary": {
+          "inputs": 4394,
+          "baselineExact": 4394,
+          "candidateExact": 4394,
+          "unchanged": 4394,
+          "fixed": 0,
+          "regression": 0,
+          "changedNonexact": 0,
+          "originalRuntime": 0
+        },
+        "receiptSHA256": "e2442dfebe355fdc164eafa83713abcd08f4f8eef0c69591723dbbe20f9ef285"
+      },
+      "getstar-residuals": {
+        "summary": {
+          "inputs": 776,
+          "baselineExact": 0,
+          "candidateExact": 34,
+          "unchanged": 742,
+          "fixed": 34,
+          "regression": 0,
+          "changedNonexact": 0,
+          "originalRuntime": 682
+        },
+        "receiptSHA256": "502a2f4f67ebd53668230510fdcb1306db294a7fdb3e664430a07d8860783b9a"
+      },
+      "quantity": {
+        "summary": {
+          "inputs": 3350,
+          "baselineExact": 3332,
+          "candidateExact": 3332,
+          "unchanged": 3350,
+          "fixed": 0,
+          "regression": 0,
+          "changedNonexact": 0,
+          "originalRuntime": 18
+        },
+        "receiptSHA256": "d5582f1fb7ff4ee02d76b8df471c2ad9ed81102d730df55fcaf3b1cc00519d2c"
+      },
+      "eval": {
+        "summary": {
+          "inputs": 1342,
+          "baselineExact": 1342,
+          "candidateExact": 1342,
+          "unchanged": 1342,
+          "fixed": 0,
+          "regression": 0,
+          "changedNonexact": 0,
+          "originalRuntime": 0
+        },
+        "receiptSHA256": "9df67b31c2fc862f57722185b46babc41e51a7090f33a3be903cee502c6be2b2"
+      },
+      "hline": {
+        "summary": {
+          "inputs": 2444,
+          "baselineExact": 2412,
+          "candidateExact": 2412,
+          "unchanged": 2444,
+          "fixed": 0,
+          "regression": 0,
+          "changedNonexact": 0,
+          "originalRuntime": 0
+        },
+        "receiptSHA256": "2bc2c082623b65473b9ac1c55ba32cd8180ec5d830d9c692e8848380205745e7"
+      }
+    },
+    "D2": {
+      "witnesses": {
+        "head": "305d257f3043f313d4ec039aca37ac12f5f57ead",
+        "beforePublishedGetStarHead": "3778159bd5b3db00cc3d2e666e6fa1aec02ac3d7",
+        "cases": [
+          {
+            "slug": "physics-expectation-state",
+            "visuallyInspected": true,
+            "sharedScale": true,
+            "afterEqualsOriginalSVG": true,
+            "beforeDifferent": true,
+            "observation": "The state psi moves inside both bra/ket operands around H instead of remaining outside an H-only expectation.",
+            "comparisonSHA256": "6dddf46acb364994cc5023bdace853be55d2ea80bc2e5ac1a803256fd0b19dfe"
+          },
+          {
+            "slug": "physics-expectation-stars",
+            "visuallyInspected": true,
+            "sharedScale": true,
+            "afterEqualsOriginalSVG": true,
+            "beforeDifferent": true,
+            "observation": "Literal stars and detached operands are replaced by the original one-star unsized and two-star whole-expression-sized expectation forms.",
+            "comparisonSHA256": "7f6e248d74969a1cb9a2bf4265df9b4f407ce9367b8e2210e655bacdd1c40303"
+          }
+        ]
+      },
+      "build": {
+        "head": "305d257f3043f313d4ec039aca37ac12f5f57ead",
+        "internalTree": "9d29ef93f3dd70e4f38ab620c515c533e1b8eb25",
+        "previewBase": "fdf3c6524f045fc310f5bf1d203b490192394bec",
+        "exit": 0,
+        "seconds": 2.464974880218506,
+        "binary": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/d2-after-physics-expectation",
+        "binarySHA256": "a128857da332258a0b050f5df1591080f8e2385d0495bfd069607a876ceb459b"
+      },
+      "allExistingD2CompleteSVGsExact": 87,
+      "verificationRound": 61,
+      "additionalOriginalInputs": 0,
+      "verificationAuthority": "root complete-source-SVG replay and visual inspection; see round61 D2 manifest",
+      "buildActual175": {
+        "head": "611bf43bd835a7e25a53c20ad4ab820f4a2c0a52",
+        "internalTree": "9d29ef93f3dd70e4f38ab620c515c533e1b8eb25",
+        "exit": 0,
+        "seconds": 0.7972500324249268,
+        "binary": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/d2-after-physics-expectation-actual175",
+        "binarySHA256": "a128857da332258a0b050f5df1591080f8e2385d0495bfd069607a876ceb459b"
+      },
+      "witnessesActual175": {
+        "head": "611bf43bd835a7e25a53c20ad4ab820f4a2c0a52",
+        "beforeMathjaxCommit": "7e1dcaa182ca1d9756293f032b91f0ff5bad112a",
+        "visuallyInspected": true,
+        "sharedScale": true,
+        "bothAfterEqualOriginal": true,
+        "allExistingD2CompleteSVGsExact": 87
+      }
+    }
+  },
+  "fixtureConsumer": "TestPhysicsExpectationOriginalReferences: 1748 full unmodified SVGs plus 48 source-bound bounded errors; no skipped raw records.",
+  "sourceObservationCountsDoNotIncreasePublicInputs": true,
+  "rebaseToActualMain175": {
+    "status": "pass",
+    "oldHead": "872af4a3a8c00fb4726bc1bef4f0372fddbe627f",
+    "newHead": "611bf43bd835a7e25a53c20ad4ab820f4a2c0a52",
+    "oldBase": "fdf3c6524f045fc310f5bf1d203b490192394bec",
+    "newBase": "7e1dcaa182ca1d9756293f032b91f0ff5bad112a",
+    "internalTree": "9d29ef93f3dd70e4f38ab620c515c533e1b8eb25",
+    "rangeDiff": "1:  305d257 = 1:  162acdd fix: follow source Physics Expectation expansion\n2:  872af4a = 2:  611bf43 Bind expectation values to original SVGs and D2 witnesses",
+    "baseDeltaPaths": [
+      "testdata/getstar_bra_README.md",
+      "testdata/getstar_bra_inventory.json"
+    ],
+    "allRebasedTreeDeltaPaths": [
+      "testdata/getstar_bra_README.md",
+      "testdata/getstar_bra_inventory.json"
+    ],
+    "fixtureHashes": {
+      "physics_expectation_test.go": "3d9be3ec17d7074ef2bf7705554036e73638973d99118aab1ff52cf54c5ee7ff",
+      "testdata/generate_physics_expectation.cjs": "0657a1f7e2adba017de93a9e900c110641659682545b829d19c4619bd0fcdef5",
+      "testdata/physics_expectation_mathjax_3_2_2.json.gz": "0de03774da38053a0e49ab1a16c86bcbb20dd3b478f70e049bbd2adb539bddb0",
+      "testdata/physics_expectation_font_observations.json.gz": "4d511f12768d452ceb5a0a41aafade0db8099c7dff7b7b544c438e347cca5c5c",
+      "testdata/physics_expectation_budget_observations.json.gz": "275c84449ea35dc0b45aa64d59528a3e557b7546d20f78260e241b14c3e08608",
+      "testdata/physics_expectation_README.md": "d9d4a75b35546c9203f6b58f2f2a999d4139eb226a5667e1b331cb65fc426631",
+      "testdata/physics_expectation_inventory.json": "0d1c9eb9912b2b3383735c463534217b77cfa216dd537c66a8521eb8d6aefe4d"
+    }
+  }
+}
