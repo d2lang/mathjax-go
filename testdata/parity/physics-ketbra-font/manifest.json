@@ -1,10 +1,10 @@
 {
   "d2Commit": "01bc7ecdbdd04c13d6fe5df1967d2d9aa14ae579",
-  "beforeMathjaxCommit": "5e757d522e94f16cc0c467c0954213906dc3f9d0",
-  "afterCodeCommit": "dae46e4c0a8f3834a272a2e56a5e295c458f2975",
+  "beforeMathjaxCommit": "6ad44b5bbbf6ec5cad3241c010f44981b1216657",
+  "afterCodeCommit": "c58678e4675593ff27138fe328e4573a0fea5445",
   "tex": "\\Huge\\boxed{\\mathbf{\\op{AB}{CD}}}",
   "files": {
-    "README.md": "a552fd25f91d57748cf74440daf79766b67af0a88306ca7cfae3652ac68e3aea",
+    "README.md": "bd92efa9e2ebd7ce86ce34534a55fd08ab1818df707dcd2487d4b046ab728bf7",
     "after.png": "c1749830a846930fca1e8774892bfac3923b393c65ea1a5ed54e15fd7607f3a4",
     "after.svg": "23626aa41ac7238209ff07fe96787a278167c259265874adad1927ed53108893",
     "before.png": "c1749830a846930fca1e8774892bfac3923b393c65ea1a5ed54e15fd7607f3a4",

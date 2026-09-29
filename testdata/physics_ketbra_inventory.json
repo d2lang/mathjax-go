@@ -3,9 +3,9 @@
   "sourceHead": "dae46e4c0a8f3834a272a2e56a5e295c458f2975",
   "sourceInternalTree": "e9766f495c05f0c75c38296e1c03c6deb0fbd740",
   "compiledPreviewBase": "611bf43bd835a7e25a53c20ad4ab820f4a2c0a52",
-  "publicationBase": "pending Expectation176 merge",
-  "overlapTree": "5e757d522e94f16cc0c467c0954213906dc3f9d0",
-  "overlapTreeStatus": "published Expectation PR176 head; pending merge",
+  "publicationBase": "6ad44b5bbbf6ec5cad3241c010f44981b1216657",
+  "overlapTree": "6ad44b5bbbf6ec5cad3241c010f44981b1216657",
+  "overlapTreeStatus": "actual merged main176; entire tree equals published Expectation head5e757d5",
   "candidateSHA256": "bd1f417b13147693f0ea35711eb673c8a1274f589fb5cc3dbc9b38798e4bfcc7",
   "baselineSHA256": "76d9e7cf0e909bb949124126fb4e1c268fc367a92b119d0daf794bd0f92beeef",
   "uniquePublicInputs": 1796,
@@ -80,9 +80,9 @@
   "fullGates": "pending",
   "overlapTreeHash": "6264a1092fc80de3984d46b29440d4a88161120d",
   "publicationOverlap": {
-    "base": "5e757d522e94f16cc0c467c0954213906dc3f9d0",
+    "base": "6ad44b5bbbf6ec5cad3241c010f44981b1216657",
     "baseTree": "6264a1092fc80de3984d46b29440d4a88161120d",
-    "baseStatus": "published Expectation PR176 head; pending merge",
+    "baseStatus": "actual merged main176; entire tree equals published Expectation head5e757d5",
     "scannedFiles": 492,
     "strict": {
       "priorRawPromotions": 24,
@@ -126,7 +126,7 @@
         "testdata/physics_ketbra_mathjax_3_2_2.json.gz": "4ef18b0bddeee11819a1e019329244556a23096f5aadad57d6e11bdc8de481bb"
       }
     },
-    "fullGates": "pending final actual176 rebase",
+    "fullGates": "pending on actual main176 rebase",
     "broad": {
       "status": "terminal-pass",
       "head": "dae46e4c0a8f3834a272a2e56a5e295c458f2975",
@@ -286,8 +286,55 @@
       "verificationRound": 62,
       "additionalOriginalInputs": 0,
       "verificationAuthority": "root complete-original-SVG replay and shared-scale visual review; integration-evidence-round62-physics-ketbra/manifest.json",
-      "finalActual176RebaseAndD2Regeneration": "pending"
+      "finalActual176RebaseAndD2Regeneration": "pending",
+      "buildActual176": {
+        "head": "c58678e4675593ff27138fe328e4573a0fea5445",
+        "internalTree": "e9766f495c05f0c75c38296e1c03c6deb0fbd740",
+        "actualBase": "6ad44b5bbbf6ec5cad3241c010f44981b1216657",
+        "exit": 0,
+        "seconds": 2.032282829284668,
+        "binary": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/d2-after-physics-ketbra-actual176",
+        "binarySHA256": "849c66eefa1dcb57fc1d2e6eeec36fc8baebbe6767b7248c8c48475942ed4440"
+      },
+      "witnessesActual176": {
+        "head": "c58678e4675593ff27138fe328e4573a0fea5445",
+        "beforeMathjaxCommit": "6ad44b5bbbf6ec5cad3241c010f44981b1216657",
+        "samePixelsAsVisuallyInspectedPreview": true,
+        "bothAfterEqualOriginal": true,
+        "allExistingD2CompleteSVGsExact": 89
+      }
     }
   },
-  "fixtureConsumer": "TestPhysicsKetBraOriginalReferences:1764 complete unmodified SVGs and32 source-bound bounded API errors; no skipped raw partition."
+  "fixtureConsumer": "TestPhysicsKetBraOriginalReferences:1764 complete unmodified SVGs and32 source-bound bounded API errors; no skipped raw partition.",
+  "rebaseToActualMain176": {
+    "status": "pass",
+    "oldHead": "8e024d3ce20fde90fe62d9a7e0f0d251e658ff4d",
+    "newHead": "c58678e4675593ff27138fe328e4573a0fea5445",
+    "oldBase": "611bf43bd835a7e25a53c20ad4ab820f4a2c0a52",
+    "newBase": "6ad44b5bbbf6ec5cad3241c010f44981b1216657",
+    "internalTree": "e9766f495c05f0c75c38296e1c03c6deb0fbd740",
+    "rangeDiff": "1:  dae46e4 = 1:  c06838f Preserve optional KetBra arguments and child environment\n2:  8e024d3 = 2:  c58678e Bind KetBra behavior to original SVGs and D2 witnesses",
+    "baseDeltaPaths": [
+      "testdata/parity/physics-expectation-stars/README.md",
+      "testdata/parity/physics-expectation-stars/comparison.png",
+      "testdata/parity/physics-expectation-stars/manifest.json",
+      "testdata/parity/physics-expectation-state/README.md",
+      "testdata/parity/physics-expectation-state/comparison.png",
+      "testdata/parity/physics-expectation-state/manifest.json",
+      "testdata/physics_expectation_README.md",
+      "testdata/physics_expectation_inventory.json"
+    ],
+    "allRebasedTreeDeltaPaths": [
+      "testdata/parity/physics-expectation-stars/README.md",
+      "testdata/parity/physics-expectation-stars/comparison.png",
+      "testdata/parity/physics-expectation-stars/manifest.json",
+      "testdata/parity/physics-expectation-state/README.md",
+      "testdata/parity/physics-expectation-state/comparison.png",
+      "testdata/parity/physics-expectation-state/manifest.json",
+      "testdata/physics_expectation_README.md",
+      "testdata/physics_expectation_inventory.json"
+    ]
+  },
+  "rebasedSourceHead": "c06838fbe9d924715a78931f9ca13aab260d16fd",
+  "actualBaseIndependentReviewSHA256": "0670e8d81927605b457b7d8f931646ce2b3e2379e0d0c528f68c326598bd84cd"
 }
