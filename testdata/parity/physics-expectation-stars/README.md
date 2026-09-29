@@ -5,8 +5,8 @@ same `witness.d2`. Individual PNG screenshots and the unmodified SVGs are also
 included. Panels use one shared scale and preserve differences in the SVG dimensions. `after.svg` and `original.svg` are byte-identical.
 
 - D2 renderer: `01bc7ecdbdd04c13d6fe5df1967d2d9aa14ae579`.
-- Before mathjax-go: `3778159bd5b3db00cc3d2e666e6fa1aec02ac3d7`.
-- After mathjax-go code: `305d257f3043f313d4ec039aca37ac12f5f57ead` (plus these evidence files).
+- Before mathjax-go: `7e1dcaa182ca1d9756293f032b91f0ff5bad112a`.
+- After mathjax-go code: `611bf43bd835a7e25a53c20ad4ab820f4a2c0a52` (plus these evidence files).
 - Original: D2's frozen MathJax 3.2.2 assets, fetched from D2 commit
   `5666d9337c77a4803b9cd60cb1c5a24439d0f949`; SHA-256 values are in `manifest.json`
   and repository `PROVENANCE.md`.

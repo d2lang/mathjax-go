@@ -93,7 +93,7 @@
   },
   "fullGates": "pending",
   "publicationBaseTree": "4fddde4d5a9846b6ec1a6a76c4633e5cfc5fc98b",
-  "compiledPreviewStatus": "Compiled on preserved fdf3c652 preview, with production identical to merged main175. Final rebase/full gates remain pending.",
+  "compiledPreviewStatus": "Preserved preview source and public fixture patches are unchanged after rebasing onto actual main175; final full gates pending.",
   "publicationOverlap": {
     "base": "7e1dcaa182ca1d9756293f032b91f0ff5bad112a",
     "scannedFiles": 486,
@@ -131,7 +131,7 @@
       "session": 33913,
       "Go": "/Users/aw/.local/share/go/1.27.0/bin/go"
     },
-    "fullGates": "pending final actual175 rebase",
+    "fullGates": "pending on actual main175 rebase",
     "broad": {
       "status": "terminal-pass",
       "seconds": 6.108,
@@ -284,9 +284,51 @@
       "allExistingD2CompleteSVGsExact": 87,
       "verificationRound": 61,
       "additionalOriginalInputs": 0,
-      "verificationAuthority": "root complete-source-SVG replay and visual inspection; see round61 D2 manifest"
+      "verificationAuthority": "root complete-source-SVG replay and visual inspection; see round61 D2 manifest",
+      "buildActual175": {
+        "head": "611bf43bd835a7e25a53c20ad4ab820f4a2c0a52",
+        "internalTree": "9d29ef93f3dd70e4f38ab620c515c533e1b8eb25",
+        "exit": 0,
+        "seconds": 0.7972500324249268,
+        "binary": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/d2-after-physics-expectation-actual175",
+        "binarySHA256": "a128857da332258a0b050f5df1591080f8e2385d0495bfd069607a876ceb459b"
+      },
+      "witnessesActual175": {
+        "head": "611bf43bd835a7e25a53c20ad4ab820f4a2c0a52",
+        "beforeMathjaxCommit": "7e1dcaa182ca1d9756293f032b91f0ff5bad112a",
+        "visuallyInspected": true,
+        "sharedScale": true,
+        "bothAfterEqualOriginal": true,
+        "allExistingD2CompleteSVGsExact": 87
+      }
     }
   },
   "fixtureConsumer": "TestPhysicsExpectationOriginalReferences: 1748 full unmodified SVGs plus 48 source-bound bounded errors; no skipped raw records.",
-  "sourceObservationCountsDoNotIncreasePublicInputs": true
+  "sourceObservationCountsDoNotIncreasePublicInputs": true,
+  "rebaseToActualMain175": {
+    "status": "pass",
+    "oldHead": "872af4a3a8c00fb4726bc1bef4f0372fddbe627f",
+    "newHead": "611bf43bd835a7e25a53c20ad4ab820f4a2c0a52",
+    "oldBase": "fdf3c6524f045fc310f5bf1d203b490192394bec",
+    "newBase": "7e1dcaa182ca1d9756293f032b91f0ff5bad112a",
+    "internalTree": "9d29ef93f3dd70e4f38ab620c515c533e1b8eb25",
+    "rangeDiff": "1:  305d257 = 1:  162acdd fix: follow source Physics Expectation expansion\n2:  872af4a = 2:  611bf43 Bind expectation values to original SVGs and D2 witnesses",
+    "baseDeltaPaths": [
+      "testdata/getstar_bra_README.md",
+      "testdata/getstar_bra_inventory.json"
+    ],
+    "allRebasedTreeDeltaPaths": [
+      "testdata/getstar_bra_README.md",
+      "testdata/getstar_bra_inventory.json"
+    ],
+    "fixtureHashes": {
+      "physics_expectation_test.go": "3d9be3ec17d7074ef2bf7705554036e73638973d99118aab1ff52cf54c5ee7ff",
+      "testdata/generate_physics_expectation.cjs": "0657a1f7e2adba017de93a9e900c110641659682545b829d19c4619bd0fcdef5",
+      "testdata/physics_expectation_mathjax_3_2_2.json.gz": "0de03774da38053a0e49ab1a16c86bcbb20dd3b478f70e049bbd2adb539bddb0",
+      "testdata/physics_expectation_font_observations.json.gz": "4d511f12768d452ceb5a0a41aafade0db8099c7dff7b7b544c438e347cca5c5c",
+      "testdata/physics_expectation_budget_observations.json.gz": "275c84449ea35dc0b45aa64d59528a3e557b7546d20f78260e241b14c3e08608",
+      "testdata/physics_expectation_README.md": "d9d4a75b35546c9203f6b58f2f2a999d4139eb226a5667e1b331cb65fc426631",
+      "testdata/physics_expectation_inventory.json": "0d1c9eb9912b2b3383735c463534217b77cfa216dd537c66a8521eb8d6aefe4d"
+    }
+  }
 }
