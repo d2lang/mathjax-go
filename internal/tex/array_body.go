@@ -17,6 +17,7 @@ import (
 type arrayBodyOwner struct {
 	environment  *environmentFrame
 	requireClose bool
+	rules        *arrayRules
 	configure    func(*parser)
 	prepare      func(*parser) ([]*mml.Node, error)
 	prepareEntry func(*parser, *cellItem) ([]*mml.Node, error)
@@ -51,6 +52,7 @@ func (p *parser) parseArrayBody(source string, owner arrayBodyOwner) error {
 			sub.environmentRow = owner.environment
 		}
 		sub.matrixClose, sub.cdArrayEntry = owner.requireClose, true
+		sub.arrayCell.rules = owner.rules
 		if owner.configure != nil {
 			owner.configure(sub)
 		}
@@ -148,6 +150,7 @@ func (p *parser) parseMultlineBody(source string, ams bool) (*mml.Node, *arrayRo
 	spacing := &arrayRowSpacing{}
 	var entries []*mml.Node
 	err := p.parseArrayBody(source, arrayBodyOwner{
+		rules:      newArrayRules(table),
 		configure:  func(sub *parser) { sub.arrayCell.multline = ams },
 		hasEntries: func() bool { return len(entries) != 0 },
 		endEntry: func(children []*mml.Node, state *arrayCellState) error {

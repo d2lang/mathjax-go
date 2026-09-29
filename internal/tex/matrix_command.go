@@ -22,6 +22,7 @@ func (p *parser) matrixCommand(name string) ([]*mml.Node, error) {
 	var entries []*mml.Node
 	spacing := &arrayRowSpacing{}
 	owner := arrayBodyOwner{
+		rules:        newArrayRules(table),
 		requireClose: true,
 		hasEntries:   func() bool { return len(entries) != 0 },
 		endEntry: func(children []*mml.Node, fill *arrayCellState) error {
@@ -79,6 +80,7 @@ func (p *parser) matrixCommand(name string) ([]*mml.Node, error) {
 		initial = ".1em"
 	}
 	spacing.apply(table, initial)
+	table = finishArrayRules(table)
 	if name == "pmatrix" {
 		return []*mml.Node{p.fenced("(", table, ")", true)}, nil
 	}

@@ -58,11 +58,12 @@ func TestExplicitMathMLSpacingFrozenSVG(t *testing.T) {
 				if row.Kind != "mrow" || !row.Flags.Inferred {
 					t.Fatal("expected inferred root row")
 				}
-				empty := mml.NewNode("mo", nil, nil)
+				empty := syntheticMMLFactory.Create("mo")
 				empty.Flags.Token, empty.Flags.Embellished = true, true
 				empty.TeXClass = mml.TeXClassOrd
 				empty.Attributes.Set("rspace", "0")
 				empty.Attributes.SetInherited("scriptlevel", 0)
+				empty.Attributes.SetInherited("displaystyle", test.Display)
 				// checkOperatorTable's empty-mo dictionary entry, independently
 				// verified by TestOperatorMathMLSpacingDefaults in internal/tex.
 				empty.OperatorLspace, empty.OperatorRspace = 1.0/18, 1.0/18

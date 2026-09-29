@@ -10,7 +10,6 @@ import (
 	"github.com/d2lang/mathjax-go/internal/font"
 	"github.com/d2lang/mathjax-go/internal/layout"
 	"github.com/d2lang/mathjax-go/internal/mml"
-	"github.com/d2lang/mathjax-go/internal/ordered"
 )
 
 // CommonMfrac constructs the slash after its authored children are wrapped.
@@ -24,10 +23,7 @@ func (w *wrapper) initializeBevel() {
 	height := math.Max(numerator.Scale*(numerator.H+numerator.D),
 		denominator.Scale*(denominator.H+denominator.D)) + 2*delta
 
-	defaults := ordered.New[mml.Property]()
-	defaults.Set("mathvariant", "normal")
-	defaults.Set("mathsize", mml.Inherit)
-	mo := mml.NewNode("mo", defaults, w.node.Attributes.Globals(), mml.NewText("/"))
+	mo := syntheticMMLFactory.Create("mo", mml.NewText("/"))
 	mo.Flags.Token, mo.Flags.Embellished = true, true
 	mo.Attributes.Set("stretchy", true)
 	// AbstractMmlNode.inheritAttributesFrom copies only these effective values,

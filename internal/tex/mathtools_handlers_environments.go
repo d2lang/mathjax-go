@@ -64,7 +64,7 @@ func (p *parser) mathtoolsSmallMatrix(environment string) ([]*mml.Node, error) {
 	if open != "" || close != "" {
 		table = p.leftRightFenced(open, table, close, true)
 	}
-	return []*mml.Node{table}, nil
+	return []*mml.Node{finishArrayRules(table)}, nil
 }
 
 func (p *parser) mathtoolsMultlined(environment string) ([]*mml.Node, error) {
@@ -125,7 +125,7 @@ func (p *parser) mathtoolsMultlined(environment string) ([]*mml.Node, error) {
 	} else {
 		table.Attributes.Set("align", "axis")
 	}
-	return []*mml.Node{table}, nil
+	return []*mml.Node{finishArrayRules(table)}, nil
 }
 
 func mathtoolsAppendCell(cell, child *mml.Node, prepend bool) {
@@ -191,6 +191,7 @@ func (p *parser) mathtoolsCases(environment string) ([]*mml.Node, error) {
 	var entries []*mml.Node
 	spacing := &arrayRowSpacing{}
 	err = p.parseArrayBody(body, arrayBodyOwner{
+		rules: newArrayRules(table),
 		prepare: func(sub *parser) ([]*mml.Node, error) {
 			if len(entries) != 1 {
 				return nil, nil
@@ -223,7 +224,7 @@ func (p *parser) mathtoolsCases(environment string) ([]*mml.Node, error) {
 	if strings.Contains(environment, "rcases") {
 		open, close = "", "}"
 	}
-	return []*mml.Node{p.leftRightFenced(open, table, close, true)}, nil
+	return []*mml.Node{p.leftRightFenced(open, finishArrayRules(table), close, true)}, nil
 }
 
 func (p *parser) mathtoolsMultline(environment string) ([]*mml.Node, error) {
@@ -245,7 +246,7 @@ func (p *parser) mathtoolsMultlineBody(body string) ([]*mml.Node, error) {
 	finishAMSMultlineTable(table)
 	spacing.apply(table, ".5em")
 
-	return []*mml.Node{table}, nil
+	return []*mml.Node{finishArrayRules(table)}, nil
 }
 
 func mathtoolsCommandArgument(source, command string) (string, error) {

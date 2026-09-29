@@ -75,6 +75,14 @@ type Flags struct {
 	CoreIndex          int
 }
 
+// FencedNodes are MmlMfenced's non-authored operator nodes. A non-nil value
+// distinguishes an initialized fence with no operators from one whose MML
+// inheritance pass has not run. These nodes do not participate in Walk/Find.
+type FencedNodes struct {
+	Open, Close *Node
+	Separators  []*Node
+}
+
 // Node is one node in MathJax's internal MathML tree. Kind-specific state that
 // is not an attribute lives in Properties.
 type Node struct {
@@ -88,6 +96,7 @@ type Node struct {
 	TeXClass   TeXClass
 	PrevClass  TeXClass
 	PrevLevel  int
+	Fenced     *FencedNodes
 	// OperatorLspace/OperatorRspace are MmlMo's dictionary-derived defaults,
 	// distinct from explicit/inherited lspace/rspace attributes (in ems).
 	OperatorLspace, OperatorRspace float64
@@ -267,5 +276,16 @@ func (n *Node) Clone() *Node {
 		children[i] = child.Clone()
 	}
 	clone.SetChildren(children)
+	if n.Fenced != nil {
+		clone.Fenced = &FencedNodes{Open: n.Fenced.Open.Clone(), Close: n.Fenced.Close.Clone()}
+		for _, separator := range n.Fenced.Separators {
+			clone.Fenced.Separators = append(clone.Fenced.Separators, separator.Clone())
+		}
+		for _, fake := range append([]*Node{clone.Fenced.Open, clone.Fenced.Close}, clone.Fenced.Separators...) {
+			if fake != nil {
+				fake.Parent = clone
+			}
+		}
+	}
 	return clone
 }

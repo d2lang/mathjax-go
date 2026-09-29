@@ -42,6 +42,7 @@ type wrapper struct {
 	surdHeight   float64
 	isMathAccent bool
 	bevel        *wrapper // Generated fraction slash; not an authored child.
+	fencedRow    *wrapper // Temporary wrapper row; its MML node remains empty.
 
 	// table retains CommonMtable's natural and resolved percentage-width
 	// state for the lifetime of this wrapped render tree.  It is nil for every
@@ -93,6 +94,9 @@ func (r *renderer) wrap(node *mml.Node, parent *wrapper, level int, display bool
 	}
 	if node.Kind == "mfrac" {
 		w.initializeBevel()
+	}
+	if node.Kind == "mfenced" {
+		w.initializeFencedRow()
 	}
 	// CommonMunder, CommonMover, and CommonMunderover stretch their children
 	// once in their constructors.  Keep this out of computeBBox: table layout
@@ -300,7 +304,20 @@ func (w *wrapper) getScale() {
 			scale = minimum
 		}
 	}
-	if mathsize := stringAttribute(w.node, "mathsize", "normal"); mathsize != "1" {
+	// CommonWrapper uses an authored mathsize only on tokens and mstyle.
+	// Containers use the inherited layer, including its default prototypes.
+	value, present := w.node.Attributes.Get("mathsize")
+	if !w.node.Flags.Token && w.node.Kind != "mstyle" {
+		value, present = w.node.Attributes.GetInherited("mathsize")
+	}
+	mathsize := "normal"
+	if present {
+		mathsize = fmt.Sprint(value)
+		if mml.IsInherit(value) {
+			mathsize = "_inherit_"
+		}
+	}
+	if mathsize != "1" {
 		scale *= layout.Length2Em(mathsize, 1, 1, w.renderer.pxPerEm)
 	}
 	parentScale := 1.0
@@ -708,10 +725,20 @@ func (w *wrapper) handleAttributes(element *Element) {
 		return
 	}
 	for _, name := range w.node.Attributes.ExplicitNames() {
-		// MathJax's handleAttributes copies non-MathML Braket, data and ARIA
-		// attributes after styles, scale, borders, and colors.  Standard
-		// MathML attributes are consumed by their wrappers instead.
-		if name != "id" && name != "braketbar" && !strings.HasPrefix(name, "data-") && !strings.HasPrefix(name, "aria-") {
+		// SVGWrapper.handleAttributes excludes this node's defaults, rather
+		// than every MathML attribute name. An attribute meaningful to one
+		// kind (e.g. columnalign) can be passthrough data on another kind.
+		if w.node.Attributes.HasDefault(name) {
+			continue
+		}
+		switch name {
+		case "fontfamily", "fontsize", "fontweight", "fontstyle", "color", "background",
+			"class", "href", "style", "xmlns":
+			continue
+		// The source defaults and skip map also inherit Object.prototype.
+		case "constructor", "__defineGetter__", "__defineSetter__", "hasOwnProperty",
+			"__lookupGetter__", "__lookupSetter__", "isPrototypeOf", "propertyIsEnumerable",
+			"toString", "valueOf", "__proto__", "toLocaleString":
 			continue
 		}
 		if hasElementAttribute(element, name) {

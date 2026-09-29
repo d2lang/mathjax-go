@@ -141,5 +141,5 @@ func (p *parser) amsAlignment(environment string) (nodes []*mml.Node, err error)
 	spacing.applySpacing(table)
 	state.end()
 	ended = true
-	return []*mml.Node{table}, nil
+	return []*mml.Node{finishArrayRules(table)}, nil
 }

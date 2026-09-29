@@ -335,7 +335,14 @@ func empheqTopRowTable(original *mml.Node) *mml.Node {
 }
 
 func empheqCopiedTopRowTable(table *mml.Node) *mml.Node {
-	if len(table.Children) > 1 {
+	if table.Flags.Arity < 0 && len(table.Children) == 1 && table.Children[0].Flags.Inferred {
+		// Source setChildren(childNodes.slice(0, 1)) delegates to this
+		// inferred row. It clears the row before appending that same row,
+		// whose now-empty contents are flattened by appendChild.
+		table.Children[0].SetChildren(nil)
+		refreshDynamicFlags(table.Children[0])
+		refreshDynamicFlags(table)
+	} else if len(table.Children) > 1 {
 		table.SetChildren(table.Children[:1])
 	}
 	table.Attributes.Set("align", "baseline 1")

@@ -83,6 +83,9 @@ func (p *parser) commandNodes(name string, after **derivativeAutoOpen) ([]*mml.N
 	if definition, ok := p.state.pairedDelimiters[name]; ok {
 		return p.invokePairedDelimiter(name, definition)
 	}
+	if isHLine(name) {
+		return nil, misplacedHLine(name)
+	}
 	// Dynamic maps precede Base's closing CellItem handlers, which in turn
 	// precede the symbol fallback (notably the backslash delimiter glyph).
 	if name == "\\" || name == "newline" || name == "cr" {
