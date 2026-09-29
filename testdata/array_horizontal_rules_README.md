@@ -116,16 +116,21 @@ reviewed preview on runtime source `621a31b`; the main merge preserves that
 runtime tree. The 2,444 public, 96 factory/fence, and 128 scale outcomes retain
 the same strict/raw partition and 1,398 public fixes. All 802 runtime-owner
 controls are byte-unchanged. The 4,326 upstream inputs have 30 genuine fixes,
-no regressions, and no changed nonexact results. The 6,574 complete published
-residual inputs have 196 genuine fixes, no regressions, and no changed nonexact
-results; 24 metadata-only records are excluded from this SVG count.
+no regressions, and no changed nonexact results. The complete current main171 inventory contains 6,768 published
+residual/proof inputs with explicit TeX/display identity and original outcomes.
+It has 196 genuine fixes, no regressions, and no changed nonexact results.
+The earlier 6,574-input snapshot and its 24 excluded metadata-only records
+remain preserved separately; the new current inventory also includes runtime
+residual and proof inputs. No missing original result is counted as SVG parity.
 
 Cancel/cancelto attribute insertion order produces apparent byte differences.
 Fourteen original-valid controls were repeated 64 times in each binary: all
 1,792 results match the complete parsed original XML, including every attribute,
 text node and child order. The published and upstream apparent fix counts each
 include one serialization-only match, excluded from the behavioral counts.
-These 14 controls contain no unsupported `enclose` command; unchanged unsupported
+A fresh current-6,768 replay has three serialization-only changes; all 384
+repeated renders match complete original XML as well as each other. The older
+14 controls and current three contain no unsupported `enclose` command; unchanged unsupported
 command outcomes are not recategorized as original matches. This qualification
 is separate from strict SVG assertions, which perform no XML normalization.
 
