@@ -75,17 +75,22 @@ func (p *parser) command(name string) ([]*mml.Node, error) {
 }
 
 type derivativeAutoOpen struct {
-	open            byte
-	closer          byte
-	application     *physicsApplicationArgument
-	ignore          bool
-	openCount       int
-	closed          bool
-	openingConsumed bool
-	smash           bool
-	right           string
-	rightNode       *mml.Node
-	rightParsed     bool
+	open              byte
+	closer            byte
+	application       *physicsApplicationArgument
+	quantity          *physicsQuantityArgument
+	big               string
+	bigOpen, bigClose *mml.Node
+	fencesParsed      bool
+	ignore            bool
+	openCount         int
+	closed            bool
+	openingConsumed   bool
+	smash             bool
+	right             string
+	rightNode         *mml.Node
+	rightParsed       bool
+	trailing          []finalItem
 }
 
 func (a *derivativeAutoOpen) openingFence() byte {
@@ -127,24 +132,56 @@ func (a *derivativeAutoOpen) start(p *parser) bool {
 // while unwinding; no parser tokens are executed during that assembly.
 // A direct SpreadLines Pop calls this only after the outer env is restored.
 func (a *derivativeAutoOpen) parseRight(p *parser) error {
-	if a == nil || a.right == "" || a.rightParsed {
+	if a == nil {
 		return nil
 	}
-	right, err := p.parseChild(a.right)
-	if err != nil {
-		return err
+	if a.right != "" && !a.rightParsed {
+		right, err := p.parseChild(a.right)
+		if err != nil {
+			return err
+		}
+		a.rightNode, a.rightParsed = right, true
 	}
-	a.rightNode, a.rightParsed = right, true
+	if a.big != "" && !a.fencesParsed {
+		left, err := p.parseChild("\\" + a.big + "l" + string(a.openingFence()))
+		if err != nil {
+			return err
+		}
+		right, err := p.parseChild("\\" + a.big + "r" + string(a.closingFence()))
+		if err != nil {
+			return err
+		}
+		a.bigOpen, a.bigClose, a.fencesParsed = left, right, true
+	}
 	return nil
 }
 
 func (a *derivativeAutoOpen) complete(p *parser) ([]*mml.Node, error) {
-	return a.completeAfter(p, nil)
+	nodes, err := a.completeAfter(p, nil)
+	if err != nil {
+		return nil, err
+	}
+	for _, item := range a.takeTrailing() {
+		nodes = append(nodes, item.node)
+	}
+	return nodes, nil
+}
+
+func (a *derivativeAutoOpen) takeTrailing() []finalItem {
+	if a == nil {
+		return nil
+	}
+	items := a.trailing
+	a.trailing = nil
+	return items
 }
 
 // A real AutoOpen is a non-MML successor. Notify its recipient only if it
 // starts, after the command's initial nodes but before parsing its body.
 func (a *derivativeAutoOpen) completeAfter(p *parser, before func()) ([]*mml.Node, error) {
+	if a != nil && a.quantity != nil {
+		return a.quantity.parse(p)
+	}
 	if a != nil && a.application != nil {
 		opened, err := a.application.prepare(p, a)
 		if err != nil || !opened {
@@ -183,9 +220,13 @@ func (a *derivativeAutoOpen) completeAfter(p *parser, before func()) ([]*mml.Nod
 	}
 	// AutoOpen.toMml delegates to fenced, then removes the row's open/close/
 	// texClass properties. Fence nodes use the node factory, not token factory.
-	children := []*mml.Node{p.autoOpenFence(string(a.openingFence()), mml.TeXClassOpen)}
-	children = append(children, content...)
-	children = append(children, p.autoOpenFence(string(a.closingFence()), mml.TeXClassClose))
+	left, right := a.bigOpen, a.bigClose
+	if a.big == "" {
+		left = p.autoOpenFence(string(a.openingFence()), mml.TeXClassOpen)
+		right = p.autoOpenFence(string(a.closingFence()), mml.TeXClassClose)
+	}
+	children := append([]*mml.Node{left}, content...)
+	children = append(children, right)
 	// Removing the texClass property retains the class assigned by fenced.
 	result := forcedRow(children, false)
 	result.TeXClass = mml.TeXClassInner
@@ -207,10 +248,13 @@ func autoOpenFence(text string, class mml.TeXClass) *mml.Node {
 	return n
 }
 
-func (a *derivativeAutoOpen) observe(nodes []*mml.Node) {
-	if len(nodes) == 1 && nodes[0].Kind == "mo" && textContent(nodes[0]) == string(a.openingFence()) {
+func (a *derivativeAutoOpen) accept(item finalItem) bool {
+	// AutoOpen.checkItem first observes the delivered MML, then tests the
+	// same item's marker. A raw bar therefore increments before decrementing.
+	if item.node.Kind == "mo" && textContent(item.node) == string(a.openingFence()) {
 		a.openCount++
 	}
+	return item.autoclose != 0 && item.autoclose == a.closingFence() && a.close()
 }
 
 func (a *derivativeAutoOpen) close() bool {
