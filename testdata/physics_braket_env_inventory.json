@@ -50,7 +50,76 @@
     "receiptSHA256": "d904956af71f2bbe48d8b67b159dfa472b90f4f707896d6bbd85f8b8e778392e",
     "generatorSHA256": "359bff8f7a28f3da977278bda966838b6724d52f7a47b26f0d1de40c3c4ed5c5"
   },
-  "fullGates": "pending on rebased actual main177",
+  "fullGates": {
+    "head": "41623db5f6d3c6840f193e69586865f5127989fe",
+    "internalTree": "be28906e9b072dac5cf0a69b7873a12e0327ad89",
+    "base": "19657cbd098093fcedef0d4b8ceda9e667ea7b83",
+    "status": "terminal-pass",
+    "gates": [
+      {
+        "name": "full",
+        "command": [
+          "/Users/aw/.local/share/go/1.27.0/bin/go",
+          "test",
+          "-p",
+          "1",
+          "./..."
+        ],
+        "status": "terminal",
+        "environmentOverrides": {},
+        "exitCode": 0,
+        "seconds": 45.079
+      },
+      {
+        "name": "race",
+        "command": [
+          "/Users/aw/.local/share/go/1.27.0/bin/go",
+          "test",
+          "-race",
+          "-p",
+          "1",
+          "./..."
+        ],
+        "status": "terminal",
+        "environmentOverrides": {},
+        "exitCode": 0,
+        "seconds": 298.697
+      },
+      {
+        "name": "vet",
+        "command": [
+          "/Users/aw/.local/share/go/1.27.0/bin/go",
+          "vet",
+          "-p",
+          "1",
+          "./..."
+        ],
+        "status": "terminal",
+        "environmentOverrides": {},
+        "exitCode": 0,
+        "seconds": 2.066
+      },
+      {
+        "name": "wasm",
+        "command": [
+          "/Users/aw/.local/share/go/1.27.0/bin/go",
+          "build",
+          "-p",
+          "1",
+          "./..."
+        ],
+        "status": "terminal",
+        "environmentOverrides": {
+          "GOOS": "js",
+          "GOARCH": "wasm"
+        },
+        "exitCode": 0,
+        "seconds": 3.852
+      }
+    ],
+    "finalHead": "41623db5f6d3c6840f193e69586865f5127989fe",
+    "finalStatus": ""
+  },
   "publicationBaseTree": "350f537f0eaf94da74d98d0005687b3a8bfe45d2",
   "publishedBaseHead": "1994824901e61b4b933d86dc3264ef0177034d72",
   "publicationOverlap": {
