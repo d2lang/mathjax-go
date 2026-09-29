@@ -36,9 +36,12 @@ The final fixture contains 264 controls outside Quantity and 48 nested-tail
 controls, with no overlap with the other inputs. Thus these files preserve
 3,350 unique originals: 3,332 SVGs (2,268 valid and 1,064 error SVGs) and 18
 runtimes. Tests make 3,342 complete SVG assertions because of the ten overlaps.
-All strict originals are well-formed XML. The first-publication overlap count
-will be bound separately to the final merged base; these totals do not claim
-that every original is newly published.
+All strict originals are well-formed XML. A recursive scan of 474 tracked JSON
+and gzip reference files at merged main173
+`fcb39d5f2a9f5c5f55075b7a33675a2965ea3a21` classifies the 3,332 unique SVG
+inputs as 3,204 first-publication inputs, 40 promotions of previously raw
+originals, and 88 existing full references. No original mismatch or ambiguous
+match was found. The 18 runtime observations are counted separately.
 
 The 16 NEL observations retain the original null-range exception and assert the
 existing bounded U+0085 conversion failure with empty output. The other two
@@ -49,19 +52,38 @@ inputs broken by the initial Quantity preview.
 
 ## Current validation boundary
 
-The compiled preview `e97c9b50` is based on Eval `436b429` and predates HLine
-integration. Its 270-SVG focused test and existing AutoOpen consumer tests pass;
-the full new fixture tests still require the final-base gate run.
+The tested source is `98f2e4e8a697a3947d5e49bf8f38d0d652ee7185`, based on
+actual merged main173 `fcb39d5f2a9f5c5f55075b7a33675a2965ea3a21`, with
+internal tree `932afa3ded5b0b0838c1f91192c2a62c4d42ff7d`. The final-base
+focused tests pass all 3,342 SVG assertions and the Physics, HLine, runtime-end
+and AutoOpen consumer controls. The complete frozen-oracle suite, race tests, vet and
+WASM build pass sequentially on that exact source. Both new D2 comparisons
+were visually inspected, both complete fixed SVGs equal the frozen original,
+and all 83 integration examples are byte-exact in round 59. The brace witness
+changes incorrect parentheses to curly braces; the order witness restores the
+calligraphic O and its function spacing.
 
-Prebuilt comparisons against that same preview baseline find all 3,332 unique
-SVGs exact, 1,382 fixes, and no original-runtime acceptance. All 5,621 shared
-AutoOpen controls are unchanged. Runtime's 802 controls have 12 exact fixes and
-two changed error diagnostics. Published and upstream replays yield 284 and 54
-genuine fixes respectively, with no genuine exact regressions. Eight authored
-attribute-order controls were checked with 64 complete renders per binary;
-their 1,024 raw outputs and complete XML proofs exclude serialization-only
-apparent changes from those counts. The inherited unsupported-enclose original
-remains raw, not an exact result.
+The current-base replay finds all 3,332 unique SVGs exact, 1,382 fixes and no
+original-runtime acceptance. All 1,342 Eval outputs, 2,444 HLine outputs and
+5,621 shared AutoOpen outputs remain unchanged. The 802 runtime-end controls
+have 12 exact fixes and two changed error diagnostics retained below. The
+4,326-input upstream replay has 54 exact fixes and no changed nonexact or
+formerly-exact regressions. The 6,800 published-input replay has 284 genuine
+fixes, no genuine regressions and the two documented error residuals.
+
+The current published sample contains five distinct serialization-only changes:
+two apparent fixes and three apparent regressions. The same three regressions
+also carry changed-nonexact labels; those are not three additional inputs.
+A fresh check of 11 distinct controls, including all eight preserved pre173
+controls and three additional current-base cases, rendered each input 64 times
+per binary (1,408 raw outputs). Both binaries produced both attribute orders
+for every control. Complete XML comparisons include attributes, text, tails
+and ordered children; the only allowed raw difference is one exact adjacent
+authored-attribute swap. All ten original-valid controls match the complete
+original XML. These checks do not normalize any test expectation. The remaining
+unsupported-enclose original is an undefined-command error: equality between
+the two Go XML trees proves unchanged inherited behavior, not original parity.
+Historical pre173 proof remains separately preserved.
 
 `physics_quantity_residuals.json` separately retains four historical proof
 records: two affected Quantity inputs and two existing Eval literal controls.
@@ -89,5 +111,9 @@ The generators validate asset hashes, retain explicit display mode, preserve
 literal LS/PS through JSONL framing, and regenerate complete original outputs
 only. Raw candidate/baseline qualification fields remain observations; the
 generators never read a Go binary or choose references according to Go output.
-Final-base composition, published-reference overlap, and the complete frozen
-oracle/race/vet/WASM gates remain required before publication.
+Independent scratch regeneration reproduced all four files byte-for-byte,
+including the complete original exception strings and diagnostic controls.
+The reviewed export and its actual173 rebase have identical fixtures, tests
+and generators. Current-base output qualification and all four Go gates are
+complete. The D2 build, both visual comparisons and all 83 integration examples
+also pass on that unchanged production tree.

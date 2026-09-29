@@ -1,7 +1,7 @@
 {
-  "phase": "pre172 preview on Eval436b429; not final release composition",
-  "sourceHead": "e97c9b50a688023b10dd0fed1438eabe0012aeec",
-  "internalTree": "45b5a56abd6eb0d85c872338832ef74f79fa7c32",
+  "phase": "Final source and fixtures tested on actual merged main173; all Go gates and D2 evidence verified",
+  "sourceHead": "98f2e4e8a697a3947d5e49bf8f38d0d652ee7185",
+  "internalTree": "932afa3ded5b0b0838c1f91192c2a62c4d42ff7d",
   "fixtures": {
     "physics_quantity_mathjax_3_2_2.json.gz": {
       "inputs": 2776,
@@ -90,21 +90,275 @@
   ],
   "strictSVGAssertions": 3342,
   "uniqueStrictSVGs": 3332,
-  "firstPublicationOverlap": "Pending final actual173 or explicit exact preview Git scan",
-  "validation": {
-    "own2776": "2760 exact/1116 fixes;16 unchanged original runtime API outcomes",
-    "delivery272": "270 exact/230 fixes;all10 initial regressions repaired;2 unchanged original runtimes",
-    "siblings264": "264 exact unchanged",
-    "nestedTrailing48": "48 exact/42 fixes;zero overlap with prior3302",
-    "shared5621": "unchanged",
-    "runtime802": "12 fixes;2 changed error diagnostics bound to inherited Eval literal controls",
-    "published6800": "284 genuine fixes/0 genuine regressions/2 changed error diagnostics;serialization controls excluded",
-    "upstream4326": "54 genuine fixes/0 genuine regressions;serialization controls excluded"
+  "firstPublicationOverlap": {
+    "baseCommit": "fcb39d5f2a9f5c5f55075b7a33675a2965ea3a21",
+    "strictPublicInputs": 3332,
+    "scannedFiles": 474,
+    "counts": {
+      "first-input-publication": 3204,
+      "promoted-raw-original": 40,
+      "prior-full-reference": 88
+    },
+    "originalMismatches": [],
+    "ambiguousOnly": 0
   },
-  "pending": [
-    "Final actual173 composition",
-    "Current-base probe/replays",
-    "Final first-publication inventory",
-    "Full frozen oracle/race/vet/WASM"
-  ]
+  "validation": {
+    "uniqueOwn3350": {
+      "exactSVG": 3332,
+      "genuineFixes": 1382,
+      "regressions": 0,
+      "changedNonexact": 0,
+      "preservedOriginalRuntimes": 18
+    },
+    "strictGoAssertions": {
+      "SVGAssertions": 3342,
+      "status": "focused-pass",
+      "includes": [
+        "Physics",
+        "HLine",
+        "runtime ends",
+        "AutoOpen consumers"
+      ]
+    },
+    "eval1342": {
+      "total": 1342,
+      "baselineExact": 1342,
+      "candidateExact": 1342,
+      "unchanged": 1342,
+      "protocolOnly": 0,
+      "fixed": 0,
+      "regression": 0,
+      "changedNonexact": 0,
+      "baselineProcessFailures": 0,
+      "candidateProcessFailures": 0
+    },
+    "hline2444": {
+      "total": 2444,
+      "baselineExact": 2412,
+      "candidateExact": 2412,
+      "unchanged": 2444,
+      "protocolOnly": 0,
+      "fixed": 0,
+      "regression": 0,
+      "changedNonexact": 0,
+      "baselineProcessFailures": 0,
+      "candidateProcessFailures": 0
+    },
+    "shared5621": {
+      "inputs": 5621,
+      "baselineExact": 5514,
+      "candidateExact": 5514,
+      "unchanged": 5621,
+      "protocolOnly": 0,
+      "fixed": 0,
+      "regression": 0,
+      "changedNonexact": 0,
+      "originalRuntime": 0
+    },
+    "runtime802": {
+      "inputs": 802,
+      "baselineExact": 670,
+      "candidateExact": 682,
+      "unchanged": 788,
+      "protocolOnly": 48,
+      "fixed": 12,
+      "regression": 0,
+      "changedNonexact": 2,
+      "originalRuntime": 54
+    },
+    "upstream4326": {
+      "status": "terminal-qualified",
+      "qualification": {
+        "rawSummary": {
+          "total": 4326,
+          "baselineExact": 4163,
+          "candidateExact": 4217,
+          "unchanged": 4272,
+          "protocolOnly": 0,
+          "fixed": 54,
+          "regression": 0,
+          "changedNonexact": 0,
+          "baselineProcessFailures": 0,
+          "candidateProcessFailures": 0,
+          "originalErrorCandidateValid": 28
+        },
+        "serializationCounts": {},
+        "genuineFixes": 54,
+        "genuineExactRegressions": 0,
+        "genuineChangedNonexact": 0
+      }
+    },
+    "published6800": {
+      "status": "terminal-qualified",
+      "qualification": {
+        "rawSummary": {
+          "total": 6800,
+          "baselineExact": 3512,
+          "candidateExact": 3795,
+          "unchanged": 6509,
+          "protocolOnly": 914,
+          "fixed": 286,
+          "regression": 3,
+          "changedNonexact": 5,
+          "baselineProcessFailures": 0,
+          "candidateProcessFailures": 0,
+          "originalErrorCandidateValid": 150,
+          "changedNonexact_validSVG": 3,
+          "changedNonexact_errorSVG": 2
+        },
+        "serializationCounts": {
+          "attributeOnlyInputs": 5,
+          "apparent_fixed": 2,
+          "apparent_regression": 3,
+          "apparent_changedNonexact": 3
+        },
+        "genuineFixes": 284,
+        "genuineExactRegressions": 0,
+        "genuineChangedNonexact": 2
+      }
+    },
+    "originalRegeneration": {
+      "generators": 4,
+      "allBytesIdentical": true,
+      "reviewedExport": "875e987b9a5670e5ae0905ad8e764bdb55053ffd",
+      "unchangedAtFinalSource": "98f2e4e8a697a3947d5e49bf8f38d0d652ee7185"
+    },
+    "gates": {
+      "head": "98f2e4e8a697a3947d5e49bf8f38d0d652ee7185",
+      "internalTree": "932afa3ded5b0b0838c1f91192c2a62c4d42ff7d",
+      "base": "fcb39d5f2a9f5c5f55075b7a33675a2965ea3a21",
+      "baseStatus": "Actual merged main173",
+      "status": "terminal-pass",
+      "gates": [
+        {
+          "name": "full",
+          "command": [
+            "/Users/aw/.local/share/go/1.27.0/bin/go",
+            "test",
+            "-p",
+            "1",
+            "./..."
+          ],
+          "status": "terminal",
+          "environmentOverrides": {},
+          "exitCode": 0,
+          "seconds": 43.714
+        },
+        {
+          "name": "race",
+          "command": [
+            "/Users/aw/.local/share/go/1.27.0/bin/go",
+            "test",
+            "-race",
+            "-p",
+            "1",
+            "./..."
+          ],
+          "status": "terminal",
+          "environmentOverrides": {},
+          "exitCode": 0,
+          "seconds": 224.29
+        },
+        {
+          "name": "vet",
+          "command": [
+            "/Users/aw/.local/share/go/1.27.0/bin/go",
+            "vet",
+            "-p",
+            "1",
+            "./..."
+          ],
+          "status": "terminal",
+          "environmentOverrides": {},
+          "exitCode": 0,
+          "seconds": 0.825
+        },
+        {
+          "name": "wasm",
+          "command": [
+            "/Users/aw/.local/share/go/1.27.0/bin/go",
+            "build",
+            "-p",
+            "1",
+            "./..."
+          ],
+          "status": "terminal",
+          "environmentOverrides": {
+            "GOOS": "js",
+            "GOARCH": "wasm"
+          },
+          "exitCode": 0,
+          "seconds": 0.894
+        }
+      ],
+      "finalHead": "98f2e4e8a697a3947d5e49bf8f38d0d652ee7185",
+      "finalStatus": ""
+    },
+    "serialization": {
+      "status": "terminal-pass",
+      "controls": 11,
+      "repeatsPerBinaryPerInput": 64,
+      "rawRepeatedOutputs": 1408,
+      "currentChangedPublishedInputs": 5,
+      "apparentFixesExcluded": 2,
+      "apparentRegressionsExcluded": 3,
+      "overlappingChangedNonexactLabels": 3,
+      "originalValidControls": 10,
+      "inheritedUnsupportedEncloseControls": 1,
+      "method": "Complete expanded XML tags, attributes, text, tails, comments/PIs and ordered children, plus exact raw adjacent authored-attribute swap. All complete original objects unchanged. No test normalization."
+    },
+    "D2Evidence": {
+      "build": {
+        "source": "98f2e4e8a697a3947d5e49bf8f38d0d652ee7185",
+        "internalTree": "932afa3ded5b0b0838c1f91192c2a62c4d42ff7d",
+        "status": "terminal",
+        "exitCode": 0,
+        "seconds": 2.627,
+        "binarySHA256": "b4fc3716170ac719b7785258e8006dc75e04786f1389a55af51470cac0cbef76"
+      },
+      "visualAndExampleReview": {
+        "status": "PASS",
+        "allD2Witnesses": 83,
+        "allD2ByteExact": true,
+        "manifest": "integration-evidence-round59-physics-quantity/manifest.json",
+        "binarySHA256": "b4fc3716170ac719b7785258e8006dc75e04786f1389a55af51470cac0cbef76",
+        "cases": [
+          {
+            "slug": "physics-quantity-braces",
+            "visuallyInspectedBy": "root",
+            "observation": "Before shows round parentheses around x+y; after and original show curly braces, at one shared scale.",
+            "completeAfterEqualsOriginal": true,
+            "comparisonSHA256": "69ddf79e48c02ea52dd9c998e1ecedaf5aa8365f33feedfd5ea59495dc0f84c3"
+          },
+          {
+            "slug": "physics-quantity-order",
+            "visuallyInspectedBy": "root",
+            "observation": "Before shows italic O with tighter following parentheses; after and original show the calligraphic O and original function spacing, at one shared scale.",
+            "completeAfterEqualsOriginal": true,
+            "comparisonSHA256": "1381ac72d0b7079c4cf6af16ef55496bb60015da7a93f993d0242bd6b46367bd"
+          }
+        ]
+      }
+    }
+  },
+  "pending": [],
+  "actualBase": "fcb39d5f2a9f5c5f55075b7a33675a2965ea3a21",
+  "binaryBinding": {
+    "baselineSHA256": "4db90c0436e0e06200586eec82524a1df3747a4681ca85d5560ddfd838bffac8",
+    "candidateSHA256": "f2af3146982cab273d9bd087d1e6b4112563a1cb69a1d7e8c2adce66a75d616e"
+  },
+  "qualifications": {
+    "runtimeOutcomes": "16 original NEL null-range exceptions require exact bounded conversion error and empty SVG; two original SpreadLines null-isInferred exceptions require non-success, not exact original runtime parity.",
+    "arrayEndDiagnostics": "Two changed error-SVG targets remain raw, outside the strict union; original targets equal their Eval literal controls, and candidate targets equal both unchanged control outputs.",
+    "serialization": "Only complete XML equality plus exact authored-attribute ordering swaps qualify apparent changes. No SVG assertion normalizes output.",
+    "unsupportedEnclose": "Frozen original undefined-command error remains raw. Baseline/candidate complete XML equality proves unchanged inherited behavior, not original equality."
+  },
+  "historicalPreview": {
+    "source": "e97c9b50a688023b10dd0fed1438eabe0012aeec",
+    "baseDependency": "436b42957bead58b17617c2c1e0ae04ce0057bbb",
+    "serializationInputs": 8,
+    "repeatsPerBinaryPerInput": 64,
+    "rawRepeatedOutputs": 1024,
+    "supersededForCurrentCounts": true
+  }
 }
