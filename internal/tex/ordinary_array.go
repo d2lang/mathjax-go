@@ -76,11 +76,20 @@ func (p *parser) ordinaryArrayEnvironment(name string, begin *environmentFrame) 
 	owner := &ordinaryArrayItem{begin: begin}
 
 	columns := "c"
+	verticalAlign := ""
 	var err error
+	if name == "array" {
+		verticalAlign, err = p.readArrayAlignment()
+		if err != nil {
+			return nil, err
+		}
+	}
 	if name == "array" || name == "subarray" || name == "crampedsubarray" {
-		// AlignedArray's optional-position setup is a separate existing gap.
-		// This ownership change retains the existing argument reader/order.
-		columns, _, err = p.readArgument("begin{"+name+"}", false)
+		argumentName := "begin{" + name + "}"
+		if name == "array" {
+			argumentName = "begin"
+		}
+		columns, _, err = p.readArgument(argumentName, false)
 		if err != nil {
 			return nil, err
 		}
@@ -164,6 +173,9 @@ func (p *parser) ordinaryArrayEnvironment(name string, begin *environmentFrame) 
 		}
 		table = p.leftRightFenced(open, finishArrayRules(table), close, true)
 	} else {
+		if name == "array" {
+			setArrayAlign(table, verticalAlign)
+		}
 		table = applyColumnSpec(table, columns)
 		open, close := matrixDelimiters(name)
 		if open != "" || close != "" {
