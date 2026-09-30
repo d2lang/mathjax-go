@@ -15,6 +15,8 @@ import (
 // and leaves Begin executing with the pending cell's raw nodes.
 // A live standalone Matrix uses the same Pop result carrier with begin=nil;
 // its pending nodes return directly to the caller without a continued Begin.
+// Cases uses this same ArrayItem result carrier for EqnArray while retaining
+// its distinct shared CasesBegin and two-End decoration sequence.
 type ordinaryArrayItem struct {
 	begin  *environmentFrame
 	end    *environmentEndItem

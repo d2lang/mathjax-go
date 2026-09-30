@@ -1,0 +1,123 @@
+{
+  "status": "INSTALLED_SOURCE_QUALIFIED_D2_103_AND_FOCUSED100_PASS",
+  "d2Commit": "01bc7ecdbdd04c13d6fe5df1967d2d9aa14ae579",
+  "beforeMathjaxCommit": "c24058161bb5df6af3f269ce65030c94079b952a",
+  "fixedProduction": {
+    "internal/tex/cases_handlers.go": {
+      "baseSHA256": "2f35f79efb9d55f676fa7749c73cb4981f8c4d0daf57a988484d969e13f55939",
+      "proposedPath": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/public-array-followup-after184/production-draft185/cases_handlers.go",
+      "proposedSHA256": "c9e74c4c4cc646471aecf443ab97d079b754c69958d766bd2d097ab92cb9fcf1"
+    },
+    "internal/tex/environment_end.go": {
+      "baseSHA256": "cbc865ea3cd2bb003d958c4cf8eef974d7953d239a240fb23a981a0a7ab6d712",
+      "proposedPath": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/public-array-followup-after184/production-draft185/environment_end.go",
+      "proposedSHA256": "3334f3391f3ff340cd68da2d8b6674384a9378f0a344447a3b6237350e0bd71c"
+    },
+    "internal/tex/ordinary_array.go": {
+      "baseSHA256": "3dca5bec34667e2ab672995ccdbc1e2ab938f73b50a4407249d5070fa32ca5fd",
+      "proposedPath": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/public-array-followup-after184/production-draft185/ordinary_array.go",
+      "proposedSHA256": "43c5d1f8647bdd0579415dab5cc3bf894f86af9ab5f8dd003f4b25d37789266d"
+    }
+  },
+  "D2BinarySHA256": "909477c1d55da2b712d8bb06e921c1fbc87b2a4e9c72703518beb516efb6063a",
+  "afterOriginalByteExact": true,
+  "afterOriginalPNGByteExact": true,
+  "newD2OriginalByteExact": 1,
+  "priorD2OriginalByteExact": 102,
+  "allD2OriginalByteExact": 103,
+  "files": {
+    "witness.d2": "b36aa4c47710675264c848aa8c1945e7cb52b130f1b52e98939c9f88e7914f65",
+    "before.svg": "17b75f5e623c0d8b6e344d12a3487111249c1d9cbad6a243bd68a4aa69caa15c",
+    "after.svg": "fcffbd58f99d1025bc7763479120414a0f158ba5bdfd342fe625e9b4a26e38a1",
+    "original.svg": "fcffbd58f99d1025bc7763479120414a0f158ba5bdfd342fe625e9b4a26e38a1",
+    "before.png": "cca1f4273fc9e94ebcc8cc9e934f1a7386a0e9bfc75fbef6ce0ad57274ddacd8",
+    "after.png": "6bc75902c951c0c5cefb0d48551f16e890be5b04a1f1c0bf267c4db6858f7c91",
+    "original.png": "6bc75902c951c0c5cefb0d48551f16e890be5b04a1f1c0bf267c4db6858f7c91",
+    "comparison.png": "ff141c39e97595dec99c78463a71a1bd993f1eea8e32051c47a6d161bae6fb16",
+    "README.md": "d75a5a6d734c832b774b24a50d70dbcf7d3ca00f54b8d6ab6d89209fa62cd2b6"
+  },
+  "screenshot": {
+    "factor": 1.4878892733564013,
+    "images": [
+      {
+        "width": 289,
+        "height": 68,
+        "renderedWidth": 430,
+        "renderedHeight": 101
+      },
+      {
+        "width": 132,
+        "height": 94,
+        "renderedWidth": 196,
+        "renderedHeight": 140
+      },
+      {
+        "width": 132,
+        "height": 94,
+        "renderedWidth": 196,
+        "renderedHeight": 140
+      }
+    ]
+  },
+  "screenshotDeviceScaleFactor": 2,
+  "comparisonPNGDimensions": [
+    3000,
+    1608
+  ],
+  "rootActuallyViewed": true,
+  "beforeDiagnosticTranscribed": "Missing \\end{numcases}",
+  "receiptHashes": {
+    "candidate56-root185/measurement.json": "ebff23e1be43a40c3c560266e7758dbbe6d184ae54bce64273cdefbc4e999618",
+    "d2-before-original-matrix-root185/measurement.json": "302e665b548493960a5e7b3724d5c47ad3c98487a2fe8b06f420dc5d6c789f35",
+    "d2-candidate-root185/measurement.json": "6b9bdbd6e04a6a495de0c45a3c491f1cc5b64dc79f16ec4aeac688a2dd2ee971",
+    "d2-candidate-root185/prior-replay-receipt.json": "b8aff825b0f6394780d07483e6b45a953e057735283860558a3bcb52b3fc8669",
+    "d2-candidate-root185/cases-array-pop/screenshot-receipt.json": "6b2565b1b8adfddb7c5da1928fc1e0a5d2668bff646b359e07d800a7c1265226",
+    "d2-candidate-root185/cases-array-pop/root-visual-inspection.json": "c293f7878ba8bfe5e53d4fa4a4c85c6d69907905ee468fe09e592d4bd3553266"
+  },
+  "completeOriginalMathEmbedded": true,
+  "originalsRegeneratedDuringAfter": false,
+  "validationScope": "100 strict public SVG APIs, four native physical continuations,112 whole original regeneration records,146639 protected distinct inputs and103 full D2 references; no full parity or excluded-runtime equality claim. Final committed local gates and exact-head CI are recorded separately.",
+  "sourceAppliedExactToMeasuredProduction": true,
+  "rootCompletedValidation": {
+    "focused100-root185/measurement.json": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/public-array-followup-after184/focused100-root185/measurement.json",
+      "sha256": "719e71894ad23e5b8ef2699442258617365dfe28dc6fa8629b9d575227f77f72"
+    },
+    "numcases-direct-pop-original-regeneration100-root185/regeneration.json": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/public-array-followup-after184/numcases-direct-pop-original-regeneration100-root185/regeneration.json",
+      "sha256": "6d49c0a0e4f5b61154f5f773dfbf4d39ccc649c35af86771d383daaeb19c0855"
+    },
+    "focused100-and-original112-saved-peer185.json": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/public-array-followup-after184/focused100-and-original112-saved-peer185.json",
+      "sha256": "d243ed9026d049bd6274137ff2bc94441457c20d626887da5f097fa7314372fc"
+    },
+    "fixtures-combined100-static-peer185.json": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/public-array-followup-after184/fixtures-combined100-static-peer185.json",
+      "sha256": "b48f6ed129c1b52b3a3fcfa2f9b0c80c8548088c1cd5fd81e1398f36eb156ec0"
+    },
+    "protected-candidate185-root/summary.json": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/public-array-followup-after184/protected-candidate185-root/summary.json",
+      "sha256": "e66760bd0334903a791225d2eb0cf731418a5db648015a631ccc4dd12ca6d7f4"
+    },
+    "cancel-order-current512-root185/receipt.json": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/public-array-followup-after184/cancel-order-current512-root185/receipt.json",
+      "sha256": "2ddd460d84410660d1e10787f1cc7544741120b3699f3d26b9521ba62097681b"
+    },
+    "candidate-full-and-d2-saved-peer185.json": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/public-array-followup-after184/candidate-full-and-d2-saved-peer185.json",
+      "sha256": "e613ef5b57e7bf3a3ebeff05d2215aa164e808f1aa599a8f7c3cef4284fc06cc"
+    },
+    "risk56-root185/root-qualification.json": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/public-array-followup-after184/risk56-root185/root-qualification.json",
+      "sha256": "e5075ab7ed56f221a881f77214d8ffc76eac590d669172df45802c5526ff5352"
+    },
+    "protectedOutcomePeer": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/public-array-followup-after184/protected-saved-peer185.json",
+      "sha256": "44220e6ebad3a0629e5bcfcd9071d160201fc5b7bd69b23c8252f07bec56a3f0"
+    },
+    "cancelOutcomePeer": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/public-array-followup-after184/cancel4-current512-saved-peer185.json",
+      "sha256": "1a0c1276f7d7d879d2c677d68ca1a9d1a4421b1cc3e4f9014aea3d15ab95740c"
+    }
+  }
+}
