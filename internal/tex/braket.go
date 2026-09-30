@@ -38,7 +38,9 @@ func (p *parser) braket(name string) ([]*mml.Node, error) {
 	if !item.single {
 		p.cdArrayEntry = false
 	}
-	defer func() { p.braketOwner, p.cdArrayEntry, p.environmentRow, p.ordinaryArray = previous, cdArrayEntry, environmentRow, ordinaryArray }()
+	defer func() {
+		p.braketOwner, p.cdArrayEntry, p.environmentRow, p.ordinaryArray = previous, cdArrayEntry, environmentRow, ordinaryArray
+	}()
 	children, _, err := p.parseRowWithInfix(terminator, false, false)
 	if err != nil {
 		return nil, err

@@ -415,9 +415,9 @@ func (p *parser) parseTableWithOrdinaryArray(body, style string, alignFills bool
 	}
 	err := p.parseArrayBody(body, arrayBodyOwner{
 		environment: environment,
-		ordinary: ordinary,
-		rules:      newArrayRules(table),
-		hasEntries: func() bool { return len(entries) != 0 },
+		ordinary:    ordinary,
+		rules:       newArrayRules(table),
+		hasEntries:  func() bool { return len(entries) != 0 },
 		endEntry: func(children []*mml.Node, fill *arrayCellState) error {
 			content := fill.finish(matrixCellContent(children), len(children))
 			cell := node("mtd", content)

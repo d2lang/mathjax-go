@@ -39,11 +39,11 @@ func isOrdinaryArrayEnvironment(name string) bool {
 // Keep the full environment for resuming Begin after Array is directly popped.
 type ordinaryBeginEnvironment struct {
 	multiLetterFont, activeFont, activeColor string
-	identifierPattern                       identifierPattern
+	identifierPattern                        identifierPattern
 	operatorLetters, noAutoOP                bool
 	fontExplicitEmpty, inRoot                bool
-	vectorFont                              string
-	vectorStar                              bool
+	vectorFont                               string
+	vectorStar                               bool
 }
 
 func (p *parser) ordinaryBeginEnvironment() ordinaryBeginEnvironment {
