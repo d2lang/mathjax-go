@@ -68,7 +68,9 @@ func (p *parser) ordinaryArrayEnvironment(name string, begin *environmentFrame) 
 	// Retain the existing Array setup scope; individual cells additionally
 	// clear font and identifier state in matrixCellParser.
 	p.inRoot, p.activeColor = false, ""
-	begin.stream, begin.ordinaryArray = true, true
+	// Ordinary Array owns its EOF check independently of legacy streaming
+	// frames, which can be inherited by captured table child parsers.
+	begin.ordinaryArray = true
 	owner := &ordinaryArrayItem{begin: begin}
 
 	columns := "c"

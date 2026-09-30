@@ -999,8 +999,7 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 	if closeErr := closeStyles(); closeErr != nil {
 		return nil, "", closeErr
 	}
-	if p.environmentRow != nil && p.environmentRow.stream && !p.environmentRow.closed &&
-		p.ordinaryArray == nil && !(p.environmentRow.ordinaryArray && infixPending) {
+	if p.environmentRow != nil && p.environmentRow.stream && !p.environmentRow.closed {
 		return nil, "", p.environmentRow.missing()
 	}
 	if auto != nil {
