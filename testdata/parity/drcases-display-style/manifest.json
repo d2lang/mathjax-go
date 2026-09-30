@@ -1,0 +1,30 @@
+{
+  "D2Commit": "01bc7ecdbdd04c13d6fe5df1967d2d9aa14ae579",
+  "beforeActualMathjaxCommit": "5985de47cd782beeee58344eb1ddaa0bbd5cc51e",
+  "beforeProductionSource": "3c9e0bd813e703c8bc95ce445ea3444222b63203",
+  "beforeBinarySHA256": "8796197d110fbd4169951b8d38d87e78cf236f023ed667d2c75b8ce20c5e1d0f",
+  "afterProductionSource": "b25453663d1e4b6f12be0943d367bbb2aab03ae8",
+  "afterInternalTree": "ecc3a0c388573b6d42074d5fa4ef1b513b7067c2",
+  "afterBinarySHA256": "28a74f07ef8d8628b5ab941a133f9e92578fb61e1ffaeaf7d6890cb2f54fef95",
+  "originalMathjaxVersion": "3.2.2",
+  "originalSourcePin": "ad8f5c21cb810236551da8c6512ba733e67357ee",
+  "originalD2AssetPin": "5666d9337c77a4803b9cd60cb1c5a24439d0f949",
+  "originalAssetSHA256": {
+    "mathjax.js": "cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869",
+    "polyfills.js": "7fe1d048c78b0e09854c1259f7413868a51cc8f0c822489eb1ac36ae6c85ce01",
+    "setup.js": "a52cb0bbabfbd7796b9fedd793b9386c474e3123e788ee151cbe47ca1fa6e881"
+  },
+  "afterOriginalByteExact": true,
+  "sharedScaleScreenshots": true,
+  "rootVisualReview": "Viewed all three panels; larger fractions and vertically stacked sum limits match reference.",
+  "filesSHA256": {
+    "witness.d2": "33d2cefc13c11383eeef3d5cfc2238cafcb6a6552adcad9fa9350289bd1c2bdf",
+    "before.svg": "a41c1d5aae22a59903a4633a046c311f30bc89e97e043b4c3374cd565e33657e",
+    "after.svg": "528c6affb1a8777e08fe0f4e2c491b6d912361b3c53de3c2754ed4834357c430",
+    "original.svg": "528c6affb1a8777e08fe0f4e2c491b6d912361b3c53de3c2754ed4834357c430",
+    "before.png": "6d7396d0dbd376469ef7403927e32a558fb4c6d022b02eb8970af2f72e727d37",
+    "after.png": "2d86e1b8bdc1d1821b24cff4c3b3bd441b6efa25076087e48bdecd2774df242b",
+    "original.png": "2d86e1b8bdc1d1821b24cff4c3b3bd441b6efa25076087e48bdecd2774df242b",
+    "comparison.png": "785c0b978d2f85e9ecfe16efa939af4dd031ffb709372d4c5de74d9dfe178889"
+  }
+}
