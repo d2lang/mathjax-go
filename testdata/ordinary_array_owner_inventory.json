@@ -219,7 +219,102 @@
       "augmentedFullBegin": 30,
       "augmentedTreeSVGOnly": 12
     },
-    "fullGates": "pending root",
+    "fullGates": {
+      "status": "terminal-pass",
+      "testedHead": "c56239e274e5ee8f98802bf95e295f503c89e1ce",
+      "internalTree": "ec1d0d9678f43c2dbeeb6b0e5523fb90cb59f8f9",
+      "productionSourceHead": "3c9e0bd813e703c8bc95ce445ea3444222b63203",
+      "receiptSHA256": "ce99b865a69ffb9ac53ec06befac16c6670ee525b0525e1d6965be3378cd4276",
+      "goVersion": "go version go1.27.0 darwin/arm64",
+      "originalAssets": {
+        "mathjax.js": "cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869",
+        "polyfills.js": "7fe1d048c78b0e09854c1259f7413868a51cc8f0c822489eb1ac36ae6c85ce01",
+        "setup.js": "a52cb0bbabfbd7796b9fedd793b9386c474e3123e788ee151cbe47ca1fa6e881"
+      },
+      "nodeRuntime": {
+        "binary": "/Users/aw/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "binarySHA256": "27db838bb204ef7c21df2931f5656e4c8fb32e6e947f363a402b49714d32b5b1",
+        "version": "v24.19.0",
+        "wrapperSHA256": "d929b50cc455d9c5aabbbec9a18c0e422d9e29d43560987994e9fcb00bf072ba",
+        "freshOriginalVM": "Existing frozen oracle script creates fresh runtime per render"
+      },
+      "environment": {
+        "GOFLAGS": "-p=1",
+        "GOTOOLCHAIN": "local",
+        "MATHJAX_GO_ORACLE_DIR": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/oracle-assets",
+        "MATHJAX_GO_NODE": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/raise-node-jitless",
+        "MATHJAX_GO_ORACLE_FULL": "1"
+      },
+      "dependencyBlobs": {
+        "go.mod": "dde37ca1954001cc619bb7616daa441f89502cd5",
+        "go.sum": null
+      },
+      "gates": [
+        {
+          "name": "full",
+          "command": [
+            "/Users/aw/.local/share/go/1.27.0/bin/go",
+            "test",
+            "-p",
+            "1",
+            "./...",
+            "-count=1"
+          ],
+          "environmentOverrides": {},
+          "status": "terminal",
+          "exitCode": 0,
+          "seconds": 74.576
+        },
+        {
+          "name": "race",
+          "command": [
+            "/Users/aw/.local/share/go/1.27.0/bin/go",
+            "test",
+            "-race",
+            "-p",
+            "1",
+            "./...",
+            "-count=1"
+          ],
+          "environmentOverrides": {},
+          "status": "terminal",
+          "exitCode": 0,
+          "seconds": 434.875
+        },
+        {
+          "name": "vet",
+          "command": [
+            "/Users/aw/.local/share/go/1.27.0/bin/go",
+            "vet",
+            "-p",
+            "1",
+            "./..."
+          ],
+          "environmentOverrides": {},
+          "status": "terminal",
+          "exitCode": 0,
+          "seconds": 1.047
+        },
+        {
+          "name": "wasm",
+          "command": [
+            "/Users/aw/.local/share/go/1.27.0/bin/go",
+            "build",
+            "-p",
+            "1",
+            "./..."
+          ],
+          "environmentOverrides": {
+            "GOOS": "js",
+            "GOARCH": "wasm"
+          },
+          "status": "terminal",
+          "exitCode": 0,
+          "seconds": 1.015
+        }
+      ],
+      "publicationPolicy": "Final documentation changes only; all production/test/generator/fixture/D2 bytes must equal this tested head. GitHub CI is checked on the exact publication head before merge."
+    },
     "D2Evidence": {
       "buildReceiptSHA256": "d4e3206067e5ffbee03fda13b082ef644ab8e3e42a22fea4b1574e61c8d0f4dc",
       "manifestSHA256": "35e94d362aeca33db04dc857664c68fc229ffa3108c47ffdf2fa235f49ea0638",
