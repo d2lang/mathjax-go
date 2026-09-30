@@ -1,0 +1,459 @@
+{
+  "mathjaxGitCommit": "ad8f5c21cb810236551da8c6512ba733e67357ee",
+  "originalAssets": {
+    "polyfills.js": "7fe1d048c78b0e09854c1259f7413868a51cc8f0c822489eb1ac36ae6c85ce01",
+    "mathjax.js": "cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869",
+    "setup.js": "a52cb0bbabfbd7796b9fedd793b9386c474e3123e788ee151cbe47ca1fa6e881"
+  },
+  "sourceUnionSHA256": "816903dc9f2beeece895f5a668c58bf4b8128fe163c71be8bccf7b7e5af2155e",
+  "profile": "D2 frozen MathJax 3.2.2; fresh state per input; display explicit; em16/ex8; fontCache none",
+  "base": "a85eebdd12d60d7b24e0dd8b570e89baa4074d1f",
+  "baseTree": "c1700e019542380baea674b775777b0960a17143",
+  "publicInputs": 6124,
+  "completeOriginalSVGs": 5976,
+  "sourceKinds": {
+    "errorSVG": 3008,
+    "validSVG": 2968,
+    "runtime": 148
+  },
+  "partitions": {
+    "strict-svg": 5608,
+    "held-svg": 124,
+    "safe-xml": 244,
+    "runtime": 148
+  },
+  "matchedOriginalAssertions": 5852,
+  "sourceMemberships": 6244,
+  "qualifiedFixes": {
+    "strict": 3050,
+    "safeXML": 124,
+    "total": 3174
+  },
+  "preservedControls": {
+    "strict": 2558,
+    "safeXML": 120,
+    "total": 2678
+  },
+  "regressions": 0,
+  "changedNonexactSVG": 0,
+  "publicationProvenance": {
+    "priorPreservedRawCandidatePromotion": 6,
+    "firstSVGInput": 5898,
+    "priorStrictCompleteSVG": 70,
+    "firstRuntimeInput": 148,
+    "priorMMLAssertionNewCompleteSVG": 2
+  },
+  "heldSVGReasons": {
+    "AlignedArray optional setup (explicitly separate)": 48,
+    "dcases/drcases existing displaystyle metadata": 4,
+    "Existing NumCases/SubNumCases direct Pop finalization": 8,
+    "Captured displaylines missing explicit center alignment": 64
+  },
+  "runtime": {
+    "completeHistoricalOriginals": 148,
+    "boundedAPI": 146,
+    "inheritedRenderedDiagnostic": 2,
+    "sourceBoundChangedAPI": 124,
+    "unchangedControls": 24,
+    "contracts": {
+      "TypeError: Cannot read properties of undefined (reading 'isInferred')": {
+        "kind": "bounded-api",
+        "id": "incomplete-script",
+        "error": "incomplete msubsup has no script child",
+        "source": "MmlMsubsup missing script reaches appendChild(undefined)."
+      },
+      "TypeError: Cannot read properties of null (reading '4')": {
+        "kind": "bounded-api",
+        "id": "unicode-nel",
+        "error": "no Unicode range for character U+0085",
+        "source": "Other dereferences the absent U+0085 Unicode range."
+      },
+      "TypeError: Cannot read properties of undefined (reading 'match')": {
+        "kind": "bounded-api",
+        "id": "missing-spread-dimension",
+        "error": "spreadlines popped a table without a spread dimension",
+        "source": "SpreadLines direct Pop exposes an immediate/inferred mtable without spread; dimen2em(undefined) throws."
+      },
+      "TypeError: Cannot read properties of undefined (reading 'appendChild')": {
+        "kind": "bounded-api",
+        "id": "empheq-missing-row",
+        "error": "Empheq left block requires a table row",
+        "source": "Empheq rowspanCell dereferences a missing table row."
+      },
+      "TypeError: Cannot read properties of null (reading 'isInferred')": {
+        "kind": "inherited-rendered-diagnostic",
+        "id": "extra-spreadlines-end",
+        "diagnostic": "Extra \\end{spreadlines}",
+        "source": "A repeated SpreadLines End pops the source Start item and returns null; the inherited Go diagnostic is a bounded control, not original SVG parity."
+      }
+    }
+  },
+  "publicObservations": {
+    "objects": 772,
+    "uniqueExistingInputs": 770,
+    "additionalPublicInputs": 0,
+    "streams": [
+      {
+        "file": "ordinary_array_owner_observations.json.gz",
+        "source": "passive178.json.gz",
+        "sourceSHA256": "1fe8c832bab5baa11325c1e1c707b8b32e077a97a498218a1cbadc17808920d4",
+        "objects": 222
+      },
+      {
+        "file": "ordinary_array_owner_corridor_observations.json.gz",
+        "source": "corridor-passive178.json.gz",
+        "sourceSHA256": "199173b7f79a25e39a8e228c800cb71be01fbf6188155e14a8ff56c12c5b0bd5",
+        "objects": 406
+      },
+      {
+        "file": "ordinary_array_owner_repair_observations.json.gz",
+        "source": "source-repair-passive179.json.gz",
+        "sourceSHA256": "172af8384d3b91bbbb6112fc3e1337795a618bf4cb028e39a36ecdf129cf2d22",
+        "objects": 48
+      },
+      {
+        "file": "ordinary_array_owner_literal_observations.json.gz",
+        "source": "literal-begin-passive179.json.gz",
+        "sourceSHA256": "d82d5acd7a1127baf40ff52afff14b0a71e31a415de3dafceb560b7b412b95b9",
+        "objects": 96
+      }
+    ]
+  },
+  "augmentedMethods": {
+    "file": "ordinary_array_owner_augmented_methods.json.gz",
+    "profile": "official-newcommand-augmented; method state seeded using existing repository primary harness; not frozen public coverage",
+    "observations": 48,
+    "additionalPublicInputs": 0,
+    "additionalPublicPassiveObservations": 0,
+    "sourceSHA256": "18bd25c8ca07b886f12c71a5c94498dbb9d0022cc4bf849284b8807f2bfb797b",
+    "qualification": "Root Go checks passed:30 complete Begin-terminal assertions and12 tree/SVG-only assertions. Twelve counter gaps and six full-output cases remain held; no public rendering claim.",
+    "testFile": "internal/tex/ordinary_array_literal_begin_augmented_test.go",
+    "staticPeerSHA256": "2cd3f88f78b799a5efc6d048a41c0e6f2c27ee014130d3cf1e67e930ccee307a",
+    "sourceOutcomes": {
+      "valid": 12,
+      "UnknownEnv": 18,
+      "MaxMacroSub2": 18
+    },
+    "assertions": {
+      "beginTerminalOutputDiagnosticAndCount": 30,
+      "validTreeAndSVGOnly": 12,
+      "retainedCounterGaps": 12,
+      "heldFullOutputs": 6
+    }
+  },
+  "metadataCorrection": "Historical field executedA is only the number of supplied prefix calls. For unsupported newenvironment before that prefix, no A calls execute. Use passive events and method counts for actual charge assertions; historical records remain untouched.",
+  "publicProfileBoundary": "The192 public newenvironment rows and12 public user-def overrides are negative package controls. The48 augmented primary records separately activate official newcommand and seed method count with the existing primary harness. No augmented inputs are counted in public6124.",
+  "files": [
+    {
+      "file": "ordinary_array_owner_mathjax_3_2_2.json.gz",
+      "sha256": "861ceef9ca80537c1417fed621cc2867b5fb61b92558b595fa4c5e26d3765dde",
+      "cases": 5852
+    },
+    {
+      "file": "ordinary_array_owner_residuals.json.gz",
+      "sha256": "7877905982204984a0a19b69b3f6129d0df23a4d97524d8d77dbe9f5323dd209",
+      "cases": 272
+    },
+    {
+      "file": "ordinary_array_owner_observations.json.gz",
+      "sha256": "b210488574330d48f8f006fa7b6e7a622e8c5ccfd9587fb01cc82a9f41ea21cc",
+      "cases": 222
+    },
+    {
+      "file": "ordinary_array_owner_corridor_observations.json.gz",
+      "sha256": "de4bf8f1fb82c1baf617f9e7dedb2d7431dc61fd982aca7b297b349fa071017f",
+      "cases": 406
+    },
+    {
+      "file": "ordinary_array_owner_repair_observations.json.gz",
+      "sha256": "459f191e1fe19784a97cd6a21cc0b3ad1faf5e738ab1ddf0a2b624c7a957e763",
+      "cases": 48
+    },
+    {
+      "file": "ordinary_array_owner_literal_observations.json.gz",
+      "sha256": "46a863f3156180135012027ef3d824138d149d0c392f0d900206096abf9e587a",
+      "cases": 96
+    },
+    {
+      "file": "ordinary_array_owner_augmented_methods.json.gz",
+      "sha256": "ebf54efa6e1c59a29e8d874927dfed59dcc4827b60fe2373a00d1c75e1a86fc6",
+      "cases": 48
+    }
+  ],
+  "sourceBindings": {
+    "qualification": {
+      "file": "source-outcome-review/focused-literal-outcome-qualification179.json",
+      "sha256": "69bf88fdf0f2d1b0db25b76bfd7fe3eb28941cf32496d3893d7e6c22d894ff33",
+      "sourceHead": "3c9e0bd813e703c8bc95ce445ea3444222b63203",
+      "internalTree": "22b9b48a55288e64f6d44452501051b7d48facaf",
+      "binarySHA256": "9505e1bf9659c98115ca858b86dc28c3fb0fc27078d4e25cf6d54d9f448e47da"
+    },
+    "sourcePreservationSHA256": "262b9ef0dd0afa34dafff9d87c5dfe83c8bc80b4b0030c5159aa69708010de6b",
+    "actualBaseOverlapSHA256": "44b8be58b906b89e8f775b80fc9b8c0204453fdac44b2582bc68824dd5b9febb",
+    "sourceProfilePeerSHA256": "dbfb2979b4dd36cd6264e30a736bb375c7719d0ebd8f1b418fdd295ba8fcf8d2"
+  },
+  "validation": {
+    "originalOnlyRegeneration": {
+      "status": "terminal-pass",
+      "generatorSHA256": "53c2624fe2971fe72be345e6dead612d4fc052e8e3fc5468331b7014089d4c96",
+      "receiptSHA256": "e049107a300467badff6f627d23b134e8f6099a394ad23f74e675468a5918e8d",
+      "nodeVersion": "v24.19.0",
+      "sevenCompressedFilesByteIdentical": true,
+      "completeOriginalSVGs": 5976,
+      "historicalRuntimeObjectsPreserved": 148,
+      "freshCompleteRuntimeObjectsRetained": 148,
+      "freshRuntimeObjectsFullyEqual": 148,
+      "freshRuntimeStackContextDifferences": 0,
+      "publicPassiveCompleteObjects": 772,
+      "publicPassiveUniqueInputs": 770,
+      "separateAugmentedMethodCompleteRecords": 48,
+      "noGoInvoked": true
+    },
+    "goTests": {
+      "status": "terminal-pass",
+      "rootReceiptSHA256": "d51a3a59bc382201e828ffbcc081c68da4d05653fdc2a25693f46b83e6ec4650",
+      "publicMatched": 5852,
+      "boundedRuntimeAPI": 146,
+      "inheritedRenderedRuntimeDiagnostics": 2,
+      "heldOriginalsValidated": 124,
+      "augmentedFullBegin": 30,
+      "augmentedTreeSVGOnly": 12
+    },
+    "fullGates": "pending root",
+    "D2Evidence": {
+      "buildReceiptSHA256": "d4e3206067e5ffbee03fda13b082ef644ab8e3e42a22fea4b1574e61c8d0f4dc",
+      "manifestSHA256": "35e94d362aeca33db04dc857664c68fc229ffa3108c47ffdf2fa235f49ea0638",
+      "sourceHead": "3c9e0bd813e703c8bc95ce445ea3444222b63203",
+      "internalTree": "22b9b48a55288e64f6d44452501051b7d48facaf",
+      "binarySHA256": "8796197d110fbd4169951b8d38d87e78cf236f023ed667d2c75b8ce20c5e1d0f",
+      "witnesses": 3,
+      "afterOriginalByteExact": 3,
+      "priorD2ControlsExact": 93,
+      "visualReview": "Root reported all three same-scale before/after/original panels viewed; publication receipts owned by root."
+    },
+    "independentPublicFixtureReviewSHA256": "adba155c22e95e3caf735ec93964c8ad94c635c49482a8d78e01d10486616fe4",
+    "independentGeneratorStaticReviewSHA256": "ed5ca1c6886b7b395dabc990d4f8ac32b078b4802226b12f8d84cb795452f18d"
+  },
+  "selectedSourceRoutes": {
+    "sourceReceiptSHA256": "dfc730c4fa8095b78dc00a11a1666a2b49685cd969d5691b3ab8b6cba3cf77a6",
+    "routes": [
+      {
+        "name": "array",
+        "handler": "AlignedArray",
+        "source": "source/base-BaseMappings.ts",
+        "line": 704,
+        "literal": "array:         ['AlignedArray'],"
+      },
+      {
+        "name": "subarray",
+        "handler": "Array",
+        "source": "source/ams-AmsMappings.ts",
+        "line": 127,
+        "literal": "subarray:      ['Array', null, null, null, null, ParseUtil.cols(0), '0.1em', 'S', 1],"
+      },
+      {
+        "name": "smallmatrix",
+        "handler": "Array",
+        "source": "source/ams-AmsMappings.ts",
+        "line": 128,
+        "literal": "smallmatrix:   ['Array', null, null, null, 'c', ParseUtil.cols(1 / 3),"
+      },
+      {
+        "name": "matrix",
+        "handler": "Array",
+        "source": "source/ams-AmsMappings.ts",
+        "line": 130,
+        "literal": "matrix:       ['Array', null, null, null, 'c'],"
+      },
+      {
+        "name": "pmatrix",
+        "handler": "Array",
+        "source": "source/ams-AmsMappings.ts",
+        "line": 131,
+        "literal": "pmatrix:      ['Array', null, '(', ')', 'c'],"
+      },
+      {
+        "name": "bmatrix",
+        "handler": "Array",
+        "source": "source/ams-AmsMappings.ts",
+        "line": 132,
+        "literal": "bmatrix:      ['Array', null, '[', ']', 'c'],"
+      },
+      {
+        "name": "Bmatrix",
+        "handler": "Array",
+        "source": "source/ams-AmsMappings.ts",
+        "line": 133,
+        "literal": "Bmatrix:      ['Array', null, '\\\\{', '\\\\}', 'c'],"
+      },
+      {
+        "name": "vmatrix",
+        "handler": "Array",
+        "source": "source/ams-AmsMappings.ts",
+        "line": 134,
+        "literal": "vmatrix:      ['Array', null, '\\\\vert', '\\\\vert', 'c'],"
+      },
+      {
+        "name": "Vmatrix",
+        "handler": "Array",
+        "source": "source/ams-AmsMappings.ts",
+        "line": 135,
+        "literal": "Vmatrix:      ['Array', null, '\\\\Vert', '\\\\Vert', 'c'],"
+      },
+      {
+        "name": "cases",
+        "handler": "Array",
+        "source": "source/ams-AmsMappings.ts",
+        "line": 136,
+        "literal": "cases:        ['Array', null, '\\\\{', '.', 'll', null, '.2em', 'T']"
+      },
+      {
+        "name": "dcases",
+        "handler": "Array",
+        "source": "source/mathtools-MathtoolsMappings.ts",
+        "line": 155,
+        "literal": "dcases:  ['Array', null, '\\\\{', '', 'll', null, '.2em', 'D'],"
+      },
+      {
+        "name": "rcases",
+        "handler": "Array",
+        "source": "source/mathtools-MathtoolsMappings.ts",
+        "line": 156,
+        "literal": "rcases:  ['Array', null, '', '\\\\}', 'll', null, '.2em'],"
+      },
+      {
+        "name": "drcases",
+        "handler": "Array",
+        "source": "source/mathtools-MathtoolsMappings.ts",
+        "line": 157,
+        "literal": "drcases: ['Array', null, '', '\\\\}', 'll', null, '.2em', 'D'],"
+      },
+      {
+        "name": "matrix*",
+        "handler": "MtMatrix",
+        "source": "source/mathtools-MathtoolsMappings.ts",
+        "line": 163,
+        "literal": "'matrix*':  ['MtMatrix', null, null, null],"
+      },
+      {
+        "name": "pmatrix*",
+        "handler": "MtMatrix",
+        "source": "source/mathtools-MathtoolsMappings.ts",
+        "line": 164,
+        "literal": "'pmatrix*': ['MtMatrix', null, '(', ')'],"
+      },
+      {
+        "name": "bmatrix*",
+        "handler": "MtMatrix",
+        "source": "source/mathtools-MathtoolsMappings.ts",
+        "line": 165,
+        "literal": "'bmatrix*': ['MtMatrix', null, '[', ']'],"
+      },
+      {
+        "name": "Bmatrix*",
+        "handler": "MtMatrix",
+        "source": "source/mathtools-MathtoolsMappings.ts",
+        "line": 166,
+        "literal": "'Bmatrix*': ['MtMatrix', null, '\\\\{', '\\\\}'],"
+      },
+      {
+        "name": "vmatrix*",
+        "handler": "MtMatrix",
+        "source": "source/mathtools-MathtoolsMappings.ts",
+        "line": 167,
+        "literal": "'vmatrix*': ['MtMatrix', null, '\\\\vert', '\\\\vert'],"
+      },
+      {
+        "name": "Vmatrix*",
+        "handler": "MtMatrix",
+        "source": "source/mathtools-MathtoolsMappings.ts",
+        "line": 168,
+        "literal": "'Vmatrix*': ['MtMatrix', null, '\\\\Vert', '\\\\Vert'],"
+      },
+      {
+        "name": "smallmatrix*",
+        "handler": "MtSmallMatrix",
+        "source": "source/mathtools-MathtoolsMappings.ts",
+        "line": 170,
+        "literal": "'smallmatrix*':  ['MtSmallMatrix', null, null, null],"
+      },
+      {
+        "name": "psmallmatrix",
+        "handler": "MtSmallMatrix",
+        "source": "source/mathtools-MathtoolsMappings.ts",
+        "line": 171,
+        "literal": "psmallmatrix:    ['MtSmallMatrix', null, '(', ')', 'c'],"
+      },
+      {
+        "name": "psmallmatrix*",
+        "handler": "MtSmallMatrix",
+        "source": "source/mathtools-MathtoolsMappings.ts",
+        "line": 172,
+        "literal": "'psmallmatrix*': ['MtSmallMatrix', null, '(', ')'],"
+      },
+      {
+        "name": "bsmallmatrix",
+        "handler": "MtSmallMatrix",
+        "source": "source/mathtools-MathtoolsMappings.ts",
+        "line": 173,
+        "literal": "bsmallmatrix:    ['MtSmallMatrix', null, '[', ']', 'c'],"
+      },
+      {
+        "name": "bsmallmatrix*",
+        "handler": "MtSmallMatrix",
+        "source": "source/mathtools-MathtoolsMappings.ts",
+        "line": 174,
+        "literal": "'bsmallmatrix*': ['MtSmallMatrix', null, '[', ']'],"
+      },
+      {
+        "name": "Bsmallmatrix",
+        "handler": "MtSmallMatrix",
+        "source": "source/mathtools-MathtoolsMappings.ts",
+        "line": 175,
+        "literal": "Bsmallmatrix:    ['MtSmallMatrix', null, '\\\\{', '\\\\}', 'c'],"
+      },
+      {
+        "name": "Bsmallmatrix*",
+        "handler": "MtSmallMatrix",
+        "source": "source/mathtools-MathtoolsMappings.ts",
+        "line": 176,
+        "literal": "'Bsmallmatrix*': ['MtSmallMatrix', null, '\\\\{', '\\\\}'],"
+      },
+      {
+        "name": "vsmallmatrix",
+        "handler": "MtSmallMatrix",
+        "source": "source/mathtools-MathtoolsMappings.ts",
+        "line": 177,
+        "literal": "vsmallmatrix:    ['MtSmallMatrix', null, '\\\\vert', '\\\\vert', 'c'],"
+      },
+      {
+        "name": "vsmallmatrix*",
+        "handler": "MtSmallMatrix",
+        "source": "source/mathtools-MathtoolsMappings.ts",
+        "line": 178,
+        "literal": "'vsmallmatrix*': ['MtSmallMatrix', null, '\\\\vert', '\\\\vert'],"
+      },
+      {
+        "name": "Vsmallmatrix",
+        "handler": "MtSmallMatrix",
+        "source": "source/mathtools-MathtoolsMappings.ts",
+        "line": 179,
+        "literal": "Vsmallmatrix:    ['MtSmallMatrix', null, '\\\\Vert', '\\\\Vert', 'c'],"
+      },
+      {
+        "name": "Vsmallmatrix*",
+        "handler": "MtSmallMatrix",
+        "source": "source/mathtools-MathtoolsMappings.ts",
+        "line": 180,
+        "literal": "'Vsmallmatrix*': ['MtSmallMatrix', null, '\\\\Vert', '\\\\Vert'],"
+      },
+      {
+        "name": "crampedsubarray",
+        "handler": "Array",
+        "source": "source/mathtools-MathtoolsMappings.ts",
+        "line": 182,
+        "literal": "crampedsubarray: ['Array', null, null, null, null, '0em', '0.1em', 'S\\'', 1],"
+      }
+    ]
+  }
+}
