@@ -230,7 +230,11 @@ func (p *parser) physicsMatrixElement(name string) ([]*mml.Node, error) {
 	} else if star1 {
 		macro = "\\langle{" + args[0] + "}\\vert{" + args[1] + "}\\vert{" + args[2] + "}\\rangle"
 	}
-	return p.parseExpansion(macro)
+	parsed, err := p.parseChild(macro)
+	if err != nil {
+		return nil, err
+	}
+	return unwrapInferred(parsed), nil
 }
 
 func physicsMatrixEnvironment(name string) bool {

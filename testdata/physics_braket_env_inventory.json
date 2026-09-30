@@ -1,0 +1,350 @@
+{
+  "mathjaxGitCommit": "ad8f5c21cb810236551da8c6512ba733e67357ee",
+  "sourceHead": "3eb7a1bdf671a43bd08a6a63c905dcf85d7a839e",
+  "sourceInternalTree": "be28906e9b072dac5cf0a69b7873a12e0327ad89",
+  "compiledPreviewBase": "33add2a28b08e59b188ef6974ad09131bb7e9592",
+  "publicationBase": "19657cbd098093fcedef0d4b8ceda9e667ea7b83",
+  "overlapTree": "350f537f0eaf94da74d98d0005687b3a8bfe45d2",
+  "overlapTreeStatus": "Actual merged PR177; fresh recursive scan of all 498 tracked testdata JSON/JSON.gz files",
+  "candidateSHA256": "6e2e32859545b7f1d76dd439d965b8bb571a0977855d5eba8ff8387f3cded13b",
+  "baselineSHA256": "bd1f417b13147693f0ea35711eb673c8a1274f589fb5cc3dbc9b38798e4bfcc7",
+  "uniquePublicInputs": 1760,
+  "fullSVGAssertions": 1748,
+  "strictValidSVG": 1544,
+  "strictErrorSVG": 204,
+  "fullSVGFixes": 286,
+  "unchangedSVGControls": 1462,
+  "fullSVGFixesBySourceChange": {
+    "copiedChildEnvironment": 272,
+    "optionalGetNextBOM": 14
+  },
+  "sourceRuntimeBoundedAssertions": 12,
+  "correctedPriorSilentRuntimeSuccesses": 12,
+  "unchangedBoundedRuntimeControls": 0,
+  "SVGRegressions": 0,
+  "changedSourceSVGNonexact": 0,
+  "runtimeOutcomesAreNotSVGParity": true,
+  "capturedByAudit": 656,
+  "retainedFromEarlierAudits": 1104,
+  "passiveObservations": {
+    "font": 144,
+    "budget": 12,
+    "independent": 64,
+    "distinctInputsAlreadyInPublicFixture": 220,
+    "additionalPublicInputs": 0
+  },
+  "fixtureSHA256": {
+    "physics_braket_env_mathjax_3_2_2.json.gz": "87ce0daf9003579e8f490af1a7ab6d57b6b9866ed1c1f18e43f23815d4176568",
+    "physics_braket_env_font_observations.json.gz": "1fafb88437762ec916e53dffb59b689dbcd283ef9c2fd6bcfc8d40bfe2df70fa",
+    "physics_braket_env_budget_observations.json.gz": "adf83495c601087698aae11cb1c33b423d6fe1eeed425079666aab5db4405074",
+    "physics_braket_env_independent_observations.json.gz": "e8c77358a2cb0d911ba7a5c8e71be30c9c97ddade876348b7277cfe9674ca1fd"
+  },
+  "originalRegeneration": {
+    "status": "PASS",
+    "source": "frozen original only",
+    "allFourGzipFilesByteIdentical": true,
+    "fullOriginalSVGs": 1748,
+    "historicalCompleteRuntimeObjectsPreserved": 12,
+    "freshCompleteRuntimeObjectsRecorded": 12,
+    "passiveCompleteObservationObjectsReproduced": 220,
+    "receiptSHA256": "d904956af71f2bbe48d8b67b159dfa472b90f4f707896d6bbd85f8b8e778392e",
+    "generatorSHA256": "359bff8f7a28f3da977278bda966838b6724d52f7a47b26f0d1de40c3c4ed5c5"
+  },
+  "fullGates": {
+    "head": "41623db5f6d3c6840f193e69586865f5127989fe",
+    "internalTree": "be28906e9b072dac5cf0a69b7873a12e0327ad89",
+    "base": "19657cbd098093fcedef0d4b8ceda9e667ea7b83",
+    "status": "terminal-pass",
+    "gates": [
+      {
+        "name": "full",
+        "command": [
+          "/Users/aw/.local/share/go/1.27.0/bin/go",
+          "test",
+          "-p",
+          "1",
+          "./..."
+        ],
+        "status": "terminal",
+        "environmentOverrides": {},
+        "exitCode": 0,
+        "seconds": 45.079
+      },
+      {
+        "name": "race",
+        "command": [
+          "/Users/aw/.local/share/go/1.27.0/bin/go",
+          "test",
+          "-race",
+          "-p",
+          "1",
+          "./..."
+        ],
+        "status": "terminal",
+        "environmentOverrides": {},
+        "exitCode": 0,
+        "seconds": 298.697
+      },
+      {
+        "name": "vet",
+        "command": [
+          "/Users/aw/.local/share/go/1.27.0/bin/go",
+          "vet",
+          "-p",
+          "1",
+          "./..."
+        ],
+        "status": "terminal",
+        "environmentOverrides": {},
+        "exitCode": 0,
+        "seconds": 2.066
+      },
+      {
+        "name": "wasm",
+        "command": [
+          "/Users/aw/.local/share/go/1.27.0/bin/go",
+          "build",
+          "-p",
+          "1",
+          "./..."
+        ],
+        "status": "terminal",
+        "environmentOverrides": {
+          "GOOS": "js",
+          "GOARCH": "wasm"
+        },
+        "exitCode": 0,
+        "seconds": 3.852
+      }
+    ],
+    "finalHead": "41623db5f6d3c6840f193e69586865f5127989fe",
+    "finalStatus": ""
+  },
+  "publicationBaseTree": "350f537f0eaf94da74d98d0005687b3a8bfe45d2",
+  "publishedBaseHead": "1994824901e61b4b933d86dc3264ef0177034d72",
+  "publicationOverlap": {
+    "priorStrictSVG": 1104,
+    "firstPublicationSVG": 644,
+    "firstPublicationRuntime": 12,
+    "rawPromotions": 0,
+    "conflicts": 0,
+    "ambiguousInputs": 0,
+    "scannedJSONFiles": 498,
+    "consumerSHA256": {
+      "getstar_bra_test.go": "c790cde5ae1f91add147067e2d3c1be29a59fc1ba9e2c9c904f6399f1cf47ec5",
+      "physics_expectation_test.go": "3d9be3ec17d7074ef2bf7705554036e73638973d99118aab1ff52cf54c5ee7ff"
+    },
+    "scanSHA256": "29545b0433e617f6600f346d192ae059aa71399373cf8fa701867561674d0394",
+    "qualifiedReceiptSHA256": "69970ac77a8de5785166fd364efeb193f92c5ec83448337ce11fc9d33fff20ac"
+  },
+  "sourceChangeAccounting": "The 272 copiedChildEnvironment fixes include shared child registrations; the 14 BOM lookahead SVG fixes and 12 NEL bounded-runtime corrections are separate.",
+  "focusedTest": {
+    "head": "3eb7a1bdf671a43bd08a6a63c905dcf85d7a839e",
+    "test": "TestPhysicsBraketEnvironmentOriginalReferences",
+    "exitCode": 0,
+    "seconds": 9.248749017715454,
+    "sourceInternalTree": "be28906e9b072dac5cf0a69b7873a12e0327ad89",
+    "uncommittedFiles": {
+      "physics_braket_env_test.go": "7239fca1d48f7cdb8f2fa1259b81090a59f41e63bb005349299f8878cc83d599",
+      "testdata/physics_braket_env_mathjax_3_2_2.json.gz": "87ce0daf9003579e8f490af1a7ab6d57b6b9866ed1c1f18e43f23815d4176568"
+    }
+  },
+  "broadReplay": {
+    "status": "terminal-pass",
+    "head": "3eb7a1bdf671a43bd08a6a63c905dcf85d7a839e",
+    "internalTree": "be28906e9b072dac5cf0a69b7873a12e0327ad89",
+    "previewBase": "33add2a28b08e59b188ef6974ad09131bb7e9592",
+    "previewBaseStatus": "Pending KetBra177 preview on actual176; not merged-base claim",
+    "binaries": {
+      "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/physics-ketbra-audit/candidate-preview176": "bd1f417b13147693f0ea35711eb673c8a1274f589fb5cc3dbc9b38798e4bfcc7",
+      "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/physics-braket-env-audit/candidate-preview177": "6e2e32859545b7f1d76dd439d965b8bb571a0977855d5eba8ff8387f3cded13b"
+    },
+    "published": {
+      "inputs": 6800,
+      "genuineCompleteSVGFixes": 0,
+      "genuineRegressions": 0,
+      "changedNonexactAfterOrderingQualification": 0,
+      "serializationControls": 4,
+      "serializationApparentFixes": 2,
+      "serializationApparentRegressions": 2
+    },
+    "upstream": {
+      "inputs": 4326,
+      "genuineCompleteSVGFixes": 0,
+      "genuineRegressions": 0,
+      "changedNonexactAfterOrderingQualification": 0,
+      "serializationControls": 2,
+      "serializationApparentFixes": 1,
+      "unsupportedEncloseStillNonexactToOriginal": 1
+    },
+    "shared": {
+      "inputs": 5621,
+      "unchanged": 5621
+    },
+    "runtime": {
+      "inputs": 802,
+      "unchanged": 802
+    },
+    "repeatedSerializationRenders": 768,
+    "allRepeatedBaselineCandidateXMLEqual": true,
+    "repeatedXMLMatchesOriginal": 640,
+    "repeatedUnsupportedEncloseXMLDoesNotMatchOriginal": 128,
+    "originalObjectsUnchanged": 17549,
+    "policy": "Full stored original/response objects unchanged. XML comparison checks every element name, attribute, text, tail, and ordered child. Five cancel controls equal original XML. The unsupported-enclose control equals the two Go renderings only; its original is an undefined-command error. No normalization of SVG assertions and no invented behavior fixes.",
+    "noGoOrCheckoutWrites": true
+  },
+  "protectedReplay": {
+    "quantity": {
+      "inputs": 3350,
+      "baselineExact": 3332,
+      "candidateExact": 3332,
+      "unchanged": 3350,
+      "fixed": 0,
+      "regression": 0,
+      "changedNonexact": 0,
+      "originalRuntime": 18
+    },
+    "hline": {
+      "inputs": 2444,
+      "baselineExact": 2412,
+      "candidateExact": 2412,
+      "unchanged": 2444,
+      "fixed": 0,
+      "regression": 0,
+      "changedNonexact": 0,
+      "originalRuntime": 0
+    },
+    "eval": {
+      "inputs": 1342,
+      "baselineExact": 1342,
+      "candidateExact": 1342,
+      "unchanged": 1342,
+      "fixed": 0,
+      "regression": 0,
+      "changedNonexact": 0,
+      "originalRuntime": 0
+    },
+    "getstar-residuals": {
+      "inputs": 776,
+      "baselineExact": 58,
+      "candidateExact": 58,
+      "unchanged": 776,
+      "fixed": 0,
+      "regression": 0,
+      "changedNonexact": 0,
+      "originalRuntime": 682
+    },
+    "expectation": {
+      "inputs": 1796,
+      "baselineExact": 1748,
+      "candidateExact": 1748,
+      "unchanged": 1796,
+      "fixed": 0,
+      "regression": 0,
+      "changedNonexact": 0,
+      "originalRuntime": 48
+    },
+    "ketbra": {
+      "inputs": 1796,
+      "baselineExact": 1764,
+      "candidateExact": 1764,
+      "unchanged": 1796,
+      "fixed": 0,
+      "regression": 0,
+      "changedNonexact": 0,
+      "originalRuntime": 32
+    },
+    "getstar-strict": {
+      "inputs": 4394,
+      "baselineExact": 4394,
+      "candidateExact": 4394,
+      "unchanged": 4394,
+      "fixed": 0,
+      "regression": 0,
+      "changedNonexact": 0,
+      "originalRuntime": 0
+    }
+  },
+  "d2Preview": {
+    "status": "PASS",
+    "observations": 91,
+    "allAfterSVGsEqualOriginal": true,
+    "manifestSHA256": "1d0eb63a49fa40bbc00cf01c4bf0ad80f1781c9bac27a402aac8f65a249c4b11",
+    "visualReview": {
+      "head": "3eb7a1bdf671a43bd08a6a63c905dcf85d7a839e",
+      "beforePublishedKetBraHead": "1994824901e61b4b933d86dc3264ef0177034d72",
+      "visuallyInspected": true,
+      "sharedScale": true,
+      "cases": [
+        {
+          "slug": "physics-braket-font",
+          "observation": "Calligraphic T identifiers now group with original spacing; the complete box narrows to the original width.",
+          "comparisonSHA256": "3967ded391aa059ddba47dc3f9d74b6849346d0484130e1b52d292f6a0947df8",
+          "afterEqualsOriginalSVG": true,
+          "beforeDifferent": true
+        },
+        {
+          "slug": "physics-braket-lookahead",
+          "observation": "The B argument after U+FEFF moves inside the first inner product instead of remaining detached after a repeated A.",
+          "comparisonSHA256": "2a1cae1350b96c8a2314ce9a763948e3583ac5db56c6a0496cd27520d49be562",
+          "afterEqualsOriginalSVG": true,
+          "beforeDifferent": true
+        }
+      ]
+    },
+    "finalRebasedPublicAncestorEvidence": {
+      "status": "terminal-pass",
+      "build": {
+        "head": "f297e06be377952b480fac10a3a423232f72e23c",
+        "internalTree": "be28906e9b072dac5cf0a69b7873a12e0327ad89",
+        "actualBase": "19657cbd098093fcedef0d4b8ceda9e667ea7b83",
+        "exit": 0,
+        "seconds": 16.13099217414856,
+        "binary": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/d2-after-physics-braket-env-actual177",
+        "binarySHA256": "14aa89f2425791e21afb6194b8f6837910867025bb347b29b933f07ea5076c43"
+      },
+      "visualReview": {
+        "head": "f297e06be377952b480fac10a3a423232f72e23c",
+        "before": "19657cbd098093fcedef0d4b8ceda9e667ea7b83",
+        "visuallyInspected": true,
+        "sharedScale": true,
+        "PNGHashesChangedFromPreview": true,
+        "originalWitnessSVGTripletsUnchanged": true,
+        "cases": [
+          {
+            "slug": "physics-braket-font",
+            "comparisonSHA256": "20e34f5b60047e1a60b49d816b3bbe40ddbe7e169f33d9706ce306e0114259bf",
+            "afterEqualsOriginalSVG": true,
+            "beforeDifferent": true
+          },
+          {
+            "slug": "physics-braket-lookahead",
+            "comparisonSHA256": "e5fffdfccf9e6550d7b5d72a909742e3909260f82ed8f69c237b4114987dc878",
+            "afterEqualsOriginalSVG": true,
+            "beforeDifferent": true
+          }
+        ]
+      },
+      "allCompleteOriginalSVGsExact": 91,
+      "manifestSHA256": "ecc5876afdcdaaca298a30e8835b155b26f0aa48dcb044e56f80470cec2de66b"
+    }
+  },
+  "actual177Rebase": {
+    "status": "pass",
+    "oldHead": "9f93752cdf2c23ab5d34b2a361da1dfcdcd6690f",
+    "newHead": "f297e06be377952b480fac10a3a423232f72e23c",
+    "oldBase": "33add2a28b08e59b188ef6974ad09131bb7e9592",
+    "newBase": "19657cbd098093fcedef0d4b8ceda9e667ea7b83",
+    "internalTree": "be28906e9b072dac5cf0a69b7873a12e0327ad89",
+    "rangeDiff": "1:  3eb7a1b = 1:  e6db02d Preserve Physics braket child environments and optional lookahead\n2:  9f93752 = 2:  f297e06 Bind Physics braket environments to original references",
+    "baseDeltaPaths": [
+      "testdata/physics_ketbra_README.md",
+      "testdata/physics_ketbra_inventory.json"
+    ],
+    "allRebasedTreeDeltaPaths": [
+      "testdata/physics_ketbra_README.md",
+      "testdata/physics_ketbra_inventory.json"
+    ]
+  },
+  "rebasedSourceHead": "e6db02d9df926f556508d1cf37265a597684195d"
+}

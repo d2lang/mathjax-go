@@ -1585,13 +1585,21 @@ func (p *parser) physicsBraket(name string) ([]*mml.Node, error) {
 			if starBra || starKet {
 				macro = "\\langle{" + bra + "}\\vert{" + ket + "}\\rangle"
 			}
-			return p.parseExpansion(macro)
+			parsed, err := p.parseChild(macro)
+			if err != nil {
+				return nil, err
+			}
+			return unwrapInferred(parsed), nil
 		}
 		macro := "\\left\\langle{" + bra + "}\\right\\vert{}"
 		if starBra {
 			macro = "\\langle{" + bra + "}\\vert"
 		}
-		return p.parseExpansion(macro)
+		parsed, err := p.parseChild(macro)
+		if err != nil {
+			return nil, err
+		}
+		return unwrapInferred(parsed), nil
 	case "ket":
 		star := p.readStar()
 		ket, _, err := p.readArgument(name, false)
@@ -1602,7 +1610,11 @@ func (p *parser) physicsBraket(name string) ([]*mml.Node, error) {
 		if star {
 			macro = "\\vert{" + ket + "}\\rangle"
 		}
-		return p.parseExpansion(macro)
+		parsed, err := p.parseChild(macro)
+		if err != nil {
+			return nil, err
+		}
+		return unwrapInferred(parsed), nil
 	case "braket", "innerproduct", "ip":
 		star := p.readStar()
 		left, _, err := p.readArgument(name, false)
@@ -1610,9 +1622,12 @@ func (p *parser) physicsBraket(name string) ([]*mml.Node, error) {
 			return nil, err
 		}
 		right := ""
-		p.skipSpaces()
+		// Source GetNext commits JavaScript whitespace before optional braces.
+		for p.pos < len(p.source) && internalTextSpace(p.peekRune()) {
+			p.consumeRune()
+		}
 		if p.pos < len(p.source) && p.source[p.pos] == '{' {
-			right, _, err = p.readArgument(name, false)
+			right, _, err = p.readArgument(name, true)
 			if err != nil {
 				return nil, err
 			}
@@ -1623,10 +1638,11 @@ func (p *parser) physicsBraket(name string) ([]*mml.Node, error) {
 		if star {
 			macro = "\\langle{" + left + "}\\vert{" + right + "}\\rangle"
 		}
-		nodes, err := p.parseExpansion(macro)
+		parsed, err := p.parseChild(macro)
 		if err != nil {
 			return nil, err
 		}
+		nodes := unwrapInferred(parsed)
 		// Physics' active vertical-bar character handler creates AutoClose
 		// tokens directly, so bars occurring inside braket arguments are not
 		// members of Base's fixStretchy list.  The middle \vert already lacks
