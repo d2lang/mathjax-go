@@ -1043,7 +1043,7 @@ func (p *parser) parseCharacter() *mml.Node {
 	if r == '~' {
 		return token("mtext", "\u00a0")
 	}
-	if unicode.IsLetter(r) || p.operatorLetters && (r == '-' || r == '*') {
+	if isASCIILetter(r) || p.operatorLetters && (r == '-' || r == '*') {
 		text := string(r)
 		grouping := p.identifierPattern != identifierPatternNone && !p.fontExplicitEmpty && p.identifierPattern.matches(r)
 		if grouping {
