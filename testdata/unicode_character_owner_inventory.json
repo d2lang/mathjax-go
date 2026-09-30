@@ -1,0 +1,320 @@
+{
+  "status": "Original-only regeneration passed; formatted public tests and full gates are being run",
+  "actualMergedBase": "6d88373dd7479949265afdeae982b1bd5fcd5613",
+  "candidateSourceHead": "0158db95a3c1d3bec582320314ad1679fa469a61",
+  "candidateInternalTree": "a7c06df4464ec55d7ac3f584249f83b9d8f82117",
+  "sourcePin": "ad8f5c21cb810236551da8c6512ba733e67357ee",
+  "sourceUnion": {
+    "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/unicode-character-owner-audit179/source-plan/union-originals972.json.gz",
+    "sha256": "4a5d99ff13db6c0ca8dcd349ce42c6d8638db0598536a270b8b058092c097ac1"
+  },
+  "focusedQualification": {
+    "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/unicode-character-owner-audit179/focused-candidate182-root-initial/qualification.json",
+    "sha256": "7516f8a20bdc8a96924a6eb6189941a5c280a6b133ffe9b20567b33fe7c75d2e"
+  },
+  "focusedCapture": {
+    "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/unicode-character-owner-audit179/focused-candidate182-root-initial/all972.json.gz",
+    "sha256": "cc4e2323d932e24956690cada0eb73cc7c8d230576b0fe63234ef3b23dffaf00"
+  },
+  "actualConsumerQualification": {
+    "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/unicode-character-owner-audit179/actual181-baseline-alljson/consumer-qualification181.json.gz",
+    "sha256": "0cca8e1ab196eae3ee3429f0ecb38f7fac265bf9be4c4261a6f2f73d1db95e92"
+  },
+  "originalSVGs": 908,
+  "strictOriginalSVGs": 908,
+  "heldOriginalSVGs": 0,
+  "originalRuntimeObjects": 104,
+  "strictEffects": {
+    "fix": 560,
+    "control": 348
+  },
+  "runtimeContracts": {
+    "newBoundedNullRange": 58,
+    "unchangedBoundedNullRange": 40,
+    "unchangedSuccessfulNormnalFallback": 6
+  },
+  "SVGPublication": {
+    "firstSVGInput": 840,
+    "firstStrictPromotionFromExistingRaw": 38,
+    "priorStrictCompleteSVG": 30
+  },
+  "runtimePublication": {
+    "firstOriginalRuntimeInput": 98,
+    "priorOriginalRuntimeWithBoundedGuard": 6
+  },
+  "passiveExistingInputs": 224,
+  "passiveProfiles": {
+    "pilot": 152,
+    "range": 72
+  },
+  "passiveDocuments": [
+    {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/unicode-character-owner-audit179/passive179.json.gz",
+      "sha256": "a054c43417107fc93327537fb3c00f5a5775bb07838606bfe0d4186691e12b3d"
+    },
+    {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/unicode-character-owner-audit179/source-plan/passive-expanded180.json.gz",
+      "sha256": "31a34e4687e5427a6a89c8f28e8e2f7e9571b5ce9f5cac838cc03660d4539975"
+    }
+  ],
+  "originalOnlyFreshConversionsPlanned": 1460,
+  "originalOnlyRegenerationStatus": "PASS",
+  "GoFormattingAndTests": "PASS formatted public test: 908 complete original SVGs,98 bounded and6 weaker fallbacks",
+  "broaderProtectedStatus": "PASS independently qualified expanded outcome",
+  "observerBodies": {
+    "pilotBody": "8a5f727f721fd4610a5de3859bd00a6287d5310abe73ab1dd21dff363f76ac71",
+    "rangeBody": "ad8bc2942cac0f09fa966d455d6e9cfac581a6de5fce30f8759cab0b19f96392"
+  },
+  "sourceObserverFiles": [
+    {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/unicode-character-owner-audit179/observe179.cjs",
+      "sha256": "d74c6faa06ac7053df7c16c5a0a3b93c0480f49c2e47e2e6a2eff92ef03c9808"
+    },
+    {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/unicode-character-owner-audit179/source-plan/passive-observer180.js",
+      "sha256": "ad8bc2942cac0f09fa966d455d6e9cfac581a6de5fce30f8759cab0b19f96392"
+    },
+    {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/unicode-character-owner-audit179/source-plan/observe-expanded180.cjs",
+      "sha256": "c51d7cc0ccd7d39e301ba5f122fbc6712560483c72223875720807d3ebf787e1"
+    }
+  ],
+  "candidateOutputGoldenFields": 0,
+  "extensionPolicy": "Preserve focused972 and both224 native profiles byte-for-byte in their five draft containers. The separately qualified40 supplement contains only immutable actual-base source records:38 original raw residual promotions and2 prior strict phantom references. No historical raw or strict source fixture is rewritten.",
+  "schema": {
+    "sourceRecord": "Complete original union row unchanged, including original API object and all metadata.",
+    "publicationProvenance": "Complete consumer-qualified actual181 association object.",
+    "runtime": "Historical full exception preserved; six fallback tests have no Go SVG/hash golden.",
+    "native": "Both complete original documents and event schemas preserved without flattening.",
+    "supplement": "Complete actual-base sourceMembership.record, Git binding, JSON pointer, source-file metadata, prior memberships and complete current capture associations retained. Only original source SVG fields are expected values; historical Go observation fields remain unconsumed provenance."
+  },
+  "draftContainerFiles": {
+    "unicode_character_owner_dispatch_observations.json.gz": {
+      "sha256": "ecf111d17a9ae3ed88caf3f78e0d4391741c56e192befedee16d3dbf978fe83f",
+      "cases": 152
+    },
+    "unicode_character_owner_mathjax_3_2_2.json.gz": {
+      "sha256": "0f1d757aa0048d5197b1b8d8297b6a4a1de46414d421ee2d5b90304f7533ac3d",
+      "cases": 868
+    },
+    "unicode_character_owner_prime_supplement.json.gz": {
+      "sha256": "4ff97a55402210f6d7b3761b4e2183dccf874f0a046c9355a4cb010d57deaf55",
+      "cases": 40
+    },
+    "unicode_character_owner_range_observations.json.gz": {
+      "sha256": "d824b53958fca6a05cf26561bba7cd54bd8a48d29b64f5de6f5a53d1c2934032",
+      "cases": 72
+    },
+    "unicode_character_owner_residuals.json.gz": {
+      "sha256": "5b7751725257f1e54bc534391efebb38aac76bda911cf22e08871532507378e5",
+      "cases": 0
+    },
+    "unicode_character_owner_runtime_originals.json.gz": {
+      "sha256": "b6fd25da9f941579c6190988c7cd67fba63a16b3d37edf0804608e91853a3a56",
+      "cases": 104
+    }
+  },
+  "draftGeneratorSHA256": "9e800fd7cd235b0123c41f7934f125fec5526eb374d9c79811466365aaf88e6c",
+  "sourceOnlyEncodingStatus": "PASS complete source objects and fresh original reproduction",
+  "nativeSerialization": "Complete objects and metadata unchanged; draft containers use the shared pretty-JSON/level9 gzip encoder, so compressed bytes intentionally differ from historical source archives.",
+  "originalPublicInputs": 1012,
+  "additionalPrimePromotionsQualified": true,
+  "focusedCounts": {
+    "originalPublicInputs": 972,
+    "strictSVGs": 868,
+    "semanticFixes": 522,
+    "controls": 346,
+    "originalRuntimes": 104,
+    "firstSVGInput": 840,
+    "priorStrictCompleteSVG": 28
+  },
+  "supplementCounts": {
+    "originalPublicInputs": 40,
+    "strictSVGs": 40,
+    "rawPromotions": 38,
+    "priorStrictPhantomControls": 2,
+    "newOriginalInputs": 0
+  },
+  "sourceSupplement": {
+    "frame": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/unicode-character-owner-audit179/fixture-supplement-draft182/supplement-source-frame.json",
+      "sha256": "719dc94e5d8c204f56158b2f7ea0a65cb9ff8d2b9405f956c01240465add6742"
+    },
+    "sourceAndOutcomeEvidence": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/unicode-character-owner-audit179/expanded-outcome-source-review182/prime40-source-and-outcome.json.gz",
+      "sha256": "f677d4c4333676c3b8d9444738f251a00ab7f707dcf69b1dcbaf971e5299dffb"
+    },
+    "promotionPlan": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/unicode-character-owner-audit179/expanded-outcome-source-review182/promotion-plan182.json",
+      "sha256": "b6ee1666e20d9cef20ccc0e542ed7864871814d88c705d08380be20df77c2a2a"
+    },
+    "sourceExpectationFields": [
+      "sourceMembership.record.original.svg",
+      "sourceMembership.record.svg"
+    ],
+    "historicalSourceRecordsUnchanged": true,
+    "currentCandidateOutputGoldenFields": 0
+  },
+  "expandedQualification": {
+    "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/unicode-character-owner-audit179/independent-review/predicate-protected-review181/expanded-outcome-final-peer182.json",
+    "sha256": "be98e86a18677dfc37ec0ec7ac24088a13083098f1371218213a49d6c7e842ea"
+  },
+  "expandedMeasuredCounts": {
+    "uniqueRequests": 145489,
+    "sourceMemberships": 163355,
+    "semanticUnicodeRepairs": 38,
+    "attributeOrderOnlySamplesExcluded": 4,
+    "sourceConsumerRegressions": 0,
+    "unchangedOriginalRuntimeInputs": 2035
+  },
+  "focusedDraftPreserved": {
+    "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/unicode-character-owner-audit179/fixture-draft182/draft-handoff182.json",
+    "sha256": "f4d162057a3b52281c54414dafa7ad2b54a42fc245049c6ec15a0baee43dd6ca"
+  },
+  "draftPublicTestSHA256": "35c757ead85afe2f847455439dc9dbb7c127321a4b2d45c5e88b98a89b940685",
+  "D2Evidence": {
+    "rootVisualReview": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/unicode-character-owner-audit179/d2-candidate182/rendered182/root-visual-review.json",
+      "sha256": "cec21192eb62199b66e41c294f5903764b16b45f91c3e771d86d6a45c3fcaca4"
+    },
+    "dataAudit": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/unicode-character-owner-audit179/d2-candidate182/artifact-preparation182/final-data-audit.json",
+      "sha256": "567a17c66276aaa2e10fedc550436193e7664116e7c6c557eb00d1d59eea45c8"
+    },
+    "afterOriginalExact": 99,
+    "newWitness": 1,
+    "priorWitnesses": 98,
+    "status": "Root viewed and source-bound, separate scratch artifacts; no fixture Go gates implied"
+  },
+  "previousOriginalRegeneration": {
+    "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/unicode-character-owner-audit179/fixture-resource-draft182/failure-binding.json",
+    "sha256": "65a54eb1b0b351dc1998060e04acf41feca94131031d79753a6f4e90cdbe20a9"
+  },
+  "resourceRevision": {
+    "strategy": "Sequential asynchronous main with setImmediate after every complete detached and streamed conversion",
+    "unchanged": [
+      "six fixture gzip bytes",
+      "public test",
+      "observer bodies",
+      "requests/options",
+      "synchronous VM setup/observation/conversion",
+      "runtime first-line/source-frame validation"
+    ],
+    "freshObservationStream": "fresh-observations.jsonl; complete per-conversion JSON objects with literal LF framing before yield",
+    "expectedRecords": 1460,
+    "heapLimitRaised": false,
+    "executionStatus": "PASS original-only retry: six byte-identical containers and1460 complete fresh records"
+  },
+  "validation": {
+    "originalOnlyRegeneration": {
+      "status": "PASS",
+      "receiptSHA256": "f49efb7d9b924b98eb21742e20a03c88f0f789bc55768a75928affcbd8524c85",
+      "generatorReceiptSHA256": "ea9dbab7ac35e32157cf8176f445b50692db3fb9473c983387b7f42fe796afd3",
+      "details": {
+        "status": "PASS original-only complete-object and deterministic regeneration",
+        "sourcePin": "ad8f5c21cb810236551da8c6512ba733e67357ee",
+        "sourceUnionSHA256": "4a5d99ff13db6c0ca8dcd349ce42c6d8638db0598536a270b8b058092c097ac1",
+        "assets": {
+          "polyfills.js": "7fe1d048c78b0e09854c1259f7413868a51cc8f0c822489eb1ac36ae6c85ce01",
+          "mathjax.js": "cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869",
+          "setup.js": "a52cb0bbabfbd7796b9fedd793b9386c474e3123e788ee151cbe47ca1fa6e881"
+        },
+        "node": "v24.19.0",
+        "nodeSHA256": "27db838bb204ef7c21df2931f5656e4c8fb32e6e947f363a402b49714d32b5b1",
+        "generatorSHA256": "9e800fd7cd235b0123c41f7934f125fec5526eb374d9c79811466365aaf88e6c",
+        "originalSVGs": 908,
+        "focusedOriginalSVGs": 868,
+        "supplementalOriginalSVGs": 40,
+        "heldSVGs": 0,
+        "historicalRuntimeObjects": 104,
+        "completeFreshRuntimeObjects": 104,
+        "completeRuntimeObjectExact": 104,
+        "passiveExistingInputs": 224,
+        "passiveFreshConversions": 448,
+        "conversions": 1460,
+        "files": {
+          "unicode_character_owner_mathjax_3_2_2.json.gz": {
+            "sha256": "0f1d757aa0048d5197b1b8d8297b6a4a1de46414d421ee2d5b90304f7533ac3d",
+            "byteIdentical": true,
+            "completeObjectsEqual": true
+          },
+          "unicode_character_owner_residuals.json.gz": {
+            "sha256": "5b7751725257f1e54bc534391efebb38aac76bda911cf22e08871532507378e5",
+            "byteIdentical": true,
+            "completeObjectsEqual": true
+          },
+          "unicode_character_owner_runtime_originals.json.gz": {
+            "sha256": "b6fd25da9f941579c6190988c7cd67fba63a16b3d37edf0804608e91853a3a56",
+            "byteIdentical": true,
+            "completeObjectsEqual": true
+          },
+          "unicode_character_owner_dispatch_observations.json.gz": {
+            "sha256": "ecf111d17a9ae3ed88caf3f78e0d4391741c56e192befedee16d3dbf978fe83f",
+            "byteIdentical": true,
+            "completeObjectsEqual": true
+          },
+          "unicode_character_owner_range_observations.json.gz": {
+            "sha256": "d824b53958fca6a05cf26561bba7cd54bd8a48d29b64f5de6f5a53d1c2934032",
+            "byteIdentical": true,
+            "completeObjectsEqual": true
+          },
+          "unicode_character_owner_prime_supplement.json.gz": {
+            "sha256": "4ff97a55402210f6d7b3761b4e2183dccf874f0a046c9355a4cb010d57deaf55",
+            "byteIdentical": true,
+            "completeObjectsEqual": true
+          }
+        },
+        "noGo": true,
+        "completeFreshObservations": {
+          "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/unicode-character-owner-audit179/fixture-resource-draft182/original-regeneration182/fresh-observations.jsonl",
+          "records": 1460,
+          "sha256": "ec798da4032400c602e5108a9b0c9e93c521b45e15f0f93fd0d00076fb5adeac",
+          "framing": "JSON objects, one literal LF after each"
+        },
+        "resourceProfile": {
+          "eventLoopYieldAfterEachDetachedConversion": true,
+          "heapLimitChangedByGenerator": false,
+          "peakHeapUsed": 358685152,
+          "peakRSS": 769163264
+        },
+        "historicalExceptionObjectsUnchanged": true,
+        "completeSupplementSourceRecordsUnchanged": true,
+        "observerBodySHA256": {
+          "pilotBody": "8a5f727f721fd4610a5de3859bd00a6287d5310abe73ab1dd21dff363f76ac71",
+          "rangeBody": "ad8bc2942cac0f09fa966d455d6e9cfac581a6de5fce30f8759cab0b19f96392"
+        }
+      }
+    },
+    "staticFixturePeer": {
+      "status": "PASS",
+      "receiptSHA256": "7f561e2d946d870b58bc8f69103238275107635525e8a456ce8ad0a4e5e7896c"
+    },
+    "independentFullRegenerationPeer": {
+      "status": "PASS",
+      "receiptSHA256": "25d771e1d759d2e423c81231969f6b8ff7bc763b5d897acff74bc4677856859c"
+    },
+    "formattedTestSHA256": "75dc8802adfa4af684d945bd81d39868b1bf62452ebc2c77e549c3669fbd7802",
+    "fullGoRaceVetWasm": "PENDING",
+    "newGoTest": {
+      "status": "terminal-pass",
+      "source": "0158db95a3c1d3bec582320314ad1679fa469a61",
+      "command": [
+        "/Users/aw/.local/share/go/1.27.0/bin/go",
+        "test",
+        "-p",
+        "1",
+        ".",
+        "-run",
+        "^TestUnicodeCharacterOwner",
+        "-count=1"
+      ],
+      "exitCode": 0,
+      "seconds": 1.733,
+      "formattedTestSHA256": "75dc8802adfa4af684d945bd81d39868b1bf62452ebc2c77e549c3669fbd7802",
+      "logSHA256": "2909ddfac12e489c32507e054c832cdab959f7a659d3aa96f1597fb0b2bfe5db",
+      "handoffSHA256": "27e1318ec9c176d00cd5f210a7a1ce21afe82154d6abffbab457fc3e4f212135",
+      "regenerationSHA256": "f49efb7d9b924b98eb21742e20a03c88f0f789bc55768a75928affcbd8524c85",
+      "staticPeerSHA256": "7f561e2d946d870b58bc8f69103238275107635525e8a456ce8ad0a4e5e7896c"
+    }
+  }
+}
