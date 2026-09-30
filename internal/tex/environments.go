@@ -28,14 +28,19 @@ func (p *parser) beginEnvironment(name string) ([]*mml.Node, error) {
 	if err := p.countEnvironment(); err != nil {
 		return nil, err
 	}
-	environment = strings.TrimSpace(environment)
-	if environment == "" {
+	// BeginEnd dispatches the literal name after charging the begin.
+	// A missing registration must fail before a body owner or reader runs.
+	registered, _ := p.sourceEndDefinition(environment)
+	if !registered {
 		return nil, texError("UnknownEnv", "Unknown environment '%s'", environment)
 	}
 	outerEnvironment := p.environmentOwner
 	frame := &environmentFrame{name: environment, parent: outerEnvironment, stream: environment == "spreadlines" || environment == "numcases" || environment == "subnumcases"}
 	p.environmentOwner = frame
 	defer func() { p.environmentOwner = outerEnvironment }()
+	if _, defined := p.state.environments[environment]; !defined && isOrdinaryArrayEnvironment(environment) {
+		return p.ordinaryArrayEnvironment(environment, frame)
+	}
 	if nodes, handled, err := p.casesEnvironment(environment); handled {
 		return nodes, err
 	}
@@ -399,12 +404,22 @@ func (p *parser) parseTable(body, style string, initialSpacing ...string) (*mml.
 }
 
 func (p *parser) parseTableWithAlignment(body, style string, alignFills bool, initialSpacing ...string) (*mml.Node, error) {
+	return p.parseTableWithOrdinaryArray(body, style, alignFills, nil, initialSpacing...)
+}
+
+func (p *parser) parseTableWithOrdinaryArray(body, style string, alignFills bool, ordinary *ordinaryArrayItem, initialSpacing ...string) (*mml.Node, error) {
 	table := node("mtable")
 	var entries []*mml.Node
 	spacing := &arrayRowSpacing{}
+	var environment *environmentFrame
+	if ordinary != nil {
+		environment = ordinary.begin
+	}
 	err := p.parseArrayBody(body, arrayBodyOwner{
-		rules:      newArrayRules(table),
-		hasEntries: func() bool { return len(entries) != 0 },
+		environment: environment,
+		ordinary:    ordinary,
+		rules:       newArrayRules(table),
+		hasEntries:  func() bool { return len(entries) != 0 },
 		endEntry: func(children []*mml.Node, fill *arrayCellState) error {
 			content := fill.finish(matrixCellContent(children), len(children))
 			cell := node("mtd", content)
@@ -424,6 +439,9 @@ func (p *parser) parseTableWithAlignment(body, style string, alignFills bool, in
 	})
 	if err != nil {
 		return nil, err
+	}
+	if ordinary != nil && ordinary.popped {
+		return nil, nil
 	}
 	table.Attributes.Set("columnspacing", "1em")
 	initial := "4pt"

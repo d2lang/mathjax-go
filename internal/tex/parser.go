@@ -110,6 +110,7 @@ type parser struct {
 	environmentOwner      *environmentFrame
 	environmentRow        *environmentFrame
 	environmentPopped     bool
+	ordinaryArray         *ordinaryArrayItem
 	pendingCell           *cellItem
 	stoppedCell           *cellItem
 	multiLetterFont       string
@@ -167,12 +168,13 @@ func (p *parser) parseRowWithPrefix(terminator byte, stopRight bool, prefix []*m
 	owner := p.braketOwner
 	p.braketOwner = nil
 	matrixClose, cdArrayEntry, arrayCell := p.matrixClose, p.cdArrayEntry, p.arrayCell
-	environmentRow := p.environmentRow
-	p.environmentRow = nil
+	environmentRow, ordinaryArray := p.environmentRow, p.ordinaryArray
+	p.environmentRow, p.ordinaryArray = nil, nil
 	p.matrixClose, p.cdArrayEntry, p.arrayCell = false, false, nil
 	defer func() {
 		p.braketOwner, p.matrixClose, p.cdArrayEntry, p.arrayCell = owner, matrixClose, cdArrayEntry, arrayCell
 		p.environmentRow = environmentRow
+		p.ordinaryArray = ordinaryArray
 	}()
 	return p.parseRowContinuation(terminator, stopRight, false, nil, "", prefix)
 }
@@ -189,9 +191,9 @@ func (p *parser) parseRowWithInfix(terminator byte, stopRight, infixPending bool
 // SetFont changes the environment without adding a stack item.
 func (p *parser) parseRowWithAutoOpen(terminator byte, stopRight, infixPending bool, auto *derivativeAutoOpen) ([]*mml.Node, string, error) {
 	if auto != nil {
-		owner, environmentRow := p.braketOwner, p.environmentRow
-		p.braketOwner, p.environmentRow = nil, nil
-		defer func() { p.braketOwner, p.environmentRow = owner, environmentRow }()
+		owner, environmentRow, ordinaryArray := p.braketOwner, p.environmentRow, p.ordinaryArray
+		p.braketOwner, p.environmentRow, p.ordinaryArray = nil, nil, nil
+		defer func() { p.braketOwner, p.environmentRow, p.ordinaryArray = owner, environmentRow, ordinaryArray }()
 	}
 	return p.parseRowContinuation(terminator, stopRight, infixPending, auto, "", nil)
 }
@@ -463,8 +465,18 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 					}
 					p.environmentPopped = true
 					return nodes, "", nil
+				case p.ordinaryArray != nil:
+					if err := mathtoolsSpreadPending(nodes); err != nil {
+						return nil, "", err
+					}
+					p.ordinaryArray.popped = true
+					return nodes, "", nil
 				case p.environmentRow != nil:
-					if p.environmentRow.name != item.name {
+					if p.environmentRow.ordinaryArray {
+						if err := mathtoolsSpreadPending(nodes); err != nil {
+							return nil, "", err
+						}
+					} else if p.environmentRow.name != item.name {
 						// A legacy captured nested Begin still owns its stop.
 						return nil, "", p.environmentRow.missing()
 					}
@@ -488,6 +500,13 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 			}
 			if terminator != 0 || stopRight || auto != nil || owner != nil {
 				return nil, "", item.extra()
+			}
+			if p.ordinaryArray != nil {
+				// Array finishes its table before this same EndItem reaches
+				// Begin. Over continuations returned above without consuming it.
+				p.ordinaryArray.end = item
+				p.pendingEnvironmentEnd = nil
+				return nodes, "", nil
 			}
 			if err := p.closeEnvironment(p.environmentRow, item); err != nil {
 				return nil, "", err

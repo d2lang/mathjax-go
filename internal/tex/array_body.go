@@ -16,6 +16,7 @@ import (
 // Fresh cell parsers implement ArrayItem.clearEnv without clearing Stack.global.
 type arrayBodyOwner struct {
 	environment  *environmentFrame
+	ordinary     *ordinaryArrayItem
 	requireClose bool
 	rules        *arrayRules
 	configure    func(*parser)
@@ -51,6 +52,7 @@ func (p *parser) parseArrayBody(source string, owner arrayBodyOwner) error {
 		if owner.environment != nil {
 			sub.environmentRow = owner.environment
 		}
+		sub.ordinaryArray = owner.ordinary
 		sub.matrixClose, sub.cdArrayEntry = owner.requireClose, true
 		sub.arrayCell.rules = owner.rules
 		if owner.configure != nil {
@@ -74,6 +76,14 @@ func (p *parser) parseArrayBody(source string, owner arrayBodyOwner) error {
 		children, _, err := sub.parseRowContinuation(terminator, false, false, nil, "", prefix)
 		if err != nil {
 			return err
+		}
+		if owner.ordinary != nil && owner.ordinary.popped {
+			// Pop.toMml uses only current nodes, not completed row/table
+			// buffers. Preserve their creation-time font before resuming
+			// the surrounding Begin's original lexical environment.
+			matrixCellContent(children)
+			owner.ordinary.nodes = children
+			return nil
 		}
 		item := sub.stoppedCell
 		// EndTable omits only a pending empty final row. Explicit Entry and

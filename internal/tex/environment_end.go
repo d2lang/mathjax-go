@@ -13,6 +13,7 @@ type environmentFrame struct {
 	name           string
 	parent         *environmentFrame
 	stream, closed bool
+	ordinaryArray  bool
 }
 
 // Only the builtin BeginEnd handler can produce this item. Dynamic command
@@ -70,12 +71,12 @@ func (p *parser) closeEnvironment(frame *environmentFrame, item *environmentEndI
 // cursor until its executing handler pops that item; return the updated input
 // and cursor unchanged by any artificial body capture or EOF callback.
 func (p *parser) parseEnvironmentContinuation(frame *environmentFrame) (*mml.Node, error) {
-	previous := p.environmentRow
+	previous, ordinary := p.environmentRow, p.ordinaryArray
 	arrayCell, matrixClose, cdArrayEntry, braket := p.arrayCell, p.matrixClose, p.cdArrayEntry, p.braketOwner
-	p.environmentRow = frame
+	p.environmentRow, p.ordinaryArray = frame, nil
 	p.arrayCell, p.matrixClose, p.cdArrayEntry, p.braketOwner = nil, false, false, nil
 	defer func() {
-		p.environmentRow = previous
+		p.environmentRow, p.ordinaryArray = previous, ordinary
 		p.arrayCell, p.matrixClose, p.cdArrayEntry, p.braketOwner = arrayCell, matrixClose, cdArrayEntry, braket
 	}()
 	children, _, err := p.parseRowContinuation(0, false, false, nil, "", nil)
