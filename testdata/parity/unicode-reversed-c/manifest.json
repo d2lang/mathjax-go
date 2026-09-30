@@ -6,7 +6,7 @@
   "afterProductionSource": "0158db95a3c1d3bec582320314ad1679fa469a61",
   "afterInternalTree": "a7c06df4464ec55d7ac3f584249f83b9d8f82117",
   "afterBinarySHA256": "007d09b00dd5ff2c5e2c00db6dc37f735774f1d132d49a1a56e7f120c56f9cdf",
-  "afterStatus": "source candidate; publication and full gates remain pending",
+  "afterStatus": "Source render; full local Go, frozen-oracle, race, vet and WebAssembly checks passed before publication",
   "originalMathjaxVersion": "3.2.2",
   "originalSourcePin": "ad8f5c21cb810236551da8c6512ba733e67357ee",
   "originalD2AssetPin": "5666d9337c77a4803b9cd60cb1c5a24439d0f949",
@@ -41,5 +41,7 @@
     "after.png": "13ee4d3616f3da1fc281a62b983d18c3e1c4f99e1485cd7f4230da68968774c7",
     "original.png": "13ee4d3616f3da1fc281a62b983d18c3e1c4f99e1485cd7f4230da68968774c7",
     "comparison.png": "49d87bfb1afc076d00c0257b4a8a37014b35a8789b3b40ba122afcf2a3b3395a"
-  }
+  },
+  "localValidationHead": "e40e4a3ef4cbc12877207e1ef03381f74f475ec9",
+  "localValidationReceiptSHA256": "a3dbdee7b3cef0a0616fc4d98c3b56e705b830842e72567b7e8b721f27c080b0"
 }
