@@ -28,8 +28,10 @@ func (p *parser) beginEnvironment(name string) ([]*mml.Node, error) {
 	if err := p.countEnvironment(); err != nil {
 		return nil, err
 	}
-	environment = strings.TrimSpace(environment)
-	if environment == "" {
+	// BeginEnd dispatches the literal name after charging the begin.
+	// A missing registration must fail before a body owner or reader runs.
+	registered, _ := p.sourceEndDefinition(environment)
+	if !registered {
 		return nil, texError("UnknownEnv", "Unknown environment '%s'", environment)
 	}
 	outerEnvironment := p.environmentOwner
