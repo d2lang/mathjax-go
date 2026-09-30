@@ -1,0 +1,177 @@
+{
+  "status": "INSTALLED_SOURCE_QUALIFIED_FOCUSED_AND_ORIGINAL_REGENERATION_PASS",
+  "originalPin": "ad8f5c21cb810236551da8c6512ba733e67357ee",
+  "actualMergedBase": "c24058161bb5df6af3f269ce65030c94079b952a",
+  "sourceOriginalUnionSHA256": "a4fda78dd875df1e1ffbdd452a48dd98d2602c3f5ac865d4bb39ec964c8650e3",
+  "publicProfile": "D2 frozen MathJax 3.2.2 public-default; fresh runtime per request; no augmented or seeded profile",
+  "originalAssets": {
+    "polyfills.js": "7fe1d048c78b0e09854c1259f7413868a51cc8f0c822489eb1ac36ae6c85ce01",
+    "mathjax.js": "cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869",
+    "setup.js": "a52cb0bbabfbd7796b9fedd793b9386c474e3123e788ee151cbe47ca1fa6e881"
+  },
+  "originalOptions": {
+    "Em": 16,
+    "Ex": 8,
+    "Display": "explicit per input",
+    "FontCache": 0
+  },
+  "sourceCounts": {
+    "cases": 100,
+    "svg": 48,
+    "errorSVG": 52,
+    "priorHeldPromotions": 8,
+    "firstSVGInputs": 92
+  },
+  "runtimeCounts": {
+    "preserved": 12,
+    "copyException": 4,
+    "matchException": 8,
+    "GoOutcomeAssertions": 0,
+    "archiveByteIdenticalToInitial56": true,
+    "initial56SourceUnionSHA256": "e09328fc33b63a604c95c93a9b29db3d8fe72854e425ed11a8d83ea06b1d5655"
+  },
+  "publicationAccounting": {
+    "strictSVGAssertions": 100,
+    "priorHeldPromotions": 8,
+    "firstSVGInputs": 92,
+    "firstRuntimeInputsPreservedOnly": 12,
+    "runtimeSVGAssertions": 0
+  },
+  "originalOnlySource": {
+    "initial44CompleteRowsUnchanged": true,
+    "risk56": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/public-array-followup-after184/risk56-root185/full-comparisons56.jsonl",
+      "sha256": "8e97cf73425306f9c9620bbbac0bcad6916ccd4fa5e65c1e3fb09f6c7c9da595",
+      "size": 535392
+    },
+    "sourceBinding": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/public-array-followup-after184/fixtures-preparation185-v2/preparation-source-bindings.json",
+      "sha256": "06d8969b4f2cc879f59434c910fdf17d8d54b7c98521f2b7d9303171564e64de",
+      "size": 5809
+    },
+    "sourceAPIFields": [
+      "svg"
+    ],
+    "baselineAndCandidateFieldsExcludedFromExpectedRecords": true
+  },
+  "newnessReceipts": {
+    "corridor32": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/public-array-followup-after184/planned32-newness.json",
+      "sha256": "8c8f9410df79ee9f698b606f4a0ccc05c99b72531bf2dcffca1c1af9812d1169",
+      "size": 248737
+    },
+    "matrix16": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/public-array-followup-after184/matrix16-newness.json",
+      "sha256": "4faf6d8161afe832a84ce8dd102c7ac503cf581a0a50a76b898ac4dc1e4d1e00",
+      "size": 237127
+    },
+    "risk56": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/public-array-followup-after184/fixtures-preparation185-v2/risk56-newness.json",
+      "sha256": "66c74952bd957e11b568038f86cc5f58e5c5d470a7aa11a9b181e8073b618785",
+      "size": 225803
+    }
+  },
+  "nativeExpectations": {
+    "binding": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/public-array-followup-after184/fixtures-preparation185-v2/native-expectations-source-binding.json",
+      "sha256": "db099ce2e3364c4edab09b23a689a34b7b6c0b6d45fa2cd94f44359b626adf1a",
+      "size": 7186
+    },
+    "sourceObservedPrograms": 4,
+    "testByteEqualInitialDraft": true,
+    "originalTreeGoldens": 0,
+    "seededStates": 0,
+    "synthesizedEndItems": 0
+  },
+  "archiveHashes": {
+    "numcases_direct_pop_mathjax_3_2_2.json.gz": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/public-array-followup-after184/fixtures-preparation185-v2/proposed/testdata/numcases_direct_pop_mathjax_3_2_2.json.gz",
+      "sha256": "83dc943dffb364b534b363dd08ef6bde5452cdab6f953ae8c7ec25a1c59dffae",
+      "size": 18295
+    },
+    "numcases_direct_pop_original_runtime_mathjax_3_2_2.json.gz": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/public-array-followup-after184/fixtures-preparation185-v2/proposed/testdata/numcases_direct_pop_original_runtime_mathjax_3_2_2.json.gz",
+      "sha256": "ff61cca875471472028b067b9c854efb6780fc72365c83f4f1ce1fc110a1f195",
+      "size": 2344
+    }
+  },
+  "generator": {
+    "file": "generate_numcases_direct_pop.cjs",
+    "sha256": "c12dcd460c37435ee80e82df6b84a2dfa1b52ecbcd66eb7368e20ccb3419f84c",
+    "unchangedOracleSHA256": "ddc9ff73cefa65f0c7caccf9a84426fe14524a0cdabfd833e556cba21767930e",
+    "exactInitialRuntimeCaptureOraclePath": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/mathjax-go/testdata/differential/oracle.mjs",
+    "nodeSHA256": "27db838bb204ef7c21df2931f5656e4c8fb32e6e947f363a402b49714d32b5b1",
+    "originalConversionsProposed": 112,
+    "freshVMPerRequest": true,
+    "fullRuntimeErrorObjectEqualityRequired": true,
+    "runtimeErrorsUnnormalized": true,
+    "byteIdenticalArchivesRequired": true,
+    "executedByPreparer": false
+  },
+  "rootRiskCaptureQualification": {
+    "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/public-array-followup-after184/risk56-root185/root-qualification.json",
+    "sha256": "e5075ab7ed56f221a881f77214d8ffc76eac590d669172df45802c5526ff5352",
+    "size": 4894
+  },
+  "validationBoundary": "Focused100SVG plus four native physical tests passed; fresh112 original regeneration preserved every full API and both archives byte-exact. Protected and103D2 evidence independently qualified. Final full/race/vet/WASM and hosted CI are recorded separately for the exact published commit. This finite corpus does not establish full MathJax parity or full source stack/runtime identity.",
+  "rootCompletedValidation": {
+    "focused100-root185/measurement.json": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/public-array-followup-after184/focused100-root185/measurement.json",
+      "sha256": "719e71894ad23e5b8ef2699442258617365dfe28dc6fa8629b9d575227f77f72"
+    },
+    "numcases-direct-pop-original-regeneration100-root185/regeneration.json": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/public-array-followup-after184/numcases-direct-pop-original-regeneration100-root185/regeneration.json",
+      "sha256": "6d49c0a0e4f5b61154f5f773dfbf4d39ccc649c35af86771d383daaeb19c0855"
+    },
+    "focused100-and-original112-saved-peer185.json": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/public-array-followup-after184/focused100-and-original112-saved-peer185.json",
+      "sha256": "d243ed9026d049bd6274137ff2bc94441457c20d626887da5f097fa7314372fc"
+    },
+    "fixtures-combined100-static-peer185.json": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/public-array-followup-after184/fixtures-combined100-static-peer185.json",
+      "sha256": "b48f6ed129c1b52b3a3fcfa2f9b0c80c8548088c1cd5fd81e1398f36eb156ec0"
+    },
+    "protected-candidate185-root/summary.json": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/public-array-followup-after184/protected-candidate185-root/summary.json",
+      "sha256": "e66760bd0334903a791225d2eb0cf731418a5db648015a631ccc4dd12ca6d7f4"
+    },
+    "cancel-order-current512-root185/receipt.json": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/public-array-followup-after184/cancel-order-current512-root185/receipt.json",
+      "sha256": "2ddd460d84410660d1e10787f1cc7544741120b3699f3d26b9521ba62097681b"
+    },
+    "candidate-full-and-d2-saved-peer185.json": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/public-array-followup-after184/candidate-full-and-d2-saved-peer185.json",
+      "sha256": "e613ef5b57e7bf3a3ebeff05d2215aa164e808f1aa599a8f7c3cef4284fc06cc"
+    },
+    "risk56-root185/root-qualification.json": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/public-array-followup-after184/risk56-root185/root-qualification.json",
+      "sha256": "e5075ab7ed56f221a881f77214d8ffc76eac590d669172df45802c5526ff5352"
+    },
+    "protectedOutcomePeer": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/public-array-followup-after184/protected-saved-peer185.json",
+      "sha256": "44220e6ebad3a0629e5bcfcd9071d160201fc5b7bd69b23c8252f07bec56a3f0"
+    },
+    "cancelOutcomePeer": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/public-array-followup-after184/cancel4-current512-saved-peer185.json",
+      "sha256": "1a0c1276f7d7d879d2c677d68ca1a9d1a4421b1cc3e4f9014aea3d15ab95740c"
+    }
+  },
+  "focusedCandidateMatches": {
+    "strictSVG": 100,
+    "fixes": 68,
+    "controls": 32,
+    "firstSVGReferences": 92,
+    "priorHeldPromotions": 8,
+    "nativePhysicalContinuationTests": 4,
+    "fullOriginalRuntimePreservedSeparately": 12
+  },
+  "protectedQualifiedReplay": {
+    "uniqueRequests": 146639,
+    "associations": 164719,
+    "stableCasesSVGFixes": 20,
+    "genuineSVGOrConsumerRegressions": 0,
+    "noncausalCancelOrderControls": 4,
+    "newRuntimeAdaptationsPreservedSeparately": 12,
+    "rawChangedFlagsRetained": true
+  }
+}

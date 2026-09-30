@@ -11,6 +11,14 @@ import (
 	"github.com/d2lang/mathjax-go/internal/mml"
 )
 
+// NumCases pushes the same CasesBegin object twice below its EqnArray.
+// The first matching End removes one entry; left decoration runs on Last
+// (the oldest node), and the second End removes the remaining entry.
+type casesBeginItem struct {
+	end     bool
+	closing *environmentEndItem
+}
+
 // NumCases is an EqnArray owner. Its left program is retained verbatim until
 // the array closes, so declarations made in either rows or that program can
 // resolve the appended helper through the ordinary shared command maps.
@@ -26,12 +34,14 @@ func (p *parser) casesEnvironment(name string) (nodes []*mml.Node, handled bool,
 		return nil, true, err
 	}
 	frame := p.environmentOwner
+	frame.casesBegin = &casesBeginItem{end: true}
+	array := &ordinaryArrayItem{begin: frame}
 
 	tags := p.amsTags()
 	tags.start(name, true, true)
 	ended := false
 	defer func() {
-		if !ended {
+		if !ended && !array.popped {
 			tags.end()
 		}
 	}()
@@ -57,6 +67,7 @@ func (p *parser) casesEnvironment(name string) (nodes []*mml.Node, handled bool,
 	row := &equationRowState{table: spacing}
 	err = p.parseArrayBody("", arrayBodyOwner{
 		environment: frame,
+		ordinary:    array,
 		rules:       spacing.rules,
 		configure: func(sub *parser) {
 			sub.arrayCell.equation, sub.arrayCell.numCases = row, true
@@ -78,6 +89,27 @@ func (p *parser) casesEnvironment(name string) (nodes []*mml.Node, handled bool,
 	if err != nil {
 		return nil, true, err
 	}
+	if array.popped {
+		// Stack.Pop().toMml() delivers only pending nodes to CasesBegin.
+		// Completed equation rows and EndTable/tag cleanup are bypassed.
+		children, err := p.continueCasesBegin(frame, array.nodes)
+		if err != nil {
+			return nil, true, err
+		}
+		if len(children) == 0 {
+			return nil, true, fmt.Errorf("Cases left block requires a pending node")
+		}
+		// NodeStack.Last is nodes[0], even after more input appends nodes.
+		first := children[0]
+		original := p.copyNode(first)
+		if err := p.empheqAddLeft(first, original, left+"\\empheqlbrace\\,", "numcases-left"); err != nil {
+			return nil, true, err
+		}
+		if err := p.closeEnvironment(frame, &environmentEndItem{name: frame.casesBegin.closing.name}); err != nil {
+			return nil, true, err
+		}
+		return children, true, nil
+	}
 	resetTableAttributes(table,
 		"displaystyle", false,
 		"rowspacing", ".2em",
@@ -90,13 +122,43 @@ func (p *parser) casesEnvironment(name string) (nodes []*mml.Node, handled bool,
 	// EqnArray EndTable restores the tag stack before Empheq parses left.
 	tags.end()
 	ended = true
+	if array.end == nil {
+		return nil, true, frame.missing()
+	}
+	if err := p.closeEnvironment(frame, array.end); err != nil {
+		return nil, true, err
+	}
 	// Cases receives the finalized ArrayItem MML before Empheq decorates it.
 	table = finishArrayRules(table)
 	original := p.copyNode(table)
 	if err := p.empheqAddLeft(table, original, left+"\\empheqlbrace\\,", "numcases-left"); err != nil {
 		return nil, true, err
 	}
+	if err := p.closeEnvironment(frame, &environmentEndItem{name: frame.casesBegin.closing.name}); err != nil {
+		return nil, true, err
+	}
 	return []*mml.Node{table}, true, nil
+}
+
+// Continue the same physical input in CasesBegin's lexical environment.
+// Its shared first End must run before the deferred left child is parsed.
+func (p *parser) continueCasesBegin(begin *environmentFrame, prefix []*mml.Node) ([]*mml.Node, error) {
+	previous, array := p.environmentRow, p.ordinaryArray
+	cell, matrixClose, entry, braket := p.arrayCell, p.matrixClose, p.cdArrayEntry, p.braketOwner
+	p.environmentRow, p.ordinaryArray = begin, nil
+	p.arrayCell, p.matrixClose, p.cdArrayEntry, p.braketOwner = nil, false, false, nil
+	defer func() {
+		p.environmentRow, p.ordinaryArray = previous, array
+		p.arrayCell, p.matrixClose, p.cdArrayEntry, p.braketOwner = cell, matrixClose, entry, braket
+	}()
+	children, _, err := p.parseRowContinuation(0, false, false, nil, "", prefix)
+	if err != nil {
+		return nil, err
+	}
+	if begin.casesBegin.end || begin.casesBegin.closing == nil {
+		return nil, begin.missing()
+	}
+	return children, nil
 }
 
 // Cases.Entry's scanner differs from BaseMethods.Entry: only leading JS

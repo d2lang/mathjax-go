@@ -14,6 +14,7 @@ type environmentFrame struct {
 	parent         *environmentFrame
 	stream, closed bool
 	ordinaryArray  bool
+	casesBegin     *casesBeginItem
 }
 
 // Only the builtin BeginEnd handler can produce this item. Dynamic command
@@ -62,7 +63,15 @@ func (p *parser) closeEnvironment(frame *environmentFrame, item *environmentEndI
 	if item.name != frame.name {
 		return texError("EnvBadEnd", "\\begin{%s} ended with \\end{%s}", frame.name, item.name)
 	}
-	frame.closed = true
+	if cases := frame.casesBegin; cases != nil && cases.end {
+		// Cases pushes one Begin object twice. The first End removes
+		// its upper entry and flips the shared end property; decoration
+		// executes while the remaining entry still owns these nodes.
+		cases.end = false
+		cases.closing = item
+	} else {
+		frame.closed = true
+	}
 	p.pendingEnvironmentEnd = nil
 	return nil
 }
