@@ -32,13 +32,13 @@ func (p *parser) braket(name string) ([]*mml.Node, error) {
 		item.single = false
 		terminator = '}'
 	}
-	previous, cdArrayEntry, environmentRow := p.braketOwner, p.cdArrayEntry, p.environmentRow
-	p.environmentRow = nil
+	previous, cdArrayEntry, environmentRow, ordinaryArray := p.braketOwner, p.cdArrayEntry, p.environmentRow, p.ordinaryArray
+	p.environmentRow, p.ordinaryArray = nil, nil
 	p.braketOwner = item
 	if !item.single {
 		p.cdArrayEntry = false
 	}
-	defer func() { p.braketOwner, p.cdArrayEntry, p.environmentRow = previous, cdArrayEntry, environmentRow }()
+	defer func() { p.braketOwner, p.cdArrayEntry, p.environmentRow, p.ordinaryArray = previous, cdArrayEntry, environmentRow, ordinaryArray }()
 	children, _, err := p.parseRowWithInfix(terminator, false, false)
 	if err != nil {
 		return nil, err

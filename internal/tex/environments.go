@@ -36,6 +36,9 @@ func (p *parser) beginEnvironment(name string) ([]*mml.Node, error) {
 	frame := &environmentFrame{name: environment, parent: outerEnvironment, stream: environment == "spreadlines" || environment == "numcases" || environment == "subnumcases"}
 	p.environmentOwner = frame
 	defer func() { p.environmentOwner = outerEnvironment }()
+	if _, defined := p.state.environments[environment]; !defined && isOrdinaryArrayEnvironment(environment) {
+		return p.ordinaryArrayEnvironment(environment, frame)
+	}
 	if nodes, handled, err := p.casesEnvironment(environment); handled {
 		return nodes, err
 	}
@@ -399,10 +402,20 @@ func (p *parser) parseTable(body, style string, initialSpacing ...string) (*mml.
 }
 
 func (p *parser) parseTableWithAlignment(body, style string, alignFills bool, initialSpacing ...string) (*mml.Node, error) {
+	return p.parseTableWithOrdinaryArray(body, style, alignFills, nil, initialSpacing...)
+}
+
+func (p *parser) parseTableWithOrdinaryArray(body, style string, alignFills bool, ordinary *ordinaryArrayItem, initialSpacing ...string) (*mml.Node, error) {
 	table := node("mtable")
 	var entries []*mml.Node
 	spacing := &arrayRowSpacing{}
+	var environment *environmentFrame
+	if ordinary != nil {
+		environment = ordinary.begin
+	}
 	err := p.parseArrayBody(body, arrayBodyOwner{
+		environment: environment,
+		ordinary: ordinary,
 		rules:      newArrayRules(table),
 		hasEntries: func() bool { return len(entries) != 0 },
 		endEntry: func(children []*mml.Node, fill *arrayCellState) error {
@@ -424,6 +437,9 @@ func (p *parser) parseTableWithAlignment(body, style string, alignFills bool, in
 	})
 	if err != nil {
 		return nil, err
+	}
+	if ordinary != nil && ordinary.popped {
+		return nil, nil
 	}
 	table.Attributes.Set("columnspacing", "1em")
 	initial := "4pt"

@@ -13,6 +13,7 @@ type environmentFrame struct {
 	name           string
 	parent         *environmentFrame
 	stream, closed bool
+	ordinaryArray  bool
 }
 
 // Only the builtin BeginEnd handler can produce this item. Dynamic command
