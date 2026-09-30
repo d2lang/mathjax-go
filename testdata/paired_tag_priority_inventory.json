@@ -3,7 +3,7 @@
   "sourceHead": "791afca0ca7842fb622e94531257cbe6aa0f7828",
   "sourceInternalTree": "fb1bd62ca6fb47a375856b64c41f4f932ff62f06",
   "compiledPreviewBase": "41623db5f6d3c6840f193e69586865f5127989fe",
-  "publicationBase": "pending actual merged main178",
+  "publicationBase": "b08b35acc9804d816425624a447945164830fa51",
   "candidateSHA256": "b49999ddd2986d71da5eecc260ddce42f708ab8a2e8d892e3f4d75297c89f269",
   "baselineSHA256": "6e2e32859545b7f1d76dd439d965b8bb571a0977855d5eba8ff8387f3cded13b",
   "uniquePublicInputs": 1446,
@@ -58,8 +58,8 @@
     "generatorSHA256": "cf3e914133d17acfacb8ffec4218c87c498d1b3034f5f8e5076dd121a76845f1"
   },
   "overlapPreview": {
-    "baseStatus": "Braket preview 41623db pending PR178; not published or actual178",
-    "classificationStatus": "All 1432 source SVGs independently qualified strict; actual merged-base binding pending",
+    "baseStatus": "Historical Braket preview 41623db; superseded by actual merged PR178 publicationOverlap",
+    "classificationStatus": "Historical complete-original preservation scan; current strict and consumer classifications are bound by publicationOverlap",
     "base": "41623db5f6d3c6840f193e69586865f5127989fe",
     "baseTree": "6d0c88ef9af6ebf577dd914403d0a10fbf96f3d4",
     "scannedFiles": 505,
@@ -349,6 +349,100 @@
     "finalTestSHA256": "d5f7c1d434caef4127d261f751d5a3f9285e2be05ffde3a9bc358699ac69e0f3",
     "finalFixtureSHA256": "95b4132bcafb79436ae48dd24a3c0fc49d82cf25f40c62fbda8f0339d1504cb5"
   },
-  "fullGates": "pending root actual-base rebase and full frozen/race/vet/WASM",
-  "D2": "pending root evidence"
+  "fullGates": "pending full frozen/race/vet/WASM on this rebased checkout",
+  "D2": {
+    "status": "PASS",
+    "actualMergedBase": "b08b35acc9804d816425624a447945164830fa51",
+    "all93SVGsEqualOriginal": true,
+    "integrationManifestSHA256": "5ff9eb46d9b74962194f33fe047eb0447a78edba6d9f61eccd654cd1beeb3bd5",
+    "build": {
+      "status": "terminal-pass",
+      "head": "a7ef6c81ec6ecfb28d5069dfac61d457364eac16",
+      "internalTree": "fb1bd62ca6fb47a375856b64c41f4f932ff62f06",
+      "actualMergedBase": "b08b35acc9804d816425624a447945164830fa51",
+      "binary": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/d2-after-paired-tag-priority-actual178",
+      "seconds": 2.329,
+      "binarySHA256": "ea8abee7941fadaf7b35e96c5b8dfd9a5077924dc126ada90a044660057cf87b"
+    },
+    "visualReview": {
+      "status": "PASS-root-visual-review",
+      "head": "a7ef6c81ec6ecfb28d5069dfac61d457364eac16",
+      "internalTree": "fb1bd62ca6fb47a375856b64c41f4f932ff62f06",
+      "actualMergedBase": "b08b35acc9804d816425624a447945164830fa51",
+      "sharedScale": true,
+      "cases": [
+        {
+          "slug": "paired-eqref-priority",
+          "observation": "Before shows unresolved reference followed by an unparenthesized fraction; fixed and original show one stretchy parenthesized fraction.",
+          "comparisonSHA256": "6bb9061efe960d4f4c74dea4007e67d828f28da6e6a8d5c3ad4b3887ef0baa3a",
+          "afterOriginalSHA256": "eceff928013a264d1f2d3fffc4de9ee7ab94e8c36a733c2e87717ef7cd5acf01",
+          "beforeSHA256": "790895d06e97454064cbb68003919a3a5289f9e00f9e61bc0da98ade8d5e2c14",
+          "rootViewed": true
+        },
+        {
+          "slug": "paired-option-command-name",
+          "observation": "Before omits the invoked command from the recorded error; fixed and original include to \\abs, including the same error-SVG dimensions. The caption quotes the diagnostic stored in the raw SVG.",
+          "comparisonSHA256": "ae972bee212261ca0c927d126853de64599dcf2bee10f0591e0e3a775814a73f",
+          "afterOriginalSHA256": "83c681d70ea9792d68c9698bbe9d30ede22a5b801470db22ea11d3e50eab548f",
+          "beforeSHA256": "df85bd0d6f5569e6d8afd5f86d8c2730f3e844d530b1633802ccde7cee72c127",
+          "rootViewed": true
+        }
+      ],
+      "failedBeforeD2AttemptsPreserved": [
+        "d2-tag-before-failure178",
+        "d2-notag-before-failure178"
+      ]
+    }
+  },
+  "publicationBaseTree": "d828433046f792f4f466dde858f1438cb63fee8f",
+  "rebasedSourceHead": "71a7911e944b711d115c4b1d8f89d89560becb73",
+  "rebasedFixtureHead": "a7ef6c81ec6ecfb28d5069dfac61d457364eac16",
+  "rebaseBinding": {
+    "status": "pass",
+    "oldFixturePreview": "a9a5b4aabfc6185ee68475a1645f5f770a9391ae",
+    "oldSource": "791afca0ca7842fb622e94531257cbe6aa0f7828",
+    "rebasedHead": "a7ef6c81ec6ecfb28d5069dfac61d457364eac16",
+    "rebasedSource": "71a7911e944b711d115c4b1d8f89d89560becb73",
+    "actualMergedBase": "b08b35acc9804d816425624a447945164830fa51",
+    "internalTree": "fb1bd62ca6fb47a375856b64c41f4f932ff62f06",
+    "onlyWholeTreeChangesFromPreview": [
+      "testdata/physics_braket_env_README.md",
+      "testdata/physics_braket_env_inventory.json"
+    ],
+    "sourceAndFixturePatchesByteIdentical": true,
+    "rangeDiff": "1:  c59cbbb = 1:  2d7341f Respect paired delimiter priority before tag handlers\n2:  791afca = 2:  71a7911 Preserve paired delimiter names in optional-argument errors\n3:  a9a5b4a = 3:  a7ef6c8 Add frozen paired delimiter priority references",
+    "clean": true
+  },
+  "publicationOverlap": {
+    "status": "PASS-actual178-overlap-and-consumer-qualification",
+    "base": "b08b35acc9804d816425624a447945164830fa51",
+    "baseTree": "d828433046f792f4f466dde858f1438cb63fee8f",
+    "baseStatus": "actual merged Braket PR178",
+    "scannedJSONFiles": 505,
+    "allTrackedTestdataJSONPathsCovered": true,
+    "sourceOriginalInputs": 1446,
+    "sourceSVGInputs": 1432,
+    "sourceRuntimeInputs": 14,
+    "publicationCounts": {
+      "rawPromotion": 6,
+      "firstPublicationSVG": 1422,
+      "priorStrictWholeSVGHashAndAST": 4,
+      "firstPublicationRuntime": 14
+    },
+    "priorCompleteOriginalObjectsUnchanged": 6,
+    "priorWholeSVGHashesExactlyBound": 4,
+    "conflicts": 0,
+    "ambiguousModes": 0,
+    "candidateAll1432SourceSVGsExact": true,
+    "runtimeOutcomesRemainOutsideSVGParity": true,
+    "consumerQualification": "Reference-text compares the complete SVG SHA256 and AST for four prior pairs; GetStar preserves six matching raw pairs without a render assertion. Duplicate AMS tag/GetStar raw records count once.",
+    "consumerSHA256": {
+      "reference_text_test.go": "a8ac7955c92fbb928c1a9619688674fe301fa7e528115d57edb1cfbd94772e96",
+      "getstar_bra_test.go": "c790cde5ae1f91add147067e2d3c1be29a59fc1ba9e2c9c904f6399f1cf47ec5"
+    },
+    "fullScanSHA256": "7a8b7d1a4ceeb745a5ea4f7d11ff8e195d699f4e752e06501a1f86d6214ab9f6",
+    "originalUnionSHA256": "8e4ea86d3063660eda4d66162400dfb7d262e618bfe0b873e4a35df49961d608",
+    "qualifiedCandidateComparisonSHA256": "5b9f4991217601a521142af0343ad0063bbb7612dd204c3e91cac0c5981fe149",
+    "noGoNoCheckoutWrites": true
+  }
 }
