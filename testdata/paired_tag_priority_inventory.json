@@ -349,7 +349,84 @@
     "finalTestSHA256": "d5f7c1d434caef4127d261f751d5a3f9285e2be05ffde3a9bc358699ac69e0f3",
     "finalFixtureSHA256": "95b4132bcafb79436ae48dd24a3c0fc49d82cf25f40c62fbda8f0339d1504cb5"
   },
-  "fullGates": "pending full frozen/race/vet/WASM on this rebased checkout",
+  "fullGates": {
+    "head": "ecb3d0a3f9598e03a27a7be238bbf0d5eb709296",
+    "internalTree": "fb1bd62ca6fb47a375856b64c41f4f932ff62f06",
+    "base": "b08b35acc9804d816425624a447945164830fa51",
+    "status": "terminal-pass",
+    "goVersion": "go version go1.27.0 darwin/arm64",
+    "environment": {
+      "GOFLAGS": "-p=1",
+      "GOTOOLCHAIN": "local",
+      "MATHJAX_GO_ORACLE_DIR": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/oracle-assets",
+      "MATHJAX_GO_NODE": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/raise-node-jitless",
+      "MATHJAX_GO_ORACLE_FULL": "1"
+    },
+    "gates": [
+      {
+        "name": "full",
+        "command": [
+          "/Users/aw/.local/share/go/1.27.0/bin/go",
+          "test",
+          "-p",
+          "1",
+          "./..."
+        ],
+        "environmentOverrides": {},
+        "status": "terminal",
+        "exitCode": 0,
+        "seconds": 44.759
+      },
+      {
+        "name": "race",
+        "command": [
+          "/Users/aw/.local/share/go/1.27.0/bin/go",
+          "test",
+          "-race",
+          "-p",
+          "1",
+          "./..."
+        ],
+        "environmentOverrides": {},
+        "status": "terminal",
+        "exitCode": 0,
+        "seconds": 306.632
+      },
+      {
+        "name": "vet",
+        "command": [
+          "/Users/aw/.local/share/go/1.27.0/bin/go",
+          "vet",
+          "-p",
+          "1",
+          "./..."
+        ],
+        "environmentOverrides": {},
+        "status": "terminal",
+        "exitCode": 0,
+        "seconds": 1.419
+      },
+      {
+        "name": "wasm",
+        "command": [
+          "/Users/aw/.local/share/go/1.27.0/bin/go",
+          "build",
+          "-p",
+          "1",
+          "./..."
+        ],
+        "environmentOverrides": {
+          "GOOS": "js",
+          "GOARCH": "wasm"
+        },
+        "status": "terminal",
+        "exitCode": 0,
+        "seconds": 1.175
+      }
+    ],
+    "finalHead": "ecb3d0a3f9598e03a27a7be238bbf0d5eb709296",
+    "finalStatus": ""
+  },
   "D2": {
     "status": "PASS",
     "actualMergedBase": "b08b35acc9804d816425624a447945164830fa51",
