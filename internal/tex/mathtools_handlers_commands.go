@@ -164,6 +164,10 @@ func (p *parser) mathtoolsPairedDelimiter(name string, definition pairedDelimite
 		var err error
 		size, _, err = p.readBrackets(nil)
 		if err != nil {
+			// GetBrackets reports CommandMap's currentCS, the invoked paired name.
+			if failure, ok := err.(*Error); ok && failure.ID == "MissingCloseBracket" {
+				return nil, texError(failure.ID, "Could not find closing ']' for argument to \\%s", name)
+			}
 			return nil, err
 		}
 	}
