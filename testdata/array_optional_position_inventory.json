@@ -1,0 +1,212 @@
+{
+  "status": "INSTALLED_SELECTED_GO_ORIGINAL_REGENERATION_PROTECTED_D2_PASS_PENDING_FULL_GATES",
+  "originalPin": "ad8f5c21cb810236551da8c6512ba733e67357ee",
+  "actualMergedBase": "16801f1f0e8e5c0b1582224cce85140b1093ed38",
+  "sourceCapture": {
+    "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/array-optional-position-audit182/original-public106-root183/originals106.json.gz",
+    "sha256": "3a3360481e88ab9d7afa4da9a1fa3609e08c6296a5ed224d5bb5cbb79e0d14e4"
+  },
+  "sourceCaptureReceipt": {
+    "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/array-optional-position-audit182/original-public106-root183/receipt.json",
+    "sha256": "e553ac15a56b272b573aafeafed4e80aaa1f5fcf6370e8ad201fd0b4247618a3"
+  },
+  "sourceDataCheck": {
+    "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/array-optional-position-audit182/fixture-draft183/source-data-check.json",
+    "sha256": "98d9094af9ad52dcc2437639363e52ef19fab0fbeb4d267067214df054d19a40"
+  },
+  "sourceObligations": {
+    "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/array-optional-position-audit182/implementation-proposal183/focused-source-obligations.json",
+    "sha256": "ecd9001f40ba3f489b295ab78d64c348add8603952a17131339d35089d46064f"
+  },
+  "sourceCounts": {
+    "uniquePublicInputs": 106,
+    "sourceCaptureFresh": 58,
+    "retainedCompleteOriginals": 48,
+    "validNonErrorSVG": 96,
+    "validErrorSVG": 10,
+    "invalidXML": 0,
+    "originalRuntime": 0
+  },
+  "measuredBaselineCandidate": {
+    "status": "INDEPENDENT_FOCUSED_PASS",
+    "strictOriginalMatches": 106,
+    "regressions": 0,
+    "changedNonexact": 0
+  },
+  "fixControlCounts": {
+    "fixes": 86,
+    "controls": 20
+  },
+  "publicationNewness": {
+    "firstStrictSVG": 58,
+    "priorHeldPromotions": 48,
+    "firstStrictFixes": 38,
+    "firstStrictControls": 20
+  },
+  "proposedStrictSourceAssertions": 106,
+  "finalConsumerPartitionPending": false,
+  "oldResidualsPreservedWhole": true,
+  "observer": {
+    "status": "PLANNED_NOT_IMPLEMENTED_OR_EXECUTED",
+    "profile": "same public default; no injection",
+    "selectedExistingInputs": 16,
+    "newPublicInputs": 0,
+    "sourcePlan": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/array-optional-position-audit182/capture-preparation183/source-observation-plan183.json",
+      "sha256": "08a3cce3089924648dd0fa89e8562d426d8c9f18057a5f9d094537069a4c0f54"
+    }
+  },
+  "files": {
+    "array_optional_position_test.go": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/mathjax-root-index/array_optional_position_test.go",
+      "sha256": "3e6d68536e472cfde6839927af33a22b060a85e4a2746c258a006ed601f2e810"
+    },
+    "testdata/array_optional_position_mathjax_3_2_2.json.gz": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/mathjax-root-index/testdata/array_optional_position_mathjax_3_2_2.json.gz",
+      "sha256": "3a3360481e88ab9d7afa4da9a1fa3609e08c6296a5ed224d5bb5cbb79e0d14e4"
+    },
+    "testdata/generate_array_optional_position.cjs": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/mathjax-root-index/testdata/generate_array_optional_position.cjs",
+      "sha256": "7bab5b5299e41723d4547018cf52cd17f5b2e0019ee9c3ea102ecb0840956c7c"
+    },
+    "testdata/array_optional_position_README.md": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/array-optional-position-audit182/artifact-and-docs-draft183/proposed/testdata/array_optional_position_README.md",
+      "sha256": "711403a6f5b517ffadc84425cc8909a50bc9aee38fa1ea6d7d265166e1133972"
+    }
+  },
+  "limits": [
+    "All SVG expectations remain complete original outputs",
+    "48 prior held promotions are excluded from first-input totals",
+    "The protected86 fixes overlap the focused86 fixes",
+    "Four cancellation order samples are excluded from fixes",
+    "No injected/native method assertions",
+    "Final artifact commit and merge have not been attested"
+  ],
+  "initialDraftCopyPlan": {
+    "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/array-optional-position-audit182/fixture-draft183/copy-plan.json",
+    "sha256": "4f0810394a5b6e2aa014a03592fd1ca789b8a086cc99c854251414dbdbe15b1b"
+  },
+  "focusedQualification": {
+    "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/array-optional-position-audit182/candidate106-v2-outcome-peer183.json",
+    "sha256": "9724322cfcbd8fb0f69e6c743c89bee559ad58b4c4a782bf2b736ab62cedd875"
+  },
+  "sourceCommit": {
+    "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/array-optional-position-audit182/source-commit183.json",
+    "sha256": "d0ee158f55057a3997798d447eb51e862245460f5c4115a8f5dd42292db28f41"
+  },
+  "productionSource": "d114575e4d54542cf119eafa77750a6c36b1a3f9",
+  "internalTree": "2a6e7a69fbd7304adb13472da0e12b14797568db",
+  "finalPublicationCommit": null,
+  "actualMergedCommit": null,
+  "regeneration": {
+    "status": "PASS_ORIGINAL_ONLY",
+    "freshConversions": 106,
+    "completeAPIObjects": 106,
+    "byteIdenticalArchives": 1,
+    "receipt": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/array-optional-position-audit182/fixture-original-regeneration106/regeneration.json",
+      "sha256": "901eeef604ac33fc2e7388280123e51864531f8734615ecdc2e8b8afb749f6fd"
+    },
+    "stream": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/array-optional-position-audit182/fixture-original-regeneration106/fresh-observations.jsonl",
+      "sha256": "46afdd77ed18800848efe64658985c0bf4fb9900f1994c09c9d4b5a7acee6624"
+    },
+    "rootInvocation": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/array-optional-position-audit182/root-original-regeneration106.json",
+      "sha256": "c55881fb82b6101e282598b7b259709ada0a37ac222989f062c2547bfb17597c"
+    },
+    "sourceAndInstalledPeer": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/array-optional-position-audit182/regeneration-installed106-peer183.json",
+      "sha256": "409b8158f8af3dd047e856dec5b550e60e177ce04fc365c9d4e731198caff3c5"
+    },
+    "invocationBindingPeer": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/array-optional-position-audit182/regeneration106-root-binding-peer183.json",
+      "sha256": "56bb0b4a4e4375a9d87564e668c408e0f90aa0ed4527cb0854d4fd2d4729ec37"
+    },
+    "shellLogLimit": "No separate shell stdout/stderr logs; root terminal observation and every complete LF response are retained."
+  },
+  "selectedGo": {
+    "status": "PASS",
+    "receipt": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/array-optional-position-audit182/selected-go106/receipt.json",
+      "sha256": "6f426bc6b83f6d9f3c8652a02ed3b669d9281837facaa51d0ecafb4aad0d43ed"
+    },
+    "installed": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/array-optional-position-audit182/installed-final-fixtures106.json",
+      "sha256": "7444a9a234a8b10adc17140dfae719a82b447546d44af4fd378dc214cea93045"
+    }
+  },
+  "protectedReplay": {
+    "status": "INDEPENDENT_PASS",
+    "receipt": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/array-optional-position-audit182/protected183-final-outcome-peer.json",
+      "sha256": "cca667658e5705b232fd33bec91ec2937beb166d0188649226ffc21388e4de89"
+    },
+    "counts": {
+      "publicRequests": 146591,
+      "sourceAssociations": 164663,
+      "rawChangedRequests": 90,
+      "stableCausalSourceAndConsumerFixes": 86,
+      "causalSourceFixAssociations": 134,
+      "noncausalRawAttributeOrderControls": 4,
+      "genuineSourceRegressions": 0,
+      "consumerRegressions": 0,
+      "otherChangedNonexactResponses": 0,
+      "runtimeRequestsUnchanged": 2135,
+      "rawInvalidSourceRequestsUnchanged": 1010,
+      "safeRuleRequestsUnchanged": 473,
+      "legacyHashRequestsUnchanged": 73,
+      "focusedStrictFullOriginalMatches": 106,
+      "focusedFixes": 86,
+      "focusedControls": 20,
+      "repeatFullResponses": 512,
+      "repeatProcesses": 32
+    },
+    "fixesOverlapFocused": 86,
+    "extraFixes": 0,
+    "fourCancellationOrderSamplesExcluded": true
+  },
+  "D2": {
+    "status": "RENDER_AND_ACTUAL_VISUAL_PASS",
+    "new": 2,
+    "prior": 100,
+    "totalAfterOriginalByteExact": 102,
+    "afterOriginalPNGsEqual": true,
+    "sourceHead": "d114575e4d54542cf119eafa77750a6c36b1a3f9",
+    "binary": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/array-optional-position-audit182/d2-build-root183-v2/d2-candidate",
+      "sha256": "4835486dcab5e06236f9f8661df58698fc0d14815387f7306f5daa23c77a13be"
+    },
+    "build": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/array-optional-position-audit182/d2-build-root183-v2/build-receipt.json",
+      "sha256": "f1b18dc82e5afb41ce3cadcb16ea2bf21e9e04b44e363aadf28d8ad23206f29b"
+    },
+    "after": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/array-optional-position-audit182/d2-candidate-root183-v2/finish.json",
+      "sha256": "bce291817d9e11ade5bbf500536aee23dea5338e3dccddee8f6daa6654526584"
+    },
+    "savedOutcomePeer": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/array-optional-position-audit182/review_d2_next-scratch/d2-v2-saved-outcome-peer183.json",
+      "sha256": "66ca6cd0efa3db572b41883cc09c064162b45c05ecea5552f400970e79ef6c11"
+    },
+    "visualPeer": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/array-optional-position-audit182/review_d2_next-scratch/d2-v2-visual-outcome-peer183.json",
+      "sha256": "5776aa8230372db701ff5f742cf3beca81441e97181a05fc9ecd4a63567070f4"
+    },
+    "rootVisualReview": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/array-optional-position-audit182/d2-candidate-root183-v2/root-visual-review.json",
+      "sha256": "92c7c27bedd33deace7a60bf3ce9be0ca10824cb615e4f8848abf3a4cbf9a2f1"
+    }
+  },
+  "requiredBeforeMerge": {
+    "fullGo": "PENDING",
+    "race": "PENDING",
+    "vet": "PENDING",
+    "WASM": "PENDING",
+    "hostedExactHeadCI": "PENDING"
+  },
+  "artifactManifestSHA256": {
+    "array-optional-top": "baf081682c49ce765655b5090093dbc0959ee22bba4f8a94bf1295a5fad4c550",
+    "array-optional-bottom": "f4b970c4997f4de3fe4106112bcb9591e2ab3a706ac7acbe136cf4a4a2a06e9e"
+  }
+}

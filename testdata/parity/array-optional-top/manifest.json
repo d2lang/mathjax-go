@@ -1,0 +1,101 @@
+{
+  "status": "D2_RENDER_AND_SHARED_SCALE_VISUAL_VERIFIED_PENDING_FULL_GATES",
+  "d2Commit": "01bc7ecdbdd04c13d6fe5df1967d2d9aa14ae579",
+  "beforeMathjaxCommit": "16801f1f0e8e5c0b1582224cce85140b1093ed38",
+  "beforeProductionSource": {
+    "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/displaylines-center-audit181/d2-build182/d2-build182.json",
+    "sha256": "e4a319834dc0b5181fe1a1980e1f206fc8cab2aa5a6df81c75b994737a021aa2"
+  },
+  "afterCodeCommit": "d114575e4d54542cf119eafa77750a6c36b1a3f9",
+  "afterInternalTree": "2a6e7a69fbd7304adb13472da0e12b14797568db",
+  "finalPublicationCommit": null,
+  "actualMergedCommit": null,
+  "tex": "A+\\begin{array}[t]{r|l}1&2\\\\3&4\\end{array}+B",
+  "sourcePublicIndices": [
+    48,
+    49
+  ],
+  "completeOriginalMathSVGEmbedded": true,
+  "afterOriginalByteExact": true,
+  "afterOriginalPNGByteExact": true,
+  "newD2OriginalByteExact": 2,
+  "priorD2OriginalByteExact": 100,
+  "allD2OriginalByteExact": 102,
+  "D2BinarySHA256": "4835486dcab5e06236f9f8661df58698fc0d14815387f7306f5daa23c77a13be",
+  "oracleAssets": {
+    "mathjax.js": "cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869",
+    "polyfills.js": "7fe1d048c78b0e09854c1259f7413868a51cc8f0c822489eb1ac36ae6c85ce01",
+    "setup.js": "a52cb0bbabfbd7796b9fedd793b9386c474e3123e788ee151cbe47ca1fa6e881"
+  },
+  "originalScriptSHA256": "ddc9ff73cefa65f0c7caccf9a84426fe14524a0cdabfd833e556cba21767930e",
+  "NodeSHA256": "27db838bb204ef7c21df2931f5656e4c8fb32e6e947f363a402b49714d32b5b1",
+  "files": {
+    "witness.d2": "70d052fa0480d96818006816883aa6d81d61bb891b80f2afadab315c37241b8b",
+    "before.svg": "ee25c56d73e9d1afe32cd8b55179e04e6d641aad2fbb2b8d1d69c559ce997248",
+    "after.svg": "6ef9d0fe7849914d1756e52f0df21f2d849851dffcf555db11c82d51705e48f5",
+    "original.svg": "6ef9d0fe7849914d1756e52f0df21f2d849851dffcf555db11c82d51705e48f5",
+    "before.png": "b857fa36ab6932cf71d5863b7f7df6252ff72dc70ca77004edf56365792943cc",
+    "after.png": "be389d04ddc08a0521d1756192cb0dad8f85c3a617b4a5706e7a89162eb280df",
+    "original.png": "be389d04ddc08a0521d1756192cb0dad8f85c3a617b4a5706e7a89162eb280df",
+    "comparison.png": "5cc4667d3c07999145d33aa5c2ce00232767d60ba98d52878032d7280699127a",
+    "README.md": "49e2c4d7a2b6e991aab0e329c811909eff023b6721bb45e59cb01c5eab5f9505"
+  },
+  "screenshot": {
+    "sharedScaleFactor": 2.2717391304347827,
+    "images": [
+      {
+        "width": 184,
+        "height": 94,
+        "renderedWidth": 418,
+        "renderedHeight": 214
+      },
+      {
+        "width": 156,
+        "height": 94,
+        "renderedWidth": 354,
+        "renderedHeight": 214
+      },
+      {
+        "width": 156,
+        "height": 94,
+        "renderedWidth": 354,
+        "renderedHeight": 214
+      }
+    ],
+    "comparisonPNGDimensions": [
+      3000,
+      1562
+    ],
+    "deviceScaleFactor": 2,
+    "untouchedSVGs": true,
+    "rootVisualInspected": true,
+    "independentVisualInspected": true,
+    "rootVisualReceipt": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/array-optional-position-audit182/d2-candidate-root183-v2/root-visual-review.json",
+      "sha256": "92c7c27bedd33deace7a60bf3ce9be0ca10824cb615e4f8848abf3a4cbf9a2f1"
+    }
+  },
+  "receiptHashes": {
+    "source-commit183.json": "d0ee158f55057a3997798d447eb51e862245460f5c4115a8f5dd42292db28f41",
+    "d2-preflight-actual183-v2/finish.json": "c94fc433a38488de5d8e58bbf54a7b46f4477e0672aa6acce6122157d2bda037",
+    "d2-build-root183-v2/build-receipt.json": "f1b18dc82e5afb41ce3cadcb16ea2bf21e9e04b44e363aadf28d8ad23206f29b",
+    "d2-candidate-root183-v2/finish.json": "bce291817d9e11ade5bbf500536aee23dea5338e3dccddee8f6daa6654526584",
+    "d2-candidate-root183-v2/prior100-receipt.json": "67b160a6f95f152360e97a8fa702b6ad5f8d1d93d22b3fa7bcc6ef7eb0d08715",
+    "review_d2_next-scratch/d2-v2-saved-outcome-peer183.json": "66ca6cd0efa3db572b41883cc09c064162b45c05ecea5552f400970e79ef6c11",
+    "review_d2_next-scratch/d2-v2-visual-outcome-peer183.json": "5776aa8230372db701ff5f742cf3beca81441e97181a05fc9ecd4a63567070f4",
+    "d2-candidate-root183-v2/root-visual-review.json": "92c7c27bedd33deace7a60bf3ce9be0ca10824cb615e4f8848abf3a4cbf9a2f1"
+  },
+  "witnessReceiptHashes": {
+    "render.json": "e8a0042271bdf6325930c71a4655c2b5b4a3b21ee2af157fdd226a8ec2357e8b",
+    "math-bindings.json": "3c6c2554e9a364b0a1bbc5103b1dde82ac904164a9b3eed444097dce96a5df0c",
+    "screenshot-receipt.json": "226582a6d0051a06a50d621e208f7296d7c6bfb211f2c99f5899d80e639d5948"
+  },
+  "pendingBeforeMerge": [
+    "Full Go tests",
+    "Race tests",
+    "go vet",
+    "WASM compilation",
+    "Exact-head hosted CI"
+  ],
+  "validationScope": "Completed D2 and actual visual checks bound to committed production source; final artifact commit and merge remain pending."
+}
