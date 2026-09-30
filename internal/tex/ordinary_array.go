@@ -155,7 +155,7 @@ func (p *parser) ordinaryArrayEnvironment(name string, begin *environmentFrame) 
 			"columnspacing", "1em",
 			"rowspacing", tableRowSpacing(table),
 		)
-		table.Attributes.Set("displaystyle", false)
+		table.Attributes.Set("displaystyle", style == "D")
 		open, close := "{", ""
 		if strings.Contains(name, "rcases") {
 			open, close = "", "}"
