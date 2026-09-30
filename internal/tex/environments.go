@@ -699,23 +699,6 @@ func applyColumnSpec(table *mml.Node, specification string) *mml.Node {
 	return finishArrayRules(table)
 }
 
-func (p *parser) displayLines(name string) ([]*mml.Node, error) {
-	body, _, err := p.readArgument(name, false)
-	if err != nil {
-		return nil, err
-	}
-	table, err := p.parseTable(strings.ReplaceAll(body, "&", "\\&"), "D")
-	if err != nil {
-		return nil, err
-	}
-	resetTableAttributes(table,
-		"rowspacing", ".5em",
-		"columnspacing", "1em",
-		"displaystyle", true,
-	)
-	return []*mml.Node{finishArrayRules(table)}, nil
-}
-
 func (p *parser) parseCD(body string) ([]*mml.Node, error) {
 	arrayParser := p.matrixCellParser("")
 	arrayParser.matrixClose = false

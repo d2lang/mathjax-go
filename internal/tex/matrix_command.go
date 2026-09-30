@@ -14,14 +14,30 @@ import (
 func (p *parser) matrixCommand(name string) ([]*mml.Node, error) {
 	numbered := name == "eqalignno" || name == "leqalignno"
 	aligned := name == "eqalign" || numbered
-	body, err := p.readMatrixBody(name)
+	displayLines := name == "displaylines"
+	var body string
+	var err error
+	if displayLines {
+		// Matrix installs a required-close Array at the current cursor.
+		// Run macros before deciding which close reaches that Array.
+		err = p.startMatrixBody(name)
+	} else {
+		body, err = p.readMatrixBody(name)
+	}
 	if err != nil {
 		return nil, err
 	}
 	table := node("mtable")
+	var liveArray *ordinaryArrayItem
+	if displayLines {
+		// Standalone Matrix has no Begin to continue after a direct Pop.
+		liveArray = &ordinaryArrayItem{}
+	}
 	var entries []*mml.Node
 	spacing := &arrayRowSpacing{}
 	owner := arrayBodyOwner{
+		live:         displayLines,
+		ordinary:     liveArray,
 		rules:        newArrayRules(table),
 		requireClose: true,
 		hasEntries:   func() bool { return len(entries) != 0 },
@@ -53,6 +69,9 @@ func (p *parser) matrixCommand(name string) ([]*mml.Node, error) {
 	if err := p.parseArrayBody(body, owner); err != nil {
 		return nil, err
 	}
+	if liveArray != nil && liveArray.popped {
+		return liveArray.nodes, nil
+	}
 	table.Attributes.Set("rowspacing", "4pt")
 	table.Attributes.Set("columnspacing", "1em")
 	if aligned {
@@ -60,6 +79,11 @@ func (p *parser) matrixCommand(name string) ([]*mml.Node, error) {
 		table.Attributes.Set("columnspacing", "0.278em")
 		table.Attributes.Set("displaystyle", true)
 		table.Attributes.Set("columnalign", "right left")
+	}
+	if displayLines {
+		table.Attributes.Set("rowspacing", ".5em")
+		table.Attributes.Set("displaystyle", true)
+		table.Attributes.Set("columnalign", "center")
 	}
 	if numbered {
 		side := "right"
@@ -73,7 +97,7 @@ func (p *parser) matrixCommand(name string) ([]*mml.Node, error) {
 		table.Attributes.Set("columnalign", "left left")
 	}
 	initial := "4pt"
-	if aligned {
+	if aligned || displayLines {
 		initial = ".5em"
 	}
 	if name == "cases" {
@@ -167,7 +191,15 @@ func (p *parser) readMatrixBody(name string) (string, error) {
 // Matrix reads its opening argument before pushing the open ArrayItem. Script
 // parsing uses the same boundary to reject an unbraced ArrayItem immediately.
 func (p *parser) startMatrixBody(name string) error {
-	p.skipSpaces()
+	if name == "displaylines" {
+		// Matrix.GetNext uses JavaScript whitespace, excluding NEL and
+		// including BOM. Retain the legacy readers of other Matrix routes.
+		for p.pos < len(p.source) && isPrimeSpace(p.peekRune()) {
+			p.consumeRune()
+		}
+	} else {
+		p.skipSpaces()
+	}
 	if p.pos == len(p.source) {
 		return texError("MissingArgFor", "Missing argument for \\%s", name)
 	}
@@ -282,6 +314,7 @@ func (p *parser) matrixCellParser(source string) *parser {
 	// Keep the configuration and logical Stack.global while starting without
 	// the surrounding font, root-index, or identifier-pattern state.
 	return &parser{source: source, state: p.state, stackGlobal: p.ensureStackGlobal(), display: p.display,
+		liveMatrix:       p.liveMatrix,
 		environmentOwner: p.environmentOwner, environmentRow: p.environmentOwner,
 		vectorFactory: p.vectorFactory, genfracPalette: p.genfracPalette,
 		starMacroChildren: p.starMacroChildren, derivativeChildren: p.derivativeChildren, matrixClose: true, arrayCell: &arrayCellState{}}

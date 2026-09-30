@@ -323,9 +323,7 @@ func (p *parser) commandNodes(name string, after **derivativeAutoOpen) ([]*mml.N
 		return p.beginEnvironment(name)
 	case "end":
 		return p.endEnvironment(name)
-	case "displaylines":
-		return p.displayLines(name)
-	case "matrix", "array", "pmatrix", "cases", "eqalign", "eqalignno", "leqalignno":
+	case "matrix", "array", "pmatrix", "cases", "eqalign", "eqalignno", "leqalignno", "displaylines":
 		return p.matrixCommand(name)
 
 	case "DeclarePairedDelimiter", "DeclarePairedDelimiters", "DeclarePairedDelimiterX", "DeclarePairedDelimitersX", "DeclarePairedDelimiterXPP", "DeclarePairedDelimitersXPP":

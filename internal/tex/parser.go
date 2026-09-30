@@ -122,6 +122,7 @@ type parser struct {
 	cdEntryStopped        bool
 	arrayCell             *arrayCellState
 	matrixClose           bool
+	liveMatrix            bool
 	identifierPattern     identifierPattern
 	operatorLetters       bool
 	noAutoOP              bool
@@ -454,7 +455,7 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 					styles = styles[:len(styles)-1]
 					nodes = append(frame.prefix, nodes...)
 					reducePositions()
-				case infixPending || terminator != 0 || stopRight || auto != nil || owner != nil:
+				case infixPending || terminator != 0 && !(p.matrixClose && p.ordinaryArray != nil && p.ordinaryArray.begin == nil) || stopRight || auto != nil || owner != nil:
 					// Braket and AutoOpen override toMml with an explicit
 					// fenced row. Their caller checks that completed result;
 					// an Over above either still owns these raw nodes.
@@ -1004,6 +1005,9 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 	}
 	if auto != nil {
 		return nil, "", auto.stopError()
+	}
+	if p.matrixClose && p.ordinaryArray != nil && p.ordinaryArray.begin == nil && terminator != 0 {
+		return nil, "", texError("MissingCloseBrace", "Missing close brace")
 	}
 	if terminator != 0 {
 		return nil, "", texError("ExtraOpenMissingClose", "Extra open brace or missing close brace")
