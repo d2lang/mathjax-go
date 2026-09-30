@@ -1,0 +1,205 @@
+{
+  "status": "FROZEN_ORIGINAL_ONLY_REFERENCES",
+  "originalPin": "ad8f5c21cb810236551da8c6512ba733e67357ee",
+  "actualMergedBase": "2a19a9626f9136931a5866ca14288d2d64998f0c",
+  "sourceOriginalUnionSHA256": "ce5a75b9828df72f980ae761c8100a40dc0b115984053e0d23f3ab23884317e8",
+  "sourceCaptureCount": 252,
+  "originalAPIOnly": true,
+  "originalTreeExpectations": false,
+  "originalOraclePath": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/mathjax-go/testdata/differential/oracle.mjs",
+  "originalOracleSHA256": "ddc9ff73cefa65f0c7caccf9a84426fe14524a0cdabfd833e556cba21767930e",
+  "originalNodeSHA256": "27db838bb204ef7c21df2931f5656e4c8fb32e6e947f363a402b49714d32b5b1",
+  "originalAssets": {
+    "mathjax.js": "cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869",
+    "polyfills.js": "7fe1d048c78b0e09854c1259f7413868a51cc8f0c822489eb1ac36ae6c85ce01",
+    "setup.js": "a52cb0bbabfbd7796b9fedd793b9386c474e3123e788ee151cbe47ca1fa6e881"
+  },
+  "options": {
+    "Em": 16,
+    "Ex": 8,
+    "Display": "explicit per input",
+    "FontCache": 0
+  },
+  "originalCounts": {
+    "diagnostic-svg": 164,
+    "original-runtime": 56,
+    "normal-svg": 32
+  },
+  "originalRuntimeFirstLines": {
+    "TypeError: Cannot read properties of undefined (reading 'copy')": 44,
+    "TypeError: Cannot read properties of undefined (reading 'match')": 4,
+    "TypeError: Cannot read properties of undefined (reading 'appendChild')": 8
+  },
+  "all252ExactTeXDisplayKeysUnique": true,
+  "newnessReceipts": [
+    {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/public-array-followup-after184/next64-source-only-peer185.json",
+      "sha256": "f60a45867e54de3bbf28eafcd59bc587fc43f4bf1084f3f44d0bd406b0e7bb3b",
+      "size": 2265
+    },
+    {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/public-array-followup-after184/lower-recipient48-independent-newness186.json",
+      "sha256": "99654c4ef87b808e705da309464b14c5df9f140d85cc94ba1052104a21ed03bb",
+      "size": 208690
+    },
+    {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/public-array-followup-after184/cases-entry-horizontal-nonrow140-independent-newness186.json",
+      "sha256": "6b330dcaa050ed077b4f94dc2867867d594706ea7031bf5db07e9be770393c9d",
+      "size": 4459
+    }
+  ],
+  "rawOriginalBindings": [
+    {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/public-array-followup-after184/next64-root-after185/requests64.json",
+      "sha256": "4e4f40eadcd424918e9b0cb79b448da481a2ec54606963c0878c1318492c3250",
+      "size": 11197
+    },
+    {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/public-array-followup-after184/next64-resume-root-after185/measurement.json",
+      "sha256": "8278fad8bce46fe560d10d559aa98bbfd8b4d22d9f2bfa43540e5cb691ed3fc7",
+      "size": 11807
+    },
+    {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/public-array-followup-after184/next64-resume-root-after185/full-comparisons64.jsonl",
+      "sha256": "c6a843d5e8212256af42c21f0cfff7fdf6d29873c2751ce78bf927f3c141bc52",
+      "size": 147612
+    },
+    {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/public-array-followup-after184/cases-lower-recipient-next185-plan/requests48.json",
+      "sha256": "b16f6338c2ee99e44e45c233d14b8702b8f65a17f288531454d3a520047f9c79",
+      "size": 11731
+    },
+    {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/public-array-followup-after184/lower-recipient48-root186/measurement.json",
+      "sha256": "0afba78ebe4b88f090ccfcd01a15ffa271b9c5b7ecb25db12d08019bf42d42b6",
+      "size": 18084
+    },
+    {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/public-array-followup-after184/lower-recipient48-root186/full-comparisons.jsonl",
+      "sha256": "8be5750e139f4627570d20af595e00e300379dbe5e79a6e647a86689c3354862",
+      "size": 87650
+    },
+    {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/public-array-followup-after184/lower-recipient48-root186/original.stdout.bin",
+      "sha256": "4c42840e0a2340d9f9acd56b87b386096865c7e9aba14449a53afd1bbf4fb4d7",
+      "size": 30376
+    },
+    {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/public-array-followup-after184/lower-recipient48-root186/original.input.bin",
+      "sha256": "bf433c44e440b1b732a1ff9d163cb3e833fdb7576f612e9b00a4d365135bccd4",
+      "size": 10468
+    },
+    {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/public-array-followup-after184/cases-entry-risk-next186-plan/pending-entry-requests40.json",
+      "sha256": "caab4e160a0d3d00a581b5fb5691368d0dd6b43d8b2f88a8e4a96254655fbcc0",
+      "size": 8313
+    },
+    {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/public-array-followup-after184/pending-entry40-v3-root186/measurement.json",
+      "sha256": "1675fdd573d094520ab3d401a4fcc1c2aa2b115266dd51a88cab83318288dd34",
+      "size": 18421
+    },
+    {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/public-array-followup-after184/pending-entry40-v3-root186/full-comparisons.jsonl",
+      "sha256": "e56f4ccac56a9884e621cdda3ef0935d0bfff832cc5389dd5aa1659dd29cf991",
+      "size": 297072
+    },
+    {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/public-array-followup-after184/pending-entry40-v3-root186/original.stdout.bin",
+      "sha256": "0a118bd1781ea2518a692ccc4569ecb6d9314e6142a1c74525a806f67d6c140d",
+      "size": 130418
+    },
+    {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/public-array-followup-after184/pending-entry40-v3-root186/original.input.bin",
+      "sha256": "1eb8380d2ba0ffa5fa69f13bd8bf18716c44f80da75366ec00c7b3f093ddffca",
+      "size": 7366
+    },
+    {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/public-array-followup-after184/cases-entry-risk-remaining52-next186-plan/requests52.json",
+      "sha256": "0563c83cb36be105a1d0949bf59bec2859bc746bf3b4e8dc91c0615da1aaed9e",
+      "size": 132063
+    },
+    {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/public-array-followup-after184/remaining52-v3-root186/measurement.json",
+      "sha256": "a468fbd3d8b954c4ae3faeee2fdc628ddf7afd4037326afeb5267e189b2ad76d",
+      "size": 18375
+    },
+    {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/public-array-followup-after184/remaining52-v3-root186/full-comparisons.jsonl",
+      "sha256": "a277b9a28d97f1a3676dbba7ca1e1cef951429e2526d8be70f4ddc3871940c2f",
+      "size": 324106
+    },
+    {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/public-array-followup-after184/remaining52-v3-root186/original.stdout.bin",
+      "sha256": "0f9b1a72197dbfec9837661466957b1acedfc8734022816c209e4640df958d23",
+      "size": 73916
+    },
+    {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/public-array-followup-after184/remaining52-v3-root186/original.input.bin",
+      "sha256": "f2e20e76fb7474e42660b5904ac411e72305781adfc94e0c9e1473c8cf5707be",
+      "size": 130656
+    },
+    {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/public-array-followup-after184/cases-horizontal-position-next186-plan/requests16.json",
+      "sha256": "ddd477bb5b7db2002105ca090864a73c0b4af8a17817d5d4e7d8aeeb49e83df3",
+      "size": 4011
+    },
+    {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/public-array-followup-after184/horizontal-position16-v3-root186/measurement.json",
+      "sha256": "e30530e028deea7e461860ff55ba015e43ede8d7ac057f32dce8a0091b1f5b68",
+      "size": 18460
+    },
+    {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/public-array-followup-after184/horizontal-position16-v3-root186/full-comparisons.jsonl",
+      "sha256": "3ba469f43131df1e818d8816a5c9ab6bfcd67f37682f536078b31f640683a11d",
+      "size": 26382
+    },
+    {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/public-array-followup-after184/horizontal-position16-v3-root186/original.stdout.bin",
+      "sha256": "2520dd5d5379882a9dfb44b5c40dc52db929645adab0ec232b4488ed8b51b5d9",
+      "size": 7712
+    },
+    {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/public-array-followup-after184/horizontal-position16-v3-root186/original.input.bin",
+      "sha256": "bb5f1205aed2e1128f043a50c4ea298913cfcc37a39c678fe476db1faf6029ad",
+      "size": 3400
+    },
+    {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/public-array-followup-after184/cases-nonrow-and-horizontal-prime-next186-plan/requests-combined32.json",
+      "sha256": "a9b4bbc5d56b5550fc92057db7a6e9cc08a85944de12229ccfbc5e47a7197f19",
+      "size": 8123
+    },
+    {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/public-array-followup-after184/nonrow-horizontal-prime32-v3-root186/measurement.json",
+      "sha256": "066638d70b83e4cf6cb151e13019f7b85c553fa80b6f9b48330f406e524bfd98",
+      "size": 18541
+    },
+    {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/public-array-followup-after184/nonrow-horizontal-prime32-v3-root186/full-comparisons.jsonl",
+      "sha256": "ca40e7397a7f7a6f952a461dcf34e6d5f8d23041322667d92ac4b87d3a20d7bb",
+      "size": 78906
+    },
+    {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/public-array-followup-after184/nonrow-horizontal-prime32-v3-root186/original.stdout.bin",
+      "sha256": "625319359c1749c21d251d79c12e1f7f49385403370d759780f748d61ea40ad1",
+      "size": 20456
+    },
+    {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/public-array-followup-after184/nonrow-horizontal-prime32-v3-root186/original.input.bin",
+      "sha256": "60808f6174b6fb830d2442a8e50f534a4d57ce1018c3a9cd6c85f3ee39351c4c",
+      "size": 6800
+    }
+  ],
+  "archives": {
+    "cases_alias_lifetime_mathjax_3_2_2.json.gz": "00acc38cd1467cc4e8695a3593b774ebfa0bf69360811ef70603abae435fa8aa",
+    "cases_alias_lifetime_original_runtime_mathjax_3_2_2.json.gz": "04977ed195a66881b5f98be3c6b9c19e5c4b903f57e9cd0b7dc564a2067e4765"
+  },
+  "sources": {
+    "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/public-array-followup-after184/fixtures-cases-alias-preparation186/proposed/testdata/cases_alias_lifetime_sources.json",
+    "sha256": "5a73c03bf6b6d7b0f3961ebea346404d5c20a00f93c3fe66a822c1cb96fdb777",
+    "size": 553045
+  },
+  "priorOriginalFixtureExpectationsUnchanged": true,
+  "GoExpectedRuntimeErrors": null,
+  "fullParityProved": false
+}

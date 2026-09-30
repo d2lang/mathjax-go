@@ -124,7 +124,7 @@ func (p *parser) parseScriptArgument(attachment *scriptAttachment, font string) 
 			}
 			p.pos = start
 		}
-		result, parseErr := p.parseOneTokenEvent()
+		result, parseErr := p.parseOneTokenEventWithCasesBegin(attachment.missingOpen)
 		if parseErr != nil {
 			return nil, currentFont, nil, nil, parseErr
 		}
