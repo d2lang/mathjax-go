@@ -1,0 +1,125 @@
+{
+  "mathjaxGitCommit": "ad8f5c21cb810236551da8c6512ba733e67357ee",
+  "actualBase": "5985de47cd782beeee58344eb1ddaa0bbd5cc51e",
+  "actualBaseTree": "819bf6849a6a131fff620121d501c2cb061ac5fc",
+  "sourceHead": "b25453663d1e4b6f12be0943d367bbb2aab03ae8",
+  "sourceInternalTree": "ecc3a0c388573b6d42074d5fa4ef1b513b7067c2",
+  "candidateBinarySHA256": "29a2e57994c80831e6855fb7f903924ef84743a0434da3c300fe063348a635a3",
+  "baselineBinarySHA256": "9505e1bf9659c98115ca858b86dc28c3fb0fc27078d4e25cf6d54d9f448e47da",
+  "sourceUnionSHA256": "6e2be76864e694bbd8756e27eebe0a9abdf02c4a0cea6c79add36c97dd46d4ae",
+  "publicOriginals": {
+    "uniqueInputs": 508,
+    "validSVG": 476,
+    "errorSVG": 32,
+    "runtime": 0,
+    "unsafeXML": 0,
+    "sourceMemberships": 512,
+    "oldSourceInputsUnchanged": 504,
+    "additionalPreviouslyPublishedInputs": 4
+  },
+  "matched": {
+    "strictSVG": 500,
+    "validSVG": 468,
+    "errorSVG": 32,
+    "fixes": 230,
+    "controls": 270,
+    "firstMatchedInputs": 488,
+    "rawOriginalPromotions": 8,
+    "priorStrictInputs": 4
+  },
+  "held": {
+    "validSVG": 8,
+    "reason": "Inherited displaylines missing explicit center alignment",
+    "newSourceInputsOnly": 8,
+    "mismatchMustPersistAssertion": false
+  },
+  "passive": {
+    "existingInputs": 144,
+    "additionalPublicInputs": 0,
+    "originalArchiveByteIdentical": true,
+    "observedMethod": "ArrayItem.EndTable",
+    "allCompleteOutputsAndEventsPreserved": true
+  },
+  "actualOverlap": {
+    "trackedJSONPaths": 523,
+    "firstSVGInputs": 496,
+    "rawOriginalPromotions": 8,
+    "priorStrictInputs": 4,
+    "conflictingOriginals": 0,
+    "ambiguousDisplay": 0
+  },
+  "historicalBaselineCorrection": {
+    "old504ApparentFixes": 228,
+    "old504ApparentControls": 268,
+    "qualified504Fixes": 226,
+    "qualified504Controls": 270,
+    "displayNumeratorDrifts": 16,
+    "reason": "Historical Go wire omitted top-level display; original oracle read nested Display correctly. All historical responses and all originals retained unchanged.",
+    "newFourFixes": 4
+  },
+  "protected": {
+    "files": 51,
+    "completeOriginalObservations": 39071,
+    "completeOriginalInputs": 38223,
+    "hashObservations": 284,
+    "hashInputs": 282,
+    "retainedSeededMethodExclusions": 12,
+    "strictFixes": 8,
+    "genuineRegressions": 0,
+    "runtimeChanges": 0
+  },
+  "broad": {
+    "observations": 17549,
+    "genuineFixes": 4,
+    "fixesOverlapProtected": true,
+    "cancellationOrderOnlyChangedOutputs": 3,
+    "cancellationOrderOnlyHistoricalDrifts": 2,
+    "genuineRegressions": 0,
+    "runtimeChanges": 0,
+    "originalRuntimeAndUnsafeXMLSeparate": true
+  },
+  "auditSourceSHA256": {
+    "originals180.json.gz": "167775bd40956bf07d3f3ee90230376cdc9260cc4e091efdd0b8557ecbd22915",
+    "comparison180.json.gz": "3590c59ae03e2de60db747a062a6ee5a45b459d483188670f58656e5298ef0bd",
+    "passive180.json.gz": "eb3cc09ed3324127325f4ffb7ddbc16fce669f33b276c27e179d2b627e351781",
+    "source-proof180.json": "ecb17211061b9ce773c8bea4cfdb1542c06eac5a6e66f21b29b7021b7fa7faf0",
+    "D-method-bindings180.json": "48d1abe0e76cb71ca2656abf3147396967f4662f60168bc78374c7c31e4f1640",
+    "source-build181.json": "c09fcdd8534fd4c98deda81214f99062b28db51951c919fe0352fc12513622aa",
+    "independent-review/focused504-qualification181.json": "5a274e0ca9409b423709be81066a3dd56b60dc281587526a8471ba3150ff8d65",
+    "independent-review/broad-protected-qualification181.json": "6b5cd847f631733a76daa1dd2d4416317614143e1a9dc9048b299810c28b409f",
+    "independent-review/extension508-source-peer181.json": "80244c27eef579426cefc62d2822962e689271df7137bcd436b0f11e28e96fd7",
+    "independent-review/actual508-overlap-peer181.json": "c396cfc73b8e63d12a407d4f5f7958c373fed52cc65f063c3c467a897aa565be",
+    "preparation180/union-originals508.json.gz": "6e2be76864e694bbd8756e27eebe0a9abdf02c4a0cea6c79add36c97dd46d4ae",
+    "preparation180/additional-four181.json.gz": "3b97e0762ad784a4bd03532a103d726839e1f9fd3b6fc1146d552a1a1876f8ba",
+    "preparation180/qualified-partitions508.json.gz": "be1c158fbba5bf47b36685310f603e9666e5d20c1372d6bafe46ebecf5809454",
+    "preparation180/actual508/overlap-actual180.json.gz": "17f3b50b89c51c75a423f6193c81583f47fde465f60943c47c34e74dd82c1768",
+    "preparation180/actual508/consumer-overlap508.json": "1a5d9dab90d0a8de324f0cba384fc23376b7078255a7d4aca53a62677fc31ad2"
+  },
+  "filesSHA256": {
+    "dcases_displaystyle_mathjax_3_2_2.json.gz": "b5f2064e6ae30590f05f0ca5c07e6fd93fbf7de52b7e1f8a5196181ed9e8e47f",
+    "dcases_displaystyle_residuals.json.gz": "0d6f035a5f8257afe4b13643955c88ea198121dada119894f841e5af43221397",
+    "dcases_displaystyle_observations.json.gz": "eb3cc09ed3324127325f4ffb7ddbc16fce669f33b276c27e179d2b627e351781",
+    "generate_dcases_displaystyle.cjs": "8e5d8768f15c8350b2f0f5cfeb88e4ca0016457ea325e166467d533faae4db33"
+  },
+  "validation": {
+    "originalOnlyRegeneration": {
+      "status": "PASS",
+      "completeOriginalSVGs": 508,
+      "passivePlainAndObservedConversions": 288,
+      "freshVMConversions": 796,
+      "allThreeContainersByteIdentical": true,
+      "receipt": "fixture-regeneration181/dcases_displaystyle_regeneration.json",
+      "receiptSHA256": "1efe09e854a94391688dda50948366f4728d8101e93c99f75f19e51d3f90eac5",
+      "node": "v24.19.0"
+    },
+    "staticFixturePeer": {
+      "status": "PASS",
+      "receipt": "independent-review/assembled-fixture-static-peer181.json",
+      "receiptSHA256": "2db6ae5debeac5fa9ca3e9fe983cd31be252b1b30fb30360ee8532696c0db775",
+      "scope": "Complete original objects, source metadata, provenance, test, generator and assembly-stage documentation"
+    },
+    "newGoTest": "pending root formatting and execution",
+    "fullGoRaceVetWasm": "pending root",
+    "D2": "root-owned artifacts; final publication binding pending"
+  }
+}
