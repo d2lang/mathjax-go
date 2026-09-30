@@ -15,11 +15,11 @@ import (
 
 type dcasesDisplaystyleCase struct {
 	Name, TeX, Partition, Reason, QualifiedChange string
-	SourceIndex int
-	Display *bool
-	Original json.RawMessage
-	SourceMemberships []json.RawMessage
-	PublicationProvenance struct{ Category string }
+	SourceIndex                                   int
+	Display                                       *bool
+	Original                                      json.RawMessage
+	SourceMemberships                             []json.RawMessage
+	PublicationProvenance                         struct{ Category string }
 }
 
 func dcasesDisplaystyleReferences(t *testing.T, name string) []dcasesDisplaystyleCase {
@@ -36,7 +36,7 @@ func dcasesDisplaystyleReferences(t *testing.T, name string) []dcasesDisplaystyl
 	defer z.Close()
 	var fixture struct {
 		MathjaxGitCommit, SourceUnionSHA256 string
-		Cases []dcasesDisplaystyleCase
+		Cases                               []dcasesDisplaystyleCase
 	}
 	if err := json.NewDecoder(z).Decode(&fixture); err != nil {
 		t.Fatal(err)
@@ -53,7 +53,10 @@ func TestDcasesDisplaystyleOriginalReferences(t *testing.T) {
 	if len(matched) != 500 || len(held) != 8 {
 		t.Fatal("dcases displaystyle container counts changed")
 	}
-	type input struct { tex string; display bool }
+	type input struct {
+		tex     string
+		display bool
+	}
 	inputs, names, indices := map[input]bool{}, map[string]bool{}, map[int]bool{}
 	partitions, provenance, matchedProvenance, effects := map[string]int{}, map[string]int{}, map[string]int{}, map[string]int{}
 	valid, errors, memberships := 0, 0, 0
@@ -77,7 +80,11 @@ func TestDcasesDisplaystyleOriginalReferences(t *testing.T) {
 		if err := xml.Unmarshal([]byte(original["svg"]), &root); err != nil || root.XMLName.Local != "svg" || root.XMLName.Space != "http://www.w3.org/2000/svg" {
 			t.Fatal("invalid original SVG", c.Name, err)
 		}
-		if strings.Contains(original["svg"], "data-mjx-error=") { errors++ } else { valid++ }
+		if strings.Contains(original["svg"], "data-mjx-error=") {
+			errors++
+		} else {
+			valid++
+		}
 		if c.Partition == "held-svg" {
 			// Preserve the original without making a current mismatch a requirement.
 			if c.Reason != "Inherited displaylines missing explicit center alignment" || c.QualifiedChange != "" || !strings.Contains(c.TeX, `\displaylines`) || strings.Contains(original["svg"], "data-mjx-error=") {
@@ -94,7 +101,9 @@ func TestDcasesDisplaystyleOriginalReferences(t *testing.T) {
 			options := mathjax.DefaultOptions()
 			options.Display = *c.Display
 			got, err := mathjax.RenderWithOptions(c.TeX, options)
-			if err != nil { t.Fatal(err) }
+			if err != nil {
+				t.Fatal(err)
+			}
 			if got != original["svg"] {
 				t.Fatalf("complete original differs: got %x want %x", sha256.Sum256([]byte(got)), sha256.Sum256([]byte(original["svg"])))
 			}
@@ -102,12 +111,20 @@ func TestDcasesDisplaystyleOriginalReferences(t *testing.T) {
 	}
 	check := func(label string, got, want map[string]int) {
 		t.Helper()
-		if len(got) != len(want) { t.Fatalf("%s categories changed: %v", label, got) }
-		for k, n := range want { if got[k] != n { t.Fatalf("%s %s: got %d want %d", label, k, got[k], n) } }
+		if len(got) != len(want) {
+			t.Fatalf("%s categories changed: %v", label, got)
+		}
+		for k, n := range want {
+			if got[k] != n {
+				t.Fatalf("%s %s: got %d want %d", label, k, got[k], n)
+			}
+		}
 	}
-	check("partitions", partitions, map[string]int{"strict-svg":500, "held-svg":8})
-	check("publication", provenance, map[string]int{"firstSVGInput":496, "priorStrictCompleteSVG":4, "priorPreservedRawPromotion":8})
-	check("matched publication", matchedProvenance, map[string]int{"firstSVGInput":488, "priorStrictCompleteSVG":4, "priorPreservedRawPromotion":8})
-	check("qualified effects", effects, map[string]int{"fix":230, "control":270})
-	if valid != 476 || errors != 32 || memberships != 512 { t.Fatal("original kind or source membership count changed", valid, errors, memberships) }
+	check("partitions", partitions, map[string]int{"strict-svg": 500, "held-svg": 8})
+	check("publication", provenance, map[string]int{"firstSVGInput": 496, "priorStrictCompleteSVG": 4, "priorPreservedRawPromotion": 8})
+	check("matched publication", matchedProvenance, map[string]int{"firstSVGInput": 488, "priorStrictCompleteSVG": 4, "priorPreservedRawPromotion": 8})
+	check("qualified effects", effects, map[string]int{"fix": 230, "control": 270})
+	if valid != 476 || errors != 32 || memberships != 512 {
+		t.Fatal("original kind or source membership count changed", valid, errors, memberships)
+	}
 }
