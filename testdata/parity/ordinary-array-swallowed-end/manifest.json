@@ -1,0 +1,29 @@
+{
+  "D2Commit": "01bc7ecdbdd04c13d6fe5df1967d2d9aa14ae579",
+  "beforeMathjaxCommit": "a85eebdd12d60d7b24e0dd8b570e89baa4074d1f",
+  "beforeProductionInternalTree": "fb1bd62ca6fb47a375856b64c41f4f932ff62f06",
+  "afterCodeCommit": "3c9e0bd813e703c8bc95ce445ea3444222b63203",
+  "afterInternalTree": "22b9b48a55288e64f6d44452501051b7d48facaf",
+  "beforeD2BinarySHA256": "ea8abee7941fadaf7b35e96c5b8dfd9a5077924dc126ada90a044660057cf87b",
+  "afterD2BinarySHA256": "8796197d110fbd4169951b8d38d87e78cf236f023ed667d2c75b8ce20c5e1d0f",
+  "originalD2BinarySHA256": "647fcc72d17cbd950ddbe3b4d3d231ddb372685f358c98692a3c2adf12db25d4",
+  "originalMathJaxVersion": "3.2.2",
+  "originalSourceCommit": "ad8f5c21cb810236551da8c6512ba733e67357ee",
+  "originalAssets": {
+    "mathjax.js": "cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869",
+    "polyfills.js": "7fe1d048c78b0e09854c1259f7413868a51cc8f0c822489eb1ac36ae6c85ce01",
+    "setup.js": "a52cb0bbabfbd7796b9fedd793b9386c474e3123e788ee151cbe47ca1fa6e881"
+  },
+  "afterOriginalByteExact": true,
+  "screenshotPolicy": "Actual unmodified D2 SVGs; one shared scale across the three panels",
+  "files": {
+    "witness.d2": "9b3ccc9412b2083a91353f93380803c368c29d3ec516e17d3400cbbcc530eae4",
+    "before.svg": "2766d23904a3aef9f59fdd011f8068b9e659937d52e164860aa4f04a6bb4b44d",
+    "after.svg": "9b6a558242245dd8c42522251c1e6820af0ab7b808fe7fac6ef5902b1751e31a",
+    "original.svg": "9b6a558242245dd8c42522251c1e6820af0ab7b808fe7fac6ef5902b1751e31a",
+    "comparison.png": "cd101963a27df37b29cecc5733810e36bacaa5ae1da11228eeba4e4ebc0ab07d",
+    "before.png": "67b1b3b05b6499faf19c01fc10672864c4ecf8f9ab399c2e473e4abceaa04277",
+    "after.png": "66577b09d2baf4d5dcdaa56bcfd1792cb2c74e90879e3346ad46c1351ec8d70e",
+    "original.png": "28904524ea4ecf311fc0f67d98a21fa20c6cf61abf19bd63d06b633d2dd792f7"
+  }
+}
