@@ -94,7 +94,12 @@ func (p *parser) parseScriptArgument(attachment *scriptAttachment, font string) 
 			name := p.readControlSequence()
 			if _, macro := p.state.macros[name]; !macro {
 				switch name {
-				case "matrix", "array", "pmatrix", "cases", "eqalign", "eqalignno", "leqalignno":
+				case "matrix", "array", "pmatrix", "cases", "eqalign", "eqalignno", "leqalignno", "displaylines":
+					if name == "displaylines" {
+						if _, paired := p.state.pairedDelimiters[name]; paired {
+							break // The declared delimiter runs before Matrix.
+						}
+					}
 					if parseErr := p.startMatrixBody(name); parseErr != nil {
 						return nil, currentFont, nil, nil, parseErr
 					}

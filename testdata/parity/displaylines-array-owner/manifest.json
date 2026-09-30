@@ -1,0 +1,64 @@
+{
+  "status": "D2_RENDER_AND_SHARED_SCALE_VISUAL_VERIFIED",
+  "d2Commit": "01bc7ecdbdd04c13d6fe5df1967d2d9aa14ae579",
+  "beforeMathjaxCommit": "b745ce2b28400d18cd98fb7d14cd4f4280e936de",
+  "afterCodeCommit": "cec6d90fe6dc097184f54e6cab786f4fc436fa54",
+  "afterInternalTree": "27894f44bafbae51225b9adfc98225eb1bccaf09",
+  "tex": "\\displaylines{\\frac{x+1}{y+1}&z}",
+  "afterOriginalByteExact": true,
+  "priorD2OriginalByteExact": 99,
+  "D2BinarySHA256": "8468828c8055d47b8b0c5c977238719cb043455503149d253d39fb7a78bac339",
+  "oracleAssets": {
+    "mathjax.js": "cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869",
+    "polyfills.js": "7fe1d048c78b0e09854c1259f7413868a51cc8f0c822489eb1ac36ae6c85ce01",
+    "setup.js": "a52cb0bbabfbd7796b9fedd793b9386c474e3123e788ee151cbe47ca1fa6e881"
+  },
+  "originalScriptSHA256": "ddc9ff73cefa65f0c7caccf9a84426fe14524a0cdabfd833e556cba21767930e",
+  "NodeSHA256": "27db838bb204ef7c21df2931f5656e4c8fb32e6e947f363a402b49714d32b5b1",
+  "files": {
+    "README.md": "e2635e6b06e57a8955d4e0d0826aa5450997af7d1c93041d456120af0ad9f6ca",
+    "after.png": "93753aed122ce9d7b2a0f486e30a9c4a6c68b12a14c165379d00800390e841b8",
+    "after.svg": "56ee99006be898689fcc315840803a3d87831d32e4156d6d0a33daa9fa1a23a0",
+    "before.png": "a09cfb5251bc948d3e7a6b052a361781aa3163b37885a32da666c39a51649a6d",
+    "before.svg": "6ab3701b6d602c852735a94badc1fffd6c38b04a5e9a8f65e0b590da27329d55",
+    "comparison.png": "c54c08396bec77c6d709acff3cd2e006fc262b3ef520f66dfddeffca2aa87db1",
+    "original.png": "93753aed122ce9d7b2a0f486e30a9c4a6c68b12a14c165379d00800390e841b8",
+    "original.svg": "56ee99006be898689fcc315840803a3d87831d32e4156d6d0a33daa9fa1a23a0",
+    "witness.d2": "245ea46e65be25cd5ecdff82f74e80c1f6fee5c393e8d84f4342b66509a19f99"
+  },
+  "screenshot": {
+    "sharedScaleFactor": 3.2913385826771653,
+    "images": [
+      {
+        "width": 122,
+        "height": 91,
+        "renderedWidth": 402,
+        "renderedHeight": 300
+      },
+      {
+        "width": 127,
+        "height": 91,
+        "renderedWidth": 418,
+        "renderedHeight": 300
+      },
+      {
+        "width": 127,
+        "height": 91,
+        "renderedWidth": 418,
+        "renderedHeight": 300
+      }
+    ],
+    "deviceScaleFactor": 2,
+    "untouchedSVGs": true,
+    "rootVisualInspected": true,
+    "independentVisualInspected": true
+  },
+  "receiptHashes": {
+    "d2-build182/d2-build182.json": "e4a319834dc0b5181fe1a1980e1f206fc8cab2aa5a6df81c75b994737a021aa2",
+    "d2-candidate182/rendered182/finish.json": "08825c6bea158b4686d70b8f184d238a6384989221618bc1bfbfdc05ec76a7e7",
+    "d2-candidate182/rendered182/prior99-receipt.json": "7754cbf4911bdb506eab4df606e86c97a964e00910efc356f242c7b217b7497b",
+    "d2-candidate182/rendered182/root-visual-review.json": "a3922980948fa3277a2bb74435ff84fab4c16b719f61dbfbb3d89d38d2d8471a",
+    "independent-review/d2-candidate100-outcome-peer182.json": "7e37ba31695d2e1cbbc3661d49e834e23793aad801d60f975e5db15dec8bf801"
+  },
+  "validationScope": "This manifest records completed D2 rendering and visual checks; fixture/fullGo/hostedCI gates are recorded independently before merge."
+}

@@ -15,6 +15,7 @@ import (
 // parser, after command argument readers and dynamic maps have had ownership.
 // Fresh cell parsers implement ArrayItem.clearEnv without clearing Stack.global.
 type arrayBodyOwner struct {
+	live         bool
 	environment  *environmentFrame
 	ordinary     *ordinaryArrayItem
 	requireClose bool
@@ -32,15 +33,17 @@ func (p *parser) parseArrayBody(source string, owner arrayBodyOwner) error {
 	terminator := byte(0)
 	if owner.requireClose {
 		terminator = '}'
-		source += "}"
+		if !owner.live {
+			source += "}"
+		}
 	}
 	position := 0
-	if owner.environment != nil {
+	if owner.live || owner.environment != nil {
 		source, position = p.source, p.pos
 	}
 	var current *parser
 	defer func() {
-		if owner.environment != nil && current != nil {
+		if (owner.live || owner.environment != nil) && current != nil {
 			p.source, p.pos = current.source, current.pos
 		}
 	}()
@@ -51,6 +54,13 @@ func (p *parser) parseArrayBody(source string, owner arrayBodyOwner) error {
 		sub.pos = position
 		if owner.environment != nil {
 			sub.environmentRow = owner.environment
+		} else if owner.live {
+			// A standalone Matrix Array is above the enclosing recipient;
+			// it does not install an environment Begin of its own.
+			sub.environmentRow = nil
+		}
+		if owner.live {
+			sub.liveMatrix = true
 		}
 		sub.ordinaryArray = owner.ordinary
 		sub.matrixClose, sub.cdArrayEntry = owner.requireClose, true
@@ -107,7 +117,7 @@ func (p *parser) parseArrayBody(source string, owner arrayBodyOwner) error {
 		}
 		// Macro expansion may replace the current source. Do not resume a
 		// substring of the original captured program or a pre-split row.
-		if owner.environment != nil {
+		if owner.live || owner.environment != nil {
 			source, position = sub.source, sub.pos
 		} else {
 			source, position = sub.source[sub.pos:], 0

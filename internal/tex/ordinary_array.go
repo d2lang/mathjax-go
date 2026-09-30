@@ -13,6 +13,8 @@ import (
 // Array and its enclosing Begin are separate stack items. EndTable removes
 // Array and replays the same End to Begin; a direct Pop removes only Array
 // and leaves Begin executing with the pending cell's raw nodes.
+// A live standalone Matrix uses the same Pop result carrier with begin=nil;
+// its pending nodes return directly to the caller without a continued Begin.
 type ordinaryArrayItem struct {
 	begin  *environmentFrame
 	end    *environmentEndItem

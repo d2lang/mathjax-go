@@ -1,0 +1,183 @@
+{
+  "status": "SCRATCH190_AMENDMENT_NOT_INSTALLED_NOT_REGENERATED",
+  "actualMergedBase": "b745ce2b28400d18cd98fb7d14cd4f4280e936de",
+  "sourcePin": "ad8f5c21cb810236551da8c6512ba733e67357ee",
+  "publicUniqueInputs": 190,
+  "sourceMemberships": 194,
+  "publicPartitions": {
+    "strict-svg": 184,
+    "safe-error-attribute": 4,
+    "bounded-original-runtime": 2
+  },
+  "effects": {
+    "strict-svg:fix": 136,
+    "strict-svg:control": 48,
+    "safe-error-attribute:fix": 2,
+    "safe-error-attribute:control": 2,
+    "bounded-original-runtime:control": 2
+  },
+  "publicationCategories": {
+    "firstStrictSVGInput": 102,
+    "priorHeldCompleteOriginal": 72,
+    "priorRawCompleteOriginal": 10,
+    "firstSafeXMLInput": 4,
+    "firstOriginalRuntime": 2
+  },
+  "validNonerrorOriginalSVG": 172,
+  "validErrorOriginalSVG": 12,
+  "rawInvalidOriginalSVG": 4,
+  "originalRuntimeObjects": 2,
+  "nativeProfile": {
+    "requests": 28,
+    "completeOriginalTreesAssertedBySeparateTest": 28,
+    "strictSVGAssertions": 26,
+    "rawInvalidSourceSVGsTreeDiagnosticAndSuccessfulAPIChecks": 2,
+    "rootSelectedGoTestPassed": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/displaylines-center-audit181/native28-go-root-prototype-v1/receipt.json",
+      "sha256": "8c67a08aabcb64bdbffbc02e63a08b416aa818d6192face1a471cffbf66f4299"
+    },
+    "nativePublicInputClaim": 0,
+    "counterCursorEventParityClaim": false
+  },
+  "directOriginalProfile": {
+    "observations": 24,
+    "constructedObservations": 14,
+    "constructedDistinctRequests": 13,
+    "constructedOriginalRuntime": 1,
+    "publicObservations": 10,
+    "reusedPublic110": 4,
+    "addedPublicUniqueInputs": 6,
+    "constructedGoOperationParityClaim": false
+  },
+  "sourceArchives": {
+    "displaylines_array_owner_original_public110.json.gz": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/displaylines-center-audit181/fixture-draft182/proposed/testdata/displaylines_array_owner_original_public110.json.gz",
+      "sha256": "900ba6bf121f85288572e79fbabeeecfb90548c468b36b584d36b46f0b2c000c"
+    },
+    "displaylines_array_owner_direct24_observations.json.gz": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/displaylines-center-audit181/fixture-draft182/proposed/testdata/displaylines_array_owner_direct24_observations.json.gz",
+      "sha256": "b2e031e9b13436d18b65b9a8effc2a2e7d2ff1eee60ac0ef682257e9dd42a923"
+    },
+    "displaylines_native_owner_observations.json.gz": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/displaylines-center-audit181/fixture-draft182/proposed/testdata/displaylines_native_owner_observations.json.gz",
+      "sha256": "eaf2e8d9ae60dfc720b9dc0ff45b1e8069007022e940abb84612bbdc555cb36a"
+    }
+  },
+  "prototypeQualification": {
+    "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/displaylines-center-audit181/independent-review/public110-prototype-outcome-peer182.json",
+    "sha256": "cad5f5ac9d06808b280e92b537f30932b62db2b2d707d99dc28365e3e3e5ff6e"
+  },
+  "directSourceQualification": {
+    "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/displaylines-center-audit181/independent-review/direct24-full-source-peer182.json",
+    "sha256": "dae8eda1ef29dfce30b8cdc09b4a96c35d34af263b760749e8f4fdc0b40af27f"
+  },
+  "directMeasuredGoCapture": {
+    "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/displaylines-center-audit181/direct-public10-go-prototype-v1/all10.json.gz",
+    "sha256": "1175130139f32f7c95c6ecb91c1a9885c7a56d1020a85fcf7b144bf0c875c87a"
+  },
+  "actual110Overlap": {
+    "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/displaylines-center-audit181/baseline-preparation-actual182/consumer-qualification182.json",
+    "sha256": "d41824a2cc3990970f7652d7463207a1fb0f50df2e7d6d8f9914fa4d729d705a"
+  },
+  "actualSixOverlap": {
+    "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/displaylines-center-audit181/source-outcome-review182/direct-six-actual182-newness.json.gz",
+    "sha256": "610f1c56b684f1c263f1ef57e1fbacad1ba298394fc4ad57f856954505cbd303"
+  },
+  "proposedFiles": {
+    "displaylines_array_owner_supplement_test.go": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/displaylines-center-audit181/fixture-supplement190-draft182/proposed/displaylines_array_owner_supplement_test.go",
+      "sha256": "9bf483c10656e97edf93e11538cd266a1f56b88b6f8ec8ef83af4bfac68fe3b4"
+    },
+    "displaylines_array_owner_test.go": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/displaylines-center-audit181/fixture-supplement190-draft182/proposed/displaylines_array_owner_test.go",
+      "sha256": "95c74995aa5a1a24b760740c7f2951e5ff64aed6ee6c99c655d696df3413f936"
+    },
+    "testdata/displaylines_array_owner_direct24_observations.json.gz": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/displaylines-center-audit181/fixture-supplement190-draft182/proposed/testdata/displaylines_array_owner_direct24_observations.json.gz",
+      "sha256": "b2e031e9b13436d18b65b9a8effc2a2e7d2ff1eee60ac0ef682257e9dd42a923"
+    },
+    "testdata/displaylines_array_owner_README.md": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/displaylines-center-audit181/fixture-supplement190-draft182/proposed/testdata/displaylines_array_owner_README.md",
+      "sha256": "733983dc709ecd56e2f5b0995715e8c2968d5f67d7eef3a0f4957a54f12d7e45"
+    },
+    "testdata/displaylines_array_owner_mathjax_3_2_2.json": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/displaylines-center-audit181/fixture-supplement190-draft182/proposed/testdata/displaylines_array_owner_mathjax_3_2_2.json",
+      "sha256": "59b433ae45e7aeee601f1a54312d28f6227e397b86da610bcb3b150badd71d10"
+    },
+    "testdata/displaylines_array_owner_original_public110.json.gz": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/displaylines-center-audit181/fixture-supplement190-draft182/proposed/testdata/displaylines_array_owner_original_public110.json.gz",
+      "sha256": "900ba6bf121f85288572e79fbabeeecfb90548c468b36b584d36b46f0b2c000c"
+    },
+    "testdata/displaylines_native_owner_observations.json.gz": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/displaylines-center-audit181/fixture-supplement190-draft182/proposed/testdata/displaylines_native_owner_observations.json.gz",
+      "sha256": "eaf2e8d9ae60dfc720b9dc0ff45b1e8069007022e940abb84612bbdc555cb36a"
+    },
+    "testdata/generate_displaylines_array_owner.cjs": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/displaylines-center-audit181/fixture-supplement190-draft182/proposed/testdata/generate_displaylines_array_owner.cjs",
+      "sha256": "1708ebbad8a5beb7f2c51155af0b0f7e7f50af5a6b299118b6b6d1df0b5e8f38"
+    },
+    "testdata/displaylines_array_owner_supplement.json": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/displaylines-center-audit181/fixture-supplement190-draft182/proposed/testdata/displaylines_array_owner_supplement.json",
+      "sha256": "ad47d670d80fbbd7e17fa5fc506f0f292a469e3ba9226f6dbf8dcd4ba143d43b"
+    }
+  },
+  "regeneration": {
+    "status": "NOT_EXECUTED",
+    "publicConversions": 190,
+    "native28Conversions": 56,
+    "direct24Conversions": 48,
+    "totalFreshVMConversions": 294,
+    "fullFreshObservationJSONLRecords": 294,
+    "runtimeComparisonsWithSeparateCompleteFreshHistoricalObjects": 4,
+    "outputContainers": 5,
+    "historicalSourceArchiveBytesPreserved": true,
+    "sequentialEventLoopYieldAfterDetachedFullRecord": true
+  },
+  "GoFormattingExecution": "Public116 and supplemental74 drafts not formatted or run; root owns execution. Separate native28 already root-passed.",
+  "broaderProtectedQualification": "Prototype saved outcomes source-qualified, final committed-source gates pending; cancellation ordering excluded.",
+  "D2Evidence": {
+    "status": "Prototype100 after/original raw exact; new screenshot independently viewed; final publication gates pending",
+    "peer": {
+      "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/displaylines-center-audit181/independent-review/d2-candidate100-outcome-peer182.json",
+      "sha256": "7e37ba31695d2e1cbbc3661d49e834e23793aad801d60f975e5db15dec8bf801"
+    }
+  },
+  "candidateProducedSVGGoldenFields": [],
+  "limits": [
+    "Constructed14 method observations are source-only and do not count as14 public inputs or Go method parity.",
+    "Native28 is a separate injected-Macro profile; its original event streams are retained but cursor/counter/event parity is not claimed.",
+    "Eight old held displaylines reasons remain unchanged inside historical source records; current repair concerns Matrix Array ownership and separators.",
+    "Four safe XML assertions escape only the single exact Misplaced-& data-mjx-error attribute in enumerated source inputs.",
+    "Prototype measured public outputs do not substitute for final committed-source broad and Go gates."
+  ],
+  "combinedPrototypeOutcomeQualification": {
+    "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/displaylines-center-audit181/independent-review/public116-native28-prototype-outcome-peer182.json",
+    "sha256": "50d309ffbf3d415f3c30066efb0a278ff44a997780df66817d5f5d502e8a4d59"
+  },
+  "preserved116Draft": {
+    "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/displaylines-center-audit181/fixture-draft182/copy-plan.json",
+    "sha256": "a791b81795fed7dbb4b26374f3159076207a0ef13fc5b2bf17951e3555e6c4f9"
+  },
+  "supplementCounts": {
+    "unique": 74,
+    "sourceMemberships": 74,
+    "actualGitReferences": 82,
+    "nestedArrayCenter": 64,
+    "cellSplitHfill": 10,
+    "firstInputs": 0,
+    "priorHeld": 64,
+    "priorRaw": 10
+  },
+  "supplementProposal": {
+    "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/displaylines-center-audit181/protected-outcome-review182/supplement74-source.json.gz",
+    "sha256": "56e13b5f5675c158b2794ef60bec21dd2ecfe0d93cadb540e68133e900686b2e"
+  },
+  "supplementActualOverlap": {
+    "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/displaylines-center-audit181/supplement74-overlap-actual182/consumer-qualification.json.gz",
+    "sha256": "8ee84eb09306fd4f74c1f0c8906da042fc72bbf4bb0e3c0ea845146fb3a06b8d"
+  },
+  "supplementActualOverlapPeer": {
+    "path": "/Users/aw/Documents/Codex/2026-09-27/we-x20/work/displaylines-center-audit181/independent-review/supplement74-actual-overlap-peer182.json",
+    "sha256": "95ec58c33fbc4b275bf1a9e22d3c1f87503515dd6212c0ca0c61bd2b2a4ccb20"
+  }
+}
