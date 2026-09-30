@@ -1,0 +1,47 @@
+{
+  "D2Commit": "01bc7ecdbdd04c13d6fe5df1967d2d9aa14ae579",
+  "beforeActualMathjaxCommit": "6d88373dd7479949265afdeae982b1bd5fcd5613",
+  "beforeProductionSource": "b25453663d1e4b6f12be0943d367bbb2aab03ae8",
+  "beforeBinarySHA256": "28a74f07ef8d8628b5ab941a133f9e92578fb61e1ffaeaf7d6890cb2f54fef95",
+  "afterProductionSource": "0158db95a3c1d3bec582320314ad1679fa469a61",
+  "afterInternalTree": "a7c06df4464ec55d7ac3f584249f83b9d8f82117",
+  "afterBinarySHA256": "007d09b00dd5ff2c5e2c00db6dc37f735774f1d132d49a1a56e7f120c56f9cdf",
+  "afterStatus": "Source render; full local Go, frozen-oracle, race, vet and WebAssembly checks passed before publication",
+  "originalMathjaxVersion": "3.2.2",
+  "originalSourcePin": "ad8f5c21cb810236551da8c6512ba733e67357ee",
+  "originalD2AssetPin": "5666d9337c77a4803b9cd60cb1c5a24439d0f949",
+  "originalAssetSHA256": {
+    "mathjax.js": "cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869",
+    "polyfills.js": "7fe1d048c78b0e09854c1259f7413868a51cc8f0c822489eb1ac36ae6c85ce01",
+    "setup.js": "a52cb0bbabfbd7796b9fedd793b9386c474e3123e788ee151cbe47ca1fa6e881"
+  },
+  "originalBinarySHA256": "647fcc72d17cbd950ddbe3b4d3d231ddb372685f358c98692a3c2adf12db25d4",
+  "originalOracleScriptSHA256": "ddc9ff73cefa65f0c7caccf9a84426fe14524a0cdabfd833e556cba21767930e",
+  "originalNodeSHA256": "27db838bb204ef7c21df2931f5656e4c8fb32e6e947f363a402b49714d32b5b1",
+  "afterOriginalByteExact": true,
+  "sharedScaleScreenshots": true,
+  "intrinsicDimensions": {
+    "preserveAspectRatio": "xMinYMin meet",
+    "viewBox": "0 0 121 93",
+    "width": "121",
+    "height": "93"
+  },
+  "rootVisualReview": "Root viewed comparison.png: the central reversed C is slanted before and upright after, matching the original; a and b remain italic, with no clipping.",
+  "rootVisualReviewReceiptSHA256": "cec21192eb62199b66e41c294f5903764b16b45f91c3e771d86d6a45c3fcaca4",
+  "independentVisualReview": "fixtures_next viewed comparison.png and confirmed the visible glyph-style change and identical after/reference panels.",
+  "priorD2Witnesses": 98,
+  "priorD2AfterOriginalByteExact": 98,
+  "D2WitnessesIncludingThisOne": 99,
+  "filesSHA256": {
+    "witness.d2": "7d25efc3b4a809a3e5ca9d636d846e6323f191520c03a139e8db183058bada79",
+    "before.svg": "b7f5b950be240979f2df18b11fe0c1c7d507295dfc3f62b352432e30fa84326a",
+    "after.svg": "6d613e38171200570a855eb5ef391ae2575482ad9bf9abbdabd7dd30e9c731b4",
+    "original.svg": "6d613e38171200570a855eb5ef391ae2575482ad9bf9abbdabd7dd30e9c731b4",
+    "before.png": "9622f80e2d80e40bc502213e4c927fbd474781f28dffba8b62647f95aa200cc7",
+    "after.png": "13ee4d3616f3da1fc281a62b983d18c3e1c4f99e1485cd7f4230da68968774c7",
+    "original.png": "13ee4d3616f3da1fc281a62b983d18c3e1c4f99e1485cd7f4230da68968774c7",
+    "comparison.png": "49d87bfb1afc076d00c0257b4a8a37014b35a8789b3b40ba122afcf2a3b3395a"
+  },
+  "localValidationHead": "e40e4a3ef4cbc12877207e1ef03381f74f475ec9",
+  "localValidationReceiptSHA256": "a3dbdee7b3cef0a0616fc4d98c3b56e705b830842e72567b7e8b721f27c080b0"
+}
