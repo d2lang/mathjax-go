@@ -63,12 +63,16 @@ func (p *parser) closeEnvironment(frame *environmentFrame, item *environmentEndI
 	if item.name != frame.name {
 		return texError("EnvBadEnd", "\\begin{%s} ended with \\end{%s}", frame.name, item.name)
 	}
-	if cases := frame.casesBegin; cases != nil && cases.end {
+	if cases := frame.casesBegin; cases != nil {
 		// Cases pushes one Begin object twice. The first End removes
 		// its upper entry and flips the shared end property; decoration
 		// executes while the remaining entry still owns these nodes.
-		cases.end = false
-		cases.closing = item
+		cases.entries--
+		if cases.end {
+			cases.end = false
+			cases.closing = item
+		}
+		frame.closed = cases.entries == 0
 	} else {
 		frame.closed = true
 	}

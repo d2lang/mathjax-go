@@ -16,6 +16,7 @@ import (
 // (the oldest node), and the second End removes the remaining entry.
 type casesBeginItem struct {
 	end     bool
+	entries int
 	closing *environmentEndItem
 }
 
@@ -30,11 +31,18 @@ func (p *parser) casesEnvironment(name string) (nodes []*mml.Node, handled bool,
 	if err != nil {
 		return nil, true, err
 	}
+	// EqnArray first pushes CasesBegin, reducing pending row items, before
+	// checking equation nesting or parsing any physical body input.
+	if p.commandCasesBegin != nil {
+		if err := p.commandCasesBegin(); err != nil {
+			return nil, true, err
+		}
+	}
 	if err := p.checkEquationEnvironment(); err != nil {
 		return nil, true, err
 	}
 	frame := p.environmentOwner
-	frame.casesBegin = &casesBeginItem{end: true}
+	frame.casesBegin = &casesBeginItem{end: true, entries: 2}
 	array := &ordinaryArrayItem{begin: frame}
 
 	tags := p.amsTags()
@@ -64,13 +72,13 @@ func (p *parser) casesEnvironment(name string) (nodes []*mml.Node, handled bool,
 	}
 	spacing := newEquationTableState(appendRow)
 	spacing.initialSpacing = ".2em"
-	row := &equationRowState{table: spacing}
+	equation := &equationRowState{table: spacing}
 	err = p.parseArrayBody("", arrayBodyOwner{
 		environment: frame,
 		ordinary:    array,
 		rules:       spacing.rules,
 		configure: func(sub *parser) {
-			sub.arrayCell.equation, sub.arrayCell.numCases = row, true
+			sub.arrayCell.equation, sub.arrayCell.numCases = equation, true
 		},
 		prepareEntry: func(sub *parser, item *cellItem) ([]*mml.Node, error) {
 			if item == nil || !item.numCasesText {
@@ -78,12 +86,12 @@ func (p *parser) casesEnvironment(name string) (nodes []*mml.Node, handled bool,
 			}
 			return sub.prepareNumCasesText(name)
 		},
-		hasEntries: func() bool { return len(row.entries) != 0 },
+		hasEntries: func() bool { return len(equation.entries) != 0 },
 		endEntry: func(children []*mml.Node, _ *arrayCellState) error {
-			row.endEntry(children)
+			equation.endEntry(children)
 			return nil
 		},
-		endRow:     row.endRow,
+		endRow:     equation.endRow,
 		addSpacing: spacing.addSpacing,
 	})
 	if err != nil {
@@ -92,9 +100,21 @@ func (p *parser) casesEnvironment(name string) (nodes []*mml.Node, handled bool,
 	if array.popped {
 		// Stack.Pop().toMml() delivers only pending nodes to CasesBegin.
 		// Completed equation rows and EndTable/tag cleanup are bypassed.
-		children, err := p.continueCasesBegin(frame, array.nodes)
+		children, err := p.continueCasesBegin(frame, []*mml.Node{row(array.nodes, true)})
 		if err != nil {
 			return nil, true, err
+		}
+		if frame.closed && frame.casesBegin.closing == nil {
+			// Both aliases were directly popped. Their final MML goes to
+			// the outer recipient without running the Cases End handler.
+			return children, true, nil
+		}
+		if frame.closed {
+			// The first matching End discarded the final alias with no
+			// MML replacement. Select Last from the exposed recipient,
+			// then replay the synthetic second End on that same row.
+			p.commandCasesLeft = &environmentEndItem{name: frame.casesBegin.closing.name}
+			return nil, true, nil
 		}
 		if len(children) == 0 {
 			return nil, true, fmt.Errorf("Cases left block requires a pending node")
@@ -155,7 +175,7 @@ func (p *parser) continueCasesBegin(begin *environmentFrame, prefix []*mml.Node)
 	if err != nil {
 		return nil, err
 	}
-	if begin.casesBegin.end || begin.casesBegin.closing == nil {
+	if !begin.closed && (begin.casesBegin.end || begin.casesBegin.closing == nil) {
 		return nil, begin.missing()
 	}
 	return children, nil
@@ -234,4 +254,15 @@ func (p *parser) prepareNumCasesText(environment string) ([]*mml.Node, error) {
 	text := strings.TrimLeftFunc(p.source[p.pos:end], internalTextSpace)
 	p.pos = end
 	return p.internalMath(text, "", true)
+}
+
+// Finish the deferred Cases handler on the actual exposed row recipient.
+// An absent left property concatenates as JavaScript undefined, rather than
+// reusing the removed CasesBegin's left program. Copy precedes mutation.
+func (p *parser) finishCasesLeft(first *mml.Node, left string) error {
+	if first == nil {
+		return fmt.Errorf("Cases left block requires a pending node")
+	}
+	original := p.copyNode(first)
+	return p.empheqAddLeft(first, original, left+"\\empheqlbrace\\,", "numcases-left")
 }

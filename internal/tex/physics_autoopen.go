@@ -4,7 +4,10 @@
 // and ParseUtil.fenced.
 package tex
 
-import "github.com/d2lang/mathjax-go/internal/mml"
+import (
+	"fmt"
+	"github.com/d2lang/mathjax-go/internal/mml"
+)
 
 // commandResult carries one invocation's stack item and after-node action.
 // Neither lives in shared parseState or escapes a genuine child parser.
@@ -18,26 +21,39 @@ type commandResult struct {
 	positionItem   *positionItem
 	cellItem       *cellItem
 	environmentEnd *environmentEndItem
+	casesLeft      *environmentEndItem
 	afterNode      *derivativeAutoOpen
 }
 
-func (p *parser) commandEvent(name string) (result commandResult, err error) {
+func (p *parser) commandEvent(name string) (commandResult, error) {
+	return p.commandEventWithCasesBegin(name, nil)
+}
+
+// A Cases Begin is pushed after its left argument is read, before its body.
+// This invocation-local action lets the current recipient observe that push.
+func (p *parser) commandEventWithCasesBegin(name string, onBegin func() error) (result commandResult, err error) {
+	beforeBegin := p.commandCasesBegin
+	p.commandCasesBegin = onBegin
 	namedFunction, notItem := p.commandNamedFunction, p.commandNot
 	nonscript := p.commandNonscript
 	dotsItem, position := p.commandDots, p.commandPosition
 	cell := p.commandCell
 	environmentEnd := p.commandEnvironmentEnd
+	casesLeft := p.commandCasesLeft
 	p.commandNamedFunction, p.commandNot = false, false
 	p.commandNonscript = false
 	p.commandDots, p.commandPosition = nil, nil
 	p.commandCell = nil
 	p.commandEnvironmentEnd = nil
+	p.commandCasesLeft = nil
 	defer func() {
+		p.commandCasesBegin = beforeBegin
 		p.commandNamedFunction, p.commandNot = namedFunction, notItem
 		p.commandNonscript = nonscript
 		p.commandDots, p.commandPosition = dotsItem, position
 		p.commandCell = cell
 		p.commandEnvironmentEnd = environmentEnd
+		p.commandCasesLeft = casesLeft
 	}()
 	result.nodes, err = p.commandNodes(name, &result.afterNode)
 	result.namedFunction, result.notItem = p.commandNamedFunction, p.commandNot
@@ -45,6 +61,7 @@ func (p *parser) commandEvent(name string) (result commandResult, err error) {
 	result.dotsItem, result.positionItem = p.commandDots, p.commandPosition
 	result.cellItem = p.commandCell
 	result.environmentEnd = p.commandEnvironmentEnd
+	result.casesLeft = p.commandCasesLeft
 	return result, err
 }
 
@@ -54,6 +71,9 @@ func (p *parser) command(name string) ([]*mml.Node, error) {
 	result, err := p.commandEvent(name)
 	if err != nil {
 		return nil, err
+	}
+	if result.casesLeft != nil {
+		return nil, fmt.Errorf("Cases left block requires a pending node")
 	}
 	if result.environmentEnd != nil {
 		return nil, result.environmentEnd.extra()

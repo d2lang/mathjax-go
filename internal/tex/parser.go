@@ -106,6 +106,8 @@ type parser struct {
 	commandPosition       *positionItem
 	commandCell           *cellItem
 	commandEnvironmentEnd *environmentEndItem
+	commandCasesLeft      *environmentEndItem
+	commandCasesBegin     func() error
 	pendingEnvironmentEnd *environmentEndItem
 	environmentOwner      *environmentFrame
 	environmentRow        *environmentFrame
@@ -473,6 +475,21 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 					p.ordinaryArray.popped = true
 					return nodes, "", nil
 				case p.environmentRow != nil:
+					if cases := p.environmentRow.casesBegin; cases != nil {
+						content := row(nodes, true)
+						if err := mathtoolsSpreadPop(content, nil); err != nil {
+							return nil, "", err
+						}
+						cases.entries--
+						if cases.entries == 0 {
+							p.environmentRow.closed = true
+							return []*mml.Node{content}, "", nil
+						}
+						// Pop does not clear the shared CasesBegin nodes.
+						// Push(toMml()) appends into its remaining alias.
+						appendNodes([]*mml.Node{content}, false)
+						continue
+					}
 					if p.environmentRow.ordinaryArray {
 						if err := mathtoolsSpreadPending(nodes); err != nil {
 							return nil, "", err
@@ -799,9 +816,42 @@ func (p *parser) parseRowContinuation(terminator byte, stopRight, infixPending b
 				}
 				continue
 			}
-			result, err := p.commandEvent(name)
+			result, err := p.commandEventWithCasesBegin(name, func() error {
+				// Begin is open, so Fn and Position wait. Prime always reduces;
+				// Not/Dots retain only Open/Left, and Nonscript is removed.
+				nonscript = false
+				finishPrime()
+				finishNot()
+				finishDots()
+				return deliveryErr
+			})
 			if err != nil {
 				return nil, "", err
+			}
+			if result.casesLeft != nil {
+				// Cases discarded its last alias without delivering MML.
+				// Last belongs to the newly exposed top, not its lost nodes.
+				var first *mml.Node
+				left := "undefined"
+				switch {
+				case pending != nil:
+					first = pending.base
+				case bool(negation), dots.active(), nonscript:
+					// These pending recipients have no raw stored MML.
+				case pendingFunction:
+					if len(nodes) > functionOffset {
+						first = nodes[functionOffset]
+					}
+				default:
+					if len(nodes) != 0 {
+						first = nodes[0]
+					}
+				}
+				if err := p.finishCasesLeft(first, left); err != nil {
+					return nil, "", err
+				}
+				p.pendingEnvironmentEnd = result.casesLeft
+				continue
 			}
 			if result.environmentEnd != nil {
 				p.pendingEnvironmentEnd = result.environmentEnd
@@ -1223,7 +1273,11 @@ func (p *parser) parseOneToken() ([]*mml.Node, error) {
 	return append(result.nodes, tail...), err
 }
 
-func (p *parser) parseOneTokenEvent() (result commandResult, err error) {
+func (p *parser) parseOneTokenEvent() (commandResult, error) {
+	return p.parseOneTokenEventWithCasesBegin(nil)
+}
+
+func (p *parser) parseOneTokenEventWithCasesBegin(onBegin func() error) (result commandResult, err error) {
 	defer func() {
 		if err == nil {
 			for _, n := range result.nodes {
@@ -1237,7 +1291,7 @@ func (p *parser) parseOneTokenEvent() (result commandResult, err error) {
 	}
 	if p.source[p.pos] == '\\' {
 		p.pos++
-		result, err = p.commandEvent(p.readControlSequence())
+		result, err = p.commandEventWithCasesBegin(p.readControlSequence(), onBegin)
 		return result, err
 	}
 	if p.source[p.pos] == '{' {
