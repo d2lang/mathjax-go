@@ -313,7 +313,7 @@
           "seconds": 1.015
         }
       ],
-      "publicationPolicy": "Final documentation changes only; all production/test/generator/fixture/D2 bytes must equal this tested head. GitHub CI is checked on the exact publication head before merge."
+      "publicationPolicy": "Final documentation, validation metadata and CI race-timeout changes only; all production/test/generator/fixture/D2 bytes must equal this tested head. GitHub CI is checked on the exact publication head before merge."
     },
     "D2Evidence": {
       "buildReceiptSHA256": "d4e3206067e5ffbee03fda13b082ef644ab8e3e42a22fea4b1574e61c8d0f4dc",
@@ -327,7 +327,17 @@
       "visualReview": "Root reported all three same-scale before/after/original panels viewed; publication receipts owned by root."
     },
     "independentPublicFixtureReviewSHA256": "adba155c22e95e3caf735ec93964c8ad94c635c49482a8d78e01d10486616fe4",
-    "independentGeneratorStaticReviewSHA256": "ed5ca1c6886b7b395dabc990d4f8ac32b078b4802226b12f8d84cb795452f18d"
+    "independentGeneratorStaticReviewSHA256": "ed5ca1c6886b7b395dabc990d4f8ac32b078b4802226b12f8d84cb795452f18d",
+    "hostedRaceTimeout": {
+      "initialHead": "92805df52a404ce903159a746da2f4f6b13a0251",
+      "initialRuns": [
+        36660310594,
+        36660396231
+      ],
+      "initialResult": "Both race jobs failed at the default ten-minute package timeout; frozen-oracle tests and go-floor checks passed. No assertion failure or data race was reported in the failed logs.",
+      "updatedCommand": "go test -race -timeout 20m ./...",
+      "policy": "A finite larger time budget preserves the complete race suite. Both updated hosted workflows must pass on the exact publication head before merge."
+    }
   },
   "selectedSourceRoutes": {
     "sourceReceiptSHA256": "dfc730c4fa8095b78dc00a11a1666a2b49685cd969d5691b3ab8b6cba3cf77a6",
