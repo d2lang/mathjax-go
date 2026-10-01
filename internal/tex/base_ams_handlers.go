@@ -16,6 +16,10 @@ import (
 // baseAMSCommand is the narrow hook for the remaining source methods whose
 // stack behavior is not represented by the legacy direct handlers.
 func (p *parser) baseAMSCommand(name string) (nodes []*mml.Node, handled bool, err error) {
+	if _, ok := amsArrowSizes[name]; ok {
+		nodes, err = p.amsXArrow(name)
+		return nodes, true, err
+	}
 	switch name {
 	case "genfrac":
 		nodes, err = p.amsGenfrac(name)
@@ -27,10 +31,6 @@ func (p *parser) baseAMSCommand(name string) (nodes []*mml.Node, handled bool, e
 		nodes, err = p.amsMultiIntegral(name)
 	case "sideset":
 		nodes, err = p.amsSideSet(name)
-	case "xrightarrow", "xleftarrow", "xleftrightarrow", "xLeftarrow", "xRightarrow", "xLeftrightarrow",
-		"xhookleftarrow", "xhookrightarrow", "xmapsto", "xrightharpoondown", "xleftharpoondown",
-		"xrightleftharpoons", "xrightharpoonup", "xleftharpoonup", "xleftrightharpoons":
-		nodes, err = p.amsXArrow(name)
 	default:
 		return nil, false, nil
 	}
@@ -386,20 +386,37 @@ type amsArrowSize struct {
 	right     float64
 }
 
-var amsArrowSizes = map[string]amsArrowSize{
-	"xrightarrow": {"→", 5, 10}, "xleftarrow": {"←", 10, 5},
-	"xleftrightarrow": {"↔", 10, 10}, "xLeftarrow": {"⇐", 12, 7},
-	"xRightarrow": {"⇒", 7, 12}, "xLeftrightarrow": {"⇔", 12, 12},
-	"xhookleftarrow": {"↩", 10, 5}, "xhookrightarrow": {"↪", 5, 10},
-	"xmapsto": {"↦", 10, 10}, "xrightharpoondown": {"⇁", 5, 10},
-	"xleftharpoondown": {"↽", 10, 5}, "xrightleftharpoons": {"⇌", 10, 10},
-	"xrightharpoonup": {"⇀", 5, 10}, "xleftharpoonup": {"↼", 10, 5},
-	"xleftrightharpoons": {"⇋", 10, 10},
-}
+// Source command maps are ordered by the active package registrations.
+// Mhchem's later xArrow entries replace Mathtools padding and add aliases.
+var amsArrowSizes = func() map[string]amsArrowSize {
+	sizes := make(map[string]amsArrowSize)
+	for _, sourceMap := range mjSourceMaps {
+		if sourceMap.Kind != mjSourceCommandMap {
+			continue
+		}
+		for _, entry := range sourceMap.Entries {
+			handler, args, ok := sourceHandler(entry.Value)
+			if !ok || handler != "xArrow" || len(args) != 3 {
+				continue
+			}
+			character, charOK := sourceInt(args[0])
+			left, leftOK := sourceInt(args[1])
+			right, rightOK := sourceInt(args[2])
+			if charOK && leftOK && rightOK {
+				sizes[entry.Name] = amsArrowSize{string(rune(character)), float64(left), float64(right)}
+			}
+		}
+	}
+	return sizes
+}()
 
 func (p *parser) amsXArrow(name string) ([]*mml.Node, error) {
-	belowRaw, hasBelow, err := p.readBrackets(nil)
+	belowRaw, _, err := p.readBrackets(nil)
 	if err != nil {
+		// The source GetBrackets diagnostic names the invoked command.
+		if failure, ok := err.(*Error); ok && failure.ID == "MissingCloseBracket" {
+			return nil, texError(failure.ID, "Could not find closing ']' for argument to \\%s", name)
+		}
 		return nil, err
 	}
 	above, err := p.parseArgument(name)
@@ -416,7 +433,7 @@ func (p *parser) amsXArrow(name string) ([]*mml.Node, error) {
 	amsSetArrowPadding(over, size)
 	over.Attributes.Set("voffset", "-.2em")
 	over.Attributes.Set("height", "-.2em")
-	if !hasBelow {
+	if belowRaw == "" {
 		result := node("mover", arrowStyle, over)
 		result.SetProperty("subsupOK", true)
 		return []*mml.Node{result}, nil
