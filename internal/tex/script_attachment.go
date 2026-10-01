@@ -29,7 +29,7 @@ type scriptAttachment struct {
 func prepareScriptAttachment(base *mml.Node, marker byte, moves bool) (*scriptAttachment, error) {
 	origin, _ := base.Property(limitsScriptOrigin)
 	eager := origin == true
-	side := base.Kind == "msub" || base.Kind == "msup" || base.Kind == "msubsup"
+	side := base.Kind == "msub" || base.Kind == "msup" || base.Kind == "msubsup" || base.Kind == "mmultiscripts"
 	limits := base.Kind == "munder" || base.Kind == "mover" || base.Kind == "munderover"
 	supOnly := base.Kind == "msup" && !eager
 	overOnly := base.Kind == "mover" && !eager
@@ -74,7 +74,7 @@ func (a *scriptAttachment) pendingBase() *mml.Node {
 	}
 	if a.reuse {
 		view := *a.base
-		if origin, _ := a.base.Property(limitsScriptOrigin); origin == true {
+		if origin, _ := a.base.Property(limitsScriptOrigin); origin == true && a.base.Kind != "mmultiscripts" {
 			view.Kind = kind
 			if a.base.Kind == "msup" || a.base.Kind == "mover" {
 				view.Children = []*mml.Node{a.base.Children[0], nil, a.over}
@@ -114,6 +114,13 @@ func (a *scriptAttachment) fill(script *mml.Node) *mml.Node {
 		under = script
 	} else {
 		over = script
+	}
+	if base.Kind == "mmultiscripts" {
+		children := append([]*mml.Node(nil), base.Children...)
+		children[1], children[2] = under, over
+		base.SetChildren(children)
+		refreshDynamicFlags(base)
+		return base
 	}
 	children := []*mml.Node{base.Children[0]}
 	kind := "msubsup"

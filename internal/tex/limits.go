@@ -63,17 +63,24 @@ func (p *parser) setLimits(nodes []*mml.Node, name string) ([]*mml.Node, error) 
 		if !enabled {
 			kind = "msubsup"
 		}
-	case "msub", "msup", "msubsup":
+	case "msub", "msup", "msubsup", "mmultiscripts":
 		if enabled {
 			kind = "munderover"
 		}
 	}
 	if kind != "" {
+		multiscripts := op.Kind == "mmultiscripts"
 		// NodeUtil.copyChildren reuses child identities and reparents them; it
 		// does not copy the old wrapper's attributes or properties.
 		replacement := texMMLFactory.Create(kind)
 		replacement.SetChildren(op.Children)
 		refreshDynamicFlags(replacement)
+		if multiscripts {
+			// The original registers the new generic family with cleanSubSup.
+			// It may still have both right slots absent at the end of parsing.
+			replacement.SetProperty(poppedScriptOrigin, true)
+			p.notePoppedScript(replacement)
+		}
 		op = replacement
 		nodes[len(nodes)-1] = op
 	}

@@ -1989,9 +1989,11 @@ func (p *parser) prescript(name string) ([]*mml.Node, error) {
 		return nil, err
 	}
 	if sup.Kind == "none" && sub.Kind == "none" {
-		return []*mml.Node{base}, nil
+		return unwrapInferred(base), nil
 	}
-	result := node("mmultiscripts", base, node("mprescripts"), sub, sup)
+	// The two right-script slots remain absent until final filtering. Ordinary
+	// authored scripts can fill them while mmultiscripts is the stack's base.
+	result := node("mmultiscripts", base, nil, nil, node("mprescripts"), sub, sup)
 	result.SetProperty("fixPrescript", true)
 	return []*mml.Node{result}, nil
 }

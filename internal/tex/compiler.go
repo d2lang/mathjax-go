@@ -67,6 +67,7 @@ func (c *Compiler) Compile(source string, display bool) (*mml.Node, error) {
 	}
 	// cleanSubSup runs after successful parsing and before inheritance.
 	// A later script can repair a popped view, or an ignored owner discard it.
+	fixPrescripts(root)
 	root, err = cleanPoppedScripts(root, state.poppedScripts)
 	if err != nil {
 		return nil, err
