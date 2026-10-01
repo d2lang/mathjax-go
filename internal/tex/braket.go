@@ -15,7 +15,7 @@ type braketItem struct {
 // Braket parses on the caller: an unbraced control sequence may consume its
 // own arguments or install a macro expansion before delivering its first node.
 func (p *parser) braket(name string) ([]*mml.Node, error) {
-	p.skipSpaces()
+	p.skipNextSpaces()
 	if p.pos == len(p.source) {
 		return nil, texError("MissingArgFor", "Missing argument for %s", "\\"+name)
 	}

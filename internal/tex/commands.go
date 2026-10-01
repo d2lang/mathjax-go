@@ -2047,7 +2047,7 @@ func (p *parser) derivative(name string, after **derivativeAutoOpen) ([]*mml.Nod
 		op = "\\delta"
 	}
 	for {
-		p.skipSpaces()
+		p.skipNextSpaces()
 		if p.pos >= len(p.source) || p.source[p.pos] != '{' || len(args) == argMax {
 			break
 		}
