@@ -8,14 +8,14 @@
   "sharedScale": true,
   "visuallyInspected": true,
   "files": {
-    "before.png": "bcff45e70068e835ff6cf67de61522cfba18ac69498f57856ccf328505a6347b",
-    "original.svg": "3747a65986c64c5a438b5ae86fefe71e24c4e9f8c6625bcf2a1ad418912e99c6",
-    "after.png": "60fdf5a69fd21d4b2aa8b5bd7762ed9165271bf150bd3b9fa9b802f0a10fae3e",
-    "after.svg": "3747a65986c64c5a438b5ae86fefe71e24c4e9f8c6625bcf2a1ad418912e99c6",
-    "original.png": "60fdf5a69fd21d4b2aa8b5bd7762ed9165271bf150bd3b9fa9b802f0a10fae3e",
-    "comparison.png": "cf54f4807e568129e3c2e6a1406452da02ce0a02a6cadb446c2c28180a011d8b",
-    "before.svg": "2a670f91c2da005f31053cd4b886ccb70de8e787e0d645a57d09c46f9d4ac21a",
-    "witness.d2": "42ee553f386f46929fe7cc3783e49e5ad3d363a8b2795a611e62dc83b5178ad8"
+    "before.png": "324707ee8967122b4e6dc8701be38b18d50204be55620352c338933702c1e517",
+    "original.svg": "e05aaccd57f721ecc064204ec294f414a10d955abafeb46d786256fbfc316580",
+    "after.png": "bcff45e70068e835ff6cf67de61522cfba18ac69498f57856ccf328505a6347b",
+    "after.svg": "e05aaccd57f721ecc064204ec294f414a10d955abafeb46d786256fbfc316580",
+    "original.png": "bcff45e70068e835ff6cf67de61522cfba18ac69498f57856ccf328505a6347b",
+    "comparison.png": "2eee652b3a243e049fa5522f9f0c61313143c84a4fd7cb8c519198e3e60f34df",
+    "before.svg": "3f5124db4ae7e49218ae9813f8b26cafc43f8c12d731d42841f2771b29ae0f3e",
+    "witness.d2": "6554179d606356677f0a5bd08ad16db4c8e6caebed78ed008be72697620468d5"
   },
   "oracleAssets": {
     "mathjax.js": "cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869",
