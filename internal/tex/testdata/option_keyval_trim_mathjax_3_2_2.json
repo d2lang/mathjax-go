@@ -1,0 +1,144 @@
+{
+  "mathjaxGitCommit": "ad8f5c21cb810236551da8c6512ba733e67357ee",
+  "assets": {
+    "polyfills.js": "7fe1d048c78b0e09854c1259f7413868a51cc8f0c822489eb1ac36ae6c85ce01",
+    "mathjax.js": "cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869",
+    "setup.js": "a52cb0bbabfbd7796b9fedd793b9386c474e3123e788ee151cbe47ca1fa6e881"
+  },
+  "scope": "Direct original ParseUtil.keyvalOptions with the Empheq left/right allowlist; fresh frozen runtime per call.",
+  "keyvalMethod": "function(t,e,Q){var n,o;void 0===e&&(e=null),void 0===Q&&(Q=!1);var i=function(t){var e,Q,T,n,o,i={},a=t;for(;a;)n=(e=r(m(a,[\"=\",\",\"]),3))[0],T=e[1],a=e[2],\"=\"===T?(o=(Q=r(m(a,[\",\"]),3))[0],T=Q[1],a=Q[2],o=\"false\"===o||\"true\"===o?JSON.parse(o):o,i[n]=o):n&&(i[n]=!0);return i}(t);if(e)try{for(var a=T(Object.keys(i)),s=a.next();!s.done;s=a.next()){var c=s.value;if(!e.hasOwnProperty(c)){if(Q)throw new l.default(\"InvalidOption\",\"Invalid option: %1\",c);delete i[c]}}}catch(t){n={error:t}}finally{try{s&&!s.done&&(o=a.return)&&o.call(a)}finally{if(n)throw n.error}}return i}",
+  "cases": [
+    {
+      "name": "plain",
+      "raw": "left={(},right={)}",
+      "options": {
+        "left": "(",
+        "right": ")"
+      },
+      "error": null
+    },
+    {
+      "name": "empty",
+      "raw": "",
+      "options": {},
+      "error": null
+    },
+    {
+      "name": "booleans",
+      "raw": "left=false,right",
+      "options": {
+        "left": false,
+        "right": true
+      },
+      "error": null
+    },
+    {
+      "name": "nested-braces",
+      "raw": "left={{(}},right={{)}}",
+      "options": {
+        "left": "(",
+        "right": ")"
+      },
+      "error": null
+    },
+    {
+      "name": "bom-key",
+      "raw": "﻿left﻿={(}",
+      "options": {
+        "left": "("
+      },
+      "error": null
+    },
+    {
+      "name": "bom-value",
+      "raw": "left=﻿(﻿,right=﻿)﻿",
+      "options": {
+        "left": "(",
+        "right": ")"
+      },
+      "error": null
+    },
+    {
+      "name": "bom-braced-value",
+      "raw": "left={﻿(﻿}",
+      "options": {
+        "left": "("
+      },
+      "error": null
+    },
+    {
+      "name": "bom-true",
+      "raw": "left=﻿true﻿",
+      "options": {
+        "left": true
+      },
+      "error": null
+    },
+    {
+      "name": "bom-false",
+      "raw": "left=﻿false﻿",
+      "options": {
+        "left": false
+      },
+      "error": null
+    },
+    {
+      "name": "bom-brace-edges",
+      "raw": "left=﻿{(}﻿",
+      "options": {
+        "left": "{(}"
+      },
+      "error": null
+    },
+    {
+      "name": "nel-key",
+      "raw": "left={(}",
+      "options": null,
+      "error": {
+        "id": "InvalidOption",
+        "message": "Invalid option: left"
+      }
+    },
+    {
+      "name": "nel-value",
+      "raw": "left=(,right=)",
+      "options": {
+        "left": "(",
+        "right": ")"
+      },
+      "error": null
+    },
+    {
+      "name": "nel-braced-value",
+      "raw": "left={(}",
+      "options": {
+        "left": "("
+      },
+      "error": null
+    },
+    {
+      "name": "nel-true",
+      "raw": "left=true",
+      "options": {
+        "left": "true"
+      },
+      "error": null
+    },
+    {
+      "name": "nel-false",
+      "raw": "left=false",
+      "options": {
+        "left": "false"
+      },
+      "error": null
+    },
+    {
+      "name": "nel-brace-edges",
+      "raw": "left={(}",
+      "options": {
+        "left": "{(}"
+      },
+      "error": null
+    }
+  ]
+}

@@ -1158,12 +1158,12 @@ func (p *parser) parseCharacter() *mml.Node {
 		return ambientLiteralToken(token("mn", p.source[start:p.pos]), r)
 	}
 	// The selected package closure installs two character-map overrides ahead
-	// of BaseConfiguration.Other.  Mathtools' centered-colon handler creates a
-	// plain mo (the default centercolon option is false), and Physics' AutoClose
+	// of BaseConfiguration.Other. Mathtools consults the current centered-colon
+	// option at character dispatch, and Physics' AutoClose
 	// creates a non-stretchy closer.  Neither node is placed on Base's
 	// fixStretchy list, so retaining the marker is observable in copied trees.
 	if r == ':' {
-		return p.token("mo", ":")
+		return p.mathtoolsCenterColon(true, false, false)
 	}
 	if r == ')' || r == ']' || r == '|' {
 		return setAttributes(p.token("mo", string(r)), map[string]any{"stretchy": false})

@@ -51,7 +51,10 @@ func (p *parser) mathtoolsOption(name string) string {
 }
 
 func (p *parser) mathtoolsOptionBool(name string) bool {
-	return p.mathtoolsOption(name) == "true"
+	value := p.mathtoolsOption(name)
+	// readKeyval recognizes the two boolean literals; every nonempty string
+	// left by that reader is truthy in the source option consumers.
+	return value != "" && value != "false"
 }
 
 func (p *parser) mathtoolsUnderOverBracket(name string) ([]*mml.Node, error) {
@@ -386,24 +389,36 @@ func (p *parser) mathtoolsSetOptions(name string) error {
 	if err != nil {
 		return err
 	}
-	for _, entry := range splitTopLevel(raw, ',') {
-		parts := strings.SplitN(entry, "=", 2)
-		key := strings.TrimSpace(parts[0])
+	settings := make(map[string]string)
+	var order []string
+	for raw != "" {
+		key, end, rest, err := empheqReadOptionValue(raw, "=,")
+		if err != nil {
+			return err
+		}
+		raw = rest
+		value := "true"
+		if end == '=' {
+			value, _, raw, err = empheqReadOptionValue(raw, ",")
+			if err != nil {
+				return err
+			}
+		} else if key == "" {
+			continue
+		}
+		if _, exists := settings[key]; !exists {
+			order = append(order, key)
+		}
+		settings[key] = value
+	}
+	// SetOptions validates the complete keyval list before applying changes.
+	for _, key := range order {
 		if _, ok := mathtoolsDefaults[key]; !ok || key == "allow-mathtoolsset" {
 			return texError("InvalidOption", "Invalid option: %s", key)
 		}
-		value := "true"
-		if len(parts) == 2 {
-			value = strings.TrimSpace(strings.Trim(parts[1], "{}"))
-		}
-		p.state.macros[mathtoolsOptionPrefix+key] = macroDefinition{body: value}
 	}
-	// The source command map handles ':' as a special character.  Until the
-	// central scanner calls mathtoolsCharacter, preserve the same behavior for
-	// the unconsumed source in this parser invocation.
-	if p.mathtoolsOptionBool("centercolon") {
-		rest := strings.ReplaceAll(p.source[p.pos:], ":", "\\centercolon ")
-		p.source = p.source[:p.pos] + rest
+	for _, key := range order {
+		p.state.macros[mathtoolsOptionPrefix+key] = macroDefinition{body: settings[key]}
 	}
 	return nil
 }

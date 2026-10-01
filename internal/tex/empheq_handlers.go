@@ -273,13 +273,13 @@ func empheqReadOptionValue(text, endings string) (value string, ending byte, res
 
 func empheqRemoveOptionBraces(text string, count int) string {
 	for count > 0 {
-		text = strings.TrimSpace(text)
+		text = strings.TrimFunc(text, internalTextSpace)
 		if len(text) >= 2 {
 			text = text[1 : len(text)-1]
 		}
 		count--
 	}
-	return strings.TrimSpace(text)
+	return strings.TrimFunc(text, internalTextSpace)
 }
 
 func empheqColumnCount(table *mml.Node) int {
