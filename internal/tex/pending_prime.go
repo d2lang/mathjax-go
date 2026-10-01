@@ -18,9 +18,9 @@ func isPrimeRune(r rune) bool { return r == '\'' || r == '\u2019' }
 
 func (p *parser) startPrime(base *mml.Node) (*pendingPrime, error) {
 	origin, _ := base.Property(limitsScriptOrigin)
-	side := base.Kind == "msub" || base.Kind == "msup" || base.Kind == "msubsup"
+	side := base.Kind == "msub" || base.Kind == "msup" || base.Kind == "msubsup" || base.Kind == "mmultiscripts"
 	authoredSup := base.Kind == "msup" && origin != true
-	if side && !authoredSup && ((base.Kind == "msup" && len(base.Children) > 1) || (base.Kind == "msubsup" && len(base.Children) > 2 && base.Children[2] != nil)) {
+	if side && !authoredSup && ((base.Kind == "msup" && len(base.Children) > 1) || ((base.Kind == "msubsup" || base.Kind == "mmultiscripts") && len(base.Children) > 2 && base.Children[2] != nil)) {
 		return nil, texError("DoubleExponentPrime", "Prime causes double exponent: use braces to clarify")
 	}
 	count := 1
@@ -55,6 +55,13 @@ func isPrimeSpace(r rune) bool {
 }
 
 func (p *pendingPrime) finish() *mml.Node {
+	if p.base.Kind == "mmultiscripts" {
+		children := append([]*mml.Node(nil), p.base.Children...)
+		children[2] = p.prime
+		p.base.SetChildren(children)
+		refreshDynamicFlags(p.base)
+		return p.base
+	}
 	origin, _ := p.base.Property(limitsScriptOrigin)
 	if p.base.Kind == "msub" || p.base.Kind == "msubsup" || (p.base.Kind == "msup" && origin == true) {
 		var under *mml.Node
@@ -89,10 +96,17 @@ func (p *pendingPrime) attach(script *mml.Node, marker byte) (*mml.Node, error) 
 		return nil, err
 	}
 	if marker == '_' {
-		result.Kind = map[bool]string{false: "msubsup", true: "munderover"}[result.Kind == "munder" || result.Kind == "mover" || result.Kind == "munderover"]
-		result.Flags.Arity = 3
-		result.SetChildren([]*mml.Node{result.Children[0], result.Children[1], p.prime})
-		refreshDynamicFlags(result)
+		if result.Kind == "mmultiscripts" {
+			children := append([]*mml.Node(nil), result.Children...)
+			children[2] = p.prime
+			result.SetChildren(children)
+			refreshDynamicFlags(result)
+		} else {
+			result.Kind = map[bool]string{false: "msubsup", true: "munderover"}[result.Kind == "munder" || result.Kind == "mover" || result.Kind == "munderover"]
+			result.Flags.Arity = 3
+			result.SetChildren([]*mml.Node{result.Children[0], result.Children[1], p.prime})
+			refreshDynamicFlags(result)
+		}
 	}
 	result.Flags.Embellished = p.base.Flags.Embellished
 	result.Flags.CoreIndex = 0
