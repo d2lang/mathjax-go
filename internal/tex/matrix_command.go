@@ -105,11 +105,13 @@ func (p *parser) matrixCommand(name string) ([]*mml.Node, error) {
 	}
 	spacing.apply(table, initial)
 	table = finishArrayRules(table)
+	// ArrayItem.toMml uses ParseUtil.fenced, whose open/close properties
+	// classify the row as INNER and preserve spacing from its predecessor.
 	if name == "pmatrix" {
-		return []*mml.Node{p.fenced("(", table, ")", true)}, nil
+		return []*mml.Node{p.leftRightFenced("(", table, ")", true)}, nil
 	}
 	if name == "cases" {
-		return []*mml.Node{p.fenced("{", table, "", true)}, nil
+		return []*mml.Node{p.leftRightFenced("{", table, "", true)}, nil
 	}
 	return []*mml.Node{table}, nil
 }
