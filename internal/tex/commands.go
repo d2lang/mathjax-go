@@ -256,13 +256,6 @@ func (p *parser) commandNodes(name string, after **derivativeAutoOpen) ([]*mml.N
 		return nil, p.declareMathOperator(name)
 	case "mathop", "mathrel", "mathbin", "mathord", "mathopen", "mathclose", "mathpunct", "mathinner":
 		return p.mathClass(name)
-	case "rank":
-		fn := token("mi", "rank")
-		fn.Attributes.Set("mathvariant", "normal")
-		fn.TeXClass = mml.TeXClassOp
-		fn.SetProperty("fnOP", true)
-		p.commandNamedFunction = true
-		return []*mml.Node{fn}, nil
 	case "injlim", "projlim":
 		text := map[string]string{"injlim": "inj\u2006lim", "projlim": "proj\u2006lim"}[name]
 		op := p.operator(text, mml.TeXClassOp, map[string]any{"movablelimits": true})
