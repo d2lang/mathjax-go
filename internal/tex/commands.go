@@ -1531,26 +1531,21 @@ func (p *parser) cancelTo(name string) ([]*mml.Node, error) {
 }
 
 func keyvalOptions(raw string, allowed []string) (map[string]any, error) {
-	result := make(map[string]any)
-	if strings.TrimSpace(raw) == "" {
-		return result, nil
-	}
 	allowedSet := make(map[string]bool, len(allowed))
 	for _, key := range allowed {
 		allowedSet[key] = true
 	}
-	for _, entry := range splitTopLevel(raw, ',') {
-		parts := strings.SplitN(entry, "=", 2)
-		key := strings.TrimSpace(parts[0])
-		if !allowedSet[key] {
-			return nil, texError("InvalidOption", "Invalid option '%s'", key)
-		}
-		value := any(true)
-		if len(parts) == 2 {
-			value = strings.TrimSpace(strings.Trim(parts[1], "{}"))
-		}
-		result[key] = value
+	options, err := parseUtilKeyvalOptions(raw, func(key string) bool {
+		return allowedSet[key]
+	}, false)
+	if err != nil {
+		return nil, err
 	}
+	result := make(map[string]any, options.Len())
+	options.Range(func(key string, value any) bool {
+		result[key] = value
+		return true
+	})
 	return result, nil
 }
 

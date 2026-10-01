@@ -176,7 +176,7 @@ func empheqOptionTeX(value any) string {
 func empheqSplitOptions(text string) (map[string]any, error) {
 	options, err := parseUtilKeyvalOptions(text, func(key string) bool {
 		return key == "left" || key == "right"
-	})
+	}, true)
 	if err != nil {
 		return nil, err
 	}
