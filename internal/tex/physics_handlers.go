@@ -7,10 +7,11 @@
 package tex
 
 import (
+	"math"
 	"strconv"
 	"strings"
-	"unicode"
 
+	"github.com/d2lang/mathjax-go/internal/jscompat"
 	"github.com/d2lang/mathjax-go/internal/mml"
 )
 
@@ -298,12 +299,16 @@ func (p *parser) physicsMatrixExpansion(name string) (string, error) {
 		if err != nil {
 			return "", err
 		}
-		size, ok := physicsParseInt(raw)
+		number, ok := physicsParseInt(raw)
 		if !ok {
 			return "", texError("InvalidNumber", "Invalid number")
 		}
-		if size <= 1 {
+		if number <= 1 {
 			return "1", nil
+		}
+		size, ok := physicsMatrixDimension(number)
+		if !ok {
+			return "", texError("InvalidNumber", "Invalid number")
 		}
 		rows := make([]string, size)
 		for i := 0; i < size; i++ {
@@ -334,16 +339,15 @@ func (p *parser) physicsMatrixExpansion(name string) (string, error) {
 		if err != nil {
 			return "", err
 		}
-		rows, rowOK := physicsParseInt(rawRows)
-		columns, columnOK := physicsParseInt(rawColumns)
-		if !rowOK || !columnOK || strconv.Itoa(rows) != rawRows || strconv.Itoa(columns) != rawColumns {
+		rowNumber, rowOK := physicsParseInt(rawRows)
+		columnNumber, columnOK := physicsParseInt(rawColumns)
+		if !rowOK || !columnOK || jscompat.NumberString(rowNumber) != rawRows || jscompat.NumberString(columnNumber) != rawColumns {
 			return "", texError("InvalidNumber", "Invalid number")
 		}
-		if rows < 1 {
-			rows = 1
-		}
-		if columns < 1 {
-			columns = 1
+		rows, rowOK := physicsMatrixDimension(rowNumber)
+		columns, columnOK := physicsMatrixDimension(columnNumber)
+		if !rowOK || !columnOK {
+			return "", texError("InvalidNumber", "Invalid number")
 		}
 		matrixRows := make([]string, rows)
 		for i := 1; i <= rows; i++ {
@@ -410,8 +414,10 @@ func (p *parser) physicsMatrixExpansion(name string) (string, error) {
 	return "", nil
 }
 
-func physicsParseInt(raw string) (int, bool) {
-	raw = strings.TrimLeftFunc(raw, unicode.IsSpace)
+// Physics parses dimensions with parseInt(text, 10), which produces a Number
+// even for a negative decimal prefix outside Go's integer range.
+func physicsParseInt(raw string) (float64, bool) {
+	raw = strings.TrimLeftFunc(raw, internalTextSpace)
 	if raw == "" {
 		return 0, false
 	}
@@ -426,6 +432,18 @@ func physicsParseInt(raw string) (int, bool) {
 	if end == startDigits {
 		return 0, false
 	}
-	value, err := strconv.Atoi(raw[:end])
-	return value, err == nil
+	value, err := strconv.ParseFloat(raw[:end], 64)
+	return value, err == nil || math.IsInf(value, 0)
+}
+
+func physicsMatrixDimension(number float64) (int, bool) {
+	if number <= 1 {
+		return 1, true
+	}
+	// Preserve the existing positive Go integer representability boundary;
+	// negative values have already taken the source's one-cell branch.
+	if number >= math.Ldexp(1, strconv.IntSize-1) {
+		return 0, false
+	}
+	return int(number), true
 }

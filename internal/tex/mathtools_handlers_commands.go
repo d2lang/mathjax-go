@@ -343,7 +343,7 @@ func (p *parser) mathtoolsXMathStrut(name string) ([]*mml.Node, error) {
 }
 
 func mathtoolsPlusOrMinus(name, value string) (string, error) {
-	value = strings.TrimSpace(value)
+	value = strings.TrimFunc(value, internalTextSpace)
 	if !mathtoolsNumber.MatchString(value) {
 		return "", texError("NotANumber", "Argument to \\%s is not a number", name)
 	}
@@ -409,7 +409,7 @@ func (p *parser) mathtoolsNewTagForm(name string, renew bool) error {
 	if err != nil {
 		return err
 	}
-	id = strings.TrimSpace(id)
+	id = strings.TrimFunc(id, internalTextSpace)
 	if id == "" {
 		return texError("InvalidTagFormID", "Tag form name can't be empty")
 	}
@@ -438,7 +438,7 @@ func (p *parser) mathtoolsUseTagForm(name string) error {
 	if err != nil {
 		return err
 	}
-	id = strings.TrimSpace(id)
+	id = strings.TrimFunc(id, internalTextSpace)
 	if id == "" {
 		delete(p.state.macros, mathtoolsCurrentTag)
 		return nil
