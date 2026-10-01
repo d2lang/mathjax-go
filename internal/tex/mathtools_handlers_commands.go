@@ -408,7 +408,9 @@ func (p *parser) mathtoolsSetOptions(name string) error {
 	}
 	settings, err := parseUtilKeyvalOptions(raw, func(key string) bool {
 		_, ok := mathtoolsDefaults[key]
-		return ok && key != "allow-mathtoolsset"
+		// Original SetOptions excludes the misspelled "pariedDelimiters".
+		// The real key is accepted without rebuilding the delimiter map.
+		return (ok && key != "allow-mathtoolsset") || key == "pairedDelimiters"
 	}, true)
 	if err != nil {
 		return err
