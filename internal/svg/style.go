@@ -15,6 +15,7 @@ import (
 const borderFuzz = .005
 
 var cssCommentPattern = regexp.MustCompile(`(?s)/\*.*?\*/`)
+var cssStyleNamePattern = regexp.MustCompile(`^[-a-z]+$`)
 var cssBorderWidthPattern = regexp.MustCompile(`^(?:[\d.]+[a-z]+|thin|medium|thick|inherit|initial|unset)$`)
 
 type cssDeclaration struct {
@@ -70,12 +71,14 @@ func parseWrapperStyles(source string) *wrapperStyles {
 		if !ok {
 			continue
 		}
-		name = strings.ToLower(strings.TrimSpace(name))
+		name = strings.TrimFunc(name, cssValueSpace)
+		// Styles.pattern captures only lowercase property names. A preceding
+		// non-whitespace character makes Styles.parse stop at that declaration.
+		if !cssStyleNamePattern.MatchString(name) {
+			return styles
+		}
 		// Styles.pattern removes JavaScript whitespace around authored values.
 		value = strings.TrimFunc(value, cssValueSpace)
-		if name == "" {
-			continue
-		}
 		if styles.setBorderComponent(name, value) {
 			continue
 		}
