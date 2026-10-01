@@ -290,7 +290,9 @@ func (w *wrapper) styleLength(value string, scale float64) float64 {
 	if value == "" {
 		return 0
 	}
-	return math.Max(0, layout.Length2Em(value, 0, scale, w.renderer.pxPerEm))
+	// CommonWrapper uses one em as the relative size for percentages and
+	// retains signed padding in both the outer box and content offset.
+	return layout.Length2Em(value, 1, scale, w.renderer.pxPerEm)
 }
 
 func (w *wrapper) styledOuterBBox() *layout.BBox { return w.styledOuterBBoxWithSave(true) }
@@ -301,10 +303,16 @@ func (w *wrapper) styledOuterBBoxWithSave(save bool) *layout.BBox {
 		return bbox
 	}
 	outer := bbox.Clone()
-	outer.H += w.styleLength(w.styles.border[0].width, outer.RScale) + w.styleLength(w.styles.padding[0], outer.RScale)
-	outer.W += w.styleLength(w.styles.border[1].width, outer.RScale) + w.styleLength(w.styles.padding[1], outer.RScale)
-	outer.D += w.styleLength(w.styles.border[2].width, outer.RScale) + w.styleLength(w.styles.padding[2], outer.RScale)
-	outer.W += w.styleLength(w.styles.border[3].width, outer.RScale) + w.styleLength(w.styles.padding[3], outer.RScale)
+	// Preserve BBox.StyleAdjust's sequence: all border widths, then padding.
+	// Combining terms first changes rounding in serialized dimensions.
+	outer.H += w.styleLength(w.styles.border[0].width, outer.RScale)
+	outer.W += w.styleLength(w.styles.border[1].width, outer.RScale)
+	outer.D += w.styleLength(w.styles.border[2].width, outer.RScale)
+	outer.W += w.styleLength(w.styles.border[3].width, outer.RScale)
+	outer.H += w.styleLength(w.styles.padding[0], outer.RScale)
+	outer.W += w.styleLength(w.styles.padding[1], outer.RScale)
+	outer.D += w.styleLength(w.styles.padding[2], outer.RScale)
+	outer.W += w.styleLength(w.styles.padding[3], outer.RScale)
 	return outer
 }
 
@@ -326,7 +334,8 @@ func (w *wrapper) handleBorder(element *Element) {
 	var widths [4]float64
 	for i, border := range w.styles.border {
 		if border.width != "" && border.style != "none" && border.style != "hidden" {
-			widths[i] = w.styleLength(border.width, w.bbox.RScale)
+			// SVGWrapper clamps the drawn border independently of box sizing.
+			widths[i] = math.Max(0, w.styleLength(border.width, w.bbox.RScale))
 		}
 	}
 	bbox := w.outerBBox()
