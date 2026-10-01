@@ -250,7 +250,9 @@ func (w *wrapper) scriptOffsetsFor(sub, sup *wrapper) (subY, supY float64) {
 	}
 	subbox, supbox := sub.outerBBox(), sup.outerBBox()
 	params := w.renderer.params
-	u := w.supShift(sup)
+	// Movable munderover uses CommonMsubsup.getUVQ, whose inherited
+	// scriptChild getter measures child 1 for the initial getU.
+	u := w.supShift(sub)
 	drop := w.baseCharZero(w.scriptBaseCore().outerBBox().D*w.baseScale() + params.SubDrop*subbox.RScale)
 	v := math.Max(drop, layout.Length2Em(attribute(w.node, "subscriptshift", ""), params.Sub2, w.bbox.Scale, w.renderer.pxPerEm))
 	minimum := 3 * params.Rule

@@ -1,0 +1,25 @@
+{
+  "d2Commit": "01bc7ecdbdd04c13d6fe5df1967d2d9aa14ae579",
+  "beforeMathjaxCommit": "b3ce847160dbedebc5167b9e369f0310437fd8f0",
+  "fixedSourceCommit": "e4fbc4f560a983876f7bfc650f465d37ce062ee7",
+  "original": "D2 frozen MathJax 3.2.2; unmodified assets; fresh runtime per render",
+  "afterOriginalSVGByteExact": true,
+  "afterOriginalPNGByteExact": true,
+  "sharedScale": true,
+  "visuallyInspected": true,
+  "files": {
+    "before.png": "78bd576a4dd7cf066708d81d53909cc262587647368ca6e39e0fc0842bc11b21",
+    "original.svg": "e8c774bf1f6f81b6662e48b929b0db1756ed0483107d15c1fe46b7861a2b08ff",
+    "after.png": "dd80d8aa7b1446cf7c19ad2aec4ae9d283e5e55eef7a9fdf84c8f650b8e2a745",
+    "after.svg": "e8c774bf1f6f81b6662e48b929b0db1756ed0483107d15c1fe46b7861a2b08ff",
+    "original.png": "dd80d8aa7b1446cf7c19ad2aec4ae9d283e5e55eef7a9fdf84c8f650b8e2a745",
+    "comparison.png": "15a78df7491e54810d0ad43e94c70cd6bf6b2c1e0051c53a3562e0fb1fe7506b",
+    "before.svg": "3daad77c6b825b709d1da31679395236011e6f3bdfd65a9928ad547553044740",
+    "witness.d2": "33b3afb83d1b740c7f137be1322670bf2f0bacf3dca55b94d2490ea5c51b89ab"
+  },
+  "oracleAssets": {
+    "mathjax.js": "cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869",
+    "polyfills.js": "7fe1d048c78b0e09854c1259f7413868a51cc8f0c822489eb1ac36ae6c85ce01",
+    "setup.js": "a52cb0bbabfbd7796b9fedd793b9386c474e3123e788ee151cbe47ca1fa6e881"
+  }
+}
