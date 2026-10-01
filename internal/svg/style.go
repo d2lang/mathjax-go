@@ -44,6 +44,17 @@ func (w *wrapper) initializeStyles() {
 		return
 	}
 	w.styles = parseWrapperStyles(style)
+	// The primary wrapper removes CSS font-size before rendering paths or
+	// fallback text; getScale applies the value to the wrapper's geometry.
+	kept := w.styles.other[:0]
+	for _, declaration := range w.styles.other {
+		if declaration.name == "font-size" {
+			w.cssFontSize = declaration.value
+		} else {
+			kept = append(kept, declaration)
+		}
+	}
+	w.styles.other = kept
 }
 
 func parseWrapperStyles(source string) *wrapperStyles {
