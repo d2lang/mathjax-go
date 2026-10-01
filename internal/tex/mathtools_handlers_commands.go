@@ -108,19 +108,34 @@ func (p *parser) mathtoolsDeclarePairedDelimiter(name string) error {
 		return err
 	}
 	arguments := 1
+	substituteZeroArgs := false
 	pre, body, post := "", "#1", ""
 	isX := strings.Contains(name, "X")
 	isXPP := strings.Contains(name, "XPP")
 	if isX {
-		count, _, err := p.readBrackets(nil)
+		// An absent count is undefined and uses PairedDelimiters' default one.
+		// An explicitly empty count remains false and consumes no arguments.
+		count, present, err := p.readBrackets(nil)
 		if err != nil {
 			return err
 		}
+		if present {
+			arguments = 0
+		}
 		if count != "" {
+			count = strings.TrimFunc(count, internalTextSpace)
+			valid := count != ""
+			for _, c := range count {
+				valid = valid && c >= '0' && c <= '9'
+			}
+			if !valid {
+				return texError("IllegalParamNumber", "Illegal number of parameters specified in \\%s", name)
+			}
 			arguments, err = parseInteger(count, "IllegalMacroParam")
 			if err != nil {
 				return err
 			}
+			substituteZeroArgs = arguments == 0
 		}
 	}
 	if isXPP {
@@ -151,7 +166,8 @@ func (p *parser) mathtoolsDeclarePairedDelimiter(name string) error {
 	}
 	p.state.pairedDelimiters[cs] = pairedDelimiter{
 		open: open, close: close, arguments: arguments,
-		body: pre + mathtoolsPairSeparator + body + mathtoolsPairSeparator + post,
+		substituteZeroArgs: substituteZeroArgs,
+		body:               pre + mathtoolsPairSeparator + body + mathtoolsPairSeparator + post,
 	}
 	return nil
 }
@@ -181,7 +197,7 @@ func (p *parser) mathtoolsPairedDelimiter(name string, definition pairedDelimite
 	} else if size != "" {
 		left, right, middle = size+"l", size+"r", size
 	}
-	if definition.arguments > 0 {
+	if definition.arguments > 0 || definition.substituteZeroArgs {
 		args := make([]string, definition.arguments)
 		for i := range args {
 			var err error
