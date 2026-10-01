@@ -48,9 +48,14 @@ func (w *wrapper) initializeStyles() {
 	// fallback text; getScale applies the value to the wrapper's geometry.
 	kept := w.styles.other[:0]
 	for _, declaration := range w.styles.other {
-		if declaration.name == "font-size" {
+		switch declaration.name {
+		case "font-size":
 			w.cssFontSize = declaration.value
-		} else {
+		case "font-weight":
+			w.cssFontWeight = declaration.value
+		case "font-style":
+			w.cssFontStyle = declaration.value
+		default:
 			kept = append(kept, declaration)
 		}
 	}
