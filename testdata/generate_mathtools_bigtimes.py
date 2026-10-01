@@ -79,7 +79,7 @@ for alias in ["DeclarePairedDelimiterX", "DeclarePairedDelimitersX"]:
     add(alias + "-bigtimes-override", "\\" + alias + r'{\bigtimes}[1]{}{}{\mathbf{#1}}\bigtimes{x}')
 add("operator-control", r'a+\sum_{i=1}^{n}x_i+b')
 add("ordinary-times-control", r'a\times b')
-add("d2-witness", r'\DeclarePairedDelimiterX{\boldsymbol}[1]{}{}{\mathbf{#1}}\bigtimes_{i=1}^{n} x_i')
+add("d2-witness", r'\DeclarePairedDelimiterX{\boldsymbol}[1]{}{}{\mathbf{#1}}{\Huge\bigtimes_{i=1}^{n} x_i = x_1\times x_2\times\cdots\times x_n}')
 
 # The frozen original lacks boldsymbol, while Go intentionally provides it.
 # These complete original diagnostic objects are preserved, never SVG credit.
