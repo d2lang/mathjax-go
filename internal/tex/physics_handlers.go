@@ -125,7 +125,7 @@ func (p *parser) physicsExpression(name string) ([]*mml.Node, error) {
 		}
 		base = node("msup", function, sup)
 	}
-	p.skipSpaces()
+	p.skipNextSpaces()
 	if p.pos >= len(p.source) || p.source[p.pos] != '(' {
 		// PhysicsMethods.Expression pushes the operator as an FnItem.  The
 		// surrounding parser row decides whether a following item requires
@@ -391,7 +391,7 @@ func (p *parser) physicsMatrixExpansion(name string) (string, error) {
 		return matrix, nil
 
 	case "diagonalmatrix", "dmat", "antidiagonalmatrix", "admat":
-		p.skipSpaces()
+		p.skipNextSpaces()
 		if p.pos >= len(p.source) || p.source[p.pos] != '{' {
 			return "", nil
 		}

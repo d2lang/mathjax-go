@@ -58,7 +58,7 @@ func (p *parser) differential(name string, after **derivativeAutoOpen) ([]*mml.N
 	} else {
 		op += " "
 	}
-	p.skipSpaces()
+	p.skipNextSpaces()
 	parens := p.pos < len(p.source) && p.source[p.pos] == '('
 	braces := p.pos < len(p.source) && p.source[p.pos] == '{'
 	if !parens {

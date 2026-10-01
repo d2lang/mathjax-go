@@ -191,15 +191,7 @@ func (p *parser) readMatrixBody(name string) (string, error) {
 // Matrix reads its opening argument before pushing the open ArrayItem. Script
 // parsing uses the same boundary to reject an unbraced ArrayItem immediately.
 func (p *parser) startMatrixBody(name string) error {
-	if name == "displaylines" {
-		// Matrix.GetNext uses JavaScript whitespace, excluding NEL and
-		// including BOM. Retain the legacy readers of other Matrix routes.
-		for p.pos < len(p.source) && isPrimeSpace(p.peekRune()) {
-			p.consumeRune()
-		}
-	} else {
-		p.skipSpaces()
-	}
+	p.skipNextSpaces()
 	if p.pos == len(p.source) {
 		return texError("MissingArgFor", "Missing argument for \\%s", name)
 	}
