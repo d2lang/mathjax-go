@@ -26,7 +26,7 @@ func TestBorderNamesPublicReferences(t *testing.T) {
 	if err := json.Unmarshal(data, &fixture); err != nil {
 		t.Fatal(err)
 	}
-	if fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || len(fixture.Cases) != 1020 {
+	if fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || len(fixture.Cases) != 1052 {
 		t.Fatal("unbound border declaration references")
 	}
 	seen := map[string]bool{}

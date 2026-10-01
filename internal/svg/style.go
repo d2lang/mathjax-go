@@ -66,9 +66,15 @@ func (w *wrapper) initializeStyles() {
 
 func parseWrapperStyles(source string) *wrapperStyles {
 	styles := &wrapperStyles{}
-	for _, declaration := range splitCSSDeclarations(cssCommentPattern.ReplaceAllString(source, "")) {
+	declarations := splitCSSDeclarations(cssCommentPattern.ReplaceAllString(source, ""))
+	for index, declaration := range declarations {
 		name, value, ok := strings.Cut(declaration, ":")
 		if !ok {
+			// Styles.parse stops when unmatched text before the next property
+			// includes more than JavaScript whitespace or another separator.
+			if strings.TrimFunc(declaration, cssValueSpace) != "" || index < len(declarations)-1 {
+				return styles
+			}
 			continue
 		}
 		name = strings.TrimFunc(name, cssValueSpace)

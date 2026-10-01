@@ -70,6 +70,14 @@ styles.push(
   ['uppercase', 'Border:4px solid red; border-bottom-width:8px'],
   ['embedded-nel', 'border\u0085-width:4px; border-bottom-width:8px'],
   ['retain-previous', 'border:4px solid red; \u0085border-bottom:8px solid blue; border-left-width:12px'],
+  ['leading-semicolon', ';border:4px solid red'],
+  ['leading-word', 'foo; border:4px solid red'],
+  ['extra-separator', 'border:4px solid red; ;border-bottom:8px solid blue'],
+  ['intervening-word', 'border:4px solid red; foo; border-bottom:8px solid blue'],
+  ['leading-whitespace-control', ' \ufeffborder:4px solid red'],
+  ['trailing-semicolon-control', 'border:4px solid red;'],
+  ['trailing-whitespace-control', 'border:4px solid red; \ufeff'],
+  ['comment-control', '/*prefix*/border:4px solid red; /*end*/'],
 );
 const pending = [];
 for (const [label, value] of styles) {

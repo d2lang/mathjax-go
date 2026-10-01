@@ -31,7 +31,7 @@ func TestBorderNamesSourceStyles(t *testing.T) {
 	if err := json.Unmarshal(data, &fixture); err != nil {
 		t.Fatal(err)
 	}
-	if fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || len(fixture.StyleCases) != 255 || len(fixture.SplitCases) != 0 {
+	if fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || len(fixture.StyleCases) != 263 || len(fixture.SplitCases) != 0 {
 		t.Fatal("unbound source Styles references")
 	}
 	for _, c := range fixture.StyleCases {
