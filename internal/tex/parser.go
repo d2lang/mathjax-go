@@ -1585,7 +1585,10 @@ func (p *parser) readControlSequence() string {
 }
 
 func (p *parser) readDelimiter(command string, braceOK bool) (string, error) {
-	p.skipSpaces()
+	// GetDelimiter calls GetNext, whose nextIsSpace uses JavaScript's \s.
+	for p.pos < len(p.source) && internalTextSpace(p.peekRune()) {
+		p.consumeRune()
+	}
 	if p.pos < len(p.source) {
 		var key string
 		if p.source[p.pos] == '\\' {
@@ -1596,7 +1599,7 @@ func (p *parser) readDelimiter(command string, braceOK bool) (string, error) {
 			if err != nil {
 				return "", err
 			}
-			key = strings.TrimSpace(raw)
+			key = strings.TrimFunc(raw, internalTextSpace)
 		} else {
 			key = string(p.consumeRune())
 		}
