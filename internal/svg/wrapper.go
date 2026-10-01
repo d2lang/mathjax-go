@@ -23,17 +23,19 @@ type wrapper struct {
 	parent   *wrapper
 	children []*wrapper
 
-	bbox         *layout.BBox
-	bboxComputed bool
-	variant      font.Variant
-	explicitFont bool
-	fontFamily   string
-	styles       *wrapperStyles
-	cssFontSize  string // CommonWrapper.removedStyles.fontSize; consumed by getScale.
-	scriptLevel  int
-	displayStyle bool
-	element      *Element
-	dx           float64
+	bbox          *layout.BBox
+	bboxComputed  bool
+	variant       font.Variant
+	explicitFont  bool
+	fontFamily    string
+	styles        *wrapperStyles
+	cssFontSize   string // CommonWrapper.removedStyles.fontSize; consumed by getScale.
+	cssFontWeight string
+	cssFontStyle  string
+	scriptLevel   int
+	displayStyle  bool
+	element       *Element
+	dx            float64
 
 	stretch      font.Delimiter
 	hasStretch   bool
@@ -213,6 +215,62 @@ func (w *wrapper) getVariant() {
 	if value, ok := w.node.Property("variantForm"); ok && truthy(value) {
 		w.variant = font.TeXVariant
 	}
+	w.applyFontWeightStyle()
+}
+
+// CommonWrapper.getVariant converts authored weight/style to native math
+// variants when no family or explicit mathvariant was selected.
+func (w *wrapper) applyFontWeightStyle() {
+	if explicit, _ := w.node.Attributes.GetExplicit("mathvariant"); truthy(explicit) {
+		return
+	}
+	weight := stringAttribute(w.node, "fontweight", "")
+	style := stringAttribute(w.node, "fontstyle", "")
+	if weight == "" {
+		weight = w.cssFontWeight
+	}
+	if style == "" {
+		style = w.cssFontStyle
+	}
+	weight = normalizedFontWeight(weight)
+	if variants := fontWeightVariants[weight]; variants != nil {
+		if variant, ok := variants[w.variant]; ok {
+			w.variant = variant
+		}
+	}
+	if variants := fontStyleVariants[style]; variants != nil {
+		if variant, ok := variants[w.variant]; ok {
+			w.variant = variant
+		}
+	}
+}
+
+// MathJax 3.2.2 CommonWrapper.BOLDVARIANTS and ITALICVARIANTS.
+var fontWeightVariants = map[string]map[font.Variant]font.Variant{
+	"bold": {font.Normal: font.Bold, font.Italic: font.BoldItalic,
+		font.Fraktur: font.BoldFraktur, font.Script: font.BoldScript,
+		font.SansSerif: font.BoldSansSerif, font.SansSerifItalic: font.SansSerifBoldItalic},
+	"normal": {font.Bold: font.Normal, font.BoldItalic: font.Italic,
+		font.BoldFraktur: font.Fraktur, font.BoldScript: font.Script,
+		font.BoldSansSerif: font.SansSerif, font.SansSerifBoldItalic: font.SansSerifItalic},
+}
+
+var fontStyleVariants = map[string]map[font.Variant]font.Variant{
+	"italic": {font.Normal: font.Italic, font.Bold: font.BoldItalic,
+		font.SansSerif: font.SansSerifItalic, font.BoldSansSerif: font.SansSerifBoldItalic},
+	"normal": {font.Italic: font.Normal, font.BoldItalic: font.Bold,
+		font.SansSerifItalic: font.SansSerif, font.SansSerifBoldItalic: font.BoldSansSerif},
+}
+
+func normalizedFontWeight(weight string) string {
+	if weight != "" && strings.IndexFunc(weight, func(r rune) bool { return r < '0' || r > '9' }) == -1 {
+		value, _ := strconv.ParseFloat(weight, 64)
+		if value > 600 {
+			return "bold"
+		}
+		return "normal"
+	}
+	return weight
 }
 
 func (w *wrapper) pseudoScriptVariant() bool {
@@ -235,11 +293,9 @@ func (w *wrapper) authoredFontFamily() bool {
 	family := stringAttribute(w.node, "fontfamily", "")
 	weight := stringAttribute(w.node, "fontweight", "")
 	style := stringAttribute(w.node, "fontstyle", "")
-	cssFamily, cssWeight, cssStyle := "", "", ""
+	cssFamily := ""
 	if w.styles != nil {
 		cssFamily = w.styles.value("font-family")
-		cssWeight = w.styles.value("font-weight")
-		cssStyle = w.styles.value("font-style")
 	}
 	if family == "" && cssFamily == "" {
 		return false
@@ -268,18 +324,12 @@ func (w *wrapper) authoredFontFamily() bool {
 		family = cssFamily
 	}
 	if weight == "" {
-		weight = cssWeight
+		weight = w.cssFontWeight
 	}
 	if style == "" {
-		style = cssStyle
+		style = w.cssFontStyle
 	}
-	if weight != "" && strings.IndexFunc(weight, func(r rune) bool { return r < '0' || r > '9' }) == -1 {
-		value, _ := strconv.ParseFloat(weight, 64)
-		weight = "normal"
-		if value > 600 {
-			weight = "bold"
-		}
-	}
+	weight = normalizedFontWeight(weight)
 	w.styles.setOther("font-family", family)
 	if weight != "" {
 		w.styles.setOther("font-weight", weight)
