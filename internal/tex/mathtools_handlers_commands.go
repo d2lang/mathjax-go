@@ -7,6 +7,7 @@
 package tex
 
 import (
+	"fmt"
 	"regexp"
 	"strings"
 
@@ -389,36 +390,16 @@ func (p *parser) mathtoolsSetOptions(name string) error {
 	if err != nil {
 		return err
 	}
-	settings := make(map[string]string)
-	var order []string
-	for raw != "" {
-		key, end, rest, err := empheqReadOptionValue(raw, "=,")
-		if err != nil {
-			return err
-		}
-		raw = rest
-		value := "true"
-		if end == '=' {
-			value, _, raw, err = empheqReadOptionValue(raw, ",")
-			if err != nil {
-				return err
-			}
-		} else if key == "" {
-			continue
-		}
-		if _, exists := settings[key]; !exists {
-			order = append(order, key)
-		}
-		settings[key] = value
+	settings, err := parseUtilKeyvalOptions(raw, func(key string) bool {
+		_, ok := mathtoolsDefaults[key]
+		return ok && key != "allow-mathtoolsset"
+	})
+	if err != nil {
+		return err
 	}
-	// SetOptions validates the complete keyval list before applying changes.
-	for _, key := range order {
-		if _, ok := mathtoolsDefaults[key]; !ok || key == "allow-mathtoolsset" {
-			return texError("InvalidOption", "Invalid option: %s", key)
-		}
-	}
-	for _, key := range order {
-		p.state.macros[mathtoolsOptionPrefix+key] = macroDefinition{body: settings[key]}
+	for _, key := range settings.JavaScriptKeys() {
+		value, _ := settings.Get(key)
+		p.state.macros[mathtoolsOptionPrefix+key] = macroDefinition{body: fmt.Sprint(value)}
 	}
 	return nil
 }

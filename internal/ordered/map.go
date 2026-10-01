@@ -6,6 +6,11 @@
 // model the object-key and DOM-attribute ordering observable in MathJax 3.2.2.
 package ordered
 
+import (
+	"sort"
+	"strconv"
+)
+
 // Map is an insertion-ordered map with string keys. Updating a key preserves
 // its original position; deleting and reinserting it appends it at the end.
 // The zero value is ready for use.
@@ -86,6 +91,31 @@ func (m *Map[V]) Keys() []string {
 		return nil
 	}
 	return append([]string(nil), m.keys...)
+}
+
+// JavaScriptKeys returns keys in Object.keys order: canonical array indices
+// first in numeric order, then the remaining keys in insertion order.
+// Keys and Range retain insertion order for DOM attributes and other callers.
+func (m *Map[V]) JavaScriptKeys() []string {
+	if m == nil {
+		return nil
+	}
+	indices := make([]string, 0, len(m.keys))
+	other := make([]string, 0, len(m.keys))
+	for _, key := range m.keys {
+		value, err := strconv.ParseUint(key, 10, 32)
+		if err == nil && value < 1<<32-1 && strconv.FormatUint(value, 10) == key {
+			indices = append(indices, key)
+		} else {
+			other = append(other, key)
+		}
+	}
+	sort.Slice(indices, func(i, j int) bool {
+		left, _ := strconv.ParseUint(indices[i], 10, 32)
+		right, _ := strconv.ParseUint(indices[j], 10, 32)
+		return left < right
+	})
+	return append(indices, other...)
 }
 
 // Range calls yield in insertion order until it returns false.

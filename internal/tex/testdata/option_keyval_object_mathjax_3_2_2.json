@@ -1,0 +1,1064 @@
+{
+  "mathjaxGitCommit": "ad8f5c21cb810236551da8c6512ba733e67357ee",
+  "assets": {
+    "polyfills.js": "7fe1d048c78b0e09854c1259f7413868a51cc8f0c822489eb1ac36ae6c85ce01",
+    "mathjax.js": "cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869",
+    "setup.js": "a52cb0bbabfbd7796b9fedd793b9386c474e3123e788ee151cbe47ca1fa6e881"
+  },
+  "scope": "Direct original ParseUtil.keyvalOptions with and without the Empheq allowlist; fresh frozen runtime per call.",
+  "keyvalMethod": "function(t,e,Q){var n,o;void 0===e&&(e=null),void 0===Q&&(Q=!1);var i=function(t){var e,Q,T,n,o,i={},a=t;for(;a;)n=(e=r(m(a,[\"=\",\",\"]),3))[0],T=e[1],a=e[2],\"=\"===T?(o=(Q=r(m(a,[\",\"]),3))[0],T=Q[1],a=Q[2],o=\"false\"===o||\"true\"===o?JSON.parse(o):o,i[n]=o):n&&(i[n]=!0);return i}(t);if(e)try{for(var a=T(Object.keys(i)),s=a.next();!s.done;s=a.next()){var c=s.value;if(!e.hasOwnProperty(c)){if(Q)throw new l.default(\"InvalidOption\",\"Invalid option: %1\",c);delete i[c]}}}catch(t){n={error:t}}finally{try{s&&!s.done&&(o=a.return)&&o.call(a)}finally{if(n)throw n.error}}return i}",
+  "cases": [
+    {
+      "name": "empty-unvalidated",
+      "raw": "",
+      "validated": false,
+      "options": {},
+      "keys": [],
+      "error": null
+    },
+    {
+      "name": "empty-empheq",
+      "raw": "",
+      "validated": true,
+      "options": {},
+      "keys": [],
+      "error": null
+    },
+    {
+      "name": "left-right-unvalidated",
+      "raw": "left={(},right={)}",
+      "validated": false,
+      "options": {
+        "left": "(",
+        "right": ")"
+      },
+      "keys": [
+        "left",
+        "right"
+      ],
+      "error": null
+    },
+    {
+      "name": "left-right-empheq",
+      "raw": "left={(},right={)}",
+      "validated": true,
+      "options": {
+        "left": "(",
+        "right": ")"
+      },
+      "keys": [
+        "left",
+        "right"
+      ],
+      "error": null
+    },
+    {
+      "name": "booleans-unvalidated",
+      "raw": "left=false,right",
+      "validated": false,
+      "options": {
+        "left": false,
+        "right": true
+      },
+      "keys": [
+        "left",
+        "right"
+      ],
+      "error": null
+    },
+    {
+      "name": "booleans-empheq",
+      "raw": "left=false,right",
+      "validated": true,
+      "options": {
+        "left": false,
+        "right": true
+      },
+      "keys": [
+        "left",
+        "right"
+      ],
+      "error": null
+    },
+    {
+      "name": "nested-unvalidated",
+      "raw": "left={{(}},right={{)}}",
+      "validated": false,
+      "options": {
+        "left": "(",
+        "right": ")"
+      },
+      "keys": [
+        "left",
+        "right"
+      ],
+      "error": null
+    },
+    {
+      "name": "nested-empheq",
+      "raw": "left={{(}},right={{)}}",
+      "validated": true,
+      "options": {
+        "left": "(",
+        "right": ")"
+      },
+      "keys": [
+        "left",
+        "right"
+      ],
+      "error": null
+    },
+    {
+      "name": "duplicates-unvalidated",
+      "raw": "right=x,left=y,right=z",
+      "validated": false,
+      "options": {
+        "right": "z",
+        "left": "y"
+      },
+      "keys": [
+        "right",
+        "left"
+      ],
+      "error": null
+    },
+    {
+      "name": "duplicates-empheq",
+      "raw": "right=x,left=y,right=z",
+      "validated": true,
+      "options": {
+        "right": "z",
+        "left": "y"
+      },
+      "keys": [
+        "right",
+        "left"
+      ],
+      "error": null
+    },
+    {
+      "name": "bare-proto-unvalidated",
+      "raw": "__proto__",
+      "validated": false,
+      "options": {},
+      "keys": [],
+      "error": null
+    },
+    {
+      "name": "bare-proto-empheq",
+      "raw": "__proto__",
+      "validated": true,
+      "options": {},
+      "keys": [],
+      "error": null
+    },
+    {
+      "name": "true-proto-unvalidated",
+      "raw": "__proto__=true",
+      "validated": false,
+      "options": {},
+      "keys": [],
+      "error": null
+    },
+    {
+      "name": "true-proto-empheq",
+      "raw": "__proto__=true",
+      "validated": true,
+      "options": {},
+      "keys": [],
+      "error": null
+    },
+    {
+      "name": "false-proto-unvalidated",
+      "raw": "__proto__=false",
+      "validated": false,
+      "options": {},
+      "keys": [],
+      "error": null
+    },
+    {
+      "name": "false-proto-empheq",
+      "raw": "__proto__=false",
+      "validated": true,
+      "options": {},
+      "keys": [],
+      "error": null
+    },
+    {
+      "name": "string-proto-unvalidated",
+      "raw": "__proto__=x",
+      "validated": false,
+      "options": {},
+      "keys": [],
+      "error": null
+    },
+    {
+      "name": "string-proto-empheq",
+      "raw": "__proto__=x",
+      "validated": true,
+      "options": {},
+      "keys": [],
+      "error": null
+    },
+    {
+      "name": "empty-proto-unvalidated",
+      "raw": "__proto__=",
+      "validated": false,
+      "options": {},
+      "keys": [],
+      "error": null
+    },
+    {
+      "name": "empty-proto-empheq",
+      "raw": "__proto__=",
+      "validated": true,
+      "options": {},
+      "keys": [],
+      "error": null
+    },
+    {
+      "name": "braces-proto-unvalidated",
+      "raw": "__proto__={}",
+      "validated": false,
+      "options": {},
+      "keys": [],
+      "error": null
+    },
+    {
+      "name": "braces-proto-empheq",
+      "raw": "__proto__={}",
+      "validated": true,
+      "options": {},
+      "keys": [],
+      "error": null
+    },
+    {
+      "name": "braced-proto-key-unvalidated",
+      "raw": "{{__proto__}}=x",
+      "validated": false,
+      "options": {},
+      "keys": [],
+      "error": null
+    },
+    {
+      "name": "braced-proto-key-empheq",
+      "raw": "{{__proto__}}=x",
+      "validated": true,
+      "options": {},
+      "keys": [],
+      "error": null
+    },
+    {
+      "name": "proto-before-left-unvalidated",
+      "raw": "__proto__=true,left={(}",
+      "validated": false,
+      "options": {
+        "left": "("
+      },
+      "keys": [
+        "left"
+      ],
+      "error": null
+    },
+    {
+      "name": "proto-before-left-empheq",
+      "raw": "__proto__=true,left={(}",
+      "validated": true,
+      "options": {
+        "left": "("
+      },
+      "keys": [
+        "left"
+      ],
+      "error": null
+    },
+    {
+      "name": "proto-after-right-unvalidated",
+      "raw": "right={)},__proto__=false",
+      "validated": false,
+      "options": {
+        "right": ")"
+      },
+      "keys": [
+        "right"
+      ],
+      "error": null
+    },
+    {
+      "name": "proto-after-right-empheq",
+      "raw": "right={)},__proto__=false",
+      "validated": true,
+      "options": {
+        "right": ")"
+      },
+      "keys": [
+        "right"
+      ],
+      "error": null
+    },
+    {
+      "name": "proto-duplicate-unvalidated",
+      "raw": "__proto__=x,__proto__=false,left={(}",
+      "validated": false,
+      "options": {
+        "left": "("
+      },
+      "keys": [
+        "left"
+      ],
+      "error": null
+    },
+    {
+      "name": "proto-duplicate-empheq",
+      "raw": "__proto__=x,__proto__=false,left={(}",
+      "validated": true,
+      "options": {
+        "left": "("
+      },
+      "keys": [
+        "left"
+      ],
+      "error": null
+    },
+    {
+      "name": "constructor-unvalidated",
+      "raw": "constructor=x",
+      "validated": false,
+      "options": {
+        "constructor": "x"
+      },
+      "keys": [
+        "constructor"
+      ],
+      "error": null
+    },
+    {
+      "name": "constructor-empheq",
+      "raw": "constructor=x",
+      "validated": true,
+      "options": null,
+      "keys": null,
+      "error": {
+        "id": "InvalidOption",
+        "message": "Invalid option: constructor"
+      }
+    },
+    {
+      "name": "toString-unvalidated",
+      "raw": "toString=x",
+      "validated": false,
+      "options": {
+        "toString": "x"
+      },
+      "keys": [
+        "toString"
+      ],
+      "error": null
+    },
+    {
+      "name": "toString-empheq",
+      "raw": "toString=x",
+      "validated": true,
+      "options": null,
+      "keys": null,
+      "error": {
+        "id": "InvalidOption",
+        "message": "Invalid option: toString"
+      }
+    },
+    {
+      "name": "hasOwnProperty-unvalidated",
+      "raw": "hasOwnProperty=x",
+      "validated": false,
+      "options": {
+        "hasOwnProperty": "x"
+      },
+      "keys": [
+        "hasOwnProperty"
+      ],
+      "error": null
+    },
+    {
+      "name": "hasOwnProperty-empheq",
+      "raw": "hasOwnProperty=x",
+      "validated": true,
+      "options": null,
+      "keys": null,
+      "error": {
+        "id": "InvalidOption",
+        "message": "Invalid option: hasOwnProperty"
+      }
+    },
+    {
+      "name": "__defineGetter__-unvalidated",
+      "raw": "__defineGetter__=x",
+      "validated": false,
+      "options": {
+        "__defineGetter__": "x"
+      },
+      "keys": [
+        "__defineGetter__"
+      ],
+      "error": null
+    },
+    {
+      "name": "__defineGetter__-empheq",
+      "raw": "__defineGetter__=x",
+      "validated": true,
+      "options": null,
+      "keys": null,
+      "error": {
+        "id": "InvalidOption",
+        "message": "Invalid option: __defineGetter__"
+      }
+    },
+    {
+      "name": "prototype-unvalidated",
+      "raw": "prototype=x",
+      "validated": false,
+      "options": {
+        "prototype": "x"
+      },
+      "keys": [
+        "prototype"
+      ],
+      "error": null
+    },
+    {
+      "name": "prototype-empheq",
+      "raw": "prototype=x",
+      "validated": true,
+      "options": null,
+      "keys": null,
+      "error": {
+        "id": "InvalidOption",
+        "message": "Invalid option: prototype"
+      }
+    },
+    {
+      "name": "proto-malformed-open-unvalidated",
+      "raw": "__proto__={",
+      "validated": false,
+      "options": null,
+      "keys": null,
+      "error": {
+        "id": "ExtraOpenMissingClose",
+        "message": "Extra open brace or missing close brace"
+      }
+    },
+    {
+      "name": "proto-malformed-open-empheq",
+      "raw": "__proto__={",
+      "validated": true,
+      "options": null,
+      "keys": null,
+      "error": {
+        "id": "ExtraOpenMissingClose",
+        "message": "Extra open brace or missing close brace"
+      }
+    },
+    {
+      "name": "unknown-malformed-open-unvalidated",
+      "raw": "unknown=x,__proto__={",
+      "validated": false,
+      "options": null,
+      "keys": null,
+      "error": {
+        "id": "ExtraOpenMissingClose",
+        "message": "Extra open brace or missing close brace"
+      }
+    },
+    {
+      "name": "unknown-malformed-open-empheq",
+      "raw": "unknown=x,__proto__={",
+      "validated": true,
+      "options": null,
+      "keys": null,
+      "error": {
+        "id": "ExtraOpenMissingClose",
+        "message": "Extra open brace or missing close brace"
+      }
+    },
+    {
+      "name": "proto-unknown-unvalidated",
+      "raw": "__proto__=x,unknown=y",
+      "validated": false,
+      "options": {
+        "unknown": "y"
+      },
+      "keys": [
+        "unknown"
+      ],
+      "error": null
+    },
+    {
+      "name": "proto-unknown-empheq",
+      "raw": "__proto__=x,unknown=y",
+      "validated": true,
+      "options": null,
+      "keys": null,
+      "error": {
+        "id": "InvalidOption",
+        "message": "Invalid option: unknown"
+      }
+    },
+    {
+      "name": "unknown-proto-unvalidated",
+      "raw": "unknown=x,__proto__=y",
+      "validated": false,
+      "options": {
+        "unknown": "x"
+      },
+      "keys": [
+        "unknown"
+      ],
+      "error": null
+    },
+    {
+      "name": "unknown-proto-empheq",
+      "raw": "unknown=x,__proto__=y",
+      "validated": true,
+      "options": null,
+      "keys": null,
+      "error": {
+        "id": "InvalidOption",
+        "message": "Invalid option: unknown"
+      }
+    },
+    {
+      "name": "numeric-sort-unvalidated",
+      "raw": "unknown=x,10=y,2=z,0=w",
+      "validated": false,
+      "options": {
+        "0": "w",
+        "2": "z",
+        "10": "y",
+        "unknown": "x"
+      },
+      "keys": [
+        "0",
+        "2",
+        "10",
+        "unknown"
+      ],
+      "error": null
+    },
+    {
+      "name": "numeric-sort-empheq",
+      "raw": "unknown=x,10=y,2=z,0=w",
+      "validated": true,
+      "options": null,
+      "keys": null,
+      "error": {
+        "id": "InvalidOption",
+        "message": "Invalid option: 0"
+      }
+    },
+    {
+      "name": "numeric-duplicate-unvalidated",
+      "raw": "unknown=x,10=y,2=z,10=w",
+      "validated": false,
+      "options": {
+        "2": "z",
+        "10": "w",
+        "unknown": "x"
+      },
+      "keys": [
+        "2",
+        "10",
+        "unknown"
+      ],
+      "error": null
+    },
+    {
+      "name": "numeric-duplicate-empheq",
+      "raw": "unknown=x,10=y,2=z,10=w",
+      "validated": true,
+      "options": null,
+      "keys": null,
+      "error": {
+        "id": "InvalidOption",
+        "message": "Invalid option: 2"
+      }
+    },
+    {
+      "name": "numeric-boundary-unvalidated",
+      "raw": "unknown=x,4294967295=y,4294967294=z",
+      "validated": false,
+      "options": {
+        "4294967294": "z",
+        "unknown": "x",
+        "4294967295": "y"
+      },
+      "keys": [
+        "4294967294",
+        "unknown",
+        "4294967295"
+      ],
+      "error": null
+    },
+    {
+      "name": "numeric-boundary-empheq",
+      "raw": "unknown=x,4294967295=y,4294967294=z",
+      "validated": true,
+      "options": null,
+      "keys": null,
+      "error": {
+        "id": "InvalidOption",
+        "message": "Invalid option: 4294967294"
+      }
+    },
+    {
+      "name": "numeric-braced-unvalidated",
+      "raw": "unknown=x,{{2}}=z",
+      "validated": false,
+      "options": {
+        "2": "z",
+        "unknown": "x"
+      },
+      "keys": [
+        "2",
+        "unknown"
+      ],
+      "error": null
+    },
+    {
+      "name": "numeric-braced-empheq",
+      "raw": "unknown=x,{{2}}=z",
+      "validated": true,
+      "options": null,
+      "keys": null,
+      "error": {
+        "id": "InvalidOption",
+        "message": "Invalid option: 2"
+      }
+    },
+    {
+      "name": "numeric-space-unvalidated",
+      "raw": "unknown=x, 2 = z",
+      "validated": false,
+      "options": {
+        "2": "z",
+        "unknown": "x"
+      },
+      "keys": [
+        "2",
+        "unknown"
+      ],
+      "error": null
+    },
+    {
+      "name": "numeric-space-empheq",
+      "raw": "unknown=x, 2 = z",
+      "validated": true,
+      "options": null,
+      "keys": null,
+      "error": {
+        "id": "InvalidOption",
+        "message": "Invalid option: 2"
+      }
+    },
+    {
+      "name": "proto-numeric-unvalidated",
+      "raw": "__proto__=x,unknown=y,2=z",
+      "validated": false,
+      "options": {
+        "2": "z",
+        "unknown": "y"
+      },
+      "keys": [
+        "2",
+        "unknown"
+      ],
+      "error": null
+    },
+    {
+      "name": "proto-numeric-empheq",
+      "raw": "__proto__=x,unknown=y,2=z",
+      "validated": true,
+      "options": null,
+      "keys": null,
+      "error": {
+        "id": "InvalidOption",
+        "message": "Invalid option: 2"
+      }
+    },
+    {
+      "name": "left-numeric-unvalidated",
+      "raw": "left={(},unknown=x,2=z",
+      "validated": false,
+      "options": {
+        "2": "z",
+        "left": "(",
+        "unknown": "x"
+      },
+      "keys": [
+        "2",
+        "left",
+        "unknown"
+      ],
+      "error": null
+    },
+    {
+      "name": "left-numeric-empheq",
+      "raw": "left={(},unknown=x,2=z",
+      "validated": true,
+      "options": null,
+      "keys": null,
+      "error": {
+        "id": "InvalidOption",
+        "message": "Invalid option: 2"
+      }
+    },
+    {
+      "name": "empty-key-numeric-unvalidated",
+      "raw": "=x,2=y",
+      "validated": false,
+      "options": {
+        "2": "y",
+        "": "x"
+      },
+      "keys": [
+        "2",
+        ""
+      ],
+      "error": null
+    },
+    {
+      "name": "empty-key-numeric-empheq",
+      "raw": "=x,2=y",
+      "validated": true,
+      "options": null,
+      "keys": null,
+      "error": {
+        "id": "InvalidOption",
+        "message": "Invalid option: 2"
+      }
+    },
+    {
+      "name": "numeric-empty-key-unvalidated",
+      "raw": "2=y,=x",
+      "validated": false,
+      "options": {
+        "2": "y",
+        "": "x"
+      },
+      "keys": [
+        "2",
+        ""
+      ],
+      "error": null
+    },
+    {
+      "name": "numeric-empty-key-empheq",
+      "raw": "2=y,=x",
+      "validated": true,
+      "options": null,
+      "keys": null,
+      "error": {
+        "id": "InvalidOption",
+        "message": "Invalid option: 2"
+      }
+    },
+    {
+      "name": "numeric-0-unvalidated",
+      "raw": "unknown=x,0=y",
+      "validated": false,
+      "options": {
+        "0": "y",
+        "unknown": "x"
+      },
+      "keys": [
+        "0",
+        "unknown"
+      ],
+      "error": null
+    },
+    {
+      "name": "numeric-0-empheq",
+      "raw": "unknown=x,0=y",
+      "validated": true,
+      "options": null,
+      "keys": null,
+      "error": {
+        "id": "InvalidOption",
+        "message": "Invalid option: 0"
+      }
+    },
+    {
+      "name": "numeric-2-unvalidated",
+      "raw": "unknown=x,2=y",
+      "validated": false,
+      "options": {
+        "2": "y",
+        "unknown": "x"
+      },
+      "keys": [
+        "2",
+        "unknown"
+      ],
+      "error": null
+    },
+    {
+      "name": "numeric-2-empheq",
+      "raw": "unknown=x,2=y",
+      "validated": true,
+      "options": null,
+      "keys": null,
+      "error": {
+        "id": "InvalidOption",
+        "message": "Invalid option: 2"
+      }
+    },
+    {
+      "name": "numeric-10-unvalidated",
+      "raw": "unknown=x,10=y",
+      "validated": false,
+      "options": {
+        "10": "y",
+        "unknown": "x"
+      },
+      "keys": [
+        "10",
+        "unknown"
+      ],
+      "error": null
+    },
+    {
+      "name": "numeric-10-empheq",
+      "raw": "unknown=x,10=y",
+      "validated": true,
+      "options": null,
+      "keys": null,
+      "error": {
+        "id": "InvalidOption",
+        "message": "Invalid option: 10"
+      }
+    },
+    {
+      "name": "numeric-4294967294-unvalidated",
+      "raw": "unknown=x,4294967294=y",
+      "validated": false,
+      "options": {
+        "4294967294": "y",
+        "unknown": "x"
+      },
+      "keys": [
+        "4294967294",
+        "unknown"
+      ],
+      "error": null
+    },
+    {
+      "name": "numeric-4294967294-empheq",
+      "raw": "unknown=x,4294967294=y",
+      "validated": true,
+      "options": null,
+      "keys": null,
+      "error": {
+        "id": "InvalidOption",
+        "message": "Invalid option: 4294967294"
+      }
+    },
+    {
+      "name": "numeric-00-unvalidated",
+      "raw": "unknown=x,00=y",
+      "validated": false,
+      "options": {
+        "unknown": "x",
+        "00": "y"
+      },
+      "keys": [
+        "unknown",
+        "00"
+      ],
+      "error": null
+    },
+    {
+      "name": "numeric-00-empheq",
+      "raw": "unknown=x,00=y",
+      "validated": true,
+      "options": null,
+      "keys": null,
+      "error": {
+        "id": "InvalidOption",
+        "message": "Invalid option: unknown"
+      }
+    },
+    {
+      "name": "numeric-01-unvalidated",
+      "raw": "unknown=x,01=y",
+      "validated": false,
+      "options": {
+        "unknown": "x",
+        "01": "y"
+      },
+      "keys": [
+        "unknown",
+        "01"
+      ],
+      "error": null
+    },
+    {
+      "name": "numeric-01-empheq",
+      "raw": "unknown=x,01=y",
+      "validated": true,
+      "options": null,
+      "keys": null,
+      "error": {
+        "id": "InvalidOption",
+        "message": "Invalid option: unknown"
+      }
+    },
+    {
+      "name": "numeric--0-unvalidated",
+      "raw": "unknown=x,-0=y",
+      "validated": false,
+      "options": {
+        "unknown": "x",
+        "-0": "y"
+      },
+      "keys": [
+        "unknown",
+        "-0"
+      ],
+      "error": null
+    },
+    {
+      "name": "numeric--0-empheq",
+      "raw": "unknown=x,-0=y",
+      "validated": true,
+      "options": null,
+      "keys": null,
+      "error": {
+        "id": "InvalidOption",
+        "message": "Invalid option: unknown"
+      }
+    },
+    {
+      "name": "numeric-+2-unvalidated",
+      "raw": "unknown=x,+2=y",
+      "validated": false,
+      "options": {
+        "unknown": "x",
+        "+2": "y"
+      },
+      "keys": [
+        "unknown",
+        "+2"
+      ],
+      "error": null
+    },
+    {
+      "name": "numeric-+2-empheq",
+      "raw": "unknown=x,+2=y",
+      "validated": true,
+      "options": null,
+      "keys": null,
+      "error": {
+        "id": "InvalidOption",
+        "message": "Invalid option: unknown"
+      }
+    },
+    {
+      "name": "numeric-2.0-unvalidated",
+      "raw": "unknown=x,2.0=y",
+      "validated": false,
+      "options": {
+        "unknown": "x",
+        "2.0": "y"
+      },
+      "keys": [
+        "unknown",
+        "2.0"
+      ],
+      "error": null
+    },
+    {
+      "name": "numeric-2.0-empheq",
+      "raw": "unknown=x,2.0=y",
+      "validated": true,
+      "options": null,
+      "keys": null,
+      "error": {
+        "id": "InvalidOption",
+        "message": "Invalid option: unknown"
+      }
+    },
+    {
+      "name": "numeric-2e0-unvalidated",
+      "raw": "unknown=x,2e0=y",
+      "validated": false,
+      "options": {
+        "unknown": "x",
+        "2e0": "y"
+      },
+      "keys": [
+        "unknown",
+        "2e0"
+      ],
+      "error": null
+    },
+    {
+      "name": "numeric-2e0-empheq",
+      "raw": "unknown=x,2e0=y",
+      "validated": true,
+      "options": null,
+      "keys": null,
+      "error": {
+        "id": "InvalidOption",
+        "message": "Invalid option: unknown"
+      }
+    },
+    {
+      "name": "numeric-4294967295-unvalidated",
+      "raw": "unknown=x,4294967295=y",
+      "validated": false,
+      "options": {
+        "unknown": "x",
+        "4294967295": "y"
+      },
+      "keys": [
+        "unknown",
+        "4294967295"
+      ],
+      "error": null
+    },
+    {
+      "name": "numeric-4294967295-empheq",
+      "raw": "unknown=x,4294967295=y",
+      "validated": true,
+      "options": null,
+      "keys": null,
+      "error": {
+        "id": "InvalidOption",
+        "message": "Invalid option: unknown"
+      }
+    },
+    {
+      "name": "numeric-4294967296-unvalidated",
+      "raw": "unknown=x,4294967296=y",
+      "validated": false,
+      "options": {
+        "unknown": "x",
+        "4294967296": "y"
+      },
+      "keys": [
+        "unknown",
+        "4294967296"
+      ],
+      "error": null
+    },
+    {
+      "name": "numeric-4294967296-empheq",
+      "raw": "unknown=x,4294967296=y",
+      "validated": true,
+      "options": null,
+      "keys": null,
+      "error": {
+        "id": "InvalidOption",
+        "message": "Invalid option: unknown"
+      }
+    }
+  ]
+}

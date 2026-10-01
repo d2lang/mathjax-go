@@ -174,46 +174,17 @@ func empheqOptionTeX(value any) string {
 // true).  readKeyval trims outer spaces, strips balanced outer braces,
 // converts the two boolean literals, and treats a bare key as true.
 func empheqSplitOptions(text string) (map[string]any, error) {
-	result := make(map[string]any)
-	var order []string
-	rest := text
-	for rest != "" {
-		key, end, next, err := empheqReadOptionValue(rest, "=,")
-		if err != nil {
-			return nil, err
-		}
-		rest = next
-		var value any = true
-		if end == '=' {
-			var raw string
-			raw, _, rest, err = empheqReadOptionValue(rest, ",")
-			if err != nil {
-				return nil, err
-			}
-			switch raw {
-			case "true":
-				value = true
-			case "false":
-				value = false
-			default:
-				value = raw
-			}
-		} else if key == "" {
-			continue
-		}
-		if _, exists := result[key]; !exists {
-			order = append(order, key)
-		}
+	options, err := parseUtilKeyvalOptions(text, func(key string) bool {
+		return key == "left" || key == "right"
+	})
+	if err != nil {
+		return nil, err
+	}
+	result := make(map[string]any, options.Len())
+	options.Range(func(key string, value any) bool {
 		result[key] = value
-	}
-	// ParseUtil.keyvalOptions validates only after readKeyval has parsed the
-	// complete list, so a malformed later value takes precedence over an
-	// earlier unknown key.
-	for _, key := range order {
-		if key != "left" && key != "right" {
-			return nil, texError("InvalidOption", "Invalid option: %s", key)
-		}
-	}
+		return true
+	})
 	return result, nil
 }
 
