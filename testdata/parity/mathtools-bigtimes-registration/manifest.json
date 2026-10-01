@@ -1,0 +1,37 @@
+{
+  "d2Commit": "01bc7ecdbdd04c13d6fe5df1967d2d9aa14ae579",
+  "beforeMathjaxCommit": "fe29d3ad1b32f04ce864e0b410267e5b6d666c99",
+  "fixedSourceCommit": "e21f53151ff810ed20879c97e5760cf5cf9705e2",
+  "original": "D2 frozen MathJax 3.2.2; unmodified assets; fresh runtime per render",
+  "afterOriginalSVGByteExact": true,
+  "afterOriginalPNGByteExact": true,
+  "sharedScale": true,
+  "visuallyInspected": true,
+  "files": {
+    "before.png": "80c47b0542f379c67749f578fec80b2b65b357e4e9c24782322eca4e0674dd80",
+    "original.svg": "34b4f1c7a3e628541fe4083fc90eea598767795a3b9812b67fca3bba2d2e3904",
+    "after.png": "3936f5cb0d82d4754cd76a8015b6526557adc91189a024eff125e263d442a338",
+    "after.svg": "34b4f1c7a3e628541fe4083fc90eea598767795a3b9812b67fca3bba2d2e3904",
+    "original.png": "3936f5cb0d82d4754cd76a8015b6526557adc91189a024eff125e263d442a338",
+    "comparison.png": "94696f3273b7299352071004b8f20bd9db9caa04127a144104c6b7d2d4f18dcc",
+    "before.svg": "674b1ee6a831d0eecae5724a96d19bd2ac35b383f63a5d00862f21b1d995f3e9",
+    "witness.d2": "4f257de611e8eb555ed45f9b30412ff0255eb4ed3b4ce13f0252cde3127204a2"
+  },
+  "oracleAssets": {
+    "mathjax.js": "cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869",
+    "polyfills.js": "7fe1d048c78b0e09854c1259f7413868a51cc8f0c822489eb1ac36ae6c85ce01",
+    "setup.js": "a52cb0bbabfbd7796b9fedd793b9386c474e3123e788ee151cbe47ca1fa6e881"
+  },
+  "beforeMathjaxTree": "e2976dde693494f8afb7278c1f2c14a7e87edc16",
+  "fixedSourceTree": "d96a869b34b3810212a6ac0fa64c8dbac865f10e",
+  "buildSHA256": {
+    "d2-integration-preview": "e3d8aef1f2cdf1e9ae1da76b06c2d784d8eb5f0552bfb275e3dd4985c516f7e7",
+    "d2-after-bigtimes": "8191106435f28443d3906e7456db4a9bdd073de3a8292b3e7e6016fe532945c3",
+    "d2-original": "98f8224c202addd0de5b82344fb2ef00da06a001eac5cdd8dff49e3cb410c194"
+  },
+  "originalDiagnosticGoExtensionBoundary": {
+    "originalValidParityCredit": 0,
+    "retainedCompleteOriginalObjects": 10,
+    "existingGoOnlyFormatter": "boldsymbol"
+  }
+}
