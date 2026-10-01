@@ -15,6 +15,7 @@ import (
 const borderFuzz = .005
 
 var cssCommentPattern = regexp.MustCompile(`(?s)/\*.*?\*/`)
+var cssBorderWidthPattern = regexp.MustCompile(`^(?:[\d.]+[a-z]+|thin|medium|thick|inherit|initial|unset)$`)
 
 type cssDeclaration struct {
 	name  string
@@ -173,7 +174,7 @@ func splitBorder(value string) borderStyle {
 	// Styles.splitWSC retains the authored shorthand until an individual
 	// width/style/color component is changed and combineWSC rebuilds it.
 	border := borderStyle{set: true, raw: value}
-	for _, part := range strings.Fields(value) {
+	for _, part := range splitCSSValue(value) {
 		switch {
 		case isBorderWidth(part) && border.width == "":
 			border.width = part
@@ -187,15 +188,7 @@ func splitBorder(value string) borderStyle {
 }
 
 func isBorderWidth(value string) bool {
-	if value == "thin" || value == "medium" || value == "thick" || value == "inherit" || value == "initial" || value == "unset" {
-		return true
-	}
-	for index, character := range value {
-		if (character < '0' || character > '9') && character != '.' {
-			return index > 0
-		}
-	}
-	return false
+	return cssBorderWidthPattern.MatchString(value)
 }
 
 func isBorderStyle(value string) bool {
@@ -208,7 +201,7 @@ func isBorderStyle(value string) bool {
 }
 
 func splitTRBL(value string) [4]string {
-	parts := strings.Fields(value)
+	parts := splitCSSValue(value)
 	if len(parts) == 0 {
 		return [4]string{}
 	}
@@ -223,6 +216,45 @@ func splitTRBL(value string) [4]string {
 		}
 	}
 	return [4]string{parts[0], parts[1], parts[2], parts[3]}
+}
+
+// Styles.splitSpaces keeps quoted strings and comma-followed whitespace in
+// one part, so rgb()/hsl() colours remain intact in border shorthands. Repeated
+// separating whitespace produces empty parts, as in the source regular expression.
+func splitCSSValue(value string) []string {
+	characters := []rune(value)
+	var parts []string
+	start := 0
+	for i := 0; i < len(characters); i++ {
+		c := characters[i]
+		if c == '\'' || c == '"' {
+			for j := i + 1; j < len(characters); j++ {
+				if characters[j] == c {
+					i = j
+					break
+				}
+			}
+			continue
+		}
+		if c == ',' && i+1 < len(characters) && cssValueSpace(characters[i+1]) {
+			i++
+			continue
+		}
+		if cssValueSpace(c) {
+			parts = append(parts, string(characters[start:i]))
+			start = i + 1
+		}
+	}
+	if start < len(characters) {
+		parts = append(parts, string(characters[start:]))
+	}
+	return parts
+}
+
+func cssValueSpace(c rune) bool {
+	return c >= '\t' && c <= '\r' || c == ' ' || c == '\u00a0' || c == '\u1680' ||
+		c >= '\u2000' && c <= '\u200a' || c == '\u2028' || c == '\u2029' ||
+		c == '\u202f' || c == '\u205f' || c == '\u3000' || c == '\ufeff'
 }
 
 func sideIndex(name string) int {
@@ -372,8 +404,10 @@ func (w *wrapper) handleBorder(element *Element) {
 	}
 	var widths [4]float64
 	for i, border := range w.styles.border {
-		if border.width != "" && border.style != "none" && border.style != "hidden" {
+		if border.width != "" {
 			// SVGWrapper clamps the drawn border independently of box sizing.
+			// Its painter uses every authored width; only dotted/dashed styles
+			// select a special path, while other styles use a solid polygon.
 			widths[i] = math.Max(0, w.styleLength(border.width, w.bbox.RScale))
 		}
 	}
