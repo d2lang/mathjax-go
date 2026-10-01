@@ -191,6 +191,8 @@ var simpleMacros = map[string]string{
 	"Ketbra":    "{\\left\\vert {#1} \\right\\rangle\\left\\langle {#2} \\right\\vert}",
 	// Mathtools' cramped stack uses the primed script-style array.
 	"crampedsubstack": "\\begin{crampedsubarray}{c}#1\\end{crampedsubarray}",
+	// Keep bigtimes as a macro so authored formatter definitions stay active.
+	"bigtimes": "\\mathop{\\Large\\kern-.1em\\boldsymbol{\\times}\\kern-.1em}",
 	// Physics determinant aliases preserve ordinary macro expansion and lookup.
 	"matrixdeterminant": "\\vmqty{#1}",
 	"mdet":              "\\vmqty{#1}",
