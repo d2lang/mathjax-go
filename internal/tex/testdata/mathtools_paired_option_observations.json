@@ -1,0 +1,154 @@
+{
+  "mathjaxGitCommit": "ad8f5c21cb810236551da8c6512ba733e67357ee",
+  "assets": {
+    "polyfills.js": "7fe1d048c78b0e09854c1259f7413868a51cc8f0c822489eb1ac36ae6c85ce01",
+    "mathjax.js": "cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869",
+    "setup.js": "a52cb0bbabfbd7796b9fedd793b9386c474e3123e788ee151cbe47ca1fa6e881"
+  },
+  "setOptionsSource": "function(t,e){var Q,r,T=t.options.mathtools;if(!T[\"allow-mathtoolsset\"])throw new c.default(\"ForbiddenMathtoolsSet\",\"%1 is disabled\",e);var o={};Object.keys(T).forEach((function(t){\"pariedDelimiters\"!==t&&\"tagforms\"!==t&&\"allow-mathtoolsset\"!==t&&(o[t]=1)}));var a=t.GetArgument(e),s=i.default.keyvalOptions(a,o,!0);try{for(var l=n(Object.keys(s)),u=l.next();!u.done;u=l.next()){var p=u.value;T[p]=s[p]}}catch(t){Q={error:t}}finally{try{u&&!u.done&&(r=l.return)&&r.call(l)}finally{if(Q)throw Q.error}}}",
+  "scope": "Direct unmodified SetOptions on original default options, fresh runtime per observation. Accepted pairedDelimiters values are stored without reparsing/rebuilding already registered delimiter definitions.",
+  "cases": [
+    {
+      "name": "bare",
+      "raw": "pairedDelimiters",
+      "error": null,
+      "pairedValue": true,
+      "pairedType": "boolean"
+    },
+    {
+      "name": "empty",
+      "raw": "pairedDelimiters=",
+      "error": null,
+      "pairedValue": "",
+      "pairedType": "string"
+    },
+    {
+      "name": "empty-braces",
+      "raw": "pairedDelimiters={}",
+      "error": null,
+      "pairedValue": true,
+      "pairedType": "boolean"
+    },
+    {
+      "name": "blank-braces",
+      "raw": "pairedDelimiters={ }",
+      "error": null,
+      "pairedValue": true,
+      "pairedType": "boolean"
+    },
+    {
+      "name": "true",
+      "raw": "pairedDelimiters=true",
+      "error": null,
+      "pairedValue": true,
+      "pairedType": "boolean"
+    },
+    {
+      "name": "false",
+      "raw": "pairedDelimiters=false",
+      "error": null,
+      "pairedValue": false,
+      "pairedType": "boolean"
+    },
+    {
+      "name": "upper-true",
+      "raw": "pairedDelimiters=TRUE",
+      "error": null,
+      "pairedValue": "TRUE",
+      "pairedType": "string"
+    },
+    {
+      "name": "upper-false",
+      "raw": "pairedDelimiters=FALSE",
+      "error": null,
+      "pairedValue": "FALSE",
+      "pairedType": "string"
+    },
+    {
+      "name": "zero",
+      "raw": "pairedDelimiters=0",
+      "error": null,
+      "pairedValue": "0",
+      "pairedType": "string"
+    },
+    {
+      "name": "one",
+      "raw": "pairedDelimiters=1",
+      "error": null,
+      "pairedValue": "1",
+      "pairedType": "string"
+    },
+    {
+      "name": "other-string",
+      "raw": "pairedDelimiters=x",
+      "error": null,
+      "pairedValue": "x",
+      "pairedType": "string"
+    },
+    {
+      "name": "nested",
+      "raw": "pairedDelimiters={{x}}",
+      "error": null,
+      "pairedValue": "x",
+      "pairedType": "string"
+    },
+    {
+      "name": "comma-in-braces",
+      "raw": "pairedDelimiters={left,right}",
+      "error": null,
+      "pairedValue": "left,right",
+      "pairedType": "string"
+    },
+    {
+      "name": "documented-tuple-string",
+      "raw": "pairedDelimiters={example: [left,right,body,1,pre,post]}",
+      "error": null,
+      "pairedValue": "example: [left,right,body,1,pre,post]",
+      "pairedType": "string"
+    },
+    {
+      "name": "duplicate-last-false",
+      "raw": "pairedDelimiters=x,pairedDelimiters=false",
+      "error": null,
+      "pairedValue": false,
+      "pairedType": "boolean"
+    },
+    {
+      "name": "duplicate-last-string",
+      "raw": "pairedDelimiters=false,pairedDelimiters=x",
+      "error": null,
+      "pairedValue": "x",
+      "pairedType": "string"
+    },
+    {
+      "name": "forbidden-tagforms",
+      "raw": "tagforms={}",
+      "error": {
+        "id": "InvalidOption",
+        "message": "Invalid option: tagforms"
+      },
+      "pairedValue": {},
+      "pairedType": "object"
+    },
+    {
+      "name": "forbidden-allow",
+      "raw": "allow-mathtoolsset=false",
+      "error": {
+        "id": "InvalidOption",
+        "message": "Invalid option: allow-mathtoolsset"
+      },
+      "pairedValue": {},
+      "pairedType": "object"
+    },
+    {
+      "name": "typo",
+      "raw": "pariedDelimiters={}",
+      "error": {
+        "id": "InvalidOption",
+        "message": "Invalid option: pariedDelimiters"
+      },
+      "pairedValue": {},
+      "pairedType": "object"
+    }
+  ]
+}
