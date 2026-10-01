@@ -5,6 +5,7 @@ import (
 	"compress/gzip"
 	"encoding/json"
 	"os"
+	"strings"
 	"testing"
 
 	mathjax "github.com/d2lang/mathjax-go"
@@ -79,15 +80,19 @@ func TestPrescriptPostslotsOriginalRuntimeBoundary(t *testing.T) {
 	if fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || len(fixture.Cases) != 2 {
 		t.Fatal("unbound source runtime boundaries")
 	}
+	seen := make(map[bool]bool)
 	for _, c := range fixture.Cases {
-		if c.TeX != `\prescript{a}{b}{\sum}\limits` || c.Original.Error == "" || c.Original.SVG != "" {
+		if c.TeX != `\prescript{a}{b}{\sum}\limits` || c.Original.SVG != "" || seen[c.Display] ||
+			!strings.HasPrefix(c.Original.Error, "TypeError: Cannot read properties of null (reading 'isInferred')\n") ||
+			!strings.Contains(c.Original.Error, "at t.cleanSubSup [as item] (mathjax.js:4:242219)") {
 			t.Fatal("invalid original runtime", c.Name)
 		}
+		seen[c.Display] = true
 		options := mathjax.DefaultOptions()
 		options.Display = c.Display
 		got, err := mathjax.RenderWithOptions(c.TeX, options)
-		if err == nil || got != "" {
-			t.Fatal("incomplete family must return a bounded error", c.Name)
+		if err == nil || err.Error() != "incomplete munderover has no script child" || got != "" {
+			t.Fatal("incomplete family must return its specific bounded error", c.Name, err)
 		}
 	}
 }
