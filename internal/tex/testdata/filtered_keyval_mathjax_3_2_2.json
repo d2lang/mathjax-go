@@ -1,0 +1,1153 @@
+{
+  "mathjaxGitCommit": "ad8f5c21cb810236551da8c6512ba733e67357ee",
+  "assets": {
+    "polyfills.js": "7fe1d048c78b0e09854c1259f7413868a51cc8f0c822489eb1ac36ae6c85ce01",
+    "mathjax.js": "cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869",
+    "setup.js": "a52cb0bbabfbd7796b9fedd793b9386c474e3123e788ee151cbe47ca1fa6e881"
+  },
+  "allowedKeys": [
+    "data-arrowhead",
+    "color",
+    "mathcolor",
+    "background",
+    "mathbackground",
+    "data-padding",
+    "data-thickness"
+  ],
+  "keyvalMethod": "function(t,e,Q){var n,o;void 0===e&&(e=null),void 0===Q&&(Q=!1);var i=function(t){var e,Q,T,n,o,i={},a=t;for(;a;)n=(e=r(m(a,[\"=\",\",\"]),3))[0],T=e[1],a=e[2],\"=\"===T?(o=(Q=r(m(a,[\",\"]),3))[0],T=Q[1],a=Q[2],o=\"false\"===o||\"true\"===o?JSON.parse(o):o,i[n]=o):n&&(i[n]=!0);return i}(t);if(e)try{for(var a=T(Object.keys(i)),s=a.next();!s.done;s=a.next()){var c=s.value;if(!e.hasOwnProperty(c)){if(Q)throw new l.default(\"InvalidOption\",\"Invalid option: %1\",c);delete i[c]}}}catch(t){n={error:t}}finally{try{s&&!s.done&&(o=a.return)&&o.call(a)}finally{if(n)throw n.error}}return i}",
+  "scope": "Direct complete original keyvalOptions results with no allowlist, filtered Cancel allowlist, and strict allowlist; fresh frozen runtime per call.",
+  "cases": [
+    {
+      "name": "empty-unvalidated",
+      "raw": "",
+      "allowed": false,
+      "errorOnUnknown": false,
+      "options": {},
+      "keys": [],
+      "error": null
+    },
+    {
+      "name": "empty-filtered",
+      "raw": "",
+      "allowed": true,
+      "errorOnUnknown": false,
+      "options": {},
+      "keys": [],
+      "error": null
+    },
+    {
+      "name": "empty-strict",
+      "raw": "",
+      "allowed": true,
+      "errorOnUnknown": true,
+      "options": {},
+      "keys": [],
+      "error": null
+    },
+    {
+      "name": "unknown-unvalidated",
+      "raw": "unknown=x",
+      "allowed": false,
+      "errorOnUnknown": false,
+      "options": {
+        "unknown": "x"
+      },
+      "keys": [
+        "unknown"
+      ],
+      "error": null
+    },
+    {
+      "name": "unknown-filtered",
+      "raw": "unknown=x",
+      "allowed": true,
+      "errorOnUnknown": false,
+      "options": {},
+      "keys": [],
+      "error": null
+    },
+    {
+      "name": "unknown-strict",
+      "raw": "unknown=x",
+      "allowed": true,
+      "errorOnUnknown": true,
+      "options": null,
+      "keys": null,
+      "error": {
+        "id": "InvalidOption",
+        "message": "Invalid option: unknown"
+      }
+    },
+    {
+      "name": "bare-unknown-unvalidated",
+      "raw": "unknown",
+      "allowed": false,
+      "errorOnUnknown": false,
+      "options": {
+        "unknown": true
+      },
+      "keys": [
+        "unknown"
+      ],
+      "error": null
+    },
+    {
+      "name": "bare-unknown-filtered",
+      "raw": "unknown",
+      "allowed": true,
+      "errorOnUnknown": false,
+      "options": {},
+      "keys": [],
+      "error": null
+    },
+    {
+      "name": "bare-unknown-strict",
+      "raw": "unknown",
+      "allowed": true,
+      "errorOnUnknown": true,
+      "options": null,
+      "keys": null,
+      "error": {
+        "id": "InvalidOption",
+        "message": "Invalid option: unknown"
+      }
+    },
+    {
+      "name": "unknown-first-color-unvalidated",
+      "raw": "unknown=x,mathcolor=red",
+      "allowed": false,
+      "errorOnUnknown": false,
+      "options": {
+        "unknown": "x",
+        "mathcolor": "red"
+      },
+      "keys": [
+        "unknown",
+        "mathcolor"
+      ],
+      "error": null
+    },
+    {
+      "name": "unknown-first-color-filtered",
+      "raw": "unknown=x,mathcolor=red",
+      "allowed": true,
+      "errorOnUnknown": false,
+      "options": {
+        "mathcolor": "red"
+      },
+      "keys": [
+        "mathcolor"
+      ],
+      "error": null
+    },
+    {
+      "name": "unknown-first-color-strict",
+      "raw": "unknown=x,mathcolor=red",
+      "allowed": true,
+      "errorOnUnknown": true,
+      "options": null,
+      "keys": null,
+      "error": {
+        "id": "InvalidOption",
+        "message": "Invalid option: unknown"
+      }
+    },
+    {
+      "name": "unknown-last-color-unvalidated",
+      "raw": "mathcolor=red,unknown=x",
+      "allowed": false,
+      "errorOnUnknown": false,
+      "options": {
+        "mathcolor": "red",
+        "unknown": "x"
+      },
+      "keys": [
+        "mathcolor",
+        "unknown"
+      ],
+      "error": null
+    },
+    {
+      "name": "unknown-last-color-filtered",
+      "raw": "mathcolor=red,unknown=x",
+      "allowed": true,
+      "errorOnUnknown": false,
+      "options": {
+        "mathcolor": "red"
+      },
+      "keys": [
+        "mathcolor"
+      ],
+      "error": null
+    },
+    {
+      "name": "unknown-last-color-strict",
+      "raw": "mathcolor=red,unknown=x",
+      "allowed": true,
+      "errorOnUnknown": true,
+      "options": null,
+      "keys": null,
+      "error": {
+        "id": "InvalidOption",
+        "message": "Invalid option: unknown"
+      }
+    },
+    {
+      "name": "proto-unvalidated",
+      "raw": "__proto__=true",
+      "allowed": false,
+      "errorOnUnknown": false,
+      "options": {},
+      "keys": [],
+      "error": null
+    },
+    {
+      "name": "proto-filtered",
+      "raw": "__proto__=true",
+      "allowed": true,
+      "errorOnUnknown": false,
+      "options": {},
+      "keys": [],
+      "error": null
+    },
+    {
+      "name": "proto-strict",
+      "raw": "__proto__=true",
+      "allowed": true,
+      "errorOnUnknown": true,
+      "options": {},
+      "keys": [],
+      "error": null
+    },
+    {
+      "name": "proto-color-unvalidated",
+      "raw": "__proto__=true,mathcolor=red",
+      "allowed": false,
+      "errorOnUnknown": false,
+      "options": {
+        "mathcolor": "red"
+      },
+      "keys": [
+        "mathcolor"
+      ],
+      "error": null
+    },
+    {
+      "name": "proto-color-filtered",
+      "raw": "__proto__=true,mathcolor=red",
+      "allowed": true,
+      "errorOnUnknown": false,
+      "options": {
+        "mathcolor": "red"
+      },
+      "keys": [
+        "mathcolor"
+      ],
+      "error": null
+    },
+    {
+      "name": "proto-color-strict",
+      "raw": "__proto__=true,mathcolor=red",
+      "allowed": true,
+      "errorOnUnknown": true,
+      "options": {
+        "mathcolor": "red"
+      },
+      "keys": [
+        "mathcolor"
+      ],
+      "error": null
+    },
+    {
+      "name": "braced-proto-unvalidated",
+      "raw": "{{__proto__}}=true,mathcolor=red",
+      "allowed": false,
+      "errorOnUnknown": false,
+      "options": {
+        "mathcolor": "red"
+      },
+      "keys": [
+        "mathcolor"
+      ],
+      "error": null
+    },
+    {
+      "name": "braced-proto-filtered",
+      "raw": "{{__proto__}}=true,mathcolor=red",
+      "allowed": true,
+      "errorOnUnknown": false,
+      "options": {
+        "mathcolor": "red"
+      },
+      "keys": [
+        "mathcolor"
+      ],
+      "error": null
+    },
+    {
+      "name": "braced-proto-strict",
+      "raw": "{{__proto__}}=true,mathcolor=red",
+      "allowed": true,
+      "errorOnUnknown": true,
+      "options": {
+        "mathcolor": "red"
+      },
+      "keys": [
+        "mathcolor"
+      ],
+      "error": null
+    },
+    {
+      "name": "bom-proto-unvalidated",
+      "raw": "﻿__proto__﻿=true",
+      "allowed": false,
+      "errorOnUnknown": false,
+      "options": {},
+      "keys": [],
+      "error": null
+    },
+    {
+      "name": "bom-proto-filtered",
+      "raw": "﻿__proto__﻿=true",
+      "allowed": true,
+      "errorOnUnknown": false,
+      "options": {},
+      "keys": [],
+      "error": null
+    },
+    {
+      "name": "bom-proto-strict",
+      "raw": "﻿__proto__﻿=true",
+      "allowed": true,
+      "errorOnUnknown": true,
+      "options": {},
+      "keys": [],
+      "error": null
+    },
+    {
+      "name": "constructor-unvalidated",
+      "raw": "constructor=x",
+      "allowed": false,
+      "errorOnUnknown": false,
+      "options": {
+        "constructor": "x"
+      },
+      "keys": [
+        "constructor"
+      ],
+      "error": null
+    },
+    {
+      "name": "constructor-filtered",
+      "raw": "constructor=x",
+      "allowed": true,
+      "errorOnUnknown": false,
+      "options": {},
+      "keys": [],
+      "error": null
+    },
+    {
+      "name": "constructor-strict",
+      "raw": "constructor=x",
+      "allowed": true,
+      "errorOnUnknown": true,
+      "options": null,
+      "keys": null,
+      "error": {
+        "id": "InvalidOption",
+        "message": "Invalid option: constructor"
+      }
+    },
+    {
+      "name": "toString-unvalidated",
+      "raw": "toString=x",
+      "allowed": false,
+      "errorOnUnknown": false,
+      "options": {
+        "toString": "x"
+      },
+      "keys": [
+        "toString"
+      ],
+      "error": null
+    },
+    {
+      "name": "toString-filtered",
+      "raw": "toString=x",
+      "allowed": true,
+      "errorOnUnknown": false,
+      "options": {},
+      "keys": [],
+      "error": null
+    },
+    {
+      "name": "toString-strict",
+      "raw": "toString=x",
+      "allowed": true,
+      "errorOnUnknown": true,
+      "options": null,
+      "keys": null,
+      "error": {
+        "id": "InvalidOption",
+        "message": "Invalid option: toString"
+      }
+    },
+    {
+      "name": "hasOwnProperty-unvalidated",
+      "raw": "hasOwnProperty=x",
+      "allowed": false,
+      "errorOnUnknown": false,
+      "options": {
+        "hasOwnProperty": "x"
+      },
+      "keys": [
+        "hasOwnProperty"
+      ],
+      "error": null
+    },
+    {
+      "name": "hasOwnProperty-filtered",
+      "raw": "hasOwnProperty=x",
+      "allowed": true,
+      "errorOnUnknown": false,
+      "options": {},
+      "keys": [],
+      "error": null
+    },
+    {
+      "name": "hasOwnProperty-strict",
+      "raw": "hasOwnProperty=x",
+      "allowed": true,
+      "errorOnUnknown": true,
+      "options": null,
+      "keys": null,
+      "error": {
+        "id": "InvalidOption",
+        "message": "Invalid option: hasOwnProperty"
+      }
+    },
+    {
+      "name": "numeric-sort-unvalidated",
+      "raw": "10=x,2=y,0=z,mathcolor=red",
+      "allowed": false,
+      "errorOnUnknown": false,
+      "options": {
+        "0": "z",
+        "2": "y",
+        "10": "x",
+        "mathcolor": "red"
+      },
+      "keys": [
+        "0",
+        "2",
+        "10",
+        "mathcolor"
+      ],
+      "error": null
+    },
+    {
+      "name": "numeric-sort-filtered",
+      "raw": "10=x,2=y,0=z,mathcolor=red",
+      "allowed": true,
+      "errorOnUnknown": false,
+      "options": {
+        "mathcolor": "red"
+      },
+      "keys": [
+        "mathcolor"
+      ],
+      "error": null
+    },
+    {
+      "name": "numeric-sort-strict",
+      "raw": "10=x,2=y,0=z,mathcolor=red",
+      "allowed": true,
+      "errorOnUnknown": true,
+      "options": null,
+      "keys": null,
+      "error": {
+        "id": "InvalidOption",
+        "message": "Invalid option: 0"
+      }
+    },
+    {
+      "name": "numeric-boundary-unvalidated",
+      "raw": "4294967295=x,4294967294=y",
+      "allowed": false,
+      "errorOnUnknown": false,
+      "options": {
+        "4294967294": "y",
+        "4294967295": "x"
+      },
+      "keys": [
+        "4294967294",
+        "4294967295"
+      ],
+      "error": null
+    },
+    {
+      "name": "numeric-boundary-filtered",
+      "raw": "4294967295=x,4294967294=y",
+      "allowed": true,
+      "errorOnUnknown": false,
+      "options": {},
+      "keys": [],
+      "error": null
+    },
+    {
+      "name": "numeric-boundary-strict",
+      "raw": "4294967295=x,4294967294=y",
+      "allowed": true,
+      "errorOnUnknown": true,
+      "options": null,
+      "keys": null,
+      "error": {
+        "id": "InvalidOption",
+        "message": "Invalid option: 4294967294"
+      }
+    },
+    {
+      "name": "noncanonical-numeric-unvalidated",
+      "raw": "01=x,+2=y,-0=z,mathcolor=red",
+      "allowed": false,
+      "errorOnUnknown": false,
+      "options": {
+        "01": "x",
+        "+2": "y",
+        "-0": "z",
+        "mathcolor": "red"
+      },
+      "keys": [
+        "01",
+        "+2",
+        "-0",
+        "mathcolor"
+      ],
+      "error": null
+    },
+    {
+      "name": "noncanonical-numeric-filtered",
+      "raw": "01=x,+2=y,-0=z,mathcolor=red",
+      "allowed": true,
+      "errorOnUnknown": false,
+      "options": {
+        "mathcolor": "red"
+      },
+      "keys": [
+        "mathcolor"
+      ],
+      "error": null
+    },
+    {
+      "name": "noncanonical-numeric-strict",
+      "raw": "01=x,+2=y,-0=z,mathcolor=red",
+      "allowed": true,
+      "errorOnUnknown": true,
+      "options": null,
+      "keys": null,
+      "error": {
+        "id": "InvalidOption",
+        "message": "Invalid option: 01"
+      }
+    },
+    {
+      "name": "empty-key-unvalidated",
+      "raw": "=red,mathcolor=red",
+      "allowed": false,
+      "errorOnUnknown": false,
+      "options": {
+        "": "red",
+        "mathcolor": "red"
+      },
+      "keys": [
+        "",
+        "mathcolor"
+      ],
+      "error": null
+    },
+    {
+      "name": "empty-key-filtered",
+      "raw": "=red,mathcolor=red",
+      "allowed": true,
+      "errorOnUnknown": false,
+      "options": {
+        "mathcolor": "red"
+      },
+      "keys": [
+        "mathcolor"
+      ],
+      "error": null
+    },
+    {
+      "name": "empty-key-strict",
+      "raw": "=red,mathcolor=red",
+      "allowed": true,
+      "errorOnUnknown": true,
+      "options": null,
+      "keys": null,
+      "error": {
+        "id": "InvalidOption",
+        "message": "Invalid option: "
+      }
+    },
+    {
+      "name": "empty-entries-unvalidated",
+      "raw": ",,,mathcolor=red,,",
+      "allowed": false,
+      "errorOnUnknown": false,
+      "options": {
+        "mathcolor": "red"
+      },
+      "keys": [
+        "mathcolor"
+      ],
+      "error": null
+    },
+    {
+      "name": "empty-entries-filtered",
+      "raw": ",,,mathcolor=red,,",
+      "allowed": true,
+      "errorOnUnknown": false,
+      "options": {
+        "mathcolor": "red"
+      },
+      "keys": [
+        "mathcolor"
+      ],
+      "error": null
+    },
+    {
+      "name": "empty-entries-strict",
+      "raw": ",,,mathcolor=red,,",
+      "allowed": true,
+      "errorOnUnknown": true,
+      "options": {
+        "mathcolor": "red"
+      },
+      "keys": [
+        "mathcolor"
+      ],
+      "error": null
+    },
+    {
+      "name": "nested-comma-unvalidated",
+      "raw": "unknown={{a,b=c}},mathcolor={red}",
+      "allowed": false,
+      "errorOnUnknown": false,
+      "options": {
+        "unknown": "a,b=c",
+        "mathcolor": "red"
+      },
+      "keys": [
+        "unknown",
+        "mathcolor"
+      ],
+      "error": null
+    },
+    {
+      "name": "nested-comma-filtered",
+      "raw": "unknown={{a,b=c}},mathcolor={red}",
+      "allowed": true,
+      "errorOnUnknown": false,
+      "options": {
+        "mathcolor": "red"
+      },
+      "keys": [
+        "mathcolor"
+      ],
+      "error": null
+    },
+    {
+      "name": "nested-comma-strict",
+      "raw": "unknown={{a,b=c}},mathcolor={red}",
+      "allowed": true,
+      "errorOnUnknown": true,
+      "options": null,
+      "keys": null,
+      "error": {
+        "id": "InvalidOption",
+        "message": "Invalid option: unknown"
+      }
+    },
+    {
+      "name": "escaped-comma-unvalidated",
+      "raw": "unknown={a\\,b},mathcolor=red",
+      "allowed": false,
+      "errorOnUnknown": false,
+      "options": {
+        "unknown": "a\\,b",
+        "mathcolor": "red"
+      },
+      "keys": [
+        "unknown",
+        "mathcolor"
+      ],
+      "error": null
+    },
+    {
+      "name": "escaped-comma-filtered",
+      "raw": "unknown={a\\,b},mathcolor=red",
+      "allowed": true,
+      "errorOnUnknown": false,
+      "options": {
+        "mathcolor": "red"
+      },
+      "keys": [
+        "mathcolor"
+      ],
+      "error": null
+    },
+    {
+      "name": "escaped-comma-strict",
+      "raw": "unknown={a\\,b},mathcolor=red",
+      "allowed": true,
+      "errorOnUnknown": true,
+      "options": null,
+      "keys": null,
+      "error": {
+        "id": "InvalidOption",
+        "message": "Invalid option: unknown"
+      }
+    },
+    {
+      "name": "bool-colors-unvalidated",
+      "raw": "mathcolor=false,color=true,mathbackground=false,background",
+      "allowed": false,
+      "errorOnUnknown": false,
+      "options": {
+        "mathcolor": false,
+        "color": true,
+        "mathbackground": false,
+        "background": true
+      },
+      "keys": [
+        "mathcolor",
+        "color",
+        "mathbackground",
+        "background"
+      ],
+      "error": null
+    },
+    {
+      "name": "bool-colors-filtered",
+      "raw": "mathcolor=false,color=true,mathbackground=false,background",
+      "allowed": true,
+      "errorOnUnknown": false,
+      "options": {
+        "mathcolor": false,
+        "color": true,
+        "mathbackground": false,
+        "background": true
+      },
+      "keys": [
+        "mathcolor",
+        "color",
+        "mathbackground",
+        "background"
+      ],
+      "error": null
+    },
+    {
+      "name": "bool-colors-strict",
+      "raw": "mathcolor=false,color=true,mathbackground=false,background",
+      "allowed": true,
+      "errorOnUnknown": true,
+      "options": {
+        "mathcolor": false,
+        "color": true,
+        "mathbackground": false,
+        "background": true
+      },
+      "keys": [
+        "mathcolor",
+        "color",
+        "mathbackground",
+        "background"
+      ],
+      "error": null
+    },
+    {
+      "name": "boolean-strings-unvalidated",
+      "raw": "mathcolor={false},mathbackground={{true}}",
+      "allowed": false,
+      "errorOnUnknown": false,
+      "options": {
+        "mathcolor": false,
+        "mathbackground": true
+      },
+      "keys": [
+        "mathcolor",
+        "mathbackground"
+      ],
+      "error": null
+    },
+    {
+      "name": "boolean-strings-filtered",
+      "raw": "mathcolor={false},mathbackground={{true}}",
+      "allowed": true,
+      "errorOnUnknown": false,
+      "options": {
+        "mathcolor": false,
+        "mathbackground": true
+      },
+      "keys": [
+        "mathcolor",
+        "mathbackground"
+      ],
+      "error": null
+    },
+    {
+      "name": "boolean-strings-strict",
+      "raw": "mathcolor={false},mathbackground={{true}}",
+      "allowed": true,
+      "errorOnUnknown": true,
+      "options": {
+        "mathcolor": false,
+        "mathbackground": true
+      },
+      "keys": [
+        "mathcolor",
+        "mathbackground"
+      ],
+      "error": null
+    },
+    {
+      "name": "bom-color-unvalidated",
+      "raw": "mathcolor=﻿red﻿",
+      "allowed": false,
+      "errorOnUnknown": false,
+      "options": {
+        "mathcolor": "red"
+      },
+      "keys": [
+        "mathcolor"
+      ],
+      "error": null
+    },
+    {
+      "name": "bom-color-filtered",
+      "raw": "mathcolor=﻿red﻿",
+      "allowed": true,
+      "errorOnUnknown": false,
+      "options": {
+        "mathcolor": "red"
+      },
+      "keys": [
+        "mathcolor"
+      ],
+      "error": null
+    },
+    {
+      "name": "bom-color-strict",
+      "raw": "mathcolor=﻿red﻿",
+      "allowed": true,
+      "errorOnUnknown": true,
+      "options": {
+        "mathcolor": "red"
+      },
+      "keys": [
+        "mathcolor"
+      ],
+      "error": null
+    },
+    {
+      "name": "nel-color-unvalidated",
+      "raw": "mathcolor=red",
+      "allowed": false,
+      "errorOnUnknown": false,
+      "options": {
+        "mathcolor": "red"
+      },
+      "keys": [
+        "mathcolor"
+      ],
+      "error": null
+    },
+    {
+      "name": "nel-color-filtered",
+      "raw": "mathcolor=red",
+      "allowed": true,
+      "errorOnUnknown": false,
+      "options": {
+        "mathcolor": "red"
+      },
+      "keys": [
+        "mathcolor"
+      ],
+      "error": null
+    },
+    {
+      "name": "nel-color-strict",
+      "raw": "mathcolor=red",
+      "allowed": true,
+      "errorOnUnknown": true,
+      "options": {
+        "mathcolor": "red"
+      },
+      "keys": [
+        "mathcolor"
+      ],
+      "error": null
+    },
+    {
+      "name": "blank-color-unvalidated",
+      "raw": "mathcolor=",
+      "allowed": false,
+      "errorOnUnknown": false,
+      "options": {
+        "mathcolor": ""
+      },
+      "keys": [
+        "mathcolor"
+      ],
+      "error": null
+    },
+    {
+      "name": "blank-color-filtered",
+      "raw": "mathcolor=",
+      "allowed": true,
+      "errorOnUnknown": false,
+      "options": {
+        "mathcolor": ""
+      },
+      "keys": [
+        "mathcolor"
+      ],
+      "error": null
+    },
+    {
+      "name": "blank-color-strict",
+      "raw": "mathcolor=",
+      "allowed": true,
+      "errorOnUnknown": true,
+      "options": {
+        "mathcolor": ""
+      },
+      "keys": [
+        "mathcolor"
+      ],
+      "error": null
+    },
+    {
+      "name": "empty-braces-color-unvalidated",
+      "raw": "mathcolor={}",
+      "allowed": false,
+      "errorOnUnknown": false,
+      "options": {
+        "mathcolor": true
+      },
+      "keys": [
+        "mathcolor"
+      ],
+      "error": null
+    },
+    {
+      "name": "empty-braces-color-filtered",
+      "raw": "mathcolor={}",
+      "allowed": true,
+      "errorOnUnknown": false,
+      "options": {
+        "mathcolor": true
+      },
+      "keys": [
+        "mathcolor"
+      ],
+      "error": null
+    },
+    {
+      "name": "empty-braces-color-strict",
+      "raw": "mathcolor={}",
+      "allowed": true,
+      "errorOnUnknown": true,
+      "options": {
+        "mathcolor": true
+      },
+      "keys": [
+        "mathcolor"
+      ],
+      "error": null
+    },
+    {
+      "name": "duplicates-unvalidated",
+      "raw": "unknown=x,mathcolor=blue,mathcolor=red,unknown=y",
+      "allowed": false,
+      "errorOnUnknown": false,
+      "options": {
+        "unknown": "y",
+        "mathcolor": "red"
+      },
+      "keys": [
+        "unknown",
+        "mathcolor"
+      ],
+      "error": null
+    },
+    {
+      "name": "duplicates-filtered",
+      "raw": "unknown=x,mathcolor=blue,mathcolor=red,unknown=y",
+      "allowed": true,
+      "errorOnUnknown": false,
+      "options": {
+        "mathcolor": "red"
+      },
+      "keys": [
+        "mathcolor"
+      ],
+      "error": null
+    },
+    {
+      "name": "duplicates-strict",
+      "raw": "unknown=x,mathcolor=blue,mathcolor=red,unknown=y",
+      "allowed": true,
+      "errorOnUnknown": true,
+      "options": null,
+      "keys": null,
+      "error": {
+        "id": "InvalidOption",
+        "message": "Invalid option: unknown"
+      }
+    },
+    {
+      "name": "malformed-open-unvalidated",
+      "raw": "unknown={",
+      "allowed": false,
+      "errorOnUnknown": false,
+      "options": null,
+      "keys": null,
+      "error": {
+        "id": "ExtraOpenMissingClose",
+        "message": "Extra open brace or missing close brace"
+      }
+    },
+    {
+      "name": "malformed-open-filtered",
+      "raw": "unknown={",
+      "allowed": true,
+      "errorOnUnknown": false,
+      "options": null,
+      "keys": null,
+      "error": {
+        "id": "ExtraOpenMissingClose",
+        "message": "Extra open brace or missing close brace"
+      }
+    },
+    {
+      "name": "malformed-open-strict",
+      "raw": "unknown={",
+      "allowed": true,
+      "errorOnUnknown": true,
+      "options": null,
+      "keys": null,
+      "error": {
+        "id": "ExtraOpenMissingClose",
+        "message": "Extra open brace or missing close brace"
+      }
+    },
+    {
+      "name": "malformed-close-unvalidated",
+      "raw": "unknown=x}",
+      "allowed": false,
+      "errorOnUnknown": false,
+      "options": {
+        "unknown": "x}"
+      },
+      "keys": [
+        "unknown"
+      ],
+      "error": null
+    },
+    {
+      "name": "malformed-close-filtered",
+      "raw": "unknown=x}",
+      "allowed": true,
+      "errorOnUnknown": false,
+      "options": {},
+      "keys": [],
+      "error": null
+    },
+    {
+      "name": "malformed-close-strict",
+      "raw": "unknown=x}",
+      "allowed": true,
+      "errorOnUnknown": true,
+      "options": null,
+      "keys": null,
+      "error": {
+        "id": "InvalidOption",
+        "message": "Invalid option: unknown"
+      }
+    },
+    {
+      "name": "invalid-before-malformed-unvalidated",
+      "raw": "unknown=x,mathcolor={",
+      "allowed": false,
+      "errorOnUnknown": false,
+      "options": null,
+      "keys": null,
+      "error": {
+        "id": "ExtraOpenMissingClose",
+        "message": "Extra open brace or missing close brace"
+      }
+    },
+    {
+      "name": "invalid-before-malformed-filtered",
+      "raw": "unknown=x,mathcolor={",
+      "allowed": true,
+      "errorOnUnknown": false,
+      "options": null,
+      "keys": null,
+      "error": {
+        "id": "ExtraOpenMissingClose",
+        "message": "Extra open brace or missing close brace"
+      }
+    },
+    {
+      "name": "invalid-before-malformed-strict",
+      "raw": "unknown=x,mathcolor={",
+      "allowed": true,
+      "errorOnUnknown": true,
+      "options": null,
+      "keys": null,
+      "error": {
+        "id": "ExtraOpenMissingClose",
+        "message": "Extra open brace or missing close brace"
+      }
+    },
+    {
+      "name": "valid-before-malformed-unvalidated",
+      "raw": "mathcolor=red,unknown={",
+      "allowed": false,
+      "errorOnUnknown": false,
+      "options": null,
+      "keys": null,
+      "error": {
+        "id": "ExtraOpenMissingClose",
+        "message": "Extra open brace or missing close brace"
+      }
+    },
+    {
+      "name": "valid-before-malformed-filtered",
+      "raw": "mathcolor=red,unknown={",
+      "allowed": true,
+      "errorOnUnknown": false,
+      "options": null,
+      "keys": null,
+      "error": {
+        "id": "ExtraOpenMissingClose",
+        "message": "Extra open brace or missing close brace"
+      }
+    },
+    {
+      "name": "valid-before-malformed-strict",
+      "raw": "mathcolor=red,unknown={",
+      "allowed": true,
+      "errorOnUnknown": true,
+      "options": null,
+      "keys": null,
+      "error": {
+        "id": "ExtraOpenMissingClose",
+        "message": "Extra open brace or missing close brace"
+      }
+    }
+  ]
+}
