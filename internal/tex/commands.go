@@ -174,7 +174,7 @@ func (p *parser) commandNodes(name string, after **derivativeAutoOpen) ([]*mml.N
 		return []*mml.Node{spacer("-0.167em")}, nil
 	case "enskip":
 		return []*mml.Node{spacer("0.5em")}, nil
-	case "space":
+	case "space", "\u00a0":
 		return []*mml.Node{token("mtext", "\u00a0")}, nil
 	case "{", "}", "$", "%", "#", "&", "_":
 		return []*mml.Node{p.token("mo", name)}, nil

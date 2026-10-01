@@ -175,6 +175,7 @@ var simpleMacros = map[string]string{
 	"skew":      "{{#2{#3\\mkern#1mu}\\mkern-#1mu}{}}",
 	"flatfrac":  "\\left.#1\\middle/#2\\right.",
 	"stackrel":  "\\mathrel{\\mathop{#2}\\limits^{#1}}",
+	"stackbin":  "\\mathbin{\\mathop{#2}\\limits^{#1}}",
 	"pmod":      "\\pod{\\mmlToken{mi}{mod}\\kern 6mu #1}",
 	"pod":       "\\mathchoice{\\kern18mu}{\\kern8mu}{\\kern8mu}{\\kern8mu}(#1)",
 	"mod":       "\\mathchoice{\\kern18mu}{\\kern12mu}{\\kern12mu}{\\kern12mu}\\mmlToken{mi}{mod}\\,\\,#1",
