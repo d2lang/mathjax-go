@@ -1611,11 +1611,9 @@ func (p *parser) skipSpaces() {
 }
 
 func (p *parser) skipComment() {
-	for p.pos < len(p.source) {
-		r := p.consumeRune()
-		if r == '\n' || r == '\r' {
-			return
-		}
+	// BaseMethods.Comment consumes bare CR and leaves LF for the Space handler.
+	for p.pos < len(p.source) && p.peekRune() != '\n' {
+		p.consumeRune()
 	}
 }
 
