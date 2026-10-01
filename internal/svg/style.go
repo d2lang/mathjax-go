@@ -71,15 +71,23 @@ func parseWrapperStyles(source string) *wrapperStyles {
 			continue
 		}
 		name = strings.ToLower(strings.TrimSpace(name))
-		value = strings.TrimSpace(value)
+		// Styles.pattern removes JavaScript whitespace around authored values.
+		value = strings.TrimFunc(value, cssValueSpace)
 		if name == "" {
 			continue
 		}
 		if styles.setBorderComponent(name, value) {
 			continue
 		}
-		if value == "" {
-			continue
+		switch name {
+		case "border", "border-top", "border-right", "border-bottom", "border-left",
+			"border-width", "border-style", "border-color":
+			// Styles.set also splits an empty border declaration so that its
+			// previously authored side or component values are removed.
+		default:
+			if value == "" {
+				continue
+			}
 		}
 		switch name {
 		case "border":
@@ -173,7 +181,7 @@ func splitCSSDeclarations(source string) []string {
 func splitBorder(value string) borderStyle {
 	// Styles.splitWSC retains the authored shorthand until an individual
 	// width/style/color component is changed and combineWSC rebuilds it.
-	border := borderStyle{set: true, raw: value}
+	border := borderStyle{set: value != "", raw: value}
 	for _, part := range splitCSSValue(value) {
 		switch {
 		case isBorderWidth(part) && border.width == "":
@@ -241,7 +249,11 @@ func splitCSSValue(value string) []string {
 			continue
 		}
 		if cssValueSpace(c) {
-			parts = append(parts, string(characters[start:i]))
+			// The source's zero-length regexp match at the beginning of the
+			// string is suppressed by String.split. Later empty fields remain.
+			if i != 0 {
+				parts = append(parts, string(characters[start:i]))
+			}
 			start = i + 1
 		}
 	}
