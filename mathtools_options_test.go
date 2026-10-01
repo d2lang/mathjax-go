@@ -32,7 +32,7 @@ func TestMathtoolsOptionsOriginalReferences(t *testing.T) {
 	if err := json.NewDecoder(z).Decode(&fixture); err != nil {
 		t.Fatal(err)
 	}
-	if fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || len(fixture.Cases) != 114 {
+	if fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || len(fixture.Cases) != 134 {
 		t.Fatal("unbound Mathtools options originals")
 	}
 	type input struct {

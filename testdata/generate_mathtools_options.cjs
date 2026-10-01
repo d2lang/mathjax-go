@@ -56,6 +56,15 @@ for (const [name, options] of [
   ['unknown-key', 'centercolon=true,unknown=x'], ['forbidden-key', 'allow-mathtoolsset=false'],
   ['empty-key', 'centercolon=true,=true'],
 ]) inputs.push([`keyval-${name}`, String.raw`\mathtoolsset{${options}}a:b`]);
+for (const [name, whitespace] of [['bom', '\uFEFF'], ['nel', '\u0085']]) {
+  for (const [suffix, options] of [
+    ['key', `${whitespace}centercolon${whitespace}=true`],
+    ['true', `centercolon=${whitespace}true${whitespace}`],
+    ['false', `centercolon=${whitespace}false${whitespace}`],
+    ['offset', `centercolon-offset=${whitespace}.3em${whitespace},centercolon=true`],
+    ['unicode-false', `use-unicode=${whitespace}false${whitespace}`],
+  ]) inputs.push([`keyval-${name}-${suffix}`, String.raw`\mathtoolsset{${options}}a:b\coloneqq c`]);
+}
 const cases = [];
 for (const [name, tex] of inputs) {
   for (const display of [false, true]) {
@@ -72,3 +81,40 @@ fs.writeFileSync(path.join(__dirname, 'mathtools_options_mathjax_3_2_2.json.gz')
   scope: 'Complete unmodified SVGs from the frozen D2 MathJax bundle; each case uses a fresh runtime.',
   cases,
 }, null, 2) + '\n'));
+
+// Empheq uses the same ParseUtil.keyvalOptions helper with left/right allowed.
+// Observe that original helper directly without enabling an extra package.
+const keyvals = [
+  ['plain', 'left={(},right={)}'],
+  ['empty', ''],
+  ['booleans', 'left=false,right'],
+  ['nested-braces', 'left={{(}},right={{)}}'],
+];
+for (const [name, whitespace] of [['bom', '\uFEFF'], ['nel', '\u0085']]) {
+  for (const [suffix, raw] of [
+    ['key', `${whitespace}left${whitespace}={(}`],
+    ['value', `left=${whitespace}(${whitespace},right=${whitespace})${whitespace}`],
+    ['braced-value', `left={${whitespace}(${whitespace}}`],
+    ['true', `left=${whitespace}true${whitespace}`],
+    ['false', `left=${whitespace}false${whitespace}`],
+    ['brace-edges', `left=${whitespace}{(}${whitespace}`],
+  ]) keyvals.push([`${name}-${suffix}`, raw]);
+}
+const keyvalCases = [];
+let keyvalMethod;
+for (const [name, raw] of keyvals) {
+  const context = vm.createContext({console});
+  context.globalThis = context;
+  for (const script of scripts) script.runInContext(context);
+  const method = context.MathJax._.input.tex.ParseUtil.default.keyvalOptions;
+  keyvalMethod = method.toString();
+  let options = null, error = null;
+  try { options = method(raw, {left: 1, right: 1}, true); }
+  catch (e) { error = {id: e.id, message: e.message}; }
+  keyvalCases.push({name, raw, options, error});
+}
+fs.writeFileSync(path.join(__dirname, '../internal/tex/testdata/option_keyval_trim_mathjax_3_2_2.json'), JSON.stringify({
+  mathjaxGitCommit: 'ad8f5c21cb810236551da8c6512ba733e67357ee', assets: hashes,
+  scope: 'Direct original ParseUtil.keyvalOptions with the Empheq left/right allowlist; fresh frozen runtime per call.',
+  keyvalMethod, cases: keyvalCases,
+}, null, 2) + '\n');

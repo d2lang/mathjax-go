@@ -4,7 +4,7 @@ Enabling `centercolon` previously rewrote all remaining source, so `\text{Time: 
 
 `comparison.png` is a Chromium screenshot of the three untouched complete D2 SVGs at one shared scale. The before and after diagrams use the same D2 source and renderer. The original diagram is independently rendered through the frozen, hash-verified MathJax 3.2.2 bundle. The after/original SVGs and PNGs are byte-identical. All images were visually inspected.
 
-The public regression fixture compares 114 complete original SVGs: 102 valid renderings and 12 original rendered errors. It fixes 56 valid renderings and preserves 58 controls. Every conversion uses a fresh original VM. Regenerate with `node testdata/generate_mathtools_options.cjs PINNED_ASSETS`.
+The public regression fixture compares 134 complete original SVGs: 120 valid renderings and 14 original rendered errors. It fixes 68 valid renderings and two error SVGs, and preserves 64 controls. Every conversion uses a fresh original VM. The shared key/value reader uses JavaScript whitespace: BOM is trimmed while NEL remains literal. A separate fixture directly observes original `ParseUtil.keyvalOptions` with Empheq's left/right allowlist, covering 16 whitespace and ordinary controls. Regenerate both fixtures with `node testdata/generate_mathtools_options.cjs PINNED_ASSETS`.
 
 To regenerate the diagrams, use D2 at the renderer commit in `manifest.json`. Build it with a replacement for mathjax-go at the before revision or fixed source revision, then run:
 
