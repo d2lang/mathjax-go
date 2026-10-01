@@ -5,6 +5,8 @@
 // Package layout implements MathJax's common TeX layout rules.
 package layout
 
+import "github.com/d2lang/mathjax-go/internal/jscompat"
+
 // BigDimen is MathJax's sentinel for an unset or effectively infinite
 // dimension.
 const BigDimen = 1_000_000
@@ -72,9 +74,11 @@ func (b *BBox) Rescale(scale float64) {
 // Combine expands b to include child at offset (x,y).
 func (b *BBox) Combine(child *BBox, x, y float64) {
 	scale := child.RScale
-	w := x + scale*(child.W+child.L+child.R)
-	h := y + scale*child.H
-	d := scale*child.D - y
+	// JavaScript rounds each product before adding the offset. Keep those
+	// rounding points when Go may otherwise fuse the multiply and addition.
+	w := x + jscompat.NumberStep(scale*(child.W+child.L+child.R))
+	h := y + jscompat.NumberStep(scale*child.H)
+	d := jscompat.NumberStep(scale*child.D) - y
 	if w > b.W {
 		b.W = w
 	}
@@ -89,7 +93,8 @@ func (b *BBox) Combine(child *BBox, x, y float64) {
 // Append places child after the current width and expands height and depth.
 func (b *BBox) Append(child *BBox) {
 	scale := child.RScale
-	b.W += scale * (child.W + child.L + child.R)
+	// The source's width increment also rounds before the compound addition.
+	b.W += jscompat.NumberStep(scale * (child.W + child.L + child.R))
 	if scale*child.H > b.H {
 		b.H = scale * child.H
 	}
