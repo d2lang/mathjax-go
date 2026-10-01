@@ -33,6 +33,9 @@ type pairedDelimiter struct {
 	open, close string
 	body        string
 	arguments   int
+	// GetArgCount returns a nonempty digit string even for zero. That string
+	// still enables substitution with an empty argument list.
+	substituteZeroArgs bool
 }
 
 type environmentDefinition struct {
