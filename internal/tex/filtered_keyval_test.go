@@ -75,7 +75,12 @@ func TestFilteredKeyvalOriginalReferences(t *testing.T) {
 			}
 			if c.Allowed && !c.ErrorOnUnknown {
 				attributes, err := keyvalOptions(c.Raw, enclose.AllowedOptions)
-				if err != nil || !reflect.DeepEqual(attributes, c.Options) {
+				if err != nil {
+					t.Fatal(err)
+				}
+				got := make(map[string]any, attributes.Len())
+				attributes.Range(func(key string, value any) bool { got[key] = value; return true })
+				if !reflect.DeepEqual(got, c.Options) || !reflect.DeepEqual(attributes.JavaScriptKeys(), c.Keys) {
 					t.Fatalf("Cancel/Enclose options=%#v error=%v want %#v", attributes, err, c.Options)
 				}
 			}

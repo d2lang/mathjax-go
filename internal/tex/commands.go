@@ -24,6 +24,7 @@ import (
 
 	"github.com/d2lang/mathjax-go/internal/mhchem"
 	"github.com/d2lang/mathjax-go/internal/mml"
+	"github.com/d2lang/mathjax-go/internal/ordered"
 	texcancel "github.com/d2lang/mathjax-go/internal/tex/extensions/cancel"
 	texcolor "github.com/d2lang/mathjax-go/internal/tex/extensions/color"
 	"github.com/d2lang/mathjax-go/internal/tex/extensions/enclose"
@@ -1481,8 +1482,8 @@ func (p *parser) enclose(name string) ([]*mml.Node, error) {
 	if err != nil {
 		return nil, err
 	}
-	attrs["notation"] = strings.ReplaceAll(notation, ",", " ")
-	return []*mml.Node{setAttributes(node("menclose", math), attrs)}, nil
+	attrs.Set("notation", strings.ReplaceAll(notation, ",", " "))
+	return []*mml.Node{setKeyvalAttributes(node("menclose", math), attrs)}, nil
 }
 
 func (p *parser) cancel(name string) ([]*mml.Node, error) {
@@ -1498,11 +1499,11 @@ func (p *parser) cancel(name string) ([]*mml.Node, error) {
 	if err != nil {
 		return nil, err
 	}
-	attrs["notation"] = map[string]string{
+	attrs.Set("notation", map[string]string{
 		"cancel": texcancel.UpDiagonalStrike, "bcancel": texcancel.DownDiagonalStrike,
 		"xcancel": texcancel.UpDiagonalStrike + " " + texcancel.DownDiagonalStrike,
-	}[name]
-	return []*mml.Node{setAttributes(node("menclose", math), attrs)}, nil
+	}[name])
+	return []*mml.Node{setKeyvalAttributes(node("menclose", math), attrs)}, nil
 }
 
 func (p *parser) cancelTo(name string) ([]*mml.Node, error) {
@@ -1522,31 +1523,32 @@ func (p *parser) cancelTo(name string) ([]*mml.Node, error) {
 	if err != nil {
 		return nil, err
 	}
-	attrs["notation"] = texcancel.CancelToNotation
+	attrs.Set("notation", texcancel.CancelToNotation)
 	padded := node("mpadded", value)
 	for _, attribute := range texcancel.CancelToPadding {
 		padded.Attributes.Set(attribute.Name, attribute.Value)
 	}
-	return []*mml.Node{node("msup", setAttributes(node("menclose", math), attrs), padded)}, nil
+	return []*mml.Node{node("msup", setKeyvalAttributes(node("menclose", math), attrs), padded)}, nil
 }
 
-func keyvalOptions(raw string, allowed []string) (map[string]any, error) {
+func keyvalOptions(raw string, allowed []string) (*ordered.Map[any], error) {
 	allowedSet := make(map[string]bool, len(allowed))
 	for _, key := range allowed {
 		allowedSet[key] = true
 	}
-	options, err := parseUtilKeyvalOptions(raw, func(key string) bool {
+	return parseUtilKeyvalOptions(raw, func(key string) bool {
 		return allowedSet[key]
 	}, false)
-	if err != nil {
-		return nil, err
+}
+
+// Preserve Object.keys order when NodeFactory forwards option properties to
+// MathML attributes. SVG copies surviving data-* attributes in that order.
+func setKeyvalAttributes(n *mml.Node, attributes *ordered.Map[any]) *mml.Node {
+	for _, name := range attributes.JavaScriptKeys() {
+		value, _ := attributes.Get(name)
+		n.Attributes.Set(name, value)
 	}
-	result := make(map[string]any, options.Len())
-	options.Range(func(key string, value any) bool {
-		result[key] = value
-		return true
-	})
-	return result, nil
+	return n
 }
 
 func (p *parser) colorDeclaration() (mjSourceObject, error) {

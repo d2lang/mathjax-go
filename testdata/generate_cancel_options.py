@@ -67,7 +67,20 @@ add('d2-bom-color-witness', '\\cancel[mathcolor=\ufeffred\ufeff]{x}+\\cancel[mat
 for attribute in ['mathcolor', 'color', 'mathbackground', 'background']:
     for value in ['false', '0', 'red']:
         add('mmltoken-string-color-' + str(len(requests)), r'\mmlToken{mi}[' + attribute + '="' + value + r'"]{x}')
-assert len(requests) == 1756
+# Multiple surviving data attributes must retain their own-property order.
+# Duplicates update the value without moving the original property position;
+# deleting unknown index/prototype keys must not reorder surviving keys.
+ordered_options = [
+    'data-padding=.3em,data-thickness=.08em,data-arrowhead=5 3 2,mathcolor=red',
+    'data-arrowhead=5 3 2,data-thickness=.08em,data-padding=.3em,mathcolor=red',
+    'data-padding=.2em,0=unknown,data-arrowhead=5 3 2,__proto__=true,data-thickness=.08em,data-padding=.3em,mathcolor=red',
+]
+for command in ['cancel', 'bcancel', 'xcancel', 'cancelto']:
+    for option_index, option in enumerate(ordered_options):
+        call = '\\' + command + '[' + option + ']' + ('{0}' if command == 'cancelto' else '') + '{x}'
+        for context_name, wrap in [('plain', lambda s: s), ('sub', lambda s: 'Q_{' + s + '}')]:
+            add(f'ordered-{command}-{option_index}-{context_name}', wrap(call))
+assert len(requests) == 1804
 wire = "".join(json.dumps({"tex": c["tex"], "options": {"Display": c["display"]}}, ensure_ascii=True) + "\n" for c in requests)
 process = subprocess.run([node, "--jitless", str(directory / "differential/oracle.mjs"), "--asset-dir", str(assets)],
                          input=wire, text=True, capture_output=True, check=True)
@@ -83,7 +96,7 @@ for request, response in zip(requests, responses):
         assert response["error"].startswith("TypeError: t.trim is not a function\n"), (request, response)
         assert "at e.getParameters (mathjax.js:4:506021)" in response["error"], (request, response)
         runtime_cases.append(case)
-assert len(cases) == 1724 and len(runtime_cases) == 32
+assert len(cases) == 1772 and len(runtime_cases) == 32
 assert all("data-mjx-error" not in c["original"]["svg"] for c in cases)
 metadata = {"mathjaxGitCommit": "ad8f5c21cb810236551da8c6512ba733e67357ee", "primaryAssets": hashes,
             "scope": "Complete unchanged original APIs; fresh frozen runtime per case; all original runtime failures retained separately."}

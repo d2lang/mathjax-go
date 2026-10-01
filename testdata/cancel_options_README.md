@@ -13,6 +13,10 @@ reader preserves balanced braces, escaped separators, JavaScript trimming,
 typed boolean values, ordinary-object `__proto__` behavior, and Object.keys
 enumeration before filtering.
 
+Cancel and Enclose forward surviving options to MathML attributes in that
+same order. Multiple `data-*` options therefore have deterministic SVG
+serialization, including reversed declaration orders and duplicate updates.
+
 SVG `handleColor` also tests the original value before string coercion, as the
 source's `mathcolor || color` and background fallback expressions do. A typed
 `false` does not become the invalid paint string `"false"`. The attribute remains
@@ -30,10 +34,10 @@ The second line contains actual U+FEFF characters around `red`, corresponding to
 
 ## Frozen original verification
 
-`cancel_options_mathjax_3_2_2.json.gz` retains all 1,756 complete original API
-objects from fresh runtimes: 1,724 valid SVGs and 32 runtime exceptions stored
-separately. Every valid SVG matches byte for byte after the fix. Against the
-preceding Go source `43f197a`, 1,092 valid cases differed and 632 were exact
+`cancel_options_mathjax_3_2_2.json.gz` retains all 1,804 complete original API
+objects from fresh runtimes: 1,772 valid SVGs and 32 runtime exceptions stored
+separately. Every valid SVG matches byte for byte after the fix. Among the first
+1,724 valid cases, against preceding Go source `43f197a`, 1,092 differed and 632 were exact
 controls. Of the differences, 722 were valid original formulas that Go rendered
 as errors, and 370 were other valid SVG differences. There are no original
 rendered-error SVGs in this matrix.
@@ -43,6 +47,10 @@ numeric/inherited/prototype keys, duplicates, braces/commas/escapes, BOM and NEL
 bare keys and literal booleans, supported enclosure attributes, color/background
 fallbacks, nested script/font/color contexts, child text parsers, and matrices.
 Independent `mmlToken` color controls retain quoted `false`, `0`, and `red` values.
+An additional 48 complete original SVGs cover all four Cancel commands with multiple data attributes in both orders, nested scripts,
+duplicates, and filtered unknown keys. Each is rendered repeatedly to verify
+that attribute forwarding retains the original property order. These are
+serialization checks; their attribute order does not change the painted image.
 
 The 32 original runtime failures are `TypeError: t.trim is not a function` in
 `getParameters` for boolean-valued `data-arrowhead` inputs. Tests bind that

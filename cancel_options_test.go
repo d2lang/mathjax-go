@@ -36,7 +36,7 @@ func TestCancelOptionsOriginalReferences(t *testing.T) {
 	if err := json.NewDecoder(reader).Decode(&fixture); err != nil {
 		t.Fatal(err)
 	}
-	if fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || len(fixture.Cases) != 1724 || len(fixture.RuntimeCases) != 32 {
+	if fixture.MathjaxGitCommit != "ad8f5c21cb810236551da8c6512ba733e67357ee" || len(fixture.Cases) != 1772 || len(fixture.RuntimeCases) != 32 {
 		t.Fatal("unbound Cancel option originals", len(fixture.Cases))
 	}
 	type input struct {
@@ -59,12 +59,18 @@ func TestCancelOptionsOriginalReferences(t *testing.T) {
 		t.Run(c.Name, func(t *testing.T) {
 			options := mathjax.DefaultOptions()
 			options.Display = c.Display
-			got, err := mathjax.RenderWithOptions(c.TeX, options)
-			if err != nil {
-				t.Fatal(err)
+			repeats := 1
+			if strings.HasPrefix(c.Name, "ordered-") {
+				repeats = 16
 			}
-			if got != c.Original.SVG {
-				t.Fatalf("complete original SVG differs\ngot: %s\nwant: %s", got, c.Original.SVG)
+			for repeat := 0; repeat < repeats; repeat++ {
+				got, err := mathjax.RenderWithOptions(c.TeX, options)
+				if err != nil {
+					t.Fatal(err)
+				}
+				if got != c.Original.SVG {
+					t.Fatalf("complete original SVG differs on render %d\ngot: %s\nwant: %s", repeat, got, c.Original.SVG)
+				}
 			}
 		})
 	}
@@ -85,7 +91,7 @@ func TestCancelOptionsOriginalReferences(t *testing.T) {
 			}
 		})
 	}
-	if valid != 1724 || renderedErrors != 0 {
-		t.Fatalf("original inventory = %d valid, %d rendered errors; want 1724, 0", valid, renderedErrors)
+	if valid != 1772 || renderedErrors != 0 {
+		t.Fatalf("original inventory = %d valid, %d rendered errors; want 1772, 0", valid, renderedErrors)
 	}
 }
