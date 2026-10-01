@@ -1,0 +1,27 @@
+{
+  "mathjaxGitCommit": "ad8f5c21cb810236551da8c6512ba733e67357ee",
+  "primaryAssets": {
+    "mathjax.js": "cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869",
+    "polyfills.js": "7fe1d048c78b0e09854c1259f7413868a51cc8f0c822489eb1ac36ae6c85ce01",
+    "setup.js": "a52cb0bbabfbd7796b9fedd793b9386c474e3123e788ee151cbe47ca1fa6e881"
+  },
+  "scope": "Complete unchanged original APIs; fresh frozen runtime per case; runtime-only cases have no SVG parity credit.",
+  "cases": [
+    {
+      "name": "prescript-postslots-1154",
+      "display": false,
+      "TeX": "\\prescript{a}{b}{\\sum}\\limits",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading 'isInferred')\n    at Q.appendChild (mathjax.js:4:91337)\n    at t.setChildren (mathjax.js:4:209761)\n    at Q.setChildren (mathjax.js:4:91208)\n    at t.createNode (mathjax.js:4:250612)\n    at t.create (mathjax.js:4:251353)\n    at T (mathjax.js:4:241913)\n    at t.cleanSubSup [as item] (mathjax.js:4:242219)\n    at e.execute (mathjax.js:4:1736921)\n    at t.executeFilters (mathjax.js:4:64650)\n    at e.compile (mathjax.js:4:232292)"
+      }
+    },
+    {
+      "name": "prescript-postslots-1155",
+      "display": true,
+      "TeX": "\\prescript{a}{b}{\\sum}\\limits",
+      "original": {
+        "error": "TypeError: Cannot read properties of null (reading 'isInferred')\n    at Q.appendChild (mathjax.js:4:91337)\n    at t.setChildren (mathjax.js:4:209761)\n    at Q.setChildren (mathjax.js:4:91208)\n    at t.createNode (mathjax.js:4:250612)\n    at t.create (mathjax.js:4:251353)\n    at T (mathjax.js:4:241913)\n    at t.cleanSubSup [as item] (mathjax.js:4:242219)\n    at e.execute (mathjax.js:4:1736921)\n    at t.executeFilters (mathjax.js:4:64650)\n    at e.compile (mathjax.js:4:232292)"
+      }
+    }
+  ]
+}
