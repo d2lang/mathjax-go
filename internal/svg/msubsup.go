@@ -218,7 +218,10 @@ func (w *wrapper) scriptOffsets() (subY, supY float64) {
 	sub, sup := w.children[1], w.children[2]
 	subbox, supbox := sub.outerBBox(), sup.outerBBox()
 	params := w.renderer.params
-	u := w.supShift(sup)
+	// CommonMsubsup keeps CommonScriptbase.scriptChild at child 1. Its
+	// initial getU therefore measures the subscript before enforcing the
+	// clearance between the separately measured sub/sup boxes.
+	u := w.supShift(sub)
 	drop := w.baseCharZero(w.scriptBaseCore().outerBBox().D*w.baseScale() + params.SubDrop*subbox.RScale)
 	v := math.Max(drop, layout.Length2Em(attribute(w.node, "subscriptshift", ""), params.Sub2, w.bbox.Scale, w.renderer.pxPerEm))
 	minimum := 3 * params.Rule
