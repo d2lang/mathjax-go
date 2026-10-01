@@ -126,7 +126,7 @@ var functionNames = func() map[string]string {
 		"sinh": "sinh", "sup": "sup", "tan": "tan", "tanh": "tanh",
 		"injlim": "inj lim", "projlim": "proj lim",
 	}
-	// Physics' long spellings use BaseMethods.NamedFn with an explicit id.
+	// Physics' NamedFn mappings use the command name by default or an explicit id.
 	// They do not use Expression's optional exponent or automatic fences.
 	for _, sourceMap := range mjSourcePhysicsMaps {
 		if sourceMap.Kind != mjSourceCommandMap || sourceMap.Name != "Physics-expressions-macros" {
@@ -134,10 +134,12 @@ var functionNames = func() map[string]string {
 		}
 		for _, entry := range sourceMap.Entries {
 			handler, args, ok := sourceHandler(entry.Value)
-			if !ok || handler != "NamedFn" || len(args) != 1 {
+			if !ok || handler != "NamedFn" {
 				continue
 			}
-			if id, ok := args[0].(string); ok {
+			if len(args) == 0 {
+				names[entry.Name] = entry.Name
+			} else if id, ok := args[0].(string); ok {
 				names[entry.Name] = id
 			}
 		}
