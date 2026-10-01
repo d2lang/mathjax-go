@@ -71,7 +71,13 @@ func parseWrapperStyles(source string) *wrapperStyles {
 		}
 		name = strings.ToLower(strings.TrimSpace(name))
 		value = strings.TrimSpace(value)
-		if name == "" || value == "" {
+		if name == "" {
+			continue
+		}
+		if styles.setBorderComponent(name, value) {
+			continue
+		}
+		if value == "" {
 			continue
 		}
 		switch name {
@@ -109,6 +115,39 @@ func parseWrapperStyles(source string) *wrapperStyles {
 		}
 	}
 	return styles
+}
+
+// Styles.set recombines a side's width/style/color after a component changes,
+// including an empty value that removes a previously authored component.
+func (s *wrapperStyles) setBorderComponent(name, value string) bool {
+	parts := strings.Split(name, "-")
+	if len(parts) != 3 || parts[0] != "border" {
+		return false
+	}
+	i := -1
+	for index, side := range sideNames {
+		if parts[1] == side {
+			i = index
+			break
+		}
+	}
+	if i < 0 {
+		return false
+	}
+	border := &s.border[i]
+	switch parts[2] {
+	case "width":
+		border.width = value
+	case "style":
+		border.style = value
+	case "color":
+		border.color = value
+	default:
+		return false
+	}
+	border.raw = ""
+	border.set = border.cssValue() != ""
+	return true
 }
 
 func splitCSSDeclarations(source string) []string {
