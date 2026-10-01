@@ -6,6 +6,7 @@ import (
 	"crypto/sha256"
 	"encoding/json"
 	"os"
+	"strings"
 	"testing"
 
 	mathjax "github.com/d2lang/mathjax-go"
@@ -46,6 +47,9 @@ func TestMathtoolsPairedOptionOriginalReferences(t *testing.T) {
 		key := input{c.TeX, c.Display}
 		if c.Name == "" || names[c.Name] || inputs[key] || c.SVG == "" {
 			t.Fatal("invalid original pairedDelimiters setter input", c.Name)
+		}
+		if c.Diagnostic != strings.Contains(c.SVG, `data-mml-node="merror"`) {
+			t.Fatal("original diagnostic classification differs from untouched SVG", c.Name)
 		}
 		names[c.Name], inputs[key] = true, true
 		if c.Diagnostic {
