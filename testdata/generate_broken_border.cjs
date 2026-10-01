@@ -7,7 +7,7 @@ const path = require('node:path');
 const crypto = require('node:crypto');
 const {spawnSync} = require('node:child_process');
 const assets = process.argv[2];
-if (!assets) throw new Error('usage: node generate_border_names.cjs PINNED_ASSETS');
+if (!assets) throw new Error('usage: node generate_broken_border.cjs PINNED_ASSETS');
 const hashes = {
   'polyfills.js': '7fe1d048c78b0e09854c1259f7413868a51cc8f0c822489eb1ac36ae6c85ce01',
   'mathjax.js': 'cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869',
@@ -45,51 +45,40 @@ if (process.argv[3] === '--worker') {
   process.exit(0);
 }
 
-const whites = [
-  ['space', ' '], ['tab', '\t'], ['line-feed', '\n'], ['vertical-tab', '\v'],
-  ['form-feed', '\f'], ['carriage-return', '\r'], ['nbsp', '\u00a0'],
-  ['ogham', '\u1680'], ['en-quad', '\u2000'], ['em-quad', '\u2001'],
-  ['en-space', '\u2002'], ['em-space', '\u2003'], ['third-em', '\u2004'],
-  ['quarter-em', '\u2005'], ['sixth-em', '\u2006'], ['figure-space', '\u2007'],
-  ['punctuation-space', '\u2008'], ['thin-space', '\u2009'], ['hair-space', '\u200a'],
-  ['line-separator', '\u2028'], ['paragraph-separator', '\u2029'],
-  ['narrow-nbsp', '\u202f'], ['medium-space', '\u205f'], ['ideographic-space', '\u3000'],
-  ['bom', '\ufeff'], ['nel-control', '\u0085'], ['mvs-control', '\u180e'], ['zwsp-control', '\u200b'],
-];
 const styles = [];
-for (const [name, white] of whites) {
-  for (const [position, before, after] of [['leading', white, ''], ['trailing', '', white], ['both', white, white]]) {
-    for (const [kind, value] of [
-      ['shorthand', `${before}border${after}:4px solid red`],
-      ['followed', `${before}border${after}:4px solid red; border-bottom-width:8px`],
-      ['component', `${before}border-top-width${after}:4px; border-top-style:solid; border-top-color:red`],
-    ]) styles.push([`${name}-${position}-${kind}`, value]);
+for (const side of sides) {
+  for (const width of ['.1em', '.5em', '1em', '2em']) {
+    for (const style of ['dashed', 'dotted']) styles.push([`${side}-${width}-${style}`, `border-${side}:${width} ${style} blue`]);
   }
 }
+for (const width of ['0px', '2px', '.2em', '.8em']) {
+  for (const style of ['dashed', 'dotted']) styles.push([`global-${width}-${style}`, `border:${width} ${style} blue`]);
+}
 styles.push(
-  ['uppercase', 'Border:4px solid red; border-bottom-width:8px'],
-  ['embedded-nel', 'border\u0085-width:4px; border-bottom-width:8px'],
-  ['retain-previous', 'border:4px solid red; \u0085border-bottom:8px solid blue; border-left-width:12px'],
+  ['repeated-width', 'border:3px dashed blue; border-width:2px  4px'],
+  ['asymmetric-widths', 'border-width:.7em 0px 1em 0px; border-style:dashed; border-color:blue'],
+  ['asymmetric-sides', 'border-top:1em dashed blue; border-bottom:2px dashed red'],
+  ['padded', 'border-bottom:.5em dashed blue; padding:.2em'],
+  ['zero-width-control', 'border-bottom:0px dashed blue'],
+  ['solid-control', 'border-bottom:.5em solid blue'],
 );
 const pending = [];
 for (const [label, value] of styles) {
   for (const kind of ['mi', 'mtext']) {
-    for (const display of [false, true]) {
-      pending.push({type: 'svg', name: `${kind}-${label}-${display ? 'display' : 'inline'}`, tex: `\\mmlToken{${kind}}[style='${value}']{x}`, display});
+    const token = `\\mmlToken{${kind}}[style='${value}']{x}`;
+    for (const [position, tex] of [['direct', token], ['numerator', `\\frac{${token}}{y}`], ['subscript', `z_{${token}}`]]) {
+      for (const display of [false, true]) pending.push({type: 'svg', name: `${kind}-${label}-${position}-${display ? 'display' : 'inline'}`, tex, display});
     }
   }
 }
-for (const [name, value] of styles) pending.push({type: 'style', name, value});
 const records = [];
 for (let start = 0; start < pending.length; start += 32) {
   const worker = spawnSync(process.execPath, [__filename, assets, '--worker'], {input: JSON.stringify(pending.slice(start, start + 32)), encoding: 'utf8', maxBuffer: 16 * 1024 * 1024});
   if (worker.error || worker.status !== 0) throw worker.error || new Error(worker.stderr || `oracle worker ${worker.status}`);
   records.push(...JSON.parse(worker.stdout));
 }
-fs.writeFileSync(path.join(__dirname, 'border_names_mathjax_3_2_2.json'), JSON.stringify({
+fs.writeFileSync(path.join(__dirname, 'broken_border_mathjax_3_2_2.json'), JSON.stringify({
   mathjaxGitCommit: 'ad8f5c21cb810236551da8c6512ba733e67357ee', assets: hashes,
-  scope: 'Border property names use the source lowercase pattern and exact JavaScript whitespace, stopping at non-whitespace prefixes. Full SVGs and direct Styles assertions use fresh frozen D2 runtimes.',
+  scope: 'Broken border dash counts, including zero for segments shorter than the authored thickness; full original SVGs from fresh frozen D2 runtimes cover sides, widths, padding, and nested scale.',
   cases: records.filter(r => r.type === 'svg').map(({type, ...record}) => record),
-  styleCases: records.filter(r => r.type === 'style').map(({type, ...record}) => record),
-  splitCases: records.filter(r => r.type === 'split').map(({type, ...record}) => record),
 }, null, 2) + '\n');

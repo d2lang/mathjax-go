@@ -507,9 +507,8 @@ func (w *wrapper) addBrokenBorder(element *Element, path [4][2]float64, color, s
 	if dotted {
 		count = math.Ceil(length / (2 * thickness))
 	}
-	if count < 1 {
-		count = 1
-	}
+	// SVGWrapper permits zero when a dashed segment is shorter than its
+	// thickness; the resulting unit is the whole segment length.
 	dash := ""
 	linecap := "square"
 	if dotted {

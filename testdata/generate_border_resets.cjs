@@ -41,7 +41,7 @@ if (process.argv[3] === '--worker') {
     }
     return {...record, border: sides.map(side => ['width', 'style', 'color'].map(part => styles.get('border-' + side + '-' + part)))};
   });
-  process.stdout.write(JSON.stringify(records));
+  fs.writeFileSync(1, JSON.stringify(records));
   process.exit(0);
 }
 
