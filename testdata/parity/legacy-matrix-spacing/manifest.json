@@ -1,0 +1,45 @@
+{
+  "d2Commit": "01bc7ecdbdd04c13d6fe5df1967d2d9aa14ae579",
+  "beforeMathjaxCommit": "883f28d1180b49d1d1f9f7421eedc30f181d887d",
+  "beforeEquivalentCanonicalMathjaxCommit": "fc40841854f0b3cdad53ee346a71646c478b7ba8",
+  "beforeCanonicalTrackedTree": "090f9f0c9c35c7bdeeaec697177edbfb8107918b",
+  "fixedSourceCommit": "743a583dbe68f5257c2c476e5989bf874ac5b9db",
+  "original": "D2 frozen MathJax 3.2.2; unmodified hash-verified assets; fresh runtime per distinct formula",
+  "afterOriginalSVGByteExact": true,
+  "afterOriginalPNGByteExact": true,
+  "sharedScale": true,
+  "comparisonScale": 1.6666666666666667,
+  "allImagesFit": true,
+  "visuallyInspected": true,
+  "corpus": {
+    "originalRequests": 1236,
+    "validSVGs": 1156,
+    "validFixes": 98,
+    "validUnchangedControls": 1058,
+    "strictDiagnosticControls": 64,
+    "qualifiedOriginalUnsupportedBoldsymbolDiagnostics": 16,
+    "originalRuntimeFailures": 0,
+    "strictSVGAssertions": 1220,
+    "SVGRegressions": 0
+  },
+  "d2Binaries": {
+    "before": "e6a169296f3dd721c3826e302354d4df3500b9e1002bcf4dde1e6615f87cbe8f",
+    "fixed": "a1dc813f648b72fbb1ed84b42c408ed3a5dd5aa43e6eb19adf5c972bcc22eac9",
+    "original": "98f8224c202addd0de5b82344fb2ef00da06a001eac5cdd8dff49e3cb410c194"
+  },
+  "files": {
+    "after.png": "0b38d44be540882f0a30332fdc083e276ff41f8a787571594ef8ff884ebf71ef",
+    "after.svg": "fb83b75ea136e49e8ae05ed82b006d3dd58af2405d7a62cd7238d0c0ef7f3b92",
+    "before.png": "7a36d1436819555461a1aa506965f57d4007527700476426a38f9f5db32fa3b9",
+    "before.svg": "17bb20f6762cdf1deec1e1ae3838b05ded50cd7d44327ee866bd3a4f242a4e79",
+    "comparison.png": "6c6e9173449fd150bf64d1e508af65d29269fb23384b1b8f50e2ece6b913cefb",
+    "original.png": "0b38d44be540882f0a30332fdc083e276ff41f8a787571594ef8ff884ebf71ef",
+    "original.svg": "fb83b75ea136e49e8ae05ed82b006d3dd58af2405d7a62cd7238d0c0ef7f3b92",
+    "witness.d2": "8f2f43b667a0f3eb48f696463f15261298ee0a8e3a221f289659b02cd865ad31"
+  },
+  "oracleAssets": {
+    "mathjax.js": "cbbc1051a1f8abb1a181b6aa0fe927c020e3631ca630d19f52d9abb65b5ee869",
+    "polyfills.js": "7fe1d048c78b0e09854c1259f7413868a51cc8f0c822489eb1ac36ae6c85ce01",
+    "setup.js": "a52cb0bbabfbd7796b9fedd793b9386c474e3123e788ee151cbe47ca1fa6e881"
+  }
+}
