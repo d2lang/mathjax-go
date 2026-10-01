@@ -1976,21 +1976,45 @@ func (p *parser) quickQuadText(name string) ([]*mml.Node, error) {
 }
 
 func (p *parser) prescript(name string) ([]*mml.Node, error) {
-	sup, err := p.parseArgument(name)
+	sup, err := p.mathtoolsPrescriptArgument(name, "sup")
 	if err != nil {
 		return nil, err
 	}
-	sub, err := p.parseArgument(name)
+	sub, err := p.mathtoolsPrescriptArgument(name, "sub")
 	if err != nil {
 		return nil, err
 	}
-	base, err := p.parseArgument(name)
+	base, err := p.mathtoolsPrescriptArgument(name, "arg")
 	if err != nil {
 		return nil, err
+	}
+	if sup.Kind == "none" && sub.Kind == "none" {
+		return []*mml.Node{base}, nil
 	}
 	result := node("mmultiscripts", base, node("mprescripts"), sub, sup)
 	result.SetProperty("fixPrescript", true)
 	return []*mml.Node{result}, nil
+}
+
+// MathtoolsUtil.getScript trims each authored argument, represents an empty
+// argument with none, and applies its position's format in a fresh child.
+func (p *parser) mathtoolsPrescriptArgument(name, position string) (*mml.Node, error) {
+	raw, _, err := p.readArgument(name, false)
+	if err != nil {
+		return nil, err
+	}
+	arg := strings.TrimFunc(raw, internalTextSpace)
+	if strings.HasSuffix(arg, "\\") && strings.HasSuffix(raw, " ") {
+		arg += " " // ParseUtil.trimSpaces preserves a terminal control-space.
+	}
+	if arg == "" {
+		return node("none"), nil
+	}
+	format := p.mathtoolsOption("prescript-" + position + "-format")
+	if format != "" && format != "false" {
+		arg = format + "{" + arg + "}"
+	}
+	return p.parseChild(arg)
 }
 
 func unwrapInferred(n *mml.Node) []*mml.Node {
