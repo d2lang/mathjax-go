@@ -11,7 +11,7 @@ import "github.com/d2lang/mathjax-go/internal/ordered"
 // The original readKeyval uses an ordinary JavaScript object: primitive
 // assignments to __proto__ do not create an own property, and Object.keys
 // enumerates array-index properties before other keys.
-func parseUtilKeyvalOptions(text string, allowed func(string) bool) (*ordered.Map[any], error) {
+func parseUtilKeyvalOptions(text string, allowed func(string) bool, errorOnUnknown bool) (*ordered.Map[any], error) {
 	result := ordered.New[any]()
 	rest := text
 	for rest != "" {
@@ -45,7 +45,10 @@ func parseUtilKeyvalOptions(text string, allowed func(string) bool) (*ordered.Ma
 	if allowed != nil {
 		for _, key := range result.JavaScriptKeys() {
 			if !allowed(key) {
-				return nil, texError("InvalidOption", "Invalid option: %s", key)
+				if errorOnUnknown {
+					return nil, texError("InvalidOption", "Invalid option: %s", key)
+				}
+				result.Delete(key)
 			}
 		}
 	}

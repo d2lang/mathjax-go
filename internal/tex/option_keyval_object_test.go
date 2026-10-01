@@ -46,7 +46,7 @@ func TestOptionKeyvalOriginalObjectProperties(t *testing.T) {
 			if c.Validated {
 				allowed = func(key string) bool { return key == "left" || key == "right" }
 			}
-			options, err := parseUtilKeyvalOptions(c.Raw, allowed)
+			options, err := parseUtilKeyvalOptions(c.Raw, allowed, true)
 			if c.Error != nil {
 				failure, ok := err.(*Error)
 				if !ok || failure.ID != c.Error.ID || failure.Message != c.Error.Message {

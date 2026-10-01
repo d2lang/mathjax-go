@@ -1122,16 +1122,16 @@ func elementAttributeTruthy(element *Element, name string) bool {
 }
 
 func (w *wrapper) handleColor(element *Element) {
-	color := stringAttributeExplicit(w.node, "mathcolor")
+	color := colorAttributeExplicit(w.node, "mathcolor")
 	if color == "" {
-		color = stringAttributeExplicit(w.node, "color")
+		color = colorAttributeExplicit(w.node, "color")
 	}
 	if color != "" {
 		element.SetAttr("fill", color).SetAttr("stroke", color)
 	}
-	background := stringAttributeExplicit(w.node, "mathbackground")
+	background := colorAttributeExplicit(w.node, "mathbackground")
 	if background == "" {
-		background = stringAttributeExplicit(w.node, "background")
+		background = colorAttributeExplicit(w.node, "background")
 	}
 	if background == "" && w.styles != nil {
 		background = w.styles.value("background-color")
@@ -1147,6 +1147,26 @@ func (w *wrapper) handleColor(element *Element) {
 			SetAttr("data-bgcolor", "true")
 		element.Prepend(rect)
 	}
+}
+
+// handleColor tests the original attribute value before string coercion.
+// Boolean false must fall through to another explicit color or a style, while
+// strings such as "false" and "0" remain truthy JavaScript strings.
+func colorAttributeExplicit(node *mml.Node, name string) string {
+	if node == nil || node.Attributes == nil {
+		return ""
+	}
+	value, ok := node.Attributes.GetExplicit(name)
+	if !ok {
+		return ""
+	}
+	if text, ok := value.(string); ok {
+		return text
+	}
+	if !truthy(value) {
+		return ""
+	}
+	return fmt.Sprint(value)
 }
 
 func nodeText(node *mml.Node) string {

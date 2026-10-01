@@ -409,7 +409,7 @@ func (p *parser) mathtoolsSetOptions(name string) error {
 	settings, err := parseUtilKeyvalOptions(raw, func(key string) bool {
 		_, ok := mathtoolsDefaults[key]
 		return ok && key != "allow-mathtoolsset"
-	})
+	}, true)
 	if err != nil {
 		return err
 	}
