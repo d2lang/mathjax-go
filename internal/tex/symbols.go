@@ -187,6 +187,7 @@ var simpleMacros = map[string]string{
 	"substack":  "\\begin{subarray}{c}#1\\end{subarray}",
 	"Bra":       "{\\left\\langle {#1} \\right\\vert}",
 	"Ket":       "{\\left\\vert {#1} \\right\\rangle}",
+	"Ketbra":    "{\\left\\vert {#1} \\right\\rangle\\left\\langle {#2} \\right\\vert}",
 	// Mathtools' cramped stack uses the primed script-style array.
 	"crampedsubstack": "\\begin{crampedsubarray}{c}#1\\end{crampedsubarray}",
 	// Physics determinant aliases preserve ordinary macro expansion and lookup.
