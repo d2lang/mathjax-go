@@ -29,6 +29,7 @@ type wrapper struct {
 	explicitFont bool
 	fontFamily   string
 	styles       *wrapperStyles
+	cssFontSize  string // CommonWrapper.removedStyles.fontSize; consumed by getScale.
 	scriptLevel  int
 	displayStyle bool
 	element      *Element
@@ -316,6 +317,17 @@ func (w *wrapper) getScale() {
 		if mml.IsInherit(value) {
 			mathsize = "_inherit_"
 		}
+	}
+	// CommonWrapper.getScale resolves deprecated fontsize before inherited
+	// mathsize. An authored mathsize takes precedence over both fontsize and
+	// the font-size CSS declaration removed during getStyles().
+	fontsize := attribute(w.node, "fontsize", "")
+	if !truthy(fontsize) && w.cssFontSize != "" {
+		fontsize = w.cssFontSize
+	}
+	explicitMathsize, _ := w.node.Attributes.GetExplicit("mathsize")
+	if truthy(fontsize) && !truthy(explicitMathsize) {
+		mathsize = fmt.Sprint(fontsize)
 	}
 	if mathsize != "1" {
 		scale *= layout.Length2Em(mathsize, 1, 1, w.renderer.pxPerEm)
