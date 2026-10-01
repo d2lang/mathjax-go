@@ -24,8 +24,10 @@ go test ./... -run TestMathtoolsPairedOption -count=1
 
 The fixture retains 284 complete SVGs: 274 valid originals and ten rendered
 diagnostics. Against the canonical pre-fix revision `fe29d3a`, 266 valid cases
-fail through `UnknownKeyVal`; eight valid controls and all ten diagnostics are
-unchanged. The 19 direct original method observations bind the exact exclusion
+fail through `UnknownKeyVal`; eight valid controls and eight diagnostics are
+unchanged. Two diagnostic cases now reach the later unknown option, matching the
+original diagnostic; these receive no valid-input parity credit. The 19 direct
+original method observations bind the exact exclusion
 typo and verify boolean/string values, brace handling, duplicate-key replacement,
 and the three forbidden/unknown-key boundaries. No original runtime failures are
 counted as SVG evidence. These finite checks do not establish universal parity.
