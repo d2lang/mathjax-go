@@ -27,6 +27,13 @@ internal pipeline failure.
 
 ## Compatibility tests
 
+Run the full regression suite from a Git checkout, which retains every fixture,
+oracle helper, and visual comparison. An empty `testdata/go.mod` keeps the root
+test-data directory out of published module archives, as recommended by the
+[Go module reference](https://go.dev/ref/mod#vcs-zip). This keeps dependency
+downloads below Go's 500 MiB archive limit; runtime packages and their embedded
+assets remain in the module.
+
 The regular suite is pure Go:
 
 ```sh
