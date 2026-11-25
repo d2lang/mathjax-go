@@ -100,11 +100,20 @@ func TestCheckMovableLimitsDictionaryAndAttributeBoundary(t *testing.T) {
 func TestCheckMovableLimitsContextualFormOrder(t *testing.T) {
 	// A test-only operator distinguishes first matching dictionary entry from
 	// searching all forms for a truthy flag, or honoring explicit form here.
-	oldPrefix, oldInfix := mjOperatorDictionaryPrefix, mjOperatorDictionaryInfix
-	t.Cleanup(func() { mjOperatorDictionaryPrefix, mjOperatorDictionaryInfix = oldPrefix, oldInfix })
+	t.Cleanup(func() { mjOperatorDictionaryOverlay = nil })
 	const symbol = "D058-test"
-	mjOperatorDictionaryPrefix = append([]mjOperatorDictionaryEntry{{Operator: symbol, Definition: mjOperatorDefinition{Properties: mjOperatorProperties{{Name: "movablelimits", Value: true}}}}}, oldPrefix...)
-	mjOperatorDictionaryInfix = append([]mjOperatorDictionaryEntry{{Operator: symbol, Definition: mjOperatorDefinition{}}}, oldInfix...)
+	mjOperatorDictionaryOverlay = func(form, text string) (mjOperatorDefinition, bool) {
+		if text != symbol {
+			return mjOperatorDefinition{}, false
+		}
+		switch form {
+		case "prefix":
+			return mjOperatorDefinition{Properties: mjOperatorProperties{{Name: "movablelimits", Value: true}}}, true
+		case "infix":
+			return mjOperatorDefinition{}, true
+		}
+		return mjOperatorDefinition{}, false
+	}
 	for _, first := range []bool{false, true} {
 		base := token("mo", symbol)
 		base.Attributes.Set("form", "prefix")

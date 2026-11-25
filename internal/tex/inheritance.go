@@ -511,24 +511,81 @@ func checkMathAccent(n *mml.Node) {
 	}
 }
 
+// Positions of the forms in mjOperatorFormStart.
+const (
+	mjOperatorPrefix = iota
+	mjOperatorPostfix
+	mjOperatorInfix
+)
+
+// mjOperatorDictionaryOverlay, if set, is asked before the dictionary of a
+// form. Tests use it to add operators that MathJax does not have.
+var mjOperatorDictionaryOverlay func(form, text string) (mjOperatorDefinition, bool)
+
+// lookupOperatorDefinition returns the entry for text in the first of the
+// given forms whose dictionary has one. A form other than "prefix" and
+// "postfix" selects the infix dictionary.
 func lookupOperatorDefinition(text string, forms []string) (mjOperatorDefinition, bool) {
 	for _, form := range forms {
-		var dictionary []mjOperatorDictionaryEntry
+		if mjOperatorDictionaryOverlay != nil {
+			if definition, ok := mjOperatorDictionaryOverlay(form, text); ok {
+				return definition, true
+			}
+		}
+		index := mjOperatorInfix
 		switch form {
 		case "prefix":
-			dictionary = mjOperatorDictionaryPrefix
+			index = mjOperatorPrefix
 		case "postfix":
-			dictionary = mjOperatorDictionaryPostfix
-		default:
-			dictionary = mjOperatorDictionaryInfix
+			index = mjOperatorPostfix
 		}
-		for _, entry := range dictionary {
-			if entry.Operator == text {
-				return entry.Definition, true
-			}
+		if entry := findOperatorEntry(index, text); entry >= 0 {
+			return operatorDefinitionAt(entry), true
 		}
 	}
 	return mjOperatorDefinition{}, false
+}
+
+// The dictionary is stored without pointers (operator_dictionary_packed_gen.go):
+// the operators of each form are sorted by their bytes and concatenated in
+// mjOperatorText, and each has the number of one of the few distinct
+// definitions.
+
+// findOperatorEntry returns the position of text among the operators of the
+// form with the given index, or -1.
+func findOperatorEntry(form int, text string) int {
+	low, end := int(mjOperatorFormStart[form]), int(mjOperatorFormStart[form+1])
+	high := end
+	for low < high {
+		middle := int(uint(low+high) >> 1)
+		if mjOperatorText[mjOperatorOffsets[middle]:mjOperatorOffsets[middle+1]] < text {
+			low = middle + 1
+		} else {
+			high = middle
+		}
+	}
+	if low < end && mjOperatorText[mjOperatorOffsets[low]:mjOperatorOffsets[low+1]] == text {
+		return low
+	}
+	return -1
+}
+
+// A definition word holds lspace in bits 0-2, rspace in bits 3-5, the TeX
+// class plus one in bits 6-9 and the number of the property list above them.
+const (
+	mjOperatorSpaceBits    = 3
+	mjOperatorTexClassBits = 4
+)
+
+func operatorDefinitionAt(entry int) mjOperatorDefinition {
+	word := int(mjOperatorDefinitionWords[mjOperatorDefinitionIndex[entry]])
+	definition := mjOperatorDefinition{Lspace: word & (1<<mjOperatorSpaceBits - 1)}
+	word >>= mjOperatorSpaceBits
+	definition.Rspace = word & (1<<mjOperatorSpaceBits - 1)
+	word >>= mjOperatorSpaceBits
+	definition.TexClass = word&(1<<mjOperatorTexClassBits-1) - 1
+	definition.Properties = mjOperatorPropertyLists[word>>mjOperatorTexClassBits]
+	return definition
 }
 
 func operatorForms(n *mml.Node) []string {
