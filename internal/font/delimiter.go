@@ -18,7 +18,7 @@ const (
 
 // Delimiter is a source-shaped copy of MathJax DelimiterData. Optional-field
 // flags distinguish absent data from zero values. Returned slice fields are
-// cloned and may be modified by callers.
+// the caller's own and may be modified.
 type Delimiter struct {
 	Direction Direction
 
@@ -41,26 +41,123 @@ type Delimiter struct {
 	HasFullExt bool
 }
 
-func cloneDelimiter(delimiter Delimiter) Delimiter {
-	delimiter.Sizes = append([]float64(nil), delimiter.Sizes...)
-	delimiter.SizeVariants = append([]int(nil), delimiter.SizeVariants...)
-	delimiter.SizeChars = append([]rune(nil), delimiter.SizeChars...)
-	delimiter.Stretch = append([]rune(nil), delimiter.Stretch...)
-	delimiter.StretchVariants = append([]int(nil), delimiter.StretchVariants...)
+// findDelimiter returns the position of codepoint in the generated delimiter
+// tables, or -1.
+func findDelimiter(codepoint rune) int {
+	low, high := 0, len(delimiterCodepoints)
+	for low < high {
+		middle := int(uint(low+high) >> 1)
+		if rune(delimiterCodepoints[middle]) < codepoint {
+			low = middle + 1
+		} else {
+			high = middle
+		}
+	}
+	if low < len(delimiterCodepoints) && rune(delimiterCodepoints[low]) == codepoint {
+		return low
+	}
+	return -1
+}
+
+// Flags in the first word of a delimiter record.
+const (
+	delimiterHorizontal = 1 << iota
+	delimiterHasHDW
+	delimiterHasMin
+	delimiterHasAlias
+	delimiterHasFullExt
+)
+
+// decodeDelimiter rebuilds a Delimiter from its record in the generated
+// table. A record is a sequence of 16-bit words:
+//
+//	flags (the constants above)
+//	five 3-bit list lengths, lowest bits first: sizes, size variants,
+//	    size characters, stretch characters, stretch variants
+//	the entries of those five lists
+//	HDW (three lengths), min (one), alias (one code point) and fullExt (two
+//	    lengths), each only if its flag is set
+//
+// Lengths are int16 values in the unit of the glyph tables. Every call
+// allocates new slices, so callers own what they get; an absent list is nil.
+func decodeDelimiter(record []uint16) Delimiter {
+	flags, counts := record[0], record[1]
+	next := 2
+	count := func() int {
+		n := int(counts & 7)
+		counts >>= 3
+		return n
+	}
+	length := func() float64 {
+		value := glyphLength(int16(record[next]))
+		next++
+		return value
+	}
+	delimiter := Delimiter{Direction: DirectionVertical}
+	if flags&delimiterHorizontal != 0 {
+		delimiter.Direction = DirectionHorizontal
+	}
+	if n := count(); n != 0 {
+		delimiter.Sizes = make([]float64, n)
+		for i := range delimiter.Sizes {
+			delimiter.Sizes[i] = length()
+		}
+	}
+	if n := count(); n != 0 {
+		delimiter.SizeVariants = make([]int, n)
+		for i := range delimiter.SizeVariants {
+			delimiter.SizeVariants[i] = int(record[next])
+			next++
+		}
+	}
+	if n := count(); n != 0 {
+		delimiter.SizeChars = make([]rune, n)
+		for i := range delimiter.SizeChars {
+			delimiter.SizeChars[i] = rune(record[next])
+			next++
+		}
+	}
+	if n := count(); n != 0 {
+		delimiter.Stretch = make([]rune, n)
+		for i := range delimiter.Stretch {
+			delimiter.Stretch[i] = rune(record[next])
+			next++
+		}
+	}
+	if n := count(); n != 0 {
+		delimiter.StretchVariants = make([]int, n)
+		for i := range delimiter.StretchVariants {
+			delimiter.StretchVariants[i] = int(record[next])
+			next++
+		}
+	}
+	if flags&delimiterHasHDW != 0 {
+		delimiter.HDW, delimiter.HasHDW = [3]float64{length(), length(), length()}, true
+	}
+	if flags&delimiterHasMin != 0 {
+		delimiter.Min, delimiter.HasMin = length(), true
+	}
+	if flags&delimiterHasAlias != 0 {
+		delimiter.Alias, delimiter.HasAlias = rune(record[next]), true
+		next++
+	}
+	if flags&delimiterHasFullExt != 0 {
+		delimiter.FullExt, delimiter.HasFullExt = [2]float64{length(), length()}, true
+	}
 	return delimiter
 }
 
 // LookupDelimiter returns the exact MathJax delimiter-table entry.
 func LookupDelimiter(codepoint rune) (Delimiter, bool) {
-	delimiter, ok := delimiterTable[codepoint]
-	if !ok {
+	index := findDelimiter(codepoint)
+	if index < 0 {
 		return Delimiter{}, false
 	}
-	return cloneDelimiter(delimiter), true
+	return decodeDelimiter(delimiterData[delimiterOffsets[index]:delimiterOffsets[index+1]]), true
 }
 
 // DelimiterCount returns the number of entries in the upstream table.
-func DelimiterCount() int { return len(delimiterTable) }
+func DelimiterCount() int { return len(delimiterCodepoints) }
 
 var sizeVariants = [...]Variant{Normal, SmallOp, LargeOp, Size3, Size4, TeXVariant}
 var stretchVariants = [...]Variant{Size4}

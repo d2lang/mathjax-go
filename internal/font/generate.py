@@ -278,29 +278,8 @@ def delimiter_object(text: str) -> dict[int, Any]:
     return delimiters
 
 
-def go_number(number: Number) -> str:
-    raw = number.raw
-    if raw.startswith("-."):
-        return "-0" + raw[1:]
-    if raw.startswith("."):
-        return "0" + raw
-    return raw
-
-
 def go_string(value: str) -> str:
     return json.dumps(value, ensure_ascii=True, separators=(",", ":"))
-
-
-def go_float_slice(values: list[Number]) -> str:
-    return "[]float64{" + ", ".join(go_number(value) for value in values) + "}"
-
-
-def go_int_slice(values: list[Number]) -> str:
-    return "[]int{" + ", ".join(str(value.integer) for value in values) + "}"
-
-
-def go_rune_slice(values: list[Number]) -> str:
-    return "[]rune{" + ", ".join(f"0x{value.integer:X}" for value in values) + "}"
 
 
 # Lengths are stored as integers in units of 1/10000 em. MathJax writes them
@@ -460,46 +439,87 @@ def write_glyphs(
     (output / "data_glyphs_gen.go").write_text("".join(lines))
 
 
-def render_delimiter(data: dict[str, Any]) -> str:
+def delimiter_record(data: dict[str, Any]) -> list[int]:
+    """Encode one DelimiterData as 16-bit words; delimiter.go has the layout."""
     allowed = {"dir", "sizes", "variants", "schar", "stretch", "stretchv", "HDW", "min", "c", "fullExt"}
     unknown = set(data) - allowed
     if unknown:
         raise ValueError(f"unsupported DelimiterData: {sorted(unknown)}")
-    direction = {"V": "DirectionVertical", "H": "DirectionHorizontal"}[data["dir"]]
-    fields = [f"Direction: {direction}"]
-    if "sizes" in data:
-        fields.append(f"Sizes: {go_float_slice(data['sizes'])}")
-    if "variants" in data:
-        fields.append(f"SizeVariants: {go_int_slice(data['variants'])}")
-    if "schar" in data:
-        fields.append(f"SizeChars: {go_rune_slice(data['schar'])}")
-    if "stretch" in data:
-        fields.append(f"Stretch: {go_rune_slice(data['stretch'])}")
-    if "stretchv" in data:
-        fields.append(f"StretchVariants: {go_int_slice(data['stretchv'])}")
+
+    def word(value: int) -> int:
+        if not 0 <= value < 1 << 16:
+            raise ValueError(f"{value} does not fit a 16-bit delimiter word")
+        return value
+
+    def lengths(values: list[Number]) -> list[int]:
+        return [length_units(value) & 0xFFFF for value in values]
+
+    def integers(values: list[Number]) -> list[int]:
+        return [word(value.integer) for value in values]
+
+    flags = {"V": 0, "H": 1}[data["dir"]]
+    lists = [
+        lengths(data.get("sizes", [])),
+        integers(data.get("variants", [])),
+        integers(data.get("schar", [])),
+        integers(data.get("stretch", [])),
+        integers(data.get("stretchv", [])),
+    ]
+    counts = 0
+    for position, values in enumerate(lists):
+        if len(values) > 7:
+            raise ValueError("delimiter list longer than seven entries")
+        counts |= len(values) << (3 * position)
+    tail: list[int] = []
     if "HDW" in data:
-        values = data["HDW"]
-        fields.extend((
-            "HDW: [3]float64{" + ", ".join(go_number(value) for value in values) + "}",
-            "HasHDW: true",
-        ))
+        if len(data["HDW"]) != 3:
+            raise ValueError("HDW must have three entries")
+        flags |= 1 << 1
+        tail += lengths(data["HDW"])
     if "min" in data:
-        fields.extend((f"Min: {go_number(data['min'])}", "HasMin: true"))
+        flags |= 1 << 2
+        tail += lengths([data["min"]])
     if "c" in data:
-        fields.extend((f"Alias: 0x{data['c'].integer:X}", "HasAlias: true"))
+        flags |= 1 << 3
+        tail += integers([data["c"]])
     if "fullExt" in data:
-        values = data["fullExt"]
-        fields.extend((
-            "FullExt: [2]float64{" + ", ".join(go_number(value) for value in values) + "}",
-            "HasFullExt: true",
-        ))
-    return "Delimiter{" + ", ".join(fields) + "}"
+        if len(data["fullExt"]) != 2:
+            raise ValueError("fullExt must have two entries")
+        flags |= 1 << 4
+        tail += lengths(data["fullExt"])
+    return [flags, counts] + [value for values in lists for value in values] + tail
 
 
 def write_delimiters(output: Path, delimiters: dict[int, dict[str, Any]]) -> None:
-    lines = [GENERATED_HEADER, "var delimiterTable = map[rune]Delimiter{\n"]
-    for codepoint in sorted(delimiters):
-        lines.append(f"\t0x{codepoint:X}: {render_delimiter(delimiters[codepoint])},\n")
+    ordered = sorted(delimiters)
+    if any(not 0 <= codepoint < 1 << 16 for codepoint in ordered):
+        raise ValueError("delimiter code point does not fit 16 bits")
+    records = [delimiter_record(delimiters[codepoint]) for codepoint in ordered]
+    offsets = [0]
+    for record in records:
+        offsets.append(offsets[-1] + len(record))
+    if offsets[-1] >= 1 << 16:
+        raise ValueError("delimiter data does not fit 16-bit offsets")
+    lines = [
+        GENERATED_HEADER,
+        "// delimiterCodepoints holds the stretchy delimiters in increasing order.\n",
+        "var delimiterCodepoints = [...]uint16{\n",
+    ]
+    lines.extend(go_table([f"0x{codepoint:X}" for codepoint in ordered], 12))
+    lines.extend((
+        "}\n\n",
+        "// The record of delimiter i is delimiterData[delimiterOffsets[i]:delimiterOffsets[i+1]].\n",
+        "var delimiterOffsets = [...]uint16{\n",
+    ))
+    lines.extend(go_table([str(value) for value in offsets], 12))
+    lines.extend((
+        "}\n\n",
+        "// delimiterData holds one record per line; decodeDelimiter documents the layout.\n",
+        "var delimiterData = [...]uint16{\n",
+    ))
+    for codepoint, record in zip(ordered, records):
+        values = ", ".join(f"0x{value:X}" if position < 2 else str(value) for position, value in enumerate(record))
+        lines.append(f"\t/* {codepoint:X} */ {values},\n")
     lines.append("}\n")
     (output / "data_delimiters_gen.go").write_text("".join(lines))
 

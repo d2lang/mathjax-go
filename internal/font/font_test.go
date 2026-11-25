@@ -9,7 +9,6 @@ import (
 	"encoding/hex"
 	"math"
 	"slices"
-	"sort"
 	"testing"
 )
 
@@ -209,14 +208,13 @@ func generatedTableHash() string {
 			writeString(hash, glyph.Content)
 		}
 	}
-	delimiters := make([]rune, 0, len(delimiterTable))
-	for codepoint := range delimiterTable {
-		delimiters = append(delimiters, codepoint)
-	}
-	sort.Slice(delimiters, func(i, j int) bool { return delimiters[i] < delimiters[j] })
-	writeUint64(hash, uint64(len(delimiters)))
-	for _, codepoint := range delimiters {
-		delimiter := delimiterTable[codepoint]
+	writeUint64(hash, uint64(len(delimiterCodepoints)))
+	for _, entry := range delimiterCodepoints {
+		codepoint := rune(entry)
+		delimiter, ok := LookupDelimiter(codepoint)
+		if !ok {
+			panic("generated delimiter is missing from its own table")
+		}
 		writeUint64(hash, uint64(codepoint))
 		writeUint64(hash, uint64(delimiter.Direction))
 		writeFloats(hash, delimiter.Sizes)
@@ -240,9 +238,10 @@ func generatedTableHash() string {
 	return hex.EncodeToString(hash.Sum(nil))
 }
 
-// The digest was taken from the map[rune]glyphData tables that preceded the
-// packed ones, so it pins every code point, every bit of every metric and
-// every outline to the values those maps held.
+// The digest was taken from the map[rune]glyphData and map[rune]Delimiter
+// tables that preceded the packed ones, so it pins every code point, every bit
+// of every metric, every outline and every delimiter field to the values
+// those maps held.
 func TestGeneratedTableHash(t *testing.T) {
 	const expected = "900a71cf3d7d3c1710b3d331efe04b9cbca20cd6020ef0c26b2eced3333d9a71"
 	if got := generatedTableHash(); got != expected {
@@ -287,6 +286,58 @@ func TestGlyphTablesAreSearchable(t *testing.T) {
 	for i, index := range glyphStrings {
 		if int(index)+1 >= len(glyphStringOffsets) {
 			t.Fatalf("glyph %d: string index %d out of range", i, index)
+		}
+	}
+}
+
+func TestDelimiterTablesAreSearchable(t *testing.T) {
+	if len(delimiterOffsets) != len(delimiterCodepoints)+1 || delimiterOffsets[0] != 0 {
+		t.Fatalf("%d offsets for %d delimiters", len(delimiterOffsets), len(delimiterCodepoints))
+	}
+	if int(delimiterOffsets[len(delimiterCodepoints)]) != len(delimiterData) {
+		t.Fatal("delimiter offsets do not end at the end of the data")
+	}
+	hits := 0
+	for codepoint := rune(-1); codepoint <= 0x110000; codepoint++ {
+		delimiter, ok := LookupDelimiter(codepoint)
+		if !ok {
+			if delimiter.Direction != DirectionNone || delimiter.Sizes != nil || delimiter.Stretch != nil || delimiter.HasHDW {
+				t.Fatalf("U+%04X: a miss returned %#v", codepoint, delimiter)
+			}
+			continue
+		}
+		if hits >= len(delimiterCodepoints) || rune(delimiterCodepoints[hits]) != codepoint {
+			t.Fatalf("U+%04X: found, but it is not the next table entry", codepoint)
+		}
+		hits++
+	}
+	if hits != DelimiterCount() {
+		t.Fatalf("%d code points resolve, table has %d", hits, DelimiterCount())
+	}
+	for i, codepoint := range delimiterCodepoints {
+		if i > 0 && delimiterCodepoints[i-1] >= codepoint {
+			t.Fatalf("delimiters U+%04X, U+%04X are not increasing", delimiterCodepoints[i-1], codepoint)
+		}
+		// Count the words a record must have from its own header.
+		record := delimiterData[delimiterOffsets[i]:delimiterOffsets[i+1]]
+		words := 2
+		for counts := record[1]; counts != 0; counts >>= 3 {
+			words += int(counts & 7)
+		}
+		for flag, size := range map[uint16]int{delimiterHasHDW: 3, delimiterHasMin: 1, delimiterHasAlias: 1, delimiterHasFullExt: 2} {
+			if record[0]&flag != 0 {
+				words += size
+			}
+		}
+		if words != len(record) || record[0] >= 1<<5 || record[1] >= 1<<15 {
+			t.Fatalf("U+%04X: record of %d words describes %d", codepoint, len(record), words)
+		}
+		// The maps this table replaced gave nil for every absent list.
+		delimiter, _ := LookupDelimiter(rune(codepoint))
+		if (delimiter.Sizes != nil && len(delimiter.Sizes) == 0) || (delimiter.SizeVariants != nil && len(delimiter.SizeVariants) == 0) ||
+			(delimiter.SizeChars != nil && len(delimiter.SizeChars) == 0) || (delimiter.Stretch != nil && len(delimiter.Stretch) == 0) ||
+			(delimiter.StretchVariants != nil && len(delimiter.StretchVariants) == 0) {
+			t.Fatalf("U+%04X: an absent list is not nil", codepoint)
 		}
 	}
 }
