@@ -611,7 +611,7 @@ func (w *wrapper) computeTextBBox(bbox *layout.BBox) {
 	}
 	text := w.remappedText()
 	for _, codepoint := range text {
-		glyph, ok := font.Lookup(variant, codepoint)
+		metrics, ok := font.LookupMetrics(variant, codepoint)
 		if !ok {
 			if isCJK(codepoint) {
 				bbox.W++
@@ -625,7 +625,6 @@ func (w *wrapper) computeTextBBox(bbox *layout.BBox) {
 			bbox.IC, bbox.Skew = 0, 0
 			continue
 		}
-		metrics := glyph.Metrics
 		bbox.W += metrics.Width
 		bbox.H = math.Max(bbox.H, metrics.Height)
 		bbox.D = math.Max(bbox.D, metrics.Depth)

@@ -43,12 +43,61 @@ const (
 	TeXVariant          Variant = "-tex-variant"
 )
 
-var variants = [...]Variant{
-	Normal, Bold, Italic, BoldItalic, DoubleStruck, Fraktur, BoldFraktur,
-	Script, BoldScript, SansSerif, BoldSansSerif, SansSerifItalic,
-	SansSerifBoldItalic, Monospace, SmallOp, LargeOp, Size3, Size4,
-	TeXCalligraphic, TeXBoldCalligraphic, TeXMathItalic, TeXOldStyle,
-	TeXBoldOldStyle, TeXVariant,
+// Positions of the variants in the variants array, which is the order of
+// TeXFont.defaultChars and of the generated glyph tables.
+const (
+	indexNormal = iota
+	indexBold
+	indexItalic
+	indexBoldItalic
+	indexDoubleStruck
+	indexFraktur
+	indexBoldFraktur
+	indexScript
+	indexBoldScript
+	indexSansSerif
+	indexBoldSansSerif
+	indexSansSerifItalic
+	indexSansSerifBoldItalic
+	indexMonospace
+	indexSmallOp
+	indexLargeOp
+	indexSize3
+	indexSize4
+	indexTeXCalligraphic
+	indexTeXBoldCalligraphic
+	indexTeXMathItalic
+	indexTeXOldStyle
+	indexTeXBoldOldStyle
+	indexTeXVariant
+	variantCount
+)
+
+var variants = [variantCount]Variant{
+	indexNormal:              Normal,
+	indexBold:                Bold,
+	indexItalic:              Italic,
+	indexBoldItalic:          BoldItalic,
+	indexDoubleStruck:        DoubleStruck,
+	indexFraktur:             Fraktur,
+	indexBoldFraktur:         BoldFraktur,
+	indexScript:              Script,
+	indexBoldScript:          BoldScript,
+	indexSansSerif:           SansSerif,
+	indexBoldSansSerif:       BoldSansSerif,
+	indexSansSerifItalic:     SansSerifItalic,
+	indexSansSerifBoldItalic: SansSerifBoldItalic,
+	indexMonospace:           Monospace,
+	indexSmallOp:             SmallOp,
+	indexLargeOp:             LargeOp,
+	indexSize3:               Size3,
+	indexSize4:               Size4,
+	indexTeXCalligraphic:     TeXCalligraphic,
+	indexTeXBoldCalligraphic: TeXBoldCalligraphic,
+	indexTeXMathItalic:       TeXMathItalic,
+	indexTeXOldStyle:         TeXOldStyle,
+	indexTeXBoldOldStyle:     TeXBoldOldStyle,
+	indexTeXVariant:          TeXVariant,
 }
 
 // Variants returns the canonical variants in MathJax source order.
@@ -94,39 +143,43 @@ type Glyph struct {
 	Content   string
 }
 
+// noVariant marks a variant without a link, or the end of an inheritance
+// chain.
+const noVariant = -1
+
 type variantRule struct {
-	inherit Variant
-	link    Variant
+	inherit int8
+	link    int8
 }
 
 // These rules reproduce FontData.defaultVariants followed by the additional
 // CommonTeXFontMixin variants. A link contributes only its own character map;
 // inheritance follows the complete fallback chain.
-var variantRules = map[Variant]variantRule{
-	Normal:              {},
-	Bold:                {inherit: Normal},
-	Italic:              {inherit: Normal},
-	BoldItalic:          {inherit: Italic, link: Bold},
-	DoubleStruck:        {inherit: Bold},
-	Fraktur:             {inherit: Normal},
-	BoldFraktur:         {inherit: Bold, link: Fraktur},
-	Script:              {inherit: Italic},
-	BoldScript:          {inherit: BoldItalic, link: Script},
-	SansSerif:           {inherit: Normal},
-	BoldSansSerif:       {inherit: Bold, link: SansSerif},
-	SansSerifItalic:     {inherit: Italic, link: SansSerif},
-	SansSerifBoldItalic: {inherit: BoldItalic, link: BoldSansSerif},
-	Monospace:           {inherit: Normal},
-	SmallOp:             {inherit: Normal},
-	LargeOp:             {inherit: Normal},
-	Size3:               {inherit: Normal},
-	Size4:               {inherit: Normal},
-	TeXCalligraphic:     {inherit: Italic},
-	TeXBoldCalligraphic: {inherit: BoldItalic},
-	TeXMathItalic:       {inherit: Italic},
-	TeXOldStyle:         {inherit: Normal},
-	TeXBoldOldStyle:     {inherit: Bold},
-	TeXVariant:          {inherit: Normal},
+var variantRules = [variantCount]variantRule{
+	indexNormal:              {inherit: noVariant, link: noVariant},
+	indexBold:                {inherit: indexNormal, link: noVariant},
+	indexItalic:              {inherit: indexNormal, link: noVariant},
+	indexBoldItalic:          {inherit: indexItalic, link: indexBold},
+	indexDoubleStruck:        {inherit: indexBold, link: noVariant},
+	indexFraktur:             {inherit: indexNormal, link: noVariant},
+	indexBoldFraktur:         {inherit: indexBold, link: indexFraktur},
+	indexScript:              {inherit: indexItalic, link: noVariant},
+	indexBoldScript:          {inherit: indexBoldItalic, link: indexScript},
+	indexSansSerif:           {inherit: indexNormal, link: noVariant},
+	indexBoldSansSerif:       {inherit: indexBold, link: indexSansSerif},
+	indexSansSerifItalic:     {inherit: indexItalic, link: indexSansSerif},
+	indexSansSerifBoldItalic: {inherit: indexBoldItalic, link: indexBoldSansSerif},
+	indexMonospace:           {inherit: indexNormal, link: noVariant},
+	indexSmallOp:             {inherit: indexNormal, link: noVariant},
+	indexLargeOp:             {inherit: indexNormal, link: noVariant},
+	indexSize3:               {inherit: indexNormal, link: noVariant},
+	indexSize4:               {inherit: indexNormal, link: noVariant},
+	indexTeXCalligraphic:     {inherit: indexItalic, link: noVariant},
+	indexTeXBoldCalligraphic: {inherit: indexBoldItalic, link: noVariant},
+	indexTeXMathItalic:       {inherit: indexItalic, link: noVariant},
+	indexTeXOldStyle:         {inherit: indexNormal, link: noVariant},
+	indexTeXBoldOldStyle:     {inherit: indexBold, link: noVariant},
+	indexTeXVariant:          {inherit: indexNormal, link: noVariant},
 }
 
 // LookupExact returns only a source-table entry, without variant inheritance
@@ -199,80 +252,115 @@ func glyphStringsAt(glyph int) (path, content string) {
 	return text, ""
 }
 
-func lookupOwn(variant Variant, codepoint rune) (Glyph, bool) {
-	if glyph, ok := LookupExact(variant, codepoint); ok {
-		return glyph, true
-	}
-	if smp, ok := smpCodepoint(variant, codepoint); ok {
-		return Glyph{Codepoint: smp, Variant: variant}, true
-	}
-	return Glyph{}, false
+// location is where an effective lookup ended: at an entry of the generated
+// tables, or (glyph < 0) at the code point that a variant substitutes from
+// Unicode's Mathematical Alphanumeric Symbols block and that still has to be
+// looked up itself.
+type location struct {
+	variant   int
+	codepoint rune
+	glyph     int
 }
 
-func lookupEffective(variant Variant, codepoint rune) (Glyph, bool) {
-	if glyph, ok := lookupOwn(variant, codepoint); ok {
-		return glyph, true
+// isRemap reports whether l is a substitution for codepoint, not a glyph.
+func (l location) isRemap(codepoint rune) bool { return l.glyph < 0 && l.codepoint != codepoint }
+
+func lookupOwn(variant int, codepoint rune) (location, bool) {
+	if glyph := findGlyph(variant, codepoint); glyph >= 0 {
+		return location{variant: variant, codepoint: codepoint, glyph: glyph}, true
 	}
-	rule, ok := variantRules[variant]
-	if !ok {
-		return Glyph{}, false
+	if smp, ok := smpCodepoint(variant, codepoint); ok {
+		return location{variant: variant, codepoint: smp, glyph: -1}, true
 	}
-	if rule.link != "" {
-		if glyph, ok := lookupOwn(rule.link, codepoint); ok {
-			return glyph, true
+	return location{}, false
+}
+
+func lookupEffective(variant int, codepoint rune) (location, bool) {
+	for {
+		if found, ok := lookupOwn(variant, codepoint); ok {
+			return found, true
 		}
+		rule := variantRules[variant]
+		if rule.link != noVariant {
+			if found, ok := lookupOwn(int(rule.link), codepoint); ok {
+				return found, true
+			}
+		}
+		if rule.inherit == noVariant {
+			return location{}, false
+		}
+		variant = int(rule.inherit)
 	}
-	if rule.inherit != "" {
-		return lookupEffective(rule.inherit, codepoint)
-	}
-	return Glyph{}, false
 }
 
 // RemapCodepoint applies the effective variant's mathematical-alphabet mapping
 // before glyph lookup, as CommonWrapper.unicodeChars does. Keep the mapped
 // character even when no bundled outline exists: it is also the text fallback.
 func RemapCodepoint(variant Variant, codepoint rune) rune {
-	glyph, ok := lookupEffective(variant, codepoint)
-	if ok && glyph.Codepoint != codepoint && glyph.Path == "" && glyph.Content == "" && glyph.Metrics == (Metrics{}) {
-		return glyph.Codepoint
+	index := variantIndex(variant)
+	if index < 0 {
+		return codepoint
+	}
+	if found, ok := lookupEffective(index, codepoint); ok && found.isRemap(codepoint) {
+		return found.codepoint
 	}
 	return codepoint
+}
+
+// locate performs MathJax's effective lookup, including variant link and
+// inheritance precedence and Basic Latin/Greek remapping into Unicode's
+// Mathematical Alphanumeric Symbols block.
+func locate(variant Variant, codepoint rune) (location, bool) {
+	index := variantIndex(variant)
+	if index < 0 {
+		return location{}, false
+	}
+	found, ok := lookupEffective(index, codepoint)
+	if !ok {
+		return location{}, false
+	}
+	// Resolve a substituted code point through the same variant, just as
+	// Wrapper.unicodeChars() does before SVG lookup.
+	if found.isRemap(codepoint) {
+		return lookupEffective(index, found.codepoint)
+	}
+	return found, true
 }
 
 // Lookup performs MathJax's effective lookup, including variant link and
 // inheritance precedence and Basic Latin/Greek remapping into Unicode's
 // Mathematical Alphanumeric Symbols block.
 func Lookup(variant Variant, codepoint rune) (Glyph, bool) {
-	if !ValidVariant(variant) {
-		return Glyph{}, false
-	}
-	glyph, ok := lookupEffective(variant, codepoint)
+	found, ok := locate(variant, codepoint)
 	if !ok {
 		return Glyph{}, false
 	}
-	// A glyph whose metrics are all zero and whose path/content are empty is a
-	// synthetic SMP remap marker. Resolve that codepoint through the same
-	// variant, just as Wrapper.unicodeChars() does before SVG lookup.
-	if glyph.Codepoint != codepoint && glyph.Path == "" && glyph.Content == "" && glyph.Metrics == (Metrics{}) {
-		return lookupEffective(variant, glyph.Codepoint)
+	glyph := Glyph{Codepoint: found.codepoint, Variant: variants[found.variant]}
+	if found.glyph >= 0 {
+		glyph.Metrics = glyphMetricsAt(found.glyph)
+		glyph.Path, glyph.Content = glyphStringsAt(found.glyph)
 	}
 	return glyph, true
 }
 
-// LookupMetrics is a convenience wrapper for layout code.
+// LookupMetrics is Lookup for layout code, which does not need the outline.
 func LookupMetrics(variant Variant, codepoint rune) (Metrics, bool) {
-	glyph, ok := Lookup(variant, codepoint)
-	return glyph.Metrics, ok
+	found, ok := locate(variant, codepoint)
+	if !ok || found.glyph < 0 {
+		return Metrics{}, ok
+	}
+	return glyphMetricsAt(found.glyph), true
 }
 
 // LookupPath is a convenience wrapper for SVG code. The boolean reports glyph
 // presence; an empty path is valid for spaces and Content substitutions.
 func LookupPath(variant Variant, codepoint rune) (path, content string, ok bool) {
-	glyph, ok := Lookup(variant, codepoint)
-	if !ok {
-		return "", "", false
+	found, ok := locate(variant, codepoint)
+	if !ok || found.glyph < 0 {
+		return "", "", ok
 	}
-	return glyph.Path, glyph.Content, true
+	path, content = glyphStringsAt(found.glyph)
+	return path, content, true
 }
 
 // ExactGlyphCount returns the number of entries in the upstream source table.

@@ -26,11 +26,11 @@ func (w *wrapper) stretchPart(index int) (rune, font.Variant, font.Metrics, bool
 		return 0, "", font.Metrics{}, false
 	}
 	codepoint := w.stretch.Stretch[index]
-	glyph, ok := font.Lookup(variant, codepoint)
+	metrics, ok := font.LookupMetrics(variant, codepoint)
 	if !ok {
 		return 0, "", font.Metrics{}, false
 	}
-	return codepoint, variant, glyph.Metrics, true
+	return codepoint, variant, metrics, true
 }
 
 func (w *wrapper) addStretchGlyph(element *Element, index int, x, y float64) float64 {
