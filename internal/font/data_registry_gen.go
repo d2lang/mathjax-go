@@ -18,33 +18,6 @@
 
 package font
 
-var glyphTables = map[Variant]map[rune]glyphData{
-	Normal:              glyphTableNormal,
-	Bold:                glyphTableBold,
-	Italic:              glyphTableItalic,
-	BoldItalic:          glyphTableBoldItalic,
-	DoubleStruck:        glyphTableDoubleStruck,
-	Fraktur:             glyphTableFraktur,
-	BoldFraktur:         glyphTableBoldFraktur,
-	Script:              glyphTableScript,
-	BoldScript:          glyphTableBoldScript,
-	SansSerif:           glyphTableSansSerif,
-	BoldSansSerif:       glyphTableBoldSansSerif,
-	SansSerifItalic:     glyphTableSansSerifItalic,
-	SansSerifBoldItalic: glyphTableSansSerifBoldItalic,
-	Monospace:           glyphTableMonospace,
-	SmallOp:             glyphTableSmallOp,
-	LargeOp:             glyphTableLargeOp,
-	Size3:               glyphTableSize3,
-	Size4:               glyphTableSize4,
-	TeXCalligraphic:     glyphTableTeXCalligraphic,
-	TeXBoldCalligraphic: glyphTableTeXBoldCalligraphic,
-	TeXMathItalic:       glyphTableTeXMathItalic,
-	TeXOldStyle:         glyphTableTeXOldStyle,
-	TeXBoldOldStyle:     glyphTableTeXBoldOldStyle,
-	TeXVariant:          glyphTableTeXVariant,
-}
-
 // Source hashes cover sorted relative names, NUL, exact source bytes, and NUL.
 const CommonSourceSHA256 = "6270255b8b5b5c21e09a62261be09d677860135be814d0d031f09b3b4c6e8c28"
 const SVGSourceSHA256 = "bfc1e17685cb4d3a30eb3ee674f15c6b95519a745030fc3b4d3126cda98ba888"

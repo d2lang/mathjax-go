@@ -20,6 +20,7 @@ import hashlib
 import json
 import os
 from dataclasses import dataclass
+from decimal import Decimal
 from pathlib import Path
 import re
 import sys
@@ -302,50 +303,161 @@ def go_rune_slice(values: list[Number]) -> str:
     return "[]rune{" + ", ".join(f"0x{value.integer:X}" for value in values) + "}"
 
 
-def render_metrics(values: list[Any]) -> str:
+# Lengths are stored as integers in units of 1/10000 em. MathJax writes them
+# with at most four decimals, and float64(n)/10000 is then the same double as
+# the decimal literal: both are the correctly rounded value of n/10000.
+LENGTH_UNIT = 10000
+NO_OPTION = -(1 << 15)
+
+
+def length_units(number: Number) -> int:
+    scaled = Decimal(number.raw) * LENGTH_UNIT
+    units = int(scaled)
+    if scaled != units:
+        raise ValueError(f"{number.raw} has more than four decimals")
+    if not NO_OPTION < units < (1 << 15):
+        raise ValueError(f"{number.raw} does not fit a 16-bit length")
+    if float(units) / LENGTH_UNIT != number.floating:
+        raise ValueError(f"{number.raw} does not survive scaling by {LENGTH_UNIT}")
+    return units
+
+
+def glyph_metrics(values: list[Any]) -> list[int]:
+    """Return height, depth, width, italic correction and skew in length units."""
     if len(values) not in (3, 4):
         raise ValueError(f"unexpected CharData length {len(values)}")
-    parts = [
-        f"Height: {go_number(values[0])}",
-        f"Depth: {go_number(values[1])}",
-        f"Width: {go_number(values[2])}",
-    ]
+    units = [length_units(value) for value in values[:3]] + [NO_OPTION, NO_OPTION]
     if len(values) == 4:
         options = values[3]
         unknown = set(options) - {"ic", "sk"}
         if unknown:
             raise ValueError(f"unsupported CharOptions: {sorted(unknown)}")
         if "ic" in options:
-            parts.extend((f"ItalicCorrection: {go_number(options['ic'])}", "HasItalicCorrection: true"))
+            units[3] = length_units(options["ic"])
         if "sk" in options:
-            parts.extend((f"Skew: {go_number(options['sk'])}", "HasSkew: true"))
-    return "Metrics{" + ", ".join(parts) + "}"
+            units[4] = length_units(options["sk"])
+    return units
 
 
-def write_variant(
+def go_table(values: list[str], per_line: int) -> list[str]:
+    return [
+        "\t" + ", ".join(values[start : start + per_line]) + ",\n"
+        for start in range(0, len(values), per_line)
+    ]
+
+
+def write_glyphs(
     output: Path,
-    source_name: str,
-    go_name: str,
-    metrics: dict[int, list[Any]],
-    paths: dict[int, str],
-    content: dict[int, str],
+    tables: list[tuple[str, str, dict[int, list[Any]], dict[int, str], dict[int, str]]],
 ) -> None:
-    if set(paths) & set(content):
-        raise ValueError(f"{source_name}: path and content maps overlap")
-    if set(metrics) != set(paths) | set(content):
-        missing = sorted(set(metrics) - set(paths) - set(content))
-        extra = sorted((set(paths) | set(content)) - set(metrics))
-        raise ValueError(f"{source_name}: SVG coverage mismatch missing={missing[:5]} extra={extra[:5]}")
-    lines = [GENERATED_HEADER, f"var glyphTable{go_name} = map[rune]glyphData{{\n"]
-    for codepoint in sorted(metrics):
-        fields = [f"Metrics: {render_metrics(metrics[codepoint])}"]
-        if codepoint in paths:
-            fields.append(f"Path: {go_string(paths[codepoint])}")
-        if codepoint in content:
-            fields.append(f"Content: {go_string(content[codepoint])}")
-        lines.append(f"\t0x{codepoint:X}: {{{', '.join(fields)}}},\n")
-    lines.append("}\n")
-    (output / f"data_{source_name.replace('-', '_')}_gen.go").write_text("".join(lines))
+    """Write every variant's glyphs as pointer-free tables.
+
+    A Go map of structs costs a hash bucket slot, a string header and a
+    garbage-collector root per glyph. Sorted code points, integer metrics and
+    one shared string avoid all three.
+    """
+    starts = [0]
+    codepoints: list[tuple[str, list[int]]] = []
+    metric_rows: list[tuple[str, list[tuple[int, list[int]]]]] = []
+    string_of_glyph: list[int] = []
+    # Index 0 is the empty outline. Outlines come first and substitution
+    # strings after them, so one index says which of the two a glyph has.
+    path_index: dict[str, int] = {"": 0}
+    path_list: list[str] = [""]
+    content_index: dict[str, int] = {}
+    content_list: list[str] = []
+    pending_content: list[tuple[int, str]] = []
+    for source_name, go_name, metrics, paths, content in tables:
+        if set(paths) & set(content):
+            raise ValueError(f"{source_name}: path and content maps overlap")
+        if set(metrics) != set(paths) | set(content):
+            missing = sorted(set(metrics) - set(paths) - set(content))
+            extra = sorted((set(paths) | set(content)) - set(metrics))
+            raise ValueError(f"{source_name}: SVG coverage mismatch missing={missing[:5]} extra={extra[:5]}")
+        ordered = sorted(metrics)
+        if any(codepoint < 0 or codepoint > 0x10FFFF for codepoint in ordered):
+            raise ValueError(f"{source_name}: code point out of range")
+        codepoints.append((go_name, ordered))
+        metric_rows.append((go_name, [(codepoint, glyph_metrics(metrics[codepoint])) for codepoint in ordered]))
+        for codepoint in ordered:
+            if codepoint in content:
+                text = content[codepoint]
+                if text == "":
+                    raise ValueError(f"{source_name}: empty substitution for U+{codepoint:04X}")
+                if text not in content_index:
+                    content_index[text] = len(content_list)
+                    content_list.append(text)
+                pending_content.append((len(string_of_glyph), text))
+                string_of_glyph.append(-1)
+            else:
+                text = paths[codepoint]
+                if text not in path_index:
+                    path_index[text] = len(path_list)
+                    path_list.append(text)
+                string_of_glyph.append(path_index[text])
+        starts.append(starts[-1] + len(ordered))
+    first_content = len(path_list)
+    for glyph, text in pending_content:
+        string_of_glyph[glyph] = first_content + content_index[text]
+    strings = path_list + content_list
+    if starts[-1] >= 1 << 16 or len(strings) >= 1 << 16:
+        raise ValueError("glyph or string count does not fit 16 bits")
+    offsets = [0]
+    for text in strings:
+        offsets.append(offsets[-1] + len(text.encode("utf-8")))
+
+    lines = [
+        GENERATED_HEADER,
+        "// The glyphs of all variants, in the order of the variants array and by\n",
+        "// increasing code point within a variant. Glyph i of the tables below belongs\n",
+        "// to variant v when glyphVariantStart[v] <= i < glyphVariantStart[v+1].\n",
+        "var glyphVariantStart = [...]uint16{\n",
+    ]
+    lines.extend(go_table([str(value) for value in starts], 12))
+    lines.append("}\n\n")
+
+    lines.append("// glyphCodepoints holds the code point of every glyph.\n")
+    lines.append("var glyphCodepoints = [...]uint32{\n")
+    for go_name, ordered in codepoints:
+        lines.append(f"\t// {go_name}\n")
+        lines.extend(go_table([f"0x{codepoint:X}" for codepoint in ordered], 12))
+    lines.append("}\n\n")
+
+    lines.extend((
+        "// na marks an italic correction or skew that the source does not give.\n",
+        f"const na = {NO_OPTION}\n\n",
+        "// glyphMetrics holds five lengths per glyph: height, depth, width, italic\n",
+        f"// correction and skew, in units of 1/{LENGTH_UNIT} em.\n",
+        "var glyphMetrics = [...]int16{\n",
+    ))
+    for go_name, rows in metric_rows:
+        lines.append(f"\t// {go_name}\n")
+        for codepoint, units in rows:
+            values = ", ".join("na" if value == NO_OPTION else str(value) for value in units)
+            lines.append(f"\t/* {codepoint:X} */ {values},\n")
+    lines.append("}\n\n")
+
+    lines.extend((
+        "// glyphStrings holds the index of every glyph's string. Strings below\n",
+        "// glyphFirstContent are SVG outlines; the others are the characters MathJax\n",
+        "// draws in place of an outline (the `c` option).\n",
+        "var glyphStrings = [...]uint16{\n",
+    ))
+    lines.extend(go_table([str(value) for value in string_of_glyph], 16))
+    lines.append("}\n\n")
+    lines.append(f"const glyphFirstContent = {first_content}\n\n")
+
+    lines.append("// String s is glyphStringData[glyphStringOffsets[s]:glyphStringOffsets[s+1]].\n")
+    lines.append("var glyphStringOffsets = [...]uint32{\n")
+    lines.extend(go_table([str(value) for value in offsets], 12))
+    lines.append("}\n\n")
+
+    lines.append('const glyphStringData = "" +\n')
+    nonempty = [text for text in strings if text != ""]
+    for position, text in enumerate(nonempty):
+        ending = "\n" if position == len(nonempty) - 1 else " +\n"
+        lines.append(f"\t{go_string(text)}{ending}")
+    (output / "data_glyphs_gen.go").write_text("".join(lines))
 
 
 def render_delimiter(data: dict[str, Any]) -> str:
@@ -403,16 +515,13 @@ def source_hash(files: list[Path], root: Path) -> str:
 
 
 def write_registry(output: Path, hashes: tuple[str, str, str]) -> None:
-    lines = [GENERATED_HEADER, "var glyphTables = map[Variant]map[rune]glyphData{\n"]
-    for _, _, go_name in VARIANTS:
-        lines.append(f"\t{go_name}: glyphTable{go_name},\n")
-    lines.extend((
-        "}\n\n",
+    lines = [
+        GENERATED_HEADER,
         "// Source hashes cover sorted relative names, NUL, exact source bytes, and NUL.\n",
         f'const CommonSourceSHA256 = "{hashes[0]}"\n',
         f'const SVGSourceSHA256 = "{hashes[1]}"\n',
         f'const DelimiterSourceSHA256 = "{hashes[2]}"\n',
-    ))
+    ]
     (output / "data_registry_gen.go").write_text("".join(lines))
 
 
@@ -447,6 +556,7 @@ def main() -> None:
 
     common_files: list[Path] = []
     svg_files: list[Path] = []
+    tables = []
     for _, source_name, go_name in VARIANTS:
         common_path = common_dir / f"{source_name}.ts"
         svg_path = svg_dir / f"{source_name}.ts"
@@ -454,7 +564,8 @@ def main() -> None:
         svg_files.append(svg_path)
         metrics = exported_object(common_path.read_text())
         paths, content = svg_objects(svg_path.read_text())
-        write_variant(output, source_name, go_name, metrics, paths, content)
+        tables.append((source_name, go_name, metrics, paths, content))
+    write_glyphs(output, tables)
 
     delimiter_path = common_dir / "delimiters.ts"
     delimiters = delimiter_object(delimiter_path.read_text())

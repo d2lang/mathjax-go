@@ -54,11 +54,19 @@ var variants = [...]Variant{
 // Variants returns the canonical variants in MathJax source order.
 func Variants() []Variant { return append([]Variant(nil), variants[:]...) }
 
-// ValidVariant reports whether variant is a MathJax 3.2.2 TeX variant.
-func ValidVariant(variant Variant) bool {
-	_, ok := glyphTables[variant]
-	return ok
+// variantIndex returns the position of variant in variants, which is also its
+// position in the generated glyph tables, or -1 for an unknown variant.
+func variantIndex(variant Variant) int {
+	for i := range variants {
+		if variants[i] == variant {
+			return i
+		}
+	}
+	return -1
 }
+
+// ValidVariant reports whether variant is a MathJax 3.2.2 TeX variant.
+func ValidVariant(variant Variant) bool { return variantIndex(variant) >= 0 }
 
 // Metrics is MathJax CharData: height, depth, width, and optional character
 // options.  Presence flags preserve the distinction between an omitted option
@@ -84,12 +92,6 @@ type Glyph struct {
 	Metrics   Metrics
 	Path      string
 	Content   string
-}
-
-type glyphData struct {
-	Metrics Metrics
-	Path    string
-	Content string
 }
 
 type variantRule struct {
@@ -130,15 +132,71 @@ var variantRules = map[Variant]variantRule{
 // LookupExact returns only a source-table entry, without variant inheritance
 // or mathematical-alphanumeric remapping.
 func LookupExact(variant Variant, codepoint rune) (Glyph, bool) {
-	table, ok := glyphTables[variant]
-	if !ok {
+	index := variantIndex(variant)
+	if index < 0 {
 		return Glyph{}, false
 	}
-	data, ok := table[codepoint]
-	if !ok {
+	glyph := findGlyph(index, codepoint)
+	if glyph < 0 {
 		return Glyph{}, false
 	}
-	return Glyph{Codepoint: codepoint, Variant: variant, Metrics: data.Metrics, Path: data.Path, Content: data.Content}, true
+	path, content := glyphStringsAt(glyph)
+	return Glyph{Codepoint: codepoint, Variant: variant, Metrics: glyphMetricsAt(glyph), Path: path, Content: content}, true
+}
+
+// The generated tables (data_glyphs_gen.go) hold no pointers: the code points
+// of each variant are sorted for binary search, lengths are integers, and all
+// outlines share one string. See generate.py for the reasons.
+
+// findGlyph returns the table index of codepoint in the variant with the
+// given index, or -1 if that variant's source table has no such entry.
+func findGlyph(variant int, codepoint rune) int {
+	low, end := int(glyphVariantStart[variant]), int(glyphVariantStart[variant+1])
+	high := end
+	for low < high {
+		middle := int(uint(low+high) >> 1)
+		if rune(glyphCodepoints[middle]) < codepoint {
+			low = middle + 1
+		} else {
+			high = middle
+		}
+	}
+	if low < end && rune(glyphCodepoints[low]) == codepoint {
+		return low
+	}
+	return -1
+}
+
+// glyphLengthUnit is the number of table units in one em. Dividing by it
+// gives the same float64 as the decimal literal in the MathJax source, which
+// has at most four decimals: both are the correctly rounded quotient.
+const glyphLengthUnit = 10000
+
+func glyphLength(units int16) float64 { return float64(units) / glyphLengthUnit }
+
+func glyphMetricsAt(glyph int) Metrics {
+	units := glyphMetrics[5*glyph : 5*glyph+5]
+	metrics := Metrics{
+		Height: glyphLength(units[0]),
+		Depth:  glyphLength(units[1]),
+		Width:  glyphLength(units[2]),
+	}
+	if units[3] != na {
+		metrics.ItalicCorrection, metrics.HasItalicCorrection = glyphLength(units[3]), true
+	}
+	if units[4] != na {
+		metrics.Skew, metrics.HasSkew = glyphLength(units[4]), true
+	}
+	return metrics
+}
+
+func glyphStringsAt(glyph int) (path, content string) {
+	index := int(glyphStrings[glyph])
+	text := glyphStringData[glyphStringOffsets[index]:glyphStringOffsets[index+1]]
+	if index >= glyphFirstContent {
+		return "", text
+	}
+	return text, ""
 }
 
 func lookupOwn(variant Variant, codepoint rune) (Glyph, bool) {
@@ -218,4 +276,10 @@ func LookupPath(variant Variant, codepoint rune) (path, content string, ok bool)
 }
 
 // ExactGlyphCount returns the number of entries in the upstream source table.
-func ExactGlyphCount(variant Variant) int { return len(glyphTables[variant]) }
+func ExactGlyphCount(variant Variant) int {
+	index := variantIndex(variant)
+	if index < 0 {
+		return 0
+	}
+	return int(glyphVariantStart[index+1]) - int(glyphVariantStart[index])
+}

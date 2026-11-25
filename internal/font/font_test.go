@@ -189,17 +189,16 @@ func writeRunes(hash interface{ Write([]byte) (int, error) }, values []rune) {
 
 func generatedTableHash() string {
 	hash := sha256.New()
-	for _, variant := range Variants() {
+	for index, variant := range Variants() {
 		writeString(hash, string(variant))
-		table := glyphTables[variant]
-		codepoints := make([]rune, 0, len(table))
-		for codepoint := range table {
-			codepoints = append(codepoints, codepoint)
-		}
-		sort.Slice(codepoints, func(i, j int) bool { return codepoints[i] < codepoints[j] })
+		codepoints := glyphCodepoints[glyphVariantStart[index]:glyphVariantStart[index+1]]
 		writeUint64(hash, uint64(len(codepoints)))
-		for _, codepoint := range codepoints {
-			glyph := table[codepoint]
+		for _, entry := range codepoints {
+			codepoint := rune(entry)
+			glyph, ok := LookupExact(variant, codepoint)
+			if !ok {
+				panic("generated code point is missing from its own variant")
+			}
 			writeUint64(hash, uint64(codepoint))
 			for _, value := range [...]float64{glyph.Metrics.Height, glyph.Metrics.Depth, glyph.Metrics.Width, glyph.Metrics.ItalicCorrection, glyph.Metrics.Skew} {
 				writeUint64(hash, math.Float64bits(value))
@@ -241,9 +240,87 @@ func generatedTableHash() string {
 	return hex.EncodeToString(hash.Sum(nil))
 }
 
+// The digest was taken from the map[rune]glyphData tables that preceded the
+// packed ones, so it pins every code point, every bit of every metric and
+// every outline to the values those maps held.
 func TestGeneratedTableHash(t *testing.T) {
 	const expected = "900a71cf3d7d3c1710b3d331efe04b9cbca20cd6020ef0c26b2eced3333d9a71"
 	if got := generatedTableHash(); got != expected {
 		t.Fatalf("generated table hash = %s, want %s", got, expected)
+	}
+}
+
+func TestGlyphTablesAreSearchable(t *testing.T) {
+	if len(glyphVariantStart) != len(variants)+1 || glyphVariantStart[0] != 0 {
+		t.Fatalf("glyphVariantStart has %d entries starting at %d", len(glyphVariantStart), glyphVariantStart[0])
+	}
+	count := int(glyphVariantStart[len(variants)])
+	for name, length := range map[string]int{
+		"glyphCodepoints": len(glyphCodepoints), "glyphMetrics": len(glyphMetrics) / 5, "glyphStrings": len(glyphStrings),
+	} {
+		if length != count {
+			t.Fatalf("%s describes %d glyphs, glyphVariantStart %d", name, length, count)
+		}
+	}
+	for index := range variants {
+		start, end := glyphVariantStart[index], glyphVariantStart[index+1]
+		if start > end {
+			t.Fatalf("%s: range %d..%d", variants[index], start, end)
+		}
+		for i := start + 1; i < end; i++ {
+			if glyphCodepoints[i-1] >= glyphCodepoints[i] {
+				t.Fatalf("%s: code points U+%04X, U+%04X are not increasing", variants[index], glyphCodepoints[i-1], glyphCodepoints[i])
+			}
+		}
+	}
+	if len(glyphStringOffsets) < 2 || glyphStringOffsets[0] != 0 || glyphStringOffsets[1] != 0 {
+		t.Fatal("string 0 must be the empty outline")
+	}
+	for i := 1; i < len(glyphStringOffsets); i++ {
+		if glyphStringOffsets[i-1] > glyphStringOffsets[i] {
+			t.Fatalf("string offsets decrease at %d", i)
+		}
+	}
+	if int(glyphStringOffsets[len(glyphStringOffsets)-1]) != len(glyphStringData) {
+		t.Fatal("string offsets do not end at the end of the data")
+	}
+	for i, index := range glyphStrings {
+		if int(index)+1 >= len(glyphStringOffsets) {
+			t.Fatalf("glyph %d: string index %d out of range", i, index)
+		}
+	}
+}
+
+// TestGeneratedTableHash shows that every entry of the source tables is
+// found; this shows that nothing else is.
+func TestExactLookupFindsOnlyTableEntries(t *testing.T) {
+	for index, variant := range Variants() {
+		hits := 0
+		next := int(glyphVariantStart[index])
+		for codepoint := rune(-1); codepoint <= 0x110000; codepoint++ {
+			glyph, ok := LookupExact(variant, codepoint)
+			if !ok {
+				if glyph != (Glyph{}) {
+					t.Fatalf("%s U+%04X: a miss returned %#v", variant, codepoint, glyph)
+				}
+				continue
+			}
+			if next >= int(glyphVariantStart[index+1]) || rune(glyphCodepoints[next]) != codepoint {
+				t.Fatalf("%s U+%04X: found, but it is not the next table entry", variant, codepoint)
+			}
+			if glyph.Codepoint != codepoint || glyph.Variant != variant {
+				t.Fatalf("%s U+%04X: resolved as %s U+%04X", variant, codepoint, glyph.Variant, glyph.Codepoint)
+			}
+			next++
+			hits++
+		}
+		if hits != ExactGlyphCount(variant) {
+			t.Errorf("%s: %d code points resolve, table has %d", variant, hits, ExactGlyphCount(variant))
+		}
+	}
+	for _, variant := range []Variant{"", "not-a-variant", "Normal", "normal ", "-size5"} {
+		if _, ok := LookupExact(variant, 'x'); ok || ValidVariant(variant) || ExactGlyphCount(variant) != 0 {
+			t.Errorf("unknown variant %q resolved", variant)
+		}
 	}
 }
