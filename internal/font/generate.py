@@ -325,6 +325,160 @@ def go_table(values: list[str], per_line: int) -> list[str]:
     ]
 
 
+# An SVG outline in the MathJax source is a move (two numbers, the M itself is
+# not written) followed by commands, each a letter and its numbers:
+#
+#     34 634Q34 659 50 676T93 694ZM238 634H277V179
+#
+# All numbers are integers separated by single spaces. That text is rebuilt
+# exactly from a record that is about a third of its size:
+#
+#     count    number of commands after the first move, as a varint
+#     codes    one 4-bit code per command (its position in OUTLINE_COMMANDS),
+#              two to a byte, low half first
+#     numbers  the numbers of the first move and of every command, each as the
+#              difference from the same coordinate of the previous point
+#
+# "Previous point" follows the control polygon: the end of a Q is relative to
+# its control point, and the end of a T to the control point that T implies
+# (the last control point mirrored in the current point). A difference is one
+# signed byte, or the byte 0x80 followed by a 16-bit little-endian value.
+# decodeOutline in outline.go is the reader; decode_outline below is its twin
+# and checks every record before it is written.
+OUTLINE_COMMANDS = "MLHVQTZ"
+OUTLINE_ARITY = {"M": 2, "L": 2, "H": 1, "V": 1, "Q": 4, "T": 2, "Z": 0}
+OUTLINE_NUMBER = r"(?:0|-?[1-9]\d*)"
+OUTLINE_TEXT = re.compile(
+    rf"{OUTLINE_NUMBER} {OUTLINE_NUMBER}(?:[MLHVQTZ](?:{OUTLINE_NUMBER}(?: {OUTLINE_NUMBER})*)?)*"
+)
+OUTLINE_COMMAND = re.compile(rf"([MLHVQTZ])((?:{OUTLINE_NUMBER}(?: {OUTLINE_NUMBER})*)?)")
+
+
+def encode_outline(text: str) -> bytes:
+    if text == "":
+        return b""
+    if not OUTLINE_TEXT.fullmatch(text):
+        raise ValueError(f"outline is not in the expected form: {text[:60]!r}")
+    first = re.match(rf"{OUTLINE_NUMBER} {OUTLINE_NUMBER}", text)
+    commands = [("M", [int(value) for value in first.group(0).split(" ")])]
+    for match in OUTLINE_COMMAND.finditer(text, first.end()):
+        numbers = [int(value) for value in match.group(2).split(" ")] if match.group(2) else []
+        if len(numbers) != OUTLINE_ARITY[match.group(1)]:
+            raise ValueError(f"unexpected arguments for {match.group(1)} in {text[:60]!r}")
+        commands.append((match.group(1), numbers))
+
+    codes: list[int] = []
+    differences: list[int] = []
+    x = y = control_x = control_y = 0
+    for position, (command, numbers) in enumerate(commands):
+        if position:
+            codes.append(OUTLINE_COMMANDS.index(command))
+        if command == "H":
+            differences.append(numbers[0] - x)
+            x = numbers[0]
+            control_x, control_y = x, y
+        elif command == "V":
+            differences.append(numbers[0] - y)
+            y = numbers[0]
+            control_x, control_y = x, y
+        elif command == "Z":
+            control_x, control_y = x, y
+        elif command == "Q":
+            control_x, control_y, end_x, end_y = numbers
+            differences += [control_x - x, control_y - y, end_x - control_x, end_y - control_y]
+            x, y = end_x, end_y
+        elif command == "T":
+            control_x, control_y = 2 * x - control_x, 2 * y - control_y
+            differences += [numbers[0] - control_x, numbers[1] - control_y]
+            x, y = numbers
+        else:
+            differences += [numbers[0] - x, numbers[1] - y]
+            x, y = numbers
+            control_x, control_y = x, y
+
+    record = bytearray()
+    count = len(codes)
+    while count >= 0x80:
+        record.append(count & 0x7F | 0x80)
+        count >>= 7
+    record.append(count)
+    for position in range(0, len(codes), 2):
+        high = codes[position + 1] if position + 1 < len(codes) else 0
+        record.append(codes[position] | high << 4)
+    for difference in differences:
+        if -127 <= difference <= 127:
+            record.append(difference & 0xFF)
+        elif -(1 << 15) <= difference < 1 << 15:
+            record.append(0x80)
+            record += (difference & 0xFFFF).to_bytes(2, "little")
+        else:
+            raise ValueError(f"coordinate step {difference} does not fit 16 bits")
+    return bytes(record)
+
+
+def decode_outline(record: bytes) -> str:
+    if not record:
+        return ""
+    position = 0
+    count = shift = 0
+    while True:
+        byte = record[position]
+        position += 1
+        count |= (byte & 0x7F) << shift
+        shift += 7
+        if byte < 0x80:
+            break
+    codes = record[position : position + (count + 1) // 2]
+    position += (count + 1) // 2
+
+    def number() -> int:
+        nonlocal position
+        value = record[position]
+        position += 1
+        if value == 0x80:
+            value = int.from_bytes(record[position : position + 2], "little", signed=True)
+            position += 2
+            return value
+        return value - 256 if value > 127 else value
+
+    x = number()
+    y = number()
+    control_x, control_y = x, y
+    text = [f"{x} {y}"]
+    for index in range(count):
+        command = OUTLINE_COMMANDS[codes[index >> 1] >> 4 * (index & 1) & 0xF]
+        if command == "H":
+            x += number()
+            control_x, control_y = x, y
+            text.append(f"H{x}")
+        elif command == "V":
+            y += number()
+            control_x, control_y = x, y
+            text.append(f"V{y}")
+        elif command == "Z":
+            control_x, control_y = x, y
+            text.append("Z")
+        elif command == "Q":
+            control_x = x + number()
+            control_y = y + number()
+            x = control_x + number()
+            y = control_y + number()
+            text.append(f"Q{control_x} {control_y} {x} {y}")
+        elif command == "T":
+            control_x, control_y = 2 * x - control_x, 2 * y - control_y
+            x = control_x + number()
+            y = control_y + number()
+            text.append(f"T{x} {y}")
+        else:
+            x += number()
+            y += number()
+            control_x, control_y = x, y
+            text.append(f"{command}{x} {y}")
+    if position != len(record):
+        raise ValueError("outline record has trailing bytes")
+    return "".join(text)
+
+
 def write_glyphs(
     output: Path,
     tables: list[tuple[str, str, dict[int, list[Any]], dict[int, str], dict[int, str]]],
@@ -333,7 +487,8 @@ def write_glyphs(
 
     A Go map of structs costs a hash bucket slot, a string header and a
     garbage-collector root per glyph. Sorted code points, integer metrics and
-    one shared string avoid all three.
+    outlines addressed by offsets avoid all three, and the outlines are
+    written in the compact form described above.
     """
     starts = [0]
     codepoints: list[tuple[str, list[int]]] = []
@@ -378,12 +533,21 @@ def write_glyphs(
     first_content = len(path_list)
     for glyph, text in pending_content:
         string_of_glyph[glyph] = first_content + content_index[text]
-    strings = path_list + content_list
-    if starts[-1] >= 1 << 16 or len(strings) >= 1 << 16:
+    if starts[-1] >= 1 << 16 or first_content + len(content_list) >= 1 << 16:
         raise ValueError("glyph or string count does not fit 16 bits")
-    offsets = [0]
-    for text in strings:
-        offsets.append(offsets[-1] + len(text.encode("utf-8")))
+    records = [encode_outline(text) for text in path_list]
+    for text, record in zip(path_list, records):
+        if decode_outline(record) != text:
+            raise ValueError(f"outline does not survive encoding: {text[:60]!r}")
+    outline_offsets = [0]
+    for record in records:
+        outline_offsets.append(outline_offsets[-1] + len(record))
+    content_offsets = [0]
+    for text in content_list:
+        content_offsets.append(content_offsets[-1] + len(text.encode("utf-8")))
+    if content_offsets[-1] >= 1 << 16:
+        raise ValueError("substitution text does not fit 16-bit offsets")
+    (output / "data_outlines_gen.bin").write_bytes(b"".join(records))
 
     lines = [
         GENERATED_HEADER,
@@ -417,25 +581,29 @@ def write_glyphs(
     lines.append("}\n\n")
 
     lines.extend((
-        "// glyphStrings holds the index of every glyph's string. Strings below\n",
-        "// glyphFirstContent are SVG outlines; the others are the characters MathJax\n",
-        "// draws in place of an outline (the `c` option).\n",
+        "// glyphStrings says what is drawn for every glyph: outline number s if s is\n",
+        "// below glyphFirstContent, else substitution s-glyphFirstContent, the\n",
+        "// characters MathJax draws in place of an outline (the `c` option).\n",
         "var glyphStrings = [...]uint16{\n",
     ))
     lines.extend(go_table([str(value) for value in string_of_glyph], 16))
     lines.append("}\n\n")
     lines.append(f"const glyphFirstContent = {first_content}\n\n")
 
-    lines.append("// String s is glyphStringData[glyphStringOffsets[s]:glyphStringOffsets[s+1]].\n")
-    lines.append("var glyphStringOffsets = [...]uint32{\n")
-    lines.extend(go_table([str(value) for value in offsets], 12))
+    lines.extend((
+        "// The record of outline s is\n",
+        "// glyphOutlineData[glyphOutlineOffsets[s]:glyphOutlineOffsets[s+1]];\n",
+        "// decodeOutline turns it back into the path of the MathJax source.\n",
+        "var glyphOutlineOffsets = [...]uint32{\n",
+    ))
+    lines.extend(go_table([str(value) for value in outline_offsets], 12))
     lines.append("}\n\n")
 
-    lines.append('const glyphStringData = "" +\n')
-    nonempty = [text for text in strings if text != ""]
-    for position, text in enumerate(nonempty):
-        ending = "\n" if position == len(nonempty) - 1 else " +\n"
-        lines.append(f"\t{go_string(text)}{ending}")
+    lines.append("// Substitution c is glyphContentData[glyphContentOffsets[c]:glyphContentOffsets[c+1]].\n")
+    lines.append("var glyphContentOffsets = [...]uint16{\n")
+    lines.extend(go_table([str(value) for value in content_offsets], 12))
+    lines.append("}\n\n")
+    lines.append(f"const glyphContentData = {go_string(''.join(content_list))}\n")
     (output / "data_glyphs_gen.go").write_text("".join(lines))
 
 
@@ -571,7 +739,7 @@ def main() -> None:
     common_dir = source / "common/fonts/tex"
     svg_dir = source / "svg/fonts/tex"
 
-    for stale in output.glob("data_*_gen.go"):
+    for stale in list(output.glob("data_*_gen.go")) + list(output.glob("data_*_gen.bin")):
         stale.unlink()
 
     common_files: list[Path] = []

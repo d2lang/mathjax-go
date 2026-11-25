@@ -198,8 +198,8 @@ func LookupExact(variant Variant, codepoint rune) (Glyph, bool) {
 }
 
 // The generated tables (data_glyphs_gen.go) hold no pointers: the code points
-// of each variant are sorted for binary search, lengths are integers, and all
-// outlines share one string. See generate.py for the reasons.
+// of each variant are sorted for binary search, lengths are integers, and the
+// outlines are records in one embedded file. See generate.py for the reasons.
 
 // findGlyph returns the table index of codepoint in the variant with the
 // given index, or -1 if that variant's source table has no such entry.
@@ -245,11 +245,11 @@ func glyphMetricsAt(glyph int) Metrics {
 
 func glyphStringsAt(glyph int) (path, content string) {
 	index := int(glyphStrings[glyph])
-	text := glyphStringData[glyphStringOffsets[index]:glyphStringOffsets[index+1]]
 	if index >= glyphFirstContent {
-		return "", text
+		index -= glyphFirstContent
+		return "", glyphContentData[glyphContentOffsets[index]:glyphContentOffsets[index+1]]
 	}
-	return text, ""
+	return decodeOutline(glyphOutlineData[glyphOutlineOffsets[index]:glyphOutlineOffsets[index+1]]), ""
 }
 
 // location is where an effective lookup ended: at an entry of the generated

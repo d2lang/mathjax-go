@@ -272,19 +272,27 @@ func TestGlyphTablesAreSearchable(t *testing.T) {
 			}
 		}
 	}
-	if len(glyphStringOffsets) < 2 || glyphStringOffsets[0] != 0 || glyphStringOffsets[1] != 0 {
-		t.Fatal("string 0 must be the empty outline")
+	if len(glyphOutlineOffsets) != glyphFirstContent+1 || glyphOutlineOffsets[0] != 0 || glyphOutlineOffsets[1] != 0 {
+		t.Fatal("there must be glyphFirstContent outlines, the first of them empty")
 	}
-	for i := 1; i < len(glyphStringOffsets); i++ {
-		if glyphStringOffsets[i-1] > glyphStringOffsets[i] {
-			t.Fatalf("string offsets decrease at %d", i)
+	for i := 1; i < len(glyphOutlineOffsets); i++ {
+		if glyphOutlineOffsets[i-1] > glyphOutlineOffsets[i] {
+			t.Fatalf("outline offsets decrease at %d", i)
 		}
 	}
-	if int(glyphStringOffsets[len(glyphStringOffsets)-1]) != len(glyphStringData) {
-		t.Fatal("string offsets do not end at the end of the data")
+	if int(glyphOutlineOffsets[glyphFirstContent]) != len(glyphOutlineData) {
+		t.Fatal("outline offsets do not end at the end of the data")
+	}
+	if glyphContentOffsets[0] != 0 || int(glyphContentOffsets[len(glyphContentOffsets)-1]) != len(glyphContentData) {
+		t.Fatal("substitution offsets do not span the data")
+	}
+	for i := 1; i < len(glyphContentOffsets); i++ {
+		if glyphContentOffsets[i-1] >= glyphContentOffsets[i] {
+			t.Fatalf("substitution %d is empty or out of order", i-1)
+		}
 	}
 	for i, index := range glyphStrings {
-		if int(index)+1 >= len(glyphStringOffsets) {
+		if int(index) >= glyphFirstContent+len(glyphContentOffsets)-1 {
 			t.Fatalf("glyph %d: string index %d out of range", i, index)
 		}
 	}
