@@ -280,7 +280,7 @@ func TestGlyphTablesAreSearchable(t *testing.T) {
 			t.Fatalf("outline offsets decrease at %d", i)
 		}
 	}
-	if int(glyphOutlineOffsets[glyphFirstContent]) != len(glyphOutlineData) {
+	if int(glyphOutlineOffsets[glyphFirstContent]) != len(glyphOutlineData()) {
 		t.Fatal("outline offsets do not end at the end of the data")
 	}
 	if glyphContentOffsets[0] != 0 || int(glyphContentOffsets[len(glyphContentOffsets)-1]) != len(glyphContentData) {

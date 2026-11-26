@@ -45,7 +45,7 @@ var outlineText = regexp.MustCompile(`^(0|-?[1-9][0-9]*) (0|-?[1-9][0-9]*)([MLHV
 func TestOutlineRecordsAreCanonical(t *testing.T) {
 	distinct := make(map[string]int)
 	for index := 0; index < glyphFirstContent; index++ {
-		record := glyphOutlineData[glyphOutlineOffsets[index]:glyphOutlineOffsets[index+1]]
+		record := glyphOutlineData()[glyphOutlineOffsets[index]:glyphOutlineOffsets[index+1]]
 		text := decodeOutline(record)
 		if index == 0 {
 			if text != "" {

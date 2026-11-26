@@ -249,7 +249,7 @@ func glyphStringsAt(glyph int) (path, content string) {
 		index -= glyphFirstContent
 		return "", glyphContentData[glyphContentOffsets[index]:glyphContentOffsets[index+1]]
 	}
-	return decodeOutline(glyphOutlineData[glyphOutlineOffsets[index]:glyphOutlineOffsets[index+1]]), ""
+	return decodeOutline(glyphOutlineData()[glyphOutlineOffsets[index]:glyphOutlineOffsets[index+1]]), ""
 }
 
 // location is where an effective lookup ended: at an entry of the generated

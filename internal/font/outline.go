@@ -3,15 +3,38 @@
 
 package font
 
-import _ "embed"
+import (
+	_ "embed"
+	"fmt"
+	"io"
+	"strings"
+	"sync"
 
-// glyphOutlineData holds every distinct SVG outline of the MathJax fonts, one
-// record after the other. As text the outlines take 846 kB; these records
-// take a third of that and decode to the same text. generate.py writes the
-// file and describes the format.
+	"github.com/d2lang/brotli"
+)
+
+// glyphOutlineData returns every distinct SVG outline of the MathJax fonts,
+// one record after the other. As text the outlines take 846 kB; these records
+// take a third of that and decode to the same text. generate.py writes them
+// to data_outlines_gen.bin and describes the format.
 //
-//go:embed data_outlines_gen.bin
-var glyphOutlineData string
+// The records are embedded as data_outlines_gen.br, which
+// gen_outline_stream.go compresses from data_outlines_gen.bin to about three
+// fifths, and decompressed the first time a formula needs an outline.
+var glyphOutlineData = sync.OnceValue(func() string {
+	size := int(glyphOutlineOffsets[glyphFirstContent])
+	var b strings.Builder
+	b.Grow(size)
+	n, err := io.Copy(&b, brotli.NewReader(strings.NewReader(glyphOutlineStream)))
+	if err != nil || n != int64(size) {
+		panic(fmt.Sprintf("mathjax-go: glyph outlines: %d of %d bytes: %v", n, size, err))
+	}
+	return b.String()
+})
+
+//go:generate go run gen_outline_stream.go
+//go:embed data_outlines_gen.br
+var glyphOutlineStream string
 
 // outlineCommands lists the path commands in the order of their 4-bit codes.
 const outlineCommands = "MLHVQTZ"
